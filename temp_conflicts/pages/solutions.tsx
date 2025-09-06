@@ -6,7 +6,7 @@ import {
   Heart, DollarSign, Factory, ShoppingCart, Building2, 
   GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle,
   Users, Globe, Cpu, Database, Network, Target
-} from 'lucide-react';
+} from 'lucide-react',
 
 const SolutionsPage: React.FC = () => {
   const industrySolutions = [
@@ -178,7 +178,7 @@ const SolutionsPage: React.FC = () => {
         }
       ]
     }
-  ];
+  ],
 
   return (
     <UltraFuturisticBackground>
@@ -395,7 +395,7 @@ const SolutionsPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss how our industry-specific solutions can drive innovation and growth for your organization.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300"
@@ -414,7 +414,7 @@ const SolutionsPage: React.FC = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )
+},
 
-export default Solutions;
+export default Solutions,

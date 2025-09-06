@@ -1,9 +1,7 @@
 import Link from "next/link";
-
-export const metadata = {
-  title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group",
+export const metadata = $2;
   description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",
-  keywords: "Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group"};
+  keywords: "Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group"},
 
 export default function ZionOSPage() {
   return (
@@ -160,52 +158,12 @@ export default function ZionOSPage() {
               </p>
             </div>
 
-            <div className="card group">
-              <div className="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-500/30 transition-colors">
-                <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Modular Architecture</h3>
-              <p className="text-gray-400">
-                Pick and choose the features you need. Deploy only what matters for your specific use case.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              How Zion OS Works
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Three simple steps to launch your sovereign digital economy
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-400">1</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Configure</h3>
-              <p className="text-gray-400">
-                Use our intuitive launch wizard to configure your economy's parameters, 
+            <div className = $2;
                 including governance rules, token economics, and marketplace settings.
               </p>
             </div>
             
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-400">2</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Deploy</h3>
-              <p className="text-gray-400">
-                Click deploy and watch as Zion OS automatically creates your infrastructure, 
+            <div className = $2;
                 smart contracts, and governance systems in minutes.
               </p>
             </div>
@@ -236,27 +194,12 @@ export default function ZionOSPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="card">
-              <h3 className="text-xl font-semibold mb-3">Startups & Entrepreneurs</h3>
-              <p className="text-gray-400 mb-4">
-                Launch innovative business models with built-in governance, 
+          <div className = $2;
                 token economics, and marketplace infrastructure.
               </p>
             </div>
             
-            <div className="card">
-              <h3 className="text-xl font-semibold mb-3">Enterprises</h3>
-              <p className="text-gray-400 mb-4">
-                Transform traditional business models with AI-powered governance 
-                and decentralized marketplace capabilities.
-              </p>
-            </div>
-            
-            <div className="card">
-              <h3 className="text-xl font-semibold mb-3">Communities & DAOs</h3>
-              <p className="text-gray-400 mb-4">
-                Build thriving communities with transparent governance, 
+            <div className = $2;
                 fair token distribution, and collaborative decision-making.
               </p>
             </div>
@@ -355,7 +298,7 @@ export default function ZionOSPage() {
               Join the future of sovereign, AI-powered digital economies. 
               Deploy in minutes, scale infinitely.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/multiverse/launch" className="btn-primary text-lg px-8 py-4">
                 Start Deployment
               </Link>
@@ -367,5 +310,5 @@ export default function ZionOSPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

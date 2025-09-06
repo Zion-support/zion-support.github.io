@@ -2,19 +2,18 @@ import Head from 'next/head';
 import { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import Link from 'next/link';
-
 // Simple icons using inline SVG to avoid external assets
 function StarIcon({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.802 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.88 8.72c-.783-.57-.38-1.81.588-1.81H6.93a1 1 0 00.95-.69l1.07-3.292z" />
     </svg>
-  );
+  )
 }
 
-function AppleBadge({ href }: { href: string }) {
+function AppleBadge({ href }: { href: string}) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-lg bg-black text-white px-4 py-2 shadow hover:opacity-90">
+    <a href={href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-lg bg-black text-white px-4 py-2 shadow hover: opacity-90">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
         <path d="M16.365 1.43c0 1.14-.42 2.18-1.26 3.11-.91 1.02-2.01 1.61-3.2 1.52-.12-1.02.37-2.12 1.21-3.06.86-.97 2.24-1.67 3.25-1.57-.01 0 .01 0 0 0zM20.51 17.14c-.45 1.05-1 2.03-1.66 2.93-.88 1.2-1.59 2.04-2.57 2.05-.97.02-1.28-.66-2.66-.66-1.38 0-1.72.64-2.69.68-1.09.04-1.93-1.02-2.82-2.22-1.54-2.1-2.73-5.93-1.14-8.52.79-1.27 2.2-2.08 3.73-2.1 1.16-.02 2.25.78 2.66.78.4 0 1.51-.96 2.85-.82.49.02 1.88.2 2.77 1.6-.07.05-1.65.97-1.63 2.88.02 2.3 2.06 3.07 2.09 3.08-.02.06-.39 1.36-1.93 1.62z" />
       </svg>
@@ -23,12 +22,12 @@ function AppleBadge({ href }: { href: string }) {
         <div className="text-sm font-semibold">App Store</div>
       </div>
     </a>
-  );
+  )
 }
 
-function GoogleBadge({ href }: { href: string }) {
+function GoogleBadge({ href }: { href: string}) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-lg bg-[#121212] text-white px-4 py-2 shadow hover:opacity-90">
+    <a href={href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-lg bg-[#121212] text-white px-4 py-2 shadow hover: opacity-90">
       <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden>
         <defs>
           <linearGradient id="g1" x1="100%" y1="0%">
@@ -58,24 +57,23 @@ function GoogleBadge({ href }: { href: string }) {
         <div className="text-sm font-semibold">Google Play</div>
       </div>
     </a>
-  );
+  )
 }
 
-function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string; androidUrl: string; deepLink: string }) {
-  const [visible, setVisible] = useState(false);
+function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, androidUrl: string, deepLink: string}) {
+  const [visible, setVisible] = useState($2);
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const dismissed = localStorage.getItem('smartBannerDismissed') === '1';
-    if (dismissed) return;
-    const ua = navigator.userAgent || '';
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
-    if (isMobile) setVisible(true);
-  }, []);
+    if (typeof window = $2;
+    const dismissed = $2;
+    if (dismissed) return,
+    const ua = $2;
+    const isMobile = /iPhone|iPad|iPod|Android/i.test($2);
+    if (isMobile) setVisible(true)
+  }, []),
 
-  if (!visible) return null;
-  const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent);
-  const storeUrl = isIOS ? iosUrl : androidUrl;
-
+  if (!visible) return null,
+  const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test($2);
+  const storeUrl = $2;
   return (
     <div className="fixed inset-x-0 top-0 z-50">
       <div className="mx-auto max-w-5xl">
@@ -90,59 +88,44 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string; android
             <a href={storeUrl} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700">Install</a>
             <button
               aria-label="Dismiss"
-              onClick={() => { localStorage.setItem('smartBannerDismissed', '1'); setVisible(false); }}
-              className="text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
-            >
-              ✕
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https://apps.apple.com/app/id0000000000';
-const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https://play.google.com/store/apps/details?id=com.zion.app';
-const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';
-
-const SITE_BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || '';
-
+              onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
+              className = $2;
+const ANDROID_APP_URL = $2;
+const DEEP_LINK_URL = $2;
+const SITE_BASE_URL = $2;
 const testimonials = [
   { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
-  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }];
+  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
 
 export default function MobileLaunchPage() {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
-  const [error, setError] = useState('');
-
+  const [email, setEmail] = useState($2);
+  const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle'),
+  const [error, setError] = useState($2);
   // Auto-rotate testimonial index
-  const [idx, setIdx] = useState(0);
+  const [idx, setIdx] = useState($2);
   useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % testimonials.length), 4000);
-    return () => clearInterval(t);
-  }, []);
+    const t = setInterval(() => setIdx((i) => (i + 1) % testimonials.length), 4000),
+    return () => clearInterval(t)
+  }, []),
 
-  const qrHref = useMemo(() => {
-    const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download');
-    const encoded = encodeURIComponent(target);
-    return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;
-  }, []);
+  const qrHref = $2;
+    const encoded = encodeURIComponent($2);
+    return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`
+  }, []),
 
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setStatus('loading');
-    setError('');
+    e.preventDefault($2);
+    setStatus($2);
+    setError($2);
     try {
-      const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) });
-      if (!res.ok) throw new Error(await res.text());
-      setStatus('success');
-      setEmail('');
+      const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),
+      if (!res.ok) throw new Error(await res.text()),
+      setStatus($2);
+      setEmail('')
     } catch (err: any) {
-      setStatus('error');
-      setError(err?.message || 'Something went wrong.');
+      setStatus($2);
+      setError(err?.message || 'Something went wrong.')
     }
   }
 
@@ -278,5 +261,5 @@ export default function MobileLaunchPage() {
         </div>
       </section>
     </EnhancedLayout>
-  );
+  )
 }

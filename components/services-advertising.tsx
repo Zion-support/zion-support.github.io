@@ -1,9 +1,8 @@
 import React from 'react';
 import SEO from '../components/SEO';
-
 const ext = (url: string) => (
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
-);
+),
 
 export default function ServicesAdvertisingPage() {
 	return (
@@ -312,7 +311,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $50–$500/mo + API usage</li>
 						<li>Learn more: <a className="text-cyan-400 underline" href="/services/ai-red-teaming-suite">/services/ai-red-teaming-suite</a></li>
-						<li>References: https://openai.com/safety, https://www.anthropic.com/news, https://www.promptfoo.dev/pricing</li>
+						<li>References: https: //openai.com/safety, https://www.anthropic.com/news, https://www.promptfoo.dev/pricing</li>
 					</ul>
 				</section>
 
@@ -322,7 +321,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $20–$100/mo</li>
 						<li>Learn more: <a className="text-cyan-400 underline" href="/services/api-schema-diff-registry">/services/api-schema-diff-registry</a></li>
-						<li>References: https://swagger.io/tools/swaggerhub/pricing/, https://stoplight.io/pricing, https://www.openapis.org/</li>
+						<li>References: https: //swagger.io/tools/swaggerhub/pricing/, https://stoplight.io/pricing, https://www.openapis.org/</li>
 					</ul>
 				</section>
 
@@ -332,7 +331,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $20–$200/mo</li>
 						<li>Learn more: <a className="text-cyan-400 underline" href="/services/github-secrets-scanner-plus">/services/github-secrets-scanner-plus</a></li>
-						<li>References: https://docs.github.com/code-security/secret-scanning, https://github.com/features/security, https://github.com/trufflesecurity/trufflehog</li>
+						<li>References: https: //docs.github.com/code-security/secret-scanning, https://github.com/features/security, https://github.com/trufflesecurity/trufflehog</li>
 					</ul>
 				</section>
 
@@ -342,7 +341,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $100–$500/mo</li>
 						<li>Learn more: <a className="text-cyan-400 underline" href="/services/gdpr-dsar-portal-lite">/services/gdpr-dsar-portal-lite</a></li>
-						<li>References: https://www.osano.com/pricing, https://www.transcend.io/platform</li>
+						<li>References: https: //www.osano.com/pricing, https://www.transcend.io/platform</li>
 					</ul>
 				</section>
 
@@ -352,7 +351,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $50–$300/mo</li>
 						<li>Learn more: <a className="text-cyan-400 underline" href="/services/k8s-cost-rightsizer">/services/k8s-cost-rightsizer</a></li>
-						<li>References: https://www.kubecost.com/pricing, https://prometheus.io/</li>
+						<li>References: https: //www.kubecost.com/pricing, https://prometheus.io/</li>
 					</ul>
 				</section>
 
@@ -362,7 +361,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $50–$300/mo</li>
 						<li>Learn more: <a className="text-cyan-400 underline" href="/services/pii-redaction-proxy">/services/pii-redaction-proxy</a></li>
-						<li>References: https://www.skyflow.com/pricing, https://www.verygoodsecurity.com/pricing</li>
+						<li>References: https: //www.skyflow.com/pricing, https://www.verygoodsecurity.com/pricing</li>
 					</ul>
 				</section>
 
@@ -372,7 +371,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $20–$150/mo</li>
 						<li>Learn more: <a className="text-cyan-400 underline" href="/services/postgres-index-advisor-pro">/services/postgres-index-advisor-pro</a></li>
-						<li>References: https://pganalyze.com/pricing, https://www.postgresql.org/docs/current/auto-explain.html</li>
+						<li>References: https: //pganalyze.com/pricing, https://www.postgresql.org/docs/current/auto-explain.html</li>
 					</ul>
 				</section>
 
@@ -382,7 +381,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $5–$100/mo</li>
 						<li>Learn more: <a className="text-cyan-400 underline" href="/services/s3-lifecycle-optimizer">/services/s3-lifecycle-optimizer</a></li>
-						<li>References: https://aws.amazon.com/s3/pricing/, https://aws.amazon.com/s3/storage-classes/</li>
+						<li>References: https: //aws.amazon.com/s3/pricing/, https://aws.amazon.com/s3/storage-classes/</li>
 					</ul>
 				</section>
 
@@ -393,40 +392,40 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">Latest Real Additions</h2>
 					<ul className="list-disc list-inside text-slate-300 space-y-2">
 						<li>
-							<strong className="text-white">Postgres Index Advisor Pro</strong> — $79/mo. Auto index insights, PR rollouts. Learn: <a className="text-cyan-400 underline" href="/services/postgres-index-advisor-pro">/services/postgres-index-advisor-pro</a>. Benchmarks: {ext('https://www.postgresql.org/docs/current/auto-explain.html')}{', '}{ext('https://pganalyze.com/blog')}
+							<strong className="text-white">Postgres Index Advisor Pro</strong> — $79/mo. Auto index insights, PR rollouts. Learn: <a className="text-cyan-400 underline" href="/services/postgres-index-advisor-pro">/services/postgres-index-advisor-pro</a>. Benchmarks: {ext('https://www.postgresql.org/docs/current/auto-explain.html')}{}{ext('https://pganalyze.com/blog')}
 						</li>
 						<li>
-							<strong className="text-white">S3 Lifecycle Optimizer</strong> — $59/mo. Smart storage class moves. Learn: <a className="text-cyan-400 underline" href="/services/s3-lifecycle-optimizer">/services/s3-lifecycle-optimizer</a>. References: {ext('https://aws.amazon.com/s3/pricing/')}{', '}{ext('https://aws.amazon.com/s3/storage-classes/')}
+							<strong className="text-white">S3 Lifecycle Optimizer</strong> — $59/mo. Smart storage class moves. Learn: <a className="text-cyan-400 underline" href="/services/s3-lifecycle-optimizer">/services/s3-lifecycle-optimizer</a>. References: {ext('https://aws.amazon.com/s3/pricing/')}{}{ext('https://aws.amazon.com/s3/storage-classes/')}
 						</li>
 						<li>
-							<strong className="text-white">Synthetic Journey Monitor</strong> — $39/mo. Record/replay + SLO alerts. Learn: <a className="text-cyan-400 underline" href="/services/synthetic-journey-monitor">/services/synthetic-journey-monitor</a>. References: {ext('https://playwright.dev')}{', '}{ext('https://www.checklyhq.com/pricing/')}
+							<strong className="text-white">Synthetic Journey Monitor</strong> — $39/mo. Record/replay + SLO alerts. Learn: <a className="text-cyan-400 underline" href="/services/synthetic-journey-monitor">/services/synthetic-journey-monitor</a>. References: {ext('https://playwright.dev')}{}{ext('https://www.checklyhq.com/pricing/')}
 						</li>
 						<li>
-							<strong className="text-white">Feature Flag Auditor</strong> — $29/mo. Hygiene checks + PRs. Learn: <a className="text-cyan-400 underline" href="/services/feature-flag-auditor">/services/feature-flag-auditor</a>. References: {ext('https://launchdarkly.com/pricing/')}{', '}{ext('https://www.flagsmith.com/pricing')}
+							<strong className="text-white">Feature Flag Auditor</strong> — $29/mo. Hygiene checks + PRs. Learn: <a className="text-cyan-400 underline" href="/services/feature-flag-auditor">/services/feature-flag-auditor</a>. References: {ext('https://launchdarkly.com/pricing/')}{}{ext('https://www.flagsmith.com/pricing')}
 						</li>
 						<li>
-							<strong className="text-white">SOC 2 Evidence Collector</strong> — $99/mo. Continuous evidence bundles. Learn: <a className="text-cyan-400 underline" href="/services/soc2-evidence-collector">/services/soc2-evidence-collector</a>. References: {ext('https://www.servicenow.com/trust/compliance-reports.html')}{', '}{ext('https://www.aicpa.org/resources/certification/soc-2')}
+							<strong className="text-white">SOC 2 Evidence Collector</strong> — $99/mo. Continuous evidence bundles. Learn: <a className="text-cyan-400 underline" href="/services/soc2-evidence-collector">/services/soc2-evidence-collector</a>. References: {ext('https://www.servicenow.com/trust/compliance-reports.html')}{}{ext('https://www.aicpa.org/resources/certification/soc-2')}
 						</li>
 						<li>
-							<strong className="text-white">IAM Permission Analyzer</strong> — $79/mo. Least privilege guidance. Learn: <a className="text-cyan-400 underline" href="/services/iam-permission-analyzer">/services/iam-permission-analyzer</a>. References: {ext('https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html')}{', '}{ext('https://cloud.google.com/iam/docs')}
+							<strong className="text-white">IAM Permission Analyzer</strong> — $79/mo. Least privilege guidance. Learn: <a className="text-cyan-400 underline" href="/services/iam-permission-analyzer">/services/iam-permission-analyzer</a>. References: {ext('https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html')}{}{ext('https://cloud.google.com/iam/docs')}
 						</li>
 						<li>
-							<strong className="text-white">GitOps Drift Auto-Remediator</strong> — $69/mo. Detect drift, open PRs. Learn: <a className="text-cyan-400 underline" href="/services/gitops-drift-auto-remediator">/services/gitops-drift-auto-remediator</a>. References: {ext('https://www.openpolicyagent.org/')}{', '}{ext('https://argo-cd.readthedocs.io/en/stable/')}
+							<strong className="text-white">GitOps Drift Auto-Remediator</strong> — $69/mo. Detect drift, open PRs. Learn: <a className="text-cyan-400 underline" href="/services/gitops-drift-auto-remediator">/services/gitops-drift-auto-remediator</a>. References: {ext('https://www.openpolicyagent.org/')}{}{ext('https://argo-cd.readthedocs.io/en/stable/')}
 						</li>
 						<li>
-							<strong className="text-white">AI Meeting‑to‑Ticket Copilot</strong> — $25/user/mo. Action items → Jira/GitHub. Learn: <a className="text-cyan-400 underline" href="/services/ai-meeting-to-ticket">/services/ai-meeting-to-ticket</a>. References: {ext('https://workspace.google.com/pricing')}{', '}{ext('https://www.atlassian.com/software/jira/pricing')}
+							<strong className="text-white">AI Meeting‑to‑Ticket Copilot</strong> — $25/user/mo. Action items → Jira/GitHub. Learn: <a className="text-cyan-400 underline" href="/services/ai-meeting-to-ticket">/services/ai-meeting-to-ticket</a>. References: {ext('https://workspace.google.com/pricing')}{}{ext('https://www.atlassian.com/software/jira/pricing')}
 						</li>
 						<li>
-							<strong className="text-white">Email Warmup & Reputation Monitor</strong> — $39/mo. Sender reputation & inbox tests. Learn: <a className="text-cyan-400 underline" href="/services/email-warmup-monitor">/services/email-warmup-monitor</a>. References: {ext('https://postmaster.google.com')}{', '}{ext('https://sendgrid.com/pricing/')}
+							<strong className="text-white">Email Warmup & Reputation Monitor</strong> — $39/mo. Sender reputation & inbox tests. Learn: <a className="text-cyan-400 underline" href="/services/email-warmup-monitor">/services/email-warmup-monitor</a>. References: {ext('https://postmaster.google.com')}{}{ext('https://sendgrid.com/pricing/')}
 						</li>
 						<li>
-							<strong className="text-white">PII Discovery Scanner</strong> — $89/mo. Detect, redact, export evidence. Learn: <a className="text-cyan-400 underline" href="/services/pii-discovery-scanner">/services/pii-discovery-scanner</a>. References: {ext('https://cloud.google.com/dlp/pricing')}{', '}{ext('https://aws.amazon.com/macie/pricing/')}
+							<strong className="text-white">PII Discovery Scanner</strong> — $89/mo. Detect, redact, export evidence. Learn: <a className="text-cyan-400 underline" href="/services/pii-discovery-scanner">/services/pii-discovery-scanner</a>. References: {ext('https://cloud.google.com/dlp/pricing')}{}{ext('https://aws.amazon.com/macie/pricing/')}
 						</li>
 						<li>
-							<strong className="text-white">API Breaking Change Watcher</strong> — $49/mo. Schema diff + CI gates. Learn: <a className="text-cyan-400 underline" href="/services/api-breaking-change-watcher">/services/api-breaking-change-watcher</a>. References: {ext('https://www.openapis.org/')}{', '}{ext('https://graphql.org/learn/best-practices/')}
+							<strong className="text-white">API Breaking Change Watcher</strong> — $49/mo. Schema diff + CI gates. Learn: <a className="text-cyan-400 underline" href="/services/api-breaking-change-watcher">/services/api-breaking-change-watcher</a>. References: {ext('https://www.openapis.org/')}{}{ext('https://graphql.org/learn/best-practices/')}
 						</li>
 						<li>
-							<strong className="text-white">Data Warehouse Cost Optimizer</strong> — $99/mo. Right-size warehouses. Learn: <a className="text-cyan-400 underline" href="/services/warehouse-cost-optimizer">/services/warehouse-cost-optimizer</a>. References: {ext('https://www.snowflake.com/en/pricing/')}{', '}{ext('https://cloud.google.com/bigquery/pricing')}
+							<strong className="text-white">Data Warehouse Cost Optimizer</strong> — $99/mo. Right-size warehouses. Learn: <a className="text-cyan-400 underline" href="/services/warehouse-cost-optimizer">/services/warehouse-cost-optimizer</a>. References: {ext('https://www.snowflake.com/en/pricing/')}{}{ext('https://cloud.google.com/bigquery/pricing')}
 						</li>
 					</ul>
 				</section>
@@ -1470,12 +1469,12 @@ export default function ServicesAdvertisingPage() {
 				</section>
 
 				{/* Contact CTA */}
-				<div className="flex flex-col md:flex-row items-center gap-4 p-4 rounded-xl bg-black/30 border border-gray-800">
+				<div className="flex flex-col md: flex-row items-center gap-4 p-4 rounded-xl bg-black/30 border border-gray-800">
 					<a href="tel:+13024640950" className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Call +1 302 464 0950</a>
 					<a href="mailto:kleber@ziontechgroup.com" className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white">Email kleber@ziontechgroup.com</a>
 					<a href="/pricing" className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a>
 				</div>
 			</div>
 		</div>
-	);
+	)
 }

@@ -1,4 +1,3 @@
 
-const InteractiveNavigation = () => {};
-
-export default InteractiveNavigation;
+const InteractiveNavigation = $2;
+export default InteractiveNavigation,

@@ -1,45 +1,42 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface FuturisticAIService2030 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const futuristicAIServices2030: FuturisticAIService2030[] = [
   // AI Consciousness & Evolution 2030
@@ -51,16 +48,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for developing advanced AI consciousness, self-awareness, and emotional intelligence beyond current AI capabilities.',
     features: [
-      'Advanced consciousness mapping',
-      'Multi-dimensional awareness training',
-      'Emotional intelligence evolution',
-      'Consciousness safety protocols',
-      'Ethical consciousness frameworks',
-      'Consciousness validation systems',
-      'Real-time consciousness monitoring',
-      'Consciousness integration APIs',
-      'Consciousness evolution tracking',
-      'Advanced consciousness security'
+      'Advanced consciousness mappingMulti-dimensional awareness trainingEmotional intelligence evolutionConsciousness safety protocolsEthical consciousness frameworksConsciousness validation systemsReal-time consciousness monitoringConsciousness integration APIsConsciousness evolution trackingAdvanced consciousness security'
     ],
     popular: true,
     icon: '🧠',
@@ -92,8 +80,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     launchDate: '2030-01-01',
     customers: 8,
     rating: 5.0,
-    reviews: 5
-  },
+    reviews: 5},
   // Quantum AI Computing 2030
   {
     id: 'quantum-ai-computing-2030',
@@ -103,16 +90,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform that combines quantum computing with advanced AI, enabling unprecedented computational power and AI capabilities.',
     features: [
-      'Quantum AI algorithms',
-      'Quantum neural networks',
-      'Quantum AI optimization',
-      'Quantum AI security',
-      'Quantum AI APIs',
-      'Real-time quantum AI',
-      'Quantum AI validation',
-      'Quantum AI networks',
-      'Quantum AI consciousness',
-      'Quantum AI evolution'
+      'Quantum AI algorithmsQuantum neural networksQuantum AI optimizationQuantum AI securityQuantum AI APIsReal-time quantum AIQuantum AI validationQuantum AI networksQuantum AI consciousnessQuantum AI evolution'
     ],
     popular: true,
     icon: '⚛️',
@@ -144,8 +122,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     launchDate: '2030-01-15',
     customers: 5,
     rating: 5.0,
-    reviews: 3
-  },
+    reviews: 3},
   // AI Autonomous Operations 2030
   {
     id: 'ai-autonomous-operations-2030',
@@ -155,16 +132,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for fully autonomous AI operations, enabling AI systems to operate independently with minimal human intervention.',
     features: [
-      'Autonomous AI decision making',
-      'Self-optimizing AI systems',
-      'AI self-improvement',
-      'Autonomous AI learning',
-      'AI self-healing',
-      'Autonomous AI innovation',
-      'AI self-validation',
-      'Autonomous AI security',
-      'AI self-evolution',
-      'Autonomous AI collaboration'
+      'Autonomous AI decision makingSelf-optimizing AI systemsAI self-improvementAutonomous AI learningAI self-healingAutonomous AI innovationAI self-validationAutonomous AI securityAI self-evolutionAutonomous AI collaboration'
     ],
     popular: true,
     icon: '🤖',
@@ -196,8 +164,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     launchDate: '2030-02-01',
     customers: 12,
     rating: 4.9,
-    reviews: 8
-  },
+    reviews: 8},
   // AI Metaverse Integration 2030
   {
     id: 'ai-metaverse-integration-2030',
@@ -207,16 +174,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for AI-powered metaverse experiences, enabling intelligent virtual worlds and AI-driven digital experiences.',
     features: [
-      'AI-powered metaverse creation',
-      'Intelligent virtual beings',
-      'AI-driven experiences',
-      'Metaverse AI optimization',
-      'AI metaverse APIs',
-      'Virtual AI consciousness',
-      'AI metaverse security',
-      'Metaverse AI networks',
-      'AI metaverse validation',
-      'Virtual AI evolution'
+      'AI-powered metaverse creationIntelligent virtual beingsAI-driven experiencesMetaverse AI optimizationAI metaverse APIsVirtual AI consciousnessAI metaverse securityMetaverse AI networksAI metaverse validationVirtual AI evolution'
     ],
     popular: true,
     icon: '🌌',
@@ -248,8 +206,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     launchDate: '2030-02-15',
     customers: 18,
     rating: 4.8,
-    reviews: 12
-  },
+    reviews: 12},
   // AI Space Technology 2030
   {
     id: 'ai-space-technology-2030',
@@ -259,16 +216,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for AI-powered space exploration, enabling autonomous space missions and intelligent space technology.',
     features: [
-      'AI-powered space missions',
-      'Autonomous space exploration',
-      'AI space optimization',
-      'Space AI networks',
-      'AI space security',
-      'Autonomous space operations',
-      'AI space validation',
-      'Space AI consciousness',
-      'AI space evolution',
-      'Autonomous space innovation'
+      'AI-powered space missionsAutonomous space explorationAI space optimizationSpace AI networksAI space securityAutonomous space operationsAI space validationSpace AI consciousnessAI space evolutionAutonomous space innovation'
     ],
     popular: true,
     icon: '🚀',
@@ -300,6 +248,5 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     launchDate: '2030-01-10',
     customers: 6,
     rating: 5.0,
-    reviews: 4
-  }
-];
+    reviews: 4}
+],

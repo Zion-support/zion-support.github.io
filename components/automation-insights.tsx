@@ -1,38 +1,30 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function AutomationInsightsPage() {
-  const automationTrends = [
-    {
-      id: 'ai-automation-2025',
+  const automationTrends = $2;
       title: 'AI Automation Trends 2025',
       description: 'Discover the latest trends in AI automation that are reshaping industries worldwide.',
       category: 'Trends',
       readTime: '8 min read',
-      featured: true
-    },
+      featured: true},
     {
       id: 'autonomous-systems',
       title: 'Building Autonomous Systems',
       description: 'Learn how to design and implement truly autonomous systems that operate independently.',
       category: 'Implementation',
       readTime: '12 min read',
-      featured: false
-    },
+      featured: false},
     {
       id: 'automation-roi',
       title: 'Calculating Automation ROI',
       description: 'A comprehensive guide to measuring and maximizing return on investment for automation projects.',
       category: 'Business',
       readTime: '10 min read',
-      featured: false
-    }
-  ];
+      featured: false}
+  ],
 
-  const automationTools = [
-    {
-      id: 'automation-framework',
+  const automationTools = $2;
       title: 'Zion Automation Framework',
       description: 'Our proprietary framework for building scalable automation solutions.',
       type: 'Framework',
@@ -52,11 +44,9 @@ export default function AutomationInsightsPage() {
       type: 'Process',
       complexity: 'Beginner'
     }
-  ];
+  ],
 
-  const successMetrics = [
-    {
-      metric: '227',
+  const successMetrics = $2;
       label: 'Active Automations',
       description: 'Successfully deployed and running'
     },
@@ -75,7 +65,7 @@ export default function AutomationInsightsPage() {
       label: 'Pages Generated',
       description: 'Content created autonomously'
     }
-  ];
+  ],
 
   return (
     <>
@@ -163,7 +153,7 @@ export default function AutomationInsightsPage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link 
                   href="/contact"
-                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
+                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started
                 </Link>
@@ -179,5 +169,5 @@ export default function AutomationInsightsPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

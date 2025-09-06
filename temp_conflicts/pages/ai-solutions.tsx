@@ -1,14 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function AISolutionsPage() {
   const aiSolutions = [
     {
       id: 'machine-learning',
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.',
-      features: ['Predictive Analytics', 'Pattern Recognition', 'Anomaly Detection', 'Recommendation Systems'],
+      features: ['Predictive AnalyticsPattern RecognitionAnomaly DetectionRecommendation Systems'],
       icon: '🧠',
       category: 'Core AI',
       complexity: 'Advanced'
@@ -17,7 +16,7 @@ export default function AISolutionsPage() {
       id: 'natural-language-processing',
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.',
-      features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'],
+      features: ['Text AnalysisSentiment AnalysisLanguage TranslationChatbot Development'],
       icon: '💬',
       category: 'Language AI',
       complexity: 'Advanced'
@@ -26,7 +25,7 @@ export default function AISolutionsPage() {
       id: 'computer-vision',
       title: 'Computer Vision',
       description: 'Computer vision solutions for image recognition, object detection, and visual analytics.',
-      features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Quality Control'],
+      features: ['Image RecognitionObject DetectionFacial RecognitionQuality Control'],
       icon: '👁️',
       category: 'Visual AI',
       complexity: 'Advanced'
@@ -35,7 +34,7 @@ export default function AISolutionsPage() {
       id: 'autonomous-systems',
       title: 'Autonomous Systems',
       description: 'Self-operating systems that can make decisions and take actions independently.',
-      features: ['Decision Making', 'Self-Learning', 'Adaptive Behavior', 'Continuous Improvement'],
+      features: ['Decision MakingSelf-LearningAdaptive BehaviorContinuous Improvement'],
       icon: '🤖',
       category: 'Autonomy',
       complexity: 'Expert'
@@ -44,7 +43,7 @@ export default function AISolutionsPage() {
       id: 'predictive-analytics',
       title: 'Predictive Analytics',
       description: 'Data-driven insights that help predict future trends and behaviors.',
-      features: ['Trend Analysis', 'Risk Assessment', 'Forecasting', 'Behavioral Prediction'],
+      features: ['Trend AnalysisRisk AssessmentForecastingBehavioral Prediction'],
       icon: '📊',
       category: 'Analytics',
       complexity: 'Intermediate'
@@ -53,39 +52,39 @@ export default function AISolutionsPage() {
       id: 'ai-automation',
       title: 'AI-Powered Automation',
       description: 'Intelligent automation that learns and improves over time.',
-      features: ['Process Automation', 'Workflow Optimization', 'Intelligent Routing', 'Adaptive Workflows'],
+      features: ['Process AutomationWorkflow OptimizationIntelligent RoutingAdaptive Workflows'],
       icon: '⚡',
       category: 'Automation',
       complexity: 'Intermediate'
     }
-  ];
+  ],
 
   const useCases = [
     {
       industry: 'Manufacturing',
-      solutions: ['Quality Control', 'Predictive Maintenance', 'Supply Chain Optimization'],
+      solutions: ['Quality ControlPredictive MaintenanceSupply Chain Optimization'],
       icon: '🏭'
     },
     {
       industry: 'Healthcare',
-      solutions: ['Diagnostic Support', 'Patient Care Optimization', 'Drug Discovery'],
+      solutions: ['Diagnostic SupportPatient Care OptimizationDrug Discovery'],
       icon: '🏥'
     },
     {
       industry: 'Finance',
-      solutions: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading'],
+      solutions: ['Fraud DetectionRisk AssessmentAlgorithmic Trading'],
       icon: '💳'
     },
     {
       industry: 'Retail',
-      solutions: ['Customer Segmentation', 'Inventory Management', 'Personalized Marketing'],
+      solutions: ['Customer SegmentationInventory ManagementPersonalized Marketing'],
       icon: '🛍️'
     }
-  ];
+  ],
 
   const technologies = [
-    'TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenAI GPT', 'BERT', 'YOLO', 'Keras', 'Pandas'
-  ];
+    'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas'
+  ],
 
   return (
     <>
@@ -218,7 +217,7 @@ export default function AISolutionsPage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link 
                   href="/contact"
-                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
+                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Start Your AI Journey
                 </Link>
@@ -234,5 +233,5 @@ export default function AISolutionsPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

@@ -13,8 +13,6 @@ import Spinner from '@/components/ui/spinner';
 import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary';
 import { useCurrency } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
@@ -28,8 +26,8 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
     tags: ["AI", "Machine Learning", "GPU"],
     author: { name: "NVIDIA", id: "nvidia" },
-    images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-15T10:30:00.000Z",
+    images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto = $2;
+    createdAt: "2024-01-15T10: 30: 00.000Z",
     rating: 4.9,
     reviewCount: 27,
     location: "Santa Clara, CA",
@@ -46,8 +44,8 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     specifications: ["2U Rack", "Dual Xeon", "128GB RAM", "2TB SSD"],
     tags: ["Server", "Enterprise", "Virtualization"],
     author: { name: "Dell", id: "dell" },
-    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-12T14:20:00.000Z",
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto = $2;
+    createdAt: "2024-01-12T14: 20: 00.000Z",
     rating: 4.7,
     reviewCount: 34,
     location: "Austin, TX",
@@ -64,8 +62,8 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     specifications: ["48x 100GbE", "QSFP28", "Line Rate"],
     tags: ["Switch", "100GbE", "Datacenter"],
     author: { name: "Cisco", id: "cisco" },
-    images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-10T09:15:00.000Z",
+    images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto = $2;
+    createdAt: "2024-01-10T09: 15: 00.000Z",
     rating: 4.8,
     reviewCount: 19,
     location: "San Jose, CA",
@@ -82,8 +80,8 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     specifications: ["2U Rack", "Dual Xeon", "256GB RAM", "4TB SSD"],
     tags: ["Server", "Enterprise", "Compute"],
     author: { name: "HPE", id: "hpe" },
-    images: ["https://images.unsplash.com/photo-1555617981-dac388a08846?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-18T11:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-1555617981-dac388a08846?auto = $2;
+    createdAt: "2024-01-18T11: 00: 00.000Z",
     rating: 4.6,
     reviewCount: 21,
     location: "Houston, TX",
@@ -100,8 +98,8 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     specifications: ["24TB Flash", "NVMe", "Active-Active"],
     tags: ["Storage", "Flash", "NVMe"],
     author: { name: "NetApp", id: "netapp" },
-    images: ["https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-18T09:45:00.000Z",
+    images: ["https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto = $2;
+    createdAt: "2024-01-18T09: 45: 00.000Z",
     rating: 4.7,
     reviewCount: 18,
     location: "Chicago, IL",
@@ -118,126 +116,33 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     specifications: ["48x10GbE", "6x40GbE", "Wire Speed"],
     tags: ["Switch", "10GbE", "Datacenter"],
     author: { name: "Arista", id: "arista" },
-    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-17T12:10:00.000Z",
+    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto = $2;
+    createdAt: "2024-01-17T12: 10: 00.000Z",
     rating: 4.5,
     reviewCount: 16,
     location: "Sunnyvale, CA",
     availability: "In Stock"
   }
-];
+],
 
 // Market insights component
-const EquipmentMarketInsights = ({ stats }: { stats: any }) => (
-  <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
-    <CardContent className="p-6">
-      <div className="flex items-center gap-2 mb-4">
-        <TrendingUp className="h-5 w-5 text-blue-400" />
-        <h3 className="text-lg font-semibold">Equipment Market Insights</h3>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="text-center">
-          <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice / 1000)}k</div>
-          <div className="text-sm text-muted-foreground">Avg Price</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
-          <div className="text-sm text-muted-foreground">Avg Rating</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-purple-400">{stats.totalEquipment}</div>
-          <div className="text-sm text-muted-foreground">Total Items</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-orange-400">{stats.inStockCount}</div>
-          <div className="text-sm text-muted-foreground">In Stock</div>
-        </div>
-      </div>
-    </CardContent>
-  </Card>
-);
-
+const EquipmentMarketInsights = $2;
 // Filter controls
 const EquipmentFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
 }: any) => (
-  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
-    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
-    <div className="flex items-center gap-2">
-      <Filter className="h-4 w-4 text-muted-foreground" />
-      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
-        <option value="">All Categories</option>
-        {categories.map((cat: string) => <option key={cat} value={cat}>{cat}</option>)}
-      </select>
-    </div>
-    <div className="flex items-center gap-2">
-      <SortAsc className="h-4 w-4 text-muted-foreground" />
-      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
-        <option value="newest">Newest First</option>
-        <option value="price-low">Price: Low to High</option>
-        <option value="price-high">Price: High to Low</option>
-        <option value="rating">Highest Rated</option>
-      </select>
-    </div>
-    <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
-      <Star className="h-4 w-4 mr-1" />
-      {showRecommended ? "All Equipment" : "Recommended"}
-    </Button>
-  </div>
-);
-
+  <div className = $2;
 // Equipment card
-const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing; onViewDetails: () => void }) => {
-  const { formatPrice } = useCurrency();
+const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
+  const { formatPrice } = useCurrency($2);
   return (
-    <Card className="h-full hover:shadow-lg transition-shadow">
-      <CardHeader className="pb-3">
-        <div className="flex items-start justify-between">
-          <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-lg truncate">{equipment.title}</h3>
-            <p className="text-sm text-muted-foreground">{equipment.category}</p>
-            <div className="flex items-center gap-2 mt-2">
-              <Badge variant="secondary" className="text-xs">{equipment.brand}</Badge>
-            </div>
-          </div>
-          <div className="text-right">
-            <div className="text-xl font-bold text-blue-600">{formatPrice(equipment.price ?? 0)}</div>
-            <Badge variant={equipment.availability === "In Stock" ? "default" : "outline"} className="text-xs">
-              {equipment.availability}
-            </Badge>
-          </div>
-        </div>
-      </CardHeader>
-      <CardContent className="pt-0">
-        <div className="flex items-center gap-4 mb-3">
-          <div className="flex items-center gap-1">
-            <Star className="h-4 w-4 text-yellow-500 fill-current" />
-            <span className="text-sm font-medium">{equipment.rating?.toFixed(1)}</span>
-            <span className="text-xs text-muted-foreground">({equipment.reviewCount} reviews)</span>
-          </div>
-        </div>
-        <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{equipment.description}</p>
-        <div className="flex items-center justify-between">
-          <span className="text-sm font-medium">{equipment.category}</span>
-          <Button size="sm" onClick={onViewDetails}>
-            <ShoppingCart className="h-4 w-4 mr-1" />
-            View Details
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
-  );
-};
-
+    <Card className = $2;
 // Loading grid
 const EquipmentLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
-  </div>
-);
-
+    {Array.from({ length: count}).map((_, i) => <SkeletonCard key = $2;
 // Error fallback component
-function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) {
+function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, resetErrorBoundary: () => void }) {
   return (
     <div className="container py-8">
       <Card className="border-red-200 bg-red-50">
@@ -259,87 +164,80 @@ function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error; r
         </CardContent>
       </Card>
     </div>
-  );
+  )
 }
 
 // Main component
 function EquipmentPageContent() {
-  const router = useRouter();
-  const [sortBy, setSortBy] = useState('newest');
-  const [filterCategory, setFilterCategory] = useState('');
-  const [showRecommended, setShowRecommended] = useState(false);
-
+  const router = useRouter($2);
+  const [sortBy, setSortBy] = useState($2);
+  const [filterCategory, setFilterCategory] = useState($2);
+  const [showRecommended, setShowRecommended] = useState($2);
   // Generate a consistent seed based on current filters for deterministic data
   const dataSeed = useMemo(() => {
-    return `equipment-${filterCategory}-${showRecommended}`;
-  }, [filterCategory, showRecommended]);
+    return `equipment-${filterCategory}-${showRecommended}`
+  }, [filterCategory, showRecommended]),
 
   const fetchEquipment = useCallback(async (page: number, limit: number) => {
     // Simulate realistic API delay
-    await new Promise(resolve => setTimeout(resolve, 300));
+    await new Promise(resolve => setTimeout(resolve, 300)),
 
     try {
       // Generate consistent virtual dataset using the seed
-      const VIRTUAL_DATASET_SIZE = 150;
-      const baseVirtualEquipment = generateDatacenterEquipment(
-        VIRTUAL_DATASET_SIZE,
-        INITIAL_EQUIPMENT.length,
-        dataSeed
-      );
+      const VIRTUAL_DATASET_SIZE = $2;
+      const baseVirtualEquipment = generateDatacenterEquipment($2);
       let fullVirtualDataset: ProductListing[] = [
         ...INITIAL_EQUIPMENT,
         ...baseVirtualEquipment
-      ];
+      ],
 
       // Deduplicate by ID in case of overlaps
-      const dedupMap = new Map<string, ProductListing>();
+      const dedupMap = new Map<string, ProductListing>(),
       for (const item of fullVirtualDataset) {
         if (!dedupMap.has(item.id)) {
-          dedupMap.set(item.id, item);
+          dedupMap.set(item.id, item)
         }
       }
-      fullVirtualDataset = Array.from(dedupMap.values());
-
+      fullVirtualDataset = $2;
       // Apply category filtering
-      let processedDataset = fullVirtualDataset;
+      let processedDataset = $2;
       if (filterCategory) {
-        processedDataset = processedDataset.filter(e => e.category === filterCategory);
+        processedDataset = processedDataset.filter(e => e.category === filterCategory)
       }
 
       // Apply recommended filtering
       if (showRecommended) {
-        processedDataset = getRecommendedEquipment(processedDataset);
+        processedDataset = getRecommendedEquipment(processedDataset)
       }
 
       // Sort the processed dataset
       processedDataset.sort((a, b) => {
         switch (sortBy) {
           case 'price-low':
-            return (a.price || 0) - (b.price || 0);
+            return (a.price || 0) - (b.price || 0),
           case 'price-high':
-            return (b.price || 0) - (a.price || 0);
+            return (b.price || 0) - (a.price || 0),
           case 'rating':
-            return (b.rating || 0) - (a.rating || 0);
+            return (b.rating || 0) - (a.rating || 0),
           default: // 'newest'
-            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime();
+            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
         }
-      });
+      }),
 
       // Slice for pagination
-      const startIndex = (page - 1) * limit;
-      const endIndex = startIndex + limit;
-      const items = processedDataset.slice(startIndex, endIndex);
-
+      const startIndex = $2;
+      const endIndex = $2;
+      const items = processedDataset.slice($2);
       return {
         items,
         hasMore: endIndex < processedDataset.length,
         total: processedDataset.length
-      };
+      }
     } catch (error) {
-      logErrorToProduction('Error in fetchEquipment:', { data: error });
-      throw new Error('Failed to load equipment data. Please try again.');
+      logErrorToProduction($2);
+      throw new Error('Failed to load equipment data. Please try again.')
     }
-  }, [sortBy, filterCategory, showRecommended, dataSeed]);
+  }, [sortBy, filterCategory, showRecommended, dataSeed]),
 
   const {
     items: equipment,
@@ -352,39 +250,37 @@ function EquipmentPageContent() {
     refresh,
     scrollToTop,
     loadMore
-  } = useInfiniteScrollPagination(fetchEquipment, 12);
-
+  } = useInfiniteScrollPagination($2);
   // Refresh when filters change
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      refresh();
-    }, 100); // Small delay to prevent rapid successive refreshes
+      refresh()
+    }, 100), // Small delay to prevent rapid successive refreshes
 
-    return () => clearTimeout(timeoutId);
-  }, [sortBy, filterCategory, showRecommended, refresh]);
+    return () => clearTimeout(timeoutId)
+  }, [sortBy, filterCategory, showRecommended, refresh]),
 
-  const marketStats = useMemo(() => {
-    if (equipment.length === 0) return null;
-    return getEquipmentMarketStats(equipment);
-  }, [equipment]);
+  const marketStats = $2;
+    return getEquipmentMarketStats(equipment)
+  }, [equipment]),
 
   const categories = useMemo(() => {
     // Use all possible categories, not just from current items
-    return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"];
-  }, []);
+    return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"]
+  }, []),
 
-  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState($2);
   useEffect(() => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 800);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleScroll = () => setShowScrollTop($2);
+    window.addEventListener($2);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
 
   // Loading state
   if (loading && equipment.length === 0) {
     return (
       <div className="container py-8">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
+        <motion.div initial={{ opacity: 0, y: 20}} animate={{ opacity: 1, y: 0}} className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Datacenter Equipment
           </h1>
@@ -392,7 +288,7 @@ function EquipmentPageContent() {
         </motion.div>
         <EquipmentLoadingGrid />
       </div>
-    );
+    )
   }
 
   // Error state
@@ -414,12 +310,12 @@ function EquipmentPageContent() {
           </div>
         </div>
       </div>
-    );
+    )
   }
 
   return (
     <div className="container py-8">
-      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
+      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0}}>
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
           Datacenter Equipment
         </h1>
@@ -427,12 +323,12 @@ function EquipmentPageContent() {
       </motion.div>
 
       {marketStats && (
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+        <motion.div initial={{ opacity: 0, y: 20}} animate={{ opacity: 1, y: 0}} transition={{ delay: 0.2 }}>
           <EquipmentMarketInsights stats={marketStats} />
         </motion.div>
       )}
 
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+      <motion.div initial={{ opacity: 0, y: 20}} animate={{ opacity: 1, y: 0}} transition={{ delay: 0.3 }}>
         <EquipmentFilterControls
           sortBy={sortBy}
           setSortBy={setSortBy}
@@ -445,14 +341,14 @@ function EquipmentPageContent() {
         />
       </motion.div>
 
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0}} animate={{ opacity: 1}} transition={{ delay: 0.4 }}>
         <AnimatePresence mode="popLayout">
           {equipment.map((item, index) => (
             <motion.div
               key={item.id} 
               ref={index === equipment.length - 1 ? lastElementRef : null}
               initial={{ opacity: 0, scale: 0.9 }} 
-              animate={{ opacity: 1, scale: 1 }} 
+              animate={{ opacity: 1, scale: 1}} 
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }} 
               whileHover={{ scale: 1.02 }}
@@ -462,12 +358,12 @@ function EquipmentPageContent() {
                 onViewDetails={() => {
                   if (typeof window !== 'undefined') {
                     try {
-                      sessionStorage.setItem(`equipment:${item.id}`, JSON.stringify(item));
+                      sessionStorage.setItem(`equipment:${item.id}`, JSON.stringify(item))
                     } catch {
                       // ignore storage errors
                     }
                   }
-                  router.push(`/equipment/${item.id}`);
+                  router.push(`/equipment/${item.id}`)
                 }}
               />
             </motion.div>
@@ -476,7 +372,7 @@ function EquipmentPageContent() {
       </motion.div>
 
       {(isFetching || loading) && equipment.length > 0 && (
-        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <motion.div className="mt-8" initial={{ opacity: 0}} animate={{ opacity: 1}}>
           <EquipmentLoadingGrid count={4} />
         </motion.div>
       )}
@@ -499,7 +395,7 @@ function EquipmentPageContent() {
       )}
 
       {!hasMore && equipment.length > 0 && (
-        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0}} animate={{ opacity: 1}}>
           <div className="text-muted-foreground text-lg mb-2">🏭 You've explored all available equipment!</div>
           <div className="text-sm text-muted-foreground">Showing {equipment.length} datacenter equipment items</div>
         </motion.div>
@@ -510,9 +406,9 @@ function EquipmentPageContent() {
           <motion.button 
             onClick={scrollToTop} 
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
-            initial={{ opacity: 0, scale: 0 }} 
-            animate={{ opacity: 1, scale: 1 }} 
-            exit={{ opacity: 0, scale: 0 }}
+            initial={{ opacity: 0, scale: 0}} 
+            animate={{ opacity: 1, scale: 1}} 
+            exit={{ opacity: 0, scale: 0}}
             whileHover={{ scale: 1.1 }} 
             whileTap={{ scale: 0.9 }}
           >
@@ -521,7 +417,7 @@ function EquipmentPageContent() {
         )}
       </AnimatePresence>
     </div>
-  );
+  )
 }
 
 // Main export with error boundary
@@ -530,5 +426,5 @@ export default function EquipmentPage() {
     <EquipmentErrorBoundary>
       <EquipmentPageContent />
     </EquipmentErrorBoundary>
-  );
+  )
 }

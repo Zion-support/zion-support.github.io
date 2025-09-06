@@ -4,12 +4,9 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger} from "@/components/ui/accordion";
+  AccordionTrigger} from "@/components/ui/accordion",
 import { FileText } from "lucide-react";
-
-const faqs = [
-  {
-    question: "How do I publish my AI product or service on Zion?",
+const faqs = $2;
     answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."},
   {
     question: "What types of AI jobs can I find or post on Zion?",
@@ -25,7 +22,7 @@ const faqs = [
     answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."},
   {
     question: "Are there any fees for listing my products or services?",
-    answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
+    answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}],
 
 export function FaqSection() {
   return (
@@ -59,5 +56,5 @@ export function FaqSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

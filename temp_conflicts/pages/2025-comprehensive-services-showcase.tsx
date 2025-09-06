@@ -5,7 +5,7 @@ import {
   Brain, Building, Target, Cpu, Shield, 
   Check, Phone, Mail, MapPin,
   TrendingUp, Zap, Globe
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new service data
 import { advancedBusinessIntelligenceServices2025 } from '../data/2025-advanced-business-intelligence-services';
@@ -18,9 +18,8 @@ import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecuri
 import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services';
 import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions';
 import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
-
 const ComprehensiveServicesShowcase2025 = () => {
-  const [activeTab, setActiveTab] = useState('all');
+  const [activeTab, setActiveTab] = useState('all'),
 
   const allServices = [
     ...advancedBusinessIntelligenceServices2025,
@@ -28,35 +27,35 @@ const ComprehensiveServicesShowcase2025 = () => {
     ...innovative2025ITInfrastructureServices,
     ...innovativeMicroSaasSolutions2025,
     ...cuttingEdgeAIServices2025
-  ];
+  ],
 // Helper function to get service pricing
 const getServicePricing = (service: any) => {
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`;
-  if (typeof service.price === 'string') return service.price;
-  return 'Contact for pricing';
-};
+  if (service.pricing?.starter) return service.pricing.starter,
+  if (service.price?.monthly) return `$${service.price.monthly}/month`,
+  if (typeof service.price === 'string') return service.price,
+  return 'Contact for pricing'
+},
 
 // Helper function to get service features
 const getServiceFeatures = (service: any) => {
-  return service.keyFeatures || service.features || [];
-};
+  return service.keyFeatures || service.features || []
+},
 
 // Helper function to get service setup time
 const getServiceSetupTime = (service: any) => {
-  if (service.setupTime) return service.setupTime;
-  if (service.pricing?.setupTime) return service.pricing.setupTime;
-  if (service.price?.setupTime) return service.price.setupTime;
-  return 'N/A';
-};
+  if (service.setupTime) return service.setupTime,
+  if (service.pricing?.setupTime) return service.pricing.setupTime,
+  if (service.price?.setupTime) return service.price.setupTime,
+  return 'N/A'
+},
 
 // Helper function to get service trial days
 const getServiceTrialDays = (service: any) => {
-  if (service.trialDays) return service.trialDays;
-  if (service.pricing?.trialDays) return service.pricing.trialDays;
-  if (service.price?.trialDays) return service.price.trialDays;
-  return 'N/A';
-};
+  if (service.trialDays) return service.trialDays,
+  if (service.pricing?.trialDays) return service.pricing.trialDays,
+  if (service.price?.trialDays) return service.price.trialDays,
+  return 'N/A'
+},
 
 // All services combined
 const allServices = [
@@ -65,7 +64,7 @@ const allServices = [
       ...advancedCloudDevOpsServices2025,
   ...industrySpecificSolutions,
   ...emergingTechnologyServices
-];
+],
 
   const categories = [
     { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5" /> },
@@ -74,18 +73,18 @@ const allServices = [
     { id: 'it-infrastructure', name: 'IT Infrastructure', icon: <Building className="w-5 h-5" /> },
     { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> },
     { id: 'ai-services', name: 'AI Services', icon: <Cpu className="w-5 h-5" /> }
-  ];
+  ],
 
   const filteredServices = activeTab === 'all' 
     ? allServices 
     : allServices.filter(service => {
-        if (activeTab === 'business-intelligence') return service.category?.includes('Business Intelligence') || service.category?.includes('Analytics');
-        if (activeTab === 'ai-automation') return service.category?.includes('AI Automation');
-        if (activeTab === 'it-infrastructure') return service.category?.includes('IT Infrastructure');
-        if (activeTab === 'micro-saas') return service.category?.includes('Micro SAAS');
-        if (activeTab === 'ai-services') return service.category?.includes('AI Services');
-        return true;
-      });
+        if (activeTab === 'business-intelligence') return service.category?.includes('Business Intelligence') || service.category?.includes('Analytics'),
+        if (activeTab === 'ai-automation') return service.category?.includes('AI Automation'),
+        if (activeTab === 'it-infrastructure') return service.category?.includes('IT Infrastructure'),
+        if (activeTab === 'micro-saas') return service.category?.includes('Micro SAAS'),
+        if (activeTab === 'ai-services') return service.category?.includes('AI Services'),
+        return true
+      }),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
@@ -503,7 +502,7 @@ const allServices = [
 
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -548,7 +547,7 @@ const allServices = [
         </div>
       </section>
     </div>
-  );
-};
+  )
+},
 
-export default ComprehensiveServicesShowcase2025;
+export default ComprehensiveServicesShowcase2025,

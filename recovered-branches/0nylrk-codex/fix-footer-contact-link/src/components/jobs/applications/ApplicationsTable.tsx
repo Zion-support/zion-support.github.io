@@ -11,20 +11,19 @@ import {
   TableHead,
   TableHeader,
   TableRow
-} from "@/components/ui/table";
+} from "@/components/ui/table",
 import { ApplicationActions } from "./ApplicationActions";
 import { StatusBadge } from "./StatusBadge";
 import { Briefcase, User } from "lucide-react";
 import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
-
 interface ApplicationsTableProps {
-  applications: JobApplication[];
-  processingId: string | null;
-  onViewApplication: (applicationId: string) => Promise<void>;
-  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
-  onViewScore: (application: JobApplication) => void;
+  applications: JobApplication[],
+  processingId: string | null,
+  onViewApplication: (applicationId: string) => Promise<void>,
+  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,
+  onViewScore: (application: JobApplication) => void
 }
 
 export function ApplicationsTable({ 
@@ -34,21 +33,18 @@ export function ApplicationsTable({
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
-  const [hireModalOpen, setHireModalOpen] = useState(false);
-  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
+  const [hireModalOpen, setHireModalOpen] = useState($2);
+  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
   const handleHireClick = (application: JobApplication) => {
-    setSelectedApplication(application);
-    setHireModalOpen(true);
-  };
+    setSelectedApplication($2);
+    setHireModalOpen(true)
+  },
   
-  const handleHireConfirmed = () => {
-    // This will be called after the hire confirmation is completed
-    toast({
-      title: "Hiring process initiated",
+  const handleHireConfirmed = $2;
       description: "Offer has been sent to the talent."
-    });
-  };
+    })
+  },
   
   return (
     <>
@@ -138,5 +134,5 @@ export function ApplicationsTable({
         onConfirm={handleHireConfirmed}
       />
     </>
-  );
+  )
 }

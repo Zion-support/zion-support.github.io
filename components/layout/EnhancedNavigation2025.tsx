@@ -1,4 +1,4 @@
-'use client';
+'use client',
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -12,13 +12,11 @@ import {
   Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight,
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb,
   Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
-} from 'lucide-react';
+} from 'lucide-react',
 
-const navigationItems = [
-  {
-    name: 'All Services',
+const navigationItems = $2;
     href: '/2025-innovative-services-showcase',
-    icon: <Globe className="w-5 h-5" />,
+    icon: <Globe className = $2;
     description: 'Complete portfolio of all technology services',
     badge: 'New',
     children: [
@@ -40,7 +38,7 @@ const navigationItems = [
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
+    icon: <Brain className = $2;
     description: 'Revolutionary AI consciousness and emotional intelligence',
     badge: 'New',
     children: [
@@ -75,7 +73,7 @@ const navigationItems = [
   {
     name: 'AI Automation',
     href: '/ai-automation-services',
-    icon: <Zap className="w-5 h-5" />,
+    icon: <Zap className = $2;
     description: 'Advanced AI-powered automation solutions',
     badge: 'Hot',
     children: [
@@ -94,7 +92,7 @@ const navigationItems = [
   {
     name: 'AI Automation',
     href: '/ai-automation-services',
-    icon: <Zap className="w-5 h-5" />,
+    icon: <Zap className = $2;
     description: 'Advanced AI-powered automation solutions',
     badge: 'Hot',
     children: [
@@ -113,7 +111,7 @@ const navigationItems = [
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum-services',
-    icon: <Atom className="w-5 h-5" />,
+    icon: <Atom className = $2;
     description: 'Quantum computing and breakthrough technologies',
     badge: 'Hot',
     children: [
@@ -137,7 +135,7 @@ const navigationItems = [
   {
     name: 'Cybersecurity',
     href: '/cybersecurity-services',
-    icon: <Shield className="w-5 h-5" />,
+    icon: <Shield className = $2;
     description: 'Next-generation cybersecurity solutions',
     badge: 'Hot',
     children: [
@@ -156,7 +154,7 @@ const navigationItems = [
   {
     name: 'Cybersecurity',
     href: '/cybersecurity-services',
-    icon: <Shield className="w-5 h-5" />,
+    icon: <Shield className = $2;
     description: 'Next-generation cybersecurity solutions',
     badge: 'Hot',
     children: [
@@ -175,7 +173,7 @@ const navigationItems = [
   {
     name: 'Enterprise IT',
     href: '/enterprise-it',
-    icon: <Cpu className="w-5 h-5" />,
+    icon: <Cpu className = $2;
     description: 'Enterprise solutions and infrastructure',
     children: [
       { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', description: 'Future-proof cloud security' },
@@ -198,7 +196,7 @@ const navigationItems = [
   {
     name: 'Blockchain & Web3',
     href: '/blockchain-web3-services',
-    icon: <Globe className="w-5 h-5" />,
+    icon: <Globe className = $2;
     description: 'Advanced blockchain and Web3 solutions',
     badge: 'New',
     children: [
@@ -217,7 +215,7 @@ const navigationItems = [
   {
     name: 'Micro SAAS',
     href: '/micro-saas',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className = $2;
     description: 'Innovative business solutions for modern enterprises',
     badge: 'Popular',
     children: [
@@ -236,7 +234,7 @@ const navigationItems = [
   {
     name: 'Healthcare & Biotech',
     href: '/healthcare-biotech-services',
-    icon: <Heart className="w-5 h-5" />,
+    icon: <Heart className = $2;
     description: 'AI-powered healthcare and biotechnology',
     badge: 'New',
     children: [
@@ -255,7 +253,7 @@ const navigationItems = [
   {
     name: 'Healthcare & Biotech',
     href: '/healthcare-biotech-services',
-    icon: <Heart className="w-5 h-5" />,
+    icon: <Heart className = $2;
     description: 'AI-powered healthcare and biotechnology',
     badge: 'New',
     children: [
@@ -274,7 +272,7 @@ const navigationItems = [
   {
     name: 'Solutions',
     href: '/solutions',
-    icon: <Target className="w-5 h-5" />,
+    icon: <Target className = $2;
     description: 'Industry-specific solutions',
     children: [
       { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },
@@ -288,7 +286,7 @@ const navigationItems = [
   {
     name: 'Research & Development',
     href: '/research-development',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className = $2;
     description: 'Cutting-edge research and development services',
     children: [
       { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed research' },
@@ -302,7 +300,7 @@ const navigationItems = [
   {
     name: 'Industry Solutions',
     href: '/industry-solutions',
-    icon: <Truck className="w-5 h-5" />,
+    icon: <Truck className = $2;
     description: 'Specialized solutions for specific industries',
     children: [
       { name: 'Healthcare AI', href: '/healthcare-ai-solutions', description: 'Medical AI applications' },
@@ -316,7 +314,7 @@ const navigationItems = [
   {
     name: 'Pricing & Plans',
     href: '/pricing',
-    icon: <DollarSign className="w-5 h-5" />,
+    icon: <DollarSign className = $2;
     description: 'Flexible pricing options for all services',
     children: [
       { name: '2025 Pricing', href: '/pricing-2025', description: 'Current year pricing' },
@@ -330,7 +328,7 @@ const navigationItems = [
   {
     name: 'Resources',
     href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className = $2;
     description: 'Educational resources and documentation',
     children: [
       { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
@@ -344,7 +342,7 @@ const navigationItems = [
   {
     name: 'Support',
     href: '/support',
-    icon: <Settings className="w-5 h-5" />,
+    icon: <Settings className = $2;
     description: 'Technical support and customer service',
     children: [
       { name: 'Help Center', href: '/help', description: 'Self-service support' },
@@ -355,30 +353,25 @@ const navigationItems = [
       { name: 'Status Page', href: '/status', description: 'Service status' }
     ]
   }
-];
+],
 
-const contactInfo = {
-  phone: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'
-};
+},
 
 export default function EnhancedNavigation2025() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-
+  const [isOpen, setIsOpen] = useState($2);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null),
+  const [isScrolled, setIsScrolled] = useState($2);
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleScroll = $2;
+    window.addEventListener($2);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
-
+  const toggleMenu = () => setIsOpen($2);
+  const closeMenu = () => setIsOpen($2);
   return (
     <>
       {/* Top Contact Bar */}
@@ -444,9 +437,9 @@ export default function EnhancedNavigation2025() {
                   <AnimatePresence>
                     {activeSubmenu === item.name && (
                       <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
+                        initial={{ opacity: 0, y: 10}}
+                        animate={{ opacity: 1, y: 0}}
+                        exit={{ opacity: 0, y: 10}}
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
                       >
@@ -532,7 +525,7 @@ export default function EnhancedNavigation2025() {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0}}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
                       {item.badge && (
@@ -548,9 +541,9 @@ export default function EnhancedNavigation2025() {
 
                   {activeDropdown === item.name && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
+                      initial={{ opacity: 0, height: 0}}
                       animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
+                      exit={{ opacity: 0, height: 0}}
                       transition={{ duration: 0.2 }}
                       className="ml-8 mt-2 space-y-2"
                     >
@@ -624,75 +617,8 @@ export default function EnhancedNavigation2025() {
                       <AnimatePresence>
                         {activeSubmenu === item.name && (
                           <motion.div
-                            initial={{ opacity: 0, height: 0 }}
+                            initial={{ opacity: 0, height: 0}}
                             animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="ml-8 space-y-2"
-                          >
-                            {item.submenu?.map((subitem) => (
-                              <Link
-                                key={subitem.name}
-                                href={subitem.href}
-                                onClick={closeMenu}
-                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200"
-                              >
-                                <h4 className="text-white font-medium">{subitem.name}</h4>
-                                <p className="text-sm text-gray-400 mt-1">{subitem.description}</p>
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Mobile CTA */}
-                <div className="mt-8 space-y-4">
-                  <Link
-                    href="/pricing"
-                    onClick={closeMenu}
-                    className="block w-full text-center px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-200"
-                  >
-                    View Pricing
-                  </Link>
-                  <Link
-                    href="/contact"
-                    onClick={closeMenu}
-                    className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                  >
-                    Contact Us
-                  </Link>
-                </div>
-
-                {/* Mobile Contact Info */}
-                <div className="mt-8 pt-6 border-t border-gray-700/50">
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-center space-x-3 text-gray-400">
-                      <Phone className="w-4 h-4 text-cyan-400" />
-                      <span>{contactInfo.phone}</span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-gray-400">
-                      <Mail className="w-4 h-4 text-purple-400" />
-                      <span>{contactInfo.email}</span>
-                    </div>
-                    <div className="flex items-start space-x-3 text-gray-400">
-                      <MapPin className="w-4 h-4 text-green-400 mt-0.5" />
-                      <span className="text-xs">{contactInfo.address}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Spacer for fixed navigation */}
-      <div className="h-20" />
-    </>
-  );
-};
-
-export default EnhancedNavigation2025;
+                            exit={{ opacity: 0, height: 0}}
+                            transition = $2;
+export default EnhancedNavigation2025,

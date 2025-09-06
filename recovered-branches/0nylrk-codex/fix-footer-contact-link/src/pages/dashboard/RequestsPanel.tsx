@@ -7,19 +7,16 @@ import { useAuth } from "@/hooks/useAuth";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { QuoteDetails } from "@/components/quotes/QuoteDetails";
 import { 
-  RequestsHeader, 
+  RequestsHeader,
   QuoteRequestsList 
-} from "@/components/quotes";
+} from "@/components/quotes",
 import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
-
 export default function RequestsPanel() {
-  const { user } = useAuth();
-  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
-  
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
-
+  const { user } = useAuth($2);
+  const isTalent = $2;
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
+  const [showDetails, setShowDetails] = useState($2);
   const {
     quotes,
     unreadCount,
@@ -31,22 +28,15 @@ export default function RequestsPanel() {
     markAsViewed,
     markAsResponded,
     toggleArchive
-  } = useTalentQuotes();
-
+  } = useTalentQuotes($2);
   const handleViewDetails = (quote: QuoteRequest) => {
-    setSelectedQuote(quote);
-    setShowDetails(true);
-    
+    setSelectedQuote($2);
+    setShowDetails($2);
     // If status is new, mark as viewed
-    if (quote.status === 'new') {
-      markAsViewed(quote.id);
-    }
-  };
-
+    if (quote.status = $2;
   // Filter quotes by archive status
-  const activeQuotes = quotes.filter(q => !q.is_archived);
-  const archivedQuotes = quotes.filter(q => q.is_archived);
-
+  const activeQuotes = quotes.filter($2);
+  const archivedQuotes = quotes.filter($2);
   return (
     <ProtectedRoute>
       <div>
@@ -98,13 +88,13 @@ export default function RequestsPanel() {
           quote={selectedQuote}
           isOpen={showDetails}
           onClose={() => {
-            setShowDetails(false);
-            setSelectedQuote(null);
+            setShowDetails($2);
+            setSelectedQuote(null)
           }}
         />
         
         <Footer />
       </div>
     </ProtectedRoute>
-  );
+  )
 }

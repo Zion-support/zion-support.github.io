@@ -1,72 +1,66 @@
 import React, { useState } from 'react';
-
-type PersonaConfig = {
-  voice: 'Visionary' | 'Grounded' | 'Technical';
-  language: string;
-  cloneStyleText?: string;
-};
+type PersonaConfig = $2;
+  language: string,
+  cloneStyleText?: string
+},
 
 export default function StudioHostPage() {
-  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' });
-  const [inviteeName, setInviteeName] = useState('');
-  const [inviteeBio, setInviteeBio] = useState('');
-  const [topic, setTopic] = useState('');
-  const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
-
-  const [generating, setGenerating] = useState(false);
-  const [episode, setEpisode] = useState<any>(null);
-  const [synthesizing, setSynthesizing] = useState(false);
-  const [publishing, setPublishing] = useState(false);
-
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),
+  const [inviteeName, setInviteeName] = useState($2);
+  const [inviteeBio, setInviteeBio] = useState($2);
+  const [topic, setTopic] = useState($2);
+  const [operatorPrompt, setOperatorPrompt] = useState($2);
+  const [generating, setGenerating] = useState($2);
+  const [episode, setEpisode] = useState<any>(null),
+  const [synthesizing, setSynthesizing] = useState($2);
+  const [publishing, setPublishing] = useState($2);
   const handleGenerate = async () => {
-    setGenerating(true);
+    setGenerating($2);
     try {
       const res = await fetch('/api/podcast/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ persona, invitee: { name: inviteeName, bio: inviteeBio }, topic, operatorPrompt })});
-      const data = await res.json();
-      setEpisode(data.episode);
+        body: JSON.stringify({ persona, invitee: { name: inviteeName, bio: inviteeBio}, topic, operatorPrompt })}),
+      const data = await res.json($2);
+      setEpisode(data.episode)
     } catch (e) {
-      console.error(e);
-      alert('Failed to generate episode');
+      console.error($2);
+      alert('Failed to generate episode')
     } finally {
-      setGenerating(false);
+      setGenerating(false)
     }
-  };
+  },
 
-  const handleSynthesize = async () => {
-    if (!episode?.id) return;
-    setSynthesizing(true);
+  const handleSynthesize = $2;
+    setSynthesizing($2);
     try {
       const res = await fetch('/api/podcast/synthesize', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ episodeId: episode.id, persona })});
-      const data = await res.json();
-      setEpisode(data.episode);
+        body: JSON.stringify({ episodeId: episode.id, persona })}),
+      const data = await res.json($2);
+      setEpisode(data.episode)
     } catch (e) {
-      console.error(e);
-      alert('Failed to synthesize audio');
+      console.error($2);
+      alert('Failed to synthesize audio')
     } finally {
-      setSynthesizing(false);
+      setSynthesizing(false)
     }
-  };
+  },
 
-  const handlePublishRss = async () => {
-    if (!episode?.id) return;
-    setPublishing(true);
+  const handlePublishRss = $2;
+    setPublishing($2);
     try {
-      const res = await fetch('/api/podcast/rss', { method: 'POST' });
-      await res.json();
-      alert('RSS feed updated. Platforms will pull on next refresh.');
+      const res = await fetch($2);
+      await res.json($2);
+      alert('RSS feed updated. Platforms will pull on next refresh.')
     } catch (e) {
-      console.error(e);
-      alert('Failed to update RSS');
+      console.error($2);
+      alert('Failed to update RSS')
     } finally {
-      setPublishing(false);
+      setPublishing(false)
     }
-  };
+  },
 
   return (
     <div className="space-y-8">
@@ -174,5 +168,5 @@ export default function StudioHostPage() {
         </section>
       )}
     </div>
-  );
+  )
 }

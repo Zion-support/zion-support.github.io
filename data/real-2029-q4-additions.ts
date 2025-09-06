@@ -1,11 +1,9 @@
 import { RealMarketService } from './real-market-services';
-
-const contact = {
-	mobile: '+1 302 464 0950',
+const contact = $2;
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+},
 
 export const real2029Q4Additions: RealMarketService[] = [
 	{
@@ -16,29 +14,24 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.',
 		features: [
-			'Intent classification and priority scoring',
-			'One-click reply drafts with tone controls',
-			'Auto-tagging and routing to teams',
-			'PII redaction and allowlist domains',
-			'SLA-aware escalations and summaries',
-			'Analytics: response time, CSAT impact, volume by topic'
+			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and summariesAnalytics: response time, CSAT impact, volume by topic'
 		],
 		popular: true,
 		icon: '✉️',
 		color: 'from-cyan-600 to-blue-700',
 		textColor: 'text-cyan-300',
 		link: 'https://ziontechgroup.com/services/ai-email-triage-copilot',
-		marketPosition: 'Alternative to basic autoresponders; focuses on triage quality and CRM integration.',
+		marketPosition: 'Alternative to basic autoresponders, focuses on triage quality and CRM integration.',
 		targetAudience: 'Support teams, sales ops, founders',
 		trialDays: 14,
 		setupTime: '1 day',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['Next.js', 'TypeScript', 'OpenAI', 'PostgreSQL'],
-		integrations: ['Zendesk', 'Freshdesk', 'HubSpot', 'Gmail', 'Microsoft 365'],
-		useCases: ['Customer support triage', 'Lead routing', 'Internal helpdesk'],
+		technology: ['Next.jsTypeScriptOpenAIPostgreSQL'],
+		integrations: ['ZendeskFreshdeskHubSpotGmailMicrosoft 365'],
+		useCases: ['Customer support triageLead routingInternal helpdesk'],
 		roi: 'Reduce manual triage time by 60–80% and improve first-response SLAs.',
-		competitors: ['Superhuman AI', 'Zendesk AI', 'HubSpot AI'],
+		competitors: ['Superhuman AIZendesk AIHubSpot AI'],
 		marketSize: 'Helpdesk software $20B+',
 		growthRate: '25% YoY',
 		variant: 'ai-futuristic',
@@ -48,39 +41,33 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-10-12',
 		customers: 120,
 		rating: 4.8,
-		reviews: 74
-	},
+		reviews: 74},
 	{
 		id: 'mobile-survey-studio',
 		name: 'Mobile Survey Studio',
 		tagline: 'Conversational, mobile-first surveys with branching logic and realtime dashboards',
 		price: '$59',
 		period: '/month',
-		description: 'Launch high-conversion mobile surveys with skip logic, NPS/CSAT templates, and shareable dashboards. Embed on sites or share links; export to CSV and data warehouses.',
+		description: 'Launch high-conversion mobile surveys with skip logic, NPS/CSAT templates, and shareable dashboards. Embed on sites or share links, export to CSV and data warehouses.',
 		features: [
-			'Branching logic and progress-save',
-			'Question bank: CSAT, NPS, PMF, churn',
-			'Anonymous or identified responses',
-			'Webhooks and Zapier integration',
-			'Real-time charts and cohort filters',
-			'GDPR/CCPA consent and deletion tools'
+			'Branching logic and progress-saveQuestion bank: CSAT, NPS, PMF, churnAnonymous or identified responsesWebhooks and Zapier integrationReal-time charts and cohort filtersGDPR/CCPA consent and deletion tools'
 		],
 		popular: false,
 		icon: '📱',
 		color: 'from-emerald-600 to-teal-700',
 		textColor: 'text-emerald-300',
 		link: 'https://ziontechgroup.com/services/mobile-survey-studio',
-		marketPosition: 'Lightweight alternative to enterprise survey suites; optimized for mobile.',
+		marketPosition: 'Lightweight alternative to enterprise survey suites, optimized for mobile.',
 		targetAudience: 'Growth teams, product managers, agencies',
 		trialDays: 7,
 		setupTime: 'Same day',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge'],
-		integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery'],
-		useCases: ['Landing page surveys', 'In-product polls', 'Exit intent feedback'],
+		technology: ['Next.jsPostgreSQLTailwindVercel Edge'],
+		integrations: ['Google SheetsZapierSegmentBigQuery'],
+		useCases: ['Landing page surveysIn-product pollsExit intent feedback'],
 		roi: 'Increase response rates 2–5x and de-risk product decisions.',
-		competitors: ['Typeform', 'SurveyMonkey'],
+		competitors: ['TypeformSurveyMonkey'],
 		marketSize: 'Survey market $9B+',
 		growthRate: '14% YoY',
 		variant: 'ai-futuristic',
@@ -90,8 +77,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-11-05',
 		customers: 60,
 		rating: 4.6,
-		reviews: 33
-	},
+		reviews: 33},
 	{
 		id: 'event-ops-dashboard',
 		name: 'EventOps Dashboard',
@@ -100,12 +86,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.',
 		features: [
-			'QR tickets and check-in app',
-			'Speaker/sponsor asset management',
-			'Automated reminders and WhatsApp/SMS alerts',
-			'Feedback/NPS post-event forms',
-			'Budget tracker and P&L exports',
-			'Embeddable agendas and live updates'
+			'QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event formsBudget tracker and P&L exportsEmbeddable agendas and live updates'
 		],
 		popular: true,
 		icon: '🎟️',
@@ -118,11 +99,11 @@ export const real2029Q4Additions: RealMarketService[] = [
 		setupTime: '2 days',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.js', 'Stripe', 'Resend', 'PostgreSQL'],
-		integrations: ['Stripe', 'Resend', 'Mailchimp', 'Twilio'],
-		useCases: ['Meetups', 'Webinars', 'Conferences'],
+		technology: ['Next.jsStripeResendPostgreSQL'],
+		integrations: ['StripeResendMailchimpTwilio'],
+		useCases: ['MeetupsWebinarsConferences'],
 		roi: 'Cut ops overhead by 50% and improve attendance by 15–30%.',
-		competitors: ['Eventbrite', 'Hopin'],
+		competitors: ['EventbriteHopin'],
 		marketSize: 'Event tech $6B+',
 		growthRate: '18% YoY',
 		variant: 'ai-futuristic',
@@ -132,8 +113,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-09-23',
 		customers: 48,
 		rating: 4.7,
-		reviews: 29
-	},
+		reviews: 29},
 	{
 		id: 'oncall-scheduler-pro',
 		name: 'OnCall Scheduler Pro',
@@ -142,29 +122,24 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.',
 		features: [
-			'Flexible rotations and override rules',
-			'Escalation policies and schedules',
-			'Slack/Teams integration and on-call handoffs',
-			'Vacation/holiday calendars',
-			'Incident reports and postmortem templates',
-			'SLO and error budget reminders'
+			'Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendarsIncident reports and postmortem templatesSLO and error budget reminders'
 		],
 		popular: false,
 		icon: '📆',
 		color: 'from-indigo-600 to-blue-700',
 		textColor: 'text-indigo-300',
 		link: 'https://ziontechgroup.com/services/oncall-scheduler-pro',
-		marketPosition: 'Lean alternative for SMBs; complements enterprise incident suites.',
+		marketPosition: 'Lean alternative for SMBs, complements enterprise incident suites.',
 		targetAudience: 'SRE teams, startups, agencies',
 		trialDays: 14,
 		setupTime: '1 day',
 		category: 'Observability',
 		realService: true,
-		technology: ['Next.js', 'PostgreSQL', 'Twilio'],
-		integrations: ['Slack', 'Microsoft Teams', 'Twilio'],
-		useCases: ['On-call management', 'Incident response'],
+		technology: ['Next.jsPostgreSQLTwilio'],
+		integrations: ['SlackMicrosoft TeamsTwilio'],
+		useCases: ['On-call managementIncident response'],
 		roi: 'Reduce paging confusion and missed alerts by 30–50%.',
-		competitors: ['PagerDuty', 'Opsgenie'],
+		competitors: ['PagerDutyOpsgenie'],
 		marketSize: 'Incident management $3B+',
 		growthRate: '20% YoY',
 		variant: 'ai-futuristic',
@@ -174,8 +149,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-10-30',
 		customers: 32,
 		rating: 4.5,
-		reviews: 19
-	},
+		reviews: 19},
 	{
 		id: 'seo-content-optimizer-pro',
 		name: 'SEO Content Optimizer Pro',
@@ -184,12 +158,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.',
 		features: [
-			'Keyword clustering and topical maps',
-			'Competitor gap analysis',
-			'Outline and brief generation',
-			'On-page audit and schema suggestions',
-			'Rank tracking and change logs',
-			'CMS export (Markdown/Headless)'
+			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)'
 		],
 		popular: true,
 		icon: '🔎',
@@ -202,11 +171,11 @@ export const real2029Q4Additions: RealMarketService[] = [
 		setupTime: 'Same day',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.js', 'OpenAI', 'SerpAPI'],
-		integrations: ['Google Search Console', 'Ahrefs (export)', 'Semrush (export)'],
-		useCases: ['Page optimization', 'Content planning', 'Brief creation'],
+		technology: ['Next.jsOpenAISerpAPI'],
+		integrations: ['Google Search ConsoleAhrefs (export)Semrush (export)'],
+		useCases: ['Page optimizationContent planningBrief creation'],
 		roi: 'Improve organic traffic 20–50% over 3–6 months.',
-		competitors: ['SurferSEO', 'Frase', 'ClearScope'],
+		competitors: ['SurferSEOFraseClearScope'],
 		marketSize: 'SEO software $6B+',
 		growthRate: '16% YoY',
 		variant: 'ai-futuristic',
@@ -216,8 +185,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-09-10',
 		customers: 95,
 		rating: 4.6,
-		reviews: 54
-	},
+		reviews: 54},
 	{
 		id: 'feature-flags-lite',
 		name: 'Feature Flags Lite',
@@ -226,12 +194,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Add feature flags to your app with SDKs for React/Node, rule targeting, and environments. Includes audit logs and safe defaulting.',
 		features: [
-			'Boolean, multivariate, and JSON flags',
-			'User and cohort targeting',
-			'Gradual rollouts and percentage splits',
-			'Audit logs and environment scoping',
-			'Server and client SDKs',
-			'Webhook notifications'
+			'Boolean, multivariate, and JSON flagsUser and cohort targetingGradual rollouts and percentage splitsAudit logs and environment scopingServer and client SDKsWebhook notifications'
 		],
 		popular: false,
 		icon: '🚩',
@@ -244,11 +207,11 @@ export const real2029Q4Additions: RealMarketService[] = [
 		setupTime: 'Same day',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.js', 'Edge KV/Redis'],
-		integrations: ['Vercel', 'Netlify'],
-		useCases: ['Kill switches', 'Safe migrations', 'Cohort experiments'],
+		technology: ['Next.jsEdge KV/Redis'],
+		integrations: ['VercelNetlify'],
+		useCases: ['Kill switchesSafe migrationsCohort experiments'],
 		roi: 'Reduce incident impact and deploy more frequently.',
-		competitors: ['LaunchDarkly (entry)', 'Flagsmith'],
+		competitors: ['LaunchDarkly (entry)Flagsmith'],
 		marketSize: 'Feature management $1.5B+',
 		growthRate: '22% YoY',
 		variant: 'ai-futuristic',
@@ -258,8 +221,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-10-02',
 		customers: 70,
 		rating: 4.5,
-		reviews: 21
-	},
+		reviews: 21},
 	{
 		id: 'sales-lead-enrichment',
 		name: 'Sales Lead Enrichment',
@@ -268,12 +230,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.',
 		features: [
-			'Company/person enrich via email or domain',
-			'Tech stack detection and hiring signals',
-			'CSV bulk processing and API',
-			'CRM enrichment workflows',
-			'Confidence scores and data provenance',
-			'Usage-based pricing tiers'
+			'Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflowsConfidence scores and data provenanceUsage-based pricing tiers'
 		],
 		popular: true,
 		icon: '🧭',
@@ -286,11 +243,11 @@ export const real2029Q4Additions: RealMarketService[] = [
 		setupTime: 'Same day',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.js', 'Node', 'External data partners'],
-		integrations: ['HubSpot', 'Salesforce (export)', 'Airtable'],
-		useCases: ['Lead scoring', 'ICP matching', 'Outbound targeting'],
+		technology: ['Next.jsNodeExternal data partners'],
+		integrations: ['HubSpotSalesforce (export)Airtable'],
+		useCases: ['Lead scoringICP matchingOutbound targeting'],
 		roi: 'Improve conversion rates by 10–25%.',
-		competitors: ['Clearbit', 'ZoomInfo (export)'],
+		competitors: ['ClearbitZoomInfo (export)'],
 		marketSize: 'Sales intelligence $30B+',
 		growthRate: '12% YoY',
 		variant: 'ai-futuristic',
@@ -300,8 +257,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-11-18',
 		customers: 40,
 		rating: 4.4,
-		reviews: 17
-	},
+		reviews: 17},
 	{
 		id: 'invoice-ocr-processor',
 		name: 'Invoice OCR Processor',
@@ -310,12 +266,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Upload PDFs/images and get structured outputs (vendor, dates, taxes, line items). Human-in-the-loop validation and retraining for edge cases.',
 		features: [
-			'High-accuracy OCR and field mapping',
-			'Line item extraction and taxes',
-			'Validation UI and review queues',
-			'Export to CSV, JSON, or webhook',
-			'ERP connectors and retry policies',
-			'PII redaction and retention policies'
+			'High-accuracy OCR and field mappingLine item extraction and taxesValidation UI and review queuesExport to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies'
 		],
 		popular: false,
 		icon: '🧾',
@@ -328,11 +279,11 @@ export const real2029Q4Additions: RealMarketService[] = [
 		setupTime: '2 days',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['Next.js', 'Tesseract/LLMs', 'PostgreSQL'],
-		integrations: ['QuickBooks (export)', 'Xero (export)', 'SAP (export)'],
-		useCases: ['AP automation', 'Expense processing'],
+		technology: ['Next.jsTesseract/LLMsPostgreSQL'],
+		integrations: ['QuickBooks (export)Xero (export)SAP (export)'],
+		useCases: ['AP automationExpense processing'],
 		roi: 'Reduce manual data entry by 70–90%.',
-		competitors: ['Veryfi', 'Rossum'],
+		competitors: ['VeryfiRossum'],
 		marketSize: 'Document AI $5B+',
 		growthRate: '24% YoY',
 		variant: 'ai-futuristic',
@@ -342,8 +293,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-12-01',
 		customers: 27,
 		rating: 4.5,
-		reviews: 14
-	},
+		reviews: 14},
 	{
 		id: 'rpa-browser-automation',
 		name: 'RPA Browser Automation Kit',
@@ -352,12 +302,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Create robotic process automations for web workflows: login, scrape, form-fill, download, and upload. Includes scheduling, proxy support, and error screenshots.',
 		features: [
-			'Workflow editor and step recorder',
-			'Retry logic and backoff policies',
-			'Captcha solving hooks and proxies',
-			'File storage and PII redaction',
-			'Job queue, metrics, and alerts',
-			'Human approval steps'
+			'Workflow editor and step recorderRetry logic and backoff policiesCaptcha solving hooks and proxiesFile storage and PII redactionJob queue, metrics, and alertsHuman approval steps'
 		],
 		popular: true,
 		icon: '🤖',
@@ -370,11 +315,11 @@ export const real2029Q4Additions: RealMarketService[] = [
 		setupTime: '3 days',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Playwright', 'Next.js', 'PostgreSQL'],
-		integrations: ['Zapier', 'Make.com', 'S3/R2'],
-		useCases: ['Partner portal automations', 'Data collection', 'Bulk updates'],
+		technology: ['PlaywrightNext.jsPostgreSQL'],
+		integrations: ['ZapierMake.comS3/R2'],
+		useCases: ['Partner portal automationsData collectionBulk updates'],
 		roi: 'Automate repetitive tasks and cut manual hours by 50–90%.',
-		competitors: ['UiPath (SMB)', 'Robocorp'],
+		competitors: ['UiPath (SMB)Robocorp'],
 		marketSize: 'RPA $13B+',
 		growthRate: '20% YoY',
 		variant: 'ai-futuristic',
@@ -384,8 +329,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-11-28',
 		customers: 38,
 		rating: 4.4,
-		reviews: 18
-	},
+		reviews: 18},
 	{
 		id: 'redaction-compliance-api',
 		name: 'Redaction & Compliance API',
@@ -394,12 +338,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Detect and redact sensitive data (PII/PHI/PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.',
 		features: [
-			'Configurable detectors (SSN, phone, email, credit card)',
-			'Context-aware redaction and masking',
-			'Audit logs and retention policies',
-			'Batch processing and streaming',
-			'Webhook retries and DLQs',
-			'Export to S3/R2 and BigQuery'
+			'Configurable detectors (SSN, phone, email, credit card)Context-aware redaction and maskingAudit logs and retention policiesBatch processing and streamingWebhook retries and DLQsExport to S3/R2 and BigQuery'
 		],
 		popular: false,
 		icon: '🧼',
@@ -412,11 +351,11 @@ export const real2029Q4Additions: RealMarketService[] = [
 		setupTime: 'Same day',
 		category: 'Quality & Monitoring',
 		realService: true,
-		technology: ['Next.js', 'LLMs', 'Regex engines'],
-		integrations: ['S3/R2', 'GCS', 'BigQuery'],
-		useCases: ['Data minimization', 'Compliance workflows', 'PII scrubbing'],
+		technology: ['Next.jsLLMsRegex engines'],
+		integrations: ['S3/R2GCSBigQuery'],
+		useCases: ['Data minimizationCompliance workflowsPII scrubbing'],
 		roi: 'Reduce compliance risk and review time.',
-		competitors: ['Nightfall', 'Very Good Security'],
+		competitors: ['NightfallVery Good Security'],
 		marketSize: 'Data security $20B+',
 		growthRate: '18% YoY',
 		variant: 'ai-futuristic',
@@ -426,8 +365,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-12-03',
 		customers: 22,
 		rating: 4.3,
-		reviews: 12
-	},
+		reviews: 12},
 	{
 		id: 'kpi-scorecards-studio',
 		name: 'KPI Scorecards Studio',
@@ -436,12 +374,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.',
 		features: [
-			'Goal trees and KPI ownership',
-			'Weekly executive summaries',
-			'Alerting on thresholds and trends',
-			'Warehouse connectors',
-			'Shareable links with permissions',
-			'Annotations and change logs'
+			'Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectorsShareable links with permissionsAnnotations and change logs'
 		],
 		popular: false,
 		icon: '📊',
@@ -454,11 +387,11 @@ export const real2029Q4Additions: RealMarketService[] = [
 		setupTime: 'Same day',
 		category: 'Business Intelligence',
 		realService: true,
-		technology: ['Next.js', 'Supabase', 'BigQuery'],
-		integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)'],
-		useCases: ['OKRs/scorecards', 'Exec reporting'],
+		technology: ['Next.jsSupabaseBigQuery'],
+		integrations: ['Google SheetsBigQuerySnowflake (export)'],
+		useCases: ['OKRs/scorecardsExec reporting'],
 		roi: 'Improve visibility and accountability.',
-		competitors: ['Grid', 'Grow'],
+		competitors: ['GridGrow'],
 		marketSize: 'BI $30B+',
 		growthRate: '11% YoY',
 		variant: 'ai-futuristic',
@@ -468,6 +401,5 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-10-20',
 		customers: 36,
 		rating: 4.4,
-		reviews: 16
-	}
-];
+		reviews: 16}
+],

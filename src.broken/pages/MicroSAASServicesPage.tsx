@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-  Zap, 
+  Zap,
   Users, 
   FileText, 
   BarChart3, 
@@ -22,14 +22,12 @@ import {
   Globe,
   Smartphone,
   Database
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function MicroSAASServicesPage() {
-  const microSAASServices = [
-    {
-      name: "Project Management Hub",
+  const microSAASServices = $2;
       description: "Lightweight, intuitive project management tool designed for small teams and startups. Streamline workflows, track progress, and collaborate effectively.",
-      icon: <Users className="w-12 h-12 text-blue-500" />,
+      icon: <Users className = $2;
       features: [
         "Task management and assignment",
         "Team collaboration tools",
@@ -61,7 +59,7 @@ export default function MicroSAASServicesPage() {
     {
       name: "Invoice & Billing System",
       description: "Automated invoicing and payment processing platform with recurring billing, financial analytics, and tax calculations.",
-      icon: <CreditCard className="w-12 h-12 text-green-500" />,
+      icon: <CreditCard className = $2;
       features: [
         "Automated invoice generation",
         "Payment processing integration",
@@ -93,7 +91,7 @@ export default function MicroSAASServicesPage() {
     {
       name: "Social Media Scheduler",
       description: "AI-powered social media management platform with content optimization, multi-platform posting, and performance analytics.",
-      icon: <MessageSquare className="w-12 h-12 text-purple-500" />,
+      icon: <MessageSquare className = $2;
       features: [
         "Multi-platform posting (Instagram, Twitter, LinkedIn, Facebook)",
         "AI content optimization",
@@ -125,7 +123,7 @@ export default function MicroSAASServicesPage() {
     {
       name: "Customer Relationship Manager",
       description: "Simple yet powerful CRM designed for growing businesses. Manage leads, track sales, and nurture customer relationships.",
-      icon: <BarChart3 className="w-12 h-12 text-orange-500" />,
+      icon: <BarChart3 className = $2;
       features: [
         "Lead management and scoring",
         "Sales pipeline tracking",
@@ -157,7 +155,7 @@ export default function MicroSAASServicesPage() {
     {
       name: "Email Marketing Platform",
       description: "Professional email marketing solution with automation, segmentation, and advanced analytics for better campaign performance.",
-      icon: <Mail className="w-12 h-12 text-indigo-500" />,
+      icon: <Mail className = $2;
       features: [
         "Drag-and-drop email builder",
         "Email automation workflows",
@@ -189,7 +187,7 @@ export default function MicroSAASServicesPage() {
     {
       name: "Analytics Dashboard",
       description: "Comprehensive business analytics platform with real-time insights, custom reports, and data visualization tools.",
-      icon: <TrendingUp className="w-12 h-12 text-pink-500" />,
+      icon: <TrendingUp className = $2;
       features: [
         "Real-time data visualization",
         "Custom dashboard builder",
@@ -218,65 +216,49 @@ export default function MicroSAASServicesPage() {
       freeTrial: "30 days",
       setupTime: "Under 3 hours"
     }
-  ];
+  ],
 
-  const additionalMicroSAAS = [
-    {
-      name: "Time Tracking Tool",
+  const additionalMicroSAAS = $2;
       description: "Simple time tracking for teams and freelancers with project billing and productivity insights.",
       pricing: "$19/month",
-      icon: <Calendar className="w-8 h-8 text-blue-400" />
-    },
+      icon: <Calendar className = $2;
     {
       name: "Knowledge Base Platform",
       description: "Create and manage documentation, FAQs, and help articles for your customers and team.",
       pricing: "$39/month",
-      icon: <FileText className="w-8 h-8 text-green-400" />
-    },
+      icon: <FileText className = $2;
     {
       name: "Survey & Feedback Tool",
       description: "Collect customer feedback, conduct surveys, and gather insights to improve your products and services.",
       pricing: "$29/month",
-      icon: <MessageSquare className="w-8 h-8 text-purple-400" />
-    },
+      icon: <MessageSquare className = $2;
     {
       name: "Appointment Scheduler",
       description: "Automated appointment booking system with calendar integration and reminder notifications.",
       pricing: "$25/month",
-      icon: <Calendar className="w-8 h-8 text-orange-400" />
-    }
-  ];
-
+      icon: <Calendar className = $2;
   const stats = [
     { label: "Active Users", value: "10,000+" },
     { label: "Cost Savings", value: "40-60%" },
     { label: "Setup Time", value: "< 2 hours" },
     { label: "Customer Satisfaction", value: "96%" }
-  ];
+  ],
 
-  const whyChooseUs = [
-    {
-      title: "Affordable Pricing",
+  const whyChooseUs = $2;
       description: "Up to 60% savings compared to enterprise solutions without compromising on features.",
-      icon: <TrendingUp className="w-8 h-8 text-green-400" />
-    },
+      icon: <TrendingUp className = $2;
     {
       title: "Quick Setup",
       description: "Get up and running in under 2 hours with our intuitive setup wizards and templates.",
-      icon: <Zap className="w-8 h-8 text-blue-400" />
-    },
+      icon: <Zap className = $2;
     {
       title: "Scalable Solutions",
       description: "Start small and scale up as your business grows. No long-term contracts or hidden fees.",
-      icon: <Globe className="w-8 h-8 text-purple-400" />
-    },
+      icon: <Globe className = $2;
     {
       title: "24/7 Support",
       description: "Round-the-clock customer support to help you succeed with our platforms.",
-      icon: <Users className="w-8 h-8 text-orange-400" />
-    }
-  ];
-
+      icon: <Users className = $2;
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Hero Section */}
@@ -606,7 +588,7 @@ export default function MicroSAASServicesPage() {
 
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-white/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white">Zion Tech Group</h3>
@@ -661,5 +643,5 @@ export default function MicroSAASServicesPage() {
         </div>
       </footer>
     </div>
-  );
+  )
 }

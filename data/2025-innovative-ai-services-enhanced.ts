@@ -1,45 +1,42 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface InnovativeAIService2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string[],
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
   // AI Consciousness & Emotional Intelligence
@@ -51,16 +48,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     period: '/month',
     description: 'Revolutionary platform for developing AI systems with consciousness, emotional intelligence, and self-awareness. Enables creation of truly intelligent AI that understands context, emotions, and human behavior.',
     features: [
-      'Consciousness development framework',
-      'Emotional intelligence training',
-      'Self-awareness algorithms',
-      'Context understanding engine',
-      'Ethical decision making',
-      'Human-AI interaction protocols',
-      'Consciousness monitoring tools',
-      'Evolutionary learning systems',
-      'Safety and alignment controls',
-      'Research collaboration tools'
+      'Consciousness development frameworkEmotional intelligence trainingSelf-awareness algorithmsContext understanding engineEthical decision makingHuman-AI interaction protocolsConsciousness monitoring toolsEvolutionary learning systemsSafety and alignment controlsResearch collaboration tools'
     ],
     popular: true,
     icon: '🧠',
@@ -68,7 +56,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/ai-consciousness-evolution',
     marketPosition: 'First-to-market AI consciousness platform. Competes with OpenAI ($20/month), Anthropic ($20/month). Our advantage: Consciousness development and emotional intelligence.',
-    targetAudience: ['AI research institutions', 'Technology companies', 'Universities', 'Government agencies', 'Healthcare providers', 'Gaming companies'],
+    targetAudience: ['AI research institutionsTechnology companiesUniversitiesGovernment agenciesHealthcare providersGaming companies'],
     trialDays: 14,
     setupTime: '2-4 weeks',
     category: 'AI Consciousness & Research',
@@ -92,8 +80,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     launchDate: '2024-12-01',
     customers: 12,
     rating: 4.9,
-    reviews: 8
-  },
+    reviews: 8},
 
   // AI Autonomous Ecosystem Platform
   {
@@ -104,16 +91,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     period: '/month',
     description: 'Advanced platform for building autonomous AI ecosystems that can self-manage, evolve, and adapt without human intervention. Perfect for creating intelligent systems that grow and improve over time.',
     features: [
-      'Autonomous system architecture',
-      'Self-evolution algorithms',
-      'Adaptive learning systems',
-      'Resource optimization',
-      'Self-healing capabilities',
-      'Performance monitoring',
-      'Scalability management',
-      'Integration frameworks',
-      'Security protocols',
-      'Analytics dashboard'
+      'Autonomous system architectureSelf-evolution algorithmsAdaptive learning systemsResource optimizationSelf-healing capabilitiesPerformance monitoringScalability managementIntegration frameworksSecurity protocolsAnalytics dashboard'
     ],
     popular: true,
     icon: '🌐',
@@ -121,7 +99,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-autonomous-ecosystem',
     marketPosition: 'Competes with AutoML platforms ($500/month), MLOps tools ($200/month). Our advantage: Full autonomy and self-evolution capabilities.',
-    targetAudience: ['AI developers', 'Data scientists', 'Technology companies', 'Research institutions', 'Enterprise businesses'],
+    targetAudience: ['AI developersData scientistsTechnology companiesResearch institutionsEnterprise businesses'],
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'AI Autonomy & Evolution',
@@ -145,8 +123,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     launchDate: '2024-11-15',
     customers: 28,
     rating: 4.8,
-    reviews: 19
-  },
+    reviews: 19},
 
   // AI Ethics & Governance Platform
   {
@@ -157,16 +134,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     period: '/month',
     description: 'Comprehensive platform for implementing AI ethics, governance, and responsible development practices. Helps organizations build trustworthy AI systems that align with human values and ethical principles.',
     features: [
-      'Ethics framework implementation',
-      'Bias detection and mitigation',
-      'Transparency tools',
-      'Accountability systems',
-      'Compliance monitoring',
-      'Ethical decision making',
-      'Stakeholder engagement',
-      'Impact assessment',
-      'Policy management',
-      'Reporting and analytics'
+      'Ethics framework implementationBias detection and mitigationTransparency toolsAccountability systemsCompliance monitoringEthical decision makingStakeholder engagementImpact assessmentPolicy managementReporting and analytics'
     ],
     popular: true,
     icon: '⚖️',
@@ -174,7 +142,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-ethics-governance',
     marketPosition: 'Competes with ethics consulting ($500/hour), governance tools ($200/month). Our advantage: Comprehensive platform with automated ethics monitoring.',
-    targetAudience: ['AI companies', 'Government agencies', 'Healthcare organizations', 'Financial institutions', 'Educational institutions'],
+    targetAudience: ['AI companiesGovernment agenciesHealthcare organizationsFinancial institutionsEducational institutions'],
     trialDays: 14,
     setupTime: '1 week',
     category: 'AI Ethics & Compliance',
@@ -198,8 +166,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     launchDate: '2024-10-20',
     customers: 45,
     rating: 4.7,
-    reviews: 31
-  },
+    reviews: 31},
 
   // AI Creativity Studio Platform
   {
@@ -210,16 +177,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     period: '/month',
     description: 'Revolutionary AI-powered creativity platform that generates art, music, literature, and multimedia content. Enables artists, designers, and creators to explore new dimensions of human-AI collaboration.',
     features: [
-      'AI art generation',
-      'Music composition tools',
-      'Creative writing assistance',
-      'Design automation',
-      'Style transfer capabilities',
-      'Collaborative creation',
-      'Content optimization',
-      'Royalty-free assets',
-      'Export in multiple formats',
-      'Community sharing'
+      'AI art generationMusic composition toolsCreative writing assistanceDesign automationStyle transfer capabilitiesCollaborative creationContent optimizationRoyalty-free assetsExport in multiple formatsCommunity sharing'
     ],
     popular: true,
     icon: '🎨',
@@ -227,7 +185,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-creativity-studio',
     marketPosition: 'Competes with Midjourney ($30/month), DALL-E ($20/month), Stable Diffusion (Free). Our advantage: Multi-modal creativity and collaborative features.',
-    targetAudience: ['Artists', 'Designers', 'Musicians', 'Writers', 'Content creators', 'Marketing agencies'],
+    targetAudience: ['ArtistsDesignersMusiciansWritersContent creatorsMarketing agencies'],
     trialDays: 7,
     setupTime: '1 hour',
     category: 'AI Creativity & Arts',
@@ -251,8 +209,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     launchDate: '2024-09-15',
     customers: 156,
     rating: 4.8,
-    reviews: 89
-  },
+    reviews: 89},
 
   // AI Education Platform
   {
@@ -263,16 +220,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     period: '/month',
     description: 'Revolutionary AI-powered education platform that creates personalized learning experiences for students of all ages. Adapts content, pace, and teaching style to individual learning preferences and needs.',
     features: [
-      'Personalized learning paths',
-      'AI-powered content adaptation',
-      'Real-time progress tracking',
-      'Adaptive assessments',
-      'Interactive simulations',
-      'Multi-language support',
-      'Parent/teacher dashboards',
-      'Performance analytics',
-      'Content creation tools',
-      'Integration with LMS'
+      'Personalized learning pathsAI-powered content adaptationReal-time progress trackingAdaptive assessmentsInteractive simulationsMulti-language supportParent/teacher dashboardsPerformance analyticsContent creation toolsIntegration with LMS'
     ],
     popular: true,
     icon: '🎓',
@@ -280,7 +228,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-education-platform',
     marketPosition: 'Competes with Coursera ($59/month), Udemy ($20/month), Khan Academy (Free). Our advantage: AI personalization and adaptive learning.',
-    targetAudience: ['Schools', 'Universities', 'Corporate training', 'Individual learners', 'Educational institutions'],
+    targetAudience: ['SchoolsUniversitiesCorporate trainingIndividual learnersEducational institutions'],
     trialDays: 21,
     setupTime: '1 day',
     category: 'AI Education & Learning',
@@ -304,6 +252,5 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     launchDate: '2024-03-25',
     customers: 156,
     rating: 4.8,
-    reviews: 89
-  }
-];
+    reviews: 89}
+],

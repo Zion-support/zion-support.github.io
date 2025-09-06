@@ -6,10 +6,8 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Briefcase, Inbox } from "lucide-react";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
-
 function ApplicationStatusTrackerContent() {
-  const isMobile = useIsMobile();
-  
+  const isMobile = useIsMobile($2);
   return (
     <>
       <SEO 
@@ -39,7 +37,7 @@ function ApplicationStatusTrackerContent() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
 export default function ApplicationStatusTracker() {
@@ -49,5 +47,5 @@ export default function ApplicationStatusTracker() {
         <ApplicationStatusTrackerContent />
       </AppLayout>
     </ProtectedRoute>
-  );
+  )
 }

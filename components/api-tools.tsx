@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
-  Code, 
+  Code,
   Database, 
   Globe, 
   Shield, 
@@ -19,20 +19,14 @@ import {
   BookOpen,
   Github,
   Terminal
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function ApiToolsPage() {
-  const apiTools = [
-    {
-      icon: <Code className="w-8 h-8 text-white" />,
+  const apiTools = $2;
       title: 'CodeGen API - AI-Powered Code Generation',
       description: 'Generate production-ready code in multiple languages using natural language descriptions and AI.',
       features: [
-        'Support for 20+ programming languages',
-        'Real-time code completion and suggestions',
-        'Custom code templates and patterns',
-        'Integration with popular IDEs',
-        'Code review and optimization suggestions'
+        'Support for 20+ programming languagesReal-time code completion and suggestionsCustom code templates and patternsIntegration with popular IDEsCode review and optimization suggestions'
       ],
       pricing: {
         free: '100 requests/month',
@@ -51,15 +45,11 @@ export default function ApiToolsPage() {
       responseTime: '<100ms'
     },
     {
-      icon: <Database className="w-8 h-8 text-white" />,
+      icon: <Database className = $2;
       title: 'DataSync API - Real-time Data Synchronization',
       description: 'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.',
       features: [
-        'Multi-database support (PostgreSQL, MySQL, MongoDB)',
-        'Real-time change detection and propagation',
-        'Conflict resolution and data validation',
-        'Webhook support for custom integrations',
-        'Comprehensive audit logging and monitoring'
+        'Multi-database support (PostgreSQL, MySQL, MongoDB)Real-time change detection and propagationConflict resolution and data validationWebhook support for custom integrationsComprehensive audit logging and monitoring'
       ],
       pricing: {
         free: '1,000 syncs/month',
@@ -78,15 +68,11 @@ export default function ApiToolsPage() {
       responseTime: '<50ms'
     },
     {
-      icon: <Globe className="w-8 h-8 text-white" />,
+      icon: <Globe className = $2;
       title: 'GeoAPI - Advanced Geospatial Services',
       description: 'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.',
       features: [
-        'Global geocoding and reverse geocoding',
-        'Real-time traffic and routing optimization',
-        'Geofencing and location tracking',
-        'Map visualization and customization',
-        'Spatial data analysis and clustering'
+        'Global geocoding and reverse geocodingReal-time traffic and routing optimizationGeofencing and location trackingMap visualization and customizationSpatial data analysis and clustering'
       ],
       pricing: {
         free: '10,000 requests/month',
@@ -105,15 +91,11 @@ export default function ApiToolsPage() {
       responseTime: '<75ms'
     },
     {
-      icon: <Shield className="w-8 h-8 text-white" />,
+      icon: <Shield className = $2;
       title: 'AuthGuard API - Enterprise Authentication',
       description: 'Secure, scalable authentication and authorization system with advanced security features.',
       features: [
-        'Multi-factor authentication (MFA)',
-        'OAuth 2.0 and OpenID Connect support',
-        'Role-based access control (RBAC)',
-        'Advanced threat detection and prevention',
-        'Compliance with SOC2, GDPR, and HIPAA'
+        'Multi-factor authentication (MFA)OAuth 2.0 and OpenID Connect supportRole-based access control (RBAC)Advanced threat detection and preventionCompliance with SOC2, GDPR, and HIPAA'
       ],
       pricing: {
         free: '1,000 users/month',
@@ -132,15 +114,11 @@ export default function ApiToolsPage() {
       responseTime: '<25ms'
     },
     {
-      icon: <Zap className="w-8 h-8 text-white" />,
+      icon: <Zap className = $2;
       title: 'WebhookHub - Intelligent Webhook Management',
       description: 'Reliable webhook delivery, retry logic, and event processing for modern applications.',
       features: [
-        'Guaranteed webhook delivery with retry logic',
-        'Event filtering and transformation',
-        'Real-time monitoring and analytics',
-        'Custom authentication and security',
-        'Integration with popular platforms'
+        'Guaranteed webhook delivery with retry logicEvent filtering and transformationReal-time monitoring and analyticsCustom authentication and securityIntegration with popular platforms'
       ],
       pricing: {
         free: '5,000 webhooks/month',
@@ -159,15 +137,11 @@ export default function ApiToolsPage() {
       responseTime: '<30ms'
     },
     {
-      icon: <Bot className="w-8 h-8 text-white" />,
+      icon: <Bot className = $2;
       title: 'NLP API - Natural Language Processing',
       description: 'Advanced text analysis, sentiment detection, and language understanding capabilities.',
       features: [
-        'Text classification and categorization',
-        'Sentiment analysis and emotion detection',
-        'Named entity recognition (NER)',
-        'Language detection and translation',
-        'Custom model training and fine-tuning'
+        'Text classification and categorizationSentiment analysis and emotion detectionNamed entity recognition (NER)Language detection and translationCustom model training and fine-tuning'
       ],
       pricing: {
         free: '5,000 requests/month',
@@ -186,15 +160,11 @@ export default function ApiToolsPage() {
       responseTime: '<200ms'
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
+      icon: <BarChart3 className = $2;
       title: 'Analytics API - Business Intelligence',
       description: 'Comprehensive analytics and reporting APIs for data-driven decision making.',
       features: [
-        'Real-time data aggregation and analysis',
-        'Custom dashboard creation and sharing',
-        'Advanced filtering and segmentation',
-        'Export capabilities (CSV, JSON, PDF)',
-        'Scheduled reports and alerts'
+        'Real-time data aggregation and analysisCustom dashboard creation and sharingAdvanced filtering and segmentationExport capabilities (CSV, JSON, PDF)Scheduled reports and alerts'
       ],
       pricing: {
         free: '10,000 events/month',
@@ -213,15 +183,11 @@ export default function ApiToolsPage() {
       responseTime: '<150ms'
     },
     {
-      icon: <Lock className="w-8 h-8 text-white" />,
+      icon: <Lock className = $2;
       title: 'EncryptAPI - Data Encryption Services',
       description: 'Enterprise-grade encryption, hashing, and cryptographic operations for secure applications.',
       features: [
-        'AES-256 encryption and decryption',
-        'Secure key management and rotation',
-        'Digital signatures and certificates',
-        'Compliance with FIPS 140-2 standards',
-        'Hardware security module (HSM) support'
+        'AES-256 encryption and decryptionSecure key management and rotationDigital signatures and certificatesCompliance with FIPS 140-2 standardsHardware security module (HSM) support'
       ],
       pricing: {
         free: '1,000 operations/month',
@@ -239,15 +205,13 @@ export default function ApiToolsPage() {
       rating: 4.9,
       responseTime: '<20ms'
     }
-  ];
+  ],
 
-  const categories = ['All', 'Development', 'Data', 'Location', 'Security', 'Integration', 'AI/ML', 'Analytics'];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-
+  const categories = $2;
+  const [selectedCategory, setSelectedCategory] = React.useState($2);
   const filteredTools = selectedCategory === 'All' 
     ? apiTools 
-    : apiTools.filter(tool => tool.category === selectedCategory);
-
+    : apiTools.filter($2);
   return (
     <>
       <Head>
@@ -461,7 +425,7 @@ export default function ApiToolsPage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
             Ready to Build Something Amazing?
@@ -491,5 +455,5 @@ export default function ApiToolsPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

@@ -1,26 +1,20 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function CaseStudyPage() {
-  const caseStudy = {
-    id: 'content-generation-scale',
+  const caseStudy = $2;
     title: 'Scaling Content Generation 10x',
     company: 'Digital Marketing Agency',
     industry: 'Marketing',
     challenge: 'Unable to meet client demand for high-quality content at scale',
     solution: 'Deployed autonomous content generation systems with human oversight and quality control',
     results: [
-      '10x increase in content output',
-      '85% improvement in engagement metrics',
-      '70% reduction in content creation time',
-      '95% client satisfaction rate'
+      '10x increase in content output85% improvement in engagement metrics70% reduction in content creation time95% client satisfaction rate'
     ],
-    technologies: ['Natural Language Processing', 'Content Optimization', 'SEO Automation', 'Analytics'],
+    technologies: ['Natural Language ProcessingContent OptimizationSEO AutomationAnalytics'],
     duration: '4 months',
     teamSize: '5 engineers + 3 content specialists',
-    featured: false
-  };
+    featured: false},
 
   return (
     <>
@@ -108,7 +102,7 @@ export default function CaseStudyPage() {
                   This case study demonstrates the real impact of AI automation in content generation. 
                   Let's discuss how we can help you achieve similar results.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link 
                     href="/contact"
                     className="bg-gradient-to-r from-purple-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-cyan-500 transition-all duration-300"
@@ -128,5 +122,5 @@ export default function CaseStudyPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

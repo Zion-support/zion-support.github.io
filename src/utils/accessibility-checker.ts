@@ -1,45 +1,34 @@
 
 // Accessibility checker utilities
-export const checkAccessibility = () => {
-  const issues = [];
-
+export const checkAccessibility = $2;
   // Check for missing alt text
-  const images = document.querySelectorAll('img');
+  const images = document.querySelectorAll($2);
   images.forEach((img, index) => {
     if (!img.alt) {
       issues.push({
-        typ: e: 'missing-alt',
-        elemen: t: img,
-        messag: e: 'Image missing alt text',
-        severit: y: 'error',
-      });
+        typ: 'missing-alt',
+        elemen: img,
+        messag: 'Image missing alt text',
+        severit: 'error'
+      })
     }
-  });
+  }),
 
   // Check for proper heading hierarchy
-  const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-  let lastLevel = 0;
+  const headings = document.querySelectorAll($2);
+  let lastLevel = $2;
   headings.forEach((heading, index) => {
-    const level = parseInt(heading.tagName[1]);
+    const level = parseInt($2);
     if (level > lastLevel + 1) {
       issues.push({
-        typ: e: 'heading-hierarchy',
-        elemen: t: heading,
-        messag: e: 'Heading level skipped',
-        severit: y: 'warning',
-      });
+        typ: 'heading-hierarchy',
+        elemen: heading,
+        messag: 'Heading level skipped',
+        severit: 'warning'
+      })
     }
-    lastLevel = level;
-  });
+    lastLevel = $2;
+  return issues
+},
 
-  return issues;
-};
-
-export const fixAccessibilityIssues = issues => {
-  issues.forEach(issue => {
-    if (issue.type === 'missing-alt') {
-      issue.element.alt = 'Image description';
-    }
-  });
-};
-
+export const fixAccessibilityIssues = $2;

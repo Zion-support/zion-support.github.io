@@ -4,26 +4,22 @@ import {
   Phone, Mail, MapPin, Globe, 
   Clock, ChevronDown, ChevronUp,
   MessageCircle, Calendar, Star
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
   hours: 'Mon-Fri: 9AM-6PM EST',
   rating: '4.9/5 (200+ Reviews)'
-};
+},
 
 const quickActions = [
-  { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> },
-  { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> },
-  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
-];
-
+  { name: 'Get Quote', href: '/quote', icon: <MessageCircle className = $2;
+  { name: 'Book Demo', href: '/demo', icon: <Calendar className = $2;
+  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className = $2;
 export default function TopContactBar() {
-  const [isExpanded, setIsExpanded] = useState(false);
-
+  const [isExpanded, setIsExpanded] = useState($2);
   return (
     <div className="relative z-40">
       {/* Main Contact Bar */}
@@ -117,9 +113,9 @@ export default function TopContactBar() {
       <AnimatePresence>
         {isExpanded && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, height: 0}}
             animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            exit={{ opacity: 0, height: 0}}
             transition={{ duration: 0.3 }}
             className="bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-hidden"
           >
@@ -250,6 +246,6 @@ export default function TopContactBar() {
         )}
       </AnimatePresence>
     </div>
-  );
+  )
 }
 

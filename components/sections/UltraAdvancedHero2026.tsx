@@ -5,28 +5,24 @@ import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles, Chec
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
-
 export default function UltraAdvancedHero2026() {
-  const totalServices = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
-  
-  const contactInfo = {
-    phone: '+1 302 464 0950',
+  const totalServices = $2;
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  },
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 30},
     visible: {
       opacity: 1,
       y: 0,
@@ -34,7 +30,7 @@ export default function UltraAdvancedHero2026() {
         duration: 0.8
       }
     }
-  };
+  },
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -219,8 +215,7 @@ export default function UltraAdvancedHero2026() {
             y: [0, -20, 0],
             rotate: [0, 5, 0]
           }}
-          transition={{ 
-            duration: 6,
+          transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -234,8 +229,7 @@ export default function UltraAdvancedHero2026() {
             y: [0, 20, 0],
             rotate: [0, -5, 0]
           }}
-          transition={{ 
-            duration: 8,
+          transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -249,8 +243,7 @@ export default function UltraAdvancedHero2026() {
             y: [0, -15, 0],
             rotate: [0, 3, 0]
           }}
-          transition={{ 
-            duration: 7,
+          transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -264,8 +257,7 @@ export default function UltraAdvancedHero2026() {
             y: [0, 15, 0],
             rotate: [0, -3, 0]
           }}
-          transition={{ 
-            duration: 9,
+          transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -275,5 +267,5 @@ export default function UltraAdvancedHero2026() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

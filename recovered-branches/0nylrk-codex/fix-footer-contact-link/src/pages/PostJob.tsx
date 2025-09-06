@@ -7,17 +7,15 @@ import { SEO } from "@/components/SEO";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
-
 export default function PostJob() {
-  const { isAuthenticated, isLoading } = useAuth();
-  const isMobile = useIsMobile();
-  
+  const { isAuthenticated, isLoading } = useAuth($2);
+  const isMobile = useIsMobile($2);
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-pulse">Loading...</div>
       </div>
-    );
+    )
   }
   
   return (
@@ -44,5 +42,5 @@ export default function PostJob() {
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
       {isMobile && <div className="h-16"></div>}
     </>
-  );
+  )
 }

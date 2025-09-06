@@ -5,20 +5,19 @@ import {
   Twitter, Linkedin, Github, 
   ArrowUp, Crown, Zap, Brain, Rocket,
   Shield, Users, BookOpen, Briefcase, Atom
-} from 'lucide-react';
+} from 'lucide-react',
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
-
 interface FooterLink {
-  label: string;
-  href: string;
-  description?: string;
-  external?: boolean;
+  label: string,
+  href: string,
+  description?: string,
+  external?: boolean
 }
 
 interface FooterSection {
-  title: string;
-  links: FooterLink[];
+  title: string,
+  links: FooterLink[]
 }
 
 const footerSections: FooterSection[] = [
@@ -76,31 +75,27 @@ const footerSections: FooterSection[] = [
       { label: 'Education', href: '/education-technology-solutions', description: 'EdTech solutions' }
     ]
   }
-];
+],
 
 const socialLinks = [
-  { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true },
-  { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true },
-  { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true }
-];
+  { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true},
+  { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true},
+  { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true}
+],
 
 const quickLinks = [
-  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
-  { name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> },
-  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
-  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
-  { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },
-  { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
-];
-
+  { name: 'About Us', href: '/about', icon: <Users className = $2;
+  { name: 'Contact', href: '/contact', icon: <Phone className = $2;
+  { name: 'Support', href: '/support', icon: <HelpCircle className = $2;
+  { name: 'Documentation', href: '/docs', icon: <FileText className = $2;
+  { name: 'API Reference', href: '/api', icon: <Code className = $2;
+  { name: 'Status', href: '/status', icon: <TrendingUp className = $2;
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  },
 
-  const footerSections = [
-    {
-      title: 'Services',
+  const footerSections = $2;
       items: [
         { label: 'AI & Machine Learning', href: '/ai-services' },
         { label: 'Quantum Computing', href: '/quantum-computing' },
@@ -139,27 +134,26 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         { label: 'Support', href: '/support' }
       ]
     }
-  ];
+  ],
 
   const socialLinks = [
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
     { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' }
-  ];
+  ],
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0},
     visible: {
       y: 0,
       opacity: 1,
@@ -167,7 +161,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
@@ -183,14 +177,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
               y: [0, Math.random() * 1000, 0],
               opacity: [0, 0.6, 0],
               scale: [0, 1, 0]}}
-            transition={{
-              duration: 15 + Math.random() * 10,
+            transition = $2;
               repeat: -1,
               delay: Math.random() * 8,
               ease: "easeInOut"
             }}
-            style={{
-              left: `${Math.random() * 100}%`,
+            style = $2;
               top: `${Math.random() * 100}%`
             }}
           />
@@ -208,7 +200,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12"
           >
             {/* Company Info */}
@@ -289,10 +281,10 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 
           {/* Social Links & Newsletter */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="mt-16 pt-12 border-t border-gray-800/50"
           >
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -341,10 +333,10 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 
         {/* Bottom Bar */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -387,14 +379,9 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50"
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3, delay: 1 }}
+        initial={{ opacity: 0, scale: 0}}
+        animate={{ opacity: 1, scale: 1}}
+        transition={{ duration: 0.3, delay: 1}}
       >
-        <ArrowUp className="w-6 h-6 mx-auto" />
-      </motion.button>
-    </footer>
-  );
-};
-
-export default UltraAdvancedFuturisticFooter2025;
+        <ArrowUp className = $2;
+export default UltraAdvancedFuturisticFooter2025,

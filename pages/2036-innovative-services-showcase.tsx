@@ -7,95 +7,68 @@ import {
   Cpu, Lock, Cloud, Settings, Eye, Award, Clock, 
   Star, TrendingUp, Users, Building, Lightbulb,
   ArrowRight, Filter, Search, Grid, List, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
 import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const categories = [
-  'All Services',
-  'AI & Data',
-  'Quantum Technology',
-  'Space Technology',
-  'IT Infrastructure',
-  'Cybersecurity',
-  'Edge Computing',
-  'Blockchain',
-  'Manufacturing',
-  'Healthcare AI',
-  'Emerging Technology',
-  'Biotechnology',
-  'Human-Computer Interaction',
-  'Metaverse',
-  'Autonomous Systems',
-  'Climate Technology'
-];
-
+const categories = $2;
 const categoryIcons: { [key: string]: React.ReactNode } = {
-  'AI & Data': <Brain className="w-5 h-5" />,
-  'Quantum Technology': <Atom className="w-5 h-5" />,
-  'Space Technology': <Rocket className="w-5 h-5" />,
-  'IT Infrastructure': <Cpu className="w-5 h-5" />,
-  'Cybersecurity': <Shield className="w-5 h-5" />,
-  'Edge Computing': <Zap className="w-5 h-5" />,
-  'Blockchain': <Globe className="w-5 h-5" />,
-  'Manufacturing': <Building className="w-5 h-5" />,
-  'Healthcare AI': <Eye className="w-5 h-5" />,
-  'Emerging Technology': <Lightbulb className="w-5 h-5" />,
-  'Biotechnology': <Target className="w-5 h-5" />,
-  'Human-Computer Interaction': <Users className="w-5 h-5" />,
-  'Metaverse': <Globe className="w-5 h-5" />,
-  'Autonomous Systems': <Rocket className="w-5 h-5" />,
-  'Climate Technology': <Globe className="w-5 h-5" />
-};
-
+  'AI & Data': <Brain className = $2;
+  'Quantum Technology': <Atom className = $2;
+  'Space Technology': <Rocket className = $2;
+  'IT Infrastructure': <Cpu className = $2;
+  'Cybersecurity': <Shield className = $2;
+  'Edge Computing': <Zap className = $2;
+  'Blockchain': <Globe className = $2;
+  'Manufacturing': <Building className = $2;
+  'Healthcare AI': <Eye className = $2;
+  'Emerging Technology': <Lightbulb className = $2;
+  'Biotechnology': <Target className = $2;
+  'Human-Computer Interaction': <Users className = $2;
+  'Metaverse': <Globe className = $2;
+  'Autonomous Systems': <Rocket className = $2;
+  'Climate Technology': <Globe className = $2;
 export default function InnovativeServicesShowcase2036() {
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'marketSize'>('name');
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'marketSize'>('name'),
 
-  const allServices = [...real2036InnovativeServices, ...real2036SpecializedServices];
+  const allServices = [...real2036InnovativeServices, ...real2036SpecializedServices],
 
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'All Services' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+  const filteredServices = $2;
+    const matchesSearch = $2;
+    return matchesCategory && matchesSearch
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'rating':
-        return (b.rating || 0) - (a.rating || 0);
+        return (b.rating || 0) - (a.rating || 0),
       case 'marketSize':
-        return parseFloat(b.marketSize?.replace('$', '').replace('B', '') || '0') - parseFloat(a.marketSize?.replace('$', '').replace('B', '') || '0');
-      default:
-        return a.name.localeCompare(b.name);
+        return parseFloat(b.marketSize?.replace('$', '').replace('B', '') || '0') - parseFloat(a.marketSize?.replace('$', '').replace('B', '') || '0'),
+      default: return a.name.localeCompare(b.name)
     }
-  });
+  }),
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0},
     visible: {
       y: 0,
       opacity: 1,
@@ -103,7 +76,7 @@ export default function InnovativeServicesShowcase2036() {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <Layout>
@@ -125,16 +98,12 @@ export default function InnovativeServicesShowcase2036() {
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(20)].map((_, i) => (
             <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
+              key = $2;
                 top: `${Math.random() * 100}%`}}
               animate={{
                 y: [0, -100, 0],
                 opacity: [0.3, 1, 0.3]}}
-              transition={{
-                duration: 3 + Math.random() * 2,
+              transition = $2;
                 repeat: Infinity,
                 delay: Math.random() * 2}}
             />
@@ -144,16 +113,16 @@ export default function InnovativeServicesShowcase2036() {
         <div className="relative z-10 text-center max-w-6xl mx-auto">
           <motion.h1 
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
           >
             2036 Innovative Services
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Experience the future of technology with our cutting-edge micro SAAS services, 
@@ -161,8 +130,8 @@ export default function InnovativeServicesShowcase2036() {
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
@@ -180,10 +149,10 @@ export default function InnovativeServicesShowcase2036() {
         <div className="max-w-6xl mx-auto">
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
               <Phone className="w-8 h-8 mx-auto mb-4 text-cyan-400" />
@@ -210,16 +179,9 @@ export default function InnovativeServicesShowcase2036() {
           {/* Section Header */}
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Revolutionary Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our comprehensive portfolio of innovative micro SAAS services, 
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition = $2;
               AI platforms, and cutting-edge technology solutions designed for the future.
             </p>
           </motion.div>
@@ -227,10 +189,10 @@ export default function InnovativeServicesShowcase2036() {
           {/* Filters and Controls */}
           <motion.div 
             className="mb-12 space-y-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             {/* Search and View Controls */}
             <div className="flex flex-col lg:flex-row gap-4 justify-between items-center">
@@ -298,7 +260,7 @@ export default function InnovativeServicesShowcase2036() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
           >
             {sortedServices.map((service, index) => (
@@ -406,10 +368,10 @@ export default function InnovativeServicesShowcase2036() {
           {/* Results Summary */}
           <motion.div 
             className="mt-12 text-center text-gray-400"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0}}
+            whileInView={{ opacity: 1}}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             Showing {sortedServices.length} of {allServices.length} services
           </motion.div>
@@ -420,10 +382,10 @@ export default function InnovativeServicesShowcase2036() {
       <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?
@@ -441,7 +403,7 @@ export default function InnovativeServicesShowcase2036() {
               </a>
               <a
                 href={`tel:${contactInfo.mobile}`}
-                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
               >
                 Call Us Now
               </a>
@@ -450,5 +412,5 @@ export default function InnovativeServicesShowcase2036() {
         </div>
       </section>
     </Layout>
-  );
+  )
 }

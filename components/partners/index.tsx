@@ -1,20 +1,13 @@
 import { useState } from "react";
 import Head from "next/head";
-
 export default function Partners() {
-  const [form, setForm] = useState({
-    name: "",
-    entityType: "",
-    pocName: "",
-    pocEmail: "",
-    useCaseType: "Education Partnership"});
-  const [result, setResult] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
-
+  const [form, setForm] = useState($2);
+  const [result, setResult] = useState<any>(null),
+  const [loading, setLoading] = useState($2);
   async function submit(e: React.FormEvent) {
-    e.preventDefault();
-    setLoading(true);
-    setResult(null);
+    e.preventDefault($2);
+    setLoading($2);
+    setResult($2);
     const res = await fetch("/api/partners/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -22,10 +15,10 @@ export default function Partners() {
         name: form.name,
         entityType: form.entityType,
         useCaseType: form.useCaseType,
-        pointOfContact: { name: form.pocName, email: form.pocEmail }})});
-    const data = await res.json();
-    setLoading(false);
-    setResult(data);
+        pointOfContact: { name: form.pocName, email: form.pocEmail }})}),
+    const data = await res.json($2);
+    setLoading($2);
+    setResult(data)
   }
 
   return (
@@ -91,5 +84,5 @@ export default function Partners() {
         )}
       </div>
     </div>
-  );
+  )
 }

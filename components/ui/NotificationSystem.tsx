@@ -1,41 +1,38 @@
-          key={notification.id};
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`};
-
+          key = $2;
+          className = $2;
         >,
-          <div className="flex items-start justify-between">,
-            <div className="flex-1">,
+          <div className = $2;
+            <div className = $2;
               {notification.title && (,
-                <h4 className="font-medium mb-1">{notification.title}</h4>)};
-              <p className="text-sm">{notification.message}</p>,
+                <h4 className = $2;
+              <p className = $2;
             </div>,
             {onDismiss && (,
               <button,
-                onClick={() => onDismiss(notification.id)};
+                onClick = $2;
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-
-export type Toast = { id: string; message: string; tone?: 'default' | 'success' | 'error' };
+export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' },
 
 type NotificationContextValue = {
-  notify: (message: string, tone?: 'default' | 'success' | 'error') => void;
-};
+  notify: (message: string, tone?: 'default' | 'success' | 'error') => void
+},
 
-const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} });
-
+const NotificationContext = $2;
 export function useToast() {
-  return useContext(NotificationContext);
+  return useContext(NotificationContext)
 }
 
-export function NotificationProvider({ children }: { children: ReactNode }) {
-  const [toasts, setToasts] = useState<Toast[]>([]);
+export function NotificationProvider({ children }: { children: ReactNode}) {
+  const [toasts, setToasts] = useState<Toast[]>([]),
 
   const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
-    const id = Math.random().toString(36).slice(2);
-    setToasts((prev) => [...prev, { id, message, tone }]);
+    const id = Math.random().toString(36).slice($2);
+    setToasts((prev) => [...prev, { id, message, tone }]),
     setTimeout(() => {
-      setToasts((prev) => prev.filter((t) => t.id !== id));
-    }, 3000);
-  }, []);
+      setToasts((prev) => prev.filter((t) => t.id !== id))
+    }, 3000)
+  }, []),
 
   return (
     <NotificationContext.Provider value={{ notify }}>
@@ -47,7 +44,7 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
               <motion.div
                 key={toast.id}
                 initial={{ opacity: 0, y: -8 }}
-                animate={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0}}
                 exit={{ opacity: 0, y: -8 }}
                 className={`mb-2 pointer-events-auto rounded-lg border backdrop-blur px-4 py-3 shadow-lg ${
                   toast.tone === 'success'
@@ -64,5 +61,5 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
         </div>
       </div>
     </NotificationContext.Provider>
-  );
+  )
 }

@@ -7,19 +7,18 @@ import {
   Brain, Atom, Rocket, Cpu, Database, Target, Sparkles,
   ChevronRight, Search, Filter, Grid, List, Phone, Mail, MapPin,
   DollarSign, Target as TargetIcon, BarChart3, Users as UsersIcon
-} from 'lucide-react';
+} from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { advancedMicroSaasServices2026 } from '../data/2026-advanced-micro-saas-expansion';
 import { specializedIndustrySolutions2026 } from '../data/2026-specialized-industry-solutions';
-
 export default function ServicesAdvertising2026() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedService, setSelectedService] = useState<string | null>(null),
 
   // Combine all services
-  const allServices = [...advancedMicroSaasServices2026, ...specializedIndustrySolutions2026];
+  const allServices = [...advancedMicroSaasServices2026, ...specializedIndustrySolutions2026],
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
@@ -39,15 +38,15 @@ export default function ServicesAdvertising2026() {
     { id: 'Real Estate Technology', name: 'PropTech', icon: '🏠', count: allServices.filter(s => s.category === 'Real Estate Technology').length },
     { id: 'Legal Technology', name: 'LegalTech', icon: '⚖️', count: allServices.filter(s => s.category === 'Legal Technology').length },
     { id: 'Manufacturing Technology', name: 'Manufacturing', icon: '🏭', count: allServices.filter(s => s.category === 'Manufacturing Technology').length }
-  ];
+  ],
 
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+    return matchesCategory && matchesSearch
+  }),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -57,7 +56,7 @@ export default function ServicesAdvertising2026() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -68,7 +67,7 @@ export default function ServicesAdvertising2026() {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -454,8 +453,8 @@ export default function ServicesAdvertising2026() {
               onClick={(e) => e.stopPropagation()}
             >
               {selectedService && (() => {
-                const service = allServices.find(s => s.id === selectedService);
-                if (!service) return null;
+                const service = allServices.find(s => s.id === selectedService),
+                if (!service) return null,
 
                 return (
                   <div className="p-8">
@@ -614,13 +613,13 @@ export default function ServicesAdvertising2026() {
                       </a>
                       <button
                         onClick={() => setSelectedService(null)}
-                        className="px-8 py-4 border border-white/20 text-white hover:border-cyan-400 transition-all duration-300 rounded-lg"
+                        className="px-8 py-4 border border-white/20 text-white hover: border-cyan-400 transition-all duration-300 rounded-lg"
                       >
                         Close
                       </button>
                     </div>
                   </div>
-                );
+                )
               })()}
             </motion.div>
           </motion.div>
@@ -629,5 +628,5 @@ export default function ServicesAdvertising2026() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

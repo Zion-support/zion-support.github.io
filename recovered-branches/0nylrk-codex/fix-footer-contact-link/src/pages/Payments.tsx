@@ -5,7 +5,6 @@ import { Footer } from "@/components/Footer";
 import { TransactionHistory } from "@/components/transactions/TransactionHistory";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 export default function Payments() {
   return (
     <>
@@ -42,7 +41,7 @@ export default function Payments() {
                       Manage your payment methods and set your default preference.
                     </p>
                     <Button 
-                      onClick={() => window.open('https://stripe.com', '_blank')}
+                      onClick={() => window.open('https://stripe.com_blank')}
                       className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
                     >
                       Manage Payment Methods
@@ -96,7 +95,7 @@ export default function Payments() {
       </div>
       <Footer />
     </>
-  );
+  )
 }
 
 // Import UI components for Payment Settings tab

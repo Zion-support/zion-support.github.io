@@ -3,16 +3,13 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from 'lucide-react'
 import { cn } from "@/lib/utils";
-
 interface FeatureHighlightsProps {
-  className?: string;
-  style?: React.CSSProperties;
+  className?: string,
+  style?: React.CSSProperties
 }
 
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
-  const highlightsData = [
-    {
-      title: "For Talent Seekers",
+  const highlightsData = $2;
       features: [
         "AI-powered talent matching based on your specific project requirements",
         "Verified profiles with skills validation and credential checking",
@@ -44,7 +41,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
         "Customizable workflow and approval processes"
       ]
     }
-  ];
+  ],
 
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
@@ -75,5 +72,5 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
         </div>
       </div>
     </section>
-  );
+  )
 }

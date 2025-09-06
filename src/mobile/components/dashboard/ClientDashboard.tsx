@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
 import Link from "next/link";
-
 export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -144,7 +143,7 @@ export function ClientDashboard() {
               </div>
               <div>
                 <p className="text-sm">
-                  <strong>Website Redesign:</strong> Sarah submitted Milestone 2 for review
+                  <strong>Website Redesign: </strong> Sarah submitted Milestone 2 for review
                 </p>
                 <p className="text-xs text-muted-foreground">2 hours ago</p>
               </div>
@@ -167,5 +166,5 @@ export function ClientDashboard() {
         </Card>
       </section>
     </div>
-  );
+  )
 }

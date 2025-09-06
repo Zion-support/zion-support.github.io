@@ -1,15 +1,14 @@
-"use client";
+"use client",
 
 import { useState, useEffect } from "react";
-
 interface Feature {
-  id: string;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  color: string;
-  details: string[];
-  demo?: string;
+  id: string,
+  title: string,
+  description: string,
+  icon: React.ReactNode,
+  color: string,
+  details: string[],
+  demo?: string
 }
 
 const features: Feature[] = [
@@ -18,10 +17,7 @@ const features: Feature[] = [
     title: "Marketplace & Jobs",
     description: "Complete marketplace infrastructure with job posting, talent matching, and project management.",
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
+      <svg className = $2;
     color: "blue",
     details: [
       "Smart job matching algorithms",
@@ -36,10 +32,7 @@ const features: Feature[] = [
     title: "AI Governance",
     description: "Intelligent governance systems with DAO voting, proposal management, and automated decision-making.",
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-      </svg>
-    ),
+      <svg className = $2;
     color: "purple",
     details: [
       "AI-powered proposal analysis",
@@ -54,10 +47,7 @@ const features: Feature[] = [
     title: "Token Systems",
     description: "Flexible token economics with rewards, staking, and multi-currency support for your economy.",
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-      </svg>
-    ),
+      <svg className = $2;
     color: "green",
     details: [
       "Custom token creation",
@@ -67,27 +57,24 @@ const features: Feature[] = [
       "Cross-chain bridges"
     ]
   }
-];
+],
 
 export function FeatureShowcase() {
-  const [activeFeature, setActiveFeature] = useState<string | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
+  const [activeFeature, setActiveFeature] = useState<string | null>(null),
+  const [isVisible, setIsVisible] = useState($2);
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true)
+  }, []),
 
-  const getColorClasses = (color: string) => {
-    const colorMap = {
-      blue: "from-blue-500 to-blue-600",
+  const getColorClasses = $2;
       purple: "from-purple-500 to-purple-600",
       green: "from-green-500 to-green-600",
       red: "from-red-500 to-red-600",
       yellow: "from-yellow-500 to-yellow-600",
       indigo: "from-indigo-500 to-indigo-600"
-    };
-    return colorMap[color as keyof typeof colorMap] || "from-blue-500 to-blue-600";
-  };
+    },
+    return colorMap[color as keyof typeof colorMap] || "from-blue-500 to-blue-600"
+  },
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">
@@ -216,5 +203,5 @@ export function FeatureShowcase() {
         </div>
       </div>
     </section>
-  );
+  )
 }

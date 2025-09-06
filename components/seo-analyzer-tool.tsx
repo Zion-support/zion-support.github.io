@@ -3,48 +3,37 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
-
 export default function SEOAnalyzerToolPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
-  const [url, setUrl] = useState('');
-
-  const features = [
-    {
-      icon: <Search className="w-8 h-8 text-white" />,
+  const [isAnalyzing, setIsAnalyzing] = useState($2);
+  const [analysisResults, setAnalysisResults] = useState($2);
+  const [url, setUrl] = useState($2);
+  const features = $2;
       title: 'Comprehensive SEO Analysis',
       description: 'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500'},
     {
-      icon: <Target className="w-8 h-8 text-white" />,
+      icon: <Target className = $2;
       title: 'Keyword Research',
       description: 'Discover high-value keywords and analyze search intent to optimize your content strategy.',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500'},
     {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
+      icon: <BarChart3 className = $2;
       title: 'Competitive Analysis',
       description: 'Analyze your competitors\' SEO strategies and identify opportunities to outperform them.',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
       gradient: 'from-purple-400 to-indigo-500'},
     {
-      icon: <Zap className="w-8 h-8 text-white" />,
+      icon: <Zap className = $2;
       title: 'AI-Powered Insights',
       description: 'Get intelligent recommendations and actionable insights to improve your search rankings.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500'}];
+      gradient: 'from-orange-400 to-red-500'}],
 
-  const seoFactors = [
-    {
-      category: 'On-Page SEO',
+  const seoFactors = $2;
       factors: [
-        'Title tags optimization',
-        'Meta descriptions',
-        'Header structure (H1, H2, H3)',
-        'Content quality and length',
-        'Internal linking structure',
-        'Image optimization (alt tags)'
+        'Title tags optimizationMeta descriptionsHeader structure (H1, H2, H3)Content quality and lengthInternal linking structureImage optimization (alt tags)'
       ],
       icon: '📝',
       color: 'text-green-400'
@@ -52,12 +41,7 @@ export default function SEOAnalyzerToolPage() {
     {
       category: 'Technical SEO',
       factors: [
-        'Page load speed',
-        'Mobile responsiveness',
-        'XML sitemap',
-        'Robots.txt configuration',
-        'SSL certificate',
-        'Core Web Vitals'
+        'Page load speedMobile responsivenessXML sitemapRobots.txt configurationSSL certificateCore Web Vitals'
       ],
       icon: '⚙️',
       color: 'text-blue-400'
@@ -65,12 +49,7 @@ export default function SEOAnalyzerToolPage() {
     {
       category: 'Content SEO',
       factors: [
-        'Keyword density',
-        'Content relevance',
-        'Readability scores',
-        'Content freshness',
-        'Multimedia optimization',
-        'Schema markup'
+        'Keyword densityContent relevanceReadability scoresContent freshnessMultimedia optimizationSchema markup'
       ],
       icon: '📊',
       color: 'text-purple-400'
@@ -78,74 +57,43 @@ export default function SEOAnalyzerToolPage() {
     {
       category: 'Local SEO',
       factors: [
-        'Google My Business',
-        'Local citations',
-        'Review management',
-        'Local keyword targeting',
-        'Location-based content',
-        'Local link building'
+        'Google My BusinessLocal citationsReview managementLocal keyword targetingLocation-based contentLocal link building'
       ],
       icon: '📍',
       color: 'text-orange-400'
     }
-  ];
+  ],
 
-  const pricing = [
-    {
-      name: 'Starter',
+  const pricing = $2;
       price: '$39',
       period: '/month',
       description: 'Perfect for small businesses and bloggers',
       features: [
-        '10 website analyses/month',
-        'Basic SEO metrics',
-        'Keyword research (100 keywords)',
-        'On-page SEO analysis',
-        'Email support',
-        'Basic reporting'
+        '10 website analyses/monthBasic SEO metricsKeyword research (100 keywords)On-page SEO analysisEmail supportBasic reporting'
       ],
-      popular: false
-    },
+      popular: false},
     {
       name: 'Professional',
       price: '$89',
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
       features: [
-        '50 website analyses/month',
-        'Advanced SEO metrics',
-        'Keyword research (500 keywords)',
-        'Competitive analysis',
-        'Priority support',
-        'Advanced reporting',
-        'API access',
-        'Team collaboration'
+        '50 website analyses/monthAdvanced SEO metricsKeyword research (500 keywords)Competitive analysisPriority supportAdvanced reportingAPI accessTeam collaboration'
       ],
-      popular: true
-    },
+      popular: true},
     {
       name: 'Enterprise',
       price: '$249',
       period: '/month',
       description: 'For large organizations and SEO agencies',
       features: [
-        'Unlimited analyses',
-        'Enterprise SEO metrics',
-        'Unlimited keyword research',
-        'Advanced competitive analysis',
-        '24/7 dedicated support',
-        'Custom reporting',
-        'White-label options',
-        'Custom integrations'
+        'Unlimited analysesEnterprise SEO metricsUnlimited keyword researchAdvanced competitive analysis24/7 dedicated supportCustom reportingWhite-label optionsCustom integrations'
       ],
-      popular: false
-    }
-  ];
+      popular: false}
+  ],
 
-  const handleAnalyzeSEO = async () => {
-    if (!url.trim()) return;
-    
-    setIsAnalyzing(true);
+  const handleAnalyzeSEO = $2;
+    setIsAnalyzing($2);
     // Simulate SEO analysis
     setTimeout(() => {
       setAnalysisResults({
@@ -161,20 +109,17 @@ export default function SEOAnalyzerToolPage() {
           { type: 'info', message: 'Consider adding more internal links', priority: 'low' }
         ],
         recommendations: [
-          'Optimize meta descriptions for better click-through rates',
-          'Improve page load speed by optimizing images',
-          'Add more relevant internal links to improve site structure',
-          'Implement schema markup for rich snippets'
+          'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets'
         ],
         keywords: [
           { keyword: 'website optimization', volume: '12K', difficulty: 'medium' },
           { keyword: 'SEO tools', volume: '8K', difficulty: 'low' },
           { keyword: 'search engine optimization', volume: '15K', difficulty: 'high' }
         ]
-      });
-      setIsAnalyzing(false);
-    }, 4000);
-  };
+      }),
+      setIsAnalyzing(false)
+    }, 4000)
+  },
 
   return (
     <>
@@ -190,18 +135,7 @@ export default function SEOAnalyzerToolPage() {
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.06),transparent_50%)]" />
-        <div className="absolute inset-0 bg-grid opacity-10" />
-        
-        <div className="relative z-10 container-cursor text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
-            <Search className="w-4 h-4 mr-2" />
-            Professional SEO Analysis
-          </div>
-          <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
-            SEO Analyzer Tool
-          </h1>
-          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-            Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, 
+        <div className = $2;
             keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
           </p>
           
@@ -517,7 +451,7 @@ export default function SEOAnalyzerToolPage() {
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="container-cursor text-center relative z-10">
           <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
             Ready to Improve Your SEO Rankings?
@@ -546,5 +480,5 @@ export default function SEOAnalyzerToolPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

@@ -3,20 +3,16 @@ import { format } from 'date-fns';
 import { PaperclipIcon } from 'lucide-react'
 import { cn } from '@/lib/utils';
 import { Message } from '@/types/messaging';
-
 interface MessageBubbleProps {
-  message: Message;
-  isUserMessage: boolean;
-}
+  message: Message,
+  isUserMessage: boolean}
 
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
-    <div className={cn(
-      "flex",
+    <div className = $2;
       isUserMessage ? "justify-end" : "justify-start"
     )}>
-      <div className={cn(
-        "max-w-[75%] rounded-lg px-4 py-2",
+      <div className = $2;
         isUserMessage 
           ? "bg-zion-purple text-white" 
           : "bg-zion-blue-dark text-white"
@@ -40,5 +36,5 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         </div>
       </div>
     </div>
-  );
+  )
 }

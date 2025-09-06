@@ -7,32 +7,26 @@ import {
   Phone, Mail, MapPin, TrendingUp, Users, Award,
   Zap, Globe, Cpu, Database, Lock, Cloud,
   Stethoscope, GraduationCap, Leaf, Truck
-} from 'lucide-react';
+} from 'lucide-react',
 import Layout from '../components/layout/Layout';
-
 // Import all the new 2025 innovative service data
 import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services';
 import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services';
 import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services';
 import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services';
 import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services';
-
 // Import existing services for comprehensive coverage
 import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
 import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
 import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
 import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceCategories = [
-  {
-    id: 'financial-technology',
+const serviceCategories = $2;
     title: '💰 Financial Technology',
     description: 'Innovative fintech, DeFi, and financial services',
     icon: TrendingUp,
@@ -121,35 +115,24 @@ const serviceCategories = [
     gradient: 'from-teal-500/20 to-green-500/20',
     badge: 'Popular'
   }
-];
+],
 
 export default function InnovativeServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
-
-  const filteredServices = serviceCategories.flatMap(category => 
-    category.services.filter(service =>
-      (selectedCategory === 'all' || category.id === selectedCategory) &&
-      (searchTerm === '' || 
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.category.toLowerCase().includes(searchTerm.toLowerCase()))
-    )
-  );
-
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [sortBy, setSortBy] = useState($2);
+  const filteredServices = $2;
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare($2);
       case 'price':
-        return a.pricing.starter.price - b.pricing.starter.price;
+        return a.pricing.starter.price - b.pricing.starter.price,
       case 'category':
-        return a.category.localeCompare(b.category);
-      default:
-        return 0;
+        return a.category.localeCompare($2);
+      default: return 0
     }
-  });
+  }),
 
   return (
     <Layout>
@@ -175,8 +158,8 @@ export default function InnovativeServicesShowcase2025() {
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -198,8 +181,8 @@ export default function InnovativeServicesShowcase2025() {
 
           {/* Stats */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
@@ -288,10 +271,10 @@ export default function InnovativeServicesShowcase2025() {
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 {/* Service Header */}
@@ -365,8 +348,8 @@ export default function InnovativeServicesShowcase2025() {
 
           {sortedServices.length === 0 && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0}}
+              animate={{ opacity: 1}}
               className="text-center py-20"
             >
               <div className="text-gray-400 text-xl mb-4">No services found</div>
@@ -380,10 +363,10 @@ export default function InnovativeServicesShowcase2025() {
       <section className="py-20 bg-gradient-to-b from-slate-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
@@ -396,10 +379,10 @@ export default function InnovativeServicesShowcase2025() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -410,10 +393,10 @@ export default function InnovativeServicesShowcase2025() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -424,10 +407,10 @@ export default function InnovativeServicesShowcase2025() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -440,5 +423,5 @@ export default function InnovativeServicesShowcase2025() {
         </div>
       </section>
     </Layout>
-  );
+  )
 }

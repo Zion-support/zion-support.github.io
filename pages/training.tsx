@@ -8,23 +8,21 @@ import {
   Star, CheckCircle, ArrowRight, ChevronDown, ChevronUp,
   Play, Download, ExternalLink, Calendar, MapPin, DollarSign,
   TrendingUp, Target, Lightbulb, Building, Globe, Server
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function TrainingPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedProgram, setExpandedProgram] = useState<number | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [expandedProgram, setExpandedProgram] = useState<number | null>(null),
 
   const trainingCategories = [
-    { id: 'all', name: 'All Programs', count: 24 },
-    { id: 'ai-consciousness', name: 'AI Consciousness', count: 8 },
-    { id: 'quantum-computing', name: 'Quantum Computing', count: 6 },
-    { id: 'autonomous-ops', name: 'Autonomous Operations', count: 5 },
-    { id: 'enterprise-it', name: 'Enterprise IT', count: 5 }
-  ];
+    { id: 'all', name: 'All Programs', count: 24},
+    { id: 'ai-consciousness', name: 'AI Consciousness', count: 8},
+    { id: 'quantum-computing', name: 'Quantum Computing', count: 6},
+    { id: 'autonomous-ops', name: 'Autonomous Operations', count: 5},
+    { id: 'enterprise-it', name: 'Enterprise IT', count: 5}
+  ],
 
-  const featuredPrograms = [
-    {
-      id: 1,
+  const featuredPrograms = $2;
       title: 'AI Consciousness Developer Certification',
       description: 'Master the fundamentals of AI consciousness development and earn industry-recognized certification.',
       category: 'ai-consciousness',
@@ -34,13 +32,9 @@ export default function TrainingPage() {
       rating: 4.9,
       students: '1,247',
       featured: true,
-      icon: <Brain className="w-12 h-12" />,
+      icon: <Brain className = $2;
       highlights: [
-        'Hands-on AI consciousness platform development',
-        'Real-world project implementation',
-        'Expert mentorship and support',
-        'Industry-recognized certification',
-        'Lifetime access to course materials'
+        'Hands-on AI consciousness platform developmentReal-world project implementationExpert mentorship and supportIndustry-recognized certificationLifetime access to course materials'
       ]
     },
     {
@@ -54,13 +48,9 @@ export default function TrainingPage() {
       rating: 4.8,
       students: '892',
       featured: true,
-      icon: <Atom className="w-12 h-12" />,
+      icon: <Atom className = $2;
       highlights: [
-        'Quantum algorithm development',
-        'Enterprise integration strategies',
-        'Performance optimization techniques',
-        'Security and compliance considerations',
-        'Hands-on quantum simulator access'
+        'Quantum algorithm developmentEnterprise integration strategiesPerformance optimization techniquesSecurity and compliance considerationsHands-on quantum simulator access'
       ]
     },
     {
@@ -74,21 +64,14 @@ export default function TrainingPage() {
       rating: 4.9,
       students: '1,156',
       featured: true,
-      icon: <Rocket className="w-12 h-12" />,
+      icon: <Rocket className = $2;
       highlights: [
-        'Business process automation design',
-        'AI-powered decision making systems',
-        'Change management strategies',
-        'ROI measurement and optimization',
-        'Industry best practices and case studies'
+        'Business process automation designAI-powered decision making systemsChange management strategiesROI measurement and optimizationIndustry best practices and case studies'
       ]
     }
-  ];
+  ],
 
-  const allPrograms = [
-    // AI Consciousness Programs
-    {
-      id: 4,
+  const allPrograms = $2;
       title: 'AI Consciousness Fundamentals',
       description: 'Introduction to artificial consciousness concepts and basic implementation.',
       category: 'ai-consciousness',
@@ -97,8 +80,7 @@ export default function TrainingPage() {
       price: '$1,299',
       rating: 4.7,
       students: '2,341',
-      icon: <Brain className="w-8 h-8" />
-    },
+      icon: <Brain className = $2;
     {
       id: 5,
       title: 'Advanced AI Consciousness Architecture',
@@ -109,8 +91,7 @@ export default function TrainingPage() {
       price: '$3,999',
       rating: 4.9,
       students: '567',
-      icon: <Brain className="w-8 h-8" />
-    },
+      icon: <Brain className = $2;
     {
       id: 6,
       title: 'AI Ethics and Governance',
@@ -121,8 +102,7 @@ export default function TrainingPage() {
       price: '$1,899',
       rating: 4.8,
       students: '1,023',
-      icon: <Shield className="w-8 h-8" />
-    },
+      icon: <Shield className = $2;
     {
       id: 7,
       title: 'AI Consciousness API Development',
@@ -133,9 +113,7 @@ export default function TrainingPage() {
       price: '$2,199',
       rating: 4.7,
       students: '789',
-      icon: <Code className="w-8 h-8" />
-    },
-
+      icon: <Code className = $2;
     // Quantum Computing Programs
     {
       id: 8,
@@ -147,8 +125,7 @@ export default function TrainingPage() {
       price: '$1,599',
       rating: 4.6,
       students: '1,456',
-      icon: <Atom className="w-8 h-8" />
-    },
+      icon: <Atom className = $2;
     {
       id: 9,
       title: 'Quantum Machine Learning',
@@ -159,8 +136,7 @@ export default function TrainingPage() {
       price: '$3,299',
       rating: 4.8,
       students: '423',
-      icon: <Atom className="w-8 h-8" />
-    },
+      icon: <Atom className = $2;
     {
       id: 10,
       title: 'Quantum Security and Cryptography',
@@ -171,9 +147,7 @@ export default function TrainingPage() {
       price: '$2,399',
       rating: 4.7,
       students: '678',
-      icon: <Shield className="w-8 h-8" />
-    },
-
+      icon: <Shield className = $2;
     // Autonomous Operations Programs
     {
       id: 11,
@@ -185,8 +159,7 @@ export default function TrainingPage() {
       price: '$1,999',
       rating: 4.8,
       students: '945',
-      icon: <Zap className="w-8 h-8" />
-    },
+      icon: <Zap className = $2;
     {
       id: 12,
       title: 'Autonomous Decision Systems',
@@ -197,9 +170,7 @@ export default function TrainingPage() {
       price: '$2,999',
       rating: 4.9,
       students: '567',
-      icon: <Target className="w-8 h-8" />
-    },
-
+      icon: <Target className = $2;
     // Enterprise IT Programs
     {
       id: 13,
@@ -211,8 +182,7 @@ export default function TrainingPage() {
       price: '$2,299',
       rating: 4.7,
       students: '823',
-      icon: <Building className="w-8 h-8" />
-    },
+      icon: <Building className = $2;
     {
       id: 14,
       title: 'Cloud-Native AI Development',
@@ -223,8 +193,7 @@ export default function TrainingPage() {
       price: '$1,899',
       rating: 4.6,
       students: '1,134',
-      icon: <Server className="w-8 h-8" />
-    },
+      icon: <Server className = $2;
     {
       id: 15,
       title: 'DevOps for AI Systems',
@@ -235,38 +204,18 @@ export default function TrainingPage() {
       price: '$1,599',
       rating: 4.8,
       students: '756',
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
+      icon: <Zap className = $2;
+  const filteredPrograms = allPrograms.filter($2);
+  const getCategoryIcon = $2;
+      'quantum-computing': <Atom className = $2;
+      'autonomous-ops': <Rocket className = $2;
+      'enterprise-it': <Building className = $2;
+    return icons[category as keyof typeof icons] || <GraduationCap className = $2;
+  const getCategoryColor = $2;
+    return colors[category as keyof typeof colors] || 'gray'
+  },
 
-  const filteredPrograms = allPrograms.filter(program => 
-    selectedCategory === 'all' || program.category === selectedCategory
-  );
-
-  const getCategoryIcon = (category: string) => {
-    const icons = {
-      'ai-consciousness': <Brain className="w-6 h-6" />,
-      'quantum-computing': <Atom className="w-6 h-6" />,
-      'autonomous-ops': <Rocket className="w-6 h-6" />,
-      'enterprise-it': <Building className="w-6 h-6" />
-    };
-    return icons[category as keyof typeof icons] || <GraduationCap className="w-6 h-6" />;
-  };
-
-  const getCategoryColor = (category: string) => {
-    const colors = {
-      'ai-consciousness': 'cyan',
-      'quantum-computing': 'purple',
-      'autonomous-ops': 'green',
-      'enterprise-it': 'blue'
-    };
-    return colors[category as keyof typeof colors] || 'gray';
-  };
-
-  const toggleProgram = (id: number) => {
-    setExpandedProgram(expandedProgram === id ? null : id);
-  };
-
+  const toggleProgram = $2;
   return (
     <Layout>
       <SEO 
@@ -280,8 +229,8 @@ export default function TrainingPage() {
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
@@ -333,10 +282,10 @@ export default function TrainingPage() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -351,10 +300,10 @@ export default function TrainingPage() {
               {featuredPrograms.map((program, index) => (
                 <motion.div
                   key={program.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
                 >
                   <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
@@ -363,7 +312,7 @@ export default function TrainingPage() {
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       <span className={`px-3 py-1 bg-${getCategoryColor(program.category)}-500/20 text-${getCategoryColor(program.category)}-400 rounded-full text-sm border border-${getCategoryColor(program.category)}-500/30`}>
-                        {program.category.replace('-', ' ')}
+                        {program.category.replace('- ')}
                       </span>
                       <span className="text-gray-400 text-sm">
                         {program.level}
@@ -422,10 +371,10 @@ export default function TrainingPage() {
         <section className="py-20 bg-black/50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -440,10 +389,10 @@ export default function TrainingPage() {
               {filteredPrograms.map((program, index) => (
                 <motion.div
                   key={program.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
                 >
                   <div className="p-6">
@@ -455,7 +404,7 @@ export default function TrainingPage() {
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-2">
                           <span className={`px-2 py-1 bg-${getCategoryColor(program.category)}-500/20 text-${getCategoryColor(program.category)}-400 rounded text-xs border border-${getCategoryColor(program.category)}-500/30`}>
-                            {program.category.replace('-', ' ')}
+                            {program.category.replace('- ')}
                           </span>
                           <span className="text-gray-400 text-xs">
                             {program.level}
@@ -504,9 +453,9 @@ export default function TrainingPage() {
                     
                     {expandedProgram === program.id && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
+                        initial={{ opacity: 0, height: 0}}
                         animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
+                        exit={{ opacity: 0, height: 0}}
                         transition={{ duration: 0.3 }}
                         className="mt-4 pt-4 border-t border-gray-700"
                       >
@@ -584,39 +533,17 @@ export default function TrainingPage() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Learning Paths
-              </h2>
-              <p className="text-xl text-gray-400">
-                Structured learning journeys to master complete technology domains
-              </p>
-            </motion.div>
-            
-            <div className="grid lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: 'AI Consciousness Expert',
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
                   description: 'Complete path from fundamentals to advanced AI consciousness development.',
                   duration: '6-12 months',
                   courses: 8,
                   level: 'Beginner to Expert',
-                  icon: <Brain className="w-12 h-12" />,
+                  icon: <Brain className = $2;
                   color: 'cyan',
                   path: [
-                    'AI Consciousness Fundamentals',
-                    'Consciousness Architecture Design',
-                    'Advanced Implementation',
-                    'Ethics and Governance',
-                    'API Development',
-                    'System Optimization',
-                    'Real-world Applications',
-                    'Expert Certification'
+                    'AI Consciousness FundamentalsConsciousness Architecture DesignAdvanced ImplementationEthics and GovernanceAPI DevelopmentSystem OptimizationReal-world ApplicationsExpert Certification'
                   ]
                 },
                 {
@@ -625,15 +552,10 @@ export default function TrainingPage() {
                   duration: '8-16 months',
                   courses: 6,
                   level: 'Intermediate to Expert',
-                  icon: <Atom className="w-12 h-12" />,
+                  icon: <Atom className = $2;
                   color: 'purple',
                   path: [
-                    'Quantum Computing Basics',
-                    'Quantum Algorithms',
-                    'Machine Learning Integration',
-                    'Security Implementation',
-                    'Enterprise Solutions',
-                    'Advanced Applications'
+                    'Quantum Computing BasicsQuantum AlgorithmsMachine Learning IntegrationSecurity ImplementationEnterprise SolutionsAdvanced Applications'
                   ]
                 },
                 {
@@ -642,23 +564,19 @@ export default function TrainingPage() {
                   duration: '6-10 months',
                   courses: 5,
                   level: 'Intermediate to Advanced',
-                  icon: <Rocket className="w-12 h-12" />,
+                  icon: <Rocket className = $2;
                   color: 'green',
                   path: [
-                    'Business Process Analysis',
-                    'Automation Strategy',
-                    'System Implementation',
-                    'Change Management',
-                    'Performance Optimization'
+                    'Business Process AnalysisAutomation StrategySystem ImplementationChange ManagementPerformance Optimization'
                   ]
                 }
               ].map((path, index) => (
                 <motion.div
                   key={path.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="text-center mb-6">
@@ -711,37 +629,7 @@ export default function TrainingPage() {
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Career?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Personalized Guidance
-                </a>
-                <a
-                  href="/resources"
-                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
-                >
-                  Explore Free Resources
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
-};
-
-export default Training;
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
+export default Training,

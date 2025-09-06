@@ -1,12 +1,6 @@
 export default function AIServicesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold mb-6">🤖 AI Services & Solutions</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Transform your business with cutting-edge artificial intelligence. From automation to predictive analytics, 
+    <div className = $2;
             we deliver enterprise-grade AI solutions that drive real results.
           </p>
           <div className="mt-8">
@@ -76,17 +70,7 @@ export default function AIServicesPage() {
                 </div>
               </div>
 
-              <a href="https://ziontechgroup.com/ai-services" className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">
-                Learn More About ZionGPT Core
-              </a>
-            </div>
-
-            {/* AI Content Generation */}
-            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
-              <div className="text-4xl mb-6">✍️</div>
-              <h2 className="text-3xl font-bold mb-4">AI Content Generation</h2>
-              <p className="text-zinc-300 mb-6 text-lg">
-                Automate your content creation with AI-powered writing tools that generate high-quality, 
+              <a href = $2;
                 SEO-optimized content for blogs, social media, and marketing materials.
               </p>
               
@@ -102,38 +86,7 @@ export default function AIServicesPage() {
                 </ul>
               </div>
 
-              <div className="bg-zinc-700 rounded-lg p-6 mb-6">
-                <h4 className="text-lg font-semibold mb-4">Pricing Plans</h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span>Basic Plan</span>
-                    <span className="text-green-400 font-semibold">$199/month</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Pro Plan</span>
-                    <span className="text-green-400 font-semibold">$399/month</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Business Plan</span>
-                    <span className="text-green-400 font-semibold">$799/month</span>
-                  </div>
-                  <div className="text-sm text-zinc-400 mt-2">
-                    Setup fee: $800 | Unlimited content generation
-                  </div>
-                </div>
-              </div>
-
-              <a href="https://ziontechgroup.com/ai-content" className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">
-                Learn More About AI Content Generation
-              </a>
-            </div>
-
-            {/* AI-Powered Analytics */}
-            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
-              <div className="text-4xl mb-6">📊</div>
-              <h2 className="text-3xl font-bold mb-4">AI-Powered Analytics</h2>
-              <p className="text-zinc-300 mb-6 text-lg">
-                Transform your data into actionable insights with machine learning-powered analytics, 
+              <div className = $2;
                 predictive modeling, and intelligent business intelligence solutions.
               </p>
               
@@ -217,17 +170,7 @@ export default function AIServicesPage() {
                 </div>
               </div>
 
-              <a href="https://ziontechgroup.com/ai-support" className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">
-                Learn More About AI Customer Support
-              </a>
-            </div>
-
-            {/* AI Process Automation */}
-            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
-              <div className="text-4xl mb-6">⚙️</div>
-              <h2 className="text-3xl font-bold mb-4">AI Process Automation</h2>
-              <p className="text-zinc-300 mb-6 text-lg">
-                Streamline your business operations with intelligent workflow automation, 
+              <a href = $2;
                 document processing, and AI-powered business process optimization.
               </p>
               
@@ -354,27 +297,7 @@ export default function AIServicesPage() {
               <p className="text-zinc-300">Build, train, and optimize AI models tailored to your specific business needs.</p>
             </div>
             
-            <div className="text-center">
-              <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">5</div>
-              <h3 className="text-xl font-semibold mb-3">Integration & Testing</h3>
-              <p className="text-zinc-300">Seamlessly integrate AI solutions with existing systems and conduct thorough testing.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">6</div>
-              <h3 className="text-xl font-semibold mb-3">Deployment & Optimization</h3>
-              <p className="text-zinc-300">Launch AI solutions and continuously optimize for maximum performance and ROI.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Harness the Power of AI?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our AI solutions can transform your business operations, 
+            <div className = $2;
             improve efficiency, and drive unprecedented growth.
           </p>
           <div className="space-y-4">
@@ -387,11 +310,11 @@ export default function AIServicesPage() {
               </a>
             </div>
             <p className="text-blue-100 text-sm">
-              📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https://ziontechgroup.com
+              📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https: //ziontechgroup.com
             </p>
           </div>
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -1,29 +1,26 @@
-"use client";
+"use client",
 
 import { useState } from "react";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
-
 export default function SignInPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
-  const { login } = useAuth();
-
+  const [email, setEmail] = useState($2);
+  const [password, setPassword] = useState($2);
+  const [isLoading, setIsLoading] = useState($2);
+  const [error, setError] = useState($2);
+  const { login } = useAuth($2);
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setError("");
-
+    e.preventDefault($2);
+    setIsLoading($2);
+    setError($2);
     try {
-      await login(email, password);
+      await login(email, password)
     } catch (error) {
-      setError(error instanceof Error ? error.message : "Login failed");
+      setError(error instanceof Error ? error.message : "Login failed")
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
-  };
+  },
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">
@@ -99,12 +96,12 @@ export default function SignInPage() {
               Terms of Service
             </Link>{" "}
             and{" "}
-            <Link href="/privacy" className="text-zinc-400 hover:text-zinc-300">
+            <Link href="/privacy" className="text-zinc-400 hover: text-zinc-300">
               Privacy Policy
             </Link>
           </p>
         </div>
       </div>
     </div>
-  );
+  )
 }

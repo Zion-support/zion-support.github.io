@@ -3,20 +3,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Award } from 'lucide-react'
 
 interface LeaderboardEntry {
-  rank: number;
-  name: string;
-  referrals: number;
-}
+  rank: number,
+  name: string,
+  referrals: number}
 
 export function ReferralLeaderboard() {
   // This would typically be fetched from the server
   // For now, we'll use mock data
   const leaderboardData: LeaderboardEntry[] = [
-    { rank: 1, name: "Alex Johnson", referrals: 24 },
-    { rank: 2, name: "Jamie Smith", referrals: 18 },
-    { rank: 3, name: "Taylor Wong", referrals: 15 },
-    { rank: 4, name: "Casey Brown", referrals: 12 },
-    { rank: 5, name: "Jordan Lee", referrals: 10 }];
+    { rank: 1, name: "Alex Johnson", referrals: 24},
+    { rank: 2, name: "Jamie Smith", referrals: 18},
+    { rank: 3, name: "Taylor Wong", referrals: 15},
+    { rank: 4, name: "Casey Brown", referrals: 12},
+    { rank: 5, name: "Jordan Lee", referrals: 10}],
 
   return (
     <Card>
@@ -58,5 +57,5 @@ export function ReferralLeaderboard() {
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }

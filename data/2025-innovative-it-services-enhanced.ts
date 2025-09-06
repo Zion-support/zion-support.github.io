@@ -1,45 +1,42 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface InnovativeITService2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string[],
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
   // Quantum Cloud Infrastructure Platform
@@ -51,16 +48,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Revolutionary quantum-enhanced cloud infrastructure that provides unprecedented computing power, security, and scalability. Combines quantum computing with traditional cloud services for breakthrough performance.',
     features: [
-      'Quantum-enhanced computing power',
-      'Unbreakable quantum encryption',
-      'Automatic scaling and optimization',
-      'Quantum machine learning acceleration',
-      'Real-time performance monitoring',
-      'Multi-cloud orchestration',
-      'Advanced security protocols',
-      'Cost optimization algorithms',
-      'Global edge computing network',
-      'Quantum-safe data storage'
+      'Quantum-enhanced computing powerUnbreakable quantum encryptionAutomatic scaling and optimizationQuantum machine learning accelerationReal-time performance monitoringMulti-cloud orchestrationAdvanced security protocolsCost optimization algorithmsGlobal edge computing networkQuantum-safe data storage'
     ],
     popular: true,
     icon: '☁️',
@@ -92,8 +80,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-12-01',
     customers: 23,
     rating: 4.9,
-    reviews: 15
-  },
+    reviews: 15},
 
   // Zero Trust Security Platform
   {
@@ -104,16 +91,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and AI-powered threat detection. Protects organizations from modern cyber threats with advanced security protocols.',
     features: [
-      'Zero trust architecture implementation',
-      'Continuous identity verification',
-      'Micro-segmentation',
-      'AI-powered threat detection',
-      'Real-time security monitoring',
-      'Advanced authentication methods',
-      'Compliance reporting',
-      'Incident response automation',
-      'Security analytics dashboard',
-      'Integration with existing systems'
+      'Zero trust architecture implementationContinuous identity verificationMicro-segmentationAI-powered threat detectionReal-time security monitoringAdvanced authentication methodsCompliance reportingIncident response automationSecurity analytics dashboardIntegration with existing systems'
     ],
     popular: true,
     icon: '🔒',
@@ -145,8 +123,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-11-15',
     customers: 67,
     rating: 4.8,
-    reviews: 42
-  },
+    reviews: 42},
 
   // Edge Computing Orchestration Platform
   {
@@ -157,16 +134,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Advanced edge computing orchestration platform that optimizes distributed computing resources, reduces latency, and improves performance for IoT applications and edge computing workloads.',
     features: [
-      'Intelligent edge orchestration',
-      'Automatic resource optimization',
-      'Latency reduction algorithms',
-      'IoT device management',
-      'Edge analytics processing',
-      'Load balancing automation',
-      'Performance monitoring',
-      'Cost optimization',
-      'Multi-edge coordination',
-      'Real-time analytics'
+      'Intelligent edge orchestrationAutomatic resource optimizationLatency reduction algorithmsIoT device managementEdge analytics processingLoad balancing automationPerformance monitoringCost optimizationMulti-edge coordinationReal-time analytics'
     ],
     popular: true,
     icon: '🌐',
@@ -198,8 +166,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-10-20',
     customers: 89,
     rating: 4.7,
-    reviews: 56
-  },
+    reviews: 56},
 
   // Blockchain Enterprise Platform
   {
@@ -210,16 +177,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Comprehensive enterprise blockchain platform that enables secure, transparent, and efficient business processes. Supports smart contracts, digital assets, and decentralized applications for enterprise use cases.',
     features: [
-      'Enterprise blockchain infrastructure',
-      'Smart contract development',
-      'Digital asset management',
-      'Consensus mechanisms',
-      'Security and compliance',
-      'Performance optimization',
-      'Integration APIs',
-      'Monitoring and analytics',
-      'Multi-chain support',
-      'Developer tools'
+      'Enterprise blockchain infrastructureSmart contract developmentDigital asset managementConsensus mechanismsSecurity and compliancePerformance optimizationIntegration APIsMonitoring and analyticsMulti-chain supportDeveloper tools'
     ],
     popular: true,
     icon: '⛓️',
@@ -251,8 +209,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-09-15',
     customers: 45,
     rating: 4.8,
-    reviews: 31
-  },
+    reviews: 31},
 
   // AI-Powered DevOps Platform
   {
@@ -263,16 +220,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Advanced DevOps platform that uses AI to automate software development, testing, deployment, and monitoring, continuously learning and optimizing your development processes.',
     features: [
-      'AI-powered code review',
-      'Automated testing optimization',
-      'Intelligent deployment strategies',
-      'Performance monitoring',
-      'Security scanning',
-      'Cost optimization',
-      'Team collaboration tools',
-      'CI/CD automation',
-      'Infrastructure as code',
-      'Real-time analytics'
+      'AI-powered code reviewAutomated testing optimizationIntelligent deployment strategiesPerformance monitoringSecurity scanningCost optimizationTeam collaboration toolsCI/CD automationInfrastructure as codeReal-time analytics'
     ],
     popular: true,
     icon: '🚀🧠',
@@ -304,8 +252,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-08-15',
     customers: 234,
     rating: 4.9,
-    reviews: 167
-  },
+    reviews: 167},
 
   // Quantum Networking Platform
   {
@@ -316,16 +263,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Revolutionary quantum networking platform that provides unbreakable communication channels using quantum entanglement and quantum key distribution. Perfect for organizations requiring absolute security.',
     features: [
-      'Quantum key distribution',
-      'Quantum entanglement networks',
-      'Unbreakable encryption',
-      'Global quantum network',
-      'Real-time quantum communication',
-      'Security monitoring',
-      'Performance analytics',
-      'Integration APIs',
-      'Compliance reporting',
-      '24/7 quantum support'
+      'Quantum key distributionQuantum entanglement networksUnbreakable encryptionGlobal quantum networkReal-time quantum communicationSecurity monitoringPerformance analyticsIntegration APIsCompliance reporting24/7 quantum support'
     ],
     popular: true,
     icon: '🌐',
@@ -357,8 +295,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-07-30',
     customers: 18,
     rating: 4.9,
-    reviews: 12
-  },
+    reviews: 12},
 
   // Autonomous IT Operations Platform
   {
@@ -369,16 +306,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Advanced autonomous IT operations platform that uses AI to manage, monitor, and optimize IT infrastructure automatically. Reduces manual intervention and improves system reliability.',
     features: [
-      'AI-powered infrastructure management',
-      'Automated problem resolution',
-      'Predictive maintenance',
-      'Self-healing systems',
-      'Performance optimization',
-      'Resource management',
-      'Security automation',
-      'Compliance monitoring',
-      'Analytics and reporting',
-      'Integration with existing tools'
+      'AI-powered infrastructure managementAutomated problem resolutionPredictive maintenanceSelf-healing systemsPerformance optimizationResource managementSecurity automationCompliance monitoringAnalytics and reportingIntegration with existing tools'
     ],
     popular: true,
     icon: '🤖',
@@ -410,8 +338,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-06-20',
     customers: 78,
     rating: 4.8,
-    reviews: 52
-  },
+    reviews: 52},
 
   // Quantum Data Center Platform
   {
@@ -422,16 +349,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Revolutionary quantum-enhanced data center platform that provides unprecedented computing power, energy efficiency, and security. Combines quantum computing with traditional data center operations.',
     features: [
-      'Quantum computing integration',
-      'Advanced cooling systems',
-      'Energy optimization algorithms',
-      'Quantum security protocols',
-      'High-performance networking',
-      'Automated management',
-      'Scalability management',
-      'Performance monitoring',
-      'Cost optimization',
-      'Global data center network'
+      'Quantum computing integrationAdvanced cooling systemsEnergy optimization algorithmsQuantum security protocolsHigh-performance networkingAutomated managementScalability managementPerformance monitoringCost optimizationGlobal data center network'
     ],
     popular: true,
     icon: '🏢',
@@ -463,8 +381,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-05-15',
     customers: 12,
     rating: 4.9,
-    reviews: 8
-  },
+    reviews: 8},
 
   // Quantum Cybersecurity Platform
   {
@@ -475,16 +392,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Advanced quantum cybersecurity platform that combines quantum encryption with AI-powered threat detection. Provides unbreakable security for enterprise networks, applications, and data.',
     features: [
-      'Quantum encryption algorithms',
-      'AI threat detection',
-      'Real-time monitoring',
-      'Automated incident response',
-      'Vulnerability assessment',
-      'Compliance reporting',
-      'Multi-cloud security',
-      'Zero-trust architecture',
-      'Threat intelligence',
-      'Security analytics'
+      'Quantum encryption algorithmsAI threat detectionReal-time monitoringAutomated incident responseVulnerability assessmentCompliance reportingMulti-cloud securityZero-trust architectureThreat intelligenceSecurity analytics'
     ],
     popular: true,
     icon: '🛡️',
@@ -516,8 +424,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-04-25',
     customers: 34,
     rating: 4.9,
-    reviews: 23
-  },
+    reviews: 23},
 
   // Quantum Cloud Migration Platform
   {
@@ -528,16 +435,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Advanced cloud migration platform that uses quantum computing to optimize migration strategies, reduce downtime, and ensure seamless transitions to cloud environments.',
     features: [
-      'Quantum migration optimization',
-      'Zero-downtime migration',
-      'Performance optimization',
-      'Cost analysis and optimization',
-      'Security assessment',
-      'Compliance validation',
-      'Migration automation',
-      'Performance monitoring',
-      'Rollback capabilities',
-      'Integration support'
+      'Quantum migration optimizationZero-downtime migrationPerformance optimizationCost analysis and optimizationSecurity assessmentCompliance validationMigration automationPerformance monitoringRollback capabilitiesIntegration support'
     ],
     popular: true,
     icon: '☁️',
@@ -569,8 +467,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-03-30',
     customers: 56,
     rating: 4.8,
-    reviews: 38
-  },
+    reviews: 38},
 
   // Cloud-Native Application Development Platform
   {
@@ -581,16 +478,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Comprehensive platform for developing, deploying, and managing cloud-native applications with microservices architecture and container orchestration.',
     features: [
-      'Microservices development framework',
-      'Container orchestration with Kubernetes',
-      'CI/CD pipeline automation',
-      'Service mesh implementation',
-      'Auto-scaling capabilities',
-      'Multi-cloud deployment',
-      'Performance monitoring',
-      'Security and compliance',
-      'API management',
-      'Expert consultation'
+      'Microservices development frameworkContainer orchestration with KubernetesCI/CD pipeline automationService mesh implementationAuto-scaling capabilitiesMulti-cloud deploymentPerformance monitoringSecurity and complianceAPI managementExpert consultation'
     ],
     popular: true,
     icon: '☁️',
@@ -622,8 +510,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-12-01',
     customers: 41,
     rating: 4.8,
-    reviews: 33
-  },
+    reviews: 33},
 
   // Zero-Trust Security Architecture Platform
   {
@@ -634,16 +521,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Advanced zero-trust security platform that implements comprehensive security controls, identity verification, and continuous monitoring.',
     features: [
-      'Identity and access management',
-      'Multi-factor authentication',
-      'Network segmentation',
-      'Continuous monitoring',
-      'Threat detection',
-      'Compliance reporting',
-      'API security',
-      'Device management',
-      'Risk assessment',
-      '24/7 security monitoring'
+      'Identity and access managementMulti-factor authenticationNetwork segmentationContinuous monitoringThreat detectionCompliance reportingAPI securityDevice managementRisk assessment24/7 security monitoring'
     ],
     popular: true,
     icon: '🔒',
@@ -675,8 +553,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-11-15',
     customers: 26,
     rating: 4.9,
-    reviews: 21
-  },
+    reviews: 21},
 
   // Edge Computing Orchestration Platform
   {
@@ -687,16 +564,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Advanced edge computing platform that manages distributed computing resources, optimizes performance, and reduces latency for edge applications.',
     features: [
-      'Edge node management',
-      'Distributed computing orchestration',
-      'Latency optimization',
-      'Load balancing',
-      'Real-time processing',
-      'Edge analytics',
-      'Multi-location deployment',
-      'Performance monitoring',
-      'API for integrations',
-      'Expert consultation'
+      'Edge node managementDistributed computing orchestrationLatency optimizationLoad balancingReal-time processingEdge analyticsMulti-location deploymentPerformance monitoringAPI for integrationsExpert consultation'
     ],
     popular: true,
     icon: '🌐',
@@ -728,8 +596,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-10-15',
     customers: 34,
     rating: 4.7,
-    reviews: 28
-  },
+    reviews: 28},
 
   // API Gateway and Management Platform
   {
@@ -740,16 +607,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Comprehensive API management platform that provides gateway functionality, security, monitoring, and developer portal capabilities.',
     features: [
-      'API gateway functionality',
-      'Rate limiting and throttling',
-      'Authentication and authorization',
-      'API versioning',
-      'Developer portal',
-      'Performance monitoring',
-      'Analytics and reporting',
-      'Documentation generation',
-      'API testing tools',
-      'Multi-cloud support'
+      'API gateway functionalityRate limiting and throttlingAuthentication and authorizationAPI versioningDeveloper portalPerformance monitoringAnalytics and reportingDocumentation generationAPI testing toolsMulti-cloud support'
     ],
     popular: true,
     icon: '🔌',
@@ -781,8 +639,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-09-15',
     customers: 48,
     rating: 4.6,
-    reviews: 39
-  },
+    reviews: 39},
 
   // Data Pipeline and ETL Platform
   {
@@ -793,16 +650,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Advanced data pipeline platform that automates data extraction, transformation, and loading processes with real-time processing capabilities.',
     features: [
-      'Data extraction tools',
-      'Transformation workflows',
-      'Real-time processing',
-      'Data quality monitoring',
-      'Error handling and recovery',
-      'Performance optimization',
-      'Multi-source integration',
-      'Scheduling and orchestration',
-      'Monitoring and alerting',
-      'API for custom integrations'
+      'Data extraction toolsTransformation workflowsReal-time processingData quality monitoringError handling and recoveryPerformance optimizationMulti-source integrationScheduling and orchestrationMonitoring and alertingAPI for custom integrations'
     ],
     popular: true,
     icon: '📊',
@@ -834,8 +682,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-08-15',
     customers: 36,
     rating: 4.7,
-    reviews: 29
-  },
+    reviews: 29},
 
   // Infrastructure as Code Platform
   {
@@ -846,16 +693,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Comprehensive infrastructure as code platform that provides tools for defining, deploying, and managing infrastructure using declarative configuration files.',
     features: [
-      'Infrastructure definition',
-      'Multi-cloud support',
-      'Version control integration',
-      'Automated deployment',
-      'State management',
-      'Policy enforcement',
-      'Cost optimization',
-      'Security scanning',
-      'Compliance reporting',
-      'Team collaboration tools'
+      'Infrastructure definitionMulti-cloud supportVersion control integrationAutomated deploymentState managementPolicy enforcementCost optimizationSecurity scanningCompliance reportingTeam collaboration tools'
     ],
     popular: true,
     icon: '🏗️',
@@ -887,8 +725,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-07-15',
     customers: 42,
     rating: 4.8,
-    reviews: 35
-  },
+    reviews: 35},
 
   // Database Performance Optimization Platform
   {
@@ -899,16 +736,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Advanced database performance optimization platform that provides real-time monitoring, query optimization, and performance tuning recommendations.',
     features: [
-      'Real-time performance monitoring',
-      'Query optimization',
-      'Index recommendations',
-      'Performance tuning',
-      'Capacity planning',
-      'Performance analytics',
-      'Multi-database support',
-      'Automated optimization',
-      'Performance alerts',
-      'Expert consultation'
+      'Real-time performance monitoringQuery optimizationIndex recommendationsPerformance tuningCapacity planningPerformance analyticsMulti-database supportAutomated optimizationPerformance alertsExpert consultation'
     ],
     popular: true,
     icon: '🗄️',
@@ -940,8 +768,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-06-15',
     customers: 38,
     rating: 4.7,
-    reviews: 31
-  },
+    reviews: 31},
 
   // Network Monitoring and Analytics Platform
   {
@@ -952,16 +779,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Comprehensive network monitoring platform that provides real-time visibility, performance analytics, and intelligent troubleshooting capabilities.',
     features: [
-      'Real-time network monitoring',
-      'Performance analytics',
-      'Traffic analysis',
-      'Anomaly detection',
-      'Network mapping',
-      'Performance optimization',
-      'Multi-vendor support',
-      'API for integrations',
-      'Custom dashboards',
-      '24/7 monitoring'
+      'Real-time network monitoringPerformance analyticsTraffic analysisAnomaly detectionNetwork mappingPerformance optimizationMulti-vendor supportAPI for integrationsCustom dashboards24/7 monitoring'
     ],
     popular: true,
     icon: '🌐',
@@ -993,8 +811,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-05-15',
     customers: 45,
     rating: 4.6,
-    reviews: 37
-  },
+    reviews: 37},
 
   // IT Asset Management and Discovery Platform
   {
@@ -1005,16 +822,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Advanced IT asset management platform that automatically discovers, tracks, and manages IT assets across your organization.',
     features: [
-      'Automatic asset discovery',
-      'Asset lifecycle management',
-      'License tracking',
-      'Compliance reporting',
-      'Cost optimization',
-      'Performance analytics',
-      'Multi-platform support',
-      'API for integrations',
-      'Custom workflows',
-      'Expert consultation'
+      'Automatic asset discoveryAsset lifecycle managementLicense trackingCompliance reportingCost optimizationPerformance analyticsMulti-platform supportAPI for integrationsCustom workflowsExpert consultation'
     ],
     popular: true,
     icon: '💻',
@@ -1046,8 +854,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-04-15',
     customers: 52,
     rating: 4.8,
-    reviews: 43
-  },
+    reviews: 43},
 
   // Quantum-Secure Cloud Infrastructure
   {
@@ -1058,16 +865,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Next-generation cloud infrastructure platform built with quantum-resistant cryptography, ensuring your data remains secure even when quantum computers become mainstream.',
     features: [
-      'Quantum-resistant encryption algorithms',
-      'Post-quantum cryptography standards',
-      'Hybrid classical-quantum security',
-      'Zero-trust architecture',
-      'Multi-cloud orchestration',
-      'Automated security compliance',
-      'Real-time threat detection',
-      'Quantum key distribution',
-      'Disaster recovery automation',
-      'Performance optimization'
+      'Quantum-resistant encryption algorithmsPost-quantum cryptography standardsHybrid classical-quantum securityZero-trust architectureMulti-cloud orchestrationAutomated security complianceReal-time threat detectionQuantum key distributionDisaster recovery automationPerformance optimization'
     ],
     popular: true,
     icon: '☁️🔐',
@@ -1099,8 +897,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-12-01',
     customers: 18,
     rating: 4.9,
-    reviews: 12
-  },
+    reviews: 12},
 
   // Autonomous IT Operations Center
   {
@@ -1111,16 +908,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Revolutionary IT operations platform that uses AI and automation to monitor, maintain, and optimize your entire IT infrastructure without human intervention.',
     features: [
-      'AI-powered infrastructure monitoring',
-      'Automated incident response',
-      'Self-healing systems',
-      'Predictive maintenance',
-      'Performance optimization',
-      'Cost optimization',
-      'Security automation',
-      'Compliance monitoring',
-      'Real-time analytics',
-      'Mobile app management'
+      'AI-powered infrastructure monitoringAutomated incident responseSelf-healing systemsPredictive maintenancePerformance optimizationCost optimizationSecurity automationCompliance monitoringReal-time analyticsMobile app management'
     ],
     popular: true,
     icon: '🤖🏢',
@@ -1152,8 +940,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-11-01',
     customers: 67,
     rating: 4.8,
-    reviews: 45
-  },
+    reviews: 45},
 
   // Edge Computing Orchestration Platform
   {
@@ -1164,16 +951,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Advanced edge computing platform that orchestrates distributed computing resources, enabling real-time processing and low-latency applications across global networks.',
     features: [
-      'Global edge network orchestration',
-      'Real-time resource allocation',
-      'Low-latency application deployment',
-      'Edge AI processing',
-      'Network optimization',
-      'Security at the edge',
-      'Multi-cloud edge integration',
-      'IoT device management',
-      'Performance monitoring',
-      'Cost optimization'
+      'Global edge network orchestrationReal-time resource allocationLow-latency application deploymentEdge AI processingNetwork optimizationSecurity at the edgeMulti-cloud edge integrationIoT device managementPerformance monitoringCost optimization'
     ],
     popular: true,
     icon: '🌐⚡',
@@ -1205,8 +983,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-10-15',
     customers: 89,
     rating: 4.7,
-    reviews: 56
-  },
+    reviews: 56},
 
   // Blockchain Infrastructure Platform
   {
@@ -1217,16 +994,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description: 'Comprehensive blockchain platform that provides enterprise-grade infrastructure for building, deploying, and managing blockchain applications with advanced security and scalability.',
     features: [
-      'Multi-blockchain support',
-      'Smart contract development',
-      'Enterprise security features',
-      'Scalability solutions',
-      'Interoperability protocols',
-      'Governance tools',
-      'Analytics and monitoring',
-      'API management',
-      'Developer tools',
-      'Compliance features'
+      'Multi-blockchain supportSmart contract developmentEnterprise security featuresScalability solutionsInteroperability protocolsGovernance toolsAnalytics and monitoringAPI managementDeveloper toolsCompliance features'
     ],
     popular: true,
     icon: '⛓️🏗️',
@@ -1258,6 +1026,5 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-09-01',
     customers: 123,
     rating: 4.8,
-    reviews: 52
-  }
-];
+    reviews: 52}
+],

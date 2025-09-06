@@ -1,48 +1,45 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, ExternalLink, ArrowRight, TrendingUp, Users, Clock, Shield, Zap } from 'lucide-react';
-
 interface EnhancedServiceCardProps {
   service: {
-    id: string;
-    name: string;
-    tagline: string;
-    price: string;
-    period: string;
-    description: string;
-    features: string[];
-    popular: boolean;
-    icon: string;
-    color: string;
-    textColor: string;
-    link: string;
-    marketPosition: string;
-    targetAudience: string;
-    trialDays: number;
-    setupTime: string;
-    category: string;
-    realService: boolean;
-    technology: string[];
-    integrations: string[];
-    useCases: string[];
-    roi: string;
-    competitors: string[];
-    marketSize: string;
-    growthRate: string;
-    variant: string;
+    id: string,
+    name: string,
+    tagline: string,
+    price: string,
+    period: string,
+    description: string,
+    features: string[],
+    popular: boolean,
+    icon: string,
+    color: string,
+    textColor: string,
+    link: string,
+    marketPosition: string,
+    targetAudience: string,
+    trialDays: number,
+    setupTime: string,
+    category: string,
+    realService: boolean,
+    technology: string[],
+    integrations: string[],
+    useCases: string[],
+    roi: string,
+    competitors: string[],
+    marketSize: string,
+    growthRate: string,
+    variant: string,
     contactInfo: {
-      mobile: string;
-      email: string;
-      address: string;
-      website: string;
-    };
-    realImplementation: boolean;
-    implementationDetails: string;
-    launchDate: string;
-    customers: number;
-    rating: number;
-    reviews: number;
-  };
+      mobile: string,
+      email: string,
+      address: string,
+      website: string},
+    realImplementation: boolean,
+    implementationDetails: string,
+    launchDate: string,
+    customers: number,
+    rating: number,
+    reviews: number}
 }
 
 const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) => {
@@ -65,10 +62,10 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
   const iconVariants = {
-    hidden: { rotate: -180, scale: 0 },
+    hidden: { rotate: -180, scale: 0},
     visible: { 
       rotate: 0, 
       scale: 1,
@@ -85,7 +82,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
         ease: "easeInOut" as const
       }
     }
-  };
+  },
 
   return (
     <motion.div
@@ -94,7 +91,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
       initial="hidden"
       whileInView="visible"
       whileHover="hover"
-      viewport={{ once: true }}
+      viewport={{ once: true}}
     >
       {/* Background Glow */}
       <div 
@@ -110,7 +107,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
           <motion.div
             className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1"
             initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
+            animate={{ scale: 1, rotate: 0}}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <Star className="w-3 h-3 fill-current" />
@@ -176,83 +173,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
                 key={index}
                 className="flex items-center gap-2 text-sm text-gray-300"
                 initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1 * index }}
-              >
-                <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
-                {feature}
-              </motion.div>
-            ))}
-            {service.features.length > 3 && (
-              <div className="text-xs text-gray-500 mt-2">
-                +{service.features.length - 3} more features
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Market Info */}
-        <div className="mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-xs font-semibold text-white">Market Size</span>
-            <span className="text-xs text-cyan-400">{service.marketSize}</span>
-          </div>
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-xs font-semibold text-white">Growth Rate</span>
-            <span className="text-xs text-green-400">{service.growthRate}</span>
-          </div>
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-white">ROI</span>
-            <span className="text-xs text-yellow-400">{service.roi}</span>
-          </div>
-        </div>
-
-        {/* Trial & Setup Info */}
-        <div className="flex items-center justify-between mb-6 text-sm">
-          <div className="flex items-center gap-2 text-gray-400">
-            <Clock className="w-4 h-4" />
-            {service.trialDays} day trial
-          </div>
-          <div className="flex items-center gap-2 text-gray-400">
-            <Shield className="w-4 h-4" />
-            {service.setupTime}
-          </div>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="flex gap-3">
-          <motion.a
-            href={service.link}
-            className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <ExternalLink className="w-4 h-4" />
-            Learn More
-          </motion.a>
-          
-          <motion.a
-            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
-            className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <ArrowRight className="w-4 h-4" />
-          </motion.a>
-        </div>
-
-        {/* Contact Info */}
-        <div className="mt-4 pt-4 border-t border-white/10">
-          <div className="text-xs text-gray-500 text-center">
-            Contact: {service.contactInfo.email}
-          </div>
-        </div>
-      </div>
-
-      {/* Hover Effect Border */}
-      <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-    </motion.div>
-  );
-};
-
-export default EnhancedServiceCard;
+                animate={{ opacity: 1, x: 0}}
+                transition = $2;
+export default EnhancedServiceCard,

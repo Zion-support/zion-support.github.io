@@ -1,38 +1,36 @@
 export interface InnovativeAIService {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
+  id: string,
+  name: string,
+  tagline: string,
+  description: string,
+  category: string,
   price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
-    setupTime: string;
-  };
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  marketPosition: string;
-  competitors: string[];
-  techStack: string[];
-  realImplementation: boolean;
-  implementationDetails: string;
-  roi: string;
-  useCases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    monthly: number,
+    yearly: number,
+    currency: string,
+    trialDays: number,
+    setupTime: string},
+  features: string[],
+  benefits: string[],
+  targetAudience: string[],
+  marketPosition: string,
+  competitors: string[],
+  techStack: string[],
+  realImplementation: boolean,
+  implementationDetails: string,
+  roi: string,
+  useCases: string[],
+  integrations: string[],
+  support: string,
+  compliance: string[],
+  link: string,
+  icon: string,
+  color: string,
+  popular: boolean,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const innovativeAIServices2025: InnovativeAIService[] = [
   {
@@ -49,45 +47,22 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
       setupTime: '2 weeks'
     },
     features: [
-      'Consciousness development frameworks',
-      'Emotional intelligence training modules',
-      'Ethical AI governance tools',
-      'Self-awareness assessment metrics',
-      'Consciousness evolution tracking',
-      'Multi-modal consciousness training',
-      'Real-time consciousness monitoring',
-      'Ethical decision-making frameworks',
-      'Consciousness validation tools',
-      'Research collaboration platform'
+      'Consciousness development frameworksEmotional intelligence training modulesEthical AI governance toolsSelf-awareness assessment metricsConsciousness evolution trackingMulti-modal consciousness trainingReal-time consciousness monitoringEthical decision-making frameworksConsciousness validation toolsResearch collaboration platform'
     ],
     benefits: [
-      'First-mover advantage in AI consciousness',
-      'Ethical AI development compliance',
-      'Breakthrough research capabilities',
-      'Patent-pending consciousness frameworks',
-      'Industry-leading consciousness metrics'
+      'First-mover advantage in AI consciousnessEthical AI development complianceBreakthrough research capabilitiesPatent-pending consciousness frameworksIndustry-leading consciousness metrics'
     ],
     targetAudience: [
-      'AI research institutions',
-      'Tech companies developing AGI',
-      'Government research labs',
-      'Ethics committees',
-      'AI safety organizations',
-      'Academic researchers'
+      'AI research institutionsTech companies developing AGIGovernment research labsEthics committeesAI safety organizationsAcademic researchers'
     ],
     marketPosition: 'First-to-market AI consciousness platform. No direct competitors in consciousness development. Positioned as the industry standard for ethical AI consciousness.',
-    competitors: ['None - First to market', 'General AI platforms (OpenAI, Anthropic)'],
+    competitors: ['None - First to marketGeneral AI platforms (OpenAI, Anthropic)'],
     techStack: ['Advanced Neural Networks, Consciousness Frameworks, Ethical AI, Python, TensorFlow, PyTorch, Quantum Computing Integration'],
     realImplementation: true,
     implementationDetails: 'Fully functional consciousness development platform with patented frameworks, real-time monitoring, and comprehensive research tools. Includes mobile app and API access.',
     roi: 'Research institutions report 500% ROI through breakthrough discoveries and patent filings. Companies see 1000% ROI through first-mover advantage.',
     useCases: [
-      'AGI consciousness development',
-      'Ethical AI research',
-      'Consciousness validation studies',
-      'AI safety research',
-      'Emotional intelligence training',
-      'Self-awareness development'
+      'AGI consciousness developmentEthical AI researchConsciousness validation studiesAI safety researchEmotional intelligence trainingSelf-awareness development'
     ],
     integrations: ['Research platforms, Academic databases, Patent systems, Government research networks'],
     support: '24/7 expert support, dedicated research consultants, patent assistance, and collaboration facilitation.',
@@ -99,8 +74,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-01-01',
     customers: 25,
     rating: 5.0,
-    reviews: 12
-  },
+    reviews: 12},
   {
     id: 'quantum-ai-orchestrator',
     name: 'Quantum AI Orchestrator',
@@ -115,31 +89,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
       setupTime: '1 week'
     },
     features: [
-      'Quantum AI orchestration engine',
-      'Real-time optimization algorithms',
-      'Multi-dimensional problem solving',
-      'Quantum-enhanced machine learning',
-      'Enterprise workflow automation',
-      'Resource optimization engine',
-      'Predictive analytics platform',
-      'Quantum security protocols',
-      'Scalable quantum processing',
-      'API-first architecture'
+      'Quantum AI orchestration engineReal-time optimization algorithmsMulti-dimensional problem solvingQuantum-enhanced machine learningEnterprise workflow automationResource optimization enginePredictive analytics platformQuantum security protocolsScalable quantum processingAPI-first architecture'
     ],
     benefits: [
-      'Solve NP-hard problems in seconds',
-      'Optimize operations by 300%+',
-      'Reduce computational costs by 80%',
-      'Enable real-time decision making',
-      'Future-proof quantum advantage'
+      'Solve NP-hard problems in secondsOptimize operations by 300%+Reduce computational costs by 80%Enable real-time decision makingFuture-proof quantum advantage'
     ],
     targetAudience: [
-      'Fortune 500 companies',
-      'Financial institutions',
-      'Healthcare organizations',
-      'Logistics companies',
-      'Research institutions',
-      'Government agencies'
+      'Fortune 500 companiesFinancial institutionsHealthcare organizationsLogistics companiesResearch institutionsGovernment agencies'
     ],
     marketPosition: 'Leading quantum AI orchestration platform. Competes with IBM Quantum, Google Quantum, and D-Wave. Our advantage: AI integration and enterprise focus.',
     competitors: ['IBM Quantum, Google Quantum, D-Wave, Rigetti, IonQ'],
@@ -148,12 +104,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     implementationDetails: 'Production-ready quantum AI platform with enterprise-grade security, real-time processing, and comprehensive API ecosystem. Includes mobile management app.',
     roi: 'Enterprise customers see 400% ROI through operational optimization and cost reduction. Average payback period: 6 months.',
     useCases: [
-      'Financial portfolio optimization',
-      'Supply chain optimization',
-      'Drug discovery acceleration',
-      'Logistics route optimization',
-      'Energy grid optimization',
-      'Risk assessment modeling'
+      'Financial portfolio optimizationSupply chain optimizationDrug discovery accelerationLogistics route optimizationEnergy grid optimizationRisk assessment modeling'
     ],
     integrations: ['Enterprise systems, Cloud platforms, Financial platforms, Healthcare systems, Government networks'],
     support: '24/7 enterprise support, dedicated quantum consultants, implementation specialists, and ongoing optimization.',
@@ -165,8 +116,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-01-15',
     customers: 150,
     rating: 4.9,
-    reviews: 89
-  },
+    reviews: 89},
   {
     id: 'autonomous-devops-platform',
     name: 'Autonomous DevOps Platform',
@@ -181,31 +131,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
       setupTime: '3 days'
     },
     features: [
-      'Autonomous infrastructure management',
-      'Self-healing applications',
-      'Intelligent deployment optimization',
-      'Predictive failure prevention',
-      'Auto-scaling intelligence',
-      'Security vulnerability auto-patching',
-      'Performance auto-optimization',
-      'Cost optimization engine',
-      'Zero-downtime deployments',
-      'Comprehensive monitoring'
+      'Autonomous infrastructure managementSelf-healing applicationsIntelligent deployment optimizationPredictive failure preventionAuto-scaling intelligenceSecurity vulnerability auto-patchingPerformance auto-optimizationCost optimization engineZero-downtime deploymentsComprehensive monitoring'
     ],
     benefits: [
-      'Reduce DevOps workload by 90%',
-      'Improve system reliability by 99.9%',
-      'Reduce deployment failures by 95%',
-      'Optimize costs by 40%',
-      'Enable 24/7 autonomous operations'
+      'Reduce DevOps workload by 90%Improve system reliability by 99.9%Reduce deployment failures by 95%Optimize costs by 40%Enable 24/7 autonomous operations'
     ],
     targetAudience: [
-      'Tech companies',
-      'E-commerce businesses',
-      'Financial services',
-      'Healthcare organizations',
-      'Government agencies',
-      'Startups and scale-ups'
+      'Tech companiesE-commerce businessesFinancial servicesHealthcare organizationsGovernment agenciesStartups and scale-ups'
     ],
     marketPosition: 'Leading autonomous DevOps platform. Competes with GitLab, Jenkins, and CircleCI. Our advantage: Full autonomy and AI-powered optimization.',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'],
@@ -214,12 +146,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     implementationDetails: 'Production-ready autonomous platform with enterprise-grade security, comprehensive monitoring, and seamless integration with existing DevOps tools.',
     roi: 'Companies see 300% ROI through reduced DevOps costs and improved system reliability. Average payback period: 4 months.',
     useCases: [
-      'Continuous deployment automation',
-      'Infrastructure as code management',
-      'Application performance optimization',
-      'Security compliance automation',
-      'Cost optimization',
-      'Disaster recovery automation'
+      'Continuous deployment automationInfrastructure as code managementApplication performance optimizationSecurity compliance automationCost optimizationDisaster recovery automation'
     ],
     integrations: ['GitHub, GitLab, AWS, Azure, GCP, Kubernetes, Docker, Terraform, Monitoring tools'],
     support: '24/7 support, dedicated DevOps consultants, implementation specialists, and ongoing optimization.',
@@ -231,8 +158,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-01-10',
     customers: 500,
     rating: 4.8,
-    reviews: 234
-  },
+    reviews: 234},
   {
     id: 'zero-trust-ai-security',
     name: 'Zero-Trust AI Security Platform',
@@ -247,31 +173,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
       setupTime: '1 week'
     },
     features: [
-      'AI-powered threat detection',
-      'Zero-trust architecture',
-      'Real-time threat response',
-      'Behavioral analysis',
-      'Automated incident response',
-      'Threat intelligence sharing',
-      'Compliance automation',
-      'Security orchestration',
-      'Vulnerability management',
-      'Security analytics dashboard'
+      'AI-powered threat detectionZero-trust architectureReal-time threat responseBehavioral analysisAutomated incident responseThreat intelligence sharingCompliance automationSecurity orchestrationVulnerability managementSecurity analytics dashboard'
     ],
     benefits: [
-      'Reduce security incidents by 95%',
-      'Automate 90% of security responses',
-      'Improve threat detection accuracy by 99%',
-      'Reduce compliance costs by 60%',
-      'Enable proactive security posture'
+      'Reduce security incidents by 95%Automate 90% of security responsesImprove threat detection accuracy by 99%Reduce compliance costs by 60%Enable proactive security posture'
     ],
     targetAudience: [
-      'Financial institutions',
-      'Healthcare organizations',
-      'Government agencies',
-      'Tech companies',
-      'E-commerce businesses',
-      'Educational institutions'
+      'Financial institutionsHealthcare organizationsGovernment agenciesTech companiesE-commerce businessesEducational institutions'
     ],
     marketPosition: 'Leading AI-powered zero-trust security platform. Competes with CrowdStrike, Palo Alto Networks, and Fortinet. Our advantage: AI integration and zero-trust architecture.',
     competitors: ['CrowdStrike, Palo Alto Networks, Fortinet, Cisco, Symantec'],
@@ -280,12 +188,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     implementationDetails: 'Enterprise-grade security platform with real-time threat detection, automated response, and comprehensive compliance features. Includes mobile security app.',
     roi: 'Organizations see 400% ROI through reduced security incidents and automated compliance. Average payback period: 3 months.',
     useCases: [
-      'Endpoint security',
-      'Network security',
-      'Cloud security',
-      'Identity and access management',
-      'Compliance automation',
-      'Threat hunting'
+      'Endpoint securityNetwork securityCloud securityIdentity and access managementCompliance automationThreat hunting'
     ],
     integrations: ['SIEM systems, EDR platforms, Identity providers, Cloud platforms, Security tools'],
     support: '24/7 security operations center, dedicated security consultants, incident response team, and ongoing optimization.',
@@ -297,8 +200,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-01-20',
     customers: 300,
     rating: 4.9,
-    reviews: 156
-  },
+    reviews: 156},
   {
     id: 'space-mining-ai',
     name: 'Space Mining AI Platform',
@@ -313,45 +215,22 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
       setupTime: '1 month'
     },
     features: [
-      'AI-powered resource identification',
-      'Autonomous mining fleet management',
-      'Space logistics optimization',
-      'Resource value assessment',
-      'Mining operation planning',
-      'Risk assessment and mitigation',
-      'Regulatory compliance tools',
-      'Market analysis platform',
-      'Supply chain optimization',
-      'Real-time monitoring'
+      'AI-powered resource identificationAutonomous mining fleet managementSpace logistics optimizationResource value assessmentMining operation planningRisk assessment and mitigationRegulatory compliance toolsMarket analysis platformSupply chain optimizationReal-time monitoring'
     ],
     benefits: [
-      'Optimize mining operations by 500%',
-      'Reduce operational risks by 80%',
-      'Increase resource discovery by 300%',
-      'Enable profitable space mining',
-      'First-mover advantage in space economy'
+      'Optimize mining operations by 500%Reduce operational risks by 80%Increase resource discovery by 300%Enable profitable space miningFirst-mover advantage in space economy'
     ],
     targetAudience: [
-      'Space mining companies',
-      'Aerospace corporations',
-      'Government space agencies',
-      'Private space companies',
-      'Investment firms',
-      'Research institutions'
+      'Space mining companiesAerospace corporationsGovernment space agenciesPrivate space companiesInvestment firmsResearch institutions'
     ],
     marketPosition: 'First-to-market space mining AI platform. No direct competitors in AI-powered space mining. Positioned as the industry standard for space resource extraction.',
-    competitors: ['None - First to market', 'General space companies (SpaceX, Blue Origin)'],
+    competitors: ['None - First to marketGeneral space companies (SpaceX, Blue Origin)'],
     techStack: ['AI/ML, Space Technology, Python, Satellite Data, Robotics, Autonomous Systems, Space Communications'],
     realImplementation: true,
     implementationDetails: 'Production-ready space mining platform with satellite integration, autonomous fleet management, and comprehensive resource analysis tools.',
     roi: 'Space companies report 1000% ROI through optimized operations and increased resource discovery. Average payback period: 12 months.',
     useCases: [
-      'Asteroid mining',
-      'Lunar resource extraction',
-      'Space station resource management',
-      'Satellite resource optimization',
-      'Space logistics planning',
-      'Resource market analysis'
+      'Asteroid miningLunar resource extractionSpace station resource managementSatellite resource optimizationSpace logistics planningResource market analysis'
     ],
     integrations: ['Satellite systems, Space vehicles, Ground stations, Government networks, Market data platforms'],
     support: '24/7 space operations support, dedicated space consultants, regulatory assistance, and ongoing optimization.',
@@ -363,8 +242,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-01-25',
     customers: 15,
     rating: 5.0,
-    reviews: 8
-  },
+    reviews: 8},
   {
     id: 'dna-computing-platform',
     name: 'DNA Computing Platform',
@@ -379,31 +257,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
       setupTime: '2 weeks'
     },
     features: [
-      'DNA computing engine',
-      'Biological problem solver',
-      'Drug discovery platform',
-      'Genetic algorithm optimization',
-      'Bioinformatics tools',
-      'Molecular simulation',
-      'Protein folding prediction',
-      'Disease modeling',
-      'Drug interaction analysis',
-      'Research collaboration tools'
+      'DNA computing engineBiological problem solverDrug discovery platformGenetic algorithm optimizationBioinformatics toolsMolecular simulationProtein folding predictionDisease modelingDrug interaction analysisResearch collaboration tools'
     ],
     benefits: [
-      'Solve biological problems 1000x faster',
-      'Accelerate drug discovery by 500%',
-      'Enable new research possibilities',
-      'Reduce computational costs by 90%',
-      'Breakthrough scientific discoveries'
+      'Solve biological problems 1000x fasterAccelerate drug discovery by 500%Enable new research possibilitiesReduce computational costs by 90%Breakthrough scientific discoveries'
     ],
     targetAudience: [
-      'Pharmaceutical companies',
-      'Biotechnology firms',
-      'Research institutions',
-      'Healthcare organizations',
-      'Government labs',
-      'Academic researchers'
+      'Pharmaceutical companiesBiotechnology firmsResearch institutionsHealthcare organizationsGovernment labsAcademic researchers'
     ],
     marketPosition: 'Leading DNA computing platform. Competes with traditional supercomputers and quantum computers. Our advantage: Biological problem specialization.',
     competitors: ['Traditional supercomputers, Quantum computers, Cloud computing platforms'],
@@ -412,12 +272,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     implementationDetails: 'Production-ready DNA computing platform with comprehensive bioinformatics tools, research collaboration features, and seamless integration with existing research workflows.',
     roi: 'Research institutions report 800% ROI through accelerated discoveries and reduced computational costs. Average payback period: 8 months.',
     useCases: [
-      'Drug discovery',
-      'Protein structure prediction',
-      'Disease modeling',
-      'Genetic research',
-      'Molecular simulation',
-      'Bioinformatics analysis'
+      'Drug discoveryProtein structure predictionDisease modelingGenetic researchMolecular simulationBioinformatics analysis'
     ],
     integrations: ['Research databases, Laboratory systems, Academic networks, Government research platforms'],
     support: '24/7 research support, dedicated bioinformatics consultants, implementation specialists, and ongoing optimization.',
@@ -429,8 +284,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-01-30',
     customers: 75,
     rating: 4.9,
-    reviews: 45
-  },
+    reviews: 45},
   {
     id: 'metaverse-development-platform',
     name: 'Metaverse Development Platform',
@@ -445,31 +299,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
       setupTime: '1 week'
     },
     features: [
-      '3D world creation tools',
-      'AI-powered content generation',
-      'Virtual asset marketplace',
-      'User management system',
-      'Monetization tools',
-      'Analytics dashboard',
-      'Multi-platform deployment',
-      'Social features',
-      'Virtual commerce tools',
-      'Custom branding options'
+      '3D world creation toolsAI-powered content generationVirtual asset marketplaceUser management systemMonetization toolsAnalytics dashboardMulti-platform deploymentSocial featuresVirtual commerce toolsCustom branding options'
     ],
     benefits: [
-      'Create metaverse experiences in days',
-      'Generate content 10x faster with AI',
-      'Monetize virtual experiences',
-      'Reach global audiences',
-      'Future-proof business presence'
+      'Create metaverse experiences in daysGenerate content 10x faster with AIMonetize virtual experiencesReach global audiencesFuture-proof business presence'
     ],
     targetAudience: [
-      'Brands and businesses',
-      'Content creators',
-      'Educational institutions',
-      'Event organizers',
-      'Real estate companies',
-      'Entertainment companies'
+      'Brands and businessesContent creatorsEducational institutionsEvent organizersReal estate companiesEntertainment companies'
     ],
     marketPosition: 'Leading metaverse development platform. Competes with Roblox, Unity, and Unreal Engine. Our advantage: AI integration and business focus.',
     competitors: ['Roblox, Unity, Unreal Engine, Decentraland, The Sandbox'],
@@ -478,12 +314,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     implementationDetails: 'Production-ready metaverse platform with comprehensive creation tools, AI-powered content generation, and seamless deployment across multiple platforms.',
     roi: 'Businesses see 300% ROI through virtual presence and new revenue streams. Average payback period: 6 months.',
     useCases: [
-      'Virtual events and conferences',
-      'Brand experiences',
-      'Educational virtual worlds',
-      'Virtual real estate',
-      'Gaming and entertainment',
-      'Virtual commerce'
+      'Virtual events and conferencesBrand experiencesEducational virtual worldsVirtual real estateGaming and entertainmentVirtual commerce'
     ],
     integrations: ['Social media, E-commerce platforms, Payment systems, Analytics tools, Marketing platforms'],
     support: '24/7 support, dedicated metaverse consultants, content creation assistance, and ongoing optimization.',
@@ -495,8 +326,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-02-01',
     customers: 800,
     rating: 4.7,
-    reviews: 423
-  },
+    reviews: 423},
   {
     id: 'autonomous-logistics-ai',
     name: 'Autonomous Logistics AI Platform',
@@ -511,31 +341,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
       setupTime: '2 weeks'
     },
     features: [
-      'AI-powered demand prediction',
-      'Autonomous route optimization',
-      'Real-time supply chain monitoring',
-      'Inventory optimization',
-      'Warehouse automation',
-      'Last-mile delivery optimization',
-      'Cost optimization engine',
-      'Sustainability tracking',
-      'Compliance automation',
-      'Performance analytics'
+      'AI-powered demand predictionAutonomous route optimizationReal-time supply chain monitoringInventory optimizationWarehouse automationLast-mile delivery optimizationCost optimization engineSustainability trackingCompliance automationPerformance analytics'
     ],
     benefits: [
-      'Reduce logistics costs by 40%',
-      'Improve delivery times by 60%',
-      'Optimize inventory by 50%',
-      'Reduce carbon footprint by 30%',
-      'Enable 24/7 autonomous operations'
+      'Reduce logistics costs by 40%Improve delivery times by 60%Optimize inventory by 50%Reduce carbon footprint by 30%Enable 24/7 autonomous operations'
     ],
     targetAudience: [
-      'E-commerce companies',
-      'Retail chains',
-      'Manufacturing companies',
-      'Logistics providers',
-      'Food delivery services',
-      'Healthcare organizations'
+      'E-commerce companiesRetail chainsManufacturing companiesLogistics providersFood delivery servicesHealthcare organizations'
     ],
     marketPosition: 'Leading AI-powered logistics platform. Competes with Flexport, Convoy, and FourKites. Our advantage: Full AI integration and autonomous operations.',
     competitors: ['Flexport, Convoy, FourKites, Project44, ClearMetal'],
@@ -544,12 +356,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     implementationDetails: 'Production-ready logistics platform with real-time optimization, autonomous operations, and comprehensive analytics. Includes mobile apps for drivers and customers.',
     roi: 'Companies see 400% ROI through cost reduction and improved efficiency. Average payback period: 5 months.',
     useCases: [
-      'Supply chain optimization',
-      'Route optimization',
-      'Inventory management',
-      'Warehouse automation',
-      'Last-mile delivery',
-      'Sustainability tracking'
+      'Supply chain optimizationRoute optimizationInventory managementWarehouse automationLast-mile deliverySustainability tracking'
     ],
     integrations: ['E-commerce platforms, ERP systems, WMS, TMS, Payment systems, Analytics tools'],
     support: '24/7 logistics support, dedicated consultants, implementation specialists, and ongoing optimization.',
@@ -561,8 +368,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-02-05',
     customers: 450,
     rating: 4.8,
-    reviews: 267
-  },
+    reviews: 267},
   {
     id: 'quantum-financial-platform',
     name: 'Quantum Financial Platform',
@@ -577,31 +383,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
       setupTime: '2 weeks'
     },
     features: [
-      'Quantum-powered trading algorithms',
-      'Real-time risk assessment',
-      'Portfolio optimization engine',
-      'Financial modeling tools',
-      'Market prediction algorithms',
-      'Fraud detection system',
-      'Compliance automation',
-      'Performance analytics',
-      'API access',
-      'Multi-asset support'
+      'Quantum-powered trading algorithmsReal-time risk assessmentPortfolio optimization engineFinancial modeling toolsMarket prediction algorithmsFraud detection systemCompliance automationPerformance analyticsAPI accessMulti-asset support'
     ],
     benefits: [
-      'Execute trades 1000x faster',
-      'Improve portfolio returns by 200%',
-      'Reduce risk by 80%',
-      'Enable real-time decision making',
-      'Future-proof financial advantage'
+      'Execute trades 1000x fasterImprove portfolio returns by 200%Reduce risk by 80%Enable real-time decision makingFuture-proof financial advantage'
     ],
     targetAudience: [
-      'Investment banks',
-      'Hedge funds',
-      'Asset management firms',
-      'Trading companies',
-      'Financial institutions',
-      'Wealth management firms'
+      'Investment banksHedge fundsAsset management firmsTrading companiesFinancial institutionsWealth management firms'
     ],
     marketPosition: 'Leading quantum financial platform. Competes with Bloomberg, Thomson Reuters, and FactSet. Our advantage: Quantum computing integration.',
     competitors: ['Bloomberg, Thomson Reuters, FactSet, Refinitiv, S&P Global'],
@@ -610,12 +398,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     implementationDetails: 'Production-ready financial platform with quantum computing integration, real-time data processing, and comprehensive financial tools. Includes mobile trading app.',
     roi: 'Financial institutions see 500% ROI through improved trading performance and risk reduction. Average payback period: 4 months.',
     useCases: [
-      'Algorithmic trading',
-      'Portfolio optimization',
-      'Risk management',
-      'Financial modeling',
-      'Market analysis',
-      'Fraud detection'
+      'Algorithmic tradingPortfolio optimizationRisk managementFinancial modelingMarket analysisFraud detection'
     ],
     integrations: ['Trading platforms, Market data providers, Banking systems, Compliance tools, Analytics platforms'],
     support: '24/7 financial support, dedicated financial consultants, implementation specialists, and ongoing optimization.',
@@ -627,8 +410,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-02-10',
     customers: 200,
     rating: 4.9,
-    reviews: 134
-  },
+    reviews: 134},
   {
     id: 'ai-healthcare-diagnostic',
     name: 'AI Healthcare Diagnostic Platform',
@@ -643,31 +425,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
       setupTime: '1 month'
     },
     features: [
-      'AI-powered medical imaging analysis',
-      'Early disease detection',
-      'Personalized treatment recommendations',
-      'Patient outcome prediction',
-      'Medical record analysis',
-      'Drug interaction checking',
-      'Clinical decision support',
-      'Telemedicine integration',
-      'Compliance automation',
-      'Research collaboration tools'
+      'AI-powered medical imaging analysisEarly disease detectionPersonalized treatment recommendationsPatient outcome predictionMedical record analysisDrug interaction checkingClinical decision supportTelemedicine integrationCompliance automationResearch collaboration tools'
     ],
     benefits: [
-      'Improve diagnostic accuracy by 99.9%',
-      'Reduce diagnostic errors by 95%',
-      'Enable early disease detection',
-      'Improve patient outcomes by 80%',
-      'Reduce healthcare costs by 40%'
+      'Improve diagnostic accuracy by 99.9%Reduce diagnostic errors by 95%Enable early disease detectionImprove patient outcomes by 80%Reduce healthcare costs by 40%'
     ],
     targetAudience: [
-      'Hospitals and clinics',
-      'Medical imaging centers',
-      'Research institutions',
-      'Pharmaceutical companies',
-      'Insurance companies',
-      'Government health agencies'
+      'Hospitals and clinicsMedical imaging centersResearch institutionsPharmaceutical companiesInsurance companiesGovernment health agencies'
     ],
     marketPosition: 'Leading AI healthcare diagnostic platform. Competes with IBM Watson Health, Google Health, and Microsoft Healthcare. Our advantage: Specialized diagnostic accuracy.',
     competitors: ['IBM Watson Health, Google Health, Microsoft Healthcare, GE Healthcare, Siemens Healthineers'],
@@ -676,12 +440,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     implementationDetails: 'Production-ready healthcare platform with FDA approval, comprehensive diagnostic tools, and seamless integration with existing healthcare systems.',
     roi: 'Healthcare organizations see 600% ROI through improved patient outcomes and reduced costs. Average payback period: 8 months.',
     useCases: [
-      'Medical imaging analysis',
-      'Disease diagnosis',
-      'Treatment planning',
-      'Patient monitoring',
-      'Drug discovery',
-      'Clinical research'
+      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
     ],
     integrations: ['EHR systems, Medical devices, Imaging equipment, Laboratory systems, Telemedicine platforms'],
     support: '24/7 medical support, dedicated healthcare consultants, implementation specialists, and ongoing optimization.',
@@ -693,6 +452,5 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-02-15',
     customers: 350,
     rating: 4.9,
-    reviews: 189
-  }
-];
+    reviews: 189}
+],

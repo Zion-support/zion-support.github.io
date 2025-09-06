@@ -6,15 +6,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-
 interface DiscussionPost {
-  id: number;
-  author: string;
-  avatar?: string;
-  time: string;
-  title: string;
-  body: string;
-}
+  id: number,
+  author: string,
+  avatar?: string,
+  time: string,
+  title: string,
+  body: string}
 
 const initialPosts: DiscussionPost[] = [
   {
@@ -28,28 +26,24 @@ const initialPosts: DiscussionPost[] = [
     author: "David Kim",
     time: "50m ago",
     title: "Quick tip: How to rank your Zion listing higher",
-    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}];
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
 
 export const CommunityDiscussion: React.FC = () => {
-  const [posts, setPosts] = useState(initialPosts);
-  const [showNew, setShowNew] = useState(false);
-  const [newTitle, setNewTitle] = useState("");
-  const [newBody, setNewBody] = useState("");
-
-  const handleAddPost = () => {
-    if (!newTitle.trim() || !newBody.trim()) return;
-    setPosts([
-      {
-        id: Date.now(),
+  const [posts, setPosts] = useState($2);
+  const [showNew, setShowNew] = useState($2);
+  const [newTitle, setNewTitle] = useState($2);
+  const [newBody, setNewBody] = useState($2);
+  const handleAddPost = $2;
+    setPosts($2);
         author: "You",
         time: "Now",
         title: newTitle,
         body: newBody},
-      ...posts]);
-    setNewTitle("");
-    setNewBody("");
-    setShowNew(false);
-  };
+      ...posts]),
+    setNewTitle($2);
+    setNewBody($2);
+    setShowNew(false)
+  },
 
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
@@ -126,20 +120,4 @@ export const CommunityDiscussion: React.FC = () => {
                 </AvatarFallback>
               </Avatar>
               <div>
-                <div className="flex gap-2 items-center">
-                  <span className="font-semibold text-white">{post.author}</span>
-                  <span className="text-xs text-zion-slate-light">{post.time}</span>
-                </div>
-                <h3 className="text-lg font-bold text-zion-cyan mt-1">{post.title}</h3>
-                <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-      <div className="mt-8 text-xs text-zion-slate-dark text-center">
-        🚀 Stay engaged! Top contributors are regularly featured on the homepage.
-      </div>
-    </div>
-  );
-};
+                <div className = $2;

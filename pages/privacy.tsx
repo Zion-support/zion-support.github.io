@@ -7,96 +7,67 @@ import { motion } from 'framer-motion';
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
-} from 'lucide-react';
+} from 'lucide-react',
 
 const PrivacyPage: React.FC = () => {
-  const lastUpdated = 'January 17, 2025';
+  const lastUpdated = 'January 17, 2025',
 
-  const privacySections = [
-    {
-      title: 'Information We Collect',
-      icon: <Database className="w-8 h-8" />,
+  const privacySections = $2;
+      icon: <Database className = $2;
       color: 'from-cyan-500 to-blue-500',
       content: [
-        'Personal information (name, email, phone number, company)',
-        'Business information (company size, industry, project requirements)',
-        'Technical information (IP address, browser type, device information)',
-        'Usage data (website interactions, service usage patterns)',
-        'Communication records (emails, phone calls, support tickets)'
+        'Personal information (name, email, phone number, company)Business information (company size, industry, project requirements)Technical information (IP address, browser type, device information)Usage data (website interactions, service usage patterns)Communication records (emails, phone calls, support tickets)'
       ]
     },
     {
       title: 'How We Use Your Information',
-      icon: <Settings className="w-8 h-8" />,
+      icon: <Settings className = $2;
       color: 'from-purple-500 to-pink-500',
       content: [
-        'Provide and improve our services',
-        'Communicate with you about our services',
-        'Process payments and manage accounts',
-        'Send marketing communications (with consent)',
-        'Analyze usage patterns and improve user experience',
-        'Comply with legal obligations'
+        'Provide and improve our servicesCommunicate with you about our servicesProcess payments and manage accountsSend marketing communications (with consent)Analyze usage patterns and improve user experienceComply with legal obligations'
       ]
     },
     {
       title: 'Information Sharing',
-      icon: <Globe className="w-8 h-8" />,
+      icon: <Globe className = $2;
       color: 'from-green-500 to-emerald-500',
       content: [
-        'We do not sell, trade, or rent your personal information',
-        'Share with trusted service providers under strict confidentiality',
-        'Comply with legal requirements and court orders',
-        'Protect our rights, property, and safety',
-        'Business transfers (with notice and choice)'
+        'We do not sell, trade, or rent your personal informationShare with trusted service providers under strict confidentialityComply with legal requirements and court ordersProtect our rights, property, and safetyBusiness transfers (with notice and choice)'
       ]
     },
     {
       title: 'Data Security',
-      icon: <Lock className="w-8 h-8" />,
+      icon: <Lock className = $2;
       color: 'from-orange-500 to-red-500',
       content: [
-        'Industry-standard encryption for data in transit and at rest',
-        'Regular security audits and vulnerability assessments',
-        'Access controls and authentication measures',
-        'Employee training on data protection',
-        'Incident response and breach notification procedures'
+        'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
       ]
     }
-  ];
+  ],
 
-  const rights = [
-    {
-      title: 'Access',
+  const rights = $2;
       description: 'Request access to your personal information',
-      icon: <Eye className="w-6 h-6" />
-    },
+      icon: <Eye className = $2;
     {
       title: 'Correction',
       description: 'Request correction of inaccurate information',
-      icon: <CheckCircle className="w-6 h-6" />
-    },
+      icon: <CheckCircle className = $2;
     {
       title: 'Deletion',
       description: 'Request deletion of your personal information',
-      icon: <AlertTriangle className="w-6 h-6" />
-    },
+      icon: <AlertTriangle className = $2;
     {
       title: 'Portability',
       description: 'Request transfer of your data to another service',
-      icon: <Database className="w-6 h-6" />
-    },
+      icon: <Database className = $2;
     {
       title: 'Objection',
       description: 'Object to processing of your personal information',
-      icon: <User className="w-6 h-6" />
-    },
+      icon: <User className = $2;
     {
       title: 'Restriction',
       description: 'Request restriction of processing activities',
-      icon: <Settings className="w-6 h-6" />
-    }
-  ];
-
+      icon: <Settings className = $2;
   return (
     <ErrorBoundary>
       <SEOOptimizer />
@@ -107,8 +78,8 @@ const PrivacyPage: React.FC = () => {
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6 }}
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -131,7 +102,7 @@ const PrivacyPage: React.FC = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0}}
                   transition={{ duration: 0.6 }}
                 >
                   <h2 className="text-4xl font-bold mb-6 text-white">
@@ -153,8 +124,8 @@ const PrivacyPage: React.FC = () => {
                 </motion.div>
                 
                 <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, x: 20}}
+                  whileInView={{ opacity: 1, x: 0}}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="relative"
                 >
@@ -187,8 +158,8 @@ const PrivacyPage: React.FC = () => {
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
@@ -200,8 +171,8 @@ const PrivacyPage: React.FC = () => {
                 {privacySections.map((section, index) => (
                   <motion.div
                     key={section.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 20}}
+                    whileInView={{ opacity: 1, y: 0}}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
                   >
@@ -229,8 +200,8 @@ const PrivacyPage: React.FC = () => {
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
@@ -242,8 +213,8 @@ const PrivacyPage: React.FC = () => {
                 {rights.map((right, index) => (
                   <motion.div
                     key={right.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 20}}
+                    whileInView={{ opacity: 1, y: 0}}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center"
                   >
@@ -264,8 +235,8 @@ const PrivacyPage: React.FC = () => {
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6 }}
                 className="space-y-12"
               >
@@ -327,9 +298,7 @@ const PrivacyPage: React.FC = () => {
                     </div>
 
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-4">Data Retention</h3>
-                      <p className="text-gray-300 mb-4 leading-relaxed">
-                        We retain your personal information for as long as necessary to provide our services, 
+                      <h3 className = $2;
                         comply with legal obligations, resolve disputes, and enforce our agreements.
                       </p>
                       <p className="text-gray-300 leading-relaxed">
@@ -397,42 +366,12 @@ const PrivacyPage: React.FC = () => {
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-4xl font-bold mb-6 text-white">
-                  Questions About Privacy?
-                </h2>
-                <p className="text-xl text-gray-300 mb-8">
-                  If you have any questions about this Privacy Policy or our data practices, 
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition = $2;
                   please don't hesitate to contact us.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="mailto:kleber@ziontechgroup.com"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
-                  >
-                    <Mail className="w-5 h-5" />
-                    Email Us
-                  </a>
-                  <a
-                    href="/contact"
-                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
-                  >
-                    <User className="w-5 h-5" />
-                    Contact Form
-                  </a>
-                </div>
-              </motion.div>
-            </div>
-          </section>
-        </main>
-      </Layout>
-    </ErrorBoundary>
-  );
-};
-
-export default PrivacyPage;
+                <div className = $2;
+export default PrivacyPage,
 
  

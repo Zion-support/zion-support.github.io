@@ -1,17 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-
 const UltraFuturisticBackground2047: React.FC = () => {
-  const [isClient, setIsClient] = useState(false);
-
+  const [isClient, setIsClient] = useState($2);
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    setIsClient(true)
+  }, []),
 
   if (!isClient) {
     return (
       <div className="fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black" />
-    );
+    )
   }
 
   return (
@@ -27,8 +25,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
           animate={{
             rotate: [0, 360],
             scale: [1, 1.2, 1]}}
-          transition={{
-            duration: 20,
+          transition = $2;
             repeat: Infinity as any,
             ease: "linear"
           }}
@@ -41,8 +38,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
           animate={{
             rotate: [360, 0],
             scale: [1, 0.8, 1]}}
-          transition={{
-            duration: 15,
+          transition = $2;
             repeat: Infinity as any,
             ease: "linear"
           }}
@@ -56,8 +52,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
           animate={{
             y: [0, -30, 0],
             x: [0, 20, 0]}}
-          transition={{
-            duration: 8,
+          transition = $2;
             repeat: Infinity as any,
             ease: "easeInOut"
           }}
@@ -70,8 +65,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
           animate={{
             y: [0, 40, 0],
             x: [0, -30, 0]}}
-          transition={{
-            duration: 12,
+          transition = $2;
             repeat: Infinity as any,
             ease: "easeInOut"
           }}
@@ -96,8 +90,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
           className="absolute top-0 left-0 w-full h-full opacity-20"
           animate={{
             y: [0, -100]}}
-          transition={{
-            duration: 30,
+          transition = $2;
             repeat: Infinity as any,
             ease: "linear"
           }}
@@ -110,8 +103,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
                 animate={{
                   height: [32, 64, 32],
                   opacity: [0.3, 1, 0.3]}}
-                transition={{
-                  duration: 3,
+                transition = $2;
                   repeat: Infinity as any,
                   delay: i * 0.1,
                   ease: "easeInOut"
@@ -135,8 +127,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
           className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
           animate={{
             y: [0, 1000]}}
-          transition={{
-            duration: 8,
+          transition = $2;
             repeat: Infinity as any,
             ease: "linear"
           }}
@@ -148,8 +139,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
           animate={{
             scale: [1, 20],
             opacity: [1, 0]}}
-          transition={{
-            duration: 4,
+          transition = $2;
             repeat: Infinity as any,
             ease: "easeOut"
           }}
@@ -162,12 +152,10 @@ const UltraFuturisticBackground2047: React.FC = () => {
           animate={{
             scale: [1, 15],
             opacity: [1, 0]}}
-          transition={{
-            duration: 4,
+          transition = $2;
             repeat: Infinity as any,
             ease: "easeOut",
-            delay: 1
-          }}
+            delay: 1}}
         >
           <div className="w-full h-full border-2 border-blue-400 rounded-full" />
         </motion.div>
@@ -177,12 +165,10 @@ const UltraFuturisticBackground2047: React.FC = () => {
           animate={{
             scale: [1, 10],
             opacity: [1, 0]}}
-          transition={{
-            duration: 4,
+          transition = $2;
             repeat: Infinity as any,
             ease: "easeOut",
-            delay: 2
-          }}
+            delay: 2}}
         >
           <div className="w-full h-full border-2 border-purple-400 rounded-full" />
         </motion.div>
@@ -191,11 +177,11 @@ const UltraFuturisticBackground2047: React.FC = () => {
       {/* CSS for hexagon clip */}
       <style jsx>{`
         .clip-hexagon {
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
         }
       `}</style>
     </>
-  );
-};
+  )
+},
 
-export default UltraFuturisticBackground2047;
+export default UltraFuturisticBackground2047,

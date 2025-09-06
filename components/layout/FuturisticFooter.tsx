@@ -1,16 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
-
 export default function FuturisticFooter() {
-  const currentYear = new Date().getFullYear();
-  
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const currentYear = new Date().getFullYear($2);
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const quickLinks = [
     { name: 'Services', href: '/services' },
@@ -18,20 +15,19 @@ export default function FuturisticFooter() {
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' }];
+    { name: 'Blog', href: '/blog' }],
 
   const serviceCategories = [
-    { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning' },
-    { name: 'Cloud & Infrastructure', href: '/services?category=Cloud%20%26%20Infrastructure' },
-    { name: 'Cybersecurity', href: '/services?category=Cybersecurity' },
-    { name: 'Analytics & Business Intelligence', href: '/services?category=Analytics%20%26%20Business%20Intelligence' },
-    { name: 'Robotics & Automation', href: '/services?category=Robotics%20%26%20Automation' },
-    { name: 'Blockchain & Web3', href: '/services?category=Blockchain%20%26%20Web3' }];
-
+    { name: 'AI & Machine Learning', href: '/services?category = $2;
+    { name: 'Cloud & Infrastructure', href: '/services?category = $2;
+    { name: 'Cybersecurity', href: '/services?category = $2;
+    { name: 'Analytics & Business Intelligence', href: '/services?category = $2;
+    { name: 'Robotics & Automation', href: '/services?category = $2;
+    { name: 'Blockchain & Web3', href: '/services?category = $2;
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: '💼' },
     { name: 'X', href: 'https://x.com/ziontechgroup', icon: '🐦' },
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '💻' }];
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '💻' }],
 
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">
@@ -186,5 +182,5 @@ export default function FuturisticFooter() {
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
-  );
+  )
 }

@@ -5,11 +5,10 @@ import { motion } from 'framer-motion';
 import { 
   Users, Rocket, Brain, Globe, Award, Zap, 
   Heart, Star, ArrowRight, CheckCircle, Briefcase
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function Careers() {
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
-
+  const [selectedDepartment, setSelectedDepartment] = useState($2);
   const departments = [
     { id: 'all', name: 'All Departments' },
     { id: 'engineering', name: 'Engineering' },
@@ -19,11 +18,9 @@ export default function Careers() {
     { id: 'sales', name: 'Sales & Business Development' },
     { id: 'marketing', name: 'Marketing' },
     { id: 'operations', name: 'Operations' }
-  ];
+  ],
 
-  const jobOpenings = [
-    {
-      id: 1,
+  const jobOpenings = $2;
       title: 'Senior AI Engineer',
       department: 'ai-research',
       location: 'Remote / Middletown, DE',
@@ -31,10 +28,7 @@ export default function Careers() {
       experience: '5+ years',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
       requirements: [
-        'Advanced degree in Computer Science, AI, or related field',
-        'Expertise in Python, TensorFlow, PyTorch',
-        'Experience with large language models and neural networks',
-        'Strong problem-solving and analytical skills'
+        'Advanced degree in Computer Science, AI, or related fieldExpertise in Python, TensorFlow, PyTorchExperience with large language models and neural networksStrong problem-solving and analytical skills'
       ]
     },
     {
@@ -46,10 +40,7 @@ export default function Careers() {
       experience: '3+ years',
       description: 'Research and develop quantum algorithms and quantum computing solutions.',
       requirements: [
-        'PhD in Physics, Computer Science, or related field',
-        'Experience with quantum programming languages (Qiskit, Cirq)',
-        'Knowledge of quantum algorithms and quantum information theory',
-        'Strong mathematical and theoretical background'
+        'PhD in Physics, Computer Science, or related fieldExperience with quantum programming languages (Qiskit, Cirq)Knowledge of quantum algorithms and quantum information theoryStrong mathematical and theoretical background'
       ]
     },
     {
@@ -61,10 +52,7 @@ export default function Careers() {
       experience: '4+ years',
       description: 'Design and develop innovative space technology solutions and satellite systems.',
       requirements: [
-        'Degree in Aerospace Engineering, Physics, or related field',
-        'Experience with satellite design and space systems',
-        'Knowledge of orbital mechanics and space environment',
-        'Familiarity with space industry standards and regulations'
+        'Degree in Aerospace Engineering, Physics, or related fieldExperience with satellite design and space systemsKnowledge of orbital mechanics and space environmentFamiliarity with space industry standards and regulations'
       ]
     },
     {
@@ -76,10 +64,7 @@ export default function Careers() {
       experience: '3+ years',
       description: 'Build scalable web applications and cloud-based solutions.',
       requirements: [
-        'Experience with React, Node.js, and cloud platforms',
-        'Knowledge of modern web technologies and APIs',
-        'Understanding of software architecture and design patterns',
-        'Experience with DevOps and CI/CD practices'
+        'Experience with React, Node.js, and cloud platformsKnowledge of modern web technologies and APIsUnderstanding of software architecture and design patternsExperience with DevOps and CI/CD practices'
       ]
     },
     {
@@ -91,52 +76,39 @@ export default function Careers() {
       experience: '5+ years',
       description: 'Drive business growth through strategic partnerships and client relationships.',
       requirements: [
-        'Proven track record in B2B sales and business development',
-        'Experience in technology or consulting industries',
-        'Strong networking and relationship-building skills',
-        'Understanding of emerging technologies and market trends'
+        'Proven track record in B2B sales and business developmentExperience in technology or consulting industriesStrong networking and relationship-building skillsUnderstanding of emerging technologies and market trends'
       ]
     }
-  ];
+  ],
 
-  const companyValues = [
-    {
-      icon: <Brain className="w-8 h-8" />,
+  const companyValues = $2;
       title: 'Innovation First',
       description: 'We push boundaries and explore new technologies to solve complex problems.'
     },
     {
-      icon: <Heart className="w-8 h-8" />,
+      icon: <Heart className = $2;
       title: 'People Matter',
       description: 'Our team is our greatest asset, and we invest in their growth and well-being.'
     },
     {
-      icon: <Globe className="w-8 h-8" />,
+      icon: <Globe className = $2;
       title: 'Global Impact',
       description: 'We create solutions that make a difference in the world.'
     },
     {
-      icon: <Star className="w-8 h-8" />,
+      icon: <Star className = $2;
       title: 'Excellence',
       description: 'We strive for the highest quality in everything we do.'
     }
-  ];
+  ],
 
   const benefits = [
-    'Competitive salary and equity packages',
-    'Comprehensive health, dental, and vision insurance',
-    'Flexible work arrangements and remote work options',
-    'Professional development and training programs',
-    'Generous paid time off and holidays',
-    '401(k) with company matching',
-    'Modern technology and equipment',
-    'Collaborative and inclusive work environment'
-  ];
+    'Competitive salary and equity packagesComprehensive health, dental, and vision insuranceFlexible work arrangements and remote work optionsProfessional development and training programsGenerous paid time off and holidays401(k) with company matchingModern technology and equipmentCollaborative and inclusive work environment'
+  ],
 
   const filteredJobs = selectedDepartment === 'all' 
     ? jobOpenings 
-    : jobOpenings.filter(job => job.department === selectedDepartment);
-
+    : jobOpenings.filter($2);
   return (
     <UltraFuturisticBackground>
       <div className="min-h-screen">
@@ -148,8 +120,8 @@ export default function Careers() {
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -164,8 +136,8 @@ export default function Careers() {
 
         {/* Company Culture */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-16"
         >
@@ -185,8 +157,8 @@ export default function Careers() {
 
         {/* Benefits */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mb-16"
         >
@@ -205,8 +177,8 @@ export default function Careers() {
 
         {/* Job Openings */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mb-16"
         >
@@ -234,8 +206,8 @@ export default function Careers() {
             {filteredJobs.map((job) => (
               <motion.div
                 key={job.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
@@ -296,37 +268,8 @@ export default function Careers() {
 
         {/* General Application */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Don't See the Right Fit?</h2>
-            <p className="text-gray-300 mb-6">
-              We're always looking for talented individuals to join our team. 
-              Send us your resume and let's discuss how you can contribute to our mission.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Send Your Resume
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-              <a 
-                href="/about" 
-                className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
-              >
-                Learn More About Us
-              </a>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </Layout>
-  );
-};
-
-export default CareersPage;
+          className = $2;
+export default CareersPage,

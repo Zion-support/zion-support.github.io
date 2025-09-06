@@ -5,22 +5,19 @@ import {
   Star, TrendingUp, Zap, Brain, Rocket, Shield, 
   DollarSign, Users, Clock, CheckCircle, ArrowRight,
   Phone, Mail, MapPin, ExternalLink
-} from 'lucide-react';
+} from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
-
 export default function InnovativeServicesShowcase() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
@@ -28,10 +25,10 @@ export default function InnovativeServicesShowcase() {
         delayChildren: 0.2
       }
     }
-  };
+  },
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 30},
     visible: {
       opacity: 1,
       y: 0,
@@ -40,17 +37,15 @@ export default function InnovativeServicesShowcase() {
         ease: "easeOut"
       }
     }
-  };
+  },
 
-  const featuredServices = [
-    {
-      title: '🔐 Quantum Internet Security Platform',
+  const featuredServices = $2;
       description: 'ArrowRight-generation quantum-secured internet infrastructure with unbreakable encryption. Protect enterprise networks with quantum-resistant protocols.',
       price: '$8,999/month',
       marketData: '$150B cybersecurity market, 300% annual growth',
       competitors: 'Traditional cybersecurity solutions',
       savings: 'Quantum-level protection vs. traditional methods',
-      features: ['Quantum key distribution (QKD)', 'Post-quantum cryptography', 'Quantum-resistant VPN tunnels', 'Real-time threat detection', 'Zero-trust architecture'],
+      features: ['Quantum key distribution (QKD)Post-quantum cryptographyQuantum-resistant VPN tunnelsReal-time threat detectionZero-trust architecture'],
       link: 'https://ziontechgroup.com/quantum-internet-security-platform',
       color: 'from-indigo-600 to-purple-700'
     },
@@ -61,7 +56,7 @@ export default function InnovativeServicesShowcase() {
       marketData: '$150B AI in healthcare, 400% annual growth',
       competitors: 'Insitro ($100M+ funding), Recursion ($2B+ funding)',
       savings: '100x faster drug discovery vs. traditional methods',
-      features: ['Quantum molecular simulation', 'AI-powered drug screening', 'Protein folding prediction', 'Drug interaction modeling', 'Clinical trial optimization'],
+      features: ['Quantum molecular simulationAI-powered drug screeningProtein folding predictionDrug interaction modelingClinical trial optimization'],
       link: 'https://ziontechgroup.com/ai-quantum-drug-discovery',
       color: 'from-emerald-600 to-teal-700'
     },
@@ -72,7 +67,7 @@ export default function InnovativeServicesShowcase() {
       marketData: '$15T algorithmic trading, 200% annual growth',
       competitors: 'Renaissance Technologies, Two Sigma, Citadel',
       savings: 'Accessible quantum AI for smaller firms',
-      features: ['Quantum AI trading algorithms', 'Nanosecond execution', 'Real-time market analysis', 'Risk management', 'Portfolio optimization'],
+      features: ['Quantum AI trading algorithmsNanosecond executionReal-time market analysisRisk managementPortfolio optimization'],
       link: 'https://ziontechgroup.com/autonomous-quantum-trading-system',
       color: 'from-yellow-600 to-orange-700'
     },
@@ -83,11 +78,11 @@ export default function InnovativeServicesShowcase() {
       marketData: '$5B neural interface market, 500% annual growth',
       competitors: 'Basic research tools, Traditional medical devices',
       savings: 'First comprehensive neural interface platform',
-      features: ['Neural signal processing', 'Brain activity monitoring', 'AI-powered interpretation', 'Real-time communication', 'Safety protocols'],
+      features: ['Neural signal processingBrain activity monitoringAI-powered interpretationReal-time communicationSafety protocols'],
       link: 'https://ziontechgroup.com/neural-interface-development-platform',
       color: 'from-purple-600 to-indigo-700'
     }
-  ];
+  ],
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -107,8 +102,8 @@ export default function InnovativeServicesShowcase() {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 50}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 1, ease: "easeOut" }}
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -151,10 +146,10 @@ export default function InnovativeServicesShowcase() {
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -171,9 +166,9 @@ export default function InnovativeServicesShowcase() {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0}}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300"
                 >
                   <div className="mb-6">
@@ -225,10 +220,10 @@ export default function InnovativeServicesShowcase() {
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
@@ -244,10 +239,10 @@ export default function InnovativeServicesShowcase() {
                               {emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 50}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                 >
                   <UltraFuturisticCard variant="quantum-holographic" className="p-6">
                     <div className="text-4xl mb-4">{service.icon}</div>
@@ -272,10 +267,10 @@ export default function InnovativeServicesShowcase() {
 
             <motion.div
               className="text-center mt-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <motion.a
                 href="/services"
@@ -295,10 +290,10 @@ export default function InnovativeServicesShowcase() {
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">
@@ -314,10 +309,10 @@ export default function InnovativeServicesShowcase() {
               {nextGenAIServices.slice(0, 6).map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 50}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                 >
                   <UltraFuturisticCard variant="quantum-holographic" className="p-6">
                     <div className="text-4xl mb-4">{service.icon}</div>
@@ -342,10 +337,10 @@ export default function InnovativeServicesShowcase() {
 
             <motion.div
               className="text-center mt-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <motion.a
                 href="/services"
@@ -364,10 +359,10 @@ export default function InnovativeServicesShowcase() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Experience the Future?
@@ -413,5 +408,5 @@ export default function InnovativeServicesShowcase() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  )
 }

@@ -1,6 +1,5 @@
 
 import Head from 'next/head';
-
 const FutureOfWorkAndAutomation = () => {
   return (
     <div>
@@ -14,7 +13,7 @@ const FutureOfWorkAndAutomation = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default FutureOfWorkAndAutomation;
+export default FutureOfWorkAndAutomation,

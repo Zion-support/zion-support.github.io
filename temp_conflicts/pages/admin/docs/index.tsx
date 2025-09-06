@@ -1,37 +1,36 @@
 import React, { useEffect, useState } from 'react';
-
 export default function DocsAdmin() {
-  const [token, setToken] = useState('');
-  const [value, setValue] = useState('');
-  const [status, setStatus] = useState<string | null>(null);
+  const [token, setToken] = useState(''),
+  const [value, setValue] = useState(''),
+  const [status, setStatus] = useState<string | null>(null),
 
   const fetchContent = async () => {
-    setStatus('Loading...');
-    const res = await fetch('/api/admin/docs/get', { headers: { 'x-admin-token': token } });
+    setStatus('Loading...'),
+    const res = await fetch('/api/admin/docs/get', { headers: { 'x-admin-token': token } }),
     if (!res.ok) {
-      setStatus('Failed to load');
-      return;
+      setStatus('Failed to load'),
+      return
     }
-    const json = await res.json();
-    setValue(JSON.stringify(json, null, 2));
-    setStatus('Loaded');
-  };
+    const json = await res.json(),
+    setValue(JSON.stringify(json, null, 2)),
+    setStatus('Loaded')
+  },
 
   const saveContent = async () => {
-    setStatus('Saving...');
+    setStatus('Saving...'),
     try {
-      const parsed = JSON.parse(value);
+      const parsed = JSON.parse(value),
       const res = await fetch('/api/admin/docs/save', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
-        body: JSON.stringify(parsed)});
-      if (!res.ok) throw new Error('Save failed');
-      const data = await res.json();
-      setStatus(`Saved version ${data.version}`);
+        headers: { 'Content-Type': 'application/jsonx-admin-token': token },
+        body: JSON.stringify(parsed)}),
+      if (!res.ok) throw new Error('Save failed'),
+      const data = await res.json(),
+      setStatus(`Saved version ${data.version}`)
     } catch (e) {
-      setStatus('Invalid JSON or save error');
+      setStatus('Invalid JSON or save error')
     }
-  };
+  },
 
   return (
     <div className="max-w-5xl mx-auto p-6 space-y-4">
@@ -54,5 +53,5 @@ export default function DocsAdmin() {
         onChange={(e) => setValue(e.target.value)}
       />
     </div>
-  );
+  )
 }

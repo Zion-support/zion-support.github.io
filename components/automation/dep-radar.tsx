@@ -1,22 +1,21 @@
 import fs from 'fs';
 import path from 'path';
-
-type Outdated = { name: string; current: string; latest: string; type: 'dependency' | 'devDependency' };
+type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
 
 export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'data', 'dep-radar.json');
-  let outdated: Outdated[] = [];
-  let generatedAt = '';
+  const file = path.join(process.cwd(), 'datadep-radar.json'),
+  let outdated: Outdated[] = [],
+  let generatedAt = $2;
   try {
-    const raw = fs.readFileSync(file, 'utf-8');
-    const json = JSON.parse(raw);
-    outdated = json.outdated || [];
-    generatedAt = json.generatedAt || '';
+    const raw = fs.readFileSync($2);
+    const json = JSON.parse($2);
+    outdated = $2;
+    generatedAt = json.generatedAt || ''
   } catch {}
-  return { props: { outdated, generatedAt } };
+  return { props: { outdated, generatedAt } }
 }
 
-export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[]; generatedAt: string }) {
+export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string}) {
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>
@@ -48,5 +47,5 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
         </div>
       )}
     </div>
-  );
+  )
 }

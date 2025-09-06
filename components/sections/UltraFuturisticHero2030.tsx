@@ -5,18 +5,15 @@ import {
   ArrowRight, Zap, Brain, Atom, Rocket, Star, 
   TrendingUp, Shield, Globe, Cpu, Sparkles,
   Play, CheckCircle, Award, Users, Clock, Phone, Mail
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const features = [
-  {
-    icon: Brain,
+const features = $2;
     title: 'AI Consciousness',
     description: 'Develop genuine AI consciousness and emotional intelligence'
   },
@@ -35,14 +32,14 @@ const features = [
     title: 'Quantum Security',
     description: 'Unbreakable encryption with quantum key distribution'
   }
-];
+],
 
 const stats = [
-  { number: '500+', label: 'Active Clients', icon: Users },
-  { number: '99.9%', label: 'Uptime SLA', icon: Clock },
-  { number: '24/7', label: 'Support', icon: Shield },
-  { number: '2030', label: 'Future Ready', icon: Star }
-];
+  { number: '500+', label: 'Active Clients', icon: Users},
+  { number: '99.9%', label: 'Uptime SLA', icon: Clock},
+  { number: '24/7', label: 'Support', icon: Shield},
+  { number: '2030', label: 'Future Ready', icon: Star}
+],
 
 export default function UltraFuturisticHero2030() {
   return (
@@ -57,14 +54,14 @@ export default function UltraFuturisticHero2030() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: 1, scale: 1}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6"
           >
@@ -73,8 +70,8 @@ export default function UltraFuturisticHero2030() {
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
           >
@@ -84,8 +81,8 @@ export default function UltraFuturisticHero2030() {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
           >
@@ -96,8 +93,8 @@ export default function UltraFuturisticHero2030() {
           </motion.p>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto"
           >
@@ -107,8 +104,8 @@ export default function UltraFuturisticHero2030() {
 
         {/* CTA Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 1.0 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16"
         >
@@ -136,16 +133,16 @@ export default function UltraFuturisticHero2030() {
 
         {/* Features Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 1.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 1.4 + index * 0.1 }}
               className="group p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-purple-500/30 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:bg-white/10"
             >
@@ -160,8 +157,8 @@ export default function UltraFuturisticHero2030() {
 
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 1.6 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
@@ -169,7 +166,7 @@ export default function UltraFuturisticHero2030() {
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: 1, scale: 1}}
               transition={{ duration: 0.8, delay: 1.8 + index * 0.1 }}
               className="text-center group"
             >
@@ -184,8 +181,8 @@ export default function UltraFuturisticHero2030() {
 
         {/* Contact Information */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 2.0 }}
           className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-2xl p-8 backdrop-blur-sm"
         >
@@ -217,8 +214,8 @@ export default function UltraFuturisticHero2030() {
 
         {/* Trust Indicators */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 2.2 }}
           className="mt-16 text-center"
         >
@@ -247,8 +244,7 @@ export default function UltraFuturisticHero2030() {
           animate={{
             scale: [1, 2, 1],
             opacity: [0.5, 1, 0.5]}}
-          transition={{
-            duration: 3,
+          transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -258,8 +254,7 @@ export default function UltraFuturisticHero2030() {
           animate={{
             scale: [1, 1.5, 1],
             opacity: [0.3, 0.8, 0.3]}}
-          transition={{
-            duration: 4,
+          transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -269,13 +264,12 @@ export default function UltraFuturisticHero2030() {
           animate={{
             scale: [1, 3, 1],
             opacity: [0.2, 0.6, 0.2]}}
-          transition={{
-            duration: 5,
+          transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
           }}
         />
       </div>
     </section>
-  );
+  )
 }

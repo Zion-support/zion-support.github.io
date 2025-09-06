@@ -16,7 +16,7 @@ import {
   FileText,
   Megaphone,
   Search
-} from "@/components/icons";
+} from "@/components/icons",
 
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
@@ -55,7 +55,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     adminOnly: true,
     icon: "Megaphone"
   }
-};
+},
 
 // Mock data for posts by category
 const postsByCategory: Record<string, ForumPost[]> = {
@@ -66,17 +66,16 @@ const postsByCategory: Record<string, ForumPost[]> = {
       content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
       authorId: "user2",
       authorName: "Sarah Chen",
-      authorAvatar: "https://i.pravatar.cc/150?img=5",
+      authorAvatar: "https://i.pravatar.cc/150?img = $2;
       categoryId: "getting-hired",
       tags: ["profile", "tips", "hiring"],
-      createdAt: "2025-04-03T09:15:00Z",
-      updatedAt: "2025-04-03T09:15:00Z",
+      createdAt: "2025-04-03T09: 15: 00Z",
+      updatedAt: "2025-04-03T09: 15: 00Z",
       upvotes: 32,
       downvotes: 0,
       replyCount: 8,
       isPinned: true,
-      isFeatured: true
-    },
+      isFeatured: true},
     {
       id: "6",
       title: "Portfolio pieces that clients actually care about",
@@ -85,12 +84,11 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorName: "James Wilson",
       categoryId: "getting-hired",
       tags: ["portfolio", "projects", "examples"],
-      createdAt: "2025-04-07T11:30:00Z",
-      updatedAt: "2025-04-07T11:30:00Z",
+      createdAt: "2025-04-07T11: 30: 00Z",
+      updatedAt: "2025-04-07T11: 30: 00Z",
       upvotes: 19,
       downvotes: 2,
-      replyCount: 6
-    }
+      replyCount: 6}
   ],
   "project-help": [
     {
@@ -101,12 +99,11 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorName: "Michael Wong",
       categoryId: "project-help",
       tags: ["testing", "automation", "ci-cd"],
-      createdAt: "2025-04-10T14:30:00Z",
-      updatedAt: "2025-04-10T14:30:00Z",
+      createdAt: "2025-04-10T14: 30: 00Z",
+      updatedAt: "2025-04-10T14: 30: 00Z",
       upvotes: 5,
       downvotes: 0,
-      replyCount: 2
-    },
+      replyCount: 2},
     {
       id: "5",
       title: "How to handle client scope creep?",
@@ -115,13 +112,12 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorName: "David Lin",
       categoryId: "project-help",
       tags: ["client-management", "scope", "projects"],
-      createdAt: "2025-04-08T10:20:00Z",
-      updatedAt: "2025-04-08T10:20:00Z",
+      createdAt: "2025-04-08T10: 20: 00Z",
+      updatedAt: "2025-04-08T10: 20: 00Z",
       upvotes: 24,
       downvotes: 0,
       replyCount: 7,
-      isAnswered: true
-    }
+      isAnswered: true}
   ],
   "ai-tools": [
     {
@@ -130,18 +126,17 @@ const postsByCategory: Record<string, ForumPost[]> = {
       content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
       authorId: "user1",
       authorName: "Alex Johnson",
-      authorAvatar: "https://i.pravatar.cc/150?img=3",
+      authorAvatar: "https://i.pravatar.cc/150?img = $2;
       authorRole: "Verified Talent",
       categoryId: "ai-tools",
       tags: ["machine-learning", "fine-tuning", "gpt"],
-      createdAt: "2025-04-01T12:00:00Z",
-      updatedAt: "2025-04-01T12:00:00Z",
+      createdAt: "2025-04-01T12: 00: 00Z",
+      updatedAt: "2025-04-01T12: 00: 00Z",
       upvotes: 48,
       downvotes: 2,
       replyCount: 12,
       isAnswered: true,
-      isFeatured: true
-    },
+      isFeatured: true},
     {
       id: "7",
       title: "Comparing different vector embedding models",
@@ -150,12 +145,11 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorName: "Lisa Park",
       categoryId: "ai-tools",
       tags: ["embeddings", "vectors", "similarity-search"],
-      createdAt: "2025-04-05T16:40:00Z",
-      updatedAt: "2025-04-05T16:40:00Z",
+      createdAt: "2025-04-05T16: 40: 00Z",
+      updatedAt: "2025-04-05T16: 40: 00Z",
       upvotes: 31,
       downvotes: 0,
-      replyCount: 9
-    }
+      replyCount: 9}
   ],
   "feedback": [
     {
@@ -166,12 +160,11 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorName: "Emma Davis",
       categoryId: "feedback",
       tags: ["feature-request", "teams", "collaboration"],
-      createdAt: "2025-04-09T18:45:00Z",
-      updatedAt: "2025-04-09T18:45:00Z",
+      createdAt: "2025-04-09T18: 45: 00Z",
+      updatedAt: "2025-04-09T18: 45: 00Z",
       upvotes: 12,
       downvotes: 1,
-      replyCount: 3
-    },
+      replyCount: 3},
     {
       id: "8",
       title: "Suggestion for improving the jobs matching algorithm",
@@ -180,12 +173,11 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorName: "Ryan Mitchell",
       categoryId: "feedback",
       tags: ["matching", "jobs", "algorithm"],
-      createdAt: "2025-04-04T08:10:00Z",
-      updatedAt: "2025-04-04T08:10:00Z",
+      createdAt: "2025-04-04T08: 10: 00Z",
+      updatedAt: "2025-04-04T08: 10: 00Z",
       upvotes: 17,
       downvotes: 3,
-      replyCount: 5
-    }
+      replyCount: 5}
   ],
   "announcements": [
     {
@@ -197,13 +189,12 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorRole: "Admin",
       categoryId: "announcements",
       tags: ["update", "matching", "algorithm"],
-      createdAt: "2025-04-02T15:00:00Z",
-      updatedAt: "2025-04-02T15:00:00Z",
+      createdAt: "2025-04-02T15: 00: 00Z",
+      updatedAt: "2025-04-02T15: 00: 00Z",
       upvotes: 42,
       downvotes: 0,
       replyCount: 11,
-      isPinned: true
-    },
+      isPinned: true},
     {
       id: "10",
       title: "Maintenance Scheduled: April 15th",
@@ -213,60 +204,38 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorRole: "Admin",
       categoryId: "announcements",
       tags: ["maintenance", "downtime"],
-      createdAt: "2025-04-10T09:00:00Z",
-      updatedAt: "2025-04-10T09:00:00Z",
+      createdAt: "2025-04-10T09: 00: 00Z",
+      updatedAt: "2025-04-10T09: 00: 00Z",
       upvotes: 8,
       downvotes: 0,
       replyCount: 2,
-      isPinned: true
-    }
+      isPinned: true}
   ]
-};
+},
 
-const iconMap = {
-  "Briefcase": Briefcase,
+const iconMap = $2;
   "MessageSquare": MessageSquare,
   "Code": Code,
   "FileText": FileText,
   "Megaphone": Megaphone
-};
+},
 
 export default function ForumCategoryPage() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
-  const { categoryId } = useParams();
-  const { user } = useAuth();
-  const [searchQuery, setSearchQuery] = useState("");
-  
+  const { categoryId } = useParams($2);
+  const { user } = useAuth($2);
+  const [searchQuery, setSearchQuery] = useState($2);
   if (!categoryId || !categoriesInfo[categoryId]) {
     return (
       <AppLayout>
-        <div className="container py-8">
-          <h1>Category not found</h1>
-          <Button asChild className="mt-4">
-            <Link to="/community">Back to Community</Link>
-          </Button>
-        </div>
-      </AppLayout>
-    );
-  }
-  
-  const category = categoriesInfo[categoryId];
-  const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare;
-  const posts = postsByCategory[categoryId] || [];
-  
+        <div className = $2;
+  const IconComponent = $2;
+  const posts = $2;
   // Filter posts based on search query
-  const filteredPosts = searchQuery
-    ? posts.filter(post => 
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )
-    : posts;
-  
+  const filteredPosts = $2;
   // For announcements, check if user is admin
-  const canCreatePost = categoryId !== "announcements" || (user?.userType === 'admin' || user?.role === 'admin');
-  
+  const canCreatePost = $2;
   return (
     <AppLayout>
       <SEO 
@@ -338,5 +307,5 @@ export default function ForumCategoryPage() {
         )}
       </div>
     </AppLayout>
-  );
+  )
 }

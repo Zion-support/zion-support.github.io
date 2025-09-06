@@ -1,68 +1,56 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-
 interface UltraFuturisticBackground2034Props {
-  intensity?: number;
-  theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic';
+  intensity?: number,
+  theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic'
 }
 
 const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({
-  intensity = 1
-}) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number | undefined>(undefined);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
+  intensity = $2;
+  const animationRef = $2;
+  const [mousePosition, setMousePosition] = useState($2);
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const canvas = $2;
+    if (!canvas) return,
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext($2);
+    if (!ctx) return,
 
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    type ParticleType = 'quantum' | 'neural' | 'holographic';
-    
+    const resizeCanvas = $2;
+      canvas.height = $2;
+    resizeCanvas($2);
+    window.addEventListener($2);
+    type ParticleType = $2;
     // Particle system
     const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      life: number;
-      maxLife: number;
-      type: ParticleType;
-    }> = [];
+      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      life: number,
+      maxLife: number,
+      type: ParticleType}> = [],
 
     // Quantum entanglement lines
     const entanglementLines: Array<{
-      x1: number;
-      y1: number;
-      x2: number;
-      y2: number;
-      strength: number;
-      life: number;
-    }> = [];
+      x1: number,
+      y1: number,
+      x2: number,
+      y2: number,
+      strength: number,
+      life: number}> = [],
 
     // Neural network nodes
     const neuralNodes: Array<{
-      x: number;
-      y: number;
-      connections: number[];
-      activation: number;
-    }> = [];
+      x: number,
+      y: number,
+      connections: number[],
+      activation: number}> = [],
 
     // Initialize particles
     const initParticles = () => {
-      for (let i = 0; i < 100 * intensity; i++) {
+      for (let i = 0, i < 100 * intensity, i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -71,160 +59,143 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           size: Math.random() * 3 + 1,
           life: Math.random() * 100,
           maxLife: 100,
-          type: ['quantum', 'neural', 'holographic'][Math.floor(Math.random() * 3)] as ParticleType
-        });
+          type: ['quantumneuralholographic'][Math.floor(Math.random() * 3)] as ParticleType
+        })
       }
-    };
+    },
 
     // Initialize neural network
     const initNeuralNetwork = () => {
-      for (let i = 0; i < 20 * intensity; i++) {
+      for (let i = 0, i < 20 * intensity, i++) {
         neuralNodes.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           connections: [],
           activation: Math.random()
-        });
+        })
       }
 
       // Create connections
       neuralNodes.forEach((node, i) => {
-        const numConnections = Math.floor(Math.random() * 3) + 1;
-        for (let j = 0; j < numConnections; j++) {
-          const targetIndex = Math.floor(Math.random() * neuralNodes.length);
+        const numConnections = $2;
+        for (let j = 0, j < numConnections, j++) {
+          const targetIndex = $2;
           if (targetIndex !== i && !node.connections.includes(targetIndex)) {
-            node.connections.push(targetIndex);
+            node.connections.push(targetIndex)
           }
         }
-      });
-    };
+      })
+    },
 
     // Initialize entanglement lines
     const initEntanglementLines = () => {
-      for (let i = 0; i < 15 * intensity; i++) {
-        const x1 = Math.random() * canvas.width;
-        const y1 = Math.random() * canvas.height;
-        const x2 = x1 + (Math.random() - 0.5) * 200;
-        const y2 = y1 + (Math.random() - 0.5) * 200;
-        
-        entanglementLines.push({
-          x1,
-          y1,
-          x2,
-          y2,
-          strength: Math.random(),
+      for (let i = 0, i < 15 * intensity, i++) {
+        const x1 = $2;
+        const y1 = $2;
+        const x2 = $2;
+        const y2 = $2;
+        entanglementLines.push($2);
           life: Math.random() * 100
-        });
+        })
       }
-    };
+    },
 
-    initParticles();
-    initNeuralNetwork();
-    initEntanglementLines();
-
+    initParticles($2);
+    initNeuralNetwork($2);
+    initEntanglementLines($2);
     // Animation loop
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+      ctx.clearRect($2);
       // Update and draw particles
       particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        particle.life--;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
+        particle.life--,
 
         // Bounce off edges
-        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
-        if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
+        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1,
+        if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1,
 
         // Draw particle
-        const alpha = particle.life / particle.maxLife;
-        ctx.save();
-        ctx.globalAlpha = alpha;
-        
+        const alpha = $2;
+        ctx.save($2);
+        ctx.globalAlpha = $2;
         if (particle.type === 'quantum') {
-          ctx.fillStyle = `rgba(0, 255, 255, ${alpha})`;
-          ctx.shadowColor = 'cyan';
-          ctx.shadowBlur = 10;
+          ctx.fillStyle = `rgba(0, 255, 255, ${alpha})`,
+          ctx.shadowColor = $2;
+          ctx.shadowBlur = 10
         } else if (particle.type === 'neural') {
-          ctx.fillStyle = `rgba(255, 0, 255, ${alpha})`;
-          ctx.shadowColor = 'magenta';
-          ctx.shadowBlur = 8;
+          ctx.fillStyle = `rgba(255, 0, 255, ${alpha})`,
+          ctx.shadowColor = $2;
+          ctx.shadowBlur = 8
         } else {
-          ctx.fillStyle = `rgba(0, 255, 0, ${alpha})`;
-          ctx.shadowColor = 'lime';
-          ctx.shadowBlur = 6;
+          ctx.fillStyle = `rgba(0, 255, 0, ${alpha})`,
+          ctx.shadowColor = $2;
+          ctx.shadowBlur = 6
         }
 
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
-
+        ctx.beginPath($2);
+        ctx.arc($2);
+        ctx.fill($2);
+        ctx.restore($2);
         // Remove dead particles
         if (particle.life <= 0) {
-          particles.splice(index, 1);
+          particles.splice(index, 1)
         }
-      });
+      }),
 
       // Draw entanglement lines
       entanglementLines.forEach((line, index) => {
-        line.life--;
-        const alpha = line.life / 100;
-        
-        ctx.save();
-        ctx.globalAlpha = alpha * 0.6;
-        ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
-        ctx.lineWidth = 2;
-        ctx.shadowColor = 'cyan';
-        ctx.shadowBlur = 5;
-        
-        ctx.beginPath();
-        ctx.moveTo(line.x1, line.y1);
-        ctx.lineTo(line.x2, line.y2);
-        ctx.stroke();
-        ctx.restore();
-
+        line.life--,
+        const alpha = $2;
+        ctx.save($2);
+        ctx.globalAlpha = $2;
+        ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`,
+        ctx.lineWidth = $2;
+        ctx.shadowColor = $2;
+        ctx.shadowBlur = $2;
+        ctx.beginPath($2);
+        ctx.moveTo($2);
+        ctx.lineTo($2);
+        ctx.stroke($2);
+        ctx.restore($2);
         if (line.life <= 0) {
-          entanglementLines.splice(index, 1);
+          entanglementLines.splice(index, 1)
         }
-      });
+      }),
 
       // Draw neural network
       neuralNodes.forEach((node, i) => {
-        node.activation = Math.sin(Date.now() * 0.001 + i) * 0.5 + 0.5;
-        
+        node.activation = $2;
         // Draw connections
-        node.connections.forEach(connectionIndex => {
-          const targetNode = neuralNodes[connectionIndex];
+        node.connections.forEach(connectionIndex = $2;
           if (targetNode) {
-            const strength = (node.activation + targetNode.activation) / 2;
-            ctx.save();
-            ctx.globalAlpha = strength * 0.4;
-            ctx.strokeStyle = `rgba(255, 0, 255, ${strength})`;
-            ctx.lineWidth = strength * 2;
-            ctx.shadowColor = 'magenta';
-            ctx.shadowBlur = 3;
-            
-            ctx.beginPath();
-            ctx.moveTo(node.x, node.y);
-            ctx.lineTo(targetNode.x, targetNode.y);
-            ctx.stroke();
-            ctx.restore();
+            const strength = $2;
+            ctx.save($2);
+            ctx.globalAlpha = $2;
+            ctx.strokeStyle = `rgba(255, 0, 255, ${strength})`,
+            ctx.lineWidth = $2;
+            ctx.shadowColor = $2;
+            ctx.shadowBlur = $2;
+            ctx.beginPath($2);
+            ctx.moveTo($2);
+            ctx.lineTo($2);
+            ctx.stroke($2);
+            ctx.restore()
           }
-        });
+        }),
 
         // Draw node
-        ctx.save();
-        ctx.globalAlpha = node.activation;
-        ctx.fillStyle = `rgba(255, 0, 255, ${node.activation})`;
-        ctx.shadowColor = 'magenta';
-        ctx.shadowBlur = 8;
-        
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
-      });
+        ctx.save($2);
+        ctx.globalAlpha = $2;
+        ctx.fillStyle = `rgba(255, 0, 255, ${node.activation})`,
+        ctx.shadowColor = $2;
+        ctx.shadowBlur = $2;
+        ctx.beginPath($2);
+        ctx.arc($2);
+        ctx.fill($2);
+        ctx.restore()
+      }),
 
       // Add new particles
       if (particles.length < 100 * intensity) {
@@ -236,71 +207,46 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           size: Math.random() * 3 + 1,
           life: 100,
           maxLife: 100,
-          type: ['quantum', 'neural', 'holographic'][Math.floor(Math.random() * 3)] as ParticleType
-        });
+          type: ['quantumneuralholographic'][Math.floor(Math.random() * 3)] as ParticleType
+        })
       }
 
       // Add new entanglement lines
       if (entanglementLines.length < 15 * intensity) {
-        const x1 = Math.random() * canvas.width;
-        const y1 = Math.random() * canvas.height;
-        const x2 = x1 + (Math.random() - 0.5) * 200;
-        const y2 = y1 + (Math.random() - 0.5) * 200;
-        
-        entanglementLines.push({
-          x1,
-          y1,
-          x2,
-          y2,
-          strength: Math.random(),
-          life: 100
-        });
+        const x1 = $2;
+        const y1 = $2;
+        const x2 = $2;
+        const y2 = $2;
+        entanglementLines.push($2);
+          life: 100})
       }
 
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-    animate();
-
+      animationRef.current = $2;
+    animate($2);
     return () => {
       if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
+        cancelAnimationFrame(animationRef.current)
       }
-      window.removeEventListener('resize', resizeCanvas);
-    };
-  }, [intensity]);
+      window.removeEventListener('resize', resizeCanvas)
+    }
+  }, [intensity]),
 
   // Mouse move handler for interactive effects
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+      setMousePosition({ x: e.clientX, y: e.clientY })
+    },
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+    window.addEventListener($2);
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, []),
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      {/* HTML Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-        style={{ filter: `blur(${0.5 * intensity}px)` }}
-      />
-      
-      {/* Framer Motion Geometric Shapes */}
-      <div className="absolute inset-0">
-        {/* Floating geometric shapes */}
-        <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
-          animate={{
-            rotate: 360,
+    <div className = $2;
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]
           }}
-          transition={{
-            duration: 8,
+          transition = $2;
             repeat: -1,
             ease: "linear"
           }}
@@ -313,8 +259,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             opacity: [0.4, 0.8, 0.4],
             scale: [1, 1.1, 1]
           }}
-          transition={{
-            duration: 6,
+          transition = $2;
             repeat: -1,
             ease: "easeInOut"
           }}
@@ -327,8 +272,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             rotate: [0, 180, 360],
             opacity: [0.2, 0.5, 0.2]
           }}
-          transition={{
-            duration: 12,
+          transition = $2;
             repeat: -1,
             ease: "linear"
           }}
@@ -336,26 +280,14 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       </div>
 
       {/* Energy waves */}
-      <div className="absolute inset-0">
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent"
-          animate={{
-            x: ['-100%', '100%']
-          }}
-          transition={{
-            duration: 15,
+      <div className = $2;
             repeat: -1,
             ease: "linear"
           }}
         />
         
         <motion.div
-          className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent"
-          animate={{
-            y: ['-100%', '100%']
-          }}
-          transition={{
-            duration: 20,
+          className = $2;
             repeat: -1,
             ease: "linear"
           }}
@@ -364,7 +296,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 
       {/* Holographic matrix effect */}
       <div className="absolute inset-0">
-        {Array.from({ length: 20 }).map((_, i) => (
+        {Array.from({ length: 20}).map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent"
@@ -373,8 +305,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
               opacity: [0, 1, 0],
               scaleY: [0, 1, 0]
             }}
-            transition={{
-              duration: 3,
+            transition = $2;
               delay: i * 0.1,
               repeat: -1,
               ease: "easeInOut"
@@ -393,15 +324,14 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           animate={{
             opacity: [0.3, 0.6, 0.3]
           }}
-          transition={{
-            duration: 4,
+          transition = $2;
             repeat: -1,
             ease: "easeInOut"
           }}
         />
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticBackground2034;
+export default UltraFuturisticBackground2034,

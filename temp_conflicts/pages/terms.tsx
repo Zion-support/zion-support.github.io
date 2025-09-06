@@ -4,83 +4,58 @@ import { motion } from 'framer-motion';
 import { 
   FileText, CheckCircle, AlertTriangle, Shield, Users, 
   Globe, Lock, Database, Info, AlertCircle
-} from 'lucide-react';
+} from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-
 export default function TermsPage() {
-  const lastUpdated = 'January 15, 2025';
+  const lastUpdated = 'January 15, 2025',
 
   const sections = [
     {
       title: 'Acceptance of Terms',
       icon: <CheckCircle className="w-6 h-6" />,
       content: [
-        'By accessing or using our services, you agree to be bound by these terms',
-        'If you do not agree to these terms, do not use our services',
-        'We may modify these terms at any time with notice',
-        'Continued use after changes constitutes acceptance of new terms'
+        'By accessing or using our services, you agree to be bound by these termsIf you do not agree to these terms, do not use our servicesWe may modify these terms at any time with noticeContinued use after changes constitutes acceptance of new terms'
       ]
     },
     {
       title: 'Service Description',
       icon: <Info className="w-6 h-6" />,
       content: [
-        'AI and machine learning platforms and services',
-        'Quantum computing solutions and infrastructure',
-        'Cybersecurity and data protection services',
-        'Consulting and professional services',
-        'Technical support and maintenance'
+        'AI and machine learning platforms and servicesQuantum computing solutions and infrastructureCybersecurity and data protection servicesConsulting and professional servicesTechnical support and maintenance'
       ]
     },
     {
       title: 'User Responsibilities',
       icon: <Users className="w-6 h-6" />,
       content: [
-        'Provide accurate and complete information',
-        'Maintain security of your account credentials',
-        'Comply with applicable laws and regulations',
-        'Use services for lawful purposes only',
-        'Respect intellectual property rights'
+        'Provide accurate and complete informationMaintain security of your account credentialsComply with applicable laws and regulationsUse services for lawful purposes onlyRespect intellectual property rights'
       ]
     },
     {
       title: 'Intellectual Property',
       icon: <Shield className="w-6 h-6" />,
       content: [
-        'Our services and content are protected by copyright',
-        'You retain rights to your data and content',
-        'You grant us license to use your content for service provision',
-        'No transfer of intellectual property rights',
-        'Respect for third-party intellectual property'
+        'Our services and content are protected by copyrightYou retain rights to your data and contentYou grant us license to use your content for service provisionNo transfer of intellectual property rightsRespect for third-party intellectual property'
       ]
     },
     {
       title: 'Privacy and Data',
       icon: <Lock className="w-6 h-6" />,
       content: [
-        'Collection and use of data as described in Privacy Policy',
-        'Implementation of appropriate security measures',
-        'Compliance with data protection regulations',
-        'Data retention and deletion policies',
-        'Your rights regarding your personal data'
+        'Collection and use of data as described in Privacy PolicyImplementation of appropriate security measuresCompliance with data protection regulationsData retention and deletion policiesYour rights regarding your personal data'
       ]
     },
     {
       title: 'Limitation of Liability',
       icon: <AlertTriangle className="w-6 h-6" />,
       content: [
-        'Services provided "as is" without warranties',
-        'Limitation of liability to extent permitted by law',
-        'No liability for indirect or consequential damages',
-        'Force majeure events and circumstances',
-        'Your responsibility for backup and data protection'
+        'Services provided "as is" without warrantiesLimitation of liability to extent permitted by lawNo liability for indirect or consequential damagesForce majeure events and circumstancesYour responsibility for backup and data protection'
       ]
     }
-  ];
+  ],
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Terms of Service — Zion Tech Group | Service Terms & Conditions</title>
         <meta name="description" content="Zion Tech Group's terms of service outline the rules and conditions for using our technology services. Read our comprehensive terms and conditions." />
@@ -128,8 +103,8 @@ export default function TermsPage() {
           >
             <h2 className="text-3xl font-bold text-white mb-6">Agreement to Terms</h2>
             <p className="text-gray-300 leading-relaxed mb-6">
-              These Terms of Service (&quot;Terms&quot;) govern your use of Zion Tech Group&apos;s services, including our website, 
-              applications, and any related services (collectively, the &quot;Services&quot;).
+              These Terms of Service (&quot,Terms&quot) govern your use of Zion Tech Group&apos,s services, including our website, 
+              applications, and any related services (collectively, the &quot,Services&quot).
             </p>
             <p className="text-gray-300 leading-relaxed">
               By accessing or using our Services, you agree to be bound by these Terms. If you disagree with any part 
@@ -279,7 +254,7 @@ export default function TermsPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Questions About These Terms?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              We&apos;re here to help clarify any questions you may have about our terms of service.
+              We&apos,re here to help clarify any questions you may have about our terms of service.
             </p>
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
@@ -309,5 +284,5 @@ export default function TermsPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

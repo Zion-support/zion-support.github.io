@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-
 interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string;
-}
+  name: string,
+  email: string,
+  company: string,
+  phone: string,
+  service: string,
+  message: string}
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -34,7 +32,6 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
-
     try {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -42,7 +39,6 @@ const ContactForm: React.FC = () => {
       // Here you would typically send the data to your backend
       console.log('Form submitted:', formData);
       setSubmitStatus('success');
-      
       // Reset form
       setFormData({
         name: '',
@@ -51,7 +47,7 @@ const ContactForm: React.FC = () => {
         phone: '',
         service: '',
         message: ''
-      });
+      })
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
@@ -178,15 +174,5 @@ const ContactForm: React.FC = () => {
         )}
 
         <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full px-8 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed rounded-lg font-semibold text-white transition-colors duration-200"
-        >
-          {isSubmitting ? 'Sending...' : 'Send Message'}
-        </button>
-      </form>
-    </div>
-  );
-};
-
-export default ContactForm;
+          type = $2;
+export default ContactForm,

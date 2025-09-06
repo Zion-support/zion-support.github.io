@@ -10,28 +10,21 @@ import { HELP_CATEGORIES } from "./help-content";
 import { Search } from 'lucide-react'
 
 export default function HelpCenter() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-  
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState($2);
   const handleCategorySelect = (categoryId: string) => {
-    setSelectedCategory(categoryId);
-    setSelectedArticle(null);
-  };
+    setSelectedCategory($2);
+    setSelectedArticle(null)
+  },
   
-  const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId);
-  };
-  
+  const handleArticleSelect = $2;
   const handleBackToCategories = () => {
-    setSelectedCategory(null);
-    setSelectedArticle(null);
-  };
+    setSelectedCategory($2);
+    setSelectedArticle(null)
+  },
   
-  const handleBackToArticles = () => {
-    setSelectedArticle(null);
-  };
-  
+  const handleBackToArticles = $2;
   return (
     <>
       <div className="container mx-auto px-4 py-8">
@@ -137,7 +130,7 @@ export default function HelpCenter() {
             </TabsContent>
             
             <TabsContent value="contact">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">Contact Support</h2>
                   <p className="text-zion-slate-light mb-4">
@@ -207,5 +200,5 @@ export default function HelpCenter() {
         </div>
       </div>
     </>
-  );
+  )
 }

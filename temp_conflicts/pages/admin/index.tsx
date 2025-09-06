@@ -1,5 +1,4 @@
 import AdminTable from '../../components/admin/AdminTable';
-
 export default function AdminDashboard() {
   return (
     <div className="space-y-6">
@@ -9,5 +8,5 @@ export default function AdminDashboard() {
       </ul>
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
-  );
+  )
 }

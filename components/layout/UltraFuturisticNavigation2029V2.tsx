@@ -12,18 +12,15 @@ import {
   Code, Wrench, Smartphone, BarChart3, Eye, Globe2,
   Zap, Rocket, Brain, Sparkles, ShieldCheck, Target,
   Users2, Briefcase, Lightbulb, Award, Clock, CheckCircle
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceCategories = [
-  {
-    title: '🚀 2029 Futuristic AI Services',
+const serviceCategories = $2;
     icon: Brain,
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     description: 'Next-generation AI consciousness and creativity',
@@ -88,44 +85,39 @@ const serviceCategories = [
     color: 'from-orange-600 via-red-600 to-pink-600',
     description: 'Breakthrough research solutions',
     services: [
-      'Advanced Research Automation',
-      'Quantum Research Platform',
-      'AI Research Assistant',
-      'Biotech Research Suite'
+      'Advanced Research AutomationQuantum Research PlatformAI Research AssistantBiotech Research Suite'
     ]
   }
-];
+],
 
 const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
-  { name: 'Quantum Tech', href: '/quantum-tech', icon: Globe },
-  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu },
-  { name: 'Space Tech', href: '/space-tech', icon: Rocket },
-  { name: 'Micro SAAS', href: '/micro-saas', icon: Target },
-  { name: 'Innovations', href: '/innovations', icon: Sparkles },
-  { name: 'About', href: '/about', icon: Users },
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+  { name: 'Home', href: '/', icon: Home},
+  { name: 'Services', href: '/services', icon: Briefcase},
+  { name: 'AI Solutions', href: '/ai-solutions', icon: Brain},
+  { name: 'Quantum Tech', href: '/quantum-tech', icon: Globe},
+  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu},
+  { name: 'Space Tech', href: '/space-tech', icon: Rocket},
+  { name: 'Micro SAAS', href: '/micro-saas', icon: Target},
+  { name: 'Innovations', href: '/innovations', icon: Sparkles},
+  { name: 'About', href: '/about', icon: Users},
+  { name: 'Contact', href: '/contact', icon: MessageCircle}
+],
 
 const quickLinks = [
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
-  { name: 'Blog', href: '/blog', icon: BookOpen },
-  { name: 'News', href: '/news', icon: TrendingUp },
-  { name: 'Careers', href: '/careers', icon: GraduationCap },
-  { name: 'Support', href: '/support', icon: MessageCircle }
-];
+  { name: 'About Us', href: '/about', icon: Users},
+  { name: 'Case Studies', href: '/case-studies', icon: BookOpen},
+  { name: 'Blog', href: '/blog', icon: BookOpen},
+  { name: 'News', href: '/news', icon: TrendingUp},
+  { name: 'Careers', href: '/careers', icon: GraduationCap},
+  { name: 'Support', href: '/support', icon: MessageCircle}
+],
 
 export default function UltraFuturisticNavigation2029V2() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
-
+  const [isOpen, setIsOpen] = useState($2);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState($2);
+  const toggleMenu = () => setIsOpen($2);
+  const closeMenu = () => setIsOpen($2);
   return (
     <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
       {/* Main Navigation Bar */}
@@ -134,7 +126,7 @@ export default function UltraFuturisticNavigation2029V2() {
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0}}
             transition={{ duration: 0.5 }}
             className="flex-shrink-0"
           >
@@ -160,7 +152,7 @@ export default function UltraFuturisticNavigation2029V2() {
               <motion.div
                 key={item.name}
                 initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.5, delay: mainNavigation.indexOf(item) * 0.1 }}
                 className="relative group"
               >
@@ -195,7 +187,7 @@ export default function UltraFuturisticNavigation2029V2() {
             {/* Contact Button */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: 1, scale: 1}}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <Link
@@ -224,9 +216,9 @@ export default function UltraFuturisticNavigation2029V2() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, height: 0}}
             animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            exit={{ opacity: 0, height: 0}}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20"
           >
@@ -304,7 +296,7 @@ export default function UltraFuturisticNavigation2029V2() {
         {activeCategory && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0}}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
             className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40"
@@ -350,5 +342,5 @@ export default function UltraFuturisticNavigation2029V2() {
         )}
       </AnimatePresence>
     </nav>
-  );
+  )
 }

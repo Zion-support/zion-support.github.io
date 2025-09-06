@@ -1,20 +1,17 @@
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
 
-const noop = () => {};
-const noopReturn = () => null;
-const noopPromise = () => Promise.resolve();
-
+const noop = $2;
+const noopReturn = $2;
+const noopPromise = () => Promise.resolve($2);
 // Mock Sentry instance with all common methods
-const mockSentry = {
-  // Core Sentry methods
-  init: noop,
+const mockSentry = $2;
   captureException: noop,
   captureMessage: noop,
   captureEvent: noop,
   addBreadcrumb: noop,
   configureScope: noop,
-  withScope: (callback: (...args: any[]) => any) => callback(mockScope),
+  withScope: (callback: (...args: any[]) => any) => callback($2);
   setUser: noop,
   setTag: noop,
   setTags: noop,
@@ -39,8 +36,8 @@ const mockSentry = {
   
   // Server-specific methods (Node.js)
   Handlers: {
-    requestHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next(),
-    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) => next(),
+    requestHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next($2);
+    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) => next($2);
     tracingHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next()},
   
   // Next.js specific
@@ -85,11 +82,10 @@ const mockSentry = {
     Error: 'error',
     Warning: 'warning',
     Info: 'info',
-    Debug: 'debug'}};
+    Debug: 'debug'}},
 
 // Mock scope
-const mockScope = {
-  setUser: noop,
+const mockScope = $2;
   setTag: noop,
   setTags: noop,
   setExtra: noop,
@@ -98,11 +94,10 @@ const mockScope = {
   setLevel: noop,
   setFingerprint: noop,
   clear: noop,
-  addEventProcessor: noop};
+  addEventProcessor: noop},
 
 // Mock transaction
-const mockTransaction = {
-  setName: noop,
+const mockTransaction = $2;
   setTag: noop,
   setData: noop,
   finish: noop,
@@ -110,11 +105,10 @@ const mockTransaction = {
   setStatus: noop,
   setHttpStatus: noop,
   toContext: () => ({}),
-  updateWithContext: noop};
+  updateWithContext: noop},
 
 // Mock hub
-const mockHub = {
-  getClient: noopReturn,
+const mockHub = $2;
   getScope: () => mockScope,
   captureException: noop,
   captureMessage: noop,
@@ -127,46 +121,45 @@ const mockHub = {
   setExtras: noop,
   setContext: noop,
   configureScope: noop,
-  withScope: (callback: (...args: any[]) => any) => callback(mockScope),
-  startTransaction: () => mockTransaction};
+  withScope: (callback: (...args: any[]) => any) => callback($2);
+  startTransaction: () => mockTransaction},
 
 // Export default mock that covers all Sentry packages
-export default mockSentry;
+export default mockSentry,
 
 // Named exports for compatibility
-export const init = mockSentry.init;
-export const captureException = mockSentry.captureException;
-export const captureMessage = mockSentry.captureMessage;
-export const captureEvent = mockSentry.captureEvent;
-export const addBreadcrumb = mockSentry.addBreadcrumb;
-export const configureScope = mockSentry.configureScope;
-export const withScope = mockSentry.withScope;
-export const setUser = mockSentry.setUser;
-export const setTag = mockSentry.setTag;
-export const setTags = mockSentry.setTags;
-export const setExtra = mockSentry.setExtra;
-export const setExtras = mockSentry.setExtras;
-export const setContext = mockSentry.setContext;
-export const getCurrentHub = mockSentry.getCurrentHub;
-export const getClient = mockSentry.getClient;
-export const startTransaction = mockSentry.startTransaction;
-export const ErrorBoundary = mockSentry.ErrorBoundary;
-export const withErrorBoundary = mockSentry.withErrorBoundary;
-export const showReportDialog = mockSentry.showReportDialog;
-export const onLoad = mockSentry.onLoad;
-export const wrap = mockSentry.wrap;
-export const Handlers = mockSentry.Handlers;
-export const withSentryConfig = mockSentry.withSentryConfig;
-export const SentryWebpackPlugin = mockSentry.SentryWebpackPlugin;
-export const Tracing = mockSentry.Tracing;
-export const Integrations = mockSentry.Integrations;
-export const makeBrowserOfflineTransport = mockSentry.makeBrowserOfflineTransport;
-export const makeFetchTransport = mockSentry.makeFetchTransport;
-export const createTransport = mockSentry.createTransport;
-export const SDK_VERSION = mockSentry.SDK_VERSION;
-export const Severity = mockSentry.Severity;
-
+export const init = $2;
+export const captureException = $2;
+export const captureMessage = $2;
+export const captureEvent = $2;
+export const addBreadcrumb = $2;
+export const configureScope = $2;
+export const withScope = $2;
+export const setUser = $2;
+export const setTag = $2;
+export const setTags = $2;
+export const setExtra = $2;
+export const setExtras = $2;
+export const setContext = $2;
+export const getCurrentHub = $2;
+export const getClient = $2;
+export const startTransaction = $2;
+export const ErrorBoundary = $2;
+export const withErrorBoundary = $2;
+export const showReportDialog = $2;
+export const onLoad = $2;
+export const wrap = $2;
+export const Handlers = $2;
+export const withSentryConfig = $2;
+export const SentryWebpackPlugin = $2;
+export const Tracing = $2;
+export const Integrations = $2;
+export const makeBrowserOfflineTransport = $2;
+export const makeFetchTransport = $2;
+export const createTransport = $2;
+export const SDK_VERSION = $2;
+export const Severity = $2;
 // Additional exports for compatibility
-export { mockSentry as Sentry };
+export { mockSentry as Sentry },
 
 // All exports are already defined above

@@ -3,49 +3,37 @@ import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-
 export function TalentPool() {
   // Mock talent data
-  const talents = [
-    {
-      id: "talent-1",
+  const talents = $2;
       name: "Jessica Lee",
       role: "UI/UX Designer",
       skills: ["Figma", "Sketch", "User Testing"],
       status: "available",
-      match: 95
-    },
+      match: 95},
     {
       id: "talent-2",
       name: "Marcus Wright",
       role: "Full Stack Developer",
       skills: ["React", "Node.js", "MongoDB"],
       status: "interviewing",
-      match: 92
-    },
+      match: 92},
     {
       id: "talent-3",
       name: "Aisha Patel",
       role: "Product Manager",
       skills: ["Agile", "Roadmapping", "User Research"],
       status: "available",
-      match: 88
-    }
-  ];
+      match: 88}
+  ],
 
-  const getStatusBadge = (status: string) => {
-    switch (status) {
-      case "available":
-        return <Badge className="bg-green-500">Available</Badge>;
+  const getStatusBadge = $2;
       case "interviewing":
-        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>;
+        return <Badge variant = $2;
       case "hired":
-        return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Hired</Badge>;
+        return <Badge variant = $2;
       default:
-        return <Badge variant="outline">{status}</Badge>;
-    }
-  };
-
+        return <Badge variant = $2;
   return (
     <Card>
       <CardHeader>
@@ -89,5 +77,5 @@ export function TalentPool() {
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }

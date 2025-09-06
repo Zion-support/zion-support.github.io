@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-
 export default function TestPage() {
   return (
     <>
@@ -11,5 +10,5 @@ export default function TestPage() {
         <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
       </div>
     </>
-  );
+  )
 }

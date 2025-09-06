@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-
 export default function DocsPage() {
 	return (
 		<Layout>
@@ -14,5 +13,5 @@ export default function DocsPage() {
 				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
 			</section>
 		</Layout>
-	);
+	)
 }

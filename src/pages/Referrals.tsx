@@ -13,11 +13,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from '@/components/ui/button';
 import { toast } from '@/hooks/use-toast';
 import { Share, Users } from 'lucide-react'
-import { useRouter } from 'next/router'; // Changed from useNavigate
+import { useRouter } from 'next/router', // Changed from useNavigate
 
 export default function ReferralsPage() {
-  const router = useRouter(); // Changed from navigate
-  const { isAuthenticated } = useAuth();
+  const router = useRouter(), // Changed from navigate
+  const { isAuthenticated } = useAuth($2);
   const {
     isLoading,
     referralCode,
@@ -26,20 +26,15 @@ export default function ReferralsPage() {
     stats,
     getReferralLink,
     copyReferralLink,
-    shareOnSocialMedia} = useReferrals();
-
+    shareOnSocialMedia} = useReferrals($2);
   useEffect(() => {
     if (!isAuthenticated) {
-      toast({
-        title: "Authentication required",
-        description: "Please login to access the referral program",
-        variant: "destructive"});
-      router.push("/login"); // Changed to router.push
+      toast($2);
+      router.push("/login"), // Changed to router.push
     }
-  }, [isAuthenticated, router]); // Changed navigate to router in dependencies
+  }, [isAuthenticated, router]), // Changed navigate to router in dependencies
 
-  const referralLink = getReferralLink();
-
+  const referralLink = getReferralLink($2);
   return (
     <div className="container max-w-7xl py-10">
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">
@@ -91,5 +86,5 @@ export default function ReferralsPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

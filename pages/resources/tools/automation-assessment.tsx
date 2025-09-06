@@ -1,101 +1,69 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function ToolPage() {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState<{ [key: string]: number }>({});
-  const [showResults, setShowResults] = useState(false);
-
-  const questions = [
-    {
-      id: 'current-automation',
+  const [currentQuestion, setCurrentQuestion] = useState($2);
+  const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
+  const [showResults, setShowResults] = useState($2);
+  const questions = $2;
       question: 'What is your current level of automation?',
       options: [
-        'No automation - everything is manual',
-        'Basic automation - some repetitive tasks automated',
-        'Moderate automation - multiple processes automated',
-        'Advanced automation - most processes automated',
-        'Fully automated - autonomous systems in place'
+        'No automation - everything is manualBasic automation - some repetitive tasks automatedModerate automation - multiple processes automatedAdvanced automation - most processes automatedFully automated - autonomous systems in place'
       ]
     },
     {
       id: 'team-expertise',
       question: 'How would you rate your team\'s AI/automation expertise?',
       options: [
-        'No expertise - team needs training',
-        'Beginner - some basic knowledge',
-        'Intermediate - can implement basic solutions',
-        'Advanced - can build complex systems',
-        'Expert - can innovate and lead'
+        'No expertise - team needs trainingBeginner - some basic knowledgeIntermediate - can implement basic solutionsAdvanced - can build complex systemsExpert - can innovate and lead'
       ]
     },
     {
       id: 'data-quality',
       question: 'How would you assess your data quality and accessibility?',
       options: [
-        'Poor - data is scattered and unreliable',
-        'Fair - some data available but needs cleaning',
-        'Good - most data is accessible and clean',
-        'Very good - comprehensive data with good structure',
-        'Excellent - real-time, high-quality data streams'
+        'Poor - data is scattered and unreliableFair - some data available but needs cleaningGood - most data is accessible and cleanVery good - comprehensive data with good structureExcellent - real-time, high-quality data streams'
       ]
     },
     {
       id: 'budget-commitment',
       question: 'What is your budget commitment for automation initiatives?',
       options: [
-        'No budget allocated',
-        'Limited budget - under $50K',
-        'Moderate budget - $50K to $200K',
-        'Significant budget - $200K to $1M',
-        'Unlimited budget - whatever it takes'
+        'No budget allocatedLimited budget - under $50KModerate budget - $50K to $200KSignificant budget - $200K to $1MUnlimited budget - whatever it takes'
       ]
     },
     {
       id: 'executive-support',
       question: 'How strong is executive support for automation?',
       options: [
-        'No support - resistance to change',
-        'Weak support - some interest but no action',
-        'Moderate support - willing to try pilot projects',
-        'Strong support - actively championing automation',
-        'Full support - automation is strategic priority'
+        'No support - resistance to changeWeak support - some interest but no actionModerate support - willing to try pilot projectsStrong support - actively championing automationFull support - automation is strategic priority'
       ]
     }
-  ];
+  ],
 
   const handleAnswer = (questionId: string, value: number) => {
-    setAnswers(prev => ({ ...prev, [questionId]: value }));
-  };
+    setAnswers(prev => ({ ...prev, [questionId]: value }))
+  },
 
   const calculateScore = () => {
-    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0);
-    const maxScore = questions.length * 5;
-    const percentage = (totalScore / maxScore) * 100;
-    
-    if (percentage >= 80) return { level: 'Advanced', color: 'text-green-400', description: 'Your organization is well-positioned for advanced automation initiatives.' };
-    if (percentage >= 60) return { level: 'Intermediate', color: 'text-yellow-400', description: 'You have a solid foundation and can move forward with strategic automation.' };
-    if (percentage >= 40) return { level: 'Beginner', color: 'text-orange-400', description: 'You have some groundwork to do before major automation projects.' };
-    return { level: 'Foundation', color: 'text-red-400', description: 'Focus on building fundamentals before automation projects.' };
-  };
+    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0),
+    const maxScore = $2;
+    const percentage = $2;
+    if (percentage >= 80) return { level: 'Advanced', color: 'text-green-400', description: 'Your organization is well-positioned for advanced automation initiatives.' },
+    if (percentage >= 60) return { level: 'Intermediate', color: 'text-yellow-400', description: 'You have a solid foundation and can move forward with strategic automation.' },
+    if (percentage >= 40) return { level: 'Beginner', color: 'text-orange-400', description: 'You have some groundwork to do before major automation projects.' },
+    return { level: 'Foundation', color: 'text-red-400', description: 'Focus on building fundamentals before automation projects.' }
+  },
 
-  const nextQuestion = () => {
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
-    } else {
-      setShowResults(true);
-    }
-  };
-
+  const nextQuestion = $2;
   const resetAssessment = () => {
-    setCurrentQuestion(0);
-    setAnswers({});
-    setShowResults(false);
-  };
+    setCurrentQuestion($2);
+    setAnswers($2);
+    setShowResults(false)
+  },
 
   if (showResults) {
-    const result = calculateScore();
+    const result = calculateScore($2);
     return (
       <>
         <Head>
@@ -123,37 +91,7 @@ export default function ToolPage() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                   {questions.map((q, index) => (
-                    <div key={q.id} className="bg-white/10 rounded-lg p-4 border border-white/20">
-                      <h3 className="font-semibold text-cyan-400 mb-2">{q.question}</h3>
-                      <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button 
-                    onClick={resetAssessment}
-                    className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-                  >
-                    Retake Assessment
-                  </button>
-                  <Link 
-                    href="/contact"
-                    className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
-                  >
-                    Get Personalized Recommendations
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </main>
-        </div>
-      </>
-    );
-  }
-
-  const currentQ = questions[currentQuestion];
-
+                    <div key = $2;
   return (
     <>
       <Head>
@@ -219,5 +157,5 @@ export default function ToolPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

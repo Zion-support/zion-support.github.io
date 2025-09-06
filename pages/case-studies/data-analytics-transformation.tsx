@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function CaseStudyPage() {
   return (
     <>
@@ -11,103 +10,14 @@ export default function CaseStudyPage() {
         <meta name="keywords" content="data analytics, healthcare analytics, predictive modeling, big data, machine learning" />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-        <main className="container mx-auto px-6 py-12">
-          {/* Breadcrumb */}
-          <nav className="mb-8">
-            <Link href="/" className="text-white/60 hover:text-white transition-colors">
-              Home
-            </Link>
-            <span className="text-white/60 mx-2">→</span>
-            <Link href="/case-studies" className="text-white/60 hover:text-white transition-colors">
-              Case Studies
-            </Link>
-            <span className="text-white/60 mx-2">→</span>
-            <span className="text-white">Data Analytics Transformation</span>
-          </nav>
-
-          {/* Header */}
-          <header className="text-center mb-16">
-            <div className="inline-block px-4 py-2 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30 mb-6">
-              Healthcare Industry
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Data Analytics Transformation
-            </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              How a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform
-            </p>
-          </header>
-
-          {/* Case Study Content */}
-          <div className="max-w-4xl mx-auto">
-            {/* Company Overview */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-semibold text-purple-400 mb-4">Healthcare Provider</h3>
-                <p className="text-white/90 text-lg mb-4">
-                  A large healthcare network serving multiple communities with hospitals, 
+      <div className = $2;
                   clinics, and specialized medical services. The organization struggled to leverage data for patient care improvements.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-400">5+</div>
-                    <div className="text-white/70">Hospitals</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-400">50+</div>
-                    <div className="text-white/70">Clinics</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-400">$200M+</div>
-                    <div className="text-white/70">Annual Budget</div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Challenge */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-semibold text-red-400 mb-4">Critical Issues</h3>
-                <ul className="space-y-3 text-white/90 text-lg">
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
-                    <span>Inability to leverage data for patient care improvements</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
-                    <span>Operational inefficiencies due to lack of data insights</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
-                    <span>Manual data collection and analysis processes</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
-                    <span>No predictive capabilities for patient care planning</span>
-                  </li>
-                </ul>
-              </div>
-            </section>
-
-            {/* Solution */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-semibold text-green-400 mb-4">Comprehensive Data Analytics Platform</h3>
-                <p className="text-white/90 text-lg mb-6">
-                  We built a comprehensive data analytics platform that provides real-time insights, 
+                <div className = $2;
                   predictive modeling, and automated reporting for improved patient care and operational efficiency.
                 </p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                    <h4 className="text-xl font-semibold text-purple-400 mb-3">Big Data Processing</h4>
-                    <p className="text-white/80">
-                      Advanced big data infrastructure processes millions of patient records, 
+                <div className = $2;
                       lab results, and operational data points in real-time.
                     </p>
                   </div>
@@ -120,10 +30,7 @@ export default function CaseStudyPage() {
                     </p>
                   </div>
                   
-                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                    <h4 className="text-xl font-semibold text-purple-400 mb-3">Real-time Analytics</h4>
-                    <p className="text-white/80">
-                      Live dashboards provide instant insights into patient conditions, 
+                  <div className = $2;
                       resource utilization, and operational metrics.
                     </p>
                   </div>
@@ -196,7 +103,7 @@ export default function CaseStudyPage() {
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {['Big Data', 'Machine Learning', 'Real-time Analytics', 'Predictive Modeling'].map((tech) => (
+                  {['Big DataMachine LearningReal-time AnalyticsPredictive Modeling'].map((tech) => (
                     <div key={tech} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                       <span className="text-purple-400 font-semibold">{tech}</span>
                     </div>
@@ -251,9 +158,9 @@ export default function CaseStudyPage() {
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Data Analytics?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
                   This case study demonstrates the real impact of data analytics transformation. 
-                  Let&apos;s discuss how we can help you achieve similar results.
+                  Let&apos,s discuss how we can help you achieve similar results.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link 
                     href="/contact"
                     className="bg-gradient-to-r from-purple-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-cyan-500 transition-all duration-300"
@@ -273,5 +180,5 @@ export default function CaseStudyPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

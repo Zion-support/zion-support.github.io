@@ -1,23 +1,21 @@
 import React, { useState } from 'react';
-
 export default function CoachWidget() {
-  const [input, setInput] = useState('');
-  const [reply, setReply] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-
+  const [input, setInput] = useState($2);
+  const [reply, setReply] = useState<string | null>(null),
+  const [loading, setLoading] = useState($2);
   async function ask() {
-    if (!input.trim()) return;
-    setLoading(true);
+    if (!input.trim()) return,
+    setLoading($2);
     try {
       const resp = await fetch('/api/learn/coach', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt: input })
-      });
-      const data = await resp.json();
-      setReply(data.text || '');
+        body: JSON.stringify({ prompt: input})
+      }),
+      const data = await resp.json($2);
+      setReply(data.text || '')
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
   }
 
@@ -30,5 +28,5 @@ export default function CoachWidget() {
       </div>
       {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
     </div>
-  );
+  )
 }

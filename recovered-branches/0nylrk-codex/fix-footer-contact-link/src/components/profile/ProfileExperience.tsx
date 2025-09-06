@@ -1,9 +1,8 @@
 
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
 import { Briefcase } from "lucide-react";
-
 interface ProfileExperienceProps {
-  experience: ProfileExperienceType[];
+  experience: ProfileExperienceType[]
 }
 
 export function ProfileExperience({ experience }: ProfileExperienceProps) {
@@ -32,5 +31,5 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
         ))}
       </div>
     </div>
-  );
+  )
 }

@@ -6,17 +6,16 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CountryServiceCard } from "@/components/services/CountryServiceCard";
 import { CountryPricing } from "@/data/onsiteServicePricing";
-
 interface CountryTabsProps {
-  popularCountries: string[];
-  filteredCountries: CountryPricing[];
-  handleCountrySelect: (country: CountryPricing) => void;
-  searchQuery: string;
-  setSearchQuery: (query: string) => void;
+  popularCountries: string[],
+  filteredCountries: CountryPricing[],
+  handleCountrySelect: (country: CountryPricing) => void,
+  searchQuery: string,
+  setSearchQuery: (query: string) => void
 }
 
 export function CountryTabs({ 
-  popularCountries, 
+  popularCountries,
   filteredCountries, 
   handleCountrySelect, 
   searchQuery, 
@@ -94,5 +93,5 @@ export function CountryTabs({
         )}
       </TabsContent>
     </Tabs>
-  );
+  )
 }

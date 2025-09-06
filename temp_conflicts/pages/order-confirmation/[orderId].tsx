@@ -1,10 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-
 export default function OrderConfirmationPage() {
-  const router = useRouter();
-  const { orderId } = router.query;
+  const router = useRouter(),
+  const { orderId } = router.query,
 
   return (
     <>
@@ -19,11 +18,11 @@ export default function OrderConfirmationPage() {
         )}
         <p className="text-lg mb-4">Your order has been confirmed and is being processed.</p>
         <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
+          <a href="/" className="text-blue-600 hover: underline">
             ← Back to Home
           </a>
         </div>
       </div>
     </>
-  );
+  )
 }

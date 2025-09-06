@@ -2,23 +2,21 @@
 import React from "react";
 import { format } from "date-fns";
 import { 
-  Card, 
+  Card,
   CardContent, 
   CardHeader, 
   CardTitle, 
   CardDescription
-} from "@/components/ui/card";
+} from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
-
-type QuoteRequestCardProps = {
-  quote: QuoteRequest;
-  onViewDetails: (quote: QuoteRequest) => void;
-  onMarkAsResponded?: (id: string) => void;
-  onToggleArchive: (id: string, isArchived: boolean) => void;
-};
+type QuoteRequestCardProps = $2;
+  onViewDetails: (quote: QuoteRequest) => void,
+  onMarkAsResponded?: (id: string) => void,
+  onToggleArchive: (id: string, isArchived: boolean) => void
+},
 
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote,
@@ -29,11 +27,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   // Format date for display
   const formatDate = (dateString: string) => {
     try {
-      return format(new Date(dateString), 'PP');
+      return format(new Date(dateString), 'PP')
     } catch (e) {
-      return dateString;
+      return dateString
     }
-  };
+  },
 
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
@@ -89,17 +87,4 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
               variant="ghost"
               size="sm"
               onClick={() => onToggleArchive(quote.id, !quote.is_archived)}
-              className="flex items-center gap-1"
-            >
-              {quote.is_archived ? (
-                <RefreshCw className="h-4 w-4" />
-              ) : (
-                <ArchiveIcon className="h-4 w-4" />
-              )}
-            </Button>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  );
-};
+              className = $2;

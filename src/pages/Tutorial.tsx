@@ -6,21 +6,19 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from 'lucide-react'
 import ReactMarkdown from "react-markdown";
 import type { Tutorial as TutorialType } from "@/types/tutorial";
-
 interface TutorialPageProps {
-  tutorial?: TutorialType;
+  tutorial?: TutorialType
 }
-export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
-  const router = useRouter();
-  const slug = router.query.slug as string | undefined;
-  const tutorial = initialTutorial || TUTORIALS.find((t) => t.slug === slug);
-
+export default function Tutorial({ tutorial: initialTutorial}: TutorialPageProps) {
+  const router = useRouter($2);
+  const slug = $2;
+  const tutorial = $2;
   if (!tutorial) {
     return (
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Tutorial not found.
       </div>
-    );
+    )
   }
 
   return (
@@ -50,5 +48,5 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
         </div>
       </div>
     </>
-  );
+  )
 }

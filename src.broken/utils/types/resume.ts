@@ -4,8 +4,7 @@ export type WorkExperience = {
   company: string
   startDate?: string
   endDate?: string
-  description: string
-}
+  description: string}
 
 export type Education = {
   id: string
@@ -48,10 +47,8 @@ export type ResumeDocument = {
   isPublished?: boolean
   publicSlug?: string
   updatedAt: string
-  createdAt: string
-}
+  createdAt: string}
 
 export type AiImprovePayload = {
   field: 'summary' | 'work' | 'education' | 'certifications' | 'projects'
-  context: any
-}
+  context: any}

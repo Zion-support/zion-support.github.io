@@ -1,45 +1,42 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface FuturisticInnovation2030 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const futuristicInnovations2030: FuturisticInnovation2030[] = [
   // AI Consciousness & Emotional Intelligence
@@ -51,16 +48,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     period: '/month',
     description: 'Revolutionary platform for developing genuine AI consciousness, self-awareness, and emotional intelligence. Enables AI systems to understand context, develop personality, and form genuine connections with users.',
     features: [
-      'Consciousness development algorithms',
-      'Emotional intelligence training',
-      'Personality customization engine',
-      'Context awareness systems',
-      'Self-reflection capabilities',
-      'Ethical decision-making frameworks',
-      'Consciousness monitoring tools',
-      'Multi-modal consciousness fusion',
-      'Real-time consciousness metrics',
-      'Consciousness evolution tracking'
+      'Consciousness development algorithmsEmotional intelligence trainingPersonality customization engineContext awareness systemsSelf-reflection capabilitiesEthical decision-making frameworksConsciousness monitoring toolsMulti-modal consciousness fusionReal-time consciousness metricsConsciousness evolution tracking'
     ],
     popular: true,
     icon: '🧠',
@@ -92,8 +80,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     launchDate: '2024-12-01',
     customers: 15,
     rating: 4.9,
-    reviews: 8
-  },
+    reviews: 8},
   {
     id: 'ai-emotional-intelligence-platform',
     name: 'AI Emotional Intelligence Platform',
@@ -102,16 +89,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     period: '/month',
     description: 'Advanced AI platform that analyzes human emotions in real-time through voice, facial expressions, and text, then generates empathetic and contextually appropriate responses.',
     features: [
-      'Real-time emotion detection',
-      'Multi-modal emotion analysis',
-      'Empathetic response generation',
-      'Emotional context understanding',
-      'Emotion-based decision making',
-      'Emotional intelligence training',
-      'Emotion tracking over time',
-      'Cultural emotion adaptation',
-      'Privacy-preserving emotion analysis',
-      'Emotion-based analytics dashboard'
+      'Real-time emotion detectionMulti-modal emotion analysisEmpathetic response generationEmotional context understandingEmotion-based decision makingEmotional intelligence trainingEmotion tracking over timeCultural emotion adaptationPrivacy-preserving emotion analysisEmotion-based analytics dashboard'
     ],
     popular: true,
     icon: '❤️',
@@ -143,8 +121,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     launchDate: '2024-10-15',
     customers: 45,
     rating: 4.8,
-    reviews: 23
-  },
+    reviews: 23},
   // Quantum & Emerging Tech
   {
     id: 'quantum-internet-security-gateway',
@@ -154,16 +131,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     period: '/month',
     description: 'Next-generation quantum internet security gateway providing unbreakable encryption, quantum key distribution, and post-quantum cryptography for ultra-secure communications.',
     features: [
-      'Quantum key distribution (QKD)',
-      'Post-quantum cryptography',
-      'Quantum-resistant algorithms',
-      'Real-time quantum encryption',
-      'Quantum network security',
-      'Quantum threat detection',
-      'Quantum-safe protocols',
-      'Quantum network monitoring',
-      'Quantum key management',
-      'Quantum security analytics'
+      'Quantum key distribution (QKD)Post-quantum cryptographyQuantum-resistant algorithmsReal-time quantum encryptionQuantum network securityQuantum threat detectionQuantum-safe protocolsQuantum network monitoringQuantum key managementQuantum security analytics'
     ],
     popular: true,
     icon: '🔐',
@@ -195,8 +163,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     launchDate: '2024-11-01',
     customers: 8,
     rating: 4.9,
-    reviews: 5
-  },
+    reviews: 5},
   {
     id: 'biotech-dna-computing-platform',
     name: 'Biotech DNA Computing Platform',
@@ -205,16 +172,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     period: '/month',
     description: 'Groundbreaking platform leveraging DNA molecules for ultra-dense data storage and parallel computing, enabling massive computational power in microscopic spaces.',
     features: [
-      'DNA data encoding/decoding',
-      'Parallel DNA computation',
-      'Ultra-dense data storage',
-      'DNA synthesis automation',
-      'DNA sequencing integration',
-      'Molecular computing',
-      'DNA-based algorithms',
-      'Biocompatible interfaces',
-      'DNA error correction',
-      'DNA computing analytics'
+      'DNA data encoding/decodingParallel DNA computationUltra-dense data storageDNA synthesis automationDNA sequencing integrationMolecular computingDNA-based algorithmsBiocompatible interfacesDNA error correctionDNA computing analytics'
     ],
     popular: true,
     icon: '🧬',
@@ -246,8 +204,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     launchDate: '2024-09-01',
     customers: 3,
     rating: 5.0,
-    reviews: 2
-  },
+    reviews: 2},
   // Space & Metaverse Tech
   {
     id: 'space-mining-automation-platform',
@@ -257,16 +214,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     period: '/month',
     description: 'Revolutionary platform for automated asteroid mining, space resource extraction, and orbital manufacturing. Enables sustainable space exploration and resource utilization.',
     features: [
-      'Asteroid identification and mapping',
-      'Automated mining operations',
-      'Space resource extraction',
-      'Orbital manufacturing',
-      'Space logistics management',
-      'Resource processing automation',
-      'Space safety protocols',
-      'Resource transportation',
-      'Space mining analytics',
-      'Regulatory compliance tools'
+      'Asteroid identification and mappingAutomated mining operationsSpace resource extractionOrbital manufacturingSpace logistics managementResource processing automationSpace safety protocolsResource transportationSpace mining analyticsRegulatory compliance tools'
     ],
     popular: true,
     icon: '🚀',
@@ -298,8 +246,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     launchDate: '2024-08-01',
     customers: 2,
     rating: 5.0,
-    reviews: 1
-  },
+    reviews: 1},
   {
     id: 'metaverse-development-platform',
     name: 'Metaverse Development Platform',
@@ -308,16 +255,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     period: '/month',
     description: 'Comprehensive platform for creating immersive metaverse experiences, virtual worlds, and digital reality applications with advanced AI, blockchain, and spatial computing.',
     features: [
-      '3D world building tools',
-      'AI-powered NPCs',
-      'Blockchain integration',
-      'VR/AR support',
-      'Multi-user collaboration',
-      'Real-time rendering',
-      'Spatial audio',
-      'Digital asset marketplace',
-      'Metaverse analytics',
-      'Cross-platform deployment'
+      '3D world building toolsAI-powered NPCsBlockchain integrationVR/AR supportMulti-user collaborationReal-time renderingSpatial audioDigital asset marketplaceMetaverse analyticsCross-platform deployment'
     ],
     popular: true,
     icon: '🌌',
@@ -349,8 +287,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     launchDate: '2024-07-01',
     customers: 120,
     rating: 4.7,
-    reviews: 67
-  },
+    reviews: 67},
   // Enterprise IT Solutions
   {
     id: 'autonomous-devops-platform',
@@ -360,16 +297,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     period: '/month',
     description: 'Revolutionary DevOps platform that operates completely autonomously, managing infrastructure, deployments, monitoring, and optimization without human intervention.',
     features: [
-      'Autonomous infrastructure management',
-      'Self-healing systems',
-      'Automated deployment pipelines',
-      'Intelligent monitoring',
-      'Predictive maintenance',
-      'Auto-scaling capabilities',
-      'Security automation',
-      'Performance optimization',
-      'Cost optimization',
-      'Compliance automation'
+      'Autonomous infrastructure managementSelf-healing systemsAutomated deployment pipelinesIntelligent monitoringPredictive maintenanceAuto-scaling capabilitiesSecurity automationPerformance optimizationCost optimizationCompliance automation'
     ],
     popular: true,
     icon: '⚙️',
@@ -401,8 +329,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     launchDate: '2024-06-01',
     customers: 85,
     rating: 4.8,
-    reviews: 42
-  },
+    reviews: 42},
   {
     id: 'zero-trust-network-architecture',
     name: 'Zero Trust Network Architecture',
@@ -411,16 +338,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     period: '/month',
     description: 'Complete zero trust network architecture implementation providing comprehensive security through continuous verification, micro-segmentation, and least-privilege access.',
     features: [
-      'Continuous identity verification',
-      'Micro-segmentation',
-      'Least-privilege access',
-      'Multi-factor authentication',
-      'Behavioral analytics',
-      'Threat detection',
-      'Access control policies',
-      'Network monitoring',
-      'Security automation',
-      'Compliance reporting'
+      'Continuous identity verificationMicro-segmentationLeast-privilege accessMulti-factor authenticationBehavioral analyticsThreat detectionAccess control policiesNetwork monitoringSecurity automationCompliance reporting'
     ],
     popular: true,
     icon: '🛡️',
@@ -452,6 +370,5 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     launchDate: '2024-05-01',
     customers: 156,
     rating: 4.9,
-    reviews: 89
-  }
-];
+    reviews: 89}
+],

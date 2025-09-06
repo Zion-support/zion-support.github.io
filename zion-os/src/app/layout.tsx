@@ -1,13 +1,11 @@
 import "./globals.css";
 import type { ReactNode } from "react";
 import { Metadata } from "next";
-
-export const metadata = {
-  title: "Zion OS - Launch Sovereign AI-Powered Digital Economies",
+export const metadata = $2;
   description: "Unified deployment protocol for Zion ecosystems. Deploy AI-powered marketplaces, governance systems, and digital economies with one click.",
-  keywords: "AI, blockchain, digital economy, marketplace, governance, deployment, Zion"};
+  keywords: "AI, blockchain, digital economy, marketplace, governance, deployment, Zion"},
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode}) {
   return (
     <html lang="en">
       <body className="min-h-screen bg-[var(--bg)] text-[var(--fg)]">
@@ -54,7 +52,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <main className="min-h-screen">{children}</main>
         
         <footer className="border-t border-white/10 bg-zinc-900/50 mt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="col-span-1 md:col-span-2">
                 <div className="flex items-center space-x-2 mb-4">
@@ -89,11 +87,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </div>
             
             <div className="border-t border-white/10 mt-8 pt-8 text-center text-white/50">
-              <p>&copy; 2024 Zion OS. All rights reserved.</p>
+              <p>&copy, 2024 Zion OS. All rights reserved.</p>
             </div>
           </div>
         </footer>
       </body>
     </html>
-  );
+  )
 }

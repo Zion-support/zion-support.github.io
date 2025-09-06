@@ -1,38 +1,36 @@
 import React, { useState } from 'react';
-
 type Props = {
-  onSubmit: (payload: { title: string; description?: string; dueDate: string; amountUsd: number }) => Promise<void> | void;
-};
+  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number}) => Promise<void> | void
+},
 
 export default function MilestoneForm({ onSubmit }: Props) {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [dueDate, setDueDate] = useState('');
-  const [amountUsd, setAmountUsd] = useState<string>('');
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-
+  const [title, setTitle] = useState($2);
+  const [description, setDescription] = useState($2);
+  const [dueDate, setDueDate] = useState($2);
+  const [amountUsd, setAmountUsd] = useState<string>(''),
+  const [error, setError] = useState<string | null>(null),
+  const [loading, setLoading] = useState($2);
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null);
-    const parsedAmount = Number(amountUsd);
+    e.preventDefault($2);
+    setError($2);
+    const parsedAmount = Number($2);
     if (!title || !dueDate || !amountUsd || Number.isNaN(parsedAmount)) {
-      setError('Please provide Title, Due Date and a valid Amount.');
-      return;
+      setError($2);
+      return
     }
-    setLoading(true);
+    setLoading($2);
     try {
-      await onSubmit({ title, description: description || undefined, dueDate, amountUsd: parsedAmount });
-      setTitle('');
-      setDescription('');
-      setDueDate('');
-      setAmountUsd('');
+      await onSubmit($2);
+      setTitle($2);
+      setDescription($2);
+      setDueDate($2);
+      setAmountUsd('')
     } catch (err: any) {
-      setError(err?.message || 'Failed to create milestone');
+      setError(err?.message || 'Failed to create milestone')
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  },
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -90,5 +88,5 @@ export default function MilestoneForm({ onSubmit }: Props) {
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>
     </form>
-  );
+  )
 }

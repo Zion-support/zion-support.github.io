@@ -9,86 +9,71 @@ import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularService
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
-
 export default function PricingPage() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
-  const popularServices = getPopularServices();
-  
+  const popularServices = getPopularServices($2);
   // Combine all services for comprehensive pricing
-  const allServices = [
-    ...enhancedRealMicroSaasServices,
+  const allServices = $2;
     ...nextGenerationAIServices,
     ...cuttingEdgeITServices,
     ...innovativeMicroSaasV2Services
-  ];
+  ],
 
   // Enhanced service categories with pricing
-  const serviceCategories = [
-    {
-      name: 'Next-Generation AI',
+  const serviceCategories = $2;
       description: 'Revolutionary AI platforms',
-      services: ['AI Multimodal Fusion', 'AI Autonomous Decision Engine', 'AI Emotional Intelligence'],
+      services: ['AI Multimodal FusionAI Autonomous Decision EngineAI Emotional Intelligence'],
       avgPrice: '$3,199/month',
       savings: 'Save 60-80% vs. competitors'
     },
     {
       name: 'Cutting-Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions',
-      services: ['Zero Trust Architecture', 'Edge Computing Orchestration', '5G Private Networks'],
+      services: ['Zero Trust ArchitectureEdge Computing Orchestration5G Private Networks'],
       avgPrice: '$4,999/month',
       savings: 'Save 50-70% vs. competitors'
     },
     {
       name: 'Innovative Micro SaaS',
       description: 'Creative and practical SaaS tools',
-      services: ['AI Brand Personality', 'Virtual Event Holograms', 'AI Meeting Transcriber'],
+      services: ['AI Brand PersonalityVirtual Event HologramsAI Meeting Transcriber'],
       avgPrice: '$199/month',
       savings: 'Save 40-60% vs. competitors'
     },
     {
       name: 'Quantum & Space Technology',
       description: 'Quantum computing and space solutions',
-      services: ['Quantum AI Hybrid', 'Space Technology Platform', 'Quantum Cybersecurity'],
+      services: ['Quantum AI HybridSpace Technology PlatformQuantum Cybersecurity'],
       avgPrice: '$5,999/month',
       savings: 'Save 70-85% vs. competitors'
     },
     {
       name: 'Enterprise IT Services',
       description: 'Comprehensive enterprise solutions',
-      services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
+      services: ['Cloud MigrationDevOps AutomationSecurity Hardening'],
       avgPrice: '$2,999/month',
       savings: 'Save 45-65% vs. competitors'
     }
-  ];
+  ],
 
   // Enhanced pricing tiers with more realistic and comprehensive offerings
-  const pricingTiers = [
-    {
-      name: 'Starter',
+  const pricingTiers = $2;
       description: 'Perfect for small businesses and startups',
-      price: billingCycle === 'monthly' ? 49 : 39,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = $2;
+      period: billingCycle = $2;
+      savings: billingCycle = $2;
       features: [
-        'Access to 50+ Core Services',
-        'Basic AI Integration',
-        'Standard Support (24/7)',
-        '30-Day Free Trial',
-        'Basic Analytics Dashboard',
-        'Email Support',
-        '99.5% Uptime Guarantee',
-        'Standard Security Features'
+        'Access to 50+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
       ],
-      icon: <Sparkles className="w-8 h-8" />,
+      icon: <Sparkles className = $2;
       variant: 'quantum' as const,
       popular: false,
       cta: 'Start Free Trial',
@@ -97,24 +82,13 @@ export default function PricingPage() {
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
-      price: billingCycle === 'monthly' ? 149 : 119,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = $2;
+      period: billingCycle = $2;
+      savings: billingCycle = $2;
       features: [
-        'Access to 200+ Premium Services',
-        'Advanced AI & Quantum Computing',
-        'Priority Support (24/7)',
-        '60-Day Free Trial',
-        'Advanced Analytics & Reporting',
-        'Phone & Email Support',
-        '99.9% Uptime Guarantee',
-        'Enhanced Security & Compliance',
-        'Custom Integrations',
-        'Team Collaboration Tools',
-        'API Access',
-        'White-label Options'
+        'Access to 200+ Premium ServicesAdvanced AI & Quantum ComputingPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security & ComplianceCustom IntegrationsTeam Collaboration ToolsAPI AccessWhite-label Options'
       ],
-      icon: <Crown className="w-8 h-8" />,
+      icon: <Crown className = $2;
       variant: 'holographic' as const,
       popular: true,
       cta: 'Start Free Trial',
@@ -123,106 +97,79 @@ export default function PricingPage() {
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
-      price: billingCycle === 'monthly' ? 499 : 399,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = $2;
+      period: billingCycle = $2;
+      savings: billingCycle = $2;
       features: [
-        'Access to ALL 500+ Services',
-        'Full Quantum AI & Autonomous Systems',
-        'Dedicated Support Team (24/7)',
-        '90-Day Free Trial',
-        'Enterprise Analytics & AI Insights',
-        'Dedicated Account Manager',
-        '99.99% Uptime SLA',
-        'Enterprise Security & Compliance',
-        'Custom Development Services',
-        'Advanced Team Management',
-        'Full API & SDK Access',
-        'Custom Branding & White-label',
-        'On-premise Deployment Options',
-        'Advanced AI Training & Customization',
-        'Priority Feature Development',
-        'Global Infrastructure Access'
+        'Access to ALL 500+ ServicesFull Quantum AI & Autonomous SystemsDedicated Support Team (24/7)90-Day Free TrialEnterprise Analytics & AI InsightsDedicated Account Manager99.99% Uptime SLAEnterprise Security & ComplianceCustom Development ServicesAdvanced Team ManagementFull API & SDK AccessCustom Branding & White-labelOn-premise Deployment OptionsAdvanced AI Training & CustomizationPriority Feature DevelopmentGlobal Infrastructure Access'
       ],
-      icon: <Rocket className="w-8 h-8" />,
+      icon: <Rocket className = $2;
       variant: 'neural' as const,
       popular: false,
       cta: 'Contact Sales',
       ctaVariant: 'primary' as const
     }
-  ];
+  ],
 
   // Service category pricing examples
-  const serviceCategoryPricing = [
-    {
-      category: 'Quantum AI & Computing',
-      services: ['Quantum AI Platform', 'Neural Network Training', 'Quantum Optimization'],
+  const serviceCategoryPricing = $2;
+      services: ['Quantum AI PlatformNeural Network TrainingQuantum Optimization'],
       startingPrice: '$99/month',
-      icon: <Brain className="w-6 h-6" />
-    },
+      icon: <Brain className = $2;
     {
       category: 'Autonomous Systems',
-      services: ['AI Factory Management', 'Robotic Process Automation', 'Smart Manufacturing'],
+      services: ['AI Factory ManagementRobotic Process AutomationSmart Manufacturing'],
       startingPrice: '$149/month',
-      icon: <Factory className="w-6 h-6" />
-    },
+      icon: <Factory className = $2;
     {
       category: 'Healthcare & Biotech',
-      services: ['Drug Discovery AI', 'Medical Imaging Analysis', 'Genomic Research Platform'],
+      services: ['Drug Discovery AIMedical Imaging AnalysisGenomic Research Platform'],
       startingPrice: '$199/month',
-      icon: <FlaskConical className="w-6 h-6" />
-    },
+      icon: <FlaskConical className = $2;
     {
       category: 'Cybersecurity',
-      services: ['Quantum Encryption', 'Threat Intelligence', 'Zero-Trust Security'],
+      services: ['Quantum EncryptionThreat IntelligenceZero-Trust Security'],
       startingPrice: '$129/month',
-      icon: <Shield className="w-6 h-6" />
-    },
+      icon: <Shield className = $2;
     {
       category: 'Financial Technology',
-      services: ['AI Trading Platform', 'Risk Management', 'Portfolio Optimization'],
+      services: ['AI Trading PlatformRisk ManagementPortfolio Optimization'],
       startingPrice: '$179/month',
-      icon: <DollarSign className="w-6 h-6" />
-    },
+      icon: <DollarSign className = $2;
     {
       category: 'Space Technology',
-      services: ['Satellite Management', 'Space Data Analytics', 'Mission Planning AI'],
+      services: ['Satellite ManagementSpace Data AnalyticsMission Planning AI'],
       startingPrice: '$299/month',
-      icon: <Rocket className="w-6 h-6" />
-    }
-  ];
-
+      icon: <Rocket className = $2;
   // Value propositions
-  const valuePropositions = [
-    {
-      title: 'Unprecedented ROI',
+  const valuePropositions = $2;
       description: 'Average 300% ROI within 6 months',
-      icon: <TrendingUp className="w-8 h-8" />,
+      icon: <TrendingUp className = $2;
       metric: '300%',
       detail: 'Average ROI'
     },
     {
       title: 'Time to Value',
       description: 'Get up and running in under 24 hours',
-      icon: <Clock className="w-8 h-8" />,
+      icon: <Clock className = $2;
       metric: '<24h',
       detail: 'Setup Time'
     },
     {
       title: 'Global Reach',
       description: 'Available in 150+ countries worldwide',
-      icon: <Globe className="w-8 h-8" />,
+      icon: <Globe className = $2;
       metric: '150+',
       detail: 'Countries'
     },
     {
       title: 'Enterprise Security',
       description: 'Bank-level security with 99.99% uptime',
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className = $2;
       metric: '99.99%',
       detail: 'Uptime SLA'
     }
-  ];
+  ],
 
   return (
     <UltraFuturisticBackground variant="quantum" intensity="high">
@@ -537,7 +484,7 @@ export default function PricingPage() {
               No credit card required, instant setup, and full support included.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">
               <Button
                 href="/services"
                 variant="primary"
@@ -566,5 +513,5 @@ export default function PricingPage() {
         </div>
       </div>
     </UltraFuturisticBackground>
-  );
+  )
 }

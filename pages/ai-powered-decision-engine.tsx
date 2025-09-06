@@ -1,6 +1,5 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
-
 export default function AiPoweredDecisionEngine() {
 	return (
 		<ServiceLanding
@@ -10,8 +9,7 @@ export default function AiPoweredDecisionEngine() {
 			pricePerMonthUSD={279}
 			implementationWeeks="3-7 days"
 			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
-			features={[
-				"Policy and risk decisioning with constraints",
+			features = $2;
 				"Online experimentation (A/B, multi-armed bandits)",
 				"Explainability and audit trails",
 				"Rules + ML hybrid strategies",
@@ -21,7 +19,7 @@ export default function AiPoweredDecisionEngine() {
 				"Versioned strategies with canary rollouts"
 			]}
 			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
-			canonical="https://ziontechgroup.com/ai-powered-decision-engine"
+			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
 		/>
-	);
+	)
 }

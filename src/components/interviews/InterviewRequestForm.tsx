@@ -18,12 +18,10 @@ import { CalendarIcon } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface InterviewRequestFormProps {
-  talent: TalentProfile;
-  onClose: () => void;
-  userDetails?: UserProfile;
+  talent: TalentProfile,
+  onClose: () => void,
+  userDetails?: UserProfile
 }
 
 const formSchema = z.object({
@@ -31,69 +29,57 @@ const formSchema = z.object({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
     message: "Interview date must be in the future"
   }),
-  time: z.string().min(1, "Please select a time for the interview."),
-  duration: z.string().min(1, "Please select the interview duration."),
-  platform: z.string().min(1, "Please select a meeting platform."),
-  meetingLink: z.string().optional(),
-  title: z.string().min(3, "Please provide a brief title for the interview."),
-  notes: z.string().optional()});
+  time: z.string().min($2);
+  duration: z.string().min($2);
+  platform: z.string().min($2);
+  meetingLink: z.string().optional($2);
+  title: z.string().min($2);
+  notes: z.string().optional()}),
 
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
-  const { requestInterview } = useInterviews();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
+  const { requestInterview } = useInterviews($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
   const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver($2);
     defaultValues: {
       title: `Interview with ${talent.full_name}`,
       duration: "30",
       platform: "zoom",
       notes: "",
-      meetingLink: ""}});
+      meetingLink: ""}}),
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     if (!userDetails?.id) {
-      toast({
-        title: "Authentication required",
-        description: "Please log in to schedule an interview",
-        variant: "destructive"});
-      return;
+      toast($2);
+      return
     }
 
-    setIsSubmitting(true);
-
+    setIsSubmitting($2);
     try {
       // Combine date and time
-      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
-      const scheduledDate = new Date(dateTimeString);
-      
+      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`,
+      const scheduledDate = new Date($2);
       // Calculate end time based on duration
-      const durationMinutes = parseInt(values.duration);
-
-      await requestInterview({
-        talent_id: talent.id,
-        client_id: userDetails.id,
-        scheduled_date: scheduledDate.toISOString(),
+      const durationMinutes = parseInt($2);
+      await requestInterview($2);
         duration_minutes: durationMinutes,
         notes: values.notes,
         meeting_platform: values.platform as any,
         meeting_link: values.meetingLink,
         interview_type: "video",
         title: values.title
-      });
+      }),
 
-      toast({
-        title: "Interview requested",
-        description: `Your interview request with ${talent.full_name} has been sent.`});
-      onClose();
+      toast($2);
+      onClose()
     } catch (error) {
-      logErrorToProduction('Failed to schedule interview:', { data: error });
+      logErrorToProduction($2);
       toast({
         title: "Failed to schedule interview",
         description: "An error occurred while scheduling the interview. Please try again.",
-        variant: "destructive"});
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
   }
 
@@ -101,8 +87,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
-    "18:00", "18:30", "19:00", "19:30", "20:00"
-  ];
+    "18:00", "18:30", "19:00", "19:30", "20: 00"
+  ],
 
   return (
     <Form {...form}>
@@ -141,15 +127,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             control={form.control}
             name="date"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (
-              <FormItem className="flex flex-col">
-                <FormLabel>Date</FormLabel>
-                <Popover>
-                  <PopoverTrigger asChild>
-                    <FormControl>
-                      <Button
-                        variant="outline"
-                        className={cn(
-                          "w-full pl-3 text-left font-normal",
+              <FormItem className = $2;
                           !field.value && "text-muted-foreground"
                         )}
                       >
@@ -301,5 +279,5 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         </div>
       </form>
     </Form>
-  );
+  )
 }

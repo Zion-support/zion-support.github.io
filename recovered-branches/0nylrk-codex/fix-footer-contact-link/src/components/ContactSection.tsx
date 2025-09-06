@@ -2,7 +2,6 @@
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
-
 export function ContactSection() {
   return (
     <section className="py-20 bg-zion-blue" id="contact">
@@ -72,7 +71,7 @@ export function ContactSection() {
                   <textarea
                     id="message"
                     rows={4}
-                    className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+                    className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus: border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                   ></textarea>
                 </div>
                 <div>
@@ -86,5 +85,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

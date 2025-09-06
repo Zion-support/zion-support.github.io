@@ -1,43 +1,41 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Q3Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition?: string;
-  targetAudience?: string;
-  trialDays?: number;
-  setupTime?: string;
-  category: string;
-  realService: boolean;
-  technology?: string[];
-  integrations?: string[];
-  useCases?: string[];
-  roi?: string;
-  competitors?: string[];
-  marketSize?: string;
-  growthRate?: string;
-  variant?: ServiceVariant;
-  customers?: number;
-  rating?: number;
-  reviews?: number;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular?: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition?: string,
+  targetAudience?: string,
+  trialDays?: number,
+  setupTime?: string,
+  category: string,
+  realService: boolean,
+  technology?: string[],
+  integrations?: string[],
+  useCases?: string[],
+  roi?: string,
+  competitors?: string[],
+  marketSize?: string,
+  growthRate?: string,
+  variant?: ServiceVariant,
+  customers?: number,
+  rating?: number,
+  reviews?: number
 }
 
-const contact = {
-  mobile: '+1 302 464 0950',
+const contact = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export const realServicesQ32025: Q3Service[] = [
   {
@@ -48,12 +46,7 @@ export const realServicesQ32025: Q3Service[] = [
     period: '/month',
     description: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.',
     features: [
-      'Churn and retention analysis',
-      'Cohort and funnel dashboards',
-      'Price testing and packaging experiments',
-      'Revenue leakage detection',
-      'Revenue forecasting models',
-      'Weekly executive summaries'
+      'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries'
     ],
     popular: true,
     icon: '📊',
@@ -66,11 +59,11 @@ export const realServicesQ32025: Q3Service[] = [
     setupTime: '1–2 weeks',
     category: 'AI & Data',
     realService: true,
-    technology: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python'],
-    integrations: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy'],
-    useCases: ['Reduce churn', 'Price optimization', 'Board-ready revenue KPIs'],
+    technology: ['dbtSnowflake/BigQuerySegment/GA4Python'],
+    integrations: ['StripePaddleChargebeeLemon Squeezy'],
+    useCases: ['Reduce churnPrice optimizationBoard-ready revenue KPIs'],
     roi: '3–10% ARR lift from churn reduction and pricing wins.',
-    competitors: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics'],
+    competitors: ['ProfitWell MetricsChartMogulBaremetrics'],
     marketSize: '$30B+ subscription economy tooling',
     growthRate: '30% YoY',
     variant: 'ai-futuristic',
@@ -78,8 +71,7 @@ export const realServicesQ32025: Q3Service[] = [
     rating: 4.9,
     reviews: 31,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-    contactInfo: contact
-  },
+    contactInfo: contact},
   {
     id: 'digital-product-commerce-stack',
     name: 'Digital Product Commerce Stack',
@@ -88,12 +80,7 @@ export const realServicesQ32025: Q3Service[] = [
     period: '/project',
     description: 'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.',
     features: [
-      'Payments, taxes, and invoicing',
-      'License keys and subscriptions',
-      'EU/US tax and compliance guidance',
-      'Storefront templates and checkout',
-      'Sales analytics and email hooks',
-      '1-week launch plan'
+      'Payments, taxes, and invoicingLicense keys and subscriptionsEU/US tax and compliance guidanceStorefront templates and checkoutSales analytics and email hooks1-week launch plan'
     ],
     icon: '🛒',
     color: 'from-cyan-600 to-blue-700',
@@ -104,17 +91,16 @@ export const realServicesQ32025: Q3Service[] = [
     setupTime: '5–7 days',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Next.js', 'Stripe', 'Lemon Squeezy API', 'PostgreSQL'],
-    integrations: ['Stripe', 'Lemon Squeezy', 'Gumroad', 'Make/Zapier'],
-    useCases: ['Course sales', 'Plugin licenses', 'Templates marketplace'],
-    roi: 'Launch revenue in under 2 weeks; save 40–80 hours of setup.',
-    competitors: ['Lemon Squeezy', 'Gumroad', 'Paddle'],
+    technology: ['Next.jsStripeLemon Squeezy APIPostgreSQL'],
+    integrations: ['StripeLemon SqueezyGumroadMake/Zapier'],
+    useCases: ['Course salesPlugin licensesTemplates marketplace'],
+    roi: 'Launch revenue in under 2 weeks, save 40–80 hours of setup.',
+    competitors: ['Lemon SqueezyGumroadPaddle'],
     customers: 12,
     rating: 4.8,
     reviews: 18,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-    contactInfo: contact
-  },
+    contactInfo: contact},
   {
     id: 'wordpress-internal-linking-automation',
     name: 'WordPress Internal Linking Automation',
@@ -123,11 +109,7 @@ export const realServicesQ32025: Q3Service[] = [
     period: '/month',
     description: 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments.',
     features: [
-      'Automatic link suggestions and anchors',
-      'Orphan page and pillar clustering',
-      'Click-through rate experiments',
-      'Reporting and recommendations',
-      'Sitemap and crawl improvements'
+      'Automatic link suggestions and anchorsOrphan page and pillar clusteringClick-through rate experimentsReporting and recommendationsSitemap and crawl improvements'
     ],
     icon: '🔗',
     color: 'from-purple-600 to-pink-600',
@@ -139,17 +121,16 @@ export const realServicesQ32025: Q3Service[] = [
     setupTime: '2–4 days',
     category: 'Growth & Marketing',
     realService: true,
-    technology: ['WordPress', 'GA4', 'Looker Studio'],
-    integrations: ['Link Whisper', 'Yoast/RankMath', 'Search Console'],
-    useCases: ['Boost organic traffic', 'Fix site structure', 'Improve crawl and CTR'],
+    technology: ['WordPressGA4Looker Studio'],
+    integrations: ['Link WhisperYoast/RankMathSearch Console'],
+    useCases: ['Boost organic trafficFix site structureImprove crawl and CTR'],
     roi: '5–25% organic uplift in 8–12 weeks on content libraries.',
-    competitors: ['Link Whisper', 'Internal Link Juicer'],
+    competitors: ['Link WhisperInternal Link Juicer'],
     customers: 30,
     rating: 4.7,
     reviews: 22,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-    contactInfo: contact
-  },
+    contactInfo: contact},
   {
     id: 'reviews-ugc-activation',
     name: 'Ecommerce Reviews & UGC Activation',
@@ -158,11 +139,7 @@ export const realServicesQ32025: Q3Service[] = [
     period: '/project',
     description: 'We implement reviews and UGC collection across your storefront with on-brand widgets, post-purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.',
     features: [
-      'Reviews widget integration',
-      'Email/SMS post-purchase triggers',
-      'Photo/video UGC capture',
-      'Moderation and syndication',
-      'Conversion impact reporting'
+      'Reviews widget integrationEmail/SMS post-purchase triggersPhoto/video UGC captureModeration and syndicationConversion impact reporting'
     ],
     icon: '⭐',
     color: 'from-amber-600 to-rose-600',
@@ -173,15 +150,14 @@ export const realServicesQ32025: Q3Service[] = [
     setupTime: '3–6 days',
     category: 'Quality & Monitoring',
     realService: true,
-    technology: ['Shopify', 'Klaviyo', 'Next.js'],
-    integrations: ['Yotpo', 'Judge.me', 'Loox', 'Stamped'],
-    useCases: ['Increase trust', 'Lift CVR', 'Collect UGC for ads'],
+    technology: ['ShopifyKlaviyoNext.js'],
+    integrations: ['YotpoJudge.meLooxStamped'],
+    useCases: ['Increase trustLift CVRCollect UGC for ads'],
     roi: '2–10% CVR lift on PDPs post-deployment.',
-    competitors: ['Yotpo', 'Judge.me', 'Loox', 'Stamped.io'],
+    competitors: ['YotpoJudge.meLooxStamped.io'],
     customers: 10,
     rating: 4.8,
     reviews: 12,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-    contactInfo: contact
-  }
-];
+    contactInfo: contact}
+],

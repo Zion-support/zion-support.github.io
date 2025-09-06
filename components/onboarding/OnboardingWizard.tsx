@@ -14,9 +14,8 @@ export default function OnboardingWizard() {
     if (isClient) {
       return [
         { title: 'Ready to find top IT talent?', content: (
-          <div className="space-y-4">
-            <p>Post a role or import your job brief to get started.</p>
-            <Link href="/jobs/post"><a className="inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-white/5">Post a job</a></Link>
+          <div className="space-y-3">
+            <p>We will help you find the best IT talent for your projects.</p>
           </div>
         ) },
         { title: 'View suggested matches', content: <p>We will surface the best matches instantly based on your job brief.</p> },
@@ -26,23 +25,9 @@ export default function OnboardingWizard() {
       { title: 'Complete your profile', content: (
         <div className="space-y-3">
           <input className="w-full rounded-md border px-3 py-2 bg-transparent" placeholder="Your title (e.g., Senior LLM Engineer)" onChange={(e) => setUser(prev => prev ? { ...prev, name: prev.name } : prev)} />
-          <textarea className="w-full rounded-md border px-3 py-2 bg-transparent" placeholder="Short bio" />
-        </div>
-      ) },
+          <textarea className = $2;
       { title: 'Choose skills and availability', content: (
-        <div className="space-y-3 text-sm">
-          <div className="flex flex-wrap gap-2">
-            {['AI', 'LLM', 'Next.js', 'Python', 'DevOps', 'Security'].map(s => (
-              <button key={s} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5">{s}</button>
-            ))}
-          </div>
-          <div className="flex gap-3">
-            {['full-time','part-time','contract'].map(a => (
-              <button key={a} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5 capitalize">{a}</button>
-            ))}
-          </div>
-        </div>
-      ) },
+        <div className = $2;
       { title: 'Preview your profile', content: <p>Review how clients will see your profile.</p> },
       { title: 'Enable AI matchmaking', content: (
         <div className="space-y-2">
@@ -71,7 +56,7 @@ export default function OnboardingWizard() {
         {step < steps.length - 1 ? (
           <button onClick={() => setStep(s => Math.min(steps.length - 1, s + 1))} className="px-3 py-2 rounded-md border">Next</button>
         ) : (
-          <button onClick={() => { completeOnboarding(); addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px-3 py-2 rounded-md border">Finish</button>
+          <button onClick={() => { completeOnboarding(), addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px-3 py-2 rounded-md border">Finish</button>
         )}
       </div>
     </div>

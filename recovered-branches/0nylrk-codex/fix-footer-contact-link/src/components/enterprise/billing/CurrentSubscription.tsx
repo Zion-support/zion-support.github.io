@@ -3,11 +3,9 @@ import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-
 export function CurrentSubscription() {
   // Mock subscription data
-  const subscription = {
-    plan: "Business",
+  const subscription = $2;
     status: "active",
     billingCycle: "Annual",
     startDate: "May 1, 2025",
@@ -15,9 +13,8 @@ export function CurrentSubscription() {
     amount: "$1,999.00",
     teamSeats: {
       used: 32,
-      total: 50
-    }
-  };
+      total: 50}
+  },
 
   return (
     <Card>
@@ -75,5 +72,5 @@ export function CurrentSubscription() {
         <Button variant="destructive">Cancel Subscription</Button>
       </CardFooter>
     </Card>
-  );
+  )
 }

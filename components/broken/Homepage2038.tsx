@@ -8,19 +8,17 @@ import {
   Brain, Atom, Shield, Zap, TrendingUp, Globe,
   Rocket, Target, Cpu, Cloud, Lock, Users, Award,
   CheckCircle, Sparkles, Infinity, Zap as Lightning
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import new services
 import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services';
 import { innovative2038ITServices } from '../data/innovative-2038-it-services';
 import { innovative2038AIServices } from '../data/innovative-2038-ai-services';
-
 const Homepage2038: React.FC = () => {
   // Get featured services from each category
-  const featuredMicroSaas = innovative2038MicroSaasServices.filter(s => s.popular).slice(0, 3);
-  const featuredIT = innovative2038ITServices.filter(s => s.popular).slice(0, 3);
-  const featuredAI = innovative2038AIServices.filter(s => s.popular).slice(0, 3);
-
+  const featuredMicroSaas = innovative2038MicroSaasServices.filter(s => s.popular).slice($2);
+  const featuredIT = innovative2038ITServices.filter(s => s.popular).slice($2);
+  const featuredAI = innovative2038AIServices.filter(s => s.popular).slice($2);
   return (
     <Layout>
       {/* Main Content */}
@@ -38,15 +36,15 @@ const Homepage2038: React.FC = () => {
           
           <div className="text-center max-w-5xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
               {/* Company Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1}}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm"
               >
@@ -89,8 +87,8 @@ const Homepage2038: React.FC = () => {
               
               {/* Trust Indicators */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-400"
               >
@@ -120,10 +118,10 @@ const Homepage2038: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
           <div className="max-w-7xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
             >
               <motion.div 
@@ -166,10 +164,10 @@ const Homepage2038: React.FC = () => {
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-20"
             >
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -184,10 +182,10 @@ const Homepage2038: React.FC = () => {
               {featuredAI.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                 >
                   <UltraFuturisticServiceCard2038
                     service={service}
@@ -215,10 +213,10 @@ const Homepage2038: React.FC = () => {
         <section className="py-24 px-4 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-20"
             >
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
@@ -233,10 +231,10 @@ const Homepage2038: React.FC = () => {
               {featuredMicroSaas.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                 >
                   <UltraFuturisticServiceCard2038
                     service={service}
@@ -264,10 +262,10 @@ const Homepage2038: React.FC = () => {
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-20"
             >
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
@@ -282,10 +280,10 @@ const Homepage2038: React.FC = () => {
               {featuredIT.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                 >
                   <UltraFuturisticServiceCard2038
                     service={service}
@@ -313,54 +311,39 @@ const Homepage2038: React.FC = () => {
         <section className="py-24 px-4 bg-black/30">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-20"
-            >
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Why Choose Zion Tech Group?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                We're not just building technology - we're shaping the future of human consciousness and computing
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: <Brain className="w-12 h-12" />,
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
                   title: "AI Consciousness Evolution",
                   description: "Leading the development of artificial consciousness and emotional intelligence",
                   color: "from-purple-500 to-pink-500"
                 },
                 {
-                  icon: <Atom className="w-12 h-12" />,
+                  icon: <Atom className = $2;
                   title: "Quantum Computing Power",
                   description: "Access to the most advanced quantum computing capabilities available",
                   color: "from-blue-500 to-cyan-500"
                 },
                 {
-                  icon: <Shield className="w-12 h-12" />,
+                  icon: <Shield className = $2;
                   title: "Future-Proof Security",
                   description: "Quantum-resistant encryption and zero-trust security frameworks",
                   color: "from-red-500 to-orange-500"
                 },
                 {
-                  icon: <Rocket className="w-12 h-12" />,
+                  icon: <Rocket className = $2;
                   title: "Innovation First",
                   description: "Constantly pushing the boundaries of what's possible in technology",
                   color: "from-green-500 to-emerald-500"
                 },
                 {
-                  icon: <Users className="w-12 h-12" />,
+                  icon: <Users className = $2;
                   title: "Global Expertise",
                   description: "World-class team with experience across cutting-edge technologies",
                   color: "from-indigo-500 to-purple-500"
                 },
                 {
-                  icon: <Award className="w-12 h-12" />,
+                  icon: <Award className = $2;
                   title: "Proven Results",
                   description: "Track record of delivering transformative solutions to leading organizations",
                   color: "from-yellow-500 to-orange-500"
@@ -368,10 +351,10 @@ const Homepage2038: React.FC = () => {
               ].map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="text-center p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                 >
@@ -392,10 +375,10 @@ const Homepage2038: React.FC = () => {
         <section className="py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="space-y-8"
             >
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -406,35 +389,5 @@ const Homepage2038: React.FC = () => {
                 Let's build the future together.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Link href="/contact">
-                  <motion.button
-                    className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 text-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span className="flex items-center gap-3">
-                      Get Started Today
-                      <ArrowRight className="w-6 h-6" />
-                    </span>
-                  </motion.button>
-                </Link>
-                <Link href="/services">
-                  <motion.button
-                    className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Explore Our Services
-                  </motion.button>
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </main>
-    </Layout>
-  );
-};
-
-export default Homepage2038;
+              <div className = $2;
+export default Homepage2038,

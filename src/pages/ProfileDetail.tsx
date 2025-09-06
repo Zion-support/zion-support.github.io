@@ -10,62 +10,60 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
-
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
-  const router = useRouter();
-  const profileId = router.query.profileId as string;
-  const [profileData, setProfileData] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const router = useRouter($2);
+  const profileId = $2;
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
 
   useEffect(() => {
     const fetchProfile = async () => {
-      setIsLoading(true);
-      setError(null);
+      setIsLoading($2);
+      setError($2);
       try {
         if (!profileId) {
-          setError("Profile ID is missing.");
-          return;
+          setError($2);
+          return
         }
 
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
-          .single();
-
+          .single($2);
         if (error) {
-          throw new Error(error.message);
+          throw new Error(error.message)
         }
 
         if (!data) {
-          setError("Profile not found.");
-          return;
+          setError($2);
+          return
         }
 
-        setProfileData(data);
+        setProfileData(data)
       } catch (err: any) {
-        setError(err.message || "Failed to fetch profile.");
+        setError($2);
         toast({
           title: "Error",
           description: err.message || "Failed to fetch profile.",
-          variant: "destructive"});
+          variant: "destructive"})
       } finally {
-        setIsLoading(false);
+        setIsLoading(false)
       }
-    };
+    },
 
-    fetchProfile();
-  }, [profileId]);
+    fetchProfile()
+  }, [profileId]),
 
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
       </div>
-    );
+    )
   }
 
   if (error) {
@@ -73,7 +71,7 @@ export default function ProfileDetail() {
       <div className="min-h-screen flex items-center justify-center">
         <p>Error: {error}</p>
       </div>
-    );
+    )
   }
 
   if (!profileData) {
@@ -81,7 +79,7 @@ export default function ProfileDetail() {
       <div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
       </div>
-    );
+    )
   }
 
   return (
@@ -196,32 +194,10 @@ export default function ProfileDetail() {
                   <div className="flex flex-col gap-3">
                     {profileData.portfolio_links.map((link: any, index: number) => (
                       <a
-                        key={index}
-                        href={link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-zion-cyan hover:text-white flex items-center gap-2"
-                      >
-                        <LinkIcon className="h-4 w-4" />
-                        {link.title || link.url}
-                      </a>
-                    ))}
-                  </div>
-                ) : (
-                  <p className="text-zion-slate-light">No portfolio links provided.</p>
-                )}
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Sidebar with HireNowCTA */}
-          <div className="col-span-4 lg:col-span-1">
-            <HireNowCTA
-              talentProfile={{
-                id: profileData?.id || '',
-                full_name: profileData?.full_name || '',
-                professional_title: profileData?.professional_title || '',
-                hourly_rate: profileData?.hourly_rate || 0
+                        key = $2;
+                full_name: profileData ?.full_name || '',
+                professional_title: profileData ?.professional_title || '',
+                hourly_rate: profileData ?.hourly_rate || 0
               }}
             />
             {/* Contact Information */}
@@ -300,5 +276,5 @@ export default function ProfileDetail() {
         </div>
       </div>
     </>
-  );
+  )
 }

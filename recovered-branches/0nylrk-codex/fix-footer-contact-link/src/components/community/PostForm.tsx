@@ -7,7 +7,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle
-} from "@/components/ui/card";
+} from "@/components/ui/card",
 import {
   Form,
   FormControl,
@@ -15,49 +15,41 @@ import {
   FormItem,
   FormLabel,
   FormMessage
-} from "@/components/ui/form";
+} from "@/components/ui/form",
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { ForumCategory } from "@/types/community";
-
 interface PostFormValues {
-  title: string;
-  content: string;
-  categoryId: ForumCategory;
-  tags: string;
-}
+  title: string,
+  content: string,
+  categoryId: ForumCategory,
+  tags: string}
 
 interface PostFormProps {
-  initialValues?: Partial<PostFormValues>;
-  onSubmit: (values: PostFormValues) => void;
-  isEditing?: boolean;
+  initialValues?: Partial<PostFormValues>,
+  onSubmit: (values: PostFormValues) => void,
+  isEditing?: boolean
 }
 
-export const PostForm = ({
-  initialValues,
+export const PostForm = $2;
   onSubmit,
-  isEditing = false
-}: PostFormProps) => {
-  const form = useForm<PostFormValues>({
-    defaultValues: {
-      title: initialValues?.title || "",
-      content: initialValues?.content || "",
-      categoryId: initialValues?.categoryId || "project-help",
-      tags: initialValues?.tags || ""
+  isEditing = $2;
+      content: initialValues ?.content || "",
+      categoryId: initialValues ?.categoryId || "project-help",
+      tags: initialValues ?.tags || ""
     }
-  });
+  }),
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
+  const [isSubmitting, setIsSubmitting] = useState($2);
   const handleSubmit = async (values: PostFormValues) => {
-    setIsSubmitting(true);
+    setIsSubmitting($2);
     try {
-      await onSubmit(values);
+      await onSubmit(values)
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  },
 
   return (
     <Card>
@@ -138,14 +130,5 @@ export const PostForm = ({
               )}
             />
             
-            <Button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
-            </Button>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
-  );
-};
-
-export default PostForm;
+            <Button type = $2;
+export default PostForm,

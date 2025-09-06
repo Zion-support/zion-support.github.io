@@ -1,6 +1,5 @@
 
 import Head from 'next/head';
-
 const Callback = () => {
   return (
     <div>
@@ -14,7 +13,7 @@ const Callback = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default Callback;
+export default Callback,

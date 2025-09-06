@@ -6,26 +6,25 @@ import {
   CheckCircle, ArrowRight, Zap, Target, Microscope,
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette,
   Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const heroStats = [
   { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> },
   { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },
   { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> },
   { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> }
-];
+],
 
 const serviceCategories = [
   {
@@ -64,27 +63,27 @@ const serviceCategories = [
     gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600',
     count: cuttingEdgeMicroSaasServices2025.length
   }
-];
+],
 
 export default function CuttingEdgeServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
   const allServices = [
     ...cuttingEdgeAIServices2025,
     ...cuttingEdgeQuantumServices2025,
     ...cuttingEdgeEnterpriseITServices2025,
     ...cuttingEdgeMicroSaasServices2025
-  ];
+  ],
 
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    return matchesSearch && matchesCategory
+  }),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -94,7 +93,7 @@ export default function CuttingEdgeServicesShowcase2025() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -105,7 +104,7 @@ export default function CuttingEdgeServicesShowcase2025() {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <>
@@ -391,8 +390,8 @@ export default function CuttingEdgeServicesShowcase2025() {
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>
                 <button
                   onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('all');
+                    setSearchTerm(''),
+                    setSelectedCategory('all')
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
                 >
@@ -470,5 +469,5 @@ export default function CuttingEdgeServicesShowcase2025() {
         </section>
       </Layout>
     </>
-  );
+  )
 }

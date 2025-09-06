@@ -3,14 +3,13 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2 } from 'lucide-react'
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
-
 interface AIEnhancementButtonProps {
-  currentContent: string;
-  enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general';
-  context?: string;
-  onEnhanced: (enhancedContent: string) => void;
-  buttonText?: string;
-  className?: string;
+  currentContent: string,
+  enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general',
+  context?: string,
+  onEnhanced: (enhancedContent: string) => void,
+  buttonText?: string,
+  className?: string
 }
 
 export function AIEnhancementButton({
@@ -18,29 +17,24 @@ export function AIEnhancementButton({
   enhancementType,
   context,
   onEnhanced,
-  buttonText = "Enhance with AI",
+  buttonText = $2;
   className
 }: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useResumeEnhancer();
-  const [error, setError] = useState<string | null>(null);
+  const { enhanceContent, isEnhancing } = useResumeEnhancer($2);
+  const [error, setError] = useState<string | null>(null),
   
   const handleEnhance = async () => {
     if (!currentContent || currentContent.trim().length < 10) {
-      setError('Please enter at least some basic content before enhancing');
-      return;
+      setError($2);
+      return
     }
     
-    setError(null);
-    const enhancedContent = await enhanceContent(
-      currentContent,
-      enhancementType,
-      context
-    );
-    
+    setError($2);
+    const enhancedContent = await enhanceContent($2);
     if (enhancedContent) {
-      onEnhanced(enhancedContent);
+      onEnhanced(enhancedContent)
     }
-  };
+  },
   
   return (
     <Button
@@ -58,5 +52,5 @@ export function AIEnhancementButton({
       )}
       <span className="text-xs">{buttonText}</span>
     </Button>
-  );
+  )
 }

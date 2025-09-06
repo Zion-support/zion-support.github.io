@@ -11,113 +11,82 @@ import { MessageTab } from "./MessageTab";
 import { ResumeTab } from "./ResumeTab";
 import { Job } from "./types";
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface ApplyFormProps {
-  job: Job;
-  onClose: () => void;
-  onApplySuccess?: (jobId: string) => Promise<void>;
+  job: Job,
+  onClose: () => void,
+  onApplySuccess?: (jobId: string) => Promise<void>
 }
 
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
-  const { createConversation } = useMessaging();
-  const { applyToJob } = useJobApplications();
-  const [message, setMessage] = useState(
-    `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
-  );
-  const [proposalLink, setProposalLink] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [activeTab, setActiveTab] = useState<string>("message");
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
+  const { createConversation } = useMessaging($2);
+  const { applyToJob } = useJobApplications($2);
+  const [message, setMessage] = useState($2);
+  const [proposalLink, setProposalLink] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const [activeTab, setActiveTab] = useState<string>("message"),
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
+  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),
   
   const handleResumeSelected = (resume: ResumeOption) => {
-    setSelectedResume(resume);
-    setSelectedResumeId(resume.id);
-  };
+    setSelectedResume($2);
+    setSelectedResumeId(resume.id)
+  },
   
   const handleApply = async () => {
     if (!message.trim()) {
-      toast({
-        title: "Message required",
-        description: "Please enter a message before applying.",
-        variant: "destructive"
-      });
-      return;
+      toast($2);
+      return
     }
     
     try {
-      setIsSubmitting(true);
-      
+      setIsSubmitting($2);
       // First submit the application to the job applications table
-      const applicationSuccess = await applyToJob(
-        job.id,
-        message,
-        selectedResume && selectedResume.type === 'ai_resume'
-          ? selectedResumeId || undefined
-          : undefined,
-        selectedResume && selectedResume.type === 'custom_upload'
-          ? selectedResume.file
-          : undefined
-      );
-      
+      const applicationSuccess = await applyToJob($2);
       if (!applicationSuccess) {
-        throw new Error("Failed to submit application");
+        throw new Error("Failed to submit application")
       }
       
       // Format message with proposal link if provided
-      let fullMessage = message;
-      
+      let fullMessage = $2;
       if (proposalLink) {
-        fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`;
+        fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`
       }
       
       // Add info about attached resume if available
       if (selectedResume) {
-        fullMessage += `\n\nI've attached my resume: ${selectedResume.title}`;
+        fullMessage += `\n\nI've attached my resume: ${selectedResume.title}`
       }
       
       // Create context data for the conversation
-      const contextData = {
-        title: job.title,
+      const contextData = $2;
         description: job.description,
         attachedResume: selectedResume ? {
           id: selectedResume.id,
           title: selectedResume.title,
           type: selectedResume.type
         } : null
-      };
+      },
       
       // Create conversation with the job client
-      await createConversation(
-        job.client_id,
-        fullMessage,
-        'job',
-        job.id,
-        contextData
-      );
-      
+      await createConversation($2);
       // Call onApplySuccess to update job status in the UI
       if (onApplySuccess) {
-        await onApplySuccess(job.id);
+        await onApplySuccess(job.id)
       }
       
-      toast({
-        title: "Application sent",
-        description: `Your application for "${job.title}" has been sent.`});
-      
-      onClose();
+      toast($2);
+      onClose()
     } catch (error) {
-      logErrorToProduction('Failed to send application:', { data: error });
+      logErrorToProduction($2);
       toast({
         title: "Application failed",
         description: "There was an error sending your application. Please try again.",
         variant: "destructive"
-      });
+      })
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  },
 
   return (
     <>
@@ -174,5 +143,5 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         </Button>
       </div>
     </>
-  );
+  )
 }

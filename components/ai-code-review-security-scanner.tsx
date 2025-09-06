@@ -5,7 +5,7 @@ import {
   Brain, Shield, Code, CheckCircle, Zap, 
   ArrowRight, Star, TrendingUp, Users, 
   Lock, Eye, BarChart3, Globe, Award
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AICodeReviewSecurityScanner = () => {
   return (
@@ -24,8 +24,8 @@ const AICodeReviewSecurityScanner = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
@@ -85,8 +85,8 @@ const AICodeReviewSecurityScanner = () => {
         <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -99,43 +99,40 @@ const AICodeReviewSecurityScanner = () => {
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: <Code className="w-8 h-8" />,
+            <div className = $2;
                   title: "Multi-Language Support",
                   description: "Support for Python, JavaScript, Java, Go, Rust, and more with language-specific security rules and best practices."
                 },
                 {
-                  icon: <Shield className="w-8 h-8" />,
+                  icon: <Shield className = $2;
                   title: "AI-Powered Vulnerability Detection",
                   description: "Advanced machine learning algorithms that detect security vulnerabilities, code smells, and potential security risks."
                 },
                 {
-                  icon: <Eye className="w-8 h-8" />,
+                  icon: <Eye className = $2;
                   title: "Automated Code Review",
                   description: "Intelligent code analysis with detailed feedback, improvement suggestions, and automated quality checks."
                 },
                 {
-                  icon: <Lock className="w-8 h-8" />,
+                  icon: <Lock className = $2;
                   title: "Security Best Practices",
                   description: "Enforce security standards, compliance requirements, and industry best practices automatically."
                 },
                 {
-                  icon: <BarChart3 className="w-8 h-8" />,
+                  icon: <BarChart3 className = $2;
                   title: "Performance Analytics",
                   description: "Comprehensive metrics and insights to track code quality improvements and security posture over time."
                 },
                 {
-                  icon: <Globe className="w-8 h-8" />,
+                  icon: <Globe className = $2;
                   title: "Integration & APIs",
                   description: "Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access."
                 }
               ].map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
                 >
@@ -154,24 +151,9 @@ const AICodeReviewSecurityScanner = () => {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Transparent Pricing Plans
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your development team size and security requirements. 
-                All plans include our core AI-powered security scanning capabilities.
-              </p>
-            </motion.div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "Starter",
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
                   price: "$299",
                   period: "/month",
                   description: "Perfect for small development teams and startups",
@@ -183,8 +165,7 @@ const AICodeReviewSecurityScanner = () => {
                     "Standard security rules",
                     "Basic reporting"
                   ],
-                  popular: false
-                },
+                  popular: false},
                 {
                   name: "Professional",
                   price: "$799",
@@ -200,8 +181,7 @@ const AICodeReviewSecurityScanner = () => {
                     "CI/CD integration",
                     "Team collaboration tools"
                   ],
-                  popular: true
-                },
+                  popular: true},
                 {
                   name: "Enterprise",
                   price: "$1,999",
@@ -218,13 +198,12 @@ const AICodeReviewSecurityScanner = () => {
                     "Custom integrations",
                     "SLA guarantees"
                   ],
-                  popular: false
-                }
+                  popular: false}
               ].map((plan, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className={`relative bg-white/5 backdrop-blur-xl border rounded-2xl p-8 ${
                     plan.popular 
@@ -279,35 +258,24 @@ const AICodeReviewSecurityScanner = () => {
         <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our AI Code Security Platform?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our platform delivers measurable results that improve your security posture, 
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
                 development efficiency, and code quality while reducing costs and risks.
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 gap-12">
-              <div className="space-y-8">
-                {[
-                  {
-                    icon: <Shield className="w-8 h-8" />,
+            <div className = $2;
                     title: "Reduce Security Vulnerabilities by 85%",
                     description: "Our AI algorithms detect security issues that traditional scanners miss, significantly reducing your attack surface."
                   },
                   {
-                    icon: <Zap className="w-8 h-8" />,
+                    icon: <Zap className = $2;
                     title: "Speed Up Code Review Process by 70%",
                     description: "Automated analysis and intelligent suggestions help developers identify and fix issues faster than manual review."
                   },
                   {
-                    icon: <TrendingUp className="w-8 h-8" />,
+                    icon: <TrendingUp className = $2;
                     title: "Improve Code Quality & Maintainability",
                     description: "AI-powered insights help maintain consistent code standards and improve overall codebase health."
                   }
@@ -315,43 +283,27 @@ const AICodeReviewSecurityScanner = () => {
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    whileInView={{ opacity: 1, x: 0}}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="flex items-start"
-                  >
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">
-                      {benefit.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                      <p className="text-gray-300">{benefit.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-              
-              <div className="space-y-8">
-                {[
-                  {
-                    icon: <CheckCircle className="w-8 h-8" />,
+                    className = $2;
                     title: "Ensure Compliance with Security Standards",
                     description: "Meet SOC2, ISO27001, and other compliance requirements with automated security testing and reporting."
                   },
                   {
-                    icon: <Users className="w-8 h-8" />,
+                    icon: <Users className = $2;
                     title: "Reduce Technical Debt & Bugs",
                     description: "Proactive identification of code quality issues prevents technical debt accumulation and reduces production bugs."
                   },
                   {
-                    icon: <Star className="w-8 h-8" />,
+                    icon: <Star className = $2;
                     title: "Enable Faster Development Cycles",
                     description: "Confident code deployment with automated security validation accelerates your development and release processes."
                   }
                 ].map((benefit, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, x: 20}}
+                    whileInView={{ opacity: 1, x: 0}}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     className="flex items-start"
                   >
@@ -373,23 +325,9 @@ const AICodeReviewSecurityScanner = () => {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Trusted by Development Teams Worldwide
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI-powered code security platform is used by development teams across various industries 
-                to protect their applications and improve code quality.
-              </p>
-            </motion.div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                "Software Development Teams",
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
                 "DevOps & Security Teams",
                 "Financial Technology Companies",
                 "Healthcare Software Providers",
@@ -400,8 +338,8 @@ const AICodeReviewSecurityScanner = () => {
               ].map((useCase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"
                 >
@@ -419,8 +357,8 @@ const AICodeReviewSecurityScanner = () => {
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -461,44 +399,7 @@ const AICodeReviewSecurityScanner = () => {
         <section className="py-16 bg-white/5">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-              <div className="grid md:grid-cols-3 gap-8 text-gray-300">
-                <div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
-                    <Users className="w-6 h-6" />
-                  </div>
-                  <h4 className="text-white font-semibold mb-2">Contact Us</h4>
-                  <p>Mobile: +1 302 464 0950</p>
-                  <p>Email: kleber@ziontechgroup.com</p>
-                </div>
-                
-                <div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
-                    <Globe className="w-6 h-6" />
-                  </div>
-                  <h4 className="text-white font-semibold mb-2">Visit Our Website</h4>
-                  <p>https://ziontechgroup.com</p>
-                </div>
-                
-                <div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
-                    <Award className="w-6 h-6" />
-                  </div>
-                  <h4 className="text-white font-semibold mb-2">Address</h4>
-                  <p>364 E Main St STE 1008</p>
-                  <p>Middletown DE 19709</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
-
-export default AICodeReviewSecurityScanner;
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
+export default AICodeReviewSecurityScanner,

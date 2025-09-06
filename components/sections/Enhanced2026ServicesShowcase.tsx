@@ -2,11 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
 import Link from 'next/link';
-
-const Enhanced2026ServicesShowcase = () => {
-  const featuredServices = [
-    {
-      id: 'ai-business-intelligence-elite-2026',
+const Enhanced2026ServicesShowcase = $2;
       name: 'AI Business Intelligence Elite 2026',
       description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',
       price: '$299',
@@ -14,7 +10,7 @@ const Enhanced2026ServicesShowcase = () => {
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
       category: 'AI & Analytics',
-      features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'AI-powered Reports']
+      features: ['Predictive AnalyticsReal-time InsightsCustom DashboardsAI-powered Reports']
     },
     {
       id: 'autonomous-ai-agents-platform-2026',
@@ -25,7 +21,7 @@ const Enhanced2026ServicesShowcase = () => {
       icon: Zap,
       color: 'from-blue-500 to-cyan-500',
       category: 'AI & Automation',
-      features: ['Task Automation', 'Process Optimization', '24/7 Operation', 'Scalable Architecture']
+      features: ['Task AutomationProcess Optimization24/7 OperationScalable Architecture']
     },
     {
       id: 'quantum-cybersecurity-suite-2026',
@@ -36,7 +32,7 @@ const Enhanced2026ServicesShowcase = () => {
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       category: 'Security',
-      features: ['Quantum Encryption', 'Threat Detection', 'Zero Trust', 'Compliance Ready']
+      features: ['Quantum EncryptionThreat DetectionZero TrustCompliance Ready']
     },
     {
       id: 'neuromorphic-computing-platform-2026',
@@ -47,7 +43,7 @@ const Enhanced2026ServicesShowcase = () => {
       icon: Cpu,
       color: 'from-green-500 to-emerald-500',
       category: 'Emerging Tech',
-      features: ['Brain-like Processing', 'Low Power', 'Real-time Learning', 'Cognitive Computing']
+      features: ['Brain-like ProcessingLow PowerReal-time LearningCognitive Computing']
     },
     {
       id: 'dna-computing-platform-2026',
@@ -58,7 +54,7 @@ const Enhanced2026ServicesShowcase = () => {
       icon: Globe,
       color: 'from-indigo-500 to-purple-500',
       category: 'Emerging Tech',
-      features: ['Molecular Processing', 'Exponential Speed', 'Complex Algorithms', 'Research Ready']
+      features: ['Molecular ProcessingExponential SpeedComplex AlgorithmsResearch Ready']
     },
     {
       id: 'space-debris-tracking-system',
@@ -69,16 +65,16 @@ const Enhanced2026ServicesShowcase = () => {
       icon: Rocket,
       color: 'from-yellow-500 to-orange-500',
       category: 'Space Tech',
-      features: ['Real-time Tracking', 'Collision Prediction', 'Satellite Safety', 'Space Traffic Management']
+      features: ['Real-time TrackingCollision PredictionSatellite SafetySpace Traffic Management']
     }
-  ];
+  ],
 
   const categories = [
     { name: 'AI Services', count: '150+', icon: Brain, color: 'from-purple-500 to-pink-500' },
     { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from-blue-500 to-cyan-500' },
     { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from-green-500 to-emerald-500' },
     { name: 'IT Solutions', count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500' }
-  ];
+  ],
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -88,10 +84,10 @@ const Enhanced2026ServicesShowcase = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -106,19 +102,19 @@ const Enhanced2026ServicesShowcase = () => {
 
         {/* Category Overview */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
           {categories.map((category, index) => (
             <motion.div
               key={category.name}
               initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1}}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               whileHover={{ scale: 1.05, y: -5 }}
               className="group text-center"
             >
@@ -136,10 +132,10 @@ const Enhanced2026ServicesShowcase = () => {
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, scale: 0.8, y: 20 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.8, y: 20}}
+              whileInView={{ opacity: 1, scale: 1, y: 0}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               whileHover={{ scale: 1.02, y: -5 }}
               className="group relative"
             >
@@ -193,10 +189,10 @@ const Enhanced2026ServicesShowcase = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8">
@@ -226,19 +222,5 @@ const Enhanced2026ServicesShowcase = () => {
                 transition={{ duration: 0.2, delay: 0.1 }}
               >
                 <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-200"
-                >
-                  <Shield className="w-5 h-5 mr-2" />
-                  Get Started
-                </Link>
-              </motion.div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-export default Enhanced2026ServicesShowcase;
+                  href = $2;
+export default Enhanced2026ServicesShowcase,

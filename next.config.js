@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true
   },
@@ -14,11 +13,13 @@ const nextConfig = {
       'localhost',
       'ziontechgroup.com',
       'images.unsplash.com',
-      'via.placeholder.com'],
+      'via.placeholder.com'
+    ],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000},
+    minimumCacheTTL: 31536000
+  },
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
@@ -38,29 +39,14 @@ const nextConfig = {
           '**/backup-pages/**',
           '**/src.pages.disabled/**',
           '**/lib_backup*/**',
-          '**/src_backup*/**',
-          '**/corrupted-files-backup*/**',
-          '**/performance-reports*/**',
-          '**/log-analysis-reports*/**',
-          '**/link-reports*/**',
-          '**/lint-target*/**',
-          '**/monitoring*/**',
-          '**/pm2-automation*/**',
-          '**/automation/logs*/**',
-          '**/automation/backup*/**',
-          '**/performance-*.json',
-          '**/performance-*.js',
-          '**/performance-*.cjs',
-          '**/performance-*.sh',
-          '**/performance-*.html',
-          '**/performance-*.md',
-          '**/performance-*.txt'
+          '**/src_backup*/**'
         ],
         poll: 1000,
-        aggregateTimeout: 300};
+        aggregateTimeout: 300
+      }
     }
-    return config;
+    return config
   }
-};
+}
 
-module.exports = nextConfig;
+export default nextConfig

@@ -1,85 +1,69 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
-
 interface ServiceCardProps {
   service: {
-    id: string;
-    name: string;
-    tagline: string;
-    description: string;
-    category: string;
+    id: string,
+    name: string,
+    tagline: string,
+    description: string,
+    category: string,
     price: {
-      monthly: number;
-      yearly: number;
-      currency: string;
-      trialDays: number;
-      setupTime: string;
-      enterprise?: number;
-    };
-    features: string[];
-    benefits: string[];
-    targetAudience: string[];
-    marketPosition: string;
-    competitors: string[];
-    techStack: string[];
-    realImplementation: boolean;
-    implementationDetails: string;
-    roi: string;
-    useCases: string[];
-    integrations: string[];
-    support: string;
-    compliance: string[];
-    link: string;
-    icon: string;
-    color: string;
-    popular: boolean;
-    launchDate: string;
-    customers: number;
-    rating: number;
-    reviews: number;
-    marketSize?: string;
-    growthRate?: string;
-  };
-  index: number;
-}
+      monthly: number,
+      yearly: number,
+      currency: string,
+      trialDays: number,
+      setupTime: string,
+      enterprise?: number
+    },
+    features: string[],
+    benefits: string[],
+    targetAudience: string[],
+    marketPosition: string,
+    competitors: string[],
+    techStack: string[],
+    realImplementation: boolean,
+    implementationDetails: string,
+    roi: string,
+    useCases: string[],
+    integrations: string[],
+    support: string,
+    compliance: string[],
+    link: string,
+    icon: string,
+    color: string,
+    popular: boolean,
+    launchDate: string,
+    customers: number,
+    rating: number,
+    reviews: number,
+    marketSize?: string,
+    growthRate?: string
+  },
+  index: number}
 
 const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, index }) => {
-  const getCategoryIcon = (category: string) => {
-    switch (category.toLowerCase()) {
-      case 'ai & consciousness':
-        return <Zap className="w-5 h-5" />;
+  const getCategoryIcon = $2;
       case 'quantum & emerging tech':
-        return <Rocket className="w-5 h-5" />;
+        return <Rocket className = $2;
       case 'enterprise it':
-        return <Shield className="w-5 h-5" />;
+        return <Shield className = $2;
       case 'space & metaverse':
-        return <Globe className="w-5 h-5" />;
+        return <Globe className = $2;
       case 'micro saas':
-        return <TrendingUp className="w-5 h-5" />;
+        return <TrendingUp className = $2;
       default:
-        return <Zap className="w-5 h-5" />;
-    }
-  };
-
-  const getGradientClass = (color: string) => {
-    if (color.includes('from-') && color.includes('to-')) {
-      return color;
-    }
-    return 'from-cyan-500 to-blue-500';
-  };
-
+        return <Zap className = $2;
+  const getGradientClass = $2;
   return (
     <motion.div
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{
-        duration: 0.6,
+      animate={{ opacity: 1, y: 0, scale: 1}}
+      transition = $2;
         delay: index * 0.1,
         ease: [0.25, 0.46, 0.45, 0.94]
       }}
-      whileHover={{
-        y: -10,
+      whileHover = $2;
         scale: 1.02,
         transition: { duration: 0.3 }
       }}
@@ -93,7 +77,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length: 20px_20px]"></div>
         </div>
 
         {/* Header */}
@@ -113,9 +97,9 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
             
             {service.popular && (
               <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
+                initial={{ scale: 0}}
+                animate={{ scale: 1}}
+                transition={{ delay: 0.5, type: "spring", stiffness: 200}}
                 className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full"
               >
                 <Star className="w-3 h-3 fill-current" />
@@ -188,7 +172,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                animate={{ opacity: 1, x: 0}}
                 transition={{ delay: 0.6 + idx * 0.1 }}
                 className="flex items-center space-x-2 text-sm"
               >
@@ -212,60 +196,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.8 + idx * 0.1 }}
-                className="flex items-center space-x-2 text-sm"
-              >
-                <div className="w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full"></div>
-                <span className="text-gray-300">{benefit}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Market info */}
-        {service.marketSize && service.growthRate && (
-          <div className="relative z-10 mb-6">
-            <div className="bg-gray-800/30 rounded-lg p-3 border border-gray-600/20">
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-gray-400">Market Size</span>
-                <span className="text-cyan-400 font-medium">{service.marketSize}</span>
-              </div>
-              <div className="flex items-center justify-between text-xs mt-1">
-                <span className="text-gray-400">Growth Rate</span>
-                <span className="text-green-400 font-medium">{service.growthRate}</span>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* CTA Button */}
-        <div className="relative z-10">
-          <motion.a
-            href={service.link}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25"
-          >
-            <span className="relative z-10 flex items-center space-x-2">
-              <span>Learn More</span>
-              <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
-            </span>
-            
-            {/* Button glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
-          </motion.a>
-        </div>
-
-        {/* Hover overlay */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileHover={{ opacity: 1 }}
-          className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none"
-        />
-      </div>
-    </motion.div>
-  );
-};
-
-export default UltraFuturisticServiceCardV2;
+                animate={{ opacity: 1, x: 0}}
+                transition = $2;
+export default UltraFuturisticServiceCardV2,

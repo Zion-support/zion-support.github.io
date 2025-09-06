@@ -1,41 +1,29 @@
 import React from 'react';
 import Head from 'next/head';
 import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react';
-
-
 export default function CloudPlatformPage() {
-  const features = [
-    {
-      icon: <Server className="w-8 h-8 text-white" />,
+  const features = $2;
       title: 'Scalable Infrastructure',
       description: 'Auto-scaling compute resources that grow with your needs'
     },
     {
-      icon: <Database className="w-8 h-8 text-white" />,
+      icon: <Database className = $2;
       title: 'Managed Databases',
       description: 'Fully managed databases with automated backups and scaling'
     },
     {
-      icon: <Globe className="w-8 h-8 text-white" />,
+      icon: <Globe className = $2;
       title: 'Global CDN',
       description: 'Lightning-fast content delivery across the globe'
     },
     {
-      icon: <Shield className="w-8 h-8 text-white" />,
+      icon: <Shield className = $2;
       title: 'Enterprise Security',
       description: 'SOC 2 compliant with advanced threat protection'
     }
-  ];
+  ],
 
-  const benefits = [
-    '99.99% uptime guarantee',
-    'Global edge locations',
-    'Real-time monitoring',
-    'Automated scaling',
-    'Pay-as-you-go pricing',
-    '24/7 expert support'
-  ];
-
+  const benefits = $2;
   return (
     <>
       <Head>
@@ -154,7 +142,7 @@ export default function CloudPlatformPage() {
 
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Ready to Scale Your Infrastructure?
             </h2>
@@ -175,5 +163,5 @@ export default function CloudPlatformPage() {
         </section>
       </div>
     </>
-  );
+  )
 }

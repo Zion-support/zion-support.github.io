@@ -5,25 +5,21 @@ import {
   Award, Clock, Zap, Shield, Brain, Atom, Rocket,
   ShoppingCart, Cpu, Globe, Lock, Video, Palette,
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
-} from 'lucide-react';
+} from 'lucide-react',
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceCategories = [
-  {
-    id: 'ai-services',
+const serviceCategories = $2;
     title: '🧠 Revolutionary AI Services',
     description: 'Next-generation AI consciousness and creativity',
     icon: Brain,
     color: 'from-violet-500 to-purple-500',
-    services: aiEmergingTechServices.filter(s => s.category.includes('AI')),
+    services: aiEmergingTechServices.filter(s = $2;
     gradient: 'from-violet-500/20 to-indigo-500/20'
   },
   {
@@ -32,7 +28,7 @@ const serviceCategories = [
     description: 'Quantum computing and beyond',
     icon: Atom,
     color: 'from-indigo-500 to-blue-500',
-    services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') || s.category.includes('Blockchain')),
+    services: aiEmergingTechServices.filter(s = $2;
     gradient: 'from-indigo-500/20 to-cyan-500/20'
   },
   {
@@ -41,7 +37,7 @@ const serviceCategories = [
     description: 'Autonomous operations and zero-trust security',
     icon: Cpu,
     color: 'from-blue-500 to-cyan-500',
-    services: realMarketServices.filter(s => s.category.includes('Security') || s.category.includes('HR') || s.category.includes('Project')),
+    services: realMarketServices.filter(s = $2;
     gradient: 'from-blue-500/20 to-teal-500/20'
   },
   {
@@ -50,7 +46,7 @@ const serviceCategories = [
     description: 'Streamline business operations',
     icon: ShoppingCart,
     color: 'from-teal-500 to-emerald-500',
-    services: realMarketServices.filter(s => s.category.includes('E-commerce') || s.category.includes('Marketing') || s.category.includes('Finance')),
+    services: realMarketServices.filter(s = $2;
     gradient: 'from-teal-500/20 to-green-500/20'
   },
   {
@@ -59,7 +55,7 @@ const serviceCategories = [
     description: 'Intelligent automation solutions',
     icon: Rocket,
     color: 'from-green-500 to-yellow-500',
-    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') || s.category.includes('Edge')),
+    services: aiEmergingTechServices.filter(s = $2;
     gradient: 'from-green-500/20 to-orange-500/20'
   },
   {
@@ -68,40 +64,34 @@ const serviceCategories = [
     description: 'Breakthrough technologies and innovations',
     icon: Globe,
     color: 'from-orange-500 to-red-500',
-    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') || s.category.includes('Climate')),
+    services: aiEmergingTechServices.filter(s = $2;
     gradient: 'from-orange-500/20 to-pink-500/20'
   }
-];
+],
 
 export default function UltraFuturisticServiceShowcase2034() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const allServices = [...realMarketServices, ...aiEmergingTechServices];
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [searchTerm, setSearchTerm] = useState($2);
+  const allServices = [...realMarketServices, ...aiEmergingTechServices],
   
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
-      serviceCategories.some(cat => cat.services.includes(service));
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+  const filteredServices = $2;
+    const matchesSearch = $2;
+    return matchesCategory && matchesSearch
+  }),
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
+    hidden: { opacity: 0, y: 20},
+    visible: { opacity: 1, y: 0}
+  },
 
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
@@ -115,10 +105,10 @@ export default function UltraFuturisticServiceShowcase2034() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
@@ -132,17 +122,17 @@ export default function UltraFuturisticServiceShowcase2034() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
             {[
-              { label: 'Total Services', value: allServices.length.toString(), icon: Rocket },
-              { label: 'Happy Customers', value: '50K+', icon: Users },
-              { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
-              { label: 'Global Reach', value: '45+ Countries', icon: Globe }
+              { label: 'Total Services', value: allServices.length.toString(), icon: Rocket},
+              { label: 'Happy Customers', value: '50K+', icon: Users},
+              { label: 'Success Rate', value: '99.9%', icon: CheckCircle},
+              { label: 'Global Reach', value: '45+ Countries', icon: Globe}
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
               >
                 <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
@@ -155,10 +145,10 @@ export default function UltraFuturisticServiceShowcase2034() {
 
         {/* Search and Filter */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="mb-12"
         >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
@@ -192,20 +182,20 @@ export default function UltraFuturisticServiceShowcase2034() {
 
         {/* Service Categories */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="mb-16"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
                   selectedCategory === category.id 
                     ? 'border-cyan-500 bg-cyan-500/10' 
@@ -235,7 +225,7 @@ export default function UltraFuturisticServiceShowcase2034() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredServices.map((service, index) => (
@@ -347,10 +337,10 @@ export default function UltraFuturisticServiceShowcase2034() {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="text-center mt-20"
         >
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm">
@@ -383,5 +373,5 @@ export default function UltraFuturisticServiceShowcase2034() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

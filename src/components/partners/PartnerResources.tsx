@@ -2,15 +2,13 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
 import { toast } from "@/hooks/use-toast";
-
 interface ResourceItem {
-  id: string;
-  title: string;
-  description: string;
-  type: 'image' | 'video' | 'document' | 'link';
-  icon: JSX.Element;
-  url: string;
-}
+  id: string,
+  title: string,
+  description: string,
+  type: 'image' | 'video' | 'document' | 'link',
+  icon: JSX.Element,
+  url: string}
 
 export function PartnerResources() {
   const resources: ResourceItem[] = [
@@ -19,7 +17,7 @@ export function PartnerResources() {
       title: 'Zion AI Logo Pack',
       description: 'Official logos in various formats (PNG, SVG, JPG)',
       type: 'image',
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />,
+      icon: <FileImage className = $2;
       url: '#'
     },
     {
@@ -27,7 +25,7 @@ export function PartnerResources() {
       title: 'Brand Guidelines',
       description: 'How to properly use our brand assets in your content',
       type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
+      icon: <FileText className = $2;
       url: '#'
     },
     {
@@ -35,7 +33,7 @@ export function PartnerResources() {
       title: 'Social Media Banners',
       description: 'Pre-designed graphics for your social channels',
       type: 'image',
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />,
+      icon: <FileImage className = $2;
       url: '#'
     },
     {
@@ -43,7 +41,7 @@ export function PartnerResources() {
       title: 'Promotional Video',
       description: 'Short explainer video about Zion AI Marketplace',
       type: 'video',
-      icon: <FileVideo className="h-10 w-10 text-red-500" />,
+      icon: <FileVideo className = $2;
       url: '#'
     },
     {
@@ -51,7 +49,7 @@ export function PartnerResources() {
       title: 'Email Templates',
       description: 'Ready-to-use email templates for your audience',
       type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
+      icon: <FileText className = $2;
       url: '#'
     },
     {
@@ -59,18 +57,18 @@ export function PartnerResources() {
       title: 'Talking Points',
       description: 'Key messages and benefits to highlight',
       type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
+      icon: <FileText className = $2;
       url: '#'
     }
-  ];
+  ],
 
   const handleDownload = (resource: ResourceItem) => {
     // In a real app, this would download the actual resource
     toast({
       title: "Download started",
       description: `Downloading ${resource.title}`,
-      variant: "default"});
-  };
+      variant: "default"})
+  },
 
   return (
     <div className="space-y-6">
@@ -151,11 +149,11 @@ export function PartnerResources() {
             Our partner success team is available to help you maximize your partnership with Zion AI Marketplace.
             Feel free to reach out if you have questions about promotions, resources, or payment.
           </p>
-          <Button className="bg-zion-purple hover:bg-zion-purple-dark">
+          <Button className="bg-zion-purple hover: bg-zion-purple-dark">
             Contact Partner Support
           </Button>
         </CardContent>
       </Card>
     </div>
-  );
+  )
 }

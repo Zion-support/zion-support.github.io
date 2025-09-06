@@ -14,32 +14,30 @@ import { PartnerResources } from "@/components/partners/PartnerResources";
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
 export default function Partners() {
 
-  logInfo('PartnersPage rendering');
-  const [activeTab, setActiveTab] = useState("overview");
-  const { t } = useTranslation();
-  const { user, isAuthenticated } = useAuth();
-  const router = useRouter();
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
-
+  logInfo($2);
+  const [activeTab, setActiveTab] = useState($2);
+  const { t } = useTranslation($2);
+  const { user, isAuthenticated } = useAuth($2);
+  const router = useRouter($2);
+  const [authServiceAvailable, setAuthServiceAvailable] = useState($2);
   useEffect(() => {
     async function checkHealth() {
       try {
-        const res = await fetch('/api/auth/health');
-        setAuthServiceAvailable(res.ok);
+        const res = await fetch($2);
+        setAuthServiceAvailable(res.ok)
       } catch (err) {
-        logErrorToProduction('Partner login auth health check failed', { data: err });
-        setAuthServiceAvailable(false);
+        logErrorToProduction($2);
+        setAuthServiceAvailable(false)
       }
     }
-    checkHealth();
-  }, []);
+    checkHealth()
+  }, []),
 
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
-    logInfo('PartnersPage rendering Unauthenticated View');
+    logInfo($2);
     return (
       <div className="container max-w-6xl py-10">
         <div className="text-center mb-8">
@@ -172,11 +170,11 @@ export default function Partners() {
           )}
         </div>
       </div>
-    );
+    )
   }
 
   // Authenticated user view - Partner Dashboard
-  logInfo('PartnersPage rendering Authenticated View. User:', { data: user });
+  logInfo($2);
   return (
     <div className="container max-w-7xl py-10">
       <h1>DEBUG: Partners Page - Authenticated View</h1>
@@ -232,5 +230,5 @@ export default function Partners() {
         </TabsContent>
       </Tabs>
     </div>
-  );
+  )
 }

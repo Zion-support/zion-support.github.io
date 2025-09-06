@@ -1,187 +1,149 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-
+const fs = require($2);
+const path = require($2);
 // List of specific pages that were identified as corrupted
-const corruptedPages = [
-  'pages/403.tsx',
-  'pages/ProductsList.tsx',
-  'pages/faq.tsx',
-  'pages/order-success.tsx',
-  'pages/thank-you.tsx',
-  'pages/gpt-library.tsx',
-  'pages/order-confirmation/[orderId].tsx',
-  'pages/governance/zgp-library.tsx',
-  'pages/governance/create.tsx',
-  'pages/governance/my-votes.tsx',
-  'pages/governance/[proposalId].tsx'
-];
-
+const corruptedPages = $2;
 // Function to find the best backup file for a given page
 function findBestBackup(pagePath) {
-  const dir = path.dirname(pagePath);
-  const baseName = path.basename(pagePath, path.extname(pagePath));
-  const ext = path.extname(pagePath);
-  
+  const dir = path.dirname($2);
+  const baseName = path.basename(pagePath, path.extname(pagePath)),
+  const ext = path.extname($2);
   // Look for backup files
-  const backupPattern = new RegExp(`^${baseName}\\.tsx\\.backup\\.\\d+$`);
-  const files = fs.readdirSync(dir).filter(file => backupPattern.test(file));
-  
-  if (files.length === 0) return null;
-  
+  const backupPattern = new RegExp($2);
+  const files = $2;
+  if (files.length = $2;
   // Sort by timestamp (newest first) and find the first valid one
   files.sort((a, b) => {
-    const timestampA = parseInt(a.match(/\.backup\.(\d+)$/)[1]);
-    const timestampB = parseInt(b.match(/\.backup\.(\d+)$/)[1]);
-    return timestampB - timestampA;
-  });
+    const timestampA = $2;
+    const timestampB = $2;
+    return timestampB - timestampA
+  }),
   
   for (const backupFile of files) {
-    const backupPath = path.join(dir, backupFile);
+    const backupPath = path.join($2);
     try {
-      const content = fs.readFileSync(backupPath, 'utf8');
-      
+      const content = fs.readFileSync($2);
       // Check if this backup has proper content
       if (content.includes('export default') && 
           (content.includes('function') || content.includes('const') || content.includes('class')) &&
           content.includes('return') &&
           content.length > 100) {
-        return backupPath;
+        return backupPath
       }
     } catch (error) {
-      console.log(`Error reading backup ${backupPath}:`, error.message);
+      console.log(`Error reading backup ${backupPath}:`, error.message)
     }
   }
   
-  return null;
+  return null
 }
 
 // Function to restore a corrupted page
 function restorePage(pagePath) {
   try {
-    const currentContent = fs.readFileSync(pagePath, 'utf8');
-    
+    const currentContent = fs.readFileSync($2);
     // Check if the page is corrupted
     const isCorrupted = !currentContent.includes('export default') || 
                         currentContent.length < 100 ||
-                        !currentContent.includes('return');
-    
+                        !currentContent.includes($2);
     if (!isCorrupted) {
-      return { restored: false, reason: 'Page is not corrupted' };
+      return { restored: false, reason: 'Page is not corrupted' }
     }
     
     // Find backup
-    const backupPath = findBestBackup(pagePath);
+    const backupPath = findBestBackup($2);
     if (!backupPath) {
-      return { restored: false, reason: 'No valid backup found' };
+      return { restored: false, reason: 'No valid backup found' }
     }
     
     // Read backup content
-    let backupContent = fs.readFileSync(backupPath, 'utf8');
-    
+    let backupContent = fs.readFileSync($2);
     // Handle merge conflicts by taking the content after the conflict markers
     if (backupContent.includes('<<<<<<< HEAD')) {
-      const parts = backupContent.split('=======');
+      const parts = backupContent.split($2);
       if (parts.length > 1) {
         // Take the content after the conflict resolution
-        backupContent = parts[1].split('>>>>>>>')[0];
+        backupContent = parts[1].split('>>>>>>>')[0]
       }
     }
     
     // Clean up the content
-    backupContent = backupContent.trim();
-    
+    backupContent = backupContent.trim($2);
     // Ensure it has proper structure
     if (!backupContent.includes('export default')) {
-      return { restored: false, reason: 'Backup content is also corrupted' };
+      return { restored: false, reason: 'Backup content is also corrupted' }
     }
     
     // Create a backup of the current corrupted file
-    const timestamp = Date.now();
-    const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`;
-    fs.writeFileSync(corruptedBackupPath, currentContent);
-    
+    const timestamp = Date.now($2);
+    const corruptedBackupPath = $2;
+    fs.writeFileSync($2);
     // Restore the page
-    fs.writeFileSync(pagePath, backupContent);
-    
+    fs.writeFileSync($2);
     return { 
       restored: true, 
       backupUsed: backupPath,
-      corruptedBackup: corruptedBackupPath
-    };
+      corruptedBackup: corruptedBackupPath}
     
   } catch (error) {
-    return { restored: false, reason: `Error: ${error.message}` };
+    return { restored: false, reason: `Error: ${error.message}` }
   }
 }
 
 // Function to fix specific corrupted pages
 function fixSpecificPages() {
-  const results = {
-    total: corruptedPages.length,
+  const results = $2;
     restored: 0,
     failed: 0,
     details: []
-  };
+  },
   
-  console.log('🚀 Starting targeted page restoration...');
-  console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`);
-  
+  console.log($2);
+  console.log($2);
   for (const pagePath of corruptedPages) {
     if (!fs.existsSync(pagePath)) {
-      console.log(`⚠️  Page not found: ${pagePath}`);
-      results.failed++;
-      results.details.push({
-        file: pagePath,
-        restored: false,
-        reason: 'Page not found'
-      });
-      continue;
+      console.log($2);
+      results.failed++,
+      results.details.push($2);
+      continue
     }
     
-    console.log(`\n🔍 Checking: ${pagePath}`);
-    const result = restorePage(pagePath);
-    
+    console.log($2);
+    const result = restorePage($2);
     if (result.restored) {
-      results.restored++;
-      console.log(`✅ Restored: ${pagePath}`);
-      console.log(`   Used backup: ${result.backupUsed}`);
-      console.log(`   Corrupted backup: ${result.corruptedBackup}`);
+      results.restored++,
+      console.log($2);
+      console.log($2);
+      console.log(`   Corrupted backup: ${result.corruptedBackup}`)
     } else {
-      results.failed++;
-      console.log(`❌ Failed: ${pagePath}`);
-      console.log(`   Reason: ${result.reason}`);
+      results.failed++,
+      console.log($2);
+      console.log(`   Reason: ${result.reason}`)
     }
     
     results.details.push({
       file: pagePath,
       ...result
-    });
+    })
   }
   
   // Generate summary
-  console.log('\n📊 Restoration Summary:');
-  console.log(`   Total pages: ${results.total}`);
-  console.log(`   Restored: ${results.restored}`);
-  console.log(`   Failed: ${results.failed}`);
-  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`);
+  console.log($2);
+  console.log($2);
+  console.log($2);
+  console.log($2);
+  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
   
   // Save detailed report
-  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json');
-  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
-  console.log(`\n📄 Detailed report saved to: ${reportPath}`);
-  
-  return results;
+  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json'),
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),
+  console.log($2);
+  return results
 }
 
 // Run the restoration if this script is executed directly
-if (require.main === module) {
-  fixSpecificPages();
-}
-
-module.exports = {
-  restorePage,
+if (require.main = $2;
   fixSpecificPages,
   findBestBackup
-};
+},

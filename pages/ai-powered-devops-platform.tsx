@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
-
 export default function AIPoweredDevOpsPlatformPage() {
 	return (
 		<>
@@ -13,12 +12,7 @@ export default function AIPoweredDevOpsPlatformPage() {
 			<ServiceLanding
 				title="AI-Powered DevOps Platform"
 				description="Accelerate software delivery with autonomous pipeline optimization, flaky test triage, change-risk prediction, incident prevention, and automated release orchestration."
-				subtitle="Ship faster with higher reliability"
-				pricePerMonthUSD={2499}
-				implementationWeeks="2-4 weeks"
-				roiNote="Cut MTTR by 40% and increase deployment frequency 3-5x"
-				features={[
-					"Autonomous CI/CD optimization and caching",
+				subtitle = $2;
 					"Flaky test detection and auto quarantine",
 					"Change-risk scoring before deploy",
 					"Automated canary and feature flags",
@@ -26,8 +20,8 @@ export default function AIPoweredDevOpsPlatformPage() {
 					"Incident prediction, runbooks, and guardrails"
 				]}
 				industries={["SaaS", "E-commerce", "Fintech", "Media", "Enterprise IT"]}
-				canonical="https://ziontechgroup.com/ai-powered-devops-platform"
+				canonical="https: //ziontechgroup.com/ai-powered-devops-platform"
 			/>
 		</>
-	);
+	)
 }

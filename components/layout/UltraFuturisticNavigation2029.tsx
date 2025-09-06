@@ -11,18 +11,15 @@ import {
   Palette, Camera, Video, Music, Gamepad2, Heart,
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3, Eye, Timer
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceCategories = [
-  {
-    title: '🧠 2029 AI Consciousness & Innovation',
+const serviceCategories = $2;
     icon: Brain,
     color: 'from-purple-600 to-pink-600',
     description: 'Beyond human consciousness simulation',
@@ -132,35 +129,31 @@ const serviceCategories = [
       { name: 'Corporate Intelligence Platform', href: '/corporate-intelligence-platform', description: 'AI-powered business intelligence', price: '$7,999/month' }
     ]
   }
-];
+],
 
 const mainNavItems = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'Solutions', href: '/solutions', icon: Target },
-  { name: 'Pricing', href: '/pricing', icon: DollarSign },
-  { name: 'Resources', href: '/resources', icon: BookOpen },
-  { name: 'News', href: '/news', icon: TrendingUp },
-  { name: 'Support', href: '/support', icon: MessageCircle },
-  { name: 'Contact', href: '/contact', icon: Phone }
-];
+  { name: 'Home', href: '/', icon: Home},
+  { name: 'Services', href: '/services', icon: Briefcase},
+  { name: 'Solutions', href: '/solutions', icon: Target},
+  { name: 'Pricing', href: '/pricing', icon: DollarSign},
+  { name: 'Resources', href: '/resources', icon: BookOpen},
+  { name: 'News', href: '/news', icon: TrendingUp},
+  { name: 'Support', href: '/support', icon: MessageCircle},
+  { name: 'Contact', href: '/contact', icon: Phone}
+],
 
 export default function UltraFuturisticNavigation2029() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [scrolled, setScrolled] = useState(false);
-
+  const [isOpen, setIsOpen] = useState($2);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null),
+  const [scrolled, setScrolled] = useState($2);
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleScroll = $2;
+    window.addEventListener($2);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
-
+  const toggleMenu = () => setIsOpen($2);
+  const closeMenu = () => setIsOpen($2);
   return (
     <>
       {/* Top Contact Bar */}
@@ -199,7 +192,7 @@ export default function UltraFuturisticNavigation2029() {
             {/* Logo */}
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0}}
               className="flex items-center space-x-3"
             >
               <div className="relative">
@@ -246,8 +239,8 @@ export default function UltraFuturisticNavigation2029() {
                     {serviceCategories.map((category, index) => (
                       <motion.div
                         key={category.title}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, y: 20}}
+                        animate={{ opacity: 1, y: 0}}
                         transition={{ delay: index * 0.1 }}
                         className="group"
                       >
@@ -313,7 +306,7 @@ export default function UltraFuturisticNavigation2029() {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0}}
             exit={{ opacity: 0, x: '100%' }}
             className="fixed inset-0 z-50 lg:hidden"
           >
@@ -394,5 +387,5 @@ export default function UltraFuturisticNavigation2029() {
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
-  );
+  )
 }

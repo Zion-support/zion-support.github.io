@@ -9,43 +9,38 @@ import { TalentProfile } from "@/types/talent";
 import { RatingStars } from '@/components/RatingStars';
 import { useAuth } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
-
 export interface TalentCardProps {
-  talent: TalentProfile;
-  onViewProfile: (id: string) => void;
-  onRequestHire: (talent: TalentProfile) => void;
-  isAuthenticated: boolean;
-}
+  talent: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire: (talent: TalentProfile) => void,
+  isAuthenticated: boolean}
 
-const TalentCardComponent = ({
-  talent,
+const TalentCardComponent = $2;
   onViewProfile,
   onRequestHire,
   isAuthenticated
 }: TalentCardProps) => {
-  const router = useRouter();
-  
+  const router = useRouter($2);
   const handleViewProfile = () => {
     // Navigate directly to the talent profile
-    router.push(`/talent/${talent.id}`);
-    
+    router.push($2);
     // Also call the onViewProfile callback if provided
     if (onViewProfile) {
-      onViewProfile(talent.id);
+      onViewProfile(talent.id)
     }
-  };
+  },
 
   const handleRequestHire = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+    e.preventDefault($2);
+    e.stopPropagation($2);
     if (onRequestHire) {
-      onRequestHire(talent);
+      onRequestHire(talent)
     }
-  };
+  },
 
 
   // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) || [];
+  const skills = talent.skills?.slice(0, 5) || [],
 
   return (
     <Card
@@ -153,19 +148,9 @@ const TalentCardComponent = ({
               size="sm"
               variant="ghost"
               onClick={(e) => {
-                e.stopPropagation();
-                handleViewProfile();
+                e.stopPropagation($2);
+                handleViewProfile()
               }}
-              className="text-zion-cyan hover:text-white hover:bg-zion-blue-light"
-            >
-              View <ArrowRight className="ml-1 h-4 w-4" />
-            </Button>
-          </div>
-        </div>
-      </div>
-    </Card>
-  );
-};
-
-export const TalentCard = React.memo(TalentCardComponent);
-TalentCard.displayName = 'TalentCard';
+              className = $2;
+export const TalentCard = React.memo($2);
+TalentCard.displayName = $2;

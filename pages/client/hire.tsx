@@ -1,39 +1,37 @@
 import { useState } from "react";
 import FeedbackModal from "../../components/ui/FeedbackModal";
-
 export default function ClientHirePage() {
-  const [talentSlug, setTalentSlug] = useState("ava-chen");
-  const [startDateIso, setStartDateIso] = useState<string>(new Date().toISOString().slice(0, 10));
-  const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module");
-  const [termsType, setTermsType] = useState("hourly");
-  const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
-  const [fixedAmountUsd, setFixedAmountUsd] = useState(5000);
-  const [agreementUrl, setAgreementUrl] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any | null>(null);
-  const [showFeedback, setShowFeedback] = useState(false);
-
+  const [talentSlug, setTalentSlug] = useState($2);
+  const [startDateIso, setStartDateIso] = useState<string>(new Date().toISOString().slice(0, 10)),
+  const [scopeSummary, setScopeSummary] = useState($2);
+  const [termsType, setTermsType] = useState($2);
+  const [hourlyRateUsd, setHourlyRateUsd] = useState($2);
+  const [fixedAmountUsd, setFixedAmountUsd] = useState($2);
+  const [agreementUrl, setAgreementUrl] = useState($2);
+  const [loading, setLoading] = useState($2);
+  const [result, setResult] = useState<any | null>(null),
+  const [showFeedback, setShowFeedback] = useState($2);
   async function sendOffer() {
-    setLoading(true);
-    setResult(null);
+    setLoading($2);
+    setResult($2);
     const paymentTerms =
       termsType === "hourly"
         ? { type: "hourly", hourlyRateUsd }
         : termsType === "fixed"
         ? { type: "fixed", fixedAmountUsd }
-        : { type: "milestone", milestones: [] };
+        : { type: "milestone", milestones: [] },
 
     const res = await fetch("/api/marketplace/offers", {
       method: "POST",
       headers: { "Content-Type": "application/json", "x-demo-user-role": "client", "x-demo-user-id": "client-1" },
-      body: JSON.stringify({ talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl })});
-    const json = await res.json();
-    setLoading(false);
+      body: JSON.stringify({ talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl })}),
+    const json = await res.json($2);
+    setLoading($2);
     if (!json.ok) {
-      alert(json.error || "Failed to send offer");
+      alert(json.error || "Failed to send offer")
     } else {
-      setResult(json.offer);
-      setShowFeedback(true);
+      setResult($2);
+      setShowFeedback(true)
     }
   }
 
@@ -103,8 +101,8 @@ export default function ClientHirePage() {
         isOpen={showFeedback}
         onClose={() => setShowFeedback(false)}
         defaultContext={{ actionType: 'listing_publish', metadata: { talentSlug } }}
-        userHeaders={{ 'x-demo-user-role': 'client', 'x-demo-user-id': 'client-1' }}
+        userHeaders={{ 'x-demo-user-role': 'clientx-demo-user-id': 'client-1' }}
       />
     </div>
-  );
+  )
 }

@@ -5,10 +5,8 @@ import { useWallet } from "@/hooks/useWallet";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-
 export function TokenDisplay() {
-  const { wallet, loading } = useWallet();
-
+  const { wallet, loading } = useWallet($2);
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -39,5 +37,5 @@ export function TokenDisplay() {
         )}
       </CardContent>
     </Card>
-  );
+  )
 }

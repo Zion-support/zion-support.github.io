@@ -3,40 +3,34 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
-
 export default function WebsitePerformanceMonitorPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
-
-  const features = [
-    {
-      icon: <Monitor className="w-8 h-8 text-white" />,
+  const [isAnalyzing, setIsAnalyzing] = useState($2);
+  const [analysisResults, setAnalysisResults] = useState($2);
+  const features = $2;
       title: 'Real-Time Monitoring',
       description: '24/7 monitoring of your website performance with instant alerts and notifications.',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500'},
     {
-      icon: <Gauge className="w-8 h-8 text-white" />,
+      icon: <Gauge className = $2;
       title: 'Performance Metrics',
       description: 'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500'},
     {
-      icon: <AlertTriangle className="w-8 h-8 text-white" />,
+      icon: <AlertTriangle className = $2;
       title: 'Issue Detection',
       description: 'Automatically detect and alert on performance issues, downtime, and bottlenecks.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       gradient: 'from-orange-400 to-red-500'},
     {
-      icon: <TrendingUp className="w-8 h-8 text-white" />,
+      icon: <TrendingUp className = $2;
       title: 'Performance Optimization',
       description: 'AI-powered recommendations to improve your website speed and user experience.',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500'}];
+      gradient: 'from-purple-400 to-indigo-500'}],
 
-  const metrics = [
-    {
-      name: 'Core Web Vitals',
+  const metrics = $2;
       description: 'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.',
       icon: '⚡',
       color: 'text-blue-400'
@@ -71,81 +65,44 @@ export default function WebsitePerformanceMonitorPage() {
       icon: '👥',
       color: 'text-pink-400'
     }
-  ];
+  ],
 
-  const pricing = [
-    {
-      name: 'Starter',
+  const pricing = $2;
       price: '$29',
       period: '/month',
       description: 'Perfect for small websites and blogs',
       features: [
-        '5 websites monitored',
-        'Basic performance metrics',
-        'Daily monitoring',
-        'Email alerts',
-        'Basic reporting',
-        'Core Web Vitals tracking'
+        '5 websites monitoredBasic performance metricsDaily monitoringEmail alertsBasic reportingCore Web Vitals tracking'
       ],
-      popular: false
-    },
+      popular: false},
     {
       name: 'Professional',
       price: '$79',
       period: '/month',
       description: 'Ideal for growing businesses and e-commerce sites',
       features: [
-        '25 websites monitored',
-        'Advanced performance metrics',
-        'Real-time monitoring',
-        'SMS & email alerts',
-        'Advanced reporting',
-        'Performance optimization tips',
-        'API access',
-        'Team collaboration'
+        '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alertsAdvanced reportingPerformance optimization tipsAPI accessTeam collaboration'
       ],
-      popular: true
-    },
+      popular: true},
     {
       name: 'Enterprise',
       price: '$199',
       period: '/month',
       description: 'For large organizations with critical performance requirements',
       features: [
-        'Unlimited websites',
-        'Enterprise-grade monitoring',
-        'Custom alerting rules',
-        '24/7 support',
-        'Custom integrations',
-        'White-label reporting',
-        'SLA guarantees',
-        'On-premise options'
+        'Unlimited websitesEnterprise-grade monitoringCustom alerting rules24/7 supportCustom integrationsWhite-label reportingSLA guaranteesOn-premise options'
       ],
-      popular: false
-    }
-  ];
+      popular: false}
+  ],
 
   const handleAnalyzeWebsite = async () => {
-    setIsAnalyzing(true);
+    setIsAnalyzing($2);
     // Simulate website analysis
     setTimeout(() => {
-      setAnalysisResults({
-        url: 'https://example.com',
-        overallScore: 87,
-        lcp: '2.1s',
-        fid: '45ms',
-        cls: '0.08',
-        loadTime: '1.8s',
-        recommendations: [
-          'Optimize images and implement lazy loading',
-          'Minimize render-blocking resources',
-          'Enable compression and caching',
-          'Consider using a CDN for global performance'
-        ]
-      });
-      setIsAnalyzing(false);
-    }, 4000);
-  };
+      setAnalysisResults($2);
+      setIsAnalyzing(false)
+    }, 4000)
+  },
 
   return (
     <>
@@ -417,7 +374,7 @@ export default function WebsitePerformanceMonitorPage() {
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="container-cursor text-center relative z-10">
           <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
             Ready to Monitor Your Website Performance?
@@ -446,5 +403,5 @@ export default function WebsitePerformanceMonitorPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

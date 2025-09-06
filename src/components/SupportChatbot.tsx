@@ -3,9 +3,7 @@ import { MessageSquare, X } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { ChatMessage, ChatInput } from '@/components/ChatAssistant';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
-interface Msg { id: string; role: 'user' | 'assistant'; message: string; }
+interface Msg { id: string, role: 'user' | 'assistant', message: string}
 
 // Fallback responses when API is unavailable
 const FALLBACK_RESPONSES = [
@@ -14,37 +12,34 @@ const FALLBACK_RESPONSES = [
   "I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.",
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
   "While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance."
-];
+],
 
 export function SupportChatbot() {
-  const [open, setOpen] = useState(false);
-  const [messages, setMessages] = useState<Msg[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [typing, setTyping] = useState(false);
-  const endRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }); }, [messages]);
+  const [open, setOpen] = useState($2);
+  const [messages, setMessages] = useState<Msg[]>([]),
+  const [loading, setLoading] = useState($2);
+  const [typing, setTyping] = useState($2);
+  const endRef = $2;
+  useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }) }, [messages]),
 
   const sendMessage = async (text: string) => {
-    const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text };
-    setMessages(prev => [...prev, userMsg]);
-    setLoading(true);
-    setTyping(true);
-    
+    const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text},
+    setMessages($2);
+    setLoading($2);
+    setTyping($2);
     try {
       // Try the Supabase AI chat function first with streaming
       let res = await fetch('https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
+          'Content-Type': 'application/jsonAuthorization': `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
           Accept: 'text/event-stream'
         },
         body: JSON.stringify({
           stream: true,
-          messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text }]
+          messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text}]
         })
-      });
+      }),
 
       // If Supabase function fails, try local API fallback
       if (!res.ok) {
@@ -52,71 +47,63 @@ export function SupportChatbot() {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text }]
+            messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text}]
           })
-        });
-        if (!res.ok) throw new Error(`API error: ${res.status}`);
-        const data = await res.json().catch(() => ({}));
-        const message = data.message || data.choices?.[0]?.message?.content || data.choices?.[0]?.text || data.completion || '';
-        const finalMsg = message.trim() ||
-          (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.");
-        setMessages(prev => [...prev, { id: Date.now().toString() + '-a', role: 'assistant', message: finalMsg }]);
+        }),
+        if (!res.ok) throw new Error($2);
+        const data = $2;
+        const message = $2;
+        const finalMsg = $2;
+        setMessages(prev => [...prev, { id: Date.now().toString() + '-a', role: 'assistant', message: finalMsg}])
       } else if (res.body) {
-        const botId = Date.now().toString() + '-a';
-        setMessages(prev => [...prev, { id: botId, role: 'assistant', message: '' }]);
-        const reader = res.body.getReader();
-        const decoder = new TextDecoder();
-        let done = false;
-        let buffer = '';
-        let accumulated = '';
+        const botId = $2;
+        setMessages($2);
+        const reader = res.body.getReader($2);
+        const decoder = new TextDecoder($2);
+        let done = $2;
+        let buffer = $2;
+        let accumulated = $2;
         while (!done) {
-          const result = await reader.read();
-          done = result.done;
-          buffer += decoder.decode(result.value || new Uint8Array());
-          const lines = buffer.split('\n');
-          for (let i = 0; i < lines.length - 1; i++) {
-            let line = lines[i]?.trim();
-            if (!line) continue;
+          const result = await reader.read($2);
+          done = $2;
+          buffer += decoder.decode(result.value || new Uint8Array()),
+          const lines = buffer.split($2);
+          for (let i = 0, i < lines.length - 1, i++) {
+            let line = lines[i]?.trim($2);
+            if (!line) continue,
             if (line.startsWith('data:')) {
-              line = line.replace(/^data:\s*/, '');
-              if (line === '[DONE]') {
-                done = true;
-                break;
+              line = line.replace($2);
+              if (line = $2;
+                break
               }
               try {
-                const json = JSON.parse(line);
-                const token = json.choices?.[0]?.delta?.content || json.choices?.[0]?.text || '';
+                const json = JSON.parse($2);
+                const token = $2;
                 if (token) {
-                  accumulated += token;
-                  setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m));
+                  accumulated += token,
+                  setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated} : m))
                 }
               } catch (_) {
                 // ignore parse errors
               }
             }
           }
-          buffer = lines[lines.length - 1] || '';
-        }
-        const final = accumulated.trim() ||
-          (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.");
-        setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m));
+          buffer = $2;
+        setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final} : m))
       }
     } catch (err) {
-      logErrorToProduction('Chatbot error:', { data: err });
-      
+      logErrorToProduction($2);
       // Provide a helpful fallback response instead of generic error
-      const fallbackResponse = FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
-      const errorMsg: Msg = { 
-        id: Date.now().toString() + '-e', 
+      const fallbackResponse = $2;
+      const errorMsg: Msg = $2;
         role: 'assistant', 
-        message: fallbackResponse
-      };
-      setMessages(prev => [...prev, errorMsg]);
+        message: fallbackResponse},
+      setMessages(prev => [...prev, errorMsg])
     } finally {
-      setLoading(false);
-      setTyping(false);
+      setLoading($2);
+      setTyping(false)
     }
-  };
+  },
 
   if (!open) {
     return (
@@ -124,12 +111,12 @@ export function SupportChatbot() {
         onClick={() => setOpen(true)} 
         size="icon" 
         variant="outline" 
-        className="fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40" 
+        className="fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover: bg-zion-purple-light z-40" 
         aria-label="Open help chat"
       >
         <MessageSquare className="h-5 w-5" />
       </Button>
-    );
+    )
   }
 
   return (
@@ -165,5 +152,5 @@ export function SupportChatbot() {
         <ChatInput onSend={sendMessage} disabled={loading} />
       </div>
     </div>
-  );
+  )
 }

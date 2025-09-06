@@ -6,18 +6,17 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog";
+  DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ReviewForm } from "./ReviewForm";
 import { useReviews } from "@/hooks/useReviews";
-
 interface LeaveReviewModalProps {
-  projectId: string;
-  revieweeId: string;
-  revieweeName: string;
-  isOpen: boolean;
-  onClose: () => void;
+  projectId: string,
+  revieweeId: string,
+  revieweeName: string,
+  isOpen: boolean,
+  onClose: () => void
 }
 
 export function LeaveReviewModal({
@@ -26,38 +25,37 @@ export function LeaveReviewModal({
   revieweeName,
   isOpen,
   onClose}: LeaveReviewModalProps) {
-  const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId);
-  const [open, setOpen] = useState(isOpen);
-  
+  const { userReview, submitReview, updateReview, isSubmitting } = useReviews($2);
+  const [open, setOpen] = useState($2);
   useEffect(() => {
-    setOpen(isOpen);
-  }, [isOpen]);
+    setOpen(isOpen)
+  }, [isOpen]),
   
   const handleOpenChange = (open: boolean) => {
-    setOpen(open);
+    setOpen($2);
     if (!open) {
-      onClose();
+      onClose()
     }
-  };
+  },
   
   const handleSubmit = async (formValues: any) => {
     if (userReview) {
       // Update existing review
-      const { project_id, reviewee_id, ...updates } = formValues;
-      const success = await updateReview(userReview.id, updates);
+      const { project_id, reviewee_id, ...updates } = formValues,
+      const success = await updateReview($2);
       if (success) {
-        handleOpenChange(false);
+        handleOpenChange(false)
       }
-      return success;
+      return success
     } else {
       // Create new review
-      const success = await submitReview(formValues);
+      const success = await submitReview($2);
       if (success) {
-        handleOpenChange(false);
+        handleOpenChange(false)
       }
-      return success;
+      return success
     }
-  };
+  },
   
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
@@ -81,5 +79,5 @@ export function LeaveReviewModal({
         />
       </DialogContent>
     </Dialog>
-  );
+  )
 }

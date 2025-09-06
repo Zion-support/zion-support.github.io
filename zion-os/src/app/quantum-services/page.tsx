@@ -1,9 +1,7 @@
 import Link from "next/link";
-
-export const metadata = {
-  title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",
+export const metadata = $2;
   description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.",
-  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"};
+  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"},
 
 export default function QuantumServicesPage() {
   return (
@@ -37,132 +35,10 @@ export default function QuantumServicesPage() {
                   entanglement, we can process information in ways that classical 
                   computers simply cannot match.
                 </p>
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-purple-500 rounded-full mr-3"></div>
-                    <span className="text-gray-300">Exponential speedup for specific problems</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-purple-500 rounded-full mr-3"></div>
-                    <span className="text-gray-300">Revolutionary optimization capabilities</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-purple-500 rounded-full mr-3"></div>
-                    <span className="text-gray-300">Breakthrough machine learning algorithms</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-purple-500 rounded-full mr-3"></div>
-                    <span className="text-gray-300">Unprecedented simulation accuracy</span>
-                  </div>
-                </div>
-                <Link href="/contact" className="btn-primary">
-                  Explore Quantum Solutions
-                </Link>
-              </div>
-              <div className="relative">
-                <div className="w-full h-80 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
-                  <svg className="w-32 h-32 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Quantum Services */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Core Quantum Services
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Comprehensive quantum computing solutions designed for enterprise applications
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Quantum Algorithm Development */}
-            <div className="card group hover:bg-purple-500/10 transition-colors">
-              <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/30">
-                <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Quantum Algorithm Development</h3>
-              <p className="text-gray-400 mb-4">
-                Custom quantum algorithms designed for your specific business problems, 
+                <div className = $2;
                 from optimization challenges to complex simulations.
               </p>
-              <ul className="space-y-2 mb-6 text-sm text-gray-400">
-                <li>• Custom algorithm design</li>
-                <li>• Problem-specific optimization</li>
-                <li>• Hybrid classical-quantum approaches</li>
-                <li>• Performance benchmarking</li>
-              </ul>
-              <Link href="/quantum-services/algorithm-development" className="text-purple-400 hover:text-purple-300 text-sm font-medium">
-                Learn More →
-              </Link>
-            </div>
-            
-            {/* Quantum Machine Learning */}
-            <div className="card group hover:bg-blue-500/10 transition-colors">
-              <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500/30">
-                <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Quantum Machine Learning</h3>
-              <p className="text-gray-400 mb-4">
-                Quantum-enhanced machine learning models that leverage quantum 
-                superposition for faster training and better pattern recognition.
-              </p>
-              <ul className="space-y-2 mb-6 text-sm text-gray-400">
-                <li>• Quantum neural networks</li>
-                <li>• Quantum feature mapping</li>
-                <li>• Quantum kernel methods</li>
-                <li>• Hybrid ML pipelines</li>
-              </ul>
-              <Link href="/quantum-services/quantum-ml" className="text-blue-400 hover:text-blue-300 text-sm font-medium">
-                Learn More →
-              </Link>
-            </div>
-            
-            {/* Quantum Optimization */}
-            <div className="card group hover:bg-green-500/10 transition-colors">
-              <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500/30">
-                <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Quantum Optimization</h3>
-              <p className="text-gray-400 mb-4">
-                Solve complex optimization problems with quantum algorithms that 
-                can find global minima in exponentially large search spaces.
-              </p>
-              <ul className="space-y-2 mb-6 text-sm text-gray-400">
-                <li>• Quantum annealing</li>
-                <li>• Variational quantum algorithms</li>
-                <li>• Combinatorial optimization</li>
-                <li>• Supply chain optimization</li>
-              </ul>
-              <Link href="/quantum-services/quantum-optimization" className="text-green-400 hover:text-green-300 text-sm font-medium">
-                Learn More →
-              </Link>
-            </div>
-            
-            {/* Quantum Simulation */}
-            <div className="card group hover:bg-indigo-500/10 transition-colors">
-              <div className="w-16 h-16 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/30">
-                <svg className="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Quantum Simulation</h3>
-              <p className="text-gray-400 mb-4">
-                Accurate simulation of quantum systems for materials science, 
+              <ul className = $2;
                 chemistry, and physics research applications.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -436,7 +312,7 @@ export default function QuantumServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="card bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-500/30">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -458,5 +334,5 @@ export default function QuantumServicesPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

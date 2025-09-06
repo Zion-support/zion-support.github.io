@@ -7,19 +7,19 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
 
 interface IntegrationCardProps {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  status?: "connected" | "disconnected" | "pending";
-  href?: string;
-  onConnect?: () => void;
+  title: string,
+  description: string,
+  icon: React.ReactNode,
+  status?: "connected" | "disconnected" | "pending",
+  href?: string,
+  onConnect?: () => void
 }
 
 export function IntegrationCard({
   title,
   description,
   icon,
-  status = "disconnected",
+  status = $2;
   href,
   onConnect}: IntegrationCardProps) {
   return (
@@ -65,7 +65,7 @@ export function IntegrationCard({
         )}
       </CardFooter>
     </Card>
-  );
+  )
 }
 
 export function IntegrationCards() {
@@ -90,5 +90,5 @@ export function IntegrationCards() {
         onConnect={() => logDebug('Connect Teams clicked')}
       />
     </div>
-  );
+  )
 }

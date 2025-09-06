@@ -1,5 +1,4 @@
-// Hook for useQuoteWizard;
-export const useUseQuoteWizard: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
+// Hook for useQuoteWizard,
+export const useUseQuoteWizard: unknown = $2;
+  return {}
+},

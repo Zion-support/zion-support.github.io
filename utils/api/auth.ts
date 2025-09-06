@@ -1,35 +1,29 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-
-export type CurrentUser = {
-  userId: string;
-  role: 'client' | 'talent' | 'admin';
-};
+export type CurrentUser = $2;
+  role: 'client' | 'talent' | 'admin'
+},
 
 export function getCurrentUser(req: NextApiRequest): CurrentUser | null {
-  const headerUser = req.headers['x-user-id'];
-  const headerRole = req.headers['x-user-role'] as string | undefined;
+  const headerUser = $2;
+  const headerRole = $2;
+  const cookie = $2;
+  const cookieUser = $2;
+  const cookieRole = $2;
+  const userId = $2;
+  const role = $2;
+  if (!userId || !role) return null,
+  if (role !== 'client' && role !== 'talent' && role !== 'admin') return null,
 
-  const cookie = req.cookies || {};
-  const cookieUser = cookie['x-user-id'];
-  const cookieRole = cookie['x-user-role'];
-
-  const userId = (headerUser as string) || cookieUser;
-  const role = (headerRole as CurrentUser['role']) || (cookieRole as CurrentUser['role']);
-
-  if (!userId || !role) return null;
-  if (role !== 'client' && role !== 'talent' && role !== 'admin') return null;
-
-  return { userId, role };
+  return { userId, role }
 }
 
 export function requireUser(
   req: NextApiRequest,
-  res: NextApiResponse
-): CurrentUser | null {
-  const user = getCurrentUser(req);
+  res: NextApiResponse): CurrentUser | null {
+  const user = getCurrentUser($2);
   if (!user) {
-    res.status(401).json({ error: 'Unauthorized' });
-    return null;
+    res.status(401).json($2);
+    return null
   }
-  return user;
+  return user
 }

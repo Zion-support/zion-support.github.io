@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Play, Download, Code, Globe, Lock, Sparkles } from 'lucide-react';
-
 export default function AIContentGeneratorPage() {
   const features = [
     {
@@ -41,7 +40,7 @@ export default function AIContentGeneratorPage() {
       title: '24/7 Availability',
       description: 'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.',
       color: 'bg-gradient-to-br from-teal-500 to-blue-600',
-      gradient: 'from-teal-400 to-blue-500'}];
+      gradient: 'from-teal-400 to-blue-500'}],
 
   const pricingPlans = [
     {
@@ -50,12 +49,7 @@ export default function AIContentGeneratorPage() {
       period: '/month',
       description: 'Perfect for individuals and small blogs',
       features: [
-        '1,000 words per month',
-        '5 content templates',
-        'Basic SEO optimization',
-        'Email support',
-        'API access (100 calls/month)',
-        'Content analytics dashboard'
+        '1,000 words per month5 content templatesBasic SEO optimizationEmail supportAPI access (100 calls/month)Content analytics dashboard'
       ],
       popular: false,
       color: 'border-gray-600',
@@ -67,14 +61,7 @@ export default function AIContentGeneratorPage() {
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
       features: [
-        '10,000 words per month',
-        '25+ content templates',
-        'Advanced SEO tools',
-        'Priority support',
-        'API access (1,000 calls/month)',
-        'Advanced analytics',
-        'Team collaboration',
-        'Custom branding'
+        '10,000 words per month25+ content templatesAdvanced SEO toolsPriority supportAPI access (1,000 calls/month)Advanced analyticsTeam collaborationCustom branding'
       ],
       popular: true,
       color: 'border-blue-500',
@@ -86,48 +73,40 @@ export default function AIContentGeneratorPage() {
       period: '/month',
       description: 'For large organizations and enterprises',
       features: [
-        'Unlimited words',
-        'All templates + custom',
-        'Full SEO suite',
-        'Dedicated support',
-        'Unlimited API access',
-        'Advanced analytics',
-        'White-label solution',
-        'Custom integrations',
-        'SLA guarantee'
+        'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrationsSLA guarantee'
       ],
       popular: false,
       color: 'border-purple-600',
       buttonColor: 'bg-purple-600 hover:bg-purple-700'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Blog Writing',
       description: 'Generate engaging blog posts, articles, and long-form content in minutes.',
       icon: '📝',
-      examples: ['Tech reviews', 'How-to guides', 'Industry insights', 'Product comparisons']
+      examples: ['Tech reviewsHow-to guidesIndustry insightsProduct comparisons']
     },
     {
       title: 'Marketing Copy',
       description: 'Create compelling ad copy, landing pages, and marketing materials.',
       icon: '🎯',
-      examples: ['Facebook ads', 'Google ads', 'Landing pages', 'Email campaigns']
+      examples: ['Facebook adsGoogle adsLanding pagesEmail campaigns']
     },
     {
       title: 'Social Media',
       description: 'Generate engaging social media posts, captions, and hashtag suggestions.',
       icon: '📱',
-      examples: ['Instagram posts', 'Twitter threads', 'LinkedIn articles', 'TikTok captions']
+      examples: ['Instagram postsTwitter threadsLinkedIn articlesTikTok captions']
     },
     {
       title: 'E-commerce',
       description: 'Write product descriptions, category pages, and promotional content.',
       icon: '🛍️',
-      examples: ['Product descriptions', 'Category pages', 'Promotional emails', 'FAQ sections']
+      examples: ['Product descriptionsCategory pagesPromotional emailsFAQ sections']
     }
-  ];
+  ],
 
   const integrations = [
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
@@ -136,7 +115,7 @@ export default function AIContentGeneratorPage() {
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
     { name: 'Slack', icon: '💬', description: 'Team collaboration' },
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
-  ];
+  ],
 
   return (
     <>
@@ -379,7 +358,7 @@ export default function AIContentGeneratorPage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
             Ready to Transform Your Content Creation?
@@ -410,5 +389,5 @@ export default function AIContentGeneratorPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

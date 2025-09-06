@@ -7,55 +7,32 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { 
-  Select, 
+  Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue 
-} from "@/components/ui/select";
+} from "@/components/ui/select",
 import { Zap, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-
-type JobPostStep = "details" | "requirements" | "budget" | "preview";
-
+type JobPostStep = $2;
 export function MobileJobPost() {
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
   
-  const goToNextStep = () => {
-    if (currentStep === "details") {
-      setCurrentStep("requirements");
-    } else if (currentStep === "requirements") {
-      setCurrentStep("budget");
-    } else if (currentStep === "budget") {
-      setCurrentStep("preview");
-    }
-  };
-  
-  const goToPrevStep = () => {
-    if (currentStep === "requirements") {
-      setCurrentStep("details");
-    } else if (currentStep === "budget") {
-      setCurrentStep("requirements");
-    } else if (currentStep === "preview") {
-      setCurrentStep("budget");
-    }
-  };
-  
-  const renderStepContent = () => {
-    switch (currentStep) {
-      case "details":
-        return <DetailsStep />;
+  const goToNextStep = $2;
+  const goToPrevStep = $2;
+  const renderStepContent = $2;
       case "requirements":
-        return <RequirementsStep />;
+        return <RequirementsStep />,
       case "budget":
-        return <BudgetStep />;
+        return <BudgetStep />,
       case "preview":
-        return <PreviewStep />;
+        return <PreviewStep />,
       default:
-        return <DetailsStep />;
+        return <DetailsStep />
     }
-  };
+  },
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -103,7 +80,7 @@ export function MobileJobPost() {
       
       <BottomNavigation />
     </div>
-  );
+  )
 }
 
 function DetailsStep() {
@@ -159,26 +136,22 @@ function DetailsStep() {
         />
       </div>
     </div>
-  );
+  )
 }
 
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
     "React", "TypeScript", "Node.js"
-  ]);
-  const [newSkill, setNewSkill] = useState("");
-  
+  ]),
+  const [newSkill, setNewSkill] = useState($2);
   const addSkill = () => {
     if (newSkill && !skills.includes(newSkill)) {
-      setSkills([...skills, newSkill]);
-      setNewSkill("");
+      setSkills($2);
+      setNewSkill("")
     }
-  };
+  },
   
-  const removeSkill = (skill: string) => {
-    setSkills(skills.filter(s => s !== skill));
-  };
-  
+  const removeSkill = $2;
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
@@ -263,7 +236,7 @@ function RequirementsStep() {
         />
       </div>
     </div>
-  );
+  )
 }
 
 function BudgetStep() {
@@ -340,7 +313,7 @@ function BudgetStep() {
         />
       </div>
     </div>
-  );
+  )
 }
 
 function PreviewStep() {
@@ -383,5 +356,5 @@ function PreviewStep() {
       
       <Button variant="outline" className="w-full">Edit Job Post</Button>
     </div>
-  );
+  )
 }

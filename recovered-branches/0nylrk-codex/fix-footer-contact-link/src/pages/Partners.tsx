@@ -11,12 +11,10 @@ import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard";
 import { PartnerResources } from "@/components/partners/PartnerResources";
 import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom";
-
 export default function Partners() {
-  const [activeTab, setActiveTab] = useState("overview");
-  const { user, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
-
+  const [activeTab, setActiveTab] = useState($2);
+  const { user, isAuthenticated } = useAuth($2);
+  const navigate = useNavigate($2);
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
     return (
@@ -147,7 +145,7 @@ export default function Partners() {
           </Button>
         </div>
       </div>
-    );
+    )
   }
 
   // Authenticated user view - Partner Dashboard
@@ -205,5 +203,5 @@ export default function Partners() {
         </TabsContent>
       </Tabs>
     </div>
-  );
+  )
 }

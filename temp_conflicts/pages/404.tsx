@@ -3,14 +3,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Home, Search, ArrowLeft, AlertTriangle, Map, Users, Rocket } from 'lucide-react';
-
 export default function Custom404() {
   const quickLinks = [
     { href: '/', label: '🏠 Home', icon: Home },
     { href: '/services', label: '🚀 Services', icon: Rocket },
     { href: '/explore', label: '🔍 Explore', icon: Search },
     { href: '/about', label: '👥 About', icon: Users },
-    { href: '/sitemap', label: '🗺️ Sitemap', icon: Map }];
+    { href: '/sitemap', label: '🗺️ Sitemap', icon: Map }],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center px-6">
@@ -139,7 +138,7 @@ export default function Custom404() {
           <p className="text-white/60 mb-4">
             Can't find what you're looking for? We're here to help!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center text-sm">
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -162,5 +161,5 @@ export default function Custom404() {
         </motion.div>
       </div>
     </div>
-  );
+  )
 }

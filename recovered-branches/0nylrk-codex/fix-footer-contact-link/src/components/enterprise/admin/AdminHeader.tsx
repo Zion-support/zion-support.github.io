@@ -4,11 +4,9 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Download, Settings } from "lucide-react";
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
-
 export function AdminHeader() {
-  const { user } = useAuth();
-  const { company } = useCompanyWorkspace();
-
+  const { user } = useAuth($2);
+  const { company } = useCompanyWorkspace($2);
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -64,5 +62,5 @@ export function AdminHeader() {
         <Button>Customize Workspace</Button>
       </div>
     </div>
-  );
+  )
 }

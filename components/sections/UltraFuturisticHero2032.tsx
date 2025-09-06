@@ -5,25 +5,22 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, Star, ArrowRight, Play, CheckCircle,
   Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const heroStats = [
   { number: '1000+', label: 'Innovative Services', icon: Sparkles, color: 'from-cyan-400 to-blue-400' },
   { number: '24/7', label: 'Expert Support', icon: Shield, color: 'from-purple-400 to-pink-400' },
   { number: '1000%', label: 'Average ROI', icon: Star, color: 'from-yellow-400 to-orange-400' },
   { number: '99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from-green-400 to-emerald-400' }
-];
+],
 
-const featuredServices = [
-  {
-    name: 'AI Consciousness Evolution',
+const featuredServices = $2;
     description: 'Develop genuine AI consciousness',
     price: '$19,999/month',
     icon: Brain,
@@ -46,7 +43,7 @@ const featuredServices = [
     color: 'from-indigo-600 to-blue-600',
     href: '/quantum-internet-security-gateway'
   }
-];
+],
 
 export default function UltraFuturisticHero2032() {
   return (
@@ -57,16 +54,12 @@ export default function UltraFuturisticHero2032() {
         <div className="absolute inset-0">
           {[...Array(50)].map((_, i) => (
             <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
-              style={{
-                left: `${Math.random() * 100}%`,
+              key = $2;
                 top: `${Math.random() * 100}%`}}
               animate={{
                 y: [0, -20, 0],
                 opacity: [0.3, 0.8, 0.3]}}
-              transition={{
-                duration: 3 + Math.random() * 2,
+              transition = $2;
                 repeat: Infinity,
                 delay: Math.random() * 2}}
             />
@@ -83,8 +76,8 @@ export default function UltraFuturisticHero2032() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Hero Badge */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6 }}
           className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
         >
@@ -95,8 +88,8 @@ export default function UltraFuturisticHero2032() {
 
         {/* Main Heading */}
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
         >
@@ -109,8 +102,8 @@ export default function UltraFuturisticHero2032() {
 
         {/* Subheading */}
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
         >
@@ -121,8 +114,8 @@ export default function UltraFuturisticHero2032() {
 
         {/* CTA Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
         >
@@ -145,8 +138,8 @@ export default function UltraFuturisticHero2032() {
 
         {/* Stats Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
@@ -154,7 +147,7 @@ export default function UltraFuturisticHero2032() {
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: 1, scale: 1}}
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
               className="text-center group"
             >
@@ -171,8 +164,8 @@ export default function UltraFuturisticHero2032() {
 
         {/* Featured Services */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 1.2 }}
           className="mb-16"
         >
@@ -183,8 +176,8 @@ export default function UltraFuturisticHero2032() {
             {featuredServices.map((service, index) => (
               <motion.div
                 key={service.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
                 className="group"
               >
@@ -220,8 +213,8 @@ export default function UltraFuturisticHero2032() {
 
         {/* Contact Information */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 1.6 }}
           className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto"
         >
@@ -262,9 +255,9 @@ export default function UltraFuturisticHero2032() {
 
       {/* Floating Action Button */}
       <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 2 }}
+        initial={{ opacity: 0, scale: 0}}
+        animate={{ opacity: 1, scale: 1}}
+        transition={{ duration: 0.8, delay: 2}}
         className="fixed bottom-8 right-8 z-50"
       >
         <Link
@@ -275,5 +268,5 @@ export default function UltraFuturisticHero2032() {
         </Link>
       </motion.div>
     </section>
-  );
+  )
 }

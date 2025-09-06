@@ -12,18 +12,15 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3, Eye,
   Infinity, Hexagon, Network
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceCategories = [
-  {
-    title: '🚀 2030 Ultra-Futuristic AI Services',
+const serviceCategories = $2;
     icon: Brain,
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     description: 'Next-generation AI consciousness and creativity',
@@ -94,18 +91,18 @@ const serviceCategories = [
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
     ]
   }
-];
+],
 
 const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'Solutions', href: '/solutions', icon: Layers },
-  { name: 'Pricing', href: '/pricing', icon: DollarSign },
-  { name: 'Resources', href: '/resources', icon: BookOpen },
-  { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-  { name: 'Blog', href: '/blog', icon: MessageCircle },
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+  { name: 'Home', href: '/', icon: Home},
+  { name: 'Services', href: '/services', icon: Briefcase},
+  { name: 'Solutions', href: '/solutions', icon: Layers},
+  { name: 'Pricing', href: '/pricing', icon: DollarSign},
+  { name: 'Resources', href: '/resources', icon: BookOpen},
+  { name: 'Case Studies', href: '/case-studies', icon: BarChart3},
+  { name: 'Blog', href: '/blog', icon: MessageCircle},
+  { name: 'Contact', href: '/contact', icon: MessageCircle}
+],
 
 const quickLinks = [
   { name: 'AI Services', href: '/services/ai', icon: Brain, color: 'from-purple-500 to-pink-500' },
@@ -114,24 +111,20 @@ const quickLinks = [
   { name: 'Space Technology', href: '/services/space', icon: Rocket, color: 'from-indigo-500 to-purple-500' },
   { name: 'Enterprise IT', href: '/services/enterprise', icon: Cpu, color: 'from-gray-500 to-slate-500' },
   { name: 'Micro SAAS', href: '/services/micro-saas', icon: Target, color: 'from-orange-500 to-red-500' }
-];
+],
 
 export default function UltraFuturisticNavigation2030() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<number | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-
+  const [isOpen, setIsOpen] = useState($2);
+  const [activeCategory, setActiveCategory] = useState<number | null>(null),
+  const [isScrolled, setIsScrolled] = useState($2);
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleScroll = $2;
+    window.addEventListener($2);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
-
+  const toggleMenu = () => setIsOpen($2);
+  const closeMenu = () => setIsOpen($2);
   return (
     <>
       {/* Top Contact Bar */}
@@ -283,9 +276,9 @@ export default function UltraFuturisticNavigation2030() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
+              initial={{ opacity: 0, height: 0}}
               animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              exit={{ opacity: 0, height: 0}}
               className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20"
             >
               <div className="px-4 py-6 space-y-6">
@@ -352,5 +345,5 @@ export default function UltraFuturisticNavigation2030() {
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
-  );
+  )
 }

@@ -6,7 +6,7 @@ import {
   ArrowRight, Star, 
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin,
   Users, Building, Rocket, CheckCircle, Phone, Mail
-} from 'lucide-react';
+} from 'lucide-react',
 
 const Homepage2026: React.FC = () => {
   return (
@@ -24,15 +24,15 @@ const Homepage2026: React.FC = () => {
           
           <div className="text-center max-w-4xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
               {/* Company Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1}}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium"
               >
@@ -71,8 +71,8 @@ const Homepage2026: React.FC = () => {
               
               {/* Trust Indicators */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="flex items-center justify-center space-x-6 text-sm text-gray-400"
               >
@@ -98,8 +98,8 @@ const Homepage2026: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
           <div className="max-w-6xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -111,8 +111,8 @@ const Homepage2026: React.FC = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-center"
               >
@@ -124,8 +124,8 @@ const Homepage2026: React.FC = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center"
               >
@@ -137,8 +137,8 @@ const Homepage2026: React.FC = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-center"
               >
@@ -150,8 +150,8 @@ const Homepage2026: React.FC = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-center"
               >
@@ -169,8 +169,8 @@ const Homepage2026: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -184,7 +184,7 @@ const Homepage2026: React.FC = () => {
               {/* AI Automation Services */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0}}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300"
               >
@@ -217,8 +217,8 @@ const Homepage2026: React.FC = () => {
 
               {/* IT Infrastructure Services */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: 20}}
+                whileInView={{ opacity: 1, x: 0}}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300"
               >
@@ -252,7 +252,7 @@ const Homepage2026: React.FC = () => {
               {/* Micro SAAS Solutions */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0}}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300"
               >
@@ -285,8 +285,8 @@ const Homepage2026: React.FC = () => {
 
               {/* Cutting-Edge AI Services */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: 20}}
+                whileInView={{ opacity: 1, x: 0}}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300"
               >
@@ -324,83 +324,7 @@ const Homepage2026: React.FC = () => {
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6"
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Get in touch with our team to discuss how our innovative services can drive your success
-              </p>
-              
-              {/* Contact Information */}
-              <div className="bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8">
-                <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Contact Information</h3>
-                <div className="grid md:grid-cols-2 gap-6 text-left">
-                  <div className="flex items-center space-x-3">
-                    <Globe className="w-5 h-5 text-blue-400" />
-                    <div>
-                      <div className="text-sm text-gray-400">Website</div>
-                      <a href="https://ziontechgroup.com" className="text-cyan-400 hover:underline font-medium">
-                        ziontechgroup.com
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Phone className="w-5 h-5 text-green-400" />
-                    <div>
-                      <div className="text-sm text-gray-400">Phone</div>
-                      <a href="tel:+13024640950" className="text-cyan-400 hover:underline font-medium">
-                        +1 302 464 0950
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Mail className="w-5 h-5 text-yellow-400" />
-                    <div>
-                      <div className="text-sm text-gray-400">Email</div>
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline font-medium">
-                        kleber@ziontechgroup.com
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-purple-400" />
-                    <div>
-                      <div className="text-sm text-gray-400">Address</div>
-                      <div className="text-white font-medium">
-                        364 E Main St STE 1008<br />
-                        Middletown DE 19709
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  <span>Get Started Today</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <a
-                  href="tel:+13024640950"
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
-                >
-                  Call Now
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </main>
-    </Layout>
-  );
-};
-
-export default Homepage2026;
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
+export default Homepage2026,

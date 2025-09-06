@@ -6,77 +6,57 @@ import { Textarea } from "@/components/ui/textarea";
 import { AIMatchingResults } from "@/components/AIMatchingResults";
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
 import { toast } from "@/hooks/use-toast";
-
 interface SummaryStepProps {
-  formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void;
+  formData: QuoteFormData,
+  updateFormData: (data: Partial<QuoteFormData>) => void
 }
 
 export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
-  const [isMatching, setIsMatching] = useState(false);
-  const [matches, setMatches] = useState<MatchResult[]>([]);
+  const [isMatching, setIsMatching] = useState($2);
+  const [matches, setMatches] = useState<MatchResult[]>([]),
   
   // Run AI matching when the component mounts
   useEffect(() => {
-    const runMatching = async () => {
-      if (!formData.projectDescription) return;
-      
-      setIsMatching(true);
+    const runMatching = $2;
+      setIsMatching($2);
       try {
         // Create a query string from the form data
-        const queryString = `
-          ${formData.projectName} 
-          ${formData.projectDescription} 
-          ${formData.serviceType} 
-          ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
-          ${formData.timeline}
-        `;
-        
+        const queryString = $2;
         // Get AI matches
-        const results = await findMatches(
-          queryString,
-          formData.serviceType,
-          3
-        );
-        
-        setMatches(results);
+        const results = await findMatches($2);
+        setMatches(results)
       } catch (error) {
-        console.error("Error during AI matching:", error);
+        console.error($2);
         toast({
           title: "Matching Error",
           description: "We couldn't find matches for your request. Please try again.",
-          variant: "destructive"});
+          variant: "destructive"})
       } finally {
-        setIsMatching(false);
+        setIsMatching(false)
       }
-    };
+    },
     
-    runMatching();
-  }, [formData]);
+    runMatching()
+  }, [formData]),
   
   const handleSelectMatch = (match: MatchResult) => {
     // Update the form with the selected match
-    updateFormData({
-      specificItem: match.item,
-      serviceCategory: match.item.category
-    });
-    
+    updateFormData($2);
     toast({
       title: "Match Selected",
-      description: `You've selected ${match.item.title}`});
-  };
+      description: `You've selected ${match.item.title}`})
+  },
   
   // Extract just the items from each MatchResult for the AIMatchingResults component
-  const matchItems = matches.map(match => match.item);
-  
+  const matchItems = matches.map($2);
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
-    const matchResult = matches.find(match => match.item.id === item.id);
+    const matchResult = matches.find($2);
     if (matchResult) {
-      handleSelectMatch(matchResult);
+      handleSelectMatch(matchResult)
     }
-  };
+  },
   
   return (
     <div className="space-y-6">
@@ -219,5 +199,5 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
         </Card>
       </div>
     </div>
-  );
+  )
 }

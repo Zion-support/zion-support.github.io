@@ -1,5 +1,5 @@
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
-import Link from 'next/link'; // Changed from react-router-dom
+import Link from 'next/link', // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
@@ -8,42 +8,27 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow} from '@/components/ui/table';
+  TableRow} from '@/components/ui/table',
 import { Badge } from '@/components/ui/badge';
 import Skeleton from '@/components/ui/skeleton';
 import { EmptyState } from '@/components/ui/empty-state';
-
 export default function OrdersPage() {
-  const { user } = useAuth();
-  const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
-
-  const formatDate = (date: string) => new Date(date).toLocaleDateString();
-
+  const { user } = useAuth($2);
+  const { data: orders, isLoading } = useGetOrdersQuery($2);
+  const formatDate = (date: string) => new Date(date).toLocaleDateString($2);
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'in_escrow':
-        return (
-          <Badge variant="warning" className="flex items-center gap-1">
-            <Clock className="h-3 w-3" /> In Escrow
-          </Badge>
-        );
+        return($2);
       case 'released':
       case 'completed':
-        return (
-          <Badge variant="success" className="flex items-center gap-1">
-            <CheckCircle2 className="h-3 w-3" /> Released
-          </Badge>
-        );
+        return($2);
       case 'disputed':
-        return (
-          <Badge variant="destructive" className="flex items-center gap-1">
-            <ShieldAlert className="h-3 w-3" /> Disputed
-          </Badge>
-        );
+        return($2);
       default:
-        return status;
+        return status
     }
-  };
+  },
 
   return (
     <div className="container max-w-4xl py-10">
@@ -60,7 +45,7 @@ export default function OrdersPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {Array.from({ length: 3 }).map((_, i) => (
+            {Array.from({ length: 3}).map((_, i) => (
               <TableRow key={i}>
                 <TableCell><Skeleton className="h-4 w-20" /></TableCell>
                 <TableCell><Skeleton className="h-4 w-24" /></TableCell>
@@ -109,5 +94,5 @@ export default function OrdersPage() {
         </Table>
       )}
     </div>
-  );
+  )
 }

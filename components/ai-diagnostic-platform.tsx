@@ -5,50 +5,33 @@ import {
   Brain, Shield, Zap, Target, Stethoscope, 
   BarChart3, Cpu, Globe, Users, Award,
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 import Layout from '../components/layout/Layout';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const features = [
-  'AI-powered medical image analysis',
-  'Symptom assessment algorithms',
-  'Treatment recommendation engine',
-  'Patient history integration',
-  'Real-time diagnostic updates',
-  'Multi-specialty coverage',
-  'Mobile app integration',
-  'HIPAA-compliant platform'
-];
-
-const pricingPlans = [
-  {
-    name: 'Starter',
+const features = $2;
+const pricingPlans = $2;
     price: 299,
     period: 'month',
-    features: ['Basic diagnostic tools', '3 medical specialties', 'Standard reporting', 'Standard support'],
-    popular: false
-  },
+    features: ['Basic diagnostic tools3 medical specialtiesStandard reportingStandard support'],
+    popular: false},
   {
     name: 'Professional',
     price: 799,
     period: 'month',
-    features: ['Advanced AI diagnostics', 'All specialties', 'Custom reporting', 'API access', 'Priority support'],
-    popular: true
-  },
+    features: ['Advanced AI diagnosticsAll specialtiesCustom reportingAPI accessPriority support'],
+    popular: true},
   {
     name: 'Enterprise',
     price: 1999,
     period: 'month',
-    features: ['Custom AI models', 'White-label solution', 'Dedicated support', 'Custom integrations', 'Training included'],
-    popular: false
-  }
-];
+    features: ['Custom AI modelsWhite-label solutionDedicated supportCustom integrationsTraining included'],
+    popular: false}
+],
 
 export default function AIDiagnosticPlatform() {
   return (
@@ -75,8 +58,8 @@ export default function AIDiagnosticPlatform() {
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -98,8 +81,8 @@ export default function AIDiagnosticPlatform() {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
@@ -125,10 +108,10 @@ export default function AIDiagnosticPlatform() {
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
@@ -143,10 +126,10 @@ export default function AIDiagnosticPlatform() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4">
@@ -163,10 +146,10 @@ export default function AIDiagnosticPlatform() {
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
@@ -181,10 +164,10 @@ export default function AIDiagnosticPlatform() {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className={`relative bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border rounded-2xl p-8 ${
                   plan.popular 
                     ? 'border-blue-500/50 scale-105' 
@@ -229,10 +212,10 @@ export default function AIDiagnosticPlatform() {
       <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
@@ -245,10 +228,10 @@ export default function AIDiagnosticPlatform() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -259,10 +242,10 @@ export default function AIDiagnosticPlatform() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -273,10 +256,10 @@ export default function AIDiagnosticPlatform() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -289,5 +272,5 @@ export default function AIDiagnosticPlatform() {
         </div>
       </section>
     </Layout>
-  );
+  )
 }

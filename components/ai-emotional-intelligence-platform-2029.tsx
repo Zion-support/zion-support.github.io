@@ -7,21 +7,16 @@ import {
   Zap, TrendingUp, CheckCircle, ArrowRight, Star,
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3,
   Smartphone, Database, Cloud, Server, ShieldCheck
-} from 'lucide-react';
+} from 'lucide-react',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-
-const AIEmotionalIntelligencePlatform2029 = () => {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+const AIEmotionalIntelligencePlatform2029 = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
-  const features = [
-    {
-      icon: Brain,
+  const features = $2;
       title: 'Real-time Emotion Detection',
       description: 'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time',
       color: 'from-violet-500 to-purple-600'
@@ -56,20 +51,10 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       description: 'Tracks emotional patterns and provides insights for mental health support',
       color: 'from-indigo-500 to-purple-600'
     }
-  ];
+  ],
 
-  const benefits = [
-    'Improve customer satisfaction by 85%',
-    'Reduce customer churn by 60%',
-    'Enhance team collaboration and communication',
-    'Optimize marketing campaigns with emotional insights',
-    'Improve mental health support and monitoring',
-    'Create empathetic AI interactions and experiences'
-  ];
-
-  const useCases = [
-    {
-      title: 'Customer Service Automation',
+  const benefits = $2;
+  const useCases = $2;
       description: 'AI agents that understand customer emotions and respond appropriately',
       icon: Users,
       color: 'from-blue-500 to-cyan-600'
@@ -104,57 +89,35 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       icon: Shield,
       color: 'from-teal-500 to-cyan-600'
     }
-  ];
+  ],
 
-  const pricing = {
-    basic: {
-      name: 'Starter',
+  const pricing = $2;
       price: '$1,999',
       period: '/month',
       description: 'Perfect for small teams and startups',
       features: [
-        'Up to 1,000 emotional interactions/month',
-        'Basic emotion detection (5 emotions)',
-        'Email support',
-        'Standard API access',
-        'Basic analytics dashboard'
+        'Up to 1,000 emotional interactions/monthBasic emotion detection (5 emotions)Email supportStandard API accessBasic analytics dashboard'
       ],
-      popular: false
-    },
+      popular: false},
     professional: {
       name: 'Professional',
       price: '$3,999',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 emotional interactions/month',
-        'Advanced emotion detection (15+ emotions)',
-        'Priority support',
-        'Full API access with webhooks',
-        'Advanced analytics and reporting',
-        'Custom emotion models',
-        'Multi-language support'
+        'Up to 10,000 emotional interactions/monthAdvanced emotion detection (15+ emotions)Priority supportFull API access with webhooksAdvanced analytics and reportingCustom emotion modelsMulti-language support'
       ],
-      popular: true
-    },
+      popular: true},
     enterprise: {
       name: 'Enterprise',
       price: '$7,999',
       period: '/month',
       description: 'For large organizations with custom needs',
       features: [
-        'Unlimited emotional interactions',
-        'Custom emotion detection models',
-        '24/7 dedicated support',
-        'Custom integrations',
-        'Advanced security features',
-        'White-label options',
-        'On-premise deployment',
-        'Custom training and consulting'
+        'Unlimited emotional interactionsCustom emotion detection models24/7 dedicated supportCustom integrationsAdvanced security featuresWhite-label optionsOn-premise deploymentCustom training and consulting'
       ],
-      popular: false
-    }
-  };
+      popular: false}
+  },
 
   return (
     <>
@@ -192,15 +155,15 @@ const AIEmotionalIntelligencePlatform2029 = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            initial={{ opacity: 0, y: 50}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ duration: 1}}
             className="mb-16"
           >
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: 1, scale: 1}}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8"
             >
@@ -210,8 +173,8 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
             {/* Main Heading */}
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 1, delay: 0.3 }}
               className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
             >
@@ -224,8 +187,8 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
             {/* Subheading */}
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 1, delay: 0.5 }}
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
             >
@@ -234,8 +197,8 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 1, delay: 0.7 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
             >
@@ -263,8 +226,8 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
             {/* Key Stats */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 1, delay: 0.9 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             >
@@ -293,10 +256,10 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 50}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 1}}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -311,10 +274,10 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 50}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105"
               >
                 <div className={`flex justify-center mb-6`}>
@@ -334,10 +297,10 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 50}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 1}}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -353,9 +316,9 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               <motion.div
                 key={benefit}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0}}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20"
               >
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
@@ -370,10 +333,10 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 50}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 1}}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -388,10 +351,10 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 50}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105"
               >
                 <div className={`flex justify-center mb-6`}>
@@ -411,10 +374,10 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 50}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 1}}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -429,10 +392,10 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             {Object.entries(pricing).map(([key, plan], index) => (
               <motion.div
                 key={key}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 50}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className={`relative p-8 rounded-2xl border-2 transition-all duration-300 transform hover:scale-105 ${
                   plan.popular
                     ? 'border-purple-500 bg-gradient-to-b from-purple-500/10 to-purple-600/5'
@@ -485,10 +448,10 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 50}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 1}}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -501,10 +464,10 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10"
             >
               <Phone className="w-12 h-12 text-purple-400 mx-auto mb-4" />
@@ -513,10 +476,10 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10"
             >
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
@@ -525,10 +488,10 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10"
             >
               <MapPin className="w-12 h-12 text-purple-400 mx-auto mb-4" />
@@ -538,28 +501,8 @@ const AIEmotionalIntelligencePlatform2029 = () => {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
-            >
-              <span className="flex items-center">
-                Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </span>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      <UltraFuturisticFooter2028 />
-    </>
-  );
-};
-
-export default AIEmotionalIntelligencePlatform2029;
+            viewport = $2;
+export default AIEmotionalIntelligencePlatform2029,

@@ -4,14 +4,11 @@ import { motion } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Shield, Cloud, BarChart3, 
   ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
+} from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-
 export default function PortfolioPage() {
-  const projects = [
-    {
-      title: "AI-Powered Financial Analytics Platform",
+  const projects = $2;
       description: "Revolutionary financial analytics platform using advanced AI algorithms for real-time market analysis and predictive modeling",
       category: "AI & Machine Learning",
       client: "Fortune 500 Financial Institution",
@@ -76,23 +73,21 @@ export default function PortfolioPage() {
       icon: Rocket,
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
   const stats = [
-    { number: "500+", label: "Projects Delivered", icon: Rocket },
-    { number: "50+", label: "Enterprise Clients", icon: Users },
-    { number: "99.9%", label: "Client Satisfaction", icon: Star },
-    { number: "2500%", label: "Average ROI", icon: TrendingUp }
-  ];
+    { number: "500+", label: "Projects Delivered", icon: Rocket},
+    { number: "50+", label: "Enterprise Clients", icon: Users},
+    { number: "99.9%", label: "Client Satisfaction", icon: Star},
+    { number: "2500%", label: "Average ROI", icon: TrendingUp}
+  ],
 
-  const categories = ["All", "AI & Machine Learning", "Quantum Computing", "Cybersecurity", "Cloud Infrastructure", "Data Analytics", "Digital Transformation"];
+  const categories = ["All", "AI & Machine Learning", "Quantum Computing", "Cybersecurity", "Cloud Infrastructure", "Data Analytics", "Digital Transformation"],
 
-  const [selectedCategory, setSelectedCategory] = React.useState("All");
-
+  const [selectedCategory, setSelectedCategory] = React.useState($2);
   const filteredProjects = selectedCategory === "All" 
     ? projects 
-    : projects.filter(project => project.category === selectedCategory);
-
+    : projects.filter($2);
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -109,8 +104,8 @@ export default function PortfolioPage() {
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -123,8 +118,8 @@ export default function PortfolioPage() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-12"
           >
@@ -143,10 +138,10 @@ export default function PortfolioPage() {
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -188,10 +183,10 @@ export default function PortfolioPage() {
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="p-8">
@@ -247,10 +242,10 @@ export default function PortfolioPage() {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Start Your Project?
@@ -258,7 +253,7 @@ export default function PortfolioPage() {
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Let's discuss how we can help you achieve similar results with our innovative technology solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Start Your Project
               </button>
@@ -272,5 +267,5 @@ export default function PortfolioPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

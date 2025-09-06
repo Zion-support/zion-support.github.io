@@ -1,20 +1,19 @@
-"use client";
+"use client",
 
 import { useState } from "react";
-
 interface ITService {
-  id: string;
-  name: string;
-  description: string;
-  deliverables: string[];
-  timeline: string;
-  pricing: string;
-  startingPrice: number;
-  contactLink: string;
-  icon: string;
-  features: string[];
-  technologies: string[];
-  industries: string[];
+  id: string,
+  name: string,
+  description: string,
+  deliverables: string[],
+  timeline: string,
+  pricing: string,
+  startingPrice: number,
+  contactLink: string,
+  icon: string,
+  features: string[],
+  technologies: string[],
+  industries: string[]
 }
 
 const itServices: ITService[] = [
@@ -34,7 +33,7 @@ const itServices: ITService[] = [
     timeline: "4-12 weeks depending on complexity",
     pricing: "Starting at $15,000",
     startingPrice: 15000,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Cloud%20Migration%20Inquiry",
+    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "☁️",
     features: [
       "Multi-cloud strategy planning",
@@ -79,7 +78,7 @@ const itServices: ITService[] = [
     timeline: "2-8 weeks depending on scope",
     pricing: "Starting at $8,500",
     startingPrice: 8500,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Cybersecurity%20Inquiry",
+    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "🔒",
     features: [
       "Penetration testing",
@@ -124,7 +123,7 @@ const itServices: ITService[] = [
     timeline: "3-10 weeks depending on size",
     pricing: "Starting at $6,500",
     startingPrice: 6500,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Network%20Infrastructure%20Inquiry",
+    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "🌐",
     features: [
       "Network design and planning",
@@ -169,7 +168,7 @@ const itServices: ITService[] = [
     timeline: "2-6 weeks depending on scope",
     pricing: "Starting at $200/hour",
     startingPrice: 200,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=IT%20Strategy%20Inquiry",
+    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "💡",
     features: [
       "Technology roadmap planning",
@@ -214,7 +213,7 @@ const itServices: ITService[] = [
     timeline: "8-20 weeks depending on complexity",
     pricing: "Starting at $25,000",
     startingPrice: 25000,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Data%20Center%20Inquiry",
+    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "🏢",
     features: [
       "Data center design and planning",
@@ -259,7 +258,7 @@ const itServices: ITService[] = [
     timeline: "2-4 weeks for setup",
     pricing: "Starting at $2,500/month",
     startingPrice: 2500,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Managed%20IT%20Services%20Inquiry",
+    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "🔄",
     features: [
       "24/7 monitoring and alerting",
@@ -288,16 +287,11 @@ const itServices: ITService[] = [
       "Financial Services"
     ]
   }
-];
+],
 
 export default function ITSolutionsPage() {
   return (
-    <div className="space-y-8">
-      {/* Header */}
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">IT Solutions & Services</h1>
-        <p className="text-xl opacity-80 max-w-3xl mx-auto">
-          Enterprise-grade IT solutions designed to modernize your infrastructure, 
+    <div className = $2;
           enhance security, and drive operational efficiency across your organization.
         </p>
       </div>
@@ -408,19 +402,7 @@ export default function ITSolutionsPage() {
             <h3 className="font-semibold mb-2">Infrastructure</h3>
             <p className="text-sm opacity-80">Network design, implementation, and management</p>
           </div>
-          <div className="text-center p-6 rounded-lg bg-white/5 border border-white/10">
-            <div className="text-3xl mb-3">💡</div>
-            <h3 className="font-semibold mb-2">Strategy</h3>
-            <p className="text-sm opacity-80">IT strategy and digital transformation consulting</p>
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="text-center space-y-6 py-12 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-lg border border-white/10">
-        <h2 className="text-3xl font-bold">Ready to Modernize Your IT Infrastructure?</h2>
-        <p className="text-xl opacity-80 max-w-2xl mx-auto">
-          Let's discuss how our IT solutions can transform your technology landscape, 
+          <div className = $2;
           enhance security, and drive operational efficiency. Get in touch for a comprehensive IT assessment.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -443,11 +425,11 @@ export default function ITSolutionsPage() {
       <div className="text-center">
         <a
           href="/services"
-          className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all font-semibold"
+          className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover: bg-white/10 transition-all font-semibold"
         >
           ← Back to All Services
         </a>
       </div>
     </div>
-  );
+  )
 }

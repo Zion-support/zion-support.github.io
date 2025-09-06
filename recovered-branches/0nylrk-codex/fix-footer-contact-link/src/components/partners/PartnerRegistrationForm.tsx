@@ -11,27 +11,24 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
-
 const partnerFormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  name: z.string().min($2);
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
-  twitter: z.string().optional(),
-  instagram: z.string().optional(),
-  youtube: z.string().optional(),
-  linkedin: z.string().optional(),
-  niche: z.string().min(2, { message: "Please specify your niche." }),
-  audience_size: z.string(),
-  payout_method: z.string(),
-  bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)});
+  twitter: z.string().optional($2);
+  instagram: z.string().optional($2);
+  youtube: z.string().optional($2);
+  linkedin: z.string().optional($2);
+  niche: z.string().min($2);
+  audience_size: z.string($2);
+  payout_method: z.string($2);
+  bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),
 
-type PartnerFormValues = z.infer<typeof partnerFormSchema>;
-
+type PartnerFormValues = $2;
 export function PartnerRegistrationForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { user } = useAuth();
-
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const { user } = useAuth($2);
   const form = useForm<PartnerFormValues>({
-    resolver: zodResolver(partnerFormSchema),
+    resolver: zodResolver($2);
     defaultValues: {
       name: "",
       website: "",
@@ -42,40 +39,33 @@ export function PartnerRegistrationForm() {
       niche: "",
       audience_size: "",
       payout_method: "paypal",
-      bio: ""}});
+      bio: ""}}),
 
   const checkExistingPartner = async () => {
-    const { data: existingPartner } = await supabase
+    const { data: existingPartner} = await supabase
       .from('partner_profiles')
       .select('id')
       .eq('user_id', user.id)
-      .single();
-
+      .single($2);
     if (existingPartner) {
-      toast({
-        title: "Already registered",
-        description: "You have already registered as a partner.",
-        variant: "destructive"});
-      setIsSubmitting(false);
-      return true;
+      toast($2);
+      setIsSubmitting($2);
+      return true
     }
-    return false;
-  };
+    return false
+  },
 
   async function onSubmit(data: PartnerFormValues) {
     if (!user) {
-      toast({
-        title: "Authentication required",
-        description: "You must be logged in to register as a partner.",
-        variant: "destructive"});
-      return;
+      toast($2);
+      return
     }
 
-    setIsSubmitting(true);
+    setIsSubmitting($2);
     try {
       // Check if they already have a partner profile
-      const hasExistingPartner = await checkExistingPartner();
-      if (hasExistingPartner) return;
+      const hasExistingPartner = await checkExistingPartner($2);
+      if (hasExistingPartner) return,
 
       // Insert new partner profile
       const { data: newPartner, error } = await supabase
@@ -97,34 +87,28 @@ export function PartnerRegistrationForm() {
             status: 'pending', // Partners need approval
           }
         ])
-        .select();
+        .select($2);
+      if (error) throw error,
 
-      if (error) throw error;
-
-      toast({
-        title: "Application submitted!",
-        description: "Your partner application has been submitted for review.",
-        variant: "default"});
-
+      toast($2);
       // Create a referral code if they don't have one already
-      const { data: existingCode } = await supabase
+      const { data: existingCode} = await supabase
         .from('referral_codes')
         .select('code')
         .eq('user_id', user.id)
-        .single();
-
+        .single($2);
       if (!existingCode) {
-        await supabase.rpc('generate_referral_code', { user_id: user.id });
+        await supabase.rpc('generate_referral_code', { user_id: user.id })
       }
 
     } catch (error: any) {
-      console.error('Error submitting partner application:', error);
+      console.error($2);
       toast({
         title: "Submission failed",
         description: error.message || "There was a problem submitting your application.",
-        variant: "destructive"});
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
   }
 
@@ -327,5 +311,5 @@ export function PartnerRegistrationForm() {
         </Form>
       </CardContent>
     </Card>
-  );
+  )
 }

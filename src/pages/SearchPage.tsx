@@ -9,21 +9,20 @@ import {
   Tabs,
   TabsContent,
   TabsList,
-  TabsTrigger} from "@/components/ui/tabs";
+  TabsTrigger} from "@/components/ui/tabs",
 import { Loader2 } from 'lucide-react'
 
 interface SearchResult {
-  id: string;
-  type: "product" | "service" | "talent" | "blog" | "doc";
-  title: string;
-  description: string;
-}
+  id: string,
+  type: "product" | "service" | "talent" | "blog" | "doc",
+  title: string,
+  description: string}
 
 function highlight(text: string, term: string) {
-  if (!term) return text;
-  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const regex = new RegExp(`(${escaped})`, "gi");
-  const parts = text.split(regex);
+  if (!term) return text,
+  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+  const regex = new RegExp(`(${escaped})`, "gi"),
+  const parts = text.split($2);
   return (
     <>
       {parts.map((part, i) =>
@@ -36,85 +35,78 @@ function highlight(text: string, term: string) {
         )
       )}
     </>
-  );
+  )
 }
 
 export default function SearchPage() {
-  const router = useRouterReady(); // Use our custom hook
-  const [query, setQuery] = useState("");
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [loading, setLoading] = useState(false);
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions();
-
+  const router = useRouterReady(), // Use our custom hook
+  const [query, setQuery] = useState($2);
+  const [results, setResults] = useState<SearchResult[]>([]),
+  const [loading, setLoading] = useState($2);
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions($2);
   // Force re-render and reset state when route changes
   const routeKey = useRouteChange(() => {
-    setResults([]);
-    setLoading(false);
-  });
+    setResults($2);
+    setLoading(false)
+  }),
 
-  const productResults = results.filter(
-    r => r.type === 'product' || r.type === 'service'
-  );
-  const talentResults = results.filter(r => r.type === 'talent');
-  const docResults = results.filter(r => r.type === 'doc');
-  const blogResults = results.filter(r => r.type === 'blog');
-  const marketplaceResults = [...productResults, ...talentResults];
+  const productResults = results.filter($2);
+  const talentResults = results.filter($2);
+  const docResults = results.filter($2);
+  const blogResults = results.filter($2);
+  const marketplaceResults = [...productResults, ...talentResults],
 
   // Sync query with URL parameter changes
   useEffect(() => {
-    if (!router.isReady) return;
+    if (!router.isReady) return,
     
-    const urlQuery = (router.query.q as string) || "";
+    const urlQuery = $2;
     if (urlQuery !== query) {
-      setQuery(urlQuery);
+      setQuery(urlQuery)
     }
-  }, [router.isReady, router.query.q]); // Fixed dependency array
+  }, [router.isReady, router.query.q]), // Fixed dependency array
 
   // Fetch results when query changes
   useEffect(() => {
-    if (!router.isReady) return;
+    if (!router.isReady) return,
     
     if (query.trim()) {
-      fetchResults(query.trim());
+      fetchResults(query.trim())
     } else {
-      setResults([]);
+      setResults([])
     }
-  }, [router.isReady, query]); // Fixed dependency array
+  }, [router.isReady, query]), // Fixed dependency array
 
   const fetchResults = async (term: string) => {
     if (!term.trim()) {
-      setResults([]);
-      return;
+      setResults($2);
+      return
     }
 
-    setLoading(true);
+    setLoading($2);
     try {
-      const res = await fetch(`/api/search?query=${encodeURIComponent(term)}`);
-      const data = await res.json();
+      const res = $2;
+      const data = await res.json($2);
       if (data && data.results && Array.isArray(data.results)) {
-        setResults(data.results);
+        setResults(data.results)
       } else {
-        setResults([]);
-        logErrorToProduction('Search API response structure is not as expected:', { data: data });
+        setResults($2);
+        logErrorToProduction('Search API response structure is not as expected:', { data: data})
       }
     } catch (error) {
-      logErrorToProduction('Search failed:', { data: error });
-      setResults([]);
+      logErrorToProduction($2);
+      setResults([])
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  },
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault($2);
     if (query.trim()) {
-      router.push(`/search?q=${encodeURIComponent(query.trim())}`);
-    }
-  };
-
+      router.push(`/search?q = $2;
   // Add key prop to force re-render when route changes
-  const pageKey = `search-${routeKey}-${router.asPath}`;
-
+  const pageKey = $2;
   return (
     <div key={pageKey}>
       <main className="container mx-auto px-4 py-8">
@@ -123,9 +115,9 @@ export default function SearchPage() {
             value={query}
             onChange={setQuery}
             onSelectSuggestion={(suggestion) => {
-              const searchTerm = suggestion.text.trim();
-              setQuery(searchTerm);
-              router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
+              const searchTerm = suggestion.text.trim($2);
+              setQuery($2);
+              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
             }}
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects..."
@@ -241,5 +233,5 @@ export default function SearchPage() {
         )}
       </main>
     </div>
-  );
+  )
 }

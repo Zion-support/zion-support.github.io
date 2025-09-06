@@ -15,41 +15,37 @@ import { useAuth } from "@/hooks/useAuth";
 import { UserProfile } from "@/types/auth";
 import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
-
 export default function TalentProfilePage() {
-  const router = useRouter();
+  const router = useRouter($2);
   // Get id from Next.js router query params
-  const { id } = router.query as { id?: string };
-  const { profile, isLoading, error } = useTalentProfile(id);
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-  const { isAuthenticated, user } = useAuth();
-
+  const { id } = router.query as { id?: string },
+  const { profile, isLoading, error } = useTalentProfile($2);
+  const [isHireModalOpen, setIsHireModalOpen] = useState($2);
+  const [isMessageModalOpen, setIsMessageModalOpen] = useState($2);
+  const { userDetails } = useAuthStatus($2);
+  const { isAuthenticated, user } = useAuth($2);
   // Create a compatible UserProfile from UserDetails or the authenticated user
-  const userProfile: UserProfile = user ? {
-    id: user.id || '',
+  const userProfile: UserProfile = $2;
     displayName: user.displayName || '',
     email: user.email || '', // Ensure email is always a string
     userType: user.userType || null,
     profileComplete: user.profileComplete || false,
-    created_at: user.created_at || new Date().toISOString(),
-    updated_at: user.updatedAt || new Date().toISOString(),
+    created_at: user.created_at || new Date().toISOString($2);
+    updated_at: user.updatedAt || new Date().toISOString($2);
     role: user.role || '',
     name: user.name || '',
     points: user.points || 0
   } : {
-    id: userDetails?.id || '',
-    displayName: userDetails?.name || '',
-    email: userDetails?.email || '', // Ensure email is always a string
+    id: userDetails ?.id || '',
+    displayName: userDetails ?.name || '',
+    email: userDetails ?.email || '', // Ensure email is always a string
     userType: null, // Default empty string since userDetails doesn't have this property
     profileComplete: false, // Default value since userDetails doesn't have this property
     created_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
     updated_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
     role: '', // Default empty string since userDetails doesn't have this property
     name: '',
-    points: 0
-  };
+    points: 0},
 
   // Handle loading error gracefully
   useEffect(() => {
@@ -57,41 +53,35 @@ export default function TalentProfilePage() {
       toast({
         title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
-        variant: "destructive"});
+        variant: "destructive"})
     }
-  }, [error]);
+  }, [error]),
 
   if (isLoading) {
-    return <ProfileLoadingState />;
+    return <ProfileLoadingState />
   }
 
   if (error || !profile) {
-    return <ProfileErrorState error={error} />;
+    return <ProfileErrorState error={error} />
   }
 
   const handleRequestHire = () => {
     if (!isAuthenticated) {
-      toast({
-        title: "Authentication required",
-        description: "Please sign in to hire this talent.",
-        variant: "default"});
-      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
-      return;
+      toast($2);
+      router.push(`/login?returnTo = $2;
+      return
     }
-    setIsHireModalOpen(true);
-  };
+    setIsHireModalOpen(true)
+  },
 
   const handleMessageTalent = () => {
     if (!isAuthenticated) {
-      toast({
-        title: "Authentication required",
-        description: "Please sign in to message this talent.",
-        variant: "default"});
-      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
-      return;
+      toast($2);
+      router.push(`/login?returnTo = $2;
+      return
     }
-    setIsMessageModalOpen(true);
-  };
+    setIsMessageModalOpen(true)
+  },
 
   return (
     <>
@@ -147,5 +137,5 @@ export default function TalentProfilePage() {
       />
     </div>
     </>
-  );
+  )
 }

@@ -5,18 +5,15 @@ import { DisputesList } from "./DisputesList";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
-
 export function DisputeDashboard() {
-  const { disputes, isLoading, refetch } = useDisputes();
-
+  const { disputes, isLoading, refetch } = useDisputes($2);
   useEffect(() => {
-    refetch();
-  }, [refetch]);
+    refetch()
+  }, [refetch]),
 
-  const openDisputes = disputes.filter(d => d.status === 'open');
-  const underReviewDisputes = disputes.filter(d => d.status === 'under_review');
-  const resolvedDisputes = disputes.filter(d => d.status === 'resolved');
-
+  const openDisputes = disputes.filter($2);
+  const underReviewDisputes = disputes.filter($2);
+  const resolvedDisputes = disputes.filter($2);
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -85,5 +82,5 @@ export function DisputeDashboard() {
       
       <DisputesList disputes={disputes} isLoading={isLoading} />
     </div>
-  );
+  )
 }

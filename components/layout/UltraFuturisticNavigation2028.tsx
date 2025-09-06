@@ -11,18 +11,15 @@ import {
   Palette, Camera, Video, Music, Gamepad2, Heart,
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceCategories = [
-  {
-    title: '🚀 2028 Futuristic Innovations',
+const serviceCategories = $2;
     icon: Rocket,
     color: 'from-violet-600 to-purple-600',
     description: 'Beyond the future of technology',
@@ -141,54 +138,40 @@ const serviceCategories = [
       { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
     ]
   }
-];
+],
 
 const companyLinks = [
-  { name: '🏠 Home', href: '/', icon: Home },
-  { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket },
-  { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star },
-  { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign },
-  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },
-  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
-  { name: '🎯 About Us', href: '/about', icon: Users },
-  { name: '📞 Contact', href: '/contact', icon: MessageCircle },
-  { name: '🔒 Support', href: '/support', icon: ShieldCheck }
-];
+  { name: '🏠 Home', href: '/', icon: Home},
+  { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket},
+  { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star},
+  { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign},
+  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase},
+  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen},
+  { name: '🎯 About Us', href: '/about', icon: Users},
+  { name: '📞 Contact', href: '/contact', icon: MessageCircle},
+  { name: '🔒 Support', href: '/support', icon: ShieldCheck}
+],
 
 const resourceLinks = [
-  { name: '📖 Documentation', href: '/docs', icon: BookOpen },
-  { name: '🎥 Video Tutorials', href: '/tutorials', icon: Video },
-  { name: '💡 API Reference', href: '/api', icon: Code },
-  { name: '🛠️ Developer Tools', href: '/dev-tools', icon: Wrench },
-  { name: '📱 Mobile Apps', href: '/mobile', icon: Smartphone },
-  { name: '☁️ Cloud Services', href: '/cloud', icon: Cloud },
-  { name: '🔐 Security Center', href: '/security', icon: Shield },
-  { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }
-];
+  { name: '📖 Documentation', href: '/docs', icon: BookOpen},
+  { name: '🎥 Video Tutorials', href: '/tutorials', icon: Video},
+  { name: '💡 API Reference', href: '/api', icon: Code},
+  { name: '🛠️ Developer Tools', href: '/dev-tools', icon: Wrench},
+  { name: '📱 Mobile Apps', href: '/mobile', icon: Smartphone},
+  { name: '☁️ Cloud Services', href: '/cloud', icon: Cloud},
+  { name: '🔐 Security Center', href: '/security', icon: Shield},
+  { name: '📊 Analytics', href: '/analytics', icon: BarChart3}
+],
 
 export default function UltraFuturisticNavigation2028() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
-
-  const handleCategoryHover = (categoryTitle: string) => {
-    setActiveCategory(categoryTitle);
-  };
-
-  const handleCategoryLeave = () => {
-    setActiveCategory(null);
-  };
-
-  const filteredServices = serviceCategories.flatMap(category =>
-    category.services.filter(service =>
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  );
-
+  const [isOpen, setIsOpen] = useState($2);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState($2);
+  const toggleMenu = () => setIsOpen($2);
+  const closeMenu = () => setIsOpen($2);
+  const handleCategoryHover = $2;
+  const handleCategoryLeave = $2;
+  const filteredServices = $2;
   return (
     <nav className="relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30">
       {/* Top Contact Bar */}
@@ -349,9 +332,9 @@ export default function UltraFuturisticNavigation2028() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, height: 0}}
             animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            exit={{ opacity: 0, height: 0}}
             className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30"
           >
             <div className="px-4 py-6 space-y-6">
@@ -456,5 +439,5 @@ export default function UltraFuturisticNavigation2028() {
         </div>
       )}
     </nav>
-  );
+  )
 }

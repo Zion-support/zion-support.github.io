@@ -10,16 +10,13 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle} from "@/components/ui/card";
+  CardTitle} from "@/components/ui/card",
 import { Sparkles } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
-
 export function UsageStats() {
-  const handleSaveChanges = () => {
-    toast({
-      title: "Limits updated",
-      description: "The new usage limits have been saved successfully."});
-  };
+  const handleSaveChanges = $2;
+      description: "The new usage limits have been saved successfully."})
+  },
 
   return (
     <div className="space-y-8">
@@ -174,5 +171,5 @@ export function UsageStats() {
         <Button>Contact Us</Button>
       </div>
     </div>
-  );
+  )
 }

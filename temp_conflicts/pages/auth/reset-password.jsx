@@ -1,6 +1,5 @@
 
 import Head from 'next/head';
-
 const ResetPassword = () => {
   return (
     <div>
@@ -14,7 +13,7 @@ const ResetPassword = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default ResetPassword;
+export default ResetPassword,

@@ -1,6 +1,5 @@
-export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {
-  if (!code) return url;
-  const u = new URL(url);
-  u.searchParams.set('ref', code);
-  return u.toString();
+export function affiliate(url: string, code: string = $2;
+  const u = new URL($2);
+  u.searchParams.set($2);
+  return u.toString()
 }

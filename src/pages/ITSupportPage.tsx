@@ -3,23 +3,18 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 
 export default function ITSupportPage() {
-  const benefits = [
-    {
-      title: "24/7 Assistance",
+  const benefits = $2;
       description: "Our experts are available around the clock to keep your systems running.",
-      icon: <Clock className="h-8 w-8" />},
+      icon: <Clock className = $2;
     {
       title: "Certified Professionals",
       description: "Work with seasoned technicians experienced in modern IT infrastructures.",
-      icon: <ShieldCheck className="h-8 w-8" />},
+      icon: <ShieldCheck className = $2;
     {
       title: "Multi-Channel Support",
       description: "Get help via phone, chat, or onsite visits tailored to your needs.",
-      icon: <Phone className="h-8 w-8" />}];
-
-  const testimonials = [
-    {
-      name: "Lisa Wong",
+      icon: <Phone className = $2;
+  const testimonials = $2;
       role: "Operations Manager",
       text: "Zion's support team resolved our network outage within hours and saved us from a major downtime.",
       avatar: "/placeholder.svg"},
@@ -27,7 +22,7 @@ export default function ITSupportPage() {
       name: "Carlos Diaz",
       role: "IT Lead",
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
-      avatar: "/placeholder.svg"}];
+      avatar: "/placeholder.svg"}],
 
   return (
     <ServiceLandingTemplate
@@ -40,5 +35,5 @@ export default function ITSupportPage() {
       ctaText="Get IT Support"
       ctaLink="/request-quote"
     />
-  );
+  )
 }

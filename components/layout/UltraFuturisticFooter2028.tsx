@@ -8,18 +8,15 @@ import {
   GraduationCap, Scale, Building, Factory, Camera,
   Video, Music, Gamepad2, Sun, Moon, Wind, Droplets,
   Code
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceCategories = [
-  {
-    title: '🚀 2028 Futuristic Innovations',
+const serviceCategories = $2;
     services: [
       { name: 'AI Climate Prediction Platform', href: '/ai-climate-prediction-platform' },
       { name: 'Quantum Cybersecurity Firewall', href: '/quantum-cybersecurity-firewall' },
@@ -54,32 +51,32 @@ const serviceCategories = [
       { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform' }
     ]
   }
-];
+],
 
 const companyLinks = [
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Case Studies', href: '/case-studies', icon: Briefcase },
-  { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
-  { name: 'Careers', href: '/careers', icon: TrendingUp },
-  { name: 'Contact', href: '/contact', icon: MessageCircle },
-  { name: 'Support', href: '/support', icon: ShieldCheck }
-];
+  { name: 'About Us', href: '/about', icon: Users},
+  { name: 'Case Studies', href: '/case-studies', icon: Briefcase},
+  { name: 'Blog & Resources', href: '/blog', icon: BookOpen},
+  { name: 'Careers', href: '/careers', icon: TrendingUp},
+  { name: 'Contact', href: '/contact', icon: MessageCircle},
+  { name: 'Support', href: '/support', icon: ShieldCheck}
+],
 
 const resourceLinks = [
-  { name: 'Documentation', href: '/docs', icon: BookOpen },
-  { name: 'API Reference', href: '/api', icon: Cpu },
-  { name: 'Developer Tools', href: '/dev-tools', icon: Database },
-  { name: 'Mobile Apps', href: '/mobile', icon: Globe },
-  { name: 'Cloud Services', href: '/cloud', icon: Cloud },
-  { name: 'Security Center', href: '/security', icon: Shield }
-];
+  { name: 'Documentation', href: '/docs', icon: BookOpen},
+  { name: 'API Reference', href: '/api', icon: Cpu},
+  { name: 'Developer Tools', href: '/dev-tools', icon: Database},
+  { name: 'Mobile Apps', href: '/mobile', icon: Globe},
+  { name: 'Cloud Services', href: '/cloud', icon: Cloud},
+  { name: 'Security Center', href: '/security', icon: Shield}
+],
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Users },
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: MessageCircle },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video },
-  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code }
-];
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Users},
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: MessageCircle},
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video},
+  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code}
+],
 
 export default function UltraFuturisticFooter2028() {
   return (
@@ -281,5 +278,5 @@ export default function UltraFuturisticFooter2028() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl"></div>
       </div>
     </footer>
-  );
+  )
 }

@@ -6,18 +6,15 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, 
   BookOpen, MessageCircle 
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceCategories = [
-  {
-    title: 'AI & Machine Learning 2026',
+const serviceCategories = $2;
     icon: Brain,
     color: 'from-purple-600 to-pink-600',
     description: 'Next-generation AI solutions',
@@ -88,38 +85,34 @@ const serviceCategories = [
       { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
     ]
   }
-];
+],
 
 const companyLinks = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: '2026 Services', href: '/2026-services-showcase', icon: Rocket },
-  { name: 'Innovative 2026', href: '/2026-innovative-services-showcase', icon: Zap },
-  { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Sparkles },
-  { name: '2026 Pricing', href: '/revolutionary-2026-pricing', icon: DollarSign },
-  { name: 'Case Studies', href: '/case-studies', icon: Briefcase },
-  { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
-  { name: 'Careers', href: '/careers', icon: Users },
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+  { name: 'Home', href: '/', icon: Home},
+  { name: 'About Us', href: '/about', icon: Users},
+  { name: '2026 Services', href: '/2026-services-showcase', icon: Rocket},
+  { name: 'Innovative 2026', href: '/2026-innovative-services-showcase', icon: Zap},
+  { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Sparkles},
+  { name: '2026 Pricing', href: '/revolutionary-2026-pricing', icon: DollarSign},
+  { name: 'Case Studies', href: '/case-studies', icon: Briefcase},
+  { name: 'Blog & Resources', href: '/blog', icon: BookOpen},
+  { name: 'Careers', href: '/careers', icon: Users},
+  { name: 'Contact', href: '/contact', icon: MessageCircle}
+],
 
 const UltraAdvancedNavigation2026 = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState($2);
+  const [isScrolled, setIsScrolled] = useState($2);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleScroll = $2;
+    window.addEventListener($2);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
 
-  const navigationItems = [
-    {
-      name: 'AI Services',
-      href: '/services?category=ai',
+  const navigationItems = $2;
+      href: '/services?category = $2;
       icon: Brain,
       color: 'from-blue-500 to-cyan-500',
       description: 'Autonomous AI systems and consciousness interfaces',
@@ -134,7 +127,7 @@ const UltraAdvancedNavigation2026 = () => {
     },
     {
       name: 'Quantum Tech',
-      href: '/services?category=quantum',
+      href: '/services?category = $2;
       icon: Atom,
       color: 'from-purple-500 to-indigo-500',
       description: 'Quantum computing and space technology',
@@ -147,7 +140,7 @@ const UltraAdvancedNavigation2026 = () => {
     },
     {
       name: 'Metaverse',
-      href: '/services?category=metaverse',
+      href: '/services?category = $2;
       icon: Globe,
       color: 'from-pink-500 to-rose-500',
       description: 'Virtual worlds and digital reality',
@@ -160,7 +153,7 @@ const UltraAdvancedNavigation2026 = () => {
     },
     {
       name: 'Enterprise IT',
-      href: '/services?category=enterprise',
+      href: '/services?category = $2;
       icon: Zap,
       color: 'from-green-500 to-emerald-500',
       description: 'Enterprise solutions and infrastructure',
@@ -171,13 +164,12 @@ const UltraAdvancedNavigation2026 = () => {
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ]
     }
-  ];
+  ],
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  },
 
   return (
     <>
@@ -225,7 +217,7 @@ const UltraAdvancedNavigation2026 = () => {
                     {activeDropdown === item.name && (
                       <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        animate={{ opacity: 1, y: 0, scale: 1}}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl overflow-hidden"
@@ -316,16 +308,16 @@ const UltraAdvancedNavigation2026 = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0}}
+            animate={{ opacity: 1}}
+            exit={{ opacity: 0}}
             transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
             onClick={() => setIsOpen(false)}
           >
             <motion.div
               initial={{ x: '100%' }}
-              animate={{ x: 0 }}
+              animate={{ x: 0}}
               exit={{ x: '100%' }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
               className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-purple-500/20 p-6 overflow-y-auto"
@@ -366,79 +358,4 @@ const UltraAdvancedNavigation2026 = () => {
                     <div className="mt-3 ml-11 space-y-2">
                       {item.subItems.slice(0, 3).map((subItem) => (
                         <Link
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-
-                {/* Quick Links */}
-                <div className="space-y-3 pt-4">
-                  <Link
-                    href="/services"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    All Services
-                  </Link>
-                  <Link
-                    href="/pricing"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Pricing
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Contact
-                  </Link>
-                </div>
-
-                {/* Contact Info - Mobile */}
-                <div className="pt-6 border-t border-gray-700/50 space-y-3">
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Phone className="w-4 h-4" />
-                    <span className="text-sm">{contactInfo.phone}</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Mail className="w-4 h-4" />
-                    <span className="text-sm">{contactInfo.email}</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <MapPin className="w-4 h-4" />
-                    <span className="text-sm">{contactInfo.address}</span>
-                  </div>
-                </div>
-
-                {/* Get Started Button - Mobile */}
-                <div className="pt-4">
-                  <Link
-                    href="/contact"
-                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Get Started Today
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Spacer for fixed navigation */}
-      <div className="h-20"></div>
-    </>
-  );
-}
-
-export default UltraAdvancedNavigation2026;
+                          key = $2;

@@ -7,19 +7,16 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface LoadingState {
   isLoading: boolean
   error: Error | null
   retryCount: number
-  isOnline: boolean
-}
+  isOnline: boolean}
 
 interface DynamicLoaderProps {
   importFn: () => Promise<{ default: ComponentType<any> }>
   fallback?: React.ReactNode
-  errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>
+  errorFallback?: React.ComponentType<{ error: Error, retry: () => void }>
   loadingComponent?: React.ComponentType
   enableRetry?: boolean
   maxRetries?: number
@@ -35,8 +32,8 @@ const EnhancedLoading: React.FC<{
   message?: string
   showProgress?: boolean
 }> = ({ 
-  progress = 0, 
-  message = 'Loading component...', 
+  progress = $2;
+  message = $2;
   showProgress = true 
 }) => (
   <Card className="w-full max-w-md mx-auto">
@@ -50,8 +47,8 @@ const EnhancedLoading: React.FC<{
               style={{
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
               }}
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
+              initial={{ rotate: 0}}
+              animate={{ rotate: 360}}
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
             />
           )}
@@ -75,8 +72,7 @@ const EnhancedError: React.FC<{
   retry: () => void
   isOnline: boolean
   retryCount: number
-  maxRetries: number
-}> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
+  maxRetries: number}> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
   <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
     <CardContent className="p-6">
       <div className="flex flex-col items-center space-y-4">
@@ -144,9 +140,9 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   fallback,
   errorFallback,
   loadingComponent,
-  enableRetry = true,
-  maxRetries = 3,
-  prefetch = false,
+  enableRetry = $2;
+  maxRetries = $2;
+  prefetch = $2;
   className,
   children,
   ...props
@@ -155,8 +151,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     isLoading: true,
     error: null,
     retryCount: 0,
-    isOnline: true
-  })
+    isOnline: true})
   const [progress, setProgress] = useState(0)
   const [DynamicComponent, setDynamicComponent] = useState<ComponentType<any> | null>(null)
   const isOnline = useNetworkStatus()
@@ -188,13 +183,12 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       setProgress(100)
       
       setTimeout(() => {
-        setLoadingState(prev => ({ ...prev, isLoading: false }))
+        setLoadingState(prev => ({ ...prev, isLoading: false}))
       }, 300) // Small delay for smoother transition
 
     } catch (error) {
-      logErrorToProduction('Dynamic component loading failed:', { data: error })
-      setLoadingState(prev => ({
-        ...prev,
+      logErrorToProduction('Dynamic component loading failed:', { data: error})
+      setLoadingState(prev = $2;
         isLoading: false,
         error: error as Error,
         retryCount: prev.retryCount + 1,
@@ -238,7 +232,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     return (
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+        animate={{ opacity: 1, scale: 1}}
         className={cn("flex items-center justify-center p-8", className)}
       >
         <EnhancedLoading 
@@ -262,7 +256,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     return (
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+        animate={{ opacity: 1, scale: 1}}
         className={cn("flex items-center justify-center p-8", className)}
       >
         <EnhancedError
@@ -282,55 +276,23 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       <Suspense fallback={fallback || <EnhancedLoading />}>
         <AnimatePresence>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className={className}
-          >
-            <DynamicComponent {...props}>
-              {children}
-            </DynamicComponent>
-          </motion.div>
-        </AnimatePresence>
-      </Suspense>
-    )
-  }
-
-  return null
-}
-
-// HOC for creating dynamic components easily
-export const createDynamicComponent = <T extends ComponentType<any>>(
-  importFn: () => Promise<{ default: T }>,
+            transition = $2;
   options?: Omit<DynamicLoaderProps, 'importFn' | 'children'>
 ) => {
   return (props: React.ComponentProps<T> & { children?: React.ReactNode }) => (
     <DynamicComponentLoader
-      importFn={importFn}
-      {...(options || {})}
-      {...(props as any)}
-    />
-  )
-}
-
-// Predefined dynamic loaders for common heavy components
-// Note: These are examples - uncomment and install types as needed
-
-// export const DynamicChartComponent = createDynamicComponent(
-//   () => import('recharts').then(module => ({ default: module.LineChart })),
+      importFn = $2;
 //   {
 //     loadingComponent: () => (
-//       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
-//         <span className="text-muted-foreground">Loading chart...</span>
-//       </div>
-//     ),
+//       <div className = $2;
 //     prefetch: true
 //   }
 // )
 
-// export const DynamicThreeComponent = createDynamicComponent(
-//   () => import('three').then(module => ({ default: module.WebGLRenderer })),
+// export const DynamicThreeComponent = $2;
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">

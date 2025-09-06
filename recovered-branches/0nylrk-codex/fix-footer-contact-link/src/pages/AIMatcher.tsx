@@ -8,35 +8,28 @@ import { AIMatchmaker } from "@/components/AIMatchmaker";
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
 import { toast } from "@/hooks/use-toast";
 import { MatchResult } from "@/lib/ai-matchmaking";
-
 export default function AIMatcherPage() {
-  const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const navigate = useNavigate($2);
+  const [selectedCategory, setSelectedCategory] = useState<string>("all"),
   
-  const handleMatchSelect = (match: MatchResult) => {
-    // Get the item type from the category
-    let itemType = "service";
-    const category = match.item.category.toLowerCase();
-    
+  const handleMatchSelect = $2;
+    const category = match.item.category.toLowerCase($2);
     if (category.includes("talent") || category === "engineering" || 
         category === "data science" || category === "development") {
-      itemType = "talent";
+      itemType = "talent"
     } else if (category.includes("equipment") || category === "hardware") {
-      itemType = "equipment";
+      itemType = "equipment"
     }
     
-    toast({
-      title: "Match Selected",
-      description: `You've selected ${match.item.title}`});
-    
+    toast($2);
     // Navigate to the quote request page with the selected item
     navigate("/request-quote", {
       state: { 
         serviceType: itemType,
         specificItem: match.item
       }
-    });
-  };
+    })
+  },
   
   return (
     <>
@@ -77,5 +70,5 @@ export default function AIMatcherPage() {
       </div>
       <Footer />
     </>
-  );
+  )
 }

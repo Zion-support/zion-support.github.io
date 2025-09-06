@@ -1,11 +1,9 @@
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
-
-const contact = {
-	mobile: '+1 302 464 0950',
+const contact = $2;
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+},
 
 export const enterpriseITSolutions: MicroSaasService[] = [
 	{
@@ -16,14 +14,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		period: '/month',
 		description: 'Comprehensive enterprise data governance platform that automates data quality management, compliance monitoring, and governance workflows across all enterprise data sources and systems.',
 		features: [
-			'Automated data quality monitoring',
-			'Compliance and regulatory tracking',
-			'Data lineage and cataloging',
-			'Privacy and security controls',
-			'Master data management',
-			'Data stewardship workflows',
-			'Real-time compliance reporting',
-			'Integration with enterprise systems'
+			'Automated data quality monitoringCompliance and regulatory trackingData lineage and catalogingPrivacy and security controlsMaster data managementData stewardship workflowsReal-time compliance reportingIntegration with enterprise systems'
 		],
 		popular: true,
 		icon: '🏛️',
@@ -50,8 +41,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		launchDate: '2025-01-05',
 		customers: 23,
 		rating: 4.8,
-		reviews: 18
-	},
+		reviews: 18},
 	{
 		id: 'enterprise-api-governance-platform',
 		name: 'Enterprise API Governance Platform',
@@ -60,14 +50,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		period: '/month',
 		description: 'Enterprise-grade API governance platform that provides centralized API management, security controls, compliance monitoring, and lifecycle management across all enterprise APIs.',
 		features: [
-			'Centralized API management',
-			'Security and access controls',
-			'API lifecycle management',
-			'Compliance and audit trails',
-			'API performance monitoring',
-			'Developer portal and documentation',
-			'API versioning and deprecation',
-			'Integration with enterprise systems'
+			'Centralized API managementSecurity and access controlsAPI lifecycle managementCompliance and audit trailsAPI performance monitoringDeveloper portal and documentationAPI versioning and deprecationIntegration with enterprise systems'
 		],
 		popular: true,
 		icon: '🔌',
@@ -94,8 +77,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		launchDate: '2025-01-08',
 		customers: 45,
 		rating: 4.7,
-		reviews: 32
-	},
+		reviews: 32},
 	{
 		id: 'enterprise-identity-access-management-suite',
 		name: 'Enterprise Identity & Access Management Suite',
@@ -104,14 +86,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		period: '/month',
 		description: 'Enterprise-grade identity and access management platform that provides advanced authentication, authorization, and identity governance with automated compliance and security controls.',
 		features: [
-			'Multi-factor authentication',
-			'Single sign-on (SSO)',
-			'Identity governance and administration',
-			'Privileged access management',
-			'Compliance and audit reporting',
-			'Automated provisioning and deprovisioning',
-			'Risk-based access controls',
-			'Integration with enterprise systems'
+			'Multi-factor authenticationSingle sign-on (SSO)Identity governance and administrationPrivileged access managementCompliance and audit reportingAutomated provisioning and deprovisioningRisk-based access controlsIntegration with enterprise systems'
 		],
 		popular: true,
 		icon: '🆔',
@@ -138,8 +113,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		launchDate: '2025-01-12',
 		customers: 67,
 		rating: 4.8,
-		reviews: 45
-	},
+		reviews: 45},
 	{
 		id: 'enterprise-workflow-automation-platform',
 		name: 'Enterprise Workflow Automation Platform',
@@ -148,14 +122,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		period: '/month',
 		description: 'Enterprise-grade workflow automation platform that uses AI to optimize business processes, automate complex workflows, and integrate with enterprise systems for seamless operations.',
 		features: [
-			'AI-powered workflow optimization',
-			'Complex process automation',
-			'Enterprise system integration',
-			'Workflow analytics and insights',
-			'Compliance and audit trails',
-			'Multi-tenant architecture',
-			'Advanced workflow designer',
-			'Real-time monitoring and alerts'
+			'AI-powered workflow optimizationComplex process automationEnterprise system integrationWorkflow analytics and insightsCompliance and audit trailsMulti-tenant architectureAdvanced workflow designerReal-time monitoring and alerts'
 		],
 		popular: true,
 		icon: '⚙️',
@@ -182,8 +149,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		launchDate: '2025-01-15',
 		customers: 34,
 		rating: 4.7,
-		reviews: 26
-	},
+		reviews: 26},
 	{
 		id: 'enterprise-monitoring-and-observability-suite',
 		name: 'Enterprise Monitoring & Observability Suite',
@@ -192,14 +158,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		period: '/month',
 		description: 'Enterprise-grade monitoring and observability platform that provides comprehensive visibility into infrastructure, applications, and business metrics with intelligent alerting and automated incident response.',
 		features: [
-			'Infrastructure monitoring',
-			'Application performance monitoring',
-			'Business metrics tracking',
-			'Intelligent alerting and escalation',
-			'Automated incident response',
-			'Distributed tracing',
-			'Log aggregation and analysis',
-			'Integration with enterprise systems'
+			'Infrastructure monitoringApplication performance monitoringBusiness metrics trackingIntelligent alerting and escalationAutomated incident responseDistributed tracingLog aggregation and analysisIntegration with enterprise systems'
 		],
 		popular: true,
 		icon: '📊',
@@ -226,6 +185,5 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		launchDate: '2025-01-18',
 		customers: 56,
 		rating: 4.8,
-		reviews: 38
-	}
-];
+		reviews: 38}
+],

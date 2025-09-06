@@ -1,58 +1,52 @@
 
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-
 export interface TalentProfileData {
-  name: string;
-  title: string;
-  bio: string;
-  skills: string[];
-  location?: string;
+  name: string,
+  title: string,
+  bio: string,
+  skills: string[],
+  location?: string
 }
 
 export interface CategorizedSkills {
-  programming: string[];
-  devops: string[];
-  platforms: string[];
-  softSkills: string[];
-  other: string[];
+  programming: string[],
+  devops: string[],
+  platforms: string[],
+  softSkills: string[],
+  other: string[]
 }
 
 export interface EnhancedProfile {
-  summary: string;
-  categorizedSkills: CategorizedSkills;
-}
+  summary: string,
+  categorizedSkills: CategorizedSkills}
 
 export function useTalentProfileEnhancer() {
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [isGenerating, setIsGenerating] = useState($2);
+  const [error, setError] = useState<string | null>(null),
   
   const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
-    setIsGenerating(true);
-    setError(null);
-    
+    setIsGenerating($2);
+    setError($2);
     try {
       // Call the Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
-        body: { talentData: profileData }
-      });
-
+      const { data, error } = await supabase.functions.invoke($2);
       if (error) {
-        throw new Error(error.message);
+        throw new Error(error.message)
       }
       
-      return data as EnhancedProfile;
+      return data as EnhancedProfile
     } catch (err: any) {
-      setError(err.message || 'Failed to enhance profile');
-      return null;
+      setError($2);
+      return null
     } finally {
-      setIsGenerating(false);
+      setIsGenerating(false)
     }
-  };
+  },
   
   return {
     enhanceProfile,
     isGenerating,
     error
-  };
+  }
 }

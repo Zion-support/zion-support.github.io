@@ -6,113 +6,79 @@ import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search,
   Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart
-} from 'lucide-react';
+} from 'lucide-react',
 
 import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const categories = [
-  'All Services',
-  'AI & Machine Learning',
-  'Customer Success',
-  'Supply Chain',
-  'Financial Planning',
-  'Sales Intelligence',
-  'HR Analytics',
-  'Decision Intelligence',
-  'Content Marketing',
-  'CRM & Customer Intelligence',
-  'Business Intelligence'
-];
-
-const pricingRanges = [
-  'All Prices',
-  'Under $300',
-  '$300 - $500',
-  '$500 - $800',
-  '$800+'
-];
-
+const categories = $2;
+const pricingRanges = $2;
 export default function ComprehensiveServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [selectedPriceRange, setSelectedPriceRange] = useState($2);
+  const [searchQuery, setSearchQuery] = useState($2);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity'),
 
   // Filter services based on selections
-  const filteredServices = comprehensiveRealServices2025.filter(service => {
-    const categoryMatch = selectedCategory === 'All Services' || service.category.includes(selectedCategory);
-    
-    let priceMatch = true;
+  const filteredServices = comprehensiveRealServices2025.filter($2);
+    let priceMatch = $2;
     if (selectedPriceRange !== 'All Prices') {
-      const price = parseInt(service.price.replace('$', ''));
+      const price = parseInt(service.price.replace('$', '')),
       switch (selectedPriceRange) {
         case 'Under $300':
-          priceMatch = price < 300;
-          break;
+          priceMatch = $2;
+          break,
         case '$300 - $500':
-          priceMatch = price >= 300 && price <= 500;
-          break;
+          priceMatch = $2;
+          break,
         case '$500 - $800':
-          priceMatch = price > 500 && price <= 800;
-          break;
+          priceMatch = $2;
+          break,
         case '$800+':
-          priceMatch = price > 800;
-          break;
+          priceMatch = $2;
+          break
       }
     }
     
-    const searchMatch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                       service.category.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    return categoryMatch && priceMatch && searchMatch;
-  });
+    const searchMatch = $2;
+    return categoryMatch && priceMatch && searchMatch
+  }),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare($2);
       case 'price':
-        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''));
+        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', '')),
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'popularity':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-      default:
-        return 0;
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+      default: return 0
     }
-  });
+  }),
 
   const getPriceRange = (price: string) => {
-    const numPrice = parseInt(price.replace('$', ''));
-    if (numPrice < 300) return 'Under $300';
-    if (numPrice <= 500) return '$300 - $500';
-    if (numPrice <= 800) return '$500 - $800';
-    return '$800+';
-  };
+    const numPrice = parseInt(price.replace('$', '')),
+    if (numPrice < 300) return 'Under $300',
+    if (numPrice <= 500) return '$300 - $500',
+    if (numPrice <= 800) return '$500 - $800',
+    return '$800+'
+  },
 
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => 
-      category.toLowerCase().includes(cat.id.toLowerCase())
-    );
-    return categoryData ? categoryData.icon : Globe;
-  };
+  const getCategoryIcon = $2;
+    return categoryData ? categoryData.icon : Globe
+  },
 
-  const getCategoryColor = (category: string) => {
-    const categoryData = categories.find(cat => 
-      category.toLowerCase().includes(cat.id.toLowerCase())
-    );
-    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';
-  };
+  const getCategoryColor = $2;
+    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
+  },
 
   return (
     <>
@@ -140,8 +106,8 @@ export default function ComprehensiveServicesShowcase2025() {
 
           <div className="relative z-10 container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl lg:text-7xl font-bold mb-6">
@@ -300,8 +266,8 @@ export default function ComprehensiveServicesShowcase2025() {
                 {sortedServices.map((service, index) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 30}}
+                    animate={{ opacity: 1, y: 0}}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="group"
                   >
@@ -387,7 +353,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    animate={{ opacity: 1, x: 0}}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="group"
                   >
@@ -488,9 +454,9 @@ export default function ComprehensiveServicesShowcase2025() {
                 </p>
                 <button
                   onClick={() => {
-                    setSelectedCategory('All Services');
-                    setSelectedPriceRange('All Prices');
-                    setSearchQuery('');
+                    setSelectedCategory($2);
+                    setSelectedPriceRange($2);
+                    setSearchQuery('')
                   }}
                   className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all duration-300"
                 >
@@ -505,50 +471,7 @@ export default function ComprehensiveServicesShowcase2025() {
         <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  Ready to Transform
-                </span>
-                <br />
-                <span className="text-white">Your Business?</span>
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Let's discuss how our innovative services can help you achieve your business goals. 
-                Get in touch with our experts today.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-                <a
-                  href={`tel:${contactInfo.mobile}`}
-                  className="flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  {contactInfo.mobile}
-                </a>
-                <a
-                  href={`mailto:${contactInfo.email}`}
-                  className="flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
-                >
-                  <Mail className="w-5 h-5 mr-2" />
-                  {contactInfo.email}
-                </a>
-              </div>
-
-              <div className="text-center text-gray-400">
-                <p className="mb-2">{contactInfo.address}</p>
-                <p>Visit us at: <a href={contactInfo.website} className="text-cyan-400 hover:text-cyan-300 transition-colors">{contactInfo.website}</a></p>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-    </>
-  );
-};
-
-export default ComprehensiveServicesShowcase2025;
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
+export default ComprehensiveServicesShowcase2025,

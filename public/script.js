@@ -1,381 +1,309 @@
 // Zion Tech Group Website JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation Toggle
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    
+    const navToggle = document.getElementById($2);
+    const navMenu = document.getElementById($2);
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
+            navMenu.classList.toggle($2);
+            navToggle.classList.toggle('active')
+        })
     }
     
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
         if (!event.target.closest('.nav') && navMenu && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
+            navMenu.classList.remove($2);
+            navToggle.classList.remove('active')
         }
-    });
+    }),
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            e.preventDefault($2);
+            const target = $2;
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
-                });
+                })
             }
-        });
-    });
+        })
+    }),
     
     // Add scroll effects to elements
-    const observerOptions = {
-        threshold: 0.1,
+    const observerOptions = $2;
         rootMargin: '0px 0px -50px 0px'
-    };
+    },
     
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in-up');
+                entry.target.classList.add('fade-in-up')
             }
-        });
-    }, observerOptions);
+        })
+    }, observerOptions),
     
     // Observe elements for animation
-    document.querySelectorAll('.service-card, .solution-card, .stat-item').forEach(el => {
-        observer.observe(el);
-    });
-    
+    document.querySelectorAll('.service-card, .solution-card, .stat-item').forEach(el = $2;
     // Header scroll effect
-    const header = document.querySelector('.header');
-    let lastScrollTop = 0;
-    
+    const header = document.querySelector($2);
+    let lastScrollTop = $2;
     window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
+        const scrollTop = $2;
         if (scrollTop > 100) {
-            header.classList.add('scrolled');
+            header.classList.add('scrolled')
         } else {
-            header.classList.remove('scrolled');
+            header.classList.remove('scrolled')
         }
         
-        lastScrollTop = scrollTop;
-    });
-    
+        lastScrollTop = $2;
     // Form handling for contact forms
-    const contactForms = document.querySelectorAll('form[data-contact]');
-    
+    const contactForms = document.querySelectorAll($2);
     contactForms.forEach(form => {
         form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(form);
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            
+            e.preventDefault($2);
+            const formData = new FormData($2);
+            const submitBtn = form.querySelector($2);
+            const originalText = $2;
             // Show loading state
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
+            submitBtn.textContent = $2;
+            submitBtn.disabled = $2;
             // Simulate form submission (replace with actual API call)
             setTimeout(() => {
-                submitBtn.textContent = 'Message Sent!';
-                submitBtn.style.background = '#10b981';
-                
+                submitBtn.textContent = $2;
+                submitBtn.style.background = $2;
                 // Reset form
-                form.reset();
-                
+                form.reset($2);
                 // Reset button after delay
                 setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.background = '';
-                }, 3000);
-            }, 2000);
-        });
-    });
+                    submitBtn.textContent = $2;
+                    submitBtn.disabled = $2;
+                    submitBtn.style.background = ''
+                }, 3000)
+            }, 2000)
+        })
+    }),
     
     // Lazy loading for images
     if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.classList.remove('lazy');
-                    imageObserver.unobserve(img);
+            entries.forEach(entry = $2;
+                    img.src = $2;
+                    img.classList.remove($2);
+                    imageObserver.unobserve(img)
                 }
-            });
-        });
+            })
+        }),
         
         document.querySelectorAll('img[data-src]').forEach(img => {
-            imageObserver.observe(img);
-        });
+            imageObserver.observe(img)
+        })
     }
     
     // Search functionality
-    const searchInput = document.querySelector('.search-input');
+    const searchInput = document.querySelector($2);
     if (searchInput) {
         searchInput.addEventListener('input', function() {
-            const query = this.value.toLowerCase();
-            const searchResults = document.querySelector('.search-results');
-            
+            const query = this.value.toLowerCase($2);
+            const searchResults = document.querySelector($2);
             if (query.length > 2) {
                 // Perform search (replace with actual search logic)
-                performSearch(query);
+                performSearch(query)
             } else {
                 if (searchResults) {
-                    searchResults.style.display = 'none';
+                    searchResults.style.display = 'none'
                 }
             }
-        });
+        })
     }
     
     // Newsletter subscription
-    const newsletterForm = document.querySelector('.newsletter-form');
+    const newsletterForm = document.querySelector($2);
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = this.querySelector('input[type="email"]').value;
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            
+            e.preventDefault($2);
+            const email = $2;
+            const submitBtn = this.querySelector($2);
+            const originalText = $2;
             // Show loading state
-            submitBtn.textContent = 'Subscribing...';
-            submitBtn.disabled = true;
-            
+            submitBtn.textContent = $2;
+            submitBtn.disabled = $2;
             // Simulate subscription (replace with actual API call)
             setTimeout(() => {
-                submitBtn.textContent = 'Subscribed!';
-                submitBtn.style.background = '#10b981';
-                
+                submitBtn.textContent = $2;
+                submitBtn.style.background = $2;
                 // Reset form
-                this.reset();
-                
+                this.reset($2);
                 // Reset button after delay
                 setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.background = '';
-                }, 3000);
-            }, 1500);
-        });
+                    submitBtn.textContent = $2;
+                    submitBtn.disabled = $2;
+                    submitBtn.style.background = ''
+                }, 3000)
+            }, 1500)
+        })
     }
     
     // Service card hover effects
-    const serviceCards = document.querySelectorAll('.service-card');
+    const serviceCards = document.querySelectorAll($2);
     serviceCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
-        });
-        
+            this.style.transform = $2;
         card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-    
+            this.style.transform = $2;
     // Stats counter animation
-    const statNumbers = document.querySelectorAll('.stat-number');
+    const statNumbers = document.querySelectorAll($2);
     const statsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                statsObserver.unobserve(entry.target);
+                animateCounter($2);
+                statsObserver.unobserve(entry.target)
             }
-        });
-    }, { threshold: 0.5 });
+        })
+    }, { threshold: 0.5 }),
     
-    statNumbers.forEach(stat => {
-        statsObserver.observe(stat);
-    });
-    
+    statNumbers.forEach(stat = $2;
     // Back to top button
-    const backToTopBtn = document.createElement('button');
-    backToTopBtn.innerHTML = '↑';
-    backToTopBtn.className = 'back-to-top';
-    backToTopBtn.setAttribute('aria-label', 'Back to top');
-    document.body.appendChild(backToTopBtn);
-    
+    const backToTopBtn = document.createElement($2);
+    backToTopBtn.innerHTML = $2;
+    backToTopBtn.className = $2;
+    backToTopBtn.setAttribute($2);
+    document.body.appendChild($2);
     backToTopBtn.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
-        });
-    });
+        })
+    }),
     
     // Show/hide back to top button
     window.addEventListener('scroll', function() {
         if (window.pageYOffset > 300) {
-            backToTopBtn.classList.add('visible');
+            backToTopBtn.classList.add('visible')
         } else {
-            backToTopBtn.classList.remove('visible');
+            backToTopBtn.classList.remove('visible')
         }
-    });
+    }),
     
     // Initialize tooltips
-    initializeTooltips();
-    
+    initializeTooltips($2);
     // Initialize modals
-    initializeModals();
-});
+    initializeModals()
+}),
 
 // Search function
 function performSearch(query) {
     // This would typically make an API call to search your content
     // For now, we'll simulate search results
-    const searchResults = document.querySelector('.search-results');
+    const searchResults = document.querySelector($2);
     if (searchResults) {
         const results = [
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
-        ].filter(item => 
-            item.title.toLowerCase().includes(query)
-        );
-        
+        ].filter(item = $2;
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result => 
                 `<a href="${result.url}" class="search-result-item">${result.title}</a>`
-            ).join('');
-            searchResults.style.display = 'block';
-        } else {
-            searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>';
-            searchResults.style.display = 'block';
+            ).join($2);
+            searchResults.style.display = $2;
+            searchResults.style.display = 'block'
         }
     }
 }
 
 // Counter animation
 function animateCounter(element) {
-    const target = parseInt(element.textContent.replace(/\D/g, ''));
-    const duration = 2000;
-    const step = target / (duration / 16);
-    let current = 0;
-    
-    const timer = setInterval(() => {
-        current += step;
+    const target = parseInt(element.textContent.replace(/\D/g, '')),
+    const duration = $2;
+    const step = $2;
+    let current = $2;
+    const timer = $2;
         if (current >= target) {
-            current = target;
-            clearInterval(timer);
+            current = $2;
+            clearInterval(timer)
         }
         
-        const suffix = element.textContent.replace(/\d/g, '');
-        element.textContent = Math.floor(current) + suffix;
-    }, 16);
+        const suffix = element.textContent.replace($2);
+        element.textContent = Math.floor(current) + suffix
+    }, 16)
 }
 
 // Tooltip initialization
 function initializeTooltips() {
-    const tooltipElements = document.querySelectorAll('[data-tooltip]');
-    
+    const tooltipElements = document.querySelectorAll($2);
     tooltipElements.forEach(element => {
         element.addEventListener('mouseenter', function(e) {
-            const tooltip = document.createElement('div');
-            tooltip.className = 'tooltip';
-            tooltip.textContent = this.dataset.tooltip;
-            document.body.appendChild(tooltip);
-            
-            const rect = this.getBoundingClientRect();
-            tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
-            tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px';
-            
-            this.tooltip = tooltip;
-        });
-        
+            const tooltip = document.createElement($2);
+            tooltip.className = $2;
+            tooltip.textContent = $2;
+            document.body.appendChild($2);
+            const rect = this.getBoundingClientRect($2);
+            tooltip.style.left = $2;
+            tooltip.style.top = $2;
+            this.tooltip = $2;
         element.addEventListener('mouseleave', function() {
             if (this.tooltip) {
-                this.tooltip.remove();
-                this.tooltip = null;
+                this.tooltip.remove($2);
+                this.tooltip = null
             }
-        });
-    });
+        })
+    })
 }
 
 // Modal initialization
 function initializeModals() {
-    const modalTriggers = document.querySelectorAll('[data-modal]');
-    const modals = document.querySelectorAll('.modal');
-    
+    const modalTriggers = document.querySelectorAll($2);
+    const modals = document.querySelectorAll($2);
     modalTriggers.forEach(trigger => {
         trigger.addEventListener('click', function(e) {
-            e.preventDefault();
-            const modalId = this.dataset.modal;
-            const modal = document.getElementById(modalId);
-            
+            e.preventDefault($2);
+            const modalId = $2;
+            const modal = document.getElementById($2);
             if (modal) {
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-        });
-    });
-    
+                modal.classList.add($2);
+                document.body.style.overflow = $2;
     // Close modal on overlay click
     modals.forEach(modal => {
         modal.addEventListener('click', function(e) {
             if (e.target === this) {
-                this.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-        
+                this.classList.remove($2);
+                document.body.style.overflow = $2;
         // Close modal on close button click
-        const closeBtn = modal.querySelector('.modal-close');
+        const closeBtn = modal.querySelector($2);
         if (closeBtn) {
             closeBtn.addEventListener('click', function() {
-                modal.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        }
-    });
-    
+                modal.classList.remove($2);
+                document.body.style.overflow = $2;
     // Close modal on escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             modals.forEach(modal => {
                 if (modal.classList.contains('active')) {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = '';
-                }
-            });
-        }
-    });
-}
-
-// Performance monitoring
-function logPerformance() {
-    if ('performance' in window) {
-        const perfData = performance.getEntriesByType('navigation')[0];
-        console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
-        console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms');
+                    modal.classList.remove($2);
+                    document.body.style.overflow = $2;
+        console.log($2);
+        console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
     }
 }
 
 // Error tracking
 window.addEventListener('error', function(e) {
-    console.error('JavaScript Error:', e.error);
+    console.error($2);
     // Send to error tracking service
-});
+}),
 
 // Analytics tracking (replace with your analytics service)
 function trackEvent(eventName, eventData = {}) {
-    console.log('Event tracked:', eventName, eventData);
+    console.log($2);
     // Implement your analytics tracking here
 }
 
 // Track page views
-trackEvent('page_view', {
-    page: window.location.pathname,
-    title: document.title
-});
-
+trackEvent($2);
 // Track button clicks
 document.addEventListener('click', function(e) {
     if (e.target.matches('.btn')) {
@@ -383,9 +311,9 @@ document.addEventListener('click', function(e) {
             button_text: e.target.textContent,
             button_class: e.target.className,
             page: window.location.pathname
-        });
+        })
     }
-});
+}),
 
 // Log performance when page is fully loaded
-window.addEventListener('load', logPerformance);
+window.addEventListener($2);

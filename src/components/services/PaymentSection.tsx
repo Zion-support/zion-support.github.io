@@ -3,18 +3,14 @@ import { MapPin } from 'lucide-react'
 import { PaymentButton } from "@/components/transactions/PaymentButton";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { toast } from "@/hooks/use-toast";
-
 interface PaymentSectionProps {
-  selectedCountry: CountryPricing;
-}
+  selectedCountry: CountryPricing}
 
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment
-  const handlePaymentInitiated = () => {
-    toast({
-      title: "Processing your request",
-      description: "You'll be redirected to our secure payment portal momentarily."});
-  };
+  const handlePaymentInitiated = $2;
+      description: "You'll be redirected to our secure payment portal momentarily."})
+  },
   
   return (
     <div className="text-center">
@@ -39,5 +35,5 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
         Price includes transportation and first hour onsite. Additional hours billed separately.
       </p>
     </div>
-  );
+  )
 }

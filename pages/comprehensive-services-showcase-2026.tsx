@@ -7,88 +7,57 @@ import {
   Search, Filter, Star, Users, TrendingUp, 
   Clock, Zap, Shield, Cloud, Brain, 
   Database, Globe, Robot, Cube, Sparkles
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 const ComprehensiveServicesShowcase2026: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
-
-  const allServices = [
-    ...innovativeMicroSaasServices2026,
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [selectedPriceRange, setSelectedPriceRange] = useState($2);
+  const [sortBy, setSortBy] = useState($2);
+  const allServices = $2;
     ...specializedITSolutions2026,
     ...emergingTechServices2026
-  ];
+  ],
 
-  const categories = [
-    'all',
-    'Business Intelligence & Analytics',
-    'Content Creation & Marketing',
-    'Customer Service & Support',
-    'E-commerce & Retail',
-    'HR & Recruitment',
-    'Financial Management',
-    'Project Management',
-    'Education & Training',
-    'Healthcare & Medical',
-    'Cloud Infrastructure & DevOps',
-    'Cybersecurity & Threat Intelligence',
-    'Data Engineering & Analytics',
-    'API Management & Integration',
-    'Network Monitoring & Management',
-    'Database Management & Optimization',
-    'IT Service Management',
-    'Backup & Disaster Recovery',
-    'Quantum Computing & AI',
-    'Blockchain & Web3',
-    'Internet of Things (IoT)',
-    'Edge Computing & 5G',
-    'AR/VR & Immersive Technology',
-    'Robotics & Automation',
-    'Digital Twin & Simulation'
-  ];
-
+  const categories = $2;
   const priceRanges = [
     { value: 'all', label: 'All Prices' },
     { value: '0-100', label: '$0 - $100' },
@@ -96,77 +65,66 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     { value: '200-400', label: '$200 - $400' },
     { value: '400-600', label: '$400 - $600' },
     { value: '600+', label: '$600+' }
-  ];
+  ],
 
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    
+  const filteredServices = $2;
+    const matchesCategory = $2;
     const matchesPrice = selectedPriceRange === 'all' || (() => {
-      const price = parseInt(service.price.replace('$', ''));
+      const price = parseInt(service.price.replace('$', '')),
       switch (selectedPriceRange) {
-        case '0-100': return price <= 100;
-        case '100-200': return price > 100 && price <= 200;
-        case '200-400': return price > 200 && price <= 400;
-        case '400-600': return price > 400 && price <= 600;
-        case '600+': return price > 600;
-        default: return true;
+        case '0-100': return price <= 100,
+        case '100-200': return price > 100 && price <= 200,
+        case '200-400': return price > 200 && price <= 400,
+        case '400-600': return price > 400 && price <= 600,
+        case '600+': return price > 600,
+        default: return true
       }
-    })();
+    })(),
     
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
+    return matchesSearch && matchesCategory && matchesPrice
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
-        return b.popular ? 1 : -1;
+        return b.popular ? 1 : -1,
       case 'price-low':
-        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''));
+        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', '')),
       case 'price-high':
-        return parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', ''));
+        return parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', '')),
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'customers':
-        return b.customers - a.customers;
-      default:
-        return 0;
+        return b.customers - a.customers,
+      default: return 0
     }
-  });
+  }),
 
-  const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ReactNode } = {
-      'Business Intelligence & Analytics': <Database className="w-5 h-5" />,
-      'Content Creation & Marketing': <Sparkles className="w-5 h-5" />,
-      'Customer Service & Support': <Users className="w-5 h-5" />,
-      'E-commerce & Retail': <Globe className="w-5 h-5" />,
-      'HR & Recruitment': <Users className="w-5 h-5" />,
-      'Financial Management': <TrendingUp className="w-5 h-5" />,
-      'Project Management': <Clock className="w-5 h-5" />,
-      'Education & Training': <Brain className="w-5 h-5" />,
-      'Healthcare & Medical': <Shield className="w-5 h-5" />,
-      'Cloud Infrastructure & DevOps': <Cloud className="w-5 h-5" />,
-      'Cybersecurity & Threat Intelligence': <Shield className="w-5 h-5" />,
-      'Data Engineering & Analytics': <Database className="w-5 h-5" />,
-      'API Management & Integration': <Zap className="w-5 h-5" />,
-      'Network Monitoring & Management': <Globe className="w-5 h-5" />,
-      'Database Management & Optimization': <Database className="w-5 h-5" />,
-      'IT Service Management': <Users className="w-5 h-5" />,
-      'Backup & Disaster Recovery': <Cloud className="w-5 h-5" />,
-      'Quantum Computing & AI': <Brain className="w-5 h-5" />,
-      'Blockchain & Web3': <Cube className="w-5 h-5" />,
-      'Internet of Things (IoT)': <Zap className="w-5 h-5" />,
-      'Edge Computing & 5G': <Globe className="w-5 h-5" />,
-      'AR/VR & Immersive Technology': <Cube className="w-5 h-5" />,
-      'Robotics & Automation': <Robot className="w-5 h-5" />,
-      'Digital Twin & Simulation': <Cube className="w-5 h-5" />
-    };
-    return iconMap[category] || <Sparkles className="w-5 h-5" />;
-  };
-
+  const getCategoryIcon = $2;
+      'Content Creation & Marketing': <Sparkles className = $2;
+      'Customer Service & Support': <Users className = $2;
+      'E-commerce & Retail': <Globe className = $2;
+      'HR & Recruitment': <Users className = $2;
+      'Financial Management': <TrendingUp className = $2;
+      'Project Management': <Clock className = $2;
+      'Education & Training': <Brain className = $2;
+      'Healthcare & Medical': <Shield className = $2;
+      'Cloud Infrastructure & DevOps': <Cloud className = $2;
+      'Cybersecurity & Threat Intelligence': <Shield className = $2;
+      'Data Engineering & Analytics': <Database className = $2;
+      'API Management & Integration': <Zap className = $2;
+      'Network Monitoring & Management': <Globe className = $2;
+      'Database Management & Optimization': <Database className = $2;
+      'IT Service Management': <Users className = $2;
+      'Backup & Disaster Recovery': <Cloud className = $2;
+      'Quantum Computing & AI': <Brain className = $2;
+      'Blockchain & Web3': <Cube className = $2;
+      'Internet of Things (IoT)': <Zap className = $2;
+      'Edge Computing & 5G': <Globe className = $2;
+      'AR/VR & Immersive Technology': <Cube className = $2;
+      'Robotics & Automation': <Robot className = $2;
+      'Digital Twin & Simulation': <Cube className = $2;
+    return iconMap[category] || <Sparkles className = $2;
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
         {/* Hero Section */}
@@ -174,8 +132,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
@@ -285,8 +243,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -326,112 +284,5 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                   <ul className="space-y-1">
                     {service.features.slice(0, 3).map((feature, idx) => (
-                      <li key={idx} className="text-xs text-gray-300 flex items-center">
-                        <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Stats */}
-                <div className="grid grid-cols-3 gap-4 mb-4 text-center">
-                  <div>
-                    <div className="text-lg font-bold text-white">{service.rating}</div>
-                    <div className="text-xs text-gray-400">Rating</div>
-                  </div>
-                  <div>
-                    <div className="text-lg font-bold text-white">{service.customers}</div>
-                    <div className="text-xs text-gray-400">Customers</div>
-                  </div>
-                  <div>
-                    <div className="text-lg font-bold text-white">{service.setupTime}</div>
-                    <div className="text-xs text-gray-400">Setup</div>
-                  </div>
-                </div>
-
-                {/* Market Info */}
-                <div className="mb-4 p-3 bg-white/5 rounded-lg">
-                  <div className="text-xs text-gray-300 mb-1">Market Size: {service.marketSize}</div>
-                  <div className="text-xs text-gray-300">Growth Rate: {service.growthRate}</div>
-                </div>
-
-                {/* CTA Button */}
-                <a
-                  href={service.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Learn More & Get Started
-                </a>
-
-                {/* Contact Info */}
-                <div className="mt-4 text-center">
-                  <div className="text-xs text-gray-400">
-                    Contact: {service.contactInfo.email}
-                  </div>
-                  <div className="text-xs text-gray-400">
-                    Phone: {service.contactInfo.mobile}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Contact Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Get in touch with our team to discuss how our innovative services can help you achieve your goals.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Expert Team</h3>
-                  <p className="text-gray-300 text-sm">Dedicated professionals ready to help</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-blue-400" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Fast Implementation</h3>
-                  <p className="text-gray-300 text-sm">Quick setup and deployment</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="w-8 h-8 text-purple-400" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>
-                  <p className="text-gray-300 text-sm">Round-the-clock assistance</p>
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                >
-                  Email Us
-                </a>
-                <a
-                  href="tel:+13024640950"
-                  className="bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300"
-                >
-                  Call Us
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  );
-};
-
-export default ComprehensiveServicesShowcase2026;
+                      <li key = $2;
+export default ComprehensiveServicesShowcase2026,

@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Button from '../components/ui/Button';
-
 export default function AIEvaluationOrchestratorPage() {
   return (
     <>
@@ -18,12 +17,7 @@ export default function AIEvaluationOrchestratorPage() {
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              'Create datasets and scoring functions',
-              'Batch runs across models and versions',
-              'Track regressions and enforce quality gates',
-              'Integrations: OpenAI, Anthropic, Groq, OpenRouter, Langfuse',
-              'Export reports, share baselines, and diff results',
-              'From $199/mo'
+              'Create datasets and scoring functionsBatch runs across models and versionsTrack regressions and enforce quality gatesIntegrations: OpenAI, Anthropic, Groq, OpenRouter, LangfuseExport reports, share baselines, and diff resultsFrom $199/mo'
             ].map((f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
             ))}
@@ -34,5 +28,5 @@ export default function AIEvaluationOrchestratorPage() {
         </div>
       </div>
     </>
-  );
+  )
 }

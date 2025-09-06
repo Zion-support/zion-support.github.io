@@ -1,14 +1,12 @@
-"use client";
+"use client",
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-
 export function Navigation() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState($2);
+  const [isSearchOpen, setIsSearchOpen] = useState($2);
+  const [isServicesOpen, setIsServicesOpen] = useState($2);
+  const [isScrolled, setIsScrolled] = useState($2);
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -279,5 +277,5 @@ export function Navigation() {
         </div>
       </div>
     </nav>
-  );
+  )
 }

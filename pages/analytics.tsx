@@ -1,41 +1,29 @@
 import React from 'react';
 import Head from 'next/head';
 import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react';
-
-
 export default function AnalyticsPage() {
-  const features = [
-    {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
+  const features = $2;
       title: 'Real-time Dashboards',
       description: 'Live monitoring and visualization of your key metrics'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-white" />,
+      icon: <TrendingUp className = $2;
       title: 'Predictive Analytics',
       description: 'AI-powered forecasting and trend analysis'
     },
     {
-      icon: <PieChart className="w-8 h-8 text-white" />,
+      icon: <PieChart className = $2;
       title: 'Custom Reports',
       description: 'Build and schedule personalized reports'
     },
     {
-      icon: <Activity className="w-8 h-8 text-white" />,
+      icon: <Activity className = $2;
       title: 'Performance Monitoring',
       description: 'Track system performance and user behavior'
     }
-  ];
+  ],
 
-  const benefits = [
-    'Make data-driven decisions',
-    'Identify growth opportunities',
-    'Optimize user experience',
-    'Monitor system health',
-    'Track business metrics',
-    'Generate actionable insights'
-  ];
-
+  const benefits = $2;
   return (
     <>
       <Head>
@@ -154,7 +142,7 @@ export default function AnalyticsPage() {
 
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Ready to Unlock Your Data?
             </h2>
@@ -175,5 +163,5 @@ export default function AnalyticsPage() {
         </section>
       </div>
     </>
-  );
+  )
 }

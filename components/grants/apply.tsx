@@ -2,57 +2,47 @@ import { useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
-
-const categories: GrantCategory[] = ['Ecosystem Tools', 'Talent Development', 'Regional Expansion', 'Research Grants'];
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 
 export default function ApplyGrantPage() {
-  const router = useRouter();
-  const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
-  const [projectName, setProjectName] = useState('');
-  const [teamInfo, setTeamInfo] = useState('');
-  const [proposalSummary, setProposalSummary] = useState('');
-  const [timeline, setTimeline] = useState('');
-  const [budgetAmount, setBudgetAmount] = useState<number>(0);
-  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
-  const [supportingLinks, setSupportingLinks] = useState<string>('');
-  const [pitchDeckUrl, setPitchDeckUrl] = useState('');
-  const [region, setRegion] = useState('');
-  const [sector, setSector] = useState<string>('');
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const router = useRouter($2);
+  const [program, setProgram] = useState<'grant' | 'incubator'>('grant'),
+  const [projectName, setProjectName] = useState($2);
+  const [teamInfo, setTeamInfo] = useState($2);
+  const [proposalSummary, setProposalSummary] = useState($2);
+  const [timeline, setTimeline] = useState($2);
+  const [budgetAmount, setBudgetAmount] = useState<number>(0),
+  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC'),
+  const [supportingLinks, setSupportingLinks] = useState<string>(''),
+  const [pitchDeckUrl, setPitchDeckUrl] = useState($2);
+  const [region, setRegion] = useState($2);
+  const [sector, setSector] = useState<string>(''),
+  const [loading, setLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
 
   const save = async (submit: boolean) => {
     try {
-      setLoading(true);
-      setError(null);
-      const resp = await fetch('/api/grants', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          program,
-          projectName,
-          teamInfo,
-          proposalSummary,
-          timeline,
-          budgetAmount: Number(budgetAmount || 0),
+      setLoading($2);
+      setError($2);
+      const resp = await fetch($2);
           budgetCurrency,
           supportingLinks: supportingLinks
             .split('\n')
             .map((s) => s.trim())
-            .filter(Boolean),
+            .filter($2);
           pitchDeckUrl,
           region,
           sector: (sector as any) || undefined,
-          submit})});
-      const data = await resp.json();
-      if (!resp.ok) throw new Error(data?.error || 'Failed');
-      router.push(`/grants/${data.id}`);
+          submit})}),
+      const data = await resp.json($2);
+      if (!resp.ok) throw new Error($2);
+      router.push(`/grants/${data.id}`)
     } catch (e: any) {
-      setError(e.message);
+      setError(e.message)
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  },
 
   return (
     <EnhancedLayout>
@@ -113,5 +103,5 @@ export default function ApplyGrantPage() {
         </div>
       </div>
     </EnhancedLayout>
-  );
+  )
 }

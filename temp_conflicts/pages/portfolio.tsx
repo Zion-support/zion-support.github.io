@@ -5,13 +5,12 @@ import {
   Brain, Shield, Rocket, Cpu, Database, Atom, Users, 
   Award, ExternalLink, Github, Globe, Zap, Star, CheckCircle,
   TrendingUp, BarChart3, Cloud, Network, Filter, Search, Building
-} from 'lucide-react';
+} from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-
 export default function PortfolioPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
 
   const categories = [
     { id: 'all', name: 'All Projects', icon: Globe },
@@ -21,7 +20,7 @@ export default function PortfolioPage() {
     { id: 'space', name: 'Space Technology', icon: Rocket },
     { id: 'edge', name: 'Edge Computing', icon: Cpu },
     { id: 'enterprise', name: 'Enterprise Solutions', icon: Building }
-  ];
+  ],
 
   const projects = [
     {
@@ -30,8 +29,8 @@ export default function PortfolioPage() {
       category: 'ai',
       client: 'Fortune 500 Financial Services',
       description: 'Developed a comprehensive AI-driven analytics platform that processes real-time financial data, providing predictive insights and automated reporting.',
-      technologies: ['Python', 'TensorFlow', 'React', 'AWS', 'PostgreSQL'],
-      results: ['40% increase in decision speed', '25% reduction in operational costs', '99.9% uptime'],
+      technologies: ['PythonTensorFlowReactAWSPostgreSQL'],
+      results: ['40% increase in decision speed25% reduction in operational costs99.9% uptime'],
       image: '/api/placeholder/600/400',
       link: '#',
       github: '#',
@@ -43,8 +42,8 @@ export default function PortfolioPage() {
       category: 'cybersecurity',
       client: 'Government Defense Agency',
       description: 'Built a next-generation cybersecurity framework using quantum-resistant encryption algorithms and AI-powered threat detection.',
-      technologies: ['Rust', 'Post-Quantum Cryptography', 'AI/ML', 'Kubernetes', 'Zero Trust'],
-      results: ['Quantum-resistant encryption', 'Real-time threat detection', 'Zero security breaches'],
+      technologies: ['RustPost-Quantum CryptographyAI/MLKubernetesZero Trust'],
+      results: ['Quantum-resistant encryptionReal-time threat detectionZero security breaches'],
       image: '/api/placeholder/600/400',
       link: '#',
       github: '#',
@@ -56,8 +55,8 @@ export default function PortfolioPage() {
       category: 'space',
       client: 'Space Exploration Startup',
       description: 'Designed and implemented an autonomous satellite constellation management system with AI-powered mission planning and resource optimization.',
-      technologies: ['Python', 'AI/ML', 'Satellite APIs', 'Real-time Processing', 'Cloud Infrastructure'],
-      results: ['Autonomous mission planning', '30% fuel efficiency improvement', '24/7 monitoring'],
+      technologies: ['PythonAI/MLSatellite APIsReal-time ProcessingCloud Infrastructure'],
+      results: ['Autonomous mission planning30% fuel efficiency improvement24/7 monitoring'],
       image: '/api/placeholder/600/400',
       link: '#',
       github: '#',
@@ -69,8 +68,8 @@ export default function PortfolioPage() {
       category: 'edge',
       client: 'IoT Manufacturing Company',
       description: 'Created a distributed edge computing platform that manages thousands of IoT devices with intelligent load balancing and real-time analytics.',
-      technologies: ['Kubernetes', 'Edge Computing', 'IoT Protocols', 'Real-time Analytics', 'Microservices'],
-      results: ['50% reduction in latency', 'Scalable to 10k+ devices', '99.99% reliability'],
+      technologies: ['KubernetesEdge ComputingIoT ProtocolsReal-time AnalyticsMicroservices'],
+      results: ['50% reduction in latencyScalable to 10k+ devices99.99% reliability'],
       image: '/api/placeholder/600/400',
       link: '#',
       github: '#',
@@ -82,8 +81,8 @@ export default function PortfolioPage() {
       category: 'ai',
       client: 'Medical Research Institute',
       description: 'Developed a comprehensive toolkit for building brain-computer interfaces with advanced signal processing and AI pattern recognition.',
-      technologies: ['Python', 'Signal Processing', 'AI/ML', 'Real-time Systems', 'Medical Standards'],
-      results: ['Advanced BCI capabilities', 'Real-time processing', 'Medical compliance'],
+      technologies: ['PythonSignal ProcessingAI/MLReal-time SystemsMedical Standards'],
+      results: ['Advanced BCI capabilitiesReal-time processingMedical compliance'],
       image: '/api/placeholder/600/400',
       link: '#',
       github: '#',
@@ -95,29 +94,29 @@ export default function PortfolioPage() {
       category: 'enterprise',
       client: 'Global Manufacturing Corporation',
       description: 'Delivered a comprehensive digital transformation solution including process automation, data analytics, and AI-powered decision support.',
-      technologies: ['Digital Twins', 'AI/ML', 'Process Automation', 'Data Analytics', 'Cloud Migration'],
-      results: ['60% process efficiency improvement', '$2M annual cost savings', 'Complete digital transformation'],
+      technologies: ['Digital TwinsAI/MLProcess AutomationData AnalyticsCloud Migration'],
+      results: ['60% process efficiency improvement$2M annual cost savingsComplete digital transformation'],
       image: '/api/placeholder/600/400',
       link: '#',
       github: '#',
       featured: false
     }
-  ];
+  ],
 
   const filteredProjects = projects.filter(project => {
-    const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory,
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.client.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+                         project.client.toLowerCase().includes(searchTerm.toLowerCase()),
+    return matchesCategory && matchesSearch
+  }),
 
   const stats = [
     { number: '100+', label: 'Projects Delivered', icon: CheckCircle },
     { number: '50+', label: 'Enterprise Clients', icon: Users },
     { number: '99.9%', label: 'Client Satisfaction', icon: Star },
     { number: '$500M+', label: 'Value Delivered', icon: TrendingUp }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -333,7 +332,7 @@ export default function PortfolioPage() {
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl rounded-3xl border border-blue-500/30 p-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Ready to Start Your Project?
             </h2>
             <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
@@ -360,5 +359,5 @@ export default function PortfolioPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

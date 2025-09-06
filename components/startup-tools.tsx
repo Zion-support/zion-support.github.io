@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
-  Rocket, 
+  Rocket,
   DollarSign, 
   Users, 
   BarChart3, 
@@ -20,31 +20,24 @@ import {
   Target,
   Lightbulb,
   BookOpen
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function StartupToolsPage() {
-  const startupTools = [
-    {
-      name: 'HubSpot',
+  const startupTools = $2;
       description: 'All-in-one inbound marketing, sales, and customer service platform designed to help businesses grow better.',
       category: 'Marketing & Sales',
       pricing: 'Free - $45/month',
       rating: 4.7,
       users: '135K+',
-      icon: <Target className="w-8 h-8 text-orange-400" />,
+      icon: <Target className = $2;
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       features: [
-        'CRM system',
-        'Email marketing',
-        'Lead generation',
-        'Analytics & reporting',
-        'Marketing automation',
-        'Free tier available'
+        'CRM systemEmail marketingLead generationAnalytics & reportingMarketing automationFree tier available'
       ],
       website: 'https://hubspot.com',
       useCase: 'Perfect for startups that want to implement inbound marketing strategies and manage customer relationships effectively.',
-      pros: ['Free tier', 'All-in-one solution', 'Great for beginners', 'Excellent support'],
-      cons: ['Can get expensive', 'Complex for small teams', 'Limited customization'],
+      pros: ['Free tierAll-in-one solutionGreat for beginnersExcellent support'],
+      cons: ['Can get expensiveComplex for small teamsLimited customization'],
       bestFor: 'B2B startups, SaaS companies, marketing teams'
     },
     {
@@ -54,20 +47,15 @@ export default function StartupToolsPage() {
       pricing: 'Free - $59/month',
       rating: 4.5,
       users: '12M+',
-      icon: <Mail className="w-8 h-8 text-yellow-400" />,
+      icon: <Mail className = $2;
       color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
       features: [
-        'Email templates',
-        'Automation workflows',
-        'A/B testing',
-        'Analytics & reporting',
-        'Integration ecosystem',
-        'Free tier available'
+        'Email templatesAutomation workflowsA/B testingAnalytics & reportingIntegration ecosystemFree tier available'
       ],
       website: 'https://mailchimp.com',
       useCase: 'Ideal for startups that need to build email lists, nurture leads, and communicate with customers.',
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
-      cons: ['Limited free features', 'Basic automation', 'Can be expensive'],
+      pros: ['Free tierEasy to useGood templatesAffordable'],
+      cons: ['Limited free featuresBasic automationCan be expensive'],
       bestFor: 'E-commerce, content creators, small businesses'
     },
     {
@@ -77,20 +65,15 @@ export default function StartupToolsPage() {
       pricing: 'Free - $12/month',
       rating: 4.8,
       users: '10M+',
-      icon: <Calendar className="w-8 h-8 text-blue-400" />,
+      icon: <Calendar className = $2;
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
-        'Automated scheduling',
-        'Calendar integration',
-        'Custom booking pages',
-        'Team scheduling',
-        'Analytics & reporting',
-        'Free tier available'
+        'Automated schedulingCalendar integrationCustom booking pagesTeam schedulingAnalytics & reportingFree tier available'
       ],
       website: 'https://calendly.com',
       useCase: 'Essential for startups that need to schedule sales calls, investor meetings, and team collaborations efficiently.',
-      pros: ['Free tier', 'Easy integration', 'Professional appearance', 'Time-saving'],
-      cons: ['Limited free features', 'Basic customization', 'Can be expensive'],
+      pros: ['Free tierEasy integrationProfessional appearanceTime-saving'],
+      cons: ['Limited free featuresBasic customizationCan be expensive'],
       bestFor: 'Sales teams, consultants, remote teams'
     },
     {
@@ -100,20 +83,15 @@ export default function StartupToolsPage() {
       pricing: 'Free - $12.99/month',
       rating: 4.6,
       users: '100M+',
-      icon: <Lightbulb className="w-8 h-8 text-blue-400" />,
+      icon: <Lightbulb className = $2;
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
-        'Design templates',
-        'Stock photos & icons',
-        'Brand kit',
-        'Team collaboration',
-        'Social media formats',
-        'Free tier available'
+        'Design templatesStock photos & iconsBrand kitTeam collaborationSocial media formatsFree tier available'
       ],
       website: 'https://canva.com',
       useCase: 'Perfect for startups that need to create marketing materials, social media content, and presentations.',
-      pros: ['Free tier', 'Easy to use', 'Great templates', 'Affordable'],
-      cons: ['Limited customization', 'Watermark on free', 'Basic features'],
+      pros: ['Free tierEasy to useGreat templatesAffordable'],
+      cons: ['Limited customizationWatermark on freeBasic features'],
       bestFor: 'Marketing teams, content creators, small businesses'
     },
     {
@@ -123,20 +101,15 @@ export default function StartupToolsPage() {
       pricing: 'Free - $15/month',
       rating: 4.4,
       users: '140K+',
-      icon: <Globe className="w-8 h-8 text-green-400" />,
+      icon: <Globe className = $2;
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Social media scheduling',
-        'Analytics & reporting',
-        'Team collaboration',
-        'Content calendar',
-        'Multiple platforms',
-        'Free tier available'
+        'Social media schedulingAnalytics & reportingTeam collaborationContent calendarMultiple platformsFree tier available'
       ],
       website: 'https://buffer.com',
       useCase: 'Ideal for startups that want to maintain a consistent social media presence and grow their audience.',
-      pros: ['Free tier', 'Easy to use', 'Good analytics', 'Affordable'],
-      cons: ['Limited free features', 'Basic scheduling', 'Limited platforms'],
+      pros: ['Free tierEasy to useGood analyticsAffordable'],
+      cons: ['Limited free featuresBasic schedulingLimited platforms'],
       bestFor: 'Social media managers, small businesses, content creators'
     },
     {
@@ -146,20 +119,15 @@ export default function StartupToolsPage() {
       pricing: 'Free - $8/month',
       rating: 4.7,
       users: '20M+',
-      icon: <Zap className="w-8 h-8 text-gray-400" />,
+      icon: <Zap className = $2;
       color: 'bg-gradient-to-br from-gray-500 to-gray-700',
       features: [
-        'Note-taking & docs',
-        'Project management',
-        'Team collaboration',
-        'Database & tables',
-        'Templates library',
-        'API integration'
+        'Note-taking & docsProject managementTeam collaborationDatabase & tablesTemplates libraryAPI integration'
       ],
       website: 'https://notion.so',
       useCase: 'Perfect for startup teams that need a flexible workspace for documentation, project management, and knowledge sharing.',
-      pros: ['Highly flexible', 'Beautiful interface', 'Great templates', 'Free tier'],
-      cons: ['Learning curve', 'Limited offline access', 'Can be overwhelming'],
+      pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier'],
+      cons: ['Learning curveLimited offline accessCan be overwhelming'],
       bestFor: 'Remote teams, project managers, knowledge workers'
     },
     {
@@ -169,20 +137,15 @@ export default function StartupToolsPage() {
       pricing: '2.9% + 30¢ per transaction',
       rating: 4.9,
       users: '1M+',
-      icon: <DollarSign className="w-8 h-8 text-blue-400" />,
+      icon: <DollarSign className = $2;
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
-        'Global payment methods',
-        'Subscription billing',
-        'Fraud protection',
-        'Compliance tools',
-        'Developer-friendly API',
-        'Analytics dashboard'
+        'Global payment methodsSubscription billingFraud protectionCompliance toolsDeveloper-friendly APIAnalytics dashboard'
       ],
       website: 'https://stripe.com',
       useCase: 'Essential for any startup that needs to accept payments, especially SaaS companies and e-commerce businesses.',
-      pros: ['Developer-friendly', 'Global reach', 'Excellent docs', 'Reliable'],
-      cons: ['Higher fees than some alternatives', 'Complex for beginners', 'Strict requirements'],
+      pros: ['Developer-friendlyGlobal reachExcellent docsReliable'],
+      cons: ['Higher fees than some alternativesComplex for beginnersStrict requirements'],
       bestFor: 'SaaS companies, e-commerce, online businesses'
     },
     {
@@ -192,20 +155,15 @@ export default function StartupToolsPage() {
       pricing: '$39 - $999/month',
       rating: 4.6,
       users: '25K+',
-      icon: <Users className="w-8 h-8 text-green-400" />,
+      icon: <Users className = $2;
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Live chat',
-        'Customer messaging',
-        'Help desk',
-        'User onboarding',
-        'Analytics & reporting',
-        'Integration ecosystem'
+        'Live chatCustomer messagingHelp deskUser onboardingAnalytics & reportingIntegration ecosystem'
       ],
       website: 'https://intercom.com',
       useCase: 'Perfect for SaaS startups and online businesses that want to provide excellent customer support and user engagement.',
-      pros: ['Great UX', 'Powerful features', 'Good integrations', 'Mobile apps'],
-      cons: ['Expensive', 'Complex pricing', 'Can be overwhelming'],
+      pros: ['Great UXPowerful featuresGood integrationsMobile apps'],
+      cons: ['ExpensiveComplex pricingCan be overwhelming'],
       bestFor: 'SaaS companies, online businesses, customer support teams'
     },
     {
@@ -215,20 +173,15 @@ export default function StartupToolsPage() {
       pricing: 'Free - $25/month',
       rating: 4.5,
       users: '26K+',
-      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
+      icon: <BarChart3 className = $2;
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
-        'User behavior tracking',
-        'Funnel analysis',
-        'A/B testing',
-        'Real-time data',
-        'Custom events',
-        'Mobile analytics'
+        'User behavior trackingFunnel analysisA/B testingReal-time dataCustom eventsMobile analytics'
       ],
       website: 'https://mixpanel.com',
       useCase: 'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.',
-      pros: ['Powerful analytics', 'Real-time data', 'Good documentation', 'Flexible'],
-      cons: ['Complex setup', 'Expensive at scale', 'Steep learning curve'],
+      pros: ['Powerful analyticsReal-time dataGood documentationFlexible'],
+      cons: ['Complex setupExpensive at scaleSteep learning curve'],
       bestFor: 'Product teams, growth hackers, data analysts'
     },
     {
@@ -238,31 +191,24 @@ export default function StartupToolsPage() {
       pricing: 'Free - $20/month',
       rating: 4.8,
       users: '100K+',
-      icon: <Rocket className="w-8 h-8 text-black" />,
+      icon: <Rocket className = $2;
       color: 'bg-gradient-to-br from-gray-800 to-black',
       features: [
-        'Zero-config deployment',
-        'Global CDN',
-        'Automatic scaling',
-        'Git integration',
-        'Preview deployments',
-        'Edge functions'
+        'Zero-config deploymentGlobal CDNAutomatic scalingGit integrationPreview deploymentsEdge functions'
       ],
       website: 'https://vercel.com',
       useCase: 'Ideal for startup development teams that want to deploy modern web applications quickly with excellent performance.',
-      pros: ['Zero config', 'Excellent performance', 'Great DX', 'Free tier'],
-      cons: ['Limited backend features', 'Can be expensive for high traffic', 'Vendor lock-in'],
+      pros: ['Zero configExcellent performanceGreat DXFree tier'],
+      cons: ['Limited backend featuresCan be expensive for high trafficVendor lock-in'],
       bestFor: 'Frontend developers, startup teams, modern web apps'
     }
-  ];
+  ],
 
-  const categories = ['All', 'Marketing & Sales', 'Email Marketing', 'Productivity', 'Design', 'Social Media', 'Payments', 'Customer Support', 'Analytics', 'Development'];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-
+  const categories = $2;
+  const [selectedCategory, setSelectedCategory] = React.useState($2);
   const filteredTools = selectedCategory === 'All' 
     ? startupTools 
-    : startupTools.filter(tool => tool.category === selectedCategory);
-
+    : startupTools.filter($2);
   return (
     <>
       <Head>
@@ -281,7 +227,7 @@ export default function StartupToolsPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]" />
         </div>
 
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size: 50px_50px] opacity-20" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-20 animate-fade-in">
@@ -520,7 +466,7 @@ export default function StartupToolsPage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-orange-600 to-orange-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
             Ready to Scale Your Startup?
@@ -528,7 +474,7 @@ export default function StartupToolsPage() {
           <p className="text-xl text-orange-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Our startup experts can help you choose the right tools, implement growth strategies, and accelerate your business growth.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">
             <Button
               href="/contact"
               variant="secondary"
@@ -550,5 +496,5 @@ export default function StartupToolsPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

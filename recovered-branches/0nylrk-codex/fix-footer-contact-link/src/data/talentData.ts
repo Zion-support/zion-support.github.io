@@ -1,6 +1,5 @@
 
 import { TalentProfile } from "@/types/talent";
-
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -8,7 +7,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     user_id: "user-001",
     full_name: "Alexandra Chen",
     professional_title: "Senior AI Engineer & Machine Learning Expert",
-    profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200",
+    profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto = $2;
     bio: "AI specialist with over 8 years of experience in computer vision and natural language processing. I've designed and implemented machine learning solutions for Fortune 500 companies across healthcare, finance, and retail sectors.",
     location: "Boston, MA",
     skills: ["Machine Learning", "TensorFlow", "Python", "Computer Vision", "NLP", "Data Science", "PyTorch", "Deep Learning"],
@@ -34,7 +33,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     user_id: "user-002",
     full_name: "Michael Reynolds",
     professional_title: "DevOps Specialist & Cloud Architect",
-    profile_picture_url: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=200&h=200",
+    profile_picture_url: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto = $2;
     bio: "Infrastructure automation expert with 10+ years of experience in containerization, CI/CD pipelines, and cloud-native architectures. I specialize in designing and implementing scalable, resilient, and secure cloud infrastructure on AWS, Azure, and GCP.",
     location: "Chicago, IL",
     skills: ["Kubernetes", "Docker", "AWS", "Terraform", "CI/CD", "Azure", "Python", "Infrastructure as Code"],
@@ -60,7 +59,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     user_id: "user-003",
     full_name: "Priya Sharma",
     professional_title: "Data Scientist & Statistical Analyst",
-    profile_picture_url: "https://images.unsplash.com/photo-1580489944761-15a19d654955?auto=format&fit=crop&w=200&h=200", 
+    profile_picture_url: "https://images.unsplash.com/photo-1580489944761-15a19d654955?auto = $2;
     bio: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions. My work focuses on extracting actionable insights from complex datasets and developing statistical models that drive business decisions.",
     location: "Seattle, WA",
     skills: ["Statistical Analysis", "Python", "R", "Tableau", "SQL", "Machine Learning", "Data Visualization", "Predictive Modeling"],
@@ -86,7 +85,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     user_id: "user-004",
     full_name: "James Wilson",
     professional_title: "Cybersecurity Expert & Ethical Hacker",
-    profile_picture_url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200",
+    profile_picture_url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto = $2;
     bio: "CISSP-certified security professional with 10+ years of experience in threat detection, incident response, and security architecture. I specialize in conducting penetration tests, security assessments, and implementing robust security controls across enterprise environments.",
     location: "Austin, TX",
     skills: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management", "Network Security", "Incident Response", "Security Architecture", "Cloud Security"],
@@ -112,7 +111,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     user_id: "user-005",
     full_name: "David Martinez",
     professional_title: "Full-Stack Developer & React Expert",
-    profile_picture_url: "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=200&h=200",
+    profile_picture_url: "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto = $2;
     bio: "Full-stack developer with 7+ years of experience specializing in React, Node.js, and modern JavaScript frameworks. I build scalable, responsive, and user-friendly web applications with a focus on performance optimization and clean code.",
     location: "Miami, FL",
     skills: ["React", "Node.js", "TypeScript", "MongoDB", "GraphQL", "Next.js", "Redux", "AWS"],
@@ -138,7 +137,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     user_id: "user-006",
     full_name: "Sarah Johnson",
     professional_title: "AI Ethics Consultant & Policy Advisor",
-    profile_picture_url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200",
+    profile_picture_url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto = $2;
     bio: "Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.",
     location: "Washington, DC",
     skills: ["AI Ethics", "Policy Development", "Risk Assessment", "Governance", "Responsible AI", "Compliance", "Stakeholder Engagement", "Research"],
@@ -164,7 +163,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     user_id: "user-007",
     full_name: "Daniel Kim",
     professional_title: "Computer Vision Engineer & Deep Learning Specialist",
-    profile_picture_url: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200",
+    profile_picture_url: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto = $2;
     bio: "Computer vision engineer with expertise in developing advanced visual recognition systems using deep learning. My work spans object detection, image classification, and video analysis for applications in retail, manufacturing, and autonomous systems.",
     location: "San Francisco, CA",
     skills: ["Computer Vision", "PyTorch", "TensorFlow", "Object Detection", "Image Processing", "C++", "CUDA", "Edge AI"],
@@ -190,7 +189,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     user_id: "user-008",
     full_name: "Olivia Rodriguez",
     professional_title: "Natural Language Processing Researcher",
-    profile_picture_url: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200",
+    profile_picture_url: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto = $2;
     bio: "PhD in Computational Linguistics with 8+ years of experience in NLP research and applications. I specialize in sentiment analysis, text generation, language understanding, and multilingual NLP systems for enterprise applications.",
     location: "Montreal, Canada",
     skills: ["Natural Language Processing", "BERT", "Transformers", "GPT", "Python", "Hugging Face", "Language Models", "Sentiment Analysis"],
@@ -216,7 +215,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     user_id: "user-009",
     full_name: "Robert Zhang",
     professional_title: "Quantum Machine Learning Researcher",
-    profile_picture_url: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=200&h=200",
+    profile_picture_url: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto = $2;
     bio: "Quantum computing researcher with focus on quantum machine learning algorithms and applications. My work bridges the gap between quantum computing theory and practical machine learning implementations for complex optimization problems.",
     location: "Toronto, Canada",
     skills: ["Quantum Computing", "Quantum Machine Learning", "Qiskit", "PennyLane", "Linear Algebra", "Python", "TensorFlow Quantum", "Optimization"],
@@ -242,7 +241,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     user_id: "user-010",
     full_name: "Emma Taylor",
     professional_title: "AI Product Manager & Strategy Consultant",
-    profile_picture_url: "https://images.unsplash.com/photo-1573497019236-61938a1a2cd2?auto=format&fit=crop&w=200&h=200",
+    profile_picture_url: "https://images.unsplash.com/photo-1573497019236-61938a1a2cd2?auto = $2;
     bio: "Experienced product manager specializing in AI products and services. I bridge the gap between technical AI capabilities and business value, helping organizations define, develop, and deploy impactful machine learning solutions.",
     location: "London, UK",
     skills: ["Product Management", "AI Strategy", "User Research", "Go-to-Market", "Agile", "Analytics", "Stakeholder Management", "Product Roadmap"],
@@ -268,7 +267,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     user_id: "user-011",
     full_name: "Marcus Johnson",
     professional_title: "Reinforcement Learning Engineer",
-    profile_picture_url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200",
+    profile_picture_url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto = $2;
     bio: "Specialist in reinforcement learning with applications in robotics, autonomous systems, and optimization problems. I develop RL algorithms that enable systems to learn optimal behaviors through interaction with their environment.",
     location: "Berlin, Germany",
     skills: ["Reinforcement Learning", "Deep RL", "PyTorch", "TensorFlow", "Robotics", "Simulation", "OpenAI Gym", "Multi-agent Systems"],
@@ -294,7 +293,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     user_id: "user-012",
     full_name: "Sophia Lee",
     professional_title: "Healthcare AI Specialist & Medical Imaging Expert",
-    profile_picture_url: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200",
+    profile_picture_url: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto = $2;
     bio: "Medical imaging specialist with expertise in applying AI to healthcare challenges. I develop deep learning solutions for medical image analysis, diagnostics, and personalized treatment planning in clinical settings.",
     location: "Boston, MA",
     skills: ["Medical Imaging", "Healthcare AI", "Deep Learning", "CNN", "PyTorch", "DICOM", "Clinical Validation", "Regulatory Compliance"],
@@ -315,4 +314,4 @@ export const TALENT_PROFILES: TalentProfile[] = [
       }
     ]
   }
-];
+],

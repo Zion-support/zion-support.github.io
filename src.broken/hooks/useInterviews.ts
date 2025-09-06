@@ -1,5 +1,4 @@
-// Hook for useInterviews;
-export const useUseInterviews: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
+// Hook for useInterviews,
+export const useUseInterviews: unknown = $2;
+  return {}
+},

@@ -8,16 +8,14 @@ import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFoote
 import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFuturistic2029ServiceShowcase';
 import { cuttingEdge2029Services } from '../data/2029-cutting-edge-innovations';
 import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services';
-
 export default function UltraFuturistic2029InnovationsPage() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
-  const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
+  const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services],
 
   return (
     <>
@@ -42,8 +40,8 @@ export default function UltraFuturistic2029InnovationsPage() {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
@@ -54,8 +52,8 @@ export default function UltraFuturistic2029InnovationsPage() {
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8 leading-tight"
             >
@@ -65,8 +63,8 @@ export default function UltraFuturistic2029InnovationsPage() {
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
             >
@@ -75,8 +73,8 @@ export default function UltraFuturistic2029InnovationsPage() {
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
@@ -100,56 +98,37 @@ export default function UltraFuturistic2029InnovationsPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Innovation Categories
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our 2029 innovations span across multiple cutting-edge technology domains
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: '🧠 AI Consciousness & Innovation',
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
                   description: 'Revolutionary AI systems with human-like consciousness and reasoning capabilities',
                   icon: Brain,
                   color: 'from-purple-600 to-pink-600',
-                  services: cuttingEdge2029Services.filter(s => s.category.includes('Consciousness') || s.category.includes('Business'))
-                },
+                  services: cuttingEdge2029Services.filter(s = $2;
                 {
                   title: '⚛️ Quantum & Neuroscience',
                   description: 'Quantum computing meets brain-computer interfaces for unprecedented capabilities',
                   icon: Atom,
                   color: 'from-indigo-600 to-purple-600',
-                  services: cuttingEdge2029Services.filter(s => s.category.includes('Neuroscience') || s.category.includes('Time'))
-                },
+                  services: cuttingEdge2029Services.filter(s = $2;
                 {
                   title: '🚀 Space Colonization & Mining',
                   description: 'Automated space exploration, colonization, and resource extraction systems',
                   icon: Rocket,
                   color: 'from-red-600 to-orange-600',
-                  services: cuttingEdge2029Services.filter(s => s.category.includes('Space') || s.category.includes('Time'))
-                },
+                  services: cuttingEdge2029Services.filter(s = $2;
                 {
                   title: '🏠 Space Architecture & Energy',
                   description: 'Advanced habitat design and space-based energy harvesting platforms',
                   icon: Globe,
                   color: 'from-green-600 to-teal-600',
-                  services: cuttingEdge2029Services.filter(s => s.category.includes('Architecture') || s.category.includes('Energy'))
-                },
+                  services: cuttingEdge2029Services.filter(s = $2;
                 {
                   title: '👁️ AI Reality Augmentation',
                   description: 'Real-time AI-powered reality enhancement and content generation',
                   icon: Eye,
                   color: 'from-orange-600 to-red-600',
-                  services: cuttingEdge2029Services.filter(s => s.category.includes('Augmented Reality'))
-                },
+                  services: cuttingEdge2029Services.filter(s = $2;
                 {
                   title: '⏰ Quantum Time Manipulation',
                   description: 'Quantum-based time perception manipulation and optimization',
@@ -160,8 +139,8 @@ export default function UltraFuturistic2029InnovationsPage() {
               ].map((category, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 group"
                 >
@@ -203,8 +182,8 @@ export default function UltraFuturistic2029InnovationsPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -225,8 +204,8 @@ export default function UltraFuturistic2029InnovationsPage() {
               ].map((stat, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
                 >
@@ -245,8 +224,8 @@ export default function UltraFuturistic2029InnovationsPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-3xl p-12 backdrop-blur-sm"
             >
@@ -278,5 +257,5 @@ export default function UltraFuturistic2029InnovationsPage() {
         {/* Footer */}
         <UltraFuturisticFooter2029 />
     </>
-  );
+  )
 }

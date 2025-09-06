@@ -3,90 +3,63 @@ import { useState, useEffect } from "react";
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
-
 interface HiringAnalyticsProps {
-  jobId?: string;
+  jobId?: string
 }
 
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
-  const { applications, isLoading } = useJobApplications(jobId);
+  const { applications, isLoading } = useJobApplications($2);
   const [analyticsData, setAnalyticsData] = useState<{
-    statusDistribution: any[];
-    timeToHire: number;
-    conversionRate: number;
-    funnelData: any[];
+    statusDistribution: any[],
+    timeToHire: number,
+    conversionRate: number,
+    funnelData: any[]
   }>({
     statusDistribution: [],
     timeToHire: 0,
     conversionRate: 0,
-    funnelData: []});
+    funnelData: []}),
   
   useEffect(() => {
     if (applications && applications.length > 0) {
       // Calculate status distribution
-      const statusCounts: Record<string, number> = {};
-      applications.forEach(app => {
-        statusCounts[app.status] = (statusCounts[app.status] || 0) + 1;
-      });
-      
+      const statusCounts: Record<string, number> = {},
+      applications.forEach(app = $2;
       const statusDistribution = Object.entries(statusCounts).map(([status, count]) => ({
         status,
-        count}));
+        count})),
       
       // Calculate time to hire (in days)
-      const hiredApplications = applications.filter(app => app.status === 'hired');
-      let avgTimeToHire = 0;
-      
+      const hiredApplications = applications.filter($2);
+      let avgTimeToHire = $2;
       if (hiredApplications.length > 0) {
         const totalDays = hiredApplications.reduce((sum, app) => {
-          const hireDate = new Date(app.updated_at);
-          const applyDate = new Date(app.created_at);
-          const daysDiff = (hireDate.getTime() - applyDate.getTime()) / (1000 * 3600 * 24);
-          return sum + daysDiff;
-        }, 0);
+          const hireDate = new Date($2);
+          const applyDate = new Date($2);
+          const daysDiff = $2;
+          return sum + daysDiff
+        }, 0),
         
-        avgTimeToHire = Math.round(totalDays / hiredApplications.length);
-      }
-      
-      // Calculate conversion rate
-      const conversionRate = hiredApplications.length > 0
-        ? Math.round((hiredApplications.length / applications.length) * 100)
-        : 0;
-      
+        avgTimeToHire = $2;
       // Funnel data
       const funnelData = [
         { name: 'Applied', value: applications.length },
-        { name: 'Shortlisted', value: applications.filter(app => app.status === 'shortlisted').length },
-        { name: 'Interview', value: applications.filter(app => app.status === 'interview').length },
-        { name: 'Hired', value: applications.filter(app => app.status === 'hired').length }];
-      
+        { name: 'Shortlisted', value: applications.filter(app = $2;
+        { name: 'Interview', value: applications.filter(app = $2;
+        { name: 'Hired', value: applications.filter(app = $2;
       setAnalyticsData({
         statusDistribution,
         timeToHire: avgTimeToHire,
         conversionRate,
-        funnelData});
+        funnelData})
     }
-  }, [applications]);
+  }, [applications]),
   
   if (isLoading) {
-    return <div>Loading analytics data...</div>;
+    return <div>Loading analytics data...</div>
   }
   
-  if (!applications || applications.length === 0) {
-    return (
-      <Card className="text-center py-16">
-        <CardContent>
-          <h3 className="text-lg font-semibold mb-2">No data available</h3>
-          <p className="text-muted-foreground mb-6">
-            You need applications to generate analytics
-          </p>
-        </CardContent>
-      </Card>
-    );
-  }
-  
-  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8'];
-  
+  if (!applications || applications.length = $2;
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {/* Status Distribution */}
@@ -171,5 +144,5 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
         </CardContent>
       </Card>
     </div>
-  );
+  )
 }

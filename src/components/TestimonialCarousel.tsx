@@ -4,7 +4,7 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious} from "@/components/ui/carousel";
+  CarouselPrevious} from "@/components/ui/carousel",
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -12,24 +12,10 @@ import { Quote } from 'lucide-react'
 import Link from "next/link";
 import Image from "next/image";
 import { CASE_STUDIES } from "@/data/case-studies";
-
-const testimonials = CASE_STUDIES;
-
+const testimonials = $2;
 export function TestimonialCarousel() {
   return (
-    <section className="py-20 bg-zion-blue-dark">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold text-white mb-3">What Our Users Say</h3>
-          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-            Discover how Zion is transforming the tech and AI marketplace ecosystem
-          </p>
-        </div>
-        
-        <div className="max-w-5xl mx-auto px-8">
-          <Carousel
-            opts={{
-              align: "start",
+    <section className = $2;
               loop: true}}
             className="w-full"
           >
@@ -79,12 +65,12 @@ export function TestimonialCarousel() {
               ))}
             </CarouselContent>
             <div className="flex justify-center mt-8 gap-2">
-              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
+              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
             </div>
           </Carousel>
         </div>
       </div>
     </section>
-  );
+  )
 }

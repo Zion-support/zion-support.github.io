@@ -5,102 +5,69 @@ import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
-} from 'lucide-react';
+} from 'lucide-react',
 import Link from 'next/link';
-
 // Import our new innovative services
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
-
 // Loading fallback component
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-      className="text-center"
-    >
-      <div className="relative">
-        <Loader2 className="w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4" />
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse"></div>
-      </div>
-      <p className="text-xl text-gray-300 mb-2">Loading Zion Tech Group 2045...</p>
-      <p className="text-sm text-gray-500">Preparing your futuristic digital transformation journey</p>
-    </motion.div>
-  </div>
-);
-
+      animate={{ opacity: 1, scale: 1}}
+      transition = $2;
 const Homepage2045: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
-
+  const [isLoading, setIsLoading] = useState($2);
+  const [isVisible, setIsVisible] = useState($2);
+  const [activeSection, setActiveSection] = useState($2);
   useEffect(() => {
     // Simulate content loading with better timing
     const timer = setTimeout(() => {
-      setIsLoading(false);
-      setIsVisible(true);
-    }, 800);
+      setIsLoading($2);
+      setIsVisible(true)
+    }, 800),
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer)
+  }, []),
 
   // Intersection Observer for better performance
   useEffect(() => {
     if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-      const observer = new (window as any).IntersectionObserver(
-        (entries: any[]) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActiveSection(entry.target.id);
-            }
-          });
-        },
+      const observer = $2;
         { threshold: 0.3, rootMargin: '-100px' }
-      );
+      ),
 
-      const sections = document.querySelectorAll('section[id]');
-      sections.forEach((section) => observer.observe(section));
+      const sections = document.querySelectorAll($2);
+      sections.forEach((section) => observer.observe(section)),
 
-      return () => observer.disconnect();
+      return () => observer.disconnect()
     }
-  }, []);
+  }, []),
 
   const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
+    initial: { opacity: 0, y: 60},
+    animate: { opacity: 1, y: 0},
     transition: { duration: 0.6, ease: "easeOut" }
-  };
+  },
 
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
+  const staggerContainer = $2;
         delayChildren: 0.2
       }
     }
-  };
+  },
 
   const backgroundVariants = {
     initial: { opacity: 0, scale: 0.8 },
-    animate: { opacity: 1, scale: 1 },
+    animate: { opacity: 1, scale: 1},
     transition: { duration: 1.2, ease: "easeOut" }
-  };
+  },
 
-  const getColorClasses = (index: number) => {
-    const colors = [
-      'from-cyan-400 to-blue-500',
-      'from-purple-400 to-pink-500',
-      'from-emerald-400 to-teal-500',
-      'from-orange-400 to-red-500',
-      'from-indigo-400 to-purple-500',
-      'from-yellow-400 to-orange-500'
-    ];
-    return colors[index % colors.length];
-  };
+  const getColorClasses = $2;
+    return colors[index % colors.length]
+  },
 
   if (isLoading) {
     return (
@@ -110,7 +77,7 @@ const Homepage2045: React.FC = () => {
           <p className="text-cyan-400 text-xl">Loading Zion Tech Group...</p>
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -126,8 +93,7 @@ const Homepage2045: React.FC = () => {
                 rotate: [0, 360],
                 scale: [1, 1.1, 1],
                 opacity: [0.3, 0.6, 0.3]}}
-              transition={{
-                duration: 8,
+              transition = $2;
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
@@ -138,8 +104,7 @@ const Homepage2045: React.FC = () => {
                 rotate: [360, 0],
                 scale: [1, 1.2, 1],
                 opacity: [0.3, 0.7, 0.3]}}
-              transition={{
-                duration: 6,
+              transition = $2;
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
@@ -150,8 +115,7 @@ const Homepage2045: React.FC = () => {
                 rotate: [45, 405],
                 scale: [1, 1.15, 1],
                 opacity: [0.3, 0.5, 0.3]}}
-              transition={{
-                duration: 10,
+              transition = $2;
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
@@ -161,14 +125,14 @@ const Homepage2045: React.FC = () => {
           {/* Hero Content */}
           <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-5xl md:text-7xl font-bold mb-6"
               >
@@ -177,8 +141,8 @@ const Homepage2045: React.FC = () => {
                 </span>
               </motion.h1>
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
               >
@@ -188,8 +152,8 @@ const Homepage2045: React.FC = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
@@ -209,8 +173,8 @@ const Homepage2045: React.FC = () => {
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.8 }}
               className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
             >
@@ -234,62 +198,44 @@ const Homepage2045: React.FC = () => {
         <section id="featured-services" className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                  Revolutionary Services
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology.
-              </p>
-            </motion.div>
-
-            {/* Service Categories Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: <Brain className="w-12 h-12" />,
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
                   title: "AI & Consciousness",
                   description: "Revolutionary AI platforms with emotional intelligence and autonomous operations",
                   color: "from-cyan-400 to-blue-500",
                   href: "/ai-services"
                 },
                 {
-                  icon: <Atom className="w-12 h-12" />,
+                  icon: <Atom className = $2;
                   title: "Quantum Technology",
                   description: "Breakthrough quantum computing solutions for next-generation applications",
                   color: "from-purple-400 to-pink-500",
                   href: "/quantum-services"
                 },
                 {
-                  icon: <Rocket className="w-12 h-12" />,
+                  icon: <Rocket className = $2;
                   title: "Space Technology",
                   description: "Advanced space exploration and resource management platforms",
                   color: "from-emerald-400 to-teal-500",
                   href: "/space-technology"
                 },
                 {
-                  icon: <Shield className="w-12 h-12" />,
+                  icon: <Shield className = $2;
                   title: "Enterprise Solutions",
                   description: "Advanced infrastructure and security solutions for modern enterprises",
                   color: "from-orange-400 to-red-500",
                   href: "/enterprise-solutions"
                 },
                 {
-                  icon: <Target className="w-12 h-12" />,
+                  icon: <Target className = $2;
                   title: "Micro SAAS",
                   description: "Innovative business solutions that drive growth and efficiency",
                   color: "from-indigo-400 to-purple-500",
                   href: "/micro-saas"
                 },
                 {
-                  icon: <Sparkles className="w-12 h-12" />,
+                  icon: <Sparkles className = $2;
                   title: "Emerging Tech",
                   description: "Cutting-edge technologies that define the future of innovation",
                   color: "from-yellow-400 to-orange-500",
@@ -298,10 +244,10 @@ const Homepage2045: React.FC = () => {
               ].map((service, index) => (
                 <motion.div
                   key={service.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 30}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="group"
                 >
                   <Link href={service.href}>
@@ -327,10 +273,10 @@ const Homepage2045: React.FC = () => {
         <section id="latest-innovations" className="py-20 relative bg-gray-900/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -349,9 +295,9 @@ const Homepage2045: React.FC = () => {
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="group"
                 >
                   <Link href={service.link}>
@@ -383,10 +329,10 @@ const Homepage2045: React.FC = () => {
 
             {/* View All Services CTA */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mt-12"
             >
               <Link
@@ -404,39 +350,7 @@ const Homepage2045: React.FC = () => {
         <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                  Ready to Transform?
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let's discuss how our revolutionary technology solutions can drive your business into the future.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105"
-                >
-                  Get Started
-                </Link>
-                <a
-                  href="tel:+1 302 464 0950"
-                  className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105"
-                >
-                  Call Now
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
-};
-
-export default Homepage2045;
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
+export default Homepage2045,

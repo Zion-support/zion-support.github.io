@@ -1,5 +1,4 @@
-// Hook for useWallet;
-export const useUseWallet: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
+// Hook for useWallet,
+export const useUseWallet: unknown = $2;
+  return {}
+},

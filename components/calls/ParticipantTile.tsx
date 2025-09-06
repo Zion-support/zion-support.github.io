@@ -1,47 +1,29 @@
 import React, { useEffect, useRef } from 'react';
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
-
-type Props = {
-  participant: RemoteParticipant | LocalParticipant;
-  isLocal?: boolean;
-  displayName?: string;
-};
+type Props = $2;
+  isLocal?: boolean,
+  displayName?: string
+},
 
 export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
+  const videoRef = $2;
+  const audioRef = $2;
   useEffect(() => {
     const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
-      if (track.kind === 'video' && videoRef.current) {
-        track.attach(videoRef.current);
-      }
-      if (track.kind === 'audio' && audioRef.current) {
-        track.attach(audioRef.current);
-      }
-    };
+      if (track.kind = $2;
     const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {
-      if (track.kind === 'video' && videoRef.current) {
-        track.detach(videoRef.current);
-      }
-      if (track.kind === 'audio' && audioRef.current) {
-        track.detach(audioRef.current);
-      }
-    };
+      if (track.kind = $2;
+    participant.tracks.forEach(pub = $2;
+      if (track) handleTrackSubscribed(pub, track)
+    }),
 
-    participant.tracks.forEach(pub => {
-      const track = pub.track;
-      if (track) handleTrackSubscribed(pub, track);
-    });
-
-    participant.on('trackSubscribed', handleTrackSubscribed);
-    participant.on('trackUnsubscribed', handleTrackUnsubscribed);
-
+    participant.on($2);
+    participant.on($2);
     return () => {
-      participant.off('trackSubscribed', handleTrackSubscribed);
-      participant.off('trackUnsubscribed', handleTrackUnsubscribed);
-    };
-  }, [participant]);
+      participant.off($2);
+      participant.off('trackUnsubscribed', handleTrackUnsubscribed)
+    }
+  }, [participant]),
 
   return (
     <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">
@@ -51,5 +33,5 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
         {displayName || (participant as any).name || (isLocal ? 'You' : 'Participant')}
       </div>
     </div>
-  );
+  )
 }

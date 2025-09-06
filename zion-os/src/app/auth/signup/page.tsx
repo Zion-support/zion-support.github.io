@@ -1,37 +1,34 @@
-"use client";
+"use client",
 
 import { useState } from "react";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
-
 export default function SignUpPage() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
-  const { register } = useAuth();
-
+  const [name, setName] = useState($2);
+  const [email, setEmail] = useState($2);
+  const [password, setPassword] = useState($2);
+  const [confirmPassword, setConfirmPassword] = useState($2);
+  const [isLoading, setIsLoading] = useState($2);
+  const [error, setError] = useState($2);
+  const { register } = useAuth($2);
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setError("");
-
+    e.preventDefault($2);
+    setIsLoading($2);
+    setError($2);
     if (password !== confirmPassword) {
-      setError("Passwords do not match");
-      setIsLoading(false);
-      return;
+      setError($2);
+      setIsLoading($2);
+      return
     }
 
     try {
-      await register(name, email, password);
+      await register(name, email, password)
     } catch (error) {
-      setError(error instanceof Error ? error.message : "Registration failed");
+      setError(error instanceof Error ? error.message : "Registration failed")
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
-  };
+  },
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">
@@ -168,12 +165,12 @@ export default function SignUpPage() {
               Terms of Service
             </Link>{" "}
             and{" "}
-            <Link href="/privacy" className="text-zinc-400 hover:text-zinc-300">
+            <Link href="/privacy" className="text-zinc-400 hover: text-zinc-300">
               Privacy Policy
             </Link>
           </p>
         </div>
       </div>
     </div>
-  );
+  )
 }

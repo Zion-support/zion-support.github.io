@@ -1,111 +1,108 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
-
 export default function AccountSettingsPage() {
-  const [user, setUser] = useState<{ address: string; chain: 'evm' | 'sol' } | null>(null);
-  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-  const [ens, setEns] = useState('');
-  const [lens, setLens] = useState('');
-  const [ceramic, setCeramic] = useState('');
-  const [farcaster, setFarcaster] = useState('');
-  const [linking, setLinking] = useState(false);
-  const [backupCid, setBackupCid] = useState('');
-  const [restoreCid, setRestoreCid] = useState('');
-  const [status, setStatus] = useState<string | null>(null);
+  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
+  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false),
+  const [ens, setEns] = useState($2);
+  const [lens, setLens] = useState($2);
+  const [ceramic, setCeramic] = useState($2);
+  const [farcaster, setFarcaster] = useState($2);
+  const [linking, setLinking] = useState($2);
+  const [backupCid, setBackupCid] = useState($2);
+  const [restoreCid, setRestoreCid] = useState($2);
+  const [status, setStatus] = useState<string | null>(null),
 
   useEffect(() => {
-    const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
-    if (saved) setUser(JSON.parse(saved));
-    const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null;
-    setDisplayWeb3(pref === 'true');
-  }, []);
+    const saved = $2;
+    if (saved) setUser(JSON.parse(saved)),
+    const pref = $2;
+    setDisplayWeb3(pref === 'true')
+  }, []),
 
   const saveDisplayPref = (val: boolean) => {
-    setDisplayWeb3(val);
-    if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-display', String(val));
-  };
+    setDisplayWeb3($2);
+    if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-display', String(val))
+  },
 
-  const linkDID = async () => {
-    if (!user) return;
-    setLinking(true);
-    setStatus(null);
+  const linkDID = $2;
+    setLinking($2);
+    setStatus($2);
     try {
-      const nonceRes = await fetch('/api/auth/nonce');
-      const { nonce } = await nonceRes.json();
-      const payload = { ens, lens, ceramic, farcaster, address: user.address, chain: user.chain, nonce, ts: Date.now() };
-      const msg = `Link Web3 identities to Zion account\n${JSON.stringify(payload)}`;
+      const nonceRes = await fetch($2);
+      const { nonce } = await nonceRes.json($2);
+      const payload = { ens, lens, ceramic, farcaster, address: user.address, chain: user.chain, nonce, ts: Date.now() },
+      const msg = $2;
       // Sign message with connected wallet if possible (best effort)
-      let signature: string | null = null;
+      let signature: string | null = $2;
       try {
         if (user.chain === 'evm' && (window as any).ethereum) {
-          const ethers = await import('ethers');
-          const provider = new ethers.providers.Web3Provider((window as any).ethereum);
-          const signer = provider.getSigner();
-          signature = await signer.signMessage(msg);
+          const ethers = await import($2);
+          const provider = $2;
+          const signer = provider.getSigner($2);
+          signature = await signer.signMessage(msg)
         } else if (user.chain === 'sol' && (window as any).solana?.isPhantom) {
-          const enc = new TextEncoder().encode(msg);
-          const { signature: sig } = await (window as any).solana.signMessage(enc, 'utf8');
-          const bs58 = (await import('bs58')).default;
-          signature = bs58.encode(sig);
+          const enc = new TextEncoder().encode($2);
+          const { signature: sig} = await (window as any).solana.signMessage($2);
+          const bs58 = $2;
+          signature = bs58.encode(sig)
         }
       } catch {}
 
       const res = await fetch('/api/did/link', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ payload, message: msg, signature })});
-      if (!res.ok) throw new Error('Failed to link DIDs');
-      setStatus('Linked successfully');
+        body: JSON.stringify({ payload, message: msg, signature })}),
+      if (!res.ok) throw new Error($2);
+      setStatus('Linked successfully')
     } catch (e: any) {
-      setStatus(e?.message || 'Linking failed');
+      setStatus(e?.message || 'Linking failed')
     } finally {
-      setLinking(false);
+      setLinking(false)
     }
-  };
+  },
 
   const doBackup = async () => {
-    setStatus(null);
+    setStatus($2);
     try {
-      const profile = {
-        user,
+      const profile = $2;
         preferences: { displayWeb3 },
         did: { ens, lens, ceramic, farcaster },
         resume: {},
         projects: [],
-        reviews: []};
+        reviews: []},
       const res = await fetch('/api/backup/upload', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(profile)});
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || 'Backup failed');
-      setBackupCid(data.cid);
-      setStatus('Backup saved to decentralized storage');
+        body: JSON.stringify(profile)}),
+      const data = await res.json($2);
+      if (!res.ok) throw new Error($2);
+      setBackupCid($2);
+      setStatus('Backup saved to decentralized storage')
     } catch (e: any) {
-      setStatus(e?.message || 'Backup failed');
+      setStatus(e?.message || 'Backup failed')
     }
-  };
+  },
 
   const doRestore = async () => {
-    setStatus(null);
+    setStatus($2);
     try {
-      const res = await fetch(`/api/backup/restore?cid=${encodeURIComponent(restoreCid || backupCid)}`);
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || 'Restore failed');
-      const { user: u, preferences, did } = data;
-      if (u) setUser(u);
-      if (preferences) saveDisplayPref(!!preferences.displayWeb3);
+      const res = $2;
+      const data = await res.json($2);
+      if (!res.ok) throw new Error($2);
+      const { user: u, preferences, did } = data,
+      if (u) setUser($2);
+      if (preferences) saveDisplayPref($2);
       if (did) {
-        setEns(did.ens || '');
-        setLens(did.lens || '');
-        setCeramic(did.ceramic || '');
-        setFarcaster(did.farcaster || '');
+        setEns($2);
+        setLens($2);
+        setCeramic($2);
+        setFarcaster(did.farcaster || '')
       }
-      setStatus('Profile restored from backup');
+      setStatus('Profile restored from backup')
     } catch (e: any) {
-      setStatus(e?.message || 'Restore failed');
+      setStatus(e?.message || 'Restore failed')
     }
-  };
+  },
 
   return (
     <>
@@ -135,7 +132,7 @@ export default function AccountSettingsPage() {
           <div className="grid grid-cols-1 gap-3">
             <input value={ens} onChange={(e) => setEns(e.target.value)} placeholder="ENS (e.g. vitalik.eth)" className="w-full rounded-md border px-3 py-2" />
             <input value={lens} onChange={(e) => setLens(e.target.value)} placeholder="Lens handle (e.g. alice.lens)" className="w-full rounded-md border px-3 py-2" />
-            <input value={ceramic} onChange={(e) => setCeramic(e.target.value)} placeholder="Ceramic DID (did:3:...)" className="w-full rounded-md border px-3 py-2" />
+            <input value={ceramic} onChange={(e) => setCeramic(e.target.value)} placeholder="Ceramic DID (did: 3: ...)" className="w-full rounded-md border px-3 py-2" />
             <input value={farcaster} onChange={(e) => setFarcaster(e.target.value)} placeholder="Farcaster handle (e.g. @alice)" className="w-full rounded-md border px-3 py-2" />
             <button onClick={linkDID} disabled={linking} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2">{linking ? 'Linking…' : 'Link & Verify'}</button>
           </div>
@@ -157,5 +154,5 @@ export default function AccountSettingsPage() {
         {status && <div className="text-sm text-gray-600">{status}</div>}
       </div>
     </>
-  );
+  )
 }

@@ -43,50 +43,7 @@ export default function ITServicesPage() {
                 From migration to ongoing management, we ensure your cloud journey is seamless and cost-effective.
               </p>
               
-              <div className="space-y-4 mb-8">
-                <h3 className="text-xl font-semibold text-green-400">Services Include:</h3>
-                <ul className="space-y-2 text-zinc-300">
-                  <li>• Cloud architecture design and planning</li>
-                  <li>• Migration from on-premises to cloud</li>
-                  <li>• Multi-cloud and hybrid cloud solutions</li>
-                  <li>• Cost optimization and resource management</li>
-                  <li>• Disaster recovery and backup strategies</li>
-                  <li>• 24/7 cloud infrastructure monitoring</li>
-                </ul>
-              </div>
-
-              <div className="bg-zinc-700 rounded-lg p-6 mb-6">
-                <h4 className="text-lg font-semibold mb-4">Pricing Structure</h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span>Consulting Rate</span>
-                    <span className="text-green-400 font-semibold">$150/hour</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Project Range</span>
-                    <span className="text-yellow-400 font-semibold">$5K - $50K</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Monthly Management</span>
-                    <span className="text-green-400 font-semibold">$2K - $10K</span>
-                  </div>
-                  <div className="text-sm text-zinc-400 mt-2">
-                    Free initial cloud assessment | Custom pricing for enterprise
-                  </div>
-                </div>
-              </div>
-
-              <a href="https://ziontechgroup.com/cloud-services" className="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">
-                Learn More About Cloud Infrastructure
-              </a>
-            </div>
-
-            {/* DevOps & CI/CD */}
-            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
-              <div className="text-4xl mb-6">🚀</div>
-              <h2 className="text-3xl font-bold mb-4">DevOps & CI/CD</h2>
-              <p className="text-zinc-300 mb-6 text-lg">
-                Accelerate your software delivery with automated deployment pipelines, 
+              <div className = $2;
                 infrastructure as code, and DevOps culture implementation that drives innovation.
               </p>
               
@@ -102,38 +59,7 @@ export default function ITServicesPage() {
                 </ul>
               </div>
 
-              <div className="bg-zinc-700 rounded-lg p-6 mb-6">
-                <h4 className="text-lg font-semibold mb-4">Pricing Structure</h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span>Consulting Rate</span>
-                    <span className="text-green-400 font-semibold">$175/hour</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Project Range</span>
-                    <span className="text-yellow-400 font-semibold">$8K - $75K</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Monthly Support</span>
-                    <span className="text-green-400 font-semibold">$3K - $15K</span>
-                  </div>
-                  <div className="text-sm text-zinc-400 mt-2">
-                    Free DevOps maturity assessment | Training included
-                  </div>
-                </div>
-              </div>
-
-              <a href="https://ziontechgroup.com/devops" className="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">
-                Learn More About DevOps & CI/CD
-              </a>
-            </div>
-
-            {/* Cybersecurity */}
-            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
-              <div className="text-4xl mb-6">🛡️</div>
-              <h2 className="text-3xl font-bold mb-4">Cybersecurity</h2>
-              <p className="text-zinc-300 mb-6 text-lg">
-                Protect your business with comprehensive cybersecurity solutions including security audits, 
+              <div className = $2;
                 penetration testing, compliance frameworks, and incident response planning.
               </p>
               
@@ -231,50 +157,7 @@ export default function ITServicesPage() {
                 that enable seamless integration and data exchange between systems.
               </p>
               
-              <div className="space-y-4 mb-8">
-                <h3 className="text-xl font-semibold text-green-400">Services Include:</h3>
-                <ul className="space-y-2 text-zinc-300">
-                  <li>• RESTful API design and development</li>
-                  <li>• GraphQL API implementation</li>
-                  <li>• Microservices architecture design</li>
-                  <li>• API gateway and management</li>
-                  <li>• API documentation and testing</li>
-                  <li>• Performance optimization and scaling</li>
-                </ul>
-              </div>
-
-              <div className="bg-zinc-700 rounded-lg p-6 mb-6">
-                <h4 className="text-lg font-semibold mb-4">Pricing Structure</h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span>Consulting Rate</span>
-                    <span className="text-green-400 font-semibold">$140/hour</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Project Range</span>
-                    <span className="text-yellow-400 font-semibold">$8K - $80K</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Monthly Support</span>
-                    <span className="text-green-400 font-semibold">$2K - $12K</span>
-                  </div>
-                  <div className="text-sm text-zinc-400 mt-2">
-                    Free API assessment | Documentation included
-                  </div>
-                </div>
-              </div>
-
-              <a href="https://ziontechgroup.com/api-development" className="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">
-                Learn More About API Development
-              </a>
-            </div>
-
-            {/* Digital Transformation */}
-            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
-              <div className="text-4xl mb-6">🔄</div>
-              <h2 className="text-3xl font-bold mb-4">Digital Transformation</h2>
-              <p className="text-zinc-300 mb-6 text-lg">
-                Guide your organization through end-to-end digital transformation with strategic consulting, 
+              <div className = $2;
                 legacy system modernization, and change management expertise.
               </p>
               
@@ -402,11 +285,7 @@ export default function ITServicesPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Modernize Your IT Infrastructure?</h2>
-          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our IT services can transform your technology landscape, 
+      <section className = $2;
             improve efficiency, and drive business growth through digital innovation.
           </p>
           <div className="space-y-4">
@@ -419,11 +298,11 @@ export default function ITServicesPage() {
               </a>
             </div>
             <p className="text-green-100 text-sm">
-              📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https://ziontechgroup.com
+              📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https: //ziontechgroup.com
             </p>
           </div>
         </div>
       </section>
     </div>
-  );
+  )
 }

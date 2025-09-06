@@ -9,22 +9,20 @@ import {
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbSeparator} from '@/components/ui/breadcrumb';
+  BreadcrumbSeparator} from '@/components/ui/breadcrumb',
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
-
 export default function CaseStudy() {
-  const router = useRouter();
-  const slug = router.query.slug as string;
-  const study = CASE_STUDIES.find((s) => s.slug === slug);
-  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);
-
+  const router = useRouter($2);
+  const slug = $2;
+  const study = $2;
+  const breadcrumbs = getBreadcrumbsForPath($2);
   if (!study) {
     return (
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Case study not found.
       </div>
-    );
+    )
   }
 
   return (
@@ -88,5 +86,5 @@ export default function CaseStudy() {
         </div>
       </div>
     </>
-  );
+  )
 }

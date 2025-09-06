@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-=======
-module.exports = {
-  apps: [
-    {
-      name: 'error-fixer',
+<<<<<<< HEAD = $2;
       script: 'automation/lint-error-fixer.cjs',
       args: 'continuous',
       instances: 1,
@@ -16,8 +11,7 @@ module.exports = {
       error_file: './logs/error-fixer-error.log',
       out_file: './logs/error-fixer-out.log',
       log_file: './logs/error-fixer-combined.log',
-      time: true
-    },
+      time: true},
     {
       name: 'intelligent-orchestrator',
       script: 'automation/intelligent-orchestrator.cjs',
@@ -32,8 +26,7 @@ module.exports = {
       error_file: './logs/orchestrator-error.log',
       out_file: './logs/orchestrator-out.log',
       log_file: './logs/orchestrator-combined.log',
-      time: true
-    },
+      time: true},
     {
       name: 'automation-dashboard',
       script: 'automation/automation-dashboard.cjs',
@@ -44,13 +37,11 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PORT: 3001
-      },
+        PORT: 3001},
       error_file: './logs/dashboard-error.log',
       out_file: './logs/dashboard-out.log',
       log_file: './logs/dashboard-combined.log',
-      time: true
-    },
+      time: true},
     {
       name: 'code-quality-monitor',
       script: 'automation/code-quality-monitor.cjs',
@@ -64,8 +55,7 @@ module.exports = {
       error_file: './logs/code-quality-error.log',
       out_file: './logs/code-quality-out.log',
       log_file: './logs/code-quality-combined.log',
-      time: true
-    },
+      time: true},
     {
       name: 'performance-optimizer',
       script: 'automation/performance-optimizer.cjs',
@@ -79,8 +69,7 @@ module.exports = {
       error_file: './logs/performance-error.log',
       out_file: './logs/performance-out.log',
       log_file: './logs/performance-combined.log',
-      time: true
-    }
+      time: true}
   ]
 >>>>>>> 878d942794613d77e7906d7fb8891458141d2dcc
-};
+},

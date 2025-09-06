@@ -1,58 +1,54 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { X } from 'lucide-react';
-
-type ChatMessage = {
-  role: 'user' | 'assistant' | 'system';
-  content: string;
-  timestamp?: number;
-};
+type ChatMessage = $2;
+  content: string,
+  timestamp?: number
+},
 
 function generateSessionId(): string {
-  if (typeof window === 'undefined') return '';
-  const existing = window.localStorage.getItem('zion_support_session_id');
-  if (existing) return existing;
-  const id = `sess_${Math.random().toString(36).slice(2)}_${Date.now()}`;
-  window.localStorage.setItem('zion_support_session_id', id);
-  return id;
+  if (typeof window = $2;
+  const existing = window.localStorage.getItem($2);
+  if (existing) return existing,
+  const id = $2;
+  window.localStorage.setItem($2);
+  return id
 }
 
 export default function ChatWidget() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [input, setInput] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [failedIntents, setFailedIntents] = useState(0);
-  const [showEscalation, setShowEscalation] = useState(false);
-  const sessionIdRef = useRef<string>('');
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
-
+  const [isOpen, setIsOpen] = useState($2);
+  const [messages, setMessages] = useState<ChatMessage[]>([]),
+  const [input, setInput] = useState($2);
+  const [isLoading, setIsLoading] = useState($2);
+  const [failedIntents, setFailedIntents] = useState($2);
+  const [showEscalation, setShowEscalation] = useState($2);
+  const sessionIdRef = $2;
+  const messagesEndRef = $2;
   useEffect(() => {
-    sessionIdRef.current = generateSessionId();
-  }, []);
+    sessionIdRef.current = generateSessionId()
+  }, []),
 
   useEffect(() => {
     if (!isOpen && messages.length === 0) {
       // Seed greeting
       setMessages([
-        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }]);
+        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
     }
-  }, [isOpen, messages.length]);
+  }, [isOpen, messages.length]),
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }, [messages]),
 
-  const quickReplies = useMemo(
-    () => ['How do I hire?', 'How do I get matched?', 'Billing help'],
+  const quickReplies = $2;
     []
-  );
+  ),
 
   async function logEvent(eventType: string, payload: any) {
     try {
       await fetch('/api/support/session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })});
+        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
     } catch {}
   }
 
@@ -61,56 +57,46 @@ export default function ChatWidget() {
       await fetch('/api/support/escalate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })});
-      setShowEscalation(true);
+        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+      setShowEscalation(true)
     } catch {}
   }
 
   async function onSend(messageText?: string) {
-    const text = (messageText ?? input).trim();
-    if (!text) return;
+    const text = (messageText ?? input).trim($2);
+    if (!text) return,
 
-    const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now() };
-    setMessages((prev) => [...prev, newUserMessage]);
-    setInput('');
-    setIsLoading(true);
-    await logEvent('message/user', { content: text });
-
+    const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now() },
+    setMessages((prev) => [...prev, newUserMessage]),
+    setInput($2);
+    setIsLoading($2);
+    await logEvent($2);
     try {
       const res = await fetch('/api/support/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           sessionId: sessionIdRef.current,
-          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})});
-      const data = await res.json();
-
+          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})}),
+      const data = await res.json($2);
       if (data?.assistantMessage) {
-        const assistantMessage: ChatMessage = {
-          role: 'assistant',
+        const assistantMessage: ChatMessage = $2;
           content: data.assistantMessage,
-          timestamp: Date.now()};
-        setMessages((prev) => [...prev, assistantMessage]);
-        await logEvent('message/assistant', { content: assistantMessage.content, meta: data.meta });
+          timestamp: Date.now()},
+        setMessages((prev) => [...prev, assistantMessage]),
+        await logEvent('message/assistant', { content: assistantMessage.content, meta: data.meta })
       }
 
-      if (data?.meta?.intentMatched === false) {
-        setFailedIntents((n) => {
-          const next = n + 1;
+      if (data?.meta?.intentMatched = $2;
           if (next >= 3) {
-            escalateSupport('Failed to match user intent 3+ times');
+            escalateSupport('Failed to match user intent 3+ times')
           }
-          return next;
-        });
-      } else if (data?.meta?.intentMatched === true) {
-        setFailedIntents(0);
-      }
-    } catch (e) {
-      setMessages((prev) => [
-        ...prev,
-        { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }]);
+          return next
+        })
+      } else if (data?.meta?.intentMatched = $2;
+        { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
   }
 
@@ -120,7 +106,7 @@ export default function ChatWidget() {
         <button
           aria-label="Open support chat"
           onClick={() => setIsOpen(true)}
-          className="rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black"
+          className="rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark: focus:ring-offset-black"
         >
           ?
         </button>
@@ -130,7 +116,7 @@ export default function ChatWidget() {
         <div className="w-[360px] max-w-[92vw] h-[520px] max-h-[80vh] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col">
           <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800">
             <div className="font-semibold">Zion Support</div>
-            <button onClick={() => setIsOpen(false)} aria-label="Close" className="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
+            <button onClick={() => setIsOpen(false)} aria-label="Close" className="p-1 rounded hover:bg-gray-200 dark: hover:bg-gray-700">
               <X size={18} />
             </button>
           </div>
@@ -164,7 +150,7 @@ export default function ChatWidget() {
                   <button
                     key={q}
                     onClick={() => onSend(q)}
-                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark: hover: bg-gray-800"
                   >
                     {q}
                   </button>
@@ -181,8 +167,8 @@ export default function ChatWidget() {
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' && !e.shiftKey) {
-                      e.preventDefault();
-                      onSend();
+                      e.preventDefault($2);
+                      onSend()
                     }
                   }}
                   placeholder="Ask a question…"
@@ -200,8 +186,8 @@ export default function ChatWidget() {
               <div className="flex flex-col gap-2 text-sm">
                 <div className="text-gray-700 dark:text-gray-300">We can escalate this to our team:</div>
                 <div className="flex gap-2">
-                  <a href="mailto:support@zion.ai" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Email Support</a>
-                  <a href="/contact" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Chat with Live Agent</a>
+                  <a href="mailto:support@zion.ai" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark: hover: bg-gray-800">Email Support</a>
+                  <a href="/contact" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark: hover: bg-gray-800">Chat with Live Agent</a>
                 </div>
               </div>
             )}
@@ -209,5 +195,5 @@ export default function ChatWidget() {
         </div>
       )}
     </div>
-  );
+  )
 }

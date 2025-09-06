@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from "lucide-react";
-
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,37 +13,32 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form",
 import { Link } from "react-router-dom";
-
 // Form validation schema
 const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email").min(1, "Email is required"),
-  password: z.string().min(6, "Password must be at least 6 characters")});
+  email: z.string().email("Please enter a valid email").min($2);
+  password: z.string().min(6, "Password must be at least 6 characters")}),
 
-type LoginFormValues = z.infer<typeof loginSchema>;
-
+type LoginFormValues = $2;
 export function LoginForm() {
-  const { login, isLoading } = useAuth();
-  const [showPassword, setShowPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  
+  const { login, isLoading } = useAuth($2);
+  const [showPassword, setShowPassword] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
   const form = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema),
+    resolver: zodResolver($2);
     defaultValues: {
       email: "",
-      password: ""}});
+      password: ""}}),
 
-  const onSubmit = async (data: LoginFormValues) => {
-    if (isSubmitting) return;
-    
+  const onSubmit = $2;
     try {
-      setIsSubmitting(true);
-      await login(data.email, data.password);
+      setIsSubmitting($2);
+      await login(data.email, data.password)
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  },
 
   return (
     <Form {...form}>
@@ -131,5 +125,5 @@ export function LoginForm() {
         </Button>
       </form>
     </Form>
-  );
+  )
 }

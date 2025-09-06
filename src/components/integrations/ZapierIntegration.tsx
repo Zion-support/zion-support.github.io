@@ -8,15 +8,14 @@ import { toast } from "sonner";
 import { Check, Copy, ExternalLink } from 'lucide-react'
 
 export function ZapierIntegration() {
-  const [copied, setCopied] = useState(false);
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
-  
+  const [copied, setCopied] = useState($2);
+  const [apiKey] = useState($2);
   const handleCopyApiKey = () => {
-    navigator.clipboard.writeText(apiKey);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-    toast.success("API key copied to clipboard");
-  };
+    navigator.clipboard.writeText($2);
+    setCopied($2);
+    setTimeout(() => setCopied(false), 2000),
+    toast.success("API key copied to clipboard")
+  },
   
   return (
     <div className="space-y-6">
@@ -99,7 +98,7 @@ export function ZapierIntegration() {
             Use these webhook triggers to start Zaps when events happen in your Zion account.
           </p>
           
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md: grid-cols-3 gap-4">
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Job Posted</h4>
               <p className="text-xs text-muted-foreground mb-3">
@@ -127,5 +126,5 @@ export function ZapierIntegration() {
         </CardContent>
       </Card>
     </div>
-  );
+  )
 }

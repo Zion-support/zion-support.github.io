@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react';
 import Link from 'next/link';
-
 const Revolutionary2027Hero = () => {
   const floatingIcons = [
     { icon: Brain, delay: 0, position: 'top-20 left-20' },
@@ -13,20 +12,19 @@ const Revolutionary2027Hero = () => {
     { icon: Lock, delay: 2.5, position: 'top-1/2 right-10' },
     { icon: Atom, delay: 3, position: 'bottom-1/3 left-1/2' },
     { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' }
-  ];
+  ],
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 30},
     visible: {
       opacity: 1,
       y: 0,
@@ -35,7 +33,7 @@ const Revolutionary2027Hero = () => {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
@@ -46,7 +44,7 @@ const Revolutionary2027Hero = () => {
       
       {/* Animated Grid Pattern */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size: 50px_50px]"></div>
       </div>
 
       {/* Floating Icons */}
@@ -57,8 +55,7 @@ const Revolutionary2027Hero = () => {
           animate={{
             y: [0, -20, 0],
             rotate: [0, 5, -5, 0]}}
-          transition={{
-            duration: 4,
+          transition = $2;
             delay: item.delay,
             repeat: Infinity,
             ease: "easeInOut"
@@ -175,8 +172,7 @@ const Revolutionary2027Hero = () => {
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         animate={{
           y: [0, 10, 0]}}
-        transition={{
-          duration: 2,
+        transition = $2;
           repeat: Infinity,
           ease: "easeInOut"
         }}
@@ -186,8 +182,7 @@ const Revolutionary2027Hero = () => {
             className="w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-2"
             animate={{
               y: [0, 12, 0]}}
-            transition={{
-              duration: 2,
+            transition = $2;
               repeat: Infinity,
               ease: "easeInOut"
             }}
@@ -199,23 +194,19 @@ const Revolutionary2027Hero = () => {
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(20)].map((_, i) => (
           <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
+            key = $2;
               top: `${Math.random() * 100}%`}}
             animate={{
               y: [0, -100],
               opacity: [0, 1, 0]}}
-            transition={{
-              duration: 3 + Math.random() * 2,
+            transition = $2;
               repeat: Infinity,
               delay: Math.random() * 2}}
           />
         ))}
       </div>
     </section>
-  );
-};
+  )
+},
 
-export default Revolutionary2027Hero;
+export default Revolutionary2027Hero,

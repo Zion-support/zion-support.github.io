@@ -4,49 +4,46 @@ import { ArrowRight, Star, TrendingUp, Users, Shield, Zap } from 'lucide-react';
 import { revolutionary2025MicroSaasServices } from '../../data/revolutionary-2025-micro-saas';
 import { emergingTech2025Services } from '../../data/emerging-tech-2025-services';
 import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services';
-
 const RevolutionaryServicesShowcase: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [visibleServices, setVisibleServices] = useState(12);
-
+  const [activeCategory, setActiveCategory] = useState($2);
+  const [visibleServices, setVisibleServices] = useState($2);
   const categories = [
     { id: 'all', name: 'All Services', count: revolutionary2025MicroSaasServices.length + emergingTech2025Services.length + enterpriseIT2025Services.length },
-    { id: 'ai', name: 'AI & ML', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('AI')).length },
-    { id: 'quantum', name: 'Quantum Tech', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('Quantum')).length },
+    { id: 'ai', name: 'AI & ML', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s = $2;
+    { id: 'quantum', name: 'Quantum Tech', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s = $2;
     { id: 'emerging', name: 'Emerging Tech', count: emergingTech2025Services.length },
     { id: 'enterprise', name: 'Enterprise IT', count: enterpriseIT2025Services.length },
     { id: 'revolutionary', name: 'Revolutionary', count: revolutionary2025MicroSaasServices.length }
-  ];
+  ],
 
-  const allServices = [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services];
+  const allServices = [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services],
 
   const filteredServices = activeCategory === 'all' 
     ? allServices 
     : allServices.filter(service => {
-        if (activeCategory === 'ai') return service.category.includes('AI');
-        if (activeCategory === 'quantum') return service.category.includes('Quantum');
-        if (activeCategory === 'emerging') return emergingTech2025Services.includes(service);
-        if (activeCategory === 'enterprise') return enterpriseIT2025Services.includes(service);
-        if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices.includes(service);
-        return true;
-      });
+        if (activeCategory === 'ai') return service.category.includes($2);
+        if (activeCategory === 'quantum') return service.category.includes($2);
+        if (activeCategory === 'emerging') return emergingTech2025Services.includes($2);
+        if (activeCategory === 'enterprise') return enterpriseIT2025Services.includes($2);
+        if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices.includes($2);
+        return true
+      }),
 
   const loadMore = () => {
-    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length));
-  };
+    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length))
+  },
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20},
     visible: {
       opacity: 1,
       y: 0,
@@ -54,7 +51,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -62,10 +59,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -83,17 +80,17 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         {/* Category Filter */}
         <motion.div 
           className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
         >
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => {
-                setActiveCategory(category.id);
-                setVisibleServices(12);
+                setActiveCategory($2);
+                setVisibleServices(12)
               }}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 ${
                 activeCategory === category.id
@@ -115,7 +112,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true}}
         >
           {filteredServices.slice(0, visibleServices).map((service, index) => (
             <motion.div
@@ -215,10 +212,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         {visibleServices < filteredServices.length && (
           <motion.div 
             className="text-center"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0}}
+            whileInView={{ opacity: 1}}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <button
               onClick={loadMore}
@@ -232,10 +229,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         {/* Call to Action */}
         <motion.div 
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
         >
           <h3 className="text-3xl font-bold text-white mb-4">
             Ready to Experience the Future?
@@ -244,24 +241,5 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             Join the revolution with our cutting-edge AI, quantum, and emerging technology services. 
             Transform your business and stay ahead of the competition.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a 
-              href="/contact" 
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
-            >
-              Start Your Transformation
-            </a>
-            <a 
-              href="/pricing" 
-              className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
-            >
-              View Pricing
-            </a>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-export default RevolutionaryServicesShowcase;
+          <div className = $2;
+export default RevolutionaryServicesShowcase,

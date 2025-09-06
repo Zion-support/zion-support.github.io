@@ -2,15 +2,12 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
 export default function ToolResourcePage() {
-  const router = useRouter();
-  const { id } = router.query;
+  const router = useRouter($2);
+  const { id } = router.query,
 
   // Tools data - this should match the data in resources.tsx
-  const tools = [
-    {
-      id: 'automation-assessment',
+  const tools = $2;
       title: 'Automation Readiness Assessment',
       description: 'Evaluate your organization\'s readiness for AI automation implementation.',
       type: 'Interactive Tool',
@@ -59,11 +56,7 @@ export default function ToolResourcePage() {
         </ul>
       `,
       features: [
-        'Comprehensive evaluation framework',
-        'Industry benchmarking',
-        'Actionable recommendations',
-        'Progress tracking',
-        'Resource library access'
+        'Comprehensive evaluation frameworkIndustry benchmarkingActionable recommendationsProgress trackingResource library access'
       ]
     },
     {
@@ -119,11 +112,7 @@ export default function ToolResourcePage() {
         </ul>
       `,
       features: [
-        '5-level maturity framework',
-        'Multi-dimensional assessment',
-        'Gap analysis tools',
-        'Transformation roadmap',
-        'Progress tracking'
+        '5-level maturity frameworkMulti-dimensional assessmentGap analysis toolsTransformation roadmapProgress tracking'
       ]
     },
     {
@@ -188,17 +177,12 @@ export default function ToolResourcePage() {
         </ul>
       `,
       features: [
-        'Industry benchmark database',
-        'Performance gap analysis',
-        'Trend analysis tools',
-        'Action planning framework',
-        'Progress tracking'
+        'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
     }
-  ];
+  ],
 
-  const tool = tools.find(t => t.id === id);
-
+  const tool = tools.find($2);
   if (!tool) {
     return (
       <>
@@ -214,7 +198,7 @@ export default function ToolResourcePage() {
               </p>
               <Link 
                 href="/resources"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
                 ← Back to Resources
               </Link>
@@ -222,7 +206,7 @@ export default function ToolResourcePage() {
           </main>
         </div>
       </>
-    );
+    )
   }
 
   return (
@@ -298,7 +282,7 @@ export default function ToolResourcePage() {
             <div className="text-center">
               <Link 
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
                 Get Started with Your Project
               </Link>
@@ -307,5 +291,5 @@ export default function ToolResourcePage() {
         </main>
       </div>
     </>
-  );
+  )
 }

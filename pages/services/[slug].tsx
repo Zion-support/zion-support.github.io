@@ -9,15 +9,12 @@ import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
 import { newRealServices } from '../../data/new-real-services';
 import { marketReadyServices } from '../../data/market-ready-services';
-
-type Service = typeof enhancedRealMicroSaasServices[number];
-
-const contactInfo = {
-	mobile: '+1 302 464 0950',
+type Service = $2;
+const contactInfo = $2;
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+},
 
 function getAllServices(): Service[] {
 	return enhancedRealMicroSaasServices
@@ -26,72 +23,66 @@ function getAllServices(): Service[] {
 			additionalEnhancedServices as Service[],
 			newRealServices as Service[],
 			marketReadyServices as Service[]
-		);
+		)
 }
 
 function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
 
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
-		const url = new URL(link);
-		const path = url.pathname.replace(/^\/+|\/+$/g, '');
+		const url = new URL($2);
+		const path = url.pathname.replace($2);
 		if (path.startsWith('services/')) {
-			return path.substring('services/'.length);
+			return path.substring('services/'.length)
 		}
-		return null;
+		return null
 	} catch {
-		return null;
+		return null
 	}
 }
 
 export async function getStaticPaths() {
-	const services = getAllServices();
-	const slugs = new Set<string>();
-
+	const services = getAllServices($2);
+	const slugs = $2;
 	for (const s of services) {
 		// Prefer explicit link under /services/* when available
-		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
+		const fromLink = $2;
 		if (fromLink) {
-			slugs.add(fromLink);
-			continue;
+			slugs.add($2);
+			continue
 		}
 		// Fall back to normalized id or name to provide a stable URL under /services/*
-		if (s.id) slugs.add(toSlug(s.id));
-		else if (s.name) slugs.add(toSlug(s.name));
+		if (s.id) slugs.add(toSlug(s.id)),
+		else if (s.name) slugs.add(toSlug(s.name))
 	}
 
 	return {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
-		fallback: false
-	};
+		fallback: false}
 }
 
-export async function getStaticProps({ params }: { params: { slug: string } }) {
-	const services = getAllServices();
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
-
-	let service: Service | undefined = services.find((s) => {
-		if (!s.link) return false;
-		const fromLink = extractServiceSlugFromLink(s.link);
-		return fromLink === incomingSlug;
-	});
-
+export async function getStaticProps({ params }: { params: { slug: string} }) {
+	const services = getAllServices($2);
+	const incomingSlug = (params?.slug || '').replace($2);
+	let service: Service | undefined = $2;
+		const fromLink = extractServiceSlugFromLink($2);
+		return fromLink = $2;
 	if (!service) {
-		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
+		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
 	}
 
 	if (!service) {
-		return { notFound: true };
+		return { notFound: true}
 	}
 
 	return {
 		props: { service }
-	};
+	}
 }
 
-export default function ServiceDetailPage({ service }: { service: Service }) {
+export default function ServiceDetailPage({ service }: { service: Service}) {
 	return (
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
@@ -151,5 +142,5 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-	);
+	)
 }

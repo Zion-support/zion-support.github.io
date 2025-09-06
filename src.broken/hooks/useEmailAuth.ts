@@ -1,5 +1,4 @@
-// Hook for useEmailAuth;
-export const useUseEmailAuth: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
+// Hook for useEmailAuth,
+export const useUseEmailAuth: unknown = $2;
+  return {}
+},

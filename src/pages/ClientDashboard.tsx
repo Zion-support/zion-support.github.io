@@ -15,34 +15,29 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 import { useIsMobile } from "@/hooks/use-mobile";
-
 function ClientDashboardContent() {
-  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
-  const { jobs, isLoading } = useJobs();
-  const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
-  const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
-  const isMobile = useIsMobile();
-  const onboardingStatus = useOnboardingStatus();
-  const showAdvanced =
-    onboardingStatus.jobPosted &&
-    onboardingStatus.inviteSent &&
-    onboardingStatus.responseReceived;
-
+  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
+  const { jobs, isLoading } = useJobs($2);
+  const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
+  const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
+  const isMobile = useIsMobile($2);
+  const onboardingStatus = useOnboardingStatus($2);
+  const showAdvanced = $2;
   // Set the first job as selected when jobs are loaded (if any)
   useEffect(() => {
     if (jobs.length > 0 && !selectedJobId) {
-      const firstJob = jobs[0];
+      const firstJob = $2;
       if (firstJob) {
-        setSelectedJobId(firstJob.id);
-        setSelectedJobTitle(firstJob.title);
+        setSelectedJobId($2);
+        setSelectedJobTitle(firstJob.title)
       }
     }
-  }, [jobs, selectedJobId]);
+  }, [jobs, selectedJobId]),
 
   const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId);
-    setSelectedJobTitle(jobTitle);
-  };
+    setSelectedJobId($2);
+    setSelectedJobTitle(jobTitle)
+  },
 
   return (
     <>
@@ -139,7 +134,7 @@ function ClientDashboardContent() {
         </div>
       </main>
     </>
-  );
+  )
 }
 
 export default function ClientDashboard() {
@@ -147,5 +142,5 @@ export default function ClientDashboard() {
     <ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>
-  );
+  )
 }

@@ -9,8 +9,7 @@ import Head from 'next/head'
 import type { User as SupabaseUser } from '@supabase/supabase-js'
 
 interface PrivatePageProps {
-  user: SupabaseUser
-}
+  user: SupabaseUser}
 
 export default function PrivatePage({ user }: PrivatePageProps) {
   return (

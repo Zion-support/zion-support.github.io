@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  FileText, 
+  FileText,
   Download, 
   Calendar, 
   User, 
@@ -18,23 +18,19 @@ import {
   Eye,
   Clock,
   Award
-} from 'lucide-react';
+} from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-
-const ReportsPage: React.FC = () => {
-  const reports = [
-    {
-      title: 'The Future of Quantum Computing in Enterprise: 2024-2030',
+const ReportsPage: React.FC = $2;
       excerpt: 'Comprehensive analysis of quantum computing adoption trends, market opportunities, and strategic implications for businesses across industries.',
       date: '2024-01-15',
       author: 'Dr. Sarah Chen & Quantum Research Team',
       category: 'Technology Trends',
-      tags: ['Quantum Computing', 'Enterprise', 'Market Analysis', 'Future Tech'],
+      tags: ['Quantum ComputingEnterpriseMarket AnalysisFuture Tech'],
       pages: 45,
       downloads: 1247,
       views: 5678,
       featured: true,
-      icon: <Atom className="w-8 h-8" />,
+      icon: <Atom className = $2;
       color: 'from-purple-500 to-pink-500'
     },
     {
@@ -43,12 +39,12 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-10',
       author: 'AI Research Division',
       category: 'Business Intelligence',
-      tags: ['AI', 'ROI', 'Fortune 500', 'Best Practices'],
+      tags: ['AIROIFortune 500Best Practices'],
       pages: 38,
       downloads: 892,
       views: 3456,
       featured: false,
-      icon: <Brain className="w-8 h-8" />,
+      icon: <Brain className = $2;
       color: 'from-blue-500 to-cyan-500'
     },
     {
@@ -57,12 +53,12 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-08',
       author: 'Cybersecurity Research Team',
       category: 'Security',
-      tags: ['Cybersecurity', 'AI Threats', 'Threat Landscape', 'Defense'],
+      tags: ['CybersecurityAI ThreatsThreat LandscapeDefense'],
       pages: 52,
       downloads: 1567,
       views: 6789,
       featured: false,
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className = $2;
       color: 'from-red-500 to-orange-500'
     },
     {
@@ -71,12 +67,12 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-05',
       author: 'Market Research Team',
       category: 'Market Analysis',
-      tags: ['Venture Capital', 'Investment', 'Innovation', 'Global Markets'],
+      tags: ['Venture CapitalInvestmentInnovationGlobal Markets'],
       pages: 41,
       downloads: 734,
       views: 2890,
       featured: false,
-      icon: <TrendingUp className="w-8 h-8" />,
+      icon: <TrendingUp className = $2;
       color: 'from-green-500 to-emerald-500'
     },
     {
@@ -85,12 +81,12 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-03',
       author: 'IoT Research Division',
       category: 'Emerging Tech',
-      tags: ['Edge Computing', 'IoT', 'Industry 4.0', 'Real-time'],
+      tags: ['Edge ComputingIoTIndustry 4.0Real-time'],
       pages: 36,
       downloads: 623,
       views: 2345,
       featured: false,
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Zap className = $2;
       color: 'from-yellow-500 to-orange-500'
     },
     {
@@ -99,15 +95,15 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-01',
       author: 'Sustainability Research Team',
       category: 'Sustainability',
-      tags: ['Green Computing', 'Sustainability', 'Environmental Impact', 'Clean Tech'],
+      tags: ['Green ComputingSustainabilityEnvironmental ImpactClean Tech'],
       pages: 43,
       downloads: 445,
       views: 1789,
       featured: false,
-      icon: <Globe className="w-8 h-8" />,
+      icon: <Globe className = $2;
       color: 'from-teal-500 to-green-500'
     }
-  ];
+  ],
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -130,8 +126,8 @@ const ReportsPage: React.FC = () => {
             </motion.h1>
             <motion.p 
               className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.
@@ -139,8 +135,8 @@ const ReportsPage: React.FC = () => {
             
             <motion.div
               className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <span className="flex items-center space-x-2">
@@ -164,10 +160,10 @@ const ReportsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Featured Report
@@ -178,10 +174,10 @@ const ReportsPage: React.FC = () => {
               <motion.div
                 key={index}
                 className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
               >
                 <div className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-8">
                   <div className={`w-24 h-24 bg-gradient-to-br ${report.color} rounded-2xl flex items-center justify-center text-white flex-shrink-0`}>
@@ -249,10 +245,10 @@ const ReportsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 All Reports
@@ -265,10 +261,10 @@ const ReportsPage: React.FC = () => {
             {/* Category Pills */}
             <motion.div 
               className="flex flex-wrap justify-center gap-4 mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               {categories.map((category, index) => (
                 <button
@@ -290,10 +286,10 @@ const ReportsPage: React.FC = () => {
                 <motion.article
                   key={index}
                   className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 30}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${report.color} rounded-xl flex items-center justify-center text-white mb-6`}>
                     {report.icon}
@@ -344,38 +340,7 @@ const ReportsPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Need Custom Research?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2"
-                >
-                  <span>Request Custom Research</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <a
-                  href="/services"
-                  className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200"
-                >
-                  View Research Services
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-  );
-};
-
-export default ReportsPage;
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
+export default ReportsPage,

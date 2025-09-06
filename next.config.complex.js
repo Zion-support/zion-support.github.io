@@ -1,16 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+const nextConfig = $2;
   compress: true,
   poweredByHeader: false,
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  eslint: { ignoreDuringBuilds: true},
+  typescript: { ignoreBuildErrors: true},
+  pageExtensions: ['tsxtsjsxjs'],
   
   // Image optimization
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
-    formats: ['image/webp', 'image/avif'],
+    formats: ['image/webpimage/avif']
   },
   
   // Output configuration
@@ -29,7 +28,7 @@ const nextConfig = {
   generateEtags: true,
   
   // Dist directory
-  distDir: '.next',
-};
+  distDir: '.next'
+},
 
-module.exports = nextConfig;
+module.exports = $2;

@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { Scale, CheckCircle, Globe, Shield, FileText, Users, Mail, Phone, MapPin } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-
 export default function Compliance() {
   const complianceFrameworks = [
     {
@@ -13,11 +12,7 @@ export default function Compliance() {
       icon: Shield,
       description: 'Annual audits of security, availability, and confidentiality controls',
       details: [
-        'Independent third-party auditing',
-        'Security controls assessment',
-        'Availability and processing integrity',
-        'Confidentiality safeguards',
-        'Annual compliance reporting'
+        'Independent third-party auditingSecurity controls assessmentAvailability and processing integrityConfidentiality safeguardsAnnual compliance reporting'
       ]
     },
     {
@@ -26,11 +21,7 @@ export default function Compliance() {
       icon: Scale,
       description: 'International standard for information security management',
       details: [
-        'Information security management system (ISMS)',
-        'Risk assessment and management',
-        'Security policy implementation',
-        'Continuous improvement processes',
-        'Regular certification audits'
+        'Information security management system (ISMS)Risk assessment and managementSecurity policy implementationContinuous improvement processesRegular certification audits'
       ]
     },
     {
@@ -39,11 +30,7 @@ export default function Compliance() {
       icon: Globe,
       description: 'European Union data protection regulation compliance',
       details: [
-        'Data protection by design and default',
-        'Individual rights management',
-        'Data processing agreements',
-        'Privacy impact assessments',
-        'Breach notification procedures'
+        'Data protection by design and defaultIndividual rights managementData processing agreementsPrivacy impact assessmentsBreach notification procedures'
       ]
     },
     {
@@ -52,14 +39,10 @@ export default function Compliance() {
       icon: Users,
       description: 'Healthcare information privacy and security standards',
       details: [
-        'Protected health information (PHI) safeguards',
-        'Business associate agreements',
-        'Access controls and audit logs',
-        'Workforce training programs',
-        'Incident response procedures'
+        'Protected health information (PHI) safeguardsBusiness associate agreementsAccess controls and audit logsWorkforce training programsIncident response procedures'
       ]
     }
-  ];
+  ],
 
   const additionalCompliance = [
     { name: 'PCI DSS', description: 'Payment card industry data security standard' },
@@ -67,7 +50,7 @@ export default function Compliance() {
     { name: 'FERPA', description: 'Family Educational Rights and Privacy Act' },
     { name: 'FISMA', description: 'Federal Information Security Management Act' },
     { name: 'FedRAMP', description: 'Federal Risk and Authorization Management Program' }
-  ];
+  ],
 
   return (
     <>
@@ -239,8 +222,7 @@ export default function Compliance() {
               <h3 className="text-3xl font-bold text-white mb-6">Your Data Protection Rights</h3>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10">
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Under various data protection regulations, you have specific rights regarding your personal data:
-                </p>
+                  Under various data protection regulations, you have specific rights regarding your personal data: </p>
                 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
@@ -251,7 +233,7 @@ export default function Compliance() {
                     <ul className="space-y-2 text-gray-300">
                       <li>• Right to access your personal data</li>
                       <li>• Right to rectification (correction)</li>
-                      <li>• Right to erasure (&quot;right to be forgotten&quot;)</li>
+                      <li>• Right to erasure (&quot,right to be forgotten&quot)</li>
                       <li>• Right to restrict processing</li>
                       <li>• Right to data portability</li>
                     </ul>
@@ -318,8 +300,7 @@ export default function Compliance() {
               </h3>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-                For questions about our compliance programs or to exercise your data protection rights:
-              </p>
+                For questions about our compliance programs or to exercise your data protection rights: </p>
               
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="flex items-center">
@@ -353,5 +334,5 @@ export default function Compliance() {
         <EnhancedFooter />
       </div>
     </>
-  );
+  )
 }

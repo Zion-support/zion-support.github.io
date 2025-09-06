@@ -1,5 +1,5 @@
 import { 
-  UserGroupIcon, 
+  UserGroupIcon,
   LightBulbIcon, 
   GlobeAltIcon, 
   ShieldCheckIcon,
@@ -7,9 +7,7 @@ import {
   RocketLaunchIcon
 } from '@heroicons/react/24/outline'
 
-const values = [
-  {
-    name: 'Innovation First',
+const values = $2;
     description: 'We push the boundaries of what\'s possible, constantly exploring new frontiers in AI and technology.',
     icon: LightBulbIcon},
   {
@@ -25,9 +23,7 @@ const values = [
     description: 'Our team of world-class researchers drives breakthrough discoveries and innovations.',
     icon: AcademicCapIcon}]
 
-const team = [
-  {
-    name: 'Dr. Sarah Chen',
+const team = $2;
     role: 'Chief Executive Officer',
     bio: 'Former AI researcher at Stanford, leading Zion Tech Group\'s vision for the future of technology.',
     image: '/images/team/sarah-chen.jpg'},
@@ -103,22 +99,11 @@ export default function AboutPage() {
       </div>
 
       {/* Company Story */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Story</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            From Research to Revolution
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
-          <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
-            <p className="text-lg text-gray-300 mb-6">
-              Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs, 
+      <div className = $2;
               Zion Tech Group emerged from a shared vision: to bridge the gap between cutting-edge 
               research and real-world applications.
             </p>
-            <p className="text-lg text-gray-300 mb-6">
-              What started as a small research lab has grown into a global technology powerhouse, 
+            <p className = $2;
               with offices in Silicon Valley, London, Tokyo, and Singapore. Our team of 200+ 
               researchers, engineers, and business professionals work tirelessly to push the 
               boundaries of what's possible.

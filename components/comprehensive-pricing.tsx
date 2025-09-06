@@ -7,15 +7,14 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '../data/revolutionary-micro-saas-services';
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';
-
 export default function ComprehensivePricingPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [priceRange, setPriceRange] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('price');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [priceRange, setPriceRange] = useState($2);
+  const [searchQuery, setSearchQuery] = useState($2);
+  const [sortBy, setSortBy] = useState($2);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
-  const allServices = [...revolutionaryMicroSaasServices, ...enhancedMicroSaasServices];
+  const allServices = [...revolutionaryMicroSaasServices, ...enhancedMicroSaasServices],
 
   const priceRanges = [
     { value: 'All', label: 'All Prices' },
@@ -25,7 +24,7 @@ export default function ComprehensivePricingPage() {
     { value: '1001-2500', label: '$1,001 - $2,500' },
     { value: '2501-5000', label: '$2,501 - $5,000' },
     { value: '5001+', label: '$5,001+' }
-  ];
+  ],
 
   const sortOptions = [
     { value: 'price', label: 'Price Low-High' },
@@ -33,23 +32,22 @@ export default function ComprehensivePricingPage() {
     { value: 'popularity', label: 'Most Popular' },
     { value: 'category', label: 'Category' },
     { value: 'roi', label: 'Highest ROI' }
-  ];
+  ],
 
   // Filter and sort services
-  let filteredServices = allServices;
-
+  let filteredServices = $2;
   // Category filter
   if (selectedCategory !== 'All') {
-    filteredServices = filteredServices.filter(service => service.category === selectedCategory);
+    filteredServices = filteredServices.filter(service => service.category === selectedCategory)
   }
 
   // Price range filter
   if (priceRange !== 'All') {
-    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+    const [min, max] = priceRange.split('-').map(p = $2;
     filteredServices = filteredServices.filter(service => {
-      const price = parseFloat(service.price.replace('$', '').replace(',', ''));
-      return price >= min && (max === Infinity || price <= max);
-    });
+      const price = parseFloat(service.price.replace('$', '').replace(, '')),
+      return price >= min && (max === Infinity || price <= max)
+    })
   }
 
   // Search filter
@@ -59,129 +57,98 @@ export default function ComprehensivePricingPage() {
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    )
   }
 
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'popularity':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
       case 'category':
-        return a.category.localeCompare(b.category);
+        return a.category.localeCompare($2);
       case 'roi':
-        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
-        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
-        return bRoi - aRoi;
-      default:
-        return a.name.localeCompare(b.name);
+        const aRoi = $2;
+        const bRoi = $2;
+        return bRoi - aRoi,
+      default: return a.name.localeCompare(b.name)
     }
-  });
+  }),
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   // Pricing tiers
-  const pricingTiers = [
-    {
-      name: 'Starter',
+  const pricingTiers = $2;
       price: '$49',
       period: '/month',
       description: 'Perfect for small businesses and startups',
       features: [
-        'Basic service access',
-        'Email support',
-        'Standard features',
-        'Community forum access',
-        'Basic analytics'
+        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ],
-      icon: <Star className="w-6 h-6" />,
+      icon: <Star className = $2;
       color: 'from-blue-500 to-cyan-600',
-      popular: false
-    },
+      popular: false},
     {
       name: 'Professional',
       price: '$199',
       period: '/month',
       description: 'Ideal for growing businesses and teams',
       features: [
-        'Advanced service access',
-        'Priority support',
-        'Advanced features',
-        'API access',
-        'Advanced analytics',
-        'Custom integrations'
+        'Advanced service accessPriority supportAdvanced featuresAPI accessAdvanced analyticsCustom integrations'
       ],
-      icon: <Gem className="w-6 h-6" />,
+      icon: <Gem className = $2;
       color: 'from-purple-500 to-pink-600',
-      popular: true
-    },
+      popular: true},
     {
       name: 'Enterprise',
       price: '$499',
       period: '/month',
       description: 'For large organizations and enterprises',
       features: [
-        'Full service access',
-        '24/7 dedicated support',
-        'All features',
-        'Custom development',
-        'Enterprise analytics',
-        'White-label options',
-        'SLA guarantees'
+        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees'
       ],
-      icon: <Crown className="w-6 h-6" />,
+      icon: <Crown className = $2;
       color: 'from-yellow-500 to-orange-600',
-      popular: false
-    }
-  ];
+      popular: false}
+  ],
 
   // Market statistics
-  const marketStats = [
-    {
-      metric: '$15.2B',
+  const marketStats = $2;
       label: 'Total Market Size',
       description: 'Combined market value of all services',
-      icon: <ChartBar className="w-6 h-6" />
-    },
+      icon: <ChartBar className = $2;
     {
       metric: '400+',
       label: 'Services Available',
       description: 'Comprehensive micro SaaS portfolio',
-      icon: <Database className="w-6 h-6" />
-    },
+      icon: <Database className = $2;
     {
       metric: '99.99%',
       label: 'Uptime Guarantee',
       description: 'Enterprise-grade reliability',
-      icon: <Shield className="w-6 h-6" />
-    },
+      icon: <Shield className = $2;
     {
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
-      icon: <TrendingUp className="w-6 h-6" />
-    }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
+      icon: <TrendingUp className = $2;
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0},
     visible: {
       y: 0,
       opacity: 1,
@@ -189,7 +156,7 @@ export default function ComprehensivePricingPage() {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
@@ -212,8 +179,8 @@ export default function ComprehensivePricingPage() {
             <div className="max-w-5xl mx-auto">
               <motion.h1 
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8 }}
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -224,8 +191,8 @@ export default function ComprehensivePricingPage() {
               </motion.h1>
               <motion.p 
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Transparent pricing for all our revolutionary micro SaaS services. 
@@ -235,8 +202,8 @@ export default function ComprehensivePricingPage() {
               {/* Market Stats */}
               <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 {marketStats.map((stat, index) => (
@@ -251,8 +218,8 @@ export default function ComprehensivePricingPage() {
               {/* CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <Button 
@@ -301,9 +268,9 @@ export default function ComprehensivePricingPage() {
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -323,7 +290,7 @@ export default function ComprehensivePricingPage() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               {pricingTiers.map((tier, index) => (
                 <motion.div
@@ -367,7 +334,7 @@ export default function ComprehensivePricingPage() {
                                              <Button 
                          variant={tier.popular ? 'futuristic' : 'primary'} 
                          size="md"
-                         onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+                         onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                          className="w-full"
                        >
                         Get Started
@@ -387,9 +354,9 @@ export default function ComprehensivePricingPage() {
             {/* Filters and Controls */}
             <motion.div 
               className="mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
               transition={{ duration: 0.6 }}
             >
               <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -465,7 +432,7 @@ export default function ComprehensivePricingPage() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -509,7 +476,7 @@ export default function ComprehensivePricingPage() {
                            <Button 
                              variant="futuristic" 
                              size="sm"
-                             onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+                             onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                              className="w-full"
                            >
                              Get Pricing
@@ -567,7 +534,7 @@ export default function ComprehensivePricingPage() {
                              <Button 
                                variant="futuristic" 
                                size="sm"
-                               onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+                               onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                              >
                                Get Pricing
                                <DollarSign className="ml-2 w-4 h-4" />
@@ -584,8 +551,8 @@ export default function ComprehensivePricingPage() {
             {filteredServices.length === 0 && (
               <motion.div 
                 className="text-center py-16"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0}}
+                animate={{ opacity: 1}}
                 transition={{ duration: 0.6 }}
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -594,9 +561,9 @@ export default function ComprehensivePricingPage() {
                                  <Button 
                    variant="primary"
                    onClick={() => {
-                     setSearchQuery('');
-                     setSelectedCategory('All');
-                     setPriceRange('All');
+                     setSearchQuery($2);
+                     setSelectedCategory($2);
+                     setPriceRange('All')
                    }}
                  >
                    Clear Filters
@@ -611,9 +578,9 @@ export default function ComprehensivePricingPage() {
           <div className="container mx-auto px-4 text-center">
             <motion.div 
               className="max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -627,7 +594,7 @@ export default function ComprehensivePricingPage() {
                 <Button 
                   variant="primary" 
                   size="lg"
-                  onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+                  onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                 >
                   Contact Sales
                   <Mail className="ml-2 w-5 h-5" />
@@ -635,7 +602,7 @@ export default function ComprehensivePricingPage() {
                 <Button 
                   variant="futuristic" 
                   size="lg"
-                  onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+                  onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                 >
                   Schedule Demo
                   <Calendar className="ml-2 w-5 h-5" />
@@ -664,5 +631,5 @@ export default function ComprehensivePricingPage() {
         </section>
       </div>
     </UltraFuturisticBackground>
-  );
+  )
 }

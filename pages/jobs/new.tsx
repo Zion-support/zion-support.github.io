@@ -3,19 +3,17 @@ import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import { useToast } from '../../components/ui/NotificationSystem';
-
 export default function NewJobPage() {
-  const { notify } = useToast();
-  const [loading, setLoading] = useState(false);
-
+  const { notify } = useToast($2);
+  const [loading, setLoading] = useState($2);
   const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
+    e.preventDefault($2);
+    setLoading($2);
     setTimeout(() => {
-      setLoading(false);
-      notify('Job posted! Invite talent to get responses.', 'success');
-    }, 800);
-  };
+      setLoading($2);
+      notify('Job posted! Invite talent to get responses.success')
+    }, 800)
+  },
 
   return (
     <div className="max-w-2xl mx-auto">
@@ -33,5 +31,5 @@ export default function NewJobPage() {
         )}
       </EnhancedCard>
     </div>
-  );
+  )
 }

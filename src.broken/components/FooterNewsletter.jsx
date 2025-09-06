@@ -4,37 +4,35 @@ import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { apiClient } from '@/utils/apiClient';
 import { Loader2 } from 'lucide-react';
-
 export function FooterNewsletter() {
-  const [email, setEmail] = useState('');
-  const [honeypot, setHoneypot] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
+  const [email, setEmail] = useState($2);
+  const [honeypot, setHoneypot] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const { toast } = useToast($2);
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (honeypot) return; // ignore bots
-    setIsSubmitting(true);
+    e.preventDefault($2);
+    if (honeypot) return, // ignore bots
+    setIsSubmitting($2);
     try {
       const res = await apiClient('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
-      });
+      }),
 
       if (res.ok) {
-        toast.success('Subscribed!');
-        setEmail('');
+        toast.success($2);
+        setEmail('')
       } else {
-        const data = await res.json().catch(() => ({}));
-        toast.error(data.error || 'Subscription failed');
+        const data = $2;
+        toast.error(data.error || 'Subscription failed')
       }
     } catch (err) {
-      toast.error(err.message || 'Subscription failed');
+      toast.error(err.message || 'Subscription failed')
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  },
 
   return (
     <form
@@ -73,5 +71,5 @@ export function FooterNewsletter() {
         )}
       </Button>
     </form>
-  );
+  )
 }

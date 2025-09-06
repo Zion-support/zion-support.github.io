@@ -1,5 +1,4 @@
 import { Project } from "@/types/projects";
-
 export const PROJECTS: Project[] = [
   {
     id: "project-1",
@@ -21,4 +20,4 @@ export const PROJECTS: Project[] = [
       professional_title: "Senior AI Engineer"
     }
   }
-];
+],

@@ -2,26 +2,21 @@
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 // These would be replaced with actual screenshots
 const mockScreenshots = [
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
   { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" },
   { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },
   { id: 4, alt: "Messaging screen", src: "/placeholder.svg" },
-  { id: 5, alt: "Profile screen", src: "/placeholder.svg" }];
+  { id: 5, alt: "Profile screen", src: "/placeholder.svg" }],
 
-export const AppScreenshots: React.FC = () => {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (direction: "left" | "right") => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = 300;
+export const AppScreenshots: React.FC = $2;
+  const scroll = $2;
       scrollContainerRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth"});
+        left: direction = $2;
+        behavior: "smooth"})
     }
-  };
+  },
 
   return (
     <section className="py-16 bg-zion-blue-dark">
@@ -50,28 +45,4 @@ export const AppScreenshots: React.FC = () => {
           >
             {mockScreenshots.map((screenshot) => (
               <div 
-                key={screenshot.id} 
-                className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30"
-              >
-                <img 
-                  src={screenshot.src} 
-                  alt={screenshot.alt}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-          
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
-            onClick={() => scroll("right")}
-          >
-            <ChevronRight className="h-6 w-6" />
-          </Button>
-        </div>
-      </div>
-    </section>
-  );
-};
+                key = $2;

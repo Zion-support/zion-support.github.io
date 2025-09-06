@@ -7,7 +7,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { 
   Card,
   CardContent
-} from "@/components/ui/card";
+} from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Navigate } from "react-router-dom";
 import type { QuoteRequest } from "@/types/quotes";
@@ -18,15 +18,13 @@ import {
   QuoteStatusCards,
   QuotesFilter,
   QuotesTable
-} from "@/components/admin/quotes";
+} from "@/components/admin/quotes",
 
 export default function QuoteManager() {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin';
-  
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
-
+  const { user } = useAuth($2);
+  const isAdmin = $2;
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
+  const [showDetails, setShowDetails] = useState($2);
   const {
     quotes,
     isLoading,
@@ -42,31 +40,27 @@ export default function QuoteManager() {
     updateStatus,
     toggleArchive,
     deleteQuote
-  } = useAdminQuotes();
-
+  } = useAdminQuotes($2);
   // Count quotes by status
-  const statusCounts = {
-    new: quotes.filter(q => q.status === 'new').length,
-    in_review: quotes.filter(q => q.status === 'in_review').length,
-    accepted: quotes.filter(q => q.status === 'accepted').length,
-    responded: quotes.filter(q => q.status === 'responded').length,
-    closed: quotes.filter(q => q.status === 'closed').length
-  };
-
+  const statusCounts = $2;
+    in_review: quotes.filter(q = $2;
+    accepted: quotes.filter(q = $2;
+    responded: quotes.filter(q = $2;
+    closed: quotes.filter(q = $2;
   const handleViewDetails = (quote: QuoteRequest) => {
-    setSelectedQuote(quote);
-    setShowDetails(true);
-  };
+    setSelectedQuote($2);
+    setShowDetails(true)
+  },
 
   const handleResetFilters = () => {
-    setStatusFilter('all');
-    setArchiveFilter('all');
-    setSearchQuery('');
-    setDateRange({ from: undefined, to: undefined });
-  };
+    setStatusFilter($2);
+    setArchiveFilter($2);
+    setSearchQuery($2);
+    setDateRange({ from: undefined, to: undefined})
+  },
 
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" replace />;
+    return <Navigate to="/unauthorized" replace />
   }
 
   return (
@@ -142,13 +136,13 @@ export default function QuoteManager() {
           quote={selectedQuote}
           isOpen={showDetails}
           onClose={() => {
-            setShowDetails(false);
-            setSelectedQuote(null);
+            setShowDetails($2);
+            setSelectedQuote(null)
           }}
         />
         
         <Footer />
       </div>
     </ProtectedRoute>
-  );
+  )
 }

@@ -1,52 +1,48 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface NextGenAIService2026 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
-const contact = {
-  mobile: '+1 302 464 0950',
+const contact = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   {
@@ -57,16 +53,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Advanced AI platform that analyzes facial expressions, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.',
     features: [
-      'Real-time emotion detection from video/audio',
-      'Sentiment analysis with emotional context',
-      'Emotional response recommendations',
-      'Multi-modal emotion fusion (facial, voice, text)',
-      'Emotional intelligence training modules',
-      'Custom emotion models for specific industries',
-      'Real-time emotional analytics dashboard',
-      'API for integration with existing systems',
-      'Privacy-compliant emotion processing',
-      'Emotional intelligence scoring and reports'
+      'Real-time emotion detection from video/audioSentiment analysis with emotional contextEmotional response recommendationsMulti-modal emotion fusion (facial, voice, text)Emotional intelligence training modulesCustom emotion models for specific industriesReal-time emotional analytics dashboardAPI for integration with existing systemsPrivacy-compliant emotion processingEmotional intelligence scoring and reports'
     ],
     popular: true,
     icon: '🧠💙',
@@ -79,11 +66,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '2-3 days',
     category: 'AI & Emotional Intelligence',
     realService: true,
-    technology: ['TensorFlow', 'OpenCV', 'PyTorch', 'WebRTC', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['Zoom', 'Teams', 'Slack', 'Salesforce', 'HubSpot', 'Zendesk', 'Custom APIs'],
-    useCases: ['Customer sentiment analysis', 'Employee wellness monitoring', 'Mental health assessment', 'Educational engagement tracking'],
+    technology: ['TensorFlowOpenCVPyTorchWebRTCReactNode.jsPostgreSQL'],
+    integrations: ['ZoomTeamsSlackSalesforceHubSpotZendeskCustom APIs'],
+    useCases: ['Customer sentiment analysisEmployee wellness monitoringMental health assessmentEducational engagement tracking'],
     roi: 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.',
-    competitors: ['Affectiva', 'Realeyes', 'Emotient', 'Noldus'],
+    competitors: ['AffectivaRealeyesEmotientNoldus'],
     marketSize: '$3.2B emotional AI market',
     growthRate: '150% annual growth',
     variant: 'ai-futuristic',
@@ -93,8 +80,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-06-01',
     customers: 45,
     rating: 4.9,
-    reviews: 89
-  },
+    reviews: 89},
   {
     id: 'ai-predictive-maintenance-platform',
     name: 'AI Predictive Maintenance Platform',
@@ -103,16 +89,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Industrial IoT platform that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.',
     features: [
-      'Real-time sensor data monitoring',
-      'Machine learning failure prediction models',
-      'Predictive maintenance scheduling',
-      'Equipment health scoring',
-      'Anomaly detection algorithms',
-      'Maintenance cost optimization',
-      'Integration with CMMS systems',
-      'Mobile app for field technicians',
-      'Custom alerting and notifications',
-      'Historical performance analytics'
+      'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field techniciansCustom alerting and notificationsHistorical performance analytics'
     ],
     popular: true,
     icon: '⚙️🔮',
@@ -125,11 +102,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '1-2 weeks',
     category: 'AI & Industrial IoT',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'Apache Kafka', 'InfluxDB', 'React', 'Node.js', 'Docker'],
-    integrations: ['SAP', 'Oracle', 'Maximo', 'ServiceNow', 'Modbus', 'OPC UA', 'REST APIs'],
-    useCases: ['Equipment failure prediction', 'Maintenance optimization', 'Energy efficiency', 'Quality control'],
+    technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'],
+    integrations: ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'],
+    useCases: ['Equipment failure predictionMaintenance optimizationEnergy efficiencyQuality control'],
     roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',
-    competitors: ['Uptake', 'C3.ai', 'PTC', 'Siemens Mindsphere'],
+    competitors: ['UptakeC3.aiPTCSiemens Mindsphere'],
     marketSize: '$12.3B predictive maintenance market',
     growthRate: '120% annual growth',
     variant: 'ai-futuristic',
@@ -139,8 +116,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-03-15',
     customers: 78,
     rating: 4.7,
-    reviews: 156
-  },
+    reviews: 156},
   {
     id: 'ai-content-personalization-engine',
     name: 'AI Content Personalization Engine',
@@ -149,16 +125,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Advanced AI engine that personalizes content, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.',
     features: [
-      'Real-time user behavior tracking',
-      'Dynamic content personalization',
-      'A/B testing automation',
-      'Multi-channel personalization',
-      'Predictive user modeling',
-      'Content performance optimization',
-      'Personalization analytics dashboard',
-      'API for content delivery',
-      'GDPR-compliant data handling',
-      'Custom personalization rules engine'
+      'Real-time user behavior trackingDynamic content personalizationA/B testing automationMulti-channel personalizationPredictive user modelingContent performance optimizationPersonalization analytics dashboardAPI for content deliveryGDPR-compliant data handlingCustom personalization rules engine'
     ],
     popular: false,
     icon: '🎯✨',
@@ -171,11 +138,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '3-5 days',
     category: 'AI & Personalization',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'Redis', 'PostgreSQL', 'React', 'Node.js', 'AWS Lambda'],
-    integrations: ['Shopify', 'WooCommerce', 'WordPress', 'HubSpot', 'Mailchimp', 'Custom CMS'],
-    useCases: ['Product recommendations', 'Content personalization', 'Email marketing', 'Website optimization'],
+    technology: ['PythonTensorFlowRedisPostgreSQLReactNode.jsAWS Lambda'],
+    integrations: ['ShopifyWooCommerceWordPressHubSpotMailchimpCustom CMS'],
+    useCases: ['Product recommendationsContent personalizationEmail marketingWebsite optimization'],
     roi: 'Average 35% increase in conversion rates and 40% improvement in user engagement.',
-    competitors: ['Dynamic Yield', 'Optimizely', 'Evergage', 'Adobe Target'],
+    competitors: ['Dynamic YieldOptimizelyEvergageAdobe Target'],
     marketSize: '$8.7B personalization market',
     growthRate: '140% annual growth',
     variant: 'ai-futuristic',
@@ -185,8 +152,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-04-20',
     customers: 92,
     rating: 4.6,
-    reviews: 203
-  },
+    reviews: 203},
   {
     id: 'ai-voice-cloning-platform',
     name: 'AI Voice Cloning Platform',
@@ -195,16 +161,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Professional voice cloning platform that creates high-quality, natural-sounding voice replicas for content creators, marketers, and businesses.',
     features: [
-      'High-quality voice cloning (5+ minutes of audio)',
-      'Multiple voice styles and emotions',
-      'Real-time voice synthesis',
-      'Text-to-speech with cloned voices',
-      'Voice customization controls',
-      'Batch processing capabilities',
-      'API for integration',
-      'Voice library management',
-      'Quality assurance tools',
-      'Commercial usage rights'
+      'High-quality voice cloning (5+ minutes of audio)Multiple voice styles and emotionsReal-time voice synthesisText-to-speech with cloned voicesVoice customization controlsBatch processing capabilitiesAPI for integrationVoice library managementQuality assurance toolsCommercial usage rights'
     ],
     popular: false,
     icon: '🎤🎭',
@@ -217,11 +174,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '1 day',
     category: 'AI & Voice Technology',
     realService: true,
-    technology: ['Python', 'PyTorch', 'TensorFlow', 'React', 'Node.js', 'AWS Polly', 'Google Cloud TTS'],
-    integrations: ['Adobe Audition', 'Audacity', 'GarageBand', 'Custom audio workflows', 'REST APIs'],
-    useCases: ['Podcast production', 'Marketing videos', 'E-learning content', 'Audiobook narration'],
+    technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],
+    integrations: ['Adobe AuditionAudacityGarageBandCustom audio workflowsREST APIs'],
+    useCases: ['Podcast productionMarketing videosE-learning contentAudiobook narration'],
     roi: 'Average 60% reduction in voice recording costs and 3x faster content production.',
-    competitors: ['ElevenLabs', 'Play.ht', 'Resemble AI', 'Descript'],
+    competitors: ['ElevenLabsPlay.htResemble AIDescript'],
     marketSize: '$2.1B voice cloning market',
     growthRate: '180% annual growth',
     variant: 'ai-futuristic',
@@ -231,8 +188,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-02-10',
     customers: 156,
     rating: 4.8,
-    reviews: 312
-  },
+    reviews: 312},
   {
     id: 'ai-code-review-assistant',
     name: 'AI Code Review Assistant',
@@ -241,16 +197,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Intelligent code review assistant that automatically analyzes code quality, identifies potential issues, and provides actionable improvement suggestions.',
     features: [
-      'Automated code quality analysis',
-      'Security vulnerability detection',
-      'Performance optimization suggestions',
-      'Code style and best practices',
-      'Integration with Git platforms',
-      'Custom rule configuration',
-      'Team collaboration tools',
-      'Code review analytics',
-      'Pull request automation',
-      'Multi-language support'
+      'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analyticsPull request automationMulti-language support'
     ],
     popular: true,
     icon: '💻🔍',
@@ -263,11 +210,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '2-3 days',
     category: 'AI & Development',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'Docker'],
-    integrations: ['GitHub', 'GitLab', 'Bitbucket', 'Azure DevOps', 'Slack', 'Jira', 'Teams'],
-    useCases: ['Code quality improvement', 'Security auditing', 'Performance optimization', 'Team collaboration'],
+    technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'],
+    integrations: ['GitHubGitLabBitbucketAzure DevOpsSlackJiraTeams'],
+    useCases: ['Code quality improvementSecurity auditingPerformance optimizationTeam collaboration'],
     roi: 'Average 40% reduction in code review time and 30% improvement in code quality scores.',
-    competitors: ['SonarQube', 'CodeClimate', 'DeepCode', 'Snyk'],
+    competitors: ['SonarQubeCodeClimateDeepCodeSnyk'],
     marketSize: '$5.4B code quality market',
     growthRate: '110% annual growth',
     variant: 'ai-futuristic',
@@ -277,6 +224,5 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-01-25',
     customers: 203,
     rating: 4.7,
-    reviews: 445
-  }
-];
+    reviews: 445}
+],

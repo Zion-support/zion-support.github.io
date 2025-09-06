@@ -11,105 +11,84 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
-} from 'lucide-react';
+} from 'lucide-react',
 
-const SpaceTechnologyPage: React.FC = () => {
-  const spaceServices = [
-    {
-      id: 'space-resource-mining',
+const SpaceTechnologyPage: React.FC = $2;
       name: 'Space Resource Mining',
       description: 'Advanced mining operations for extraterrestrial resources',
-      features: ['Asteroid Mining', 'Resource Extraction', 'Processing Automation', 'Transport Logistics'],
+      features: ['Asteroid MiningResource ExtractionProcessing AutomationTransport Logistics'],
       price: '$4,999',
       period: 'month',
       popular: true,
-      icon: <Rocket className="w-8 h-8" />
-    },
+      icon: <Rocket className = $2;
     {
       id: 'ai-powered-space-tech',
       name: 'AI-Powered Space Technology',
       description: 'Intelligent space systems with autonomous capabilities',
-      features: ['Autonomous Navigation', 'AI Mission Control', 'Predictive Analytics', 'Real-time Optimization'],
+      features: ['Autonomous NavigationAI Mission ControlPredictive AnalyticsReal-time Optimization'],
       price: '$3,999',
       period: 'month',
       popular: false,
-      icon: <Brain className="w-8 h-8" />
-    },
+      icon: <Brain className = $2;
     {
       id: 'brain-computer-interface',
       name: 'Brain-Computer Interface',
       description: 'Neural interface technology for space applications',
-      features: ['Neural Control', 'Cognitive Enhancement', 'Remote Operation', 'Safety Protocols'],
+      features: ['Neural ControlCognitive EnhancementRemote OperationSafety Protocols'],
       price: '$3,499',
       period: 'month',
       popular: false,
-      icon: <Cpu className="w-8 h-8" />
-    },
+      icon: <Cpu className = $2;
     {
       id: 'autonomous-vehicle-ai',
       name: 'Autonomous Vehicle AI',
       description: 'AI-powered autonomous systems for space vehicles',
-      features: ['Path Planning', 'Obstacle Avoidance', 'Mission Execution', 'Adaptive Learning'],
+      features: ['Path PlanningObstacle AvoidanceMission ExecutionAdaptive Learning'],
       price: '$2,999',
       period: 'month',
       popular: false,
-      icon: <Settings className="w-8 h-8" />
-    },
+      icon: <Settings className = $2;
     {
       id: 'quantum-space-communications',
       name: 'Quantum Space Communications',
       description: 'Secure quantum communication for space missions',
-      features: ['Quantum Encryption', 'Interplanetary Links', 'Secure Data Transfer', 'Quantum Networks'],
+      features: ['Quantum EncryptionInterplanetary LinksSecure Data TransferQuantum Networks'],
       price: '$3,799',
       period: 'month',
       popular: false,
-      icon: <Globe className="w-8 h-8" />
-    },
+      icon: <Globe className = $2;
     {
       id: 'space-infrastructure',
       name: 'Space Infrastructure',
       description: 'Comprehensive space infrastructure solutions',
-      features: ['Orbital Stations', 'Lunar Bases', 'Mars Colonies', 'Sustainable Systems'],
+      features: ['Orbital StationsLunar BasesMars ColoniesSustainable Systems'],
       price: '$5,999',
       period: 'month',
       popular: false,
-      icon: <Building className="w-8 h-8" />
-    }
-  ];
-
-  const spaceCapabilities = [
-    {
-      title: 'Space Exploration',
+      icon: <Building className = $2;
+  const spaceCapabilities = $2;
       description: 'Advanced exploration technologies and systems',
-      icon: <Rocket className="w-6 h-6" />
-    },
+      icon: <Rocket className = $2;
     {
       title: 'Resource Extraction',
       description: 'Mining and processing of space resources',
-      icon: <Target className="w-6 h-6" />
-    },
+      icon: <Target className = $2;
     {
       title: 'AI Integration',
       description: 'Intelligent systems for space operations',
-      icon: <Brain className="w-6 h-6" />
-    },
+      icon: <Brain className = $2;
     {
       title: 'Quantum Technology',
       description: 'Quantum computing for space applications',
-      icon: <Atom className="w-6 h-6" />
-    },
+      icon: <Atom className = $2;
     {
       title: 'Autonomous Systems',
       description: 'Self-operating space technologies',
-      icon: <Settings className="w-6 h-6" />
-    },
+      icon: <Settings className = $2;
     {
       title: 'Sustainable Development',
       description: 'Eco-friendly space infrastructure',
-      icon: <Heart className="w-6 h-6" />
-    }
-  ];
-
+      icon: <Heart className = $2;
   return (
     <Layout>
       <SEO 
@@ -123,8 +102,8 @@ const SpaceTechnologyPage: React.FC = () => {
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-orange-600 bg-clip-text text-transparent">
@@ -156,10 +135,10 @@ const SpaceTechnologyPage: React.FC = () => {
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -174,10 +153,10 @@ const SpaceTechnologyPage: React.FC = () => {
               {spaceCapabilities.map((capability, index) => (
                 <motion.div
                   key={capability.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
@@ -197,10 +176,10 @@ const SpaceTechnologyPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -215,10 +194,10 @@ const SpaceTechnologyPage: React.FC = () => {
               {spaceServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
                     service.popular 
                       ? 'border-purple-500 shadow-lg shadow-purple-500/25' 
@@ -270,38 +249,8 @@ const SpaceTechnologyPage: React.FC = () => {
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                Ready to Explore Space?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join the space revolution and be part of humanity's next great adventure
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact" 
-                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Your Space Journey
-                </a>
-                <a 
-                  href="/contact" 
-                  className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                >
-                  Schedule Consultation
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </main>
-    </Layout>
-  );
-};
-
-export default SpaceTechnologyPage;
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
+export default SpaceTechnologyPage,
 

@@ -1,38 +1,36 @@
 import { useState } from 'react';
-
-export type FeedbackContext = { actionType?: string; metadata?: any };
+export type FeedbackContext = { actionType?: string, metadata?: any },
 
 export default function FeedbackModal({
   isOpen,
   onClose,
   defaultContext,
-  defaultKind = 'general',
+  defaultKind = $2;
   userHeaders}: {
-  isOpen: boolean;
-  onClose: (submitted: boolean) => void;
-  defaultContext?: FeedbackContext;
-  defaultKind?: 'general' | 'bug' | 'feature';
-  userHeaders?: Record<string, string>;
+  isOpen: boolean,
+  onClose: (submitted: boolean) => void,
+  defaultContext?: FeedbackContext,
+  defaultKind?: 'general' | 'bug' | 'feature',
+  userHeaders?: Record<string, string>
 }) {
-  const [rating, setRating] = useState<number>(0);
-  const [hover, setHover] = useState<number>(0);
-  const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
-  const [comment, setComment] = useState('');
-  const [loading, setLoading] = useState(false);
-
-  if (!isOpen) return null;
+  const [rating, setRating] = useState<number>(0),
+  const [hover, setHover] = useState<number>(0),
+  const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind),
+  const [comment, setComment] = useState($2);
+  const [loading, setLoading] = useState($2);
+  if (!isOpen) return null,
 
   async function submit() {
-    if (rating < 1) return onClose(false);
-    setLoading(true);
+    if (rating < 1) return onClose($2);
+    setLoading($2);
     try {
       await fetch('/api/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },
-        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })});
+        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
     } catch {}
-    setLoading(false);
-    onClose(true);
+    setLoading($2);
+    onClose(true)
   }
 
   return (
@@ -69,5 +67,5 @@ export default function FeedbackModal({
         </div>
       </div>
     </div>
-  );
+  )
 }

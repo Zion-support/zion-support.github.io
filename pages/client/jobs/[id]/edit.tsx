@@ -1,36 +1,32 @@
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useEffect, useState } from 'react';
-
-const fetcher = (url: string) => fetch(url).then((r) => r.json());
-
+const fetcher = $2;
 export default function EditJobPage() {
-  const router = useRouter();
-  const { id } = router.query;
-  const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
-  const job = data?.job;
-
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [category, setCategory] = useState('');
-
+  const router = useRouter($2);
+  const { id } = router.query,
+  const { data } = useSWR($2);
+  const job = $2;
+  const [title, setTitle] = useState($2);
+  const [description, setDescription] = useState($2);
+  const [category, setCategory] = useState($2);
   useEffect(() => {
     if (job) {
-      setTitle(job.title || '');
-      setDescription(job.description || '');
-      setCategory(job.category || '');
+      setTitle($2);
+      setDescription($2);
+      setCategory(job.category || '')
     }
-  }, [job]);
+  }, [job]),
 
   async function save() {
     await fetch(`/api/jobs/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ title, description, category })});
-    router.push('/client/dashboard');
+      body: JSON.stringify({ title, description, category })}),
+    router.push('/client/dashboard')
   }
 
-  if (!job) return <div>Loading…</div>;
+  if (!job) return <div>Loading…</div>,
 
   return (
     <div className="max-w-2xl mx-auto space-y-4">
@@ -51,5 +47,5 @@ export default function EditJobPage() {
         <button className="px-4 py-2 rounded bg-black text-white" onClick={save}>Save</button>
       </div>
     </div>
-  );
+  )
 }

@@ -3,27 +3,23 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
   Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export default function Pricing2033Page() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
 
   // Enhanced service categories with pricing
-  const serviceCategories = [
-    {
-      name: 'Revolutionary AI Services',
+  const serviceCategories = $2;
       description: 'AI consciousness evolution and emotional intelligence',
-      services: ['AI Consciousness Evolution', 'AI Emotional Intelligence', 'AI Creativity Orchestrator', 'AI Autonomous Business Manager'],
+      services: ['AI Consciousness EvolutionAI Emotional IntelligenceAI Creativity OrchestratorAI Autonomous Business Manager'],
       avgPrice: '$11,499/month',
       savings: 'Save 60-80% vs. competitors',
       icon: Brain,
@@ -32,7 +28,7 @@ export default function Pricing2033Page() {
     {
       name: 'Quantum & Emerging Tech',
       description: 'Quantum computing and DNA-based solutions',
-      services: ['Quantum DNA Computing', 'Quantum Internet Security', 'Quantum Financial Trading', 'Quantum Creativity Studio'],
+      services: ['Quantum DNA ComputingQuantum Internet SecurityQuantum Financial TradingQuantum Creativity Studio'],
       avgPrice: '$19,999/month',
       savings: 'Save 70-85% vs. competitors',
       icon: Atom,
@@ -41,7 +37,7 @@ export default function Pricing2033Page() {
     {
       name: 'Enterprise IT Solutions',
       description: 'Autonomous operations and zero-trust security',
-      services: ['Autonomous DevOps', 'Zero Trust Architecture', 'Edge Computing Orchestration', 'AI IT Operations Center'],
+      services: ['Autonomous DevOpsZero Trust ArchitectureEdge Computing OrchestrationAI IT Operations Center'],
       avgPrice: '$649/month',
       savings: 'Save 50-70% vs. competitors',
       icon: Cpu,
@@ -50,7 +46,7 @@ export default function Pricing2033Page() {
     {
       name: 'Space & Metaverse Tech',
       description: 'Space mining and metaverse development',
-      services: ['Space Mining Automation', 'Metaverse AI Development', 'AI Health Analytics', 'Holographic Events'],
+      services: ['Space Mining AutomationMetaverse AI DevelopmentAI Health AnalyticsHolographic Events'],
       avgPrice: '$14,999/month',
       savings: 'Save 65-80% vs. competitors',
       icon: Rocket,
@@ -59,7 +55,7 @@ export default function Pricing2033Page() {
     {
       name: 'Innovative Micro SAAS',
       description: 'Cutting-edge solutions for every business',
-      services: ['AI Business Intelligence', 'Quantum-Secure Communication', 'AI Customer Success', 'Blockchain Supply Chain'],
+      services: ['AI Business IntelligenceQuantum-Secure CommunicationAI Customer SuccessBlockchain Supply Chain'],
       avgPrice: '$374/month',
       savings: 'Save 40-60% vs. competitors',
       icon: Target,
@@ -68,33 +64,22 @@ export default function Pricing2033Page() {
     {
       name: 'Research & Development',
       description: 'Breakthrough technologies and innovations',
-      services: ['Neuromorphic Computing', 'Photonic Computing', 'Swarm Robotics', 'Biotech Automation'],
+      services: ['Neuromorphic ComputingPhotonic ComputingSwarm RoboticsBiotech Automation'],
       avgPrice: '$1,099/month',
       savings: 'Save 55-75% vs. competitors',
       icon: Microscope,
       color: 'from-orange-500 to-red-500'
     }
-  ];
+  ],
 
   // Enhanced pricing tiers with more realistic and comprehensive offerings
-  const pricingTiers = [
-    {
-      name: 'Starter',
+  const pricingTiers = $2;
       description: 'Perfect for small businesses and startups',
-      price: billingCycle === 'monthly' ? 99 : 79,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = $2;
+      period: billingCycle = $2;
+      savings: billingCycle = $2;
       features: [
-        'Access to 100+ Core Services',
-        'Basic AI Integration',
-        'Standard Support (24/7)',
-        '30-Day Free Trial',
-        'Basic Analytics Dashboard',
-        'Email Support',
-        '99.5% Uptime Guarantee',
-        'Basic Security Features',
-        'API Access (1000 calls/month)',
-        'Community Support'
+        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeBasic Security FeaturesAPI Access (1000 calls/month)Community Support'
       ],
       popular: false,
       color: 'from-gray-500 to-gray-600'
@@ -102,22 +87,11 @@ export default function Pricing2033Page() {
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
-      price: billingCycle === 'monthly' ? 299 : 239,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = $2;
+      period: billingCycle = $2;
+      savings: billingCycle = $2;
       features: [
-        'Access to 200+ Advanced Services',
-        'Advanced AI Integration',
-        'Priority Support (24/7)',
-        '60-Day Free Trial',
-        'Advanced Analytics Dashboard',
-        'Phone & Email Support',
-        '99.9% Uptime Guarantee',
-        'Advanced Security Features',
-        'API Access (10,000 calls/month)',
-        'Dedicated Account Manager',
-        'Custom Integrations',
-        'Advanced Reporting'
+        'Access to 200+ Advanced ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security FeaturesAPI Access (10,000 calls/month)Dedicated Account ManagerCustom IntegrationsAdvanced Reporting'
       ],
       popular: true,
       color: 'from-purple-500 to-cyan-500'
@@ -125,38 +99,23 @@ export default function Pricing2033Page() {
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
-      price: billingCycle === 'monthly' ? 999 : 799,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = $2;
+      period: billingCycle = $2;
+      savings: billingCycle = $2;
       features: [
-        'Access to All 500+ Services',
-        'Full AI & Quantum Integration',
-        'Premium Support (24/7)',
-        '90-Day Free Trial',
-        'Enterprise Analytics Suite',
-        'Dedicated Support Users',
-        '99.99% Uptime Guarantee',
-        'Enterprise Security Features',
-        'Unlimited API Access',
-        'Dedicated Success Manager',
-        'Custom Development',
-        'Advanced Compliance',
-        'White-label Solutions',
-        'SLA Guarantees'
+        'Access to All 500+ ServicesFull AI & Quantum IntegrationPremium Support (24/7)90-Day Free TrialEnterprise Analytics SuiteDedicated Support Users99.99% Uptime GuaranteeEnterprise Security FeaturesUnlimited API AccessDedicated Success ManagerCustom DevelopmentAdvanced ComplianceWhite-label SolutionsSLA Guarantees'
       ],
       popular: false,
       color: 'from-blue-500 to-indigo-500'
     }
-  ];
+  ],
 
   // Popular services with pricing
-  const popularServices = [
-    {
-      name: 'AI Consciousness Evolution Platform',
+  const popularServices = $2;
       price: '$24,999/month',
       description: 'Develop genuine AI consciousness through advanced neural architecture',
       category: 'AI & Consciousness',
-      features: ['Multi-dimensional consciousness mapping', 'Emotional intelligence evolution', 'Self-awareness development'],
+      features: ['Multi-dimensional consciousness mappingEmotional intelligence evolutionSelf-awareness development'],
       savings: 'Save 70% vs. competitors'
     },
     {
@@ -164,7 +123,7 @@ export default function Pricing2033Page() {
       price: '$35,999/month',
       description: 'Breakthrough platform combining quantum computing with DNA-based computation',
       category: 'Quantum & Biotech',
-      features: ['DNA-based quantum algorithms', 'Biological quantum entanglement', 'DNA memory systems'],
+      features: ['DNA-based quantum algorithmsBiological quantum entanglementDNA memory systems'],
       savings: 'Save 75% vs. competitors'
     },
     {
@@ -172,7 +131,7 @@ export default function Pricing2033Page() {
       price: '$45,999/month',
       description: 'Revolutionary platform for automated asteroid mining and resource extraction',
       category: 'Space Technology',
-      features: ['Asteroid identification and mapping', 'Automated mining operations', 'Resource extraction algorithms'],
+      features: ['Asteroid identification and mappingAutomated mining operationsResource extraction algorithms'],
       savings: 'Save 80% vs. competitors'
     },
     {
@@ -180,10 +139,10 @@ export default function Pricing2033Page() {
       price: '$299/month',
       description: 'Comprehensive business intelligence platform powered by artificial intelligence',
       category: 'Micro SAAS',
-      features: ['AI-powered analytics', 'Predictive insights', 'Automated reporting'],
+      features: ['AI-powered analyticsPredictive insightsAutomated reporting'],
       savings: 'Save 50% vs. competitors'
     }
-  ];
+  ],
 
   return (
     <>
@@ -211,8 +170,8 @@ export default function Pricing2033Page() {
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6 }} className="mb-6">
                 <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">
                   <Crown className="w-4 h-4" />
@@ -221,8 +180,8 @@ export default function Pricing2033Page() {
               </motion.div>
 
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   Revolutionary Technology
@@ -232,16 +191,16 @@ export default function Pricing2033Page() {
               </motion.h1>
 
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: 0.2 }} className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
                 Experience the future of technology with our revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions at competitive prices.
               </motion.p>
 
               {/* Billing Toggle */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: 0.3 }} className="flex items-center justify-center space-x-4 mb-8">
                 <span className={`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
                   Monthly
@@ -273,8 +232,8 @@ export default function Pricing2033Page() {
               {pricingTiers.map((tier, index) => (
                 <motion.div
                   key={tier.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  animate={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative ${
                     tier.popular ? 'scale-105' : ''
@@ -348,8 +307,8 @@ export default function Pricing2033Page() {
               {serviceCategories.map((category, index) => (
                 <motion.div
                   key={category.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  animate={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
@@ -403,8 +362,8 @@ export default function Pricing2033Page() {
               {popularServices.map((service, index) => (
                 <motion.div
                   key={service.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  animate={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
@@ -494,5 +453,5 @@ export default function Pricing2033Page() {
         </div>
       </div>
     </>
-  );
+  )
 }

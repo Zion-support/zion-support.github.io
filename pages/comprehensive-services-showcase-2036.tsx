@@ -5,16 +5,12 @@ import { real2036InnovativeServices } from '../data/real-2036-innovative-service
 import { real2036ITServices } from '../data/real-2036-it-services';
 import { real2036AIServices } from '../data/real-2036-ai-services';
 import { motion } from 'framer-motion';
-
-const ComprehensiveServicesShowcase2036: React.FC = () => {
-  const allServices = [
-    ...real2036InnovativeServices,
+const ComprehensiveServicesShowcase2036: React.FC = $2;
     ...real2036ITServices,
     ...real2036AIServices
-  ];
+  ],
 
-  const categories = [...new Set(allServices.map(service => service.category))];
-
+  const categories = $2;
   return (
     <Layout>
       <SEO 
@@ -29,24 +25,24 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 animate-pulse"></div>
           <div className="relative z-10 max-w-7xl mx-auto text-center">
             <motion.h1 
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 50}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             >
               2036 Services Showcase
             </motion.h1>
             <motion.p 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
             >
               Experience the future of technology with our revolutionary portfolio of AI, Quantum Computing, Space Technology, and cutting-edge IT solutions
             </motion.p>
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
@@ -64,8 +60,8 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -82,8 +78,8 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
               {categories.map((category, index) => (
                 <motion.div
                   key={category}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 30}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
                 >
@@ -103,8 +99,8 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 
             {/* Featured Services */}
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -121,8 +117,8 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
               {allServices.filter(service => service.popular).slice(0, 6).map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 30}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105 group"
                 >
@@ -163,8 +159,8 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 
             {/* All Services Section */}
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -180,8 +176,8 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
             {categories.map((category, categoryIndex) => (
               <motion.div
                 key={category}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 className="mb-16"
               >
@@ -192,8 +188,8 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                     .map((service, serviceIndex) => (
                       <motion.div
                         key={service.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, y: 20}}
+                        whileInView={{ opacity: 1, y: 0}}
                         transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
                         className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
                       >
@@ -230,31 +226,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 
             {/* Call to Action */}
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20"
-            >
-              <h2 className="text-4xl font-bold mb-6 text-white">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join the future of technology with our revolutionary services. Get in touch to discuss how we can help you achieve your goals.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                  Contact Us Today
-                </button>
-                <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                  Schedule Demo
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
-};
-
-export default ComprehensiveServicesShowcase2036;
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
+export default ComprehensiveServicesShowcase2036,

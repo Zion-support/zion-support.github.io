@@ -1,51 +1,46 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-
 interface LazyImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: string;
-  threshold?: number;
-  width?: number;
-  height?: number;
+  src: string,
+  alt: string,
+  className?: string,
+  placeholder?: string,
+  threshold?: number,
+  width?: number,
+  height?: number
 }
 
 export const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
-  className = '',
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
-  threshold = 0.1,
+  className = $2;
+  placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
+  threshold = $2;
   width,
   height
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
+  const [isLoaded, setIsLoaded] = useState($2);
+  const [isInView, setIsInView] = useState($2);
+  const imgRef = $2;
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
+          setIsInView($2);
+          observer.disconnect()
         }
       },
       { threshold }
-    );
+    ),
 
     if (imgRef.current) {
-      observer.observe(imgRef.current);
+      observer.observe(imgRef.current)
     }
 
-    return () => observer.disconnect();
-  }, [threshold]);
+    return () => observer.disconnect()
+  }, [threshold]),
 
-  const handleLoad = () => {
-    setIsLoaded(true);
-  };
-
+  const handleLoad = $2;
   return (
     <div className={`relative overflow-hidden ${className}`}>
       {/* Placeholder */}
@@ -74,7 +69,7 @@ export const LazyImage: React.FC<LazyImageProps> = ({
         />
       )}
     </div>
-  );
-};
+  )
+},
 
-export default LazyImage;
+export default LazyImage,

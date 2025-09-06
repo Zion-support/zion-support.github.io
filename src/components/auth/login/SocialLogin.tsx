@@ -4,15 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Web3Login } from "./Web3Login";
 import { useState } from "react";
 import { openAuthPopup } from "@/api/authSocial";
-
 export function SocialLogin() {
-  const [isLoading, setIsLoading] = useState(false);
-
+  const [isLoading, setIsLoading] = useState($2);
   const handleGoogle = () => {
-    setIsLoading(true);
-    window.location.href = '/auth/google';
-  };
-
+    setIsLoading($2);
+    window.location.href = $2;
   return (
     <div className="mt-6">
       <div className="relative">
@@ -67,5 +63,5 @@ export function SocialLogin() {
         <Web3Login />
       </div>
     </div>
-  );
+  )
 }

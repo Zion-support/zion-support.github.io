@@ -1,37 +1,25 @@
-'use client';
+'use client',
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
+  const [formData, setFormData] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
+  const handleChange = $2;
       [e.target.name]: e.target.value
-    });
-  };
+    })
+  },
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
+    e.preventDefault($2);
+    setIsSubmitting($2);
     // Simulate API call
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
+      await new Promise(resolve => setTimeout(resolve, 2000)),
+      setSubmitStatus($2);
       setFormData({
         name: '',
         email: '',
@@ -39,27 +27,16 @@ const ContactForm: React.FC = () => {
         phone: '',
         service: '',
         message: ''
-      });
+      })
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus('error')
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  },
 
-  const services = [
-    'AI Development',
-    'Cloud Architecture',
-    'Digital Transformation',
-    'IoT Platforms',
-    'Blockchain Solutions',
-    'Data Analytics',
-    'Other'
-  ];
-
-  const contactInfo = [
-    {
-      icon: Mail,
+  const services = $2;
+  const contactInfo = $2;
       title: 'Email Us',
       content: 'contact@ziontechgroup.com',
       href: 'mailto:contact@ziontechgroup.com'
@@ -76,7 +53,7 @@ const ContactForm: React.FC = () => {
       content: '123 Tech Street, Innovation City, IC 12345',
       href: '#'
     }
-  ];
+  ],
 
   return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
@@ -89,14 +66,14 @@ const ContactForm: React.FC = () => {
       <div className="relative container mx-auto px-4">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Let&apos;s Start a
+          <h2 className="text-4xl md: text-6xl font-bold text-white mb-6">
+            Let&apos,s Start a
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Conversation
             </span>
@@ -112,9 +89,9 @@ const ContactForm: React.FC = () => {
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="space-y-8"
           >
             <div>
@@ -132,9 +109,9 @@ const ContactForm: React.FC = () => {
                   key={info.title}
                   href={info.href}
                   initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0}}
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
@@ -152,10 +129,10 @@ const ContactForm: React.FC = () => {
 
             {/* Additional Info */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6"
             >
               <h4 className="text-lg font-semibold text-white mb-3">Why Choose Zion Tech?</h4>
@@ -182,16 +159,16 @@ const ContactForm: React.FC = () => {
 
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 30}}
+            whileInView={{ opacity: 1, x: 0}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
           >
             {submitStatus === 'success' ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1}}
                 className="text-center py-12"
               >
                 <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
@@ -313,38 +290,6 @@ const ContactForm: React.FC = () => {
                 {submitStatus === 'error' && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4"
-                  >
-                    <AlertCircle className="w-5 h-5" />
-                    <span>Something went wrong. Please try again.</span>
-                  </motion.div>
-                )}
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      <span>Sending...</span>
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5" />
-                      <span>Send Message</span>
-                    </>
-                  )}
-                </button>
-              </form>
-            )}
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default ContactForm;
+                    animate={{ opacity: 1, y: 0}}
+                    className = $2;
+export default ContactForm,

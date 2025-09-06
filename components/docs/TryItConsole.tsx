@@ -1,39 +1,32 @@
 import React, { useMemo, useState } from 'react';
-
 interface TryItProps {
-  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-  path: string; // full URL or relative
-  requiresAuth: boolean;
-}
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+  path: string, // full URL or relative
+  requiresAuth: boolean}
 
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
-  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
-  const [token, setToken] = useState('');
-  const [body, setBody] = useState('');
-  const [response, setResponse] = useState<string>('');
-  const [loading, setLoading] = useState(false);
-
-  const url = useMemo(() => {
-    if (path.startsWith('http')) return path;
-    return baseUrl.replace(/\/$/, '') + path;
-  }, [baseUrl, path]);
+  const [baseUrl, setBaseUrl] = useState($2);
+  const [token, setToken] = useState($2);
+  const [body, setBody] = useState($2);
+  const [response, setResponse] = useState<string>(''),
+  const [loading, setLoading] = useState($2);
+  const url = $2;
+    return baseUrl.replace(/\/$/, '') + path
+  }, [baseUrl, path]),
 
   async function onSend() {
-    setLoading(true);
-    setResponse('');
+    setLoading($2);
+    setResponse($2);
     try {
-      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
-      const res = await fetch(url, {
-        method,
-        headers,
-        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined});
-      const text = await res.text();
-      setResponse(text);
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' },
+      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`,
+      const res = await fetch($2);
+      const text = await res.text($2);
+      setResponse(text)
     } catch (e: any) {
-      setResponse(String(e?.message || e));
+      setResponse(String(e?.message || e))
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
   }
 
@@ -67,5 +60,5 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
         <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80"><code>{response}</code></pre>
       </div>
     </div>
-  );
+  )
 }

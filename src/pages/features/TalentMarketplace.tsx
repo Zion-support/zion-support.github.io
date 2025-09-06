@@ -4,15 +4,13 @@ import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
-
 export default function TalentMarketplace() {
-  const schema = {
-    "@context": "https://schema.org",
+  const schema = $2;
     "@type": "WebPage",
     "name": "Talent Marketplace",
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
-  };
+  },
 
   return (
     <>
@@ -36,12 +34,12 @@ export default function TalentMarketplace() {
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
-              src="https://placehold.co/800x400"
+              src="https: //placehold.co/800x400"
               alt="Screenshot of talent directory"
               className="object-cover"
             />
           </div>
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
+          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Find pre-screened experts for short or long term projects.</li>
             <li>AI-powered matching recommends the best candidates for your needs.</li>
@@ -66,5 +64,5 @@ export default function TalentMarketplace() {
         </div>
       </main>
     </>
-  );
+  )
 }

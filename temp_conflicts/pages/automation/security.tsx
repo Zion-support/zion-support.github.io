@@ -1,27 +1,26 @@
 import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
-
 interface AuditReport {
-  generatedAt?: string;
-  metadata?: any;
-  vulnerabilities?: any;
-  error?: string;
-  raw?: string;
+  generatedAt?: string,
+  metadata?: any,
+  vulnerabilities?: any,
+  error?: string,
+  raw?: string
 }
 
-type Props = { report: AuditReport };
+type Props = { report: AuditReport },
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd(), 'public', 'automation', 'security-audit.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-    return { props: { report: data }, revalidate: 86400 };
+    const file = path.join(process.cwd(), 'publicautomationsecurity-audit.json'),
+    const raw = fs.readFileSync(file, 'utf8'),
+    const data = JSON.parse(raw),
+    return { props: { report: data }, revalidate: 86400 }
   } catch {
-    return { props: { report: { error: 'No audit report yet.' } }, revalidate: 86400 };
+    return { props: { report: { error: 'No audit report yet.' } }, revalidate: 86400 }
   }
-};
+},
 
 export default function SecurityAudit({ report }: Props) {
   return (
@@ -38,5 +37,5 @@ export default function SecurityAudit({ report }: Props) {
 {JSON.stringify(report, null, 2)}
       </pre>
     </div>
-  );
+  )
 }

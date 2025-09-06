@@ -2,35 +2,29 @@
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-
 export function SharedInbox() {
   // Mock messages
-  const messages = [
-    {
-      id: "msg-1",
+  const messages = $2;
       from: "John Smith",
       subject: "Interview Scheduled",
       preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm.",
       timestamp: "2h ago",
-      unread: true
-    },
+      unread: true},
     {
       id: "msg-2",
       from: "Talent Support",
       subject: "New talent matches",
       preview: "We've found 5 new candidates that match your recent job posting for UI/UX Designer.",
       timestamp: "Yesterday",
-      unread: false
-    },
+      unread: false},
     {
       id: "msg-3",
       from: "Sarah Wilson",
       subject: "Contract approved",
       preview: "The contract with freelancer Michael Chen has been approved and signed.",
       timestamp: "2d ago",
-      unread: false
-    }
-  ];
+      unread: false}
+  ],
 
   return (
     <Card>
@@ -67,11 +61,11 @@ export function SharedInbox() {
         )}
         
         <div className="p-3 text-center border-t border-border">
-          <button className="text-sm text-blue-500 font-medium hover:text-blue-700">
+          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View All Messages
           </button>
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }

@@ -6,18 +6,15 @@ import {
   Rocket, Shield, Cpu, Target, Microscope, Users,
   Facebook, Twitter, Linkedin, Instagram, Youtube,
   Github, ArrowRight, Heart, Star, Award, CheckCircle
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceCategories = [
-  {
-    title: '🚀 AI & Consciousness',
+const serviceCategories = $2;
     services: [
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform' },
       { name: 'AI Emotional Intelligence', href: '/ai-emotion-intelligence-platform' },
@@ -70,7 +67,7 @@ const serviceCategories = [
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030' }
     ]
   }
-];
+],
 
 const quickLinks = [
   { name: 'Home', href: '/' },
@@ -81,7 +78,7 @@ const quickLinks = [
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' }
-];
+],
 
 const companyInfo = [
   { name: 'About Us', href: '/about' },
@@ -90,26 +87,18 @@ const companyInfo = [
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }
-];
+],
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
-  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
-];
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin},
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter},
+  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook},
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram},
+  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube},
+  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github}
+],
 
-const certifications = [
-  'ISO 27001 Certified',
-  'SOC 2 Type II Compliant',
-  'GDPR Compliant',
-  'HIPAA Compliant',
-  'PCI DSS Level 1',
-  'FedRAMP Authorized'
-];
-
+const certifications = $2;
 export default function UltraFuturisticFooter2030() {
   return (
     <footer className="bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden">
@@ -279,10 +268,10 @@ export default function UltraFuturisticFooter2030() {
 
         {/* Bottom Bar */}
         <div className="border-t border-purple-500/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
+                <span>&copy, 2024 Zion Tech Group. All rights reserved.</span>
                 <Link href="/privacy" className="hover:text-purple-400 transition-colors">Privacy Policy</Link>
                 <Link href="/terms" className="hover:text-purple-400 transition-colors">Terms of Service</Link>
               </div>
@@ -302,5 +291,5 @@ export default function UltraFuturisticFooter2030() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

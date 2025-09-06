@@ -8,16 +8,15 @@ import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFoote
 import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFuturistic2029ServiceShowcase';
 import { cuttingEdge2029Services } from '../data/2029-cutting-edge-innovations';
 import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services';
-
 export default function UltraFuturistic2029InnovationsPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
-  const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
+  const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services],
 
   return (
     <>
@@ -252,5 +251,5 @@ export default function UltraFuturistic2029InnovationsPage() {
         {/* Footer */}
         <UltraFuturisticFooter2029 />
     </>
-  );
+  )
 }

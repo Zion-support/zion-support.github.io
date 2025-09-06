@@ -4,16 +4,13 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
 export default function QuantumAICognitivePage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-cognitive'));
-
+  const service = $2;
   if (!service) {
-    return null;
+    return null
   }
 
-  const contactInfo = service.contactInfo;
-
+  const contactInfo = $2;
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -83,6 +80,6 @@ export default function QuantumAICognitivePage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  )
 }
 

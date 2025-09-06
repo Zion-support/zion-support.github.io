@@ -4,14 +4,11 @@ import { motion } from 'framer-motion';
 import { 
   Rocket, Zap, Shield, Cpu, Database, Users, 
   ArrowRight, CheckCircle, Star, Clock, TrendingUp, Globe
-} from 'lucide-react';
+} from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
-
 export default function DigitalTransformationPage() {
-  const services = [
-    {
-      title: "Digital Strategy & Roadmap",
+  const services = $2;
       description: "Comprehensive digital transformation strategy and implementation planning",
       features: ["Technology Assessment", "Change Management", "ROI Planning", "Implementation Roadmap"],
       price: "From $15,000",
@@ -42,14 +39,14 @@ export default function DigitalTransformationPage() {
       icon: Users,
       color: "from-emerald-500 to-teal-500"
     }
-  ];
+  ],
 
   const stats = [
-    { number: "500+", label: "Transformations Completed", icon: Rocket },
-    { number: "40%", label: "Average Cost Reduction", icon: TrendingUp },
-    { number: "300%", label: "ROI Improvement", icon: Star },
-    { number: "24/7", label: "Support Available", icon: Clock }
-  ];
+    { number: "500+", label: "Transformations Completed", icon: Rocket},
+    { number: "40%", label: "Average Cost Reduction", icon: TrendingUp},
+    { number: "300%", label: "ROI Improvement", icon: Star},
+    { number: "24/7", label: "Support Available", icon: Clock}
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -67,8 +64,8 @@ export default function DigitalTransformationPage() {
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -81,8 +78,8 @@ export default function DigitalTransformationPage() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-12"
           >
@@ -105,10 +102,10 @@ export default function DigitalTransformationPage() {
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -126,10 +123,10 @@ export default function DigitalTransformationPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Digital Transformation Services</h2>
@@ -142,10 +139,10 @@ export default function DigitalTransformationPage() {
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-orange-500/30 transition-all duration-300"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -177,10 +174,10 @@ export default function DigitalTransformationPage() {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -188,7 +185,7 @@ export default function DigitalTransformationPage() {
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Transformation Assessment
               </button>
@@ -202,5 +199,5 @@ export default function DigitalTransformationPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

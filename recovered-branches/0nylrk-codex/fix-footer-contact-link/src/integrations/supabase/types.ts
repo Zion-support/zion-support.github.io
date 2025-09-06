@@ -6,168 +6,7 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[]
 
-export type Database = {
-  public: {
-    Tables: {
-      ai_chats: {
-        Row: {
-          created_at: string
-          id: string
-          message: string
-          response: string
-          user_id: string
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          message: string
-          response: string
-          user_id: string
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          message?: string
-          response?: string
-          user_id?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "ai_chats_user_id_fkey"
-            columns: ["user_id"]
-            isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
-          }]
-      }
-      analytics_events: {
-        Row: {
-          created_at: string | null
-          event_type: string
-          id: string
-          metadata: Json | null
-          path: string | null
-          session_id: string | null
-          user_id: string | null
-        }
-        Insert: {
-          created_at?: string | null
-          event_type: string
-          id?: string
-          metadata?: Json | null
-          path?: string | null
-          session_id?: string | null
-          user_id?: string | null
-        }
-        Update: {
-          created_at?: string | null
-          event_type?: string
-          id?: string
-          metadata?: Json | null
-          path?: string | null
-          session_id?: string | null
-          user_id?: string | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "analytics_events_user_id_fkey"
-            columns: ["user_id"]
-            isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
-          }]
-      }
-      api_keys: {
-        Row: {
-          created_at: string
-          expires_at: string | null
-          id: string
-          is_active: boolean
-          key_hash: string
-          key_prefix: string
-          last_used_at: string | null
-          name: string
-          scopes: Database["public"]["Enums"]["api_key_scope"][]
-          user_id: string
-        }
-        Insert: {
-          created_at?: string
-          expires_at?: string | null
-          id?: string
-          is_active?: boolean
-          key_hash: string
-          key_prefix: string
-          last_used_at?: string | null
-          name: string
-          scopes?: Database["public"]["Enums"]["api_key_scope"][]
-          user_id: string
-        }
-        Update: {
-          created_at?: string
-          expires_at?: string | null
-          id?: string
-          is_active?: boolean
-          key_hash?: string
-          key_prefix?: string
-          last_used_at?: string | null
-          name?: string
-          scopes?: Database["public"]["Enums"]["api_key_scope"][]
-          user_id?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "api_keys_user_id_fkey"
-            columns: ["user_id"]
-            isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
-          }]
-      }
-      api_logs: {
-        Row: {
-          api_key_id: string | null
-          created_at: string
-          endpoint: string
-          id: string
-          ip_address: string | null
-          method: string
-          response_time_ms: number | null
-          status_code: number
-          user_agent: string | null
-          user_id: string | null
-        }
-        Insert: {
-          api_key_id?: string | null
-          created_at?: string
-          endpoint: string
-          id?: string
-          ip_address?: string | null
-          method: string
-          response_time_ms?: number | null
-          status_code: number
-          user_agent?: string | null
-          user_id?: string | null
-        }
-        Update: {
-          api_key_id?: string | null
-          created_at?: string
-          endpoint?: string
-          id?: string
-          ip_address?: string | null
-          method?: string
-          response_time_ms?: number | null
-          status_code?: number
-          user_agent?: string | null
-          user_id?: string | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "api_logs_api_key_id_fkey"
-            columns: ["api_key_id"]
-            isOneToOne: false
-            referencedRelation: "api_keys"
-            referencedColumns: ["id"]
-          },
+export type Database = $2;
           {
             foreignKeyName: "api_logs_user_id_fkey"
             columns: ["user_id"]
@@ -186,8 +25,7 @@ export type Database = {
           issue_date: string | null
           issuing_organization: string
           name: string
-          resume_id: string
-        }
+          resume_id: string}
         Insert: {
           created_at?: string
           credential_id?: string | null
@@ -197,8 +35,7 @@ export type Database = {
           issue_date?: string | null
           issuing_organization: string
           name: string
-          resume_id: string
-        }
+          resume_id: string}
         Update: {
           created_at?: string
           credential_id?: string | null
@@ -276,8 +113,7 @@ export type Database = {
           template_data: Json
           title: string
           updated_at: string
-          user_id: string
-        }
+          user_id: string}
         Insert: {
           created_at?: string
           id?: string
@@ -285,8 +121,7 @@ export type Database = {
           template_data: Json
           title: string
           updated_at?: string
-          user_id: string
-        }
+          user_id: string}
         Update: {
           created_at?: string
           id?: string
@@ -319,8 +154,7 @@ export type Database = {
           location: string | null
           resume_id: string
           start_date: string
-          updated_at: string
-        }
+          updated_at: string}
         Insert: {
           created_at?: string
           degree: string
@@ -370,8 +204,7 @@ export type Database = {
           report_data: Json | null
           report_month: string
           suspicious_count: number
-          total_flags: number
-        }
+          total_flags: number}
         Insert: {
           action_taken_count?: number
           dangerous_count?: number
@@ -491,8 +324,7 @@ export type Database = {
           status: string
           talent_id: string
           timeline: string
-          updated_at: string
-        }
+          updated_at: string}
         Insert: {
           attachments?: Json | null
           budget_display?: string | null
@@ -549,8 +381,7 @@ export type Database = {
           status: string
           talent_id: string
           title: string | null
-          updated_at: string
-        }
+          updated_at: string}
         Insert: {
           client_id: string
           created_at?: string
@@ -671,8 +502,7 @@ export type Database = {
           skills: string[]
           status: string
           title: string
-          updated_at: string
-        }
+          updated_at: string}
         Insert: {
           budget?: Json
           category: string
@@ -717,8 +547,7 @@ export type Database = {
           milestone_id: string
           new_status: string
           previous_status: string | null
-          user_id: string
-        }
+          user_id: string}
         Insert: {
           action: string
           comment?: string | null
@@ -727,8 +556,7 @@ export type Database = {
           milestone_id: string
           new_status: string
           previous_status?: string | null
-          user_id: string
-        }
+          user_id: string}
         Update: {
           action?: string
           comment?: string | null
@@ -762,16 +590,14 @@ export type Database = {
           marketing_emails: boolean | null
           system_notifications: boolean | null
           updated_at: string
-          user_id: string
-        }
+          user_id: string}
         Insert: {
           created_at?: string
           id?: string
           marketing_emails?: boolean | null
           system_notifications?: boolean | null
           updated_at?: string
-          user_id: string
-        }
+          user_id: string}
         Update: {
           created_at?: string
           id?: string
@@ -799,8 +625,7 @@ export type Database = {
           title: string
           type: string
           updated_at: string | null
-          user_id: string
-        }
+          user_id: string}
         Insert: {
           created_at?: string | null
           id?: string
@@ -810,8 +635,7 @@ export type Database = {
           title: string
           type: string
           updated_at?: string | null
-          user_id: string
-        }
+          user_id: string}
         Update: {
           created_at?: string | null
           id?: string
@@ -842,8 +666,7 @@ export type Database = {
           partner_id: string
           payout_details: Json | null
           status: string
-          updated_at: string
-        }
+          updated_at: string}
         Insert: {
           amount: number
           completed_at?: string | null
@@ -943,8 +766,7 @@ export type Database = {
           name: string
           partner_id: string
           source: string | null
-          updated_at: string
-        }
+          updated_at: string}
         Insert: {
           campaign?: string | null
           clicks?: number | null
@@ -988,8 +810,7 @@ export type Database = {
           technologies: string[] | null
           title: string
           updated_at: string
-          user_id: string
-        }
+          user_id: string}
         Insert: {
           created_at?: string
           demo_url?: string | null
@@ -1001,8 +822,7 @@ export type Database = {
           technologies?: string[] | null
           title: string
           updated_at?: string
-          user_id: string
-        }
+          user_id: string}
         Update: {
           created_at?: string
           demo_url?: string | null
@@ -1111,8 +931,7 @@ export type Database = {
           project_id: string
           status: string
           title: string
-          updated_at: string
-        }
+          updated_at: string}
         Insert: {
           amount: number
           created_at?: string
@@ -1161,15 +980,13 @@ export type Database = {
           created_at: string
           id: string
           project_id: string
-          user_id: string
-        }
+          user_id: string}
         Insert: {
           content: string
           created_at?: string
           id?: string
           project_id: string
-          user_id: string
-        }
+          user_id: string}
         Update: {
           content?: string
           created_at?: string
@@ -1205,8 +1022,7 @@ export type Database = {
           start_date: string
           status: string
           talent_id: string
-          updated_at: string
-        }
+          updated_at: string}
         Insert: {
           agreement_url?: string | null
           client_id: string
@@ -1342,15 +1158,13 @@ export type Database = {
           created_at: string
           id: string
           updated_at: string
-          user_id: string
-        }
+          user_id: string}
         Insert: {
           code: string
           created_at?: string
           id?: string
           updated_at?: string
-          user_id: string
-        }
+          user_id: string}
         Update: {
           code?: string
           created_at?: string
@@ -1376,8 +1190,7 @@ export type Database = {
           partner_id: string | null
           referral_id: string
           reward_type: string
-          user_id: string
-        }
+          user_id: string}
         Insert: {
           amount?: number | null
           created_at?: string
@@ -1386,8 +1199,7 @@ export type Database = {
           partner_id?: string | null
           referral_id: string
           reward_type: string
-          user_id: string
-        }
+          user_id: string}
         Update: {
           amount?: number | null
           created_at?: string
@@ -1509,8 +1321,7 @@ export type Database = {
           opened_at: string | null
           reminder_type: string
           sent_at: string | null
-          user_id: string
-        }
+          user_id: string}
         Insert: {
           clicked_at?: string | null
           email_body: string
@@ -1519,8 +1330,7 @@ export type Database = {
           opened_at?: string | null
           reminder_type: string
           sent_at?: string | null
-          user_id: string
-        }
+          user_id: string}
         Update: {
           clicked_at?: string | null
           email_body?: string
@@ -1585,8 +1395,7 @@ export type Database = {
           reporter_id: string
           resolved_at: string | null
           review_id: string
-          status: string
-        }
+          status: string}
         Insert: {
           created_at?: string
           id?: string
@@ -1708,8 +1517,7 @@ export type Database = {
           payload: Json | null
           scheduled_for: string
           status: string
-          updated_at: string
-        }
+          updated_at: string}
         Insert: {
           completed_at?: string | null
           created_at?: string
@@ -1743,8 +1551,7 @@ export type Database = {
           stripe_customer_id: string | null
           stripe_subscription_id: string | null
           updated_at: string
-          user_id: string
-        }
+          user_id: string}
         Insert: {
           created_at?: string
           current_period_end?: string | null
@@ -1755,8 +1562,7 @@ export type Database = {
           stripe_customer_id?: string | null
           stripe_subscription_id?: string | null
           updated_at?: string
-          user_id: string
-        }
+          user_id: string}
         Update: {
           created_at?: string
           current_period_end?: string | null
@@ -1787,8 +1593,7 @@ export type Database = {
           summary: string | null
           title: string
           updated_at: string
-          user_id: string
-        }
+          user_id: string}
         Insert: {
           created_at?: string
           headline?: string | null
@@ -1797,8 +1602,7 @@ export type Database = {
           summary?: string | null
           title?: string
           updated_at?: string
-          user_id: string
-        }
+          user_id: string}
         Update: {
           created_at?: string
           headline?: string | null
@@ -1823,14 +1627,12 @@ export type Database = {
           created_at: string | null
           id: string
           tenant_id: string
-          user_id: string
-        }
+          user_id: string}
         Insert: {
           created_at?: string | null
           id?: string
           tenant_id: string
-          user_id: string
-        }
+          user_id: string}
         Update: {
           created_at?: string | null
           id?: string
@@ -1986,8 +1788,7 @@ export type Database = {
           secret: string | null
           updated_at: string
           url: string
-          user_id: string
-        }
+          user_id: string}
         Insert: {
           created_at?: string
           event_types: string[]
@@ -1998,8 +1799,7 @@ export type Database = {
           secret?: string | null
           updated_at?: string
           url: string
-          user_id: string
-        }
+          user_id: string}
         Update: {
           created_at?: string
           event_types?: string[]
@@ -2092,8 +1892,7 @@ export type Database = {
           resume_id: string
           role_title: string
           start_date: string
-          updated_at: string
-        }
+          updated_at: string}
         Insert: {
           company_logo_url?: string | null
           company_name: string
@@ -2187,13 +1986,11 @@ export type Database = {
           last_login: string
           reminder_type: string
           days_since_login: number
-          onboarding_status: Json
-        }[]
+          onboarding_status: Json}[]
       }
       complete_referral: {
-        Args: { _referred_id: string; _user_type: string }
-        Returns: undefined
-      }
+        Args: { _referred_id: string, _user_type: string}
+        Returns: undefined}
       create_notification: {
         Args: {
           _user_id: string
@@ -2202,12 +1999,10 @@ export type Database = {
           _type: string
           _related_id?: string
         }
-        Returns: string
-      }
+        Returns: string}
       create_scheduled_reminders: {
         Args: Record<PropertyKey, never>
-        Returns: undefined
-      }
+        Returns: undefined}
       flag_suspicious_content: {
         Args: {
           p_user_id: string
@@ -2217,58 +2012,45 @@ export type Database = {
           p_content_excerpt: string
           p_severity: string
           p_reason: string
-          p_ip_address: string
-        }
-        Returns: string
-      }
+          p_ip_address: string}
+        Returns: string}
       generate_api_key: {
-        Args: { prefix: string }
-        Returns: string
-      }
+        Args: { prefix: string}
+        Returns: string}
       generate_fraud_report: {
-        Args: { year: number; month: number }
-        Returns: string
-      }
+        Args: { year: number, month: number}
+        Returns: string}
       generate_referral_code: {
-        Args: { user_id: string }
-        Returns: string
-      }
+        Args: { user_id: string}
+        Returns: string}
       get_api_key_user_id: {
-        Args: { key_prefix: string; provided_key: string }
-        Returns: string
-      }
+        Args: { key_prefix: string, provided_key: string}
+        Returns: string}
       get_current_tenant_id: {
         Args: Record<PropertyKey, never>
-        Returns: string
-      }
+        Returns: string}
       get_event_distribution: {
         Args: { days_back?: number }
         Returns: {
           date: string
           event_type: string
-          count: number
-        }[]
+          count: number}[]
       }
       hash_api_key: {
-        Args: { api_key: string }
-        Returns: string
-      }
+        Args: { api_key: string}
+        Returns: string}
       schedule_email_reminders: {
         Args: Record<PropertyKey, never>
-        Returns: number
-      }
+        Returns: number}
       trigger_resume_scoring: {
-        Args: { application_id: string }
-        Returns: undefined
-      }
+        Args: { application_id: string}
+        Returns: undefined}
       update_onboarding_milestone: {
-        Args: { _user_id: string; _milestone: string; _status: boolean }
-        Returns: undefined
-      }
+        Args: { _user_id: string, _milestone: string, _status: boolean}
+        Returns: undefined}
       verify_api_key: {
-        Args: { provided_key: string; stored_hash: string }
-        Returns: boolean
-      }
+        Args: { provided_key: string, stored_hash: string}
+        Returns: boolean}
     }
     Enums: {
       api_key_scope:
@@ -2304,7 +2086,7 @@ export type Tables<
   }
     ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
         Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
-    : never = never,
+    : never = $2;
 > = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
       Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {
@@ -2330,7 +2112,7 @@ export type TablesInsert<
     schema: keyof Database
   }
     ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    : never = $2;
 > = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
       Insert: infer I
@@ -2353,7 +2135,7 @@ export type TablesUpdate<
     schema: keyof Database
   }
     ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    : never = $2;
 > = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
       Update: infer U
@@ -2376,7 +2158,7 @@ export type Enums<
     schema: keyof Database
   }
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never,
+    : never = $2;
 > = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
@@ -2391,18 +2173,14 @@ export type CompositeTypes<
     schema: keyof Database
   }
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
-    : never = never,
+    : never = $2;
 > = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
     : never
 
-export const Constants = {
-  public: {
-    Enums: {
-      api_key_scope: [
-        "jobs:read",
+export const Constants = $2;
         "jobs:write",
         "talent:read",
         "quotes:write",

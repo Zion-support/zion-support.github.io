@@ -2,12 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
 export default function AIIoTPlatformPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-iot-platform'));
-  if (!service) return null;
+  const service = $2;
+  if (!service) return null,
 
   return (
     <Layout>
@@ -51,5 +49,5 @@ export default function AIIoTPlatformPage() {
         </div>
       </div>
     </Layout>
-  );
+  )
 }

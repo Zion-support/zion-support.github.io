@@ -9,31 +9,27 @@ import { logWarn } from '@/utils/productionLogger';
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
 
 interface MobileBottomNavProps {
-  unreadCount?: number;
+  unreadCount?: number
 }
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
-  const router = useRouter();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const { items: wishlistItems } = useWishlist(); // Renamed to avoid conflict
-  const favoritesCount = wishlistItems.length;
-
-  const cartContextValue = useCart(); // Call hook at top level
-  let cartCount = 0;
+  const router = useRouter($2);
+  const { user } = useAuth($2);
+  const isAuthenticated = $2;
+  const { items: wishlistItems} = useWishlist(), // Renamed to avoid conflict
+  const favoritesCount = $2;
+  const cartContextValue = useCart(), // Call hook at top level
+  let cartCount = $2;
   if (cartContextValue && cartContextValue.items) {
-    cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0);
+    cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)
   } else {
-    // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.");
+    // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
   }
 
-  const navItems = [
-    {
-      name: "Home",
+  const navItems = $2;
       href: "/",
       icon: Home,
-      matches: (path: string) => path === "/"
-    },
+      matches: (path: string) => path = $2;
     {
       name: "Browse",
       href: "/talent",
@@ -50,49 +46,34 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       name: "Wishlist",
       href: "/wishlist",
       icon: Heart,
-      matches: (path: string) => path.startsWith("/wishlist"),
+      matches: (path: string) => path.startsWith($2);
       badge: favoritesCount,
-      authRequired: true
-    },
+      authRequired: true},
     {
       name: "Messages",
       href: "/messages",
       icon: MessageSquare,
-      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
+      matches: (path: string) => path.startsWith("/messages") || path.startsWith($2);
       badge: unreadCount,
-      authRequired: true
-    },
+      authRequired: true},
     {
       name: "Cart",
       href: "/cart",
       icon: ShoppingCart,
-      matches: (path: string) => path.startsWith("/cart"),
-      badge: cartCount
-    },
+      matches: (path: string) => path.startsWith($2);
+      badge: cartCount},
     {
       name: "Dashboard",
       href: "/dashboard",
       icon: User,
-      matches: (path: string) => path.startsWith("/dashboard"),
-      authRequired: true
-    }
-  ];
+      matches: (path: string) => path.startsWith($2);
+      authRequired: true}
+  ],
 
   // Filter items based on auth status
-  const visibleItems = navItems.filter(item => 
-    !item.authRequired || (item.authRequired && isAuthenticated)
-  );
-
+  const visibleItems = $2;
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">
-      <div className="flex justify-around items-center h-16">
-        {visibleItems.map(item => (
-          <Link
-            key={item.name}
-            href={item.href}
-            aria-label={item.name}
-            className={cn(
-              "flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+    <nav className = $2;
               item.matches(router.pathname)
                 ? "text-primary"
                 : "text-foreground/70 hover:text-foreground"
@@ -111,5 +92,5 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
         ))}
       </div>
     </nav>
-  );
+  )
 }

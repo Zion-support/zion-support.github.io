@@ -1,19 +1,16 @@
 import React from "react";
 import fs from "fs";
 import path from "path";
+type Experiment = $2;
+  hypothesis?: string,
+  metric?: string,
+  effort?: number,
+  impact?: number
+},
 
-type Experiment = {
-  title: string;
-  hypothesis?: string;
-  metric?: string;
-  effort?: number;
-  impact?: number;
-};
-
-type Props = {
-  updatedAt: string | null;
-  items: Experiment[];
-};
+type Props = $2;
+  items: Experiment[]
+},
 
 export default function CurationPage({ updatedAt, items }: Props) {
   return (
@@ -51,24 +48,24 @@ export default function CurationPage({ updatedAt, items }: Props) {
         )}
       </div>
     </main>
-  );
+  )
 }
 
 export async function getStaticProps() {
   try {
-    const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
-    const raw = fs.readFileSync(filePath, "utf8");
-    const parsed = JSON.parse(raw);
+    const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json"),
+    const raw = fs.readFileSync($2);
+    const parsed = JSON.parse($2);
     return {
       props: {
         updatedAt: parsed.updatedAt || null,
         items: parsed.items || []},
-      revalidate: 300};
+      revalidate: 300}
   } catch {
     return {
       props: {
         updatedAt: null,
         items: []},
-      revalidate: 300};
+      revalidate: 300}
   }
 }

@@ -3,22 +3,19 @@ import { useAuthStatus } from "./talent/useAuthStatus";
 import { useTalentData } from "./talent/useTalentData";
 import { useFilterTalents } from "./talent/useFilterTalents";
 import { useUIState } from "./talent/useUIState";
-
 export function useTalentDirectory() {
   // Fetch auth status and saved talents
   const { 
-    isAuthenticated, 
+    isAuthenticated,
     userDetails, 
     savedTalents, 
     handleToggleSave 
-  } = useAuthStatus();
-
+  } = useAuthStatus($2);
   // Fetch talent data
   const { 
     talents, 
     isLoading 
-  } = useTalentData();
-
+  } = useTalentData($2);
   // Apply filters and sorting
   const {
     filteredTalents,
@@ -37,8 +34,7 @@ export function useTalentDirectory() {
     toggleAvailability,
     toggleRegion,
     clearFilters
-  } = useFilterTalents(talents);
-
+  } = useFilterTalents($2);
   // Manage UI state
   const {
     isMobileFilterOpen,
@@ -49,8 +45,7 @@ export function useTalentDirectory() {
     setSelectedTalent,
     expandedSections,
     toggleSection
-  } = useUIState();
-
+  } = useUIState($2);
   return {
     // Talents and loading state
     talents,
@@ -91,5 +86,5 @@ export function useTalentDirectory() {
     clearFilters,
     toggleSection,
     handleToggleSave
-  };
+  }
 }

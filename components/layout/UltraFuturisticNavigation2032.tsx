@@ -17,18 +17,15 @@ import {
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon,
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon,
   MenuIcon, CloseIcon, ChevronRightIcon
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceCategories = [
-  {
-    title: '🧠 AI & Consciousness 2030',
+const serviceCategories = $2;
     icon: BrainIcon,
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     description: 'Next-generation AI consciousness and emotional intelligence',
@@ -99,18 +96,18 @@ const serviceCategories = [
       { name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3,999/month' }
     ]
   }
-];
+],
 
 const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'Solutions', href: '/solutions', icon: Layers },
-  { name: 'Pricing', href: '/pricing', icon: DollarSign },
-  { name: 'Resources', href: '/resources', icon: BookOpen },
-  { name: 'Case Studies', href: '/case-studies', icon: TrendingUp },
-  { name: 'Blog', href: '/blog', icon: MessageCircle },
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+  { name: 'Home', href: '/', icon: Home},
+  { name: 'Services', href: '/services', icon: Briefcase},
+  { name: 'Solutions', href: '/solutions', icon: Layers},
+  { name: 'Pricing', href: '/pricing', icon: DollarSign},
+  { name: 'Resources', href: '/resources', icon: BookOpen},
+  { name: 'Case Studies', href: '/case-studies', icon: TrendingUp},
+  { name: 'Blog', href: '/blog', icon: MessageCircle},
+  { name: 'Contact', href: '/contact', icon: MessageCircle}
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
@@ -119,24 +116,20 @@ const companyLinks = [
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }
-];
+],
 
 export default function UltraFuturisticNavigation2032() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<number | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-
+  const [isOpen, setIsOpen] = useState($2);
+  const [activeCategory, setActiveCategory] = useState<number | null>(null),
+  const [isScrolled, setIsScrolled] = useState($2);
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleScroll = $2;
+    window.addEventListener($2);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
-
+  const toggleMenu = () => setIsOpen($2);
+  const closeMenu = () => setIsOpen($2);
   return (
     <>
       {/* Top Contact Bar */}
@@ -282,7 +275,7 @@ export default function UltraFuturisticNavigation2032() {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0}}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-50 lg:hidden"
@@ -408,5 +401,5 @@ export default function UltraFuturisticNavigation2032() {
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
-  );
+  )
 }

@@ -9,81 +9,70 @@ import z from "zod";
 import { Mail } from 'lucide-react'
 
 export function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const [submitted, setSubmitted] = useState($2);
   const [errors, setErrors] = useState<{
-    name?: string;
-    email?: string;
-    subject?: string;
-    message?: string;
-  }>({});
+    name?: string,
+    email?: string,
+    subject?: string,
+    message?: string
+  }>({}),
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    setErrors((prev) => ({ ...prev, [name]: undefined }));
-  };
+    const { name, value } = e.target,
+    setFormData((prev) => ({ ...prev, [name]: value })),
+    setErrors((prev) => ({ ...prev, [name]: undefined }))
+  },
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
+    e.preventDefault($2);
     const schema = z.object({
-      name: z.string().min(2, "Name is required"),
-      email: z.string().email("Enter a valid email"),
-      subject: z.string().min(2, "Subject is required"),
-      message: z.string().min(10, "Message must be at least 10 characters")});
+      name: z.string().min($2);
+      email: z.string().email($2);
+      subject: z.string().min($2);
+      message: z.string().min(10, "Message must be at least 10 characters")}),
 
-    const result = schema.safeParse(formData);
+    const result = schema.safeParse($2);
     if (!result.success) {
-      const fieldErrors: Record<string, string> = {};
+      const fieldErrors: Record<string, string> = {},
       for (const err of result.error.errors) {
         if (err.path[0]) {
-          fieldErrors[err.path[0] as string] = err.message;
+          fieldErrors[err.path[0] as string] = err.message
         }
       }
-      setErrors(fieldErrors);
-      toast({
-        title: "Form Validation Error",
-        description: result.error.errors[0]?.message || "Please check your form and try again",
-        variant: "destructive"});
-      return;
+      setErrors($2);
+      toast($2);
+      return
     }
 
-    setErrors({});
-    setIsSubmitting(true);
-
+    setErrors($2);
+    setIsSubmitting($2);
     fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData)})
       .then(async (res) => {
-        setIsSubmitting(false);
+        setIsSubmitting($2);
         if (!res.ok) {
-          const data = await res.json().catch(() => ({}));
-          throw new Error(data.error || "Failed to send message");
+          const data = $2;
+          throw new Error(data.error || "Failed to send message")
         }
-        toast({
-          title: "Message Sent",
-          description: "We've received your message and will get back to you soon."});
-        setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 2000);
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        toast($2);
+        setSubmitted($2);
+        setTimeout(() => setSubmitted(false), 2000),
+        setFormData({ name: "", email: "", subject: "", message: "" })
       })
       .catch((err) => {
-        setIsSubmitting(false);
+        setIsSubmitting($2);
         toast({
           title: "Submission Error",
           description: err.message,
-          variant: "destructive"});
-      });
-  };
+          variant: "destructive"})
+      })
+  },
 
   return (
     <section className="py-20 bg-zion-blue" id="contact">
@@ -200,5 +189,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

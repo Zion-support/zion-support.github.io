@@ -9,30 +9,26 @@ import {
   Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette,
   FileText, BarChart3, Heart, Truck, ShieldCheck,
   Sparkles, Infinity as InfinityIcon, Zap as Lightning
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import new service data
 import { innovativeMicroSaasServices2025V2 } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
-
 // Lazy load heavy components for better performance
-const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
-
+const LazyServiceCard = $2;
 const Homepage2040: React.FC = () => {
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
+  const [currentServiceIndex, setCurrentServiceIndex] = useState($2);
+  const [isVisible, setIsVisible] = useState($2);
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible($2);
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+      setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length)
+    }, 5000),
+    return () => clearInterval(interval)
+  }, []),
 
   // Enhanced animation variants for better performance
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
@@ -40,10 +36,10 @@ const Homepage2040: React.FC = () => {
         delayChildren: 0.2
       }
     }
-  };
+  },
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20},
     visible: {
       opacity: 1,
       y: 0,
@@ -52,7 +48,7 @@ const Homepage2040: React.FC = () => {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
   const floatingVariants = {
     float: {
@@ -63,11 +59,9 @@ const Homepage2040: React.FC = () => {
         ease: "easeInOut" as const
       }
     }
-  };
+  },
 
-  const statsData = [
-    {
-      number: "100+",
+  const statsData = $2;
       label: "Innovative Services",
       description: "Cutting-edge solutions",
       icon: Sparkles,
@@ -98,38 +92,35 @@ const Homepage2040: React.FC = () => {
       color: "text-green-400",
       hoverColor: "group-hover:text-green-300"
     }
-  ];
+  ],
 
   // Combine all services for showcase
-  const allServices = [...innovativeMicroSaasServices2025V2, ...emergingTechServices2025V2];
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 6);
-
-  const serviceCategories = [
-    {
-      name: "AI & Machine Learning",
+  const allServices = [...innovativeMicroSaasServices2025V2, ...emergingTechServices2025V2],
+  const featuredServices = allServices.filter(service => service.popular).slice($2);
+  const serviceCategories = $2;
       icon: Brain,
-      count: allServices.filter(s => s.category.includes('AI')).length,
+      count: allServices.filter(s = $2;
       color: "from-pink-500 to-rose-600"
     },
     {
       name: "Quantum Technology",
       icon: Atom,
-      count: allServices.filter(s => s.category.includes('Quantum')).length,
+      count: allServices.filter(s = $2;
       color: "from-blue-500 to-cyan-600"
     },
     {
       name: "Emerging Tech",
       icon: Rocket,
-      count: allServices.filter(s => s.category.includes('Emerging') || s.category.includes('Space')).length,
+      count: allServices.filter(s = $2;
       color: "from-purple-500 to-indigo-600"
     },
     {
       name: "Cybersecurity",
       icon: Shield,
-      count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber')).length,
+      count: allServices.filter(s = $2;
       color: "from-green-500 to-emerald-600"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -165,18 +156,14 @@ const Homepage2040: React.FC = () => {
             <div className="absolute inset-0">
               {[...Array(20)].map((_, i) => (
                 <motion.div
-                  key={i}
-                  className="absolute w-1 h-1 bg-cyan-400/30 rounded-full"
-                  style={{
-                    left: `${Math.random() * 100}%`,
+                  key = $2;
                     top: `${Math.random() * 100}%`,
                     animationDelay: `${Math.random() * 3}s`
                   }}
                   animate={{
                     scale: [0, 1, 0],
                     opacity: [0, 1, 0]}}
-                  transition={{
-                    duration: 3,
+                  transition = $2;
                     repeat: Infinity,
                     delay: Math.random() * 3
                   }}
@@ -280,7 +267,7 @@ const Homepage2040: React.FC = () => {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
               {statsData.map((stat, index) => (
@@ -310,7 +297,7 @@ const Homepage2040: React.FC = () => {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <motion.h2 
@@ -331,7 +318,7 @@ const Homepage2040: React.FC = () => {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
               {serviceCategories.map((category, index) => (
@@ -362,7 +349,7 @@ const Homepage2040: React.FC = () => {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <motion.h2 
@@ -383,7 +370,7 @@ const Homepage2040: React.FC = () => {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
               {featuredServices.map((service, index) => (
@@ -442,87 +429,9 @@ const Homepage2040: React.FC = () => {
 
                 {/* View All Services Button */}
                 <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 30}}
+                  whileInView={{ opacity: 1, y: 0}}
+                  viewport={{ once: true}}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-center mt-12"
-                >
-                  <Link 
-                    href="/innovative-2040-futuristic-services-showcase"
-                    className="inline-flex items-center justify-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-lg"
-                  >
-                    View All 2040 Services
-                    <ArrowRight className="w-6 h-6 ml-3" />
-                  </Link>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Enhanced CTA Section */}
-        <section className="py-20 px-4 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="space-y-8"
-            >
-              <motion.h2 
-                variants={itemVariants}
-                className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent"
-              >
-                Ready to Transform Your Business?
-              </motion.h2>
-              <motion.p 
-                variants={itemVariants}
-                className="text-xl text-gray-300 max-w-2xl mx-auto"
-              >
-                Join thousands of companies already leveraging our revolutionary technology solutions
-              </motion.p>
-              
-              <motion.div 
-                variants={itemVariants}
-                className="flex flex-col sm:flex-row gap-6 justify-center"
-              >
-                <Link href="/contact" aria-label="Contact us">
-                  <button className="px-12 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25">
-                    Contact Us Today
-                  </button>
-                </Link>
-                <Link href="/demo" aria-label="Request a demo">
-                  <button className="px-12 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    Request Demo
-                  </button>
-                </Link>
-              </motion.div>
-              
-              <motion.div
-                variants={itemVariants}
-                className="flex items-center justify-center gap-8 text-sm text-gray-400"
-              >
-                <div className="flex items-center gap-2">
-                  <Shield className="w-5 h-5 text-green-400" />
-                  <span>Enterprise Security</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Zap className="w-5 h-5 text-yellow-400" />
-                  <span>24/7 Support</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5 text-blue-400" />
-                  <span>Proven Results</span>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-      </main>
-    </Layout>
-  );
-};
-
-export default Homepage2040;
+                  className = $2;
+export default Homepage2040,

@@ -8,11 +8,10 @@ import {
   ErrorState,
   LoadingState,
   ScoreDialog
-} from "./applications";
+} from "./applications",
 
 interface JobApplicationsTableProps {
-  jobId: string;
-}
+  jobId: string}
 
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   const { 
@@ -22,49 +21,41 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     updateApplicationStatus, 
     markApplicationAsViewed,
     refetch
-  } = useJobApplications(jobId);
-
-  const [processingId, setProcessingId] = useState<string | null>(null);
-  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
-  const [showScoreDialog, setShowScoreDialog] = useState(false);
-  
+  } = useJobApplications($2);
+  const [processingId, setProcessingId] = useState<string | null>(null),
+  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
+  const [showScoreDialog, setShowScoreDialog] = useState($2);
   const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {
-    setProcessingId(applicationId);
+    setProcessingId($2);
     try {
-      await updateApplicationStatus(applicationId, newStatus);
+      await updateApplicationStatus($2);
       // If it's not already viewed, mark it as viewed
-      const application = applications.find(app => app.id === applicationId);
+      const application = applications.find($2);
       if (application && !application.viewed_at) {
-        await markApplicationAsViewed(applicationId);
+        await markApplicationAsViewed(applicationId)
       }
     } finally {
-      setProcessingId(null);
+      setProcessingId(null)
     }
-  };
+  },
 
   const handleViewScore = (application: JobApplication) => {
-    setSelectedApplication(application);
-    setShowScoreDialog(true);
-  };
+    setSelectedApplication($2);
+    setShowScoreDialog(true)
+  },
 
-  const handleViewApplication = async (applicationId: string) => {
-    await markApplicationAsViewed(applicationId);
-  };
-
-  const handleScoreUpdated = (updatedApplication: JobApplication) => {
-    refetch();
-  };
-
+  const handleViewApplication = $2;
+  const handleScoreUpdated = $2;
   if (isLoading) {
-    return <LoadingState />;
+    return <LoadingState />
   }
 
   if (error) {
-    return <ErrorState error={error} />;
+    return <ErrorState error={error} />
   }
 
   if (applications.length === 0) {
-    return <EmptyState />;
+    return <EmptyState />
   }
 
   return (
@@ -84,5 +75,5 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
         onScoreUpdated={handleScoreUpdated}
       />
     </>
-  );
+  )
 }

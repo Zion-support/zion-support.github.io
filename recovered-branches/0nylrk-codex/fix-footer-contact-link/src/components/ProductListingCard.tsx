@@ -3,55 +3,39 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
 import { Star, DollarSign } from "lucide-react";
-
 interface ProductListingCardProps {
-  listing: ProductListing;
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
+  listing: ProductListing,
+  view?: 'grid' | 'list',
+  onRequestQuote?: (id: string) => void
 }
 
 export function ProductListingCard({ 
   listing, 
-  view = 'grid',
+  view = $2;
   onRequestQuote
 }: ProductListingCardProps) {
-  const isGrid = view === 'grid';
-  const navigate = useNavigate();
-  
+  const isGrid = $2;
+  const navigate = useNavigate($2);
   // Get the first image or use a placeholder
-  const imageUrl = listing.images && listing.images.length > 0 
-    ? listing.images[0] 
-    : '/placeholder.svg';
-    
+  const imageUrl = $2;
   // Format price display
-  const formatPrice = () => {
-    if (listing.price === null) return "Custom pricing";
-    return `${listing.currency}${listing.price.toLocaleString()}`;
-  };
+  const formatPrice = $2;
+    return `${listing.currency}${listing.price.toLocaleString()}`
+  },
 
   // Handle image loading errors
-  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    e.currentTarget.src = '/placeholder.svg';
-  };
-  
+  const handleImageError = $2;
   // Handle navigating to listing detail
-  const handleViewListing = () => {
-    navigate(`/listing/${listing.id}`);
-  };
-  
+  const handleViewListing = $2;
   // Handle request quote button click
   const handleRequestQuote = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    
+    e.preventDefault($2);
+    e.stopPropagation($2);
     if (onRequestQuote) {
-      onRequestQuote(listing.id);
+      onRequestQuote(listing.id)
     } else {
       // Default behavior if no handler provided
-      navigate(`/request-quote?listing=${listing.id}`);
-    }
-  };
-  
+      navigate(`/request-quote?listing = $2;
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>
       {/* Image */}
@@ -134,8 +118,8 @@ export function ProductListingCard({
             <Button 
               size="sm" 
               onClick={(e) => {
-                e.stopPropagation();
-                navigate(`/listing/${listing.id}`);
+                e.stopPropagation($2);
+                navigate(`/listing/${listing.id}`)
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             >
@@ -156,5 +140,5 @@ export function ProductListingCard({
         </div>
       </div>
     </div>
-  );
+  )
 }

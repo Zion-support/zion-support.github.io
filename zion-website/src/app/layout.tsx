@@ -4,12 +4,9 @@ import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Leading AI and Technology Solutions',
+const inter = $2;
   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
-  keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
+  keywords: ['AIartificial intelligencetechnologyinnovationquantum computingautonomous systemsbusiness solutionszion tech'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
@@ -32,7 +29,7 @@ export const metadata: Metadata = {
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
     description: 'Transform your business with cutting-edge AI and technology solutions.',
     images: ['/og-image.jpg']},
-  viewport: 'width=device-width, initial-scale=1',
+  viewport: 'width=device-width, initial-scale = $2;
   themeColor: '#000000'}
 
 export default function RootLayout({

@@ -1,7 +1,6 @@
 
 import Head from 'next/head';
 import Link from 'next/link';
-
 const AiPoweredMarketplacesTheFutureOfDigitalCommerceChat = () => {
   return (
     <div>
@@ -16,7 +15,7 @@ const AiPoweredMarketplacesTheFutureOfDigitalCommerceChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default AiPoweredMarketplacesTheFutureOfDigitalCommerceChat;
+export default AiPoweredMarketplacesTheFutureOfDigitalCommerceChat,

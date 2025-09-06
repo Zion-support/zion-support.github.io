@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
 import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026';
 import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026';
-
 export default function QuantumCybersecurityServices() {
   return (
     <>
@@ -34,8 +33,8 @@ export default function QuantumCybersecurityServices() {
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
           <div className="text-center z-10 max-w-6xl mx-auto">
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
             >
@@ -45,8 +44,8 @@ export default function QuantumCybersecurityServices() {
             </motion.h1>
             
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed"
             >
@@ -54,8 +53,8 @@ export default function QuantumCybersecurityServices() {
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
             >
@@ -75,8 +74,8 @@ export default function QuantumCybersecurityServices() {
 
             {/* Key Benefits */}
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 50}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 1, delay: 0.6 }}
               className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
             >
@@ -103,8 +102,8 @@ export default function QuantumCybersecurityServices() {
         <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -122,10 +121,10 @@ export default function QuantumCybersecurityServices() {
               {quantumCybersecurityServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 50}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                 >
                   <UltraFuturisticServiceCard2026 
                     service={service} 
@@ -142,8 +141,8 @@ export default function QuantumCybersecurityServices() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -157,9 +156,9 @@ export default function QuantumCybersecurityServices() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0}}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-4">The Quantum Threat</h3>
@@ -175,10 +174,10 @@ export default function QuantumCybersecurityServices() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: 30}}
+                whileInView={{ opacity: 1, x: 0}}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-4">Our Quantum Solution</h3>
@@ -200,8 +199,8 @@ export default function QuantumCybersecurityServices() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -214,10 +213,10 @@ export default function QuantumCybersecurityServices() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="text-center"
               >
                 <div className="text-6xl mb-4">🔒</div>
@@ -226,10 +225,10 @@ export default function QuantumCybersecurityServices() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="text-center"
               >
                 <div className="text-6xl mb-4">🔄</div>
@@ -238,10 +237,10 @@ export default function QuantumCybersecurityServices() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="text-center"
               >
                 <div className="text-6xl mb-4">🤖</div>
@@ -250,10 +249,10 @@ export default function QuantumCybersecurityServices() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="text-center"
               >
                 <div className="text-6xl mb-4">📊</div>
@@ -268,12 +267,12 @@ export default function QuantumCybersecurityServices() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
                   Secure Your Future Today
                 </span>
@@ -326,5 +325,5 @@ export default function QuantumCybersecurityServices() {
         </section>
       </UltraFuturisticBackground2026>
     </>
-  );
+  )
 }

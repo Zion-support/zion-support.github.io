@@ -6,41 +6,32 @@ import {
   Check, Star, Users, TrendingUp, DollarSign, Clock, 
   Shield, Zap, Rocket, Brain, Atom, Globe, Target,
   ArrowRight, Phone, Mail, MapPin, ExternalLink
-} from 'lucide-react';
+} from 'lucide-react',
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-
 // Import all service data
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
-
 export default function PricingPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('All');
-
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [selectedPriceRange, setSelectedPriceRange] = useState($2);
   // Combine all services
-  const allServices = [
-    ...enhancedRealMicroSaasServices,
+  const allServices = $2;
     ...innovativeAIServices2029,
     ...quantumSpaceInnovations2029,
     ...enterpriseITInnovations2029,
     ...innovativeMicroSaas2029
-  ];
+  ],
 
   // Get unique services by ID
   const uniqueServices = allServices.filter((service, index, self) => 
-    index === self.findIndex(s => s.id === service.id)
-  );
-
+    index = $2;
   // Get all categories
-  const categories = ['All', ...Array.from(new Set(uniqueServices.map(s => 
-    Array.isArray(s.category) ? s.category[0] : s.category
-  )))];
-
+  const categories = ['All', ...Array.from(new Set(uniqueServices.map(s = $2;
   // Price ranges
   const priceRanges = [
     { id: 'All', name: 'All Prices', range: 'All' },
@@ -48,45 +39,32 @@ export default function PricingPage() {
     { id: '$1K - $5K', name: '$1K - $5K/month', range: '$1K - $5K' },
     { id: '$5K - $20K', name: '$5K - $20K/month', range: '$5K - $20K' },
     { id: '$20K+', name: '$20K+/month', range: '$20K+' }
-  ];
+  ],
 
   // Filter services
-  const filteredServices = uniqueServices.filter(service => {
-    const matchesCategory = selectedCategory === 'All' || 
-                           (Array.isArray(service.category) ? 
-                             service.category.includes(selectedCategory) : 
-                             service.category === selectedCategory);
-    
-    const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
-    const matchesPrice = selectedPriceRange === 'All' ||
-                        (selectedPriceRange === 'Under $1K' && price < 1000) ||
-                        (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) ||
-                        (selectedPriceRange === '$5K - $20K' && price >= 5000 && price < 20000) ||
-                        (selectedPriceRange === '$20K+' && price >= 20000);
-    
-    return matchesCategory && matchesPrice;
-  });
+  const filteredServices = $2;
+    const price = parseFloat(service.price.replace(/[^0-9.]/g, '')),
+    const matchesPrice = $2;
+    return matchesCategory && matchesPrice
+  }),
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   // Group services by category for better organization
   const servicesByCategory = filteredServices.reduce((acc, service) => {
-    const category = Array.isArray(service.category) ? service.category[0] : service.category;
+    const category = $2;
     if (!acc[category]) {
-      acc[category] = [];
+      acc[category] = []
     }
-    acc[category].push(service);
-    return acc;
-  }, {} as Record<string, typeof filteredServices>);
+    acc[category].push($2);
+    return acc
+  }, {} as Record<string, typeof filteredServices>),
 
-  const faqs = [
-    {
-      question: 'Can I change my plan at any time?',
+  const faqs = $2;
       answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.'
     },
     {
@@ -109,27 +87,13 @@ export default function PricingPage() {
       question: 'Is there a setup fee?',
       answer: 'No setup fees for any of our plans. You can start using our services immediately after signing up.'
     }
-  ];
+  ],
 
-  const categories = [
-    'All',
-    'Content & Marketing',
-    'Development & DevOps',
-    'Sales & CRM',
-    'Legal & Compliance',
-    'Human Resources',
-    'Analytics & Data',
-    'Finance & Accounting',
-    'Project Management',
-    'Customer Experience',
-    'Security & Compliance'
-  ];
-
+  const categories = $2;
   const filteredServices = selectedCategory === 'All' 
     ? microSaasServices 
-    : microSaasServices.filter(service => service.category === selectedCategory);
-
-  const yearlyDiscount = 0.2; // 20% discount for yearly billing
+    : microSaasServices.filter($2);
+  const yearlyDiscount = 0.2, // 20% discount for yearly billing
 
   return (
     <UltraFuturisticBackground2029>
@@ -147,8 +111,8 @@ export default function PricingPage() {
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
@@ -198,10 +162,10 @@ export default function PricingPage() {
             {Object.entries(servicesByCategory).map(([category, services], categoryIndex) => (
               <motion.div
                 key={category}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="mb-20"
               >
                 <div className="text-center mb-12">
@@ -217,10 +181,10 @@ export default function PricingPage() {
                   {services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: 20}}
+                      whileInView={{ opacity: 1, y: 0}}
                       transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
-                      viewport={{ once: true }}
+                      viewport={{ once: true}}
                       className="group cursor-pointer"
                     >
                       <div className={`p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105 ${service.popular ? 'ring-2 ring-yellow-400/50' : ''}`}>
@@ -350,10 +314,10 @@ export default function PricingPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Ready to Get Started with
@@ -397,7 +361,7 @@ export default function PricingPage() {
               {/* Additional Info */}
               <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20">
                 <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300">
                   <div className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-green-400" />
                     <span>All services are operational and market-tested</span>
@@ -423,5 +387,5 @@ export default function PricingPage() {
 
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
-  );
+  )
 }

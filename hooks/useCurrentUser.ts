@@ -1,12 +1,10 @@
 import useSWR from 'swr';
-
-const fetcher = (url: string) => fetch(url).then((r) => (r.ok ? r.json() : null));
-
+const fetcher = $2;
 export function useCurrentUser() {
-  const { data, error, mutate } = useSWR('/api/auth/me', fetcher);
+  const { data, error, mutate } = useSWR($2);
   return {
-    user: data?.user || null,
+    user: data ?.user || null,
     loading: !data && !error,
     error,
-    mutate};
+    mutate}
 }

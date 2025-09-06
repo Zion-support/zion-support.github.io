@@ -1,5 +1,4 @@
-// Hook for useFraudPreventionSignup;
-export const useUseFraudPreventionSignup: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
+// Hook for useFraudPreventionSignup,
+export const useUseFraudPreventionSignup: unknown = $2;
+  return {}
+},

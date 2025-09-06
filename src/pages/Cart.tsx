@@ -7,14 +7,14 @@ import { useAuth } from '@/hooks/useAuth';
 import type { RootState, AppDispatch } from '@/store';
 import {
   removeItem as removeItemAction,
-  updateQuantity as updateQuantityAction} from '@/store/cartSlice';
+  updateQuantity as updateQuantityAction} from '@/store/cartSlice',
 import {logErrorToProduction} from '@/utils/productionLogger';
 import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
 import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal';
 // CartItemType is already imported via RootState from cartSlice which uses CartItem from @/types/cart
-// import { CartItem as CartItemType } from '@/types/cart';
+// import { CartItem as CartItemType } from '@/types/cart',
 // safeStorage is no longer needed here for reading
-// import { safeStorage } from '@/utils/safeStorage';
+// import { safeStorage } from '@/utils/safeStorage',
 import { getStripe } from '@/utils/getStripe';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -23,83 +23,64 @@ import { useWishlist } from '@/hooks/useWishlist';
 import { toast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-
 export default function CartPage() {
-  const { t } = useTranslation();
-  const items = useSelector((s: RootState) => s.cart.items);
-  const dispatch = useDispatch<AppDispatch>();
-  const { user, isAuthenticated } = useAuth();
-  const [loading, setLoading] = useState(false);
-  const [guestOpen, setGuestOpen] = useState(false);
-  const { toggle: toggleWishlist, isWishlisted } = useWishlist();
-
+  const { t } = useTranslation($2);
+  const items = $2;
+  const dispatch = $2;
+  const { user, isAuthenticated } = useAuth($2);
+  const [loading, setLoading] = useState($2);
+  const [guestOpen, setGuestOpen] = useState($2);
+  const { toggle: toggleWishlist, isWishlisted } = useWishlist($2);
   const updateQuantity = (id: string, qty: number) => {
-    dispatch(updateQuantityAction({ id, quantity: qty }));
-  };
+    dispatch(updateQuantityAction({ id, quantity: qty}))
+  },
 
   const removeItem = (id: string) => {
-    const item = items.find(i => i.id === id);
-    dispatch(removeItemAction(id));
+    const item = items.find($2);
+    dispatch(removeItemAction(id)),
     
     if (item) {
       toast({
         title: "Item removed",
-        description: `${item.name} has been removed from your cart`});
+        description: `${item.name} has been removed from your cart`})
     }
-  };
+  },
 
   const saveForLater = (id: string, name: string) => {
-    const wasWishlisted = isWishlisted(id);
-    toggleWishlist(id);
+    const wasWishlisted = isWishlisted($2);
+    toggleWishlist($2);
     toast({
       title: wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist',
-      description: wasWishlisted
-        ? `${name} has been removed from your wishlist`
-        : `${name} has been added to your wishlist`});
-  };
+      description: wasWishlisted ? `${name} has been removed from your wishlist`
+        : `${name} has been added to your wishlist`})
+  },
 
-  const handleCheckout = async (details?: { email?: string; address?: string }) => {
-    setLoading(true);
+  const handleCheckout = async (details?: { email?: string, address?: string }) => {
+    setLoading($2);
     try {
-      const stripe = await getStripe();
-      if (!stripe) throw new Error('Stripe.js failed to load');
-
-      const { data } = await axios.post('/api/checkout-session', {
-        cartItems: items,
-        customer_email: details?.email || user?.email,
-        shipping_address: details?.address});
-
-      const sessionId = data.sessionId as string | undefined;
-      if (!sessionId) throw new Error('Session ID missing in response');
-
-      const { error } = await stripe.redirectToCheckout({ sessionId });
-      if (error) logErrorToProduction('Stripe redirect error:', { data: error.message });
+      const stripe = await getStripe($2);
+      if (!stripe) throw new Error($2);
+      const { data } = await axios.post($2);
+      const sessionId = $2;
+      if (!sessionId) throw new Error($2);
+      const { error } = await stripe.redirectToCheckout($2);
+      if (error) logErrorToProduction('Stripe redirect error:', { data: error.message })
     } catch (err: any) {
-      logErrorToProduction('Checkout error:', { data: err });
-      alert(err.message || 'Checkout failed');
+      logErrorToProduction($2);
+      alert(err.message || 'Checkout failed')
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  }; 
+  }, 
 
-  const startCheckout = () => {
-    if (!isAuthenticated) {
-      setGuestOpen(true);
-    } else {
-      handleCheckout();
-    }
-  };
-
-  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
-  const tax = subtotal * 0.08; // 8% tax estimate
+  const startCheckout = $2;
+  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0),
+  const tax = subtotal * 0.08, // 8% tax estimate
   
   // Only add shipping for physical items
-  const hasPhysicalItems = items.some(item => 
-    !item.type || item.type === 'physical' // Default to physical if type not specified
-  );
-  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0;
-  const total = subtotal + tax + shipping;
-
+  const hasPhysicalItems = items.some($2);
+  const shipping = $2;
+  const total = $2;
   // Empty cart state
   if (items.length === 0) {
     return (
@@ -107,8 +88,8 @@ export default function CartPage() {
         <div className="container mx-auto max-w-2xl">
           <motion.div 
             className="text-center py-20"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
           >
             <div className="mb-8">
               <ShoppingCart className="mx-auto h-24 w-24 text-zion-slate-light mb-4" />
@@ -119,7 +100,7 @@ export default function CartPage() {
             </div>
             
             <div className="space-y-4">
-              <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue">
+              <Button asChild size="lg" className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue">
                 <Link href="/equipment">
                   <Package className="h-4 w-4 mr-2" />
                   Browse Equipment
@@ -147,7 +128,7 @@ export default function CartPage() {
           </motion.div>
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -157,7 +138,7 @@ export default function CartPage() {
         <motion.div 
           className="text-center mb-8"
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0}}
         >
           <h1 className="text-4xl font-bold text-white mb-2">Your Cart</h1>
           <p className="text-zion-slate-light">
@@ -170,14 +151,14 @@ export default function CartPage() {
           <motion.div 
             className="lg:col-span-2 space-y-4"
             initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0}}
             transition={{ delay: 0.2 }}
           >
             {items.map((item, index) => (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ delay: index * 0.1 }}
               >
                 <Card className="bg-zion-blue-light/80 border-zion-cyan/20 hover:border-zion-cyan/40 transition-colors">
@@ -243,8 +224,8 @@ export default function CartPage() {
           {/* Order Summary */}
           <motion.div
             className="lg:col-span-1"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 20}}
+            animate={{ opacity: 1, x: 0}}
             transition={{ delay: 0.4 }}
           >
             <Card className="bg-zion-blue-light/80 border-zion-cyan/20 sticky top-8">
@@ -341,5 +322,5 @@ export default function CartPage() {
         />
       </div>
     </div>
-  );
+  )
 }

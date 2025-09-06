@@ -3,10 +3,8 @@ import React from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { MobileProjectView } from "../components/projects/MobileProjectView";
-
 // Mock data
-const projectData = {
-  id: "project-123",
+const projectData = $2;
   title: "Website Redesign",
   client: {
     name: "TechCorp Inc.",
@@ -18,11 +16,9 @@ const projectData = {
   totalAmount: "$12,000",
   progress: 60,
   description: "Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages."
-};
+},
 
-const milestonesData = [
-  {
-    id: "milestone-1",
+const milestonesData = $2;
     title: "Initial Design Concepts",
     dueDate: "Oct 30, 2023",
     status: "completed" as const,
@@ -45,7 +41,7 @@ const milestonesData = [
     paymentStatus: "pending" as const,
     amount: "$5,000"
   }
-];
+],
 
 export function MobileProjects() {
   return (
@@ -64,5 +60,5 @@ export function MobileProjects() {
       
       <BottomNavigation />
     </div>
-  );
+  )
 }

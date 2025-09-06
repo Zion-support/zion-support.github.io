@@ -12,18 +12,15 @@ import {
   Smartphone, BarChart3, Palette, Camera, Video,
   Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind,
   Droplets, Mountain, Globe2, Bot, Crown, Infinity
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceCategories = [
-  {
-    title: 'AI & Consciousness',
+const serviceCategories = $2;
     icon: Brain,
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     services: [
@@ -66,51 +63,51 @@ const serviceCategories = [
       { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
     ]
   }
-];
+],
 
 const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
-  { name: 'Quantum Tech', href: '/quantum-tech', icon: Globe },
-  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu },
-  { name: 'Space Tech', href: '/space-tech', icon: Rocket },
-  { name: 'Micro SAAS', href: '/micro-saas', icon: Target },
-  { name: 'Innovations', href: '/innovations', icon: Sparkles },
-  { name: 'About', href: '/about', icon: Users },
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+  { name: 'Home', href: '/', icon: Home},
+  { name: 'Services', href: '/services', icon: Briefcase},
+  { name: 'AI Solutions', href: '/ai-solutions', icon: Brain},
+  { name: 'Quantum Tech', href: '/quantum-tech', icon: Globe},
+  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu},
+  { name: 'Space Tech', href: '/space-tech', icon: Rocket},
+  { name: 'Micro SAAS', href: '/micro-saas', icon: Target},
+  { name: 'Innovations', href: '/innovations', icon: Sparkles},
+  { name: 'About', href: '/about', icon: Users},
+  { name: 'Contact', href: '/contact', icon: MessageCircle}
+],
 
 const quickLinks = [
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
-  { name: 'Blog', href: '/blog', icon: BookOpen },
-  { name: 'News', href: '/news', icon: TrendingUp },
-  { name: 'Careers', href: '/careers', icon: GraduationCap },
-  { name: 'Support', href: '/support', icon: MessageCircle }
-];
+  { name: 'About Us', href: '/about', icon: Users},
+  { name: 'Case Studies', href: '/case-studies', icon: BookOpen},
+  { name: 'Blog', href: '/blog', icon: BookOpen},
+  { name: 'News', href: '/news', icon: TrendingUp},
+  { name: 'Careers', href: '/careers', icon: GraduationCap},
+  { name: 'Support', href: '/support', icon: MessageCircle}
+],
 
 const resources = [
-  { name: 'Documentation', href: '/docs', icon: BookOpen },
-  { name: 'API Reference', href: '/api', icon: Code },
-  { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
-  { name: 'White Papers', href: '/white-papers', icon: BookOpen },
-  { name: 'Blog', href: '/blog', icon: BookOpen },
-  { name: 'News', href: '/news', icon: TrendingUp },
-  { name: 'Events', href: '/events', icon: Calendar },
-  { name: 'Webinars', href: '/webinars', icon: Video }
-];
+  { name: 'Documentation', href: '/docs', icon: BookOpen},
+  { name: 'API Reference', href: '/api', icon: Code},
+  { name: 'Case Studies', href: '/case-studies', icon: BookOpen},
+  { name: 'White Papers', href: '/white-papers', icon: BookOpen},
+  { name: 'Blog', href: '/blog', icon: BookOpen},
+  { name: 'News', href: '/news', icon: TrendingUp},
+  { name: 'Events', href: '/events', icon: Calendar},
+  { name: 'Webinars', href: '/webinars', icon: Video}
+],
 
 const company = [
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Our Team', href: '/team', icon: Users },
-  { name: 'Careers', href: '/careers', icon: GraduationCap },
-  { name: 'Partners', href: '/partners', icon: Users },
-  { name: 'Investors', href: '/investors', icon: Star },
-  { name: 'Press', href: '/press', icon: BookOpen },
-  { name: 'Legal', href: '/legal', icon: Shield },
-  { name: 'Privacy', href: '/privacy', icon: ShieldCheck }
-];
+  { name: 'About Us', href: '/about', icon: Users},
+  { name: 'Our Team', href: '/team', icon: Users},
+  { name: 'Careers', href: '/careers', icon: GraduationCap},
+  { name: 'Partners', href: '/partners', icon: Users},
+  { name: 'Investors', href: '/investors', icon: Star},
+  { name: 'Press', href: '/press', icon: BookOpen},
+  { name: 'Legal', href: '/legal', icon: Shield},
+  { name: 'Privacy', href: '/privacy', icon: ShieldCheck}
+],
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-500' },
@@ -119,11 +116,9 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
-];
+],
 
-const footerSections = [
-  {
-    title: 'Services',
+const footerSections = $2;
     links: [
       { name: 'AI & Machine Learning', href: '/services/ai-ml' },
       { name: 'Quantum Computing', href: '/services/quantum-computing' },
@@ -166,7 +161,7 @@ const footerSections = [
       { name: 'Research', href: '/research' }
     ]
   }
-];
+],
 
 export default function UltraFuturisticFooter2029V2() {
   return (
@@ -177,10 +172,10 @@ export default function UltraFuturisticFooter2029V2() {
           {/* Company Info */}
           <div className="lg:col-span-2 xl:col-span-1">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <Link href="/" className="flex items-center space-x-3 mb-6 group">
                 <div className="relative">
@@ -228,10 +223,10 @@ export default function UltraFuturisticFooter2029V2() {
           {footerSections.map((section, index) => (
             <motion.div
               key={section.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h4 className="text-lg font-semibold text-white mb-6 flex items-center">
                 <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mr-3" />
@@ -256,10 +251,10 @@ export default function UltraFuturisticFooter2029V2() {
 
         {/* Service Showcase */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="mt-16 pt-12 border-t border-gray-800"
         >
           <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -270,9 +265,9 @@ export default function UltraFuturisticFooter2029V2() {
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="group"
               >
                 <div className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>
@@ -308,9 +303,9 @@ export default function UltraFuturisticFooter2029V2() {
             {/* Copyright */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0}}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-gray-400 text-sm"
             >
               © 2025 Zion Tech Group. All rights reserved. | 
@@ -320,10 +315,10 @@ export default function UltraFuturisticFooter2029V2() {
 
             {/* Social Links */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 20}}
+              whileInView={{ opacity: 1, x: 0}}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="flex items-center space-x-4"
             >
               {socialLinks.map((social) => (
@@ -344,10 +339,10 @@ export default function UltraFuturisticFooter2029V2() {
 
       {/* Newsletter Signup */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 20}}
+        whileInView={{ opacity: 1, y: 0}}
         transition={{ duration: 0.6, delay: 0.4 }}
-        viewport={{ once: true }}
+        viewport={{ once: true}}
         className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-cyan-500/20"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -358,7 +353,7 @@ export default function UltraFuturisticFooter2029V2() {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Get the latest updates on AI breakthroughs, quantum computing advances, space technology innovations, and cutting-edge micro SAAS solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -372,5 +367,5 @@ export default function UltraFuturisticFooter2029V2() {
         </div>
       </motion.div>
     </footer>
-  );
+  )
 }

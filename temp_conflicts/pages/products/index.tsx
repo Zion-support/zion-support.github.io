@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-
 const ProductsPage: NextPage = () => {
   const products = [
     // AI & Automation Tools
@@ -235,7 +234,7 @@ const ProductsPage: NextPage = () => {
         }
       ]
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-green-50">
@@ -350,7 +349,7 @@ const ProductsPage: NextPage = () => {
           <div className="flex justify-center gap-4 mb-8">
             <Link 
               href="/contact"
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-green-600 hover: bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Start Free Trial
             </Link>
@@ -378,17 +377,16 @@ const ProductsPage: NextPage = () => {
         </div>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default ProductsPage;
+export default ProductsPage,
 import React from 'react';
-
 export default function ProductsIndexPage() {
   return (
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Products</h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300">Browse Zion products.</p>
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Browse Zion products.</p>
     </div>
-  );
+  )
 }

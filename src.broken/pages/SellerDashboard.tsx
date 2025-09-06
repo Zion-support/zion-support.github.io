@@ -5,10 +5,8 @@ import { Footer } from '@/components/Footer';
 import { DropzoneBulkUpload } from '@/components/DropzoneBulkUpload';
 import { ProductSubmissionForm } from '@/components/ProductSubmissionForm';
 import { SEO } from '@/components/SEO';
-
 export default function SellerDashboard() {
-  const [tab, setTab] = useState('products');
-
+  const [tab, setTab] = useState($2);
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO title="Seller Dashboard" description="Manage your listings" />
@@ -30,5 +28,5 @@ export default function SellerDashboard() {
       </main>
       <Footer />
     </div>
-  );
+  )
 }

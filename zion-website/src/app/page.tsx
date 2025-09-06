@@ -1,5 +1,5 @@
 import { 
-  LightBulbIcon, 
+  LightBulbIcon,
   CpuChipIcon, 
   GlobeAltIcon, 
   ShieldCheckIcon,
@@ -7,9 +7,7 @@ import {
   UserGroupIcon
 } from '@heroicons/react/24/outline'
 
-const features = [
-  {
-    name: 'AI-Powered Research',
+const features = $2;
     description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',
     icon: LightBulbIcon},
   {
@@ -39,9 +37,7 @@ const stats = [
   { name: 'Global Clients', value: '1000+' },
   { name: 'Patents Filed', value: '25+' }]
 
-const solutions = [
-  {
-    name: 'AI Research Assistant',
+const solutions = $2;
     description: 'Autonomous research platform that accelerates scientific discovery.',
     href: '/solutions/ai-autonomous-research'},
   {

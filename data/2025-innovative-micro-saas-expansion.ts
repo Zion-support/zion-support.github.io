@@ -1,45 +1,42 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface InnovativeMicroSaasExpansionService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] = [
   // AI-Powered Customer Success Automation
@@ -51,16 +48,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     period: '/month',
     description: 'Intelligent customer success platform that uses AI to predict churn, automate onboarding, and optimize customer experience for maximum retention and growth.',
     features: [
-      'AI-powered churn prediction with 94% accuracy',
-      'Automated customer onboarding workflows',
-      'Intelligent health scoring and monitoring',
-      'Proactive customer outreach automation',
-      'Personalized success playbooks',
-      'Real-time customer sentiment analysis',
-      'Automated milestone celebrations',
-      'Integration with CRM and support tools',
-      'Advanced analytics and reporting',
-      'Multi-channel communication orchestration'
+      'AI-powered churn prediction with 94% accuracyAutomated customer onboarding workflowsIntelligent health scoring and monitoringProactive customer outreach automationPersonalized success playbooksReal-time customer sentiment analysisAutomated milestone celebrationsIntegration with CRM and support toolsAdvanced analytics and reportingMulti-channel communication orchestration'
     ],
     popular: true,
     icon: '🤖💼',
@@ -92,8 +80,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     launchDate: '2024-11-15',
     customers: 320,
     rating: 4.8,
-    reviews: 156
-  },
+    reviews: 156},
 
   // Intelligent Document Processing Hub
   {
@@ -104,16 +91,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     period: '/month',
     description: 'Advanced document processing platform that uses AI to extract, classify, and process documents with 99.2% accuracy, automating workflows and reducing manual data entry.',
     features: [
-      'AI document classification and extraction',
-      'OCR with 99.2% accuracy rate',
-      'Automated form processing and validation',
-      'Intelligent data extraction from any format',
-      'Workflow automation and routing',
-      'Compliance and audit trail management',
-      'Multi-language document support',
-      'Real-time processing and notifications',
-      'Advanced search and retrieval',
-      'Integration with business systems'
+      'AI document classification and extractionOCR with 99.2% accuracy rateAutomated form processing and validationIntelligent data extraction from any formatWorkflow automation and routingCompliance and audit trail managementMulti-language document supportReal-time processing and notificationsAdvanced search and retrievalIntegration with business systems'
     ],
     popular: false,
     icon: '📄🧠',
@@ -145,8 +123,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     launchDate: '2024-10-20',
     customers: 280,
     rating: 4.7,
-    reviews: 134
-  },
+    reviews: 134},
 
   // Smart Inventory Management System
   {
@@ -157,16 +134,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     period: '/month',
     description: 'Intelligent inventory management platform that uses AI to predict demand, optimize stock levels, and automate reordering, reducing costs and improving efficiency.',
     features: [
-      'AI demand forecasting with 96% accuracy',
-      'Automated reorder point calculations',
-      'Real-time inventory tracking and alerts',
-      'Multi-location inventory management',
-      'Supplier management and automation',
-      'Advanced analytics and reporting',
-      'Mobile app for field operations',
-      'Integration with ERP and e-commerce',
-      'Barcode and QR code scanning',
-      'Automated inventory audits'
+      'AI demand forecasting with 96% accuracyAutomated reorder point calculationsReal-time inventory tracking and alertsMulti-location inventory managementSupplier management and automationAdvanced analytics and reportingMobile app for field operationsIntegration with ERP and e-commerceBarcode and QR code scanningAutomated inventory audits'
     ],
     popular: true,
     icon: '📦📊',
@@ -198,8 +166,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     launchDate: '2024-09-10',
     customers: 450,
     rating: 4.9,
-    reviews: 223
-  },
+    reviews: 223},
 
   // AI-Powered HR Recruitment Suite
   {
@@ -210,16 +177,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     period: '/month',
     description: 'Advanced HR recruitment platform that uses AI to screen candidates, match skills, and automate the hiring process, reducing time-to-hire by 60%.',
     features: [
-      'AI-powered candidate screening and matching',
-      'Automated job posting and distribution',
-      'Intelligent skill assessment and testing',
-      'Automated interview scheduling',
-      'Candidate relationship management',
-      'Advanced analytics and reporting',
-      'Multi-channel sourcing automation',
-      'Compliance and diversity tracking',
-      'Integration with HRIS systems',
-      'Mobile app for recruiters'
+      'AI-powered candidate screening and matchingAutomated job posting and distributionIntelligent skill assessment and testingAutomated interview schedulingCandidate relationship managementAdvanced analytics and reportingMulti-channel sourcing automationCompliance and diversity trackingIntegration with HRIS systemsMobile app for recruiters'
     ],
     popular: false,
     icon: '👥🤖',
@@ -251,8 +209,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     launchDate: '2024-08-25',
     customers: 380,
     rating: 4.8,
-    reviews: 187
-  },
+    reviews: 187},
 
   // Intelligent Project Management Hub
   {
@@ -263,16 +220,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     period: '/month',
     description: 'Smart project management platform that uses AI to optimize resource allocation, predict project risks, and automate task management for improved project success rates.',
     features: [
-      'AI-powered project risk prediction',
-      'Intelligent resource allocation optimization',
-      'Automated task dependency management',
-      'Real-time progress tracking and alerts',
-      'Advanced project analytics and reporting',
-      'Team collaboration and communication tools',
-      'Integration with development tools',
-      'Mobile app for field teams',
-      'Automated milestone tracking',
-      'Custom workflow automation'
+      'AI-powered project risk predictionIntelligent resource allocation optimizationAutomated task dependency managementReal-time progress tracking and alertsAdvanced project analytics and reportingTeam collaboration and communication toolsIntegration with development toolsMobile app for field teamsAutomated milestone trackingCustom workflow automation'
     ],
     popular: true,
     icon: '📋🎯',
@@ -304,6 +252,5 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     launchDate: '2024-07-15',
     customers: 520,
     rating: 4.9,
-    reviews: 267
-  }
-];
+    reviews: 267}
+],

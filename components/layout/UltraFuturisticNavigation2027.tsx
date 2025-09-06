@@ -8,18 +8,15 @@ import {
   FileText, Calendar, CreditCard, BarChart3, Settings,
   Rocket, Star, TrendingUp, Users, Target, Award,
   Phone, Mail, MapPin, ExternalLink, Building
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceCategories = [
-  {
-    title: '🚀 2028 Cutting-Edge Innovations',
+const serviceCategories = $2;
     icon: Rocket,
     color: 'from-violet-600 to-purple-600',
     description: 'Beyond the future of technology',
@@ -90,56 +87,50 @@ const serviceCategories = [
       { name: 'Digital Reality Interface', href: '/digital-reality-interface-2028', description: 'Next-gen reality interface', price: '$4,999/month' }
     ]
   }
-];
+],
 
 const companyLinks = [
-  { name: '🏠 Home', href: '/', icon: Home },
-  { name: '🚀 2028 Services', href: '/ultimate-2028-services-showcase', icon: Rocket },
-  { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star },
-  { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign },
-  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },
-  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
-  { name: '📈 Reports', href: '/reports', icon: TrendingUp },
-  { name: '🔧 Solutions', href: '/solutions', icon: Layers },
-  { name: '💼 Careers', href: '/careers', icon: Users },
-  { name: '📞 Contact', href: '/contact', icon: MessageCircle }
-];
+  { name: '🏠 Home', href: '/', icon: Home},
+  { name: '🚀 2028 Services', href: '/ultimate-2028-services-showcase', icon: Rocket},
+  { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star},
+  { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign},
+  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase},
+  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen},
+  { name: '📈 Reports', href: '/reports', icon: TrendingUp},
+  { name: '🔧 Solutions', href: '/solutions', icon: Layers},
+  { name: '💼 Careers', href: '/careers', icon: Users},
+  { name: '📞 Contact', href: '/contact', icon: MessageCircle}
+],
 
 const technologyLinks = [
-  { name: '🤖 AI Services', href: '/ai-services', icon: Brain },
-  { name: '⚛️ Quantum Services', href: '/quantum-services', icon: Atom },
-  { name: '☁️ Cloud Platform', href: '/cloud-platform', icon: Cloud },
-  { name: '🔒 Cybersecurity', href: '/cybersecurity', icon: Lock },
-  { name: '📊 Analytics', href: '/analytics', icon: Database },
-  { name: '🔄 Automation', href: '/automation', icon: Cpu }
-];
+  { name: '🤖 AI Services', href: '/ai-services', icon: Brain},
+  { name: '⚛️ Quantum Services', href: '/quantum-services', icon: Atom},
+  { name: '☁️ Cloud Platform', href: '/cloud-platform', icon: Cloud},
+  { name: '🔒 Cybersecurity', href: '/cybersecurity', icon: Lock},
+  { name: '📊 Analytics', href: '/analytics', icon: Database},
+  { name: '🔄 Automation', href: '/automation', icon: Cpu}
+],
 
 export default function UltraFuturisticNavigation2027() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isClient, setIsClient] = useState(false);
+  const [isOpen, setIsOpen] = useState($2);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [isClient, setIsClient] = useState($2);
+  useEffect(() => {
+    setIsClient(true)
+  }, []),
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    if (!isClient) return,
 
-  useEffect(() => {
-    if (!isClient) return;
+    const handleScroll = $2;
+    window.addEventListener($2);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [isClient]),
 
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isClient]);
-
-  const navigation = [
-    {
-      name: 'AI & Machine Learning',
-      href: '/services?category=AI%20%26%20Machine%20Learning',
+  const navigation = $2;
+      href: '/services?category = $2;
       description: '200+ AI & ML Solutions',
-      icon: <Brain className="w-5 h-5" />,
+      icon: <Brain className = $2;
       color: 'from-purple-500 to-indigo-600',
       children: [
         { 
@@ -172,7 +163,7 @@ export default function UltraFuturisticNavigation2027() {
         },
         { 
           name: 'View All AI Services', 
-          href: '/services?category=AI%20%26%20Machine%20Learning',
+          href: '/services?category = $2;
           description: 'Explore 200+ AI solutions',
           icon: '🚀'
         }
@@ -180,9 +171,9 @@ export default function UltraFuturisticNavigation2027() {
     },
     {
       name: 'Quantum Technology',
-      href: '/services?category=Quantum%20Computing',
+      href: '/services?category = $2;
       description: '50+ Quantum Solutions',
-      icon: <Atom className="w-5 h-5" />,
+      icon: <Atom className = $2;
       color: 'from-blue-500 to-cyan-600',
       children: [
         { 
@@ -215,7 +206,7 @@ export default function UltraFuturisticNavigation2027() {
         },
         { 
           name: 'View All Quantum Services', 
-          href: '/services?category=Quantum%20Computing',
+          href: '/services?category = $2;
           description: 'Explore quantum solutions',
           icon: '🚀'
         }
@@ -223,9 +214,9 @@ export default function UltraFuturisticNavigation2027() {
     },
     {
       name: 'Emerging Tech',
-      href: '/services?category=Emerging%20Technology',
+      href: '/services?category = $2;
       description: '100+ Future Solutions',
-      icon: <Rocket className="w-5 h-5" />,
+      icon: <Rocket className = $2;
       color: 'from-green-500 to-emerald-600',
       children: [
         { 
@@ -258,7 +249,7 @@ export default function UltraFuturisticNavigation2027() {
         },
         { 
           name: 'View All Emerging Tech', 
-          href: '/services?category=Emerging%20Technology',
+          href: '/services?category = $2;
           description: 'Explore future solutions',
           icon: '🚀'
         }
@@ -266,9 +257,9 @@ export default function UltraFuturisticNavigation2027() {
     },
     {
       name: 'Business Solutions',
-      href: '/services?category=Business%20Operations',
+      href: '/services?category = $2;
       description: '150+ Business Tools',
-      icon: <Target className="w-5 h-5" />,
+      icon: <Target className = $2;
       color: 'from-orange-500 to-red-600',
       children: [
         { 
@@ -301,7 +292,7 @@ export default function UltraFuturisticNavigation2027() {
         },
         { 
           name: 'View All Business Solutions', 
-          href: '/services?category=Business%20Operations',
+          href: '/services?category = $2;
           description: 'Explore business tools',
           icon: '🚀'
         }
@@ -309,9 +300,9 @@ export default function UltraFuturisticNavigation2027() {
     },
     {
       name: 'Cybersecurity',
-      href: '/services?category=Cybersecurity',
+      href: '/services?category = $2;
       description: '75+ Security Solutions',
-      icon: <Shield className="w-5 h-5" />,
+      icon: <Shield className = $2;
       color: 'from-red-500 to-pink-600',
       children: [
         { 
@@ -344,7 +335,7 @@ export default function UltraFuturisticNavigation2027() {
         },
         { 
           name: 'View All Security Solutions', 
-          href: '/services?category=Cybersecurity',
+          href: '/services?category = $2;
           description: 'Explore security tools',
           icon: '🚀'
         }
@@ -352,9 +343,9 @@ export default function UltraFuturisticNavigation2027() {
     },
     {
       name: 'Enterprise IT',
-      href: '/services?category=Enterprise%20IT',
+      href: '/services?category = $2;
       description: '100+ Enterprise Solutions',
-      icon: <Building className="w-5 h-5" />,
+      icon: <Building className = $2;
       color: 'from-indigo-500 to-purple-600',
       children: [
         { 
@@ -387,28 +378,25 @@ export default function UltraFuturisticNavigation2027() {
         },
         { 
           name: 'View All Enterprise Solutions', 
-          href: '/services?category=Enterprise%20IT',
+          href: '/services?category = $2;
           description: 'Explore enterprise tools',
           icon: '🚀'
         }
       ]
     }
-  ];
+  ],
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const quickLinks = [
-    { name: 'Pricing', href: '/pricing', icon: <CreditCard className="w-4 h-4" /> },
-    { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" /> },
-    { name: 'Support', href: '/support', icon: <MessageSquare className="w-4 h-4" /> },
-    { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> }
-  ];
-
+    { name: 'Pricing', href: '/pricing', icon: <CreditCard className = $2;
+    { name: 'Case Studies', href: '/case-studies', icon: <FileText className = $2;
+    { name: 'Support', href: '/support', icon: <MessageSquare className = $2;
+    { name: 'Contact', href: '/contact', icon: <Mail className = $2;
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
@@ -462,7 +450,7 @@ export default function UltraFuturisticNavigation2027() {
                   {activeDropdown === item.name && (
                     <motion.div
                       initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      animate={{ opacity: 1, y: 0, scale: 1}}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
                       className="absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
@@ -556,97 +544,8 @@ export default function UltraFuturisticNavigation2027() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, height: 0}}
             animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50"
-          >
-            <div className="container mx-auto px-4 py-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Services */}
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
-                  <div className="space-y-3">
-                    {navigation.map((item) => (
-                      <div key={item.name}>
-                        <Link
-                          href={item.href}
-                          className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
-                        >
-                          <div className={`p-2 rounded-lg bg-gradient-to-br ${item.color}`}>
-                            {item.icon}
-                          </div>
-                          <div>
-                            <div className="font-medium text-white">{item.name}</div>
-                            <div className="text-sm text-gray-400">{item.description}</div>
-                          </div>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Quick Links & Contact */}
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
-                    <div className="space-y-2">
-                      {quickLinks.map((link) => (
-                        <Link
-                          key={link.name}
-                          href={link.href}
-                          className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
-                        >
-                          {link.icon}
-                          <span className="text-white">{link.name}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-4">Contact Info</h3>
-                    <div className="space-y-3">
-                      <a 
-                        href={`tel:${contactInfo.mobile}`}
-                        className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
-                      >
-                        <Phone className="w-4 h-4 text-cyan-400" />
-                        <span className="text-white">{contactInfo.mobile}</span>
-                      </a>
-                      <a 
-                        href={`mailto:${contactInfo.email}`}
-                        className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
-                      >
-                        <Mail className="w-4 h-4 text-cyan-400" />
-                        <span className="text-white">{contactInfo.email}</span>
-                      </a>
-                      <div className="flex items-center space-x-3 p-3 rounded-xl">
-                        <MapPin className="w-4 h-4 text-cyan-400" />
-                        <span className="text-white text-sm">{contactInfo.address}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Mobile CTA */}
-              <div className="mt-6 pt-6 border-t border-gray-700/50">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300"
-                >
-                  <Rocket className="w-4 h-4 mr-2" />
-                  Get Started Today
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
-  );
-};
-
-export default UltraFuturisticNavigation2027;
+            exit={{ opacity: 0, height: 0}}
+            transition = $2;
+export default UltraFuturisticNavigation2027,

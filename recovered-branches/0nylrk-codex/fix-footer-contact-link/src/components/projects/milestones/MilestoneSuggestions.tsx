@@ -6,14 +6,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, Sparkles, Check } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { format, parseISO } from 'date-fns';
-
 interface MilestoneSuggestionsProps {
-  projectName: string;
-  scopeSummary: string;
-  startDate: Date;
-  endDate?: Date;
-  projectType: string;
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
+  projectName: string,
+  scopeSummary: string,
+  startDate: Date,
+  endDate?: Date,
+  projectType: string,
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
 
 export function MilestoneSuggestions({
@@ -24,34 +23,30 @@ export function MilestoneSuggestions({
   projectType,
   onMilestonesGenerated
 }: MilestoneSuggestionsProps) {
-  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
-  const [showSuggestions, setShowSuggestions] = useState(false);
-
-  const handleGenerateMilestones = async () => {
-    const input: MilestoneInput = {
-      scope: `${projectName}: ${scopeSummary}`,
-      startDate: startDate.toISOString(),
+  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator($2);
+  const [showSuggestions, setShowSuggestions] = useState($2);
+  const handleGenerateMilestones = $2;
+      startDate: startDate.toISOString($2);
       endDate: endDate ? endDate.toISOString() : null,
       projectType: projectType || "Other"
-    };
+    },
 
-    const milestones = await generateMilestones(input);
-    
+    const milestones = await generateMilestones($2);
     if (milestones.length > 0) {
-      setShowSuggestions(true);
+      setShowSuggestions($2);
       if (onMilestonesGenerated) {
-        onMilestonesGenerated(milestones);
+        onMilestonesGenerated(milestones)
       }
     }
-  };
+  },
 
   const formatDate = (dateString: string) => {
     try {
-      return format(parseISO(dateString), 'MMM dd, yyyy');
+      return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
-      return dateString;
+      return dateString
     }
-  };
+  },
 
   return (
     <div className="space-y-4">
@@ -115,5 +110,5 @@ export function MilestoneSuggestions({
         </Card>
       )}
     </div>
-  );
+  )
 }

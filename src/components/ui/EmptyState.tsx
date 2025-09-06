@@ -1,19 +1,18 @@
 import { Package, RefreshCw } from 'lucide-react'
 import { Button } from './button';
-
 interface EmptyStateProps {
-  text?: string;
-  description?: string;
-  onRetry?: () => void;
-  showRetry?: boolean;
-  icon?: React.ReactNode;
+  text?: string,
+  description?: string,
+  onRetry?: () => void,
+  showRetry?: boolean,
+  icon?: React.ReactNode
 }
 
 export function EmptyState({ 
-  text = "No items available", 
+  text = $2;
   description,
   onRetry,
-  showRetry = false,
+  showRetry = $2;
   icon
 }: EmptyStateProps) {
   return (
@@ -40,5 +39,5 @@ export function EmptyState({
         </Button>
       )}
     </div>
-  );
+  )
 } 

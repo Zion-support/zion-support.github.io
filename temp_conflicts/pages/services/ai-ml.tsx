@@ -4,10 +4,9 @@ import { motion } from 'framer-motion';
 import { 
   Brain, ArrowRight, CheckCircle, Zap, Target, Users, 
   TrendingUp, Shield, Cpu, Database, Globe, Star
-} from 'lucide-react';
+} from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
-
 export default function AIMachineLearningPage() {
   const services = [
     {
@@ -46,7 +45,7 @@ export default function AIMachineLearningPage() {
       price: "$599/month",
       icon: Zap
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -69,7 +68,7 @@ export default function AIMachineLearningPage() {
       title: "Risk Mitigation",
       description: "Identify and prevent potential issues before they occur"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -239,7 +238,7 @@ export default function AIMachineLearningPage() {
               href="mailto:kleber@ziontechgroup.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <span>Start Your AI Journey</span>
               <ArrowRight className="w-5 h-5" />
@@ -250,5 +249,5 @@ export default function AIMachineLearningPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

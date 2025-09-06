@@ -1,33 +1,29 @@
 import { useEffect, useState } from 'react';
-
-type Note = {
-  id: string;
-  targetType: string;
-  targetId: string;
-  text: string;
-  authorId: string;
-  createdAt: number;
-};
+type Note = $2;
+  targetType: string,
+  targetId: string,
+  text: string,
+  authorId: string,
+  createdAt: number},
 
 export default function AdminNotesConsole() {
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [loading, setLoading] = useState(false);
-
+  const [isAdmin, setIsAdmin] = useState($2);
+  const [notes, setNotes] = useState<Note[]>([]),
+  const [loading, setLoading] = useState($2);
   useEffect(() => {
     async function load() {
-      setLoading(true);
+      setLoading($2);
       try {
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } });
-        if (!res.ok) return;
-        const data = await res.json();
-        setNotes(data.notes || []);
+        const res = await fetch($2);
+        if (!res.ok) return,
+        const data = await res.json($2);
+        setNotes(data.notes || [])
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
     }
-    if (isAdmin) load();
-  }, [isAdmin]);
+    if (isAdmin) load()
+  }, [isAdmin]),
 
   return (
     <div className="space-y-4">
@@ -55,5 +51,5 @@ export default function AdminNotesConsole() {
         </div>
       )}
     </div>
-  );
+  )
 }

@@ -4,37 +4,25 @@ import { useState, useEffect } from 'react';
 import { ContactInfo } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
-
 export default function Services() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  
+  const [isLoaded, setIsLoaded] = useState($2);
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
+    const timer = setTimeout(() => setIsLoaded(true), 100),
+    return () => clearTimeout(timer)
+  }, []),
 
-  const contact: ContactInfo = {
-    phone: '+1 302 464 0950',
+  const contact: ContactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  },
 
-  const serviceCategories = [
-    {
-      title: 'Micro SaaS Products',
+  const serviceCategories = $2;
       description: 'Innovative, focused software solutions for modern businesses',
       count: '150+',
       color: 'blue',
       services: [
-        'AI-Powered Video Clip Maker',
-        'Smart Contract Analyzer',
-        'Cybersecurity Threat Intelligence',
-        'Multi-Language Website Translator',
-        'Predictive Inventory Optimizer',
-        'Real-Time Analytics Dashboard',
-        'Automated Customer Support',
-        'Blockchain Transaction Monitor'
+        'AI-Powered Video Clip MakerSmart Contract AnalyzerCybersecurity Threat IntelligenceMulti-Language Website TranslatorPredictive Inventory OptimizerReal-Time Analytics DashboardAutomated Customer SupportBlockchain Transaction Monitor'
       ],
       href: '/micro-saas'
     },
@@ -44,14 +32,7 @@ export default function Services() {
       count: '100+',
       color: 'purple',
       services: [
-        'Autonomous AI Agents',
-        'AI-Powered Financial Trading',
-        'AI Legal Document Analysis',
-        'AI-Powered Voice Analytics',
-        'AI-Powered Search & Discovery',
-        'Machine Learning Model Training',
-        'Natural Language Processing',
-        'Computer Vision Solutions'
+        'Autonomous AI AgentsAI-Powered Financial TradingAI Legal Document AnalysisAI-Powered Voice AnalyticsAI-Powered Search & DiscoveryMachine Learning Model TrainingNatural Language ProcessingComputer Vision Solutions'
       ],
       href: '/ai-services'
     },
@@ -61,23 +42,13 @@ export default function Services() {
       count: '100+',
       color: 'green',
       services: [
-        'Quantum Computing Consulting',
-        'Blockchain & Web3 Solutions',
-        'DevSecOps & Security Automation',
-        'Enterprise Data Platform',
-        'High-Performance Computing',
-        'Cloud Migration Services',
-        'Infrastructure as Code',
-        'Disaster Recovery Solutions'
+        'Quantum Computing ConsultingBlockchain & Web3 SolutionsDevSecOps & Security AutomationEnterprise Data PlatformHigh-Performance ComputingCloud Migration ServicesInfrastructure as CodeDisaster Recovery Solutions'
       ],
       href: '/it-services'
     }
-  ];
+  ],
 
-  const getColorClasses = (color: string) => {
-    const colors = {
-      blue: {
-        bg: 'bg-blue-600',
+  const getColorClasses = $2;
         hover: 'hover:bg-blue-700',
         text: 'text-blue-400',
         border: 'border-blue-500/40',
@@ -97,9 +68,9 @@ export default function Services() {
         border: 'border-green-500/40',
         ring: 'focus:ring-green-500'
       }
-    };
-    return colors[color as keyof typeof colors] || colors.blue;
-  };
+    },
+    return colors[color as keyof typeof colors] || colors.blue
+  },
 
   return (
     <>
@@ -109,24 +80,7 @@ export default function Services() {
         <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`${contact.site}/services`} />
-      </Head>
-      
-      <ErrorBoundary level="page">
-        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-          {/* Hero Section */}
-          <section className="py-20 px-4 text-center" role="banner">
-            <div className="max-w-4xl mx-auto">
-              <h1 
-                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-                Our Services
-              </h1>
-              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                350+ Innovative Solutions for Modern Businesses
-              </p>
-              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                From cutting-edge AI services to comprehensive IT solutions and specialized micro SaaS products, 
+        <link rel = $2;
                 we provide everything your business needs to thrive in the digital age.
               </p>
             </div>
@@ -137,7 +91,7 @@ export default function Services() {
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-8">
                 {serviceCategories.map((category, index) => {
-                  const colors = getColorClasses(category.color);
+                  const colors = getColorClasses($2);
                   return (
                     <div 
                       key={category.title}
@@ -176,7 +130,7 @@ export default function Services() {
                         </svg>
                       </Link>
                     </div>
-                  );
+                  )
                 })}
               </div>
             </div>
@@ -259,7 +213,7 @@ export default function Services() {
                 </a>
                 <a 
                   href={`mailto:${contact.email}`} 
-                  className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
+                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
                 >
                   Email Us
                 </a>
@@ -269,5 +223,5 @@ export default function Services() {
         </main>
       </ErrorBoundary>
     </>
-  );
+  )
 }

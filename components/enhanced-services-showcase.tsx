@@ -7,7 +7,7 @@ import {
   Phone, Mail, MapPin, ExternalLink, Search, Filter,
   Grid, List, ChevronDown, ChevronUp, Sparkles,
   Crown, Award, Target, Globe, Cpu, Database
-} from 'lucide-react';
+} from 'lucide-react',
 import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
@@ -19,23 +19,20 @@ import { quantumSpaceServices } from '../data/quantum-space-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
 import { realMarketServices } from '../data/real-market-services';
 import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025';
-
 export default function EnhancedServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<string>('name');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<string>('name'),
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   // Combine all services for comprehensive showcase
-  const allServices = [
-    ...nextGenerationAIServices,
+  const allServices = $2;
     ...cuttingEdgeITServices,
     ...innovativeMicroSaasV2Services,
     ...enhancedRealMicroSaasServices,
@@ -44,7 +41,7 @@ export default function EnhancedServicesShowcase() {
     ...enterpriseITServices,
     ...realMarketServices,
     ...newVerifiedServicesQ22025
-  ];
+  ],
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
@@ -53,7 +50,7 @@ export default function EnhancedServicesShowcase() {
     { id: 'innovative-saas', name: 'Innovative SaaS', icon: '💻', count: innovativeMicroSaasV2Services.length },
     { id: 'quantum-space', name: 'Quantum & Space', icon: '⚛️', count: quantumSpaceServices.length },
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseITServices.length }
-  ];
+  ],
 
   const sortOptions = [
     { id: 'name', name: 'Name A-Z' },
@@ -62,55 +59,40 @@ export default function EnhancedServicesShowcase() {
     { id: 'rating', name: 'Rating' },
     { id: 'customers', name: 'Customer Count' },
     { id: 'popularity', name: 'Popularity' }
-  ];
+  ],
 
   // Filter and sort services
-  const filteredServices = React.useMemo(() => {
-    let filtered = allServices.filter(service => {
-      const matchesCategory = selectedCategory === 'all' || 
-        (selectedCategory === 'next-gen-ai' && nextGenerationAIServices.includes(service)) ||
-        (selectedCategory === 'cutting-edge-it' && cuttingEdgeITServices.includes(service)) ||
-        (selectedCategory === 'innovative-saas' && innovativeMicroSaasV2Services.includes(service)) ||
-        (selectedCategory === 'quantum-space' && quantumSpaceServices.includes(service)) ||
-        (selectedCategory === 'enterprise' && enterpriseITServices.includes(service));
-      
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
-      
-      return matchesCategory && matchesSearch;
-    });
+  const filteredServices = $2;
+      const matchesSearch = $2;
+      return matchesCategory && matchesSearch
+    }),
 
     // Sort services
     switch (sortBy) {
       case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name));
-        break;
+        filtered.sort((a, b) => a.name.localeCompare(b.name)),
+        break,
       case 'price-low':
-        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, '')));
-        break;
+        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, ''))),
+        break,
       case 'price-high':
-        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, '')));
-        break;
+        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, ''))),
+        break,
       case 'rating':
-        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-        break;
+        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0)),
+        break,
       case 'customers':
-        filtered.sort((a, b) => (b.customers || 0) - (a.customers || 0));
-        break;
+        filtered.sort((a, b) => (b.customers || 0) - (a.customers || 0)),
+        break,
       case 'popularity':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
-        break;
-      default:
-        break;
-    }
+        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
+        break,
+      default: break}
 
-    return filtered;
-  }, [allServices, selectedCategory, searchTerm, sortBy]);
+    return filtered
+  }, [allServices, selectedCategory, searchTerm, sortBy]),
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
@@ -118,10 +100,10 @@ export default function EnhancedServicesShowcase() {
         delayChildren: 0.2
       }
     }
-  };
+  },
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 30},
     visible: {
       opacity: 1,
       y: 0,
@@ -130,28 +112,26 @@ export default function EnhancedServicesShowcase() {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
-  const featuredServices = [
-    {
-      title: '🚀 ArrowRight-Generation AI Services',
+  const featuredServices = $2;
       description: 'Revolutionary AI platforms that push the boundaries of what\'s possible',
-      services: nextGenerationAIServices.slice(0, 3),
+      services: nextGenerationAIServices.slice($2);
       color: 'from-purple-500 to-pink-600'
     },
     {
       title: '⚡ Cutting-Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions for the modern enterprise',
-      services: cuttingEdgeITServices.slice(0, 3),
+      services: cuttingEdgeITServices.slice($2);
       color: 'from-blue-500 to-cyan-600'
     },
     {
       title: '💻 Innovative Micro SaaS Solutions',
       description: 'Creative and practical SaaS tools for every business need',
-      services: innovativeMicroSaasV2Services.slice(0, 3),
+      services: innovativeMicroSaasV2Services.slice($2);
       color: 'from-green-500 to-emerald-600'
     }
-  ];
+  ],
 
   return (
     <UltraAdvancedFuturisticMatrixBackground intensity="high"       colorScheme="quantum">
@@ -171,8 +151,8 @@ export default function EnhancedServicesShowcase() {
         <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
@@ -207,10 +187,10 @@ export default function EnhancedServicesShowcase() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">
@@ -225,10 +205,10 @@ export default function EnhancedServicesShowcase() {
               {featuredServices.map((category, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 30}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="relative"
                 >
                   <div className={`bg-gradient-to-br ${category.color} p-8 rounded-2xl text-white relative overflow-hidden`}>
@@ -494,8 +474,8 @@ export default function EnhancedServicesShowcase() {
                 <Button 
                   href="#"
                   onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('all');
+                    setSearchTerm($2);
+                    setSelectedCategory('all')
                   }}
                   variant="primary"
                 >
@@ -510,103 +490,33 @@ export default function EnhancedServicesShowcase() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of companies achieving breakthrough results with our revolutionary services
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="flex items-center justify-center space-x-3">
-                  <Phone className="w-6 h-6 text-cyan-400" />
-                  <span className="text-lg">{contactInfo.mobile}</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <Mail className="w-6 h-6 text-purple-400" />
-                  <span className="text-lg">{contactInfo.email}</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <MapPin className="w-6 h-6 text-green-400" />
-                  <span className="text-lg">{contactInfo.address}</span>
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  href="/contact"
-                  variant="primary"
-                  size="lg"
-                  className="text-lg px-8 py-4"
-                >
-                  Start Your Transformation
-                  <Rocket className="ml-2 w-6 h-6" />
-                </Button>
-                <Button 
-                  href="/pricing"
-                  variant="secondary"
-                  size="lg"
-                  className="text-lg px-8 py-4"
-                >
-                  View Pricing
-                  <DollarSign className="ml-2 w-6 h-6" />
-                </Button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </UltraAdvancedFuturisticMatrixBackground>
-  );
-}
-
-// Button component (if not imported)
-const Button = ({ 
-  href, 
-  variant = 'primary', 
-  size = 'md', 
-  className = '', 
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
+  variant = $2;
+  size = $2;
+  className = $2;
   children, 
   onClick 
 }: {
-  href?: string;
-  variant?: 'primary' | 'secondary';
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-  children: React.ReactNode;
-  onClick?: () => void;
+  href?: string,
+  variant?: 'primary' | 'secondary',
+  size?: 'sm' | 'md' | 'lg',
+  className?: string,
+  children: React.ReactNode,
+  onClick?: () => void
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900';
-  
-  const variantClasses = {
-    primary: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-cyan-500',
+  const baseClasses = $2;
+  const variantClasses = $2;
     secondary: 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500'
-  };
+  },
   
-  const sizeClasses = {
-    sm: 'px-4 py-2 text-sm',
+  const sizeClasses = $2;
     md: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg'
-  };
+  },
 
-  const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`;
-
+  const classes = $2;
   if (href) {
     return (
-      <a href={href} className={classes}>
-        {children}
-      </a>
-    );
-  }
-
-  return (
-    <button onClick={onClick} className={classes}>
-      {children}
-    </button>
-  );
-};
+      <a href = $2;

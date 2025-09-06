@@ -1,5 +1,4 @@
 import { ServiceCategory, ITService, AIService, MicroSAAS } from '@/types/services';
-
 export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     id: 'ai-services',
@@ -43,7 +42,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     icon: '☁️',
     color: 'bg-gradient-to-r from-sky-500 to-blue-500'
   }
-];
+],
 
 export const AI_SERVICES: AIService[] = [
   {
@@ -59,54 +58,52 @@ export const AI_SERVICES: AIService[] = [
       reviewCount: 156,
       location: 'Middletown, DE',
       verified: true,
-      specialties: ['AI', 'Customer Service', 'Automation']
+      specialties: ['AICustomer ServiceAutomation']
     },
     pricing: {
       basic: {
         price: 299,
         currency: '$',
         period: 'month',
-        features: ['Up to 1,000 conversations/month', 'Basic NLP', 'Email support', 'Standard templates']
+        features: ['Up to 1,000 conversations/monthBasic NLPEmail supportStandard templates']
       },
       professional: {
         price: 799,
         currency: '$',
         period: 'month',
-        features: ['Up to 10,000 conversations/month', 'Advanced NLP', 'Phone support', 'Custom branding', 'Analytics dashboard'],
-        popular: true
-      },
+        features: ['Up to 10,000 conversations/monthAdvanced NLPPhone supportCustom brandingAnalytics dashboard'],
+        popular: true},
       enterprise: {
         price: 2499,
         currency: '$',
         period: 'month',
-        features: ['Unlimited conversations', 'Custom AI training', 'Dedicated support', 'API access', 'White-label solution']
+        features: ['Unlimited conversationsCustom AI trainingDedicated supportAPI accessWhite-label solution']
       }
     },
-    features: ['Natural Language Processing', 'Multi-language support', 'Integration with CRM systems', 'Sentiment analysis', 'Automated ticket routing'],
-    benefits: ['24/7 customer support', 'Reduced response time', 'Cost savings', 'Improved customer satisfaction', 'Scalable solution'],
-    useCases: ['E-commerce support', 'Help desk automation', 'Lead qualification', 'FAQ handling', 'Appointment booking'],
-    technologies: ['GPT-4', 'BERT', 'TensorFlow', 'Python', 'React'],
+    features: ['Natural Language ProcessingMulti-language supportIntegration with CRM systemsSentiment analysisAutomated ticket routing'],
+    benefits: ['24/7 customer supportReduced response timeCost savingsImproved customer satisfactionScalable solution'],
+    useCases: ['E-commerce supportHelp desk automationLead qualificationFAQ handlingAppointment booking'],
+    technologies: ['GPT-4BERTTensorFlowPythonReact'],
     deploymentTime: '2-4 weeks',
-    support: ['Email support', 'Phone support', 'Documentation', 'Training sessions', 'API documentation'],
-    integrations: ['Salesforce', 'HubSpot', 'Zendesk', 'Slack', 'Microsoft Teams'],
-    security: ['SOC 2 Type II', 'GDPR compliant', 'End-to-end encryption', 'Regular security audits'],
-    compliance: ['GDPR', 'CCPA', 'HIPAA', 'SOC 2'],
-    images: ['https://images.unsplash.com/photo-1557555187-807fa78b1c7e?auto=format&fit=crop&w=800&h=500'],
+    support: ['Email supportPhone supportDocumentationTraining sessionsAPI documentation'],
+    integrations: ['SalesforceHubSpotZendeskSlackMicrosoft Teams'],
+    security: ['SOC 2 Type IIGDPR compliantEnd-to-end encryptionRegular security audits'],
+    compliance: ['GDPRCCPAHIPAASOC 2'],
+    images: ['https://images.unsplash.com/photo-1557555187-807fa78b1c7e?auto = $2;
     demoUrl: 'https://ziontechgroup.com/demo/ai-customer-service',
     documentationUrl: 'https://docs.ziontechgroup.com/ai-customer-service',
-    createdAt: '2024-01-15T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
-    tags: ['AI', 'Customer Service', 'Automation', 'NLP', 'Chatbot'],
+    createdAt: '2024-01-15T00: 00: 00.000Z',
+    updatedAt: '2024-12-19T00: 00: 00.000Z',
+    tags: ['AICustomer ServiceAutomationNLPChatbot'],
     aiScore: 95,
     marketTrend: 'rising',
-    industryFocus: ['E-commerce', 'Healthcare', 'Finance', 'Education'],
+    industryFocus: ['E-commerceHealthcareFinanceEducation'],
     aiModel: 'GPT-4 + Custom BERT',
     accuracy: 94.2,
     trainingData: '10M+ customer interactions',
     customization: true,
     apiAccess: true,
-    realTimeProcessing: true
-  },
+    realTimeProcessing: true},
   {
     id: 'ai-content-generation',
     title: 'AI Content Generation Suite',
@@ -120,54 +117,52 @@ export const AI_SERVICES: AIService[] = [
       reviewCount: 89,
       location: 'Middletown, DE',
       verified: true,
-      specialties: ['Content Creation', 'AI Writing', 'Marketing']
+      specialties: ['Content CreationAI WritingMarketing']
     },
     pricing: {
       basic: {
         price: 199,
         currency: '$',
         period: 'month',
-        features: ['Up to 50 articles/month', 'Basic templates', 'SEO optimization', 'Email support']
+        features: ['Up to 50 articles/monthBasic templatesSEO optimizationEmail support']
       },
       professional: {
         price: 499,
         currency: '$',
         period: 'month',
-        features: ['Up to 200 articles/month', 'Custom templates', 'Advanced SEO', 'Priority support', 'Analytics'],
-        popular: true
-      },
+        features: ['Up to 200 articles/monthCustom templatesAdvanced SEOPriority supportAnalytics'],
+        popular: true},
       enterprise: {
         price: 1499,
         currency: '$',
         period: 'month',
-        features: ['Unlimited content', 'Custom AI training', 'Dedicated writer', 'API access', 'White-label']
+        features: ['Unlimited contentCustom AI trainingDedicated writerAPI accessWhite-label']
       }
     },
-    features: ['Multi-format content generation', 'SEO optimization', 'Brand voice customization', 'Plagiarism detection', 'Content scheduling'],
-    benefits: ['10x faster content creation', 'Improved SEO rankings', 'Consistent brand voice', 'Cost-effective content', 'Scalable production'],
-    useCases: ['Blog writing', 'Social media posts', 'Email campaigns', 'Product descriptions', 'Technical documentation'],
-    technologies: ['GPT-4', 'Claude', 'BERT', 'Python', 'Node.js'],
+    features: ['Multi-format content generationSEO optimizationBrand voice customizationPlagiarism detectionContent scheduling'],
+    benefits: ['10x faster content creationImproved SEO rankingsConsistent brand voiceCost-effective contentScalable production'],
+    useCases: ['Blog writingSocial media postsEmail campaignsProduct descriptionsTechnical documentation'],
+    technologies: ['GPT-4ClaudeBERTPythonNode.js'],
     deploymentTime: '1-2 weeks',
-    support: ['Email support', 'Chat support', 'Content strategy consultation', 'Training sessions'],
-    integrations: ['WordPress', 'HubSpot', 'Mailchimp', 'Buffer', 'Hootsuite'],
-    security: ['SOC 2 Type II', 'GDPR compliant', 'Content encryption', 'Access controls'],
-    compliance: ['GDPR', 'CCPA', 'Copyright compliance'],
-    images: ['https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&h=500'],
+    support: ['Email supportChat supportContent strategy consultationTraining sessions'],
+    integrations: ['WordPressHubSpotMailchimpBufferHootsuite'],
+    security: ['SOC 2 Type IIGDPR compliantContent encryptionAccess controls'],
+    compliance: ['GDPRCCPACopyright compliance'],
+    images: ['https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto = $2;
     demoUrl: 'https://ziontechgroup.com/demo/ai-content',
     documentationUrl: 'https://docs.ziontechgroup.com/ai-content',
-    createdAt: '2024-02-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
-    tags: ['AI', 'Content Creation', 'Writing', 'SEO', 'Marketing'],
+    createdAt: '2024-02-01T00: 00: 00.000Z',
+    updatedAt: '2024-12-19T00: 00: 00.000Z',
+    tags: ['AIContent CreationWritingSEOMarketing'],
     aiScore: 92,
     marketTrend: 'rising',
-    industryFocus: ['Marketing', 'Publishing', 'E-commerce', 'Education'],
+    industryFocus: ['MarketingPublishingE-commerceEducation'],
     aiModel: 'GPT-4 + Claude + Custom Models',
     accuracy: 91.8,
     trainingData: '5M+ articles and content pieces',
     customization: true,
     apiAccess: true,
-    realTimeProcessing: true
-  },
+    realTimeProcessing: true},
   {
     id: 'ai-data-analytics',
     title: 'AI-Powered Business Intelligence',
@@ -181,55 +176,53 @@ export const AI_SERVICES: AIService[] = [
       reviewCount: 234,
       location: 'Middletown, DE',
       verified: true,
-      specialties: ['Data Analytics', 'Business Intelligence', 'Predictive Analytics']
+      specialties: ['Data AnalyticsBusiness IntelligencePredictive Analytics']
     },
     pricing: {
       basic: {
         price: 399,
         currency: '$',
         period: 'month',
-        features: ['Up to 10GB data', 'Basic dashboards', 'Standard reports', 'Email support']
+        features: ['Up to 10GB dataBasic dashboardsStandard reportsEmail support']
       },
       professional: {
         price: 999,
         currency: '$',
         period: 'month',
-        features: ['Up to 100GB data', 'Advanced dashboards', 'Predictive analytics', 'Priority support', 'Custom reports'],
-        popular: true
-      },
+        features: ['Up to 100GB dataAdvanced dashboardsPredictive analyticsPriority supportCustom reports'],
+        popular: true},
       enterprise: {
         price: 2999,
         currency: '$',
         period: 'month',
-        features: ['Unlimited data', 'Custom AI models', 'Dedicated analyst', 'API access', 'White-label solution']
+        features: ['Unlimited dataCustom AI modelsDedicated analystAPI accessWhite-label solution']
       }
     },
-    features: ['Predictive analytics', 'Natural language queries', 'Automated insights', 'Real-time dashboards', 'Custom ML models'],
-    benefits: ['Faster decision making', 'Predictive insights', 'Automated reporting', 'Cost reduction', 'Competitive advantage'],
-    useCases: ['Sales forecasting', 'Customer segmentation', 'Risk assessment', 'Performance optimization', 'Market analysis'],
-    technologies: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'Python', 'React'],
+    features: ['Predictive analyticsNatural language queriesAutomated insightsReal-time dashboardsCustom ML models'],
+    benefits: ['Faster decision makingPredictive insightsAutomated reportingCost reductionCompetitive advantage'],
+    useCases: ['Sales forecastingCustomer segmentationRisk assessmentPerformance optimizationMarket analysis'],
+    technologies: ['TensorFlowPyTorchScikit-learnPythonReact'],
     deploymentTime: '3-6 weeks',
-    support: ['Email support', 'Phone support', 'Data consultation', 'Training sessions', 'Custom development'],
-    integrations: ['Salesforce', 'HubSpot', 'Google Analytics', 'MySQL', 'PostgreSQL'],
-    security: ['SOC 2 Type II', 'GDPR compliant', 'Data encryption', 'Access controls', 'Audit logs'],
-    compliance: ['GDPR', 'CCPA', 'SOC 2', 'HIPAA'],
-    images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500'],
+    support: ['Email supportPhone supportData consultationTraining sessionsCustom development'],
+    integrations: ['SalesforceHubSpotGoogle AnalyticsMySQLPostgreSQL'],
+    security: ['SOC 2 Type IIGDPR compliantData encryptionAccess controlsAudit logs'],
+    compliance: ['GDPRCCPASOC 2HIPAA'],
+    images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = $2;
     demoUrl: 'https://ziontechgroup.com/demo/ai-analytics',
     documentationUrl: 'https://docs.ziontechgroup.com/ai-analytics',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
-    tags: ['AI', 'Analytics', 'Business Intelligence', 'Predictive Analytics', 'Data Science'],
+    createdAt: '2024-01-01T00: 00: 00.000Z',
+    updatedAt: '2024-12-19T00: 00: 00.000Z',
+    tags: ['AIAnalyticsBusiness IntelligencePredictive AnalyticsData Science'],
     aiScore: 96,
     marketTrend: 'rising',
-    industryFocus: ['Finance', 'Healthcare', 'Retail', 'Manufacturing'],
+    industryFocus: ['FinanceHealthcareRetailManufacturing'],
     aiModel: 'Custom ML Models + TensorFlow',
     accuracy: 93.5,
     trainingData: '100M+ data points across industries',
     customization: true,
     apiAccess: true,
-    realTimeProcessing: true
-  }
-];
+    realTimeProcessing: true}
+],
 
 export const IT_SERVICES: ITService[] = [
   {
@@ -245,50 +238,49 @@ export const IT_SERVICES: ITService[] = [
       reviewCount: 178,
       location: 'Middletown, DE',
       verified: true,
-      specialties: ['IT Support', 'Infrastructure', 'Network Security']
+      specialties: ['IT SupportInfrastructureNetwork Security']
     },
     pricing: {
       basic: {
         price: 150,
         currency: '$',
         period: 'hour',
-        features: ['Basic troubleshooting', 'Hardware installation', 'Software setup', 'Email support']
+        features: ['Basic troubleshootingHardware installationSoftware setupEmail support']
       },
       professional: {
         price: 125,
         currency: '$',
         period: 'hour',
-        features: ['Advanced troubleshooting', 'Network configuration', 'Security setup', 'Phone support', 'Remote assistance'],
-        popular: true
-      },
+        features: ['Advanced troubleshootingNetwork configurationSecurity setupPhone supportRemote assistance'],
+        popular: true},
       enterprise: {
         price: 100,
         currency: '$',
         period: 'hour',
-        features: ['Full IT management', '24/7 monitoring', 'Dedicated technician', 'Emergency response', 'SLA guarantee']
+        features: ['Full IT management24/7 monitoringDedicated technicianEmergency responseSLA guarantee']
       }
     },
-    features: ['Network setup & configuration', 'Hardware installation & maintenance', 'Software deployment', 'Security implementation', 'Backup solutions'],
-    benefits: ['Reduced downtime', 'Improved security', 'Cost-effective IT management', 'Expert technical support', 'Scalable solutions'],
-    useCases: ['Office setup', 'Network expansion', 'Security upgrades', 'Hardware upgrades', 'Disaster recovery'],
-    technologies: ['Cisco', 'Microsoft', 'VMware', 'Linux', 'Windows Server'],
+    features: ['Network setup & configurationHardware installation & maintenanceSoftware deploymentSecurity implementationBackup solutions'],
+    benefits: ['Reduced downtimeImproved securityCost-effective IT managementExpert technical supportScalable solutions'],
+    useCases: ['Office setupNetwork expansionSecurity upgradesHardware upgradesDisaster recovery'],
+    technologies: ['CiscoMicrosoftVMwareLinuxWindows Server'],
     deploymentTime: '1-3 days',
-    support: ['Onsite support', 'Remote assistance', '24/7 emergency support', 'Preventive maintenance', 'Training sessions'],
-    integrations: ['Active Directory', 'Office 365', 'Google Workspace', 'VPN solutions', 'Backup systems'],
-    security: ['Firewall configuration', 'VPN setup', 'Access controls', 'Security audits', 'Compliance monitoring'],
-    compliance: ['SOC 2', 'HIPAA', 'PCI DSS', 'GDPR'],
-    images: ['https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500'],
+    support: ['Onsite supportRemote assistance24/7 emergency supportPreventive maintenanceTraining sessions'],
+    integrations: ['Active DirectoryOffice 365Google WorkspaceVPN solutionsBackup systems'],
+    security: ['Firewall configurationVPN setupAccess controlsSecurity auditsCompliance monitoring'],
+    compliance: ['SOC 2HIPAAPCI DSSGDPR'],
+    images: ['https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto = $2;
     demoUrl: 'https://ziontechgroup.com/demo/onsite-it',
     documentationUrl: 'https://docs.ziontechgroup.com/onsite-it',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
-    tags: ['IT Support', 'Infrastructure', 'Network', 'Hardware', 'Security'],
+    createdAt: '2024-01-01T00: 00: 00.000Z',
+    updatedAt: '2024-12-19T00: 00: 00.000Z',
+    tags: ['IT SupportInfrastructureNetworkHardwareSecurity'],
     aiScore: 85,
     marketTrend: 'stable',
-    industryFocus: ['Healthcare', 'Finance', 'Education', 'Manufacturing'],
+    industryFocus: ['HealthcareFinanceEducationManufacturing'],
     serviceType: 'onsite',
     responseTime: '4 hours',
-    coverage: ['Delaware', 'Maryland', 'Pennsylvania', 'New Jersey'],
+    coverage: ['DelawareMarylandPennsylvaniaNew Jersey'],
     emergencySupport: true,
     sla: '99.9% uptime guarantee'
   },
@@ -305,54 +297,53 @@ export const IT_SERVICES: ITService[] = [
       reviewCount: 145,
       location: 'Middletown, DE',
       verified: true,
-      specialties: ['Cloud Migration', 'AWS', 'Azure', 'Google Cloud']
+      specialties: ['Cloud MigrationAWSAzureGoogle Cloud']
     },
     pricing: {
       basic: {
         price: 5000,
         currency: '$',
         period: 'project',
-        features: ['Basic migration planning', 'Single application migration', 'Basic testing', 'Email support']
+        features: ['Basic migration planningSingle application migrationBasic testingEmail support']
       },
       professional: {
         price: 15000,
         currency: '$',
         period: 'project',
-        features: ['Comprehensive migration', 'Multiple applications', 'Performance optimization', 'Phone support', 'Training'],
-        popular: true
-      },
+        features: ['Comprehensive migrationMultiple applicationsPerformance optimizationPhone supportTraining'],
+        popular: true},
       enterprise: {
         price: 50000,
         currency: '$',
         period: 'project',
-        features: ['Full enterprise migration', 'Custom optimization', 'Dedicated team', '24/7 support', 'SLA guarantee']
+        features: ['Full enterprise migrationCustom optimizationDedicated team24/7 supportSLA guarantee']
       }
     },
-    features: ['Migration planning & strategy', 'Application assessment', 'Performance optimization', 'Cost optimization', 'Security implementation'],
-    benefits: ['Reduced infrastructure costs', 'Improved scalability', 'Enhanced security', 'Better performance', 'Disaster recovery'],
-    useCases: ['Legacy system migration', 'Data center consolidation', 'Application modernization', 'Disaster recovery setup', 'Cost optimization'],
-    technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes'],
+    features: ['Migration planning & strategyApplication assessmentPerformance optimizationCost optimizationSecurity implementation'],
+    benefits: ['Reduced infrastructure costsImproved scalabilityEnhanced securityBetter performanceDisaster recovery'],
+    useCases: ['Legacy system migrationData center consolidationApplication modernizationDisaster recovery setupCost optimization'],
+    technologies: ['AWSAzureGoogle CloudDockerKubernetes'],
     deploymentTime: '4-12 weeks',
-    support: ['Project management', 'Technical support', 'Training sessions', 'Post-migration support', 'Performance monitoring'],
-    integrations: ['Active Directory', 'Office 365', 'SAP', 'Oracle', 'Custom applications'],
-    security: ['Identity management', 'Encryption', 'Compliance monitoring', 'Security audits', 'Access controls'],
-    compliance: ['SOC 2', 'HIPAA', 'PCI DSS', 'GDPR', 'FedRAMP'],
-    images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500'],
+    support: ['Project managementTechnical supportTraining sessionsPost-migration supportPerformance monitoring'],
+    integrations: ['Active DirectoryOffice 365SAPOracleCustom applications'],
+    security: ['Identity managementEncryptionCompliance monitoringSecurity auditsAccess controls'],
+    compliance: ['SOC 2HIPAAPCI DSSGDPRFedRAMP'],
+    images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto = $2;
     demoUrl: 'https://ziontechgroup.com/demo/cloud-migration',
     documentationUrl: 'https://docs.ziontechgroup.com/cloud-migration',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
-    tags: ['Cloud Migration', 'AWS', 'Azure', 'Optimization', 'DevOps'],
+    createdAt: '2024-01-01T00: 00: 00.000Z',
+    updatedAt: '2024-12-19T00: 00: 00.000Z',
+    tags: ['Cloud MigrationAWSAzureOptimizationDevOps'],
     aiScore: 88,
     marketTrend: 'rising',
-    industryFocus: ['Finance', 'Healthcare', 'Manufacturing', 'Retail'],
+    industryFocus: ['FinanceHealthcareManufacturingRetail'],
     serviceType: 'hybrid',
     responseTime: '24 hours',
     coverage: ['Global'],
     emergencySupport: true,
     sla: '99.95% uptime guarantee'
   }
-];
+],
 
 export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
   {
@@ -368,47 +359,46 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
       reviewCount: 267,
       location: 'Middletown, DE',
       verified: true,
-      specialties: ['Project Management', 'Team Collaboration', 'AI Automation']
+      specialties: ['Project ManagementTeam CollaborationAI Automation']
     },
     pricing: {
       basic: {
         price: 29,
         currency: '$',
         period: 'month',
-        features: ['Up to 10 users', 'Basic project templates', 'Task management', 'Email support']
+        features: ['Up to 10 usersBasic project templatesTask managementEmail support']
       },
       professional: {
         price: 79,
         currency: '$',
         period: 'month',
-        features: ['Up to 50 users', 'Advanced templates', 'AI automation', 'Priority support', 'Analytics'],
-        popular: true
-      },
+        features: ['Up to 50 usersAdvanced templatesAI automationPriority supportAnalytics'],
+        popular: true},
       enterprise: {
         price: 199,
         currency: '$',
         period: 'month',
-        features: ['Unlimited users', 'Custom automation', 'Dedicated support', 'API access', 'White-label']
+        features: ['Unlimited usersCustom automationDedicated supportAPI accessWhite-label']
       }
     },
-    features: ['AI-powered task automation', 'Real-time collaboration', 'Progress tracking', 'Resource management', 'Time tracking'],
-    benefits: ['Improved productivity', 'Better team coordination', 'Reduced project delays', 'Cost savings', 'Data-driven insights'],
-    useCases: ['Software development', 'Marketing campaigns', 'Event planning', 'Product launches', 'Client projects'],
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'AI/ML'],
+    features: ['AI-powered task automationReal-time collaborationProgress trackingResource managementTime tracking'],
+    benefits: ['Improved productivityBetter team coordinationReduced project delaysCost savingsData-driven insights'],
+    useCases: ['Software developmentMarketing campaignsEvent planningProduct launchesClient projects'],
+    technologies: ['ReactNode.jsPostgreSQLRedisAI/ML'],
     deploymentTime: '1-2 weeks',
-    support: ['Email support', 'Chat support', 'Video tutorials', 'Training sessions', 'API documentation'],
-    integrations: ['Slack', 'Microsoft Teams', 'Google Workspace', 'GitHub', 'Jira'],
-    security: ['SOC 2 Type II', 'GDPR compliant', 'Data encryption', 'Access controls', 'Regular backups'],
-    compliance: ['GDPR', 'CCPA', 'SOC 2'],
-    images: ['https://images.unsplash.com/photo-1559027615-ce3b7d81f40a?auto=format&fit=crop&w=800&h=500'],
+    support: ['Email supportChat supportVideo tutorialsTraining sessionsAPI documentation'],
+    integrations: ['SlackMicrosoft TeamsGoogle WorkspaceGitHubJira'],
+    security: ['SOC 2 Type IIGDPR compliantData encryptionAccess controlsRegular backups'],
+    compliance: ['GDPRCCPASOC 2'],
+    images: ['https://images.unsplash.com/photo-1559027615-ce3b7d81f40a?auto = $2;
     demoUrl: 'https://ziontechgroup.com/demo/project-management',
     documentationUrl: 'https://docs.ziontechgroup.com/project-management',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
-    tags: ['Project Management', 'Team Collaboration', 'AI Automation', 'Productivity', 'Analytics'],
+    createdAt: '2024-01-01T00: 00: 00.000Z',
+    updatedAt: '2024-12-19T00: 00: 00.000Z',
+    tags: ['Project ManagementTeam CollaborationAI AutomationProductivityAnalytics'],
     aiScore: 89,
     marketTrend: 'rising',
-    industryFocus: ['Technology', 'Marketing', 'Consulting', 'Education'],
+    industryFocus: ['TechnologyMarketingConsultingEducation'],
     userLimit: 1000,
     whiteLabel: true,
     apiRateLimit: '1000 requests/hour',
@@ -429,47 +419,46 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
       reviewCount: 189,
       location: 'Middletown, DE',
       verified: true,
-      specialties: ['CRM', 'Sales Automation', 'AI Analytics']
+      specialties: ['CRMSales AutomationAI Analytics']
     },
     pricing: {
       basic: {
         price: 49,
         currency: '$',
         period: 'month',
-        features: ['Up to 5 users', 'Basic contact management', 'Email integration', 'Email support']
+        features: ['Up to 5 usersBasic contact managementEmail integrationEmail support']
       },
       professional: {
         price: 99,
         currency: '$',
         period: 'month',
-        features: ['Up to 25 users', 'Advanced automation', 'AI insights', 'Priority support', 'Analytics'],
-        popular: true
-      },
+        features: ['Up to 25 usersAdvanced automationAI insightsPriority supportAnalytics'],
+        popular: true},
       enterprise: {
         price: 249,
         currency: '$',
         period: 'month',
-        features: ['Unlimited users', 'Custom AI models', 'Dedicated support', 'API access', 'White-label']
+        features: ['Unlimited usersCustom AI modelsDedicated supportAPI accessWhite-label']
       }
     },
-    features: ['AI-powered lead scoring', 'Automated follow-ups', 'Sales forecasting', 'Pipeline management', 'Customer insights'],
-    benefits: ['Increased sales', 'Better customer relationships', 'Automated workflows', 'Data-driven decisions', 'Improved efficiency'],
-    useCases: ['Sales management', 'Customer support', 'Lead generation', 'Account management', 'Sales forecasting'],
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'AI/ML'],
+    features: ['AI-powered lead scoringAutomated follow-upsSales forecastingPipeline managementCustomer insights'],
+    benefits: ['Increased salesBetter customer relationshipsAutomated workflowsData-driven decisionsImproved efficiency'],
+    useCases: ['Sales managementCustomer supportLead generationAccount managementSales forecasting'],
+    technologies: ['ReactNode.jsPostgreSQLRedisAI/ML'],
     deploymentTime: '1-2 weeks',
-    support: ['Email support', 'Phone support', 'Video tutorials', 'Training sessions', 'Custom development'],
-    integrations: ['Gmail', 'Outlook', 'Slack', 'Zapier', 'Salesforce'],
-    security: ['SOC 2 Type II', 'GDPR compliant', 'Data encryption', 'Access controls', 'Audit logs'],
-    compliance: ['GDPR', 'CCPA', 'SOC 2'],
-    images: ['https://images.unsplash.com/photo-1518441902114-f0ce5d1fb743?auto=format&fit=crop&w=800&h=500'],
+    support: ['Email supportPhone supportVideo tutorialsTraining sessionsCustom development'],
+    integrations: ['GmailOutlookSlackZapierSalesforce'],
+    security: ['SOC 2 Type IIGDPR compliantData encryptionAccess controlsAudit logs'],
+    compliance: ['GDPRCCPASOC 2'],
+    images: ['https://images.unsplash.com/photo-1518441902114-f0ce5d1fb743?auto = $2;
     demoUrl: 'https://ziontechgroup.com/demo/crm',
     documentationUrl: 'https://docs.ziontechgroup.com/crm',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
-    tags: ['CRM', 'Sales Automation', 'AI Analytics', 'Lead Management', 'Customer Insights'],
+    createdAt: '2024-01-01T00: 00: 00.000Z',
+    updatedAt: '2024-12-19T00: 00: 00.000Z',
+    tags: ['CRMSales AutomationAI AnalyticsLead ManagementCustomer Insights'],
     aiScore: 91,
     marketTrend: 'rising',
-    industryFocus: ['Sales', 'Marketing', 'Real Estate', 'Consulting'],
+    industryFocus: ['SalesMarketingReal EstateConsulting'],
     userLimit: 500,
     whiteLabel: true,
     apiRateLimit: '2000 requests/hour',
@@ -490,47 +479,46 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
       reviewCount: 134,
       location: 'Middletown, DE',
       verified: true,
-      specialties: ['HR Management', 'Recruitment', 'Performance Analytics']
+      specialties: ['HR ManagementRecruitmentPerformance Analytics']
     },
     pricing: {
       basic: {
         price: 39,
         currency: '$',
         period: 'month',
-        features: ['Up to 25 employees', 'Basic HR functions', 'Employee portal', 'Email support']
+        features: ['Up to 25 employeesBasic HR functionsEmployee portalEmail support']
       },
       professional: {
         price: 89,
         currency: '$',
         period: 'month',
-        features: ['Up to 100 employees', 'AI recruitment', 'Performance tracking', 'Priority support', 'Analytics'],
-        popular: true
-      },
+        features: ['Up to 100 employeesAI recruitmentPerformance trackingPriority supportAnalytics'],
+        popular: true},
       enterprise: {
         price: 199,
         currency: '$',
         period: 'month',
-        features: ['Unlimited employees', 'Custom AI models', 'Dedicated support', 'API access', 'White-label']
+        features: ['Unlimited employeesCustom AI modelsDedicated supportAPI accessWhite-label']
       }
     },
-    features: ['AI-powered recruitment', 'Employee onboarding', 'Performance management', 'Time tracking', 'Benefits administration'],
-    benefits: ['Faster hiring', 'Better employee retention', 'Improved performance', 'Compliance automation', 'Cost savings'],
-    useCases: ['Recruitment', 'Employee management', 'Performance reviews', 'Time tracking', 'Benefits management'],
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'AI/ML'],
+    features: ['AI-powered recruitmentEmployee onboardingPerformance managementTime trackingBenefits administration'],
+    benefits: ['Faster hiringBetter employee retentionImproved performanceCompliance automationCost savings'],
+    useCases: ['RecruitmentEmployee managementPerformance reviewsTime trackingBenefits management'],
+    technologies: ['ReactNode.jsPostgreSQLRedisAI/ML'],
     deploymentTime: '2-3 weeks',
-    support: ['Email support', 'Phone support', 'HR consultation', 'Training sessions', 'Compliance support'],
-    integrations: ['ADP', 'Paychex', 'Slack', 'Microsoft Teams', 'Google Workspace'],
-    security: ['SOC 2 Type II', 'GDPR compliant', 'Data encryption', 'Access controls', 'Audit logs'],
-    compliance: ['GDPR', 'CCPA', 'SOC 2', 'HIPAA'],
-    images: ['https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&h=500'],
+    support: ['Email supportPhone supportHR consultationTraining sessionsCompliance support'],
+    integrations: ['ADPPaychexSlackMicrosoft TeamsGoogle Workspace'],
+    security: ['SOC 2 Type IIGDPR compliantData encryptionAccess controlsAudit logs'],
+    compliance: ['GDPRCCPASOC 2HIPAA'],
+    images: ['https://images.unsplash.com/photo-1521791136064-7986c2920216?auto = $2;
     demoUrl: 'https://ziontechgroup.com/demo/hr-management',
     documentationUrl: 'https://docs.ziontechgroup.com/hr-management',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
-    tags: ['HR Management', 'Recruitment', 'Performance Analytics', 'Employee Portal', 'Compliance'],
+    createdAt: '2024-01-01T00: 00: 00.000Z',
+    updatedAt: '2024-12-19T00: 00: 00.000Z',
+    tags: ['HR ManagementRecruitmentPerformance AnalyticsEmployee PortalCompliance'],
     aiScore: 87,
     marketTrend: 'stable',
-    industryFocus: ['Technology', 'Healthcare', 'Finance', 'Manufacturing'],
+    industryFocus: ['TechnologyHealthcareFinanceManufacturing'],
     userLimit: 2000,
     whiteLabel: true,
     apiRateLimit: '1500 requests/hour',
@@ -538,7 +526,7 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
     backupFrequency: 'Daily',
     uptime: 99.9
   }
-];
+],
 
 export const CYBERSECURITY_SERVICES: ITService[] = [
   {
@@ -554,54 +542,53 @@ export const CYBERSECURITY_SERVICES: ITService[] = [
       reviewCount: 98,
       location: 'Middletown, DE',
       verified: true,
-      specialties: ['Cybersecurity', 'Penetration Testing', 'Compliance']
+      specialties: ['CybersecurityPenetration TestingCompliance']
     },
     pricing: {
       basic: {
         price: 2500,
         currency: '$',
         period: 'audit',
-        features: ['Basic vulnerability scan', 'Security report', 'Remediation guidance', 'Email support']
+        features: ['Basic vulnerability scanSecurity reportRemediation guidanceEmail support']
       },
       professional: {
         price: 7500,
         currency: '$',
         period: 'audit',
-        features: ['Full penetration testing', 'Compliance assessment', 'Detailed report', 'Phone support', 'Follow-up consultation'],
-        popular: true
-      },
+        features: ['Full penetration testingCompliance assessmentDetailed reportPhone supportFollow-up consultation'],
+        popular: true},
       enterprise: {
         price: 25000,
         currency: '$',
         period: 'audit',
-        features: ['Comprehensive security audit', 'Custom testing scenarios', 'Dedicated team', '24/7 support', 'Ongoing monitoring']
+        features: ['Comprehensive security auditCustom testing scenariosDedicated team24/7 supportOngoing monitoring']
       }
     },
-    features: ['Vulnerability assessment', 'Penetration testing', 'Compliance verification', 'Security reporting', 'Remediation guidance'],
-    benefits: ['Identify security gaps', 'Meet compliance requirements', 'Reduce security risks', 'Improve security posture', 'Protect customer data'],
-    useCases: ['Security compliance', 'Risk assessment', 'Incident response', 'Security training', 'Compliance audits'],
-    technologies: ['Nessus', 'Metasploit', 'Burp Suite', 'Wireshark', 'Custom tools'],
+    features: ['Vulnerability assessmentPenetration testingCompliance verificationSecurity reportingRemediation guidance'],
+    benefits: ['Identify security gapsMeet compliance requirementsReduce security risksImprove security postureProtect customer data'],
+    useCases: ['Security complianceRisk assessmentIncident responseSecurity trainingCompliance audits'],
+    technologies: ['NessusMetasploitBurp SuiteWiresharkCustom tools'],
     deploymentTime: '2-4 weeks',
-    support: ['Email support', 'Phone support', 'Security consultation', 'Training sessions', 'Incident response'],
-    integrations: ['SIEM systems', 'Firewall management', 'Vulnerability scanners', 'Compliance tools'],
-    security: ['Secure testing environment', 'Data protection', 'Access controls', 'Audit logs', 'Confidentiality agreements'],
-    compliance: ['SOC 2', 'HIPAA', 'PCI DSS', 'GDPR', 'ISO 27001'],
-    images: ['https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500'],
+    support: ['Email supportPhone supportSecurity consultationTraining sessionsIncident response'],
+    integrations: ['SIEM systemsFirewall managementVulnerability scannersCompliance tools'],
+    security: ['Secure testing environmentData protectionAccess controlsAudit logsConfidentiality agreements'],
+    compliance: ['SOC 2HIPAAPCI DSSGDPRISO 27001'],
+    images: ['https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto = $2;
     demoUrl: 'https://ziontechgroup.com/demo/security-audit',
     documentationUrl: 'https://docs.ziontechgroup.com/security-audit',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
-    tags: ['Cybersecurity', 'Penetration Testing', 'Compliance', 'Security Audit', 'Risk Assessment'],
+    createdAt: '2024-01-01T00: 00: 00.000Z',
+    updatedAt: '2024-12-19T00: 00: 00.000Z',
+    tags: ['CybersecurityPenetration TestingComplianceSecurity AuditRisk Assessment'],
     aiScore: 90,
     marketTrend: 'rising',
-    industryFocus: ['Finance', 'Healthcare', 'Government', 'Technology'],
+    industryFocus: ['FinanceHealthcareGovernmentTechnology'],
     serviceType: 'hybrid',
     responseTime: '24 hours',
     coverage: ['Global'],
     emergencySupport: true,
     sla: '99.99% security guarantee'
   }
-];
+],
 
 export const DATA_ANALYTICS_SERVICES: AIService[] = [
   {
@@ -617,55 +604,53 @@ export const DATA_ANALYTICS_SERVICES: AIService[] = [
       reviewCount: 156,
       location: 'Middletown, DE',
       verified: true,
-      specialties: ['Business Intelligence', 'Data Analytics', 'Predictive Analytics']
+      specialties: ['Business IntelligenceData AnalyticsPredictive Analytics']
     },
     pricing: {
       basic: {
         price: 599,
         currency: '$',
         period: 'month',
-        features: ['Up to 50GB data', 'Basic dashboards', 'Standard reports', 'Email support']
+        features: ['Up to 50GB dataBasic dashboardsStandard reportsEmail support']
       },
       professional: {
         price: 1299,
         currency: '$',
         period: 'month',
-        features: ['Up to 500GB data', 'Advanced dashboards', 'Predictive analytics', 'Priority support', 'Custom reports'],
-        popular: true
-      },
+        features: ['Up to 500GB dataAdvanced dashboardsPredictive analyticsPriority supportCustom reports'],
+        popular: true},
       enterprise: {
         price: 3999,
         currency: '$',
         period: 'month',
-        features: ['Unlimited data', 'Custom AI models', 'Dedicated analyst', 'API access', 'White-label solution']
+        features: ['Unlimited dataCustom AI modelsDedicated analystAPI accessWhite-label solution']
       }
     },
-    features: ['Real-time dashboards', 'Predictive analytics', 'Automated reporting', 'Data visualization', 'Custom AI models'],
-    benefits: ['Faster insights', 'Predictive capabilities', 'Automated reporting', 'Better decisions', 'Competitive advantage'],
-    useCases: ['Sales analytics', 'Customer insights', 'Operational efficiency', 'Financial analysis', 'Market research'],
-    technologies: ['Power BI', 'Tableau', 'Python', 'R', 'Machine Learning'],
+    features: ['Real-time dashboardsPredictive analyticsAutomated reportingData visualizationCustom AI models'],
+    benefits: ['Faster insightsPredictive capabilitiesAutomated reportingBetter decisionsCompetitive advantage'],
+    useCases: ['Sales analyticsCustomer insightsOperational efficiencyFinancial analysisMarket research'],
+    technologies: ['Power BITableauPythonRMachine Learning'],
     deploymentTime: '4-8 weeks',
-    support: ['Email support', 'Phone support', 'Data consultation', 'Training sessions', 'Custom development'],
-    integrations: ['Salesforce', 'HubSpot', 'SAP', 'Oracle', 'Custom databases'],
-    security: ['SOC 2 Type II', 'GDPR compliant', 'Data encryption', 'Access controls', 'Audit logs'],
-    compliance: ['GDPR', 'CCPA', 'SOC 2', 'HIPAA'],
-    images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500'],
+    support: ['Email supportPhone supportData consultationTraining sessionsCustom development'],
+    integrations: ['SalesforceHubSpotSAPOracleCustom databases'],
+    security: ['SOC 2 Type IIGDPR compliantData encryptionAccess controlsAudit logs'],
+    compliance: ['GDPRCCPASOC 2HIPAA'],
+    images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = $2;
     demoUrl: 'https://ziontechgroup.com/demo/business-intelligence',
     documentationUrl: 'https://docs.ziontechgroup.com/business-intelligence',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
-    tags: ['Business Intelligence', 'Data Analytics', 'Predictive Analytics', 'Dashboards', 'Reporting'],
+    createdAt: '2024-01-01T00: 00: 00.000Z',
+    updatedAt: '2024-12-19T00: 00: 00.000Z',
+    tags: ['Business IntelligenceData AnalyticsPredictive AnalyticsDashboardsReporting'],
     aiScore: 94,
     marketTrend: 'rising',
-    industryFocus: ['Finance', 'Healthcare', 'Retail', 'Manufacturing'],
+    industryFocus: ['FinanceHealthcareRetailManufacturing'],
     aiModel: 'Custom ML Models + TensorFlow + PyTorch',
     accuracy: 95.2,
     trainingData: '500M+ data points across industries',
     customization: true,
     apiAccess: true,
-    realTimeProcessing: true
-  }
-];
+    realTimeProcessing: true}
+],
 
 export const CLOUD_SOLUTIONS: ITService[] = [
   {
@@ -681,60 +666,58 @@ export const CLOUD_SOLUTIONS: ITService[] = [
       reviewCount: 123,
       location: 'Middletown, DE',
       verified: true,
-      specialties: ['DevOps', 'CI/CD', 'Cloud Infrastructure']
+      specialties: ['DevOpsCI/CDCloud Infrastructure']
     },
     pricing: {
       basic: {
         price: 299,
         currency: '$',
         period: 'month',
-        features: ['Basic CI/CD pipeline', 'Git integration', 'Basic monitoring', 'Email support']
+        features: ['Basic CI/CD pipelineGit integrationBasic monitoringEmail support']
       },
       professional: {
         price: 799,
         currency: '$',
         period: 'month',
-        features: ['Advanced automation', 'Full monitoring', 'Infrastructure as code', 'Priority support', 'Training'],
-        popular: true
-      },
+        features: ['Advanced automationFull monitoringInfrastructure as codePriority supportTraining'],
+        popular: true},
       enterprise: {
         price: 2499,
         currency: '$',
         period: 'month',
-        features: ['Custom automation', 'Dedicated team', '24/7 monitoring', 'API access', 'White-label solution']
+        features: ['Custom automationDedicated team24/7 monitoringAPI accessWhite-label solution']
       }
     },
-    features: ['CI/CD pipeline automation', 'Infrastructure as code', 'Monitoring & alerting', 'Auto-scaling', 'Security scanning'],
-    benefits: ['Faster deployments', 'Reduced errors', 'Better scalability', 'Cost optimization', 'Improved security'],
-    useCases: ['Software deployment', 'Infrastructure management', 'Application monitoring', 'Security automation', 'Performance optimization'],
-    technologies: ['Docker', 'Kubernetes', 'Jenkins', 'Terraform', 'AWS/Azure'],
+    features: ['CI/CD pipeline automationInfrastructure as codeMonitoring & alertingAuto-scalingSecurity scanning'],
+    benefits: ['Faster deploymentsReduced errorsBetter scalabilityCost optimizationImproved security'],
+    useCases: ['Software deploymentInfrastructure managementApplication monitoringSecurity automationPerformance optimization'],
+    technologies: ['DockerKubernetesJenkinsTerraformAWS/Azure'],
     deploymentTime: '2-4 weeks',
-    support: ['Email support', 'Phone support', 'DevOps consultation', 'Training sessions', 'Custom development'],
-    integrations: ['GitHub', 'GitLab', 'AWS', 'Azure', 'Google Cloud'],
-    security: ['SOC 2 Type II', 'GDPR compliant', 'Security scanning', 'Access controls', 'Audit logs'],
-    compliance: ['SOC 2', 'GDPR', 'ISO 27001'],
-    images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500'],
+    support: ['Email supportPhone supportDevOps consultationTraining sessionsCustom development'],
+    integrations: ['GitHubGitLabAWSAzureGoogle Cloud'],
+    security: ['SOC 2 Type IIGDPR compliantSecurity scanningAccess controlsAudit logs'],
+    compliance: ['SOC 2GDPRISO 27001'],
+    images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto = $2;
     demoUrl: 'https://ziontechgroup.com/demo/devops-automation',
     documentationUrl: 'https://docs.ziontechgroup.com/devops-automation',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
-    tags: ['DevOps', 'CI/CD', 'Automation', 'Cloud Infrastructure', 'Monitoring'],
+    createdAt: '2024-01-01T00: 00: 00.000Z',
+    updatedAt: '2024-12-19T00: 00: 00.000Z',
+    tags: ['DevOpsCI/CDAutomationCloud InfrastructureMonitoring'],
     aiScore: 86,
     marketTrend: 'rising',
-    industryFocus: ['Technology', 'Finance', 'Healthcare', 'E-commerce'],
+    industryFocus: ['TechnologyFinanceHealthcareE-commerce'],
     serviceType: 'remote',
     responseTime: '4 hours',
     coverage: ['Global'],
     emergencySupport: true,
     sla: '99.9% uptime guarantee'
   }
-];
+],
 
-export const ALL_SERVICES = [
-  ...AI_SERVICES,
+export const ALL_SERVICES = $2;
   ...IT_SERVICES,
   ...MICRO_SAAS_SERVICES,
   ...CYBERSECURITY_SERVICES,
   ...DATA_ANALYTICS_SERVICES,
   ...CLOUD_SOLUTIONS
-];
+],

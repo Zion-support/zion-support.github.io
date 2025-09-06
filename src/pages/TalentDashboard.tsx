@@ -17,17 +17,11 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { MyApplications } from "@/components/jobs/MyApplications";
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
-
 function TalentDashboardContent() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("job-matches");
-  const onboardingStatus = useOnboardingStatus();
-  const showAdvanced =
-    onboardingStatus.profileCompleted &&
-    onboardingStatus.skillsAdded &&
-    onboardingStatus.availabilitySet &&
-    onboardingStatus.matchReceived;
-
+  const { user } = useAuth($2);
+  const [activeTab, setActiveTab] = useState($2);
+  const onboardingStatus = useOnboardingStatus($2);
+  const showAdvanced = $2;
   return (
     <>
       <SEO 
@@ -190,7 +184,7 @@ function TalentDashboardContent() {
         </div>
       </main>
     </>
-  );
+  )
 }
 
 export default function TalentDashboard() {
@@ -198,5 +192,5 @@ export default function TalentDashboard() {
     <ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>
-  );
+  )
 }

@@ -5,26 +5,19 @@ import { Separator } from "@/components/ui/separator"
 import { cn } from "@/lib/utils"
 import type { SafeRef } from "../sidebar.types"
 
-export const SidebarInput = React.forwardRef<
-  React.ElementRef<typeof Input>,
+export const SidebarInput = $2;
   React.ComponentProps<typeof Input>
 >((props, ref) => {
   return (
     <Input
-      ref={ref}
-      data-sidebar="input"
-      className={cn(
-        "h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring",
+      ref = $2;
         props.className
       )}
       {...props}
     />
   )
 })
-SidebarInput.displayName = "SidebarInput"
-
-export const SidebarHeader = React.forwardRef<
-  HTMLDivElement,
+SidebarInput.displayName = $2;
   React.ComponentProps<"div">
 >((props, ref) => {
   return (
@@ -36,10 +29,7 @@ export const SidebarHeader = React.forwardRef<
     />
   )
 })
-SidebarHeader.displayName = "SidebarHeader"
-
-export const SidebarFooter = React.forwardRef<
-  HTMLDivElement,
+SidebarHeader.displayName = $2;
   React.ComponentProps<"div">
 >((props, ref) => {
   return (
@@ -51,10 +41,7 @@ export const SidebarFooter = React.forwardRef<
     />
   )
 })
-SidebarFooter.displayName = "SidebarFooter"
-
-export const SidebarSeparator = React.forwardRef<
-  HTMLDivElement,
+SidebarFooter.displayName = $2;
   React.ComponentProps<typeof Separator>
 >((props, ref) => {
   return (
@@ -66,28 +53,19 @@ export const SidebarSeparator = React.forwardRef<
     />
   )
 })
-SidebarSeparator.displayName = "SidebarSeparator"
-
-export const SidebarContent = React.forwardRef<
-  HTMLDivElement,
+SidebarSeparator.displayName = $2;
   React.ComponentProps<"div">
 >((props, ref) => {
   return (
     <div
-      ref={ref}
-      data-sidebar="content"
-      className={cn(
-        "flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden",
+      ref = $2;
         props.className
       )}
       {...props}
     />
   )
 })
-SidebarContent.displayName = "SidebarContent"
-
-export const SidebarGroup = React.forwardRef<
-  HTMLDivElement,
+SidebarContent.displayName = $2;
   React.ComponentProps<"div">
 >((props, ref) => {
   return (

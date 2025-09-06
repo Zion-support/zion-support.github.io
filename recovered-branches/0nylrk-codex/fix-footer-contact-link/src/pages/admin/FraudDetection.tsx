@@ -7,146 +7,135 @@ import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { FraudFlag, FraudStats } from "@/types/fraud";
-
 // Import refactored components
 import {
   FraudStatsCards,
   FraudFilters,
   FraudFlagsTable,
   FraudTabContent
-} from "@/components/admin/fraud-detection";
+} from "@/components/admin/fraud-detection",
 
 export default function FraudDetection() {
-  const [flags, setFlags] = useState<FraudFlag[]>([]);
-  const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [statusFilter, setStatusFilter] = useState<string | null>(null);
-  const [severityFilter, setSeverityFilter] = useState<string | null>(null);
-  const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null);
+  const [flags, setFlags] = useState<FraudFlag[]>([]),
+  const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]),
+  const [isLoading, setIsLoading] = useState($2);
+  const [searchQuery, setSearchQuery] = useState($2);
+  const [statusFilter, setStatusFilter] = useState<string | null>(null),
+  const [severityFilter, setSeverityFilter] = useState<string | null>(null),
+  const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null),
   const [stats, setStats] = useState<FraudStats>({
     total_flags: 0,
     pending_flags: 0,
     suspicious_count: 0,
     dangerous_count: 0,
     false_positives: 0,
-    actioned_count: 0});
+    actioned_count: 0}),
 
   // Fetch fraud flags
   const fetchFraudFlags = async () => {
-    setIsLoading(true);
+    setIsLoading($2);
     try {
       const { data, error } = await supabase
         .from("fraud_flags")
         .select("*")
-        .order("timestamp", { ascending: false });
+        .order($2);
+      if (error) throw error,
 
-      if (error) throw error;
-
-      setFlags(data || []);
-      setFilteredFlags(data || []);
-      
+      setFlags($2);
+      setFilteredFlags($2);
       // Calculate stats
-      const newStats: FraudStats = {
-        total_flags: data?.length || 0,
-        pending_flags: data?.filter(flag => flag.status === 'pending').length || 0,
-        suspicious_count: data?.filter(flag => flag.severity === 'suspicious').length || 0,
-        dangerous_count: data?.filter(flag => flag.severity === 'dangerous').length || 0,
-        false_positives: data?.filter(flag => flag.is_false_positive).length || 0,
-        actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0};
-      setStats(newStats);
+      const newStats: FraudStats = $2;
+        pending_flags: data ?.filter(flag = $2;
+        suspicious_count: data ?.filter(flag = $2;
+        dangerous_count: data ?.filter(flag = $2;
+        false_positives: data ?.filter(flag = $2;
+        actioned_count: data ?.filter(flag = $2;
+      setStats(newStats)
       
     } catch (error) {
-      console.error("Error fetching fraud flags:", error);
+      console.error($2);
       toast({
         title: "Error",
         description: "Failed to load fraud detection data",
-        variant: "destructive"});
+        variant: "destructive"})
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
-  };
+  },
 
   useEffect(() => {
-    fetchFraudFlags();
-  }, []);
+    fetchFraudFlags()
+  }, []),
 
   // Apply filters
   useEffect(() => {
-    let result = [...flags];
-
+    let result = $2;
     // Apply search filter
     if (searchQuery) {
-      const query = searchQuery.toLowerCase();
+      const query = searchQuery.toLowerCase($2);
       result = result.filter(
         (flag) =>
           flag.user_email?.toLowerCase().includes(query) ||
           flag.content_excerpt.toLowerCase().includes(query) ||
           flag.reason.toLowerCase().includes(query)
-      );
+      )
     }
 
     // Apply status filter
     if (statusFilter) {
-      result = result.filter((flag) => flag.status === statusFilter);
+      result = result.filter((flag) => flag.status === statusFilter)
     }
 
     // Apply severity filter
     if (severityFilter) {
-      result = result.filter((flag) => flag.severity === severityFilter);
+      result = result.filter((flag) => flag.severity === severityFilter)
     }
 
     // Apply content type filter
     if (contentTypeFilter) {
-      result = result.filter((flag) => flag.content_type === contentTypeFilter);
+      result = result.filter((flag) => flag.content_type === contentTypeFilter)
     }
 
-    setFilteredFlags(result);
-  }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
+    setFilteredFlags(result)
+  }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]),
 
   const handleAction = async (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => {
     try {
-      const status = action === 'ignore' ? 'ignored' : 'actioned';
-      const actionTaken = action === 'ignore' ? 'none' : action;
-      
+      const status = $2;
+      const actionTaken = $2;
       const { error } = await supabase
         .from("fraud_flags")
         .update({
           status,
           action_taken: actionTaken,
-          reviewed_at: new Date().toISOString(),
+          reviewed_at: new Date().toISOString($2);
           // In a real app, you'd get the current user's ID
           reviewed_by: 'admin'
         })
-        .eq("id", flagId);
+        .eq($2);
+      if (error) throw error,
 
-      if (error) throw error;
-
-      toast({
-        title: "Flag updated",
-        description: `Action '${action}' was applied successfully.`});
-      
+      toast($2);
       // Refresh the data
-      fetchFraudFlags();
+      fetchFraudFlags()
       
     } catch (error) {
-      console.error("Error updating fraud flag:", error);
+      console.error($2);
       toast({
         title: "Error",
         description: "Failed to update flag",
-        variant: "destructive"});
+        variant: "destructive"})
     }
-  };
+  },
 
   const resetFilters = () => {
-    setSearchQuery("");
-    setStatusFilter(null);
-    setSeverityFilter(null);
-    setContentTypeFilter(null);
-  };
+    setSearchQuery($2);
+    setStatusFilter($2);
+    setSeverityFilter($2);
+    setContentTypeFilter(null)
+  },
 
-  const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
-
+  const hasFilters = $2;
   return (
     <AppLayout>
       <SEO 
@@ -229,5 +218,5 @@ export default function FraudDetection() {
         </Tabs>
       </div>
     </AppLayout>
-  );
+  )
 }

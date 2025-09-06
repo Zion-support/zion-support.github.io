@@ -5,31 +5,26 @@ import {
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
-} from 'lucide-react';
+} from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import EnhancedContactForm from '../components/EnhancedContactForm';
 import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
 import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
-
 export default function HomePage() {
-  const [currentFeature, setCurrentFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
+  const [currentFeature, setCurrentFeature] = useState($2);
+  const [isVisible, setIsVisible] = useState($2);
   useEffect(() => {
-    setIsVisible(true);
-    
+    setIsVisible($2);
     // Auto-rotate features
     const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % 6);
-    }, 5000);
+      setCurrentFeature((prev) => (prev + 1) % 6)
+    }, 5000),
     
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval)
+  }, []),
 
-  const features = [
-    {
-      icon: Brain,
+  const features = $2;
       title: "AI Autonomous Ecosystem",
       description: "Revolutionary autonomous AI solutions that adapt and evolve",
       color: "from-purple-500 to-pink-500"
@@ -64,11 +59,9 @@ export default function HomePage() {
       description: "Advanced edge computing optimization platform",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
-  const services = [
-    {
-      title: "AI & Machine Learning",
+  const services = $2;
       description: "Custom AI solutions, neural networks, and autonomous systems",
       icon: Brain,
       color: "from-purple-500 to-pink-500"
@@ -103,14 +96,14 @@ export default function HomePage() {
       icon: Rocket,
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
   const stats = [
-    { number: "500+", label: "Projects Delivered", icon: CheckCircle },
-    { number: "50+", label: "Enterprise Clients", icon: Users },
-    { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
-    { number: "24/7", label: "Support Available", icon: Clock }
-  ];
+    { number: "500+", label: "Projects Delivered", icon: CheckCircle},
+    { number: "50+", label: "Enterprise Clients", icon: Users},
+    { number: "99.9%", label: "Uptime Guarantee", icon: Shield},
+    { number: "24/7", label: "Support Available", icon: Clock}
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -136,7 +129,7 @@ export default function HomePage() {
 
         <div className="relative z-10 text-center max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30}}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
@@ -150,7 +143,7 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30}}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-12"
@@ -201,10 +194,10 @@ export default function HomePage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -219,10 +212,10 @@ export default function HomePage() {
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
@@ -251,9 +244,9 @@ export default function HomePage() {
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="text-center"
               >
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center">
@@ -279,10 +272,10 @@ export default function HomePage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -326,13 +319,13 @@ export default function HomePage() {
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -346,5 +339,5 @@ export default function HomePage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import SEO from '../components/SEO';
-
 export default function MLOpsStarterPage() {
 	return (
 		<>
@@ -16,5 +15,5 @@ export default function MLOpsStarterPage() {
 				</div>
 			</section>
 		</>
-	);
+	)
 }

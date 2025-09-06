@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 import { 
-  Star, 
+  Star,
   MapPin, 
   Clock, 
   Link as LinkIcon, 
@@ -19,55 +19,53 @@ import {
   Twitter, 
   Linkedin,
   CheckCircle2
-} from "lucide-react";
+} from "lucide-react",
 
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const { profileId } = useParams() as { profileId?: string };
-  const [profileData, setProfileData] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(false);
-
+  const { profileId } = useParams() as { profileId?: string },
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState($2);
+  const [isError, setIsError] = useState($2);
   useEffect(() => {
     const fetchProfile = async () => {
-      setIsLoading(true);
-      setIsError(false);
+      setIsLoading($2);
+      setIsError($2);
       try {
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
-          .single();
-
+          .single($2);
         if (error) {
-          throw error;
+          throw error
         }
 
-        setProfileData(data);
+        setProfileData(data)
       } catch (error) {
-        console.error("Error fetching profile:", error);
-        setIsError(true);
+        console.error($2);
+        setIsError($2);
         toast({
           title: "Error",
           description: "Failed to load profile. Please try again later.",
-          variant: "destructive"});
+          variant: "destructive"})
       } finally {
-        setIsLoading(false);
+        setIsLoading(false)
       }
-    };
+    },
 
     if (profileId) {
-      fetchProfile();
+      fetchProfile()
     }
-  }, [profileId]);
+  }, [profileId]),
 
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <span className="loading loading-ring loading-lg"></span>
       </div>
-    );
+    )
   }
 
   if (isError || !profileData) {
@@ -75,7 +73,7 @@ export default function ProfilePage() {
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
       </div>
-    );
+    )
   }
 
   return (
@@ -162,74 +160,10 @@ export default function ProfilePage() {
                 {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (
                   profileData.portfolio_links.map((link, index) => (
                     <a
-                      key={index}
-                      href={link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-zion-cyan hover:text-white transition-colors"
-                    >
-                      <LinkIcon className="h-4 w-4 mr-2" />
-                      {link}
-                    </a>
-                  ))
-                ) : (
-                  <p className="text-zion-slate-light">No portfolio links provided.</p>
-                )}
-              </div>
-            </div>
-            
-            {/* Experience Section */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
-              <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
-              <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
-            </div>
-            
-            {/* Social Links */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
-              <h2 className="text-xl font-bold text-white mb-3">Connect</h2>
-              <div className="flex space-x-4">
-                {profileData.github_link && (
-                  <a
-                    href={profileData.github_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-zion-cyan hover:text-white transition-colors"
-                  >
-                    <Github className="h-6 w-6" />
-                  </a>
-                )}
-                {profileData.twitter_link && (
-                  <a
-                    href={profileData.twitter_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-zion-cyan hover:text-white transition-colors"
-                  >
-                    <Twitter className="h-6 w-6" />
-                  </a>
-                )}
-                {profileData.linkedin_link && (
-                  <a
-                    href={profileData.linkedin_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-zion-cyan hover:text-white transition-colors"
-                  >
-                    <Linkedin className="h-6 w-6" />
-                  </a>
-                )}
-              </div>
-            </div>
-          </div>
-        
-          {/* Sidebar with HireNowCTA */}
-          <div className="col-span-12 lg:col-span-4 space-y-6">
-            <HireNowCTA
-              talentProfile={{
-                id: profileData?.id || '',
-                full_name: profileData?.full_name || '',
-                professional_title: profileData?.professional_title || '',
-                hourly_rate: profileData?.hourly_rate || 0
+                      key = $2;
+                full_name: profileData ?.full_name || '',
+                professional_title: profileData ?.professional_title || '',
+                hourly_rate: profileData ?.hourly_rate || 0
               }}
             />
             {/* Placeholder for other sidebar elements */}
@@ -238,5 +172,5 @@ export default function ProfilePage() {
       </div>
       <Footer />
     </>
-  );
+  )
 }

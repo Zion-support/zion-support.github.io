@@ -1,45 +1,42 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface AdvancedHealthcareBiotechService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] = [
   // AI-Powered Drug Discovery Platform
@@ -51,16 +48,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     period: '/month',
     description: 'Advanced AI platform that accelerates drug discovery through molecular modeling, target identification, and predictive analytics, reducing development time and costs significantly.',
     features: [
-      'AI-powered molecular modeling and simulation',
-      'Target identification and validation',
-      'Drug repurposing and optimization',
-      'Predictive toxicity and efficacy analysis',
-      'Clinical trial optimization',
-      'Real-time collaboration tools',
-      'Integration with research databases',
-      'Advanced analytics and reporting',
-      'Mobile research app',
-      'API for research institutions'
+      'AI-powered molecular modeling and simulationTarget identification and validationDrug repurposing and optimizationPredictive toxicity and efficacy analysisClinical trial optimizationReal-time collaboration toolsIntegration with research databasesAdvanced analytics and reportingMobile research appAPI for research institutions'
     ],
     popular: true,
     icon: '🧬',
@@ -92,8 +80,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     launchDate: '2024-08-15',
     customers: 23,
     rating: 4.9,
-    reviews: 12
-  },
+    reviews: 12},
 
   // Precision Medicine & Genomics Platform
   {
@@ -104,16 +91,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     period: '/month',
     description: 'Comprehensive precision medicine platform that combines genomic analysis, AI-powered diagnostics, and personalized treatment recommendations for improved patient outcomes.',
     features: [
-      'Whole genome sequencing and analysis',
-      'AI-powered disease risk assessment',
-      'Personalized treatment recommendations',
-      'Drug response prediction',
-      'Clinical decision support',
-      'Patient data management',
-      'Integration with EHR systems',
-      'Research collaboration tools',
-      'Mobile patient app',
-      'API for healthcare providers'
+      'Whole genome sequencing and analysisAI-powered disease risk assessmentPersonalized treatment recommendationsDrug response predictionClinical decision supportPatient data managementIntegration with EHR systemsResearch collaboration toolsMobile patient appAPI for healthcare providers'
     ],
     popular: true,
     icon: '🧬',
@@ -145,8 +123,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     launchDate: '2024-09-20',
     customers: 45,
     rating: 4.8,
-    reviews: 23
-  },
+    reviews: 23},
 
   // AI-Powered Medical Imaging Analysis
   {
@@ -157,16 +134,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     period: '/month',
     description: 'Advanced AI platform that provides automated medical image analysis, diagnosis assistance, and clinical decision support for radiologists and healthcare providers.',
     features: [
-      'AI-powered image analysis and diagnosis',
-      'Multi-modality support (X-ray, MRI, CT, Ultrasound)',
-      'Automated abnormality detection',
-      'Clinical decision support tools',
-      'Integration with PACS systems',
-      'Real-time analysis and reporting',
-      'Mobile imaging app',
-      'API for healthcare systems',
-      'Advanced analytics and insights',
-      'Compliance and audit tools'
+      'AI-powered image analysis and diagnosisMulti-modality support (X-ray, MRI, CT, Ultrasound)Automated abnormality detectionClinical decision support toolsIntegration with PACS systemsReal-time analysis and reportingMobile imaging appAPI for healthcare systemsAdvanced analytics and insightsCompliance and audit tools'
     ],
     popular: true,
     icon: '🩻',
@@ -198,8 +166,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     launchDate: '2024-10-10',
     customers: 67,
     rating: 4.7,
-    reviews: 34
-  },
+    reviews: 34},
 
   // Digital Health & Telemedicine Platform
   {
@@ -210,16 +177,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     period: '/month',
     description: 'Integrated digital health platform that provides telemedicine, remote patient monitoring, health analytics, and patient engagement tools for modern healthcare delivery.',
     features: [
-      'High-quality video consultations',
-      'Remote patient monitoring',
-      'Health data analytics and insights',
-      'Patient engagement and education',
-      'Integration with EHR systems',
-      'Mobile health apps',
-      'AI-powered health recommendations',
-      'Secure messaging and file sharing',
-      'Billing and insurance integration',
-      'API for healthcare applications'
+      'High-quality video consultationsRemote patient monitoringHealth data analytics and insightsPatient engagement and educationIntegration with EHR systemsMobile health appsAI-powered health recommendationsSecure messaging and file sharingBilling and insurance integrationAPI for healthcare applications'
     ],
     popular: true,
     icon: '🏥',
@@ -251,8 +209,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     launchDate: '2024-07-15',
     customers: 156,
     rating: 4.6,
-    reviews: 78
-  },
+    reviews: 78},
 
   // Clinical Trial Management & Optimization
   {
@@ -263,16 +220,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     period: '/month',
     description: 'Advanced clinical trial platform that uses AI to optimize trial design, patient recruitment, data collection, and analysis for faster, more efficient clinical research.',
     features: [
-      'AI-powered trial design optimization',
-      'Intelligent patient recruitment and matching',
-      'Real-time data collection and monitoring',
-      'Predictive analytics and insights',
-      'Regulatory compliance management',
-      'Site and investigator management',
-      'Risk assessment and mitigation',
-      'Integration with EDC systems',
-      'Mobile data collection app',
-      'API for research platforms'
+      'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systemsMobile data collection appAPI for research platforms'
     ],
     popular: true,
     icon: '🔬',
@@ -304,6 +252,5 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     launchDate: '2024-11-01',
     customers: 34,
     rating: 4.8,
-    reviews: 19
-  }
-];
+    reviews: 19}
+],

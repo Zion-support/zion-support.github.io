@@ -7,87 +7,76 @@ import {
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe, 
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud, 
   Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
-
 export default function ServicesShowcase2027() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('name'),
 
   // Sort options
   const sortOptions = [
     { value: 'name', label: 'Sort by Name' },
     { value: 'price', label: 'Sort by Price' },
     { value: 'roi', label: 'Sort by ROI' }
-  ];
+  ],
 
-  const allServices = [
-    ...cuttingEdge2027Innovations,
+  const allServices = $2;
     ...practicalMicroSaas2027
-  ];
+  ],
 
   // Filter services based on search and category
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-    
+  const filteredServices = $2;
+    const matchesCategory = selectedCategory === 'all' || service.category.includes($2);
     const matchesPrice = selectedPriceRange === 'all' || 
                         (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
                         (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) ||
-                        (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
+                        (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000),
 
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
+    return matchesSearch && matchesCategory && matchesPrice
+  }),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare($2);
       case 'price':
-        return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
+        return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),
       case 'roi':
-        return parseInt(a.roi.replace(/[^0-9]/g, '')) - parseInt(b.roi.replace(/[^0-9]/g, ''));
-      default:
-        return 0;
+        return parseInt(a.roi.replace(/[^0-9]/g, '')) - parseInt(b.roi.replace(/[^0-9]/g, '')),
+      default: return 0
     }
-  });
+  }),
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'AI Consciousness Evolution', name: 'AI Consciousness', icon: '🧠', count: allServices.filter(s => s.category.includes('AI Consciousness')).length },
-    { id: 'Quantum Consciousness', name: 'Quantum Consciousness', icon: '⚛️', count: allServices.filter(s => s.category.includes('Quantum Consciousness')).length },
-    { id: 'AI Civilization', name: 'AI Civilization', icon: '🏛️', count: allServices.filter(s => s.category.includes('AI Civilization')).length },
-    { id: 'Quantum Time', name: 'Quantum Time', icon: '⏰', count: allServices.filter(s => s.category.includes('Quantum Time')).length },
-    { id: 'AI Multiverse', name: 'AI Multiverse', icon: '🌌', count: allServices.filter(s => s.category.includes('AI Multiverse')).length },
-    { id: 'Customer Success Automation', name: 'Customer Success', icon: '🎯', count: allServices.filter(s => s.category.includes('Customer Success')).length },
-    { id: 'Content Marketing Automation', name: 'Content Marketing', icon: '📝', count: allServices.filter(s => s.category.includes('Content Marketing')).length },
-    { id: 'Inventory Management', name: 'Inventory Management', icon: '📦', count: allServices.filter(s => s.category.includes('Inventory Management')).length },
-    { id: 'HR Automation', name: 'HR Automation', icon: '👥', count: allServices.filter(s => s.category.includes('HR Automation')).length },
-    { id: 'Financial Automation', name: 'Financial Automation', icon: '💰', count: allServices.filter(s => s.category.includes('Financial Automation')).length }
-  ];
-
+    { id: 'AI Consciousness Evolution', name: 'AI Consciousness', icon: '🧠', count: allServices.filter(s = $2;
+    { id: 'Quantum Consciousness', name: 'Quantum Consciousness', icon: '⚛️', count: allServices.filter(s = $2;
+    { id: 'AI Civilization', name: 'AI Civilization', icon: '🏛️', count: allServices.filter(s = $2;
+    { id: 'Quantum Time', name: 'Quantum Time', icon: '⏰', count: allServices.filter(s = $2;
+    { id: 'AI Multiverse', name: 'AI Multiverse', icon: '🌌', count: allServices.filter(s = $2;
+    { id: 'Customer Success Automation', name: 'Customer Success', icon: '🎯', count: allServices.filter(s = $2;
+    { id: 'Content Marketing Automation', name: 'Content Marketing', icon: '📝', count: allServices.filter(s = $2;
+    { id: 'Inventory Management', name: 'Inventory Management', icon: '📦', count: allServices.filter(s = $2;
+    { id: 'HR Automation', name: 'HR Automation', icon: '👥', count: allServices.filter(s = $2;
+    { id: 'Financial Automation', name: 'Financial Automation', icon: '💰', count: allServices.filter(s = $2;
   const priceRanges = [
     { id: 'all', name: 'All Prices', count: allServices.length },
     { id: 'low', name: 'Under $1K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000).length },
     { id: 'medium', name: '$1K - $10K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(s.price.replace(/[^0-9]/g, '')) < 10000).length },
     { id: 'high', name: '$10K+/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000).length }
-  ];
+  ],
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (
     <UltraFuturisticMatrixBackground2027>
@@ -115,8 +104,8 @@ export default function ServicesShowcase2027() {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -256,7 +245,7 @@ export default function ServicesShowcase2027() {
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  animate={{ opacity: 1, y: 0, scale: 1}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   exit={{ opacity: 0, y: -30, scale: 0.9 }}
                   className="group"
@@ -337,8 +326,8 @@ export default function ServicesShowcase2027() {
           {/* No Results */}
           {sortedServices.length === 0 && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0}}
+              animate={{ opacity: 1}}
               className="text-center py-20"
             >
               <div className="text-6xl mb-4">🔍</div>
@@ -346,9 +335,9 @@ export default function ServicesShowcase2027() {
               <p className="text-cyan-300 mb-6">Try adjusting your search criteria or browse all services.</p>
               <button
                 onClick={() => {
-                  setSearchTerm('');
-                  setSelectedCategory('all');
-                  setSelectedPriceRange('all');
+                  setSearchTerm($2);
+                  setSelectedCategory($2);
+                  setSelectedPriceRange('all')
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
@@ -404,7 +393,7 @@ export default function ServicesShowcase2027() {
       </section>
 
       {/* Footer */}
-      <footer className="px-4 sm:px-6 lg:px-8 py-12 border-t border-cyan-500/30">
+      <footer className="px-4 sm: px-6 lg:px-8 py-12 border-t border-cyan-500/30">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4 shadow-2xl shadow-cyan-500/50">
@@ -417,17 +406,17 @@ export default function ServicesShowcase2027() {
           </div>
           
           <div className="text-cyan-300 text-sm">
-            <p>&copy; 2027 Zion Tech Group. All rights reserved.</p>
+            <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>
             <p className="mt-2">
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300">Privacy Policy</Link>
               {' • '}
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300">Terms of Service</Link>
               {' • '}
-              <Link href="/contact" className="hover:text-cyan-400 transition-colors duration-300">Contact Us</Link>
+              <Link href="/contact" className="hover: text-cyan-400 transition-colors duration-300">Contact Us</Link>
             </p>
           </div>
         </div>
       </footer>
     </UltraFuturisticMatrixBackground2027>
-  );
+  )
 }

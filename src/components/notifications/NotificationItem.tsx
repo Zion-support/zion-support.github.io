@@ -9,63 +9,53 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger} from '@/components/ui/tooltip';
+  TooltipTrigger} from '@/components/ui/tooltip',
 import { useRouter } from 'next/router';
 import { Notification, NotificationType } from '@/context/notifications';
-
-export const getTypeIcon = (type: NotificationType) => {
-  switch (type) {
-    case 'message':
-      return <span className="text-blue-500">💬</span>;
+export const getTypeIcon = $2;
     case 'quote_request':
-      return <span className="text-purple-500">📝</span>;
+      return <span className = $2;
     case 'booking_confirmation':
-      return <span className="text-green-500">✅</span>;
+      return <span className = $2;
     case 'hire_request':
-      return <span className="text-zion-purple">🤝</span>;
+      return <span className = $2;
     case 'onboarding':
-      return <span className="text-zion-cyan">🚀</span>;
+      return <span className = $2;
     case 'system':
-      return <span className="text-yellow-500">⚠️</span>;
+      return <span className = $2;
     case 'project_update':
-      return <span className="text-indigo-400">📌</span>;
+      return <span className = $2;
     case 'milestone_complete':
-      return <span className="text-green-500">🏁</span>;
+      return <span className = $2;
     case 'order_status':
-      return <span className="text-orange-500">📦</span>;
+      return <span className = $2;
     default:
-      return <span className="text-gray-500">📣</span>;
-  }
-};
-
+      return <span className = $2;
 interface NotificationItemProps {
-  notification: Notification;
-  onMarkAsRead: (id: string) => Promise<void>;
-  onDismiss: (id: string) => Promise<void>;
+  notification: Notification,
+  onMarkAsRead: (id: string) => Promise<void>,
+  onDismiss: (id: string) => Promise<void>
 }
 
 export const NotificationItem: React.FC<NotificationItemProps> = ({
   notification,
   onMarkAsRead,
   onDismiss}) => {
-  const router = useRouter(); // Changed from useNavigate to useRouter
+  const router = useRouter(), // Changed from useNavigate to useRouter
 
   const handleClick = () => {
     if (!notification.read) {
-      onMarkAsRead(notification.id);
+      onMarkAsRead(notification.id)
     }
     // If there's an action URL, navigate to it
     if (notification.action_url) {
-      router.push(notification.action_url); // Changed to router.push
+      router.push(notification.action_url), // Changed to router.push
     }
-  };
+  },
 
-  return (
-    <div
-      className={cn(
-        'p-3 border-b border-zion-blue-light relative group',
-        !notification.read ? 'bg-zion-blue-dark/30' : '',
-      )}
+  return (<div
+      className = $2;
+        !notification.read ? 'bg-zion-blue-dark/30' : '')}
     >
       <div className="flex items-start gap-2">
         <div className="text-xl">{getTypeIcon(notification.type)}</div>
@@ -105,7 +95,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
       </div>
 
       {/* Action buttons that appear on hover */}
-      <div className="absolute right-2 top-2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-1">
+      <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -114,8 +104,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 size="icon"
                 className="h-6 w-6"
                 onClick={(e) => {
-                  e.stopPropagation();
-                  onMarkAsRead(notification.id);
+                  e.stopPropagation($2);
+                  onMarkAsRead(notification.id)
                 }}
                 aria-label="Mark as read"
               >
@@ -136,20 +126,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 size="icon"
                 className="h-6 w-6"
                 onClick={(e) => {
-                  e.stopPropagation();
-                  onDismiss(notification.id);
+                  e.stopPropagation($2);
+                  onDismiss(notification.id)
                 }}
-                aria-label="Dismiss notification"
-              >
-                <Trash2 className="h-3.5 w-3.5 text-red-400" />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Dismiss</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-      </div>
-    </div>
-  );
-};
+                aria-label = $2;

@@ -1,11 +1,10 @@
-"use client";
+"use client",
 
 import { useEffect } from "react";
-
 interface FirstInputEntry extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target?: Element;
+  processingStart: number,
+  processingEnd: number,
+  target?: Element
 }
 
 export function Analytics() {
@@ -16,42 +15,36 @@ export function Analytics() {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === "largest-contentful-paint") {
-            console.log("LCP:", entry.startTime);
+            console.log("LCP:", entry.startTime)
           }
-          if (entry.entryType === "first-input") {
-            const firstInputEntry = entry as FirstInputEntry;
-            console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
+          if (entry.entryType = $2;
+            console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime)
           }
         }
-      });
+      }),
 
-      observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
-
+      observer.observe($2);
       // Cumulative Layout Shift monitoring
-      let cls = 0;
-      const observer2 = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === "layout-shift") {
-            const layoutShiftEntry = entry as any;
-            cls += layoutShiftEntry.value;
+      let cls = $2;
+      const observer2 = $2;
+            cls += layoutShiftEntry.value
           }
         }
-      });
+      }),
 
-      observer2.observe({ entryTypes: ["layout-shift"] });
-
+      observer2.observe($2);
       // Report metrics on page unload
       window.addEventListener("beforeunload", () => {
-        console.log("CLS:", cls);
-      });
+        console.log("CLS:", cls)
+      }),
 
       // Cleanup
       return () => {
-        observer.disconnect();
-        observer2.disconnect();
-      };
+        observer.disconnect($2);
+        observer2.disconnect()
+      }
     }
-  }, []);
+  }, []),
 
-  return null; // This component doesn't render anything
+  return null, // This component doesn't render anything
 }

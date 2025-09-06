@@ -7,7 +7,7 @@ import {
   Phone, Mail, MapPin, ExternalLink, Search, Filter,
   Grid, List, ChevronDown, ChevronUp, Sparkles,
   Crown, Award, Target, Globe, Cpu, Database
-} from 'lucide-react';
+} from 'lucide-react',
 import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
@@ -19,19 +19,18 @@ import { quantumSpaceServices } from '../data/quantum-space-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
 import { realMarketServices } from '../data/real-market-services';
 import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025';
-
 export default function EnhancedServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<string>('name');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<string>('name'),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   // Combine all services for comprehensive showcase
   const allServices = [
@@ -44,7 +43,7 @@ export default function EnhancedServicesShowcase() {
     ...enterpriseITServices,
     ...realMarketServices,
     ...newVerifiedServicesQ22025
-  ];
+  ],
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
@@ -53,7 +52,7 @@ export default function EnhancedServicesShowcase() {
     { id: 'innovative-saas', name: 'Innovative SaaS', icon: '💻', count: innovativeMicroSaasV2Services.length },
     { id: 'quantum-space', name: 'Quantum & Space', icon: '⚛️', count: quantumSpaceServices.length },
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseITServices.length }
-  ];
+  ],
 
   const sortOptions = [
     { id: 'name', name: 'Name A-Z' },
@@ -62,7 +61,7 @@ export default function EnhancedServicesShowcase() {
     { id: 'rating', name: 'Rating' },
     { id: 'customers', name: 'Customer Count' },
     { id: 'popularity', name: 'Popularity' }
-  ];
+  ],
 
   // Filter and sort services
   const filteredServices = React.useMemo(() => {
@@ -72,42 +71,41 @@ export default function EnhancedServicesShowcase() {
         (selectedCategory === 'cutting-edge-it' && cuttingEdgeITServices.includes(service)) ||
         (selectedCategory === 'innovative-saas' && innovativeMicroSaasV2Services.includes(service)) ||
         (selectedCategory === 'quantum-space' && quantumSpaceServices.includes(service)) ||
-        (selectedCategory === 'enterprise' && enterpriseITServices.includes(service));
+        (selectedCategory === 'enterprise' && enterpriseITServices.includes(service)),
       
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
+                           (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase())),
       
-      return matchesCategory && matchesSearch;
-    });
+      return matchesCategory && matchesSearch
+    }),
 
     // Sort services
     switch (sortBy) {
       case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name));
-        break;
+        filtered.sort((a, b) => a.name.localeCompare(b.name)),
+        break,
       case 'price-low':
-        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, '')));
-        break;
+        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, ''))),
+        break,
       case 'price-high':
-        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, '')));
-        break;
+        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, ''))),
+        break,
       case 'rating':
-        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-        break;
+        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0)),
+        break,
       case 'customers':
-        filtered.sort((a, b) => (b.customers || 0) - (a.customers || 0));
-        break;
+        filtered.sort((a, b) => (b.customers || 0) - (a.customers || 0)),
+        break,
       case 'popularity':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
-        break;
-      default:
-        break;
+        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
+        break,
+      default: break
     }
 
-    return filtered;
-  }, [allServices, selectedCategory, searchTerm, sortBy]);
+    return filtered
+  }, [allServices, selectedCategory, searchTerm, sortBy]),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -118,7 +116,7 @@ export default function EnhancedServicesShowcase() {
         delayChildren: 0.2
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -130,7 +128,7 @@ export default function EnhancedServicesShowcase() {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
   const featuredServices = [
     {
@@ -151,7 +149,7 @@ export default function EnhancedServicesShowcase() {
       services: innovativeMicroSaasV2Services.slice(0, 3),
       color: 'from-green-500 to-emerald-600'
     }
-  ];
+  ],
 
   return (
     <UltraAdvancedFuturisticMatrixBackground intensity="high"       colorScheme="quantum">
@@ -494,8 +492,8 @@ export default function EnhancedServicesShowcase() {
                 <Button 
                   href="#"
                   onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('all');
+                    setSearchTerm(''),
+                    setSelectedCategory('all')
                   }}
                   variant="primary"
                 >
@@ -537,7 +535,7 @@ export default function EnhancedServicesShowcase() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Button 
                   href="/contact"
                   variant="primary"
@@ -562,7 +560,7 @@ export default function EnhancedServicesShowcase() {
         </section>
       </div>
     </UltraAdvancedFuturisticMatrixBackground>
-  );
+  )
 }
 
 // Button component (if not imported)
@@ -574,39 +572,39 @@ const Button = ({
   children, 
   onClick 
 }: {
-  href?: string;
-  variant?: 'primary' | 'secondary';
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-  children: React.ReactNode;
-  onClick?: () => void;
+  href?: string,
+  variant?: 'primary' | 'secondary',
+  size?: 'sm' | 'md' | 'lg',
+  className?: string,
+  children: React.ReactNode,
+  onClick?: () => void
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900';
+  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900',
   
   const variantClasses = {
     primary: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-cyan-500',
     secondary: 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500'
-  };
+  },
   
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg'
-  };
+  },
 
-  const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`;
+  const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`,
 
   if (href) {
     return (
       <a href={href} className={classes}>
         {children}
       </a>
-    );
+    )
   }
 
   return (
     <button onClick={onClick} className={classes}>
       {children}
     </button>
-  );
-};
+  )
+},

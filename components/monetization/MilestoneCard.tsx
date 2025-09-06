@@ -1,25 +1,19 @@
 import React, { useState } from 'react';
 import { Milestone } from '../../utils/types/milestones';
+type Props = $2;
+  projectId: string,
+  role: 'client' | 'talent' | 'admin',
+  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void
+},
 
-type Props = {
-  milestone: Milestone;
-  projectId: string;
-  role: 'client' | 'talent' | 'admin';
-  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void;
-};
-
-const statusSteps = ['Pending', 'In Progress', 'Submitted', 'Approved', 'Paid'] as const;
-
+const statusSteps = $2;
 export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {
-  const [expanded, setExpanded] = useState(false);
-
-  const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
-
-  const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
-  const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone.status === 'In Progress';
-  const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
-  const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
-
+  const [expanded, setExpanded] = useState($2);
+  const currentIndex = $2;
+  const canClientMarkInProgress = $2;
+  const canTalentSubmit = $2;
+  const canClientApprove = $2;
+  const canClientMarkPaid = $2;
   return (
     <div className="border rounded-lg p-4 bg-white shadow-sm">
       <div className="flex items-start justify-between">
@@ -107,5 +101,5 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
         )}
       </div>
     </div>
-  );
+  )
 }

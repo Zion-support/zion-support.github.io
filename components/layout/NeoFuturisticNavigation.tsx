@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { 
-	Menu, 
+	Menu,
 	X, 
 	ChevronDown, 
 	ChevronRight,
@@ -51,47 +51,35 @@ import {
 	Eye,
 	FlaskConical,
 	Link as LinkIcon
-} from 'lucide-react';
+} from 'lucide-react',
 import Button from '../ui/Button';
-
 export default function NeoFuturisticNavigation() {
-	const [isOpen, setIsOpen] = useState(false);
-	const [isScrolled, setIsScrolled] = useState(false);
-	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-	const router = useRouter();
-
-	const contactInfo = {
-		mobile: '+1 302 464 0950',
+	const [isOpen, setIsOpen] = useState($2);
+	const [isScrolled, setIsScrolled] = useState($2);
+	const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+	const router = useRouter($2);
+	const contactInfo = $2;
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	};
+	},
 
 	useEffect(() => {
-		const handleScroll = () => {
-			setIsScrolled(window.scrollY > 20);
-		};
+		const handleScroll = $2;
+		window.addEventListener($2);
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, []),
 
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
-
-	const toggleDropdown = (dropdown: string) => {
-		setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-	};
-
+	const toggleDropdown = $2;
 	const closeMobileMenu = () => {
-		setIsOpen(false);
-		setActiveDropdown(null);
-	};
+		setIsOpen($2);
+		setActiveDropdown(null)
+	},
 
-	const isActive = (path: string) => router.pathname === path;
-
-	const serviceCategories = [
-		{
-			name: 'Quantum Computing',
+	const isActive = $2;
+	const serviceCategories = $2;
 			description: 'Revolutionary quantum computing solutions',
-			icon: <Atom className="w-5 h-5" />,
+			icon: <Atom className = $2;
 			color: 'from-purple-500 to-pink-500',
 			services: [
 				{ name: 'Quantum AI Platform', description: 'AI-powered quantum computing', price: '$299/month' },
@@ -102,7 +90,7 @@ export default function NeoFuturisticNavigation() {
 		{
 			name: 'AI & Machine Learning',
 			description: 'Advanced artificial intelligence and ML platforms',
-			icon: <Brain className="w-5 h-5" />,
+			icon: <Brain className = $2;
 			color: 'from-blue-500 to-cyan-500',
 			services: [
 				{ name: 'AI Content Generator', description: 'Professional AI content creation', price: '$49/month' },
@@ -113,7 +101,7 @@ export default function NeoFuturisticNavigation() {
 		{
 			name: 'Cybersecurity',
 			description: 'Next-generation security solutions',
-			icon: <Shield className="w-5 h-5" />,
+			icon: <Shield className = $2;
 			color: 'from-red-500 to-orange-500',
 			services: [
 				{ name: 'Quantum Cybersecurity', description: 'Post-quantum era security', price: '$159/month' },
@@ -124,7 +112,7 @@ export default function NeoFuturisticNavigation() {
 		{
 			name: 'Blockchain & Web3',
 			description: 'Future-proof blockchain and decentralized solutions',
-			icon: <LinkIcon className="w-5 h-5" />,
+			icon: <LinkIcon className = $2;
 			color: 'from-indigo-500 to-purple-500',
 			services: [
 				{ name: 'Quantum Blockchain', description: 'Post-quantum blockchain platform', price: '$349/month' },
@@ -135,7 +123,7 @@ export default function NeoFuturisticNavigation() {
 		{
 			name: 'IoT & Smart Cities',
 			description: 'Connected devices and intelligent infrastructure',
-			icon: <Globe className="w-5 h-5" />,
+			icon: <Globe className = $2;
 			color: 'from-teal-500 to-green-500',
 			services: [
 				{ name: 'Quantum IoT Platform', description: 'Quantum-secured IoT solutions', price: '$199/month' },
@@ -146,7 +134,7 @@ export default function NeoFuturisticNavigation() {
 		{
 			name: 'Metaverse & VR/AR',
 			description: 'Immersive digital experiences and virtual worlds',
-			icon: <Eye className="w-5 h-5" />,
+			icon: <Eye className = $2;
 			color: 'from-pink-500 to-rose-500',
 			services: [
 				{ name: 'Quantum Metaverse', description: 'Quantum-enhanced virtual reality', price: '$499/month' },
@@ -157,7 +145,7 @@ export default function NeoFuturisticNavigation() {
 		{
 			name: 'Robotics & Automation',
 			description: 'Intelligent automation and robotic systems',
-			icon: <Cpu className="w-5 h-5" />,
+			icon: <Cpu className = $2;
 			color: 'from-orange-500 to-red-500',
 			services: [
 				{ name: 'Quantum Robotics', description: 'AI-powered robotics platform', price: '$799/month' },
@@ -168,7 +156,7 @@ export default function NeoFuturisticNavigation() {
 		{
 			name: 'Energy & Sustainability',
 			description: 'Green technology and energy optimization',
-			icon: <Zap className="w-5 h-5" />,
+			icon: <Zap className = $2;
 			color: 'from-yellow-500 to-orange-500',
 			services: [
 				{ name: 'Quantum Energy', description: 'AI-optimized energy management', price: '$299/month' },
@@ -179,7 +167,7 @@ export default function NeoFuturisticNavigation() {
 		{
 			name: 'Financial Technology',
 			description: 'Innovative fintech and trading solutions',
-			icon: <DollarSign className="w-5 h-5" />,
+			icon: <DollarSign className = $2;
 			color: 'from-violet-500 to-purple-500',
 			services: [
 				{ name: 'Quantum Trading', description: 'Quantum-enhanced algorithmic trading', price: '$899/month' },
@@ -190,7 +178,7 @@ export default function NeoFuturisticNavigation() {
 		{
 			name: 'Biotechnology & Healthcare',
 			description: 'AI-powered healthcare and biotech solutions',
-			icon: <FlaskConical className="w-5 h-5" />,
+			icon: <FlaskConical className = $2;
 			color: 'from-emerald-500 to-teal-500',
 			services: [
 				{ name: 'Biotech AI', description: 'AI-powered drug discovery', price: '$599/month' },
@@ -198,14 +186,14 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'Genomic AI', description: 'Advanced genetic analysis', price: '$399/month' }
 			]
 		}
-	];
+	],
 
 	const companyInfo = [
 		{ name: 'About Zion Tech Group', description: 'Leading the global micro SaaS revolution', icon: <Rocket className="w-5 h-5" />, link: '/about' },
 		{ name: 'Careers', description: 'Join our revolutionary team', icon: <Star className="w-5 h-5" />, link: '/careers' },
 		{ name: 'News & Updates', description: 'Latest announcements and releases', icon: <TrendingUp className="w-5 h-5" />, link: '/news' },
 		{ name: 'Contact', description: 'Talk to our team 24/7', icon: <Phone className="w-5 h-5" />, link: '/contact' }
-	];
+	],
 
 	const resources = [
 		{ name: 'Documentation', description: 'Comprehensive service guides', icon: <BookOpen className="w-5 h-5" />, link: '/docs' },
@@ -213,7 +201,7 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'Case Studies', description: 'Real-world success stories', icon: <BarChart3 className="w-5 h-5" />, link: '/case-studies' },
 		{ name: 'Pricing', description: 'Transparent and flexible plans', icon: <CreditCard className="w-5 h-5" />, link: '/pricing' },
 		{ name: 'Reports', description: 'Live performance and audits', icon: <Activity className="w-5 h-5" />, link: '/reports' }
-	];
+	],
 
 	// Popular quick links to flagship services
 	const popularServiceLinks = [
@@ -226,7 +214,7 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'AI IoT Platform', href: '/ai-iot-platform' },
 		{ name: 'AI Sales Automation', href: '/ai-sales-automation' },
 		{ name: 'AI Market Research', href: '/ai-market-research' }
-	];
+	],
 
 	// Newly added real services quick links
 	const newServiceLinks = [
@@ -236,7 +224,7 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'GitHub Ops Health Dashboard', href: '/services/github-ops-health-dashboard' },
 		{ name: 'Error Budget Automation', href: '/services/error-budget-automation' },
 		{ name: 'LLM Usage Governance', href: '/services/llm-usage-governance' }
-	];
+	],
 
 	return (
 		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -503,5 +491,5 @@ export default function NeoFuturisticNavigation() {
 				</div>
 			)}
 		</nav>
-	);
+	)
 }

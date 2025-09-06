@@ -4,21 +4,18 @@ import { motion } from 'framer-motion';
 import { 
   Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, 
   Cpu, Database, Users, Award, BookOpen, Phone
-} from 'lucide-react';
+} from 'lucide-react',
 
 const EnhancedNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState($2);
+  const [isScrolled, setIsScrolled] = useState($2);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleScroll = $2;
+    window.addEventListener($2);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
 
   const services = [
     { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
@@ -27,7 +24,7 @@ const EnhancedNavigation: React.FC = () => {
     { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },
     { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },
     { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
-  ];
+  ],
 
   const company = [
     { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' },
@@ -35,16 +32,13 @@ const EnhancedNavigation: React.FC = () => {
     { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' },
     { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' },
     { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
-  ];
+  ],
 
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
-
+  const toggleDropdown = $2;
   const closeAllDropdowns = () => {
-    setActiveDropdown(null);
-    setIsOpen(false);
-  };
+    setActiveDropdown($2);
+    setIsOpen(false)
+  },
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -82,7 +76,7 @@ const EnhancedNavigation: React.FC = () => {
                 {activeDropdown === 'services' && (
                   <motion.div
                     initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    animate={{ opacity: 1, y: 0, scale: 1}}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                     transition={{ duration: 0.2 }}
                     className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden"
@@ -177,54 +171,7 @@ const EnhancedNavigation: React.FC = () => {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0}}
             exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden py-6 border-t border-white/10"
-          >
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-                  Services
-                </h3>
-                <div className="space-y-2">
-                  {services.map((service) => (
-                    <Link
-                      key={service.name}
-                      href={service.href}
-                      onClick={closeAllDropdowns}
-                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors"
-                    >
-                      <service.icon className="w-5 h-5 text-white" />
-                      <span className="text-white">{service.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-              
-              <div>
-                <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-                  Company
-                </h3>
-                <div className="space-y-2">
-                  {company.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      onClick={closeAllDropdowns}
-                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors"
-                    >
-                      <item.icon className="w-5 h-5 text-white" />
-                      <span className="text-white">{item.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </div>
-    </nav>
-  );
-};
-
-export default EnhancedNavigation;
+            className = $2;
+export default EnhancedNavigation,

@@ -1,41 +1,36 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-
 export default function UltraFuturisticBackground2035() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
+  const canvasRef = $2;
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const canvas = $2;
+    if (!canvas) return,
 
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersReducedMotion = $2;
+    const ctx = canvas.getContext($2);
+    if (!ctx) return,
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
-    canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
+    canvas.width = $2;
+    canvas.height = $2;
     if (ctx) {
-      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
+      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
     }
 
-    let animationFrameId: number;
+    let animationFrameId: number,
     let particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
-    }> = [];
+      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      opacity: number,
+      color: string}> = [],
 
     // Initialize particles
-    const initParticles = () => {
-      particles = [];
-      const isSmallScreen = window.innerWidth < 768;
-      const particleCount = prefersReducedMotion ? 12 : (isSmallScreen ? 40 : 100);
-      for (let i = 0; i < particleCount; i++) {
+    const initParticles = $2;
+      const isSmallScreen = $2;
+      const particleCount = $2;
+      for (let i = 0, i < particleCount, i++) {
         particles.push({
           x: Math.random() * canvas.width / (window.devicePixelRatio || 1),
           y: Math.random() * canvas.height / (window.devicePixelRatio || 1),
@@ -43,82 +38,72 @@ export default function UltraFuturisticBackground2035() {
           vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4,
           size: Math.random() * (isSmallScreen ? 1.5 : 2) + 0.8,
           opacity: Math.random() * 0.35 + 0.08,
-          color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][Math.floor(Math.random() * 4)]
-        });
+          color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math.floor(Math.random() * 4)]
+        })
       }
-    };
+    },
 
     // Update and draw particles
     const updateParticles = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+      ctx.clearRect($2);
       particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
 
         // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1);
-        if (particle.x > canvas.width / (window.devicePixelRatio || 1)) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1);
-        if (particle.y > canvas.height / (window.devicePixelRatio || 1)) particle.y = 0;
-
+        if (particle.x < 0) particle.x = $2;
+        if (particle.x > canvas.width / (window.devicePixelRatio || 1)) particle.x = $2;
+        if (particle.y < 0) particle.y = $2;
+        if (particle.y > canvas.height / (window.devicePixelRatio || 1)) particle.y = $2;
         // Draw particle
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.opacity;
-        ctx.fill();
-
+        ctx.beginPath($2);
+        ctx.arc($2);
+        ctx.fillStyle = $2;
+        ctx.globalAlpha = $2;
+        ctx.fill($2);
         // Draw connections
-        const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 90 : 140);
+        const maxDistance = $2;
         if (maxDistance > 0) {
           particles.forEach((otherParticle, otherIndex) => {
             if (index !== otherIndex) {
-              const dx = particle.x - otherParticle.x;
-              const dy = particle.y - otherParticle.y;
-              const distance = Math.sqrt(dx * dx + dy * dy);
-
+              const dx = $2;
+              const dy = $2;
+              const distance = Math.sqrt($2);
               if (distance < maxDistance) {
-                ctx.beginPath();
-                ctx.moveTo(particle.x, particle.y);
-                ctx.lineTo(otherParticle.x, otherParticle.y);
-                ctx.strokeStyle = particle.color;
-                ctx.globalAlpha = (maxDistance - distance) / maxDistance * 0.08;
-                ctx.lineWidth = 1;
-                ctx.stroke();
+                ctx.beginPath($2);
+                ctx.moveTo($2);
+                ctx.lineTo($2);
+                ctx.strokeStyle = $2;
+                ctx.globalAlpha = $2;
+                ctx.lineWidth = $2;
+                ctx.stroke()
               }
             }
-          });
+          })
         }
-      });
+      }),
 
       if (!prefersReducedMotion) {
-        animationFrameId = requestAnimationFrame(updateParticles);
-      }
-    };
-
-    initParticles();
-    updateParticles();
-
-    const handleResize = () => {
-      canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
-      canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
+        animationFrameId = $2;
+    initParticles($2);
+    updateParticles($2);
+    const handleResize = $2;
+      canvas.height = $2;
       if (ctx) {
-        ctx.setTransform(1, 0, 0, 1, 0, 0);
-        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
+        ctx.setTransform($2);
+        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
       }
-      initParticles();
-    };
+      initParticles()
+    },
 
-    window.addEventListener('resize', handleResize);
-
+    window.addEventListener($2);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener($2);
       if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId);
+        cancelAnimationFrame(animationFrameId)
       }
-    };
-  }, []);
+    }
+  }, []),
 
   return (
     <>
@@ -139,8 +124,7 @@ export default function UltraFuturisticBackground2035() {
             rotate: [0, 180, 360],
             opacity: [0.22, 0.45, 0.22]
           }}
-          transition={{
-            duration: 8,
+          transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -153,8 +137,7 @@ export default function UltraFuturisticBackground2035() {
             rotate: [45, 225, 405],
             opacity: [0.2, 0.5, 0.2]
           }}
-          transition={{
-            duration: 10,
+          transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -167,8 +150,7 @@ export default function UltraFuturisticBackground2035() {
             y: [0, -20, 0],
             opacity: [0.4, 0.7, 0.4]
           }}
-          transition={{
-            duration: 12,
+          transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -193,10 +175,7 @@ export default function UltraFuturisticBackground2035() {
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (
           <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-purple-400 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
+            key = $2;
               top: `${Math.random() * 100}%`
             }}
             animate={{
@@ -204,8 +183,7 @@ export default function UltraFuturisticBackground2035() {
               opacity: [0, 1, 0],
               scale: [0, 1, 0]
             }}
-            transition={{
-              duration: 3 + Math.random() * 2,
+            transition = $2;
               repeat: Infinity,
               delay: Math.random() * 2,
               ease: "easeInOut"
@@ -220,8 +198,7 @@ export default function UltraFuturisticBackground2035() {
             scaleX: [0, 1, 0],
             opacity: [0, 1, 0]
           }}
-          transition={{
-            duration: 4,
+          transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -233,8 +210,7 @@ export default function UltraFuturisticBackground2035() {
             scaleX: [0, 1, 0],
             opacity: [0, 1, 0]
           }}
-          transition={{
-            duration: 4,
+          transition = $2;
             repeat: Infinity,
             delay: 2,
             ease: "easeInOut"
@@ -244,10 +220,7 @@ export default function UltraFuturisticBackground2035() {
         {/* Quantum Dots */}
         {[...Array(15)].map((_, i) => (
           <motion.div
-            key={`quantum-${i}`}
-            className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
+            key = $2;
               top: `${Math.random() * 100}%`
             }}
             animate={{
@@ -255,8 +228,7 @@ export default function UltraFuturisticBackground2035() {
               opacity: [0, 0.8, 0],
               rotate: [0, 360]
             }}
-            transition={{
-              duration: 5 + Math.random() * 3,
+            transition = $2;
               repeat: Infinity,
               delay: Math.random() * 5,
               ease: "easeInOut"
@@ -285,8 +257,7 @@ export default function UltraFuturisticBackground2035() {
                 r: [3, 6, 3],
                 opacity: [0.3, 0.8, 0.3]
               }}
-              transition={{
-                duration: 4,
+              transition = $2;
                 repeat: Infinity,
                 delay: i * 0.5,
                 ease: "easeInOut"
@@ -304,8 +275,7 @@ export default function UltraFuturisticBackground2035() {
               rotate: [0, 90, 180, 270, 360],
               opacity: [0.1, 0.3, 0.1]
             }}
-            transition={{
-              duration: 20,
+            transition = $2;
               repeat: Infinity,
               ease: "linear"
             }}
@@ -318,8 +288,7 @@ export default function UltraFuturisticBackground2035() {
               rotate: [360, 270, 180, 90, 0],
               opacity: [0.1, 0.4, 0.1]
             }}
-            transition={{
-              duration: 15,
+            transition = $2;
               repeat: Infinity,
               ease: "linear"
             }}
@@ -330,18 +299,14 @@ export default function UltraFuturisticBackground2035() {
         <div className="absolute right-0 top-0 w-32 h-full opacity-30">
           {[...Array(20)].map((_, i) => (
             <motion.div
-              key={`stream-${i}`}
-              className="absolute w-1 h-8 bg-gradient-to-b from-purple-400 to-transparent"
-              style={{
-                right: `${Math.random() * 32}px`,
+              key = $2;
                 top: `${i * 5}%`
               }}
               animate={{
                 height: [8, 32, 8],
                 opacity: [0.3, 1, 0.3]
               }}
-              transition={{
-                duration: 2 + Math.random() * 2,
+              transition = $2;
                 repeat: Infinity,
                 delay: Math.random() * 2,
                 ease: "easeInOut"
@@ -351,5 +316,5 @@ export default function UltraFuturisticBackground2035() {
         </div>
       </div>
     </>
-  );
+  )
 }

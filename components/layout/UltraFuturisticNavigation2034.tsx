@@ -24,18 +24,15 @@ import {
   GlobeIcon as GlobeIcon2, CpuIcon as CpuIcon2,
   Handshake, LifeBuoy, Activity,
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceCategories = [
-  {
-    title: '🧠 Revolutionary AI Services',
+const serviceCategories = $2;
     icon: BrainIcon,
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     description: 'Next-generation AI consciousness and creativity',
@@ -106,68 +103,49 @@ const serviceCategories = [
       { name: 'Holographic Event Platform', href: '/holographic-event-platform', description: 'Immersive holographic experiences', price: '$2,999/month' }
     ]
   }
-];
+],
 
 const quickLinks = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'Solutions', href: '/solutions', icon: Target },
-  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign },
-  { name: 'Resources', href: '/resources', icon: BookOpen },
-  { name: 'Case Studies', href: '/case-studies', icon: FileText },
-  { name: 'Blog', href: '/blog', icon: MessageCircle },
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+  { name: 'Home', href: '/', icon: Home},
+  { name: 'Services', href: '/services', icon: Briefcase},
+  { name: 'Solutions', href: '/solutions', icon: Target},
+  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign},
+  { name: 'Resources', href: '/resources', icon: BookOpen},
+  { name: 'Case Studies', href: '/case-studies', icon: FileText},
+  { name: 'Blog', href: '/blog', icon: MessageCircle},
+  { name: 'Contact', href: '/contact', icon: MessageCircle}
+],
 
 const companyLinks = [
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Careers', href: '/careers', icon: Briefcase },
-  { name: 'News', href: '/news', icon: FileText },
-  { name: 'Partners', href: '/partners', icon: Handshake },
-  { name: 'Support', href: '/support', icon: LifeBuoy },
-  { name: 'Status', href: '/status', icon: Activity }
-];
+  { name: 'About Us', href: '/about', icon: Users},
+  { name: 'Careers', href: '/careers', icon: Briefcase},
+  { name: 'News', href: '/news', icon: FileText},
+  { name: 'Partners', href: '/partners', icon: Handshake},
+  { name: 'Support', href: '/support', icon: LifeBuoy},
+  { name: 'Status', href: '/status', icon: Activity}
+],
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
-];
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin},
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github},
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram},
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube},
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter}
+],
 
-const certifications = [
-  'ISO 27001 Certified',
-  'SOC 2 Type II Compliant',
-  'GDPR Compliant',
-  'HIPAA Compliant',
-  'PCI DSS Level 1',
-  'FedRAMP Authorized',
-  'Quantum Security Certified',
-  'AI Ethics Compliant'
-];
-
+const certifications = $2;
 export default function UltraFuturisticNavigation2034() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-
+  const [isOpen, setIsOpen] = useState($2);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [isScrolled, setIsScrolled] = useState($2);
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleScroll = $2;
+    window.addEventListener($2);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
 
-  const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category);
-  };
-
-  const closeDropdown = () => {
-    setActiveDropdown(null);
-  };
-
+  const toggleDropdown = $2;
+  const closeDropdown = $2;
   return (
     <>
       {/* Top Contact Bar */}
@@ -217,7 +195,7 @@ export default function UltraFuturisticNavigation2034() {
             {/* Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0}}
               transition={{ duration: 0.5 }}
               className="flex items-center space-x-3"
             >
@@ -313,9 +291,9 @@ export default function UltraFuturisticNavigation2034() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
+              initial={{ opacity: 0, height: 0}}
               animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              exit={{ opacity: 0, height: 0}}
               transition={{ duration: 0.3 }}
               className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
             >
@@ -346,9 +324,9 @@ export default function UltraFuturisticNavigation2034() {
                     <AnimatePresence>
                       {activeDropdown === category.title && (
                         <motion.div
-                          initial={{ opacity: 0, height: 0 }}
+                          initial={{ opacity: 0, height: 0}}
                           animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
+                          exit={{ opacity: 0, height: 0}}
                           transition={{ duration: 0.2 }}
                           className="mt-3 ml-4 space-y-2"
                         >
@@ -384,5 +362,5 @@ export default function UltraFuturisticNavigation2034() {
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
-  );
+  )
 }

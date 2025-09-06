@@ -4,8 +4,7 @@ import { getZionDesignMap, buildTokenSet, fetchLovableTokens } from '../../utils
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const base = getZionDesignMap()
-    const [localTokens, cmsTokens] = await Promise.all([
-      buildTokenSet(),
+    const [localTokens, cmsTokens] = await Promise.all($2);
       fetchLovableTokens()])
 
     const tokens = {
@@ -15,6 +14,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     res.status(200).json({ route: base.route, products: base.products, tokens })
   } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to build design map' })
+    res.status(500).json({ error: e ?.message || 'Failed to build design map' })
   }
 }

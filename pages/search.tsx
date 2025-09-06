@@ -7,40 +7,30 @@ import {
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon,
   X, Sliders, SortAsc, SortDesc
-} from 'lucide-react';
+} from 'lucide-react',
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
-
 export default function SearchPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [searchResults, setSearchResults] = useState<any[]>([]);
-  const [isSearching, setIsSearching] = useState(false);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [filters, setFilters] = useState({
-    category: 'all',
-    status: 'all',
-    priceRange: 'all',
-    technology: 'all'
-  });
-  const [sortBy, setSortBy] = useState('relevance');
-  const [showFilters, setShowFilters] = useState(false);
-
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [searchResults, setSearchResults] = useState<any[]>([]),
+  const [isSearching, setIsSearching] = useState($2);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [filters, setFilters] = useState($2);
+  const [sortBy, setSortBy] = useState($2);
+  const [showFilters, setShowFilters] = useState($2);
   // Mock data for search
-  const allServices = [
-    {
-      id: 'ai-business-intelligence',
+  const allServices = $2;
       title: 'AI Business Intelligence',
       description: 'Transform data into actionable insights with AI-powered analytics and predictive modeling',
       category: 'AI & Machine Learning',
       status: 'active',
       price: '$499/month',
       technology: 'AI/ML',
-      features: ['AI-powered dashboards', 'Predictive analytics', 'Real-time insights', 'Custom reporting'],
+      features: ['AI-powered dashboardsPredictive analyticsReal-time insightsCustom reporting'],
       link: '/ai-business-intelligence',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
-      relevance: 95
-    },
+      relevance: 95},
     {
       id: 'quantum-cybersecurity',
       title: 'Quantum Cybersecurity',
@@ -49,12 +39,11 @@ export default function SearchPage() {
       status: 'active',
       price: '$799/month',
       technology: 'Quantum',
-      features: ['Quantum-resistant encryption', 'AI threat detection', 'Zero-trust architecture', '24/7 monitoring'],
+      features: ['Quantum-resistant encryptionAI threat detectionZero-trust architecture24/7 monitoring'],
       link: '/quantum-cybersecurity',
       icon: Shield,
       color: 'from-red-500 to-orange-500',
-      relevance: 92
-    },
+      relevance: 92},
     {
       id: 'ai-customer-experience',
       title: 'AI Customer Experience',
@@ -63,12 +52,11 @@ export default function SearchPage() {
       status: 'active',
       price: '$399/month',
       technology: 'AI/ML',
-      features: ['Customer journey mapping', 'AI personalization', 'Sentiment analysis', 'Predictive support'],
+      features: ['Customer journey mappingAI personalizationSentiment analysisPredictive support'],
       link: '/ai-customer-experience',
       icon: Users,
       color: 'from-green-500 to-teal-500',
-      relevance: 88
-    },
+      relevance: 88},
     {
       id: 'edge-computing-orchestration',
       title: 'Edge Computing Orchestration',
@@ -77,12 +65,11 @@ export default function SearchPage() {
       status: 'active',
       price: '$349/month',
       technology: 'Edge',
-      features: ['Edge node management', 'IoT device management', 'Real-time monitoring', 'Auto-scaling'],
+      features: ['Edge node managementIoT device managementReal-time monitoringAuto-scaling'],
       link: '/edge-computing-orchestration',
       icon: Network,
       color: 'from-purple-500 to-pink-500',
-      relevance: 85
-    },
+      relevance: 85},
     {
       id: 'space-technology',
       title: 'Space Technology Innovation',
@@ -91,12 +78,11 @@ export default function SearchPage() {
       status: 'beta',
       price: '$2,499/month',
       technology: 'Space',
-      features: ['Satellite management', 'AI mission planning', 'Quantum communication', 'Resource optimization'],
+      features: ['Satellite managementAI mission planningQuantum communicationResource optimization'],
       link: '/space-technology',
       icon: Rocket,
       color: 'from-violet-500 to-purple-500',
-      relevance: 82
-    },
+      relevance: 82},
     {
       id: 'neural-interface',
       title: 'Neural Interface Development',
@@ -105,12 +91,11 @@ export default function SearchPage() {
       status: 'beta',
       price: '$899/month',
       technology: 'Biotech',
-      features: ['BCI development tools', 'Neural signal processing', 'AI pattern recognition', 'Safety protocols'],
+      features: ['BCI development toolsNeural signal processingAI pattern recognitionSafety protocols'],
       link: '/neural-interface',
       icon: Brain,
       color: 'from-pink-500 to-rose-500',
-      relevance: 78
-    },
+      relevance: 78},
     {
       id: 'quantum-neural-networks',
       title: 'Quantum Neural Networks',
@@ -119,12 +104,11 @@ export default function SearchPage() {
       status: 'beta',
       price: '$1,299/month',
       technology: 'Quantum',
-      features: ['Quantum algorithms', 'Neural optimization', 'Consciousness simulation', 'Research tools'],
+      features: ['Quantum algorithmsNeural optimizationConsciousness simulationResearch tools'],
       link: '/quantum-neural-networks',
       icon: Atom,
       color: 'from-blue-500 to-cyan-500',
-      relevance: 75
-    },
+      relevance: 75},
     {
       id: 'autonomous-devops',
       title: 'Autonomous DevOps',
@@ -133,12 +117,11 @@ export default function SearchPage() {
       status: 'active',
       price: '$599/month',
       technology: 'DevOps',
-      features: ['Auto-deployment', 'Performance monitoring', 'Security scanning', 'Cost optimization'],
+      features: ['Auto-deploymentPerformance monitoringSecurity scanningCost optimization'],
       link: '/autonomous-devops',
       icon: Cpu,
       color: 'from-emerald-500 to-teal-500',
-      relevance: 72
-    },
+      relevance: 72},
     {
       id: 'ai-autonomous-business',
       title: 'AI Autonomous Business Manager',
@@ -147,12 +130,11 @@ export default function SearchPage() {
       status: 'beta',
       price: '$1,999/month',
       technology: 'AI/ML',
-      features: ['Business automation', 'Decision making', 'Resource allocation', 'Performance optimization'],
+      features: ['Business automationDecision makingResource allocationPerformance optimization'],
       link: '/ai-autonomous-business',
       icon: Target,
       color: 'from-indigo-500 to-purple-500',
-      relevance: 70
-    },
+      relevance: 70},
     {
       id: 'quantum-financial-trading',
       title: 'Quantum Financial Trading',
@@ -161,13 +143,12 @@ export default function SearchPage() {
       status: 'beta',
       price: '$3,999/month',
       technology: 'Quantum',
-      features: ['Quantum algorithms', 'Risk assessment', 'Portfolio optimization', 'Real-time analysis'],
+      features: ['Quantum algorithmsRisk assessmentPortfolio optimizationReal-time analysis'],
       link: '/quantum-financial-trading',
       icon: TrendingUp,
       color: 'from-emerald-500 to-green-500',
-      relevance: 68
-    }
-  ];
+      relevance: 68}
+  ],
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: '📂' },
@@ -179,14 +160,14 @@ export default function SearchPage() {
     { id: 'Space Technology', name: 'Space Technology', icon: '🚀' },
     { id: 'Biotechnology', name: 'Biotechnology', icon: '🧬' },
     { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' }
-  ];
+  ],
 
   const statuses = [
     { id: 'all', name: 'All Statuses', icon: '📊' },
     { id: 'active', name: 'Active', icon: '✅' },
     { id: 'beta', name: 'Beta', icon: '🧪' },
     { id: 'coming-soon', name: 'Coming Soon', icon: '🚧' }
-  ];
+  ],
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', icon: '💰' },
@@ -194,7 +175,7 @@ export default function SearchPage() {
     { id: '500-1000', name: '$500 - $1,000/month', icon: '💵' },
     { id: '1000-2500', name: '$1,000 - $2,500/month', icon: '💵' },
     { id: 'over-2500', name: 'Over $2,500/month', icon: '💵' }
-  ];
+  ],
 
   const technologies = [
     { id: 'all', name: 'All Technologies', icon: '🔧' },
@@ -204,98 +185,80 @@ export default function SearchPage() {
     { id: 'Space', name: 'Space', icon: '🚀' },
     { id: 'Biotech', name: 'Biotech', icon: '🧬' },
     { id: 'DevOps', name: 'DevOps', icon: '⚙️' }
-  ];
+  ],
 
   // Search function
   const performSearch = () => {
     if (!searchTerm.trim()) {
-      setSearchResults([]);
-      return;
+      setSearchResults($2);
+      return
     }
 
-    setIsSearching(true);
-    
+    setIsSearching($2);
     // Simulate search delay
     setTimeout(() => {
-      const results = allServices.filter(service => {
-        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            service.technology.toLowerCase().includes(searchTerm.toLowerCase());
-        
-        const matchesCategory = filters.category === 'all' || service.category === filters.category;
-        const matchesStatus = filters.status === 'all' || service.status === filters.status;
-        const matchesTechnology = filters.technology === 'all' || service.technology === filters.technology;
-        
-        let matchesPrice = true;
+      const results = $2;
+        const matchesCategory = $2;
+        const matchesStatus = $2;
+        const matchesTechnology = $2;
+        let matchesPrice = $2;
         if (filters.priceRange !== 'all') {
-          const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+          const price = parseInt(service.price.replace(/[^0-9]/g, '')),
           switch (filters.priceRange) {
             case 'under-500':
-              matchesPrice = price < 500;
-              break;
+              matchesPrice = $2;
+              break,
             case '500-1000':
-              matchesPrice = price >= 500 && price < 1000;
-              break;
+              matchesPrice = $2;
+              break,
             case '1000-2500':
-              matchesPrice = price >= 1000 && price < 2500;
-              break;
+              matchesPrice = $2;
+              break,
             case 'over-2500':
-              matchesPrice = price >= 2500;
-              break;
+              matchesPrice = $2;
+              break
           }
         }
         
-        return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice;
-      });
+        return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice
+      }),
 
       // Sort results
       const sortedResults = results.sort((a, b) => {
         switch (sortBy) {
           case 'relevance':
-            return b.relevance - a.relevance;
+            return b.relevance - a.relevance,
           case 'price-low':
-            return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
+            return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),
           case 'price-high':
-            return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''));
+            return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, '')),
           case 'name':
-            return a.title.localeCompare(b.title);
+            return a.title.localeCompare($2);
           case 'status':
-            return a.status.localeCompare(b.status);
-          default:
-            return 0;
+            return a.status.localeCompare($2);
+          default: return 0
         }
-      });
+      }),
 
-      setSearchResults(sortedResults);
-      setIsSearching(false);
-    }, 500);
-  };
+      setSearchResults($2);
+      setIsSearching(false)
+    }, 500)
+  },
 
   // Handle search on Enter key
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
-      performSearch();
-    }
-  };
-
+  const handleKeyPress = $2;
   // Update search when filters change
   useEffect(() => {
     if (searchTerm.trim()) {
-      performSearch();
+      performSearch()
     }
-  }, [filters, sortBy]);
+  }, [filters, sortBy]),
 
   // Clear all filters
   const clearFilters = () => {
-    setFilters({
-      category: 'all',
-      status: 'all',
-      priceRange: 'all',
-      technology: 'all'
-    });
-    setSortBy('relevance');
-  };
+    setFilters($2);
+    setSortBy('relevance')
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -313,8 +276,8 @@ export default function SearchPage() {
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
@@ -416,9 +379,9 @@ export default function SearchPage() {
             {/* Expanded Filters */}
             {showFilters && (
               <motion.div
-                initial={{ opacity: 0, height: 0 }}
+                initial={{ opacity: 0, height: 0}}
                 animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
+                exit={{ opacity: 0, height: 0}}
                 className="mt-6 pt-6 border-t border-white/20"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -542,8 +505,8 @@ export default function SearchPage() {
                 {searchResults.map((service, index) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 20}}
+                    animate={{ opacity: 1, y: 0}}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`group relative ${
                       viewMode === 'grid' 
@@ -624,12 +587,12 @@ export default function SearchPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 <span className="text-sm text-white/40">Popular searches:</span>
-                {['AI', 'Cybersecurity', 'Quantum Computing', 'Edge Computing'].map((term) => (
+                {['AICybersecurityQuantum ComputingEdge Computing'].map((term) => (
                   <button
                     key={term}
                     onClick={() => {
-                      setSearchTerm(term);
-                      performSearch();
+                      setSearchTerm($2);
+                      performSearch()
                     }}
                     className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
                   >
@@ -644,5 +607,5 @@ export default function SearchPage() {
 
       <SmartFooter />
     </div>
-  );
+  )
 }

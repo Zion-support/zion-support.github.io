@@ -16,23 +16,19 @@ import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-
 import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
-
 export default function PricingEnhanced2026Page() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
-  const popularServices = getPopularServices();
-  
+  const popularServices = getPopularServices($2);
   // Combine all services for comprehensive pricing
-  const allServices = [
-    ...enhancedRealMicroSaasServices,
+  const allServices = $2;
     ...nextGenerationAIServices,
     ...cuttingEdgeITServices,
     ...innovativeMicroSaasV2Services,
@@ -42,14 +38,12 @@ export default function PricingEnhanced2026Page() {
     ...innovative2026AIServicesV3,
     ...emergingTech2026ServicesV3,
     ...enterpriseIT2026ServicesV3
-  ];
+  ],
 
   // Enhanced service categories with pricing for 2026
-  const serviceCategories = [
-    {
-      name: 'ArrowRight-Generation AI 2026',
+  const serviceCategories = $2;
       description: 'Revolutionary AI platforms with quantum integration',
-      services: ['AI Quantum Financial Trading', 'AI Healthcare Diagnostics', 'AI Autonomous Manufacturing', 'AI Cybersecurity Threat Intelligence'],
+      services: ['AI Quantum Financial TradingAI Healthcare DiagnosticsAI Autonomous ManufacturingAI Cybersecurity Threat Intelligence'],
       avgPrice: '$2,499/month',
       savings: 'Save 60-80% vs. competitors',
       icon: Brain,
@@ -58,7 +52,7 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Quantum & Emerging Tech 2026',
       description: 'Cutting-edge quantum and emerging technologies',
-      services: ['Quantum Internet Security', 'Neuromorphic Computing', 'DNA Computing', 'Photonic Computing', 'Holographic Display'],
+      services: ['Quantum Internet SecurityNeuromorphic ComputingDNA ComputingPhotonic ComputingHolographic Display'],
       avgPrice: '$4,199/month',
       savings: 'Save 70-85% vs. competitors',
       icon: Atom,
@@ -67,7 +61,7 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Enterprise IT Solutions 2026',
       description: 'Advanced enterprise infrastructure and security',
-      services: ['Zero Trust Network Architecture', 'Edge Computing Orchestration', '5G Private Networks', 'Blockchain Infrastructure', 'AI DevOps Automation'],
+      services: ['Zero Trust Network ArchitectureEdge Computing Orchestration5G Private NetworksBlockchain InfrastructureAI DevOps Automation'],
       avgPrice: '$5,199/month',
       savings: 'Save 50-75% vs. competitors',
       icon: Shield,
@@ -76,7 +70,7 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Innovative Micro SaaS 2026',
       description: 'Creative and practical SaaS tools',
-      services: ['AI Content Creation Studio', 'AI Business Intelligence Suite', 'AI Customer Success Platform', 'AI Meeting Transcriber'],
+      services: ['AI Content Creation StudioAI Business Intelligence SuiteAI Customer Success PlatformAI Meeting Transcriber'],
       avgPrice: '$299/month',
       savings: 'Save 40-60% vs. competitors',
       icon: Rocket,
@@ -85,7 +79,7 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Healthcare & Biotech 2026',
       description: 'AI-powered healthcare and biotechnology solutions',
-      services: ['AI Healthcare Diagnostics', 'DNA Computing Platform', 'Neuromorphic Healthcare AI', 'Quantum Medical Imaging'],
+      services: ['AI Healthcare DiagnosticsDNA Computing PlatformNeuromorphic Healthcare AIQuantum Medical Imaging'],
       avgPrice: '$3,999/month',
       savings: 'Save 65-80% vs. competitors',
       icon: FlaskConical,
@@ -94,35 +88,24 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Financial Technology 2026',
       description: 'Advanced financial and trading solutions',
-      services: ['AI Quantum Financial Trading', 'Blockchain Infrastructure', 'Quantum Internet Security', 'Photonic Computing'],
+      services: ['AI Quantum Financial TradingBlockchain InfrastructureQuantum Internet SecurityPhotonic Computing'],
       avgPrice: '$4,499/month',
       savings: 'Save 55-75% vs. competitors',
       icon: DollarSign,
       color: 'from-green-500 to-emerald-600'
     }
-  ];
+  ],
 
   // Enhanced pricing tiers with more realistic and comprehensive offerings
-  const pricingTiers = [
-    {
-      name: 'Starter',
+  const pricingTiers = $2;
       description: 'Perfect for small businesses and startups',
-      price: billingCycle === 'monthly' ? 99 : 79,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = $2;
+      period: billingCycle = $2;
+      savings: billingCycle = $2;
       features: [
-        'Access to 100+ Core Services',
-        'Basic AI Integration',
-        'Standard Support (24/7)',
-        '30-Day Free Trial',
-        'Basic Analytics Dashboard',
-        'Email Support',
-        '99.5% Uptime Guarantee',
-        'Standard Security Features',
-        'Mobile App Access',
-        'API Access (1000 calls/month)'
+        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security FeaturesMobile App AccessAPI Access (1000 calls/month)'
       ],
-      icon: <Sparkles className="w-8 h-8" />,
+      icon: <Sparkles className = $2;
       variant: 'quantum' as const,
       popular: false,
       cta: 'Start Free Trial',
@@ -131,24 +114,13 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
-      price: billingCycle === 'monthly' ? 299 : 239,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = $2;
+      period: billingCycle = $2;
+      savings: billingCycle = $2;
       features: [
-        'Access to 500+ Services',
-        'Advanced AI & Quantum Features',
-        'Priority Support (24/7)',
-        '60-Day Free Trial',
-        'Advanced Analytics & Reporting',
-        'Phone & Email Support',
-        '99.9% Uptime Guarantee',
-        'Enhanced Security Features',
-        'Custom Integrations',
-        'API Access (10,000 calls/month)',
-        'Users Collaboration Tools',
-        'Advanced Workflow Automation'
+        'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security FeaturesCustom IntegrationsAPI Access (10,000 calls/month)Users Collaboration ToolsAdvanced Workflow Automation'
       ],
-      icon: <Star className="w-8 h-8" />,
+      icon: <Star className = $2;
       variant: 'holographic' as const,
       popular: true,
       cta: 'Start Free Trial',
@@ -157,40 +129,25 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
-      price: billingCycle === 'monthly' ? 999 : 799,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = $2;
+      period: billingCycle = $2;
+      savings: billingCycle = $2;
       features: [
-        'Access to ALL Services (1000+)',
-        'Full AI & Quantum Suite',
-        'Dedicated Support Users',
-        '90-Day Free Trial',
-        'Enterprise Analytics & BI',
-        '24/7 Dedicated Support',
-        '99.99% Uptime Guarantee',
-        'Enterprise Security & Compliance',
-        'Custom Development',
-        'Unlimited API Access',
-        'Advanced Users Management',
-        'White-label Solutions',
-        'Custom SLA Agreements',
-        'On-site Implementation'
+        'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & ComplianceCustom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
       ],
-      icon: <Crown className="w-8 h-8" />,
+      icon: <Crown className = $2;
       variant: 'quantum-advanced' as const,
       popular: false,
       cta: 'Contact Sales',
       color: 'from-yellow-500 to-orange-600'
     }
-  ];
+  ],
 
   // Featured services showcase
-  const featuredServices = [
-    {
-      name: 'AI Quantum Financial Trading',
+  const featuredServices = $2;
       price: '$2,999/month',
       description: 'Revolutionary AI-powered quantum trading with 99.9% accuracy',
-      features: ['Quantum-inspired AI algorithms', 'Real-time market analysis', 'Automated trading strategies'],
+      features: ['Quantum-inspired AI algorithmsReal-time market analysisAutomated trading strategies'],
       link: 'https://ziontechgroup.com/services/ai-quantum-financial-trading',
       icon: '📈',
       color: 'from-green-500 to-emerald-600'
@@ -199,7 +156,7 @@ export default function PricingEnhanced2026Page() {
       name: 'Zero Trust Network Architecture 2026',
       price: '$6,999/month',
       description: 'ArrowRight-generation network security with continuous verification',
-      features: ['Continuous verification', 'Micro-segmentation', 'Real-time threat detection'],
+      features: ['Continuous verificationMicro-segmentationReal-time threat detection'],
       link: 'https://ziontechgroup.com/services/zero-trust-network-architecture-2026',
       icon: '🛡️',
       color: 'from-red-500 to-pink-600'
@@ -208,7 +165,7 @@ export default function PricingEnhanced2026Page() {
       name: 'AI Healthcare Diagnostics Platform',
       price: '$1,499/month',
       description: 'AI-powered medical diagnostics with 95% accuracy rate',
-      features: ['Medical image analysis', 'Diagnosis prediction', 'Treatment recommendations'],
+      features: ['Medical image analysisDiagnosis predictionTreatment recommendations'],
       link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics',
       icon: '🏥',
       color: 'from-blue-500 to-cyan-600'
@@ -217,12 +174,12 @@ export default function PricingEnhanced2026Page() {
       name: 'Quantum Internet Security Platform',
       price: '$4,999/month',
       description: 'Unbreakable quantum encryption for the future internet',
-      features: ['Quantum key distribution', 'Post-quantum cryptography', 'Real-time threat detection'],
+      features: ['Quantum key distributionPost-quantum cryptographyReal-time threat detection'],
       link: 'https://ziontechgroup.com/services/quantum-internet-security-platform',
       icon: '🔐',
       color: 'from-blue-500 to-cyan-600'
     }
-  ];
+  ],
 
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
@@ -249,8 +206,8 @@ export default function PricingEnhanced2026Page() {
         {/* Enhanced Header Section */}
         <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
             className="max-w-7xl mx-auto text-center"
           >
@@ -310,8 +267,8 @@ export default function PricingEnhanced2026Page() {
               {pricingTiers.map((tier, index) => (
                 <motion.div
                   key={tier.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  animate={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="relative"
                 >
@@ -360,9 +317,9 @@ export default function PricingEnhanced2026Page() {
                          className="w-full"
                          onClick={() => {
                            if (tier.name === 'Enterprise') {
-                             window.open(`mailto:${contactInfo.email}?subject=Enterprise Pricing Inquiry`, '_blank');
+                             window.open(`mailto:${contactInfo.email}?subject=Enterprise Pricing Inquiry`, '_blank')
                            } else {
-                             window.open(`mailto:${contactInfo.email}?subject=Start Free Trial - ${tier.name}`, '_blank');
+                             window.open(`mailto:${contactInfo.email}?subject=Start Free Trial - ${tier.name}`, '_blank')
                            }
                          }}
                        >
@@ -380,10 +337,10 @@ export default function PricingEnhanced2026Page() {
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -398,10 +355,10 @@ export default function PricingEnhanced2026Page() {
               {serviceCategories.map((category, index) => (
                 <motion.div
                   key={category.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                 >
                   <UltraFuturisticCard variant="quantum-advanced" className="h-full">
                     <div className="p-6">
@@ -449,10 +406,10 @@ export default function PricingEnhanced2026Page() {
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -467,10 +424,10 @@ export default function PricingEnhanced2026Page() {
               {featuredServices.map((service, index) => (
                 <motion.div
                   key={service.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                 >
                   <UltraFuturisticCard variant="holographic" className="h-full">
                     <div className="p-6">
@@ -524,10 +481,10 @@ export default function PricingEnhanced2026Page() {
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -563,5 +520,5 @@ export default function PricingEnhanced2026Page() {
         </div>
       </div>
     </UltraFuturisticBackground>
-  );
+  )
 }

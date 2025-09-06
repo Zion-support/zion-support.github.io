@@ -11,31 +11,30 @@ import {
   Code, Database, Network, Server, Monitor, Smartphone,
   Camera, Gamepad2, Palette, Music, Film, BookOpenCheck,
   Building, MessageCircle
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-  featured?: boolean;
+  name: string,
+  href: string,
+  icon?: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[],
+  badge?: string,
+  title?: string,
+  featured?: boolean
 }
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const navigationItems: NavigationItem[] = [
   {
     name: 'Pricing',
     href: '/pricing',
-    icon: <DollarSign className="w-5 h-5" />,
+    icon: <DollarSign className = $2;
     description: 'Plans and average market prices',
     children: [
       { name: 'Standard Pricing', href: '/pricing', description: 'Our plans' },
@@ -45,7 +44,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Resources',
     href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className = $2;
     description: 'Guides, reports and tools',
     children: [
       { name: 'Blog', href: '/blog', description: 'Insights and updates' },
@@ -57,7 +56,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Contact',
     href: '/contact',
-    icon: <Phone className="w-5 h-5" />,
+    icon: <Phone className = $2;
     description: 'Talk to our team',
     featured: true,
     children: [
@@ -68,7 +67,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Services',
     href: '/services',
-    icon: <Grid className="w-5 h-5" />,
+    icon: <Grid className = $2;
     description: 'Browse by category',
     badge: 'New',
     children: [
@@ -82,14 +81,14 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'All Services',
     href: '/comprehensive-services-showcase-2025',
-    icon: <Globe className="w-5 h-5" />,
+    icon: <Globe className = $2;
     description: 'Complete portfolio of all technology services',
     badge: 'Showcase',
     featured: true,
     children: [
       { name: 'View All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' },
-      { name: 'Ultimate 2035 Futuristic', href: '/ultimate-2035-futuristic-services-showcase', description: 'Revolutionary future technology', featured: true },
-      { name: 'Ultimate 2025 Micro SAAS', href: '/ultimate-2025-micro-saas-showcase', description: 'Latest innovative services', featured: true },
+      { name: 'Ultimate 2035 Futuristic', href: '/ultimate-2035-futuristic-services-showcase', description: 'Revolutionary future technology', featured: true},
+      { name: 'Ultimate 2025 Micro SAAS', href: '/ultimate-2025-micro-saas-showcase', description: 'Latest innovative services', featured: true},
       { name: 'Service Categories', href: '/comprehensive-services-showcase-2025#categories', description: 'Browse by category' },
       { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-2025#pricing', description: 'Compare service costs' },
       { name: 'Service Search', href: '/comprehensive-services-showcase-2025#search', description: 'Find specific services' },
@@ -105,12 +104,12 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
+    icon: <Brain className = $2;
     description: 'Revolutionary AI consciousness and emotional intelligence',
     badge: 'New',
     featured: true,
     children: [
-      { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform', description: 'Predict and prevent churn with AI', featured: true },
+      { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform', description: 'Predict and prevent churn with AI', featured: true},
       { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform', description: 'Supercharge sales with AI automation' },
       { name: 'AI Financial Planning', href: '/ai-financial-planning-platform', description: 'Intelligent financial forecasting' },
       { name: 'AI Decision Engine', href: '/ai-powered-decision-engine', description: 'AI-powered business decisions' },
@@ -131,12 +130,12 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Micro SAAS Solutions',
     href: '/micro-saas',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className = $2;
     description: 'Innovative business solutions for modern enterprises',
     badge: 'Hot',
     featured: true,
     children: [
-      { name: 'Customer Success Platform', href: '/ai-customer-success-platform', description: 'AI-powered customer retention', featured: true },
+      { name: 'Customer Success Platform', href: '/ai-customer-success-platform', description: 'AI-powered customer retention', featured: true},
       { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization', description: 'AI-powered supply chain management' },
       { name: 'Financial Planning Platform', href: '/ai-financial-planning-platform', description: 'Intelligent financial planning' },
       { name: 'HR Analytics Platform', href: '/ai-hr-analytics-platform', description: 'AI-powered HR insights' },
@@ -156,7 +155,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum-services',
-    icon: <Atom className="w-5 h-5" />,
+    icon: <Atom className = $2;
     description: 'Quantum computing and breakthrough technologies',
     badge: 'Hot',
     featured: true,
@@ -182,7 +181,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Enterprise IT',
     href: '/enterprise-it',
-    icon: <Shield className="w-5 h-5" />,
+    icon: <Shield className = $2;
     description: 'Advanced enterprise infrastructure and security',
     badge: 'Enterprise',
     featured: true,
@@ -200,7 +199,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Industry Solutions',
     href: '/industry-solutions',
-    icon: <Building className="w-5 h-5" />,
+    icon: <Building className = $2;
     description: 'Industry-specific technology solutions',
     badge: 'Industry',
     children: [
@@ -217,7 +216,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Resources',
     href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className = $2;
     description: 'Documentation, support, and learning resources',
     children: [
       { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
@@ -229,46 +228,34 @@ const navigationItems: NavigationItem[] = [
       { name: 'Community', href: '/community', description: 'User community' }
     ]
   }
-];
+],
 
 const quickActions = [
-  { name: 'Get Started', href: '/contact', icon: <ArrowRight className="w-4 h-4" />, primary: true },
-  { name: 'Get a Quote', href: '/quote', icon: <DollarSign className="w-4 h-4" /> },
-  { name: 'Book Demo', href: '/demo', icon: <Video className="w-4 h-4" /> },
-  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> },
-  { name: 'View Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
-  { name: 'Market Pricing', href: '/market-pricing', icon: <BarChart3 className="w-4 h-4" /> },
-  { name: 'Services Advertising', href: '/services-advertising', icon: <Sparkles className="w-4 h-4" /> },
-  { name: 'Documentation', href: '/docs', icon: <BookOpen className="w-4 h-4" /> },
-  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> }
-];
-
+  { name: 'Get Started', href: '/contact', icon: <ArrowRight className="w-4 h-4" />, primary: true},
+  { name: 'Get a Quote', href: '/quote', icon: <DollarSign className = $2;
+  { name: 'Book Demo', href: '/demo', icon: <Video className = $2;
+  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className = $2;
+  { name: 'View Pricing', href: '/pricing', icon: <DollarSign className = $2;
+  { name: 'Market Pricing', href: '/market-pricing', icon: <BarChart3 className = $2;
+  { name: 'Services Advertising', href: '/services-advertising', icon: <Sparkles className = $2;
+  { name: 'Documentation', href: '/docs', icon: <BookOpen className = $2;
+  { name: 'Support', href: '/support', icon: <HelpCircle className = $2;
 const UltraFuturisticNavigation2035: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-
+  const [isOpen, setIsOpen] = useState($2);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [isScrolled, setIsScrolled] = useState($2);
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+    const handleScroll = $2;
+    window.addEventListener($2);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
-
-  const closeDropdowns = () => {
-    setActiveDropdown(null);
-  };
-
+  const toggleDropdown = $2;
+  const closeDropdowns = $2;
   const closeMobileMenu = () => {
-    setIsOpen(false);
-    closeDropdowns();
-  };
+    setIsOpen($2);
+    closeDropdowns()
+  },
 
   return (
     <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -335,7 +322,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                     {activeDropdown === item.name && (
                       <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        animate={{ opacity: 1, y: 0, scale: 1}}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
@@ -431,9 +418,9 @@ const UltraFuturisticNavigation2035: React.FC = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
+              initial={{ opacity: 0, height: 0}}
               animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              exit={{ opacity: 0, height: 0}}
               transition={{ duration: 0.3 }}
               className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50"
             >
@@ -469,81 +456,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
-                            initial={{ opacity: 0, height: 0 }}
+                            initial={{ opacity: 0, height: 0}}
                             animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="ml-6 mt-2 space-y-2"
-                          >
-                            {item.children?.map((child) => (
-                              <Link
-                                key={child.name}
-                                href={child.href}
-                                className={`block p-3 rounded-lg transition-colors duration-200 ${
-                                  child.featured 
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400' 
-                                    : 'text-gray-400 hover:text-white hover:bg-gray-800/50'
-                                }`}
-                                onClick={closeMobileMenu}
-                              >
-                                <div className="font-medium">{child.name}</div>
-                                {child.description && (
-                                  <div className="text-sm opacity-75 mt-1">{child.description}</div>
-                                )}
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ))}
-
-                  {/* Mobile Quick Actions */}
-                  <div className="pt-4 border-t border-gray-800/50">
-                    <div className="space-y-3">
-                      {quickActions.map((action) => (
-                        <Link
-                          key={action.name}
-                          href={action.href}
-                          className={`flex items-center gap-3 p-3 rounded-xl text-sm font-medium transition-all duration-200 ${
-                            action.primary
-                              ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
-                              : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-                          }`}
-                          onClick={closeMobileMenu}
-                        >
-                          {action.icon}
-                          <span>{action.name}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Mobile Contact Info */}
-                  <div className="pt-4 border-t border-gray-800/50">
-                    <div className="space-y-3 text-sm text-gray-400">
-                      <a href={`tel:${contactInfo.mobile}`} className="flex items-center gap-3 p-3 rounded-lg hover:text-cyan-400 hover:bg-gray-800/50 transition-all duration-200">
-                        <Phone className="w-4 h-4" />
-                        <span>{contactInfo.mobile}</span>
-                      </a>
-                      <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200">
-                        <Mail className="w-4 h-4" />
-                        <span>{contactInfo.email}</span>
-                      </a>
-                      <div className="flex items-center gap-3 p-3 rounded-lg">
-                        <MapPin className="w-4 h-4" />
-                        <span className="text-sm">{contactInfo.address}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </nav>
-  );
-};
-
-export default UltraFuturisticNavigation2035;
+                            exit={{ opacity: 0, height: 0}}
+                            transition = $2;
+export default UltraFuturisticNavigation2035,

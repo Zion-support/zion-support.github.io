@@ -6,52 +6,20 @@ import {
   Satellite, ArrowRight, CheckCircle, Star, TrendingUp, 
   Globe, Zap, Shield, Users, Rocket, 
   Phone, Mail, MapPin, Brain, Sparkles
-} from 'lucide-react';
+} from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
-
 export default function SpaceTechnologyAIPlatform() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
-  const features = [
-    'AI-powered satellite operations',
-    'Autonomous space exploration',
-    'Space data analytics',
-    'Satellite constellation management',
-    'Space debris tracking',
-    'Real-time monitoring',
-    'Predictive maintenance',
-    'Mission planning tools',
-    'API access',
-    'Expert consultation'
-  ];
-
-  const useCases = [
-    'Satellite operations',
-    'Space exploration',
-    'Earth observation',
-    'Space debris monitoring',
-    'Mission planning',
-    'Space research'
-  ];
-
-  const integrations = [
-    'NASA APIs', 'ESA APIs', 'Satellite ground stations', 
-    'GIS systems', 'Slack', 'Microsoft Teams', 'Custom applications'
-  ];
-
-  const competitors = [
-    'Maxar ($5000-50000/month)',
-    'Planet Labs ($1000-10000/month)',
-    'Airbus Defence ($10000-100000/month)',
-    'Lockheed Martin', 'Boeing', 'Northrop Grumman'
-  ];
-
+  const features = $2;
+  const useCases = $2;
+  const integrations = $2;
+  const competitors = $2;
   return (
     <UltraAdvancedFuturisticBackground 
       intensity="extreme" 
@@ -81,8 +49,8 @@ export default function SpaceTechnologyAIPlatform() {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-indigo-900/30"></div>
           <div className="max-w-7xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -146,10 +114,10 @@ export default function SpaceTechnologyAIPlatform() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -166,10 +134,10 @@ export default function SpaceTechnologyAIPlatform() {
               {features.map((feature, index) => (
                 <motion.div
                   key={feature}
-                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  initial={{ opacity: 0, scale: 0.8, y: 20}}
+                  whileInView={{ opacity: 1, scale: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="group relative"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
@@ -192,10 +160,10 @@ export default function SpaceTechnologyAIPlatform() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -211,9 +179,9 @@ export default function SpaceTechnologyAIPlatform() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0}}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="space-y-6"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Analysis</h3>
@@ -234,10 +202,10 @@ export default function SpaceTechnologyAIPlatform() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: 20}}
+                whileInView={{ opacity: 1, x: 0}}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="space-y-6"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Market Statistics</h3>
@@ -268,10 +236,10 @@ export default function SpaceTechnologyAIPlatform() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -288,10 +256,10 @@ export default function SpaceTechnologyAIPlatform() {
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={useCase}
-                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  initial={{ opacity: 0, scale: 0.8, y: 20}}
+                  whileInView={{ opacity: 1, scale: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="group relative"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
@@ -314,10 +282,10 @@ export default function SpaceTechnologyAIPlatform() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
@@ -371,6 +339,6 @@ export default function SpaceTechnologyAIPlatform() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  )
 }
 

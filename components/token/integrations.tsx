@@ -3,36 +3,34 @@ import React, { useEffect, useState } from 'react';
 import { useWallet } from '../../hooks/useWallet';
 import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
-
-const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false });
+const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false}),
 
 export default function TokenIntegrationsPage() {
-  const { account, connect } = useWallet();
-  const [region, setRegion] = useState('');
-  const [stake, setStake] = useState('');
-  const [suggestion, setSuggestion] = useState<any>(null);
-  const [rewards, setRewards] = useState<DepinReward[] | null>(null);
-  const [depinsSyncing, setDepinsSyncing] = useState(false);
-
+  const { account, connect } = useWallet($2);
+  const [region, setRegion] = useState($2);
+  const [stake, setStake] = useState($2);
+  const [suggestion, setSuggestion] = useState<any>(null),
+  const [rewards, setRewards] = useState<DepinReward[] | null>(null),
+  const [depinsSyncing, setDepinsSyncing] = useState($2);
   async function syncDepin() {
     if (!account) {
-      await connect();
-      return;
+      await connect($2);
+      return
     }
-    setDepinsSyncing(true);
-    const acts = await fetchDepinActivities(account);
-    const r = calculateRewards(acts);
-    setRewards(r);
-    setDepinsSyncing(false);
+    setDepinsSyncing($2);
+    const acts = await fetchDepinActivities($2);
+    const r = calculateRewards($2);
+    setRewards($2);
+    setDepinsSyncing(false)
   }
 
   async function runOperator() {
     const res = await fetch('/api/operator/suggest-chain', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ region, stakeUsd: stake })});
-    const data = await res.json();
-    setSuggestion(data);
+      body: JSON.stringify({ region, stakeUsd: stake})}),
+    const data = await res.json($2);
+    setSuggestion(data)
   }
 
   return (
@@ -100,5 +98,5 @@ export default function TokenIntegrationsPage() {
         </ul>
       </section>
     </div>
-  );
+  )
 }

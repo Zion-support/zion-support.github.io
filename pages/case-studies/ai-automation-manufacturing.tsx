@@ -1,26 +1,20 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function CaseStudyPage() {
-  const caseStudy = {
-    id: 'ai-automation-manufacturing',
+  const caseStudy = $2;
     title: 'AI-Powered Manufacturing Automation',
     company: 'Global Manufacturing Corp',
     industry: 'Manufacturing',
     challenge: 'Inefficient production processes, high downtime, and quality control issues',
     solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization',
     results: [
-      '40% increase in production efficiency',
-      '60% reduction in unplanned downtime',
-      '35% improvement in product quality',
-      '25% reduction in operational costs'
+      '40% increase in production efficiency60% reduction in unplanned downtime35% improvement in product quality25% reduction in operational costs'
     ],
-    technologies: ['Machine Learning', 'Computer Vision', 'IoT Sensors', 'Predictive Analytics'],
+    technologies: ['Machine LearningComputer VisionIoT SensorsPredictive Analytics'],
     duration: '6 months',
     teamSize: '8 engineers',
-    featured: true
-  };
+    featured: true},
 
   return (
     <>
@@ -108,7 +102,7 @@ export default function CaseStudyPage() {
                   This case study demonstrates the real impact of AI automation in manufacturing. 
                   Let's discuss how we can help you achieve similar results.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link 
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
@@ -128,5 +122,5 @@ export default function CaseStudyPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

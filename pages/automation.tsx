@@ -1,41 +1,29 @@
 import React from 'react';
 import Head from 'next/head';
 import { RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3 } from 'lucide-react';
-
-
 export default function AutomationPage() {
-  const features = [
-    {
-      icon: <Workflow className="w-8 h-8 text-white" />,
+  const features = $2;
       title: 'Workflow Automation',
       description: 'Create complex workflows with drag-and-drop interface'
     },
     {
-      icon: <Bot className="w-8 h-8 text-white" />,
+      icon: <Bot className = $2;
       title: 'AI-Powered Bots',
       description: 'Intelligent automation agents that learn and adapt'
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
+      icon: <BarChart3 className = $2;
       title: 'Process Analytics',
       description: 'Real-time insights into your automation performance'
     },
     {
-      icon: <Zap className="w-8 h-8 text-white" />,
+      icon: <Zap className = $2;
       title: 'Smart Triggers',
       description: 'Automated responses based on events and conditions'
     }
-  ];
+  ],
 
-  const benefits = [
-    'Reduce manual tasks by 80%',
-    'Improve process accuracy',
-    'Scale operations efficiently',
-    '24/7 automated operations',
-    'Real-time monitoring',
-    'Custom integration support'
-  ];
-
+  const benefits = $2;
   return (
     <>
       <Head>
@@ -154,7 +142,7 @@ export default function AutomationPage() {
 
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Ready to Automate Your Workflows?
             </h2>
@@ -175,5 +163,5 @@ export default function AutomationPage() {
         </section>
       </div>
     </>
-  );
+  )
 }

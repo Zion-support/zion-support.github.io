@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
 export default function InteractiveSearch({ placeholder = 'Search talent, skills, or jobs...' }: { placeholder?: string }) {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState($2);
   return (
-    <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="relative">
+    <motion.div initial={{ opacity: 0, y: 4}} animate={{ opacity: 1, y: 0}} className="relative">
       <input
         value={value}
         onChange={(e) => setValue(e.target.value)}
@@ -14,11 +13,11 @@ export default function InteractiveSearch({ placeholder = 'Search talent, skills
       {value && (
         <button
           onClick={() => setValue('')}
-          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
+          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark: hover: text-gray-300"
         >
           ✕
         </button>
       )}
     </motion.div>
-  );
+  )
 }

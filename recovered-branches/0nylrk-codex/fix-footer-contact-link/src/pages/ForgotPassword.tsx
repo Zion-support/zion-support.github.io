@@ -5,7 +5,6 @@ import { useForm, type UseFormReturn } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Mail } from "lucide-react";
-
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,31 +14,25 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form",
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-
 // Form validation schema
-const forgotPasswordSchema = z.object({
-  email: z.string().email("Please enter a valid email")});
-
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
-
+const forgotPasswordSchema = $2;
+type ForgotPasswordFormValues = $2;
 export default function ForgotPassword() {
-  const { resetPassword, isLoading } = useAuth();
-  const [submitted, setSubmitted] = useState(false);
-  
+  const { resetPassword, isLoading } = useAuth($2);
+  const [submitted, setSubmitted] = useState($2);
   // Initialize react-hook-form
-  const form = useForm({
-    resolver: zodResolver(forgotPasswordSchema),
+  const form = useForm($2);
     defaultValues: {
-      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>;
+      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>,
 
   // Form submission handler
   const onSubmit = async (data: ForgotPasswordFormValues) => {
-    await resetPassword(data.email);
-    setSubmitted(true);
-  };
+    await resetPassword($2);
+    setSubmitted(true)
+  },
 
   return (
     <>
@@ -121,7 +114,7 @@ export default function ForgotPassword() {
             </div>
           </div>
         </div>
-        <div className="hidden lg:block relative w-0 flex-1">
+        <div className="hidden lg: block relative w-0 flex-1">
           <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">
             <div className="flex flex-col justify-center items-center h-full px-8">
               <div className="max-w-md text-center">
@@ -136,5 +129,5 @@ export default function ForgotPassword() {
       </div>
       <Footer />
     </>
-  );
+  )
 }

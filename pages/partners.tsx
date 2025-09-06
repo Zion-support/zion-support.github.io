@@ -4,14 +4,11 @@ import { motion } from 'framer-motion';
 import { 
   Handshake, Globe, Rocket, Brain, Atom, Shield, 
   ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
+} from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-
 export default function PartnersPage() {
-  const partners = [
-    {
-      name: "Microsoft Azure",
+  const partners = $2;
       category: "Cloud Infrastructure",
       description: "Strategic partnership for enterprise cloud solutions and AI services",
       logo: "/api/placeholder/200/100",
@@ -76,11 +73,9 @@ export default function PartnersPage() {
       icon: Brain,
       color: "from-indigo-500 to-purple-500"
     }
-  ];
+  ],
 
-  const partnershipTypes = [
-    {
-      title: "Technology Alliance",
+  const partnershipTypes = $2;
       description: "Deep technical integration and joint product development",
       benefits: ["Shared technology roadmap", "Joint R&D", "Co-innovation"],
       icon: Handshake,
@@ -107,14 +102,14 @@ export default function PartnersPage() {
       icon: Users,
       color: "from-orange-500 to-red-500"
     }
-  ];
+  ],
 
   const stats = [
-    { number: "50+", label: "Strategic Partners", icon: Handshake },
-    { number: "100+", label: "Joint Projects", icon: Rocket },
-    { number: "25+", label: "Countries", icon: Globe },
-    { number: "300%", label: "Growth Rate", icon: TrendingUp }
-  ];
+    { number: "50+", label: "Strategic Partners", icon: Handshake},
+    { number: "100+", label: "Joint Projects", icon: Rocket},
+    { number: "25+", label: "Countries", icon: Globe},
+    { number: "300%", label: "Growth Rate", icon: TrendingUp}
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -132,8 +127,8 @@ export default function PartnersPage() {
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -146,8 +141,8 @@ export default function PartnersPage() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-12"
           >
@@ -170,10 +165,10 @@ export default function PartnersPage() {
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -191,10 +186,10 @@ export default function PartnersPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Partnership Types</h2>
@@ -207,10 +202,10 @@ export default function PartnersPage() {
             {partnershipTypes.map((type, index) => (
               <motion.div
                 key={type.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -236,10 +231,10 @@ export default function PartnersPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Our Partners</h2>
@@ -252,10 +247,10 @@ export default function PartnersPage() {
             {partners.map((partner, index) => (
               <motion.div
                 key={partner.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="p-6">
@@ -313,10 +308,10 @@ export default function PartnersPage() {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Partner with Us?
@@ -324,7 +319,7 @@ export default function PartnersPage() {
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Partnership Inquiry
               </button>
@@ -338,5 +333,5 @@ export default function PartnersPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

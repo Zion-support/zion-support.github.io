@@ -3,32 +3,28 @@ import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useCurrentUser } from '../../utils/auth';
-
-const fetcher = (url: string) => fetch(url).then(r => r.json());
-
+const fetcher = $2;
 export default function DisputeDetailPage() {
-  const router = useRouter();
-  const { id } = router.query as { id?: string };
-  const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
-  const user = useCurrentUser();
-
-  const dispute = data?.dispute;
-  const [activeTab, setActiveTab] = useState<'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'>('Overview');
-  const [message, setMessage] = useState('');
-  const [resolutionSummary, setResolutionSummary] = useState('');
-
+  const router = useRouter($2);
+  const { id } = router.query as { id?: string },
+  const { data, mutate } = useSWR($2);
+  const user = useCurrentUser($2);
+  const dispute = $2;
+  const [activeTab, setActiveTab] = useState<'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'>('Overview'),
+  const [message, setMessage] = useState($2);
+  const [resolutionSummary, setResolutionSummary] = useState($2);
   async function sendMessage() {
-    if (!message.trim() || !id) return;
-    await fetch(`/api/disputes/${id}/message`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ body: message }) });
-    setMessage('');
-    mutate();
+    if (!message.trim() || !id) return,
+    await fetch(`/api/disputes/${id}/message`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ body: message}) }),
+    setMessage($2);
+    mutate()
   }
 
   async function resolve(status?: 'Resolved' | 'Under Review' | 'Open') {
-    if (!id) return;
-    await fetch(`/api/disputes/${id}/resolve`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ resolutionSummary, status }) });
-    setResolutionSummary('');
-    mutate();
+    if (!id) return,
+    await fetch(`/api/disputes/${id}/resolve`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ resolutionSummary, status }) }),
+    setResolutionSummary($2);
+    mutate()
   }
 
   return (
@@ -58,7 +54,7 @@ export default function DisputeDetailPage() {
           </div>
 
           <div className="border-b mb-4 flex gap-4 text-sm">
-            {(['Overview','Messages','Attachments','Admin Notes'] as const).map(t => (
+            {(['OverviewMessagesAttachmentsAdmin Notes'] as const).map(t => (
               <button key={t} onClick={() => setActiveTab(t)} className={`py-2 border-b-2 -mb-px ${activeTab === t ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500'}`}>{t}</button>
             ))}
           </div>
@@ -163,5 +159,5 @@ export default function DisputeDetailPage() {
         </div>
       )}
     </EnhancedLayout>
-  );
+  )
 }

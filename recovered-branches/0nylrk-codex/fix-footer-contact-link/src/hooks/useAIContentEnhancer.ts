@@ -2,67 +2,46 @@
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
-
-type EnhancementType = 
-  | 'resume-summary' 
-  | 'work-description' 
-  | 'job-post' 
-  | 'proposal' 
-  | 'general';
-
+type EnhancementType = $2;
 export interface AIEnhancementOptions {
-  enhancementType: EnhancementType;
-  content?: string;
-  context?: string;
-  instructions?: string;
+  enhancementType: EnhancementType,
+  content?: string,
+  context?: string,
+  instructions?: string
 }
 
 export function useAIContentEnhancer() {
-  const [isEnhancing, setIsEnhancing] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [isEnhancing, setIsEnhancing] = useState($2);
+  const [error, setError] = useState<string | null>(null),
   
-  const enhanceContent = async ({
-    enhancementType,
-    content = '',
-    context = '',
+  const enhanceContent = $2;
+    content = $2;
+    context = $2;
     instructions = ''
   }: AIEnhancementOptions): Promise<string | null> => {
-    setIsEnhancing(true);
-    setError(null);
-    
+    setIsEnhancing($2);
+    setError($2);
     try {
-      const { data, error } = await supabase.functions.invoke('ai-content-enhancer', {
-        body: { 
-          content,
-          enhancementType,
-          context,
-          instructions
-        }
-      });
-      
+      const { data, error } = await supabase.functions.invoke($2);
       if (error) {
-        throw new Error(error.message);
+        throw new Error(error.message)
       }
       
-      return data.enhancedContent;
+      return data.enhancedContent
     } catch (err: any) {
-      const errorMessage = err.message || 'Failed to enhance content';
-      setError(errorMessage);
-      toast({
-        title: "AI Enhancement Failed",
-        description: errorMessage,
-        variant: "destructive"
-      });
-      console.error('Enhancement error:', err);
-      return null;
+      const errorMessage = $2;
+      setError($2);
+      toast($2);
+      console.error($2);
+      return null
     } finally {
-      setIsEnhancing(false);
+      setIsEnhancing(false)
     }
-  };
+  },
   
   return {
     enhanceContent,
     isEnhancing,
     error
-  };
+  }
 }

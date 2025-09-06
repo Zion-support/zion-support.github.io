@@ -5,7 +5,7 @@ import {
   Brain, Shield, Code, CheckCircle, Zap, 
   ArrowRight, Star, TrendingUp, Users, 
   Lock, Eye, BarChart3, Globe, Award
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AICodeReviewSecurityScanner = () => {
   return (
@@ -466,7 +466,7 @@ const AICodeReviewSecurityScanner = () => {
               transition={{ duration: 0.8 }}
             >
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-              <div className="grid md:grid-cols-3 gap-8 text-gray-300">
+              <div className="grid md: grid-cols-3 gap-8 text-gray-300">
                 <div>
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
                     <Users className="w-6 h-6" />
@@ -498,7 +498,7 @@ const AICodeReviewSecurityScanner = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+},
 
-export default AICodeReviewSecurityScanner;
+export default AICodeReviewSecurityScanner,

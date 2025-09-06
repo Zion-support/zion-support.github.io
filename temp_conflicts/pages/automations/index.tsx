@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-
 export default function AutomationsPage() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-12">
@@ -33,10 +32,10 @@ export default function AutomationsPage() {
             Optionally uses AI to produce small, useful artifacts (e.g., growth experiments), committed into the repository.
           </p>
           <div className="mt-4 flex gap-3">
-            <Link href="/automations/curation"><a className="rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-indigo-700">View Curated Output</a></Link>
+            <Link href="/automations/curation"><a className="rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover: bg-indigo-700">View Curated Output</a></Link>
           </div>
         </div>
       </div>
     </main>
-  );
+  )
 }

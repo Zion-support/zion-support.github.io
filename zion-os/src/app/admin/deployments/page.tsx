@@ -1,8 +1,8 @@
-"use client";
+"use client",
 
 import { useState, useEffect } from "react";
 import { 
-  Rocket, 
+  Rocket,
   Clock, 
   CheckCircle, 
   AlertCircle, 
@@ -24,22 +24,22 @@ import {
   Pause,
   StopCircle,
   MapPin
-} from "lucide-react";
+} from "lucide-react",
 
 interface Deployment {
-  id: string;
-  instanceName: string;
-  status: 'pending' | 'deploying' | 'completed' | 'failed' | 'paused';
-  createdAt: string;
-  updatedAt: string;
-  progress: number;
-  features: string[];
-  vertical: string;
-  governanceType: string;
-  domain?: string;
-  subdomain?: string;
-  region?: string;
-  country?: string;
+  id: string,
+  instanceName: string,
+  status: 'pending' | 'deploying' | 'completed' | 'failed' | 'paused',
+  createdAt: string,
+  updatedAt: string,
+  progress: number,
+  features: string[],
+  vertical: string,
+  governanceType: string,
+  domain?: string,
+  subdomain?: string,
+  region?: string,
+  country?: string
 }
 
 // Mock data - replace with actual API calls
@@ -48,8 +48,8 @@ const mockDeployments: Deployment[] = [
     id: "deploy-001",
     instanceName: "Zion Health Network",
     status: "completed",
-    createdAt: "2024-01-15T10:30:00Z",
-    updatedAt: "2024-01-15T11:45:00Z",
+    createdAt: "2024-01-15T10: 30: 00Z",
+    updatedAt: "2024-01-15T11: 45: 00Z",
     progress: 100,
     features: ["marketplace", "zion_gpt", "kyc_aml", "dao_voting"],
     vertical: "HEALTH",
@@ -62,8 +62,8 @@ const mockDeployments: Deployment[] = [
     id: "deploy-002",
     instanceName: "EduDAO Academy",
     status: "deploying",
-    createdAt: "2024-01-15T14:20:00Z",
-    updatedAt: "2024-01-15T15:10:00Z",
+    createdAt: "2024-01-15T14: 20: 00Z",
+    updatedAt: "2024-01-15T15: 10: 00Z",
     progress: 65,
     features: ["academy", "zion_gpt", "incubator_grants"],
     vertical: "EDUCATION",
@@ -76,8 +76,8 @@ const mockDeployments: Deployment[] = [
     id: "deploy-003",
     instanceName: "LegalTech DAO",
     status: "pending",
-    createdAt: "2024-01-15T16:00:00Z",
-    updatedAt: "2024-01-15T16:00:00Z",
+    createdAt: "2024-01-15T16: 00: 00Z",
+    updatedAt: "2024-01-15T16: 00: 00Z",
     progress: 0,
     features: ["marketplace", "onchain_contracts", "web3_login"],
     vertical: "LAW",
@@ -86,70 +86,47 @@ const mockDeployments: Deployment[] = [
     region: "Asia Pacific",
     country: "Singapore"
   }
-];
+],
 
 export default function DeploymentsPage() {
-  const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments);
-  const [filter, setFilter] = useState<'all' | 'pending' | 'deploying' | 'completed' | 'failed'>('all');
+  const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments),
+  const [filter, setFilter] = useState<'all' | 'pending' | 'deploying' | 'completed' | 'failed'>('all'),
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'completed': return 'text-green-400';
-      case 'deploying': return 'text-blue-400';
-      case 'pending': return 'text-yellow-400';
-      case 'failed': return 'text-red-400';
-      case 'paused': return 'text-orange-400';
-      default: return 'text-gray-400';
+  const getStatusColor = $2;
+      case 'deploying': return 'text-blue-400',
+      case 'pending': return 'text-yellow-400',
+      case 'failed': return 'text-red-400',
+      case 'paused': return 'text-orange-400',
+      default: return 'text-gray-400'
     }
-  };
+  },
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'completed': return <CheckCircle className="w-5 h-5" />;
-      case 'deploying': return <Activity className="w-5 h-5" />;
-      case 'pending': return <Clock className="w-5 h-5" />;
-      case 'failed': return <AlertCircle className="w-5 h-5" />;
-      case 'paused': return <Pause className="w-5 h-5" />;
-      default: return <Clock className="w-5 h-5" />;
-    }
-  };
-
-  const getVerticalIcon = (vertical: string) => {
-    switch (vertical) {
-      case "HEALTH": return <Shield className="w-4 h-4 text-blue-400" />;
-      case "EDUCATION": return <Building2 className="w-4 h-4 text-green-400" />;
-      case "LAW": return <Shield className="w-4 h-4 text-purple-400" />;
-      case "GOV": return <Users className="w-4 h-4 text-red-400" />;
-      default: return <Globe className="w-4 h-4 text-gray-400" />;
-    }
-  };
-
-  const getGovernanceIcon = (type: string) => {
-    switch (type) {
-      case "ADMIN": return <User className="w-4 h-4 text-yellow-400" />;
-      case "DAO_LITE": return <Users className="w-4 h-4 text-blue-400" />;
-      case "DAO_FULL": return <Zap className="w-4 h-4 text-purple-400" />;
-      default: return <User className="w-4 h-4 text-gray-400" />;
-    }
-  };
-
+  const getStatusIcon = $2;
+      case 'deploying': return <Activity className = $2;
+      case 'pending': return <Clock className = $2;
+      case 'failed': return <AlertCircle className = $2;
+      case 'paused': return <Pause className = $2;
+      default: return <Clock className = $2;
+  const getVerticalIcon = $2;
+      case "EDUCATION": return <Building2 className = $2;
+      case "LAW": return <Shield className = $2;
+      case "GOV": return <Users className = $2;
+      default: return <Globe className = $2;
+  const getGovernanceIcon = $2;
+      case "DAO_LITE": return <Users className = $2;
+      case "DAO_FULL": return <Zap className = $2;
+      default: return <User className = $2;
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       month: 'short',
       day: 'numeric',
       hour: '2-digit',
       minute: '2-digit'
-    });
-  };
+    })
+  },
 
-  const filteredDeployments = deployments.filter(deployment => 
-    filter === 'all' || deployment.status === filter
-  );
-
-  const getStatusCount = (status: string) => {
-    return deployments.filter(d => d.status === status).length;
-  };
-
+  const filteredDeployments = deployments.filter($2);
+  const getStatusCount = $2;
   return (
     <div className="space-y-8">
       {/* Header Section */}
@@ -310,7 +287,7 @@ export default function DeploymentsPage() {
                 {(deployment.region || deployment.country) && (
                   <div className="flex items-center gap-2 text-white/70">
                     <MapPin className="w-4 h-4" />
-                    <span>{[deployment.region, deployment.country].filter(Boolean).join(', ')}</span>
+                    <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>
                   </div>
                 )}
               </div>
@@ -321,7 +298,7 @@ export default function DeploymentsPage() {
                 <div className="flex flex-wrap gap-2">
                   {deployment.features.slice(0, 4).map((feature) => (
                     <span key={feature} className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">
-                      {feature.replace('_', ' ')}
+                      {feature.replace('_ ')}
                     </span>
                   ))}
                   {deployment.features.length > 4 && (
@@ -418,5 +395,5 @@ export default function DeploymentsPage() {
         </div>
       )}
     </div>
-  );
+  )
 }

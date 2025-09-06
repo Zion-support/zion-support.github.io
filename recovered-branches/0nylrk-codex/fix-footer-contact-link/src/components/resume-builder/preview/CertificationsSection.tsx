@@ -1,22 +1,19 @@
 
 import { Certification } from '@/types/resume';
 import { format } from 'date-fns';
-
 interface CertificationsSectionProps {
-  certifications: Certification[];
+  certifications: Certification[]
 }
 
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {
-  const formatDate = (date: Date | string | undefined) => {
-    if (!date) return '';
+  const formatDate = $2;
     if (typeof date === 'string') {
-      return format(new Date(date), 'MMM yyyy');
+      return format(new Date(date), 'MMM yyyy')
     }
-    return format(date, 'MMM yyyy');
-  };
+    return format(date, 'MMM yyyy')
+  },
 
-  if (certifications.length === 0) return null;
-  
+  if (certifications.length = $2;
   return (
     <div>
       <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>
@@ -44,5 +41,5 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
         ))}
       </div>
     </div>
-  );
+  )
 }

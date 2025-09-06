@@ -1,25 +1,23 @@
-"use client";
+"use client",
 
 import { useState } from "react";
-
 interface PricingTier {
-  name: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  cta: string;
-  ctaLink: string;
-}
+  name: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular?: boolean,
+  cta: string,
+  ctaLink: string}
 
 interface ServicePricing {
-  serviceName: string;
-  category: string;
-  description: string;
-  tiers: PricingTier[];
-  features: string[];
-  benefits: string[];
+  serviceName: string,
+  category: string,
+  description: string,
+  tiers: PricingTier[],
+  features: string[],
+  benefits: string[]
 }
 
 const servicePricing: ServicePricing[] = [
@@ -240,17 +238,15 @@ const servicePricing: ServicePricing[] = [
       }
     ]
   }
-];
+],
 
-const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"];
+const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"],
 
 export default function PricingPage() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
+  const [selectedCategory, setSelectedCategory] = useState($2);
   const filteredServices = selectedCategory === "All" 
     ? servicePricing 
-    : servicePricing.filter(service => service.category === selectedCategory);
-
+    : servicePricing.filter($2);
   return (
     <div className="space-y-8">
       <div className="text-center space-y-4">
@@ -406,7 +402,7 @@ export default function PricingPage() {
         <p className="opacity-80">
           Our team is here to help you choose the right plan for your business.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-4">
           <div>
             <h3 className="font-semibold">Phone</h3>
             <p className="opacity-80">+1 302 464 0950</p>
@@ -422,5 +418,5 @@ export default function PricingPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

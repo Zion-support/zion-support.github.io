@@ -1,36 +1,21 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SERVICE_CATEGORIES } from '@/data/servicesData';
-
 export function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
-    budget: '',
-    timeline: ''
-  });
-
-  const [selectedService, setSelectedService] = useState('');
-
+  const [formData, setFormData] = useState($2);
+  const [selectedService, setSelectedService] = useState($2);
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
+    const { name, value } = e.target,
+    setFormData(prev = $2;
       [name]: value
-    }));
-  };
+    }))
+  },
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault($2);
     // Here you would typically send the form data to your backend
-    const mailtoLink = `mailto:kleber@ziontechgroup.com?subject=Service Inquiry from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ACompany: ${formData.company}%0D%0APhone: ${formData.phone}%0D%0AService: ${formData.service}%0D%0ABudget: ${formData.budget}%0D%0ATimeline: ${formData.timeline}%0D%0AMessage: ${formData.message}`;
-    window.location.href = mailtoLink;
-  };
-
+    const mailtoLink = $2;
+    window.location.href = $2;
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}
@@ -412,7 +397,7 @@ export function ContactPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a 
-              href="tel:+13024640950"
+              href="tel: +13024640950"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
             >
               📞 Call +1 302 464 0950
@@ -427,5 +412,5 @@ export function ContactPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

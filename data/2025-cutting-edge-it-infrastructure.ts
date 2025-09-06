@@ -1,45 +1,42 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface CuttingEdgeITInfrastructureService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [
   // Quantum-Secure Cloud Infrastructure
@@ -51,16 +48,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     period: '/month',
     description: 'Revolutionary cloud infrastructure platform featuring quantum-resistant encryption, zero-trust architecture, and autonomous security management for enterprise-grade applications.',
     features: [
-      'Quantum-resistant encryption algorithms',
-      'Zero-trust security architecture',
-      'Autonomous security management',
-      'Multi-cloud orchestration',
-      'Real-time threat detection',
-      'Compliance automation (SOC2, ISO27001)',
-      'AI-powered resource optimization',
-      'Global edge computing network',
-      '99.999% uptime guarantee',
-      '24/7 security monitoring'
+      'Quantum-resistant encryption algorithmsZero-trust security architectureAutonomous security managementMulti-cloud orchestrationReal-time threat detectionCompliance automation (SOC2, ISO27001)AI-powered resource optimizationGlobal edge computing network99.999% uptime guarantee24/7 security monitoring'
     ],
     popular: true,
     icon: '☁️',
@@ -92,8 +80,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     launchDate: '2025-01-10',
     customers: 8,
     rating: 4.9,
-    reviews: 5
-  },
+    reviews: 5},
 
   // Edge Computing Orchestration Platform
   {
@@ -104,16 +91,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     period: '/month',
     description: 'Advanced edge computing platform that orchestrates distributed computing resources across global edge locations with AI-powered optimization and real-time performance monitoring.',
     features: [
-      'Global edge computing network',
-      'AI-powered resource optimization',
-      'Real-time performance monitoring',
-      'Automatic load balancing',
-      'Edge-to-cloud synchronization',
-      'Latency optimization algorithms',
-      'Multi-region deployment',
-      'Edge security management',
-      'Cost optimization analytics',
-      'API for edge application development'
+      'Global edge computing networkAI-powered resource optimizationReal-time performance monitoringAutomatic load balancingEdge-to-cloud synchronizationLatency optimization algorithmsMulti-region deploymentEdge security managementCost optimization analyticsAPI for edge application development'
     ],
     popular: true,
     icon: '🌐',
@@ -145,8 +123,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     launchDate: '2025-01-15',
     customers: 25,
     rating: 4.8,
-    reviews: 18
-  },
+    reviews: 18},
 
   // Autonomous DevOps Platform
   {
@@ -157,16 +134,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     period: '/month',
     description: 'Revolutionary DevOps platform that autonomously manages software development, testing, deployment, and operations using advanced AI and machine learning algorithms.',
     features: [
-      'AI-powered code review and testing',
-      'Autonomous deployment optimization',
-      'Intelligent monitoring and alerting',
-      'Automated incident response',
-      'Performance optimization algorithms',
-      'Security vulnerability scanning',
-      'Cost optimization analytics',
-      'Multi-environment management',
-      'GitOps workflow automation',
-      'Real-time collaboration tools'
+      'AI-powered code review and testingAutonomous deployment optimizationIntelligent monitoring and alertingAutomated incident responsePerformance optimization algorithmsSecurity vulnerability scanningCost optimization analyticsMulti-environment managementGitOps workflow automationReal-time collaboration tools'
     ],
     popular: true,
     icon: '⚡',
@@ -198,8 +166,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     launchDate: '2025-01-20',
     customers: 38,
     rating: 4.7,
-    reviews: 25
-  },
+    reviews: 25},
 
   // Blockchain Infrastructure Platform
   {
@@ -210,16 +177,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     period: '/month',
     description: 'Enterprise-grade blockchain platform featuring scalable infrastructure, AI-powered consensus mechanisms, and automated smart contract management for business applications.',
     features: [
-      'Scalable blockchain infrastructure',
-      'AI-powered consensus algorithms',
-      'Smart contract automation',
-      'Enterprise-grade security',
-      'Multi-chain interoperability',
-      'Real-time transaction monitoring',
-      'Compliance and audit tools',
-      'API for business integration',
-      'Performance analytics dashboard',
-      '24/7 blockchain monitoring'
+      'Scalable blockchain infrastructureAI-powered consensus algorithmsSmart contract automationEnterprise-grade securityMulti-chain interoperabilityReal-time transaction monitoringCompliance and audit toolsAPI for business integrationPerformance analytics dashboard24/7 blockchain monitoring'
     ],
     popular: true,
     icon: '🔗',
@@ -251,8 +209,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     launchDate: '2025-01-25',
     customers: 15,
     rating: 4.8,
-    reviews: 12
-  },
+    reviews: 12},
 
   // Quantum Networking Platform
   {
@@ -263,16 +220,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     period: '/month',
     description: 'Revolutionary networking platform featuring quantum encryption, AI-powered traffic optimization, and autonomous network management for ultra-secure, high-performance communications.',
     features: [
-      'Quantum encryption protocols',
-      'AI-powered traffic optimization',
-      'Autonomous network management',
-      'Zero-latency routing',
-      'Quantum key distribution',
-      'Real-time security monitoring',
-      'Global network optimization',
-      'API for network integration',
-      'Performance analytics',
-      '24/7 network monitoring'
+      'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integrationPerformance analytics24/7 network monitoring'
     ],
     popular: true,
     icon: '🌌',
@@ -304,6 +252,5 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     launchDate: '2025-02-01',
     customers: 6,
     rating: 4.9,
-    reviews: 4
-  }
-];
+    reviews: 4}
+],

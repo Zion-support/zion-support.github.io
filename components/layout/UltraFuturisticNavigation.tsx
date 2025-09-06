@@ -2,28 +2,22 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield } from 'lucide-react';
-
 interface UltraFuturisticNavigationProps {
-  className?: string;
+  className?: string
 }
 
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState($2);
+  const [isScrolled, setIsScrolled] = useState($2);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = $2;
+    window.addEventListener($2);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const navigationItems = [
-    {
-      name: 'Services',
+  const navigationItems = $2;
       href: '/services',
       hasDropdown: true,
       dropdownItems: [
@@ -38,13 +32,12 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Pricing', href: '/pricing' }
-  ];
+  ],
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  },
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -57,7 +50,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0}}
             transition={{ duration: 0.6 }}
             className="flex items-center space-x-3"
           >
@@ -91,7 +84,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                       {activeDropdown === item.name && (
                         <motion.div
                           initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          animate={{ opacity: 1, y: 0, scale: 1}}
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
                           transition={{ duration: 0.2 }}
                           className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
@@ -176,9 +169,9 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, height: 0}}
             animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            exit={{ opacity: 0, height: 0}}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 overflow-hidden"
           >
@@ -201,7 +194,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                       {activeDropdown === item.name && (
                         <motion.div
                           initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
+                          animate={{ opacity: 1, y: 0}}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
                           className="ml-4 mt-2 space-y-2"
@@ -268,5 +261,5 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
         )}
       </AnimatePresence>
     </nav>
-  );
+  )
 }

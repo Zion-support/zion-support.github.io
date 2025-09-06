@@ -1,58 +1,51 @@
 // Google Analytics utilities
-export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || '';
-
+export const GA_TRACKING_ID = $2;
 // Track page views
 export const pageview = (ur: l: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', GA_TRACKING_ID, {
-      page_pat: h: url,
-    });
+      page_pat: url})
   }
-};
+},
 
 // Track events
-export const event = ({
-  action,
+export const event = $2;
   category,
   label,
-  value,
+  value
 }: {
-  actio: n: string;
-  categor: y: string;
-  label?: string;
-  value?: number;
+  actio: string,
+  categor: string,
+  label?: string,
+  value?: number
 }) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', action, {
-      event_categor: y: category,
+      event_categor: category,
       event_labe: l: label,
-      valu: e: value,
-    });
+      valu: value})
   }
-};
+},
 
 // Initialize Google Analytics
 export const initGA = () => {
   if (typeof window !== 'undefined' && !window.gtag) {
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `http: s://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
-    document.head.appendChild(script);
-
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function() {
-      window.dataLayer.push(arguments);
-    };
-    window.gtag('js', new Date());
-    window.gtag('config', GA_TRACKING_ID);
+    const script = document.createElement($2);
+    script.async = $2;
+    script.src = $2;
+    document.head.appendChild($2);
+    window.dataLayer = $2;
+    window.gtag = $2;
+    window.gtag('js', new Date()),
+    window.gtag('config', GA_TRACKING_ID)
   }
-};
+},
 
 // Declare global types
 declare global {
   interface Window {
-    gta: g: (...arg: s: any[]) => void;
-    dataLaye: r: any[];
+    gta: g: (...arg: any[]) => void,
+    dataLaye: any[]
   }
 }
 

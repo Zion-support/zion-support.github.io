@@ -3,76 +3,66 @@ import { useState } from "react";
 import { TALENT_PROFILES } from "@/data/talentData";
 import { JOB_POSTS } from "@/data/jobsData";
 import { PROJECTS } from "@/data/projectsData";
-
 export interface SearchResult {
-  id: string;
-  type: "talent" | "job" | "project";
-  title: string;
-  description: string;
-}
+  id: string,
+  type: "talent" | "job" | "project",
+  title: string,
+  description: string}
 
 interface SearchFilters {
-  type?: string | null;
-  skills?: string[] | null;
-  location?: string | null;
-  budget?: { min: number; max: number } | null;
-  availability?: string | null;
+  type?: string | null,
+  skills?: string[] | null,
+  location?: string | null,
+  budget?: { min: number, max: number} | null,
+  availability?: string | null
 }
 
 export function useAISearch() {
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [loading, setLoading] = useState(false);
-
+  const [results, setResults] = useState<SearchResult[]>([]),
+  const [loading, setLoading] = useState($2);
   const search = async (query: string) => {
-    setLoading(true);
+    setLoading($2);
     try {
-      const response = await fetch(
-        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search",
+      const response = $2;
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query })}
-      );
-      const data = await response.json();
-      const filters: SearchFilters = data.filters || {};
-
-      const items: SearchResult[] = [];
-      const matchSkill = (skills: string[] | undefined) => {
-        if (!filters.skills || filters.skills.length === 0) return true;
+      ),
+      const data = await response.json($2);
+      const filters: SearchFilters = $2;
+      const items: SearchResult[] = [],
+      const matchSkill = $2;
         return skills?.some((s) =>
           filters.skills!.some((f) => s.toLowerCase().includes(f.toLowerCase()))
-        );
-      };
+        )
+      },
 
-      if (!filters.type || filters.type === "talent" || filters.type === "all") {
-        TALENT_PROFILES.forEach((t) => {
-          if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return;
-          if (!matchSkill(t.skills)) return;
-          items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });
-        });
+      if (!filters.type || filters.type = $2;
+          if (!matchSkill(t.skills)) return,
+          items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title })
+        })
       }
 
-      if (!filters.type || filters.type === "job" || filters.type === "all") {
-        JOB_POSTS.forEach((j) => {
-          if (!matchSkill(j.skills)) return;
-          items.push({ id: j.id, type: "job", title: j.title, description: j.description });
-        });
+      if (!filters.type || filters.type = $2;
+          items.push({ id: j.id, type: "job", title: j.title, description: j.description })
+        })
       }
 
       if (!filters.type || filters.type === "project" || filters.type === "all") {
         PROJECTS.forEach((p) => {
-          items.push({ id: p.id, type: "project", title: p.job?.title || "Project", description: p.scope_summary });
-        });
+          items.push({ id: p.id, type: "project", title: p.job?.title || "Project", description: p.scope_summary })
+        })
       }
 
-      setResults(items);
+      setResults(items)
     } catch (err) {
-      console.error("search error", err);
-      setResults([]);
+      console.error($2);
+      setResults([])
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  },
 
-  return { results, loading, search };
+  return { results, loading, search }
 }

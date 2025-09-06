@@ -9,18 +9,15 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge";
 import { Search, Filter } from 'lucide-react'
 import { SEO } from "@/components/SEO";
-
 // Mock data for support requests
-const MOCK_SUPPORT_REQUESTS = [
-  {
-    id: "SR-1001",
+const MOCK_SUPPORT_REQUESTS = $2;
     user: "john.doe@example.com",
     userId: "user-123",
     issue: "Cannot access account after password reset",
     status: "open",
     priority: "high",
-    createdAt: "2023-12-15T14:30:00Z",
-    lastUpdated: "2023-12-15T15:45:00Z",
+    createdAt: "2023-12-15T14: 30: 00Z",
+    lastUpdated: "2023-12-15T15: 45: 00Z",
     category: "authentication"
   },
   {
@@ -30,8 +27,8 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "Payment failed but funds were deducted",
     status: "in-progress",
     priority: "high",
-    createdAt: "2023-12-14T09:15:00Z",
-    lastUpdated: "2023-12-15T13:20:00Z",
+    createdAt: "2023-12-14T09: 15: 00Z",
+    lastUpdated: "2023-12-15T13: 20: 00Z",
     category: "billing"
   },
   {
@@ -41,8 +38,8 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "Unable to download invoice PDF",
     status: "open",
     priority: "medium",
-    createdAt: "2023-12-15T11:00:00Z",
-    lastUpdated: "2023-12-15T11:00:00Z",
+    createdAt: "2023-12-15T11: 00: 00Z",
+    lastUpdated: "2023-12-15T11: 00: 00Z",
     category: "billing"
   },
   {
@@ -52,8 +49,8 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "API integration documentation is outdated",
     status: "open",
     priority: "low",
-    createdAt: "2023-12-13T16:45:00Z", 
-    lastUpdated: "2023-12-13T16:45:00Z",
+    createdAt: "2023-12-13T16: 45: 00Z", 
+    lastUpdated: "2023-12-13T16: 45: 00Z",
     category: "api"
   },
   {
@@ -63,8 +60,8 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "Dispute with freelancer over delivered work quality",
     status: "in-progress",
     priority: "high",
-    createdAt: "2023-12-12T10:30:00Z",
-    lastUpdated: "2023-12-15T09:15:00Z",
+    createdAt: "2023-12-12T10: 30: 00Z",
+    lastUpdated: "2023-12-15T09: 15: 00Z",
     category: "disputes"
   },
   {
@@ -74,8 +71,8 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "Profile verification pending for over 7 days",
     status: "resolved",
     priority: "medium",
-    createdAt: "2023-12-08T13:20:00Z",
-    lastUpdated: "2023-12-15T08:30:00Z",
+    createdAt: "2023-12-08T13: 20: 00Z",
+    lastUpdated: "2023-12-15T08: 30: 00Z",
     category: "verification"
   },
   {
@@ -85,58 +82,31 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "Cannot upload portfolio images",
     status: "resolved",
     priority: "medium",
-    createdAt: "2023-12-10T15:10:00Z",
-    lastUpdated: "2023-12-13T11:25:00Z",
+    createdAt: "2023-12-10T15: 10: 00Z",
+    lastUpdated: "2023-12-13T11: 25: 00Z",
     category: "profile"
   }
-];
+],
 
 export default function SupportRequests() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [statusFilter, setStatusFilter] = useState<string | null>(null);
-  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState($2);
+  const [statusFilter, setStatusFilter] = useState<string | null>(null),
+  const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
   
   // Apply filters to the request data
-  const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
-    // Apply search query filter
-    if (searchQuery && 
-        !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
-      return false;
-    }
-    
-    // Apply status filter
-    if (statusFilter && request.status !== statusFilter) {
-      return false;
-    }
-    
-    // Apply priority filter
-    if (priorityFilter && request.priority !== priorityFilter) {
-      return false;
-    }
-    
-    // Apply category filter
-    if (categoryFilter && request.category !== categoryFilter) {
-      return false;
-    }
-    
-    return true;
-  });
-  
+  const filteredRequests = $2;
   // Count by status for the summary dashboard
-  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
-  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
-  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
-  const totalCount = MOCK_SUPPORT_REQUESTS.length;
-  
+  const openCount = $2;
+  const inProgressCount = $2;
+  const resolvedCount = $2;
+  const totalCount = $2;
   const resetFilters = () => {
-    setSearchQuery("");
-    setStatusFilter(null);
-    setPriorityFilter(null);
-    setCategoryFilter(null);
-  };
+    setSearchQuery($2);
+    setStatusFilter($2);
+    setPriorityFilter($2);
+    setCategoryFilter(null)
+  },
   
   return (
     <>
@@ -347,5 +317,5 @@ export default function SupportRequests() {
         </Tabs>
       </div>
     </>
-  );
+  )
 }

@@ -5,9 +5,8 @@ import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from 'lucide-react'
 
 interface RewardsCardProps {
-  rewards: ReferralReward[];
-  isLoading: boolean;
-}
+  rewards: ReferralReward[],
+  isLoading: boolean}
 
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   if (isLoading) {
@@ -26,7 +25,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           </div>
         </CardContent>
       </Card>
-    );
+    )
   }
 
   if (rewards.length === 0) {
@@ -48,7 +47,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           </div>
         </CardContent>
       </Card>
-    );
+    )
   }
 
   return (
@@ -96,5 +95,5 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }

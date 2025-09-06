@@ -1,5 +1,4 @@
-// Hook for useProjects;
-export const useUseProjects: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
+// Hook for useProjects,
+export const useUseProjects: unknown = $2;
+  return {}
+},

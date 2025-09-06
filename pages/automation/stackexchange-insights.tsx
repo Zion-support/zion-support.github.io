@@ -1,9 +1,8 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/stackexchange-insights.json';
-
 export default function StackExchangeInsightsPage() {
-  const items: any[] = (data?.items || []).slice(0, 50);
+  const items: any[] = (data?.items || []).slice($2);
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -21,5 +20,5 @@ export default function StackExchangeInsightsPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  );
+  )
 }

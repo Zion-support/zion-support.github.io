@@ -9,61 +9,46 @@ import axios from "axios";
 import { Loader2 } from 'lucide-react'
 import { useTranslation } from "react-i18next";
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 export function ITServiceRequestHero() {
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [company, setCompany] = useState("");
-  const [location, setLocation] = useState("");
-  const [details, setDetails] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-  const { t } = useTranslation();
-
+  const [name, setName] = useState($2);
+  const [email, setEmail] = useState($2);
+  const [phone, setPhone] = useState($2);
+  const [company, setCompany] = useState($2);
+  const [location, setLocation] = useState($2);
+  const [details, setDetails] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const { toast } = useToast($2);
+  const { t } = useTranslation($2);
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
+    e.preventDefault($2);
     if (!name || !email || !location) {
-      toast({
-        title: "Missing Information",
-        description: "Name, email and location are required.",
-        variant: "destructive"});
-      return;
+      toast($2);
+      return
     }
 
-    setIsSubmitting(true);
+    setIsSubmitting($2);
     try {
-      const res = await axios.post("/api/onsite-request", {
-        name,
-        email,
-        phone,
-        company,
-        location,
-        details});
-
+      const res = await axios.post($2);
       if (res.status === 200) {
-        toast({
-          title: "Request received",
-          description: "We've received your request. Our team will reach out shortly."});
-        setName("");
-        setEmail("");
-        setPhone("");
-        setCompany("");
-        setLocation("");
-        setDetails("");
+        toast($2);
+        setName($2);
+        setEmail($2);
+        setPhone($2);
+        setCompany($2);
+        setLocation($2);
+        setDetails("")
       }
     } catch (err: any) {
-      logErrorToProduction(err);
+      logErrorToProduction($2);
       toast({
         title: "Submission Failed",
         description: "There was an error submitting your request.",
-        variant: "destructive"});
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  },
 
   return (
     <section
@@ -94,7 +79,7 @@ export function ITServiceRequestHero() {
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
                 required
               />
-              <p className="text-xs text-zion-slate-light">{t('onsite_form.name_helper', 'Enter the main contact for this request.')}</p>
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.name_helperEnter the main contact for this request.')}</p>
               <Input
                 type="email"
                 value={email}
@@ -108,26 +93,26 @@ export function ITServiceRequestHero() {
                 onChange={(e) => setPhone(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
               />
-              <p className="text-xs text-zion-slate-light">{t('onsite_form.phone_helper', 'Include a direct line for urgent updates.')}</p>
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.phone_helperInclude a direct line for urgent updates.')}</p>
               <Input
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
               />
-              <p className="text-xs text-zion-slate-light">{t('onsite_form.company_helper', 'Who do you represent?')}</p>
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.company_helperWho do you represent?')}</p>
               <Input
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
                 required
               />
-              <p className="text-xs text-zion-slate-light">{t('onsite_form.location_helper', 'Where do you need on-site support?')}</p>
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.location_helperWhere do you need on-site support?')}</p>
               <Textarea
                 value={details}
                 onChange={(e) => setDetails(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]"
               />
-              <p className="text-xs text-zion-slate-light">{t('onsite_form.details_helper', 'Share any important context for our technicians.')}</p>
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.details_helperShare any important context for our technicians.')}</p>
               <Button
                 type="submit"
                 disabled={isSubmitting}
@@ -141,10 +126,10 @@ export function ITServiceRequestHero() {
             </form>
           </div>
           <p className="text-xs text-center text-zion-slate-light mt-3">
-            {t('onsite_form.privacy_notice', 'Rest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.')}
+            {t('onsite_form.privacy_noticeRest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.')}
           </p>
         </div>
       </div>
     </section>
-  );
+  )
 }

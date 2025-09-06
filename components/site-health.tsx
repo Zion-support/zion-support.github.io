@@ -1,5 +1,4 @@
 import Head from 'next/head';
-
 export default function SiteHealth() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -72,7 +71,7 @@ export default function SiteHealth() {
 
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Artifacts</h2>
-          <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 sm: grid-cols-2">
             <a href="/reports/seo/latest.json" className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">Latest SEO Report JSON ↗</a>
             <a href="/reports/seo/index.html" className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">SEO Audit Dashboard →</a>
           </div>
@@ -90,5 +89,5 @@ export default function SiteHealth() {
         </section>
       </main>
     </div>
-  );
+  )
 }

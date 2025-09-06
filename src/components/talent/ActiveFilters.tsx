@@ -5,17 +5,17 @@ import { Button } from "@/components/ui/button";
 import { X } from 'lucide-react'
 
 interface ActiveFiltersProps {
-  selectedSkills: string[];
-  toggleSkill: (skill: string) => void;
-  selectedAvailability: string[];
-  toggleAvailability: (status: string) => void;
-  selectedRegions: string[];
-  toggleRegion: (region: string) => void;
-  priceRange: [number, number];
-  setPriceRange: (range: [number, number]) => void;
-  experienceRange: [number, number];
-  setExperienceRange: (range: [number, number]) => void;
-  clearFilters: () => void;
+  selectedSkills: string[],
+  toggleSkill: (skill: string) => void,
+  selectedAvailability: string[],
+  toggleAvailability: (status: string) => void,
+  selectedRegions: string[],
+  toggleRegion: (region: string) => void,
+  priceRange: [number, number],
+  setPriceRange: (range: [number, number]) => void,
+  experienceRange: [number, number],
+  setExperienceRange: (range: [number, number]) => void,
+  clearFilters: () => void
 }
 
 export function ActiveFilters({
@@ -32,16 +32,8 @@ export function ActiveFilters({
   clearFilters
 }: ActiveFiltersProps) {
   // Check if any filters are active
-  const hasActiveFilters = 
-    selectedSkills.length > 0 || 
-    selectedAvailability.length > 0 || 
-    selectedRegions.length > 0 ||
-    experienceRange[0] !== 0 ||
-    experienceRange[1] !== 15 ||
-    priceRange[0] !== 50 ||
-    priceRange[1] !== 200;
-  
-  if (!hasActiveFilters) return null;
+  const hasActiveFilters = $2;
+  if (!hasActiveFilters) return null,
 
   return (
     <div className="mb-6 flex flex-wrap gap-2 items-center">
@@ -106,10 +98,10 @@ export function ActiveFilters({
         variant="ghost" 
         size="sm" 
         onClick={clearFilters}
-        className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+        className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
       >
         Clear All
       </Button>
     </div>
-  );
+  )
 }

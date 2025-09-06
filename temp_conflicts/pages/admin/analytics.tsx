@@ -5,23 +5,22 @@ import SimpleDoughnutChart from '../../components/charts/SimpleDoughnutChart';
 import { KpiBadge } from '../../components/ui/InteractiveStats';
 import { exportCsv, exportSvgAsPng } from '../../utils/exporters';
 import useRole from '../../hooks/useRole';
-
 export default function AdminAnalyticsPage() {
-  const [data, setData] = useState<any>(null);
-  const { role, loading } = useRole();
+  const [data, setData] = useState<any>(null),
+  const { role, loading } = useRole(),
 
   useEffect(() => {
-    fetch('/api/analytics/admin').then(r => r.json()).then(setData).catch(() => setData(null));
-  }, []);
+    fetch('/api/analytics/admin').then(r => r.json()).then(setData).catch(() => setData(null))
+  }, []),
 
-  if (loading) return <div>Loading...</div>;
-  if (role !== 'admin') return <div>Unauthorized</div>;
+  if (loading) return <div>Loading...</div>,
+  if (role !== 'admin') return <div>Unauthorized</div>,
 
-  const totals = data?.totals || {};
-  const geo = data?.geo || [];
-  const topCategories = data?.topCategories || [];
+  const totals = data?.totals || {},
+  const geo = data?.geo || [],
+  const topCategories = data?.topCategories || [],
 
-  const lineSeries = useMemo(() => [{ label: 'Jobs Filled', points: Array.from({ length: 12 }, (_, i) => ({ x: i + 1, y: Math.round(Math.random() * 10) })) }], []);
+  const lineSeries = useMemo(() => [{ label: 'Jobs Filled', points: Array.from({ length: 12 }, (_, i) => ({ x: i + 1, y: Math.round(Math.random() * 10) })) }], []),
 
   return (
     <div className="space-y-6">
@@ -77,5 +76,5 @@ export default function AdminAnalyticsPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

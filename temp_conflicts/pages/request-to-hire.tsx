@@ -1,34 +1,33 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { TALENT_PROFILES } from '../data/talent';
-
 export default function RequestToHirePage() {
-  const router = useRouter();
-  const { talent } = router.query as { talent?: string };
-  const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
+  const router = useRouter(),
+  const { talent } = router.query as { talent?: string },
+  const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]),
 
   const [form, setForm] = useState({
     name: '',
     email: '',
     budget: '',
     timeline: '',
-    description: ''});
-  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<null | { id: string; message: string }>(null);
-  const [error, setError] = useState<string | null>(null);
+    description: ''}),
+  const [submitting, setSubmitting] = useState(false),
+  const [result, setResult] = useState<null | { id: string, message: string }>(null),
+  const [error, setError] = useState<string | null>(null),
 
   const onSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null);
+    e.preventDefault(),
+    setError(null),
 
     if (!form.name || !form.email || !form.description) {
-      setError('Please fill in name, email, and description.');
-      return;
+      setError('Please fill in name, email, and description.'),
+      return
     }
 
-    const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
+    const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, ''),
 
-    setSubmitting(true);
+    setSubmitting(true),
     try {
       const res = await fetch('/api/requests/create', {
         method: 'POST',
@@ -36,16 +35,16 @@ export default function RequestToHirePage() {
         body: JSON.stringify({
           ...form,
           budget: normalizedBudget,
-          talentSlug: selected?.slug || null})});
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Failed to submit');
-      setResult({ id: data.id, message: 'Request submitted successfully.' });
+          talentSlug: selected?.slug || null})}),
+      const data = await res.json(),
+      if (!res.ok) throw new Error(data.error || 'Failed to submit'),
+      setResult({ id: data.id, message: 'Request submitted successfully.' })
     } catch (err: any) {
-      setError(err.message || 'Something went wrong');
+      setError(err.message || 'Something went wrong')
     } finally {
-      setSubmitting(false);
+      setSubmitting(false)
     }
-  };
+  },
 
   if (result) {
     return (
@@ -54,7 +53,7 @@ export default function RequestToHirePage() {
         <p className="text-gray-600 mb-4">We received your request. We will notify the appropriate team.</p>
         <div className="text-sm text-gray-500">Confirmation ID: {result.id}</div>
       </div>
-    );
+    )
   }
 
   return (
@@ -87,5 +86,5 @@ export default function RequestToHirePage() {
         </button>
       </form>
     </div>
-  );
+  )
 }

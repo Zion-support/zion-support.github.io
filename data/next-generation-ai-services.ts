@@ -1,43 +1,41 @@
 export interface NextGenerationAIService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const nextGenerationAIServices: NextGenerationAIService[] = [
   // Advanced AI Agents & Autonomous Systems
@@ -49,16 +47,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary AI agent that autonomously manages business operations, makes decisions, and executes tasks without human intervention. Achieve 24/7 business operations with intelligent automation.',
     features: [
-      'Autonomous decision-making engine',
-      'Natural language business communication',
-      'Multi-platform task execution',
-      'Real-time market analysis',
-      'Automated customer service',
-      'Financial decision automation',
-      'Supply chain optimization',
-      'Predictive analytics',
-      'Risk assessment and mitigation',
-      'Performance optimization'
+      'Autonomous decision-making engineNatural language business communicationMulti-platform task executionReal-time market analysisAutomated customer serviceFinancial decision automationSupply chain optimizationPredictive analyticsRisk assessment and mitigationPerformance optimization'
     ],
     popular: true,
     icon: '🤖',
@@ -71,11 +60,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     setupTime: '2 weeks',
     category: 'AI & Autonomous Systems',
     realService: true,
-    technology: ['GPT-4 Turbo', 'Claude 3 Opus', 'Custom AI models', 'Python', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['Salesforce', 'HubSpot', 'Shopify', 'QuickBooks', 'Slack', 'Microsoft 365', 'Google Workspace'],
-    useCases: ['Business process automation', 'Customer service management', 'Financial operations', 'Supply chain management', 'Marketing automation', 'HR operations'],
+    technology: ['GPT-4 TurboClaude 3 OpusCustom AI modelsPythonReactNode.jsPostgreSQL'],
+    integrations: ['SalesforceHubSpotShopifyQuickBooksSlackMicrosoft 365Google Workspace'],
+    useCases: ['Business process automationCustomer service managementFinancial operationsSupply chain managementMarketing automationHR operations'],
     roi: 'Average customer sees 800% ROI within 6 months through 24/7 operations and intelligent decision-making.',
-    competitors: ['No direct competitors', 'Partial solutions: UiPath, Automation Anywhere'],
+    competitors: ['No direct competitorsPartial solutions: UiPath, Automation Anywhere'],
     marketSize: '$50B autonomous systems market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
@@ -90,8 +79,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-12-01',
     customers: 150,
     rating: 4.9,
-    reviews: 89
-  },
+    reviews: 89},
 
   // Quantum AI Computing Platform
   {
@@ -102,16 +90,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary quantum AI computing platform that combines quantum computing with artificial intelligence to solve previously unsolvable problems. Achieve computational breakthroughs in research, finance, and science.',
     features: [
-      'Quantum AI algorithm optimization',
-      'Hybrid quantum-classical computing',
-      'Quantum machine learning models',
-      'Real-time quantum simulations',
-      'Quantum cryptography integration',
-      'Advanced quantum error correction',
-      'Quantum neural networks',
-      'Quantum optimization algorithms',
-      'Quantum chemistry simulations',
-      'Quantum financial modeling'
+      'Quantum AI algorithm optimizationHybrid quantum-classical computingQuantum machine learning modelsReal-time quantum simulationsQuantum cryptography integrationAdvanced quantum error correctionQuantum neural networksQuantum optimization algorithmsQuantum chemistry simulationsQuantum financial modeling'
     ],
     popular: true,
     icon: '⚛️',
@@ -124,11 +103,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     setupTime: '4 weeks',
     category: 'Quantum AI & Computing',
     realService: true,
-    technology: ['Quantum computing hardware', 'Custom quantum algorithms', 'Python', 'Qiskit', 'TensorFlow Quantum', 'AWS Braket'],
-    integrations: ['Jupyter notebooks', 'Python libraries', 'Cloud platforms', 'Research tools', 'Data visualization tools'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Climate modeling', 'Material science', 'Cryptography', 'Optimization problems'],
+    technology: ['Quantum computing hardwareCustom quantum algorithmsPythonQiskitTensorFlow QuantumAWS Braket'],
+    integrations: ['Jupyter notebooksPython librariesCloud platformsResearch toolsData visualization tools'],
+    useCases: ['Drug discoveryFinancial modelingClimate modelingMaterial scienceCryptographyOptimization problems'],
     roi: 'Research institutions report 1000%+ ROI through breakthrough discoveries and accelerated research timelines.',
-    competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
+    competitors: ['IBM QuantumGoogle Quantum AIMicrosoft Azure QuantumAmazon Braket'],
     marketSize: '$1.5B quantum computing market',
     growthRate: '500% annual growth',
     variant: 'quantum-advanced',
@@ -143,8 +122,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-11-15',
     customers: 75,
     rating: 4.8,
-    reviews: 45
-  },
+    reviews: 45},
 
   // Neural Interface Development Platform
   {
@@ -155,16 +133,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary platform for developing neural interfaces and brain-computer interfaces. Create applications that directly connect with the human nervous system for medical, research, and consumer applications.',
     features: [
-      'Neural signal processing',
-      'Brain-computer interface SDK',
-      'Real-time neural data analysis',
-      'Machine learning for neural patterns',
-      'Safety protocols and testing',
-      'Multi-modal interface support',
-      'Neural data visualization',
-      'API for custom applications',
-      'Compliance with medical standards',
-      '24/7 neural interface support'
+      'Neural signal processingBrain-computer interface SDKReal-time neural data analysisMachine learning for neural patternsSafety protocols and testingMulti-modal interface supportNeural data visualizationAPI for custom applicationsCompliance with medical standards24/7 neural interface support'
     ],
     popular: true,
     icon: '🧠',
@@ -177,11 +146,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     setupTime: '6 weeks',
     category: 'Neural Interface & BCI',
     realService: true,
-    technology: ['Custom neural processing', 'Machine learning', 'Signal processing', 'Python', 'C++', 'Real-time systems', 'Medical device standards'],
-    integrations: ['Medical devices', 'Research tools', 'Gaming platforms', 'Accessibility software', 'Rehabilitation systems'],
-    useCases: ['Medical diagnostics', 'Assistive technology', 'Gaming and entertainment', 'Research and development', 'Rehabilitation therapy', 'Cognitive enhancement'],
+    technology: ['Custom neural processingMachine learningSignal processingPythonC++Real-time systemsMedical device standards'],
+    integrations: ['Medical devicesResearch toolsGaming platformsAccessibility softwareRehabilitation systems'],
+    useCases: ['Medical diagnosticsAssistive technologyGaming and entertainmentResearch and developmentRehabilitation therapyCognitive enhancement'],
     roi: 'Medical device companies report 500% ROI through accelerated development and improved patient outcomes.',
-    competitors: ['Neuralink', 'Kernel', 'CTRL-labs', 'Paradromics'],
+    competitors: ['NeuralinkKernelCTRL-labsParadromics'],
     marketSize: '$2.5B brain-computer interface market',
     growthRate: '350% annual growth',
     variant: 'neural-quantum',
@@ -196,8 +165,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-10-01',
     customers: 120,
     rating: 4.7,
-    reviews: 67
-  },
+    reviews: 67},
 
   // AI-Powered Space Exploration Platform
   {
@@ -208,16 +176,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary AI platform for autonomous space exploration, satellite operations, and space mission management. Enable autonomous space operations with intelligent decision-making and real-time optimization.',
     features: [
-      'Autonomous satellite operations',
-      'AI-powered mission planning',
-      'Real-time space data analysis',
-      'Predictive maintenance for satellites',
-      'Autonomous navigation systems',
-      'Space debris tracking and avoidance',
-      'Mission optimization algorithms',
-      'Multi-satellite coordination',
-      'Earth observation analytics',
-      'Space weather monitoring'
+      'Autonomous satellite operationsAI-powered mission planningReal-time space data analysisPredictive maintenance for satellitesAutonomous navigation systemsSpace debris tracking and avoidanceMission optimization algorithmsMulti-satellite coordinationEarth observation analyticsSpace weather monitoring'
     ],
     popular: true,
     icon: '🚀',
@@ -230,11 +189,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     setupTime: '8 weeks',
     category: 'Space Technology & AI',
     realService: true,
-    technology: ['AI/ML algorithms', 'Satellite communication', 'Space systems', 'Python', 'C++', 'Real-time processing', 'Space-grade hardware'],
-    integrations: ['Satellite systems', 'Ground stations', 'Mission control centers', 'Research databases', 'Government systems'],
-    useCases: ['Satellite operations', 'Space mission planning', 'Earth observation', 'Space research', 'Commercial space operations', 'Defense applications'],
+    technology: ['AI/ML algorithmsSatellite communicationSpace systemsPythonC++Real-time processingSpace-grade hardware'],
+    integrations: ['Satellite systemsGround stationsMission control centersResearch databasesGovernment systems'],
+    useCases: ['Satellite operationsSpace mission planningEarth observationSpace researchCommercial space operationsDefense applications'],
     roi: 'Space companies report 600% ROI through improved mission success rates and reduced operational costs.',
-    competitors: ['SpaceX', 'Blue Origin', 'Traditional space agencies', 'Satellite companies'],
+    competitors: ['SpaceXBlue OriginTraditional space agenciesSatellite companies'],
     marketSize: '$400B space economy',
     growthRate: '250% annual growth',
     variant: 'quantum-space',
@@ -249,8 +208,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-09-15',
     customers: 45,
     rating: 4.9,
-    reviews: 28
-  },
+    reviews: 28},
 
   // Biotech AI Drug Discovery Platform
   {
@@ -261,16 +219,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary AI platform for accelerating drug discovery and pharmaceutical research. Reduce drug development timelines by 80% and increase success rates through intelligent molecular analysis and prediction.',
     features: [
-      'AI molecular modeling',
-      'Drug target identification',
-      'Predictive toxicity analysis',
-      'Molecular docking simulations',
-      'Drug repurposing algorithms',
-      'Clinical trial optimization',
-      'Biomarker discovery',
-      'Personalized medicine algorithms',
-      'Drug interaction prediction',
-      'Regulatory compliance tools'
+      'AI molecular modelingDrug target identificationPredictive toxicity analysisMolecular docking simulationsDrug repurposing algorithmsClinical trial optimizationBiomarker discoveryPersonalized medicine algorithmsDrug interaction predictionRegulatory compliance tools'
     ],
     popular: true,
     icon: '🧬',
@@ -283,11 +232,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     setupTime: '10 weeks',
     category: 'Biotech & Healthcare AI',
     realService: true,
-    technology: ['AI/ML algorithms', 'Molecular modeling', 'Bioinformatics', 'Python', 'R', 'Cloud computing', 'High-performance computing'],
-    integrations: ['Laboratory systems', 'Clinical databases', 'Research tools', 'Regulatory systems', 'Healthcare platforms'],
-    useCases: ['Drug discovery', 'Clinical trials', 'Personalized medicine', 'Drug repurposing', 'Biomarker research', 'Regulatory compliance'],
+    technology: ['AI/ML algorithmsMolecular modelingBioinformaticsPythonRCloud computingHigh-performance computing'],
+    integrations: ['Laboratory systemsClinical databasesResearch toolsRegulatory systemsHealthcare platforms'],
+    useCases: ['Drug discoveryClinical trialsPersonalized medicineDrug repurposingBiomarker researchRegulatory compliance'],
     roi: 'Pharmaceutical companies report 800% ROI through accelerated drug development and improved success rates.',
-    competitors: ['Insilico Medicine', 'BenevolentAI', 'Atomwise', 'Recursion Pharmaceuticals'],
+    competitors: ['Insilico MedicineBenevolentAIAtomwiseRecursion Pharmaceuticals'],
     marketSize: '$50B AI drug discovery market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
@@ -302,8 +251,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-08-01',
     customers: 85,
     rating: 4.8,
-    reviews: 52
-  },
+    reviews: 52},
 
   // Quantum Financial Trading Platform
   {
@@ -314,16 +262,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary quantum computing platform for financial trading, risk management, and portfolio optimization. Achieve superior returns through quantum-powered algorithms and real-time market analysis.',
     features: [
-      'Quantum algorithmic trading',
-      'Real-time risk assessment',
-      'Portfolio optimization algorithms',
-      'Market prediction models',
-      'Quantum cryptography for security',
-      'Multi-asset trading support',
-      'Regulatory compliance tools',
-      'Performance analytics dashboard',
-      'API for broker integration',
-      '24/7 trading operations'
+      'Quantum algorithmic tradingReal-time risk assessmentPortfolio optimization algorithmsMarket prediction modelsQuantum cryptography for securityMulti-asset trading supportRegulatory compliance toolsPerformance analytics dashboardAPI for broker integration24/7 trading operations'
     ],
     popular: true,
     icon: '💰',
@@ -336,11 +275,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     setupTime: '4 weeks',
     category: 'Quantum Finance & Trading',
     realService: true,
-    technology: ['Quantum computing', 'AI/ML algorithms', 'Financial modeling', 'Python', 'C++', 'Real-time systems', 'Quantum algorithms'],
-    integrations: ['Trading platforms', 'Broker APIs', 'Market data feeds', 'Risk management systems', 'Regulatory reporting'],
-    useCases: ['Algorithmic trading', 'Risk management', 'Portfolio optimization', 'Market analysis', 'Quantitative research', 'Compliance reporting'],
+    technology: ['Quantum computingAI/ML algorithmsFinancial modelingPythonC++Real-time systemsQuantum algorithms'],
+    integrations: ['Trading platformsBroker APIsMarket data feedsRisk management systemsRegulatory reporting'],
+    useCases: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysisQuantitative researchCompliance reporting'],
     roi: 'Investment firms report 400% ROI through improved trading performance and risk management.',
-    competitors: ['Traditional trading platforms', 'Quantitative trading firms', 'Quantum computing companies'],
+    competitors: ['Traditional trading platformsQuantitative trading firmsQuantum computing companies'],
     marketSize: '$15B algorithmic trading market',
     growthRate: '300% annual growth',
     variant: 'quantum-advanced',
@@ -355,8 +294,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-07-15',
     customers: 95,
     rating: 4.7,
-    reviews: 58
-  },
+    reviews: 58},
 
   // AI-Powered Metaverse Development Platform
   {
@@ -367,16 +305,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary platform for building AI-powered metaverse experiences with intelligent NPCs, dynamic content generation, and immersive virtual environments. Create the next generation of digital experiences.',
     features: [
-      'AI-powered NPC generation',
-      'Dynamic content creation',
-      'Real-time environment adaptation',
-      'Natural language interactions',
-      'Emotional AI responses',
-      'Multi-user synchronization',
-      'VR/AR integration',
-      'Blockchain integration',
-      'Performance optimization',
-      'Analytics and insights'
+      'AI-powered NPC generationDynamic content creationReal-time environment adaptationNatural language interactionsEmotional AI responsesMulti-user synchronizationVR/AR integrationBlockchain integrationPerformance optimizationAnalytics and insights'
     ],
     popular: true,
     icon: '🌐',
@@ -389,11 +318,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     setupTime: '6 weeks',
     category: 'Metaverse & AI',
     realService: true,
-    technology: ['AI/ML algorithms', '3D graphics engines', 'VR/AR technology', 'Unity', 'Unreal Engine', 'Python', 'C#'],
-    integrations: ['VR headsets', 'AR devices', 'Gaming platforms', 'Social media', 'Blockchain networks', 'Payment systems'],
-    useCases: ['Virtual reality games', 'Augmented reality applications', 'Virtual events', 'Educational simulations', 'Virtual real estate', 'Social platforms'],
+    technology: ['AI/ML algorithms3D graphics enginesVR/AR technologyUnityUnreal EnginePythonC#'],
+    integrations: ['VR headsetsAR devicesGaming platformsSocial mediaBlockchain networksPayment systems'],
+    useCases: ['Virtual reality gamesAugmented reality applicationsVirtual eventsEducational simulationsVirtual real estateSocial platforms'],
     roi: 'Gaming companies report 500% ROI through increased user engagement and reduced development costs.',
-    competitors: ['Unity', 'Unreal Engine', 'Roblox', 'Meta Platforms'],
+    competitors: ['UnityUnreal EngineRobloxMeta Platforms'],
     marketSize: '$800B metaverse market',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
@@ -408,8 +337,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-06-01',
     customers: 180,
     rating: 4.6,
-    reviews: 95
-  },
+    reviews: 95},
 
   // Autonomous Vehicle AI Platform
   {
@@ -420,16 +348,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary AI platform for autonomous vehicles with advanced perception, decision-making, and safety systems. Enable fully autonomous transportation with industry-leading safety and performance.',
     features: [
-      'Advanced computer vision',
-      'Real-time decision making',
-      'Predictive safety systems',
-      'Multi-sensor fusion',
-      'Behavioral prediction',
-      'Traffic optimization',
-      'Fleet management',
-      'Safety monitoring',
-      'Regulatory compliance',
-      'Performance analytics'
+      'Advanced computer visionReal-time decision makingPredictive safety systemsMulti-sensor fusionBehavioral predictionTraffic optimizationFleet managementSafety monitoringRegulatory compliancePerformance analytics'
     ],
     popular: true,
     icon: '🚗',
@@ -442,11 +361,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     setupTime: '12 weeks',
     category: 'Autonomous Vehicles & AI',
     realService: true,
-    technology: ['Computer vision', 'AI/ML algorithms', 'Sensor fusion', 'Python', 'C++', 'Real-time systems', 'Safety protocols'],
-    integrations: ['Vehicle systems', 'Traffic infrastructure', 'Fleet management', 'Insurance systems', 'Regulatory databases'],
-    useCases: ['Passenger vehicles', 'Commercial trucks', 'Delivery vehicles', 'Public transportation', 'Logistics operations', 'Research and testing'],
+    technology: ['Computer visionAI/ML algorithmsSensor fusionPythonC++Real-time systemsSafety protocols'],
+    integrations: ['Vehicle systemsTraffic infrastructureFleet managementInsurance systemsRegulatory databases'],
+    useCases: ['Passenger vehiclesCommercial trucksDelivery vehiclesPublic transportationLogistics operationsResearch and testing'],
     roi: 'Transportation companies report 600% ROI through reduced accidents and improved operational efficiency.',
-    competitors: ['Tesla', 'Waymo', 'Cruise', 'Traditional automotive companies'],
+    competitors: ['TeslaWaymoCruiseTraditional automotive companies'],
     marketSize: '$100B autonomous vehicle market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
@@ -461,8 +380,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-05-15',
     customers: 65,
     rating: 4.8,
-    reviews: 42
-  },
+    reviews: 42},
 
   // Quantum Internet Security Platform
   {
@@ -473,16 +391,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary quantum internet security platform that provides unhackable communication through quantum key distribution and post-quantum cryptography. Secure the future of internet communications.',
     features: [
-      'Quantum key distribution (QKD)',
-      'Post-quantum cryptography',
-      'Quantum entanglement security',
-      'Real-time threat detection',
-      'Multi-node quantum network',
-      'Government compliance',
-      'Quantum network monitoring',
-      'API for enterprise integration',
-      '24/7 quantum security operations',
-      'Unhackable communication channels'
+      'Quantum key distribution (QKD)Post-quantum cryptographyQuantum entanglement securityReal-time threat detectionMulti-node quantum networkGovernment complianceQuantum network monitoringAPI for enterprise integration24/7 quantum security operationsUnhackable communication channels'
     ],
     popular: true,
     icon: '🔒',
@@ -495,11 +404,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     setupTime: '8 weeks',
     category: 'Quantum Internet & Security',
     realService: true,
-    technology: ['Quantum computing', 'Quantum cryptography', 'Network security', 'Python', 'C++', 'Quantum hardware', 'Security protocols'],
-    integrations: ['Network infrastructure', 'Security systems', 'Government databases', 'Financial systems', 'Healthcare platforms'],
-    useCases: ['Government communications', 'Financial transactions', 'Healthcare data', 'Defense communications', 'Critical infrastructure', 'Research networks'],
+    technology: ['Quantum computingQuantum cryptographyNetwork securityPythonC++Quantum hardwareSecurity protocols'],
+    integrations: ['Network infrastructureSecurity systemsGovernment databasesFinancial systemsHealthcare platforms'],
+    useCases: ['Government communicationsFinancial transactionsHealthcare dataDefense communicationsCritical infrastructureResearch networks'],
     roi: 'Government agencies report 1000% ROI through enhanced security and reduced cyber threats.',
-    competitors: ['No direct competitors', 'Traditional cybersecurity companies'],
+    competitors: ['No direct competitorsTraditional cybersecurity companies'],
     marketSize: '$150B cybersecurity market',
     growthRate: '400% annual growth',
     variant: 'quantum-cyberpunk',
@@ -514,8 +423,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-04-01',
     customers: 55,
     rating: 4.9,
-    reviews: 33
-  },
+    reviews: 33},
 
   // AI-Powered Manufacturing Platform
   {
@@ -526,16 +434,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary AI platform for intelligent manufacturing with predictive maintenance, quality control, and process optimization. Achieve Industry 4.0 with intelligent automation and real-time optimization.',
     features: [
-      'Predictive maintenance',
-      'Quality control automation',
-      'Process optimization',
-      'Supply chain optimization',
-      'Energy efficiency management',
-      'Real-time monitoring',
-      'Performance analytics',
-      'Predictive analytics',
-      'Automation workflows',
-      'Compliance management'
+      'Predictive maintenanceQuality control automationProcess optimizationSupply chain optimizationEnergy efficiency managementReal-time monitoringPerformance analyticsPredictive analyticsAutomation workflowsCompliance management'
     ],
     popular: true,
     icon: '🏭',
@@ -548,11 +447,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     setupTime: '8 weeks',
     category: 'AI Manufacturing & Industry 4.0',
     realService: true,
-    technology: ['AI/ML algorithms', 'IoT integration', 'Industrial automation', 'Python', 'C++', 'Real-time systems', 'Predictive analytics'],
-    integrations: ['Manufacturing systems', 'ERP systems', 'IoT devices', 'Quality control systems', 'Supply chain platforms'],
-    useCases: ['Predictive maintenance', 'Quality control', 'Process optimization', 'Supply chain management', 'Energy management', 'Compliance reporting'],
+    technology: ['AI/ML algorithmsIoT integrationIndustrial automationPythonC++Real-time systemsPredictive analytics'],
+    integrations: ['Manufacturing systemsERP systemsIoT devicesQuality control systemsSupply chain platforms'],
+    useCases: ['Predictive maintenanceQuality controlProcess optimizationSupply chain managementEnergy managementCompliance reporting'],
     roi: 'Manufacturing companies report 400% ROI through improved efficiency and reduced downtime.',
-    competitors: ['Siemens', 'GE Digital', 'PTC', 'Traditional manufacturing software'],
+    competitors: ['SiemensGE DigitalPTCTraditional manufacturing software'],
     marketSize: '$200B Industry 4.0 market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
@@ -567,6 +466,5 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-03-15',
     customers: 220,
     rating: 4.7,
-    reviews: 125
-  }
-];
+    reviews: 125}
+],

@@ -5,33 +5,26 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { useAppDispatch } from "@/store/hooks";
 import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
-
 export default function ServiceCard({ service, onSelect }) {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { user } = useAuth();
-  const dispatch = useAppDispatch();
-
-  const handleClick = () => {
-    if (onSelect) {
-      onSelect(service.id);
-    }
-  };
-
+  const navigate = useNavigate($2);
+  const location = useLocation($2);
+  const { user } = useAuth($2);
+  const dispatch = useAppDispatch($2);
+  const handleClick = $2;
   const handleSave = (e) => {
-    e.stopPropagation();
+    e.stopPropagation($2);
     if (!user) {
-      toast.info('Log in to save favorites');
-      navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`);
-      return;
+      toast.info($2);
+      navigate(`/login?next = $2;
+      return
     }
-    dispatch(addToWishlist({ id: service.id, type: 'service', data: service }));
+    dispatch(addToWishlist({ id: service.id, type: 'service', data: service})),
     fetch(`${getApiUrl()}/wishlist`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id: service.id, type: 'service' })
-    }).catch(() => {});
-  };
+    }).catch(() => {})
+  },
 
   return (
     <div
@@ -48,5 +41,5 @@ export default function ServiceCard({ service, onSelect }) {
       </button>
       <h3 className="text-white font-medium">{service.title}</h3>
     </div>
-  );
+  )
 }

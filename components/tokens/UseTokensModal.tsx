@@ -1,53 +1,50 @@
 import React, { useEffect, useState } from 'react';
 import { connectMetaMask, getAccounts } from '../../utils/wallet';
-
-export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support';
-
+export type RedemptionType = $2;
 export default function UseTokensModal({
   isOpen,
   onClose,
   serviceId,
   defaultType}: {
-  isOpen: boolean;
-  onClose: () => void;
-  serviceId?: string;
-  defaultType?: RedemptionType;
+  isOpen: boolean,
+  onClose: () => void,
+  serviceId?: string,
+  defaultType?: RedemptionType
 }) {
-  const [account, setAccount] = useState<string | null>(null);
-  const [type, setType] = useState<RedemptionType>(defaultType ?? 'boost_profile');
-  const [tokens, setTokens] = useState<number>(100);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const usdValue = (tokens * 0.01).toFixed(2);
-
+  const [account, setAccount] = useState<string | null>(null),
+  const [type, setType] = useState<RedemptionType>(defaultType ?? 'boost_profile'),
+  const [tokens, setTokens] = useState<number>(100),
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const usdValue = (tokens * 0.01).toFixed($2);
   useEffect(() => {
     (async () => {
-      const accs = await getAccounts();
-      if (accs && accs.length > 0) setAccount(accs[0]);
-    })();
-  }, []);
+      const accs = await getAccounts($2);
+      if (accs && accs.length > 0) setAccount(accs[0])
+    })()
+  }, []),
 
   async function connect() {
-    const accs = await connectMetaMask();
-    if (accs && accs.length > 0) setAccount(accs[0]);
+    const accs = await connectMetaMask($2);
+    if (accs && accs.length > 0) setAccount(accs[0])
   }
 
   async function redeem() {
-    setIsSubmitting(true);
+    setIsSubmitting($2);
     try {
       const res = await fetch('/api/tokens/redeem', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ account, amount: tokens, type, serviceId })});
-      const data = await res.json();
+        body: JSON.stringify({ account, amount: tokens, type, serviceId })}),
+      const data = await res.json($2);
       if (data?.ok) {
-        onClose();
+        onClose()
       }
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
   }
 
-  if (!isOpen) return null;
+  if (!isOpen) return null,
 
   return (
     <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center">
@@ -55,7 +52,7 @@ export default function UseTokensModal({
       <div className="relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4">
         <div className="flex items-center justify-between mb-3">
           <div className="font-semibold">Use ZION Tokens</div>
-          <button onClick={onClose} className="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800">Close</button>
+          <button onClick={onClose} className="px-2 py-1 rounded hover:bg-gray-100 dark: hover: bg-gray-800">Close</button>
         </div>
 
         <div className="text-sm mb-3">Conversion rate: 1 ZION = $0.01</div>
@@ -92,5 +89,5 @@ export default function UseTokensModal({
         </div>
       </div>
     </div>
-  );
+  )
 }

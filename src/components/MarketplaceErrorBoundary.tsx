@@ -6,8 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCcw, AlertCircle } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed
 }
@@ -16,13 +14,13 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
   const handleRetry = async () => {
     try {
       // Re-call SWR mutate('*') to refresh all cached data
-      await mutate(() => true, undefined, { revalidate: true });
-      resetErrorBoundary();
+      await mutate(() => true, undefined, { revalidate: true}),
+      resetErrorBoundary()
     } catch (retryError) {
-      logErrorToProduction('Error during retry:', { data: retryError });
-      Sentry.captureException(retryError);
+      logErrorToProduction($2);
+      Sentry.captureException(retryError)
     }
-  };
+  },
 
   return (
     <div className="flex items-center justify-center min-h-[400px] p-6">
@@ -57,7 +55,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a 
-            href="mailto:support@example.com" 
+            href="mailto: support@example.com" 
             className="text-primary hover:underline"
           >
             contact support
@@ -65,26 +63,24 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 interface MarketplaceErrorBoundaryProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {
   const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
     // Log boundary errors to Sentry
-    logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, { componentStack: errorInfo.componentStack });
-    
+    logErrorToProduction($2);
     Sentry.withScope((scope) => {
-      scope.setTag('errorBoundary', 'marketplace');
-      scope.setContext('errorInfo', {
-        componentStack: errorInfo.componentStack || undefined});
-      scope.setLevel('error');
-      Sentry.captureException(error);
-    });
-  };
+      scope.setTag($2);
+      scope.setContext($2);
+      scope.setLevel($2);
+      Sentry.captureException(error)
+    })
+  },
 
   return (
     <ErrorBoundary 
@@ -93,5 +89,5 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
     >
       {children}
     </ErrorBoundary>
-  );
+  )
 } 

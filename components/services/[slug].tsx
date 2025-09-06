@@ -13,24 +13,21 @@ import { moreRealServices2025 } from '../../data/more-real-services-2025';
 import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025';
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
-
-type Service = typeof enhancedRealMicroSaasServices[number];
-
-const contactInfo = {
-	mobile: '+1 302 464 0950',
+type Service = $2;
+const contactInfo = $2;
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+},
 
 function getPriceValue(price: Service['price']): string {
 	if (price && typeof price === 'object' && 'monthly' in price) {
-		return price.monthly.toString();
+		return price.monthly.toString()
 	}
 	if (typeof price === 'string') {
-		return price;
+		return price
 	}
-	return '99';
+	return '99'
 }
 
 function getAllServices(): Service[] {
@@ -43,100 +40,63 @@ function getAllServices(): Service[] {
 		.concat(moreRealServices2025 as unknown as Service[])
 		.concat(verified2025Additions as unknown as Service[])
 		.concat(realServicesQ12025 as unknown as Service[])
-		.concat(realServicesQ32025 as unknown as Service[]);
-		.concat(newVerifiedServicesQ22025 as unknown as Service[]);
+		.concat($2);
+		.concat(newVerifiedServicesQ22025 as unknown as Service[])
 }
 
 function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
 
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
-		const url = new URL(link);
-		const path = url.pathname.replace(/^\/+|\/+$/g, '');
+		const url = new URL($2);
+		const path = url.pathname.replace($2);
 		if (path.startsWith('services/')) {
-			return path.substring('services/'.length);
+			return path.substring('services/'.length)
 		}
-		return null;
+		return null
 	} catch {
-		return null;
+		return null
 	}
 }
 
 export async function getStaticPaths() {
-	const services = getAllServices();
-	const slugs = new Set<string>();
-
+	const services = getAllServices($2);
+	const slugs = $2;
 	// Define static service slugs that should not be handled by this dynamic route
-	const staticServiceSlugs = [
-		'ai-evaluation-orchestrator',
-		'ai-support-triage-router', 
-		'ai-code-review-assistant-pro',
-		'ai-revenue-forecasting-copilot'
-	];
-
+	const staticServiceSlugs = $2;
 	for (const s of services) {
 		// Prefer explicit link under /services/* when available
-		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
+		const fromLink = $2;
 		if (fromLink && !staticServiceSlugs.includes(fromLink)) {
-			slugs.add(fromLink);
-			continue;
+			slugs.add($2);
+			continue
 		}
 		// Fall back to normalized id or name to provide a stable URL under /services/*
-		const idSlug = s.id ? toSlug(s.id) : '';
-		const nameSlug = s.name ? toSlug(s.name) : '';
-		
+		const idSlug = $2;
+		const nameSlug = $2;
 		if (idSlug && !staticServiceSlugs.includes(idSlug)) {
-			slugs.add(idSlug);
+			slugs.add(idSlug)
 		}
 		if (nameSlug && !staticServiceSlugs.includes(nameSlug)) {
-			slugs.add(nameSlug);
+			slugs.add(nameSlug)
 		}
 	}
 
 	return {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
-		fallback: false
-	};
+		fallback: false}
 }
 
-export async function getStaticProps({ params }: { params: { slug: string } }) {
-	const services = getAllServices();
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
-
-	let service: Service | undefined = services.find((s) => {
-		if (!s.link) return false;
-		const fromLink = extractServiceSlugFromLink(s.link);
-		return fromLink === incomingSlug;
-	});
-
+export async function getStaticProps({ params }: { params: { slug: string} }) {
+	const services = getAllServices($2);
+	const incomingSlug = (params?.slug || '').replace($2);
+	let service: Service | undefined = $2;
+		const fromLink = extractServiceSlugFromLink($2);
+		return fromLink = $2;
 	if (!service) {
-		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
-	}
-
-	if (!service) {
-		return { notFound: true };
-	}
-
-	return {
-		props: { service }
-	};
-}
-
-export default function ServiceDetailPage({ service }: { service: Service }) {
-	return (
-		<Layout>
-			<Head>
-				<title>{service.name} | Zion Tech Group</title>
-				<meta name="description" content={service.tagline || service.description} />
-				<link rel="canonical" href={service.link} />
-				<script
-					type="application/ld+json"
-					dangerouslySetInnerHTML={{
-						__html: JSON.stringify(
-							{
-								"@context": "https://schema.org",
+		service = $2;
 								"@type": "Service",
 								name: service.name,
 								description: service.tagline || service.description,
@@ -215,7 +175,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
 							<div className="text-sm text-gray-400 mb-1">Pricing</div>
 							<div className="text-3xl font-bold text-white">${getPriceValue(service.price)}<span className="text-base font-medium text-gray-400">{service.period || '/month'}</span></div>
-							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'} • Competitors: {(service.competitors || []).slice(0,3).join(', ')}</div>
+							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'} • Competitors: {(service.competitors || []).slice(0,3).join()}</div>
 							<div className="mt-6 flex gap-3">
 								<a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">Contact Sales</a>
 								<a href={service.link} className="flex-1 border border-gray-600 text-gray-200 px-4 py-2 rounded-lg text-center hover:bg-gray-600 transition-all duration-300"><ExternalLink className="w-4 h-4 mr-2 inline" /> Learn More</a>
@@ -238,74 +198,32 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								{service.marketPosition && <p className="leading-relaxed"><span className="text-gray-400">Position:</span> {service.marketPosition}</p>}
 								{service.roi && <p className="leading-relaxed"><span className="text-gray-400">ROI:</span> {service.roi}</p>}
 								{service.competitors?.length ? (
-									<p className="leading-relaxed"><span className="text-gray-400">Competitors:</span> {service.competitors.slice(0,6).join(', ')}</p>
+									<p className="leading-relaxed"><span className="text-gray-400">Competitors:</span> {service.competitors.slice(0,6).join()}</p>
 								) : null}
-								<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover:text-cyan-200">See average market prices →</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</Layout>
-	);
+								<a href = $2;
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
 import services from '@/data/services/services.json';
-
 const ServiceDetail: NextPage = () => {
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
-  const items = services as any[];
-  const service = items.find((s) => s.slug === slug);
-
+  const router = useRouter($2);
+  const { slug } = router.query as { slug?: string },
+  const items = $2;
+  const service = $2;
   if (!service) {
     return (
       <EnhancedLayout>
         <Head>
           <title>Service Not Found - Zion Tech Solutions</title>
         </Head>
-        <div className="space-y-4">
-          <h1 className="text-xl font-semibold">Service not found</h1>
-          <Link href="/services"><a className="text-blue-600 hover:underline">Back to Services</a></Link>
-        </div>
-      </EnhancedLayout>
-    );
-  }
-
-  const priceRange = `$${service.priceRangeUSD[0]} - $${service.priceRangeUSD[1]}`;
-
+        <div className = $2;
   return (
     <EnhancedLayout>
       <Head>
         <title>{service.name} - Zion Tech Solutions</title>
       </Head>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="md:col-span-2 space-y-4">
-          <img src={`https://picsum.photos/seed/${encodeURIComponent(service.slug)}/1200/600`} alt={service.name} className="w-full rounded-lg border border-gray-200 dark:border-gray-800" />
-          <div>
-            <h1 className="text-2xl font-semibold">{service.name}</h1>
-            <p className="opacity-80">Category: {service.category}</p>
-          </div>
-          <p className="leading-relaxed">{service.description}</p>
-          <div className="flex flex-wrap gap-2">
-            <span className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-zinc-700">{service.category}</span>
-          </div>
-        </div>
-        <aside className="md:col-span-1 space-y-3 p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-zinc-900 h-max">
-          <div className="text-sm opacity-70">Price Range</div>
-          <div className="text-xl font-semibold">{priceRange}</div>
-          <Link href={`/contact?subject=${encodeURIComponent('Quote request: ' + service.name)}`}>
-            <a className="inline-flex items-center justify-center w-full px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Request Quote</a>
-          </Link>
-          <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
-        </aside>
-      </div>
-    </EnhancedLayout>
-  );
-};
-
-export default ServiceDetail;
+      <div className = $2;
+export default ServiceDetail
 }

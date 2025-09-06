@@ -5,25 +5,23 @@ import { toast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { EmptyMatchesCard } from "./EmptyMatchesCard";
 import { JobMatchCard } from "./JobMatchCard";
-
 interface SuggestedTalentsProps {
-  jobId: string;
-  jobTitle?: string;
+  jobId: string,
+  jobTitle?: string
 }
 
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
-  const [talents, setTalents] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isProcessing, setIsProcessing] = useState(false);
-
+  const [talents, setTalents] = useState($2);
+  const [isLoading, setIsLoading] = useState($2);
+  const [isProcessing, setIsProcessing] = useState($2);
   const fetchSuggestedTalents = async () => {
-    setIsLoading(true);
+    setIsLoading($2);
     try {
       const { data, error } = await supabase
         .from("suggested_talents")
         .select(`
           *,
-          talent_profile:talent_id(
+          talent_profile: talent_id(
             id,
             user_id,
             full_name,
@@ -39,64 +37,51 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
             company_name
           )
         `)
-        .eq("job_id", jobId);
-
-      if (error) throw error;
-      setTalents(data || []);
+        .eq($2);
+      if (error) throw error,
+      setTalents(data || [])
     } catch (error) {
-      console.error("Error fetching suggested talents:", error);
+      console.error($2);
       toast({
         title: "Error",
         description: "Failed to load suggested talents. Please try again later.",
-        variant: "destructive"});
+        variant: "destructive"})
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
-  };
+  },
 
   const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile
-    console.log("View talent profile:", talentId);
+    console.log($2);
     toast({
       title: "View Profile",
-      description: `Navigating to talent profile: ${talentId}`});
-  };
+      description: `Navigating to talent profile: ${talentId}`})
+  },
 
   const handleInvite = (talentId: string) => {
     // Implement logic to invite talent
-    console.log("Invite talent:", talentId);
+    console.log($2);
     toast({
       title: "Invite Talent",
-      description: `Inviting talent: ${talentId}`});
-  };
+      description: `Inviting talent: ${talentId}`})
+  },
 
   const handleRefresh = () => {
-    setIsProcessing(true);
+    setIsProcessing($2);
     fetchSuggestedTalents().finally(() => {
-      setIsProcessing(false);
-    });
-  };
+      setIsProcessing(false)
+    })
+  },
 
   useEffect(() => {
     if (jobId) {
-      fetchSuggestedTalents();
+      fetchSuggestedTalents()
     }
-  }, [jobId]);
+  }, [jobId]),
 
   // Transform data to match JobMatchCard component props
-  const transformedTalents = talents.map(talent => {
-    return {
-      id: talent.talent_profile?.id || '',
-      name: talent.talent_profile?.full_name || 'Talent',
-      title: talent.talent_profile?.professional_title || 'Talent',
-      company: talent.talent_profile?.company_name || '',
-      avatar: talent.talent_profile?.profile_picture_url || '',
-      location: talent.talent_profile?.location || 'Remote',
-      category: talent.talent_profile?.category || 'Technology',
-      matchPercent: talent.match_score || 85,
-      skills: talent.talent_profile?.skills || []};
-  });
-
+  const transformedTalents = talents.map($2);
   return (
     <Card className="border-zion-blue-light bg-zion-blue">
       <CardHeader>
@@ -132,5 +117,5 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
         )}
       </CardContent>
     </Card>
-  );
+  )
 }

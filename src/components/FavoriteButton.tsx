@@ -9,54 +9,44 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger} from '@/components/ui/tooltip';
+  TooltipTrigger} from '@/components/ui/tooltip',
 
 interface FavoriteButtonProps {
-  itemId: string;
-  className?: string;
+  itemId: string,
+  className?: string
 }
 
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
-  const { isWishlisted, toggle } = useWishlist();
-  const { isAuthenticated } = useAuth();
-  const [loginOpen, setLoginOpen] = React.useState(false);
-
+  const { isWishlisted, toggle } = useWishlist($2);
+  const { isAuthenticated } = useAuth($2);
+  const [loginOpen, setLoginOpen] = React.useState($2);
   const handleClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
+    e.stopPropagation($2);
     if (!isAuthenticated) {
-      setLoginOpen(true);
-      return;
+      setLoginOpen($2);
+      return
     }
     
-    const wasWishlisted = isWishlisted(itemId);
-    toggle(itemId);
-    
+    const wasWishlisted = isWishlisted($2);
+    toggle($2);
     // Provide feedback
     toast({
       title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",
-      description: wasWishlisted 
-        ? "Item has been removed from your wishlist" 
-        : "Item has been added to your wishlist"});
-  };
+      description: wasWishlisted ? "Item has been removed from your wishlist" 
+        : "Item has been added to your wishlist"})
+  },
 
-  const active = isWishlisted(itemId);
-
+  const active = isWishlisted($2);
   return (
     <>
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
             <button
-              className={cn(
-                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors',
+              className = $2;
                 className
               )}
-              onClick={handleClick}
-              aria-label={active ? 'Remove from favorites' : 'Save to favorites'}
-            >
-              <Heart
-                className={cn(
-                  'h-4 w-4 transition-transform duration-200',
+              onClick = $2;
                   active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate'
                 )}
               />
@@ -67,5 +57,5 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
       </TooltipProvider>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  );
+  )
 }

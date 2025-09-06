@@ -1,9 +1,8 @@
 import Link from "next/link";
-
 export const metadata = {
   title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",
   description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.",
-  keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"};
+  keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"},
 
 export default function EventsPage() {
   return (
@@ -240,11 +239,7 @@ export default function EventsPage() {
                 </span>
                 <span className="text-gray-400 text-sm">February 10-12, 2025</span>
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
-                Cybersecurity Innovation Summit
-              </h3>
-              <p className="text-gray-400 mb-4 leading-relaxed">
-                Three-day conference focused on emerging cybersecurity threats, 
+              <h3 className = $2;
                 AI-powered security solutions, and industry best practices.
               </p>
               <div className="flex items-center text-sm text-gray-400 mb-4">
@@ -272,11 +267,7 @@ export default function EventsPage() {
                 </span>
                 <span className="text-gray-400 text-sm">February 25, 2025</span>
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
-                Space Technology Applications
-              </h3>
-              <p className="text-gray-400 mb-4 leading-relaxed">
-                Explore practical applications of space technology in telecommunications, 
+              <h3 className = $2;
                 Earth observation, and satellite navigation systems.
               </p>
               <div className="flex items-center text-sm text-gray-400 mb-4">
@@ -412,7 +403,7 @@ export default function EventsPage() {
       </section>
 
       {/* Event Registration CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -434,5 +425,5 @@ export default function EventsPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

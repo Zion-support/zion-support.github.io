@@ -1,5 +1,4 @@
 import Head from 'next/head';
-
 export default function TestPage() {
   return (
     <>
@@ -123,5 +122,5 @@ export default function TestPage() {
         </div>
       </div>
     </>
-  );
+  )
 }

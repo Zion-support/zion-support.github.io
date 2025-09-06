@@ -1,6 +1,5 @@
 import { FormEvent, useState } from 'react';
 import type { TalentProfile } from '@/utils/types/talent';
-
 export default function NewTalentPage() {
   const [form, setForm] = useState({
     name: '',
@@ -15,16 +14,16 @@ export default function NewTalentPage() {
     availability: 'Open',
     requestQuote: false,
     portfolio: '',
-    videoUrl: ''});
-  const [generated, setGenerated] = useState<Partial<TalentProfile> | null>(null);
-  const [saving, setSaving] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+    videoUrl: ''}),
+  const [generated, setGenerated] = useState<Partial<TalentProfile> | null>(null),
+  const [saving, setSaving] = useState(false),
+  const [loading, setLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
 
   const onGenerate = async (e: FormEvent) => {
-    e.preventDefault();
-    setError(null);
-    setLoading(true);
+    e.preventDefault(),
+    setError(null),
+    setLoading(true),
     try {
       const res = await fetch('/api/talent/generate', {
         method: 'POST',
@@ -34,21 +33,21 @@ export default function NewTalentPage() {
           title: form.title,
           bio: form.bio,
           experience: form.experience,
-          skills: form.skills})});
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Generation failed');
-      setGenerated(data);
+          skills: form.skills})}),
+      const data = await res.json(),
+      if (!res.ok) throw new Error(data.error || 'Generation failed'),
+      setGenerated(data)
     } catch (err: any) {
-      setError(err.message);
+      setError(err.message)
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  },
 
   const onSave = async () => {
-    if (!generated) return;
-    setSaving(true);
-    setError(null);
+    if (!generated) return,
+    setSaving(true),
+    setError(null),
     try {
       const payload: Partial<TalentProfile> = {
         ...generated,
@@ -63,25 +62,25 @@ export default function NewTalentPage() {
         availability: form.availability as any,
         portfolio: form.portfolio
           ? form.portfolio.split('\n').map((line) => {
-              const [title, url] = line.split('|').map((s) => s.trim());
-              return { title: title || url, url };
+              const [title, url] = line.split('|').map((s) => s.trim()),
+              return { title: title || url, url }
             })
           : [],
-        videoUrl: form.videoUrl || undefined};
+        videoUrl: form.videoUrl || undefined},
 
       const res = await fetch('/api/talent', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)});
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Save failed');
-      window.location.href = `/talent/${data.slug}`;
+        body: JSON.stringify(payload)}),
+      const data = await res.json(),
+      if (!res.ok) throw new Error(data.error || 'Save failed'),
+      window.location.href = `/talent/${data.slug}`
     } catch (err: any) {
-      setError(err.message);
+      setError(err.message)
     } finally {
-      setSaving(false);
+      setSaving(false)
     }
-  };
+  },
 
   return (
     <div className="max-w-3xl mx-auto">
@@ -181,5 +180,5 @@ export default function NewTalentPage() {
         </div>
       )}
     </div>
-  );
+  )
 }

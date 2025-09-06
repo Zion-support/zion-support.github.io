@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
-
 export default function AIPoweredCybersecurityPage() {
 	return (
 		<>
@@ -14,11 +13,7 @@ export default function AIPoweredCybersecurityPage() {
 				title="AI-Powered Cybersecurity Platform"
 				description="Detect, prioritize, and remediate threats automatically. LLM-powered analytics, behavioral baselines, deception canaries, and autonomous response integrated with your SIEM and EDR."
 				subtitle="Fewer alerts, faster response"
-				pricePerMonthUSD={3999}
-				implementationWeeks="2-6 weeks"
-				roiNote="Reduce alert fatigue by 80% and mean time to contain by 70%"
-				features={[
-					"Anomaly detection and adversary behavior modeling",
+				pricePerMonthUSD = $2;
 					"Automated playbooks and SOAR actions",
 					"Deception tokens and breach canaries",
 					"Zero-trust policy recommendations",
@@ -26,8 +21,8 @@ export default function AIPoweredCybersecurityPage() {
 					"Compliance evidence and audit-ready reports"
 				]}
 				industries={["Financial Services", "Healthcare", "SaaS", "Public Sector", "Critical Infrastructure"]}
-				canonical="https://ziontechgroup.com/ai-powered-cybersecurity"
+				canonical="https: //ziontechgroup.com/ai-powered-cybersecurity"
 			/>
 		</>
-	);
+	)
 }

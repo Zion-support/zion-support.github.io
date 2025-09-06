@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
-
 export default function ZeroTrustSecurityPlatformPage() {
 	return (
 		<>
@@ -16,9 +15,8 @@ export default function ZeroTrustSecurityPlatformPage() {
 				subtitle="Trust nothing, verify everything"
 				pricePerMonthUSD={3499}
 				implementationWeeks="4-8 weeks"
-				roiNote="Reduce breach impact and lateral movement risk; meet compliance faster"
-				features={[
-					"Policy-as-code and enforcement",
+				roiNote="Reduce breach impact and lateral movement risk, meet compliance faster"
+				features = $2;
 					"Identity-aware proxies and device posture",
 					"Microsegmentation and service mesh integration",
 					"Continuous authentication and authorization",
@@ -26,8 +24,8 @@ export default function ZeroTrustSecurityPlatformPage() {
 					"Rollout playbooks and migration kits"
 				]}
 				industries={["Enterprise IT", "Financial Services", "Healthcare", "SaaS", "Public Sector"]}
-				canonical="https://ziontechgroup.com/zero-trust-security-platform"
+				canonical="https: //ziontechgroup.com/zero-trust-security-platform"
 			/>
 		</>
-	);
+	)
 }

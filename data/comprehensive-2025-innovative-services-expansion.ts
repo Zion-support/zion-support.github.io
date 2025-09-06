@@ -1,55 +1,51 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface ComprehensiveInnovativeService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  benefits: string[];
-  capabilities: string[];
-  marketAdvantage: string;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
+  benefits: string[],
+  capabilities: string[],
+  marketAdvantage: string}
 
-const contact = {
-  mobile: '+1 302 464 0950',
+const contact = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services
@@ -61,16 +57,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'Advanced AI-powered content generation platform that creates high-quality, SEO-optimized content for blogs, social media, marketing materials, and more.',
     features: [
-      'AI-powered content writing',
-      'SEO optimization tools',
-      'Multi-language support',
-      'Content templates library',
-      'Plagiarism detection',
-      'Brand voice customization',
-      'Content scheduling',
-      'Performance analytics',
-      'Collaboration tools',
-      'API integration'
+      'AI-powered content writingSEO optimization toolsMulti-language supportContent templates libraryPlagiarism detectionBrand voice customizationContent schedulingPerformance analyticsCollaboration toolsAPI integration'
     ],
     popular: true,
     icon: '✍️',
@@ -99,18 +86,10 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.8,
     reviews: 267,
     benefits: [
-      '80% faster content creation',
-      '40% increase in engagement',
-      'SEO optimization built-in',
-      'Multi-language support',
-      'Brand voice consistency'
+      '80% faster content creation40% increase in engagementSEO optimization built-inMulti-language supportBrand voice consistency'
     ],
     capabilities: [
-      'AI content generation',
-      'SEO optimization',
-      'Multi-language support',
-      'Brand customization',
-      'Performance analytics'
+      'AI content generationSEO optimizationMulti-language supportBrand customizationPerformance analytics'
     ],
     marketAdvantage: 'Advanced AI models with enterprise-grade features and integrations'
   },
@@ -124,16 +103,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'Comprehensive zero-trust security platform that implements continuous verification and least-privilege access across all users, devices, and applications.',
     features: [
-      'Identity verification and management',
-      'Device trust scoring',
-      'Application access control',
-      'Network segmentation',
-      'Continuous monitoring',
-      'Threat detection and response',
-      'Compliance reporting',
-      'API security',
-      'Data encryption',
-      'Security analytics dashboard'
+      'Identity verification and managementDevice trust scoringApplication access controlNetwork segmentationContinuous monitoringThreat detection and responseCompliance reportingAPI securityData encryptionSecurity analytics dashboard'
     ],
     popular: true,
     icon: '🔐',
@@ -162,18 +132,10 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.9,
     reviews: 134,
     benefits: [
-      '90% reduction in security incidents',
-      '60% lower compliance costs',
-      'Continuous verification',
-      'Least-privilege access',
-      'Real-time threat detection'
+      '90% reduction in security incidents60% lower compliance costsContinuous verificationLeast-privilege accessReal-time threat detection'
     ],
     capabilities: [
-      'Identity verification',
-      'Device trust scoring',
-      'Application control',
-      'Network segmentation',
-      'Continuous monitoring'
+      'Identity verificationDevice trust scoringApplication controlNetwork segmentationContinuous monitoring'
     ],
     marketAdvantage: 'Comprehensive zero-trust platform with advanced threat detection'
   },
@@ -187,16 +149,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'AI-driven DevOps platform that automates deployment, testing, monitoring, and optimization using machine learning and predictive analytics.',
     features: [
-      'Intelligent CI/CD pipelines',
-      'Automated testing and QA',
-      'Predictive deployment optimization',
-      'Performance monitoring and alerting',
-      'Infrastructure as code automation',
-      'Security scanning integration',
-      'Cost optimization recommendations',
-      'Team collaboration tools',
-      'Compliance automation',
-      'Analytics and reporting'
+      'Intelligent CI/CD pipelinesAutomated testing and QAPredictive deployment optimizationPerformance monitoring and alertingInfrastructure as code automationSecurity scanning integrationCost optimization recommendationsTeam collaboration toolsCompliance automationAnalytics and reporting'
     ],
     popular: true,
     icon: '⚙️',
@@ -225,18 +178,10 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.7,
     reviews: 189,
     benefits: [
-      '70% faster deployments',
-      '50% team productivity increase',
-      'AI-powered optimization',
-      'Automated testing',
-      'Cost optimization'
+      '70% faster deployments50% team productivity increaseAI-powered optimizationAutomated testingCost optimization'
     ],
     capabilities: [
-      'Intelligent CI/CD',
-      'Automated testing',
-      'Predictive optimization',
-      'Performance monitoring',
-      'Infrastructure automation'
+      'Intelligent CI/CDAutomated testingPredictive optimizationPerformance monitoringInfrastructure automation'
     ],
     marketAdvantage: 'First AI-powered DevOps platform with predictive optimization'
   },
@@ -250,16 +195,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'Advanced IoT edge computing platform that processes data locally, provides real-time analytics, and enables intelligent decision-making at the edge.',
     features: [
-      'Edge data processing',
-      'Real-time analytics',
-      'Machine learning at the edge',
-      'Device management and monitoring',
-      'Data synchronization',
-      'Security and encryption',
-      'Scalable edge deployment',
-      'Custom edge applications',
-      'Performance optimization',
-      'Integration APIs'
+      'Edge data processingReal-time analyticsMachine learning at the edgeDevice management and monitoringData synchronizationSecurity and encryptionScalable edge deploymentCustom edge applicationsPerformance optimizationIntegration APIs'
     ],
     popular: false,
     icon: '🌐',
@@ -288,18 +224,10 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.6,
     reviews: 67,
     benefits: [
-      '80% latency reduction',
-      '45% operational efficiency',
-      'Real-time processing',
-      'Local intelligence',
-      'Cost optimization'
+      '80% latency reduction45% operational efficiencyReal-time processingLocal intelligenceCost optimization'
     ],
     capabilities: [
-      'Edge data processing',
-      'Real-time analytics',
-      'ML at the edge',
-      'Device management',
-      'Security features'
+      'Edge data processingReal-time analyticsML at the edgeDevice managementSecurity features'
     ],
     marketAdvantage: 'Advanced edge computing with AI-powered intelligence'
   },
@@ -313,16 +241,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'Revolutionary AI platform for medical imaging analysis that provides accurate diagnosis, early detection, and treatment recommendations for various medical conditions.',
     features: [
-      'Multi-modality image analysis',
-      'AI-powered diagnosis',
-      'Early detection algorithms',
-      'Treatment recommendations',
-      'Radiologist assistance tools',
-      'Clinical decision support',
-      'Patient outcome prediction',
-      'Research and analytics',
-      'HIPAA compliance',
-      'Integration with PACS systems'
+      'Multi-modality image analysisAI-powered diagnosisEarly detection algorithmsTreatment recommendationsRadiologist assistance toolsClinical decision supportPatient outcome predictionResearch and analyticsHIPAA complianceIntegration with PACS systems'
     ],
     popular: true,
     icon: '🏥',
@@ -351,18 +270,10 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.9,
     reviews: 52,
     benefits: [
-      '25% diagnostic accuracy improvement',
-      '60% reading time reduction',
-      'Early detection capabilities',
-      'Treatment optimization',
-      'Research support'
+      '25% diagnostic accuracy improvement60% reading time reductionEarly detection capabilitiesTreatment optimizationResearch support'
     ],
     capabilities: [
-      'Multi-modality analysis',
-      'AI diagnosis',
-      'Early detection',
-      'Treatment recommendations',
-      'Clinical decision support'
+      'Multi-modality analysisAI diagnosisEarly detectionTreatment recommendationsClinical decision support'
     ],
     marketAdvantage: 'Advanced AI medical imaging with proven clinical outcomes'
   },
@@ -376,16 +287,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'Advanced AI-powered financial risk management platform that provides real-time risk assessment, fraud detection, and compliance monitoring for financial institutions.',
     features: [
-      'Real-time risk assessment',
-      'AI-powered fraud detection',
-      'Compliance monitoring',
-      'Portfolio risk analysis',
-      'Market risk modeling',
-      'Credit risk evaluation',
-      'Regulatory reporting',
-      'Stress testing scenarios',
-      'Risk analytics dashboard',
-      'API integration'
+      'Real-time risk assessmentAI-powered fraud detectionCompliance monitoringPortfolio risk analysisMarket risk modelingCredit risk evaluationRegulatory reportingStress testing scenariosRisk analytics dashboardAPI integration'
     ],
     popular: true,
     icon: '💰',
@@ -414,18 +316,10 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.8,
     reviews: 98,
     benefits: [
-      '40% risk loss reduction',
-      '50% compliance cost savings',
-      'Real-time monitoring',
-      'AI-powered detection',
-      'Regulatory compliance'
+      '40% risk loss reduction50% compliance cost savingsReal-time monitoringAI-powered detectionRegulatory compliance'
     ],
     capabilities: [
-      'Real-time risk assessment',
-      'Fraud detection',
-      'Compliance monitoring',
-      'Portfolio analysis',
-      'Regulatory reporting'
+      'Real-time risk assessmentFraud detectionCompliance monitoringPortfolio analysisRegulatory reporting'
     ],
     marketAdvantage: 'Advanced AI risk management with real-time capabilities'
   },
@@ -439,16 +333,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'Intelligent learning platform that personalizes education content, tracks student progress, and provides adaptive learning paths using AI and machine learning.',
     features: [
-      'Personalized learning paths',
-      'Adaptive content delivery',
-      'Progress tracking and analytics',
-      'Intelligent tutoring system',
-      'Assessment and feedback',
-      'Collaborative learning tools',
-      'Content creation tools',
-      'Learning analytics dashboard',
-      'Mobile learning support',
-      'Integration with LMS systems'
+      'Personalized learning pathsAdaptive content deliveryProgress tracking and analyticsIntelligent tutoring systemAssessment and feedbackCollaborative learning toolsContent creation toolsLearning analytics dashboardMobile learning supportIntegration with LMS systems'
     ],
     popular: false,
     icon: '🎓',
@@ -477,18 +362,10 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.7,
     reviews: 123,
     benefits: [
-      '35% learning outcome improvement',
-      '50% dropout rate reduction',
-      'Personalized learning',
-      'Adaptive content',
-      'Progress tracking'
+      '35% learning outcome improvement50% dropout rate reductionPersonalized learningAdaptive contentProgress tracking'
     ],
     capabilities: [
-      'Personalized learning paths',
-      'Adaptive content delivery',
-      'Progress tracking',
-      'Intelligent tutoring',
-      'Learning analytics'
+      'Personalized learning pathsAdaptive content deliveryProgress trackingIntelligent tutoringLearning analytics'
     ],
     marketAdvantage: 'Advanced AI learning platform with proven educational outcomes'
   },
@@ -502,16 +379,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'AI-powered supply chain platform that optimizes inventory, predicts demand, manages logistics, and provides real-time visibility across the entire supply chain.',
     features: [
-      'Demand forecasting',
-      'Inventory optimization',
-      'Logistics route optimization',
-      'Supplier management',
-      'Real-time tracking',
-      'Risk assessment',
-      'Cost optimization',
-      'Sustainability metrics',
-      'Performance analytics',
-      'Integration with ERP systems'
+      'Demand forecastingInventory optimizationLogistics route optimizationSupplier managementReal-time trackingRisk assessmentCost optimizationSustainability metricsPerformance analyticsIntegration with ERP systems'
     ],
     popular: true,
     icon: '📦',
@@ -540,18 +408,10 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.8,
     reviews: 145,
     benefits: [
-      '30% inventory cost reduction',
-      '40% delivery time improvement',
-      'Demand forecasting',
-      'Route optimization',
-      'Real-time visibility'
+      '30% inventory cost reduction40% delivery time improvementDemand forecastingRoute optimizationReal-time visibility'
     ],
     capabilities: [
-      'Demand forecasting',
-      'Inventory optimization',
-      'Logistics optimization',
-      'Supplier management',
-      'Risk assessment'
+      'Demand forecastingInventory optimizationLogistics optimizationSupplier managementRisk assessment'
     ],
     marketAdvantage: 'Advanced AI supply chain platform with comprehensive optimization'
   },
@@ -565,16 +425,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'AI-powered energy optimization platform that manages renewable energy systems, optimizes consumption, and provides sustainability insights for businesses and utilities.',
     features: [
-      'Renewable energy management',
-      'Energy consumption optimization',
-      'Grid integration and management',
-      'Sustainability reporting',
-      'Carbon footprint tracking',
-      'Energy trading optimization',
-      'Predictive maintenance',
-      'Real-time monitoring',
-      'Performance analytics',
-      'Integration with smart meters'
+      'Renewable energy managementEnergy consumption optimizationGrid integration and managementSustainability reportingCarbon footprint trackingEnergy trading optimizationPredictive maintenanceReal-time monitoringPerformance analyticsIntegration with smart meters'
     ],
     popular: false,
     icon: '⚡',
@@ -603,21 +454,13 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.6,
     reviews: 56,
     benefits: [
-      '25% energy cost reduction',
-      '40% sustainability improvement',
-      'Renewable integration',
-      'Grid optimization',
-      'Carbon tracking'
+      '25% energy cost reduction40% sustainability improvementRenewable integrationGrid optimizationCarbon tracking'
     ],
     capabilities: [
-      'Renewable energy management',
-      'Energy optimization',
-      'Grid integration',
-      'Sustainability reporting',
-      'Predictive maintenance'
+      'Renewable energy managementEnergy optimizationGrid integrationSustainability reportingPredictive maintenance'
     ],
     marketAdvantage: 'Advanced AI energy platform with comprehensive sustainability features'
   }
-];
+],
 
-export default comprehensiveInnovativeServices;
+export default comprehensiveInnovativeServices,

@@ -3,12 +3,10 @@
 import { supabase } from '@/integrations/supabase/client';
 import { FraudSeverity, FraudFlag } from '@/types/fraud';
 import { FlagResult } from './types';
-
 /**
  * Flag content for review
  */
-export const flagContent = async (
-  userId: string,
+export const flagContent = $2;
   userEmail: string | undefined,
   contentType: FraudFlag['content_type'],
   contentId: string,
@@ -18,14 +16,7 @@ export const flagContent = async (
   ipAddress?: string
 ): Promise<FlagResult> => {
   try {
-    console.log('Flagging content for review:', {
-      userId,
-      contentType,
-      contentId,
-      reason,
-      severity
-    });
-    
+    console.log($2);
     const { error } = await supabase.from('fraud_flags').insert({
       user_id: userId,
       user_email: userEmail,
@@ -35,18 +26,18 @@ export const flagContent = async (
       severity,
       reason,
       ip_address: ipAddress,
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString($2);
       status: 'pending'
-    });
+    }),
     
-    if (error) throw error;
+    if (error) throw error,
     
-    return { success: true };
+    return { success: true}
   } catch (error) {
-    console.error('Error flagging content:', error);
+    console.error($2);
     return { 
       success: false, 
       error: error instanceof Error ? error.message : 'Unknown error' 
-    };
+    }
   }
-};
+},

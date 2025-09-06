@@ -1,42 +1,42 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
-
 const localeLabelKey: Record<string, string> = {
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
-  ar: 'lang.arabic'};
+  ar: 'lang.arabic'
+};
 
 export default function LanguageSwitchPrompt() {
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
 
   useEffect(() => {
-    const key = 'langPromptShown';
-    const preferred = localStorage.getItem('preferredLanguage');
+    const key = 'language-preference';
+    const preferred = localStorage.getItem(key);
     if (preferred) return; // user has chosen
-    if (localStorage.getItem(key)) return; // already prompted
+    if (localStorage.getItem(key)) return, // already prompted
 
-    const detected = i18n.language || i18n.resolvedLanguage || navigator.language || 'en';
+    const detected = navigator.language;
     const normalized = detected.split('-')[0];
-    const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null;
+    const suggestion = languages[normalized as keyof typeof languages];
     if (suggestion) setSuggested(suggestion);
   }, []);
 
   if (!suggested) return null;
 
   const accept = async () => {
-    await i18n.changeLanguage(suggested!);
-    localStorage.setItem('preferredLanguage', suggested!);
-    localStorage.setItem('langPromptShown', '1');
+    await i18n.changeLanguage(suggested);
+    localStorage.setItem('language-preference', suggested);
+    localStorage.setItem('language-prompted', 'true');
     document.documentElement.setAttribute('dir', isRtl(suggested!) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', suggested!);
     setSuggested(null);
   };
 
   const decline = () => {
-    localStorage.setItem('langPromptShown', '1');
+    localStorage.setItem('language-prompted', 'true');
     setSuggested(null);
   };
 
@@ -52,5 +52,5 @@ export default function LanguageSwitchPrompt() {
         </div>
       </div>
     </div>
-  );
+  )
 }

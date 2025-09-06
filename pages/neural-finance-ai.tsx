@@ -8,19 +8,15 @@ import {
   Clock, Globe, BarChart3, Target, Microscope,
   Phone, Mail, MapPin, ArrowUpRight, Play,
   BarChart, PieChart, LineChart, Activity
-} from 'lucide-react';
+} from 'lucide-react',
 import Layout from '../components/layout/Layout';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const features = [
-  {
-    title: 'Real-time Market Sentiment Analysis',
+const features = $2;
     description: 'Advanced AI algorithms analyze market sentiment with 94% accuracy using neural networks and natural language processing.',
     icon: Brain,
     color: 'from-violet-500 to-purple-600'
@@ -55,21 +51,14 @@ const features = [
     icon: Globe,
     color: 'from-cyan-500 to-blue-600'
   }
-];
+],
 
-const pricingPlans = [
-  {
-    name: 'Starter',
+const pricingPlans = $2;
     price: 199,
     period: 'month',
     description: 'Perfect for individual traders and small investment firms',
     features: [
-      'Basic market analysis and insights',
-      'Portfolio tracking and monitoring',
-      'Risk assessment and management',
-      'Email support',
-      'Up to 5 trading strategies',
-      'Basic reporting and analytics'
+      'Basic market analysis and insightsPortfolio tracking and monitoringRisk assessment and managementEmail supportUp to 5 trading strategiesBasic reporting and analytics'
     ],
     popular: false,
     color: 'from-gray-500 to-gray-600'
@@ -80,14 +69,7 @@ const pricingPlans = [
     period: 'month',
     description: 'Ideal for professional traders and growing investment firms',
     features: [
-      'Advanced AI models and algorithms',
-      'Automated trading with backtesting',
-      'Custom strategy development',
-      'Priority support and API access',
-      'Advanced risk management tools',
-      'Multi-portfolio management',
-      'Real-time market alerts',
-      'Custom reporting and dashboards'
+      'Advanced AI models and algorithmsAutomated trading with backtestingCustom strategy developmentPriority support and API accessAdvanced risk management toolsMulti-portfolio managementReal-time market alertsCustom reporting and dashboards'
     ],
     popular: true,
     color: 'from-cyan-500 to-purple-600'
@@ -98,46 +80,37 @@ const pricingPlans = [
     period: 'month',
     description: 'For large investment firms and institutional investors',
     features: [
-      'Custom AI model training and development',
-      'White-label solution with branding',
-      'Dedicated account manager and support',
-      'Advanced compliance automation',
-      '24/7 monitoring and support',
-      'Custom integrations and APIs',
-      'Advanced security and audit trails',
-      'Multi-user access and permissions'
+      'Custom AI model training and developmentWhite-label solution with brandingDedicated account manager and supportAdvanced compliance automation24/7 monitoring and supportCustom integrations and APIsAdvanced security and audit trailsMulti-user access and permissions'
     ],
     popular: false,
     color: 'from-purple-500 to-pink-600'
   }
-];
+],
 
-const useCases = [
-  {
-    title: 'Algorithmic Trading Strategy Development',
+const useCases = $2;
     description: 'Develop, backtest, and deploy sophisticated trading algorithms using our AI-powered platform.',
     icon: BarChart,
-    benefits: ['Increased trading efficiency', 'Reduced emotional bias', '24/7 market monitoring']
+    benefits: ['Increased trading efficiencyReduced emotional bias24/7 market monitoring']
   },
   {
     title: 'Portfolio Risk Management & Optimization',
     description: 'Advanced risk modeling and portfolio optimization using neural networks and machine learning.',
     icon: PieChart,
-    benefits: ['Risk-adjusted returns', 'Portfolio diversification', 'Real-time risk monitoring']
+    benefits: ['Risk-adjusted returnsPortfolio diversificationReal-time risk monitoring']
   },
   {
     title: 'Market Trend Prediction & Analysis',
     description: 'Predict market movements and identify trading opportunities with AI-powered analytics.',
     icon: LineChart,
-    benefits: ['Early trend detection', 'Improved timing', 'Higher success rates']
+    benefits: ['Early trend detectionImproved timingHigher success rates']
   },
   {
     title: 'Automated Financial Reporting',
     description: 'Generate comprehensive financial reports and compliance documentation automatically.',
     icon: Activity,
-    benefits: ['Time savings', 'Regulatory compliance', 'Accurate reporting']
+    benefits: ['Time savingsRegulatory complianceAccurate reporting']
   }
-];
+],
 
 const integrations = [
   { name: 'Bloomberg Terminal', logo: '🔵', category: 'Market Data' },
@@ -146,7 +119,7 @@ const integrations = [
   { name: 'MetaTrader', logo: '📈', category: 'Trading Platform' },
   { name: 'Interactive Brokers', logo: '🏦', category: 'Broker' },
   { name: 'TD Ameritrade', logo: '💼', category: 'Broker' }
-];
+],
 
 const NeuralFinanceAI: React.FC = () => {
   return (
@@ -167,24 +140,8 @@ const NeuralFinanceAI: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-sm text-violet-300 mb-6">
-                <Brain className="w-4 h-4" />
-                <span>AI-Powered Financial Intelligence</span>
-              </div>
-              
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Neural Finance AI
-                </span>
-                <br />
-                <span className="text-white">Revolutionary Trading Intelligence</span>
-              </h1>
-              
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Advanced AI-powered financial analysis and trading platform using neural networks for real-time market prediction, 
+              animate={{ opacity: 1, x: 0}}
+              transition = $2;
                 risk assessment, and automated portfolio optimization with 94% accuracy.
               </p>
               
@@ -219,8 +176,8 @@ const NeuralFinanceAI: React.FC = () => {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 30}}
+              animate={{ opacity: 1, x: 0}}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
@@ -263,10 +220,10 @@ const NeuralFinanceAI: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -283,10 +240,10 @@ const NeuralFinanceAI: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="group bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-violet-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -308,10 +265,10 @@ const NeuralFinanceAI: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -329,9 +286,9 @@ const NeuralFinanceAI: React.FC = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               >
                 <div className="flex items-start space-x-4">
@@ -365,10 +322,10 @@ const NeuralFinanceAI: React.FC = () => {
       <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -385,10 +342,10 @@ const NeuralFinanceAI: React.FC = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className={`relative bg-gray-900/50 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
                     ? 'border-violet-500/50 bg-gradient-to-br from-violet-500/10 to-purple-500/10' 
@@ -441,10 +398,10 @@ const NeuralFinanceAI: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -462,56 +419,7 @@ const NeuralFinanceAI: React.FC = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="text-4xl mb-3">{integration.logo}</div>
-                <h3 className="text-sm font-semibold text-white mb-1">{integration.name}</h3>
-                <p className="text-xs text-gray-400">{integration.category}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-3xl p-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Trading?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join leading investment firms using Neural Finance AI to gain competitive advantages 
-              in today's dynamic financial markets.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link
-                href="/contact"
-                className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
-              >
-                Start Free Trial
-              </Link>
-              <Link
-                href="/contact"
-                className="border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200"
-              >
-                Schedule Demo
-              </Link>
-            </div>
-            
-            <div className="text-sm text-gray-400">
-              <p>✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant Setup</p>
-              <p className="mt-2">✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </Layout>
-  );
-};
-
-export default NeuralFinanceAI;
+                viewport = $2;
+export default NeuralFinanceAI,

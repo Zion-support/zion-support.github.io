@@ -2,30 +2,28 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
-
 export const getStaticPaths: GetStaticPaths = async () => {
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
+  const articles = readJson<HelpArticle[]>('help/articles.json', []),
   return {
     paths: articles.map((a) => ({ params: { slug: a.slug } })),
-    fallback: false};
-};
+    fallback: false}
+},
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
-  const slug = ctx.params?.slug as string;
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  const article = articles.find((a) => a.slug === slug) || null;
-  return { props: { article } };
-};
+export const getStaticProps: GetStaticProps = $2;
+  const articles = readJson<HelpArticle[]>('help/articles.json', []),
+  const article = $2;
+  return { props: { article } }
+},
 
-export default function HelpArticlePage({ article }: { article: HelpArticle }) {
-  const [voted, setVoted] = useState<null | boolean>(null);
+export default function HelpArticlePage({ article }: { article: HelpArticle}) {
+  const [voted, setVoted] = useState<null | boolean>(null),
 
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ articleId: article.id, helpful })});
-    setVoted(helpful);
+      body: JSON.stringify({ articleId: article.id, helpful })}),
+    setVoted(helpful)
   }
 
   return (
@@ -41,5 +39,5 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
         </div>
       </div>
     </article>
-  );
+  )
 }

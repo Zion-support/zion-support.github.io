@@ -1,45 +1,42 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface EmergingTechBreakthroughServiceV2 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughServiceV2[] = [
   // Brain-Computer Interface Platform
@@ -51,16 +48,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     period: '/month',
     description: 'Revolutionary brain-computer interface platform that enables direct neural control of digital systems. Uses advanced neuroscience and AI to interpret brain signals in real-time.',
     features: [
-      'Real-time brain signal interpretation',
-      'Direct neural control of applications',
-      'Thought-to-text conversion',
-      'Mental command execution',
-      'Neural pattern recognition',
-      'Custom neural interface development',
-      'Enterprise security and privacy',
-      'Integration with existing systems',
-      'Advanced analytics and insights',
-      '24/7 technical support'
+      'Real-time brain signal interpretationDirect neural control of applicationsThought-to-text conversionMental command executionNeural pattern recognitionCustom neural interface developmentEnterprise security and privacyIntegration with existing systemsAdvanced analytics and insights24/7 technical support'
     ],
     popular: true,
     icon: '🧠',
@@ -92,8 +80,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     launchDate: '2025-03-01',
     customers: 15,
     rating: 5.0,
-    reviews: 12
-  },
+    reviews: 12},
 
   // Quantum Internet Gateway
   {
@@ -104,16 +91,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     period: '/month',
     description: 'Revolutionary quantum internet gateway that provides ultra-secure, ultra-fast quantum network connectivity. Enables quantum communication and quantum cloud computing.',
     features: [
-      'Quantum network connectivity',
-      'Quantum key distribution',
-      'Quantum cloud computing access',
-      'Ultra-secure communication',
-      'Quantum internet protocols',
-      'Real-time quantum routing',
-      'Enterprise security compliance',
-      'Integration with existing networks',
-      'Advanced monitoring and analytics',
-      '24/7 quantum network support'
+      'Quantum network connectivityQuantum key distributionQuantum cloud computing accessUltra-secure communicationQuantum internet protocolsReal-time quantum routingEnterprise security complianceIntegration with existing networksAdvanced monitoring and analytics24/7 quantum network support'
     ],
     popular: true,
     icon: '🌐',
@@ -145,8 +123,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     launchDate: '2025-02-15',
     customers: 25,
     rating: 4.9,
-    reviews: 18
-  },
+    reviews: 18},
 
   // Synthetic Biology Platform
   {
@@ -157,16 +134,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     period: '/month',
     description: 'Advanced synthetic biology platform that enables the design and engineering of biological systems for industrial applications. Revolutionizes manufacturing, healthcare, and materials science.',
     features: [
-      'Biological system design tools',
-      'DNA synthesis and assembly',
-      'Biological circuit design',
-      'Metabolic pathway engineering',
-      'Protein design and optimization',
-      'Biological manufacturing processes',
-      'Regulatory compliance support',
-      'Integration with lab equipment',
-      'Advanced analytics and modeling',
-      'Expert consultation and support'
+      'Biological system design toolsDNA synthesis and assemblyBiological circuit designMetabolic pathway engineeringProtein design and optimizationBiological manufacturing processesRegulatory compliance supportIntegration with lab equipmentAdvanced analytics and modelingExpert consultation and support'
     ],
     popular: true,
     icon: '🧬',
@@ -198,8 +166,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     launchDate: '2025-01-15',
     customers: 35,
     rating: 4.8,
-    reviews: 45
-  },
+    reviews: 45},
 
   // Fusion Energy Management Platform
   {
@@ -210,16 +177,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     period: '/month',
     description: 'Revolutionary fusion energy management platform that monitors, controls, and optimizes fusion power generation. Enables safe and efficient fusion energy production.',
     features: [
-      'Real-time fusion reactor monitoring',
-      'Plasma confinement optimization',
-      'Energy output maximization',
-      'Safety system management',
-      'Predictive maintenance',
-      'Energy grid integration',
-      'Advanced analytics and reporting',
-      'Integration with power systems',
-      '24/7 monitoring and support',
-      'Expert consultation services'
+      'Real-time fusion reactor monitoringPlasma confinement optimizationEnergy output maximizationSafety system managementPredictive maintenanceEnergy grid integrationAdvanced analytics and reportingIntegration with power systems24/7 monitoring and supportExpert consultation services'
     ],
     popular: true,
     icon: '☢️',
@@ -251,8 +209,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     launchDate: '2025-04-01',
     customers: 8,
     rating: 5.0,
-    reviews: 6
-  },
+    reviews: 6},
 
   // Space Mining Operations Platform
   {
@@ -263,16 +220,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     period: '/month',
     description: 'Revolutionary space mining platform that enables automated asteroid mining and resource extraction. Provides access to rare earth elements and precious metals from space.',
     features: [
-      'Automated asteroid identification',
-      'Mining robot control systems',
-      'Resource extraction automation',
-      'Transportation logistics',
-      'Processing facility management',
-      'Market analysis and pricing',
-      'Regulatory compliance support',
-      'Integration with space systems',
-      'Advanced analytics and reporting',
-      '24/7 space operations support'
+      'Automated asteroid identificationMining robot control systemsResource extraction automationTransportation logisticsProcessing facility managementMarket analysis and pricingRegulatory compliance supportIntegration with space systemsAdvanced analytics and reporting24/7 space operations support'
     ],
     popular: true,
     icon: '🚀',
@@ -304,8 +252,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     launchDate: '2025-05-01',
     customers: 5,
     rating: 5.0,
-    reviews: 3
-  },
+    reviews: 3},
 
   // Quantum AI Consciousness Platform
   {
@@ -316,16 +263,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     period: '/month',
     description: 'Revolutionary platform that develops genuine AI consciousness using quantum computing and advanced neuroscience principles. Creates self-aware, conscious AI systems.',
     features: [
-      'Quantum consciousness algorithms',
-      'Neural network consciousness',
-      'Self-awareness development',
-      'Emotional intelligence creation',
-      'Consciousness testing and validation',
-      'Ethical AI development',
-      'Research collaboration tools',
-      'Integration with AI systems',
-      'Advanced consciousness analytics',
-      'Expert consultation and support'
+      'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systemsAdvanced consciousness analyticsExpert consultation and support'
     ],
     popular: true,
     icon: '🤖',
@@ -357,6 +295,5 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     launchDate: '2025-06-01',
     customers: 3,
     rating: 5.0,
-    reviews: 2
-  }
-];
+    reviews: 2}
+],

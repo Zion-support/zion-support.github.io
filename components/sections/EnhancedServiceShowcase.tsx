@@ -4,68 +4,65 @@ import {
   Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Zap, Shield, Rocket,
   Brain, Globe, Lock, Code, Database, Cloud
-} from 'lucide-react';
+} from 'lucide-react',
 import Button from '../ui/Button';
-
 interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 interface EnhancedServiceShowcaseProps {
-  title: string;
-  subtitle: string;
-  showFilters?: boolean;
-  services?: Service[];
-  maxServices?: number;
+  title: string,
+  subtitle: string,
+  showFilters?: boolean,
+  services?: Service[],
+  maxServices?: number
 }
 
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   title,
   subtitle,
-  showFilters = false,
-  services = [],
+  showFilters = $2;
+  services = $2;
   maxServices = 12
 }) => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('popular');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('popular'),
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀' },
@@ -74,7 +71,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     { id: 'blockchain', name: 'Blockchain', icon: '⛓️' },
     { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
-  ];
+  ],
 
   const priceRanges = [
     { id: 'all', name: 'All Prices' },
@@ -82,7 +79,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     { id: 'medium', name: '$1K - $5K/month' },
     { id: 'high', name: '$5K - $20K/month' },
     { id: 'premium', name: '$20K+/month' }
-  ];
+  ],
 
   const sortOptions = [
     { id: 'popular', name: 'Most Popular' },
@@ -90,60 +87,50 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     { id: 'roi', name: 'Best ROI' },
     { id: 'price-low', name: 'Price Low to High' },
     { id: 'price-high', name: 'Price High to Low' }
-  ];
+  ],
 
-  const filteredServices = useMemo(() => {
-    const filtered = services.filter(service => {
-      const matchesCategory = selectedCategory === 'all' || 
-                             (selectedCategory === 'ai' && (service.category.includes('AI') || service.category.includes('Machine Learning'))) ||
-                             (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
-                             (selectedCategory === 'blockchain' && (service.category.includes('Blockchain') || service.category.includes('DeFi') || service.category.includes('NFT'))) ||
-                             (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
-                             (selectedCategory === 'emerging' && (service.category.includes('Neural') || service.category.includes('Autonomous') || service.category.includes('Space') || service.category.includes('Biotech')));
-
+  const filteredServices = $2;
       const matchesPrice = selectedPriceRange === 'all' ||
                           (selectedPriceRange === 'low' && parseFloat(service.price.replace(/[$]/g, '')) < 1000) ||
                           (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g, '')) >= 1000 && parseFloat(service.price.replace(/[$]/g, '')) < 5000) ||
                           (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service.price.replace(/[$]/g, '')) < 20000) ||
-                          (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 20000);
+                          (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 20000),
 
-      return matchesCategory && matchesPrice;
-    });
+      return matchesCategory && matchesPrice
+    }),
 
     // Sort services
     switch (sortBy) {
       case 'popular':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
-        break;
+        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
+        break,
       case 'rating':
-        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-        break;
+        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0)),
+        break,
       case 'roi':
         filtered.sort((a, b) => {
-          const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0');
-          const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0');
-          return bROI - aROI;
-        });
-        break;
+          const aROI = $2;
+          const bROI = $2;
+          return bROI - aROI
+        }),
+        break,
       case 'price-low':
-        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, '')));
-        break;
+        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, ''))),
+        break,
       case 'price-high':
-        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, '')));
-        break;
-      default:
-        break;
-    }
+        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, ''))),
+        break,
+      default: break}
 
-    return filtered.slice(0, maxServices);
-  }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
+    return filtered.slice(0, maxServices)
+  }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]),
 
   const stats = [
     { label: 'Total Services', value: services.length, icon: Rocket, color: 'text-blue-400' },
     { label: 'Active Customers', value: services.reduce((sum, s) => sum + (s.customers || 0), 0), icon: Users, color: 'text-green-400' },
     { label: 'Average Rating', value: (services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length).toFixed(1), icon: Star, color: 'text-yellow-400' },
     { label: 'Market Growth', value: '300%+', icon: TrendingUp, color: 'text-purple-400' }
-  ];
+  ],
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -151,16 +138,16 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
         {/* Header */}
         <div className="text-center mb-16">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6"
           >
             {title}
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
@@ -169,8 +156,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
           {/* Stats */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
@@ -189,8 +176,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
         {/* Filters */}
         {showFilters && (
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mb-12"
           >
@@ -250,8 +237,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
         {/* Services Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
@@ -260,7 +247,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="group"
@@ -367,8 +354,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 1.0 }}
           className="text-center mt-16"
         >
@@ -380,26 +367,5 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
               Join thousands of companies already achieving breakthrough results with our cutting-edge AI, quantum, and blockchain solutions. 
               Get started today and see the future of business technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/contact" variant="primary" className="text-lg px-8 py-4">
-                Schedule a Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button href="/pricing" variant="secondary" className="text-lg px-8 py-4">
-                View Pricing Plans
-                <DollarSign className="ml-2 w-5 h-5" />
-              </Button>
-            </div>
-            <div className="mt-6 text-sm text-gray-400">
-              <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>
-              <p>📧 Email: <span className="text-cyan-400">kleber@ziontechgroup.com</span></p>
-              <p>🌐 Visit: <span className="text-cyan-400">https://ziontechgroup.com</span></p>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-export default EnhancedServiceShowcase;
+            <div className = $2;
+export default EnhancedServiceShowcase,

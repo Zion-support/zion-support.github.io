@@ -184,97 +184,11 @@ export default function BlockchainServicesPage() {
                 indexing services, and decentralized storage solutions.
               </p>
               
-              <div className="space-y-4 mb-8">
-                <h3 className="text-xl font-semibold text-orange-400">Key Features:</h3>
-                <ul className="space-y-2 text-zinc-300">
-                  <li>• Blockchain node infrastructure</li>
-                  <li>• Decentralized storage solutions</li>
-                  <li>• Web3 API development</li>
-                  <li>• Indexing and data services</li>
-                  <li>• Cross-chain bridges and oracles</li>
-                  <li>• Infrastructure monitoring and scaling</li>
-                </ul>
-              </div>
-
-              <div className="bg-zinc-700 rounded-lg p-6 mb-6">
-                <h4 className="text-lg font-semibold mb-4">Pricing Structure</h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span>Basic Infrastructure</span>
-                    <span className="text-green-400 font-semibold">$10K - $30K</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Advanced Infrastructure</span>
-                    <span className="text-green-400 font-semibold">$30K - $100K</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Enterprise Infrastructure</span>
-                    <span className="text-green-400 font-semibold">$100K+</span>
-                  </div>
-                  <div className="text-sm text-zinc-400 mt-2">
-                    Monitoring included | 24/7 support available
-                  </div>
-                </div>
-              </div>
-
-              <a href="https://ziontechgroup.com/web3-infrastructure" className="block w-full text-center bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg font-semibold transition-colors">
-                Learn More About Web3 Infrastructure
-              </a>
-            </div>
-
-            {/* DAO Development */}
-            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
-              <div className="text-4xl mb-6">🏛️</div>
-              <h2 className="text-3xl font-bold mb-4">DAO Development</h2>
-              <p className="text-zinc-300 mb-6 text-lg">
-                Create sophisticated decentralized autonomous organizations with advanced governance, 
+              <div className = $2;
                 treasury management, and community engagement tools.
               </p>
               
-              <div className="space-y-4 mb-8">
-                <h3 className="text-xl font-semibold text-orange-400">Key Features:</h3>
-                <ul className="space-y-2 text-zinc-300">
-                  <li>• Multi-signature governance systems</li>
-                  <li>• Proposal creation and voting mechanisms</li>
-                  <li>• Treasury management and budgeting</li>
-                  <li>• Token-based voting and delegation</li>
-                  <li>• Community engagement tools</li>
-                  <li>• Analytics and reporting dashboard</li>
-                </ul>
-              </div>
-
-              <div className="bg-zinc-700 rounded-lg p-6 mb-6">
-                <h4 className="text-lg font-semibold mb-4">Pricing Structure</h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span>Basic DAO</span>
-                    <span className="text-green-400 font-semibold">$20K - $50K</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Advanced DAO</span>
-                    <span className="text-green-400 font-semibold">$50K - $150K</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Enterprise DAO</span>
-                    <span className="text-green-400 font-semibold">$150K+</span>
-                  </div>
-                  <div className="text-sm text-zinc-400 mt-2">
-                    Governance tools included | Custom features available
-                  </div>
-                </div>
-              </div>
-
-              <a href="https://ziontechgroup.com/dao-development" className="block w-full text-center bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg font-semibold transition-colors">
-                Learn More About DAO Development
-              </a>
-            </div>
-
-            {/* Blockchain Consulting */}
-            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
-              <div className="text-4xl mb-6">💡</div>
-              <h2 className="text-3xl font-bold mb-4">Blockchain Consulting</h2>
-              <p className="text-zinc-300 mb-6 text-lg">
-                Strategic blockchain consulting services including technology selection, 
+              <div className = $2;
                 architecture design, regulatory compliance, and implementation strategy.
               </p>
               
@@ -399,11 +313,11 @@ export default function BlockchainServicesPage() {
               </a>
             </div>
             <p className="text-orange-100 text-sm">
-              📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https://ziontechgroup.com
+              📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https: //ziontechgroup.com
             </p>
           </div>
         </div>
       </section>
     </div>
-  );
+  )
 }

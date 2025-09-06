@@ -1,18 +1,13 @@
 
 
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'),
-module.exports = {,
+const { BundleAnalyzerPlugin } = require($2);
+module.exports = $2;
   "webpack": (config { isServer }) => {,
     if ( {,
       config.plugins.push() {,
      {,
-      config.plugins.push(};
-        new BundleAnalyzerPlugin({,
-          "analyzerMode": 'static',
-          openAnalyze: r: false,
-          reportFilenam: e: 'bundle-analysis.htm,l'}),
-
-      )};
-    return config};
-};
+      config.plugins.push($2);
+      )},
+    return config}
+},
 

@@ -1,45 +1,42 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface EnterpriseIT2026ServiceV4 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
   // Zero-Trust Network Architecture Platform
@@ -51,16 +48,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     period: '/month',
     description: 'Comprehensive zero-trust network architecture platform that implements continuous verification, least-privilege access, and micro-segmentation to protect enterprise networks from modern cyber threats.',
     features: [
-      'Continuous identity verification',
-      'Least-privilege access control',
-      'Micro-segmentation',
-      'Real-time threat detection',
-      'Behavioral analytics',
-      'API security',
-      'Cloud-native architecture',
-      'Compliance reporting',
-      'Integration APIs',
-      '24/7 monitoring'
+      'Continuous identity verificationLeast-privilege access controlMicro-segmentationReal-time threat detectionBehavioral analyticsAPI securityCloud-native architectureCompliance reportingIntegration APIs24/7 monitoring'
     ],
     popular: true,
     icon: '🛡️',
@@ -73,11 +61,11 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     setupTime: '1 month',
     category: 'Enterprise Security',
     realService: true,
-    technology: ['Zero-Trust Architecture', 'AI/ML', 'Microservices', 'React', 'Python', 'PostgreSQL', 'AWS', 'Kubernetes'],
-    integrations: ['Active Directory', 'SAML', 'OAuth', 'SIEM systems', 'Firewalls', 'VPNs'],
-    useCases: ['Network security', 'Access control', 'Threat prevention', 'Compliance', 'Cloud security'],
+    technology: ['Zero-Trust ArchitectureAI/MLMicroservicesReactPythonPostgreSQLAWSKubernetes'],
+    integrations: ['Active DirectorySAMLOAuthSIEM systemsFirewallsVPNs'],
+    useCases: ['Network securityAccess controlThreat preventionComplianceCloud security'],
     roi: 'Reduce security incidents by 90%, improve compliance by 95%, lower security costs by 40%',
-    competitors: ['Cisco', 'Palo Alto Networks', 'VMware'],
+    competitors: ['CiscoPalo Alto NetworksVMware'],
     marketSize: '$60B cybersecurity market',
     growthRate: '50% annual growth',
     variant: 'enterprise-futuristic',
@@ -92,8 +80,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     launchDate: '2026-03-01',
     customers: 60,
     rating: 4.8,
-    reviews: 48
-  },
+    reviews: 48},
 
   // AI-Powered IT Operations Center
   {
@@ -104,16 +91,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     period: '/month',
     description: 'Next-generation IT operations center that uses AI and machine learning to automate incident response, predict system failures, optimize performance, and provide intelligent insights for enterprise IT management.',
     features: [
-      'AI incident response',
-      'Predictive maintenance',
-      'Performance optimization',
-      'Automated troubleshooting',
-      'Intelligent monitoring',
-      'Root cause analysis',
-      'Capacity planning',
-      'Cost optimization',
-      'Compliance automation',
-      'Real-time dashboards'
+      'AI incident responsePredictive maintenancePerformance optimizationAutomated troubleshootingIntelligent monitoringRoot cause analysisCapacity planningCost optimizationCompliance automationReal-time dashboards'
     ],
     popular: true,
     icon: '⚙️',
@@ -126,11 +104,11 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     setupTime: '2 weeks',
     category: 'AI IT Operations',
     realService: true,
-    technology: ['AI/ML', 'Machine Learning', 'Automation', 'React', 'Python', 'PostgreSQL', 'AWS', 'Kubernetes'],
-    integrations: ['ServiceNow', 'Jira', 'Slack', 'Teams', 'Monitoring tools', 'Ticketing systems'],
-    useCases: ['IT operations automation', 'Incident management', 'Performance monitoring', 'Cost optimization', 'Compliance'],
+    technology: ['AI/MLMachine LearningAutomationReactPythonPostgreSQLAWSKubernetes'],
+    integrations: ['ServiceNowJiraSlackTeamsMonitoring toolsTicketing systems'],
+    useCases: ['IT operations automationIncident managementPerformance monitoringCost optimizationCompliance'],
     roi: 'Reduce incident response time by 80%, improve system uptime by 99.9%, lower IT costs by 30%',
-    competitors: ['ServiceNow', 'BMC', 'BMC Helix'],
+    competitors: ['ServiceNowBMCBMC Helix'],
     marketSize: '$35B IT operations market',
     growthRate: '40% annual growth',
     variant: 'ai-futuristic',
@@ -145,8 +123,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     launchDate: '2026-02-15',
     customers: 120,
     rating: 4.7,
-    reviews: 95
-  },
+    reviews: 95},
 
   // Quantum-Resistant Cryptography Platform
   {
@@ -157,16 +134,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     period: '/month',
     description: 'Advanced quantum-resistant cryptography platform that implements post-quantum cryptographic algorithms to protect sensitive data and communications from future quantum computing attacks.',
     features: [
-      'Post-quantum algorithms',
-      'Hybrid encryption',
-      'Key management',
-      'Performance optimization',
-      'Compliance validation',
-      'Migration tools',
-      'API integration',
-      'Security auditing',
-      'Expert consultation',
-      'Future-proofing'
+      'Post-quantum algorithmsHybrid encryptionKey managementPerformance optimizationCompliance validationMigration toolsAPI integrationSecurity auditingExpert consultationFuture-proofing'
     ],
     popular: false,
     icon: '🔒',
@@ -179,11 +147,11 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     setupTime: '1 month',
     category: 'Quantum Security',
     realService: true,
-    technology: ['Post-Quantum Cryptography', 'Hybrid Encryption', 'React', 'Python', 'PostgreSQL', 'AWS', 'Cryptography'],
-    integrations: ['PKI systems', 'HSMs', 'Cloud platforms', 'Security tools', 'Compliance systems'],
-    useCases: ['Data protection', 'Secure communications', 'Compliance', 'Future-proofing', 'Migration'],
+    technology: ['Post-Quantum CryptographyHybrid EncryptionReactPythonPostgreSQLAWSCryptography'],
+    integrations: ['PKI systemsHSMsCloud platformsSecurity toolsCompliance systems'],
+    useCases: ['Data protectionSecure communicationsComplianceFuture-proofingMigration'],
     roi: 'Ensure long-term security, maintain compliance, protect against future threats',
-    competitors: ['Entrust', 'DigiCert', 'GlobalSign'],
+    competitors: ['EntrustDigiCertGlobalSign'],
     marketSize: '$15B cryptography market',
     growthRate: '70% annual growth',
     variant: 'quantum-futuristic',
@@ -198,8 +166,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     launchDate: '2026-04-01',
     customers: 35,
     rating: 4.9,
-    reviews: 28
-  },
+    reviews: 28},
 
   // Autonomous Cloud Migration Platform
   {
@@ -210,16 +177,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     period: '/month',
     description: 'Intelligent cloud migration platform that uses AI to automatically analyze, plan, and execute cloud migrations with zero downtime, cost optimization, and performance guarantees.',
     features: [
-      'AI migration planning',
-      'Zero-downtime migration',
-      'Cost optimization',
-      'Performance monitoring',
-      'Automated testing',
-      'Rollback capabilities',
-      'Compliance validation',
-      'Multi-cloud support',
-      'Migration analytics',
-      'Expert support'
+      'AI migration planningZero-downtime migrationCost optimizationPerformance monitoringAutomated testingRollback capabilitiesCompliance validationMulti-cloud supportMigration analyticsExpert support'
     ],
     popular: true,
     icon: '☁️',
@@ -232,11 +190,11 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     setupTime: '1 month',
     category: 'Cloud Migration',
     realService: true,
-    technology: ['AI/ML', 'Cloud Computing', 'Automation', 'React', 'Python', 'PostgreSQL', 'AWS', 'Multi-cloud'],
-    integrations: ['AWS', 'Azure', 'GCP', 'On-premise systems', 'Monitoring tools', 'CI/CD pipelines'],
-    useCases: ['Cloud migration', 'Multi-cloud management', 'Cost optimization', 'Performance improvement', 'Compliance'],
+    technology: ['AI/MLCloud ComputingAutomationReactPythonPostgreSQLAWSMulti-cloud'],
+    integrations: ['AWSAzureGCPOn-premise systemsMonitoring toolsCI/CD pipelines'],
+    useCases: ['Cloud migrationMulti-cloud managementCost optimizationPerformance improvementCompliance'],
     roi: 'Reduce migration time by 70%, eliminate downtime, optimize cloud costs by 40%',
-    competitors: ['AWS Migration Hub', 'Azure Migrate', 'Google Cloud Migrate'],
+    competitors: ['AWS Migration HubAzure MigrateGoogle Cloud Migrate'],
     marketSize: '$50B cloud migration market',
     growthRate: '60% annual growth',
     variant: 'ai-autonomous',
@@ -251,8 +209,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     launchDate: '2026-03-15',
     customers: 85,
     rating: 4.8,
-    reviews: 72
-  },
+    reviews: 72},
 
   // Edge Computing Orchestration Platform
   {
@@ -263,16 +220,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     period: '/month',
     description: 'Advanced edge computing orchestration platform that manages distributed edge nodes, optimizes resource allocation, and provides real-time processing capabilities for IoT, AI, and real-time applications.',
     features: [
-      'Global edge orchestration',
-      'Resource optimization',
-      'Real-time processing',
-      'IoT integration',
-      'AI model deployment',
-      'Performance monitoring',
-      'Security management',
-      'Compliance automation',
-      'API gateway',
-      'Analytics dashboard'
+      'Global edge orchestrationResource optimizationReal-time processingIoT integrationAI model deploymentPerformance monitoringSecurity managementCompliance automationAPI gatewayAnalytics dashboard'
     ],
     popular: false,
     icon: '🌐',
@@ -285,11 +233,11 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     setupTime: '2 weeks',
     category: 'Edge Computing',
     realService: true,
-    technology: ['Edge Computing', 'IoT', 'AI/ML', 'React', 'Python', 'PostgreSQL', 'AWS', 'Kubernetes'],
-    integrations: ['IoT devices', 'Cloud platforms', 'AI models', 'Monitoring tools', 'Security systems'],
-    useCases: ['IoT management', 'Real-time processing', 'AI deployment', 'Edge analytics', 'Low-latency applications'],
+    technology: ['Edge ComputingIoTAI/MLReactPythonPostgreSQLAWSKubernetes'],
+    integrations: ['IoT devicesCloud platformsAI modelsMonitoring toolsSecurity systems'],
+    useCases: ['IoT managementReal-time processingAI deploymentEdge analyticsLow-latency applications'],
     roi: 'Reduce latency by 90%, improve performance by 300%, lower bandwidth costs by 60%',
-    competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT'],
+    competitors: ['AWS GreengrassAzure IoT EdgeGoogle Cloud IoT'],
     marketSize: '$40B edge computing market',
     growthRate: '80% annual growth',
     variant: 'edge-futuristic',
@@ -304,8 +252,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     launchDate: '2026-04-15',
     customers: 45,
     rating: 4.7,
-    reviews: 38
-  },
+    reviews: 38},
 
   // AI-Powered Data Governance Platform
   {
@@ -316,16 +263,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     period: '/month',
     description: 'Intelligent data governance platform that uses AI to automatically classify, catalog, and manage enterprise data while ensuring compliance, privacy, and data quality across all systems.',
     features: [
-      'AI data classification',
-      'Automated cataloging',
-      'Privacy compliance',
-      'Data quality management',
-      'Lineage tracking',
-      'Access control',
-      'Audit logging',
-      'Compliance reporting',
-      'Integration APIs',
-      'Real-time monitoring'
+      'AI data classificationAutomated catalogingPrivacy complianceData quality managementLineage trackingAccess controlAudit loggingCompliance reportingIntegration APIsReal-time monitoring'
     ],
     popular: true,
     icon: '📊',
@@ -338,11 +276,11 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     setupTime: '2 weeks',
     category: 'Data Governance',
     realService: true,
-    technology: ['AI/ML', 'Data Governance', 'Privacy', 'React', 'Python', 'PostgreSQL', 'AWS', 'Big Data'],
-    integrations: ['Data warehouses', 'Databases', 'Cloud platforms', 'BI tools', 'Compliance systems'],
-    useCases: ['Data governance', 'Privacy compliance', 'Data quality', 'Audit trails', 'Regulatory compliance'],
+    technology: ['AI/MLData GovernancePrivacyReactPythonPostgreSQLAWSBig Data'],
+    integrations: ['Data warehousesDatabasesCloud platformsBI toolsCompliance systems'],
+    useCases: ['Data governancePrivacy complianceData qualityAudit trailsRegulatory compliance'],
     roi: 'Improve data quality by 80%, reduce compliance risks by 90%, automate governance by 70%',
-    competitors: ['Collibra', 'Informatica', 'Alation'],
+    competitors: ['CollibraInformaticaAlation'],
     marketSize: '$25B data governance market',
     growthRate: '45% annual growth',
     variant: 'ai-futuristic',
@@ -357,8 +295,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     launchDate: '2026-03-01',
     customers: 95,
     rating: 4.8,
-    reviews: 78
-  },
+    reviews: 78},
 
   // Autonomous DevOps Platform
   {
@@ -369,16 +306,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     period: '/month',
     description: 'Fully autonomous DevOps platform that automatically manages CI/CD pipelines, infrastructure provisioning, testing, deployment, and monitoring without human intervention, using AI to optimize every aspect.',
     features: [
-      'AI-powered CI/CD',
-      'Automatic testing',
-      'Infrastructure automation',
-      'Performance optimization',
-      'Security scanning',
-      'Deployment automation',
-      'Monitoring automation',
-      'Incident response',
-      'Cost optimization',
-      'Compliance automation'
+      'AI-powered CI/CDAutomatic testingInfrastructure automationPerformance optimizationSecurity scanningDeployment automationMonitoring automationIncident responseCost optimizationCompliance automation'
     ],
     popular: true,
     icon: '🚀',
@@ -391,11 +319,11 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     setupTime: '1 week',
     category: 'Autonomous DevOps',
     realService: true,
-    technology: ['AI/ML', 'DevOps', 'Automation', 'React', 'Python', 'PostgreSQL', 'AWS', 'Kubernetes'],
-    integrations: ['GitHub', 'GitLab', 'Jenkins', 'Docker', 'Kubernetes', 'Cloud platforms'],
-    useCases: ['CI/CD automation', 'Infrastructure management', 'Testing automation', 'Deployment automation', 'Monitoring'],
+    technology: ['AI/MLDevOpsAutomationReactPythonPostgreSQLAWSKubernetes'],
+    integrations: ['GitHubGitLabJenkinsDockerKubernetesCloud platforms'],
+    useCases: ['CI/CD automationInfrastructure managementTesting automationDeployment automationMonitoring'],
     roi: 'Reduce deployment time by 90%, eliminate human errors, improve reliability by 99.9%',
-    competitors: ['GitLab', 'Jenkins', 'CircleCI'],
+    competitors: ['GitLabJenkinsCircleCI'],
     marketSize: '$20B DevOps market',
     growthRate: '55% annual growth',
     variant: 'ai-autonomous',
@@ -410,8 +338,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     launchDate: '2026-02-20',
     customers: 150,
     rating: 4.7,
-    reviews: 125
-  },
+    reviews: 125},
 
   // Quantum-Safe Cloud Storage Platform
   {
@@ -422,16 +349,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     period: '/month',
     description: 'Next-generation quantum-safe cloud storage platform that uses quantum-resistant encryption, distributed storage, and AI-powered security to protect enterprise data from current and future threats.',
     features: [
-      'Quantum-resistant encryption',
-      'Distributed storage',
-      'AI security monitoring',
-      'Real-time threat detection',
-      'Compliance automation',
-      'Performance optimization',
-      'Disaster recovery',
-      'Data sovereignty',
-      'API access',
-      'Expert consultation'
+      'Quantum-resistant encryptionDistributed storageAI security monitoringReal-time threat detectionCompliance automationPerformance optimizationDisaster recoveryData sovereigntyAPI accessExpert consultation'
     ],
     popular: false,
     icon: '💾',
@@ -444,11 +362,11 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     setupTime: '2 weeks',
     category: 'Quantum Storage',
     realService: true,
-    technology: ['Quantum-Resistant Encryption', 'Distributed Storage', 'AI/ML', 'React', 'Python', 'PostgreSQL', 'AWS'],
-    integrations: ['Cloud platforms', 'Storage systems', 'Security tools', 'Compliance systems', 'Backup solutions'],
-    useCases: ['Secure data storage', 'Compliance', 'Disaster recovery', 'Data sovereignty', 'Future-proofing'],
+    technology: ['Quantum-Resistant EncryptionDistributed StorageAI/MLReactPythonPostgreSQLAWS'],
+    integrations: ['Cloud platformsStorage systemsSecurity toolsCompliance systemsBackup solutions'],
+    useCases: ['Secure data storageComplianceDisaster recoveryData sovereigntyFuture-proofing'],
     roi: 'Ensure long-term data security, maintain compliance, protect against quantum threats',
-    competitors: ['AWS S3', 'Azure Blob', 'Google Cloud Storage'],
+    competitors: ['AWS S3Azure BlobGoogle Cloud Storage'],
     marketSize: '$80B cloud storage market',
     growthRate: '65% annual growth',
     variant: 'quantum-futuristic',
@@ -463,6 +381,5 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     launchDate: '2026-05-01',
     customers: 40,
     rating: 4.9,
-    reviews: 32
-  }
-];
+    reviews: 32}
+],

@@ -1,5 +1,4 @@
 import React from 'react';
-
 export default function AnimatedBackground() {
   return (
     <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
@@ -8,11 +7,11 @@ export default function AnimatedBackground() {
       }} />
       <style jsx global>{`
         @keyframes bgflow {
-          0% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-20px) rotate(10deg); }
-          100% { transform: translateY(0px) rotate(0deg); }
+          0% { transform: translateY(0px) rotate(0deg) }
+          50% { transform: translateY(-20px) rotate(10deg) }
+          100% { transform: translateY(0px) rotate(0deg) }
         }
       `}</style>
     </div>
-  );
+  )
 }

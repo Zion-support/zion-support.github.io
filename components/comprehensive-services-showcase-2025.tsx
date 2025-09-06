@@ -7,62 +7,51 @@ import {
   Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings,
   ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3,
   Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import service data
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
-
 interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  category: string;
-  rating: number;
-  reviews: number;
-  customers: number;
-  marketSize: string;
-  growthRate: string;
-  launchDate: string;
-  badge?: string;
-  icon?: React.ReactNode;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  category: string,
+  rating: number,
+  reviews: number,
+  customers: number,
+  marketSize: string,
+  growthRate: string,
+  launchDate: string,
+  badge?: string,
+  icon?: React.ReactNode
 }
 
 const allServices: Service[] = [
-  ...innovativeRealMicroSaasServices2025.map(service => ({
-    ...service,
+  ...innovativeRealMicroSaasServices2025.map(service = $2;
     category: 'Micro SAAS',
-    icon: <Rocket className="w-6 h-6" />
-  })),
-  ...innovativeAIServicesEnhanced2025.map(service => ({
-    ...service,
+    icon: <Rocket className = $2;
+  ...innovativeAIServicesEnhanced2025.map(service = $2;
     category: 'AI & Consciousness',
-    icon: <Brain className="w-6 h-6" />
-  })),
-  ...innovativeITServicesEnhanced2025.map(service => ({
-    ...service,
+    icon: <Brain className = $2;
+  ...innovativeITServicesEnhanced2025.map(service = $2;
     category: 'Enterprise IT',
-    icon: <Shield className="w-6 h-6" />
-  })),
-  ...emergingTechServicesEnhanced2025.map(service => ({
-    ...service,
+    icon: <Shield className = $2;
+  ...emergingTechServicesEnhanced2025.map(service = $2;
     category: 'Quantum & Emerging Tech',
-    icon: <Atom className="w-6 h-6" />
-  }))
-];
-
+    icon: <Atom className = $2;
 const categories = [
   { name: 'All Services', icon: <Globe className="w-5 h-5" />, count: allServices.length },
   { name: 'Micro SAAS', icon: <Rocket className="w-5 h-5" />, count: innovativeRealMicroSaasServices2025.length },
   { name: 'AI & Consciousness', icon: <Brain className="w-5 h-5" />, count: innovativeAIServicesEnhanced2025.length },
   { name: 'Enterprise IT', icon: <Shield className="w-5 h-5" />, count: innovativeITServicesEnhanced2025.length },
   { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5" />, count: emergingTechServicesEnhanced2025.length }
-];
+],
 
 const priceRanges = [
   { label: 'All Prices', value: 'all' },
@@ -70,7 +59,7 @@ const priceRanges = [
   { label: '$50 - $200/month', value: '50-200' },
   { label: '$200 - $500/month', value: '200-500' },
   { label: 'Over $500/month', value: 'over-500' }
-];
+],
 
 const sortOptions = [
   { label: 'Most Popular', value: 'popular' },
@@ -78,88 +67,79 @@ const sortOptions = [
   { label: 'Newest', value: 'newest' },
   { label: 'Price: Low to High', value: 'price-low' },
   { label: 'Price: High to Low', value: 'price-high' }
-];
+],
 
 export default function ComprehensiveServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('popular');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [filteredServices, setFilteredServices] = useState<Service[]>(allServices);
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [selectedPriceRange, setSelectedPriceRange] = useState($2);
+  const [sortBy, setSortBy] = useState($2);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [filteredServices, setFilteredServices] = useState<Service[]>(allServices),
 
   useEffect(() => {
-    let filtered = allServices;
-
+    let filtered = $2;
     // Filter by search term
     if (searchTerm) {
       filtered = filtered.filter(service =>
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      )
     }
 
     // Filter by category
     if (selectedCategory !== 'All Services') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
+      filtered = filtered.filter(service => service.category === selectedCategory)
     }
 
     // Filter by price range
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
-        const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
+        const price = parseFloat(service.price.replace(/[^0-9.]/g, '')),
         switch (selectedPriceRange) {
-          case 'under-50': return price < 50;
-          case '50-200': return price >= 50 && price <= 200;
-          case '200-500': return price > 200 && price <= 500;
-          case 'over-500': return price > 500;
-          default: return true;
+          case 'under-50': return price < 50,
+          case '50-200': return price >= 50 && price <= 200,
+          case '200-500': return price > 200 && price <= 500,
+          case 'over-500': return price > 500,
+          default: return true
         }
-      });
+      })
     }
 
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'popular':
-          return b.customers - a.customers;
+          return b.customers - a.customers,
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating,
         case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime($2);
         case 'price-low':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
         case 'price-high':
-          return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
-        default:
-          return 0;
+          return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')),
+        default: return 0
       }
-    });
+    }),
 
-    setFilteredServices(filtered);
-  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+    setFilteredServices(filtered)
+  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]),
 
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'Micro SAAS': return 'from-blue-500 to-cyan-500';
-      case 'AI & Consciousness': return 'from-purple-500 to-pink-500';
-      case 'Enterprise IT': return 'from-green-500 to-emerald-500';
-      case 'Quantum & Emerging Tech': return 'from-orange-500 to-red-500';
-      default: return 'from-gray-500 to-slate-500';
+  const getCategoryColor = $2;
+      case 'AI & Consciousness': return 'from-purple-500 to-pink-500',
+      case 'Enterprise IT': return 'from-green-500 to-emerald-500',
+      case 'Quantum & Emerging Tech': return 'from-orange-500 to-red-500',
+      default: return 'from-gray-500 to-slate-500'
     }
-  };
+  },
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Micro SAAS': return <Rocket className="w-5 h-5" />;
-      case 'AI & Consciousness': return <Brain className="w-5 h-5" />;
-      case 'Enterprise IT': return <Shield className="w-5 h-5" />;
-      case 'Quantum & Emerging Tech': return <Atom className="w-5 h-5" />;
-      default: return <Globe className="w-5 h-5" />;
-    }
-  };
-
+  const getCategoryIcon = $2;
+      case 'AI & Consciousness': return <Brain className = $2;
+      case 'Enterprise IT': return <Shield className = $2;
+      case 'Quantum & Emerging Tech': return <Atom className = $2;
+      default: return <Globe className = $2;
   return (
     <Layout>
       <Head>
@@ -186,12 +166,10 @@ export default function ComprehensiveServicesShowcase2025() {
                 x: [0, 100, 0],
                 y: [0, -100, 0],
                 opacity: [0.2, 0.8, 0.2]}}
-              transition={{
-                duration: 10 + i * 2,
+              transition = $2;
                 repeat: Infinity,
                 delay: i * 0.5}}
-              style={{
-                left: `${Math.random() * 100}%`,
+              style = $2;
                 top: `${Math.random() * 100}%`}}
             />
           ))}
@@ -199,8 +177,8 @@ export default function ComprehensiveServicesShowcase2025() {
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6">
@@ -217,15 +195,15 @@ export default function ComprehensiveServicesShowcase2025() {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               {[
-                { label: 'Total Services', value: allServices.length, icon: <Globe className="w-8 h-8" /> },
-                { label: 'AI Solutions', value: innovativeAIServicesEnhanced2025.length, icon: <Brain className="w-8 h-8" /> },
-                { label: 'IT Services', value: innovativeITServicesEnhanced2025.length, icon: <Shield className="w-8 h-8" /> },
+                { label: 'Total Services', value: allServices.length, icon: <Globe className = $2;
+                { label: 'AI Solutions', value: innovativeAIServicesEnhanced2025.length, icon: <Brain className = $2;
+                { label: 'IT Services', value: innovativeITServicesEnhanced2025.length, icon: <Shield className = $2;
                 { label: 'Emerging Tech', value: emergingTechServicesEnhanced2025.length, icon: <Atom className="w-8 h-8" /> }
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  animate={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
                   className="text-center"
                 >
@@ -350,8 +328,8 @@ export default function ComprehensiveServicesShowcase2025() {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
               >
@@ -439,7 +417,7 @@ export default function ComprehensiveServicesShowcase2025() {
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                animate={{ opacity: 1, x: 0}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300"
               >
@@ -539,9 +517,9 @@ export default function ComprehensiveServicesShowcase2025() {
             </p>
             <button
               onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('All Services');
-                setSelectedPriceRange('all');
+                setSearchTerm($2);
+                setSelectedCategory($2);
+                setSelectedPriceRange('all')
               }}
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200"
             >
@@ -555,10 +533,10 @@ export default function ComprehensiveServicesShowcase2025() {
       <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -567,7 +545,7 @@ export default function ComprehensiveServicesShowcase2025() {
               Our team of experts is ready to help you implement the perfect solution for your needs. 
               Get in touch today and discover how our innovative services can drive your success.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
@@ -585,5 +563,5 @@ export default function ComprehensiveServicesShowcase2025() {
         </div>
       </div>
     </Layout>
-  );
+  )
 }

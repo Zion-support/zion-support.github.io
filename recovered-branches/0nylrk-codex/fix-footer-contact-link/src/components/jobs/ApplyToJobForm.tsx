@@ -13,63 +13,58 @@ import { AlertCircle, FileText, Loader2 } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import { Job } from "@/types/jobs";
 import { toast } from "sonner";
-
 interface ApplyToJobFormProps {
-  job: Job;
-  onSuccess?: () => void;
+  job: Job,
+  onSuccess?: () => void
 }
 
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
-  const { user } = useAuth();
-  const { applyToJob } = useJobApplications();
-  const { resumes, isLoading: isResumesLoading } = useResume();
-  const navigate = useNavigate();
-  
-  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`);
-  const [selectedResumeId, setSelectedResumeId] = useState<string>("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const { user } = useAuth($2);
+  const { applyToJob } = useJobApplications($2);
+  const { resumes, isLoading: isResumesLoading} = useResume($2);
+  const navigate = useNavigate($2);
+  const [coverLetter, setCoverLetter] = useState($2);
+  const [selectedResumeId, setSelectedResumeId] = useState<string>(""),
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const [error, setError] = useState<string | null>(null),
   
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
+    e.preventDefault($2);
     if (!user) {
-      toast.error("You must be logged in to apply");
-      navigate("/login", { state: { returnTo: `/jobs/${job.id}` } });
-      return;
+      toast.error($2);
+      navigate($2);
+      return
     }
     
     if (!coverLetter.trim()) {
-      setError("Please provide a cover letter");
-      return;
+      setError($2);
+      return
     }
     
-    setIsSubmitting(true);
-    setError(null);
-    
+    setIsSubmitting($2);
+    setError($2);
     try {
-      const success = await applyToJob(job.id, coverLetter, selectedResumeId || undefined);
-      
+      const success = await applyToJob($2);
       if (success) {
-        toast.success("Your application has been submitted!");
+        toast.success($2);
         if (onSuccess) {
-          onSuccess();
+          onSuccess()
         }
       }
     } catch (err: any) {
-      setError(err.message || "Failed to submit application");
-      toast.error("Failed to submit application");
+      setError($2);
+      toast.error("Failed to submit application")
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  },
   
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
         <h3 className="text-lg font-medium mb-1">Apply to: {job.title}</h3>
         <p className="text-sm text-muted-foreground mb-4">
-          Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
+          Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true})}
         </p>
       </div>
       
@@ -145,7 +140,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           variant="outline"
           disabled={isSubmitting}
           onClick={() => {
-            if (onSuccess) onSuccess();
+            if (onSuccess) onSuccess()
           }}
         >
           Cancel
@@ -162,5 +157,5 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         </Button>
       </div>
     </form>
-  );
+  )
 }

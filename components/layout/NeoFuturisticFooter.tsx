@@ -1,13 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export default function NeoFuturisticFooter() {
   return (
@@ -20,7 +18,7 @@ export default function NeoFuturisticFooter() {
       <div className="relative container mx-auto px-4 py-12 text-slate-200">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <motion.h3 initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-xl font-semibold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-3">
+            <motion.h3 initial={{ opacity: 0, y: 8}} animate={{ opacity: 1, y: 0}} transition={{ duration: 0.5 }} className="text-xl font-semibold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-3">
               Zion Tech Group
             </motion.h3>
             <p className="text-slate-400 text-sm leading-relaxed">
@@ -51,12 +49,12 @@ export default function NeoFuturisticFooter() {
         <div className="mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6">
           <div className="text-xs text-slate-500">© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
           <div className="text-xs text-slate-500 flex gap-4">
-            <a href="/privacy" className="hover:text-slate-300">Privacy</a>
+            <a href="/privacy" className="hover: text-slate-300">Privacy</a>
             <a href="/terms" className="hover:text-slate-300">Terms</a>
           </div>
         </div>
       </div>
     </footer>
-  );
+  )
 }
 

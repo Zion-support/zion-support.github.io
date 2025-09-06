@@ -1,59 +1,49 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function TechnologyInsightsPage() {
-  const technologyTrends = [
-    {
-      id: 'quantum-computing',
+  const technologyTrends = $2;
       title: 'Quantum Computing in 2025',
       description: 'Exploring the latest developments in quantum computing and their implications for AI and automation.',
       category: 'Emerging Tech',
       readTime: '15 min read',
-      featured: true
-    },
+      featured: true},
     {
       id: 'edge-ai',
       title: 'Edge AI Revolution',
       description: 'How edge computing is transforming AI deployment and enabling real-time intelligent applications.',
       category: 'AI/ML',
       readTime: '12 min read',
-      featured: false
-    },
+      featured: false},
     {
       id: 'autonomous-vehicles',
       title: 'Autonomous Vehicle Technology',
       description: 'The current state and future of autonomous vehicle technology and its broader applications.',
       category: 'Autonomy',
       readTime: '18 min read',
-      featured: false
-    }
-  ];
+      featured: false}
+  ],
 
-  const researchAreas = [
-    {
-      title: 'Autonomous Systems Research',
+  const researchAreas = $2;
       description: 'Pioneering research in building truly autonomous systems that can operate independently.',
-      focus: ['Decision Making', 'Self-Learning', 'Adaptive Behavior', 'System Integration'],
+      focus: ['Decision MakingSelf-LearningAdaptive BehaviorSystem Integration'],
       icon: '🔬'
     },
     {
       title: 'AI Ethics & Governance',
       description: 'Research into responsible AI development and ethical considerations for autonomous systems.',
-      focus: ['Ethical AI', 'Bias Detection', 'Transparency', 'Accountability'],
+      focus: ['Ethical AIBias DetectionTransparencyAccountability'],
       icon: '⚖️'
     },
     {
       title: 'Human-AI Collaboration',
       description: 'Exploring how humans and AI can work together effectively and safely.',
-      focus: ['Human-AI Interface', 'Collaborative Decision Making', 'Safety Protocols', 'Trust Building'],
+      focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building'],
       icon: '🤝'
     }
-  ];
+  ],
 
-  const whitepapers = [
-    {
-      id: 'autonomous-systems-whitepaper',
+  const whitepapers = $2;
       title: 'The Future of Autonomous Systems',
       description: 'A comprehensive analysis of autonomous technology trends and implementation strategies.',
       pages: '45',
@@ -76,7 +66,7 @@ export default function TechnologyInsightsPage() {
       category: 'Business',
       downloadUrl: '/whitepapers/automation-roi-guide.pdf'
     }
-  ];
+  ],
 
   return (
     <>
@@ -203,7 +193,7 @@ export default function TechnologyInsightsPage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link 
                   href="/contact"
-                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
+                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Get in Touch
                 </Link>
@@ -219,5 +209,5 @@ export default function TechnologyInsightsPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

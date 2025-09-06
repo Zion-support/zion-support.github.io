@@ -13,12 +13,10 @@ import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community"
 import PostCard from "@/components/community/PostCard";
 import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
-
 // Mock user data
-const mockUser: CommunityUser = {
-  id: "user1",
+const mockUser: CommunityUser = $2;
   name: "Alex Johnson",
-  avatar: "https://i.pravatar.cc/150?img=3",
+  avatar: "https://i.pravatar.cc/150?img = $2;
   role: "Verified Talent",
   reputation: 325,
   postCount: 14,
@@ -47,8 +45,7 @@ const mockUser: CommunityUser = {
     }
   ],
   isVerified: true,
-  isModerator: false
-};
+  isModerator: false},
 
 // Mock posts by this user
 const userPosts: ForumPost[] = [
@@ -58,65 +55,62 @@ const userPosts: ForumPost[] = [
     content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
     authorId: "user1",
     authorName: "Alex Johnson",
-    authorAvatar: "https://i.pravatar.cc/150?img=3",
+    authorAvatar: "https://i.pravatar.cc/150?img = $2;
     authorRole: "Verified Talent",
     categoryId: "ai-tools",
     tags: ["machine-learning", "fine-tuning", "gpt"],
-    createdAt: "2025-04-01T12:00:00Z",
-    updatedAt: "2025-04-01T12:00:00Z",
+    createdAt: "2025-04-01T12: 00: 00Z",
+    updatedAt: "2025-04-01T12: 00: 00Z",
     upvotes: 48,
     downvotes: 2,
     replyCount: 12,
     isAnswered: true,
-    isFeatured: true
-  },
+    isFeatured: true},
   {
     id: "11",
     title: "How to structure an AI prompt for best results",
     content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...",
     authorId: "user1",
     authorName: "Alex Johnson",
-    authorAvatar: "https://i.pravatar.cc/150?img=3",
+    authorAvatar: "https://i.pravatar.cc/150?img = $2;
     authorRole: "Verified Talent",
     categoryId: "ai-tools",
     tags: ["prompts", "techniques", "optimization"],
-    createdAt: "2025-03-20T14:25:00Z",
-    updatedAt: "2025-03-20T14:25:00Z",
+    createdAt: "2025-03-20T14: 25: 00Z",
+    updatedAt: "2025-03-20T14: 25: 00Z",
     upvotes: 36,
     downvotes: 1,
-    replyCount: 8
-  },
+    replyCount: 8},
   {
     id: "12",
     title: "Setting up effective monitoring for AI systems",
     content: "Here's my approach to monitoring AI systems in production environments...",
     authorId: "user1",
     authorName: "Alex Johnson",
-    authorAvatar: "https://i.pravatar.cc/150?img=3",
+    authorAvatar: "https://i.pravatar.cc/150?img = $2;
     authorRole: "Verified Talent",
     categoryId: "project-help",
     tags: ["monitoring", "production", "devops"],
-    createdAt: "2025-03-12T09:30:00Z",
-    updatedAt: "2025-03-12T09:30:00Z",
+    createdAt: "2025-03-12T09: 30: 00Z",
+    updatedAt: "2025-03-12T09: 30: 00Z",
     upvotes: 24,
     downvotes: 0,
-    replyCount: 6
-  }
-];
+    replyCount: 6}
+],
 
 export default function CommunityProfilePage() {
-  const { userId } = useParams();
-  const [user, setUser] = useState<CommunityUser | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [posts, setPosts] = useState<ForumPost[]>([]);
+  const { userId } = useParams($2);
+  const [user, setUser] = useState<CommunityUser | null>(null),
+  const [isLoading, setIsLoading] = useState($2);
+  const [posts, setPosts] = useState<ForumPost[]>([]),
   
   useEffect(() => {
     // In a real app, we would fetch the user data here
     // For now, we'll just use the mock data
-    setUser(mockUser);
-    setPosts(userPosts);
-    setIsLoading(false);
-  }, [userId]);
+    setUser($2);
+    setPosts($2);
+    setIsLoading(false)
+  }, [userId]),
   
   if (isLoading) {
     return (
@@ -127,7 +121,7 @@ export default function CommunityProfilePage() {
           </div>
         </div>
       </AppLayout>
-    );
+    )
   }
   
   if (!user) {
@@ -140,7 +134,7 @@ export default function CommunityProfilePage() {
           </Button>
         </div>
       </AppLayout>
-    );
+    )
   }
 
   return (
@@ -258,7 +252,7 @@ export default function CommunityProfilePage() {
                     <ul className="space-y-4">
                       <li className="flex items-start gap-4">
                         <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
+                          {formatDistanceToNow(new Date("2025-04-10T14: 30: 00Z"), { addSuffix: true})}
                         </div>
                         <div>
                           <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover:underline">Looking for feedback on my automated testing approach</Link></p>
@@ -266,7 +260,7 @@ export default function CommunityProfilePage() {
                       </li>
                       <li className="flex items-start gap-4">
                         <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-08T09:15:00Z"), { addSuffix: true })}
+                          {formatDistanceToNow(new Date("2025-04-08T09: 15: 00Z"), { addSuffix: true})}
                         </div>
                         <div>
                           <p>Earned badge <span className="font-medium">Top Contributor</span></p>
@@ -274,7 +268,7 @@ export default function CommunityProfilePage() {
                       </li>
                       <li className="flex items-start gap-4">
                         <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-05T16:40:00Z"), { addSuffix: true })}
+                          {formatDistanceToNow(new Date("2025-04-05T16: 40: 00Z"), { addSuffix: true})}
                         </div>
                         <div>
                           <p>Replied to <Link to="/community/post/7" className="text-zion-purple hover:underline">Comparing different vector embedding models</Link></p>
@@ -282,7 +276,7 @@ export default function CommunityProfilePage() {
                       </li>
                       <li className="flex items-start gap-4">
                         <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-01T12:00:00Z"), { addSuffix: true })}
+                          {formatDistanceToNow(new Date("2025-04-01T12: 00: 00Z"), { addSuffix: true})}
                         </div>
                         <div>
                           <p>Created post <Link to="/community/post/1" className="text-zion-purple hover:underline">Best practices for AI model fine-tuning</Link></p>
@@ -290,10 +284,10 @@ export default function CommunityProfilePage() {
                       </li>
                       <li className="flex items-start gap-4">
                         <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-03-25T08:20:00Z"), { addSuffix: true })}
+                          {formatDistanceToNow(new Date("2025-03-25T08: 20: 00Z"), { addSuffix: true})}
                         </div>
                         <div>
-                          <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover:underline">How to optimize RAG systems for better results</Link></p>
+                          <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>
                         </div>
                       </li>
                     </ul>
@@ -305,5 +299,5 @@ export default function CommunityProfilePage() {
         </div>
       </div>
     </AppLayout>
-  );
+  )
 }

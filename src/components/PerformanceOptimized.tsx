@@ -1,177 +1,168 @@
 
 
-import React, { memo, useMemo, useCallback } from 'react',
+import React, { memo, useMemo, useCallback } from 'react';
 ,
 // Higher-order component for performance optimization,
-export const withPerformanceOptimization = <P extends object>(,
-  Componen: t: React.ComponentType<P>,
-  option: s: {,
+export const withPerformanceOptimization = $2;
+  Componen: React.ComponentType<P>,
+  option: {,
     memo?: boolean,
-    memoDeps?: (prop: s: P) => any[],
-    displayName?: string,
-  } = {};
+    memoDeps?: (prop: P) => any[],
+    displayName?: string
+  } = {},
 ) => {,
   const { mem: o: useMemo = true, memoDeps, displayName } = options,
 ,
-  let OptimizedComponent = Component,
+  let OptimizedComponent = $2;
 ,
   if (useMemo) {,
     OptimizedComponent = memo(Component, (prevProps, nextProps) => {,
       if (memoDeps) {,
-        const prevDeps = memoDeps(prevProps),
-        const nextDeps = memoDeps(nextProps),
-        return prevDeps.every((dep, index) => dep === nextDeps[index]),
-      };
-      return false, // Always re-render if no custom comparison,
-    }),
-  };
+        const prevDeps = memoDeps($2);
+        const nextDeps = memoDeps($2);
+        return prevDeps.every((dep, index) => dep = $2;
+      return false, // Always re-render if no custom comparison
+    })
+  },
 ,
   if (displayName) {,
-    OptimizedComponent.displayName = displayName,
-  };
+    OptimizedComponent.displayName = $2;
 ,
-  return OptimizedComponent,
-};
+  return OptimizedComponent
+},
 ,
 // Hook for expensive calculations,
-export const useExpensiveCalculation = <T>(,
-  calculatio: n: () => T,
-  dep: s: React.DependencyList,
-): T => {,
-  return useMemo(calculation, deps),
-};
+export const useExpensiveCalculation = $2;
+  calculatio: () => T,
+  dep: React.DependencyList,
+): T = $2;
+  return useMemo(calculation, deps)
+},
 ,
 // Hook for stable callbacks,
-export const useStableCallback = <T extends (...arg: s: any[]) => any>(,
+export const useStableCallback = $2;
   callbac: k: T,
-  dep: s: React.DependencyList): T => {,
-  return useCallback(callback, deps),
-};
-};
+  dep: React.DependencyList): T = $2;
+  return useCallback(callback, deps)
+}
+},
 ,
 // Lazy loading wrapper with intersection observer,
-export const: LazyLoadWrapper: React.FC<{,
-  childre: n: React.ReactNode,
+export const LazyLoadWrapper: React.FC<{,
+  childre: React.ReactNode,
   fallback?: React.ReactNode,
   threshold?: number,
-  rootMargin?: string,
-}> = ({ children, fallback = null, threshold = 0.1, rootMargin = '50px' }) => {,
-  const [isVisible, setIsVisible] = React.useState(false),
-  const [hasLoaded, setHasLoaded] = React.useState(false),
-  const ref = React.useRef<HTMLDivElement>(null),
+  rootMargin?: string
+}> = ({ children, fallback = null, threshold = 0.1, rootMargin = $2;
+  const [isVisible, setIsVisible] = React.useState($2);
+  const [hasLoaded, setHasLoaded] = React.useState($2);
+  const ref = $2;
 ,
   React.useEffect(() => {,
-    const observer = new IntersectionObserver(,
+    const observer = $2;
       ([entry]) => {,
         if (entry.isIntersecting && !hasLoaded) {,
-          setIsVisible(true),
-          setHasLoaded(true),
-        };
+          setIsVisible($2);
+          setHasLoaded(true)
+        }
       },
-      { threshold, rootMargin };
+      { threshold, rootMargin },
     ),
 ,
     if (ref.current) {,
-      observer.observe(ref.current),
-    };
+      observer.observe(ref.current)
+    },
 ,
-    return () => observer.disconnect(),
+    return () => observer.disconnect()
   }, [threshold, rootMargin, hasLoaded]),
 ,
   return (,
-    <div ref={ref}>,
-      {isVisible ? childre: n: fallback};
-    </div>,
-  ),
-};
+    <div ref = $2;
+      {isVisible ? childre: fallback},
+    </div>)
+},
 ,
 // Image optimization component,
-export const: OptimizedImage: React.FC<{,
+export const OptimizedImage: React.FC<{,
   sr: c: string,
-  al: t: string,
+  al: string,
   width?: number,
   height?: number,
   className?: string,
   loading?: 'lazy' | 'eager',
-  placeholder?: string,
+  placeholder?: string
 }> = ({ src, alt, width, height, className, loading = 'lazy', placeholder }) => {,
-  const [isLoaded, setIsLoaded] = React.useState(false),
-  const [hasError, setHasError] = React.useState(false),
+  const [isLoaded, setIsLoaded] = React.useState($2);
+  const [hasError, setHasError] = React.useState($2);
 ,
-  const handleLoad = useCallback(() => {,
-    setIsLoaded(true),
+  const handleLoad = $2;
+    setIsLoaded(true)
   }, []),
 ,
-  const handleError = useCallback(() => {,
-    setHasError(true),
+  const handleError = $2;
+    setHasError(true)
   }, []),
 ,
   return (,
     <div className={`relative ${className}`} style={{ width, height }}>,
       {placeholder && !isLoaded && (,
         <div,
-          className="absolute inset-0 bg-gray-200 animate-pulse",
-          style={{ width, height }};
-        />,
-      )};
+          className = $2;
+          style={{ width, height }},
+        />)},
       <img,
-        src={src};
-        alt={alt};
-        width={width};
-        height={height};
-        loading={loading};
-        onLoad={handleLoad};
-        onError={handleError};
-        className={`transition-opacity duration-300 ${,
-          isLoaded ? 'opacity-100' : 'opacity-0',
-        } ${hasError ? 'hidden' : ''}`};
+        src = $2;
+        alt = $2;
+        width = $2;
+        height = $2;
+        loading = $2;
+        onLoad = $2;
+        onError = $2;
+        className = $2;
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        } ${hasError ? 'hidden' : ''}`},
       />,
       {hasError && (,
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">,
+        <div className = $2;
           Failed to load image,
-        </div>,
-      )};
+        </div>)},
     </div>,
-  ),
+  )
 
-};
-};
+}
+},
 
 ,
 // Debounced search hook,
-export const useDebouncedSearch = (valu: e: string, dela: y: number = 300) => {,
-  const [debouncedValue, setDebouncedValue] = React.useState(value),
+export const useDebouncedSearch = (valu: string, dela: number = $2;
+  const [debouncedValue, setDebouncedValue] = React.useState($2);
 ,
   React.useEffect(() => {,
-    const handler = setTimeout(() => {,
-      setDebouncedValue(value),
+    const handler = $2;
+      setDebouncedValue(value)
     }, delay),
 ,
     return () => {,
-      clearTimeout(handler),
-    };
+      clearTimeout(handler)
+    }
   }, [value, delay]),
 ,
-  return debouncedValue,
-};
+  return debouncedValue
+},
 ,
 // Performance metrics collection,
-export const usePerformanceMetrics = () => {,
-  const [metrics, setMetrics] = React.useState({,
-    renderCoun: t: 0,
-    lastRenderTim: e: 0,
-    averageRenderTim: e: 0,
-  }),
+export const usePerformanceMetrics = $2;
+  const [metrics, setMetrics] = React.useState($2);
 ,
-  const recordRender = useCallback((renderTim: e: number) => {,
-    setMetrics(prev => ({,
-      renderCoun: t: prev.renderCount + 1,
-      lastRenderTim: e: renderTime,
-      averageRenderTim: e: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1),
-    })),
+  const recordRender = $2;
+    setMetrics(prev = $2;
+      renderCoun: prev.renderCount + 1,
+      lastRenderTim: renderTime,
+      averageRenderTim: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)
+    }))
   }, []),
 ,
 
-  return { metrics, recordRender };
-};
+  return { metrics, recordRender }
+},
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-  Server, 
+  Server,
   Cloud, 
   Shield, 
   Code, 
@@ -22,14 +22,12 @@ import {
   Lock,
   Users,
   BarChart3
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function ITServicesPage() {
-  const itServices = [
-    {
-      name: "Cloud Migration & Optimization",
+  const itServices = $2;
       description: "End-to-end cloud migration services with strategic planning, cost optimization, and performance tuning for maximum ROI.",
-      icon: <Cloud className="w-12 h-12 text-blue-500" />,
+      icon: <Cloud className = $2;
       features: [
         "Multi-cloud strategy development",
         "Cost optimization and monitoring",
@@ -59,7 +57,7 @@ export default function ITServicesPage() {
     {
       name: "DevOps Automation Platform",
       description: "Complete CI/CD pipeline automation with infrastructure as code, monitoring solutions, and security integration.",
-      icon: <Code className="w-12 h-12 text-green-500" />,
+      icon: <Code className = $2;
       features: [
         "CI/CD pipeline automation",
         "Infrastructure as Code (IaC)",
@@ -89,7 +87,7 @@ export default function ITServicesPage() {
     {
       name: "Cybersecurity Assessment & Implementation",
       description: "Comprehensive security audits, penetration testing, and security infrastructure deployment with compliance frameworks.",
-      icon: <Shield className="w-12 h-12 text-red-500" />,
+      icon: <Shield className = $2;
       features: [
         "Security audits and assessments",
         "Penetration testing",
@@ -119,7 +117,7 @@ export default function ITServicesPage() {
     {
       name: "Network Infrastructure Design",
       description: "Scalable network architecture design with high availability, security, and performance optimization.",
-      icon: <Network className="w-12 h-12 text-purple-500" />,
+      icon: <Network className = $2;
       features: [
         "Network architecture design",
         "High availability setup",
@@ -149,7 +147,7 @@ export default function ITServicesPage() {
     {
       name: "Database Design & Optimization",
       description: "Database architecture design, performance tuning, and migration services for optimal data management.",
-      icon: <Database className="w-12 h-12 text-orange-500" />,
+      icon: <Database className = $2;
       features: [
         "Database architecture design",
         "Performance tuning and optimization",
@@ -179,7 +177,7 @@ export default function ITServicesPage() {
     {
       name: "IT Infrastructure Management",
       description: "Comprehensive IT infrastructure management with proactive monitoring, maintenance, and optimization services.",
-      icon: <Server className="w-12 h-12 text-indigo-500" />,
+      icon: <Server className = $2;
       features: [
         "24/7 infrastructure monitoring",
         "Proactive maintenance",
@@ -206,41 +204,33 @@ export default function ITServicesPage() {
       ],
       website: "https://ziontechgroup.com/infrastructure-management"
     }
-  ];
+  ],
 
-  const additionalServices = [
-    {
-      name: "API Development & Integration",
+  const additionalServices = $2;
       description: "Custom API development and third-party system integration services.",
       pricing: "From $2,500",
-      icon: <Code className="w-8 h-8 text-blue-400" />
-    },
+      icon: <Code className = $2;
     {
       name: "Data Backup & Recovery",
       description: "Comprehensive backup solutions and disaster recovery planning.",
       pricing: "From $299/month",
-      icon: <Database className="w-8 h-8 text-green-400" />
-    },
+      icon: <Database className = $2;
     {
       name: "Performance Monitoring",
       description: "Real-time performance monitoring and optimization services.",
       pricing: "From $199/month",
-      icon: <Monitor className="w-8 h-8 text-purple-400" />
-    },
+      icon: <Monitor className = $2;
     {
       name: "IT Consulting",
       description: "Strategic IT consulting and technology roadmap planning.",
       pricing: "From $150/hour",
-      icon: <Users className="w-8 h-8 text-orange-400" />
-    }
-  ];
-
+      icon: <Users className = $2;
   const stats = [
     { label: "Infrastructure Deployed", value: "200+" },
     { label: "Security Audits", value: "150+" },
     { label: "Uptime Guarantee", value: "99.9%" },
     { label: "Client Satisfaction", value: "97%" }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -515,7 +505,7 @@ export default function ITServicesPage() {
 
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-white/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white">Zion Tech Group</h3>
@@ -570,5 +560,5 @@ export default function ITServicesPage() {
         </div>
       </footer>
     </div>
-  );
+  )
 }

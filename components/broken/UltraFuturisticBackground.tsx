@@ -1,33 +1,28 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-
-const UltraFuturisticBackground: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
+const UltraFuturisticBackground: React.FC = $2;
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const canvas = $2;
+    if (!canvas) return,
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext($2);
+    if (!ctx) return,
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
+    canvas.width = $2;
+    canvas.height = $2;
     // Quantum particle system
     const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      life: number;
-      maxLife: number;
-    }> = [];
+      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      life: number,
+      maxLife: number}> = [],
 
     // Create initial particles
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0, i < 100, i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -36,34 +31,30 @@ const UltraFuturisticBackground: React.FC = () => {
         size: Math.random() * 3 + 1,
         color: `hsl(${Math.random() * 360}, 70%, 60%)`,
         life: Math.random() * 100,
-        maxLife: 100
-      });
+        maxLife: 100})
     }
 
     // Animation loop
     const animate = () => {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)',
+      ctx.fillRect($2);
       // Update and draw particles
       particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        particle.life--;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
+        particle.life--,
 
         // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
-
+        if (particle.x < 0) particle.x = $2;
+        if (particle.x > canvas.width) particle.x = $2;
+        if (particle.y < 0) particle.y = $2;
+        if (particle.y > canvas.height) particle.y = $2;
         // Draw particle
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.life / particle.maxLife;
-        ctx.fill();
-
+        ctx.beginPath($2);
+        ctx.arc($2);
+        ctx.fillStyle = $2;
+        ctx.globalAlpha = $2;
+        ctx.fill($2);
         // Reset particle if it dies
         if (particle.life <= 0) {
           particles[index] = {
@@ -74,10 +65,9 @@ const UltraFuturisticBackground: React.FC = () => {
             size: Math.random() * 3 + 1,
             color: `hsl(${Math.random() * 360}, 70%, 60%)`,
             life: 100,
-            maxLife: 100
-          };
+            maxLife: 100}
         }
-      });
+      }),
 
       // Draw quantum entanglement lines
       particles.forEach((particle1, i) => {
@@ -85,36 +75,31 @@ const UltraFuturisticBackground: React.FC = () => {
           const distance = Math.sqrt(
             Math.pow(particle1.x - particle2.x, 2) + 
             Math.pow(particle1.y - particle2.y, 2)
-          );
+          ),
           
           if (distance < 100) {
-            ctx.beginPath();
-            ctx.moveTo(particle1.x, particle1.y);
-            ctx.lineTo(particle2.x, particle2.y);
-            ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;
-            ctx.lineWidth = 1;
-            ctx.stroke();
+            ctx.beginPath($2);
+            ctx.moveTo($2);
+            ctx.lineTo($2);
+            ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`,
+            ctx.lineWidth = $2;
+            ctx.stroke()
           }
-        });
-      });
+        })
+      }),
 
-      requestAnimationFrame(animate);
-    };
+      requestAnimationFrame(animate)
+    },
 
-    animate();
-
+    animate($2);
     // Handle resize
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    window.addEventListener('resize', handleResize);
-
+    const handleResize = $2;
+      canvas.height = $2;
+    window.addEventListener($2);
     return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+      window.removeEventListener('resize', handleResize)
+    }
+  }, []),
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
@@ -127,7 +112,7 @@ const UltraFuturisticBackground: React.FC = () => {
 
       {/* Quantum Grid */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size: 50px_50px] opacity-20" />
       </div>
 
       {/* Floating Geometric Shapes */}
@@ -143,8 +128,7 @@ const UltraFuturisticBackground: React.FC = () => {
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]
           }}
-          transition={{
-            duration: 20,
+          transition = $2;
             repeat: Infinity,
             ease: "linear"
           }}
@@ -161,8 +145,7 @@ const UltraFuturisticBackground: React.FC = () => {
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.7, 0.3]
           }}
-          transition={{
-            duration: 15,
+          transition = $2;
             repeat: Infinity,
             ease: "linear"
           }}
@@ -175,8 +158,7 @@ const UltraFuturisticBackground: React.FC = () => {
             scale: [1, 1.5, 1],
             opacity: [0.2, 0.8, 0.2]
           }}
-          transition={{
-            duration: 12,
+          transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -190,8 +172,7 @@ const UltraFuturisticBackground: React.FC = () => {
             scale: [1, 1.1, 1],
             opacity: [0.3, 0.6, 0.3]
           }}
-          transition={{
-            duration: 18,
+          transition = $2;
             repeat: Infinity,
             ease: "linear"
           }}
@@ -202,10 +183,7 @@ const UltraFuturisticBackground: React.FC = () => {
       <div className="absolute inset-0">
         {[...Array(8)].map((_, i) => (
           <motion.div
-            key={i}
-            className="absolute w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm"
-            style={{
-              left: `${20 + (i * 10)}%`,
+            key = $2;
               top: `${30 + (i * 5)}%`
             }}
             animate={{
@@ -213,8 +191,7 @@ const UltraFuturisticBackground: React.FC = () => {
               opacity: [0.3, 1, 0.3],
               y: [0, -20, 0]
             }}
-            transition={{
-              duration: 3 + i * 0.5,
+            transition = $2;
               repeat: Infinity,
               ease: "easeInOut",
               delay: i * 0.3
@@ -227,17 +204,10 @@ const UltraFuturisticBackground: React.FC = () => {
       <div className="absolute inset-0">
         {[...Array(5)].map((_, i) => (
           <motion.div
-            key={i}
-            className="absolute w-full h-1 bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent"
-            style={{
-              top: `${20 + (i * 15)}%`
-            }}
-            animate={{
-              x: ['-100%', '100%'],
+            key = $2;
               opacity: [0, 1, 0]
             }}
-            transition={{
-              duration: 8 + i * 2,
+            transition = $2;
               repeat: Infinity,
               ease: "linear",
               delay: i * 1.5
@@ -257,18 +227,13 @@ const UltraFuturisticBackground: React.FC = () => {
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
           <motion.div
-            key={i}
-            className="absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent"
-            style={{
-              left: `${Math.random() * 100}%`,
+            key = $2;
               top: '-2rem'
             }}
-            animate={{
-              y: ['0vh', '100vh'],
+            animate = $2;
               opacity: [0, 1, 0]
             }}
-            transition={{
-              duration: 4 + Math.random() * 3,
+            transition = $2;
               repeat: Infinity,
               ease: "linear",
               delay: Math.random() * 5
@@ -301,8 +266,7 @@ const UltraFuturisticBackground: React.FC = () => {
                 opacity: [0.1, 0.5, 0.1],
                 strokeDasharray: [0, 100, 0]
               }}
-              transition={{
-                duration: 6 + i * 0.5,
+              transition = $2;
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
@@ -311,7 +275,7 @@ const UltraFuturisticBackground: React.FC = () => {
         </svg>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticBackground;
+export default UltraFuturisticBackground,

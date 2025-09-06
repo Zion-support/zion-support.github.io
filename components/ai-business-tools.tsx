@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
-  Brain, 
+  Brain,
   MessageSquare, 
   Image, 
   Video, 
@@ -18,31 +18,24 @@ import {
   TrendingUp,
   Shield,
   Globe
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AIBusinessToolsPage() {
-  const aiTools = [
-    {
-      name: 'ChatGPT',
+  const aiTools = $2;
       description: 'Advanced AI language model that can help with writing, analysis, coding, and creative tasks. Perfect for content creation and problem-solving.',
       category: 'AI Assistant',
       pricing: 'Free - $20/month',
       rating: 4.8,
       users: '100M+',
-      icon: <Brain className="w-8 h-8 text-green-400" />,
+      icon: <Brain className = $2;
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Natural language processing',
-        'Code generation & debugging',
-        'Content creation',
-        'Data analysis',
-        'Creative writing',
-        'Multi-language support'
+        'Natural language processingCode generation & debuggingContent creationData analysisCreative writingMulti-language support'
       ],
       website: 'https://chat.openai.com',
       useCase: 'Ideal for writers, developers, researchers, and anyone who needs AI assistance with complex tasks.',
-      pros: ['Powerful capabilities', 'Easy to use', 'Regular updates', 'Good free tier'],
-      cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns'],
+      pros: ['Powerful capabilitiesEasy to useRegular updatesGood free tier'],
+      cons: ['Sometimes inaccurateLimited contextPrivacy concerns'],
       bestFor: 'Content creators, developers, researchers'
     },
     {
@@ -52,20 +45,15 @@ export default function AIBusinessToolsPage() {
       pricing: '$10 - $30/month',
       rating: 4.7,
       users: '1M+',
-      icon: <Image className="w-8 h-8 text-purple-400" />,
+      icon: <Image className = $2;
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
-        'Text-to-image generation',
-        'High-resolution output',
-        'Artistic styles',
-        'Commercial usage rights',
-        'Community features',
-        'Discord integration'
+        'Text-to-image generationHigh-resolution outputArtistic stylesCommercial usage rightsCommunity featuresDiscord integration'
       ],
       website: 'https://midjourney.com',
       useCase: 'Perfect for designers, marketers, content creators, and businesses needing custom visual content.',
-      pros: ['High-quality output', 'Creative control', 'Commercial rights', 'Active community'],
-      cons: ['Discord-only interface', 'Limited customization', 'Monthly subscription'],
+      pros: ['High-quality outputCreative controlCommercial rightsActive community'],
+      cons: ['Discord-only interfaceLimited customizationMonthly subscription'],
       bestFor: 'Designers, marketers, content creators'
     },
     {
@@ -75,20 +63,15 @@ export default function AIBusinessToolsPage() {
       pricing: '$39 - $125/month',
       rating: 4.6,
       users: '100K+',
-      icon: <FileText className="w-8 h-8 text-blue-400" />,
+      icon: <FileText className = $2;
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
-        'Marketing copy generation',
-        'Blog post writing',
-        'Social media content',
-        'SEO optimization',
-        'Brand voice training',
-        'Team collaboration'
+        'Marketing copy generationBlog post writingSocial media contentSEO optimizationBrand voice trainingTeam collaboration'
       ],
       website: 'https://jasper.ai',
       useCase: 'Essential for marketing teams, content creators, and businesses that need high-quality written content at scale.',
-      pros: ['Specialized for marketing', 'Brand voice training', 'SEO optimization', 'Team features'],
-      cons: ['Expensive', 'Limited free trial', 'Can be repetitive'],
+      pros: ['Specialized for marketingBrand voice trainingSEO optimizationTeam features'],
+      cons: ['ExpensiveLimited free trialCan be repetitive'],
       bestFor: 'Marketing teams, content creators, businesses'
     },
     {
@@ -98,20 +81,15 @@ export default function AIBusinessToolsPage() {
       pricing: '$30 - $89/month',
       rating: 4.5,
       users: '50K+',
-      icon: <Video className="w-8 h-8 text-red-400" />,
+      icon: <Video className = $2;
       color: 'bg-gradient-to-br from-red-500 to-pink-600',
       features: [
-        'AI avatar generation',
-        'Text-to-speech',
-        'Video templates',
-        'Multi-language support',
-        'Custom branding',
-        'API access'
+        'AI avatar generationText-to-speechVideo templatesMulti-language supportCustom brandingAPI access'
       ],
       website: 'https://synthesia.io',
       useCase: 'Perfect for creating training videos, marketing content, and presentations without hiring actors or video crews.',
-      pros: ['Professional quality', 'Multiple languages', 'Custom avatars', 'Easy to use'],
-      cons: ['Limited avatar options', 'Expensive', 'Subscription required'],
+      pros: ['Professional qualityMultiple languagesCustom avatarsEasy to use'],
+      cons: ['Limited avatar optionsExpensiveSubscription required'],
       bestFor: 'Training departments, marketers, educators'
     },
     {
@@ -121,20 +99,15 @@ export default function AIBusinessToolsPage() {
       pricing: 'Free - $49/month',
       rating: 4.4,
       users: '200K+',
-      icon: <MessageSquare className="w-8 h-8 text-orange-400" />,
+      icon: <MessageSquare className = $2;
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       features: [
-        'Marketing copy generation',
-        'Product descriptions',
-        'Social media posts',
-        'Email campaigns',
-        'Blog content',
-        'Free tier available'
+        'Marketing copy generationProduct descriptionsSocial media postsEmail campaignsBlog contentFree tier available'
       ],
       website: 'https://copy.ai',
       useCase: 'Great for small businesses, entrepreneurs, and marketers who need quality copy without hiring writers.',
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
-      cons: ['Limited customization', 'Quality varies', 'Basic features'],
+      pros: ['Free tierEasy to useGood templatesAffordable'],
+      cons: ['Limited customizationQuality variesBasic features'],
       bestFor: 'Small businesses, entrepreneurs, marketers'
     },
     {
@@ -144,20 +117,15 @@ export default function AIBusinessToolsPage() {
       pricing: 'Free - $12/month',
       rating: 4.7,
       users: '30M+',
-      icon: <Check className="w-8 h-8 text-green-400" />,
+      icon: <Check className = $2;
       color: 'bg-gradient-to-br from-green-500 to-teal-600',
       features: [
-        'Grammar & spelling check',
-        'Tone analysis',
-        'Style suggestions',
-        'Plagiarism detection',
-        'Browser extension',
-        'Mobile apps'
+        'Grammar & spelling checkTone analysisStyle suggestionsPlagiarism detectionBrowser extensionMobile apps'
       ],
       website: 'https://grammarly.com',
       useCase: 'Essential for anyone who writes professionally, including students, professionals, and content creators.',
-      pros: ['Excellent accuracy', 'Multiple platforms', 'Free tier', 'User-friendly'],
-      cons: ['Limited free features', 'Privacy concerns', 'Can be overzealous'],
+      pros: ['Excellent accuracyMultiple platformsFree tierUser-friendly'],
+      cons: ['Limited free featuresPrivacy concernsCan be overzealous'],
       bestFor: 'Students, professionals, content creators'
     },
     {
@@ -167,20 +135,15 @@ export default function AIBusinessToolsPage() {
       pricing: 'Free - $79/month',
       rating: 4.3,
       users: '100K+',
-      icon: <Video className="w-8 h-8 text-blue-400" />,
+      icon: <Video className = $2;
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
-        'Text-to-video conversion',
-        'Video templates',
-        'Music library',
-        'Brand customization',
-        'Social media formats',
-        'Free tier available'
+        'Text-to-video conversionVideo templatesMusic libraryBrand customizationSocial media formatsFree tier available'
       ],
       website: 'https://lumen5.com',
       useCase: 'Perfect for marketers, social media managers, and businesses that want to create video content from existing text.',
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
-      cons: ['Limited customization', 'Basic features', 'Watermark on free'],
+      pros: ['Free tierEasy to useGood templatesAffordable'],
+      cons: ['Limited customizationBasic featuresWatermark on free'],
       bestFor: 'Marketers, social media managers, small businesses'
     },
     {
@@ -190,31 +153,24 @@ export default function AIBusinessToolsPage() {
       pricing: '$59 - $199/month',
       rating: 4.6,
       users: '25K+',
-      icon: <TrendingUp className="w-8 h-8 text-green-400" />,
+      icon: <TrendingUp className = $2;
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Content optimization',
-        'Keyword research',
-        'Competitor analysis',
-        'SERP analysis',
-        'Content editor',
-        'Rank tracking'
+        'Content optimizationKeyword researchCompetitor analysisSERP analysisContent editorRank tracking'
       ],
       website: 'https://surferseo.com',
       useCase: 'Essential for content marketers, SEO specialists, and businesses that want to improve their search rankings.',
-      pros: ['Data-driven insights', 'Content optimization', 'Competitor analysis', 'Good support'],
-      cons: ['Expensive', 'Complex interface', 'Steep learning curve'],
+      pros: ['Data-driven insightsContent optimizationCompetitor analysisGood support'],
+      cons: ['ExpensiveComplex interfaceSteep learning curve'],
       bestFor: 'SEO specialists, content marketers, businesses'
     }
-  ];
+  ],
 
-  const categories = ['All', 'AI Assistant', 'AI Art', 'AI Writing', 'AI Video', 'AI Copywriting', 'AI SEO'];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-
+  const categories = $2;
+  const [selectedCategory, setSelectedCategory] = React.useState($2);
   const filteredTools = selectedCategory === 'All' 
     ? aiTools 
-    : aiTools.filter(tool => tool.category === selectedCategory);
-
+    : aiTools.filter($2);
   return (
     <>
       <Head>
@@ -233,7 +189,7 @@ export default function AIBusinessToolsPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]" />
         </div>
 
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size: 50px_50px] opacity-20" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-20 animate-fade-in">
@@ -463,7 +419,7 @@ export default function AIBusinessToolsPage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-green-600 to-green-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
             Ready to Transform Your Business with AI?
@@ -471,7 +427,7 @@ export default function AIBusinessToolsPage() {
           <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Our AI experts can help you identify the right tools, implement them effectively, and maximize their impact on your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">
             <Button
               href="/contact"
               variant="secondary"
@@ -493,5 +449,5 @@ export default function AIBusinessToolsPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

@@ -8,54 +8,49 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
-import { useRouter } from 'next/router'; // Changed from react-router-dom
+import { useRouter } from 'next/router', // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 export default function MessagingInbox() {
 
   const { 
-    conversations, 
+    conversations,
     activeConversation, 
     setActiveConversation, 
     markAsRead,
     fetchConversations,
     isLoading
-  } = useMessaging();
-  const isMobile = useIsMobile();
-  const router = useRouter(); // Changed from navigate
-  const [activeCall, setActiveCall] = useState<string | null>(null);
+  } = useMessaging($2);
+  const isMobile = useIsMobile($2);
+  const router = useRouter(), // Changed from navigate
+  const [activeCall, setActiveCall] = useState<string | null>(null),
   
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
       try {
-        await fetchConversations();
+        await fetchConversations()
       } catch (error) {
-        logErrorToProduction('Failed to load conversations:', { data: error });
-        toast.error("Failed to load messages. Please try again.");
+        logErrorToProduction($2);
+        toast.error("Failed to load messages. Please try again.")
       }
-    };
+    },
     
-    loadData();
-  }, [fetchConversations]);
+    loadData()
+  }, [fetchConversations]),
   
   const startVideoCall = () => {
     if (!activeConversation) {
-      toast.error("Please select a conversation first");
-      return;
+      toast.error($2);
+      return
     }
     
-    const roomId = `msg-${activeConversation.id}`;
-    setActiveCall(roomId);
-    
+    const roomId = $2;
+    setActiveCall($2);
     // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-    });
-    
+    toast.success($2);
     // Navigate to video call page
-    router.push(`/call/${roomId}`); // Changed from navigate
-  };
+    router.push(`/call/${roomId}`), // Changed from navigate
+  },
   
   return (
     <ProtectedRoute>
@@ -104,5 +99,5 @@ export default function MessagingInbox() {
         {isMobile && <div className="h-16"></div>}
       </div>
     </ProtectedRoute>
-  );
+  )
 }

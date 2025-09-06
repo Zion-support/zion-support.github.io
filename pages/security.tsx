@@ -4,19 +4,12 @@ import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-
 export default function Security() {
-  const securityMeasures = [
-    {
-      id: 'data-protection',
+  const securityMeasures = $2;
       title: 'Data Protection',
       icon: Database,
       features: [
-        'End-to-end encryption for all data in transit',
-        'AES-256 encryption for data at rest',
-        'Regular automated backups with encryption',
-        'Secure data centers with 24/7 monitoring',
-        'Data residency compliance for global clients'
+        'End-to-end encryption for all data in transitAES-256 encryption for data at restRegular automated backups with encryptionSecure data centers with 24/7 monitoringData residency compliance for global clients'
       ]
     },
     {
@@ -24,11 +17,7 @@ export default function Security() {
       title: 'Access Control',
       icon: Key,
       features: [
-        'Multi-factor authentication (MFA) required',
-        'Role-based access control (RBAC)',
-        'Principle of least privilege implementation',
-        'Regular access reviews and deprovisioning',
-        'Single sign-on (SSO) integration'
+        'Multi-factor authentication (MFA) requiredRole-based access control (RBAC)Principle of least privilege implementationRegular access reviews and deprovisioningSingle sign-on (SSO) integration'
       ]
     },
     {
@@ -36,11 +25,7 @@ export default function Security() {
       title: 'Infrastructure Security',
       icon: Server,
       features: [
-        'Network segmentation and firewalls',
-        'Intrusion detection and prevention systems',
-        'Regular vulnerability assessments',
-        'Automated security patching',
-        'DDoS protection and rate limiting'
+        'Network segmentation and firewallsIntrusion detection and prevention systemsRegular vulnerability assessmentsAutomated security patchingDDoS protection and rate limiting'
       ]
     },
     {
@@ -48,14 +33,10 @@ export default function Security() {
       title: 'Security Monitoring',
       icon: Eye,
       features: [
-        '24/7 security operations center (SOC)',
-        'Real-time threat detection and response',
-        'Comprehensive audit logging',
-        'Security incident response team',
-        'Continuous security monitoring tools'
+        '24/7 security operations center (SOC)Real-time threat detection and responseComprehensive audit loggingSecurity incident response teamContinuous security monitoring tools'
       ]
     }
-  ];
+  ],
 
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
@@ -63,7 +44,7 @@ export default function Security() {
     { name: 'GDPR', status: 'Compliant' },
     { name: 'HIPAA', status: 'Compliant' },
     { name: 'PCI DSS', status: 'Compliant' }
-  ];
+  ],
 
   return (
     <>
@@ -81,8 +62,8 @@ export default function Security() {
         <section className="pt-32 pb-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="flex items-center justify-center mb-6"
             >
@@ -90,8 +71,8 @@ export default function Security() {
             </motion.div>
             
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent mb-6"
             >
@@ -99,8 +80,8 @@ export default function Security() {
             </motion.h1>
             
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
             >
@@ -113,8 +94,8 @@ export default function Security() {
         <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -128,8 +109,8 @@ export default function Security() {
               {securityMeasures.map((measure, index) => (
                 <motion.div
                   key={measure.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  animate={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
                 >
@@ -152,8 +133,8 @@ export default function Security() {
 
             {/* Certifications */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.5 }}
               className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/20 mb-16"
             >
@@ -164,7 +145,7 @@ export default function Security() {
                   <motion.div
                     key={cert.name}
                     initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    animate={{ opacity: 1, scale: 1}}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="text-center p-4 bg-slate-800/50 rounded-xl border border-white/10"
                   >
@@ -178,8 +159,8 @@ export default function Security() {
 
             {/* Security Incident Response */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="mb-16"
             >
@@ -217,8 +198,8 @@ export default function Security() {
 
             {/* Vulnerability Management */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.7 }}
               className="mb-16"
             >
@@ -258,8 +239,8 @@ export default function Security() {
 
             {/* Contact Security Team */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.8 }}
               className="bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-2xl p-8 border border-red-500/20"
             >
@@ -269,8 +250,7 @@ export default function Security() {
               </h3>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-                If you discover a security vulnerability, please report it to our security team immediately:
-              </p>
+                If you discover a security vulnerability, please report it to our security team immediately: </p>
               
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="flex items-center">
@@ -304,5 +284,5 @@ export default function Security() {
         <EnhancedFooter />
       </div>
     </>
-  );
+  )
 }

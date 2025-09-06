@@ -11,27 +11,22 @@ import { enterpriseITSolutions2030 } from '../../data/2030-enterprise-it-solutio
 import { spaceMetaverseTechServices2030 } from '../../data/2030-space-metaverse-tech';
 import { innovativeMicroSaasServices2030 } from '../../data/2030-innovative-micro-saas';
 import { researchDevelopmentServices2030 } from '../../data/2030-research-development';
-
 export default function FuturisticServices2030Page() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
-  const all2030Services = [
-    ...futuristicAIServices2030,
+  const all2030Services = $2;
     ...quantumEmergingTechServices2030,
     ...enterpriseITSolutions2030,
     ...spaceMetaverseTechServices2030,
     ...innovativeMicroSaasServices2030,
     ...researchDevelopmentServices2030
-  ];
+  ],
 
-  const serviceCategories = [
-    {
-      title: '🚀 Futuristic AI Services 2030',
+  const serviceCategories = $2;
       icon: Brain,
       color: 'from-cyan-500 to-blue-500',
       services: futuristicAIServices2030,
@@ -72,7 +67,7 @@ export default function FuturisticServices2030Page() {
       services: researchDevelopmentServices2030,
       description: 'Breakthrough research and development solutions'
     }
-  ];
+  ],
 
   return (
     <>
@@ -94,18 +89,7 @@ export default function FuturisticServices2030Page() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2030 Futuristic Technology Services | Zion Tech Group" />
         <meta name="twitter:description" content="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image-2030.jpg" />
-        
-        {/* Additional Meta Tags */}
-        <meta name="theme-color" content="#8b5cf6" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/2030-futuristic-services" />
-        
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
+        <meta name = $2;
               "@type": "Service",
               "name": "2030 Futuristic Technology Services",
               "description": "Revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology",
@@ -136,8 +120,8 @@ export default function FuturisticServices2030Page() {
           
           <div className="max-w-7xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }} className="text-center mb-16">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -177,10 +161,10 @@ export default function FuturisticServices2030Page() {
               ].map((stat, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }} className="text-center">
+                  viewport={{ once: true}} className="text-center">
                   <div className={`text-4xl mb-2 ${stat.color}`}>
                     <stat.icon className="w-12 h-12 mx-auto mb-4" />
                   </div>
@@ -199,10 +183,10 @@ export default function FuturisticServices2030Page() {
             
             <div className="max-w-7xl mx-auto relative z-10">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }} className="text-center mb-16">
+                viewport={{ once: true}} className="text-center mb-16">
                 <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <category.icon className="w-10 h-10 text-white" />
                 </div>
@@ -220,10 +204,10 @@ export default function FuturisticServices2030Page() {
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 30}}
+                    whileInView={{ opacity: 1, y: 0}}
                     transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true}}
                     whileHover={{ y: -5 }} className="group cursor-pointer">
                     <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 backdrop-blur-sm">
                       <div className="text-4xl mb-4">{service.icon}</div>
@@ -270,9 +254,9 @@ export default function FuturisticServices2030Page() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -321,5 +305,5 @@ export default function FuturisticServices2030Page() {
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2031>
     </>
-  );
+  )
 }

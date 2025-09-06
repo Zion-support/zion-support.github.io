@@ -6,7 +6,6 @@ import type { ControllerRenderProps } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from "lucide-react";
-
 import { useAuth } from "@/hooks/useAuth";
 import { loginUser } from "@/services/authService";
 import { Button } from "@/components/ui/button";
@@ -17,53 +16,39 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form",
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Link, useNavigate } from "react-router-dom";
 import { LoadingOverlay } from "@/components/LoadingOverlay";
-
 // Form validation schema
 const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email").min(1, "Email is required"),
-  password: z.string().min(6, "Password must be at least 6 characters")});
+  email: z.string().email("Please enter a valid email").min($2);
+  password: z.string().min(6, "Password must be at least 6 characters")}),
 
-type LoginFormValues = z.infer<typeof loginSchema>;
-
+type LoginFormValues = $2;
 export function LoginForm() {
-  const { isLoading, login } = useAuth();
-  const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const [showPassword, setShowPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  
+  const { isLoading, login } = useAuth($2);
+  const navigate = useNavigate($2);
+  const [searchParams] = useSearchParams($2);
+  const [showPassword, setShowPassword] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
   const form = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema),
+    resolver: zodResolver($2);
     defaultValues: {
       email: "",
-      password: ""}});
+      password: ""}}),
 
-  const onSubmit = async (data: LoginFormValues) => {
-    if (isSubmitting) return;
-
+  const onSubmit = $2;
     try {
-      setIsSubmitting(true);
-      const { res, data: resData } = await loginUser(data.email, data.password);
+      setIsSubmitting($2);
+      const { res, data: resData} = await loginUser($2);
       if (!res.ok) {
-        toast.error(resData?.error || "Invalid credentials");
-        return;
+        toast.error($2);
+        return
       }
-      toast.success("Logged in successfully");
+      toast.success($2);
       if (resData?.token) {
-        document.cookie = `token=${resData.token}; path=/`;
-      }
-      navigate("/");
-    } catch (err) {
-      toast.error("Unable to login. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
+        document.cookie = `token=${resData.token}, path = $2;
   return (
     <Form {...form}>
       {form.formState.errors.root && (
@@ -73,9 +58,9 @@ export function LoginForm() {
       )}
       <form
         onSubmit={form.handleSubmit(onSubmit, (errors) => {
-          const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
+          const firstError = $2;
           if (firstError) {
-            form.setFocus(firstError);
+            form.setFocus(firstError)
           }
         })}
         className="space-y-6"
@@ -164,5 +149,5 @@ export function LoginForm() {
       </form>
       <LoadingOverlay visible={isLoading || isSubmitting} />
     </Form>
-  );
+  )
 }

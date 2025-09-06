@@ -4,60 +4,54 @@ import ProgressBar from '../../components/learn/ProgressBar';
 import Quiz from '../../components/learn/Quiz';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
-
 export default function CourseView() {
-  const router = useRouter();
-  const { courseId } = router.query as { courseId: string };
-  const [course, setCourse] = useState<any>(null);
-  const [progress, setProgress] = useState<any>({ percent: 0, completedLessons: [] });
-  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
-  const [finalPassed, setFinalPassed] = useState(false);
-
+  const router = useRouter($2);
+  const { courseId } = router.query as { courseId: string},
+  const [course, setCourse] = useState<any>(null),
+  const [progress, setProgress] = useState<any>({ percent: 0, completedLessons: [] }),
+  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null),
+  const [finalPassed, setFinalPassed] = useState($2);
   useEffect(() => {
-    if (!courseId) return;
+    if (!courseId) return,
     async function load() {
-      const [courseResp, progResp] = await Promise.all([
-        fetch(`/api/learn/courses/${courseId}`),
-        fetch(`/api/learn/progress?userId=demo-user`)
-      ]);
-      const courseData = await courseResp.json();
-      const progData = await progResp.json();
-      setCourse(courseData.course);
-      const cp = (progData.progress && progData.progress[courseId]) || { percent: 0, completedLessons: [] };
-      setProgress(cp);
-      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null);
+      const [courseResp, progResp] = await Promise.all($2);
+        fetch(`/api/learn/progress?userId = $2;
+      const courseData = await courseResp.json($2);
+      const progData = await progResp.json($2);
+      setCourse($2);
+      const cp = (progData.progress && progData.progress[courseId]) || { percent: 0, completedLessons: [] },
+      setProgress($2);
+      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null)
     }
-    load();
-  }, [courseId]);
+    load()
+  }, [courseId]),
 
-  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]);
+  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]),
 
   async function markLessonComplete(lessonId: string) {
-    const completedCount = (progress.completedLessons || []).includes(lessonId)
-      ? (progress.completedLessons || []).length
-      : (progress.completedLessons || []).length + 1;
-    const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100);
+    const completedCount = $2;
+    const percent = $2;
     const resp = await fetch('/api/learn/progress', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId: 'demo-user', courseId, lessonId, percent })
-    });
-    const data = await resp.json();
-    setProgress(data.progress);
+    }),
+    const data = await resp.json($2);
+    setProgress(data.progress)
   }
 
   function onModuleQuizComplete(score: number) {
     // For demo, simply mark as completed when quiz attempted
-    if (currentLessonId) markLessonComplete(currentLessonId);
+    if (currentLessonId) markLessonComplete(currentLessonId)
   }
 
   async function onFinalQuizComplete(score: number) {
-    const needed = course?.finalQuiz?.passThreshold || 0;
-    const passed = score >= needed;
-    setFinalPassed(passed);
+    const needed = $2;
+    const passed = $2;
+    setFinalPassed(passed)
   }
 
-  if (!course) return <div>Loading...</div>;
+  if (!course) return <div>Loading...</div>,
 
   return (
     <div className="grid lg:grid-cols-3 gap-6">
@@ -128,5 +122,5 @@ export default function CourseView() {
         </div>
       </div>
     </div>
-  );
+  )
 }

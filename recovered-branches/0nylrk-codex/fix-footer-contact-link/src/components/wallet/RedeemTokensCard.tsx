@@ -10,15 +10,14 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog";
+  DialogTrigger} from "@/components/ui/dialog",
 
-type RewardOption = {
-  id: string;
-  title: string;
-  description: string;
-  cost: number;
-  type: 'credit' | 'feature' | 'course';
-};
+type RewardOption = $2;
+  title: string,
+  description: string,
+  cost: number,
+  type: 'credit' | 'feature' | 'course'
+},
 
 const REWARD_OPTIONS: RewardOption[] = [
   {
@@ -42,18 +41,15 @@ const REWARD_OPTIONS: RewardOption[] = [
     cost: 100,
     type: 'credit'
   }
-];
+],
 
 export function RedeemTokensCard() {
-  const { wallet, spendTokens } = useWallet();
-  const [open, setOpen] = useState(false);
-
-  const handleRedeem = async (option: RewardOption) => {
-    if (!wallet || wallet.balance < option.cost) return;
-    
-    await spendTokens(option.cost, `Redeemed: ${option.title}`);
-    setOpen(false);
-  };
+  const { wallet, spendTokens } = useWallet($2);
+  const [open, setOpen] = useState($2);
+  const handleRedeem = $2;
+    await spendTokens($2);
+    setOpen(false)
+  },
 
   return (
     <Card>
@@ -106,5 +102,5 @@ export function RedeemTokensCard() {
         </Dialog>
       </CardContent>
     </Card>
-  );
+  )
 }

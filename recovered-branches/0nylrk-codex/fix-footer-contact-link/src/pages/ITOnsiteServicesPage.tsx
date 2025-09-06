@@ -14,26 +14,21 @@ import { ServiceDetailsSection } from "@/components/services/PageSections/Servic
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
 import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
-
 export default function ITOnsiteServicesPage() {
-  const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-  
+  const [searchParams] = useSearchParams($2);
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
+  const [searchQuery, setSearchQuery] = useState($2);
   // Check for success parameter in URL
-  const success = searchParams.get("success");
-  
+  const success = searchParams.get($2);
   // Show success toast if redirected from successful payment
   useEffect(() => {
-    if (success === "true") {
-      toast({
-        title: "Payment Successful",
-        description: "Your IT onsite service request has been received. Our team will contact you shortly."});
+    if (success = $2;
+        description: "Your IT onsite service request has been received. Our team will contact you shortly."})
     }
-  }, [success]);
+  }, [success]),
   
   // Popular countries for the featured cards
-  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
+  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],
   
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
@@ -42,24 +37,22 @@ export default function ITOnsiteServicesPage() {
     )
     .sort((a, b) => {
       // First, sort by popular status
-      const aIsPopular = popularCountries.includes(a.country);
-      const bIsPopular = popularCountries.includes(b.country);
-      
-      if (aIsPopular && !bIsPopular) return -1;
-      if (!aIsPopular && bIsPopular) return 1;
+      const aIsPopular = popularCountries.includes($2);
+      const bIsPopular = popularCountries.includes($2);
+      if (aIsPopular && !bIsPopular) return -1,
+      if (!aIsPopular && bIsPopular) return 1,
       
       // Then sort alphabetically
-      return a.country.localeCompare(b.country);
-    });
+      return a.country.localeCompare(b.country)
+    }),
   
   const handleCountrySelect = (country: CountryPricing) => {
-    setSelectedCountry(country);
-    
+    setSelectedCountry($2);
     // Scroll to the service details section
     setTimeout(() => {
-      document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-  };
+      document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
+    }, 100)
+  },
   
   return (
     <AppLayout>
@@ -112,5 +105,5 @@ export default function ITOnsiteServicesPage() {
       <TrustedBySection />
       <QuoteFormSection />
     </AppLayout>
-  );
+  )
 }

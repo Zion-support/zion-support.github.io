@@ -11,7 +11,6 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
 import { BlogPost } from "@/types/blog";
 import { Search } from "lucide-react";
-
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
@@ -38,15 +37,13 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Dr. Alicia Zhang",
       title: "AI Research Director",
-      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
-    },
+      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto = $2;
     publishedDate: "Apr 15, 2025",
     readTime: "5 min read",
     category: "Trends",
     tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"],
-    featuredImage: "https://images.unsplash.com/photo-1677442135026-f00ef565c4be?auto=format&fit=crop&w=1200&h=630",
-    isFeatured: true
-  },
+    featuredImage: "https://images.unsplash.com/photo-1677442135026-f00ef565c4be?auto = $2;
+    isFeatured: true},
   {
     id: "optimize-ai-listings",
     title: "How to Optimize Your AI Service Listings for Maximum Visibility",
@@ -71,14 +68,12 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Marcus Johnson",
       title: "Marketing Strategist",
-      avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200"
-    },
+      avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto = $2;
     publishedDate: "Apr 10, 2025",
     readTime: "8 min read",
     category: "Marketing",
     tags: ["Marketing", "AI Services", "Visibility", "SEO"],
-    featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"
-  },
+    featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto = $2;
   {
     id: "green-it",
     title: "Green IT: Reducing Your Data Center's Carbon Footprint",
@@ -103,14 +98,12 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Sophia Chen",
       title: "Sustainability Engineer",
-      avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"
-    },
+      avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto = $2;
     publishedDate: "Apr 5, 2025",
     readTime: "6 min read",
     category: "Sustainability",
     tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"],
-    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"
-  },
+    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto = $2;
   {
     id: "ai-ethics-frameworks",
     title: "Implementing Ethical AI Frameworks in Enterprise Applications",
@@ -135,14 +128,12 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Dr. James Peterson",
       title: "AI Ethics Officer",
-      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"
-    },
+      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto = $2;
     publishedDate: "Mar 30, 2025",
     readTime: "7 min read",
     category: "Ethics",
     tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"],
-    featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"
-  },
+    featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto = $2;
   {
     id: "ai-talent-acquisition",
     title: "Winning the AI Talent War: Recruitment Strategies for 2025",
@@ -167,14 +158,12 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Elena Rodriguez",
       title: "Head of AI Talent",
-      avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200"
-    },
+      avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto = $2;
     publishedDate: "Mar 22, 2025",
     readTime: "9 min read",
     category: "Recruitment",
     tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"],
-    featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630"
-  },
+    featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto = $2;
   {
     id: "ai-compute-optimization",
     title: "AI Compute Optimization: Balancing Performance and Cost",
@@ -199,46 +188,33 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Michael Wong",
       title: "ML Infrastructure Architect",
-      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
-    },
+      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto = $2;
     publishedDate: "Mar 15, 2025",
     readTime: "6 min read",
     category: "Infrastructure",
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"],
-    featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
-  }
-];
-
+    featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto = $2;
 // Categories for filtering
-const CATEGORIES = [
-  "All Categories",
+const CATEGORIES = $2;
   "Trends",
   "Marketing",
   "Sustainability",
   "Ethics",
   "Recruitment",
   "Infrastructure"
-];
+],
 
 export default function Blog() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
-  
+  const [searchQuery, setSearchQuery] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState($2);
   // Filter blog posts based on search and category
-  const filteredPosts = BLOG_POSTS.filter(post => {
-    const matchesSearch = 
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      
-    const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory;
-    
-    return matchesSearch && matchesCategory;
-  });
+  const filteredPosts = $2;
+    const matchesCategory = $2;
+    return matchesSearch && matchesCategory
+  }),
   
   // Get featured posts
-  const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured);
-  
+  const featuredPosts = BLOG_POSTS.filter($2);
   return (
     <>
       <SEO 
@@ -394,8 +370,8 @@ export default function Blog() {
               <Button 
                 variant="outline" 
                 onClick={() => {
-                  setSearchQuery("");
-                  setSelectedCategory("All Categories");
+                  setSearchQuery($2);
+                  setSelectedCategory("All Categories")
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
@@ -407,5 +383,5 @@ export default function Blog() {
       </div>
       <Footer />
     </>
-  );
+  )
 }

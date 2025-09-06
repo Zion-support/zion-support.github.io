@@ -3,21 +3,12 @@ import Link from 'next/link';
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-
 interface AuthConfigurationErrorProps {
-  onRetry?: () => void;
-  showSetupButton?: boolean;
+  onRetry?: () => void,
+  showSetupButton?: boolean
 }
 
-export function AuthConfigurationError({ onRetry, showSetupButton = true }: AuthConfigurationErrorProps) {
-  const handleRefresh = () => {
-    if (onRetry) {
-      onRetry();
-    } else {
-      window.location.reload();
-    }
-  };
-
+export function AuthConfigurationError({ onRetry, showSetupButton = $2;
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
@@ -59,7 +50,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
             {showSetupButton && (
               <Button 
-                onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md', '_blank')}
+                onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
               >
                 <Settings className="w-4 h-4 mr-2" />
@@ -177,7 +168,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                 Run the setup script to configure Auth0 interactively:
               </p>
               <code className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm">
-                npm run setup:auth0
+                npm run setup: auth0
               </code>
             </div>
           </div>
@@ -188,16 +179,4 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
           <p>
             For detailed instructions, see{' '}
             <button 
-              onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md', '_blank')}
-              className="text-blue-600 hover:underline"
-            >
-              AUTH0_SETUP_GUIDE_ISSUE_1.md
-            </button>
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default AuthConfigurationError; 
+              onClick = $2;

@@ -9,38 +9,31 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow} from "@/components/ui/table";
+  TableRow} from "@/components/ui/table",
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatDistanceToNow } from "date-fns";
 import { ShieldAlert } from "lucide-react";
 import { Link } from "react-router-dom";
-
-type DisputesListProps = {
-  disputes: Dispute[];
-  isLoading: boolean;
-};
+type DisputesListProps = $2;
+  isLoading: boolean},
 
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),
 
   const filteredDisputes = statusFilter === "all" 
     ? disputes 
-    : disputes.filter(dispute => dispute.status === statusFilter);
-
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
-    switch (status) {
-      case "open":
-        return "default";
+    : disputes.filter($2);
+  const getStatusBadgeVariant = $2;
       case "under_review":
-        return "secondary";
+        return "secondary",
       case "resolved":
-        return "outline"; // Changed from "success" to "outline"
+        return "outline", // Changed from "success" to "outline"
       case "closed":
-        return "outline";
+        return "outline",
       default:
-        return "default";
+        return "default"
     }
-  };
+  },
 
   if (isLoading) {
     return (
@@ -77,7 +70,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           </Table>
         </div>
       </div>
-    );
+    )
   }
 
   if (disputes.length === 0) {
@@ -89,7 +82,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           No active disputes match the selected filter
         </p>
       </div>
-    );
+    )
   }
 
   return (
@@ -164,11 +157,11 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                   </div>
                 </TableCell>
                 <TableCell>
-                  {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
+                  {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true})}
                 </TableCell>
                 <TableCell>
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>
-                    {dispute.status.replace('_', ' ')}
+                    {dispute.status.replace('_ ')}
                   </Badge>
                 </TableCell>
                 <TableCell className="text-right">
@@ -182,5 +175,5 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         </Table>
       </div>
     </div>
-  );
+  )
 }

@@ -8,24 +8,20 @@ import { X, Filter } from "lucide-react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
-
 interface BrowseFiltersProps {
-  type: "jobs" | "talents";
+  type: "jobs" | "talents"
 }
 
 export function BrowseFilters({ type }: BrowseFiltersProps) {
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
+  const [activeFilters, setActiveFilters] = useState<string[]>([]),
   
   const addFilter = (filter: string) => {
     if (!activeFilters.includes(filter)) {
-      setActiveFilters([...activeFilters, filter]);
+      setActiveFilters([...activeFilters, filter])
     }
-  };
+  },
   
-  const removeFilter = (filter: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter));
-  };
-  
+  const removeFilter = $2;
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -136,7 +132,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
               
               <SheetFooter>
                 <Button variant="outline" className="w-full">Reset</Button>
-                <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
+                <Button className="w-full" onClick={() => addFilter("Experience: 3 + years")}>Apply Filters</Button>
               </SheetFooter>
             </SheetContent>
           </Sheet>
@@ -168,5 +164,5 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
         </div>
       </div>
     </div>
-  );
+  )
 }

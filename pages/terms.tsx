@@ -4,19 +4,13 @@ import React from 'react';
     {
       title: 'Quantum Technology Services',
       terms: [
-        'Quantum computing resources are allocated based on service tier',
-        'Users must comply with export control regulations',
-        'Performance metrics are provided for informational purposes only',
-        'Service interruptions may occur during quantum system calibration'
+        'Quantum computing resources are allocated based on service tierUsers must comply with export control regulationsPerformance metrics are provided for informational purposes onlyService interruptions may occur during quantum system calibration'
       ]
     },
     {
       title: 'Cybersecurity Services',
       terms: [
-        'Security assessments are conducted according to industry standards',
-        'Vulnerability reports are confidential and must not be shared',
-        'Penetration testing requires written authorization',
-        'Incident response follows our established protocols'
+        'Security assessments are conducted according to industry standardsVulnerability reports are confidential and must not be sharedPenetration testing requires written authorizationIncident response follows our established protocols'
 import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
@@ -25,61 +19,43 @@ import { motion } from 'framer-motion';
 import { 
   FileText, Shield, AlertTriangle, CheckCircle, 
   User, Lock, Globe, Scale, Clock, Mail
-} from 'lucide-react';
+} from 'lucide-react',
 
 const TermsPage: React.FC = () => {
-  const lastUpdated = 'January 17, 2025';
+  const lastUpdated = 'January 17, 2025',
 
-  const termsSections = [
-    {
-      title: 'Acceptance of Terms',
-      icon: <CheckCircle className="w-8 h-8" />,
+  const termsSections = $2;
+      icon: <CheckCircle className = $2;
       color: 'from-cyan-500 to-blue-500',
       content: [
-        'By accessing or using our services, you agree to be bound by these terms',
-        'If you do not agree to these terms, do not use our services',
-        'We may modify these terms at any time with notice',
-        'Continued use after changes constitutes acceptance of new terms'
+        'By accessing or using our services, you agree to be bound by these termsIf you do not agree to these terms, do not use our servicesWe may modify these terms at any time with noticeContinued use after changes constitutes acceptance of new terms'
       ]
     },
     {
       title: 'Service Description',
-      icon: <Globe className="w-8 h-8" />,
+      icon: <Globe className = $2;
       color: 'from-purple-500 to-pink-500',
       content: [
-        'AI and machine learning solutions',
-        'Quantum computing services',
-        'IT infrastructure and consulting',
-        'Micro SAAS applications',
-        'Business automation services',
-        'Technical support and maintenance'
+        'AI and machine learning solutionsQuantum computing servicesIT infrastructure and consultingMicro SAAS applicationsBusiness automation servicesTechnical support and maintenance'
       ]
     },
     {
       title: 'User Responsibilities',
-      icon: <User className="w-8 h-8" />,
+      icon: <User className = $2;
       color: 'from-green-500 to-emerald-500',
       content: [
-        'Provide accurate and complete information',
-        'Maintain security of your account credentials',
-        'Comply with applicable laws and regulations',
-        'Use services for lawful purposes only',
-        'Respect intellectual property rights'
+        'Provide accurate and complete informationMaintain security of your account credentialsComply with applicable laws and regulationsUse services for lawful purposes onlyRespect intellectual property rights'
       ]
     },
     {
       title: 'Intellectual Property',
-      icon: <Lock className="w-8 h-8" />,
+      icon: <Lock className = $2;
       color: 'from-orange-500 to-red-500',
       content: [
-        'Our services and content are protected by copyright',
-        'You retain rights to your own content',
-        'No transfer of intellectual property rights',
-        'License to use our services as intended',
-        'Prohibition of reverse engineering'
+        'Our services and content are protected by copyrightYou retain rights to your own contentNo transfer of intellectual property rightsLicense to use our services as intendedProhibition of reverse engineering'
       ]
     }
-  ];
+  ],
 
   const prohibitedActivities = [
 import { motion } from 'framer-motion';
@@ -87,7 +63,7 @@ import {
   FileText, Shield, CheckCircle, AlertTriangle, 
   Globe, Calendar, Scale, Users, ArrowRight,
   BookOpen, Lock, Zap, Building, Brain, Rocket
-} from 'lucide-react';
+} from 'lucide-react',
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -102,44 +78,30 @@ import {
 import { motion } from 'framer-motion';
 import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-
-const Terms: React.FC = () => {
-  const sections = [
-    {
-      title: 'Acceptance of Terms',
+const Terms: React.FC = $2;
       content: `By accessing and using the Zion Tech Group website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.`,
-      icon: <FileText className="w-6 h-6 text-purple-400" />
-    },
+      icon: <FileText className = $2;
     {
       title: 'Use License',
-      content: `Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials; use the materials for any commercial purpose or for any public display; attempt to reverse engineer any software contained on Zion Tech Group's website; remove any copyright or other proprietary notations from the materials; or transfer the materials to another person or "mirror" the materials on any other server.`,
-      icon: <Lock className="w-6 h-6 text-blue-400" />
-    },
+      content: `Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials, use the materials for any commercial purpose or for any public display, attempt to reverse engineer any software contained on Zion Tech Group's website, remove any copyright or other proprietary notations from the materials, or transfer the materials to another person or "mirror" the materials on any other server.`,
+      icon: <Lock className = $2;
     {
       title: 'Service Description',
       content: `Zion Tech Group provides AI consciousness technology, quantum computing solutions, autonomous systems, and related consulting services. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.`,
-      icon: <Globe className="w-6 h-6 text-green-400" />
-    },
+      icon: <Globe className = $2;
     {
       title: 'User Responsibilities',
       content: `Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account. Users must not use our services for any illegal or unauthorized purpose, or in any way that violates applicable laws or regulations.`,
-      icon: <Users className="w-6 h-6 text-yellow-400" />
-    },
+      icon: <Users className = $2;
     {
       title: 'Privacy and Data Protection',
       content: `Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference. We are committed to protecting your data in accordance with applicable data protection laws.`,
-      icon: <Eye className="w-6 h-6 text-cyan-400" />
-    },
+      icon: <Eye className = $2;
     {
       title: 'Intellectual Property Rights',
       content: `All content on this website, including but not limited to text, graphics, logos, images, software, and other materials, is the property of Zion Tech Group or its licensors and is protected by copyright, trademark, and other intellectual property laws.`,
-      icon: <Shield className="w-6 h-6 text-red-400" />
-    }
-  ];
-
-  const importantNotices = [
-    {
-      title: 'AI Technology Risks',
+      icon: <Shield className = $2;
+  const importantNotices = $2;
       content: 'Our AI consciousness technology involves experimental and cutting-edge research. Users acknowledge that such technology may carry inherent risks and uncertainties.',
       type: 'warning'
     },
@@ -153,7 +115,7 @@ const Terms: React.FC = () => {
       content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services due to factors beyond our control.',
       type: 'info'
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -165,29 +127,26 @@ import { motion } from 'framer-motion';
 import { FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
-
-const termsSections = [
-  {
-    title: 'Acceptance of Terms',
-    icon: <CheckCircle className="w-6 h-6 text-green-400" />,
+const termsSections = $2;
+    icon: <CheckCircle className = $2;
     content: 'By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement.'
   },
   {
     title: 'Use License',
-    icon: <Scale className="w-6 h-6 text-blue-400" />,
+    icon: <Scale className = $2;
     content: 'Permission is granted to temporarily use our services for personal, non-commercial transitory viewing only.'
   },
   {
     title: 'Disclaimer',
-    icon: <AlertTriangle className="w-6 h-6 text-orange-400" />,
+    icon: <AlertTriangle className = $2;
     content: 'The materials on our website are provided on an "as is" basis. We make no warranties, expressed or implied.'
   },
   {
     title: 'Limitations',
-    icon: <Shield className="w-6 h-6 text-purple-400" />,
+    icon: <Shield className = $2;
     content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
   }
-];
+],
 
 export default function Terms() {
   return (
@@ -204,8 +163,8 @@ export default function Terms() {
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20"></div>
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -393,10 +352,10 @@ export default function Terms() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -454,10 +413,10 @@ export default function Terms() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -483,8 +442,8 @@ export default function Terms() {
 
             <div className="space-y-6">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8 }}
                 className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
               >
@@ -498,8 +457,8 @@ export default function Terms() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.1 }}
                 className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
               >
@@ -510,8 +469,8 @@ export default function Terms() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
               >
@@ -531,10 +490,10 @@ export default function Terms() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -591,8 +550,8 @@ export default function Terms() {
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Questions About These Terms?
@@ -647,8 +606,8 @@ export default function Terms() {
       <section id="terms-sections" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -664,8 +623,8 @@ export default function Terms() {
             {termsSections.map((section, index) => (
               <motion.div
                 key={section.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group cursor-pointer"
               >
@@ -686,8 +645,8 @@ export default function Terms() {
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -703,8 +662,8 @@ export default function Terms() {
             {serviceCategories.map((service, index) => (
               <motion.div
                 key={service.category}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
@@ -736,29 +695,8 @@ export default function Terms() {
                       <h4 className="text-sm font-semibold text-yellow-400 mb-2">Restrictions:</h4>
                       <ul className="text-sm text-gray-300 space-y-1">
                         {service.restrictions.map((restriction, restrictionIndex) => (
-                          <li key={restrictionIndex} className="flex items-start gap-2">
-                            <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                            {restriction}
-                          </li>
-                        ))}
-                      </ul>
-    'Unauthorized access to our systems or networks',
-    'Interference with service operation',
-    'Distribution of malware or harmful code',
-    'Violation of third-party rights',
-    'Attempts to gain unauthorized access',
-    'Use of services for illegal activities'
-  ];
-
-  const limitations = [
-    'Services provided "as is" without warranties',
-    'No guarantee of uninterrupted service',
-    'Limitation of liability for damages',
-    'No responsibility for third-party content',
-    'Service availability subject to change',
-    'Technical support during business hours only'
-  ];
-
+                          <li key = $2;
+  const limitations = $2;
   return (
     <ErrorBoundary>
       <SEOOptimizer />
@@ -769,8 +707,8 @@ export default function Terms() {
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6 }}
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -793,7 +731,7 @@ export default function Terms() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0}}
                   transition={{ duration: 0.6 }}
                 >
                   <h2 className="text-4xl font-bold mb-6 text-white">
@@ -815,8 +753,8 @@ export default function Terms() {
                 </motion.div>
                 
                 <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, x: 20}}
+                  whileInView={{ opacity: 1, x: 0}}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="relative"
                 >
@@ -849,8 +787,8 @@ export default function Terms() {
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
@@ -862,8 +800,8 @@ export default function Terms() {
                 {termsSections.map((section, index) => (
                   <motion.div
                     key={section.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 20}}
+                    whileInView={{ opacity: 1, y: 0}}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
                   >
@@ -891,8 +829,8 @@ export default function Terms() {
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
@@ -901,8 +839,8 @@ export default function Terms() {
               </motion.div>
               
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl p-8 border border-red-500/30"
               >
@@ -932,8 +870,8 @@ export default function Terms() {
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
@@ -942,8 +880,8 @@ export default function Terms() {
               </motion.div>
               
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl p-8 border border-yellow-500/30"
               >
@@ -974,8 +912,8 @@ export default function Terms() {
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6 }}
                 className="space-y-12"
               >
@@ -1138,10 +1076,10 @@ export default function Terms() {
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6">Terms Overview</h2>
@@ -1156,10 +1094,10 @@ export default function Terms() {
               {termsSections.map((section, index) => (
                 <motion.div
                   key={section.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-xl"
                 >
                   <div className="flex items-center space-x-3 mb-4">
@@ -1177,10 +1115,10 @@ export default function Terms() {
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="space-y-12"
             >
               <div className="text-center mb-16">
@@ -1294,9 +1232,7 @@ export default function Terms() {
                     Services may be temporarily unavailable due to maintenance, updates, or technical issues.
                   </p>
                   
-                  <h4 className="text-lg font-semibold text-white">Disclaimer of Warranties</h4>
-                  <p>
-                    Our services are provided "as is" and "as available" without warranties of any kind, 
+                  <h4 className = $2;
                     either express or implied, including but not limited to warranties of merchantability 
                     or fitness for a particular purpose.
                   </p>
@@ -1365,10 +1301,10 @@ export default function Terms() {
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl"
             >
               <Scale className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -1377,18 +1313,8 @@ export default function Terms() {
                 By using our services, you acknowledge that you have read and understood these Terms of Service 
                 and agree to be bound by them. If you do not agree to these terms, please discontinue use of our services.
               </p>
-              <p className="text-sm text-gray-400">
-                These terms are effective as of the date last updated and will remain in effect until modified or terminated.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
-};
-
-export default Terms;
+              <p className = $2;
+export default Terms,
             </div>
           </section>
 
@@ -1396,8 +1322,8 @@ export default Terms;
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-4xl font-bold mb-6 text-white">
@@ -1407,29 +1333,5 @@ export default Terms;
                   If you have any questions about these Terms of Service or need clarification on any 
                   provision, please don't hesitate to reach out to us.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="mailto:kleber@ziontechgroup.com"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
-                  >
-                    <Mail className="w-5 h-5" />
-                    Email Us
-                  </a>
-                  <a
-                    href="/contact"
-                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
-                  >
-                    <User className="w-5 h-5" />
-                    Contact Form
-                  </a>
-                </div>
-              </motion.div>
-            </div>
-          </section>
-        </main>
-      </Layout>
-    </ErrorBoundary>
-  );
-};
-
-export default TermsPage;
+                <div className = $2;
+export default TermsPage,

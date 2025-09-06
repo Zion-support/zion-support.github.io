@@ -4,14 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react'
 import { useSidebar } from "./sidebar-context";
 import { cn } from "@/lib/utils";
-
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
-  className?: string;
+  className?: string
 }
 
 export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
-  const { open, toggleSidebar } = useSidebar();
-
+  const { open, toggleSidebar } = useSidebar($2);
   return (
     <Button
       variant="ghost"
@@ -23,5 +21,5 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
       {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
-  );
+  )
 }

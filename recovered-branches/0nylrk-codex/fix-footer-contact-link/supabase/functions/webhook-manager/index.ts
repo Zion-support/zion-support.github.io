@@ -1,88 +1,81 @@
 
-import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.0';
-
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 interface CreateWebhookRequest {
-  name: string;
-  url: string;
-  eventTypes: string[];
-  secret?: string;
+  name: string,
+  url: string,
+  eventTypes: string[],
+  secret?: string
 }
 
 interface WebhookTestRequest {
-  webhookId: string;
-  eventType: string;
-}
+  webhookId: string,
+  eventType: string}
 
 // Create a Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
-const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
-const supabase = createClient(supabaseUrl, supabaseKey);
-
+const supabaseUrl = $2;
+const supabaseKey = $2;
+const supabase = createClient($2);
 serve(async (req) => {
   // Handle CORS for browser requests
   if (req.method === 'OPTIONS') {
     return new Response('ok', {
       headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
-        'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}});
+        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, GET, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
   }
 
   try {
     // Extract auth token from request
-    const authHeader = req.headers.get('Authorization');
+    const authHeader = req.headers.get($2);
     if (!authHeader) {
       return new Response(JSON.stringify({ error: 'Missing authorization header' }), {
         status: 401,
-        headers: { 'Content-Type': 'application/json' }});
+        headers: { 'Content-Type': 'application/json' }})
     }
 
     // Verify the token with Supabase auth
-    const token = authHeader.replace('Bearer ', '');
-    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
-    
+    const token = authHeader.replace($2);
+    const { data: { user }, error: authError} = await supabase.auth.getUser($2);
     if (authError || !user) {
       return new Response(JSON.stringify({ error: 'Unauthorized' }), {
         status: 401,
-        headers: { 'Content-Type': 'application/json' }});
+        headers: { 'Content-Type': 'application/json' }})
     }
 
     // Parse URL to determine action
-    const url = new URL(req.url);
-    const path = url.pathname.split('/').pop();
-
+    const url = new URL($2);
+    const path = url.pathname.split('/').pop($2);
     // Handle different actions
     if (req.method === 'POST') {
       if (path === 'create') {
-        const { name, url, eventTypes, secret } = await req.json() as CreateWebhookRequest;
-        return await createWebhook(user.id, name, url, eventTypes, secret);
+        const { name, url, eventTypes, secret } = await req.json() as CreateWebhookRequest,
+        return await createWebhook(user.id, name, url, eventTypes, secret)
       } else if (path === 'toggle') {
-        const { webhookId, isActive } = await req.json();
-        return await toggleWebhook(user.id, webhookId, isActive);
+        const { webhookId, isActive } = await req.json($2);
+        return await toggleWebhook(user.id, webhookId, isActive)
       } else if (path === 'test') {
-        const { webhookId, eventType } = await req.json() as WebhookTestRequest;
-        return await testWebhook(user.id, webhookId, eventType);
+        const { webhookId, eventType } = await req.json() as WebhookTestRequest,
+        return await testWebhook(user.id, webhookId, eventType)
       } else if (path === 'delete') {
-        const { webhookId } = await req.json();
-        return await deleteWebhook(user.id, webhookId);
+        const { webhookId } = await req.json($2);
+        return await deleteWebhook(user.id, webhookId)
       }
     } else if (req.method === 'GET') {
       if (path === 'webhooks') {
-        return await getUserWebhooks(user.id);
+        return await getUserWebhooks(user.id)
       }
     }
 
     return new Response(JSON.stringify({ error: 'Invalid action' }), {
       status: 400,
-      headers: { 'Content-Type': 'application/json' }});
+      headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
-    console.error('Error processing request:', error);
+    console.error($2);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-      headers: { 'Content-Type': 'application/json' }});
+      headers: { 'Content-Type': 'application/json' }})
   }
-});
+}),
 
 async function createWebhook(userId: string, name: string, url: string, eventTypes: string[], secret?: string) {
   try {
@@ -95,13 +88,12 @@ async function createWebhook(userId: string, name: string, url: string, eventTyp
         event_types: eventTypes,
         secret
       })
-      .select('id, name, url, event_types, is_active, created_at');
-
+      .select($2);
     if (error) {
-      console.error('Error creating webhook:', error);
+      console.error($2);
       return new Response(JSON.stringify({ error: 'Failed to create webhook' }), {
         status: 500,
-        headers: { 'Content-Type': 'application/json' }});
+        headers: { 'Content-Type': 'application/json' }})
     }
 
     return new Response(JSON.stringify({ 
@@ -109,12 +101,12 @@ async function createWebhook(userId: string, name: string, url: string, eventTyp
       message: 'Webhook created successfully'
     }), {
       status: 201,
-      headers: { 'Content-Type': 'application/json' }});
+      headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
-    console.error('Error in createWebhook:', error);
+    console.error($2);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-      headers: { 'Content-Type': 'application/json' }});
+      headers: { 'Content-Type': 'application/json' }})
   }
 }
 
@@ -124,23 +116,22 @@ async function getUserWebhooks(userId: string) {
       .from('webhook_configs')
       .select('id, name, url, event_types, is_active, created_at, last_triggered_at')
       .eq('user_id', userId)
-      .order('created_at', { ascending: false });
-
+      .order($2);
     if (error) {
-      console.error('Error fetching webhooks:', error);
+      console.error($2);
       return new Response(JSON.stringify({ error: 'Failed to fetch webhooks' }), {
         status: 500,
-        headers: { 'Content-Type': 'application/json' }});
+        headers: { 'Content-Type': 'application/json' }})
     }
 
-    return new Response(JSON.stringify({ webhooks: data }), {
+    return new Response(JSON.stringify({ webhooks: data}), {
       status: 200,
-      headers: { 'Content-Type': 'application/json' }});
+      headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
-    console.error('Error in getUserWebhooks:', error);
+    console.error($2);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-      headers: { 'Content-Type': 'application/json' }});
+      headers: { 'Content-Type': 'application/json' }})
   }
 }
 
@@ -148,16 +139,15 @@ async function toggleWebhook(userId: string, webhookId: string, isActive: boolea
   try {
     const { data, error } = await supabase
       .from('webhook_configs')
-      .update({ is_active: isActive })
+      .update({ is_active: isActive})
       .eq('id', webhookId)
       .eq('user_id', userId)
-      .select('id, name, is_active');
-
+      .select($2);
     if (error || !data || data.length === 0) {
-      console.error('Error toggling webhook:', error);
+      console.error($2);
       return new Response(JSON.stringify({ error: 'Failed to update webhook or webhook not found' }), {
         status: error ? 500 : 404,
-        headers: { 'Content-Type': 'application/json' }});
+        headers: { 'Content-Type': 'application/json' }})
     }
 
     return new Response(JSON.stringify({
@@ -165,12 +155,12 @@ async function toggleWebhook(userId: string, webhookId: string, isActive: boolea
       webhook: data[0]
     }), {
       status: 200,
-      headers: { 'Content-Type': 'application/json' }});
+      headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
-    console.error('Error in toggleWebhook:', error);
+    console.error($2);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-      headers: { 'Content-Type': 'application/json' }});
+      headers: { 'Content-Type': 'application/json' }})
   }
 }
 
@@ -181,61 +171,57 @@ async function deleteWebhook(userId: string, webhookId: string) {
       .delete()
       .eq('id', webhookId)
       .eq('user_id', userId)
-      .select('id');
-
+      .select($2);
     if (error) {
-      console.error('Error deleting webhook:', error);
+      console.error($2);
       return new Response(JSON.stringify({ error: 'Failed to delete webhook' }), {
         status: 500,
-        headers: { 'Content-Type': 'application/json' }});
+        headers: { 'Content-Type': 'application/json' }})
     }
 
     if (!data || data.length === 0) {
       return new Response(JSON.stringify({ error: 'Webhook not found' }), {
         status: 404,
-        headers: { 'Content-Type': 'application/json' }});
+        headers: { 'Content-Type': 'application/json' }})
     }
 
     return new Response(JSON.stringify({
       message: 'Webhook deleted successfully',
-      id: webhookId
-    }), {
+      id: webhookId}), {
       status: 200,
-      headers: { 'Content-Type': 'application/json' }});
+      headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
-    console.error('Error in deleteWebhook:', error);
+    console.error($2);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-      headers: { 'Content-Type': 'application/json' }});
+      headers: { 'Content-Type': 'application/json' }})
   }
 }
 
 async function testWebhook(userId: string, webhookId: string, eventType: string) {
   try {
     // Verify webhook exists and belongs to user
-    const { data: webhook, error: webhookError } = await supabase
+    const { data: webhook, error: webhookError} = await supabase
       .from('webhook_configs')
       .select('url, secret')
       .eq('id', webhookId)
       .eq('user_id', userId)
-      .single();
-
+      .single($2);
     if (webhookError || !webhook) {
       return new Response(JSON.stringify({ error: 'Webhook not found or access denied' }), {
         status: 404,
-        headers: { 'Content-Type': 'application/json' }});
+        headers: { 'Content-Type': 'application/json' }})
     }
 
     // Create test payload based on event type
-    const testPayload = createTestPayload(eventType);
-    
+    const testPayload = createTestPayload($2);
     // Add signature if secret is provided
     const headers: Record<string, string> = {
-      'Content-Type': 'application/json'};
+      'Content-Type': 'application/json'},
     
     if (webhook.secret) {
-      const signature = await createWebhookSignature(JSON.stringify(testPayload), webhook.secret);
-      headers['X-Zion-Signature'] = signature;
+      const signature = await createWebhookSignature(JSON.stringify(testPayload), webhook.secret),
+      headers['X-Zion-Signature'] = signature
     }
 
     // Make the request to the webhook URL
@@ -244,16 +230,15 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
         method: 'POST',
         headers,
         body: JSON.stringify(testPayload)
-      });
+      }),
 
       // Update last triggered timestamp
       await supabase
         .from('webhook_configs')
         .update({ last_triggered_at: new Date().toISOString() })
-        .eq('id', webhookId);
-
+        .eq($2);
       // Return the response status and body
-      const responseText = await webhookResponse.text();
+      const responseText = await webhookResponse.text($2);
       return new Response(JSON.stringify({
         message: 'Test webhook sent',
         status: webhookResponse.status,
@@ -261,51 +246,47 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
         responseBody: responseText.substring(0, 500) // Limit response body size
       }), {
         status: 200,
-        headers: { 'Content-Type': 'application/json' }});
+        headers: { 'Content-Type': 'application/json' }})
     } catch (fetchError) {
-      console.error('Error sending test webhook:', fetchError);
+      console.error($2);
       return new Response(JSON.stringify({ 
         error: 'Failed to send test webhook', 
         details: fetchError.message 
       }), {
         status: 500,
-        headers: { 'Content-Type': 'application/json' }});
+        headers: { 'Content-Type': 'application/json' }})
     }
   } catch (error) {
-    console.error('Error in testWebhook:', error);
+    console.error($2);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-      headers: { 'Content-Type': 'application/json' }});
+      headers: { 'Content-Type': 'application/json' }})
   }
 }
 
 async function createWebhookSignature(payload: string, secret: string) {
   // Create HMAC signature using SHA-256
-  const encoder = new TextEncoder();
-  const key = await crypto.subtle.importKey(
-    'raw',
-    encoder.encode(secret),
+  const encoder = new TextEncoder($2);
+  const key = await crypto.subtle.importKey($2);
     { name: 'HMAC', hash: 'SHA-256' },
     false,
     ['sign']
-  );
+  ),
   
-  const signature = await crypto.subtle.sign(
-    'HMAC',
+  const signature = $2;
     key,
     encoder.encode(payload)
-  );
+  ),
   
   // Convert to hex string
   return Array.from(new Uint8Array(signature))
     .map(b => b.toString(16).padStart(2, '0'))
-    .join('');
+    .join('')
 }
 
 function createTestPayload(eventType: string) {
-  const timestamp = new Date().toISOString();
-  const eventId = crypto.randomUUID();
-  
+  const timestamp = new Date().toISOString($2);
+  const eventId = crypto.randomUUID($2);
   // Create different test payload based on event type
   switch (eventType) {
     case 'new_application':
@@ -314,14 +295,13 @@ function createTestPayload(eventType: string) {
         event_id: eventId,
         timestamp,
         data: {
-          application_id: crypto.randomUUID(),
-          job_id: crypto.randomUUID(),
-          talent_id: crypto.randomUUID(),
+          application_id: crypto.randomUUID($2);
+          job_id: crypto.randomUUID($2);
+          talent_id: crypto.randomUUID($2);
           applied_at: timestamp,
           status: 'new',
-          match_score: 85
-        }
-      };
+          match_score: 85}
+      },
     
     case 'quote_received':
       return {
@@ -329,17 +309,16 @@ function createTestPayload(eventType: string) {
         event_id: eventId,
         timestamp,
         data: {
-          quote_id: crypto.randomUUID(),
-          talent_id: crypto.randomUUID(),
-          client_id: crypto.randomUUID(),
+          quote_id: crypto.randomUUID($2);
+          talent_id: crypto.randomUUID($2);
+          client_id: crypto.randomUUID($2);
           amount: {
             min: 1000,
             max: 2000,
             currency: 'USD'
           },
-          created_at: timestamp
-        }
-      };
+          created_at: timestamp}
+      },
     
     case 'milestone_approved':
       return {
@@ -347,13 +326,12 @@ function createTestPayload(eventType: string) {
         event_id: eventId,
         timestamp,
         data: {
-          milestone_id: crypto.randomUUID(),
-          project_id: crypto.randomUUID(),
+          milestone_id: crypto.randomUUID($2);
+          project_id: crypto.randomUUID($2);
           title: 'Test Milestone',
           amount: 500,
-          approved_at: timestamp
-        }
-      };
+          approved_at: timestamp}
+      },
       
     case 'talent_hired':
       return {
@@ -361,14 +339,14 @@ function createTestPayload(eventType: string) {
         event_id: eventId,
         timestamp,
         data: {
-          project_id: crypto.randomUUID(),
-          talent_id: crypto.randomUUID(),
-          client_id: crypto.randomUUID(),
-          job_id: crypto.randomUUID(),
+          project_id: crypto.randomUUID($2);
+          talent_id: crypto.randomUUID($2);
+          client_id: crypto.randomUUID($2);
+          job_id: crypto.randomUUID($2);
           created_at: timestamp,
           status: 'offer_accepted'
         }
-      };
+      },
       
     default:
       return {
@@ -378,6 +356,6 @@ function createTestPayload(eventType: string) {
         data: {
           message: 'This is a test webhook event'
         }
-      };
+      }
   }
 }

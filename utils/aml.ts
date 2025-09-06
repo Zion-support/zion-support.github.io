@@ -1,55 +1,52 @@
-export type WatchlistMatch = {
-  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
-  name: string;
-  score: number; // 0-1 match confidence
-  referenceId?: string;
-  detailsUrl?: string;
-};
+export type WatchlistMatch = $2;
+  name: string,
+  score: number, // 0-1 match confidence
+  referenceId?: string,
+  detailsUrl?: string
+},
 
-export type AmlCheckResult = {
-  status: 'clear' | 'match' | 'review' | 'unknown';
-  matches: WatchlistMatch[];
-  checkedAt: string; // ISO
-  provider: 'mock' | 'remote';
-};
+export type AmlCheckResult = $2;
+  matches: WatchlistMatch[],
+  checkedAt: string, // ISO
+  provider: 'mock' | 'remote'
+},
 
 export interface AmlProvider {
-  checkPerson(input: { fullLegalName: string; country?: string; dob?: string }): Promise<AmlCheckResult>;
-  checkBusiness(input: { businessName: string; country?: string; registrationNumber?: string }): Promise<AmlCheckResult>;
+  checkPerson(input: { fullLegalName: string, country?: string, dob?: string }): Promise<AmlCheckResult>,
+  checkBusiness(input: { businessName: string, country?: string, registrationNumber?: string }): Promise<AmlCheckResult>
 }
 
 class MockAmlProvider implements AmlProvider {
-  async checkPerson({ fullLegalName }: { fullLegalName: string }): Promise<AmlCheckResult> {
-    const lowered = fullLegalName.toLowerCase();
-    const isPep = lowered.includes('minister') || lowered.includes('president');
-    const isOfac = lowered.includes('sanction');
-    const matches: WatchlistMatch[] = [];
-    if (isPep) matches.push({ list: 'PEP', name: fullLegalName, score: 0.9 });
-    if (isOfac) matches.push({ list: 'OFAC', name: fullLegalName, score: 0.95 });
+  async checkPerson({ fullLegalName }: { fullLegalName: string}): Promise<AmlCheckResult> {
+    const lowered = fullLegalName.toLowerCase($2);
+    const isPep = lowered.includes('minister') || lowered.includes($2);
+    const isOfac = lowered.includes($2);
+    const matches: WatchlistMatch[] = [],
+    if (isPep) matches.push($2);
+    if (isOfac) matches.push($2);
     return {
       status: matches.length ? 'review' : 'clear',
       matches,
-      checkedAt: new Date().toISOString(),
-      provider: 'mock'};
+      checkedAt: new Date().toISOString($2);
+      provider: 'mock'}
   }
 
-  async checkBusiness({ businessName }: { businessName: string }): Promise<AmlCheckResult> {
-    const lowered = businessName.toLowerCase();
-    const isSanction = lowered.includes('banned');
+  async checkBusiness({ businessName }: { businessName: string}): Promise<AmlCheckResult> {
+    const lowered = businessName.toLowerCase($2);
+    const isSanction = lowered.includes($2);
     return {
       status: isSanction ? 'review' : 'clear',
       matches: isSanction ? [{ list: 'Sanctions', name: businessName, score: 0.8 }] : [],
-      checkedAt: new Date().toISOString(),
-      provider: 'mock'};
+      checkedAt: new Date().toISOString($2);
+      provider: 'mock'}
   }
 }
 
-let provider: AmlProvider = new MockAmlProvider();
-
+let provider: AmlProvider = new MockAmlProvider($2);
 export function setAmlProvider(custom: AmlProvider) {
-  provider = custom;
+  provider = custom
 }
 
 export function getAmlProvider(): AmlProvider {
-  return provider;
+  return provider
 }

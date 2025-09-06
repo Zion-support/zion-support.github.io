@@ -4,23 +4,22 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { TalentProfile } from "@/types/talent";
 import { SmartContractInfo } from "@/types/smart-contracts";
-
 interface ContractPreviewProps {
-  contractContent?: string;
-  generatedContract?: string; // Added to support both naming conventions
-  status?: 'draft' | 'ready' | 'pending';
-  talent?: TalentProfile;
-  onDeploy?: () => void;
-  onSign?: () => void;
-  onClose?: () => void;
-  deployStatus?: string;
-  deploymentInfo?: SmartContractInfo | null;
+  contractContent?: string,
+  generatedContract?: string, // Added to support both naming conventions
+  status?: 'draft' | 'ready' | 'pending',
+  talent?: TalentProfile,
+  onDeploy?: () => void,
+  onSign?: () => void,
+  onClose?: () => void,
+  deployStatus?: string,
+  deploymentInfo?: SmartContractInfo | null
 }
 
 export function ContractPreview({ 
-  contractContent, 
+  contractContent,
   generatedContract, 
-  status = 'ready', 
+  status = $2;
   onDeploy, 
   onSign,
   onClose,
@@ -29,8 +28,7 @@ export function ContractPreview({
 }: ContractPreviewProps) {
   
   // Use either contractContent or generatedContract, whichever is provided
-  const displayContent = contractContent || generatedContract || "";
-  
+  const displayContent = $2;
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center mb-4">
@@ -93,5 +91,5 @@ export function ContractPreview({
         )}
       </div>
     </div>
-  );
+  )
 }

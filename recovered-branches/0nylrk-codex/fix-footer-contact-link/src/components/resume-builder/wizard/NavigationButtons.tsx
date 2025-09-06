@@ -2,27 +2,9 @@
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 import { NavigationButtonsProps } from "./types";
-
-export const NavigationButtons = ({
-  onBack,
+export const NavigationButtons = $2;
   onNext,
-  isNextDisabled = false,
-  backLabel = "Back",
-  nextLabel = "Next",
-  isLoading = false}: NavigationButtonsProps) => {
-  return (
-    <div className="flex justify-between">
-      {onBack && (
-        <Button variant="outline" onClick={onBack}>
-          {backLabel}
-        </Button>
-      )}
-      {onNext && (
-        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
-          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          {nextLabel}
-        </Button>
-      )}
-    </div>
-  );
-};
+  isNextDisabled = $2;
+  backLabel = $2;
+  nextLabel = $2;
+  isLoading = $2;

@@ -5,20 +5,15 @@ import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import useResponsive from '../../hooks/useResponsive';
 import { useToast } from '../../components/ui/NotificationSystem';
 import { useEffect, useState } from 'react';
-
 export default function JobDetailsPage() {
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
-  const { isMobile } = useResponsive();
-  const { notify } = useToast();
-  const [loading, setLoading] = useState(true);
+  const router = useRouter($2);
+  const { slug } = router.query as { slug?: string },
+  const { isMobile } = useResponsive($2);
+  const { notify } = useToast($2);
+  const [loading, setLoading] = useState($2);
+  useEffect(() => { const t = setTimeout(() => setLoading(false), 600), return () => clearTimeout(t) }, []),
 
-  useEffect(() => { const t = setTimeout(() => setLoading(false), 600); return () => clearTimeout(t); }, []);
-
-  const onApply = () => {
-    notify('Application submitted! We’ll notify you when it’s viewed.', 'success');
-  };
-
+  const onApply = $2;
   return (
     <div className="relative">
       {loading ? (
@@ -62,5 +57,5 @@ export default function JobDetailsPage() {
         </div>
       )}
     </div>
-  );
+  )
 }

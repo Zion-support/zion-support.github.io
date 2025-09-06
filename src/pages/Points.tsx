@@ -9,58 +9,54 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { formatDistanceToNow } from 'date-fns';
 import Link from 'next/link';
 import { LoginModal } from '@/components/auth/LoginModal';
-
 export default function PointsPage() {
-  const { isAuthenticated, user } = useAuth();
-  const { ledger, balance, loading, fetchLedger } = usePoints();
-  const [loginOpen, setLoginOpen] = useState(false);
-  const [redeeming, setRedeeming] = useState(false);
-
-  async function handleRedeem(reward: { id: string; cost: number; title: string }) {
-    if (!user?.id) return;
-    setRedeeming(true);
+  const { isAuthenticated, user } = useAuth($2);
+  const { ledger, balance, loading, fetchLedger } = usePoints($2);
+  const [loginOpen, setLoginOpen] = useState($2);
+  const [redeeming, setRedeeming] = useState($2);
+  async function handleRedeem(reward: { id: string, cost: number, title: string}) {
+    if (!user?.id) return,
+    setRedeeming($2);
     try {
       await fetch('/api/points/redeem', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title })
-      });
-      await fetchLedger();
+      }),
+      await fetchLedger()
     } finally {
-      setRedeeming(false);
+      setRedeeming(false)
     }
   }
 
-  const earningOpportunities = [
-    {
-      icon: <Users className="h-5 w-5" />,
+  const earningOpportunities = $2;
       title: "Sign Up & Profile Setup",
       description: "Complete your profile and verify your email",
       points: "50 pts",
       action: isAuthenticated ? "✓ Completed" : "Get Started"
     },
     {
-      icon: <ShoppingBag className="h-5 w-5" />,
+      icon: <ShoppingBag className = $2;
       title: "First Purchase",
       description: "Make your first purchase on the marketplace",
       points: "100 pts",
       action: "Browse Marketplace"
     },
     {
-      icon: <MessageSquare className="h-5 w-5" />,
+      icon: <MessageSquare className = $2;
       title: "Community Engagement",
       description: "Post in the community or comment on discussions",
       points: "25 pts per post",
       action: "Join Community"
     },
     {
-      icon: <Users className="h-5 w-5" />,
+      icon: <Users className = $2;
       title: "Refer Friends",
       description: "Invite friends to join Zion marketplace",
       points: "200 pts per referral",
       action: "Share Referral Link"
     }
-  ];
+  ],
 
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
@@ -68,7 +64,7 @@ export default function PointsPage() {
     { id: 'swag', title: 'Zion Swag Pack', cost: 1500, category: 'Merchandise' },
     { id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' },
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
-  ];
+  ],
 
   if (!isAuthenticated) {
     return (
@@ -149,7 +145,7 @@ export default function PointsPage() {
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       </>
-    );
+    )
   }
 
   return (
@@ -249,7 +245,7 @@ export default function PointsPage() {
                     <div>
                       <p className="font-medium capitalize">{entry.reason || 'adjustment'}</p>
                       <p className="text-xs text-muted-foreground">
-                        {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })}
+                        {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true})}
                       </p>
                     </div>
                     <Badge
@@ -285,5 +281,5 @@ export default function PointsPage() {
         </CardContent>
       </Card>
     </div>
-  );
+  )
 }

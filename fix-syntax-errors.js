@@ -1,11 +1,11 @@
-  };
-}};
+  }
+}},
 ,
 // Run all fixes,
-fixFooter(),
-fixAccessibility(),
-fixAiServices(),
-fixApiDocs(),
-fixCareers(),
+fixFooter($2);
+fixAccessibility($2);
+fixAiServices($2);
+fixApiDocs($2);
+fixCareers($2);
 ,
-console.log('🎉 Syntax error fixes completed'),
+console.log($2);

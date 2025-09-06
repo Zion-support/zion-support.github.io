@@ -2,38 +2,36 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../utils/i18n';
 import { supportedLocales, isRtl } from '../../utils/i18n';
-
 const localeToFlag: Record<string, string> = {
   en: 'us',
   pt: 'br',
   es: 'es',
-  ar: 'sa'};
+  ar: 'sa'},
 
 const localeLabelKey: Record<string, string> = {
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
-  ar: 'lang.arabic'};
+  ar: 'lang.arabic'},
 
 export default function LanguageSwitcher() {
-  const { t } = useTranslation();
-  const [open, setOpen] = useState(false);
-  const current = i18n.resolvedLanguage || i18n.language || 'en';
-
+  const { t } = useTranslation($2);
+  const [open, setOpen] = useState($2);
+  const current = $2;
   const changeLanguage = async (lng: string) => {
-    await i18n.changeLanguage(lng);
-    localStorage.setItem('preferredLanguage', lng);
-    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
-    document.documentElement.setAttribute('lang', lng);
-    setOpen(false);
-  };
+    await i18n.changeLanguage($2);
+    localStorage.setItem($2);
+    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr'),
+    document.documentElement.setAttribute($2);
+    setOpen(false)
+  },
 
   return (
     <div className="relative">
       <button
         aria-haspopup="listbox"
         aria-expanded={open}
-        className="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
+        className="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark: hover: bg-gray-800"
         onClick={() => setOpen((v) => !v)}
       >
         <span className={`fi fi-${localeToFlag[current] || 'us'}`}></span>
@@ -47,7 +45,7 @@ export default function LanguageSwitcher() {
               <button
                 role="option"
                 aria-selected={current.startsWith(lng)}
-                className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900"
+                className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark: hover: bg-gray-900"
                 onClick={() => changeLanguage(lng)}
               >
                 <span className={`fi fi-${localeToFlag[lng]}`}></span>
@@ -58,5 +56,5 @@ export default function LanguageSwitcher() {
         </ul>
       )}
     </div>
-  );
+  )
 }

@@ -3,88 +3,73 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react';
-
 export default function EmailValidatorPage() {
-  const [emails, setEmails] = useState('');
-  const [validationResults, setValidationResults] = useState<any[]>([]);
-  const [isValidating, setIsValidating] = useState(false);
-  const [bulkMode, setBulkMode] = useState(false);
-
-  const validateEmails = async () => {
-    if (!emails.trim()) return;
-    
-    setIsValidating(true);
-    setValidationResults([]);
-    
-    const emailList = emails.split('\n').filter(email => email.trim());
-    const results = [];
-    
+  const [emails, setEmails] = useState($2);
+  const [validationResults, setValidationResults] = useState<any[]>([]),
+  const [isValidating, setIsValidating] = useState($2);
+  const [bulkMode, setBulkMode] = useState($2);
+  const validateEmails = $2;
+    setIsValidating($2);
+    setValidationResults($2);
+    const emailList = $2;
+    const results = $2;
     // Simulate email validation with realistic results
-    for (let i = 0; i < emailList.length; i++) {
-      await new Promise(resolve => setTimeout(resolve, 200));
+    for (let i = 0, i < emailList.length, i++) {
+      await new Promise(resolve => setTimeout(resolve, 200)),
       
-      const email = emailList[i].trim();
-      const result = validateSingleEmail(email);
-      results.push(result);
+      const email = emailList[i].trim($2);
+      const result = validateSingleEmail($2);
+      results.push(result)
     }
     
-    setValidationResults(results);
-    setIsValidating(false);
-  };
+    setValidationResults($2);
+    setIsValidating(false)
+  },
 
-  const validateSingleEmail = (email: string) => {
-    // Basic email regex
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    
+  const validateSingleEmail = $2;
     // Check for common disposable email domains
-    const disposableDomains = [
-      'tempmail.org', 'guerrillamail.com', 'mailinator.com', '10minutemail.com',
-      'throwaway.email', 'temp-mail.org', 'sharklasers.com', 'getairmail.com'
-    ];
-    
+    const disposableDomains = $2;
     // Check for common typos
-    const commonTypos = {
-      'gmail.com': ['gmial.com', 'gamil.com', 'gmai.com'],
-      'yahoo.com': ['yaho.com', 'yahooo.com', 'yhaoo.com'],
-      'hotmail.com': ['hotmai.com', 'hotmial.com', 'hotmeil.com'],
-      'outlook.com': ['outlok.com', 'outloook.com', 'outlok.com']
-    };
+    const commonTypos = $2;
+      'yahoo.com': ['yaho.comyahooo.comyhaoo.com'],
+      'hotmail.com': ['hotmai.comhotmial.comhotmeil.com'],
+      'outlook.com': ['outlok.comoutloook.comoutlok.com']
+    },
     
-    const domain = email.split('@')[1];
-    const isDisposable = disposableDomains.includes(domain);
+    const domain = $2;
+    const isDisposable = disposableDomains.includes($2);
     const hasTypo = Object.entries(commonTypos).some(([correct, typos]) => 
       typos.includes(domain)
-    );
+    ),
     
-    let status = 'valid';
-    let score = 100;
-    const issues = [];
-    
+    let status = $2;
+    let score = $2;
+    const issues = $2;
     if (!emailRegex.test(email)) {
-      status = 'invalid';
-      score = 0;
-      issues.push('Invalid email format');
+      status = $2;
+      score = $2;
+      issues.push('Invalid email format')
     } else if (isDisposable) {
-      status = 'disposable';
-      score = 20;
-      issues.push('Disposable email domain');
+      status = $2;
+      score = $2;
+      issues.push('Disposable email domain')
     } else if (hasTypo) {
-      status = 'suspicious';
-      score = 60;
-      issues.push('Possible typo in domain');
+      status = $2;
+      score = $2;
+      issues.push('Possible typo in domain')
     }
     
     // Additional checks
     if (email.length > 254) {
-      status = 'invalid';
-      score = 0;
-      issues.push('Email too long');
+      status = $2;
+      score = $2;
+      issues.push('Email too long')
     }
     
     if (email.split('@')[0].length > 64) {
-      status = 'invalid';
-      score = 0;
-      issues.push('Local part too long');
+      status = $2;
+      score = $2;
+      issues.push('Local part too long')
     }
     
     return {
@@ -96,73 +81,60 @@ export default function EmailValidatorPage() {
       isDisposable,
       hasTypo,
       timestamp: new Date().toLocaleTimeString()
-    };
-  };
-
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'valid':
-        return <CheckCircle className="w-5 h-5 text-green-400" />;
-      case 'suspicious':
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
-      case 'disposable':
-        return <XCircle className="w-5 h-5 text-orange-400" />;
-      case 'invalid':
-        return <XCircle className="w-5 h-5 text-red-400" />;
-      default:
-        return <AlertTriangle className="w-5 h-5 text-gray-400" />;
     }
-  };
+  },
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'valid':
-        return 'text-green-400';
+  const getStatusIcon = $2;
       case 'suspicious':
-        return 'text-yellow-400';
+        return <AlertTriangle className = $2;
       case 'disposable':
-        return 'text-orange-400';
+        return <XCircle className = $2;
       case 'invalid':
-        return 'text-red-400';
+        return <XCircle className = $2;
       default:
-        return 'text-gray-400';
+        return <AlertTriangle className = $2;
+  const getStatusColor = $2;
+      case 'suspicious':
+        return 'text-yellow-400',
+      case 'disposable':
+        return 'text-orange-400',
+      case 'invalid':
+        return 'text-red-400',
+      default:
+        return 'text-gray-400'
     }
-  };
+  },
 
-  const getScoreColor = (score: number) => {
-    if (score >= 80) return 'text-green-400';
-    if (score >= 60) return 'text-yellow-400';
-    if (score >= 40) return 'text-orange-400';
-    return 'text-red-400';
-  };
+  const getScoreColor = $2;
+    if (score >= 60) return 'text-yellow-400',
+    if (score >= 40) return 'text-orange-400',
+    return 'text-red-400'
+  },
 
   const copyResults = () => {
     const resultsText = validationResults.map(result => 
       `${result.email} - ${result.status.toUpperCase()} (Score: ${result.score})`
-    ).join('\n');
-    navigator.clipboard.writeText(resultsText);
-  };
+    ).join($2);
+    navigator.clipboard.writeText(resultsText)
+  },
 
   const clearResults = () => {
-    setValidationResults([]);
-    setEmails('');
-  };
+    setValidationResults($2);
+    setEmails('')
+  },
 
-  const getStats = () => {
-    if (validationResults.length === 0) return null;
+  const getStats = $2;
+    const total = $2;
+    const valid = $2;
+    const invalid = $2;
+    const suspicious = $2;
+    const disposable = $2;
+    const avgScore = validationResults.reduce((sum, r) => sum + r.score, 0) / total,
     
-    const total = validationResults.length;
-    const valid = validationResults.filter(r => r.status === 'valid').length;
-    const invalid = validationResults.filter(r => r.status === 'invalid').length;
-    const suspicious = validationResults.filter(r => r.status === 'suspicious').length;
-    const disposable = validationResults.filter(r => r.status === 'disposable').length;
-    const avgScore = validationResults.reduce((sum, r) => sum + r.score, 0) / total;
-    
-    return { total, valid, invalid, suspicious, disposable, avgScore };
-  };
+    return { total, valid, invalid, suspicious, disposable, avgScore }
+  },
 
-  const stats = getStats();
-
+  const stats = getStats($2);
   return (
     <>
       <Head>
@@ -231,7 +203,7 @@ export default function EmailValidatorPage() {
                     <textarea
                       value={emails}
                       onChange={(e) => setEmails(e.target.value)}
-                      placeholder="john@example.com&#10;jane@company.org&#10;user@domain.net"
+                      placeholder="john@example.com&#10,jane@company.org&#10,user@domain.net"
                       rows={8}
                       className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                     />
@@ -539,7 +511,7 @@ export default function EmailValidatorPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Improve Your Email Quality?
           </h2>
@@ -567,5 +539,5 @@ export default function EmailValidatorPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

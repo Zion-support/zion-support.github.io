@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function CaseStudyPage() {
   return (
     <>
@@ -11,43 +10,7 @@ export default function CaseStudyPage() {
         <meta name="keywords" content="customer service automation, chatbots, AI automation, ticket routing, sentiment analysis" />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-        <main className="container mx-auto px-6 py-12">
-          {/* Breadcrumb */}
-          <nav className="mb-8">
-            <Link href="/" className="text-white/60 hover:text-white transition-colors">
-              Home
-            </Link>
-            <span className="text-white/60 mx-2">→</span>
-            <Link href="/case-studies" className="text-white/60 hover:text-white transition-colors">
-              Case Studies
-            </Link>
-            <span className="text-white/60 mx-2">→</span>
-            <span className="text-white">Intelligent Customer Service Automation</span>
-          </nav>
-
-          {/* Header */}
-          <header className="text-center mb-16">
-            <div className="inline-block px-4 py-2 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30 mb-6">
-              Financial Services Industry
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Intelligent Customer Service Automation
-            </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              How a Financial Services Provider achieved 80% reduction in response time with AI-powered chatbots and automated ticket routing
-            </p>
-          </header>
-
-          {/* Case Study Content */}
-          <div className="max-w-4xl mx-auto">
-            {/* Company Overview */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-semibold text-green-400 mb-4">Financial Services Provider</h3>
-                <p className="text-white/90 text-lg mb-4">
-                  A leading financial services company serving millions of customers with banking, 
+      <div className = $2;
                   investment, and insurance products. The company faced challenges with high customer service costs and long response times.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
@@ -196,7 +159,7 @@ export default function CaseStudyPage() {
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {['Chatbots', 'Natural Language Processing', 'Ticket Routing', 'Sentiment Analysis'].map((tech) => (
+                  {['ChatbotsNatural Language ProcessingTicket RoutingSentiment Analysis'].map((tech) => (
                     <div key={tech} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                       <span className="text-green-400 font-semibold">{tech}</span>
                     </div>
@@ -251,9 +214,9 @@ export default function CaseStudyPage() {
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Customer Service?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
                   This case study demonstrates the real impact of customer service automation. 
-                  Let&apos;s discuss how we can help you achieve similar results.
+                  Let&apos,s discuss how we can help you achieve similar results.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link 
                     href="/contact"
                     className="bg-gradient-to-r from-green-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-500 hover:to-cyan-500 transition-all duration-300"
@@ -273,5 +236,5 @@ export default function CaseStudyPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

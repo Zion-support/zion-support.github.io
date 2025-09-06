@@ -1,9 +1,5 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout';
-
-const CAPABILITIES = [
-  'Full‑stack Web','Mobile (iOS/Android)','AI/ML','Cloud & DevOps','Data Engineering','Blockchain','IoT','Security'
-];
-
+const CAPABILITIES = $2;
 export default function CapabilitiesPage() {
   return (
     <EnhancedLayout>
@@ -16,5 +12,5 @@ export default function CapabilitiesPage() {
         ))}
       </div>
     </EnhancedLayout>
-  );
+  )
 }

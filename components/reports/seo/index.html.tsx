@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function Placeholder() {
   return (
     <main className="min-h-screen p-8">
@@ -14,5 +13,5 @@ export default function Placeholder() {
         <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></Link>
       </div>
     </main>
-  );
+  )
 }

@@ -1,7 +1,6 @@
 
 import Head from 'next/head';
 import Link from 'next/link';
-
 const ProductManagementChat = () => {
   return (
     <div>
@@ -16,7 +15,7 @@ const ProductManagementChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default ProductManagementChat;
+export default ProductManagementChat,

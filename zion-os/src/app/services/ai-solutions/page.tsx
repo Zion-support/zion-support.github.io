@@ -1,19 +1,18 @@
-"use client";
+"use client",
 
 import { useState } from "react";
-
 interface AIService {
-  id: string;
-  name: string;
-  description: string;
-  technicalSpecs: string[];
-  useCases: string[];
-  pricing: string;
-  startingPrice: number;
-  contactLink: string;
-  icon: string;
-  features: string[];
-  integration: string[];
+  id: string,
+  name: string,
+  description: string,
+  technicalSpecs: string[],
+  useCases: string[],
+  pricing: string,
+  startingPrice: number,
+  contactLink: string,
+  icon: string,
+  features: string[],
+  integration: string[]
 }
 
 const aiServices: AIService[] = [
@@ -39,7 +38,7 @@ const aiServices: AIService[] = [
     ],
     pricing: "Starting at $499/month",
     startingPrice: 499,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=ZionGPT%20Enterprise%20Inquiry",
+    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "🤖",
     features: [
       "Custom knowledge base training",
@@ -82,7 +81,7 @@ const aiServices: AIService[] = [
     ],
     pricing: "Starting at $199/month",
     startingPrice: 199,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Content%20Generation%20Inquiry",
+    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "✍️",
     features: [
       "AI-powered content creation",
@@ -125,7 +124,7 @@ const aiServices: AIService[] = [
     ],
     pricing: "Starting at $599/month",
     startingPrice: 599,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Analytics%20Inquiry",
+    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "📊",
     features: [
       "Predictive analytics",
@@ -168,7 +167,7 @@ const aiServices: AIService[] = [
     ],
     pricing: "Starting at $399/month",
     startingPrice: 399,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Automation%20Inquiry",
+    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "⚡",
     features: [
       "Process mining and discovery",
@@ -189,18 +188,13 @@ const aiServices: AIService[] = [
       "Cloud services"
     ]
   }
-];
+],
 
 export default function AISolutionsPage() {
-  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [selectedService, setSelectedService] = useState<string | null>(null),
 
   return (
-    <div className="space-y-8">
-      {/* Header */}
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">AI Solutions & Services</h1>
-        <p className="text-xl opacity-80 max-w-3xl mx-auto">
-          Cutting-edge artificial intelligence solutions designed to transform your business operations, 
+    <div className = $2;
           enhance productivity, and drive innovation across all departments.
         </p>
       </div>
@@ -340,11 +334,11 @@ export default function AISolutionsPage() {
       <div className="text-center">
         <a
           href="/services"
-          className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all font-semibold"
+          className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover: bg-white/10 transition-all font-semibold"
         >
           ← Back to All Services
         </a>
       </div>
     </div>
-  );
+  )
 }

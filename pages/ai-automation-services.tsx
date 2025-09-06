@@ -6,58 +6,52 @@ import {
   Zap, Brain, Code, Shield, Users, TrendingUp, 
   CheckCircle, ArrowRight, Star, Clock, Target,
   Cpu, Rocket, Globe, BarChart3, Settings
-} from 'lucide-react';
+} from 'lucide-react',
 import Layout from '../components/layout/Layout';
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceHighlights = [
-  {
-    title: 'AI Code Generation',
+const serviceHighlights = $2;
     description: 'Generate production-ready code across multiple languages with AI intelligence',
     icon: Code,
     color: 'from-emerald-500 to-teal-600',
-    features: ['Multi-language support', 'Security scanning', 'Performance optimization', 'Team collaboration']
+    features: ['Multi-language supportSecurity scanningPerformance optimizationTeam collaboration']
   },
   {
     title: 'DevOps Automation',
     description: 'Intelligent automation for modern DevOps workflows with predictive analytics',
     icon: Cpu,
     color: 'from-purple-500 to-indigo-600',
-    features: ['CI/CD optimization', 'Self-healing infrastructure', 'Cost optimization', 'Multi-cloud support']
+    features: ['CI/CD optimizationSelf-healing infrastructureCost optimizationMulti-cloud support']
   },
   {
     title: 'Customer Support AI',
     description: 'Transform customer support with intelligent automation and sentiment analysis',
     icon: Users,
     color: 'from-blue-500 to-cyan-600',
-    features: ['Intelligent chatbots', 'Multi-language support', 'Predictive resolution', '24/7 availability']
+    features: ['Intelligent chatbotsMulti-language supportPredictive resolution24/7 availability']
   },
   {
     title: 'Marketing Automation',
     description: 'AI-powered marketing automation with predictive analytics and optimization',
     icon: BarChart3,
     color: 'from-pink-500 to-rose-600',
-    features: ['Campaign optimization', 'Customer personalization', 'ROI tracking', 'Multi-channel automation']
+    features: ['Campaign optimizationCustomer personalizationROI trackingMulti-channel automation']
   },
   {
     title: 'Sales Intelligence',
     description: 'Boost sales performance with AI-powered insights and predictive analytics',
     icon: TrendingUp,
     color: 'from-yellow-500 to-orange-600',
-    features: ['Lead scoring', 'Sales forecasting', 'Customer insights', 'Performance optimization']
+    features: ['Lead scoringSales forecastingCustomer insightsPerformance optimization']
   }
-];
+],
 
-const benefits = [
-  {
-    title: '80% Reduction in Manual Work',
+const benefits = $2;
     description: 'Automate repetitive tasks and focus on high-value activities',
     icon: Zap,
     color: 'text-emerald-400'
@@ -80,7 +74,7 @@ const benefits = [
     icon: BarChart3,
     color: 'text-pink-400'
   }
-];
+],
 
 export default function AIAutomationServices() {
   return (
@@ -118,26 +112,9 @@ export default function AIAutomationServices() {
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8">
-              <Zap className="w-5 h-5 text-emerald-400" />
-              <span className="text-emerald-400 font-medium">AI Automation Services</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text text-white">
-              <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
-                AI Automation
-              </span>
-              <br />
-              <span className="text-white">Revolution</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform your business operations with cutting-edge AI automation. From code generation to customer support, 
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
+            transition = $2;
               automate everything with intelligent AI that learns and adapts to your needs.
             </p>
             
@@ -175,10 +152,10 @@ export default function AIAutomationServices() {
       <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -193,10 +170,10 @@ export default function AIAutomationServices() {
             {serviceHighlights.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="futuristic-card p-6 group hover:scale-105 transition-all duration-300"
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -224,10 +201,10 @@ export default function AIAutomationServices() {
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -243,9 +220,9 @@ export default function AIAutomationServices() {
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="animated-border"
               >
                 <div className="h-full">
@@ -318,10 +295,10 @@ export default function AIAutomationServices() {
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -336,10 +313,10 @@ export default function AIAutomationServices() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="text-center group"
               >
                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -358,13 +335,13 @@ export default function AIAutomationServices() {
       <section className="py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -406,5 +383,5 @@ export default function AIAutomationServices() {
         </div>
       </section>
     </Layout>
-  );
+  )
 }

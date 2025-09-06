@@ -1,8 +1,7 @@
 
 import { Button } from "@/components/ui/button";
-
 interface ContractHeaderProps {
-  onCreateClick: () => void;
+  onCreateClick: () => void
 }
 
 export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
@@ -19,5 +18,5 @@ export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
         Create New Contract
       </Button>
     </div>
-  );
+  )
 }

@@ -1,9 +1,7 @@
 import Link from "next/link";
-
-export const metadata = {
-  title: "AI Autonomous Business Manager - Zion Tech Group",
+export const metadata = $2;
   description: "Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, process automation, and strategic optimization.",
-  keywords: "AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group"};
+  keywords: "AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group"},
 
 export default function AIBusinessManagerPage() {
   return (
@@ -37,57 +35,7 @@ export default function AIBusinessManagerPage() {
                 performance and growth potential.
               </p>
             </div>
-            <div className="card bg-gradient-to-br from-blue-600/20 to-purple-600/20 border-blue-500/30 p-8">
-              <h3 className="text-2xl font-bold mb-4">Key Benefits</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  24/7 Autonomous Operation
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Real-time Decision Making
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Continuous Learning & Optimization
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Predictive Analytics
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Core Features</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Comprehensive autonomous business management capabilities
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="card group">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
-                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Strategic Planning</h3>
-              <p className="text-gray-400">
-                AI-powered strategic planning that analyzes market conditions, 
+            <div className = $2;
                 competitive landscape, and internal capabilities to develop optimal strategies.
               </p>
             </div>
@@ -144,15 +92,7 @@ export default function AIBusinessManagerPage() {
               </p>
             </div>
 
-            <div className="card group">
-              <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-500/30 transition-colors">
-                <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Growth Optimization</h3>
-              <p className="text-gray-400">
-                Data-driven growth strategies with market expansion analysis, 
+            <div className = $2;
                 customer acquisition optimization, and revenue maximization.
               </p>
             </div>
@@ -160,22 +100,7 @@ export default function AIBusinessManagerPage() {
         </section>
 
         {/* How It Works */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">How It Works</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              The autonomous business management process
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-400">1</span>
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Data Collection</h3>
-              <p className="text-gray-400 text-sm">
-                Continuously gathers data from all business systems, 
+        <section className = $2;
                 market sources, and external factors.
               </p>
             </div>
@@ -191,13 +116,7 @@ export default function AIBusinessManagerPage() {
               </p>
             </div>
             
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-green-400">3</span>
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Decision Making</h3>
-              <p className="text-gray-400 text-sm">
-                Autonomous decisions are made based on data analysis, 
+            <div className = $2;
                 business rules, and predictive models.
               </p>
             </div>
@@ -278,7 +197,7 @@ export default function AIBusinessManagerPage() {
         {/* CTA Section */}
         <section className="text-center">
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30 p-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold mb-4">
               Ready to Automate Your Business Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -297,5 +216,5 @@ export default function AIBusinessManagerPage() {
         </section>
       </div>
     </div>
-  );
+  )
 }

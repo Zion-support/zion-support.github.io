@@ -1,7 +1,5 @@
 // Stub talent data - placeholder for missing functionality
-export const TALENT_PROFILES = [
-  {
-    id: '1',
+export const TALENT_PROFILES = $2;
     slug: 'sample-talent',
     name: 'Sample Talent',
     title: 'Full Stack Developer',
@@ -9,7 +7,7 @@ export const TALENT_PROFILES = [
     location: 'Remote',
     timezone: 'UTC',
     region: 'Global',
-    skills: ['React', 'Node.js', 'TypeScript'],
+    skills: ['ReactNode.jsTypeScript'],
     summary: 'Experienced developer with expertise in modern web technologies.',
     bio: 'Passionate about creating innovative solutions.',
     hourlyRateUsd: 75,
@@ -21,8 +19,8 @@ export const TALENT_PROFILES = [
     verified: false,
     rating: 0,
     reviewsCount: 0,
-    createdAt: new Date().toISOString(),
+    createdAt: new Date().toISOString($2);
     originalLanguage: 'en',
     translations: {}
   }
-];
+],

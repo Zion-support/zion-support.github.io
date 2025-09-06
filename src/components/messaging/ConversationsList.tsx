@@ -4,12 +4,11 @@ import { User } from 'lucide-react'
 import { Conversation } from '@/types/messaging';
 import { ConversationItem } from './ConversationItem';
 import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
-
 interface ConversationsListProps {
-  conversations: Conversation[];
-  activeConversation: Conversation | null;
-  setActiveConversation: (conversation: Conversation) => void;
-  markAsRead: (conversationId: string) => Promise<void>;
+  conversations: Conversation[],
+  activeConversation: Conversation | null,
+  setActiveConversation: (conversation: Conversation) => void,
+  markAsRead: (conversationId: string) => Promise<void>
 }
 
 export function ConversationsList({
@@ -18,17 +17,15 @@ export function ConversationsList({
   setActiveConversation,
   markAsRead
 }: ConversationsListProps) {
-  const itemSize = 80;
-
+  const itemSize = $2;
   const listHeight = useMemo(() => {
-    return Math.min(conversations.length * itemSize, 600);
-  }, [conversations.length]);
+    return Math.min(conversations.length * itemSize, 600)
+  }, [conversations.length]),
 
   const Row = ({ index, style }: ListChildComponentProps) => {
-    const conversation = conversations[index];
-    
+    const conversation = $2;
     if (!conversation) {
-      return <div style={style} />;
+      return <div style={style} />
     }
     
     return (
@@ -37,13 +34,13 @@ export function ConversationsList({
           conversation={conversation}
           isActive={activeConversation?.id === conversation.id}
           onClick={() => {
-            setActiveConversation(conversation);
-            markAsRead(conversation.id);
+            setActiveConversation($2);
+            markAsRead(conversation.id)
           }}
         />
       </div>
-    );
-  };
+    )
+  },
 
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
@@ -70,5 +67,5 @@ export function ConversationsList({
         </List>
       )}
     </div>
-  );
+  )
 }

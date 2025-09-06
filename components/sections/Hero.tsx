@@ -1,23 +1,19 @@
 import React from 'react';
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
-
 interface HeroProps {
-  title: string;
-  subtitle: string;
+  title: string,
+  subtitle: string,
   primaryAction?: {
-    text: string;
-    href: string;
-  };
+    text: string,
+    href: string},
   secondaryAction?: {
-    text: string;
-    href: string;
-  };
+    text: string,
+    href: string},
   stats?: Array<{
-    value: string;
-    label: string;
-    color: string;
-  }>;
+    value: string,
+    label: string,
+    color: string}>
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -36,7 +32,7 @@ const Hero: React.FC<HeroProps> = ({
       </div>
 
       {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size: 50px_50px] opacity-20" />
 
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float" />
@@ -49,7 +45,7 @@ const Hero: React.FC<HeroProps> = ({
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6 animate-scale-in">
               <Zap className="w-4 h-4 mr-2" />
-              World&apos;s Most Advanced Autonomous Platform
+              World&apos,s Most Advanced Autonomous Platform
             </div>
           </div>
           
@@ -120,27 +116,5 @@ const Hero: React.FC<HeroProps> = ({
               <Users className="w-4 h-4" />
               <span>10,000+ Developers</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Star className="w-4 h-4 text-yellow-400" />
-              <span>99.9% Uptime</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse" />
-        </div>
-      </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
-      <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
-    </section>
-  );
-};
-
-export default Hero;
+            <div className = $2;
+export default Hero,

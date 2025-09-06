@@ -1,5 +1,4 @@
-// Hook for useTranslationService;
-export const useUseTranslationService: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
+// Hook for useTranslationService,
+export const useUseTranslationService: unknown = $2;
+  return {}
+},

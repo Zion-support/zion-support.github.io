@@ -4,66 +4,61 @@ import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 export function FooterNewsletter(): React.ReactElement {
-  const [email, setEmail] = useState('');
-  const [honeypot, setHoneypot] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [emailError, setEmailError] = useState('');
-  const { toast } = useToast();
-
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  const lastSubmit = useRef(0);
-
+  const [email, setEmail] = useState($2);
+  const [honeypot, setHoneypot] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const [emailError, setEmailError] = useState($2);
+  const { toast } = useToast($2);
+  const EMAIL_REGEX = $2;
+  const lastSubmit = useRef($2);
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (honeypot) return; // ignore bots
-    const now = Date.now();
-    if (now - lastSubmit.current < 1000) return;
-    lastSubmit.current = now;
-
-    const trimmedEmail = email.trim();
+    e.preventDefault($2);
+    if (honeypot) return, // ignore bots
+    const now = Date.now($2);
+    if (now - lastSubmit.current < 1000) return,
+    lastSubmit.current = $2;
+    const trimmedEmail = email.trim($2);
     if (!EMAIL_REGEX.test(trimmedEmail)) {
-      setEmailError("Please enter a valid email address.");
-      return;
+      setEmailError($2);
+      return
     } else {
-      setEmailError("");
+      setEmailError("")
     }
 
-    setIsSubmitting(true);
-    const uniqueToastIdBase = `newsletter-toast-${Date.now()}`; // Generate a base for unique ID
+    setIsSubmitting($2);
+    const uniqueToastIdBase = `newsletter-toast-${Date.now()}`, // Generate a base for unique ID
 
     try {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: trimmedEmail })
-      });
+        body: JSON.stringify({ email: trimmedEmail})
+      }),
 
-      const data = await res.json().catch(() => ({})); // Ensure data is an object even on parse error
+      const data = await res.json().catch(() => ({})), // Ensure data is an object even on parse error
 
       if (res.ok) {
         if (data.status === 'already_subscribed') {
-          toast.success(data.message || "You're already subscribed!", { id: `${uniqueToastIdBase}-already-subscribed` });
+          toast.success(data.message || "You're already subscribed!", { id: `${uniqueToastIdBase}-already-subscribed` })
         } else {
-          toast.success(data.message || 'Successfully subscribed to newsletter!', { id: `${uniqueToastIdBase}-success` });
+          toast.success(data.message || 'Successfully subscribed to newsletter!', { id: `${uniqueToastIdBase}-success` })
         }
-        setEmail('');
-        // setEmailError(''); // Already cleared if regex passed
+        setEmail($2);
+        // setEmailError(''), // Already cleared if regex passed
       } else {
-        logErrorToProduction('Newsletter subscription failed:', { data: data });
+        logErrorToProduction($2);
         // Use a more specific error message if available from API, otherwise generic
-        const errorMessage = data.error || 'Subscription failed. Please try again.';
-        toast.error(errorMessage, { id: `${uniqueToastIdBase}-api-error` });
+        const errorMessage = $2;
+        toast.error(errorMessage, { id: `${uniqueToastIdBase}-api-error` })
       }
     } catch (err: any) {
-      logErrorToProduction('Newsletter subscription error:', { data: err });
-      toast.error('Unable to subscribe right now. Please try again later.', { id: `${uniqueToastIdBase}-catch-error` });
+      logErrorToProduction($2);
+      toast.error('Unable to subscribe right now. Please try again later.', { id: `${uniqueToastIdBase}-catch-error` })
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  },
 
   return (
     <form
@@ -112,5 +107,5 @@ export function FooterNewsletter(): React.ReactElement {
         )}
       </Button>
     </form>
-  );
+  )
 } 

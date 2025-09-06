@@ -7,66 +7,30 @@ import {
   CheckCircle, Clock, Award, Target, Globe, Sparkles,
   Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb,
   ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const features = [
-  'Emotional intelligence training modules',
-  'Consciousness expansion exercises',
-  'Self-awareness development tools',
-  'Empathy and compassion training',
-  'Mindfulness and meditation guidance',
-  'Cognitive enhancement techniques',
-  'Social intelligence development',
-  'Creative consciousness exploration',
-  'Spiritual growth pathways',
-  'Personal transformation tracking'
-];
+  'Emotional intelligence training modulesConsciousness expansion exercisesSelf-awareness development toolsEmpathy and compassion trainingMindfulness and meditation guidanceCognitive enhancement techniquesSocial intelligence developmentCreative consciousness explorationSpiritual growth pathwaysPersonal transformation tracking'
+],
 
 const useCases = [
-  'Personal development and growth',
-  'Professional leadership training',
-  'Therapeutic and healing practices',
-  'Educational enhancement',
-  'Corporate wellness programs',
-  'Mental health support',
-  'Spiritual development',
-  'Creative arts enhancement',
-  'Relationship improvement',
-  'Stress management and resilience'
-];
+  'Personal development and growthProfessional leadership trainingTherapeutic and healing practicesEducational enhancementCorporate wellness programsMental health supportSpiritual developmentCreative arts enhancementRelationship improvementStress management and resilience'
+],
 
 const technology = [
-  'Advanced AI algorithms',
-  'Machine learning models',
-  'Natural language processing',
-  'Emotional recognition systems',
-  'Biometric feedback integration',
-  'Virtual reality experiences',
-  'Augmented reality overlays',
-  'Brain-computer interfaces',
-  'Quantum computing integration',
-  'Blockchain security'
-];
+  'Advanced AI algorithmsMachine learning modelsNatural language processingEmotional recognition systemsBiometric feedback integrationVirtual reality experiencesAugmented reality overlaysBrain-computer interfacesQuantum computing integrationBlockchain security'
+],
 
 const integrations = [
-  'Wearable devices',
-  'Mobile applications',
-  'Web platforms',
-  'Smart home systems',
-  'Healthcare platforms',
-  'Educational systems',
-  'Corporate wellness platforms',
-  'Social media networks',
-  'Fitness trackers',
-  'Meditation apps'
-];
+  'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networksFitness trackersMeditation apps'
+],
 
 const testimonials = [
   {
@@ -93,7 +57,7 @@ const testimonials = [
     rating: 5,
     avatar: '👩‍🔬'
   }
-];
+],
 
 export default function AIConsciousnessEvolution2025() {
   return (
@@ -482,11 +446,7 @@ export default function AIConsciousnessEvolution2025() {
                 period: '/month',
                 description: 'Perfect for individuals beginning their consciousness journey',
                 features: [
-                  'Basic AI assessment',
-                  '10 consciousness exercises',
-                  'Progress tracking',
-                  'Email support',
-                  'Mobile app access'
+                  'Basic AI assessment10 consciousness exercisesProgress trackingEmail supportMobile app access'
                 ],
                 popular: false
               },
@@ -496,13 +456,7 @@ export default function AIConsciousnessEvolution2025() {
                 period: '/month',
                 description: 'Advanced features for serious consciousness development',
                 features: [
-                  'Advanced AI assessment',
-                  'Unlimited exercises',
-                  'Personalized coaching',
-                  'Priority support',
-                  'Advanced analytics',
-                  'Integration with wearables',
-                  'Group sessions'
+                  'Advanced AI assessmentUnlimited exercisesPersonalized coachingPriority supportAdvanced analyticsIntegration with wearablesGroup sessions'
                 ],
                 popular: true
               },
@@ -512,13 +466,7 @@ export default function AIConsciousnessEvolution2025() {
                 period: '/month',
                 description: 'Complete solution for organizations and teams',
                 features: [
-                  'Everything in Professional',
-                  'Team management',
-                  'Custom integrations',
-                  'Dedicated support',
-                  'White-label options',
-                  'Advanced reporting',
-                  'API access'
+                  'Everything in ProfessionalTeam managementCustom integrationsDedicated supportWhite-label optionsAdvanced reportingAPI access'
                 ],
                 popular: false
               }
@@ -628,5 +576,5 @@ export default function AIConsciousnessEvolution2025() {
         </div>
       </section>
     </Layout>
-  );
+  )
 }

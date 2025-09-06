@@ -7,11 +7,11 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 
 interface SortDropdownProps {
-  sortOption: string;
-  setSortOption: (option: string) => void;
+  sortOption: string,
+  setSortOption: (option: string) => void
 }
 
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
@@ -46,5 +46,5 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }

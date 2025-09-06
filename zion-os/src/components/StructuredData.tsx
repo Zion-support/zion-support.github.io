@@ -1,8 +1,7 @@
-"use client";
+"use client",
 
 export function StructuredData() {
-  const structuredData = {
-    "@context": "https://schema.org",
+  const structuredData = $2;
     "@type": "SoftwareApplication",
     "name": "Zion OS",
     "description": "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",
@@ -48,12 +47,12 @@ export function StructuredData() {
       "name": "Zion Tech Group",
       "url": "https://ziontechgroup.com"
     }
-  };
+  },
 
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
     />
-  );
+  )
 }

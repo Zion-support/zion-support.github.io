@@ -6,11 +6,8 @@ import { BrowseFilters } from "../components/browse/BrowseFilters";
 import { BrowseCards } from "../components/browse/BrowseCards";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
-
 // Mock data for demonstration
-const jobsData = [
-  {
-    id: "1",
+const jobsData = $2;
     title: "Senior React Developer",
     subtitle: "TechCorp Inc.",
     description: "Looking for a skilled React developer to join our team for a long-term project. Experience with TypeScript and GraphQL required.",
@@ -18,8 +15,7 @@ const jobsData = [
     badges: ["React", "TypeScript", "GraphQL"],
     price: "$70-90/hr",
     timePosted: "2 days ago",
-    match: 92
-  },
+    match: 92},
   {
     id: "2",
     title: "UX/UI Designer",
@@ -29,8 +25,7 @@ const jobsData = [
     badges: ["Figma", "Design System", "Mobile Apps"],
     price: "$60-80/hr",
     timePosted: "4 hours ago",
-    match: 87
-  },
+    match: 87},
   {
     id: "3",
     title: "Full Stack Engineer",
@@ -40,13 +35,10 @@ const jobsData = [
     badges: ["React", "Node.js", "AWS"],
     price: "$75-100/hr",
     timePosted: "1 week ago",
-    match: 78
-  }
-];
+    match: 78}
+],
 
-const talentsData = [
-  {
-    id: "1",
+const talentsData = $2;
     title: "Sarah Johnson",
     subtitle: "UX Designer • 5 years exp",
     description: "Experienced UX designer specialized in creating intuitive mobile and web experiences. Former lead designer at DesignCorp.",
@@ -54,8 +46,7 @@ const talentsData = [
     badges: ["UI/UX", "Figma", "User Testing"],
     price: "$75/hr",
     image: "",
-    match: 95
-  },
+    match: 95},
   {
     id: "2",
     title: "Michael Chen",
@@ -65,8 +56,7 @@ const talentsData = [
     badges: ["React", "Node.js", "AWS"],
     price: "$90/hr",
     image: "",
-    match: 89
-  },
+    match: 89},
   {
     id: "3",
     title: "Elena Rodriguez",
@@ -76,19 +66,18 @@ const talentsData = [
     badges: ["Agile", "Scrum", "JIRA"],
     price: "$85/hr",
     image: "",
-    match: 82
-  }
-];
+    match: 82}
+],
 
 export function MobileBrowse() {
-  const { user } = useAuth();
-  const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
-  const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
+  const { user } = useAuth($2);
+  const isClient = $2;
+  const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs"),
   
   const handleViewDetails = (id: string) => {
-    console.log(`View details for item ${id}`);
+    console.log($2);
     // Navigate to details page
-  };
+  },
   
   return (
     <div className="min-h-screen">
@@ -128,5 +117,5 @@ export function MobileBrowse() {
       
       <BottomNavigation />
     </div>
-  );
+  )
 }

@@ -2,11 +2,8 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
-
 export function FeatureHighlights() {
-  const highlightsData = [
-    {
-      title: "For Talent Seekers",
+  const highlightsData = $2;
       features: [
         "AI-powered talent matching based on your specific project requirements",
         "Verified profiles with skills validation and credential checking",
@@ -38,7 +35,7 @@ export function FeatureHighlights() {
         "Customizable workflow and approval processes"
       ]
     }
-  ];
+  ],
 
   return (
     <section className="py-16 bg-zion-blue">
@@ -69,5 +66,5 @@ export function FeatureHighlights() {
         </div>
       </div>
     </section>
-  );
+  )
 }

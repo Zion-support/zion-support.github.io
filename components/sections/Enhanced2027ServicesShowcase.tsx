@@ -5,102 +5,66 @@ import {
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom, 
   Rocket, Shield, Target, CheckCircle, ExternalLink,
   Search, Filter, Grid, List, ChevronDown
-} from 'lucide-react';
+} from 'lucide-react',
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
-
 const Enhanced2027ServicesShowcase: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState('name');
-
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState($2);
   // Combine all 2027 services
-  const all2027Services = [
-    ...cuttingEdge2027Innovations,
+  const all2027Services = $2;
     ...practicalMicroSaas2027,
     ...emergingTech2027Services
-  ];
+  ],
 
   // Get unique categories
-  const categories = ['all', ...Array.from(new Set(all2027Services.map(service => service.category)))];
-
+  const categories = ['all', ...Array.from(new Set(all2027Services.map(service = $2;
   // Filter and sort services
-  const filteredServices = all2027Services
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
+  const filteredServices = $2;
+      const matchesCategory = $2;
+      return matchesSearch && matchesCategory
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'name':
-          return a.name.localeCompare(b.name);
+          return a.name.localeCompare($2);
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
         case 'roi':
-          return parseFloat(a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b.roi.replace(/[^0-9.]/g, ''));
-        default:
-          return 0;
+          return parseFloat(a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b.roi.replace(/[^0-9.]/g, '')),
+        default: return 0
       }
-    });
+    }),
 
-  const getCategoryColor = (category: string) => {
-    const colors = {
-      'AI & Machine Learning': 'from-purple-500 to-indigo-600',
-      'Quantum Computing': 'from-blue-500 to-cyan-600',
-      'Emerging Technology': 'from-green-500 to-emerald-600',
-      'Business Operations': 'from-orange-500 to-red-600',
-      'Cybersecurity': 'from-red-500 to-pink-600',
-      'Enterprise IT': 'from-indigo-500 to-purple-600',
-      'Healthcare & Biotechnology': 'from-emerald-500 to-teal-600',
-      'Financial Technology': 'from-yellow-500 to-orange-600',
-      'Space Technology': 'from-violet-500 to-purple-600',
-      'Neural Technology': 'from-pink-500 to-rose-600',
-      'Materials Science': 'from-cyan-500 to-blue-600',
-      'Environmental Technology': 'from-teal-500 to-green-600'
-    };
-    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
-  };
+  const getCategoryColor = $2;
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'
+  },
 
-  const getCategoryIcon = (category: string) => {
-    const icons = {
-      'AI & Machine Learning': <Brain className="w-5 h-5" />,
-      'Quantum Computing': <Atom className="w-5 h-5" />,
-      'Emerging Technology': <Rocket className="w-5 h-5" />,
-      'Business Operations': <Target className="w-5 h-5" />,
-      'Cybersecurity': <Shield className="w-5 h-5" />,
-      'Enterprise IT': <Zap className="w-5 h-5" />,
-      'Healthcare & Biotechnology': <Brain className="w-5 h-5" />,
-      'Financial Technology': <TrendingUp className="w-5 h-5" />,
-      'Space Technology': <Rocket className="w-5 h-5" />,
-      'Neural Technology': <Brain className="w-5 h-5" />,
-      'Materials Science': <Atom className="w-5 h-5" />,
-      'Environmental Technology': <Rocket className="w-5 h-5" />
-    };
-    return icons[category as keyof typeof icons] || <Zap className="w-5 h-5" />;
-  };
-
+  const getCategoryIcon = $2;
+      'Quantum Computing': <Atom className = $2;
+      'Emerging Technology': <Rocket className = $2;
+      'Business Operations': <Target className = $2;
+      'Cybersecurity': <Shield className = $2;
+      'Enterprise IT': <Zap className = $2;
+      'Healthcare & Biotechnology': <Brain className = $2;
+      'Financial Technology': <TrendingUp className = $2;
+      'Space Technology': <Rocket className = $2;
+      'Neural Technology': <Brain className = $2;
+      'Materials Science': <Atom className = $2;
+      'Environmental Technology': <Rocket className = $2;
+    return icons[category as keyof typeof icons] || <Zap className = $2;
   return (
     <section className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              2027 Revolutionary Services
-            </span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover our cutting-edge portfolio of 500+ innovative services spanning AI consciousness, 
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
+          transition = $2;
             quantum computing, synthetic biology, and beyond. Each service delivers measurable ROI 
             and transforms your business into a future-ready powerhouse.
           </p>
@@ -109,8 +73,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         {/* Search and Filters */}
         <motion.div 
           className="mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6">
@@ -191,8 +155,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         {/* Results Count */}
         <motion.div 
           className="mb-8"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <p className="text-gray-400">
@@ -207,7 +171,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <motion.div
               key="grid"
               initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: 1, scale: 1}}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -215,8 +179,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="group"
                 >
@@ -281,7 +245,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <motion.div
               key="list"
               initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: 1, scale: 1}}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
               className="space-y-4"
@@ -290,7 +254,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="group"
                 >
@@ -353,8 +317,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         {filteredServices.length === 0 && (
           <motion.div 
             className="text-center py-20"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0}}
+            animate={{ opacity: 1}}
             transition={{ duration: 0.6 }}
           >
             <div className="text-6xl mb-4">🔍</div>
@@ -364,8 +328,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             </p>
             <button
               onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
+                setSearchTerm($2);
+                setSelectedCategory('all')
               }}
               className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >
@@ -377,39 +341,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         {/* CTA Section */}
         <motion.div 
           className="mt-20 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Our team of experts is ready to help you implement these revolutionary services 
-              and achieve unprecedented growth. Let's build the future together.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link 
-                href="/contact"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25"
-              >
-                <span>Get Started Today</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link 
-                href="/pricing"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50"
-              >
-                <span>View Pricing</span>
-                <TrendingUp className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-export default Enhanced2027ServicesShowcase;
+          <div className = $2;
+export default Enhanced2027ServicesShowcase,

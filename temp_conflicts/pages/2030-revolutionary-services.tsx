@@ -6,20 +6,19 @@ import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturi
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 import { innovative2030Services } from '../data/2030-innovative-services';
-
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (
     <UltraFuturisticBackground2030>
       <Head>
         <title>2030 Revolutionary Technology Services | Zion Tech Group | AI Consciousness, Quantum Computing, Space Mining</title>
-        <meta name="description" content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing, we&apos;re building tomorrow&apos;s solutions today." />
+        <meta name="description" content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing, we&apos,re building tomorrow&apos,s solutions today." />
         <meta name="keywords" content="2030 technology, AI consciousness, quantum computing, space mining, DNA computing, revolutionary services, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -116,7 +115,7 @@ export default function Revolutionary2030ServicesPage() {
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
           >
             Experience the next generation of revolutionary technology services. From AI consciousness 
-            and quantum computing to space mining and DNA computing, we&apos;re building the future today.
+            and quantum computing to space mining and DNA computing, we&apos,re building the future today.
           </motion.p>
 
           <motion.div
@@ -322,5 +321,5 @@ export default function Revolutionary2030ServicesPage() {
       {/* Footer */}
       <UltraFuturisticFooter2030 />
     </UltraFuturisticBackground2030>
-  );
+  )
 }

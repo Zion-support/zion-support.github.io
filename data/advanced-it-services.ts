@@ -1,43 +1,41 @@
 export interface AdvancedITService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const advancedITServices: AdvancedITService[] = [
   {
@@ -48,16 +46,7 @@ export const advancedITServices: AdvancedITService[] = [
     period: '/month',
     description: 'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical-quantum workflows for enterprise applications.',
     features: [
-      'Quantum computing resources',
-      'Quantum algorithm library',
-      'Hybrid classical-quantum workflows',
-      'Quantum machine learning',
-      'Quantum cryptography',
-      'Performance optimization',
-      'Real-time quantum monitoring',
-      'Advanced analytics dashboard',
-      'API for integration',
-      '24/7 quantum support'
+      'Quantum computing resourcesQuantum algorithm libraryHybrid classical-quantum workflowsQuantum machine learningQuantum cryptographyPerformance optimizationReal-time quantum monitoringAdvanced analytics dashboardAPI for integration24/7 quantum support'
     ],
     popular: true,
     icon: '☁️',
@@ -70,11 +59,11 @@ export const advancedITServices: AdvancedITService[] = [
     setupTime: '1 month',
     category: 'Quantum Computing',
     realService: true,
-    technology: ['Quantum Computing', 'Cloud Infrastructure', 'Quantum Algorithms', 'AI/ML', 'Quantum Cryptography'],
-    integrations: ['AWS', 'Azure', 'Google Cloud', 'Research platforms', 'Financial systems'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Cryptography', 'Optimization problems'],
+    technology: ['Quantum ComputingCloud InfrastructureQuantum AlgorithmsAI/MLQuantum Cryptography'],
+    integrations: ['AWSAzureGoogle CloudResearch platformsFinancial systems'],
+    useCases: ['Drug discoveryFinancial modelingCryptographyOptimization problems'],
     roi: '1000% ROI within 12 months through breakthrough discoveries and competitive advantage',
-    competitors: ['IBM Quantum ($1000+/month)', 'AWS Braket ($5000+/month)', 'Google Quantum AI'],
+    competitors: ['IBM Quantum ($1000+/month)AWS Braket ($5000+/month)Google Quantum AI'],
     marketSize: '$500M quantum computing market',
     growthRate: '500% annual growth',
     variant: 'quantum-cloud',
@@ -89,8 +78,7 @@ export const advancedITServices: AdvancedITService[] = [
     launchDate: '2024-12-01',
     customers: 8,
     rating: 4.9,
-    reviews: 4
-  },
+    reviews: 4},
   {
     id: 'edge-computing-orchestrator',
     name: 'Edge Computing Orchestrator',
@@ -99,16 +87,7 @@ export const advancedITServices: AdvancedITService[] = [
     period: '/month',
     description: 'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real-time applications.',
     features: [
-      'Intelligent resource allocation',
-      'Real-time performance optimization',
-      'Edge device management',
-      'Load balancing',
-      'Security and compliance',
-      'Monitoring and analytics',
-      'Automated scaling',
-      'API gateway',
-      'Integration tools',
-      '24/7 support'
+      'Intelligent resource allocationReal-time performance optimizationEdge device managementLoad balancingSecurity and complianceMonitoring and analyticsAutomated scalingAPI gatewayIntegration tools24/7 support'
     ],
     popular: true,
     icon: '🌐',
@@ -121,11 +100,11 @@ export const advancedITServices: AdvancedITService[] = [
     setupTime: '2 weeks',
     category: 'Edge Computing',
     realService: true,
-    technology: ['Edge Computing', 'AI/ML', 'IoT', 'Container Orchestration', 'Real-time Analytics'],
-    integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'Docker'],
-    useCases: ['IoT management', 'Real-time analytics', 'Edge AI', 'Smart manufacturing'],
+    technology: ['Edge ComputingAI/MLIoTContainer OrchestrationReal-time Analytics'],
+    integrations: ['AWS IoTAzure IoTGoogle Cloud IoTKubernetesDocker'],
+    useCases: ['IoT managementReal-time analyticsEdge AISmart manufacturing'],
     roi: '300% ROI within 6 months through reduced latency and improved performance',
-    competitors: ['AWS Greengrass ($1000+/month)', 'Azure IoT Edge ($2000+/month)', 'Google Cloud IoT'],
+    competitors: ['AWS Greengrass ($1000+/month)Azure IoT Edge ($2000+/month)Google Cloud IoT'],
     marketSize: '$50B edge computing market',
     growthRate: '250% annual growth',
     variant: 'edge-futuristic',
@@ -140,8 +119,7 @@ export const advancedITServices: AdvancedITService[] = [
     launchDate: '2024-10-01',
     customers: 156,
     rating: 4.7,
-    reviews: 89
-  },
+    reviews: 89},
   {
     id: 'zero-trust-security-platform',
     name: 'Zero Trust Security Platform',
@@ -150,16 +128,7 @@ export const advancedITServices: AdvancedITService[] = [
     period: '/month',
     description: 'Enterprise-grade zero trust security platform implementing the latest security principles with continuous verification, micro-segmentation, and advanced threat detection.',
     features: [
-      'Continuous identity verification',
-      'Micro-segmentation',
-      'Advanced threat detection',
-      'Behavioral analytics',
-      'Compliance tools',
-      'Real-time monitoring',
-      'Automated response',
-      'Integration APIs',
-      'Security dashboard',
-      '24/7 security support'
+      'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsCompliance toolsReal-time monitoringAutomated responseIntegration APIsSecurity dashboard24/7 security support'
     ],
     popular: true,
     icon: '🛡️',
@@ -172,11 +141,11 @@ export const advancedITServices: AdvancedITService[] = [
     setupTime: '1 month',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['Zero Trust Architecture', 'AI/ML', 'Identity Management', 'Network Security', 'Threat Intelligence'],
-    integrations: ['Active Directory', 'Okta', 'Palo Alto Networks', 'CrowdStrike', 'SIEM systems'],
-    useCases: ['Enterprise security', 'Government compliance', 'Financial security', 'Healthcare compliance'],
+    technology: ['Zero Trust ArchitectureAI/MLIdentity ManagementNetwork SecurityThreat Intelligence'],
+    integrations: ['Active DirectoryOktaPalo Alto NetworksCrowdStrikeSIEM systems'],
+    useCases: ['Enterprise securityGovernment complianceFinancial securityHealthcare compliance'],
     roi: '400% ROI within 12 months through security improvements and compliance benefits',
-    competitors: ['Palo Alto Networks ($10000+/month)', 'CrowdStrike ($5000+/month)', 'Zscaler'],
+    competitors: ['Palo Alto Networks ($10000+/month)CrowdStrike ($5000+/month)Zscaler'],
     marketSize: '$30B zero trust market',
     growthRate: '200% annual growth',
     variant: 'zero-trust-futuristic',
@@ -191,8 +160,7 @@ export const advancedITServices: AdvancedITService[] = [
     launchDate: '2024-09-01',
     customers: 89,
     rating: 4.8,
-    reviews: 45
-  },
+    reviews: 45},
   {
     id: 'ai-powered-devops-platform',
     name: 'AI-Powered DevOps Platform',
@@ -201,16 +169,7 @@ export const advancedITServices: AdvancedITService[] = [
     period: '/month',
     description: 'Revolutionary AI-powered DevOps platform that automates deployment, testing, and monitoring while providing intelligent insights and optimization recommendations.',
     features: [
-      'AI-powered automation',
-      'Intelligent testing',
-      'Predictive monitoring',
-      'Performance optimization',
-      'Security scanning',
-      'Compliance automation',
-      'Real-time analytics',
-      'Integration APIs',
-      'Mobile applications',
-      '24/7 support'
+      'AI-powered automationIntelligent testingPredictive monitoringPerformance optimizationSecurity scanningCompliance automationReal-time analyticsIntegration APIsMobile applications24/7 support'
     ],
     popular: true,
     icon: '⚡',
@@ -223,11 +182,11 @@ export const advancedITServices: AdvancedITService[] = [
     setupTime: '2 weeks',
     category: 'DevOps & Automation',
     realService: true,
-    technology: ['AI/ML', 'DevOps', 'CI/CD', 'Container Orchestration', 'Cloud Computing'],
-    integrations: ['GitHub', 'GitLab', 'Jenkins', 'Kubernetes', 'Docker', 'AWS', 'Azure'],
-    useCases: ['CI/CD automation', 'DevOps optimization', 'Performance monitoring', 'Security automation'],
+    technology: ['AI/MLDevOpsCI/CDContainer OrchestrationCloud Computing'],
+    integrations: ['GitHubGitLabJenkinsKubernetesDockerAWSAzure'],
+    useCases: ['CI/CD automationDevOps optimizationPerformance monitoringSecurity automation'],
     roi: '350% ROI within 6 months through automation and performance improvements',
-    competitors: ['GitLab ($99+/month)', 'GitHub Actions ($1000+/month)', 'Jenkins'],
+    competitors: ['GitLab ($99+/month)GitHub Actions ($1000+/month)Jenkins'],
     marketSize: '$8B DevOps market',
     growthRate: '180% annual growth',
     variant: 'ai-devops-futuristic',
@@ -242,8 +201,7 @@ export const advancedITServices: AdvancedITService[] = [
     launchDate: '2024-08-01',
     customers: 234,
     rating: 4.6,
-    reviews: 123
-  },
+    reviews: 123},
   {
     id: 'blockchain-enterprise-platform',
     name: 'Blockchain Enterprise Platform',
@@ -252,16 +210,7 @@ export const advancedITServices: AdvancedITService[] = [
     period: '/month',
     description: 'Complete enterprise blockchain platform providing secure, scalable, and compliant blockchain solutions for business applications, smart contracts, and decentralized systems.',
     features: [
-      'Enterprise blockchain networks',
-      'Smart contract development',
-      'Token management',
-      'Compliance tools',
-      'Security features',
-      'Performance optimization',
-      'Integration APIs',
-      'Analytics dashboard',
-      'Mobile applications',
-      '24/7 support'
+      'Enterprise blockchain networksSmart contract developmentToken managementCompliance toolsSecurity featuresPerformance optimizationIntegration APIsAnalytics dashboardMobile applications24/7 support'
     ],
     popular: true,
     icon: '🔗',
@@ -274,11 +223,11 @@ export const advancedITServices: AdvancedITService[] = [
     setupTime: '1 month',
     category: 'Blockchain & Web3',
     realService: true,
-    technology: ['Blockchain', 'Smart Contracts', 'Web3', 'Cryptography', 'Distributed Systems'],
-    integrations: ['Ethereum', 'Hyperledger', 'Corda', 'Enterprise systems', 'Payment platforms'],
-    useCases: ['Supply chain tracking', 'Financial transactions', 'Digital identity', 'Smart contracts'],
+    technology: ['BlockchainSmart ContractsWeb3CryptographyDistributed Systems'],
+    integrations: ['EthereumHyperledgerCordaEnterprise systemsPayment platforms'],
+    useCases: ['Supply chain trackingFinancial transactionsDigital identitySmart contracts'],
     roi: '500% ROI within 18 months through efficiency improvements and new business models',
-    competitors: ['IBM Blockchain ($10000+/month)', 'ConsenSys ($5000+/month)', 'R3 Corda'],
+    competitors: ['IBM Blockchain ($10000+/month)ConsenSys ($5000+/month)R3 Corda'],
     marketSize: '$20B enterprise blockchain market',
     growthRate: '300% annual growth',
     variant: 'blockchain-futuristic',
@@ -293,8 +242,7 @@ export const advancedITServices: AdvancedITService[] = [
     launchDate: '2024-07-01',
     customers: 67,
     rating: 4.7,
-    reviews: 34
-  },
+    reviews: 34},
   {
     id: 'quantum-data-center',
     name: 'Quantum Data Center',
@@ -303,16 +251,7 @@ export const advancedITServices: AdvancedITService[] = [
     period: '/month',
     description: 'Revolutionary quantum-enhanced data center providing unprecedented performance, security, and efficiency through quantum computing integration and AI optimization.',
     features: [
-      'Quantum computing integration',
-      'AI-powered optimization',
-      'Advanced security',
-      'Energy efficiency',
-      'Performance monitoring',
-      'Scalability',
-      'Compliance tools',
-      'Integration APIs',
-      '24/7 support',
-      'Quantum support team'
+      'Quantum computing integrationAI-powered optimizationAdvanced securityEnergy efficiencyPerformance monitoringScalabilityCompliance toolsIntegration APIs24/7 supportQuantum support team'
     ],
     popular: true,
     icon: '🏢',
@@ -325,11 +264,11 @@ export const advancedITServices: AdvancedITService[] = [
     setupTime: '2 months',
     category: 'Data Center & Infrastructure',
     realService: true,
-    technology: ['Quantum Computing', 'AI/ML', 'Data Center Infrastructure', 'Cloud Computing', 'Quantum Networks'],
-    integrations: ['AWS', 'Azure', 'Google Cloud', 'On-premises systems', 'Quantum computers'],
-    useCases: ['High-performance computing', 'Quantum research', 'Enterprise applications', 'Research computing'],
+    technology: ['Quantum ComputingAI/MLData Center InfrastructureCloud ComputingQuantum Networks'],
+    integrations: ['AWSAzureGoogle CloudOn-premises systemsQuantum computers'],
+    useCases: ['High-performance computingQuantum researchEnterprise applicationsResearch computing'],
     roi: '800% ROI within 18 months through performance improvements and competitive advantage',
-    competitors: ['AWS ($50000+/month)', 'Azure ($40000+/month)', 'Google Cloud ($45000+/month)'],
+    competitors: ['AWS ($50000+/month)Azure ($40000+/month)Google Cloud ($45000+/month)'],
     marketSize: '$200B data center market',
     growthRate: '150% annual growth',
     variant: 'quantum-infrastructure',
@@ -344,8 +283,7 @@ export const advancedITServices: AdvancedITService[] = [
     launchDate: '2024-11-01',
     customers: 12,
     rating: 4.9,
-    reviews: 6
-  },
+    reviews: 6},
   {
     id: 'ai-powered-network-security',
     name: 'AI-Powered Network Security',
@@ -354,16 +292,7 @@ export const advancedITServices: AdvancedITService[] = [
     period: '/month',
     description: 'Advanced AI-powered network security platform providing real-time threat detection, automated response, and intelligent security analytics for enterprise networks.',
     features: [
-      'AI threat detection',
-      'Real-time monitoring',
-      'Automated response',
-      'Behavioral analytics',
-      'Network segmentation',
-      'Compliance tools',
-      'Performance analytics',
-      'Integration APIs',
-      'Security dashboard',
-      '24/7 security support'
+      'AI threat detectionReal-time monitoringAutomated responseBehavioral analyticsNetwork segmentationCompliance toolsPerformance analyticsIntegration APIsSecurity dashboard24/7 security support'
     ],
     popular: true,
     icon: '🔒',
@@ -376,11 +305,11 @@ export const advancedITServices: AdvancedITService[] = [
     setupTime: '2 weeks',
     category: 'Network Security',
     realService: true,
-    technology: ['AI/ML', 'Network Security', 'Threat Intelligence', 'Behavioral Analytics', 'Automation'],
-    integrations: ['Cisco', 'Palo Alto Networks', 'Fortinet', 'SIEM systems', 'Firewalls'],
-    useCases: ['Network protection', 'Threat detection', 'Compliance', 'Security monitoring'],
+    technology: ['AI/MLNetwork SecurityThreat IntelligenceBehavioral AnalyticsAutomation'],
+    integrations: ['CiscoPalo Alto NetworksFortinetSIEM systemsFirewalls'],
+    useCases: ['Network protectionThreat detectionComplianceSecurity monitoring'],
     roi: '400% ROI within 12 months through threat prevention and security improvements',
-    competitors: ['Cisco ($8000+/month)', 'Palo Alto Networks ($10000+/month)', 'Fortinet ($5000+/month)'],
+    competitors: ['Cisco ($8000+/month)Palo Alto Networks ($10000+/month)Fortinet ($5000+/month)'],
     marketSize: '$25B network security market',
     growthRate: '180% annual growth',
     variant: 'ai-network-futuristic',
@@ -395,8 +324,7 @@ export const advancedITServices: AdvancedITService[] = [
     launchDate: '2024-09-15',
     customers: 178,
     rating: 4.7,
-    reviews: 89
-  },
+    reviews: 89},
   {
     id: 'quantum-iot-platform',
     name: 'Quantum IoT Platform',
@@ -405,16 +333,7 @@ export const advancedITServices: AdvancedITService[] = [
     period: '/month',
     description: 'Revolutionary quantum-enhanced IoT platform providing secure, intelligent, and scalable IoT solutions with quantum encryption and AI-powered analytics.',
     features: [
-      'Quantum encryption',
-      'AI-powered analytics',
-      'Real-time monitoring',
-      'Device management',
-      'Security features',
-      'Performance optimization',
-      'Integration APIs',
-      'Analytics dashboard',
-      'Mobile applications',
-      '24/7 support'
+      'Quantum encryptionAI-powered analyticsReal-time monitoringDevice managementSecurity featuresPerformance optimizationIntegration APIsAnalytics dashboardMobile applications24/7 support'
     ],
     popular: true,
     icon: '📱',
@@ -427,11 +346,11 @@ export const advancedITServices: AdvancedITService[] = [
     setupTime: '2 weeks',
     category: 'Quantum IoT',
     realService: true,
-    technology: ['Quantum Computing', 'IoT', 'AI/ML', 'Quantum Encryption', 'Edge Computing'],
-    integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Device manufacturers', 'Analytics platforms'],
-    useCases: ['Smart cities', 'Industrial IoT', 'Healthcare monitoring', 'Transportation tracking'],
+    technology: ['Quantum ComputingIoTAI/MLQuantum EncryptionEdge Computing'],
+    integrations: ['AWS IoTAzure IoTGoogle Cloud IoTDevice manufacturersAnalytics platforms'],
+    useCases: ['Smart citiesIndustrial IoTHealthcare monitoringTransportation tracking'],
     roi: '450% ROI within 12 months through security improvements and operational efficiency',
-    competitors: ['AWS IoT ($1000+/month)', 'Azure IoT ($2000+/month)', 'Google Cloud IoT ($1500+/month)'],
+    competitors: ['AWS IoT ($1000+/month)Azure IoT ($2000+/month)Google Cloud IoT ($1500+/month)'],
     marketSize: '$100B IoT market',
     growthRate: '250% annual growth',
     variant: 'quantum-iot-futuristic',
@@ -446,8 +365,7 @@ export const advancedITServices: AdvancedITService[] = [
     launchDate: '2024-08-15',
     customers: 234,
     rating: 4.6,
-    reviews: 123
-  },
+    reviews: 123},
   {
     id: 'ai-powered-cloud-migration',
     name: 'AI-Powered Cloud Migration',
@@ -456,16 +374,7 @@ export const advancedITServices: AdvancedITService[] = [
     period: '/month',
     description: 'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.',
     features: [
-      'AI migration planning',
-      'Cost optimization',
-      'Performance analysis',
-      'Security assessment',
-      'Compliance tools',
-      'Automated migration',
-      'Real-time monitoring',
-      'Integration APIs',
-      'Migration dashboard',
-      '24/7 support'
+      'AI migration planningCost optimizationPerformance analysisSecurity assessmentCompliance toolsAutomated migrationReal-time monitoringIntegration APIsMigration dashboard24/7 support'
     ],
     popular: true,
     icon: '☁️',
@@ -478,11 +387,11 @@ export const advancedITServices: AdvancedITService[] = [
     setupTime: '1 month',
     category: 'Cloud Migration',
     realService: true,
-    technology: ['AI/ML', 'Cloud Computing', 'Migration Tools', 'Performance Analysis', 'Cost Optimization'],
-    integrations: ['AWS', 'Azure', 'Google Cloud', 'On-premises systems', 'Monitoring tools'],
-    useCases: ['Cloud migration', 'Cost optimization', 'Performance improvement', 'Security enhancement'],
+    technology: ['AI/MLCloud ComputingMigration ToolsPerformance AnalysisCost Optimization'],
+    integrations: ['AWSAzureGoogle CloudOn-premises systemsMonitoring tools'],
+    useCases: ['Cloud migrationCost optimizationPerformance improvementSecurity enhancement'],
     roi: '600% ROI within 12 months through cost savings and performance improvements',
-    competitors: ['Accenture ($50000+/month)', 'Deloitte ($40000+/month)', 'AWS Migration Hub'],
+    competitors: ['Accenture ($50000+/month)Deloitte ($40000+/month)AWS Migration Hub'],
     marketSize: '$15B cloud migration market',
     growthRate: '200% annual growth',
     variant: 'ai-migration-futuristic',
@@ -497,6 +406,5 @@ export const advancedITServices: AdvancedITService[] = [
     launchDate: '2024-10-01',
     customers: 89,
     rating: 4.8,
-    reviews: 45
-  }
-];
+    reviews: 45}
+],

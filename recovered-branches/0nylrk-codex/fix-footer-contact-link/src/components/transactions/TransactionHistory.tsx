@@ -10,132 +10,95 @@ import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
-
 interface Transaction {
-  id: string;
-  user_id: string;
-  provider_id: string;
-  service_id: string;
-  amount: number;
-  currency: string;
-  status: 'pending' | 'completed' | 'refunded' | 'cancelled';
-  in_escrow: boolean;
-  created_at: string;
-  completed_at?: string;
-  refunded_at?: string;
-  cancelled_at?: string;
+  id: string,
+  user_id: string,
+  provider_id: string,
+  service_id: string,
+  amount: number,
+  currency: string,
+  status: 'pending' | 'completed' | 'refunded' | 'cancelled',
+  in_escrow: boolean,
+  created_at: string,
+  completed_at?: string,
+  refunded_at?: string,
+  cancelled_at?: string,
   provider?: {
-    display_name?: string;
-  };
+    display_name?: string
+  },
   service?: {
-    title?: string;
-  };
+    title?: string
+  }
 }
 
 export function TransactionHistory() {
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
+  const { user } = useAuth($2);
+  const { toast } = useToast($2);
+  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all'),
   
   const { data: transactions, isLoading, error, refetch } = useQuery({
     queryKey: ['transactions', user?.id, filter],
-    queryFn: async () => {
-      if (!user) return [];
+    queryFn: async() => {
+      if (!user) return [],
       
       // Build the query based on filters
       let query = supabase
         .from('transactions')
-        .select(`
-          *,
-          provider:profiles!provider_id(display_name),
-          service:services(title)
+        .select($2);
+          service: services(title)
         `)
-        .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`);
-      
+        .or($2);
       if (filter === 'pending') {
-        query = query.eq('status', 'pending');
+        query = query.eq('statuspending')
       } else if (filter === 'completed') {
-        query = query.eq('status', 'completed');
+        query = query.eq('statuscompleted')
       } else if (filter === 'escrow') {
-        query = query.eq('in_escrow', true);
+        query = query.eq('in_escrow', true)
       }
       
-      query = query.order('created_at', { ascending: false });
+      query = query.order($2);
+      const { data, error } = await query,
       
-      const { data, error } = await query;
-      
-      if (error) throw error;
-      return data as Transaction[];
+      if (error) throw error,
+      return data as Transaction[]
     },
-    enabled: !!user});
+    enabled: !!user}),
 
   const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
     try {
-      const { data, error } = await supabase.functions.invoke('manage-transaction', {
-        body: { transactionId, action }
-      });
+      const { data, error } = await supabase.functions.invoke($2);
+      if (error) throw error,
       
-      if (error) throw error;
-      
-      toast({
-        title: "Success",
-        description: data.message || "Transaction updated successfully"});
-      
-      refetch();
+      toast($2);
+      refetch()
     } catch (error) {
-      console.error("Error managing transaction:", error);
+      console.error($2);
       toast({
         title: "Error",
         description: error.message || "Failed to update transaction",
-        variant: "destructive"});
+        variant: "destructive"})
     }
-  };
+  },
   
   const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'pending':
         return inEscrow ? (
-          <Badge variant="outline" className="bg-yellow-500/20 text-yellow-500 border-yellow-500">
-            <Clock className="w-3 h-3 mr-1" /> In Escrow
-          </Badge>
-        ) : (
-          <Badge variant="outline" className="bg-blue-500/20 text-blue-500 border-blue-500">
-            <Clock className="w-3 h-3 mr-1" /> Pending
-          </Badge>
-        );
+          <Badge variant = $2;
       case 'completed':
-        return (
-          <Badge variant="outline" className="bg-green-500/20 text-green-500 border-green-500">
-            <CheckCircle2 className="w-3 h-3 mr-1" /> Completed
-          </Badge>
-        );
+        return($2);
       case 'refunded':
-        return (
-          <Badge variant="outline" className="bg-purple-500/20 text-purple-500 border-purple-500">
-            <RefreshCcw className="w-3 h-3 mr-1" /> Refunded
-          </Badge>
-        );
+        return($2);
       case 'cancelled':
-        return (
-          <Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500">
-            <XCircle className="w-3 h-3 mr-1" /> Cancelled
-          </Badge>
-        );
-      default:
-        return (
-          <Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500">
-            <AlertCircle className="w-3 h-3 mr-1" /> Unknown
-          </Badge>
-        );
-    }
-  };
-  
+        return($2);
+      default: return(
+          <Badge variant = $2;
   const formatCurrency = (amount: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: currency.toUpperCase()
-    }).format(amount);
-  };
+    }).format(amount)
+  },
 
   if (error) {
     return (
@@ -150,7 +113,7 @@ export function TransactionHistory() {
           </Button>
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -197,39 +160,13 @@ export function TransactionHistory() {
         
         {isLoading ? (
           Array(3).fill(0).map((_, i) => (
-            <div key={i} className="mb-4">
-              <Card className="bg-zion-blue-dark border-zion-blue-light">
-                <CardHeader className="pb-2">
-                  <Skeleton className="h-6 w-3/4 bg-zion-blue-light" />
-                  <Skeleton className="h-4 w-1/4 bg-zion-blue-light mt-2" />
-                </CardHeader>
-                <CardContent>
-                  <div className="flex justify-between mb-2">
-                    <Skeleton className="h-5 w-1/3 bg-zion-blue-light" />
-                    <Skeleton className="h-5 w-1/4 bg-zion-blue-light" />
-                  </div>
-                  <Skeleton className="h-4 w-2/3 bg-zion-blue-light" />
-                </CardContent>
-                <CardFooter>
-                  <Skeleton className="h-9 w-28 bg-zion-blue-light rounded-md" />
-                </CardFooter>
-              </Card>
-            </div>
-          ))
-        ) : transactions && transactions.length > 0 ? (
-          <div className="space-y-4">
-            {transactions.map((transaction) => {
-              const isClient = user?.id === transaction.user_id;
-              const isPending = transaction.status === 'pending';
-              const isInEscrow = transaction.in_escrow;
-              const canRelease = !isClient && isPending && isInEscrow;
-              const canCancel = isClient && isPending;
-              const canRefund = isClient && transaction.status === 'completed';
-              
-              const counterpartyName = isClient 
-                ? transaction.provider?.display_name || 'Service Provider' 
-                : 'Client';
-
+            <div key = $2;
+              const isPending = $2;
+              const isInEscrow = $2;
+              const canRelease = $2;
+              const canCancel = $2;
+              const canRefund = $2;
+              const counterpartyName = $2;
               return (
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
                   <CardHeader className="pb-3">
@@ -262,7 +199,7 @@ export function TransactionHistory() {
                       <span className="text-zion-slate-light">Date:</span>
                       <span className="text-zion-slate-light">
                         {new Date(transaction.created_at).toLocaleDateString()} 
-                        ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
+                        ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true})})
                       </span>
                     </div>
                     
@@ -316,7 +253,7 @@ export function TransactionHistory() {
                     )}
                   </CardFooter>
                 </Card>
-              );
+              )
             })}
           </div>
         ) : (
@@ -335,5 +272,5 @@ export function TransactionHistory() {
         )}
       </div>
     </div>
-  );
+  )
 }

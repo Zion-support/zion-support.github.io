@@ -10,70 +10,67 @@ import type { BlogPost as BlogPostType } from "@/types/blog";
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
-
 export default function BlogPost() {
 
-  const router = useRouter();
-  const { slug } = router.query as { slug: string };
-  const [post, setPost] = useState<BlogPostType | null>(null);
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
-  const [showShareMenu, setShowShareMenu] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const timedOut = useSkeletonTimeout(20000);
-  
+  const router = useRouter($2);
+  const { slug } = router.query as { slug: string},
+  const [post, setPost] = useState<BlogPostType | null>(null),
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),
+  const [showShareMenu, setShowShareMenu] = useState($2);
+  const [isLoading, setIsLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
+  const timedOut = useSkeletonTimeout($2);
   useEffect(() => {
     const fetchPost = async () => {
-      setIsLoading(true);
-      setError(null);
+      setIsLoading($2);
+      setError($2);
       try {
-        const data = await fetchWithRetry(`/api/blog/${slug}`);
-        setPost(data);
+        const data = await fetchWithRetry($2);
+        setPost($2);
         const related = BLOG_POSTS.filter(
           (p) =>
             p.id !== data.id &&
             (p.category === data.category ||
               p.tags.some((tag) => data.tags.includes(tag)))
-        ).slice(0, 3);
-        setRelatedPosts(related);
-        setIsLoading(false);
-        return;
+        ).slice($2);
+        setRelatedPosts($2);
+        setIsLoading($2);
+        return
       } catch (err) {
-        logErrorToProduction('Failed to fetch blog post', { data: err });
-        setError('Failed to load article');
+        logErrorToProduction($2);
+        setError('Failed to load article')
       }
 
-      const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
+      const currentPost = $2;
       if (currentPost) {
-        setPost(currentPost);
+        setPost($2);
         const related = BLOG_POSTS.filter(
           (p) =>
             p.id !== currentPost.id &&
             (p.category === currentPost.category ||
               p.tags.some((tag) => currentPost.tags.includes(tag)))
-        ).slice(0, 3);
-        setRelatedPosts(related);
+        ).slice($2);
+        setRelatedPosts(related)
       } else {
-        router.replace('/blog');
+        router.replace('/blog')
       }
-      setIsLoading(false);
-    };
+      setIsLoading(false)
+    },
 
-    fetchPost();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [slug, router]);
+    fetchPost($2);
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [slug, router]),
   
   if (isLoading && !timedOut) {
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
         <div className="animate-pulse">Loading article...</div>
       </div>
-    );
+    )
   }
 
   if (!post && (error || timedOut)) {
@@ -82,40 +79,27 @@ export default function BlogPost() {
         <p>Failed to load article.</p>
         <Button onClick={() => router.reload()}>Retry</Button>
       </div>
-    );
+    )
   }
 
   // If post is still null after loading, show not found
   if (!post) {
     return (
-      <div className="min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4">
-        <p>Article not found.</p>
-        <Button onClick={() => router.push('/blog')}>Back to Blog</Button>
-      </div>
-    );
-  }
-
-  // Helper function to get share URL
-  const getShareUrl = (platform: string) => {
-    if (!post) return '';
-    
-    const url = encodeURIComponent(window.location.href);
-    const title = encodeURIComponent(post.title);
-    
+      <div className = $2;
+    const url = encodeURIComponent($2);
+    const title = encodeURIComponent($2);
     switch (platform) {
       case 'facebook':
-        return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+        return `https://www.facebook.com/sharer/sharer.php?u = $2;
       case 'twitter':
-        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+        return `https://twitter.com/intent/tweet?url = $2;
       case 'linkedin':
-        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
-      default:
-        return '#';
+        return `https://www.linkedin.com/shareArticle?mini = $2;
+      default: return '#'
     }
-  };
+  },
 
-  const articleLd = {
-    "@context": "https://schema.org",
+  const articleLd = $2;
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
@@ -123,7 +107,7 @@ export default function BlogPost() {
     datePublished: post.publishedDate,
     author: {
       "@type": "Person",
-      name: post.author.name}};
+      name: post.author.name}},
   
   return (
     <>
@@ -316,7 +300,7 @@ export default function BlogPost() {
             <div className="flex justify-between items-center mt-12">
               <Button
                 variant="outline"
-                className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+                className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
                 asChild
               >
                 <Link href="/blog">
@@ -329,5 +313,5 @@ export default function BlogPost() {
         </div>
       </div>
     </>
-  );
+  )
 }

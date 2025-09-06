@@ -8,11 +8,7 @@ import { iotEdgeComputing2025 } from '../../data/iot-edge-computing-2025';
 import { healthcareBiotech2025 } from '../../data/healthcare-biotech-2025';
 import { fintechFinancial2025 } from '../../data/fintech-financial-2025';
 import { educationElearning2025 } from '../../data/education-elearning-2025';
-
-const ComprehensiveServicesShowcase2025 = () => {
-  const serviceCategories = [
-    {
-      title: 'AI & Automation Services',
+const ComprehensiveServicesShowcase2025 = $2;
       icon: Brain,
       services: advancedAIAutomation2025,
       gradient: 'from-purple-600 via-pink-600 to-blue-600',
@@ -60,20 +56,19 @@ const ComprehensiveServicesShowcase2025 = () => {
       gradient: 'from-amber-600 via-yellow-600 to-orange-600',
       description: 'Advanced learning and educational technology'
     }
-  ];
+  ],
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0},
     visible: {
       y: 0,
       opacity: 1,
@@ -81,7 +76,7 @@ const ComprehensiveServicesShowcase2025 = () => {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -95,8 +90,8 @@ const ComprehensiveServicesShowcase2025 = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -113,7 +108,7 @@ const ComprehensiveServicesShowcase2025 = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="space-y-16"
         >
           {serviceCategories.map((category, categoryIndex) => (
@@ -143,7 +138,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    whileInView={{ opacity: 1, scale: 1}}
                     transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
                     className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
                   >
@@ -239,8 +234,8 @@ const ComprehensiveServicesShowcase2025 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-center mt-20"
         >
@@ -251,27 +246,5 @@ const ComprehensiveServicesShowcase2025 = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of businesses already leveraging our cutting-edge solutions to drive innovation, efficiency, and growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://ziontechgroup.com/contact"
-                className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
-              >
-                Get Started Today
-                <Rocket className="w-5 h-5 ml-2" />
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center justify-center px-8 py-3 bg-slate-700/50 text-white font-semibold rounded-xl hover:bg-slate-600/50 transition-all duration-200 border border-slate-600"
-              >
-                Call +1 302 464 0950
-                <Phone className="w-5 h-5 ml-2" />
-              </a>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-export default ComprehensiveServicesShowcase2025;
+            <div className = $2;
+export default ComprehensiveServicesShowcase2025,

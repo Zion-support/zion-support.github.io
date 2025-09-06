@@ -55,67 +55,53 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     adminOnly: true,
     icon: "Megaphone"
   }
-};
+},
 
-const iconMap = {
-  "Briefcase": Briefcase,
+const iconMap = $2;
   "MessageSquare": MessageSquare,
   "Code": Code,
   "FileText": FileText,
   "Megaphone": Megaphone
-};
+},
 
 function CategoryContent({
   categoryId,
   category,
   IconComponent,
   user}: {
-  categoryId: string;
-  category: ForumCategoryInfo;
-  IconComponent: React.ComponentType<any>;
-  user: any;
-}) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const { featuredPosts, recentPosts } = useCommunity();
-
+  categoryId: string,
+  category: ForumCategoryInfo,
+  IconComponent: React.ComponentType<any>,
+  user: any}) {
+  const [searchQuery, setSearchQuery] = useState($2);
+  const { featuredPosts, recentPosts } = useCommunity($2);
   // Filter posts by category from context data
   const categoryPosts = [
-    ...featuredPosts.filter(post => post.categoryId === categoryId),
+    ...featuredPosts.filter($2);
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
     // Remove duplicates by id
-    index === self.findIndex(p => p.id === post.id)
-  );
-
+    index = $2;
   // Apply search filter
-  const filteredPosts = searchQuery 
-    ? categoryPosts.filter(post => 
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )
-    : categoryPosts;
-
-  const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin');
-  const { isFollowed, follow, unfollow } = useFollowedCategories();
-  const { toast } = useToast();
-
+  const filteredPosts = $2;
+  const canCreatePost = $2;
+  const { isFollowed, follow, unfollow } = useFollowedCategories($2);
+  const { toast } = useToast($2);
   const handleFollow = () => {
     if (!user) {
-      toast({ title: 'Login required', description: 'Please sign in to follow this category' });
-      return;
+      toast($2);
+      return
     }
     if (isFollowed(categoryId)) {
-      unfollow(categoryId);
+      unfollow(categoryId)
     } else {
-      follow(categoryId);
+      follow(categoryId)
     }
-  };
+  },
 
-  logInfo('CategoryContent - categoryId:', { data: categoryId });
-  logInfo('CategoryContent - categoryPosts:', { data: categoryPosts });
-  logInfo('CategoryContent - filteredPosts:', { data: filteredPosts });
-
+  logInfo($2);
+  logInfo($2);
+  logInfo($2);
   return (
     <div className="container py-8">
       <div className="flex items-center gap-3 mb-6">
@@ -192,33 +178,27 @@ function CategoryContent({
         )}
       </div>
     </div>
-  );
+  )
 }
 
 export default function ForumCategoryPage() {
-  const router = useRouter();
-  const { categoryId } = router.query as { categoryId: string };
-  const { user } = useAuth();
-
+  const router = useRouter($2);
+  const { categoryId } = router.query as { categoryId: string},
+  const { user } = useAuth($2);
   // Check if the category exists and user has access
-  const category = categoryId ? categoriesInfo[categoryId] : null;
-  const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null;
-
+  const category = $2;
+  const IconComponent = $2;
   // Check access for admin-only categories
-  const hasAccess = category && (
-    !category.adminOnly || 
-    (user && (user.userType === 'admin' || user.role === 'admin'))
-  );
-
+  const hasAccess = $2;
   useEffect(() => {
     // Add a small delay to ensure router is ready
     if (categoryId && category) {
-      logInfo('ForumCategoryPage - categoryId changed:', { data: categoryId });
+      logInfo('ForumCategoryPage - categoryId changed:', { data: categoryId})
     }
-  }, [categoryId, category]);
+  }, [categoryId, category]),
 
   if (!categoryId || !category) {
-    return <NotFound />;
+    return <NotFound />
   }
 
   if (!hasAccess) {
@@ -234,11 +214,11 @@ export default function ForumCategoryPage() {
           </Button>
         </div>
       </div>
-    );
+    )
   }
 
   if (!IconComponent) {
-    return <NotFound />;
+    return <NotFound />
   }
 
   return (
@@ -257,5 +237,5 @@ export default function ForumCategoryPage() {
         user={user}
       />
     </>
-  );
+  )
 }

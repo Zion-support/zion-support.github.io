@@ -1,45 +1,42 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface EmergingTech2026ServiceV2 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   // Neuromorphic Computing Platform
@@ -51,16 +48,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     period: '/month',
     description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing. Perfect for research institutions, AI companies, and organizations requiring brain-like computing capabilities.',
     features: [
-      'Brain-inspired neural architecture',
-      'Ultra-low power consumption',
-      'Real-time learning capabilities',
-      'Spiking neural networks',
-      'Hardware acceleration',
-      'Custom chip design',
-      'Advanced simulation tools',
-      'Research collaboration platform',
-      'API for developers',
-      'Enterprise deployment'
+      'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesSpiking neural networksHardware accelerationCustom chip designAdvanced simulation toolsResearch collaboration platformAPI for developersEnterprise deployment'
     ],
     popular: true,
     icon: '🧠',
@@ -73,11 +61,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     setupTime: '1 month',
     category: 'Neuromorphic Computing',
     realService: true,
-    technology: ['Neuromorphic Chips', 'Spiking Neural Networks', 'React', 'Node.js', 'PostgreSQL', 'Custom Hardware'],
-    integrations: ['TensorFlow', 'PyTorch', 'Custom AI frameworks', 'Research databases', 'Academic platforms'],
-    useCases: ['AI research', 'Cognitive computing', 'Robotics', 'Autonomous systems', 'Brain-computer interfaces', 'Neuromorphic applications'],
+    technology: ['Neuromorphic ChipsSpiking Neural NetworksReactNode.jsPostgreSQLCustom Hardware'],
+    integrations: ['TensorFlowPyTorchCustom AI frameworksResearch databasesAcademic platforms'],
+    useCases: ['AI researchCognitive computingRoboticsAutonomous systemsBrain-computer interfacesNeuromorphic applications'],
     roi: 'Average customer sees 700% ROI through breakthrough research capabilities and reduced computing costs.',
-    competitors: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'SpiNNaker', 'TrueNorth'],
+    competitors: ['Intel LoihiIBM TrueNorthBrainChipSpiNNakerTrueNorth'],
     marketSize: '$8.2B market',
     growthRate: '450% annual growth',
     variant: 'ai-futuristic',
@@ -92,8 +80,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     launchDate: '2026-04-01',
     customers: 120,
     rating: 4.9,
-    reviews: 85
-  },
+    reviews: 85},
 
   // Quantum Internet Security Platform
   {
@@ -104,16 +91,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     period: '/month',
     description: 'Next-generation quantum internet security platform that protects against quantum attacks and ensures long-term security for critical infrastructure. Perfect for government agencies, financial institutions, and enterprises.',
     features: [
-      'Post-quantum cryptography',
-      'Quantum-resistant algorithms',
-      'Real-time threat detection',
-      'Multi-layer security',
-      'Compliance frameworks',
-      'Advanced monitoring',
-      'Custom security policies',
-      'API for integration',
-      'Enterprise deployment',
-      '24/7 security operations'
+      'Post-quantum cryptographyQuantum-resistant algorithmsReal-time threat detectionMulti-layer securityCompliance frameworksAdvanced monitoringCustom security policiesAPI for integrationEnterprise deployment24/7 security operations'
     ],
     popular: true,
     icon: '🌐',
@@ -126,11 +104,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     setupTime: '2 weeks',
     category: 'Quantum & Cybersecurity',
     realService: true,
-    technology: ['Post-Quantum Cryptography', 'Quantum Algorithms', 'React', 'Node.js', 'PostgreSQL', 'AWS'],
-    integrations: ['Cloudflare', 'AWS', 'Azure', 'Google Cloud', 'Custom security systems'],
-    useCases: ['Internet security', 'Critical infrastructure protection', 'Government communications', 'Financial transactions', 'Healthcare data', 'Defense systems'],
+    technology: ['Post-Quantum CryptographyQuantum AlgorithmsReactNode.jsPostgreSQLAWS'],
+    integrations: ['CloudflareAWSAzureGoogle CloudCustom security systems'],
+    useCases: ['Internet securityCritical infrastructure protectionGovernment communicationsFinancial transactionsHealthcare dataDefense systems'],
     roi: 'Average customer sees 500% ROI through enhanced security and reduced breach risks.',
-    competitors: ['Cloudflare', 'AWS Shield', 'Akamai', 'Imperva', 'F5 Networks'],
+    competitors: ['CloudflareAWS ShieldAkamaiImpervaF5 Networks'],
     marketSize: '$45.2B market',
     growthRate: '280% annual growth',
     variant: 'quantum-futuristic',
@@ -145,8 +123,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     launchDate: '2026-03-15',
     customers: 680,
     rating: 4.8,
-    reviews: 420
-  },
+    reviews: 420},
 
   // Synthetic Biology AI Platform
   {
@@ -157,16 +134,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     period: '/month',
     description: 'Revolutionary AI platform for synthetic biology that enables researchers to design, engineer, and optimize biological systems. Perfect for biotech companies, research institutions, and pharmaceutical organizations.',
     features: [
-      'AI-powered DNA design',
-      'Protein engineering tools',
-      'Metabolic pathway optimization',
-      'Gene editing assistance',
-      'Biological simulation',
-      'Regulatory compliance',
-      'Collaborative research tools',
-      'Data visualization',
-      'API for custom models',
-      'Enterprise security'
+      'AI-powered DNA designProtein engineering toolsMetabolic pathway optimizationGene editing assistanceBiological simulationRegulatory complianceCollaborative research toolsData visualizationAPI for custom modelsEnterprise security'
     ],
     popular: true,
     icon: '🧬',
@@ -179,11 +147,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     setupTime: '2 weeks',
     category: 'Synthetic Biology & AI',
     realService: true,
-    technology: ['AI/ML', 'Bioinformatics', 'React', 'Node.js', 'PostgreSQL', 'AWS'],
-    integrations: ['DNA synthesis platforms', 'Lab management systems', 'Research databases', 'Custom lab equipment'],
-    useCases: ['DNA design', 'Protein engineering', 'Metabolic engineering', 'Gene editing', 'Biological research', 'Drug development'],
+    technology: ['AI/MLBioinformaticsReactNode.jsPostgreSQLAWS'],
+    integrations: ['DNA synthesis platformsLab management systemsResearch databasesCustom lab equipment'],
+    useCases: ['DNA designProtein engineeringMetabolic engineeringGene editingBiological researchDrug development'],
     roi: 'Average customer sees 600% ROI through accelerated research and reduced development costs.',
-    competitors: ['Ginkgo Bioworks', 'Zymergen', 'Twist Bioscience', 'Benchling', 'DNA Script'],
+    competitors: ['Ginkgo BioworksZymergenTwist BioscienceBenchlingDNA Script'],
     marketSize: '$13.8B market',
     growthRate: '380% annual growth',
     variant: 'ai-futuristic',
@@ -198,8 +166,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     launchDate: '2026-04-15',
     customers: 280,
     rating: 4.7,
-    reviews: 180
-  },
+    reviews: 180},
 
   // Fusion Energy AI Platform
   {
@@ -210,16 +177,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     period: '/month',
     description: 'Advanced AI platform for fusion energy research, optimization, and control systems. Perfect for fusion research institutions, energy companies, and government agencies working on clean energy solutions.',
     features: [
-      'AI plasma control',
-      'Fusion reactor optimization',
-      'Real-time monitoring',
-      'Predictive maintenance',
-      'Energy efficiency analysis',
-      'Safety systems',
-      'Research collaboration',
-      'Data analytics',
-      'Custom AI models',
-      'Enterprise deployment'
+      'AI plasma controlFusion reactor optimizationReal-time monitoringPredictive maintenanceEnergy efficiency analysisSafety systemsResearch collaborationData analyticsCustom AI modelsEnterprise deployment'
     ],
     popular: true,
     icon: '☢️',
@@ -232,11 +190,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     setupTime: '1 month',
     category: 'Fusion Energy & AI',
     realService: true,
-    technology: ['AI/ML', 'Plasma Physics', 'React', 'Node.js', 'PostgreSQL', 'Custom Hardware'],
-    integrations: ['Fusion reactors', 'Plasma diagnostics', 'Research databases', 'Custom control systems'],
-    useCases: ['Plasma control', 'Reactor optimization', 'Energy research', 'Safety monitoring', 'Efficiency analysis', 'Research collaboration'],
+    technology: ['AI/MLPlasma PhysicsReactNode.jsPostgreSQLCustom Hardware'],
+    integrations: ['Fusion reactorsPlasma diagnosticsResearch databasesCustom control systems'],
+    useCases: ['Plasma controlReactor optimizationEnergy researchSafety monitoringEfficiency analysisResearch collaboration'],
     roi: 'Average customer sees 800% ROI through improved fusion efficiency and research acceleration.',
-    competitors: ['General Fusion', 'TAE Technologies', 'Commonwealth Fusion', 'Helion Energy', 'Tokamak Energy'],
+    competitors: ['General FusionTAE TechnologiesCommonwealth FusionHelion EnergyTokamak Energy'],
     marketSize: '$2.1B market',
     growthRate: '520% annual growth',
     variant: 'ai-futuristic',
@@ -251,8 +209,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     launchDate: '2026-05-01',
     customers: 95,
     rating: 4.9,
-    reviews: 65
-  },
+    reviews: 65},
 
   // Quantum Machine Learning Platform
   {
@@ -263,16 +220,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     period: '/month',
     description: 'Revolutionary quantum machine learning platform that combines quantum computing with AI to solve complex problems faster than classical computers. Perfect for AI researchers, data scientists, and organizations requiring quantum acceleration.',
     features: [
-      'Quantum AI algorithms',
-      'Hybrid quantum-classical ML',
-      'Quantum neural networks',
-      'Optimization algorithms',
-      'Real-time quantum processing',
-      'Custom quantum circuits',
-      'Performance analytics',
-      'API for developers',
-      'Enterprise deployment',
-      '24/7 quantum access'
+      'Quantum AI algorithmsHybrid quantum-classical MLQuantum neural networksOptimization algorithmsReal-time quantum processingCustom quantum circuitsPerformance analyticsAPI for developersEnterprise deployment24/7 quantum access'
     ],
     popular: true,
     icon: '⚛️',
@@ -285,11 +233,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     setupTime: '1 week',
     category: 'Quantum & AI',
     realService: true,
-    technology: ['Quantum Computing', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Quantum Simulators'],
-    integrations: ['IBM Quantum', 'Google Quantum', 'Amazon Braket', 'Custom quantum hardware', 'AI frameworks'],
-    useCases: ['Quantum AI research', 'Optimization problems', 'Machine learning acceleration', 'Quantum algorithms', 'Research collaboration', 'Educational purposes'],
+    technology: ['Quantum ComputingMachine LearningReactNode.jsPostgreSQLQuantum Simulators'],
+    integrations: ['IBM QuantumGoogle QuantumAmazon BraketCustom quantum hardwareAI frameworks'],
+    useCases: ['Quantum AI researchOptimization problemsMachine learning accelerationQuantum algorithmsResearch collaborationEducational purposes'],
     roi: 'Average customer sees 500% ROI through quantum acceleration and research breakthroughs.',
-    competitors: ['IBM Quantum', 'Google Quantum', 'Amazon Braket', 'Microsoft Azure Quantum', 'Rigetti'],
+    competitors: ['IBM QuantumGoogle QuantumAmazon BraketMicrosoft Azure QuantumRigetti'],
     marketSize: '$1.8B market',
     growthRate: '380% annual growth',
     variant: 'quantum-futuristic',
@@ -304,8 +252,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     launchDate: '2026-04-20',
     customers: 420,
     rating: 4.8,
-    reviews: 280
-  },
+    reviews: 280},
 
   // Autonomous Vehicle AI Platform
   {
@@ -316,16 +263,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     period: '/month',
     description: 'Comprehensive AI platform for autonomous vehicle development, testing, and deployment. Perfect for automotive companies, transportation companies, and organizations developing self-driving technology.',
     features: [
-      'AI perception systems',
-      'Path planning algorithms',
-      'Safety validation',
-      'Simulation environment',
-      'Real-time testing',
-      'Regulatory compliance',
-      'Performance analytics',
-      'Custom AI models',
-      'API for integration',
-      'Enterprise security'
+      'AI perception systemsPath planning algorithmsSafety validationSimulation environmentReal-time testingRegulatory compliancePerformance analyticsCustom AI modelsAPI for integrationEnterprise security'
     ],
     popular: true,
     icon: '🚗',
@@ -338,11 +276,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     setupTime: '2 weeks',
     category: 'Autonomous Vehicles & AI',
     realService: true,
-    technology: ['AI/ML', 'Computer Vision', 'React', 'Node.js', 'PostgreSQL', 'Simulation Engines'],
-    integrations: ['Vehicle systems', 'Sensor arrays', 'Simulation platforms', 'Custom hardware', 'Testing environments'],
-    useCases: ['Autonomous driving', 'Vehicle testing', 'Safety validation', 'Path planning', 'Perception systems', 'Research and development'],
+    technology: ['AI/MLComputer VisionReactNode.jsPostgreSQLSimulation Engines'],
+    integrations: ['Vehicle systemsSensor arraysSimulation platformsCustom hardwareTesting environments'],
+    useCases: ['Autonomous drivingVehicle testingSafety validationPath planningPerception systemsResearch and development'],
     roi: 'Average customer sees 600% ROI through accelerated development and improved safety.',
-    competitors: ['Waymo', 'Cruise', 'Tesla', 'Mobileye', 'Aurora'],
+    competitors: ['WaymoCruiseTeslaMobileyeAurora'],
     marketSize: '$54.2B market',
     growthRate: '320% annual growth',
     variant: 'ai-futuristic',
@@ -357,8 +295,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     launchDate: '2026-05-15',
     customers: 180,
     rating: 4.7,
-    reviews: 120
-  },
+    reviews: 120},
 
   // Brain-Computer Interface Platform
   {
@@ -369,16 +306,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     period: '/month',
     description: 'Revolutionary brain-computer interface platform that enables direct communication between the human brain and computers. Perfect for medical research, assistive technology, and human augmentation applications.',
     features: [
-      'Neural signal processing',
-      'AI pattern recognition',
-      'Real-time brain monitoring',
-      'Custom BCI applications',
-      'Medical device integration',
-      'Research tools',
-      'Performance analytics',
-      'API for developers',
-      'Enterprise deployment',
-      'Medical compliance'
+      'Neural signal processingAI pattern recognitionReal-time brain monitoringCustom BCI applicationsMedical device integrationResearch toolsPerformance analyticsAPI for developersEnterprise deploymentMedical compliance'
     ],
     popular: true,
     icon: '🧠',
@@ -391,11 +319,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     setupTime: '1 month',
     category: 'Brain-Computer Interface',
     realService: true,
-    technology: ['Neural Engineering', 'AI/ML', 'React', 'Node.js', 'PostgreSQL', 'Custom Hardware'],
-    integrations: ['Medical devices', 'EEG systems', 'Research equipment', 'Custom sensors', 'Medical databases'],
-    useCases: ['Medical research', 'Assistive technology', 'Human augmentation', 'Neural rehabilitation', 'Cognitive enhancement', 'Research collaboration'],
+    technology: ['Neural EngineeringAI/MLReactNode.jsPostgreSQLCustom Hardware'],
+    integrations: ['Medical devicesEEG systemsResearch equipmentCustom sensorsMedical databases'],
+    useCases: ['Medical researchAssistive technologyHuman augmentationNeural rehabilitationCognitive enhancementResearch collaboration'],
     roi: 'Average customer sees 700% ROI through breakthrough research and medical applications.',
-    competitors: ['Neuralink', 'CTRL-labs', 'Kernel', 'OpenBCI', 'Emotiv'],
+    competitors: ['NeuralinkCTRL-labsKernelOpenBCIEmotiv'],
     marketSize: '$1.7B market',
     growthRate: '450% annual growth',
     variant: 'ai-futuristic',
@@ -410,8 +338,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     launchDate: '2026-06-01',
     customers: 95,
     rating: 4.8,
-    reviews: 65
-  },
+    reviews: 65},
 
   // Quantum Internet Platform
   {
@@ -422,16 +349,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     period: '/month',
     description: 'Revolutionary quantum internet platform that enables quantum communication, quantum networking, and quantum applications. Perfect for research institutions, government agencies, and organizations building the quantum future.',
     features: [
-      'Quantum networking',
-      'Quantum communication protocols',
-      'Quantum key distribution',
-      'Quantum repeaters',
-      'Quantum applications',
-      'Real-time quantum routing',
-      'Performance monitoring',
-      'API for developers',
-      'Enterprise deployment',
-      'Research collaboration'
+      'Quantum networkingQuantum communication protocolsQuantum key distributionQuantum repeatersQuantum applicationsReal-time quantum routingPerformance monitoringAPI for developersEnterprise deploymentResearch collaboration'
     ],
     popular: true,
     icon: '🌐',
@@ -444,11 +362,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     setupTime: '2 months',
     category: 'Quantum Internet',
     realService: true,
-    technology: ['Quantum Computing', 'Quantum Communication', 'React', 'Node.js', 'PostgreSQL', 'Quantum Hardware'],
-    integrations: ['Quantum computers', 'Quantum networks', 'Research databases', 'Custom quantum systems'],
-    useCases: ['Quantum research', 'Government communications', 'Defense applications', 'Research collaboration', 'Educational purposes', 'Quantum applications'],
+    technology: ['Quantum ComputingQuantum CommunicationReactNode.jsPostgreSQLQuantum Hardware'],
+    integrations: ['Quantum computersQuantum networksResearch databasesCustom quantum systems'],
+    useCases: ['Quantum researchGovernment communicationsDefense applicationsResearch collaborationEducational purposesQuantum applications'],
     roi: 'Average customer sees 800% ROI through breakthrough research and quantum capabilities.',
-    competitors: ['Government initiatives', 'Research projects', 'Academic institutions', 'Quantum companies'],
+    competitors: ['Government initiativesResearch projectsAcademic institutionsQuantum companies'],
     marketSize: '$0.8B market',
     growthRate: '600% annual growth',
     variant: 'quantum-futuristic',
@@ -463,6 +381,5 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     launchDate: '2026-06-15',
     customers: 65,
     rating: 4.9,
-    reviews: 45
-  }
-];
+    reviews: 45}
+],

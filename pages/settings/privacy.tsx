@@ -1,45 +1,41 @@
 import React, { useEffect, useState } from 'react';
-
 export default function PrivacySettingsPage() {
-  const [userId, setUserId] = useState('');
-  const [optOut, setOptOut] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState('');
+  const [userId, setUserId] = useState($2);
+  const [optOut, setOptOut] = useState($2);
+  const [loading, setLoading] = useState($2);
+  const [message, setMessage] = useState($2);
+  const load = $2;
+    setLoading($2);
+    setMessage($2);
+    const res = $2;
+    const json = await res.json($2);
+    if (res.ok) setOptOut($2);
+    else setMessage($2);
+    setLoading(false)
+  },
 
-  const load = async () => {
-    if (!userId) return;
-    setLoading(true);
-    setMessage('');
-    const res = await fetch(`/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`);
-    const json = await res.json();
-    if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
-    else setMessage(json.error || 'Failed to load');
-    setLoading(false);
-  };
-
-  const save = async () => {
-    if (!userId) return;
-    setLoading(true);
-    setMessage('');
+  const save = $2;
+    setLoading($2);
+    setMessage($2);
     const res = await fetch('/api/fraud/settings/opt-out', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, optOut })});
-    const json = await res.json();
-    if (res.ok) setMessage('Saved');
-    else setMessage(json.error || 'Save failed');
-    setLoading(false);
-  };
+      body: JSON.stringify({ userId, optOut })}),
+    const json = await res.json($2);
+    if (res.ok) setMessage($2);
+    else setMessage($2);
+    setLoading(false)
+  },
 
   useEffect(() => {
-    const savedUser = localStorage.getItem('user-id');
-    if (savedUser) setUserId(savedUser);
-  }, []);
+    const savedUser = localStorage.getItem($2);
+    if (savedUser) setUserId(savedUser)
+  }, []),
 
   const onSaveUser = () => {
-    localStorage.setItem('user-id', userId);
-    load();
-  };
+    localStorage.setItem($2);
+    load()
+  },
 
   return (
     <div className="p-6 max-w-2xl mx-auto">
@@ -60,5 +56,5 @@ export default function PrivacySettingsPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

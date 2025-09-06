@@ -6,7 +6,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow} from "@/components/ui/table";
+  TableRow} from "@/components/ui/table",
 import {
   Dialog,
   DialogContent,
@@ -14,22 +14,18 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog";
+  DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Trash, Mail, UserPlus } from 'lucide-react'
 import { toast } from "@/hooks/use-toast";
-
 export function TeamManagement() {
-  const [isAddingMember, setIsAddingMember] = useState(false);
-  const [newMemberEmail, setNewMemberEmail] = useState("");
-
+  const [isAddingMember, setIsAddingMember] = useState($2);
+  const [newMemberEmail, setNewMemberEmail] = useState($2);
   // Mock team members data
-  const teamMembers = [
-    {
-      id: 1,
+  const teamMembers = $2;
       name: "Alex Johnson",
       email: "alex@example.com",
       role: "Admin",
@@ -55,39 +51,33 @@ export function TeamManagement() {
       email: "taylor@example.com",
       role: "Viewer",
       status: "active",
-      lastActive: "3 days ago"}];
+      lastActive: "3 days ago"}],
 
   const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
-      toast({
-        title: "Email required",
-        description: "Please enter an email address for the new team member.",
-        variant: "destructive"});
-      return;
+      toast($2);
+      return
     }
 
-    toast({
-      title: "Invitation sent",
-      description: `An invitation has been sent to ${newMemberEmail}`});
-
-    setNewMemberEmail("");
-    setIsAddingMember(false);
-  };
+    toast($2);
+    setNewMemberEmail($2);
+    setIsAddingMember(false)
+  },
 
   const handleRemoveMember = (_memberId: number) => {
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed",
-      description: "The team member has been removed from your workspace."});
-  };
+      description: "The team member has been removed from your workspace."})
+  },
 
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent",
-      description: `A new invitation has been sent to ${memberEmail}`});
-  };
+      description: `A new invitation has been sent to ${memberEmail}`})
+  },
 
   return (
     <div className="space-y-6">
@@ -216,5 +206,5 @@ export function TeamManagement() {
         </Table>
       </div>
     </div>
-  );
+  )
 }

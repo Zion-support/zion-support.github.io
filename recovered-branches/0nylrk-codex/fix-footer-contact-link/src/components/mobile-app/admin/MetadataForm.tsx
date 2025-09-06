@@ -8,38 +8,28 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
-
 interface MetadataFormProps {
-  form: UseFormReturn<AppMetadataValues>;
+  form: UseFormReturn<AppMetadataValues>
 }
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
-  const { control, register, watch, setValue } = form;
-  const keywords = watch("keywords");
-  const platform = watch("platform");
-  
+  const { control, register, watch, setValue } = form,
+  const keywords = watch($2);
+  const platform = watch($2);
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" || e.key === ",") {
-      e.preventDefault();
-      const value = e.currentTarget.value.trim();
-      
+      e.preventDefault($2);
+      const value = e.currentTarget.value.trim($2);
       if (value && !keywords.includes(value)) {
-        setValue("keywords", [...keywords, value]);
-        e.currentTarget.value = "";
-      }
-    }
-  };
-  
-  const removeKeyword = (keyword: string) => {
-    setValue(
-      "keywords",
+        setValue($2);
+        e.currentTarget.value = $2;
+  const removeKeyword = $2;
       keywords.filter((k) => k !== keyword)
-    );
-  };
+    )
+  },
   
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
-  const longDescription = watch("longDescription");
-
+  const maxDescriptionLength = $2;
+  const longDescription = watch($2);
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -156,5 +146,5 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
         </Form>
       </CardContent>
     </Card>
-  );
-};
+  )
+},

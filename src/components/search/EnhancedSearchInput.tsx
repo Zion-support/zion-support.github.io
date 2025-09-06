@@ -9,194 +9,184 @@ import { useRouter } from "next/router";
 import { slugify } from "@/lib/slugify";
 import { debounce } from "lodash";
 import { logInfo, logWarn } from '@/utils/productionLogger';
-
-
 interface EnhancedSearchInputProps {
-  value: string;
-  onChange: (value: string) => void;
+  value: string,
+  onChange: (value: string) => void,
   /**
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
    */
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
-  placeholder?: string;
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  placeholder?: string,
   /**
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
    */
-  searchSuggestions?: SearchSuggestion[];
+  searchSuggestions?: SearchSuggestion[]
 }
 
 export function EnhancedSearchInput({
   value,
   onChange,
   onSelectSuggestion,
-  placeholder = "Search...",
+  placeholder = $2;
   searchSuggestions
 }: EnhancedSearchInputProps) {
-  const [isFocused, setIsFocused] = useState(false);
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
-  const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [valueOnFocus, setValueOnFocus] = useState<string | null>(null);
-  const [enterHandledPostFocus, setEnterHandledPostFocus] = useState(false);
-  const { t } = useTranslation();
-  const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]);
-  const [loading, setLoading] = useState(false);
-
-  const debounced = useDebounce(value, 200);
-
+  const [isFocused, setIsFocused] = useState($2);
+  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),
+  const [highlightedIndex, setHighlightedIndex] = useState<number>(-1),
+  const inputRef = $2;
+  const containerRef = $2;
+  const [valueOnFocus, setValueOnFocus] = useState<string | null>(null),
+  const [enterHandledPostFocus, setEnterHandledPostFocus] = useState($2);
+  const { t } = useTranslation($2);
+  const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]),
+  const [loading, setLoading] = useState($2);
+  const debounced = useDebounce($2);
   const debouncedFetchSuggestions = useMemo(
     () =>
       debounce(async (query: string) => {
         if (!query.trim()) {
-          setApiSuggestions([]);
-          return;
+          setApiSuggestions($2);
+          return
         }
 
-        setLoading(true);
+        setLoading($2);
         try {
           const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(query)}`, {
             signal: AbortSignal.timeout(5000) // 5 second timeout
-          });
+          }),
           
           if (response.ok) {
-            const data = await response.json();
+            const data = await response.json($2);
             if (Array.isArray(data)) {
-              setApiSuggestions(data.slice(0, 5)); // Limit to 5 API suggestions
+              setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions
             }
           } else {
             // Silently fail for search suggestions - don't show error toast
-            logWarn('Search suggestions API error:', { data: response.status });
-            setApiSuggestions([]);
+            logWarn($2);
+            setApiSuggestions([])
           }
         } catch (error) {
           // Silently fail for search suggestions - don't show error toast
-          logWarn('Search suggestions fetch error:', { data: error });
-          setApiSuggestions([]);
+          logWarn($2);
+          setApiSuggestions([])
         } finally {
-          setLoading(false);
+          setLoading(false)
         }
       }, 300),
     []
-  );
+  ),
 
   // Fetch suggestions from API when input value changes
   useEffect(() => {
     if (!debounced) {
       // Show recent suggestions provided via props when no query entered
       setFilteredSuggestions(
-        (searchSuggestions || []).filter(s => s.type === 'recent')
-      );
-      setHighlightedIndex(-1);
-      return;
+        (searchSuggestions || []).filter(s = $2;
+      setHighlightedIndex($2);
+      return
     }
 
-    const controller = new AbortController();
+    const controller = new AbortController($2);
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {
       signal: controller.signal
     })
       .then(res => {
-        if (!res.ok) throw new Error('Failed to fetch suggestions');
-        return res.json();
+        if (!res.ok) throw new Error($2);
+        return res.json()
       })
       .then(data => {
         if (Array.isArray(data)) {
-          setFilteredSuggestions(data.slice(0, 8));
+          setFilteredSuggestions(data.slice(0, 8))
         } else {
-          setFilteredSuggestions([]);
+          setFilteredSuggestions([])
         }
-        setHighlightedIndex(-1);
+        setHighlightedIndex(-1)
       })
-      .catch(() => setFilteredSuggestions([]));
+      .catch(() => setFilteredSuggestions([])),
 
-    return () => controller.abort();
-  }, [debounced, searchSuggestions]);
+    return () => controller.abort()
+  }, [debounced, searchSuggestions]),
 
   // Handle clicks outside the component to close suggestions
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
-        setIsFocused(false);
-        // setHighlightedIndex(-1); // Already handled in onBlur generally
+        setIsFocused($2);
+        // setHighlightedIndex(-1), // Already handled in onBlur generally
       }
     }
     
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+    document.addEventListener($2);
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, []),
 
-  const router = useRouter();
-
+  const router = useRouter($2);
   const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {
-    logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj });
-    onChange(suggestionObj.text);
+    logInfo($2);
+    onChange($2);
     if (onSelectSuggestion) {
-      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj });
-      onSelectSuggestion(suggestionObj);
+      logInfo($2);
+      onSelectSuggestion(suggestionObj)
     } else {
       // Provide a sensible default navigation if the parent did not supply a handler
-      logWarn('onSelectSuggestion callback not provided');
+      logWarn($2);
       if (suggestionObj.id) {
-        router.push(`/marketplace/listing/${suggestionObj.id}`);
+        router.push(`/marketplace/listing/${suggestionObj.id}`)
       } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
-        router.push(suggestionObj.slug);
+        router.push(suggestionObj.slug)
       } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
-        router.push(`/blog/${suggestionObj.slug}`);
+        router.push(`/blog/${suggestionObj.slug}`)
       } else {
-        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`);
+        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
       }
     }
-    setIsFocused(false);
-    inputRef.current?.blur();
-    setHighlightedIndex(-1);
-  };
+    setIsFocused($2);
+    inputRef.current?.blur($2);
+    setHighlightedIndex(-1)
+  },
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     switch (e.key) {
       case 'ArrowDown':
         if (isFocused && filteredSuggestions.length > 0) {
-          e.preventDefault();
-          setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length);
-        }
-        break;
+          e.preventDefault($2);
+          setHighlightedIndex(prev = $2;
       case 'ArrowUp':
         if (isFocused && filteredSuggestions.length > 0) {
-          e.preventDefault();
-          setHighlightedIndex(prev => (prev - 1 + filteredSuggestions.length) % filteredSuggestions.length);
-        }
-        break;
+          e.preventDefault($2);
+          setHighlightedIndex(prev = $2;
       case 'Enter':
         if (isFocused && highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {
-          e.preventDefault(); // Prevent form submission
-          handleSelectSuggestion(filteredSuggestions[highlightedIndex]);
+          e.preventDefault(), // Prevent form submission
+          handleSelectSuggestion(filteredSuggestions[highlightedIndex])
         } else if (value.trim()) {
           // Manually trigger search navigation to ensure consistent behavior
-          e.preventDefault();
-          logInfo('EnhancedSearchInput manual submit:', { data: value });
-          router.push(`/search?q=${encodeURIComponent(value)}`);
-          setIsFocused(false);
-          setHighlightedIndex(-1);
-          inputRef.current?.blur();
+          e.preventDefault($2);
+          logInfo($2);
+          router.push(`/search?q = $2;
+          setIsFocused($2);
+          setHighlightedIndex($2);
+          inputRef.current?.blur()
         } else {
           // Prevent empty form submission
-          e.preventDefault();
+          e.preventDefault()
         }
-        break;
+        break,
       case 'Escape':
-        e.preventDefault();
-        setIsFocused(false);
-        setHighlightedIndex(-1);
-        setValueOnFocus(null);
-        inputRef.current?.blur();
-        break;
+        e.preventDefault($2);
+        setIsFocused($2);
+        setHighlightedIndex($2);
+        setValueOnFocus($2);
+        inputRef.current?.blur($2);
+        break,
       default:
         // For other keys (character input), reset enterHandledPostFocus
-        setEnterHandledPostFocus(false);
-        break;
+        setEnterHandledPostFocus($2);
+        break
     }
-  };
+  },
   
   return (
     <div
@@ -219,24 +209,23 @@ export function EnhancedSearchInput({
           name="search"
           value={value}
           onChange={(e) => {
-            onChange(e.target.value);
-            setEnterHandledPostFocus(false);
+            onChange($2);
+            setEnterHandledPostFocus(false)
           }}
           onFocus={(e) => {
-            setIsFocused(true);
-            setHighlightedIndex(-1); // Explicitly reset on focus
-            const currentVal = e.target.value;
-            setValueOnFocus(currentVal);
-            setEnterHandledPostFocus(false);
-            e.target.setSelectionRange(currentVal.length, currentVal.length);
+            setIsFocused($2);
+            setHighlightedIndex(-1), // Explicitly reset on focus
+            const currentVal = $2;
+            setValueOnFocus($2);
+            setEnterHandledPostFocus($2);
+            e.target.setSelectionRange(currentVal.length, currentVal.length)
           }}
-          onBlur={(e) => {
-            const relatedTarget = e.relatedTarget as HTMLElement;
+          onBlur = $2;
             if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {
-              setIsFocused(false);
-              setHighlightedIndex(-1);
+              setIsFocused($2);
+              setHighlightedIndex(-1)
             }
-            setValueOnFocus(null);
+            setValueOnFocus(null)
           }}
           onKeyDown={handleKeyDown}
           aria-label={t('general.search')}
@@ -265,5 +254,5 @@ export function EnhancedSearchInput({
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />
     </div>
-  );
+  )
 }

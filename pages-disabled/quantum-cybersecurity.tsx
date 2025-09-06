@@ -4,14 +4,11 @@ import { motion } from 'framer-motion';
 import { 
   Shield, Lock, Eye, AlertTriangle, Zap, Cpu, 
   Database, Globe, ArrowRight, CheckCircle, Star, Users
-} from 'lucide-react';
+} from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-
 export default function QuantumCybersecurityPage() {
-  const features = [
-    {
-      icon: Shield,
+  const features = $2;
       title: "Quantum-Resistant Encryption",
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
       color: "from-blue-500 to-cyan-500"
@@ -46,20 +43,17 @@ export default function QuantumCybersecurityPage() {
       description: "Enterprise-grade security for cloud deployments with end-to-end encryption.",
       color: "from-indigo-500 to-purple-500"
     }
-  ];
+  ],
 
-  const benefits = [
-    "Protect against quantum computing attacks with future-proof encryption",
+  const benefits = $2;
     "Reduce security incidents by 90% with AI-powered threat detection",
     "Achieve compliance with SOC 2, GDPR, and industry standards",
     "24/7 monitoring and automated incident response",
     "Scalable security that grows with your business",
     "Expert security team available around the clock"
-  ];
+  ],
 
-  const threats = [
-    {
-      type: "Quantum Attacks",
+  const threats = $2;
       description: "Future quantum computers could break current encryption standards",
       solution: "Quantum-resistant algorithms and post-quantum cryptography"
     },
@@ -78,11 +72,9 @@ export default function QuantumCybersecurityPage() {
       description: "Malicious software that encrypts data and demands payment",
       solution: "Real-time detection, automated backup, and rapid recovery"
     }
-  ];
+  ],
 
-  const pricing = [
-    {
-      plan: "Essential",
+  const pricing = $2;
       price: "$799",
       period: "/month",
       description: "Basic quantum cybersecurity for small businesses",
@@ -94,8 +86,7 @@ export default function QuantumCybersecurityPage() {
         "Up to 100 users",
         "Standard compliance reports"
       ],
-      popular: false
-    },
+      popular: false},
     {
       plan: "Professional",
       price: "$1,999",
@@ -111,8 +102,7 @@ export default function QuantumCybersecurityPage() {
         "Advanced compliance reporting",
         "Incident response team"
       ],
-      popular: true
-    },
+      popular: true},
     {
       plan: "Enterprise",
       price: "Custom",
@@ -128,9 +118,8 @@ export default function QuantumCybersecurityPage() {
         "SLA guarantees",
         "Executive reporting"
       ],
-      popular: false
-    }
-  ];
+      popular: false}
+  ],
 
   return (
     <>
@@ -150,8 +139,8 @@ export default function QuantumCybersecurityPage() {
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -187,8 +176,8 @@ export default function QuantumCybersecurityPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -202,8 +191,8 @@ export default function QuantumCybersecurityPage() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
               >
@@ -224,7 +213,7 @@ export default function QuantumCybersecurityPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0}}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose Quantum Cybersecurity?</h2>
@@ -237,7 +226,7 @@ export default function QuantumCybersecurityPage() {
                   <motion.div
                     key={benefit}
                     initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    whileInView={{ opacity: 1, x: 0}}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-center space-x-3"
                   >
@@ -249,8 +238,8 @@ export default function QuantumCybersecurityPage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 20}}
+              whileInView={{ opacity: 1, x: 0}}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8"
             >
@@ -278,8 +267,8 @@ export default function QuantumCybersecurityPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -293,8 +282,8 @@ export default function QuantumCybersecurityPage() {
             {threats.map((threat, index) => (
               <motion.div
                 key={threat.type}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300"
               >
@@ -313,8 +302,8 @@ export default function QuantumCybersecurityPage() {
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -326,8 +315,8 @@ export default function QuantumCybersecurityPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6 }}
               className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"
             >
@@ -339,8 +328,8 @@ export default function QuantumCybersecurityPage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"
             >
@@ -352,8 +341,8 @@ export default function QuantumCybersecurityPage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"
             >
@@ -365,8 +354,8 @@ export default function QuantumCybersecurityPage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"
             >
@@ -384,8 +373,8 @@ export default function QuantumCybersecurityPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -399,8 +388,8 @@ export default function QuantumCybersecurityPage() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={plan.plan}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-50 rounded-2xl p-8 ${
                   plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
@@ -446,15 +435,15 @@ export default function QuantumCybersecurityPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Secure Your Future?</h2>
             <p className="text-xl text-blue-100 mb-8">
               Don't wait until it's too late. Protect your business with quantum-resistant cybersecurity today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
@@ -474,5 +463,5 @@ export default function QuantumCybersecurityPage() {
 
       <EnhancedFooter />
     </>
-  );
+  )
 }

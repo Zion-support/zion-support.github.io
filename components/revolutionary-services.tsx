@@ -6,15 +6,14 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';
-
 export default function RevolutionaryServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [priceRange, setPriceRange] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('name');
-  const [showFilters, setShowFilters] = useState(false);
-  const [selectedService, setSelectedService] = useState<any>(null);
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [priceRange, setPriceRange] = useState($2);
+  const [searchQuery, setSearchQuery] = useState($2);
+  const [sortBy, setSortBy] = useState($2);
+  const [showFilters, setShowFilters] = useState($2);
+  const [selectedService, setSelectedService] = useState<any>(null),
 
   const priceRanges = [
     { value: 'All', label: 'All Prices' },
@@ -22,7 +21,7 @@ export default function RevolutionaryServicesPage() {
     { value: '1001-2500', label: '$1,001 - $2,500' },
     { value: '2501-5000', label: '$2,501 - $5,000' },
     { value: '5001+', label: '$5,001+' }
-  ];
+  ],
 
   const sortOptions = [
     { value: 'name', label: 'Name A-Z' },
@@ -30,20 +29,19 @@ export default function RevolutionaryServicesPage() {
     { value: 'popularity', label: 'Most Popular' },
     { value: 'category', label: 'Category' },
     { value: 'roi', label: 'Highest ROI' }
-  ];
+  ],
 
   // Filter and sort services
-  let filteredServices = revolutionaryMicroSaasServices;
-
+  let filteredServices = $2;
   // Category filter
   if (selectedCategory !== 'All') {
-    filteredServices = getRevolutionaryServicesByCategory(selectedCategory);
+    filteredServices = getRevolutionaryServicesByCategory(selectedCategory)
   }
 
   // Price range filter
   if (priceRange !== 'All') {
-    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
-    filteredServices = getRevolutionaryServicesByPriceRange(min, max);
+    const [min, max] = priceRange.split('-').map(p = $2;
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max)
   }
 
   // Search filter
@@ -53,122 +51,116 @@ export default function RevolutionaryServicesPage() {
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    )
   }
 
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'popularity':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
       case 'category':
-        return a.category.localeCompare(b.category);
+        return a.category.localeCompare($2);
       case 'roi':
-        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
-        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
-        return bRoi - aRoi;
-      default:
-        return a.name.localeCompare(b.name);
+        const aRoi = $2;
+        const bRoi = $2;
+        return bRoi - aRoi,
+      default: return a.name.localeCompare(b.name)
     }
-  });
+  }),
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
-  const popularServices = getPopularRevolutionaryServices();
-
+  const popularServices = getPopularRevolutionaryServices($2);
   // Enhanced service categories with better descriptions
-  const enhancedCategories = [
-    {
-      name: 'Quantum AI & Cognitive Computing',
+  const enhancedCategories = $2;
       description: 'Revolutionary quantum AI solutions with human-level reasoning capabilities',
-      icon: <Brain className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum AI & Cognitive Computing').length,
+      icon: <Brain className = $2;
+      count: revolutionaryMicroSaasServices.filter(s = $2;
       color: 'from-purple-500 to-indigo-600'
     },
     {
       name: 'Autonomous Manufacturing & Industry 4.0',
       description: 'Next-generation autonomous manufacturing with zero human intervention',
-      icon: <Factory className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Manufacturing & Industry 4.0').length,
+      icon: <Factory className = $2;
+      count: revolutionaryMicroSaasServices.filter(s = $2;
       color: 'from-orange-500 to-red-600'
     },
     {
       name: 'Quantum Blockchain & DeFi',
       description: 'Quantum-secured blockchain platforms with infinite scalability',
-      icon: <Globe className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Blockchain & DeFi').length,
+      icon: <Globe className = $2;
+      count: revolutionaryMicroSaasServices.filter(s = $2;
       color: 'from-green-500 to-emerald-600'
     },
     {
       name: 'AI Biomedical Research & Drug Discovery',
       description: 'AI-powered platforms for accelerated drug discovery and medical research',
-      icon: <FlaskIcon className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Biomedical Research & Drug Discovery').length,
+      icon: <FlaskIcon className = $2;
+      count: revolutionaryMicroSaasServices.filter(s = $2;
       color: 'from-blue-500 to-indigo-600'
     },
     {
       name: 'Quantum Cybersecurity & Threat Detection',
       description: 'Quantum-resistant cybersecurity with AI-powered threat detection',
-      icon: <ShieldCheck className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Cybersecurity & Threat Detection').length,
+      icon: <ShieldCheck className = $2;
+      count: revolutionaryMicroSaasServices.filter(s = $2;
       color: 'from-red-500 to-pink-600'
     },
     {
       name: 'Space Technology & Satellite Optimization',
       description: 'Revolutionary platforms for space exploration and satellite optimization',
-      icon: <Rocket className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Space Technology & Satellite Optimization').length,
+      icon: <Rocket className = $2;
+      count: revolutionaryMicroSaasServices.filter(s = $2;
       color: 'from-indigo-500 to-purple-600'
     },
     {
       name: 'AI Content Creation & Marketing',
       description: 'Quantum-powered content creation at infinite scale',
-      icon: <FileText className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Content Creation & Marketing').length,
+      icon: <FileText className = $2;
+      count: revolutionaryMicroSaasServices.filter(s = $2;
       color: 'from-teal-500 to-cyan-600'
     },
     {
       name: 'Quantum Computing as a Service',
       description: 'Enterprise quantum computing with real quantum processors',
-      icon: <Cpu className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Computing as a Service').length,
+      icon: <Cpu className = $2;
+      count: revolutionaryMicroSaasServices.filter(s = $2;
       color: 'from-violet-500 to-purple-600'
     },
     {
       name: 'Autonomous Vehicles & Smart Transportation',
       description: 'AI platforms for autonomous vehicles and smart transportation',
-      icon: <CarIcon className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Vehicles & Smart Transportation').length,
+      icon: <CarIcon className = $2;
+      count: revolutionaryMicroSaasServices.filter(s = $2;
       color: 'from-emerald-500 to-green-600'
     },
     {
       name: 'Smart Energy & Renewable Energy',
       description: 'AI platforms for smart energy grids and renewable energy optimization',
-      icon: <LeafIcon className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length,
+      icon: <LeafIcon className = $2;
+      count: revolutionaryMicroSaasServices.filter(s = $2;
       color: 'from-yellow-500 to-orange-600'
     }
-  ];
+  ],
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0},
     visible: {
       y: 0,
       opacity: 1,
@@ -176,7 +168,7 @@ export default function RevolutionaryServicesPage() {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <UltraFuturisticBackground variant="quantum" intensity="high">
@@ -199,8 +191,8 @@ export default function RevolutionaryServicesPage() {
             <div className="max-w-5xl mx-auto">
               <motion.h1 
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8 }}
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -211,8 +203,8 @@ export default function RevolutionaryServicesPage() {
               </motion.h1>
               <motion.p 
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Experience the future of technology with our revolutionary micro SaaS platform. 
@@ -222,8 +214,8 @@ export default function RevolutionaryServicesPage() {
               {/* Service Count Stats */}
               <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 <div className="text-center">
@@ -247,8 +239,8 @@ export default function RevolutionaryServicesPage() {
               {/* CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <Button 
@@ -262,7 +254,7 @@ export default function RevolutionaryServicesPage() {
                 <Button 
                   variant="futuristic" 
                   size="lg"
-                  onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+                  onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                 >
                   Get Started
                   <Rocket className="ml-2 w-5 h-5" />
@@ -300,7 +292,7 @@ export default function RevolutionaryServicesPage() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               {enhancedCategories.map((category, index) => (
                 <motion.div
@@ -334,9 +326,9 @@ export default function RevolutionaryServicesPage() {
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -356,7 +348,7 @@ export default function RevolutionaryServicesPage() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               {popularServices.slice(0, 6).map((service, index) => (
                 <motion.div
@@ -411,9 +403,9 @@ export default function RevolutionaryServicesPage() {
             {/* Filters and Controls */}
             <motion.div 
               className="mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
               transition={{ duration: 0.6 }}
             >
               <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -489,7 +481,7 @@ export default function RevolutionaryServicesPage() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -600,8 +592,8 @@ export default function RevolutionaryServicesPage() {
             {filteredServices.length === 0 && (
               <motion.div 
                 className="text-center py-16"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0}}
+                animate={{ opacity: 1}}
                 transition={{ duration: 0.6 }}
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -610,9 +602,9 @@ export default function RevolutionaryServicesPage() {
                                          <Button 
                            variant="primary"
                            onClick={() => {
-                             setSearchQuery('');
-                             setSelectedCategory('All');
-                             setPriceRange('All');
+                             setSearchQuery($2);
+                             setSelectedCategory($2);
+                             setPriceRange('All')
                            }}
                          >
                            Clear Filters
@@ -627,16 +619,16 @@ export default function RevolutionaryServicesPage() {
           {selectedService && (
             <motion.div
               className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ opacity: 0}}
+              animate={{ opacity: 1}}
+              exit={{ opacity: 0}}
               onClick={() => setSelectedService(null)}
             >
               <motion.div
                 className="bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
+                initial={{ scale: 0.9, opacity: 0}}
+                animate={{ scale: 1, opacity: 1}}
+                exit={{ scale: 0.9, opacity: 0}}
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="p-8">
@@ -739,7 +731,7 @@ export default function RevolutionaryServicesPage() {
                          </Button>
                          <Button 
                            variant="futuristic"
-                           onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+                           onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                          >
                            Contact Sales
                            <Mail className="ml-2 w-4 h-4" />
@@ -758,9 +750,9 @@ export default function RevolutionaryServicesPage() {
           <div className="container mx-auto px-4 text-center">
             <motion.div 
               className="max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -774,7 +766,7 @@ export default function RevolutionaryServicesPage() {
                                  <Button 
                    variant="primary" 
                    size="lg"
-                   onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                  >
                    Start Free Trial
                    <Rocket className="ml-2 w-5 h-5" />
@@ -782,7 +774,7 @@ export default function RevolutionaryServicesPage() {
                  <Button 
                    variant="futuristic" 
                    size="lg"
-                   onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                  >
                    Schedule Demo
                    <Calendar className="ml-2 w-5 h-5" />
@@ -811,5 +803,5 @@ export default function RevolutionaryServicesPage() {
         </section>
       </div>
     </UltraFuturisticBackground>
-  );
+  )
 }

@@ -1,14 +1,12 @@
 import { 
-  EnvelopeIcon, 
+  EnvelopeIcon,
   PhoneIcon, 
   MapPinIcon,
   ClockIcon,
   ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline'
 
-const contactMethods = [
-  {
-    name: 'Email',
+const contactMethods = $2;
     description: 'Get in touch with our team',
     value: 'contact@ziontechgroup.com',
     href: 'mailto:contact@ziontechgroup.com',
@@ -26,29 +24,25 @@ const contactMethods = [
     href: '#',
     icon: MapPinIcon}]
 
-const officeLocations = [
-  {
-    name: 'Silicon Valley',
+const officeLocations = $2;
     address: '1234 Innovation Drive, San Jose, CA 94025',
     phone: '+1 (555) 123-4567',
     email: 'sv@ziontechgroup.com',
-    hours: 'Mon-Fri: 9:00 AM - 6:00 PM PST'},
+    hours: 'Mon-Fri: 9: 00 AM - 6:00 PM PST'},
   {
     name: 'London',
     address: '456 Tech Square, London, UK EC2A 4BX',
     phone: '+44 20 1234 5678',
     email: 'london@ziontechgroup.com',
-    hours: 'Mon-Fri: 9:00 AM - 6:00 PM GMT'},
+    hours: 'Mon-Fri: 9: 00 AM - 6:00 PM GMT'},
   {
     name: 'Tokyo',
     address: '789 Innovation Tower, Tokyo, Japan 100-0001',
     phone: '+81 3 1234 5678',
     email: 'tokyo@ziontechgroup.com',
-    hours: 'Mon-Fri: 9:00 AM - 6:00 PM JST'}]
+    hours: 'Mon-Fri: 9: 00 AM - 6:00 PM JST'}]
 
-const faqs = [
-  {
-    question: 'What industries do you serve?',
+const faqs = $2;
     answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and technology. Our AI solutions are designed to be adaptable across different sectors.'},
   {
     question: 'How long does implementation take?',

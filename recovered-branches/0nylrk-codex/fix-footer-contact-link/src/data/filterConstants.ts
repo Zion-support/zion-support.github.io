@@ -1,7 +1,6 @@
 
 // Common skills for filtering
-export const COMMON_SKILLS = [
-  "Machine Learning",
+export const COMMON_SKILLS = $2;
   "Python",
   "JavaScript",
   "React",
@@ -12,14 +11,13 @@ export const COMMON_SKILLS = [
   "DevOps",
   "Cloud Architecture",
   "TensorFlow"
-];
+],
 
 // Regions
-export const REGIONS = [
-  "North America",
+export const REGIONS = $2;
   "Europe",
   "Asia Pacific",
   "South America",
   "Middle East",
   "Africa"
-];
+],

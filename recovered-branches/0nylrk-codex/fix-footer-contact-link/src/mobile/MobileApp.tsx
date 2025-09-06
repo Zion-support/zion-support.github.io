@@ -10,10 +10,8 @@ import { MobileMessages } from "./pages/MobileMessages";
 import { MobileResumeBuilder } from "./pages/MobileResumeBuilder";
 import { MobileJobPost } from "./pages/MobileJobPost";
 import { useAuth } from "@/hooks/useAuth";
-
 export function MobileApp() {
-  const { isAuthenticated } = useAuth();
-  
+  const { isAuthenticated } = useAuth($2);
   return (
     <MobileThemeProvider>
       <Routes>
@@ -33,5 +31,5 @@ export function MobileApp() {
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </MobileThemeProvider>
-  );
+  )
 }

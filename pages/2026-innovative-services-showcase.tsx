@@ -8,88 +8,81 @@ import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
-
 export default function Innovative2026ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('name'),
 
-  const allServices = [
-    ...innovative2026MicroSaasServicesV4,
+  const allServices = $2;
     ...emergingTech2026ServicesV4,
     ...enterpriseIT2026ServicesV4
-  ];
+  ],
 
   // Dynamic category counts
-  const aiCount = allServices.filter(service => service.category?.includes('AI')).length;
-  const quantumCount = allServices.filter(service => service.category?.includes('Quantum')).length;
-  const enterpriseCount = allServices.filter(service => service.category?.includes('Enterprise')).length;
-  const microSaasCount = allServices.filter(service => service.category?.includes('Micro SaaS')).length;
-  const emergingTechCount = allServices.filter(service => service.category?.includes('Emerging') || service.category?.includes('Neuromorphic') || service.category?.includes('Synthetic')).length;
-
+  const aiCount = $2;
+  const quantumCount = $2;
+  const enterpriseCount = $2;
+  const microSaasCount = $2;
+  const emergingTechCount = $2;
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },
-    { id: 'quantum', name: 'Quantum Tech', icon: '⚛️', count: quantumCount },
-    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
-    { id: 'emerging', name: 'Emerging Tech', icon: '🔬', count: emergingTechCount }
-  ];
+    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount},
+    { id: 'quantum', name: 'Quantum Tech', icon: '⚛️', count: quantumCount},
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount},
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount},
+    { id: 'emerging', name: 'Emerging Tech', icon: '🔬', count: emergingTechCount}
+  ],
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $500', range: 'Under $500' },
     { id: 'medium', name: '$500 - $1,000', range: '$500 - $1,000' },
     { id: 'high', name: 'Over $1,000', range: 'Over $1,000' }
-  ];
+  ],
 
   const sortOptions = [
     { id: 'name', name: 'Name' },
     { id: 'price', name: 'Price' },
     { id: 'rating', name: 'Rating' },
     { id: 'popularity', name: 'Popularity' }
-  ];
+  ],
 
   // Filter and sort services
-  const filteredServices = useMemo(() => {
-    let filtered = allServices;
-
+  const filteredServices = $2;
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
         switch (selectedCategory) {
           case 'ai':
-            return service.category?.includes('AI');
+            return service.category?.includes($2);
           case 'quantum':
-            return service.category?.includes('Quantum');
+            return service.category?.includes($2);
           case 'enterprise':
-            return service.category?.includes('Enterprise');
+            return service.category?.includes($2);
           case 'micro-saas':
-            return service.category?.includes('Micro SaaS');
+            return service.category?.includes($2);
           case 'emerging':
-            return service.category?.includes('Emerging') || service.category?.includes('Neuromorphic') || service.category?.includes('Synthetic');
-          default:
-            return true;
+            return service.category?.includes('Emerging') || service.category?.includes('Neuromorphic') || service.category?.includes($2);
+          default: return true
         }
-      });
+      })
     }
 
     // Price range filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
-        const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+        const price = parseInt(service.price.replace(/[^0-9]/g, '')),
         switch (selectedPriceRange) {
           case 'low':
-            return price < 500;
+            return price < 500,
           case 'medium':
-            return price >= 500 && price <= 1000;
+            return price >= 500 && price <= 1000,
           case 'high':
-            return price > 1000;
-          default:
-            return true;
+            return price > 1000,
+          default: return true
         }
-      });
+      })
     }
 
     // Search filter
@@ -98,40 +91,38 @@ export default function Innovative2026ServicesShowcase() {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      )
     }
 
     // Sort
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          const priceA = parseInt(a.price.replace(/[^0-9]/g, ''));
-          const priceB = parseInt(b.price.replace(/[^0-9]/g, ''));
-          return priceA - priceB;
+          const priceA = parseInt(a.price.replace(/[^0-9]/g, '')),
+          const priceB = parseInt(b.price.replace(/[^0-9]/g, '')),
+          return priceA - priceB,
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating,
         case 'popularity':
-          return b.customers - a.customers;
-        default:
-          return a.name.localeCompare(b.name);
+          return b.customers - a.customers,
+        default: return a.name.localeCompare(b.name)
       }
-    });
+    }),
 
-    return filtered;
-  }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]);
+    return filtered
+  }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]),
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0},
     visible: {
       y: 0,
       opacity: 1,
@@ -139,7 +130,7 @@ export default function Innovative2026ServicesShowcase() {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <>
@@ -172,24 +163,16 @@ export default function Innovative2026ServicesShowcase() {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-8"
-            >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-                2026 Innovative Services
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Discover the future of technology with our cutting-edge 2026 services. 
-                From AI-powered solutions to quantum computing and emerging technologies, 
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
+              transition = $2;
                 transform your business with next-generation innovation.
               </p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex flex-wrap justify-center gap-4 mb-12"
             >
@@ -209,8 +192,8 @@ export default function Innovative2026ServicesShowcase() {
 
             {/* Search and Filters */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="max-w-4xl mx-auto"
             >
@@ -366,16 +349,16 @@ export default function Innovative2026ServicesShowcase() {
 
             {filteredServices.length === 0 && (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0}}
+                animate={{ opacity: 1}}
                 className="text-center py-16"
               >
                 <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
                 <button
                   onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('all');
-                    setSelectedPriceRange('all');
+                    setSearchTerm($2);
+                    setSelectedCategory($2);
+                    setSelectedPriceRange('all')
                   }}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                 >
@@ -390,12 +373,12 @@ export default function Innovative2026ServicesShowcase() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -430,5 +413,5 @@ export default function Innovative2026ServicesShowcase() {
         </section>
       </div>
     </>
-  );
+  )
 }

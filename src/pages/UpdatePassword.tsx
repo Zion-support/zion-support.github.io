@@ -15,111 +15,92 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form",
 import { toast } from "@/hooks/use-toast";
 import { cleanupAuthState } from "@/utils/authUtils";
 import { logErrorToProduction } from '@/utils/productionLogger';
-
 // Form validation schema
 const updatePasswordSchema = z
   .object({
     password: z
       .string()
       .min(8, "Password must be at least 8 characters")
-      .max(64, "Password must be less than 64 characters"),
+      .max($2);
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
-    path: ["confirmPassword"]});
+    path: ["confirmPassword"]}),
 
-type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
-
+type UpdatePasswordFormValues = $2;
 export default function UpdatePassword() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [accessToken, setAccessToken] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState(false);
-  const router = useRouter();
-
+  const [isLoading, setIsLoading] = useState($2);
+  const [accessToken, setAccessToken] = useState<string | null>(null),
+  const [error, setError] = useState<string | null>(null),
+  const [success, setSuccess] = useState($2);
+  const router = useRouter($2);
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
-    resolver: zodResolver(updatePasswordSchema),
+    resolver: zodResolver($2);
     defaultValues: {
       password: "",
-      confirmPassword: ""}});
+      confirmPassword: ""}}),
 
   useEffect(() => {
     // Extract access token from URL hash on the client
-    const hash = typeof window !== 'undefined' ? window.location.hash : "";
-    const hashParams = new URLSearchParams(hash.substring(1));
-    const token = hashParams.get("access_token");
-    
+    const hash = $2;
+    const hashParams = $2;
+    const token = hashParams.get($2);
     if (token) {
-      setAccessToken(token);
+      setAccessToken(token)
     } else {
-      setError("No access token found. Please request a new password reset link.");
+      setError("No access token found. Please request a new password reset link.")
     }
 
     // Clean up auth state to prevent issues
-    cleanupAuthState();
-  }, []);
+    cleanupAuthState()
+  }, []),
 
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
-      setError("No access token found. Please request a new password reset link.");
-      return;
+      setError($2);
+      return
     }
 
-    setIsLoading(true);
+    setIsLoading($2);
     try {
       // Set the session with the access token
-      await supabase.auth.setSession({
-        access_token: accessToken,
-        refresh_token: ''});
-
+      await supabase.auth.setSession($2);
       // Update the password
-      const { error } = await supabase.auth.updateUser({
-        password: data.password});
-
+      const { error } = await supabase.auth.updateUser($2);
       if (error) {
-        toast({
-          title: "Password update failed",
-          description: error.message,
-          variant: "destructive"});
-        setError(error.message);
-        return;
+        toast($2);
+        setError($2);
+        return
       }
 
       // Show success message and clean up auth state
-      setSuccess(true);
-      toast({
-        title: "Password updated successfully",
-        description: "You can now log in with your new password."});
-
+      setSuccess($2);
+      toast($2);
       // Clean auth state and redirect after a delay
-      cleanupAuthState();
+      cleanupAuthState($2);
       setTimeout(() => {
-        router.push("/login");
-      }, 3000);
+        router.push("/login")
+      }, 3000)
     } catch (error: any) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Password update error' });
-      toast({
-        title: "Password update failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"});
-      setError(error.message || "An unexpected error occurred");
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Password update error' }),
+      toast($2);
+      setError(error.message || "An unexpected error occurred")
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
-  };
+  },
 
-  const onInvalid = (errors: any) => {
-    const firstError = Object.keys(errors)[0] as keyof UpdatePasswordFormValues;
+  const onInvalid = $2;
     if (firstError) {
-      form.setFocus(firstError);
+      form.setFocus(firstError)
     }
-  };
+  },
 
   return (
     <>
@@ -233,7 +214,7 @@ export default function UpdatePassword() {
             </div>
           </div>
         </div>
-        <div className="hidden lg:block relative w-0 flex-1">
+        <div className="hidden lg: block relative w-0 flex-1">
           <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">
             <div className="flex flex-col justify-center items-center h-full px-8">
               <div className="max-w-md text-center">
@@ -247,5 +228,5 @@ export default function UpdatePassword() {
         </div>
       </div>
     </>
-  );
+  )
 }

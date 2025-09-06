@@ -13,55 +13,41 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog";
+  DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea";
-
 interface ReviewCardProps {
-  review: Review;
-  onReport: (reviewId: string, reason: string) => Promise<boolean>;
+  review: Review,
+  onReport: (reviewId: string, reason: string) => Promise<boolean>
 }
 
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
-  const [reportReason, setReportReason] = useState("");
-  const [isReporting, setIsReporting] = useState(false);
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
-  
-  const handleReport = async () => {
-    if (!reportReason.trim()) return;
-    
-    setIsReporting(true);
-    const success = await onReport(review.id, reportReason);
-    setIsReporting(false);
-    
+  const [reportReason, setReportReason] = useState($2);
+  const [isReporting, setIsReporting] = useState($2);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState($2);
+  const handleReport = $2;
+    setIsReporting($2);
+    const success = await onReport($2);
+    setIsReporting($2);
     if (success) {
-      setReportReason("");
-      setIsReportDialogOpen(false);
+      setReportReason($2);
+      setIsReportDialogOpen(false)
     }
-  };
+  },
   
-  const renderStars = (rating?: number) => {
-    if (!rating) return null;
-    
+  const renderStars = $2;
     return (
       <div className="flex">
         {[1, 2, 3, 4, 5].map((star) => (
           <Star
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-          />
-        ))}
-      </div>
-    );
-  };
-  
+            key = $2;
   const getInitials = (name: string) => {
     return name
       .split(" ")
       .map((n) => n[0])
       .join("")
       .toUpperCase()
-      .substring(0, 2);
-  };
+      .substring(0, 2)
+  },
   
   return (
     <div className="border rounded-lg p-4 bg-card">
@@ -91,7 +77,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
               {review.is_anonymous ? "Anonymous" : review.reviewer_profile?.display_name || "User"}
             </div>
             <div className="text-sm text-muted-foreground">
-              {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
+              {formatDistanceToNow(new Date(review.created_at), { addSuffix: true})}
             </div>
           </div>
         </div>
@@ -179,5 +165,5 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
         </Dialog>
       </div>
     </div>
-  );
+  )
 }

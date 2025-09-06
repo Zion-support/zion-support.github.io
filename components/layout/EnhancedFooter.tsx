@@ -8,15 +8,12 @@ import {
 } from 'lucide-react';
 
 const contactInfo = {
-  mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
-const serviceCategories = [
-  {
-    title: 'Next-Generation AI',
+const serviceCategories = {
     services: [
       { name: 'AI Multimodal Fusion', href: '/ai-multimodal-fusion-platform' },
       { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine' },
@@ -42,7 +39,7 @@ const serviceCategories = [
       { name: 'AI Mental Health Companion', href: '/ai-mental-health-companion' }
     ]
   }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
@@ -51,7 +48,7 @@ const companyLinks = [
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
   { name: 'Resources', href: '/resources' }
-];
+],
 
 const supportLinks = [
   { name: 'Contact Support', href: '/contact' },
@@ -60,16 +57,15 @@ const supportLinks = [
   { name: 'Status Page', href: '/status' },
   { name: 'Security', href: '/security' },
   { name: 'Privacy Policy', href: '/privacy' }
-];
+],
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
-  { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: Instagram },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Globe }];
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin},
+  { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: Instagram},
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Globe}],
 
 export default function EnhancedFooter() {
-  const currentYear = new Date().getFullYear();
-
+  const currentYear = new Date().getFullYear($2);
   return (
     <footer className="bg-gray-900/95 backdrop-blur-md border-t border-gray-700/50">
       {/* Main Footer Content */}
@@ -78,10 +74,10 @@ export default function EnhancedFooter() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
@@ -121,10 +117,10 @@ export default function EnhancedFooter() {
           {serviceCategories.map((category, index) => (
             <motion.div
               key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h3 className="text-lg font-semibold text-white mb-6">{category.title}</h3>
               <ul className="space-y-3">
@@ -149,10 +145,10 @@ export default function EnhancedFooter() {
           {/* Company & Support Links */}
           <div className="grid grid-cols-2 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
               <ul className="space-y-3">
@@ -170,10 +166,10 @@ export default function EnhancedFooter() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
               <ul className="space-y-3">
@@ -194,10 +190,10 @@ export default function EnhancedFooter() {
           {/* Stats & Social */}
           <div className="grid grid-cols-1 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h4 className="text-lg font-semibold text-white mb-4">Our Impact</h4>
               <div className="grid grid-cols-2 gap-4">
@@ -221,24 +217,19 @@ export default function EnhancedFooter() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social) => {
-                  const Icon = social.icon;
+              viewport = $2;
                   return (
                     <a
                       key={social.name}
                       href={social.href}
-                      className="w-10 h-10 bg-gray-800/50 border border-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:border-cyan-500/50 transition-all duration-200"
+                      className="w-10 h-10 bg-gray-800/50 border border-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 hover: text-cyan-400 hover:border-cyan-500/50 transition-all duration-200"
                     >
                       <Icon className="w-5 h-5" />
                     </a>
-                  );
+                  )
                 })}
               </div>
             </motion.div>
@@ -247,10 +238,10 @@ export default function EnhancedFooter() {
 
         {/* Newsletter Signup */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="mt-12 pt-12 border-t border-gray-700/50"
         >
           <div className="text-center">
@@ -285,7 +276,7 @@ export default function EnhancedFooter() {
             </div>
             
             <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <a href="/terms" className="hover:text-cyan-400 transition-colors duration-200">
+              <a href="/terms" className="hover: text-cyan-400 transition-colors duration-200">
                 Terms of Service
               </a>
               <a href="/privacy" className="hover:text-cyan-400 transition-colors duration-200">
@@ -299,5 +290,5 @@ export default function EnhancedFooter() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

@@ -1,30 +1,29 @@
-export type WalletProvider = any;
-
+export type WalletProvider = $2;
 export function getEthereumProvider(): WalletProvider | null {
-  if (typeof window === 'undefined') return null;
+  if (typeof window = $2;
   // @ts-ignore
-  const { ethereum } = window;
-  return ethereum ?? null;
+  const { ethereum } = window,
+  return ethereum ?? null
 }
 
 export async function connectMetaMask(): Promise<string[] | null> {
-  const provider = getEthereumProvider();
-  if (!provider) return null;
+  const provider = getEthereumProvider($2);
+  if (!provider) return null,
   try {
-    const accounts: string[] = await provider.request({ method: 'eth_requestAccounts' });
-    return accounts;
+    const accounts: string[] = await provider.request($2);
+    return accounts
   } catch (e) {
-    return null;
+    return null
   }
 }
 
 export async function getAccounts(): Promise<string[] | null> {
-  const provider = getEthereumProvider();
-  if (!provider) return null;
+  const provider = getEthereumProvider($2);
+  if (!provider) return null,
   try {
-    const accounts: string[] = await provider.request({ method: 'eth_accounts' });
-    return accounts;
+    const accounts: string[] = await provider.request($2);
+    return accounts
   } catch (e) {
-    return null;
+    return null
   }
 }

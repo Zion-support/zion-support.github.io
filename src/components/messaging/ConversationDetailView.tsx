@@ -9,53 +9,46 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { useAuth } from '@/hooks/useAuth';
 import { MessageBubble } from './MessageBubble';
 import { DateDivider } from './DateDivider';
-
 export function ConversationDetailView() {
-  const { user } = useAuth();
+  const { user } = useAuth($2);
   const { 
-    activeConversation, 
+    activeConversation,
     activeMessages, 
     sendMessage, 
     loadMessages
-  } = useMessaging();
-  const [messageText, setMessageText] = useState('');
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLTextAreaElement | null>(null);
-  
+  } = useMessaging($2);
+  const [messageText, setMessageText] = useState($2);
+  const messagesEndRef = $2;
+  const inputRef = $2;
   useEffect(() => {
     if (activeConversation) {
-      loadMessages(activeConversation.id);
+      loadMessages(activeConversation.id)
     }
-    inputRef.current?.focus();
-  }, [activeConversation?.id, loadMessages]);
+    inputRef.current?.focus()
+  }, [activeConversation?.id, loadMessages]),
   
   useEffect(() => {
-    scrollToBottom();
-  }, [activeMessages]);
+    scrollToBottom()
+  }, [activeMessages]),
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-  
-  const send = async () => {
-    if (!messageText.trim() || !activeConversation) return;
-
-    await sendMessage(activeConversation.id, messageText);
-    setMessageText('');
-    inputRef.current?.focus();
-  };
+  const scrollToBottom = $2;
+  const send = $2;
+    await sendMessage($2);
+    setMessageText($2);
+    inputRef.current?.focus()
+  },
 
   const handleSendMessage = async (e: React.FormEvent) => {
-    e.preventDefault();
-    await send();
-  };
+    e.preventDefault($2);
+    await send()
+  },
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      send();
+      e.preventDefault($2);
+      send()
     }
-  };
+  },
   
   if (!activeConversation) {
     return (
@@ -66,29 +59,26 @@ export function ConversationDetailView() {
           Select a conversation from the list to view and send messages.
         </p>
       </div>
-    );
+    )
   }
   
   // Group messages by date
-  const groupedMessages: { date: string; messages: any[] }[] = [];
+  const groupedMessages: { date: string, messages: any[] }[] = [],
   
   activeMessages.forEach(message => {
-    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
-    const existingGroup = groupedMessages.find(group => group.date === messageDate);
-    
+    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd'),
+    const existingGroup = groupedMessages.find($2);
     if (existingGroup) {
-      existingGroup.messages.push(message);
+      existingGroup.messages.push(message)
     } else {
       groupedMessages.push({
         date: messageDate,
         messages: [message]
-      });
+      })
     }
-  });
+  }),
   
-  const hasContextData = activeConversation.context_data && 
-    (activeConversation.context_data.title || activeConversation.context_data.description);
-
+  const hasContextData = $2;
   return (
     <div className="flex-1 flex flex-col h-full">
       {/* Header */}
@@ -189,12 +179,12 @@ export function ConversationDetailView() {
           />
           <Button 
             type="submit"
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            className="bg-zion-purple hover: bg-zion-purple-dark text-white"
           >
             Send
           </Button>
         </form>
       </div>
     </div>
-  );
+  )
 }

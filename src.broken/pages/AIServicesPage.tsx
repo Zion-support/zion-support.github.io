@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-  Brain, 
+  Brain,
   MessageSquare, 
   BarChart3, 
   FileText, 
@@ -18,14 +18,12 @@ import {
   Linkedin,
   Twitter,
   Github
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AIServicesPage() {
-  const aiServices = [
-    {
-      name: "AI Content Generation Suite",
+  const aiServices = $2;
       description: "Revolutionary AI-powered content creation platform that generates high-quality, SEO-optimized content for blogs, marketing materials, and social media.",
-      icon: <FileText className="w-12 h-12 text-blue-500" />,
+      icon: <FileText className = $2;
       features: [
         "Multi-language content generation",
         "SEO optimization with keyword research",
@@ -55,7 +53,7 @@ export default function AIServicesPage() {
     {
       name: "AI Customer Service Platform",
       description: "Intelligent chatbot solution with advanced natural language processing, sentiment analysis, and seamless human handoff capabilities.",
-      icon: <MessageSquare className="w-12 h-12 text-green-500" />,
+      icon: <MessageSquare className = $2;
       features: [
         "Natural language understanding",
         "Multi-language support (50+ languages)",
@@ -85,7 +83,7 @@ export default function AIServicesPage() {
     {
       name: "AI Sales Intelligence Platform",
       description: "Predictive analytics and lead scoring platform powered by machine learning algorithms for sales optimization and revenue growth.",
-      icon: <BarChart3 className="w-12 h-12 text-purple-500" />,
+      icon: <BarChart3 className = $2;
       features: [
         "Advanced lead scoring algorithms",
         "Sales forecasting and predictions",
@@ -115,7 +113,7 @@ export default function AIServicesPage() {
     {
       name: "AI-Powered Search & RAG System",
       description: "Advanced retrieval-augmented generation system for intelligent document search, knowledge management, and contextual information retrieval.",
-      icon: <Search className="w-12 h-12 text-orange-500" />,
+      icon: <Search className = $2;
       features: [
         "Vector-based semantic search",
         "Document processing and indexing",
@@ -145,7 +143,7 @@ export default function AIServicesPage() {
     {
       name: "AI Security & Guardrails",
       description: "Comprehensive AI safety and security platform with content filtering, bias detection, and ethical AI governance tools.",
-      icon: <Shield className="w-12 h-12 text-red-500" />,
+      icon: <Shield className = $2;
       features: [
         "Content safety filtering",
         "Bias detection and mitigation",
@@ -175,7 +173,7 @@ export default function AIServicesPage() {
     {
       name: "AI Evaluation & Testing Lab",
       description: "Comprehensive AI model evaluation platform with automated testing, performance benchmarking, and quality assurance tools.",
-      icon: <Brain className="w-12 h-12 text-indigo-500" />,
+      icon: <Brain className = $2;
       features: [
         "Automated model testing",
         "Performance benchmarking",
@@ -202,14 +200,14 @@ export default function AIServicesPage() {
       ],
       website: "https://ziontechgroup.com/ai-evaluation-lab"
     }
-  ];
+  ],
 
   const stats = [
     { label: "AI Models Deployed", value: "500+" },
     { label: "Client Satisfaction", value: "98%" },
     { label: "Cost Savings", value: "40-60%" },
     { label: "Implementation Time", value: "2-4 weeks" }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -457,7 +455,7 @@ export default function AIServicesPage() {
 
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-white/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white">Zion Tech Group</h3>
@@ -512,5 +510,5 @@ export default function AIServicesPage() {
         </div>
       </footer>
     </div>
-  );
+  )
 }

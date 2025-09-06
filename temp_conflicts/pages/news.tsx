@@ -8,7 +8,7 @@ import React from 'react';
       author: 'Dr. Kleber',
       featured: true,
       image: '/api/placeholder/600/400',
-      tags: ['AI Consciousness', 'Breakthrough', 'Innovation'],
+      tags: ['AI ConsciousnessBreakthroughInnovation'],
       readTime: '5 min read'
     },
     {
@@ -19,7 +19,7 @@ import React from 'react';
       category: 'Research',
       readTime: '6 min read',
       image: '/news/quantum-breakthrough.jpg',
-      tags: ['Quantum Computing', 'Research', 'Breakthrough'],
+      tags: ['Quantum ComputingResearchBreakthrough'],
       icon: <Atom className="w-6 h-6" />,
       featured: true
     },
@@ -28,9 +28,9 @@ import React from 'react';
       excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.',
       author: 'Partnerships Team',
       date: '2025-01-10',
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedYear, setSelectedYear] = useState('all');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedYear, setSelectedYear] = useState('all'),
 
   const categories = [
     { id: 'all', name: 'All News', icon: Newspaper, count: 45 },
@@ -38,19 +38,19 @@ import React from 'react';
     { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 12 },
     { id: 'space', name: 'Space Technology', icon: Rocket, count: 8 },
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 7 }
-  ];
+  ],
 
   const years = [
     { id: 'all', name: 'All Years' },
     { id: '2025', name: '2025' },
     { id: '2024', name: '2024' },
     { id: '2023', name: '2023' }
-  ];
+  ],
 
   Newspaper, Calendar, User, Tag, ArrowRight, ExternalLink,
   TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap,
   Clock, BookOpen, Video, Podcast, FileText, Search
-} from 'lucide-react';
+} from 'lucide-react',
 import Link from 'next/link';
   return (
     <UltraFuturisticBackground>
@@ -135,9 +135,8 @@ export default function News() {
       date: '2024-01-15',
       readTime: '5 min read',
       image: '/api/placeholder/600/400',
-      tags: ['AI', 'Quantum Computing', 'Innovation'],
+      tags: ['AIQuantum ComputingInnovation'],
 import Head from 'next/head';
-
 export default function NewsPage() {
   const newsArticles = [
     {
@@ -377,12 +376,11 @@ import {
   Search, Calendar, Clock, User, Tag, 
   ArrowRight, ExternalLink, TrendingUp, 
   BookOpen, Globe, Video
-} from 'lucide-react';
+} from 'lucide-react',
 import Link from 'next/link';
-
 export default function News() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
 
   const categories = [
     { id: 'all', name: 'All News', count: 24 },
@@ -391,7 +389,7 @@ export default function News() {
     { id: 'enterprise', name: 'Enterprise IT', count: 5 },
     { id: 'research', name: 'Research & Development', count: 3 },
     { id: 'industry', name: 'Industry Insights', count: 2 }
-  ];
+  ],
 
   const featuredNews = [
     {
@@ -404,7 +402,7 @@ export default function News() {
       readTime: '5 min read',
       image: '/images/news/ai-consciousness-launch.jpg',
       featured: true,
-      tags: ['AI Consciousness', 'Platform Launch', 'Innovation']
+      tags: ['AI ConsciousnessPlatform LaunchInnovation']
     },
     {
       id: 2,
@@ -416,9 +414,9 @@ export default function News() {
       readTime: '7 min read',
       image: '/images/news/quantum-breakthrough.jpg',
       featured: true,
-      tags: ['Quantum Computing', 'Research', 'Breakthrough']
+      tags: ['Quantum ComputingResearchBreakthrough']
     }
-  ];
+  ],
 
   const latestNews = [
     {
@@ -430,7 +428,7 @@ export default function News() {
       date: '2024-01-10',
       readTime: '4 min read',
       image: '/images/news/enterprise-ai-trends.jpg',
-      tags: ['Enterprise AI', 'Best Practices', '2024 Trends']
+      tags: ['Enterprise AIBest Practices2024 Trends']
     },
     {
       id: 4,
@@ -441,7 +439,7 @@ export default function News() {
       date: '2024-01-08',
       readTime: '6 min read',
       image: '/images/news/autonomous-systems.jpg',
-      tags: ['Autonomous Systems', 'Future of Work', 'Innovation']
+      tags: ['Autonomous SystemsFuture of WorkInnovation']
     },
     {
       id: 5,
@@ -452,7 +450,7 @@ export default function News() {
       date: '2024-01-05',
       readTime: '5 min read',
       image: '/images/news/ai-cybersecurity.jpg',
-      tags: ['Cybersecurity', 'AI Security', 'Digital Protection']
+      tags: ['CybersecurityAI SecurityDigital Protection']
     },
     {
       id: 6,
@@ -463,9 +461,9 @@ export default function News() {
       date: '2024-01-03',
       readTime: '8 min read',
       image: '/images/news/quantum-ml.jpg',
-      tags: ['Quantum ML', 'Research', 'Technology Convergence']
+      tags: ['Quantum MLResearchTechnology Convergence']
     }
-  ];
+  ],
 
   const industryInsights = [
     {
@@ -476,7 +474,7 @@ export default function News() {
       author: 'Dr. Robert Chang',
       date: '2024-01-01',
       readTime: '6 min read',
-      tags: ['AI Ethics', 'Business Impact', 'Consciousness']
+      tags: ['AI EthicsBusiness ImpactConsciousness']
     },
     {
       id: 8,
@@ -486,9 +484,9 @@ export default function News() {
       author: 'Lisa Wang',
       date: '2023-12-28',
       readTime: '4 min read',
-      tags: ['Micro-SaaS', 'Startups', 'Software Industry']
+      tags: ['Micro-SaaSStartupsSoftware Industry']
     }
-  ];
+  ],
 
   const upcomingEvents = [
     {
@@ -511,23 +509,23 @@ export default function News() {
       description: 'Hands-on workshop covering quantum computing fundamentals and practical applications.',
       registration: 'https://ziontechgroup.com/events/quantum-workshop'
     }
-  ];
+  ],
 
   const filteredNews = [...featuredNews, ...latestNews, ...industryInsights].filter(article => {
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory,
+    return matchesSearch && matchesCategory
+  }),
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
-    });
-  };
+    })
+  },
 
   const getCategoryColor = (category: string) => {
     const colors = {
@@ -536,9 +534,9 @@ export default function News() {
       enterprise: 'from-green-500 to-emerald-500',
       research: 'from-orange-500 to-red-500',
       industry: 'from-indigo-500 to-purple-500'
-    };
-    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
-  };
+    },
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'
+  },
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -604,26 +602,17 @@ export default function News() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
-    'All News',
-    'Company News',
-    'Partnerships',
-    'AI & Ethics',
-    'Quantum Technology',
-    'Space Technology',
-    'Micro SAAS',
-    'IT Services',
-    'Metaverse',
-    'Industry Insights'
-  ];
+    'All NewsCompany NewsPartnershipsAI & EthicsQuantum TechnologySpace TechnologyMicro SAASIT ServicesMetaverseIndustry Insights'
+  ],
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const date = new Date(dateString),
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
-    });
-  };
+    })
+  },
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -1378,7 +1367,7 @@ export default function News() {
               Explore our latest research, industry insights, and technology breakthroughs 
               that are shaping the future of AI and quantum computing.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link 
                 href="/blog"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -1397,7 +1386,7 @@ export default function News() {
         </div>
       </section>
     </div>
-  );
+  )
 }
       {/* Call to Action */}
       <section className="py-20">
@@ -1415,7 +1404,7 @@ export default function News() {
               Have questions about our news or want to learn more about our latest developments? Contact our team.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="/contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">
+              <a href="/contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">
                 <span>Contact Us</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
@@ -1427,7 +1416,7 @@ export default function News() {
         </div>
       </section>
     </div>
-  );
+  )
 }
       title: "Partnership with TechCorp Announced for Cloud Infrastructure",
       excerpt: "Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.",
@@ -1497,9 +1486,9 @@ export default function News() {
       readTime: "7 min read",
       image: "📚"
     }
-  ];
+  ],
 
-  const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
+  const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"],
 
   return (
     <>
@@ -1611,7 +1600,7 @@ export default function News() {
                 <p className="text-white/70 mb-6">
                   Get the latest news and updates delivered directly to your inbox. Never miss an important announcement.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <div className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">
                   <input
                     type="email"
                     placeholder="Enter your email"
@@ -1627,5 +1616,5 @@ export default function News() {
         </main>
       </div>
     </>
-  );
+  )
 }

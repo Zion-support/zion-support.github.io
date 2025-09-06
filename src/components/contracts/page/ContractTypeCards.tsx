@@ -4,8 +4,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { FileText, ShieldCheck } from 'lucide-react'
 
 interface ContractTypeCardsProps {
-  onStandardClick: () => void;
-  onSmartClick: () => void;
+  onStandardClick: () => void,
+  onSmartClick: () => void
 }
 
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
@@ -70,5 +70,5 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardFooter>
       </Card>
     </div>
-  );
+  )
 }

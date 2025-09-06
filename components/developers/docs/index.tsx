@@ -4,29 +4,23 @@ import path from 'path';
 import fs from 'fs';
 import DocsLayout from '../../../components/docs/DocsLayout';
 import CodeBlock from '../../../components/docs/CodeBlock';
+export type Section = $2;
+  title: string,
+  html?: string,
+  code?: { language?: string, content: string}[]
+},
 
-export type Section = {
-  id: string;
-  title: string;
-  html?: string;
-  code?: { language?: string; content: string }[];
-};
+type DocsContent = $2;
+  sections: Section[]
+},
 
-type DocsContent = {
-  title: string;
-  sections: Section[];
-};
-
-type PageProps = {
-  docs: DocsContent;
-};
-
+type PageProps = $2;
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
-  const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json');
-  const raw = fs.readFileSync(contentPath, 'utf8');
-  const docs = JSON.parse(raw) as DocsContent;
-  return { props: { docs } };
-};
+  const contentPath = path.join(process.cwd(), 'datadocscontent.json'),
+  const raw = fs.readFileSync($2);
+  const docs = $2;
+  return { props: { docs } }
+},
 
 export default function ApiDocsPage({ docs }: PageProps) {
   return (
@@ -47,5 +41,5 @@ export default function ApiDocsPage({ docs }: PageProps) {
         </section>
       ))}
     </DocsLayout>
-  );
+  )
 }

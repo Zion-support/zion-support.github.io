@@ -7,27 +7,25 @@ import { EmptyState } from "./EmptyState";
 import { ErrorState } from "./ErrorState";
 import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
-
 export function ApplicationsTracker() {
-  const { applications, isLoading, error } = useJobApplications();
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all');
+  const { applications, isLoading, error } = useJobApplications($2);
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),
   
   if (isLoading) {
-    return <LoadingState />;
+    return <LoadingState />
   }
   
   if (error) {
-    return <ErrorState error={error} />;
+    return <ErrorState error={error} />
   }
   
   if (applications.length === 0) {
-    return <EmptyState />;
+    return <EmptyState />
   }
   
   const filteredApplications = statusFilter === 'all' 
     ? applications
-    : applications.filter(app => app.status === statusFilter);
-  
+    : applications.filter($2);
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap gap-2">
@@ -94,5 +92,5 @@ export function ApplicationsTracker() {
         </div>
       )}
     </div>
-  );
+  )
 }

@@ -2,30 +2,26 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
-
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionaryAI2025Services } from '../data/revolutionary-2025-ai-services';
 import { revolutionaryITInfrastructure2025Services } from '../data/revolutionary-2025-it-infrastructure';
 import { revolutionary2025MicroSaasServices } from '../data/revolutionary-2025-micro-saas';
-
 export default function Revolutionary2025Pricing() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   // Combine all revolutionary services
-  const allRevolutionaryServices = [
-    ...revolutionaryAI2025Services,
+  const allRevolutionaryServices = $2;
     ...revolutionaryITInfrastructure2025Services,
     ...revolutionary2025MicroSaasServices
-  ];
+  ],
 
   // Service categories
   const serviceCategories = [
@@ -33,46 +29,37 @@ export default function Revolutionary2025Pricing() {
     { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: revolutionaryAI2025Services.length },
     { id: 'infrastructure', name: 'IT Infrastructure', icon: Cpu, count: revolutionaryITInfrastructure2025Services.length },
           { id: 'saas', name: 'Micro SaaS', icon: Zap, count: revolutionary2025MicroSaasServices.length }
-  ];
+  ],
 
   // Filter services based on selected category
   const filteredServices = selectedCategory === 'all' 
     ? allRevolutionaryServices 
     : allRevolutionaryServices.filter(service => {
-        if (selectedCategory === 'ai') return service.category.includes('AI');
-        if (selectedCategory === 'infrastructure') return service.category.includes('IT') || service.category.includes('Network') || service.category.includes('Computing');
-        if (selectedCategory === 'saas') return service.category.includes('AI') || service.category.includes('Virtual') || service.category.includes('Creative');
-        return true;
-      });
+        if (selectedCategory === 'ai') return service.category.includes($2);
+        if (selectedCategory === 'infrastructure') return service.category.includes('IT') || service.category.includes('Network') || service.category.includes($2);
+        if (selectedCategory === 'saas') return service.category.includes('AI') || service.category.includes('Virtual') || service.category.includes($2);
+        return true
+      }),
 
   // Calculate pricing with billing cycle
   const getPrice = (service: any) => {
-    const basePrice = parseInt(service.price.replace('$', '').replace(',', ''));
+    const basePrice = parseInt(service.price.replace('$', '').replace(, '')),
     if (billingCycle === 'yearly') {
-      return Math.floor(basePrice * 0.8); // 20% discount for yearly
+      return Math.floor(basePrice * 0.8), // 20% discount for yearly
     }
-    return basePrice;
-  };
+    return basePrice
+  },
 
   // Pricing tiers for comparison
-  const pricingTiers = [
-    {
-      name: 'Starter',
+  const pricingTiers = $2;
       description: 'Perfect for small businesses and startups',
-      price: billingCycle === 'monthly' ? 99 : 79,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = $2;
+      period: billingCycle = $2;
+      savings: billingCycle = $2;
       features: [
-        'Access to 25+ Core Services',
-        'Basic AI Integration',
-        'Standard Support (24/7)',
-        '30-Day Free Trial',
-        'Basic Analytics Dashboard',
-        'Email Support',
-        '99.5% Uptime Guarantee',
-        'Standard Security Features'
+        'Access to 25+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
       ],
-      icon: <Sparkles className="w-8 h-8" />,
+      icon: <Sparkles className = $2;
       variant: 'quantum' as const,
       popular: false,
       cta: 'Start Free Trial',
@@ -81,22 +68,13 @@ export default function Revolutionary2025Pricing() {
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
-      price: billingCycle === 'monthly' ? 299 : 239,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = $2;
+      period: billingCycle = $2;
+      savings: billingCycle = $2;
       features: [
-        'Access to 50+ Services',
-        'Advanced AI Integration',
-        'Priority Support (24/7)',
-        '60-Day Free Trial',
-        'Advanced Analytics Dashboard',
-        'Phone & Email Support',
-        '99.9% Uptime Guarantee',
-        'Advanced Security Features',
-        'Custom Integrations',
-        'Performance Monitoring'
+        'Access to 50+ ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security FeaturesCustom IntegrationsPerformance Monitoring'
       ],
-      icon: <Rocket className="w-8 h-8" />,
+      icon: <Rocket className = $2;
       variant: 'ai-futuristic' as const,
       popular: true,
       cta: 'Start Free Trial',
@@ -105,40 +83,28 @@ export default function Revolutionary2025Pricing() {
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
-      price: billingCycle === 'monthly' ? 999 : 799,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = $2;
+      period: billingCycle = $2;
+      savings: billingCycle = $2;
       features: [
-        'Access to ALL Services',
-        'Full AI & Quantum Integration',
-        'Dedicated Support Team',
-        '90-Day Free Trial',
-        'Enterprise Analytics Suite',
-        '24/7 Dedicated Support',
-        '99.99% Uptime Guarantee',
-        'Enterprise Security Features',
-        'Custom Development',
-        'White-label Solutions',
-        'API Access',
-        'SLA Guarantees'
+        'Access to ALL ServicesFull AI & Quantum IntegrationDedicated Support Team90-Day Free TrialEnterprise Analytics Suite24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security FeaturesCustom DevelopmentWhite-label SolutionsAPI AccessSLA Guarantees'
       ],
-      icon: <Crown className="w-8 h-8" />,
+      icon: <Crown className = $2;
       variant: 'quantum-futuristic' as const,
       popular: false,
       cta: 'Contact Sales',
       ctaVariant: 'primary' as const
     }
-  ];
+  ],
 
   // Market analysis
-  const marketAnalysis = {
-    totalMarketSize: '$150B+',
+  const marketAnalysis = $2;
     growthRate: '250% annually',
     customerSatisfaction: '98%',
     averageROI: '500%',
     timeToValue: '< 30 days',
     globalReach: '150+ countries'
-  };
+  },
 
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
@@ -162,8 +128,8 @@ export default function Revolutionary2025Pricing() {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
@@ -196,7 +162,7 @@ export default function Revolutionary2025Pricing() {
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  animate={{ opacity: 1, scale: 1}}
                   transition={{ duration: 0.6, delay: 0.1 }} className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-4 border border-blue-500/30">
                   <div className="text-2xl font-bold text-blue-400">{marketAnalysis.totalMarketSize}</div>
                   <div className="text-xs text-gray-400">Market Size</div>
@@ -204,7 +170,7 @@ export default function Revolutionary2025Pricing() {
                 
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  animate={{ opacity: 1, scale: 1}}
                   transition={{ duration: 0.6, delay: 0.2 }} className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-4 border border-green-500/30">
                   <div className="text-2xl font-bold text-green-400">{marketAnalysis.growthRate}</div>
                   <div className="text-xs text-gray-400">Growth Rate</div>
@@ -212,7 +178,7 @@ export default function Revolutionary2025Pricing() {
                 
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  animate={{ opacity: 1, scale: 1}}
                   transition={{ duration: 0.6, delay: 0.3 }} className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/30">
                   <div className="text-2xl font-bold text-purple-400">{marketAnalysis.customerSatisfaction}</div>
                   <div className="text-xs text-gray-400">Satisfaction</div>
@@ -220,7 +186,7 @@ export default function Revolutionary2025Pricing() {
                 
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  animate={{ opacity: 1, scale: 1}}
                   transition={{ duration: 0.6, delay: 0.4 }} className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-4 border border-orange-500/30">
                   <div className="text-2xl font-bold text-orange-400">{marketAnalysis.averageROI}</div>
                   <div className="text-xs text-gray-400">Average ROI</div>
@@ -228,7 +194,7 @@ export default function Revolutionary2025Pricing() {
                 
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  animate={{ opacity: 1, scale: 1}}
                   transition={{ duration: 0.6, delay: 0.5 }} className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-4 border border-cyan-500/30">
                   <div className="text-2xl font-bold text-cyan-400">{marketAnalysis.timeToValue}</div>
                   <div className="text-xs text-gray-400">Time to Value</div>
@@ -236,7 +202,7 @@ export default function Revolutionary2025Pricing() {
                 
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  animate={{ opacity: 1, scale: 1}}
                   transition={{ duration: 0.6, delay: 0.6 }} className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30">
                   <div className="text-2xl font-bold text-pink-400">{marketAnalysis.globalReach}</div>
                   <div className="text-xs text-gray-400">Global Reach</div>
@@ -250,10 +216,10 @@ export default function Revolutionary2025Pricing() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="text-center mb-16">
+              viewport={{ once: true}} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Choose Your Transformation Plan
               </h2>
@@ -267,10 +233,10 @@ export default function Revolutionary2025Pricing() {
               {pricingTiers.map((tier, index) => (
                 <motion.div
                   key={tier.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 30}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className={`relative ${
                     tier.popular 
                       ? 'scale-105 border-2 border-blue-500' 
@@ -326,10 +292,10 @@ export default function Revolutionary2025Pricing() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="text-center mb-16">
+              viewport={{ once: true}} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Individual Service Pricing
               </h2>
@@ -365,10 +331,10 @@ export default function Revolutionary2025Pricing() {
               {filteredServices.map((service) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105">
+                  viewport={{ once: true}} className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105">
                   {/* Service Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
@@ -453,10 +419,10 @@ export default function Revolutionary2025Pricing() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
@@ -486,7 +452,7 @@ export default function Revolutionary2025Pricing() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                   <Phone className="w-5 h-5 mr-2" />
                   Get Custom Quote
@@ -501,5 +467,5 @@ export default function Revolutionary2025Pricing() {
         </section>
       </div>
     </UltraQuantumHolographicBackground>
-  );
+  )
 }

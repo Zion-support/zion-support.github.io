@@ -1,7 +1,6 @@
 
 import Head from 'next/head';
 import Link from 'next/link';
-
 const FiveGTechnologyAndItsImpactOnIotChat = () => {
   return (
     <div>
@@ -16,7 +15,7 @@ const FiveGTechnologyAndItsImpactOnIotChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default Chat5gTechnologyAndItsImpactOnIotChat;
+export default Chat5gTechnologyAndItsImpactOnIotChat,

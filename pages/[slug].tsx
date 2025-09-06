@@ -34,11 +34,8 @@ import { real2027Q1Additions } from '../data/real-2027-q1-additions';
 import { newSaasItAiServices2025 } from '../data/new-saas-it-ai-services-2025';
 import fs from 'fs';
 import path from 'path';
-
-type Service = typeof enhancedRealMicroSaasServices[number];
-
-  const service = useMemo(() => {
-    if (!slug) return undefined;
+type Service = $2;
+  const service = $2;
     const all: any[] = ([] as any[])
       .concat(
         enhancedRealMicroSaasServices as any,
@@ -66,16 +63,14 @@ type Service = typeof enhancedRealMicroSaasServices[number];
         real2025Q3Additions as any,
         realQ4Services2025 as any,
         require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
-      );
-    const byLink = all.find(s => {
-      try {
-        const url = new URL(s.link);
-        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
+      ),
+    const byLink = all.find($2);
+        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '')
       } catch {
-        return false;
+        return false
       }
-    });
-    if (byLink) return byLink;
+    }),
+    if (byLink) return byLink,
 
 function getAllServices(): Service[] {
 	return enhancedRealMicroSaasServices
@@ -105,80 +100,69 @@ function getAllServices(): Service[] {
 		.concat(real2026Q4Additions as unknown as Service[])
 		.concat(real2026Q4NewServices as unknown as Service[])
 		.concat(real2027Q1Additions as unknown as Service[])
-		.concat(newSaasItAiServices2025 as unknown as Service[]);
+		.concat(newSaasItAiServices2025 as unknown as Service[])
 }
 
 function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
 
 function getExistingRootPageSlugs(): Set<string> {
-	const pagesDir = path.join(process.cwd(), 'pages');
-	const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
-	const reserved = new Set<string>(['api', 'reports', 'services']);
-	const slugs = new Set<string>();
+	const pagesDir = path.join(process.cwd(), 'pages'),
+	const entries = fs.readdirSync($2);
+	const reserved = $2;
+	const slugs = $2;
 	for (const entry of entries) {
-		if (entry.name.startsWith('_')) continue;
-		if (reserved.has(entry.name)) continue;
+		if (entry.name.startsWith('_')) continue,
+		if (reserved.has(entry.name)) continue,
 		// Files at root
 		if (entry.isFile()) {
-			const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/);
+			const m = $2;
 			if (m) {
-				const base = m[1];
+				const base = $2;
 				if (base !== 'index' && base !== '404' && base !== '500' && base !== '[slug]') {
-					slugs.add(base);
+					slugs.add(base)
 				}
 			}
 		}
 		// Directories at root (folder routes)
 		if (entry.isDirectory()) {
-			slugs.add(entry.name);
+			slugs.add(entry.name)
 		}
 	}
-	return slugs;
+	return slugs
 }
 
 export async function getStaticPaths() {
-	const services = getAllServices();
-	const slugs = new Set<string>();
+	const services = getAllServices($2);
+	const slugs = $2;
 	for (const s of services) {
-		if (s.id) slugs.add(toSlug(s.id));
-		else if (s.name) slugs.add(toSlug(s.name));
+		if (s.id) slugs.add(toSlug(s.id)),
+		else if (s.name) slugs.add(toSlug(s.name))
 	}
-	const existing = getExistingRootPageSlugs();
-	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug));
+	const existing = getExistingRootPageSlugs($2);
+	const filtered = $2;
 	return {
 		paths: filtered.map((slug) => ({ params: { slug } })),
-		fallback: false
-	};
+		fallback: false}
 }
 
-export async function getStaticProps({ params }: { params: { slug: string } }) {
-	const services = getAllServices();
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
-	let service: Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
+export async function getStaticProps({ params }: { params: { slug: string} }) {
+	const services = getAllServices($2);
+	const incomingSlug = (params?.slug || '').replace($2);
+	let service: Service | undefined = $2;
 	if (!service) {
-		return { notFound: true };
+		return { notFound: true}
 	}
 	return {
 		props: { service }
-	};
+	}
 }
 
-export default function RootServiceDetailPage({ service }: { service: Service }) {
-	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`;
+export default function RootServiceDetailPage({ service }: { service: Service}) {
+	const canonical = $2;
 	return (
-		<UltraFuturisticBackground variant="quantum" intensity="high">
-			<Head>
-				<title>{service.name} | Zion Tech Group</title>
-				<meta name="description" content={service.tagline || service.description} />
-				<link rel="canonical" href={canonical} />
-				<script
-					type="application/ld+json"
-					dangerouslySetInnerHTML={{
-						__html: JSON.stringify(
-							{
-								"@context": "https://schema.org",
+		<UltraFuturisticBackground variant = $2;
 								"@type": "Service",
 								name: service.name,
 								description: service.tagline || service.description,
@@ -190,7 +174,7 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 								},
 								offers: {
 									"@type": "Offer",
-									price: (service.price || '').replace(/[^0-9.]/g, ''),
+									price: (service.price || '').replace($2);
 									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"
 								}
@@ -261,7 +245,7 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
-							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
+							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
 						</Card>
@@ -269,5 +253,5 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-	);
+	)
 }

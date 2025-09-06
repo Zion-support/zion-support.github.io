@@ -6,45 +6,35 @@ import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { ModeToggle } from '@/components/ModeToggle';
 import { useTranslation } from 'react-i18next';
-
 export interface MobileMenuProps {
-  unreadCount?: number;
-  onClose: () => void;
-  openLoginModal: (returnToPath: string) => void; // Added from plan
+  unreadCount?: number,
+  onClose: () => void,
+  openLoginModal: (returnToPath: string) => void, // Added from plan
 }
 
 // Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts
 // These are routes that should trigger the login modal if accessed while unauthenticated.
 const protectedRoutes = [
-  '/categories',
-  '/talent',
-  '/equipment',
-  '/partners',
-  '/tutorials',
-  '/case-studies',
-  '/post-job', // Already marked as authRequired, but good to be explicit if used elsewhere
+  '/categories/talent/equipment/partners/tutorials/case-studies/post-job', // Already marked as authRequired, but good to be explicit if used elsewhere
   '/messages',  // Already marked as authRequired
   '/dashboard', // Already marked as authRequired
   // Add any specific sub-routes if necessary
-];
+],
 
 function isProtectedRoute(href: string): boolean {
   // Also check against the item's own authRequired flag if present
-  return protectedRoutes.some(route => href.startsWith(route));
+  return protectedRoutes.some(route => href.startsWith(route))
 }
 
 export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileMenuProps) {
-  const router = useRouter();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const { t } = useTranslation();
-
-  const baseItems = [
-    {
-      key: 'home',
+  const router = useRouter($2);
+  const { user } = useAuth($2);
+  const isAuthenticated = $2;
+  const { t } = useTranslation($2);
+  const baseItems = $2;
       href: '/',
       icon: Home,
-      matches: (path: string) => path === '/'},
+      matches: (path: string) => path = $2;
     {
       key: 'explore',
       href: '/talent',
@@ -63,70 +53,46 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       key: 'post_job',
       href: '/post-job',
       icon: BriefcaseIcon,
-      matches: (path: string) => path.startsWith('/post-job'),
+      matches: (path: string) => path.startsWith($2);
       authRequired: true},
     {
       key: 'messages',
       href: '/messages',
       icon: MessageSquare,
       matches: (path: string) =>
-        path.startsWith('/messages') || path.startsWith('/inbox'),
+        path.startsWith('/messages') || path.startsWith($2);
       badge: unreadCount,
       authRequired: true},
     {
       key: 'dashboard',
       href: '/dashboard',
       icon: User,
-      matches: (path: string) => path.startsWith('/dashboard'),
-      authRequired: true}];
+      matches: (path: string) => path.startsWith($2);
+      authRequired: true}],
 
-  const navItems = baseItems.map((item) => ({
-    ...item,
-    name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)}));
-
+  const navItems = $2;
+    name: item.key = $2;
   // Filter items based on auth status
-  const visibleItems = navItems.filter(
-    (item) => !item.authRequired || (item.authRequired && isAuthenticated),
-  );
+  const visibleItems = $2;
+  ),
 
   return (
-    <div className="py-6">
-      <div className="flex justify-between items-center px-6 mb-6">
-        <h2 className="text-xl font-bold text-foreground">Menu</h2>
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={onClose}
-          aria-label="Close menu"
-          title="Close menu"
-        >
-          <X className="h-5 w-5" />
-        </Button>
-      </div>
-
-      <nav className="space-y-1">
-        {visibleItems.map((item) => (
-          <Link
-            key={item.name}
-            href={item.href}
-            aria-label={item.name}
-            className={cn(
-              'flex items-center px-6 py-3 text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+    <div className = $2;
               item.matches(router.pathname)
                 ? 'bg-primary/20 text-primary border-l-4 border-primary'
                 : 'text-foreground hover:bg-primary/10 hover:text-primary',
             )}
             onClick={(e) => {
-              const routeIsProtected = item.authRequired || isProtectedRoute(item.href);
+              const routeIsProtected = item.authRequired || isProtectedRoute($2);
               if (!isAuthenticated && routeIsProtected) {
-                e.preventDefault();
+                e.preventDefault($2);
                 // Update URL to include returnTo, then open modal
-                router.push({ pathname: '/auth/login', query: { returnTo: item.href } }, undefined, { shallow: true });
-                openLoginModal(item.href);
+                router.push($2);
+                openLoginModal($2);
                 // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.
                 // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.
               }
-              onClose(); // Close mobile menu on any click
+              onClose(), // Close mobile menu on any click
             }}
           >
             <div className="relative mr-4">
@@ -145,5 +111,5 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
         <ModeToggle />
       </div>
     </div>
-  );
+  )
 }

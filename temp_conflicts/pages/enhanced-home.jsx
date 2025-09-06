@@ -1,6 +1,5 @@
 
 import Head from 'next/head';
-
 const EnhancedHome = () => {
   return (
     <div>
@@ -14,7 +13,7 @@ const EnhancedHome = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedHome;
+export default EnhancedHome,

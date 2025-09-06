@@ -8,53 +8,47 @@ import { HireRequestModal } from "@/components/profile/hire-request";
 import { useAuthStatus } from "@/hooks/talent";
 import { UserProfile } from "@/types/auth";
 import { useNavigate } from "react-router-dom";
-
 interface TalentCardFooterProps {
-  profile: TalentProfile;
-  onViewProfile: (id: string) => void;
-  onRequestHire?: (profile: TalentProfile) => void;
+  profile: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire?: (profile: TalentProfile) => void
 }
 
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-  const navigate = useNavigate();
-
+  const [isHireModalOpen, setIsHireModalOpen] = useState($2);
+  const { userDetails } = useAuthStatus($2);
+  const navigate = useNavigate($2);
   // Create a compatible UserProfile from UserDetails
-  const userProfile: UserProfile = {
-    id: userDetails?.id,
-    displayName: userDetails?.name || '',
-    email: userDetails?.email || '',
+  const userProfile: UserProfile = $2;
+    displayName: userDetails ?.name || '',
+    email: userDetails ?.email || '',
     userType: '',
     profileComplete: false,
-    createdAt: new Date().toISOString(),
+    createdAt: new Date().toISOString($2);
     updatedAt: new Date().toISOString()
-  };
+  },
 
   // Handle request to hire
   const handleRequestHire = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    
+    e.stopPropagation($2);
     if (onRequestHire) {
-      onRequestHire(profile);
+      onRequestHire(profile)
     } else {
       // Open hire modal directly if no handler provided
-      setIsHireModalOpen(true);
+      setIsHireModalOpen(true)
     }
-  };
+  },
 
   // Handle view profile
   const handleViewProfile = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    
+    e.stopPropagation($2);
     // Navigate to the talent profile page
-    navigate(`/talent/${profile.id || ''}`);
-    
+    navigate($2);
     // Also call the onViewProfile callback if provided
     if (onViewProfile) {
-      onViewProfile(profile.id || '');
+      onViewProfile(profile.id || '')
     }
-  };
+  },
 
   return (
     <>
@@ -105,5 +99,5 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         userDetails={userProfile}
       />
     </>
-  );
+  )
 }

@@ -1,9 +1,6 @@
 import FeatureCard from './components/FeatureCard';
-
 export default function HomePage() {
-  const features = [
-    {
-      icon: "🤖",
+  const features = $2;
       title: "AI-Powered Intelligence",
       description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
       features: [
@@ -74,7 +71,7 @@ export default function HomePage() {
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen">
@@ -181,5 +178,5 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

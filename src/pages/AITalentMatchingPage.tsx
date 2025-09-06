@@ -3,23 +3,18 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 import { Bot, Users, TrendingUp } from 'lucide-react'
 
 export default function AITalentMatchingPage() {
-  const benefits = [
-    {
-      title: "Precise Candidate Matching",
+  const benefits = $2;
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
-      icon: <Bot className="h-8 w-8" />},
+      icon: <Bot className = $2;
     {
       title: "Streamlined Hiring Workflow",
       description: "Automated screening and ranking saves your team valuable time.",
-      icon: <Users className="h-8 w-8" />},
+      icon: <Users className = $2;
     {
       title: "Scalable Talent Pools",
       description: "Access a global network of vetted professionals ready for your projects.",
-      icon: <TrendingUp className="h-8 w-8" />}];
-
-  const testimonials = [
-    {
-      name: "Emily Stone",
+      icon: <TrendingUp className = $2;
+  const testimonials = $2;
       role: "HR Director",
       text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
       avatar: "/placeholder.svg"},
@@ -27,7 +22,7 @@ export default function AITalentMatchingPage() {
       name: "Raj Patel",
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
-      avatar: "/placeholder.svg"}];
+      avatar: "/placeholder.svg"}],
 
   return (
     <ServiceLandingTemplate
@@ -40,5 +35,5 @@ export default function AITalentMatchingPage() {
       ctaText="Find Your AI Talent"
       ctaLink="/request-quote"
     />
-  );
+  )
 }

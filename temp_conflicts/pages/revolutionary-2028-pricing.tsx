@@ -8,18 +8,17 @@ import {
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
   Building, Factory, Camera, Video, Music, Gamepad2,
   Crown, Award, Target, Users, Clock, Globe2
-} from 'lucide-react';
+} from 'lucide-react',
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const pricingTiers = [
   {
@@ -28,12 +27,7 @@ const pricingTiers = [
     period: '/month',
     description: 'Perfect for small businesses and startups',
     features: [
-      'Basic AI integration',
-      'Standard support',
-      'Core features access',
-      'Email support',
-      'Basic analytics',
-      'Mobile app access'
+      'Basic AI integrationStandard supportCore features accessEmail supportBasic analyticsMobile app access'
     ],
     popular: false,
     color: 'from-blue-600 to-cyan-600',
@@ -46,14 +40,7 @@ const pricingTiers = [
     period: '/month',
     description: 'Ideal for growing businesses and enterprises',
     features: [
-      'Advanced AI capabilities',
-      'Priority support',
-      'Full feature access',
-      'Phone & email support',
-      'Advanced analytics',
-      'API access',
-      'Custom integrations',
-      'Training & onboarding'
+      'Advanced AI capabilitiesPriority supportFull feature accessPhone & email supportAdvanced analyticsAPI accessCustom integrationsTraining & onboarding'
     ],
     popular: true,
     color: 'from-purple-600 to-pink-600',
@@ -66,23 +53,14 @@ const pricingTiers = [
     period: '',
     description: 'Tailored solutions for large organizations',
     features: [
-      'Custom AI development',
-      'Dedicated support team',
-      'White-label solutions',
-      '24/7 phone support',
-      'Custom analytics',
-      'Full API access',
-      'Custom integrations',
-      'Dedicated account manager',
-      'SLA guarantees',
-      'On-premise deployment'
+      'Custom AI developmentDedicated support teamWhite-label solutions24/7 phone supportCustom analyticsFull API accessCustom integrationsDedicated account managerSLA guaranteesOn-premise deployment'
     ],
     popular: false,
     color: 'from-indigo-600 to-purple-600',
     cta: 'Contact Sales',
     href: '/contact'
   }
-];
+],
 
 const servicePricing = [
   {
@@ -101,7 +79,7 @@ const servicePricing = [
     category: '🤖 AI & Machine Learning',
     services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
   }
-];
+],
 
 export default function Revolutionary2028Pricing() {
   return (
@@ -414,7 +392,7 @@ export default function Revolutionary2028Pricing() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Get Started</span>?
             </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
@@ -459,5 +437,5 @@ export default function Revolutionary2028Pricing() {
 
       <UltraFuturisticFooter2028 />
     </>
-  );
+  )
 }

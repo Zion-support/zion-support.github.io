@@ -7,85 +7,76 @@ import { AIListingForm } from "./AIListingForm";
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay";
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface GeneratedContent {
-  description: string;
-  tags: string[];
+  description: string,
+  tags: string[],
   suggestedPrice: {
-    min: number;
-    max: number;
-  };
-  keyPoints: string[];
+    min: number,
+    max: number},
+  keyPoints: string[]
 }
 
 interface AIListingGeneratorProps {
-  onApplyGenerated?: (content: GeneratedContent) => void;
+  onApplyGenerated?: (content: GeneratedContent) => void,
   initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string;
-  };
+    title?: string,
+    category?: string,
+    keyFeatures?: string,
+    targetAudience?: string
+  }
 }
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
+  const { toast } = useToast($2);
+  const [isLoading, setIsLoading] = useState($2);
+  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null),
 
-  const handleGenerate = async ({
-    title,
+  const handleGenerate = $2;
     category,
     keyFeatures,
     targetAudience
   }: {
-    title: string;
-    category: string;
-    keyFeatures: string;
-    targetAudience: string;
-  }) => {
-    setIsLoading(true);
-    
+    title: string,
+    category: string,
+    keyFeatures: string,
+    targetAudience: string}) => {
+    setIsLoading($2);
     try {
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
-        body: { title, category, keyFeatures, targetAudience }
-      });
-
+      const { data, error } = await supabase.functions.invoke($2);
       if (error) {
-        throw new Error(error.message);
+        throw new Error(error.message)
       }
       
       if (data && (data as any).error) {
-        throw new Error((data as any).error);
+        throw new Error((data as any).error)
       }
 
-      setGeneratedContent((data as any)?.generated || null);
+      setGeneratedContent((data as any)?.generated || null),
       toast({
         title: "Content Generated",
         description: "AI has created optimized listing content for you."
-      });
+      })
     } catch (error) {
-      logErrorToProduction('Error generating content:', { data: error });
+      logErrorToProduction($2);
       toast({
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive"
-      });
+      })
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
-  };
+  },
 
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
-      onApplyGenerated(generatedContent);
+      onApplyGenerated($2);
       toast({
         title: "Content Applied",
         description: "The generated content has been applied to your listing."
-      });
+      })
     }
-  };
+  },
 
   return (
     <div className="space-y-6">
@@ -114,5 +105,5 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
     </div>
-  );
+  )
 }

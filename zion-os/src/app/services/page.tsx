@@ -1,5 +1,4 @@
 import Link from 'next/link';
-
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
@@ -607,11 +606,11 @@ export default function ServicesPage() {
               </a>
             </div>
             <p className="text-blue-100 text-sm">
-              📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https://ziontechgroup.com
+              📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https: //ziontechgroup.com
             </p>
           </div>
         </div>
       </section>
     </div>
-  );
+  )
 }

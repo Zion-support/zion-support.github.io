@@ -9,33 +9,31 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form",
 import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue} from "@/components/ui/select";
+  SelectValue} from "@/components/ui/select",
 import { Input } from "@/components/ui/input";
 import { DisputeReason, disputeReasonLabels } from "@/types/disputes";
 import { useDisputes } from "@/hooks/useDisputes";
 import { toast } from "sonner";
 import { FileText } from "lucide-react";
-
 const formSchema = z.object({
   reason_code: z.string()
-    .min(1, { message: "Please select a reason for the dispute" }),
+    .min($2);
   description: z.string()
-    .min(20, { message: "Description must be at least 20 characters" }),
-  attachments: z.array(z.any()).optional()});
+    .min($2);
+  attachments: z.array(z.any()).optional()}),
 
-type DisputeFormProps = {
-  projectId: string;
-  milestoneId?: string;
-  onDisputeCreated?: (disputeId: string) => void;
-  onCancel?: () => void;
-};
+type DisputeFormProps = $2;
+  milestoneId?: string,
+  onDisputeCreated?: (disputeId: string) => void,
+  onCancel?: () => void
+},
 
 export function DisputeForm({ 
   projectId, 
@@ -43,60 +41,52 @@ export function DisputeForm({
   onDisputeCreated, 
   onCancel 
 }: DisputeFormProps) {
-  const { createDispute } = useDisputes();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [files, setFiles] = useState<File[]>([]);
+  const { createDispute } = useDisputes($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const [files, setFiles] = useState<File[]>([]),
 
   const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver($2);
     defaultValues: {
       reason_code: "",
       description: "",
-      attachments: []}});
+      attachments: []}}),
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      const newFiles = Array.from(e.target.files);
-      setFiles(prev => [...prev, ...newFiles]);
-      form.setValue("attachments", [...files, ...newFiles]);
+      const newFiles = Array.from($2);
+      setFiles($2);
+      form.setValue("attachments", [...files, ...newFiles])
     }
-  };
+  },
 
-  const removeFile = (index: number) => {
-    const newFiles = [...files];
-    newFiles.splice(index, 1);
-    setFiles(newFiles);
-    form.setValue("attachments", newFiles);
-  };
+  const removeFile = $2;
+    newFiles.splice($2);
+    setFiles($2);
+    form.setValue("attachments", newFiles)
+  },
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      setIsSubmitting(true);
-      
-      const dispute = await createDispute({
-        project_id: projectId,
-        milestone_id: milestoneId,
-        reason_code: values.reason_code,
-        description: values.description});
-      
+      setIsSubmitting($2);
+      const dispute = await createDispute($2);
       if (dispute && dispute.id) {
         // Future enhancement: Upload attachments
         // For now we just log the files that would be uploaded
         if (files.length > 0) {
-          console.log(`Would upload ${files.length} files for dispute ${dispute.id}`);
+          console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
         
-        toast.success("Your dispute has been submitted");
-        
+        toast.success($2);
         if (onDisputeCreated) {
-          onDisputeCreated(dispute.id);
+          onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
-      console.error("Error submitting dispute:", error);
-      toast.error("Failed to submit dispute. Please try again.");
+      console.error($2);
+      toast.error("Failed to submit dispute. Please try again.")
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
   }
 
@@ -199,5 +189,5 @@ export function DisputeForm({
         </form>
       </Form>
     </div>
-  );
+  )
 }

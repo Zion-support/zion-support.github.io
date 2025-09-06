@@ -7,17 +7,16 @@ import {
   Zap, TrendingUp, CheckCircle, ArrowRight, Star,
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3,
   Smartphone, Database, Cloud, Server, ShieldCheck
-} from 'lucide-react';
+} from 'lucide-react',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-
 const AIEmotionalIntelligencePlatform2029 = () => {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const features = [
     {
@@ -56,16 +55,11 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       description: 'Tracks emotional patterns and provides insights for mental health support',
       color: 'from-indigo-500 to-purple-600'
     }
-  ];
+  ],
 
   const benefits = [
-    'Improve customer satisfaction by 85%',
-    'Reduce customer churn by 60%',
-    'Enhance team collaboration and communication',
-    'Optimize marketing campaigns with emotional insights',
-    'Improve mental health support and monitoring',
-    'Create empathetic AI interactions and experiences'
-  ];
+    'Improve customer satisfaction by 85%Reduce customer churn by 60%Enhance team collaboration and communicationOptimize marketing campaigns with emotional insightsImprove mental health support and monitoringCreate empathetic AI interactions and experiences'
+  ],
 
   const useCases = [
     {
@@ -104,7 +98,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       icon: Shield,
       color: 'from-teal-500 to-cyan-600'
     }
-  ];
+  ],
 
   const pricing = {
     basic: {
@@ -113,11 +107,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       period: '/month',
       description: 'Perfect for small teams and startups',
       features: [
-        'Up to 1,000 emotional interactions/month',
-        'Basic emotion detection (5 emotions)',
-        'Email support',
-        'Standard API access',
-        'Basic analytics dashboard'
+        'Up to 1,000 emotional interactions/monthBasic emotion detection (5 emotions)Email supportStandard API accessBasic analytics dashboard'
       ],
       popular: false
     },
@@ -127,13 +117,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 emotional interactions/month',
-        'Advanced emotion detection (15+ emotions)',
-        'Priority support',
-        'Full API access with webhooks',
-        'Advanced analytics and reporting',
-        'Custom emotion models',
-        'Multi-language support'
+        'Up to 10,000 emotional interactions/monthAdvanced emotion detection (15+ emotions)Priority supportFull API access with webhooksAdvanced analytics and reportingCustom emotion modelsMulti-language support'
       ],
       popular: true
     },
@@ -143,18 +127,11 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       period: '/month',
       description: 'For large organizations with custom needs',
       features: [
-        'Unlimited emotional interactions',
-        'Custom emotion detection models',
-        '24/7 dedicated support',
-        'Custom integrations',
-        'Advanced security features',
-        'White-label options',
-        'On-premise deployment',
-        'Custom training and consulting'
+        'Unlimited emotional interactionsCustom emotion detection models24/7 dedicated supportCustom integrationsAdvanced security featuresWhite-label optionsOn-premise deploymentCustom training and consulting'
       ],
       popular: false
     }
-  };
+  },
 
   return (
     <>
@@ -546,7 +523,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
           >
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover: from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
             >
               <span className="flex items-center">
                 Get Started Today
@@ -559,7 +536,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
       <UltraFuturisticFooter2028 />
     </>
-  );
-};
+  )
+},
 
-export default AIEmotionalIntelligencePlatform2029;
+export default AIEmotionalIntelligencePlatform2029,

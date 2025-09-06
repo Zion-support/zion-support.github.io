@@ -4,14 +4,11 @@ import { motion } from 'framer-motion';
 import {
   Cpu, Network, Zap, Shield, Database, Globe, 
   ArrowRight, CheckCircle, Star, TrendingUp, Users
-} from 'lucide-react';
+} from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-
 export default function EdgeComputingPage() {
-  const features = [
-    {
-      icon: Cpu,
+  const features = $2;
       title: "Edge Orchestration",
       description: "Intelligent distribution and management of computing workloads across edge nodes for optimal performance.",
       color: "from-blue-500 to-cyan-500"
@@ -46,20 +43,17 @@ export default function EdgeComputingPage() {
       description: "Worldwide edge network deployment with intelligent traffic routing and load balancing.",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
-  const benefits = [
-    "Reduce latency by 80-90% with edge processing",
+  const benefits = $2;
     "Cut bandwidth costs by 60% through local data processing",
     "Improve reliability with distributed computing architecture",
     "Scale seamlessly across global edge networks",
     "Enable real-time AI and machine learning at the edge",
     "Reduce central server load and improve overall performance"
-  ];
+  ],
 
-  const useCases = [
-    {
-      industry: "Manufacturing",
+  const useCases = $2;
       description: "Real-time quality control, predictive maintenance, and production optimization",
       results: "30% reduction in downtime, 25% improvement in product quality"
     },
@@ -78,11 +72,9 @@ export default function EdgeComputingPage() {
       description: "Inventory management, customer analytics, and supply chain optimization",
       results: "45% reduction in stockouts, 30% improvement in customer satisfaction"
     }
-  ];
+  ],
 
-  const pricing = [
-    {
-      plan: "Starter",
+  const pricing = $2;
       price: "$399",
       period: "/month",
       description: "Basic edge computing for small deployments",
@@ -94,8 +86,7 @@ export default function EdgeComputingPage() {
         "Basic security features",
         "Up to 100 IoT devices"
       ],
-      popular: false
-    },
+      popular: false},
     {
       plan: "Professional",
       price: "$999",
@@ -111,8 +102,7 @@ export default function EdgeComputingPage() {
         "Up to 1000 IoT devices",
         "Custom integrations"
       ],
-      popular: true
-    },
+      popular: true},
     {
       plan: "Enterprise",
       price: "Custom",
@@ -128,9 +118,8 @@ export default function EdgeComputingPage() {
         "Custom training",
         "SLA guarantees"
       ],
-      popular: false
-    }
-  ];
+      popular: false}
+  ],
 
   return (
     <>
@@ -150,19 +139,9 @@ export default function EdgeComputingPage() {
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Edge Computing
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                {" "}Orchestration
-              </span>
-            </h1>
-            <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">
-              Bring computing power to the edge of your network. Our edge computing platform reduces latency,
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
+            transition = $2;
               cuts bandwidth costs, and enables real-time processing for mission-critical applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -187,8 +166,8 @@ export default function EdgeComputingPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -202,8 +181,8 @@ export default function EdgeComputingPage() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
               >
@@ -224,7 +203,7 @@ export default function EdgeComputingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0}}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose Edge Computing?</h2>
@@ -237,7 +216,7 @@ export default function EdgeComputingPage() {
                   <motion.div
                     key={benefit}
                     initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    whileInView={{ opacity: 1, x: 0}}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-center space-x-3"
                   >
@@ -249,8 +228,8 @@ export default function EdgeComputingPage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 20}}
+              whileInView={{ opacity: 1, x: 0}}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8"
             >
@@ -278,8 +257,8 @@ export default function EdgeComputingPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -293,8 +272,8 @@ export default function EdgeComputingPage() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300"
               >
@@ -313,8 +292,8 @@ export default function EdgeComputingPage() {
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -326,8 +305,8 @@ export default function EdgeComputingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6 }}
               className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"
             >
@@ -339,8 +318,8 @@ export default function EdgeComputingPage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"
             >
@@ -352,8 +331,8 @@ export default function EdgeComputingPage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"
             >
@@ -371,8 +350,8 @@ export default function EdgeComputingPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -386,8 +365,8 @@ export default function EdgeComputingPage() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={plan.plan}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-50 rounded-2xl p-8 ${
                   plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
@@ -433,15 +412,15 @@ export default function EdgeComputingPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
             <p className="text-xl text-blue-100 mb-8">
               Join the edge computing revolution and transform your business with real-time processing capabilities.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
@@ -461,5 +440,5 @@ export default function EdgeComputingPage() {
 
       <EnhancedFooter />
     </>
-  );
+  )
 }

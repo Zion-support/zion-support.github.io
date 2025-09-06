@@ -7,17 +7,14 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow} from "@/components/ui/table";
+  TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge";
-
 // Sample data for integration sync logs
-const syncLogs = [
-  {
-    id: "1",
+const syncLogs = $2;
     integration: "Salesforce",
     event: "contact_synced",
     status: "success",
-    timestamp: "2024-05-20T12:30:45Z",
+    timestamp: "2024-05-20T12: 30: 45Z",
     details: "Successfully synced contact data for Job #1234"
   },
   {
@@ -25,7 +22,7 @@ const syncLogs = [
     integration: "Greenhouse",
     event: "applicant_created",
     status: "success", 
-    timestamp: "2024-05-20T10:15:22Z",
+    timestamp: "2024-05-20T10: 15: 22Z",
     details: "New applicant created in Greenhouse from Zion application"
   },
   {
@@ -33,7 +30,7 @@ const syncLogs = [
     integration: "HubSpot",
     event: "deal_updated",
     status: "error",
-    timestamp: "2024-05-19T16:45:12Z",
+    timestamp: "2024-05-19T16: 45: 12Z",
     details: "Failed to update deal - API rate limit exceeded"
   },
   {
@@ -41,7 +38,7 @@ const syncLogs = [
     integration: "Zoho CRM",
     event: "job_synced",
     status: "warning",
-    timestamp: "2024-05-19T14:22:33Z",
+    timestamp: "2024-05-19T14: 22: 33Z",
     details: "Job synced but some fields were skipped due to mapping issues"
   },
   {
@@ -49,25 +46,19 @@ const syncLogs = [
     integration: "Lever",
     event: "candidate_status_changed",
     status: "success",
-    timestamp: "2024-05-18T09:10:05Z",
+    timestamp: "2024-05-18T09: 10: 05Z",
     details: "Updated candidate status to 'Interview Scheduled'"
   }
-];
+],
 
 export function IntegrationsSyncLog() {
-  const getStatusBadge = (status: string) => {
-    switch (status) {
-      case "success":
-        return <Badge className="bg-green-500">Success</Badge>;
+  const getStatusBadge = $2;
       case "error":
-        return <Badge variant="destructive">Error</Badge>;
+        return <Badge variant = $2;
       case "warning":
-        return <Badge className="bg-amber-500">Warning</Badge>;
+        return <Badge className = $2;
       default:
-        return <Badge variant="outline">Unknown</Badge>;
-    }
-  };
-  
+        return <Badge variant = $2;
   return (
     <Card>
       <div className="p-4">
@@ -97,5 +88,5 @@ export function IntegrationsSyncLog() {
         </Table>
       </div>
     </Card>
-  );
+  )
 }

@@ -4,23 +4,21 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "@/hooks/useTheme";
 import { Moon, Sun, Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-
 interface Language {
-  code: string;
-  name: string;
-  flag: string;
-}
+  code: string,
+  name: string,
+  flag: string}
 
 const languages: Language[] = [
   { code: "en", name: "English", flag: "🇺🇸" },
   { code: "es", name: "Español", flag: "🇪🇸" },
   { code: "fr", name: "Français", flag: "🇫🇷" },
   { code: "de", name: "Deutsch", flag: "🇩🇪" },
-  { code: "zh", name: "中文", flag: "🇨🇳" }];
+  { code: "zh", name: "中文", flag: "🇨🇳" }],
 
 export function LanguageThemeSelector() {
-  const { theme, setTheme } = useTheme();
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+  const { theme, setTheme } = useTheme($2);
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
 
   return (
     <div className="space-y-8 px-4">
@@ -94,5 +92,5 @@ export function LanguageThemeSelector() {
         </div>
       </div>
     </div>
-  );
+  )
 }

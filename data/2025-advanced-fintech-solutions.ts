@@ -1,45 +1,42 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface AdvancedFintechSolution2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
   {
@@ -50,16 +47,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     period: '/month',
     description: 'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.',
     features: [
-      'Alternative data analysis',
-      'Machine learning models',
-      'Real-time scoring',
-      'Risk prediction',
-      'Fraud detection',
-      'Compliance reporting',
-      'API integration',
-      'Custom scoring models',
-      'Performance analytics',
-      'Regulatory compliance'
+      'Alternative data analysisMachine learning modelsReal-time scoringRisk predictionFraud detectionCompliance reportingAPI integrationCustom scoring modelsPerformance analyticsRegulatory compliance'
     ],
     popular: true,
     icon: '💳',
@@ -91,8 +79,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     launchDate: '2025-01-22',
     customers: 67,
     rating: 4.8,
-    reviews: 45
-  },
+    reviews: 45},
   {
     id: 'blockchain-payment-processing-platform',
     name: 'Blockchain Payment Processing Platform',
@@ -101,16 +88,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     period: '/month',
     description: 'Advanced blockchain-based payment processing platform that enables fast, secure, and cost-effective cross-border transactions with real-time settlement.',
     features: [
-      'Cross-border payments',
-      'Real-time settlement',
-      'Multi-currency support',
-      'Smart contracts',
-      'Compliance tools',
-      'API integration',
-      'Transaction monitoring',
-      'Fraud prevention',
-      'Regulatory reporting',
-      'Cost optimization'
+      'Cross-border paymentsReal-time settlementMulti-currency supportSmart contractsCompliance toolsAPI integrationTransaction monitoringFraud preventionRegulatory reportingCost optimization'
     ],
     popular: true,
     icon: '⛓️',
@@ -142,8 +120,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     launchDate: '2025-01-28',
     customers: 89,
     rating: 4.7,
-    reviews: 56
-  },
+    reviews: 56},
   {
     id: 'quantum-financial-modeling-platform',
     name: 'Quantum Financial Modeling Platform',
@@ -152,16 +129,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     period: '/month',
     description: 'Revolutionary quantum financial modeling platform that leverages quantum computing to solve complex financial optimization problems and risk calculations.',
     features: [
-      'Quantum algorithms',
-      'Portfolio optimization',
-      'Risk modeling',
-      'Option pricing',
-      'Monte Carlo simulation',
-      'Quantum machine learning',
-      'Real-time calculations',
-      'API access',
-      'Custom models',
-      'Performance analytics'
+      'Quantum algorithmsPortfolio optimizationRisk modelingOption pricingMonte Carlo simulationQuantum machine learningReal-time calculationsAPI accessCustom modelsPerformance analytics'
     ],
     popular: false,
     icon: '⚛️',
@@ -193,8 +161,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     launchDate: '2025-02-03',
     customers: 23,
     rating: 4.9,
-    reviews: 18
-  },
+    reviews: 18},
   {
     id: 'ai-powered-insurance-underwriting',
     name: 'AI-Powered Insurance Underwriting',
@@ -203,16 +170,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     period: '/month',
     description: 'Advanced AI-powered insurance underwriting platform that uses machine learning to assess risk, determine pricing, and automate the underwriting process.',
     features: [
-      'AI risk assessment',
-      'Automated underwriting',
-      'Predictive modeling',
-      'Claims prediction',
-      'Fraud detection',
-      'Policy optimization',
-      'Customer segmentation',
-      'Compliance tools',
-      'API integration',
-      'Performance analytics'
+      'AI risk assessmentAutomated underwritingPredictive modelingClaims predictionFraud detectionPolicy optimizationCustomer segmentationCompliance toolsAPI integrationPerformance analytics'
     ],
     popular: true,
     icon: '🛡️',
@@ -244,8 +202,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     launchDate: '2025-02-08',
     customers: 134,
     rating: 4.6,
-    reviews: 78
-  },
+    reviews: 78},
   {
     id: 'regtech-compliance-automation-platform',
     name: 'RegTech Compliance Automation Platform',
@@ -254,16 +211,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     period: '/month',
     description: 'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.',
     features: [
-      'Regulatory monitoring',
-      'Automated reporting',
-      'Compliance tracking',
-      'Risk assessment',
-      'Audit trails',
-      'Policy management',
-      'Training modules',
-      'API integration',
-      'Real-time updates',
-      'Performance analytics'
+      'Regulatory monitoringAutomated reportingCompliance trackingRisk assessmentAudit trailsPolicy managementTraining modulesAPI integrationReal-time updatesPerformance analytics'
     ],
     popular: false,
     icon: '📋',
@@ -295,6 +243,5 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     launchDate: '2025-02-12',
     customers: 89,
     rating: 4.5,
-    reviews: 52
-  }
-];
+    reviews: 52}
+],

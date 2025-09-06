@@ -8,8 +8,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import * as Sentry from '@sentry/nextjs'
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface ErrorBoundaryState {
   hasError: boolean
   error: Error | null
@@ -17,8 +15,7 @@ interface ErrorBoundaryState {
   errorId: string | null
   retryCount: number
   userFeedback: string
-  showDetails: boolean
-}
+  showDetails: boolean}
 
 interface ErrorBoundaryProps {
   children: ReactNode
@@ -36,15 +33,13 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   constructor(props: ErrorBoundaryProps) {
     super(props)
 
-    this.state = {
-      hasError: false,
+    this.state = $2;
       error: null,
       errorInfo: null,
       errorId: null,
       retryCount: 0,
       userFeedback: '',
-      showDetails: false
-    }
+      showDetails: false}
   }
 
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
@@ -55,26 +50,22 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    const errorId = this.generateErrorId()
-    
-    // Enhanced error logging
-    const enhancedError = {
-      ...error,
+    const errorId = $2;
       componentStack: errorInfo.componentStack,
       errorBoundary: this.props.context || 'GlobalErrorBoundary',
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString($2);
       userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'SSR',
       url: typeof window !== 'undefined' ? window.location.href : 'SSR',
-      userId: this.getUserId(),
+      userId: this.getUserId($2);
       buildInfo: this.getBuildInfo()
     }
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚨 Error Boundary Caught Error')
-      logErrorToProduction('Error:', { data: error })
-      logErrorToProduction('Error Info:', { data: errorInfo })
-      logErrorToProduction('Enhanced Error:', { data: enhancedError })
+      logErrorToProduction('Error:', { data: error})
+      logErrorToProduction('Error Info:', { data: errorInfo})
+      logErrorToProduction('Enhanced Error:', { data: enhancedError})
       console.groupEnd()
     }
 
@@ -182,27 +173,22 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
     const retryDelay = Math.pow(2, this.state.retryCount) * 1000 // Exponential backoff
 
-    const timeout = setTimeout(() => {
-      this.setState({
-        hasError: false,
+    const timeout = $2;
         error: null,
         errorInfo: null,
         errorId: null,
         retryCount: this.state.retryCount + 1,
-        showDetails: false
-      })
+        showDetails: false})
     }, retryDelay)
 
     this.retryTimeouts.push(timeout)
   }
 
-  private copyErrorDetails = async () => {
-    const errorDetails = {
-      errorId: this.state.errorId,
+  private copyErrorDetails = $2;
       message: this.state.error?.message,
       stack: this.state.error?.stack,
       componentStack: this.state.errorInfo?.componentStack,
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString($2);
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
       userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'unknown'
     }
@@ -211,7 +197,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       await navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       // Could show a toast notification here
     } catch (err) {
-      logErrorToProduction('Failed to copy error details:', { data: err })
+      logErrorToProduction('Failed to copy error details:', { data: err})
     }
   }
 
@@ -243,7 +229,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
         // Show success message
       }
     } catch (err) {
-      logErrorToProduction('Failed to report error:', { data: err })
+      logErrorToProduction('Failed to report error:', { data: err})
     }
   }
 
@@ -269,7 +255,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
         <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: 1, scale: 1}}
             transition={{ duration: 0.3 }}
           >
             <Card className="w-full max-w-2xl border-red-200 bg-white dark:bg-gray-900">
@@ -336,9 +322,9 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                 <AnimatePresence>
                   {this.state.showDetails && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
+                      initial={{ opacity: 0, height: 0}}
                       animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
+                      exit={{ opacity: 0, height: 0}}
                       className="border-t pt-4"
                     >
                       <div className="space-y-4">
@@ -404,8 +390,7 @@ export const useErrorBoundary = () => {
 }
 
 // Higher-order component for adding error boundaries
-export const withErrorBoundary = <P extends object>(
-  Component: React.ComponentType<P>,
+export const withErrorBoundary = $2;
   errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
 ) => {
   const WrappedComponent = (props: P) => (

@@ -3,12 +3,11 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
-
 export default function APITestingSuitePage() {
-  const [isTesting, setIsTesting] = useState(false);
-  const [testResults, setTestResults] = useState(null);
-  const [apiEndpoint, setApiEndpoint] = useState('');
-  const [apiKey, setApiKey] = useState('');
+  const [isTesting, setIsTesting] = useState(false),
+  const [testResults, setTestResults] = useState(null),
+  const [apiEndpoint, setApiEndpoint] = useState(''),
+  const [apiKey, setApiKey] = useState(''),
 
   const features = [
     {
@@ -34,30 +33,30 @@ export default function APITestingSuitePage() {
       title: 'Real-Time Monitoring',
       description: '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500'}];
+      gradient: 'from-blue-400 to-cyan-500'}],
 
   const testTypes = [
     {
       name: 'Functional Testing',
       description: 'Verify that your API endpoints work correctly and return expected responses.',
-      tests: ['Request/response validation', 'Status code verification', 'Data format checking', 'Error handling']
+      tests: ['Request/response validationStatus code verificationData format checkingError handling']
     },
     {
       name: 'Performance Testing',
       description: 'Ensure your APIs can handle expected load and perform under pressure.',
-      tests: ['Load testing', 'Stress testing', 'Response time analysis', 'Throughput measurement']
+      tests: ['Load testingStress testingResponse time analysisThroughput measurement']
     },
     {
       name: 'Security Testing',
       description: 'Identify security vulnerabilities and ensure proper authentication and authorization.',
-      tests: ['Authentication testing', 'Authorization checks', 'Input validation', 'SQL injection testing']
+      tests: ['Authentication testingAuthorization checksInput validationSQL injection testing']
     },
     {
       name: 'Integration Testing',
       description: 'Test how your APIs integrate with other systems and services.',
-      tests: ['End-to-end workflows', 'Third-party integrations', 'Data flow validation', 'Error propagation']
+      tests: ['End-to-end workflowsThird-party integrationsData flow validationError propagation']
     }
-  ];
+  ],
 
   const pricing = [
     {
@@ -66,12 +65,7 @@ export default function APITestingSuitePage() {
       period: '/month',
       description: 'Perfect for developers and small teams',
       features: [
-        '100 API tests/month',
-        'Basic test scenarios',
-        'Email notifications',
-        'Basic reporting',
-        '5 API endpoints',
-        'Community support'
+        '100 API tests/monthBasic test scenariosEmail notificationsBasic reporting5 API endpointsCommunity support'
       ],
       popular: false
     },
@@ -81,14 +75,7 @@ export default function APITestingSuitePage() {
       period: '/month',
       description: 'Ideal for growing businesses and development teams',
       features: [
-        '500 API tests/month',
-        'Advanced test scenarios',
-        'SMS & email alerts',
-        'Advanced reporting',
-        '25 API endpoints',
-        'Performance testing',
-        'API access',
-        'Priority support'
+        '500 API tests/monthAdvanced test scenariosSMS & email alertsAdvanced reporting25 API endpointsPerformance testingAPI accessPriority support'
       ],
       popular: true
     },
@@ -98,23 +85,16 @@ export default function APITestingSuitePage() {
       period: '/month',
       description: 'For large organizations with complex API requirements',
       features: [
-        'Unlimited API tests',
-        'Custom test scenarios',
-        'Custom alerting rules',
-        '24/7 dedicated support',
-        'Unlimited endpoints',
-        'Advanced security testing',
-        'White-label options',
-        'Custom integrations'
+        'Unlimited API testsCustom test scenariosCustom alerting rules24/7 dedicated supportUnlimited endpointsAdvanced security testingWhite-label optionsCustom integrations'
       ],
       popular: false
     }
-  ];
+  ],
 
   const handleTestAPI = async () => {
-    if (!apiEndpoint.trim()) return;
+    if (!apiEndpoint.trim()) return,
     
-    setIsTesting(true);
+    setIsTesting(true),
     // Simulate API testing
     setTimeout(() => {
       setTestResults({
@@ -130,14 +110,12 @@ export default function APITestingSuitePage() {
           { name: 'Rate Limiting', status: 'pass', value: 'Within limits', threshold: 'No throttling' }
         ],
         recommendations: [
-          'Consider implementing response caching for better performance',
-          'Monitor response times during peak usage',
-          'Implement rate limiting headers for better API documentation'
+          'Consider implementing response caching for better performanceMonitor response times during peak usageImplement rate limiting headers for better API documentation'
         ]
-      });
-      setIsTesting(false);
-    }, 3000);
-  };
+      }),
+      setIsTesting(false)
+    }, 3000)
+  },
 
   return (
     <>
@@ -457,7 +435,7 @@ export default function APITestingSuitePage() {
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="container-cursor text-center relative z-10">
           <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
             Ready to Test Your APIs?
@@ -486,5 +464,5 @@ export default function APITestingSuitePage() {
         </div>
       </section>
     </>
-  );
+  )
 }

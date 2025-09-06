@@ -3,174 +3,168 @@ import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { GetServerSideProps } from 'next';
 import { requireAdminRole } from '../../utils/auth';
-
-export type Slide = {
-  id: string;
-  title: string;
-  content: string;
+export type Slide = $2;
+  title: string,
+  content: string,
   chart?: {
-    type: 'bar' | 'funnel' | 'timeline';
-    data: Array<{ label: string; value: number }>;
-  };
-};
+    type: 'bar' | 'funnel' | 'timeline',
+    data: Array<{ label: string, value: number}>
+  }
+},
 
-type BuilderState = {
-  mission: string;
-  fundingStage: string;
-  vision: string;
-  roundType: 'Seed' | 'Series A' | 'Token Sale' | '';
-  targetRaise: string;
-  assets: File[];
-};
+type BuilderState = $2;
+  fundingStage: string,
+  vision: string,
+  roundType: 'Seed' | 'Series A' | 'Token Sale' | '',
+  targetRaise: string,
+  assets: File[]
+},
 
 function uid() {
-  return Math.random().toString(36).slice(2);
+  return Math.random().toString(36).slice(2)
 }
 
-function SlidePreview({ slide, isActive, onClick }: { slide: Slide; isActive: boolean; onClick: () => void }) {
+function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: boolean, onClick: () => void }) {
   return (
     <button onClick={onClick} className={`w-56 shrink-0 border rounded-md p-3 text-left bg-white/70 dark:bg-gray-900 ${isActive ? 'ring-2 ring-blue-500' : 'border-gray-200 dark:border-gray-800'}`}>
       <div className="font-semibold text-sm line-clamp-2">{slide.title || 'Untitled'}</div>
       <div className="text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap">{slide.content || '—'}</div>
     </button>
-  );
+  )
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const result = await requireAdminRole(ctx);
+  const result = await requireAdminRole($2);
   // @ts-ignore
-  if ('redirect' in result) return result;
-  return result;
-};
+  if ('redirect' in result) return result,
+  return result
+},
 
 export default function PitchGenerator() {
-  const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] });
-  const [slides, setSlides] = useState<Slide[]>([]);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [loading, setLoading] = useState(false);
-  const [versionTag, setVersionTag] = useState<string | null>(null);
-  const [history, setHistory] = useState<{ id: string; createdAt: string; version: string }[]>([]);
+  const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] }),
+  const [slides, setSlides] = useState<Slide[]>([]),
+  const [activeIndex, setActiveIndex] = useState($2);
+  const [loading, setLoading] = useState($2);
+  const [versionTag, setVersionTag] = useState<string | null>(null),
+  const [history, setHistory] = useState<{ id: string, createdAt: string, version: string}[]>([]),
 
-  const activeSlide = slides[activeIndex];
-
+  const activeSlide = $2;
   const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    const files = Array.from(e.dataTransfer.files || []);
-    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }));
-  }, []);
+    e.preventDefault($2);
+    const files = Array.from($2);
+    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
+  }, []),
 
   const prevent = (e: React.DragEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-  };
+    e.preventDefault($2);
+    e.stopPropagation()
+  },
 
-  const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []);
+  const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []),
 
   const autoFetchMetrics = useCallback(async () => {
-    setLoading(true);
+    setLoading($2);
     try {
-      const res = await fetch('/api/admin/pitch/metrics');
-      const data = await res.json();
-      return data;
+      const res = await fetch($2);
+      const data = await res.json($2);
+      return data
     } catch (e) {
-      return {};
+      return {}
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  }, []);
+  }, []),
 
   const buildDeck = useCallback(async () => {
-    setLoading(true);
+    setLoading($2);
     try {
-      const metrics = await autoFetchMetrics();
+      const metrics = await autoFetchMetrics($2);
       const res = await fetch('/api/admin/pitch/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           operatorPrompt,
           inputs: builder,
-          metrics})});
-      const json = await res.json();
-      const newSlides: Slide[] = json.slides || [];
-      setSlides(newSlides);
-      setActiveIndex(0);
-      const v = json.version || `v${new Date().toISOString()}`;
-      setVersionTag(v);
-      setHistory((h) => [{ id: uid(), createdAt: new Date().toISOString(), version: v }, ...h]);
+          metrics})}),
+      const json = await res.json($2);
+      const newSlides: Slide[] = json.slides || [],
+      setSlides($2);
+      setActiveIndex($2);
+      const v = $2;
+      setVersionTag($2);
+      setHistory((h) => [{ id: uid(), createdAt: new Date().toISOString(), version: v}, ...h])
     } catch (e) {
       // noop
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  }, [autoFetchMetrics, builder, operatorPrompt]);
+  }, [autoFetchMetrics, builder, operatorPrompt]),
 
-  const rephraseSlide = useCallback(async (idx: number) => {
-    if (!slides[idx]) return;
-    setLoading(true);
+  const rephraseSlide = $2;
+    setLoading($2);
     try {
       const res = await fetch('/api/admin/pitch/rewrite', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ slide: slides[idx] })});
-      const json = await res.json();
-      setSlides((arr) => arr.map((s, i) => (i === idx ? { ...s, title: json.title || s.title, content: json.content || s.content } : s)));
+        body: JSON.stringify({ slide: slides[idx] })}),
+      const json = await res.json($2);
+      setSlides((arr) => arr.map((s, i) => (i === idx ? { ...s, title: json.title || s.title, content: json.content || s.content } : s)))
     } catch (e) {
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  }, [slides]);
+  }, [slides]),
 
   const addSlide = useCallback(async () => {
-    setLoading(true);
+    setLoading($2);
     try {
-      const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
-      const json = await res.json();
-      setSlides((arr) => [...arr, { id: uid(), title: json.title || 'New Slide', content: json.content || '' }]);
-      setActiveIndex(slides.length);
+      const res = await fetch($2);
+      const json = await res.json($2);
+      setSlides((arr) => [...arr, { id: uid(), title: json.title || 'New Slide', content: json.content || '' }]),
+      setActiveIndex(slides.length)
     } catch (e) {
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  }, [slides.length]);
+  }, [slides.length]),
 
   const exportPdf = useCallback(async () => {
-    setLoading(true);
+    setLoading($2);
     try {
-      const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag }) });
-      const blob = await res.blob();
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `pitch-deck-${versionTag || 'draft'}.pdf`;
-      a.click();
-      URL.revokeObjectURL(url);
+      const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag}) }),
+      const blob = await res.blob($2);
+      const url = URL.createObjectURL($2);
+      const a = document.createElement($2);
+      a.href = $2;
+      a.download = $2;
+      a.click($2);
+      URL.revokeObjectURL(url)
     } catch (e) {
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  }, [slides, versionTag]);
+  }, [slides, versionTag]),
 
   const exportGoogleSlides = useCallback(async () => {
-    setLoading(true);
+    setLoading($2);
     try {
-      const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'gslides', version: versionTag }) });
-      const json = await res.json();
+      const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'gslides', version: versionTag}) }),
+      const json = await res.json($2);
       if (json && json.url) {
-        window.open(json.url, '_blank');
+        window.open(json.url, '_blank')
       }
     } catch (e) {
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  }, [slides, versionTag]);
+  }, [slides, versionTag]),
 
   const updateActiveSlide = (updates: Partial<Slide>) => {
-    setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)));
-  };
+    setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
+  },
 
-  const renderChartPreview = (slide: Slide) => {
-    if (!slide.chart) return null;
-    const { type, data } = slide.chart;
+  const renderChartPreview = $2;
+    const { type, data } = slide.chart,
     return (
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
@@ -182,26 +176,7 @@ export default function PitchGenerator() {
             <div className="w-full">
               <div className="flex flex-col gap-1">
                 {data.map((d, idx) => (
-                  <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
-                ))}
-              </div>
-            </div>
-          )}
-          {type === 'timeline' && (
-            <div className="text-xs grid grid-cols-4 gap-2 w-full">
-              {data.map((d) => (
-                <div key={d.label} className="border p-1 rounded">
-                  <div className="font-medium">{d.label}</div>
-                  <div>{d.value}</div>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
-    );
-  };
-
+                  <div key = $2;
   return (
     <EnhancedLayout>
       <Head>
@@ -295,9 +270,9 @@ export default function PitchGenerator() {
                 <textarea value={activeSlide.content} onChange={(e) => updateActiveSlide({ content: e.target.value })} className="w-full mt-3 border rounded px-2 py-1 bg-transparent" rows={10} />
 
                 <div className="mt-4 grid grid-cols-3 gap-2 text-sm">
-                  <button onClick={() => updateActiveSlide({ chart: { type: 'bar', data: [{ label: 'Q1', value: 20 }, { label: 'Q2', value: 40 }, { label: 'Q3', value: 60 }, { label: 'Q4', value: 80 }] } })} className="border rounded px-2 py-1">Bar Chart</button>
-                  <button onClick={() => updateActiveSlide({ chart: { type: 'funnel', data: [{ label: 'Visitors', value: 100 }, { label: 'Signups', value: 40 }, { label: 'Projects', value: 15 }] } })} className="border rounded px-2 py-1">Funnel</button>
-                  <button onClick={() => updateActiveSlide({ chart: { type: 'timeline', data: [{ label: 'MVP', value: 2023 }, { label: 'Seed', value: 2024 }, { label: 'Series A', value: 2025 }] } })} className="border rounded px-2 py-1">Timeline</button>
+                  <button onClick={() => updateActiveSlide({ chart: { type: 'bar', data: [{ label: 'Q1', value: 20}, { label: 'Q2', value: 40}, { label: 'Q3', value: 60}, { label: 'Q4', value: 80}] } })} className="border rounded px-2 py-1">Bar Chart</button>
+                  <button onClick={() => updateActiveSlide({ chart: { type: 'funnel', data: [{ label: 'Visitors', value: 100}, { label: 'Signups', value: 40}, { label: 'Projects', value: 15}] } })} className="border rounded px-2 py-1">Funnel</button>
+                  <button onClick={() => updateActiveSlide({ chart: { type: 'timeline', data: [{ label: 'MVP', value: 2023}, { label: 'Seed', value: 2024}, { label: 'Series A', value: 2025}] } })} className="border rounded px-2 py-1">Timeline</button>
                 </div>
 
                 {renderChartPreview(activeSlide)}
@@ -307,5 +282,5 @@ export default function PitchGenerator() {
         </div>
       </div>
     </EnhancedLayout>
-  );
+  )
 }

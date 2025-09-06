@@ -7,57 +7,46 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 import { revolutionary2026Services } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
-
 export default function ServicesShowcase2026() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
-
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [sortBy, setSortBy] = useState($2);
   // Combine all 2026 services
-  const allServices = [
-    ...revolutionary2026Services,
+  const allServices = $2;
     ...emergingTech2026Services,
     ...comprehensiveIT2026Services
-  ];
+  ],
 
   // Filter and sort services
-  const filteredServices = allServices
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-      return matchesSearch && matchesCategory;
+  const filteredServices = $2;
+      const matchesCategory = selectedCategory === 'all' || service.category.includes($2);
+      return matchesSearch && matchesCategory
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating,
         case 'customers':
-          return b.customers - a.customers;
-        default:
-          return a.name.localeCompare(b.name);
+          return b.customers - a.customers,
+        default: return a.name.localeCompare(b.name)
       }
-    });
+    }),
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },
-    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length },
-    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },
-    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length },
-    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
-    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length },
-    { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
-  ];
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s = $2;
+    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s = $2;
+    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s = $2;
+    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s = $2;
+    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s = $2;
+    { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s = $2;
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (
     <UltraAdvancedFuturisticBackground 
@@ -89,8 +78,8 @@ export default function ServicesShowcase2026() {
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -185,8 +174,8 @@ export default function ServicesShowcase2026() {
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 30}}
+                  animate={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="group"
                 >
@@ -267,8 +256,8 @@ export default function ServicesShowcase2026() {
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0}}
+                animate={{ opacity: 1}}
                 className="text-center py-16"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -283,9 +272,9 @@ export default function ServicesShowcase2026() {
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm"
             >
@@ -309,7 +298,7 @@ export default function ServicesShowcase2026() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
@@ -328,5 +317,5 @@ export default function ServicesShowcase2026() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  )
 }

@@ -3,74 +3,57 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
-
 export default function URLShortenerPage() {
-  const [longUrl, setLongUrl] = useState('');
-  const [customAlias, setCustomAlias] = useState('');
-  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]);
-  const [isShortening, setIsShortening] = useState(false);
-  const [showQR, setShowQR] = useState<string | null>(null);
+  const [longUrl, setLongUrl] = useState($2);
+  const [customAlias, setCustomAlias] = useState($2);
+  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
+  const [isShortening, setIsShortening] = useState($2);
+  const [showQR, setShowQR] = useState<string | null>(null),
 
-  const generateShortUrl = async () => {
-    if (!longUrl.trim()) return;
-    
-    setIsShortening(true);
-    
+  const generateShortUrl = $2;
+    setIsShortening($2);
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000)),
     
-    const alias = customAlias.trim() || generateRandomAlias();
-    const shortUrl = `https://zion.tech/${alias}`;
-    
+    const alias = customAlias.trim() || generateRandomAlias($2);
+    const shortUrl = $2;
     const newShortUrl = {
-      id: Date.now(),
-      longUrl: longUrl.trim(),
+      id: Date.now($2);
+      longUrl: longUrl.trim($2);
       shortUrl,
       alias,
       clicks: 0,
-      createdAt: new Date().toISOString(),
-      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
-    };
-    
-    setShortenedUrls(prev => [newShortUrl, ...prev]);
-    setLongUrl('');
-    setCustomAlias('');
-    setIsShortening(false);
-  };
+      createdAt: new Date().toISOString($2);
+      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size = $2;
+    setShortenedUrls($2);
+    setLongUrl($2);
+    setCustomAlias($2);
+    setIsShortening(false)
+  },
 
-  const generateRandomAlias = () => {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-    for (let i = 0; i < 6; i++) {
-      result += chars.charAt(Math.floor(Math.random() * chars.length));
+  const generateRandomAlias = $2;
+    let result = $2;
+    for (let i = 0, i < 6, i++) {
+      result += chars.charAt(Math.floor(Math.random() * chars.length))
     }
-    return result;
-  };
+    return result
+  },
 
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-  };
-
+  const copyToClipboard = $2;
   const incrementClicks = (id: number) => {
     setShortenedUrls(prev => 
       prev.map(url => 
         url.id === id ? { ...url, clicks: url.clicks + 1 } : url
       )
-    );
-  };
+    )
+  },
 
-  const deleteUrl = (id: number) => {
-    setShortenedUrls(prev => prev.filter(url => url.id !== id));
-  };
-
+  const deleteUrl = $2;
   const getTotalClicks = () => {
-    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0);
-  };
+    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0)
+  },
 
-  const getTotalUrls = () => {
-    return shortenedUrls.length;
-  };
-
+  const getTotalUrls = $2;
   return (
     <>
       <Head>
@@ -489,7 +472,7 @@ export default function URLShortenerPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Shorten Your URLs?
           </h2>
@@ -517,5 +500,5 @@ export default function URLShortenerPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import ContentCategorizer from '../../components/ContentCategorizer';
-
 export default function ReportsIndex() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -20,11 +19,11 @@ export default function ReportsIndex() {
 
         {/* Back to Home */}
         <div className="mt-12 text-center">
-          <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200">
+          <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
             ← Back to home
           </Link>
         </div>
       </main>
     </div>
-  );
+  )
 }

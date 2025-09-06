@@ -14,37 +14,32 @@ import { useAuth } from '@/hooks/useAuth';
 import { UserMenu } from '@/components/header/UserMenu';
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
-import { cn } from '@/lib/utils'; // Import cn utility
+import { cn } from '@/lib/utils', // Import cn utility
 import { useRouter } from 'next/router';
-
 export function AppHeader() {
 
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [loginOpen, setLoginOpen] = useState(false);
-  const isMobile = useIsMobile();
-  const { t } = useTranslation();
-  const { user } = useAuth();
-  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
-  const router = useRouter();
-  const showTagline = router.pathname === '/';
-
+  const [mobileMenuOpen, setMobileMenuOpen] = useState($2);
+  const [loginOpen, setLoginOpen] = useState($2);
+  const isMobile = useIsMobile($2);
+  const { t } = useTranslation($2);
+  const { user } = useAuth($2);
+  const isLoggedIn = $2;
+  const router = useRouter($2);
+  const showTagline = $2;
   // Messaging context (unread message count)
-  const { unreadCount } = useMessaging();
-
+  const { unreadCount } = useMessaging($2);
   const openLoginModal = (returnToPath?: string) => {
     // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)
     // using router.push with shallow:true before this function is called.
     // This function's main job is just to open the modal.
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
-    setLoginOpen(true);
-  };
+    setLoginOpen(true)
+  },
   
   return (
     <>
       <header
-        style={{ "--nav-height": "64px" } as React.CSSProperties}
-        className={cn(
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
+        style = $2;
           { "bg-red-500": mobileMenuOpen }
         )}
       >
@@ -87,12 +82,12 @@ export function AppHeader() {
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
-                  e.preventDefault();
+                  e.preventDefault($2);
                   // For the main login link, we might not have a specific returnTo beyond current page,
                   // or we could default to dashboard.
                   // For consistency with how sub-menus now set it:
-                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true });
-                  openLoginModal(router.asPath);
+                  router.push($2);
+                  openLoginModal(router.asPath)
                 }}
               >
                 {t('auth.login')}
@@ -138,5 +133,5 @@ export function AppHeader() {
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  );
+  )
 }

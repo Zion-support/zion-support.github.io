@@ -1,16 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-
 import { Satellite, CheckCircle, Globe2 } from 'lucide-react';
-
 export default function SpaceTechPage() {
-  const features = [
-    'Mission control dashboards and telemetry pipelines',
-    'Satellite operations playbooks and anomaly response',
-    'Ground station integrations and data delivery SLAs',
-    'Secure communications and zero-trust segmentation'];
-
+  const features = $2;
   return (
     <Layout>
       <Head>
@@ -45,7 +38,7 @@ export default function SpaceTechPage() {
           </section>
 
           <section className="text-center">
-            <a href="/space-technology" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
+            <a href="/space-technology" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
               <Globe2 className="w-4 h-4" />
               <span>Explore detailed Space Technology offerings</span>
             </a>
@@ -53,5 +46,5 @@ export default function SpaceTechPage() {
         </div>
       </div>
     </Layout>
-  );
+  )
 }

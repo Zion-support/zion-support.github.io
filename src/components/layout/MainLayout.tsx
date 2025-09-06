@@ -1,19 +1,18 @@
 
-                isOpen={sidebarOpen};
-                onClose={() => setSidebarOpen(false)};
-
+                isOpen = $2;
+                onClose = $2;
               />,
-              <div className="flex-1 ml-80">,
-                {children};
+              <div className = $2;
+                {children},
               </div>,
             </div>,
-          )};
-          {!showSidebar && children};
+          )},
+          {!showSidebar && children},
         </main>,
         <Footer />,
       </div>,
     </>,
-  ),
+  )
 
-};
+},
 

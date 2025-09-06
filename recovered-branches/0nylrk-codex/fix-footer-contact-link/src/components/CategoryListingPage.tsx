@@ -7,31 +7,29 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react";
-
 // Example listing type
 interface Listing {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory?: string;
-  image?: string;
-  tags?: string[];
-  author?: string;
-  authorImage?: string;
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  price?: number | null;
-  createdAt: string;
-}
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  subcategory?: string,
+  image?: string,
+  tags?: string[],
+  author?: string,
+  authorImage?: string,
+  aiScore?: number,
+  rating?: number,
+  reviewCount?: number,
+  price?: number | null,
+  createdAt: string}
 
 interface CategoryListingPageProps {
-  title: string;
-  description: string;
-  listings: Listing[];
-  sortOptions?: { label: string; value: string }[];
-  filterOptions?: { label: string; value: string }[];
+  title: string,
+  description: string,
+  listings: Listing[],
+  sortOptions?: { label: string, value: string}[],
+  filterOptions?: { label: string, value: string}[]
 }
 
 export function CategoryListingPage({ 
@@ -50,47 +48,35 @@ export function CategoryListingPage({
     { label: 'Highly Rated', value: 'high-rating' },
     { label: 'Best AI Match', value: 'best-match' }]
 }: CategoryListingPageProps) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedSort, setSelectedSort] = useState(sortOptions[0].value);
-  const [selectedFilter, setSelectedFilter] = useState(filterOptions[0].value);
-  
+  const [searchQuery, setSearchQuery] = useState($2);
+  const [selectedSort, setSelectedSort] = useState($2);
+  const [selectedFilter, setSelectedFilter] = useState($2);
   // Process listings based on filters and search
-  const processedListings = initialListings
-    .filter(listing => {
-      // Apply search filter
-      const matchesSearch = 
-        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (listing.tags && listing.tags.some(tag => 
-          tag.toLowerCase().includes(searchQuery.toLowerCase())
-        ));
-      
+  const processedListings = $2;
       // Apply category filters
-      if (selectedFilter === 'all') return matchesSearch;
-      if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating || 0) >= 4;
-      if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore || 0) >= 85;
-      
-      return matchesSearch;
+      if (selectedFilter = $2;
+      if (selectedFilter = $2;
+      if (selectedFilter = $2;
+      return matchesSearch
     })
     .sort((a, b) => {
       // Apply sorting
       switch (selectedSort) {
         case 'newest':
-          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime($2);
         case 'oldest':
-          return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+          return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime($2);
         case 'rating-high':
-          return (b.rating || 0) - (a.rating || 0);
+          return (b.rating || 0) - (a.rating || 0),
         case 'ai-match':
-          return (b.aiScore || 0) - (a.aiScore || 0);
+          return (b.aiScore || 0) - (a.aiScore || 0),
         case 'a-z':
-          return a.title.localeCompare(b.title);
+          return a.title.localeCompare($2);
         case 'z-a':
-          return b.title.localeCompare(a.title);
-        default:
-          return 0;
+          return b.title.localeCompare($2);
+        default: return 0
       }
-    });
+    }),
 
   return (
     <>
@@ -194,8 +180,8 @@ export function CategoryListingPage({
               <Button 
                 variant="outline" 
                 onClick={() => {
-                  setSearchQuery("");
-                  setSelectedFilter(filterOptions[0].value);
+                  setSearchQuery($2);
+                  setSelectedFilter(filterOptions[0].value)
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
@@ -207,5 +193,5 @@ export function CategoryListingPage({
       </div>
       <Footer />
     </>
-  );
+  )
 }

@@ -1,48 +1,45 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
-
 interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string | string[];
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product';
-  publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
-  tags?: string[];
-  structuredData?: any;
-  noindex?: boolean;
-  nofollow?: boolean;
+  title?: string,
+  description?: string,
+  keywords?: string | string[],
+  image?: string,
+  url?: string,
+  type?: 'website' | 'article' | 'product',
+  publishedTime?: string,
+  modifiedTime?: string,
+  author?: string,
+  section?: string,
+  tags?: string[],
+  structuredData?: any,
+  noindex?: boolean,
+  nofollow?: boolean
 }
 
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions',
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.',
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics',
-  image = '/images/zion-tech-group-og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
+  image = $2;
+  url = $2;
+  type = $2;
   publishedTime,
   modifiedTime,
-  author = 'Zion Tech Group',
+  author = $2;
   section,
-  tags = [],
+  tags = $2;
   structuredData,
-  noindex = false,
-  nofollow = false}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
-  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
-
+  noindex = $2;
+  nofollow = $2;
+  const fullUrl = $2;
+  const fullImage = $2;
   return (
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords} />
+      <meta name="keywords" content={Array.isArray(keywords) ? keywords.join() : keywords} />
       <meta name="author" content={author} />
       <meta name="robots" content={noindex ? 'noindex' : 'index'} />
       {nofollow && <meta name="robots" content="nofollow" />}
@@ -83,19 +80,7 @@ const SEO: React.FC<SEOProps> = ({
       )}
       
       {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-      <meta name="theme-color" content="#000000" />
-      <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit = $2;
             "@type": "Organization",
             "name": "Zion Tech Group",
             "url": "https://ziontechgroup.com",
@@ -149,36 +134,5 @@ const SEO: React.FC<SEOProps> = ({
       />
       
       {/* Canonical URL */}
-      <link rel="canonical" href={fullUrl} />
-      
-      {/* Favicon and App Icons */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      
-      {/* Additional Meta Tags for SEO */}
-      <meta name="google-site-verification" content="your-verification-code" />
-      <meta name="msvalidate.01" content="your-bing-verification-code" />
-      <meta name="yandex-verification" content="your-yandex-verification-code" />
-      
-      {/* Custom Meta Tags */}
-      {structuredData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData)
-          }}
-        />
-      )}
-    </Head>
-  );
-};
-
-export default SEO;
+      <link rel = $2;
+export default SEO,

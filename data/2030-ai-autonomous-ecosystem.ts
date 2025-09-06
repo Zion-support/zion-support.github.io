@@ -1,45 +1,42 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface AIAutonomousEcosystem2030 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
   // AI Autonomous Business Management
@@ -51,16 +48,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     period: '/month',
     description: 'Revolutionary AI system that autonomously manages entire business operations including strategy, operations, finance, marketing, and customer relationships without human intervention.',
     features: [
-      'Autonomous strategic planning',
-      'Self-optimizing operations',
-      'Intelligent financial management',
-      'Automated marketing campaigns',
-      'Customer relationship automation',
-      'Predictive business analytics',
-      'Risk assessment and mitigation',
-      'Performance optimization',
-      'Market trend analysis',
-      'Competitive intelligence'
+      'Autonomous strategic planningSelf-optimizing operationsIntelligent financial managementAutomated marketing campaignsCustomer relationship automationPredictive business analyticsRisk assessment and mitigationPerformance optimizationMarket trend analysisCompetitive intelligence'
     ],
     popular: true,
     icon: '🤖',
@@ -92,8 +80,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     launchDate: '2024-11-15',
     customers: 12,
     rating: 4.9,
-    reviews: 6
-  },
+    reviews: 6},
   {
     id: 'ai-creativity-orchestrator',
     name: 'AI Creativity Orchestrator',
@@ -102,16 +89,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     period: '/month',
     description: 'Advanced AI platform that orchestrates multiple creative models to generate innovative ideas, designs, content, and solutions across various domains and industries.',
     features: [
-      'Multi-model creativity fusion',
-      'Cross-domain innovation',
-      'Creative collaboration tools',
-      'Innovation tracking',
-      'Creative analytics',
-      'Idea generation engine',
-      'Design automation',
-      'Content creation fusion',
-      'Creative workflow management',
-      'Innovation metrics'
+      'Multi-model creativity fusionCross-domain innovationCreative collaboration toolsInnovation trackingCreative analyticsIdea generation engineDesign automationContent creation fusionCreative workflow managementInnovation metrics'
     ],
     popular: true,
     icon: '🎨',
@@ -143,8 +121,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     launchDate: '2024-10-01',
     customers: 78,
     rating: 4.8,
-    reviews: 45
-  },
+    reviews: 45},
   // AI Health & Wellness
   {
     id: 'ai-predictive-health-analytics',
@@ -154,16 +131,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     period: '/month',
     description: 'Revolutionary AI platform that analyzes health data to predict future health outcomes, enabling preventive care and personalized health recommendations.',
     features: [
-      'Health outcome prediction',
-      'Preventive care recommendations',
-      'Personalized health insights',
-      'Risk assessment',
-      'Health trend analysis',
-      'Early warning systems',
-      'Treatment optimization',
-      'Health data integration',
-      'Predictive modeling',
-      'Health analytics dashboard'
+      'Health outcome predictionPreventive care recommendationsPersonalized health insightsRisk assessmentHealth trend analysisEarly warning systemsTreatment optimizationHealth data integrationPredictive modelingHealth analytics dashboard'
     ],
     popular: true,
     icon: '🏥',
@@ -195,8 +163,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     launchDate: '2024-09-15',
     customers: 34,
     rating: 4.9,
-    reviews: 18
-  },
+    reviews: 18},
   {
     id: 'ai-mental-health-companion',
     name: 'AI Mental Health Companion',
@@ -205,16 +172,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     period: '/month',
     description: 'Advanced AI mental health companion providing 24/7 support, therapy sessions, mood tracking, and personalized mental health recommendations.',
     features: [
-      '24/7 mental health support',
-      'AI-powered therapy sessions',
-      'Mood tracking and analysis',
-      'Personalized recommendations',
-      'Crisis intervention',
-      'Progress monitoring',
-      'Mental health education',
-      'Support group matching',
-      'Professional referral system',
-      'Privacy and security'
+      '24/7 mental health supportAI-powered therapy sessionsMood tracking and analysisPersonalized recommendationsCrisis interventionProgress monitoringMental health educationSupport group matchingProfessional referral systemPrivacy and security'
     ],
     popular: true,
     icon: '🧠',
@@ -246,8 +204,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     launchDate: '2024-08-01',
     customers: 234,
     rating: 4.7,
-    reviews: 156
-  },
+    reviews: 156},
   // AI Education & Learning
   {
     id: 'ai-personalized-learning-orchestrator',
@@ -257,16 +214,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     period: '/month',
     description: 'Revolutionary AI platform that creates personalized learning experiences, adapts to individual learning styles, and optimizes educational outcomes.',
     features: [
-      'Personalized learning paths',
-      'Adaptive content delivery',
-      'Learning style optimization',
-      'Progress tracking',
-      'Performance analytics',
-      'Content recommendation',
-      'Assessment automation',
-      'Learning analytics',
-      'Student engagement tools',
-      'Teacher support tools'
+      'Personalized learning pathsAdaptive content deliveryLearning style optimizationProgress trackingPerformance analyticsContent recommendationAssessment automationLearning analyticsStudent engagement toolsTeacher support tools'
     ],
     popular: true,
     icon: '📚',
@@ -298,8 +246,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     launchDate: '2024-07-15',
     customers: 89,
     rating: 4.8,
-    reviews: 52
-  },
+    reviews: 52},
   // AI Financial Services
   {
     id: 'ai-autonomous-trading-system',
@@ -309,16 +256,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     period: '/month',
     description: 'Advanced AI trading system that autonomously manages portfolios, executes trades, and optimizes investment strategies based on market analysis and risk management.',
     features: [
-      'Autonomous portfolio management',
-      'AI-powered trading strategies',
-      'Risk management automation',
-      'Market analysis',
-      'Portfolio optimization',
-      'Performance tracking',
-      'Compliance automation',
-      'Real-time monitoring',
-      'Trading analytics',
-      'Strategy backtesting'
+      'Autonomous portfolio managementAI-powered trading strategiesRisk management automationMarket analysisPortfolio optimizationPerformance trackingCompliance automationReal-time monitoringTrading analyticsStrategy backtesting'
     ],
     popular: true,
     icon: '📈',
@@ -350,6 +288,5 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     launchDate: '2024-06-15',
     customers: 23,
     rating: 4.9,
-    reviews: 12
-  }
-];
+    reviews: 12}
+],

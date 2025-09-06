@@ -2,37 +2,36 @@
 import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
 import { 
-  Table, 
+  Table,
   TableBody, 
   TableCell, 
   TableHead, 
   TableHeader, 
   TableRow 
-} from "@/components/ui/table";
+} from "@/components/ui/table",
 import { Button } from "@/components/ui/button";
 import { 
-  DropdownMenu, 
+  DropdownMenu,
   DropdownMenuContent, 
   DropdownMenuItem, 
   DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { formatDate } from "@/utils/dateUtils";
-
 interface QuotesTableProps {
-  quotes: QuoteRequest[];
-  isArchived?: boolean;
-  isLoading: boolean;
-  updateStatus: (id: string, status: QuoteStatus) => void;
-  toggleArchive: (id: string, isArchived: boolean) => void;
-  deleteQuote: (id: string) => void;
-  onViewDetails: (quote: QuoteRequest) => void;
+  quotes: QuoteRequest[],
+  isArchived?: boolean,
+  isLoading: boolean,
+  updateStatus: (id: string, status: QuoteStatus) => void,
+  toggleArchive: (id: string, isArchived: boolean) => void,
+  deleteQuote: (id: string) => void,
+  onViewDetails: (quote: QuoteRequest) => void
 }
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({
   quotes,
-  isArchived = false,
+  isArchived = $2;
   isLoading,
   updateStatus,
   toggleArchive,
@@ -127,7 +126,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                           className="text-red-500"
                           onClick={() => {
                             if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
-                              deleteQuote(quote.id);
+                              deleteQuote(quote.id)
                             }
                           }}
                         >
@@ -160,30 +159,4 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                             Mark as Closed
                           </DropdownMenuItem>
                           <DropdownMenuItem onClick={() => toggleArchive(quote.id, true)}>
-                            <Archive className="h-4 w-4 mr-2" />
-                            Archive
-                          </DropdownMenuItem>
-                          <DropdownMenuItem 
-                            onClick={() => {
-                              if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
-                                deleteQuote(quote.id);
-                              }
-                            }}
-                            className="text-red-500"
-                          >
-                            <Trash2 className="h-4 w-4 mr-2" />
-                            Delete
-                          </DropdownMenuItem>
-                        </DropdownMenuContent>
-                      </DropdownMenu>
-                    )}
-                  </div>
-                </TableCell>
-              </TableRow>
-            ))
-          )}
-        </TableBody>
-      </Table>
-    </div>
-  );
-};
+                            <Archive className = $2;

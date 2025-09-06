@@ -11,10 +11,7 @@ import { NextSeo } from '@/components/NextSeo';
 import { Header } from "@/components/Header";
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
-const AUTO_SERVICE_TITLES = [
-  "AI-Powered Customer Support",
+const AUTO_SERVICE_TITLES = $2;
   "Cloud Infrastructure Management",
   "Predictive Analytics Consulting",
   "Cybersecurity Automation Suite",
@@ -22,14 +19,13 @@ const AUTO_SERVICE_TITLES = [
   "Machine Learning Model Tuning",
   "IoT Device Integration Service",
   "Blockchain Data Solutions"
-];
+],
 
 function generateInnovationListing(index: number): ProductListing {
-  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service';
-  const price = Math.floor(Math.random() * 9500) + 500; // $500 - $10,000
-  const rating = Math.floor(Math.random() * 2) + 4; // 4-5 stars
-  const reviewCount = Math.floor(Math.random() * 50) + 10;
-
+  const title = $2;
+  const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
+  const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
+  const reviewCount = $2;
   return {
     id: `innovation-auto-${index}`,
     title,
@@ -43,125 +39,97 @@ function generateInnovationListing(index: number): ProductListing {
       id: "autogen"
     },
     images: ["https://source.unsplash.com/random/800x500?technology"],
-    createdAt: new Date().toISOString(),
+    createdAt: new Date().toISOString($2);
     rating,
     reviewCount,
     location: "Global",
     availability: "Immediate",
     aiScore: Math.floor(Math.random() * 20) + 80
-  };
+  }
 }
 
 interface CategoryDetailProps {
-  slug?: string;
+  slug?: string
 }
 
-export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps = {}) {
-  const router = useRouter();
+export default function CategoryDetail({ slug: slugProp}: CategoryDetailProps = {}) {
+  const router = useRouter($2);
   // Get slug from Next.js router query params
-  const params = router.query as { slug?: string };
-  const slug = slugProp ?? params.slug;
-
+  const params = $2;
+  const slug = $2;
   // Redirect to categories list if slug is missing
   if (!slug) {
-    router.push('/categories');
-    return null;
+    router.push($2);
+    return null
   }
-  const [isLoading, setIsLoading] = useState(true);
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+  const [isLoading, setIsLoading] = useState($2);
+  const [listings, setListings] = useState($2);
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: "",
     description: "",
-    icon: <Bot className="w-6 h-6" />
-  });
-  const innovationCounterRef = useRef(0);
-
+    icon: <Bot className = $2;
+  const innovationCounterRef = useRef($2);
   // Map of category slugs to their display data
-  const categoryData = {
-    'services': {
-      title: "Services",
+  const categoryData = $2;
       description: "On-demand IT support, consulting, development, and more",
-      icon: <Briefcase className="w-6 h-6" />
-    },
+      icon: <Briefcase className = $2;
     'talents': {
       title: "Talents",
       description: "Connect with AI experts, developers, and tech specialists",
-      icon: <Brain className="w-6 h-6" />
-    },
+      icon: <Brain className = $2;
     'equipment': {
       title: "Equipment",
       description: "Rent or buy specialized hardware, servers, and devices",
-      icon: <Code className="w-6 h-6" />
-    },
+      icon: <Code className = $2;
     'innovation': {
       title: "Innovation",
       description: "Discover cutting-edge solutions and tech breakthroughs",
-      icon: <Bot className="w-6 h-6" />
-    },
+      icon: <Bot className = $2;
     'ai-models-apis': {
       title: "AI Models & APIs",
       description: "Access cutting-edge AI models with easy integration",
-      icon: <Brain className="w-6 h-6" />
-    },
+      icon: <Brain className = $2;
     'content-creation': {
       title: "Content Creation",
       description: "Generate high-quality content for your projects",
-      icon: <PenLine className="w-6 h-6" />
-    },
+      icon: <PenLine className = $2;
     'data-analysis': {
       title: "Data Analysis",
       description: "Extract insights from complex datasets",
-      icon: <BarChart className="w-6 h-6" />
-    },
+      icon: <BarChart className = $2;
     'computer-vision': {
       title: "Computer Vision",
       description: "Image and video processing solutions",
-      icon: <Eye className="w-6 h-6" />
-    },
+      icon: <Eye className = $2;
     'virtual-assistants': {
       title: "Virtual Assistants",
       description: "Intelligent automation for your workflow",
-      icon: <Bot className="w-6 h-6" />
-    },
+      icon: <Bot className = $2;
     'voice-speech': {
       title: "Voice & Speech",
       description: "Speech recognition and synthesis tools",
-      icon: <Mic className="w-6 h-6" />
-    },
+      icon: <Mic className = $2;
     'developer-tools': {
       title: "Developer Tools",
       description: "AI-powered coding assistance and automation",
-      icon: <Code className="w-6 h-6" />
-    },
+      icon: <Code className = $2;
     'business-solutions': {
       title: "Business Solutions",
       description: "Enterprise AI integrations and services",
-      icon: <Briefcase className="w-6 h-6" />
-    }
-  };
-
+      icon: <Briefcase className = $2;
   useEffect(() => {
     async function load() {
-      setIsLoading(true);
+      setIsLoading($2);
       try {
         // Find the category data based on slug
-        const currentCategory = categoryData[slug as keyof typeof categoryData] || {
-          title: slug
-            ?.split('-')
-            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ') || 'Category',
+        const currentCategory = $2;
           description: 'Explore our collection in this category',
-          icon: <Bot className="w-6 h-6" />};
-
-        setCategory(currentCategory);
-        innovationCounterRef.current = 0;
-
+          icon: <Bot className = $2;
+        setCategory($2);
+        innovationCounterRef.current = $2;
         // Filter listings by category
-        const categoryTitle = currentCategory.title;
-        const filteredListings = MARKETPLACE_LISTINGS.filter(
-          (listing) => listing.category.toLowerCase() === categoryTitle.toLowerCase()
-        );
-
+        const categoryTitle = $2;
+        const filteredListings = $2;
         // If we don't have real listings for this category, generate placeholder listings
         const listingsToShow =
           filteredListings.length > 0
@@ -175,70 +143,59 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
                   category: currentCategory.title,
                   price: Math.floor(Math.random() * 500) + 50,
                   currency: '$',
-                  tags: [`${slug}`, 'ai', 'tool'],
+                  tags: [`${slug}`, 'aitool'],
                   author: {
                     name: `Provider ${index + 1}`,
                     id: `author-${index + 1}`,
                     avatarUrl: undefined},
                   images: [`/placeholder.svg`],
-                  createdAt: new Date().toISOString(),
+                  createdAt: new Date().toISOString($2);
                   rating: Math.floor(Math.random() * 5) + 1,
-                  reviewCount: Math.floor(Math.random() * 100)}));
+                  reviewCount: Math.floor(Math.random() * 100)})),
 
-        setListings(listingsToShow);
+        setListings(listingsToShow)
       } catch (err) {
-        logErrorToProduction('Category load error:', { data: err });
-        toast({ title: 'Error', description: 'Failed to load category' });
+        logErrorToProduction($2);
+        toast({ title: 'Error', description: 'Failed to load category' })
       } finally {
-        setIsLoading(false);
+        setIsLoading(false)
       }
     }
 
-    load();
-  }, [slug]);
+    load()
+  }, [slug]),
 
   useEffect(() => {
-    if (slug !== 'innovation') return;
+    if (slug !== 'innovation') return,
 
-    const interval = setInterval(() => {
-      innovationCounterRef.current += 1;
+    const interval = $2;
       setListings((prev) => [
-        generateInnovationListing(innovationCounterRef.current),
-        ...prev]);
-    }, 120000); // every 2 minutes
+        generateInnovationListing($2);
+        ...prev])
+    }, 120000), // every 2 minutes
 
-    return () => clearInterval(interval);
-  }, [slug]);
+    return () => clearInterval(interval)
+  }, [slug]),
 
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
-    const listing = listings.find(item => item.id === listingId);
-    
+    const listing = listings.find($2);
     if (listing) {
-      toast({
-        title: "Quote Requested",
-        description: `Your quote request for ${listing.title} has been sent.`
-      });
-      
+      toast($2);
       // Navigate to the quote request page with the listing information
-      const queryParams = new URLSearchParams({
-        serviceType: listing.category,
+      const queryParams = $2;
         itemId: listing.id,
         itemTitle: listing.title,
         itemCategory: listing.category,
         ...(listing.images?.[0] && { itemImage: listing.images[0] })
-      });
+      }),
       
-      router.push(`/request-quote?${queryParams.toString()}`);
+      router.push(`/request-quote?${queryParams.toString()}`)
     }
-  };
+  },
 
-  const seoTitle = category.title
-    ? `${category.title} | Zion Marketplace`
-    : 'Category | Zion Marketplace';
-  const seoDescription =
-    category.description || 'Explore listings in this category.';
-
+  const seoTitle = $2;
+  const seoDescription = $2;
   return (
     <>
       <NextSeo title={seoTitle} description={seoDescription} />
@@ -284,5 +241,5 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
         </div>
       </Suspense>
     </>
-  );
+  )
 }

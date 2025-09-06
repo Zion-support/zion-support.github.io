@@ -4,7 +4,6 @@ import Revolutionary2026UltimateNavigation from '../components/layout/Revolution
 import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero';
 import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase';
 import { Phone, Mail } from 'lucide-react';
-
 export default function Revolutionary2026ServicesPage() {
   return (
     <>
@@ -29,17 +28,7 @@ export default function Revolutionary2026ServicesPage() {
         
         {/* Additional Meta */}
         <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="contact" content="kleber@ziontechgroup.com" />
-        <meta name="phone" content="+1 302 464 0950" />
-        <meta name="address" content="364 E Main St STE 1008 Middletown DE 19709" />
-        
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
+        <meta name = $2;
               "@type": "Organization",
               "name": "Zion Tech Group",
               "url": "https://ziontechgroup.com",
@@ -96,10 +85,7 @@ export default function Revolutionary2026ServicesPage() {
             </div>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {[
-                {
-                  icon: '🧠',
+            <div className = $2;
                   title: 'AI Consciousness',
                   description: 'First-to-market AI consciousness orchestration and autonomous intelligence systems.',
                   color: 'from-purple-500 to-pink-500'
@@ -150,7 +136,7 @@ export default function Revolutionary2026ServicesPage() {
             {/* Call to Action */}
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
                   Ready to Experience the Future?
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -179,5 +165,5 @@ export default function Revolutionary2026ServicesPage() {
         </section>
       </main>
     </>
-  );
+  )
 }

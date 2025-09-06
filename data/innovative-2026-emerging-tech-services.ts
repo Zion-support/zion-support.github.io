@@ -1,45 +1,42 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Innovative2026EmergingTechService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const innovative2026EmergingTechServices: Innovative2026EmergingTechService[] = [
   // Neuromorphic Computing Platform
@@ -51,16 +48,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     period: '/month',
     description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing, cognitive computing, and adaptive learning systems.',
     features: [
-      'Brain-inspired neural architecture',
-      'Spiking neural networks (SNNs)',
-      'Ultra-low power consumption',
-      'Real-time learning and adaptation',
-      'Cognitive computing capabilities',
-      'Advanced pattern recognition',
-      'Neuromorphic hardware integration',
-      'Custom neural model development',
-      'Performance optimization tools',
-      'Research collaboration platform'
+      'Brain-inspired neural architectureSpiking neural networks (SNNs)Ultra-low power consumptionReal-time learning and adaptationCognitive computing capabilitiesAdvanced pattern recognitionNeuromorphic hardware integrationCustom neural model developmentPerformance optimization toolsResearch collaboration platform'
     ],
     popular: true,
     icon: '🧠',
@@ -73,11 +61,11 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     setupTime: '2-3 weeks',
     category: 'Emerging Technology & Neuromorphic Computing',
     realService: true,
-    technology: ['Spiking Neural Networks', 'Neuromorphic Algorithms', 'Python', 'PyTorch', 'TensorFlow', 'CUDA'],
-    integrations: ['Cloud platforms', 'Edge devices', 'IoT systems', 'Research tools', 'AI frameworks', 'Hardware platforms'],
-    useCases: ['Cognitive computing', 'Pattern recognition', 'Adaptive learning', 'Real-time processing', 'Edge AI', 'Research applications'],
+    technology: ['Spiking Neural NetworksNeuromorphic AlgorithmsPythonPyTorchTensorFlowCUDA'],
+    integrations: ['Cloud platformsEdge devicesIoT systemsResearch toolsAI frameworksHardware platforms'],
+    useCases: ['Cognitive computingPattern recognitionAdaptive learningReal-time processingEdge AIResearch applications'],
     roi: 'Average customer sees 400% ROI within 8 months through improved AI efficiency and breakthrough capabilities.',
-    competitors: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'SpiNNaker', 'BrainScaleS'],
+    competitors: ['Intel LoihiIBM TrueNorthBrainChipSpiNNakerBrainScaleS'],
     marketSize: '$12.8B market',
     growthRate: '380% annual growth',
     variant: 'quantum-futuristic',
@@ -92,8 +80,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     launchDate: '2026-01-10',
     customers: 80,
     rating: 4.9,
-    reviews: 40
-  },
+    reviews: 40},
 
   // DNA Computing Platform
   {
@@ -104,16 +91,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     period: '/month',
     description: 'Groundbreaking DNA computing platform that leverages molecular biology for ultra-dense data storage, complex problem solving, and next-generation computational capabilities.',
     features: [
-      'DNA-based data storage',
-      'Molecular problem solving',
-      'Ultra-dense information encoding',
-      'Biomolecular algorithms',
-      'DNA synthesis and sequencing',
-      'Molecular computing workflows',
-      'Advanced bioinformatics tools',
-      'Custom DNA program development',
-      'Laboratory integration',
-      'Professional bioengineering support'
+      'DNA-based data storageMolecular problem solvingUltra-dense information encodingBiomolecular algorithmsDNA synthesis and sequencingMolecular computing workflowsAdvanced bioinformatics toolsCustom DNA program developmentLaboratory integrationProfessional bioengineering support'
     ],
     popular: false,
     icon: '🧬',
@@ -126,11 +104,11 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     setupTime: '4-6 weeks',
     category: 'Emerging Technology & DNA Computing',
     realService: true,
-    technology: ['DNA Synthesis', 'DNA Sequencing', 'Bioinformatics', 'Molecular Biology', 'Python', 'R'],
-    integrations: ['Laboratory equipment', 'Bioinformatics platforms', 'Cloud storage', 'Research databases', 'Analysis tools', 'Sequencing platforms'],
-    useCases: ['Data storage', 'Complex problem solving', 'Drug discovery', 'Genetic research', 'Information encoding', 'Molecular computing'],
+    technology: ['DNA SynthesisDNA SequencingBioinformaticsMolecular BiologyPythonR'],
+    integrations: ['Laboratory equipmentBioinformatics platformsCloud storageResearch databasesAnalysis toolsSequencing platforms'],
+    useCases: ['Data storageComplex problem solvingDrug discoveryGenetic researchInformation encodingMolecular computing'],
     roi: 'Average customer sees 600% ROI within 12 months through breakthrough discoveries and new capabilities.',
-    competitors: ['Microsoft DNA Storage', 'Catalog DNA', 'Twist Bioscience', 'Illumina', 'Pacific Biosciences'],
+    competitors: ['Microsoft DNA StorageCatalog DNATwist BioscienceIlluminaPacific Biosciences'],
     marketSize: '$8.9B market',
     growthRate: '520% annual growth',
     variant: 'quantum-futuristic',
@@ -145,8 +123,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     launchDate: '2026-01-20',
     customers: 45,
     rating: 4.9,
-    reviews: 25
-  },
+    reviews: 25},
 
   // Photonic Computing Platform
   {
@@ -157,16 +134,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     period: '/month',
     description: 'Next-generation photonic computing platform that uses light instead of electricity for ultra-fast processing, low power consumption, and high-bandwidth data transfer.',
     features: [
-      'Photonic processors',
-      'Optical interconnects',
-      'Light-based computing',
-      'Ultra-fast data processing',
-      'Low power consumption',
-      'High-bandwidth communication',
-      'Photonic neural networks',
-      'Optical memory systems',
-      'Custom photonic design',
-      'Professional engineering support'
+      'Photonic processorsOptical interconnectsLight-based computingUltra-fast data processingLow power consumptionHigh-bandwidth communicationPhotonic neural networksOptical memory systemsCustom photonic designProfessional engineering support'
     ],
     popular: true,
     icon: '💡',
@@ -179,11 +147,11 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     setupTime: '3-4 weeks',
     category: 'Emerging Technology & Photonic Computing',
     realService: true,
-    technology: ['Photonic Integrated Circuits', 'Optical Computing', 'Silicon Photonics', 'Python', 'MATLAB', 'Optical Design Tools'],
-    integrations: ['Data centers', 'Telecommunications networks', 'Research equipment', 'Cloud platforms', 'AI frameworks', 'High-performance computing'],
-    useCases: ['High-speed computing', 'Data center optimization', 'Telecommunications', 'AI acceleration', 'Scientific computing', 'Real-time processing'],
+    technology: ['Photonic Integrated CircuitsOptical ComputingSilicon PhotonicsPythonMATLABOptical Design Tools'],
+    integrations: ['Data centersTelecommunications networksResearch equipmentCloud platformsAI frameworksHigh-performance computing'],
+    useCases: ['High-speed computingData center optimizationTelecommunicationsAI accelerationScientific computingReal-time processing'],
     roi: 'Average customer sees 450% ROI within 8 months through improved performance and reduced power consumption.',
-    competitors: ['Lightmatter', 'PsiQuantum', 'Xanadu', 'Intel Silicon Photonics', 'IBM Photonics'],
+    competitors: ['LightmatterPsiQuantumXanaduIntel Silicon PhotonicsIBM Photonics'],
     marketSize: '$15.6B market',
     growthRate: '420% annual growth',
     variant: 'quantum-futuristic',
@@ -198,8 +166,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     launchDate: '2026-02-01',
     customers: 120,
     rating: 4.8,
-    reviews: 60
-  },
+    reviews: 60},
 
   // Holographic Display Platform
   {
@@ -210,16 +177,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     period: '/month',
     description: 'Revolutionary holographic display platform that creates immersive 3D visualizations, interactive holograms, and next-generation display experiences for entertainment, education, and business.',
     features: [
-      '3D holographic projection',
-      'Interactive holographic displays',
-      'Real-time 3D rendering',
-      'Gesture and touch interaction',
-      'Multi-user collaboration',
-      'Holographic content creation',
-      'Augmented reality integration',
-      'Mobile holographic apps',
-      'Custom content development',
-      'Professional installation services'
+      '3D holographic projectionInteractive holographic displaysReal-time 3D renderingGesture and touch interactionMulti-user collaborationHolographic content creationAugmented reality integrationMobile holographic appsCustom content developmentProfessional installation services'
     ],
     popular: false,
     icon: '🌟',
@@ -232,11 +190,11 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     setupTime: '1-2 weeks',
     category: 'Emerging Technology & Holographic Displays',
     realService: true,
-    technology: ['Holographic Projection', '3D Rendering', 'Computer Vision', 'Unity', 'Unreal Engine', 'Python'],
-    integrations: ['Content creation tools', '3D modeling software', 'AR/VR platforms', 'Mobile devices', 'Cloud platforms', 'Social media'],
-    useCases: ['Entertainment displays', 'Educational content', 'Product visualization', 'Virtual events', 'Interactive experiences', 'Marketing campaigns'],
+    technology: ['Holographic Projection3D RenderingComputer VisionUnityUnreal EnginePython'],
+    integrations: ['Content creation tools3D modeling softwareAR/VR platformsMobile devicesCloud platformsSocial media'],
+    useCases: ['Entertainment displaysEducational contentProduct visualizationVirtual eventsInteractive experiencesMarketing campaigns'],
     roi: 'Average customer sees 300% ROI within 4 months through improved engagement and new business opportunities.',
-    competitors: ['Looking Glass', 'Light Field Lab', 'RealView', 'Hologram USA', 'HoloLens'],
+    competitors: ['Looking GlassLight Field LabRealViewHologram USAHoloLens'],
     marketSize: '$23.4B market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -251,8 +209,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     launchDate: '2026-02-15',
     customers: 200,
     rating: 4.7,
-    reviews: 100
-  },
+    reviews: 100},
 
   // Biometric Authentication Platform
   {
@@ -263,16 +220,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     period: '/month',
     description: 'Next-generation biometric authentication platform that uses AI-powered facial recognition, fingerprint scanning, voice recognition, and behavioral biometrics for secure, convenient authentication.',
     features: [
-      'Multi-modal biometric authentication',
-      'AI-powered recognition',
-      'Facial recognition technology',
-      'Fingerprint and palm scanning',
-      'Voice and speech recognition',
-      'Behavioral biometrics',
-      'Liveness detection',
-      'Multi-factor authentication',
-      'API and SDK access',
-      'Enterprise security features'
+      'Multi-modal biometric authenticationAI-powered recognitionFacial recognition technologyFingerprint and palm scanningVoice and speech recognitionBehavioral biometricsLiveness detectionMulti-factor authenticationAPI and SDK accessEnterprise security features'
     ],
     popular: true,
     icon: '🔐',
@@ -285,11 +233,11 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     setupTime: '1-2 weeks',
     category: 'Emerging Technology & Biometric Security',
     realService: true,
-    technology: ['Computer Vision', 'Deep Learning', 'Biometric Algorithms', 'Python', 'TensorFlow', 'OpenCV'],
-    integrations: ['Mobile apps', 'Web applications', 'IoT devices', 'Security systems', 'Cloud platforms', 'Enterprise systems'],
-    useCases: ['User authentication', 'Access control', 'Identity verification', 'Payment security', 'Employee management', 'Customer verification'],
+    technology: ['Computer VisionDeep LearningBiometric AlgorithmsPythonTensorFlowOpenCV'],
+    integrations: ['Mobile appsWeb applicationsIoT devicesSecurity systemsCloud platformsEnterprise systems'],
+    useCases: ['User authenticationAccess controlIdentity verificationPayment securityEmployee managementCustomer verification'],
     roi: 'Average customer sees 350% ROI within 4 months through improved security and user experience.',
-    competitors: ['Face ID', 'Touch ID', 'Voice ID', 'Clear', 'ID.me'],
+    competitors: ['Face IDTouch IDVoice IDClearID.me'],
     marketSize: '$34.8B market',
     growthRate: '320% annual growth',
     variant: 'ai-futuristic',
@@ -304,8 +252,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     launchDate: '2026-03-01',
     customers: 350,
     rating: 4.8,
-    reviews: 175
-  },
+    reviews: 175},
 
   // Quantum Internet Platform
   {
@@ -316,16 +263,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     period: '/month',
     description: 'Revolutionary quantum internet platform that provides ultra-secure communication, quantum key distribution, and next-generation networking capabilities for government, financial, and critical infrastructure.',
     features: [
-      'Quantum key distribution (QKD)',
-      'Quantum secure communication',
-      'Quantum network infrastructure',
-      'Entanglement-based protocols',
-      'Quantum repeaters and nodes',
-      'Advanced cryptography',
-      'Real-time quantum monitoring',
-      'Professional installation services',
-      '24/7 network operations',
-      'Government compliance features'
+      'Quantum key distribution (QKD)Quantum secure communicationQuantum network infrastructureEntanglement-based protocolsQuantum repeaters and nodesAdvanced cryptographyReal-time quantum monitoringProfessional installation services24/7 network operationsGovernment compliance features'
     ],
     popular: false,
     icon: '🌐',
@@ -338,11 +276,11 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     setupTime: '6-8 weeks',
     category: 'Emerging Technology & Quantum Internet',
     realService: true,
-    technology: ['Quantum Key Distribution', 'Quantum Networks', 'Quantum Cryptography', 'Quantum Repeaters', 'Python', 'Quantum Algorithms'],
-    integrations: ['Government networks', 'Financial systems', 'Defense networks', 'Healthcare systems', 'Critical infrastructure', 'Cloud platforms'],
-    useCases: ['Secure communications', 'Government networks', 'Financial transactions', 'Defense communications', 'Healthcare data', 'Critical infrastructure'],
+    technology: ['Quantum Key DistributionQuantum NetworksQuantum CryptographyQuantum RepeatersPythonQuantum Algorithms'],
+    integrations: ['Government networksFinancial systemsDefense networksHealthcare systemsCritical infrastructureCloud platforms'],
+    useCases: ['Secure communicationsGovernment networksFinancial transactionsDefense communicationsHealthcare dataCritical infrastructure'],
     roi: 'Average customer sees 500% ROI within 12 months through improved security and new capabilities.',
-    competitors: ['Quantum Xchange', 'ID Quantique', 'Toshiba Quantum', 'NTT Quantum', 'Chinese Quantum Network'],
+    competitors: ['Quantum XchangeID QuantiqueToshiba QuantumNTT QuantumChinese Quantum Network'],
     marketSize: '$18.7B market',
     growthRate: '480% annual growth',
     variant: 'quantum-futuristic',
@@ -357,23 +295,14 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     launchDate: '2026-01-25',
     customers: 60,
     rating: 4.9,
-    reviews: 30
-  }
-];
+    reviews: 30}
+],
 
-export const getPopularEmergingTechServices = () => {
-  return innovative2026EmergingTechServices.filter(service => service.popular);
-};
-
-export const getEmergingTechServicesByCategory = (category: string) => {
-  return innovative2026EmergingTechServices.filter(service => 
-    service.category.toLowerCase().includes(category.toLowerCase())
-  );
-};
-
+export const getPopularEmergingTechServices = $2;
+export const getEmergingTechServicesByCategory = $2;
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovative2026EmergingTechServices.filter(service => {
-    const price = parseInt(service.price.replace('$', '').replace(',', ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};
+    const price = parseInt(service.price.replace('$', '').replace(, '')),
+    return price >= minPrice && price <= maxPrice
+  })
+},

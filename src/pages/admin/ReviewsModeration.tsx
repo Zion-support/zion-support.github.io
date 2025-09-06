@@ -8,38 +8,30 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Star, AlertTriangle } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { logErrorToProduction } from '@/utils/productionLogger';
-
 function ReviewsModerationContent() {
-  const [activeTab, setActiveTab] = useState("pending");
-  const [reviews, setReviews] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  
+  const [activeTab, setActiveTab] = useState($2);
+  const [reviews, setReviews] = useState($2);
+  const [isLoading, setIsLoading] = useState($2);
   const fetchReviews = async () => {
-    setIsLoading(true);
+    setIsLoading($2);
     try {
       // In a real application, you would fetch reviews from an API
       // For now, let's simulate a delay and return empty data
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setReviews([]);
-      setIsLoading(false);
+      await new Promise(resolve => setTimeout(resolve, 1000)),
+      setReviews($2);
+      setIsLoading(false)
     } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' });
-      toast({
-        title: "Error",
-        description: "Failed to load reviews. Please try again later.",
-        variant: "destructive"});
-      setIsLoading(false);
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' }),
+      toast($2);
+      setIsLoading(false)
     }
-  };
+  },
 
   useEffect(() => {
-    fetchReviews();
-  }, [activeTab]);
+    fetchReviews()
+  }, [activeTab]),
 
-  const handleRefresh = () => {
-    fetchReviews();
-  };
-  
+  const handleRefresh = $2;
   return (
     <>
       <SEO
@@ -93,7 +85,7 @@ function ReviewsModerationContent() {
         </Card>
       </main>
     </>
-  );
+  )
 }
 
 export default function ReviewsModeration() {
@@ -101,5 +93,5 @@ export default function ReviewsModeration() {
     <ProtectedRoute>
       <ReviewsModerationContent />
     </ProtectedRoute>
-  );
+  )
 }

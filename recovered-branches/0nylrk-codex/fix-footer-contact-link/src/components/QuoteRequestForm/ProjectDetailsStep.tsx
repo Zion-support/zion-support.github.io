@@ -3,10 +3,9 @@ import { QuoteFormData } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-
 interface ProjectDetailsStepProps {
-  formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void;
+  formData: QuoteFormData,
+  updateFormData: (data: Partial<QuoteFormData>) => void
 }
 
 export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsStepProps) {
@@ -93,11 +92,11 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               onChange={(e) => updateFormData({ 
                 contactInfo: { ...formData.contactInfo, phone: e.target.value } 
               })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+              className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white"
             />
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

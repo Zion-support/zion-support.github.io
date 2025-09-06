@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
-  Code, 
+  Code,
   GitBranch, 
   Database, 
   Cloud, 
@@ -15,20 +15,14 @@ import {
   TrendingUp,
   Cpu,
   Globe
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function DeveloperToolsPage() {
-  const developerTools = [
-    {
-      icon: <Code className="w-8 h-8 text-white" />,
+  const developerTools = $2;
       title: 'GitHub Copilot',
       description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',
       features: [
-        'Intelligent code completion',
-        'Multi-language support',
-        'IDE integration',
-        'Code explanation',
-        'Security vulnerability detection'
+        'Intelligent code completionMulti-language supportIDE integrationCode explanationSecurity vulnerability detection'
       ],
       pricing: '$10/month',
       marketPrice: '$10-20/month',
@@ -40,15 +34,11 @@ export default function DeveloperToolsPage() {
       category: 'Code Generation'
     },
     {
-      icon: <GitBranch className="w-8 h-8 text-white" />,
+      icon: <GitBranch className = $2;
       title: 'GitHub Pro',
       description: 'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.',
       features: [
-        'Unlimited private repositories',
-        'Advanced code review tools',
-        'Priority support',
-        'Advanced insights',
-        'Team management features'
+        'Unlimited private repositoriesAdvanced code review toolsPriority supportAdvanced insightsTeam management features'
       ],
       pricing: '$4/month',
       marketPrice: '$4/month',
@@ -60,15 +50,11 @@ export default function DeveloperToolsPage() {
       category: 'Version Control'
     },
     {
-      icon: <Database className="w-8 h-8 text-white" />,
+      icon: <Database className = $2;
       title: 'MongoDB Atlas',
       description: 'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.',
       features: [
-        'Fully managed MongoDB',
-        'Auto-scaling & optimization',
-        'Global distribution',
-        'Advanced security',
-        'Real-time analytics'
+        'Fully managed MongoDBAuto-scaling & optimizationGlobal distributionAdvanced securityReal-time analytics'
       ],
       pricing: '$9/month',
       marketPrice: '$9-57/month',
@@ -80,15 +66,11 @@ export default function DeveloperToolsPage() {
       category: 'Database'
     },
     {
-      icon: <Cloud className="w-8 h-8 text-white" />,
+      icon: <Cloud className = $2;
       title: 'Vercel Pro',
       description: 'Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.',
       features: [
-        'Zero-config deployments',
-        'Preview deployments',
-        'Advanced analytics',
-        'Team collaboration',
-        'Custom domains'
+        'Zero-config deploymentsPreview deploymentsAdvanced analyticsTeam collaborationCustom domains'
       ],
       pricing: '$20/month',
       marketPrice: '$20/month',
@@ -100,15 +82,11 @@ export default function DeveloperToolsPage() {
       category: 'Deployment'
     },
     {
-      icon: <Shield className="w-8 h-8 text-white" />,
+      icon: <Shield className = $2;
       title: 'Snyk',
       description: 'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.',
       features: [
-        'Vulnerability scanning',
-        'Dependency monitoring',
-        'Container security',
-        'Infrastructure as Code',
-        'CI/CD integration'
+        'Vulnerability scanningDependency monitoringContainer securityInfrastructure as CodeCI/CD integration'
       ],
       pricing: '$25/month',
       marketPrice: '$25-100/month',
@@ -120,15 +98,11 @@ export default function DeveloperToolsPage() {
       category: 'Security'
     },
     {
-      icon: <Zap className="w-8 h-8 text-white" />,
+      icon: <Zap className = $2;
       title: 'Postman',
       description: 'Complete API development platform for building, testing, and documenting APIs with team collaboration.',
       features: [
-        'API design & testing',
-        'Team collaboration',
-        'API documentation',
-        'Mock servers',
-        'Monitoring & analytics'
+        'API design & testingTeam collaborationAPI documentationMock serversMonitoring & analytics'
       ],
       pricing: '$12/month',
       marketPrice: '$12-99/month',
@@ -139,11 +113,9 @@ export default function DeveloperToolsPage() {
       popular: false,
       category: 'API Development'
     }
-  ];
+  ],
 
-  const devMarketStats = [
-    {
-      title: 'Dev Tools Market',
+  const devMarketStats = $2;
       value: '$8.2B',
       growth: '+24% YoY',
       description: 'Global developer tools market size'
@@ -166,11 +138,9 @@ export default function DeveloperToolsPage() {
       growth: '+18% YoY',
       description: 'Average productivity improvement'
     }
-  ];
+  ],
 
-  const devCategories = [
-    {
-      name: 'Code Generation',
+  const devCategories = $2;
       description: 'AI-powered coding assistants and code completion tools',
       tools: 1,
       avgPrice: '$10/month'
@@ -205,30 +175,28 @@ export default function DeveloperToolsPage() {
       tools: 1,
       avgPrice: '$55/month'
     }
-  ];
+  ],
 
-  const devWorkflow = [
-    {
-      phase: 'Development',
-      tools: ['GitHub Copilot', 'VS Code', 'Git'],
+  const devWorkflow = $2;
+      tools: ['GitHub CopilotVS CodeGit'],
       description: 'Write and manage code with AI assistance'
     },
     {
       phase: 'Testing',
-      tools: ['Jest', 'Cypress', 'Postman'],
+      tools: ['JestCypressPostman'],
       description: 'Test code quality and API functionality'
     },
     {
       phase: 'Security',
-      tools: ['Snyk', 'GitHub Advanced Security'],
+      tools: ['SnykGitHub Advanced Security'],
       description: 'Scan for vulnerabilities and security issues'
     },
     {
       phase: 'Deployment',
-      tools: ['Vercel', 'GitHub Actions', 'Docker'],
+      tools: ['VercelGitHub ActionsDocker'],
       description: 'Deploy and host applications'
     }
-  ];
+  ],
 
   return (
     <>
@@ -469,7 +437,7 @@ export default function DeveloperToolsPage() {
             Start with one tool or build a complete development stack. Each tool is designed to work independently 
             and integrate seamlessly with your existing workflow.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">
             <Button
               href="/ai-tools"
               variant="primary"
@@ -490,5 +458,5 @@ export default function DeveloperToolsPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

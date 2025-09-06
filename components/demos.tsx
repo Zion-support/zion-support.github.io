@@ -7,16 +7,13 @@ import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo';
 import UrlShortenerDemo from '../components/demos/UrlShortenerDemo';
 import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
 import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
-
 export default function DemosPage() {
-  const [activeDemo, setActiveDemo] = useState<string>('email-validator');
+  const [activeDemo, setActiveDemo] = useState<string>('email-validator'),
 
-  const demos = [
-    {
-      id: 'email-validator',
+  const demos = $2;
       title: 'Email Validator Pro',
       description: 'Advanced email validation with domain checking and deliverability scoring',
-      icon: <Mail className="w-6 h-6" />,
+      icon: <Mail className = $2;
       color: 'from-blue-500 to-cyan-600',
       component: <EmailValidatorDemo />
     },
@@ -24,7 +21,7 @@ export default function DemosPage() {
       id: 'password-strength',
       title: 'Password Strength Analyzer',
       description: 'Comprehensive password security analysis with entropy calculation',
-      icon: <Lock className="w-6 h-6" />,
+      icon: <Lock className = $2;
       color: 'from-green-500 to-emerald-600',
       component: <PasswordStrengthDemo />
     },
@@ -32,7 +29,7 @@ export default function DemosPage() {
       id: 'url-shortener',
       title: 'Smart URL Shortener',
       description: 'Professional URL shortening with analytics and custom codes',
-      icon: <Link className="w-6 h-6" />,
+      icon: <Link className = $2;
       color: 'from-purple-500 to-pink-600',
       component: <UrlShortenerDemo />
     },
@@ -40,14 +37,13 @@ export default function DemosPage() {
       id: 'text-analyzer',
       title: 'Text Analysis Suite',
       description: 'Advanced text analysis with readability and sentiment analysis',
-      icon: <FileText className="w-6 h-6" />,
+      icon: <FileText className = $2;
       color: 'from-orange-500 to-red-600',
       component: <TextAnalyzerDemo />
     }
-  ];
+  ],
 
-  const activeDemoData = demos.find(demo => demo.id === activeDemo);
-
+  const activeDemoData = demos.find($2);
   return (
     <>
       <Head>
@@ -66,7 +62,7 @@ export default function DemosPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]" />
         </div>
 
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size: 50px_50px] opacity-20" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-20 animate-fade-in">
@@ -143,7 +139,7 @@ export default function DemosPage() {
 
       {/* Demo Navigation */}
       <section id="demos" className="py-16 bg-gray-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size: 50px_50px] opacity-20" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -210,7 +206,7 @@ export default function DemosPage() {
 
       {/* Features */}
       <section className="py-24 bg-gray-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size: 50px_50px] opacity-20" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
@@ -299,7 +295,7 @@ export default function DemosPage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
             Ready to Integrate?
@@ -308,7 +304,7 @@ export default function DemosPage() {
             After testing our demos, integrate these professional services into your applications 
             with our comprehensive APIs and documentation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">
             <Button
               href="/micro-saas"
               variant="secondary"
@@ -330,5 +326,5 @@ export default function DemosPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

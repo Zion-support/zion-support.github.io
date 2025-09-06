@@ -6,7 +6,6 @@ import { TrustedBySection } from "@/components/TrustedBySection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
-
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
@@ -20,9 +19,9 @@ const SERVICE_LISTINGS: ProductListing[] = [
     author: {
       name: "TechSolutions Inc.",
       id: "tech-solutions",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"},
-    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2023-12-10T14:48:00.000Z",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = $2;
+    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto = $2;
+    createdAt: "2023-12-10T14: 48: 00.000Z",
     aiScore: 95,
     rating: 4.9,
     reviewCount: 124},
@@ -37,8 +36,8 @@ const SERVICE_LISTINGS: ProductListing[] = [
     author: {
       name: "CloudPro Experts",
       id: "cloud-pro"},
-    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2023-11-20T09:30:00.000Z",
+    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto = $2;
+    createdAt: "2023-11-20T09: 30: 00.000Z",
     aiScore: 88,
     rating: 4.7,
     reviewCount: 92},
@@ -53,9 +52,9 @@ const SERVICE_LISTINGS: ProductListing[] = [
     author: {
       name: "DataMind Solutions",
       id: "datamind",
-      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"},
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-05T11:15:00.000Z",
+      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto = $2;
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = $2;
+    createdAt: "2024-01-05T11: 15: 00.000Z",
     aiScore: 92,
     rating: 4.8,
     reviewCount: 78},
@@ -70,8 +69,8 @@ const SERVICE_LISTINGS: ProductListing[] = [
     author: {
       name: "SecureNet Team",
       id: "secure-net"},
-    images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2023-12-28T16:22:00.000Z",
+    images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto = $2;
+    createdAt: "2023-12-28T16: 22: 00.000Z",
     aiScore: 89,
     rating: 4.9,
     reviewCount: 103},
@@ -86,8 +85,8 @@ const SERVICE_LISTINGS: ProductListing[] = [
     author: {
       name: "ModernizeIT Consulting",
       id: "modernize-it"},
-    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2023-11-10T08:45:00.000Z",
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto = $2;
+    createdAt: "2023-11-10T08: 45: 00.000Z",
     aiScore: 86,
     rating: 4.6,
     reviewCount: 67},
@@ -102,12 +101,12 @@ const SERVICE_LISTINGS: ProductListing[] = [
     author: {
       name: "AI Future Consulting",
       id: "ai-future",
-      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"},
-    images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-02-02T10:30:00.000Z",
+      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto = $2;
+    images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto = $2;
+    createdAt: "2024-02-02T10: 30: 00.000Z",
     aiScore: 94,
     rating: 4.8,
-    reviewCount: 85}];
+    reviewCount: 85}],
 
 // Filter options specific to services
 const SERVICE_FILTERS = [
@@ -116,7 +115,7 @@ const SERVICE_FILTERS = [
   { label: 'Security', value: 'security' },
   { label: 'Analytics', value: 'analytics' },
   { label: 'Consulting', value: 'consulting' },
-  { label: 'Strategy', value: 'strategy' }];
+  { label: 'Strategy', value: 'strategy' }],
 
 export default function ServicesPage() {
   return (
@@ -145,9 +144,9 @@ export default function ServicesPage() {
         categorySlug="services"
         listings={SERVICE_LISTINGS}
         categoryFilters={SERVICE_FILTERS}
-        initialPrice={{ min: 3000, max: 10000 }}
+        initialPrice={{ min: 3000, max: 10000}}
       />
       <TrustedBySection />
     </AppLayout>
-  );
+  )
 }

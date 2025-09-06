@@ -1,9 +1,8 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/hf-spaces.json';
-
 export default function HfSpacesPage() {
-  const items: any[] = (data?.items || []).slice(0, 60);
+  const items: any[] = (data?.items || []).slice($2);
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -19,5 +18,5 @@ export default function HfSpacesPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  );
+  )
 }

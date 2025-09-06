@@ -9,70 +9,62 @@ import {
   Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon, 
   Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
   Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon
-} from 'lucide-react';
+} from 'lucide-react',
 import Layout from '../components/layout/Layout';
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const heroStats = [
-  { label: 'AI Services Delivered', value: '200+', icon: <Brain className="w-5 h-5" /> },
-  { label: 'Happy AI Clients', value: '500+', icon: <Users className="w-5 h-5" /> },
-  { label: 'AI Success Rate', value: '99.8%', icon: <Award className="w-5 h-5" /> },
-  { label: 'AI ROI Average', value: '500%', icon: <TrendingUp className="w-5 h-5" /> }
-];
-
-const serviceCategories = [
-  {
-    title: 'AI Development Tools',
+  { label: 'AI Services Delivered', value: '200+', icon: <Brain className = $2;
+  { label: 'Happy AI Clients', value: '500+', icon: <Users className = $2;
+  { label: 'AI Success Rate', value: '99.8%', icon: <Award className = $2;
+  { label: 'AI ROI Average', value: '500%', icon: <TrendingUp className = $2;
+const serviceCategories = $2;
     description: 'Advanced AI-powered development and testing automation',
-    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Development Tools'),
+    services: advancedAIAutomationServices2025.filter($2);
     icon: Code,
     color: 'from-emerald-500 to-teal-600',
-    features: ['Code Review Automation', 'AI Testing', 'DevOps Intelligence']
+    features: ['Code Review AutomationAI TestingDevOps Intelligence']
   },
   {
     title: 'AI Testing & Quality Assurance',
     description: 'Intelligent testing automation with AI-driven insights',
-    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Testing & Quality Assurance'),
+    services: advancedAIAutomationServices2025.filter($2);
     icon: TestTube,
     color: 'from-purple-500 to-indigo-600',
-    features: ['Test Generation', 'Performance Testing', 'Quality Assurance']
+    features: ['Test GenerationPerformance TestingQuality Assurance']
   },
   {
     title: 'AI DevOps & Infrastructure',
     description: 'Self-managing infrastructure with AI optimization',
-    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI DevOps & Infrastructure'),
+    services: advancedAIAutomationServices2025.filter($2);
     icon: Server,
     color: 'from-blue-500 to-indigo-600',
-    features: ['Infrastructure Management', 'Deployment Optimization', 'Performance Monitoring']
+    features: ['Infrastructure ManagementDeployment OptimizationPerformance Monitoring']
   },
   {
     title: 'AI Cybersecurity',
     description: 'Proactive threat detection and response with AI',
-    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Cybersecurity'),
+    services: advancedAIAutomationServices2025.filter($2);
     icon: SecurityIcon,
     color: 'from-red-500 to-pink-600',
-    features: ['Threat Detection', 'Incident Response', 'Security Automation']
+    features: ['Threat DetectionIncident ResponseSecurity Automation']
   },
   {
     title: 'AI Data Management',
     description: 'Intelligent data infrastructure with AI automation',
-    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Data Management'),
+    services: advancedAIAutomationServices2025.filter($2);
     icon: Database,
     color: 'from-cyan-500 to-blue-600',
-    features: ['Pipeline Management', 'Quality Assurance', 'Governance Automation']
+    features: ['Pipeline ManagementQuality AssuranceGovernance Automation']
   }
-];
+],
 
-const heroFeatures = [
-  {
-    title: 'AI-Powered Automation',
+const heroFeatures = $2;
     description: 'Advanced AI algorithms that automate complex development, testing, and operations tasks.',
     icon: Brain,
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
@@ -95,11 +87,9 @@ const heroFeatures = [
     icon: BarChart3,
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
   }
-];
+],
 
-const testimonials = [
-  {
-    name: 'Dr. Michael Chen',
+const testimonials = $2;
     role: 'CTO, TechFlow Solutions',
     company: 'TechFlow Solutions',
     content: 'Zion Tech Group\'s AI automation platform has revolutionized our development process. We\'ve reduced testing time by 90% and improved code quality significantly.',
@@ -122,7 +112,7 @@ const testimonials = [
     rating: 5,
     avatar: '👨‍🔒'
   }
-];
+],
 
 export default function AdvancedAIAutomationServices() {
   return (
@@ -143,8 +133,8 @@ export default function AdvancedAIAutomationServices() {
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
@@ -158,7 +148,7 @@ export default function AdvancedAIAutomationServices() {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  animate={{ opacity: 1, scale: 1}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30"
                 >
@@ -186,10 +176,10 @@ export default function AdvancedAIAutomationServices() {
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -204,10 +194,10 @@ export default function AdvancedAIAutomationServices() {
             {heroFeatures.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="relative group"
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
@@ -231,10 +221,10 @@ export default function AdvancedAIAutomationServices() {
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -249,10 +239,10 @@ export default function AdvancedAIAutomationServices() {
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="relative"
               >
                 <div className="text-center mb-12">
@@ -268,9 +258,9 @@ export default function AdvancedAIAutomationServices() {
                     <motion.div
                       key={service.id}
                       initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
+                      whileInView={{ opacity: 1, scale: 1}}
                       transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
-                      viewport={{ once: true }}
+                      viewport={{ once: true}}
                       className="relative group"
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
@@ -328,10 +318,10 @@ export default function AdvancedAIAutomationServices() {
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -346,10 +336,10 @@ export default function AdvancedAIAutomationServices() {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20"
               >
                 <div className="flex items-center mb-4">
@@ -378,10 +368,10 @@ export default function AdvancedAIAutomationServices() {
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Operations with AI Automation?
@@ -413,5 +403,5 @@ export default function AdvancedAIAutomationServices() {
         </div>
       </section>
     </Layout>
-  );
+  )
 }

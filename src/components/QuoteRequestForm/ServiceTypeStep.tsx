@@ -10,105 +10,91 @@ import { useDebounce } from "@/hooks/useDebounce";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { z } from "zod";
 import {logErrorToProduction} from '@/utils/productionLogger';
+const listingSchema = z.object($2);
+  title: z.string($2);
+  category: z.string($2);
+  image: z.string().optional()}),
 
-
-const listingSchema = z.object({
-  id: z.string(),
-  title: z.string(),
-  category: z.string(),
-  image: z.string().optional()});
-
-const listingsSchema = z.array(listingSchema);
-
+const listingsSchema = z.array($2);
 interface ServiceTypeStepProps {
-  formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void;
+  formData: QuoteFormData,
+  updateFormData: (data: Partial<QuoteFormData>) => void
 }
 
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const debouncedQuery = useDebounce(searchQuery, 300);
-  const [listings, setListings] = useState<ListingItem[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const isMounted = useIsMounted();
-
+  const [searchQuery, setSearchQuery] = useState($2);
+  const debouncedQuery = useDebounce($2);
+  const [listings, setListings] = useState<ListingItem[]>([]),
+  const [loading, setLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
+  const isMounted = useIsMounted($2);
   // Fetch services when the service type or query changes
   useEffect(() => {
     if (!formData.serviceType) {
-      setListings([]);
-      return;
+      setListings($2);
+      return
     }
 
     const fetchServices = async () => {
-      setLoading(true);
-      setError(null);
-      const url = `/api/public/services?category=${encodeURIComponent(
-        formData.serviceType
-      )}&q=${encodeURIComponent(debouncedQuery)}`;
-      const maxRetries = 3;
-
-      for (let attempt = 0; attempt < maxRetries; attempt++) {
+      setLoading($2);
+      setError($2);
+      const url = $2;
+      const maxRetries = $2;
+      for (let attempt = 0, attempt < maxRetries, attempt++) {
         try {
-          const response = await fetch(url);
-          if (!response.ok) throw new Error('Failed to fetch');
-          const data = await response.json();
-          const parsed = listingsSchema.safeParse(data);
-          if (!parsed.success) throw new Error('Invalid response');
+          const response = await fetch($2);
+          if (!response.ok) throw new Error($2);
+          const data = await response.json($2);
+          const parsed = listingsSchema.safeParse($2);
+          if (!parsed.success) throw new Error($2);
           if (isMounted.current) {
-            setListings(parsed.data as ListingItem[]);
-            setError(null);
+            setListings($2);
+            setError(null)
           }
-          return;
+          return
         } catch (err) {
           if (attempt === maxRetries - 1) {
             if (process.env.NODE_ENV === 'development') {
-              logErrorToProduction('Failed to load services:', { data: err });
+              logErrorToProduction('Failed to load services:', { data: err})
             } else {
-              captureException(err);
+              captureException(err)
             }
             if (isMounted.current) {
-              setListings([]);
-              setError('Failed to load services');
+              setListings($2);
+              setError('Failed to load services')
             }
           } else {
-            await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500));
+            await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500))
           }
         } finally {
-          if (isMounted.current) setLoading(false);
+          if (isMounted.current) setLoading(false)
         }
       }
-    };
+    },
 
-    fetchServices();
-  }, [formData.serviceType, debouncedQuery, isMounted]);
+    fetchServices()
+  }, [formData.serviceType, debouncedQuery, isMounted]),
   
-  const handleTypeSelect = (type: ServiceType) => {
-    updateFormData({ serviceType: type });
-  };
-  
-  const handleItemSelect = (item: ListingItem) => {
-    updateFormData({ 
-      specificItem: item,
+  const handleTypeSelect = $2;
+  const handleItemSelect = $2;
       serviceCategory: item.category,
       serviceType: item.category.toLowerCase() as ServiceType
-    });
-  };
+    })
+  },
   
-  const sourceListings = listings;
-
+  const sourceListings = $2;
   const filteredListings = sourceListings.filter(item => {
     // Filter by category only when a service type has been selected
     if (formData.serviceType !== "") {
-      const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
-      if (!categoryMatch) return false;
+      const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase($2);
+      if (!categoryMatch) return false
     }
     
-    if (searchQuery.trim() === "") return true;
+    if (searchQuery.trim() === "") return true,
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-           item.category.toLowerCase().includes(searchQuery.toLowerCase());
-  });
+           item.category.toLowerCase().includes(searchQuery.toLowerCase())
+  }),
 
   return (
     <div className="space-y-6">
@@ -207,5 +193,5 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
         </div>
       )}
     </div>
-  );
+  )
 }

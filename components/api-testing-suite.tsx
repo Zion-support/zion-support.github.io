@@ -3,141 +3,92 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
-
 export default function APITestingSuitePage() {
-  const [isTesting, setIsTesting] = useState(false);
-  const [testResults, setTestResults] = useState(null);
-  const [apiEndpoint, setApiEndpoint] = useState('');
-  const [apiKey, setApiKey] = useState('');
-
-  const features = [
-    {
-      icon: <Code className="w-8 h-8 text-white" />,
+  const [isTesting, setIsTesting] = useState($2);
+  const [testResults, setTestResults] = useState($2);
+  const [apiEndpoint, setApiEndpoint] = useState($2);
+  const [apiKey, setApiKey] = useState($2);
+  const features = $2;
       title: 'Comprehensive API Testing',
       description: 'Test REST, GraphQL, and SOAP APIs with automated test suites and real-time monitoring.',
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
       gradient: 'from-indigo-400 to-purple-500'},
     {
-      icon: <Zap className="w-8 h-8 text-white" />,
+      icon: <Zap className = $2;
       title: 'Performance Testing',
       description: 'Load testing, stress testing, and performance benchmarking for your APIs.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       gradient: 'from-orange-400 to-red-500'},
     {
-      icon: <Shield className="w-8 h-8 text-white" />,
+      icon: <Shield className = $2;
       title: 'Security Testing',
       description: 'Automated security testing including authentication, authorization, and vulnerability scanning.',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500'},
     {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
+      icon: <BarChart3 className = $2;
       title: 'Real-Time Monitoring',
       description: '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500'}];
+      gradient: 'from-blue-400 to-cyan-500'}],
 
-  const testTypes = [
-    {
-      name: 'Functional Testing',
+  const testTypes = $2;
       description: 'Verify that your API endpoints work correctly and return expected responses.',
-      tests: ['Request/response validation', 'Status code verification', 'Data format checking', 'Error handling']
+      tests: ['Request/response validationStatus code verificationData format checkingError handling']
     },
     {
       name: 'Performance Testing',
       description: 'Ensure your APIs can handle expected load and perform under pressure.',
-      tests: ['Load testing', 'Stress testing', 'Response time analysis', 'Throughput measurement']
+      tests: ['Load testingStress testingResponse time analysisThroughput measurement']
     },
     {
       name: 'Security Testing',
       description: 'Identify security vulnerabilities and ensure proper authentication and authorization.',
-      tests: ['Authentication testing', 'Authorization checks', 'Input validation', 'SQL injection testing']
+      tests: ['Authentication testingAuthorization checksInput validationSQL injection testing']
     },
     {
       name: 'Integration Testing',
       description: 'Test how your APIs integrate with other systems and services.',
-      tests: ['End-to-end workflows', 'Third-party integrations', 'Data flow validation', 'Error propagation']
+      tests: ['End-to-end workflowsThird-party integrationsData flow validationError propagation']
     }
-  ];
+  ],
 
-  const pricing = [
-    {
-      name: 'Starter',
+  const pricing = $2;
       price: '$49',
       period: '/month',
       description: 'Perfect for developers and small teams',
       features: [
-        '100 API tests/month',
-        'Basic test scenarios',
-        'Email notifications',
-        'Basic reporting',
-        '5 API endpoints',
-        'Community support'
+        '100 API tests/monthBasic test scenariosEmail notificationsBasic reporting5 API endpointsCommunity support'
       ],
-      popular: false
-    },
+      popular: false},
     {
       name: 'Professional',
       price: '$99',
       period: '/month',
       description: 'Ideal for growing businesses and development teams',
       features: [
-        '500 API tests/month',
-        'Advanced test scenarios',
-        'SMS & email alerts',
-        'Advanced reporting',
-        '25 API endpoints',
-        'Performance testing',
-        'API access',
-        'Priority support'
+        '500 API tests/monthAdvanced test scenariosSMS & email alertsAdvanced reporting25 API endpointsPerformance testingAPI accessPriority support'
       ],
-      popular: true
-    },
+      popular: true},
     {
       name: 'Enterprise',
       price: '$299',
       period: '/month',
       description: 'For large organizations with complex API requirements',
       features: [
-        'Unlimited API tests',
-        'Custom test scenarios',
-        'Custom alerting rules',
-        '24/7 dedicated support',
-        'Unlimited endpoints',
-        'Advanced security testing',
-        'White-label options',
-        'Custom integrations'
+        'Unlimited API testsCustom test scenariosCustom alerting rules24/7 dedicated supportUnlimited endpointsAdvanced security testingWhite-label optionsCustom integrations'
       ],
-      popular: false
-    }
-  ];
+      popular: false}
+  ],
 
-  const handleTestAPI = async () => {
-    if (!apiEndpoint.trim()) return;
-    
-    setIsTesting(true);
+  const handleTestAPI = $2;
+    setIsTesting($2);
     // Simulate API testing
     setTimeout(() => {
-      setTestResults({
-        endpoint: apiEndpoint,
-        status: 'success',
-        responseTime: '245ms',
-        statusCode: 200,
-        tests: [
-          { name: 'Response Time', status: 'pass', value: '245ms', threshold: '<500ms' },
-          { name: 'Status Code', status: 'pass', value: '200', threshold: '200' },
-          { name: 'Response Format', status: 'pass', value: 'JSON', threshold: 'Valid JSON' },
-          { name: 'Authentication', status: 'pass', value: 'Valid', threshold: 'Authenticated' },
-          { name: 'Rate Limiting', status: 'pass', value: 'Within limits', threshold: 'No throttling' }
-        ],
-        recommendations: [
-          'Consider implementing response caching for better performance',
-          'Monitor response times during peak usage',
-          'Implement rate limiting headers for better API documentation'
-        ]
-      });
-      setIsTesting(false);
-    }, 3000);
-  };
+      setTestResults($2);
+      setIsTesting(false)
+    }, 3000)
+  },
 
   return (
     <>
@@ -457,7 +408,7 @@ export default function APITestingSuitePage() {
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="container-cursor text-center relative z-10">
           <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
             Ready to Test Your APIs?
@@ -486,5 +437,5 @@ export default function APITestingSuitePage() {
         </div>
       </section>
     </>
-  );
+  )
 }

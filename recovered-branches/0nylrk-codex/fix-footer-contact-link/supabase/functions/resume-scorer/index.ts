@@ -1,80 +1,63 @@
 
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+import "https: //deno.land/x/xhr@0.1.0/mod.ts";
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2";
+const corsHeaders = $2;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
+    return new Response(null, { headers: corsHeaders})
   }
 
-  const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
-  const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "";
-  const openAiKey = Deno.env.get("OPENAI_API_KEY") || "";
-  
+  const supabaseUrl = $2;
+  const supabaseAnonKey = $2;
+  const openAiKey = $2;
   if (!openAiKey) {
-    return new Response(
-      JSON.stringify({ error: "OpenAI API key is not configured" }),
+    return new Response($2);
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    );
+    )
   }
 
-  const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
+  const supabase = createClient($2);
   try {
-    const { applicationId } = await req.json();
-    
+    const { applicationId } = await req.json($2);
     if (!applicationId) {
-      throw new Error("Application ID is required");
+      throw new Error("Application ID is required")
     }
 
     // 1. Fetch the application with job details and resume content
-    const { data: application, error: appError } = await supabase
+    const { data: application, error: appError} = await supabase
       .from("job_applications")
-      .select(`
-        id,
-        job_id,
-        talent_id,
-        cover_letter,
-        resume_id,
-        job:jobs(title, description, skills),
+      .select($2);
         talent_profile:profiles!talent_id(bio, skills)
       `)
       .eq("id", applicationId)
-      .single();
-
+      .single($2);
     if (appError) {
-      throw new Error(`Failed to fetch application: ${appError.message}`);
+      throw new Error(`Failed to fetch application: ${appError.message}`)
     }
 
     if (!application) {
-      throw new Error("Application not found");
+      throw new Error("Application not found")
     }
 
     // 2. Fetch resume details if a resume_id is provided
-    let resumeContent = "";
-    let resumeSkills: string[] = [];
+    let resumeContent = $2;
+    let resumeSkills: string[] = [],
     
     if (application.resume_id) {
-      const { data: resume, error: resumeError } = await supabase
+      const { data: resume, error: resumeError} = await supabase
         .from("talent_resumes")
-        .select(`
-          summary,
-          headline,
-          resume_skills!inner(name, category, years_experience),
-          work_history!inner(company_name, role_title, start_date, end_date, description),
+        .select($2);
+          work_history!inner($2);
           education!inner(institution, degree, field_of_study)
         `)
         .eq("id", application.resume_id)
-        .single();
-        
+        .single($2);
       if (resumeError) {
-        console.error("Error fetching resume:", resumeError);
+        console.error("Error fetching resume:", resumeError)
       } else if (resume) {
         // Format resume content for analysis
         resumeContent = `
@@ -94,9 +77,9 @@ serve(async (req) => {
           
           Skills:
           ${resume.resume_skills.map((skill: any) => skill.name).join(", ")}
-        `;
+        `,
         
-        resumeSkills = resume.resume_skills.map((skill: any) => skill.name);
+        resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
       }
     }
     
@@ -106,15 +89,10 @@ serve(async (req) => {
         Bio: ${application.talent_profile?.bio || ""}
         Cover Letter: ${application.cover_letter || ""}
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
-      `;
-      resumeSkills = application.talent_profile?.skills || [];
-    }
-
-    // 4. Prepare job details
-    const jobTitle = application.job?.title || "";
-    const jobDescription = application.job?.description || "";
-    const jobSkills = application.job?.skills || [];
-
+      `,
+      resumeSkills = $2;
+    const jobDescription = $2;
+    const jobSkills = $2;
     // 5. Process using OpenAI to calculate match score
     const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
@@ -170,32 +148,31 @@ serve(async (req) => {
             }`
           }
         ],
-        temperature: 0.5})});
+        temperature: 0.5})}),
 
     if (!openAIResponse.ok) {
-      const errorData = await openAIResponse.json();
-      throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`);
+      const errorData = await openAIResponse.json($2);
+      throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`)
     }
 
-    const aiResult = await openAIResponse.json();
-    let matchResult;
+    const aiResult = await openAIResponse.json($2);
+    let matchResult,
     
     try {
       // Extract JSON from the response
-      const content = aiResult.choices[0].message.content;
-      matchResult = JSON.parse(content);
-      
+      const content = $2;
+      matchResult = JSON.parse($2);
       // Validate required fields
       if (!matchResult.score || !matchResult.summary || !matchResult.suggestion) {
-        throw new Error("Invalid response format");
+        throw new Error("Invalid response format")
       }
     } catch (error) {
-      console.error("Error parsing AI response:", error);
-      throw new Error("Failed to parse AI analysis results");
+      console.error($2);
+      throw new Error("Failed to parse AI analysis results")
     }
 
     // 6. Update the application with the match results
-    const { error: updateError } = await supabase
+    const { error: updateError} = await supabase
       .from("job_applications")
       .update({
         match_score: matchResult.score,
@@ -204,31 +181,25 @@ serve(async (req) => {
         match_suggestion: matchResult.suggestion,
         scored_at: new Date().toISOString()
       })
-      .eq("id", applicationId);
-
+      .eq($2);
     if (updateError) {
-      throw new Error(`Failed to update application with score: ${updateError.message}`);
+      throw new Error(`Failed to update application with score: ${updateError.message}`)
     }
 
     // 7. Return the match results
-    return new Response(
-      JSON.stringify({ 
-        success: true, 
-        matchResult 
-      }),
+    return new Response($2);
       { 
         status: 200, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
-    );
+    )
   } catch (error) {
-    console.error("Error in resume-scorer function:", error);
-    return new Response(
-      JSON.stringify({ error: error.message }),
+    console.error($2);
+    return new Response($2);
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
-    );
+    )
   }
-});
+}),

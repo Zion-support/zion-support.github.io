@@ -17,43 +17,40 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-
 // Define form schema
 const serviceProfileSchema = z.object({
-  name: z.string().min(2, "Full Name must be at least 2 characters long"),
-  title: z.string().min(5, "Business name/title is required"),
-  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
-  location: z.string().min(2, "Location is required"),
-  services: z.string().min(2, "Enter at least one service"),
+  name: z.string().min($2);
+  title: z.string().min($2);
+  bio: z.string().min(50, "Bio must be at least 50 characters long").max($2);
+  location: z.string().min($2);
+  services: z.string().min($2);
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
     message: "Rate must be a number"}),
-  availability: z.enum(["available", "limited", "unavailable"]),
-  enhancedProfile: z.boolean().transform(val => !!val),
-  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()});
+  availability: z.enum($2);
+  enhancedProfile: z.boolean().transform($2);
+  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()}),
 
-type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
-
+type ServiceFormValues = $2;
 export function ServiceProviderRegistrationForm() {
-  const { user } = useAuth();
-  const router = useRouter();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [serviceTags, setServiceTags] = useState<string[]>([]);
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<{ summary: string; services: string[] } | null>(null);
-  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+  const { user } = useAuth($2);
+  const router = useRouter($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const [serviceTags, setServiceTags] = useState<string[]>([]),
+  const [isGenerating, setIsGenerating] = useState($2);
+  const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
   
   // Initialize form with default values
-  const form = useForm<ServiceFormValues>({
-    resolver: zodResolver(serviceProfileSchema) as any,
+  const form = $2;
     defaultValues: {
-      name: user?.displayName || "",
+      name: user ?.displayName || "",
       title: "",
       bio: "",
       location: "",
@@ -61,175 +58,129 @@ export function ServiceProviderRegistrationForm() {
       hourlyRate: "",
       availability: "available",
       enhancedProfile: false,
-      website: ""}});
+      website: ""}}),
 
   // Handle adding service tags
   const handleAddService = () => {
-    const serviceInput = form.getValues("services");
+    const serviceInput = form.getValues($2);
     if (serviceInput && !serviceTags.includes(serviceInput)) {
-      setServiceTags([...serviceTags, serviceInput]);
-      form.setValue("services", "");
+      setServiceTags($2);
+      form.setValue("services", "")
     }
-  };
+  },
 
   // Handle removing service tags
-  const handleRemoveService = (service: string) => {
-    setServiceTags(serviceTags.filter((s) => s !== service));
-  };
-
+  const handleRemoveService = $2;
   // Handle key press in services input (add on enter)
   const handleServiceKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
-      e.preventDefault();
-      handleAddService();
+      e.preventDefault($2);
+      handleAddService()
     }
-  };
+  },
 
   // Handle avatar upload
-  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
+  const handleAvatarUpload = $2;
     if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setUploadedAvatar(reader.result as string);
-      };
-      reader.readAsDataURL(file);
+      const reader = new FileReader($2);
+      reader.onloadend = $2;
+      reader.readAsDataURL(file)
     }
-  };
+  },
 
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
-    const formData = form.getValues();
+    const formData = form.getValues($2);
     if (!formData.bio || formData.bio.length < 20) {
-      toast({
-        title: "More information needed",
-        description: "Please provide at least a detailed bio before generating enhanced content."});
-      return;
+      toast($2);
+      return
     }
 
     try {
-      setIsGenerating(true);
-
+      setIsGenerating($2);
       // Call the Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke('service-profile-enhancer', {
-        body: {
-          providerData: {
-            name: formData.name,
-            title: formData.title,
-            bio: formData.bio,
-            services: serviceTags,
-            location: formData.location
-          }
-        }
-      });
-
+      const { data, error } = await supabase.functions.invoke($2);
       if (error) {
-        throw new Error(error.message);
+        throw new Error(error.message)
       }
 
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
-        setGeneratedContent(data as { summary: string; services: string[] });
-        
+        setGeneratedContent($2);
         toast({
           title: "Enhanced Profile Generated",
-          description: "AI has created a professional bio and suggested additional services for your profile."});
+          description: "AI has created a professional bio and suggested additional services for your profile."})
       } else {
         // Fallback for mock/development mode
-        logWarn('Mock AI response - using fallback content');
-        setGeneratedContent({
-          summary: "Professional service provider with expertise in delivering high-quality solutions.",
-          services: ["Consulting", "Project Management", "Technical Support"]
-        });
-        
+        logWarn($2);
+        setGeneratedContent($2);
         toast({
           title: "Enhanced Profile Generated",
-          description: "AI has created a professional bio and suggested additional services for your profile."});
+          description: "AI has created a professional bio and suggested additional services for your profile."})
       }
       
     } catch (error: any) {
-      logErrorToProduction('Error generating enhanced profile:', { data: error });
+      logErrorToProduction($2);
       toast({
         title: "Generation failed",
         description: error.message || "There was an error generating your enhanced profile. Please try again.",
-        variant: "destructive"});
+        variant: "destructive"})
     } finally {
-      setIsGenerating(false);
+      setIsGenerating(false)
     }
-  };
+  },
 
   // Apply generated content to form
   const applyGeneratedContent = () => {
     if (generatedContent) {
-      form.setValue("bio", generatedContent.summary);
-      
+      form.setValue($2);
       if (generatedContent.services && generatedContent.services.length > 0) {
-        const newServices = generatedContent.services.filter(
-          service => typeof service === 'string' && service && !serviceTags.includes(service)
-        );
-        
+        const newServices = $2;
         if (newServices.length > 0) {
-          setServiceTags([...serviceTags, ...newServices]);
+          setServiceTags([...serviceTags, ...newServices])
         }
       }
     }
-  };
+  },
 
   // Handle form submission
   const onSubmit = async (values: ServiceFormValues) => {
     if (serviceTags.length === 0) {
-      toast({
-        title: "Services required",
-        description: "Please add at least one service to your profile.",
-        variant: "destructive"});
-      return;
+      toast($2);
+      return
     }
 
-    setIsSubmitting(true);
-
+    setIsSubmitting($2);
     try {
       // For actual implementation with Supabase
       if (!user?.id) {
-        throw new Error("User not authenticated");
+        throw new Error("User not authenticated")
       }
       
       // Enhance profile if not already done
-      let finalSummary = values.bio;
-      let finalServices = serviceTags;
-      
+      let finalSummary = $2;
+      let finalServices = $2;
       if (values.enhancedProfile && !generatedContent) {
         try {
-          const { data: aiData } = await supabase.functions.invoke('service-profile-enhancer', {
-            body: {
-              providerData: {
-                name: values.name,
-                title: values.title,
-                bio: values.bio,
-                services: serviceTags,
-                location: values.location
-              }
-            }
-          });
-          
+          const { data: aiData} = await supabase.functions.invoke($2);
           if (aiData) {
-            finalSummary = (aiData as any).summary || values.bio;
+            finalSummary = $2;
             // Merge AI suggested services with user-provided services
-            const aiServices = (aiData as any).services || [];
-            finalServices = [...new Set([...serviceTags, ...aiServices])];
+            const aiServices = $2;
+            finalServices = [...new Set([...serviceTags, ...aiServices])]
           }
         } catch (error) {
-          logErrorToProduction('Error enhancing profile:', { data: error });
+          logErrorToProduction($2);
           // Continue with submission even if enhancement fails
         }
       } else if (generatedContent) {
-        finalSummary = generatedContent.summary;
-        finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
+        finalSummary = $2;
+        finalServices = [...new Set([...serviceTags, ...generatedContent.services])]
       }
 
       // Get user email for notification
-      const { data: userData } = await supabase.auth.getUser();
-      const userEmail = (userData as any).user?.email;
-
+      const { data: userData} = await supabase.auth.getUser($2);
+      const userEmail = $2;
       // Create the service profile
       const { data: profileData, error } = await supabase
         .from('profiles')
@@ -238,30 +189,26 @@ export function ServiceProviderRegistrationForm() {
           bio: finalSummary,
           user_type: "creator", // Set as service provider
           profile_complete: true,
-          updated_at: new Date().toISOString(),
+          updated_at: new Date().toISOString($2);
           headline: values.title,
           // Additional fields that might be in profiles table
         })
         .eq('id', user.id)
-        .select();
-
-      if (error) throw error;
+        .select($2);
+      if (error) throw error,
 
       // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
 
       /*
-      const { error: serviceError } = await supabase
+      const { error: serviceError} = await supabase
         .from('service_profiles')
-        .insert({
-          user_id: user.id,
-          services: finalServices,
-          hourly_rate: Number(values.hourlyRate),
+        .insert($2);
           availability_status: values.availability,
           location: values.location,
-          website: values.website || null});
+          website: values.website || null}),
 
-      if (serviceError) throw serviceError;
+      if (serviceError) throw serviceError,
       */
 
       // Send notification email if available
@@ -272,43 +219,40 @@ export function ServiceProviderRegistrationForm() {
               to: userEmail,
               subject: "Your Zion Service Profile Is Ready",
               html: `
-              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-                <h2 style="color: #6D28D9;">Service Profile Created!</h2>
+              <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">
+                <h2 style="color: #6D28D9,">Service Profile Created!</h2>
                 <p>Your service provider profile has been successfully created and published.</p>
                 <p>We've enhanced your profile with AI to help you stand out to potential clients.</p>
                 <p>You can now start receiving service requests and connecting with clients.</p>
-                <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
-                  <p style="color: #666; font-size: 12px;">© ${new Date().getFullYear()} Zion Marketplace</p>
+                <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">
+                  <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
                 </div>
               </div>
               `
             }
-          });
+          })
         } catch (emailError) {
-          logErrorToProduction('Failed to send notification email:', { data: emailError });
+          logErrorToProduction($2);
           // Continue with submission even if email fails
         }
       }
       
-      toast({
-        title: "Profile Created Successfully",
-        description: "Your service provider profile has been published and is now visible in the directory."});
-
+      toast($2);
       // Redirect to service provider dashboard or profile page
       setTimeout(() => {
-        router.push('/service-dashboard');
-      }, 1500);
+        router.push('/service-dashboard')
+      }, 1500)
       
     } catch (error: any) {
-      logErrorToProduction('Error creating profile:', { data: error });
+      logErrorToProduction($2);
       toast({
         title: "Error Creating Profile",
         description: error.message || "There was an error creating your profile. Please try again.",
-        variant: "destructive"});
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  },
 
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6">
@@ -331,7 +275,7 @@ export function ServiceProviderRegistrationForm() {
                     <FormField
                       control={form.control}
                       name="name"
-                      render={({ field }: { field: any }) => (
+                      render={({ field }: { field: any}) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
                           <FormControl>
@@ -354,7 +298,7 @@ export function ServiceProviderRegistrationForm() {
                     <FormField
                       control={form.control}
                       name="title"
-                      render={({ field }: { field: any }) => (
+                      render={({ field }: { field: any}) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Business/Service Name</FormLabel>
                           <FormControl>
@@ -377,7 +321,7 @@ export function ServiceProviderRegistrationForm() {
                     <FormField
                       control={form.control}
                       name="location"
-                      render={({ field }: { field: any }) => (
+                      render={({ field }: { field: any}) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>
                           <FormControl>
@@ -400,7 +344,7 @@ export function ServiceProviderRegistrationForm() {
                     <FormField
                       control={form.control}
                       name="website"
-                      render={({ field }: { field: any }) => (
+                      render={({ field }: { field: any}) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Website (optional)</FormLabel>
                           <FormControl>
@@ -466,7 +410,7 @@ export function ServiceProviderRegistrationForm() {
                 <FormField
                   control={form.control}
                   name="bio"
-                  render={({ field }: { field: any }) => (
+                  render={({ field }: { field: any}) => (
                     <FormItem>
                       <FormLabel className="text-zion-slate-light">About Your Services</FormLabel>
                       <FormControl>
@@ -488,7 +432,7 @@ export function ServiceProviderRegistrationForm() {
                 <FormField
                   control={form.control}
                   name="enhancedProfile"
-                  render={({ field }: { field: any }) => (
+                  render={({ field }: { field: any}) => (
                     <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
                       <div className="space-y-0.5">
                         <FormLabel className="text-white flex items-center">
@@ -580,7 +524,7 @@ export function ServiceProviderRegistrationForm() {
                   <FormField
                     control={form.control}
                     name="services"
-                    render={({ field }: { field: any }) => (
+                    render={({ field }: { field: any}) => (
                       <FormItem>
                         <FormLabel className="text-zion-slate-light">Services</FormLabel>
                         <div className="flex gap-2">
@@ -637,7 +581,7 @@ export function ServiceProviderRegistrationForm() {
                   <FormField
                     control={form.control}
                     name="hourlyRate"
-                    render={({ field }: { field: any }) => (
+                    render={({ field }: { field: any}) => (
                       <FormItem>
                         <FormLabel className="text-zion-slate-light">Starting Rate (USD)</FormLabel>
                         <FormControl>
@@ -661,7 +605,7 @@ export function ServiceProviderRegistrationForm() {
                   <FormField
                     control={form.control}
                     name="availability"
-                    render={({ field }: { field: any }) => (
+                    render={({ field }: { field: any}) => (
                       <FormItem className="space-y-4">
                         <FormLabel className="text-zion-slate-light">Current Status</FormLabel>
                         <FormControl>
@@ -742,5 +686,5 @@ export function ServiceProviderRegistrationForm() {
         </Form>
       </Card>
     </div>
-  );
+  )
 }

@@ -1,30 +1,28 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-
 export default function PostJobPage() {
-  const router = useRouter();
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [category, setCategory] = useState('');
-  const [skills, setSkills] = useState<string>('');
-  const [budgetMinUsd, setBudgetMinUsd] = useState<string>('');
-  const [budgetMaxUsd, setBudgetMaxUsd] = useState<string>('');
-  const [deliveryDeadlineIso, setDeliveryDeadlineIso] = useState<string>('');
-  const [clientEmail, setClientEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const router = useRouter($2);
+  const [title, setTitle] = useState($2);
+  const [description, setDescription] = useState($2);
+  const [category, setCategory] = useState($2);
+  const [skills, setSkills] = useState<string>(''),
+  const [budgetMinUsd, setBudgetMinUsd] = useState<string>(''),
+  const [budgetMaxUsd, setBudgetMaxUsd] = useState<string>(''),
+  const [deliveryDeadlineIso, setDeliveryDeadlineIso] = useState<string>(''),
+  const [clientEmail, setClientEmail] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const [error, setError] = useState<string | null>(null),
 
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setError(null);
-
+    e.preventDefault($2);
+    setError($2);
     if (!title || !description || !category || !clientEmail) {
-      setError('Please fill in all required fields.');
-      return;
+      setError($2);
+      return
     }
 
     try {
-      setIsSubmitting(true);
+      setIsSubmitting($2);
       const res = await fetch('/api/jobs', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -33,22 +31,21 @@ export default function PostJobPage() {
           description,
           category,
           requiredSkills: skills
-            .split(',')
+            .split()
             .map((s) => s.trim())
-            .filter(Boolean),
+            .filter($2);
           budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,
           budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,
           deliveryDeadlineIso: deliveryDeadlineIso || undefined,
-          clientEmail})});
+          clientEmail})}),
 
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Failed to post job');
-
-      router.push(`/client/dashboard`);
+      const data = await res.json($2);
+      if (!res.ok) throw new Error($2);
+      router.push(`/client/dashboard`)
     } catch (err: any) {
-      setError(err.message || 'Something went wrong');
+      setError(err.message || 'Something went wrong')
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
   }
 
@@ -98,5 +95,5 @@ export default function PostJobPage() {
         </div>
       </form>
     </div>
-  );
+  )
 }

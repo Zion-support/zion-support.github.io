@@ -8,22 +8,21 @@ import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react'
 import Link from 'next/link';
 import { ErrorState } from '@/components/jobs/applications';
-
 export default function EquipmentRecommendations() {
-  const { isAuthenticated, user } = useAuth();
-  const [listings, setListings] = useState<ProductListing[]>([]);
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<boolean>(false);
+  const { isAuthenticated, user } = useAuth($2);
+  const [listings, setListings] = useState<ProductListing[]>([]),
+  const [loading, setLoading] = useState<boolean>(false),
+  const [error, setError] = useState<boolean>(false),
 
   useEffect(() => {
     if (isAuthenticated && user?.id) {
-      setLoading(true);
+      setLoading($2);
       fetchRecommendations(user.id)
         .then(setListings)
         .catch(() => setError(true))
-        .finally(() => setLoading(false));
+        .finally(() => setLoading(false))
     }
-  }, [isAuthenticated, user]);
+  }, [isAuthenticated, user]),
 
   if (!isAuthenticated) {
     return (
@@ -38,7 +37,7 @@ export default function EquipmentRecommendations() {
           </Button>
         </DialogContent>
       </Dialog>
-    );
+    )
   }
 
   return (
@@ -58,5 +57,5 @@ export default function EquipmentRecommendations() {
         ))}
       </div>
     </div>
-  );
+  )
 }

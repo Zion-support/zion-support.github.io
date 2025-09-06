@@ -16,46 +16,22 @@ import { PaymentButton } from "@/components/transactions/PaymentButton";
 import { ProfileContact } from "@/components/profile/ProfileContact";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useCurrency } from '@/hooks/useCurrency';
-
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const router = useRouter();
-  const id = router.query.id as string;
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
-  const { user } = useAuth();
-  const { formatPrice } = useCurrency();
-
+  const router = useRouter($2);
+  const id = $2;
+  const [selectedImageIndex, setSelectedImageIndex] = useState($2);
+  const [isLoading, setIsLoading] = useState($2);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState($2);
+  const [isChatOpen, setIsChatOpen] = useState($2);
+  const { user } = useAuth($2);
+  const { formatPrice } = useCurrency($2);
   // Find the listing from our shared data source - now also checking equipment listings
-  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
-
+  const listing = MARKETPLACE_LISTINGS.find($2);
   if (!listing) {
     return (
-      <div className="min-h-screen bg-zion-blue py-12 px-4">
-        <div className="container mx-auto">
-          <div className="text-center py-20">
-            <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
-              <p className="text-zion-slate-light mb-8">The listing you're looking for doesn't exist or has been removed.</p>
-              <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark">
-                <Link href="/marketplace">Back to Marketplace</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      );
-  }
-
-  const handleContact = () => {
-    if (user) {
-      setIsChatOpen(true);
-    } else {
-      setIsContactDialogOpen(true);
-    }
-  };
-
+      <div className = $2;
   return (
     <>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -83,10 +59,7 @@ export default function ListingDetail() {
                   <div className="flex p-4 gap-2 overflow-x-auto">
                     {listing.images.map((image, index) => (
                       <div 
-                        key={index}
-                        onClick={() => setSelectedImageIndex(index)}
-                        className={cn(
-                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
+                        key = $2;
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         )}
                       >
@@ -167,83 +140,21 @@ export default function ListingDetail() {
                     <div className="flex items-center">
                       {[...Array(5)].map((_, i) => (
                         <Star
-                          key={i}
-                          className={cn(
-                            "h-5 w-5",
+                          key = $2;
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
                         />
                       ))}
                     </div>
-                    <span className="text-sm text-zion-slate-light">
-                      {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
-                    </span>
-                  </div>
-                )}
-                
-                {/* Price */}
-                <div className="mb-6">
-                  {listing.price !== null ? (
-                    <div className="text-3xl font-bold text-white">
-                      {formatPrice(listing.price)}
-                    </div>
-                  ) : (
-                    <div className="text-2xl font-bold text-white">
-                      Custom Pricing
-                    </div>
-                  )}
-                </div>
-                
-                {/* Action Buttons */}
-                <div className="space-y-3 mb-8">
-                  {listing.price !== null ? (
-                    <PaymentButton
-                      amount={listing.price}
-                      serviceId={listing.id}
-                      providerId={listing.author.id}
-                      buttonText="Buy Now"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
-                      onPaymentInitiated={() => {
-                        toast({
-                          title: "Payment Processing",
+                    <span className = $2;
                           description: "Redirecting to secure checkout..."
-                        });
+                        })
                       }}
                     />
                   ) : (
                     <Button 
-                      onClick={handleContact}
-                      disabled={isLoading}
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
-                    >
-                      {isLoading ? "Processing..." : "Request Quote"}
-                    </Button>
-                  )}
-                  
-                  <Button 
-                    variant="outline" 
-                    onClick={handleContact}
-                    disabled={isLoading}
-                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
-                  >
-                    <MessageSquare className="h-4 w-4 mr-2" />
-                    Contact Publisher
-                  </Button>
-                </div>
-                
-                {/* Publisher Info */}
-                <div className="border-t border-zion-blue-light pt-6">
-                  <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
-                  <div className="flex items-center gap-3">
-                    {listing.author.avatarUrl ? (
-                      <div className="relative h-12 w-12 rounded-full overflow-hidden">
-                        <ImageWithRetry
-                          src={listing.author.avatarUrl}
-                          alt={listing.author.name}
-                          className="object-cover"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.src = "https://ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name);
+                      onClick = $2;
+                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                           }}
                         />
                       </div>
@@ -297,5 +208,5 @@ export default function ListingDetail() {
         </DialogContent>
       </Dialog>
     </>
-  );
+  )
 }

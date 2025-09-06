@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import React from 'react';
-
 export default function Update202508150403() {
   return (
     <>
@@ -117,5 +116,5 @@ export default function Update202508150403() {
         </main>
       </div>
     </>
-  );
+  )
 }

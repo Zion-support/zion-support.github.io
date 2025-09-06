@@ -20,37 +20,35 @@ import { Menu, X } from 'lucide-react'
 import { useTranslation } from 'react-i18next';
 import { CartDrawer } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
-
 export function PrimaryNav() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [loginOpen, setLoginOpen] = useState(false);
-  const { user } = useAuth();
-  const isLoggedIn = !!user;
-  const isMobile = useIsMobile();
-  const { t } = useTranslation();
-  const router = useRouter();
-  const [query, setQuery] = useState('');
-  const suggestions = generateSearchSuggestions();
-
-  let unreadCount = 0;
+  const [mobileMenuOpen, setMobileMenuOpen] = useState($2);
+  const [loginOpen, setLoginOpen] = useState($2);
+  const { user } = useAuth($2);
+  const isLoggedIn = $2;
+  const isMobile = useIsMobile($2);
+  const { t } = useTranslation($2);
+  const router = useRouter($2);
+  const [query, setQuery] = useState($2);
+  const suggestions = generateSearchSuggestions($2);
+  let unreadCount = $2;
   try {
-    const messaging = useMessaging();
-    unreadCount = messaging.unreadCount;
+    const messaging = useMessaging($2);
+    unreadCount = messaging.unreadCount
   } catch {
     // context not available
   }
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const trimmed = query.trim();
+    e.preventDefault($2);
+    const trimmed = query.trim($2);
     if (trimmed) {
-      logDebug('PrimaryNav search submit:', { query: trimmed });
+      logDebug($2);
       router
         .push(`/search?q=${encodeURIComponent(trimmed)}`)
         .then(() => setQuery(''))
-        .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }));
+        .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }))
     }
-  };
+  },
 
   return (
     <>
@@ -76,30 +74,29 @@ export function PrimaryNav() {
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(sugg) => {
-                  logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg });
+                  logDebug($2);
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
-                    router.push(`/marketplace/listing/${sugg.id}`);
+                    router.push(`/marketplace/listing/${sugg.id}`)
                   } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                     // Documentation suggestions navigate directly to their path
-                    router.push(sugg.slug);
+                    router.push(sugg.slug)
                   } else if (sugg.type === 'blog' && sugg.slug) {
                     // Blog posts navigate to blog detail page
-                    router.push(`/blog/${sugg.slug}`);
+                    router.push(`/blog/${sugg.slug}`)
                   } else {
                     // Default: search results page with query parameter
-                    router.push(`/search?q=${encodeURIComponent(sugg.text)}`);
+                    router.push(`/search?q=${encodeURIComponent(sugg.text)}`)
                   }
-                  setQuery('');
-                  
+                  setQuery($2);
                   // Track analytics event
                   if (typeof window !== 'undefined' && window.gtag) {
-                    window.gtag('event', 'search_suggestion_click', {
+                    window.gtag('eventsearch_suggestion_click', {
                       search_term: sugg.text,
                       suggestion_type: sugg.type,
                       suggestion_id: sugg.id || sugg.slug
-                    });
+                    })
                   }
                 }}
                 searchSuggestions={suggestions}
@@ -124,11 +121,11 @@ export function PrimaryNav() {
                 <>
                   <Link
                     href="/auth/login"
-                    className="text-sm hover:text-primary whitespace-nowrap"
+                    className="text-sm hover: text-primary whitespace-nowrap"
                     data-testid="login-link"
                     onClick={(e) => {
-                      e.preventDefault();
-                      setLoginOpen(true);
+                      e.preventDefault($2);
+                      setLoginOpen(true)
                     }}
                   >
                     {t('auth.login')}
@@ -146,7 +143,7 @@ export function PrimaryNav() {
           </div>
           
           {/* Tablet view (md to lg) - simplified controls */}
-          <div className="hidden md:flex lg:hidden items-center gap-2 order-2">
+          <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
             <ModeToggle />
             <LanguageSelector />
             {!isLoggedIn && (
@@ -155,8 +152,8 @@ export function PrimaryNav() {
                 className="text-sm hover:text-primary"
                 data-testid="login-link"
                 onClick={(e) => {
-                  e.preventDefault();
-                  setLoginOpen(true);
+                  e.preventDefault($2);
+                  setLoginOpen(true)
                 }}
               >
                 {t('auth.login')}
@@ -199,5 +196,5 @@ export function PrimaryNav() {
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  );
+  )
 }

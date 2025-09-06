@@ -1,22 +1,16 @@
 import '@testing-library/jest-dom';
 import { cleanup } from '@testing-library/react';
 import { vi, afterEach } from 'vitest';
-
 // Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  observe() { /* do nothing */ }
-  unobserve() { /* do nothing */ }
-  disconnect() { /* do nothing */ }
-};
-
+global.ResizeObserver = $2;
 // Mock window.scrollTo
-global.window.scrollTo = vi.fn(); // vi should be globally available
+global.window.scrollTo = vi.fn(), // vi should be globally available
 
 // Ensure React Testing Library cleans up and mocks are restored between tests
 afterEach(() => {
-  cleanup();
-  vi.restoreAllMocks(); // Changed from jest to vi
-});
+  cleanup($2);
+  vi.restoreAllMocks(), // Changed from jest to vi
+}),
 
 // -----------------------------------------------------------------------------
 // Jest-compatibility shim ------------------------------------------------------
@@ -30,19 +24,19 @@ afterEach(() => {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 (globalThis as any).jest = {
   // Core mocking utilities
-  fn: vi.fn.bind(vi),
-  mock: vi.mock.bind(vi),
-  spyOn: vi.spyOn.bind(vi),
+  fn: vi.fn.bind($2);
+  mock: vi.mock.bind($2);
+  spyOn: vi.spyOn.bind($2);
   // Timing helpers
-  useFakeTimers: vi.useFakeTimers.bind(vi),
-  useRealTimers: vi.useRealTimers.bind(vi),
-  advanceTimersByTime: vi.advanceTimersByTime.bind(vi),
-  runAllTimers: vi.runAllTimers.bind(vi),
+  useFakeTimers: vi.useFakeTimers.bind($2);
+  useRealTimers: vi.useRealTimers.bind($2);
+  advanceTimersByTime: vi.advanceTimersByTime.bind($2);
+  runAllTimers: vi.runAllTimers.bind($2);
   // Reset / clear mocks
-  resetAllMocks: vi.resetAllMocks.bind(vi),
-  restoreAllMocks: vi.restoreAllMocks.bind(vi),
-  clearAllMocks: vi.clearAllMocks.bind(vi),
+  resetAllMocks: vi.resetAllMocks.bind($2);
+  restoreAllMocks: vi.restoreAllMocks.bind($2);
+  clearAllMocks: vi.clearAllMocks.bind($2);
   // Snapshot placeholder (no-op) – Vitest has its own snapshot system.
   // We expose it so imports compile even if we don't use it.
    
-  SnapshotSerializer: () => {}};
+  SnapshotSerializer: () => {}},

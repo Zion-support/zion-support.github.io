@@ -3,10 +3,8 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import { CheckCircle2 } from 'lucide-react';
-
 export default function PaymentSuccess() {
-  const navigate = useNavigate();
-  
+  const navigate = useNavigate($2);
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -31,12 +29,12 @@ export default function PaymentSuccess() {
           <Button 
             variant="outline"
             onClick={() => navigate('/')}
-            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
           >
             Return to Home
           </Button>
         </div>
       </div>
     </div>
-  );
+  )
 }

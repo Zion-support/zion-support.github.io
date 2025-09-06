@@ -8,32 +8,23 @@ import {
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
   Building, Factory, Camera, Video, Music, Gamepad2,
   Crown, Award, Target, Users, Clock, Globe2
-} from 'lucide-react';
+} from 'lucide-react',
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const pricingTiers = [
-  {
-    name: 'Starter',
+const pricingTiers = $2;
     price: '$299',
     period: '/month',
     description: 'Perfect for small businesses and startups',
     features: [
-      'Basic AI integration',
-      'Standard support',
-      'Core features access',
-      'Email support',
-      'Basic analytics',
-      'Mobile app access'
+      'Basic AI integrationStandard supportCore features accessEmail supportBasic analyticsMobile app access'
     ],
     popular: false,
     color: 'from-blue-600 to-cyan-600',
@@ -46,14 +37,7 @@ const pricingTiers = [
     period: '/month',
     description: 'Ideal for growing businesses and enterprises',
     features: [
-      'Advanced AI capabilities',
-      'Priority support',
-      'Full feature access',
-      'Phone & email support',
-      'Advanced analytics',
-      'API access',
-      'Custom integrations',
-      'Training & onboarding'
+      'Advanced AI capabilitiesPriority supportFull feature accessPhone & email supportAdvanced analyticsAPI accessCustom integrationsTraining & onboarding'
     ],
     popular: true,
     color: 'from-purple-600 to-pink-600',
@@ -66,27 +50,16 @@ const pricingTiers = [
     period: '',
     description: 'Tailored solutions for large organizations',
     features: [
-      'Custom AI development',
-      'Dedicated support team',
-      'White-label solutions',
-      '24/7 phone support',
-      'Custom analytics',
-      'Full API access',
-      'Custom integrations',
-      'Dedicated account manager',
-      'SLA guarantees',
-      'On-premise deployment'
+      'Custom AI developmentDedicated support teamWhite-label solutions24/7 phone supportCustom analyticsFull API accessCustom integrationsDedicated account managerSLA guaranteesOn-premise deployment'
     ],
     popular: false,
     color: 'from-indigo-600 to-purple-600',
     cta: 'Contact Sales',
     href: '/contact'
   }
-];
+],
 
-const servicePricing = [
-  {
-    category: '🚀 2028 Futuristic Innovations',
+const servicePricing = $2;
     services: futuristic2028Services.slice(0, 6)
   },
   {
@@ -101,7 +74,7 @@ const servicePricing = [
     category: '🤖 AI & Machine Learning',
     services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
   }
-];
+],
 
 export default function Revolutionary2028Pricing() {
   return (
@@ -130,8 +103,8 @@ export default function Revolutionary2028Pricing() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
@@ -209,10 +182,10 @@ export default function Revolutionary2028Pricing() {
             {pricingTiers.map((tier, index) => (
               <motion.div
                 key={tier.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className={`relative ${tier.popular ? 'scale-105' : ''}`}
               >
                 {tier.popular && (
@@ -284,9 +257,9 @@ export default function Revolutionary2028Pricing() {
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, x: serviceIndex % 2 === 0 ? -30 : 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    whileInView={{ opacity: 1, x: 0}}
                     transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true}}
                     className="group relative"
                   >
                     <div className="relative p-6 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
@@ -351,10 +324,10 @@ export default function Revolutionary2028Pricing() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
             >
               <Target className="w-16 h-16 text-green-400 mx-auto mb-6" />
@@ -368,16 +341,10 @@ export default function Revolutionary2028Pricing() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
-            >
-              <Shield className="w-16 h-16 text-blue-400 mx-auto mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">No Hidden Costs</h3>
-              <p className="text-blue-300 mb-6">
-                Transparent pricing with no surprise fees. What you see is what you pay, 
+              viewport = $2;
                 with clear value for every dollar.
               </p>
               <div className="text-3xl font-bold text-blue-400">100%</div>
@@ -385,10 +352,10 @@ export default function Revolutionary2028Pricing() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
             >
               <Award className="w-16 h-16 text-pink-400 mx-auto mb-6" />
@@ -408,13 +375,13 @@ export default function Revolutionary2028Pricing() {
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="space-y-8"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Get Started</span>?
             </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
@@ -459,5 +426,5 @@ export default function Revolutionary2028Pricing() {
 
       <UltraFuturisticFooter2028 />
     </>
-  );
+  )
 }

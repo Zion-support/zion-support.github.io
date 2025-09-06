@@ -1,21 +1,19 @@
-"use client";
+"use client",
 
 import { useState } from "react";
-
 interface MicroSAASService {
-  id: string;
-  name: string;
-  description: string;
-  targetMarket: string[];
-  features: string[];
-  pricing: string;
-  startingPrice: number;
-  contactLink: string;
-  icon: string;
-  benefits: string[];
-  integrations: string[];
-  deployment: string;
-}
+  id: string,
+  name: string,
+  description: string,
+  targetMarket: string[],
+  features: string[],
+  pricing: string,
+  startingPrice: number,
+  contactLink: string,
+  icon: string,
+  benefits: string[],
+  integrations: string[],
+  deployment: string}
 
 const microSAASServices: MicroSAASService[] = [
   {
@@ -44,7 +42,7 @@ const microSAASServices: MicroSAASService[] = [
     ],
     pricing: "Starting at $1,499/month",
     startingPrice: 1499,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Marketplace%20Platform%20Pro%20Inquiry",
+    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "🏪",
     benefits: [
       "Reduce time to market by 80%",
@@ -90,7 +88,7 @@ const microSAASServices: MicroSAASService[] = [
     ],
     pricing: "Starting at $999/month",
     startingPrice: 999,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Token%20Economy%20Platform%20Inquiry",
+    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "🪙",
     benefits: [
       "Increase user engagement by 300%",
@@ -136,7 +134,7 @@ const microSAASServices: MicroSAASService[] = [
     ],
     pricing: "Starting at $499/month",
     startingPrice: 499,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=KYC%20AML%20Enterprise%20Inquiry",
+    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "🆔",
     benefits: [
       "Reduce compliance costs by 50%",
@@ -182,7 +180,7 @@ const microSAASServices: MicroSAASService[] = [
     ],
     pricing: "Starting at $799/month",
     startingPrice: 799,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=DAO%20Governance%20Platform%20Inquiry",
+    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "🏛️",
     benefits: [
       "Streamline governance processes",
@@ -228,7 +226,7 @@ const microSAASServices: MicroSAASService[] = [
     ],
     pricing: "Starting at $599/month",
     startingPrice: 599,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Learning%20Platform%20Inquiry",
+    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "🎓",
     benefits: [
       "Reduce content creation time by 70%",
@@ -274,7 +272,7 @@ const microSAASServices: MicroSAASService[] = [
     ],
     pricing: "Starting at $1,199/month",
     startingPrice: 1199,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Incubator%20Grants%20Platform%20Inquiry",
+    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "🌱",
     benefits: [
       "Streamline application processes",
@@ -294,16 +292,11 @@ const microSAASServices: MicroSAASService[] = [
     ],
     deployment: "Enterprise cloud with compliance features"
   }
-];
+],
 
 export default function MicroSAASPage() {
   return (
-    <div className="space-y-8">
-      {/* Header */}
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">Micro SAAS Solutions</h1>
-        <p className="text-xl opacity-80 max-w-3xl mx-auto">
-          Innovative software-as-a-service solutions designed to accelerate your business growth, 
+    <div className = $2;
           streamline operations, and provide competitive advantages in the digital economy.
         </p>
       </div>
@@ -367,71 +360,7 @@ export default function MicroSAASPage() {
               <h3 className="font-semibold mb-3 text-orange-400">Integrations</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {service.integrations.map((integration, index) => (
-                  <div key={index} className="flex items-center gap-2 text-sm">
-                    <span className="text-purple-400">🔗</span>
-                    <span>{integration}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Deployment */}
-            <div>
-              <h3 className="font-semibold mb-3 text-cyan-400">Deployment</h3>
-              <div className="text-sm opacity-80">{service.deployment}</div>
-            </div>
-
-            {/* CTA */}
-            <div className="space-y-3 pt-4 border-t border-white/10">
-              <a
-                href={service.contactLink}
-                className="w-full block text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold"
-              >
-                Get Started
-              </a>
-              <a
-                href={`https://ziontechgroup.com/services/${service.id}`}
-                className="w-full block text-center text-blue-400 hover:text-blue-300 text-sm underline"
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* SAAS Capabilities Overview */}
-      <div className="space-y-6">
-        <h2 className="text-3xl font-bold text-center">SAAS Capabilities Overview</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="text-center p-6 rounded-lg bg-white/5 border border-white/10">
-            <div className="text-3xl mb-3">🚀</div>
-            <h3 className="font-semibold mb-2">Rapid Deployment</h3>
-            <p className="text-sm opacity-80">Get to market faster with pre-built solutions</p>
-          </div>
-          <div className="text-center p-6 rounded-lg bg-white/5 border border-white/10">
-            <div className="text-3xl mb-3">🔧</div>
-            <h3 className="font-semibold mb-2">Customization</h3>
-            <p className="text-sm opacity-80">White-label and customize for your brand</p>
-          </div>
-          <div className="text-center p-6 rounded-lg bg-white/5 border border-white/10">
-            <div className="text-3xl mb-3">📊</div>
-            <h3 className="font-semibold mb-2">Analytics</h3>
-            <p className="text-sm opacity-80">Built-in analytics and reporting</p>
-          </div>
-          <div className="text-center p-6 rounded-lg bg-white/5 border border-white/10">
-            <div className="text-3xl mb-3">🔌</div>
-            <h3 className="font-semibold mb-2">Integrations</h3>
-            <p className="text-sm opacity-80">Connect with your existing tools</p>
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="text-center space-y-6 py-12 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-lg border border-white/10">
-        <h2 className="text-3xl font-bold">Ready to Accelerate Your Business?</h2>
-        <p className="text-xl opacity-80 max-w-2xl mx-auto">
-          Let's discuss how our micro SAAS solutions can transform your business operations, 
+                  <div key = $2;
           reduce costs, and provide competitive advantages. Get in touch for a personalized consultation.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -454,11 +383,11 @@ export default function MicroSAASPage() {
       <div className="text-center">
         <a
           href="/services"
-          className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all font-semibold"
+          className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover: bg-white/10 transition-all font-semibold"
         >
           ← Back to All Services
         </a>
       </div>
     </div>
-  );
+  )
 }

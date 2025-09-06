@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
-
 export default function PerformanceOptimization() {
   return (
     <>
@@ -61,7 +60,7 @@ export default function PerformanceOptimization() {
                   Understanding Performance Metrics
                 </h2>
                 <p className='text-white/90 mb-4'>
-                  Before diving into optimization strategies, it&apos;s crucial
+                  Before diving into optimization strategies, it&apos,s crucial
                   to understand what performance means in the context of
                   autonomous systems. Key metrics include:
                 </p>
@@ -199,8 +198,7 @@ export default function PerformanceOptimization() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   AI models are often the performance bottleneck in autonomous
-                  systems. We employ several optimization techniques:
-                </p>
+                  systems. We employ several optimization techniques: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>
                     • <strong>Model Pruning:</strong> Removing unnecessary
@@ -274,5 +272,5 @@ export default function PerformanceOptimization() {
         </main>
       </div>
     </>
-  );
+  )
 }

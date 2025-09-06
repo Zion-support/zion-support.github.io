@@ -1,35 +1,34 @@
 import { useEffect, useState } from 'react';
-
 export default function AdminPartners() {
-  const [partners, setPartners] = useState<any[]>([]);
-  const [selected, setSelected] = useState<string>('');
-  const [flags, setFlags] = useState<any[]>([]);
+  const [partners, setPartners] = useState<any[]>([]),
+  const [selected, setSelected] = useState<string>(''),
+  const [flags, setFlags] = useState<any[]>([]),
 
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch('/api/admin/partners/list');
-        const json = await res.json();
-        setPartners(json.partners || []);
+        const res = await fetch($2);
+        const json = await res.json($2);
+        setPartners(json.partners || [])
       } catch {}
-    })();
-  }, []);
+    })()
+  }, []),
 
   async function updatePartner(code: string, updates: any) {
     await fetch('/api/admin/partners/update', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code, ...updates })});
-    const res = await fetch('/api/admin/partners/list');
-    const json = await res.json();
-    setPartners(json.partners || []);
+      body: JSON.stringify({ code, ...updates })}),
+    const res = await fetch($2);
+    const json = await res.json($2);
+    setPartners(json.partners || [])
   }
 
   async function viewFlags(code: string) {
-    setSelected(code);
-    const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
-    const json = await res.json();
-    setFlags(json.flags || []);
+    setSelected($2);
+    const res = $2;
+    const json = await res.json($2);
+    setFlags(json.flags || [])
   }
 
   return (
@@ -88,5 +87,5 @@ export default function AdminPartners() {
         </div>
       )}
     </div>
-  );
+  )
 }

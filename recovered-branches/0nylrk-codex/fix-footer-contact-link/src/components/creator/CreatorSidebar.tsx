@@ -8,7 +8,7 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarGroupLabel,
-  SidebarGroupContent} from "@/components/ui/sidebar";
+  SidebarGroupContent} from "@/components/ui/sidebar",
 
 export function AppSidebar() {
   return (
@@ -95,5 +95,5 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
-  );
+  )
 }

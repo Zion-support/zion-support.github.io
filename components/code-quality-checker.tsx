@@ -3,103 +3,73 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
-
 export default function CodeQualityCheckerPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
-  const [codeInput, setCodeInput] = useState('');
-
-  const features = [
-    {
-      icon: <Code className="w-8 h-8 text-white" />,
+  const [isAnalyzing, setIsAnalyzing] = useState($2);
+  const [analysisResults, setAnalysisResults] = useState($2);
+  const [codeInput, setCodeInput] = useState($2);
+  const features = $2;
       title: 'Multi-Language Support',
       description: 'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.',
       color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
       gradient: 'from-teal-400 to-cyan-500'},
     {
-      icon: <CheckCircle className="w-8 h-8 text-white" />,
+      icon: <CheckCircle className = $2;
       title: 'Code Quality Metrics',
       description: 'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500'},
     {
-      icon: <Zap className="w-8 h-8 text-white" />,
+      icon: <Zap className = $2;
       title: 'Real-Time Analysis',
       description: 'Instant code quality feedback with detailed explanations and improvement suggestions.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       gradient: 'from-orange-400 to-red-500'},
     {
-      icon: <Shield className="w-8 h-8 text-white" />,
+      icon: <Shield className = $2;
       title: 'Security Scanning',
       description: 'Automated detection of security vulnerabilities, dependency issues, and best practice violations.',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500'}];
+      gradient: 'from-purple-400 to-indigo-500'}],
 
   const supportedLanguages = [
-    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rules', 'TypeScript checks', 'React best practices'] },
-    { name: 'Python', icon: '🐍', features: ['PEP 8 compliance', 'Type hints', 'Security scanning'] },
-    { name: 'Java', icon: '☕', features: ['PMD rules', 'Checkstyle', 'SonarQube integration'] },
-    { name: 'C++', icon: '⚙️', features: ['Clang-tidy', 'Static analysis', 'Memory leak detection'] },
-    { name: 'Go', icon: '🟢', features: ['Golangci-lint', 'Go vet', 'Performance analysis'] },
-    { name: 'PHP', icon: '🐘', features: ['PHPStan', 'PHP CS Fixer', 'Security analysis'] }
-  ];
+    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checksReact best practices'] },
+    { name: 'Python', icon: '🐍', features: ['PEP 8 complianceType hintsSecurity scanning'] },
+    { name: 'Java', icon: '☕', features: ['PMD rulesCheckstyleSonarQube integration'] },
+    { name: 'C++', icon: '⚙️', features: ['Clang-tidyStatic analysisMemory leak detection'] },
+    { name: 'Go', icon: '🟢', features: ['Golangci-lintGo vetPerformance analysis'] },
+    { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
+  ],
 
-  const pricing = [
-    {
-      name: 'Developer',
+  const pricing = $2;
       price: '$29',
       period: '/month',
       description: 'Perfect for individual developers and small projects',
       features: [
-        '100 code analyses/month',
-        'Basic quality metrics',
-        '5 programming languages',
-        'Email support',
-        'Basic reporting',
-        'Community rules'
+        '100 code analyses/monthBasic quality metrics5 programming languagesEmail supportBasic reportingCommunity rules'
       ],
-      popular: false
-    },
+      popular: false},
     {
       name: 'Team',
       price: '$79',
       period: '/month',
       description: 'Ideal for development teams and growing companies',
       features: [
-        '500 code analyses/month',
-        'Advanced quality metrics',
-        'All programming languages',
-        'Priority support',
-        'Advanced reporting',
-        'Custom rules',
-        'Team collaboration',
-        'API access'
+        '500 code analyses/monthAdvanced quality metricsAll programming languagesPriority supportAdvanced reportingCustom rulesTeam collaborationAPI access'
       ],
-      popular: true
-    },
+      popular: true},
     {
       name: 'Enterprise',
       price: '$199',
       period: '/month',
       description: 'For large organizations with complex codebases',
       features: [
-        'Unlimited analyses',
-        'Enterprise metrics',
-        'Custom language support',
-        '24/7 dedicated support',
-        'Custom reporting',
-        'White-label options',
-        'On-premise deployment',
-        'Custom integrations'
+        'Unlimited analysesEnterprise metricsCustom language support24/7 dedicated supportCustom reportingWhite-label optionsOn-premise deploymentCustom integrations'
       ],
-      popular: false
-    }
-  ];
+      popular: false}
+  ],
 
-  const handleAnalyzeCode = async () => {
-    if (!codeInput.trim()) return;
-    
-    setIsAnalyzing(true);
+  const handleAnalyzeCode = $2;
+    setIsAnalyzing($2);
     // Simulate code analysis
     setTimeout(() => {
       setAnalysisResults({
@@ -117,15 +87,12 @@ export default function CodeQualityCheckerPage() {
           securityScore: '92%'
         },
         recommendations: [
-          'Use const for immutable variables to improve code clarity',
-          'Break down large functions into smaller, more focused functions',
-          'Add proper error handling for better robustness',
-          'Consider adding JSDoc comments for better documentation'
+          'Use const for immutable variables to improve code clarityBreak down large functions into smaller, more focused functionsAdd proper error handling for better robustnessConsider adding JSDoc comments for better documentation'
         ]
-      });
-      setIsAnalyzing(false);
-    }, 3000);
-  };
+      }),
+      setIsAnalyzing(false)
+    }, 3000)
+  },
 
   return (
     <>
@@ -141,18 +108,7 @@ export default function CodeQualityCheckerPage() {
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(20,184,166,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(20,184,166,0.06),transparent_50%)]" />
-        <div className="absolute inset-0 bg-grid opacity-10" />
-        
-        <div className="relative z-10 container-cursor text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-sm font-medium mb-6">
-            <Code className="w-4 h-4 mr-2" />
-            Professional Code Analysis
-          </div>
-          <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
-            Code Quality Checker
-          </h1>
-          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-            Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages, 
+        <div className = $2;
             security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.
           </p>
           
@@ -441,7 +397,7 @@ export default function CodeQualityCheckerPage() {
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="container-cursor text-center relative z-10">
           <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
             Ready to Improve Your Code Quality?
@@ -449,7 +405,7 @@ export default function CodeQualityCheckerPage() {
           <p className="text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Join thousands of developers using our code quality checker to write better, safer, and more maintainable code.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">
             <Button
               href="/contact"
               size="lg"
@@ -470,5 +426,5 @@ export default function CodeQualityCheckerPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

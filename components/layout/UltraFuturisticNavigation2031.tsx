@@ -16,18 +16,15 @@ import {
   Keyboard, Mouse, CpuIcon, DatabaseIcon, 
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon,
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceCategories = [
-  {
-    title: '🚀 2031 Revolutionary AI Services',
+const serviceCategories = $2;
     icon: BrainIcon,
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     description: 'Next-generation AI consciousness and creativity',
@@ -98,34 +95,31 @@ const serviceCategories = [
       { name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: '$449/month' }
     ]
   }
-];
+],
 
 const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: '2030 Services', href: '/services/2030-futuristic-services', icon: Rocket },
-  { name: 'AI Solutions', href: '/ai-services', icon: Brain },
-  { name: 'IT Solutions', href: '/it-services', icon: Cpu },
-  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom },
-  { name: 'Space Tech', href: '/space-tech', icon: Rocket },
-  { name: 'Pricing', href: '/pricing', icon: DollarSign },
-  { name: 'About', href: '/about', icon: Users },
-  { name: 'Contact', href: '/contact', icon: MessageCircle },
-  { name: 'Resources', href: '/resources', icon: BookOpen }
-];
+  { name: 'Home', href: '/', icon: Home},
+  { name: 'Services', href: '/services', icon: Briefcase},
+  { name: '2030 Services', href: '/services/2030-futuristic-services', icon: Rocket},
+  { name: 'AI Solutions', href: '/ai-services', icon: Brain},
+  { name: 'IT Solutions', href: '/it-services', icon: Cpu},
+  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom},
+  { name: 'Space Tech', href: '/space-tech', icon: Rocket},
+  { name: 'Pricing', href: '/pricing', icon: DollarSign},
+  { name: 'About', href: '/about', icon: Users},
+  { name: 'Contact', href: '/contact', icon: MessageCircle},
+  { name: 'Resources', href: '/resources', icon: BookOpen}
+],
 
 export default function UltraFuturisticNavigation2031() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [scrolled, setScrolled] = useState(false);
-
+  const [isOpen, setIsOpen] = useState($2);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null),
+  const [scrolled, setScrolled] = useState($2);
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleScroll = $2;
+    window.addEventListener($2);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
 
   return (
     <>
@@ -160,7 +154,7 @@ export default function UltraFuturisticNavigation2031() {
             {/* Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0}}
               transition={{ duration: 0.5 }}
               className="flex items-center space-x-3"
             >
@@ -181,7 +175,7 @@ export default function UltraFuturisticNavigation2031() {
                 <motion.div
                   key={item.name}
                   initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  animate={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="relative group"
                 >
@@ -203,7 +197,7 @@ export default function UltraFuturisticNavigation2031() {
             <div className="hidden lg:flex items-center space-x-4">
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1}}
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
               >
@@ -211,7 +205,7 @@ export default function UltraFuturisticNavigation2031() {
               </motion.button>
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1}}
                 transition={{ duration: 0.5, delay: 0.9 }}
                 className="px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
               >
@@ -223,8 +217,8 @@ export default function UltraFuturisticNavigation2031() {
             <div className="lg:hidden">
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 1 }}
+                animate={{ opacity: 1, scale: 1}}
+                transition={{ duration: 0.5, delay: 1}}
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-gray-300 hover:text-white transition-colors duration-200"
               >
@@ -241,8 +235,8 @@ export default function UltraFuturisticNavigation2031() {
               {serviceCategories.map((category, index) => (
                 <motion.div
                   key={category.title}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 10}}
+                  animate={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="relative group"
                   onMouseEnter={() => setActiveCategory(category.title)}
@@ -259,7 +253,7 @@ export default function UltraFuturisticNavigation2031() {
                     {activeCategory === category.title && (
                       <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        animate={{ opacity: 1, y: 0, scale: 1}}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
@@ -274,7 +268,7 @@ export default function UltraFuturisticNavigation2031() {
                               <motion.div
                                 key={service.name}
                                 initial={{ opacity: 0, x: -10 }}
-                                animate={{ opacity: 1, x: 0 }}
+                                animate={{ opacity: 1, x: 0}}
                                 transition={{ duration: 0.2, delay: serviceIndex * 0.05 }}
                                 className="group cursor-pointer"
                               >
@@ -313,7 +307,7 @@ export default function UltraFuturisticNavigation2031() {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0}}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/20 z-50 lg:hidden"
@@ -359,7 +353,7 @@ export default function UltraFuturisticNavigation2031() {
       </AnimatePresence>
 
       {/* Spacer for fixed navigation */}
-      <div className="h-32 lg:h-40"></div>
+      <div className="h-32 lg: h-40"></div>
     </>
-  );
+  )
 }

@@ -7,40 +7,36 @@ import { Folder } from 'lucide-react'
 import { CATEGORIES } from '@/data/categories';
 import { NextSeo } from '@/components/NextSeo';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface CategoryType {
-  id: string;
-  name: string;
-  slug: string;
-  icon: string;
-}
+  id: string,
+  name: string,
+  slug: string,
+  icon: string}
 
 const fetcher = async (url: string): Promise<CategoryType[]> => {
   try {
-    const response = await fetch(url);
+    const response = await fetch($2);
     if (!response.ok) {
-      logErrorToProduction('Categories API error:', { data: response.statusText });
-      return CATEGORIES as CategoryType[];
+      logErrorToProduction($2);
+      return CATEGORIES as CategoryType[]
     }
-    const data = await response.json();
-    return Array.isArray(data) && data.length > 0 ? data : CATEGORIES as CategoryType[];
+    const data = await response.json($2);
+    return Array.isArray(data) && data.length > 0 ? data : CATEGORIES as CategoryType[]
   } catch (err) {
-    logErrorToProduction('Categories API fetch failed:', { data: err });
-    return CATEGORIES as CategoryType[];
+    logErrorToProduction($2);
+    return CATEGORIES as CategoryType[]
   }
-};
+},
 
 export interface CategoriesProps {
-  categories?: CategoryType[];
+  categories?: CategoryType[]
 }
 
 export default function Categories({ categories: initialCategories = [] }: CategoriesProps) {
   const { data, error } = useSWR<CategoryType[]>('/api/categories', fetcher, {
-    fallbackData: initialCategories});
-  const categories = data || [];
-  const isLoading = !data && !error;
-
+    fallbackData: initialCategories}),
+  const categories = $2;
+  const isLoading = $2;
   return (
     <>
       <NextSeo
@@ -62,7 +58,7 @@ export default function Categories({ categories: initialCategories = [] }: Categ
         <ErrorBoundary>
           {isLoading && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-testid="skeleton-loader">
-              {Array.from({ length: 4 }).map((_, index) => (
+              {Array.from({ length: 4}).map((_, index) => (
                 <SkeletonCard key={index} />
               ))}
             </div>
@@ -89,7 +85,7 @@ export default function Categories({ categories: initialCategories = [] }: Categ
                     description={`Explore ${category.name.toLowerCase()} in our marketplace`}
                     icon={<Folder className="w-6 h-6" />}
                   />
-                );
+                )
               })}
             </div>
           )}
@@ -97,5 +93,5 @@ export default function Categories({ categories: initialCategories = [] }: Categ
       </div>
     </div>
     </>
-  );
+  )
 }

@@ -6,18 +6,15 @@ import {
   Rocket, Brain, Atom, Building, Briefcase, Microscope,
   Twitter, Facebook, Linkedin, Instagram, Youtube,
   Github, Zap, Sparkles, Shield, Cpu, Database
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceCategories = [
-  {
-    title: 'AI & Machine Learning',
+const serviceCategories = $2;
     icon: Brain,
     services: [
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
@@ -53,29 +50,27 @@ const serviceCategories = [
       { name: 'DevOps Automation', href: '/devops-automation' }
     ]
   }
-];
+],
 
 const quickLinks = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'Solutions', href: '/solutions', icon: Rocket },
-  { name: 'About', href: '/about', icon: Users },
-  { name: 'Blog', href: '/blog', icon: BookOpen },
-  { name: 'Contact', href: '/contact', icon: MessageCircle },
-  { name: 'Support', href: '/support', icon: MessageCircle },
-  { name: 'Privacy', href: '/privacy', icon: Shield }
-];
+  { name: 'Home', href: '/', icon: Home},
+  { name: 'Services', href: '/services', icon: Briefcase},
+  { name: 'Solutions', href: '/solutions', icon: Rocket},
+  { name: 'About', href: '/about', icon: Users},
+  { name: 'Blog', href: '/blog', icon: BookOpen},
+  { name: 'Contact', href: '/contact', icon: MessageCircle},
+  { name: 'Support', href: '/support', icon: MessageCircle},
+  { name: 'Privacy', href: '/privacy', icon: Shield}
+],
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
-];
+],
 
-const footerSections = [
-  {
-    title: 'Company',
+const footerSections = $2;
     links: [
       { name: 'About Us', href: '/about' },
       { name: 'Our Mission', href: '/mission' },
@@ -118,7 +113,7 @@ const footerSections = [
       { name: 'Compliance', href: '/compliance' }
     ]
   }
-];
+],
 
 const UltraFuturisticFooter2029 = () => {
   return (
@@ -282,21 +277,5 @@ const UltraFuturisticFooter2029 = () => {
               Join our newsletter for exclusive updates and industry insights.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
-export default UltraFuturisticFooter2029;
+            <div className = $2;
+export default UltraFuturisticFooter2029,

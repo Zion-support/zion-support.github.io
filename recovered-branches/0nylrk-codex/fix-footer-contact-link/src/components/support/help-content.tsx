@@ -2,19 +2,19 @@
 import React from "react";
 import { HelpCategory } from "./types";
 import { 
-  HelpCircle, 
+  HelpCircle,
   CreditCard, 
   Users, 
   Calendar, 
   Briefcase 
-} from "lucide-react";
+} from "lucide-react",
 
 export const HELP_CATEGORIES: HelpCategory[] = [
   {
     id: "getting-started",
     name: "Getting Started",
     description: "Learn the basics of using the Zion AI Marketplace",
-    icon: <HelpCircle className="h-6 w-6 text-zion-purple" />,
+    icon: <HelpCircle className = $2;
     articles: [
       {
         id: "create-account",
@@ -43,7 +43,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     id: "hiring",
     name: "Hiring Process",
     description: "How to find and hire talent on the platform",
-    icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,
+    icon: <Briefcase className = $2;
     articles: [
       {
         id: "post-job",
@@ -79,7 +79,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     id: "profile-setup",
     name: "Profile Setup",
     description: "Optimize your profile for better visibility",
-    icon: <Users className="h-6 w-6 text-zion-purple" />,
+    icon: <Users className = $2;
     articles: [
       {
         id: "talent-profile",
@@ -108,7 +108,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     id: "payments",
     name: "Payments",
     description: "Everything about payments and billing",
-    icon: <CreditCard className="h-6 w-6 text-zion-cyan" />,
+    icon: <CreditCard className = $2;
     articles: [
       {
         id: "payment-methods",
@@ -137,7 +137,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     id: "disputes",
     name: "Disputes",
     description: "How to handle and resolve contract disputes",
-    icon: <Calendar className="h-6 w-6 text-zion-purple" />,
+    icon: <Calendar className = $2;
     articles: [
       {
         id: "file-dispute",
@@ -162,4 +162,4 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       }
     ]
   }
-];
+],

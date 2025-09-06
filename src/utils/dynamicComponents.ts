@@ -4,87 +4,77 @@
  */
 import React from 'react';
 import dynamic from 'next/dynamic';
-
-const LoadingSpinner = () => React.createElement('div', 
+const LoadingSpinner = $2;
   { className: "flex items-center justify-center p-8" },
   React.createElement('div', { className: "animate-spin rounded-full h-8 w-8 border-b-2 border-primary" })
-);
+),
 
-const LoadingSkeleton = () => React.createElement('div',
-  { className: "animate-pulse space-y-4" },
-  React.createElement('div', { className: "h-4 bg-gray-200 rounded w-3/4" }),
-  React.createElement('div', { className: "h-4 bg-gray-200 rounded w-1/2" }),
+const LoadingSkeleton = () => React.createElement($2);
+  React.createElement($2);
   React.createElement('div', { className: "h-32 bg-gray-200 rounded" })
-);
+),
 
 // Chart components (heavy - only load when needed)
 // TODO: Uncomment when Chart component is available
 // export const DynamicChart = dynamic(
-//   () => import('../components/charts/Chart'),
+//   () => import($2);
 //   { 
 //     loading: LoadingSkeleton,
-//     ssr: false 
+//     ssr: false
 //   }
-// );
+// ),
 
-export const DynamicPieChart = dynamic(
-  () => import('recharts').then(mod => ({ default: mod.PieChart })),
+export const DynamicPieChart = $2;
   { 
     loading: LoadingSkeleton,
-    ssr: false 
-  }
-);
+    ssr: false}
+),
 
-export const DynamicBarChart = dynamic(
-  () => import('recharts').then(mod => ({ default: mod.BarChart })),
+export const DynamicBarChart = $2;
   { 
     loading: LoadingSkeleton,
-    ssr: false 
-  }
-);
+    ssr: false}
+),
 
 // TODO: Uncomment when these components are available
 // export const DynamicPDFGenerator = dynamic(
-//   () => import('../components/pdf/PDFGenerator'),
+//   () => import($2);
 //   { 
 //     loading: LoadingSpinner,
-//     ssr: false 
+//     ssr: false
 //   }
-// );
+// ),
 
 // export const DynamicVideoPlayer = dynamic(
-//   () => import('../components/video/VideoPlayer'),
+//   () => import($2);
 //   { 
 //     loading: LoadingSkeleton,
-//     ssr: false 
+//     ssr: false
 //   }
-// );
+// ),
 
 // export const DynamicModelViewer = dynamic(
-//   () => import('../components/ar/ModelViewer'),
+//   () => import($2);
 //   { 
 //     loading: LoadingSpinner,
-//     ssr: false 
+//     ssr: false
 //   }
-// );
+// ),
 
 // export const DynamicRichEditor = dynamic(
-//   () => import('../components/editor/RichTextEditor'),
+//   () => import($2);
 //   { 
 //     loading: LoadingSpinner,
-//     ssr: false 
+//     ssr: false
 //   }
-// );
+// ),
 
 // Virtual list for large datasets
-export const DynamicVirtualList = dynamic(
-  () => import('react-window').then(mod => ({ default: mod.FixedSizeList })),
+export const DynamicVirtualList = $2;
   { 
     loading: LoadingSkeleton,
-    ssr: false 
-  }
-);
+    ssr: false}
+),
 
-// Usage examples:
-// Replace: import Chart from '../components/charts/Chart';
-// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
+// Usage examples: // Replace: import Chart from '../components/charts/Chart',
+// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents',

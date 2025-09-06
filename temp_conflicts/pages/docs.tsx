@@ -3,7 +3,6 @@ import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
 import Link from 'next/link';
-
 export default function DocsPage() {
 	return (
 		<UltraFuturisticBackground variant="quantum" intensity="medium">
@@ -29,10 +28,10 @@ export default function DocsPage() {
 					<Card className="p-6 bg-black/40 border border-gray-700/50">
 						<h3 className="text-white text-lg font-semibold mb-2">Support Center</h3>
 						<p className="text-gray-300 mb-3">FAQ, contact, status, and training resources.</p>
-						<Link href="/support" className="text-cyan-400 hover:text-cyan-300">Visit Support →</Link>
+						<Link href="/support" className="text-cyan-400 hover: text-cyan-300">Visit Support →</Link>
 					</Card>
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-	);
+	)
 }

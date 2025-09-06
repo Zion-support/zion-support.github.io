@@ -16,31 +16,28 @@ import { ProductListing } from '@/types/listings';
 import { motion } from 'framer-motion';
 import { useCurrency } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface EquipmentSpecification {
-  name: string;
-  value: string;
-}
+  name: string,
+  value: string}
 
 interface EquipmentDetails {
-  id: string;
-  name: string;
-  description: string;
-  brand: string;
-  category: string;
-  subcategory?: string;
-  images: string[];
-  price: number;
-  currency: string;
-  rating?: number;
-  reviewCount?: number;
-  inStock: boolean;
-  expectedShipping?: string;
-  specifications: EquipmentSpecification[];
-  features: string[];
-  warranty?: string;
-  returnPolicy?: string;
+  id: string,
+  name: string,
+  description: string,
+  brand: string,
+  category: string,
+  subcategory?: string,
+  images: string[],
+  price: number,
+  currency: string,
+  rating?: number,
+  reviewCount?: number,
+  inStock: boolean,
+  expectedShipping?: string,
+  specifications: EquipmentSpecification[],
+  features: string[],
+  warranty?: string,
+  returnPolicy?: string
 }
 
 // Convert ProductListing to EquipmentDetails format
@@ -52,12 +49,12 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     brand: item.brand || 'Unknown',
     category: item.category,
     subcategory: item.subcategory,
-    images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'],
+    images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto = $2;
     price: item.price || 0,
     currency: item.currency || '$',
     rating: item.rating,
     reviewCount: item.reviewCount,
-    inStock: item.availability === 'In Stock' || !item.availability,
+    inStock: item.availability = $2;
     expectedShipping: item.availability || 'In Stock',
     specifications: (item.specifications || []).map((spec) => ({ 
       name: spec, 
@@ -66,123 +63,110 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     features: item.tags || [],
     warranty: '1 Year Manufacturer Warranty',
     returnPolicy: '30-day return policy'
-  };
+  }
 }
 
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipmentListings.reduce((acc, item) => {
-    acc[item.id] = convertProductListingToEquipmentDetails(item);
-    return acc;
-  }, {} as { [key: string]: EquipmentDetails });
+    acc[item.id] = convertProductListingToEquipmentDetails($2);
+    return acc
+  }, {} as { [key: string]: EquipmentDetails }),
 
 export default function EquipmentDetail() {
-  const router = useRouter();
-  const { id } = router.query as { id?: string };
-  const { isAuthenticated, user } = useAuth();
-  const { items, dispatch } = useCart();
-  const { formatPrice } = useCurrency();
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
-  const [isAdding, setIsAdding] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const router = useRouter($2);
+  const { id } = router.query as { id?: string },
+  const { isAuthenticated, user } = useAuth($2);
+  const { items, dispatch } = useCart($2);
+  const { formatPrice } = useCurrency($2);
+  const [selectedImageIndex, setSelectedImageIndex] = useState($2);
+  const [quantity, setQuantity] = useState($2);
+  const [isAdding, setIsAdding] = useState($2);
+  const [loading, setLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
 
-  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>();
+  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>(),
 
   useEffect(() => {
     async function loadEquipment() {
       if (!id) {
-        setLoading(false);
-        setError('No equipment ID provided');
-        return;
+        setLoading($2);
+        setError($2);
+        return
       }
 
       try {
-        setLoading(true);
-        setError(null);
-
+        setLoading($2);
+        setError($2);
         // Try to find in static data first
-        const equipmentFromSample = SAMPLE_EQUIPMENT[id];
+        const equipmentFromSample = $2;
         if (equipmentFromSample) {
-          setEquipment(equipmentFromSample);
-          setLoading(false);
-          return;
+          setEquipment($2);
+          setLoading($2);
+          return
         }
 
         // Try to get from sessionStorage (for dynamically generated equipment)
         if (typeof window !== 'undefined') {
           try {
-            const stored = sessionStorage.getItem(`equipment:${id}`);
+            const stored = sessionStorage.getItem($2);
             if (stored) {
-              const storedData = JSON.parse(stored);
-              
+              const storedData = JSON.parse($2);
               // Check if it's already in EquipmentDetails format or needs conversion
-              let equipmentData: EquipmentDetails;
+              let equipmentData: EquipmentDetails,
               if (storedData.name) {
                 // Already in EquipmentDetails format
-                equipmentData = storedData;
+                equipmentData = storedData
               } else {
                 // It's a ProductListing, convert it
-                equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing);
+                equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing)
               }
               
-              setEquipment(equipmentData);
-              setLoading(false);
-              return;
+              setEquipment($2);
+              setLoading($2);
+              return
             }
           } catch (storageError) {
-            logErrorToProduction('Error reading from sessionStorage:', { data: storageError });
+            logErrorToProduction('Error reading from sessionStorage:', { data: storageError})
           }
         }
 
         // If not found anywhere, set error
-        setError('Equipment not found');
-        setLoading(false);
+        setError($2);
+        setLoading(false)
       } catch (error) {
-        logErrorToProduction('Error loading equipment:', { data: error });
-        setError('Failed to load equipment details');
-        setLoading(false);
+        logErrorToProduction($2);
+        setError($2);
+        setLoading(false)
       }
     }
 
-    loadEquipment();
-  }, [id]);
+    loadEquipment()
+  }, [id]),
 
   const handleAddToCart = async () => {
     if (!equipment || !isAuthenticated) {
-      toast({
-        title: "Authentication Required",
-        description: "Please log in to add items to cart",
-        variant: "destructive"});
-      return;
+      toast($2);
+      return
     }
 
-    setIsAdding(true);
+    setIsAdding($2);
     try {
-      dispatch({
-        type: 'ADD_ITEM',
-        payload: {
-          id: equipment.id,
-          name: equipment.name,
-          price: equipment.price,
-          quantity}});
-
+      dispatch($2);
       toast({
         title: "Added to Cart",
-        description: `${equipment.name} has been added to your cart.`});
+        description: `${equipment.name} has been added to your cart.`})
     } catch (error) {
       toast({
         title: "Error",
         description: "Failed to add item to cart. Please try again.",
-        variant: "destructive"});
+        variant: "destructive"})
     } finally {
-      setIsAdding(false);
+      setIsAdding(false)
     }
-  };
+  },
 
-  const inCart = items.some(item => item.id === equipment?.id);
-
+  const inCart = items.some($2);
   // Loading state
   if (loading) {
     return (
@@ -197,7 +181,7 @@ export default function EquipmentDetail() {
           </div>
         </div>
       </>
-    );
+    )
   }
 
   // Error state
@@ -212,49 +196,10 @@ export default function EquipmentDetail() {
           <div className="container mx-auto">
             <motion.div 
               className="text-center py-20"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
             >
-              <AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />
-              <h1 className="text-3xl font-bold text-white mb-4">
-                {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
-              </h1>
-              <p className="text-zion-slate-light mb-8 max-w-md mx-auto">
-                {error === 'Equipment not found' 
-                  ? "The equipment you're looking for doesn't exist or has been removed." 
-                  : error || "We couldn't load the equipment details. Please try again."
-                }
-              </p>
-              <div className="space-x-4">
-                <Button 
-                  onClick={() => router.back()} 
-                  variant="outline"
-                  className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue"
-                >
-                  <ArrowLeft className="h-4 w-4 mr-2" />
-                  Go Back
-                </Button>
-                <Button 
-                  onClick={() => router.push('/equipment')}
-                  className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
-                >
-                  Browse Equipment
-                </Button>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </>
-    );
-  }
-
-  return (
-    <>
-      <NextSeo
-        title={`${equipment.name} - Zion Marketplace`}
-        description={equipment.description}
-        openGraph={{
-          title: `${equipment.name} - Zion Marketplace`,
+              <AlertTriangle className = $2;
           description: equipment.description,
           images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined
         }}
@@ -265,7 +210,7 @@ export default function EquipmentDetail() {
           <motion.nav 
             className="flex mb-8"
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0}}
           >
             <button
               onClick={() => router.push('/equipment')}
@@ -282,7 +227,7 @@ export default function EquipmentDetail() {
             <motion.div 
               className="space-y-4"
               initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0}}
               transition={{ delay: 0.2 }}
             >
               <AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">
@@ -319,8 +264,8 @@ export default function EquipmentDetail() {
             {/* Product Details */}
             <motion.div 
               className="space-y-6"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 20}}
+              animate={{ opacity: 1, x: 0}}
               transition={{ delay: 0.4 }}
             >
               {/* Header */}
@@ -467,6 +412,6 @@ export default function EquipmentDetail() {
         </div>
       </div>
     </>
-  );
+  )
 }
 

@@ -2,11 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react';
 import Link from 'next/link';
-
-const Revolutionary2027ServicesShowcase = () => {
-  const featuredServices = [
-    {
-      id: 'quantum-ai-consciousness-platform',
+const Revolutionary2027ServicesShowcase = $2;
       name: 'Quantum AI Consciousness Platform',
       description: 'Simulate human consciousness with quantum computing - the first platform to combine quantum computing with advanced AI for breakthrough neuroscience research.',
       price: '$9,999',
@@ -14,7 +10,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Brain,
       color: 'from-purple-600 to-indigo-700',
       category: 'Quantum AI & Neuroscience',
-      features: ['Quantum consciousness simulation', 'Neural pattern recognition', 'Emotional intelligence modeling', 'Real-time brain-computer interface'],
+      features: ['Quantum consciousness simulationNeural pattern recognitionEmotional intelligence modelingReal-time brain-computer interface'],
       marketSize: '$15B research market',
       growthRate: '300% annual growth'
     },
@@ -27,7 +23,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Rocket,
       color: 'from-blue-600 to-cyan-700',
       category: 'Space Technology & AI',
-      features: ['Autonomous mining operations', 'Resource detection algorithms', 'Risk assessment AI', 'Mission planning automation'],
+      features: ['Autonomous mining operationsResource detection algorithmsRisk assessment AIMission planning automation'],
       marketSize: '$3.8T space economy',
       growthRate: '400% annual growth'
     },
@@ -40,7 +36,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: TestTube,
       color: 'from-green-600 to-emerald-700',
       category: 'Biotechnology & Computing',
-      features: ['DNA-based computation', 'Molecular algorithm optimization', 'Real-time molecular analysis', 'Algorithm library (100+ algorithms)'],
+      features: ['DNA-based computationMolecular algorithm optimizationReal-time molecular analysisAlgorithm library (100+ algorithms)'],
       marketSize: '$2.1T biotechnology market',
       growthRate: '250% annual growth'
     },
@@ -53,7 +49,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Globe,
       color: 'from-pink-600 to-rose-700',
       category: 'Metaverse & Holographics',
-      features: ['3D holographic rendering', 'Real-time 3D modeling', 'Holographic projection systems', 'AI-powered content generation'],
+      features: ['3D holographic renderingReal-time 3D modelingHolographic projection systemsAI-powered content generation'],
       marketSize: '$800B metaverse market',
       growthRate: '350% annual growth'
     },
@@ -66,7 +62,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Microscope,
       color: 'from-red-600 to-orange-700',
       category: 'Healthcare & AI',
-      features: ['Autonomous diagnosis', 'Treatment recommendation AI', 'Continuous learning algorithms', 'Predictive health analytics'],
+      features: ['Autonomous diagnosisTreatment recommendation AIContinuous learning algorithmsPredictive health analytics'],
       marketSize: '$4.1T healthcare market',
       growthRate: '280% annual growth'
     },
@@ -79,31 +75,30 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Lock,
       color: 'from-indigo-600 to-purple-700',
       category: 'Quantum Security',
-      features: ['Quantum key distribution', 'Unbreakable encryption', 'Real-time threat detection', 'Zero-trust architecture'],
+      features: ['Quantum key distributionUnbreakable encryptionReal-time threat detectionZero-trust architecture'],
       marketSize: '$500B cybersecurity market',
       growthRate: '500% annual growth'
     }
-  ];
+  ],
 
   const categories = [
     { name: 'Quantum AI Services', count: '25+', icon: Atom, color: 'from-purple-500 to-indigo-600' },
     { name: 'Space Technology', count: '15+', icon: Satellite, color: 'from-blue-500 to-cyan-600' },
     { name: 'Biotechnology', count: '20+', icon: TestTube, color: 'from-green-500 to-emerald-600' },
     { name: 'Emerging Tech', count: '30+', icon: Sparkles, color: 'from-pink-500 to-rose-600' }
-  ];
+  ],
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20},
     visible: {
       opacity: 1,
       y: 0,
@@ -112,7 +107,7 @@ const Revolutionary2027ServicesShowcase = () => {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -124,10 +119,10 @@ const Revolutionary2027ServicesShowcase = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
@@ -146,7 +141,7 @@ const Revolutionary2027ServicesShowcase = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
           {categories.map((category, index) => (
@@ -171,7 +166,7 @@ const Revolutionary2027ServicesShowcase = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {featuredServices.map((service, index) => (
@@ -239,40 +234,8 @@ const Revolutionary2027ServicesShowcase = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join the future of technology with our revolutionary 2027 services. 
-              Get in touch to discover how we can accelerate your digital transformation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link 
-                href="https://ziontechgroup.com/contact"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25"
-              >
-                <span>Get Started Today</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <a 
-                href="tel:+13024640950"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl"
-              >
-                <span>Call +1 302 464 0950</span>
-              </a>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-export default Revolutionary2027ServicesShowcase;
+          viewport = $2;
+export default Revolutionary2027ServicesShowcase,

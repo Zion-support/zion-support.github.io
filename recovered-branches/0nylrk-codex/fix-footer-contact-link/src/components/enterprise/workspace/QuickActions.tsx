@@ -3,38 +3,35 @@ import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
-
 export function QuickActions() {
-  const actions = [
-    {
-      id: "post-job",
+  const actions = $2;
       label: "Post New Job",
-      icon: <FileText className="h-5 w-5 mr-2" />,
+      icon: <FileText className = $2;
       description: "Create a new job posting",
       color: "bg-blue-100 dark:bg-blue-900/20"
     },
     {
       id: "add-member",
       label: "Add Team Member",
-      icon: <Plus className="h-5 w-5 mr-2" />,
+      icon: <Plus className = $2;
       description: "Invite someone to your team",
       color: "bg-green-100 dark:bg-green-900/20"
     },
     {
       id: "find-talent",
       label: "Find Talent",
-      icon: <Search className="h-5 w-5 mr-2" />,
+      icon: <Search className = $2;
       description: "Search the talent pool",
       color: "bg-purple-100 dark:bg-purple-900/20"
     },
     {
       id: "schedule",
       label: "Schedule Interview",
-      icon: <Calendar className="h-5 w-5 mr-2" />,
+      icon: <Calendar className = $2;
       description: "Set up candidate interviews",
       color: "bg-amber-100 dark:bg-amber-900/20"
     }
-  ];
+  ],
 
   return (
     <Card>
@@ -62,5 +59,5 @@ export function QuickActions() {
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }

@@ -5,19 +5,17 @@ import type { RootState } from '@/store';
 import { ShoppingCart } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
-
 export function CartDrawer() {
-  const items = useSelector((s: RootState) => s.cart.items);
-  const count = items.reduce((sum, i) => sum + i.quantity, 0);
-  const { isAuthenticated } = useAuth();
-  const [loginOpen, setLoginOpen] = React.useState(false);
-
+  const items = $2;
+  const count = items.reduce((sum, i) => sum + i.quantity, 0),
+  const { isAuthenticated } = useAuth($2);
+  const [loginOpen, setLoginOpen] = React.useState($2);
   const handleClick = (e: React.MouseEvent) => {
     if (!isAuthenticated) {
-      e.preventDefault();
-      setLoginOpen(true);
+      e.preventDefault($2);
+      setLoginOpen(true)
     }
-  };
+  },
 
   return (
     <>
@@ -31,5 +29,5 @@ export function CartDrawer() {
       </Link>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  );
+  )
 }

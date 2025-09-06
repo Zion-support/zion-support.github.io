@@ -4,17 +4,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown
-} from 'lucide-react';
+} from 'lucide-react',
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
-
 export default function ComprehensivePricingPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
+  const [expandedService, setExpandedService] = useState<string | null>(null),
 
   // Combine all services
-  const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices];
+  const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices],
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀' },
@@ -34,26 +33,22 @@ export default function ComprehensivePricingPage() {
     { id: 'Edge Computing', name: 'Edge', icon: '🌐' },
     { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍' },
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠' }
-  ];
+  ],
 
   const filteredServices = selectedCategory === 'all' 
     ? allServices 
-    : allServices.filter(service => service.category === selectedCategory);
-
+    : allServices.filter($2);
   const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category);
-    return categoryData?.icon || '🚀';
-  };
+    const categoryData = categories.find($2);
+    return categoryData?.icon || '🚀'
+  },
 
   const calculateYearlyPrice = (monthlyPrice: string) => {
-    const price = parseFloat(monthlyPrice.replace('$', '').replace(',', ''));
-    return `$${(price * 12 * 0.8).toFixed(0)}`; // 20% discount for yearly
-  };
+    const price = parseFloat(monthlyPrice.replace('$', '').replace(, '')),
+    return `$${(price * 12 * 0.8).toFixed(0)}`, // 20% discount for yearly
+  },
 
-  const toggleServiceExpansion = (serviceId: string) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
-  };
-
+  const toggleServiceExpansion = $2;
   return (
     <>
       <Head>
@@ -68,8 +63,8 @@ export default function ComprehensivePricingPage() {
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -127,8 +122,8 @@ export default function ComprehensivePricingPage() {
         <section className="px-6 mb-16">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6 }}
               className="flex flex-wrap justify-center gap-3"
             >
@@ -158,8 +153,8 @@ export default function ComprehensivePricingPage() {
                 {filteredServices.map((service, index) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 30}}
+                    animate={{ opacity: 1, y: 0}}
                     exit={{ opacity: 0, y: -30 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
@@ -242,9 +237,9 @@ export default function ComprehensivePricingPage() {
                     <AnimatePresence>
                       {expandedService === service.id && (
                         <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
+                          initial={{ height: 0, opacity: 0}}
+                          animate={{ height: 'auto', opacity: 1}}
+                          exit={{ height: 0, opacity: 0}}
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden border-t border-white/10"
                         >
@@ -319,10 +314,10 @@ export default function ComprehensivePricingPage() {
         <section className="px-6 pb-20">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center"
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
@@ -332,7 +327,7 @@ export default function ComprehensivePricingPage() {
                 <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
                   Contact our sales team to discuss your specific needs and get a customized quote for our revolutionary micro SAAS services.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <a
                     href="mailto:kleber@ziontechgroup.com"
                     className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
@@ -353,5 +348,5 @@ export default function ComprehensivePricingPage() {
         </section>
       </div>
     </>
-  );
+  )
 }

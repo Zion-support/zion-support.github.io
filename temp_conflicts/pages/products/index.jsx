@@ -2,7 +2,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-
 const Products = () => {
   const products = [
     {
@@ -59,9 +58,9 @@ const Products = () => {
       image: "🛡️",
       href: "/products/securenet-gateway"
     }
-  ];
+  ],
 
-  const categories = ["All", "Artificial Intelligence", "Cloud Solutions", "Blockchain", "Data Analytics", "DevOps", "Cybersecurity"];
+  const categories = ["All", "Artificial Intelligence", "Cloud Solutions", "Blockchain", "Data Analytics", "DevOps", "Cybersecurity"],
 
   return (
     <EnhancedLayout>
@@ -176,7 +175,7 @@ const Products = () => {
           <p className="text-blue-100 mb-6">
             Schedule a demo or consultation to see how our products can transform your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Request Demo
             </Link>
@@ -187,7 +186,7 @@ const Products = () => {
         </div>
       </main>
     </EnhancedLayout>
-  );
-};
+  )
+},
 
-export default Products;
+export default Products,

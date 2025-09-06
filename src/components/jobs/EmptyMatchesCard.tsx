@@ -4,9 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Sparkles, RefreshCcw } from 'lucide-react'
 
 export interface EmptyMatchesCardProps {
-  onRefresh: () => void;
-  isProcessing: boolean;
-}
+  onRefresh: () => void,
+  isProcessing: boolean}
 
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
   return (
@@ -16,7 +15,7 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
       </div>
       <h3 className="text-lg font-medium mb-2">No talent matches yet</h3>
       <p className="text-muted-foreground mb-6">
-        Run AI matching to find talents that match this job&apos;s requirements.
+        Run AI matching to find talents that match this job&apos,s requirements.
       </p>
       <Button 
         onClick={onRefresh} 
@@ -36,5 +35,5 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
         )}
       </Button>
     </Card>
-  );
+  )
 }

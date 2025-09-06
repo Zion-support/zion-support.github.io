@@ -5,18 +5,15 @@ import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, 
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap,
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
-} from 'lucide-react';
+} from 'lucide-react',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const serviceCategories = [
-  {
-    title: 'AI & Automation',
+const serviceCategories = $2;
     services: [
       { name: 'AI Autonomous Business Processor', href: '/ai-autonomous-business-processor' },
       { name: 'AI Predictive Enterprise Analytics', href: '/ai-predictive-enterprise-analytics' },
@@ -55,7 +52,7 @@ const serviceCategories = [
       { name: 'AI Autonomous Clinical Trials', href: '/ai-autonomous-clinical-trials' }
     ]
   }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
@@ -66,7 +63,7 @@ const companyLinks = [
   { name: 'Investors', href: '/investors' },
   { name: 'Contact Us', href: '/contact' },
   { name: 'Locations', href: '/locations' }
-];
+],
 
 const resourceLinks = [
   { name: 'Documentation', href: '/docs' },
@@ -77,16 +74,16 @@ const resourceLinks = [
   { name: 'Training & Certification', href: '/training' },
   { name: 'Community Forum', href: '/community' },
   { name: 'Developer Resources', href: '/developer-resources' }
-];
+],
 
 const socialLinks = [
-  { name: 'Facebook', href: '#', icon: Facebook },
-  { name: 'Twitter', href: '#', icon: Twitter },
-  { name: 'LinkedIn', href: '#', icon: Linkedin },
-  { name: 'Instagram', href: '#', icon: Instagram },
-  { name: 'YouTube', href: '#', icon: Youtube },
-  { name: 'GitHub', href: '#', icon: Github }
-];
+  { name: 'Facebook', href: '#', icon: Facebook},
+  { name: 'Twitter', href: '#', icon: Twitter},
+  { name: 'LinkedIn', href: '#', icon: Linkedin},
+  { name: 'Instagram', href: '#', icon: Instagram},
+  { name: 'YouTube', href: '#', icon: Youtube},
+  { name: 'GitHub', href: '#', icon: Github}
+],
 
 export default function UltraFuturisticFooter2026() {
   return (
@@ -103,8 +100,8 @@ export default function UltraFuturisticFooter2026() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center mb-6">
@@ -146,8 +143,8 @@ export default function UltraFuturisticFooter2026() {
           {serviceCategories.map((category, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
@@ -178,8 +175,8 @@ export default function UltraFuturisticFooter2026() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Company Links */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
@@ -202,8 +199,8 @@ export default function UltraFuturisticFooter2026() {
 
           {/* Resources */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
@@ -226,8 +223,8 @@ export default function UltraFuturisticFooter2026() {
 
           {/* Social Media */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
@@ -250,8 +247,8 @@ export default function UltraFuturisticFooter2026() {
 
         {/* Newsletter Signup */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12"
         >
@@ -278,12 +275,12 @@ export default function UltraFuturisticFooter2026() {
 
         {/* Bottom Bar */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="border-t border-gray-800 pt-8"
         >
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md: flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © 2026 Zion Tech Group. All rights reserved. | 
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">
@@ -308,5 +305,5 @@ export default function UltraFuturisticFooter2026() {
         </motion.div>
       </div>
     </footer>
-  );
+  )
 }

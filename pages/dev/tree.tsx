@@ -1,43 +1,41 @@
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
-
 interface ApiResponse {
-  nodes: TreeNode[];
-  status: { gitConnected: boolean; gitBranch?: string };
+  nodes: TreeNode[],
+  status: { gitConnected: boolean, gitBranch?: string }
 }
 
 export default function DevTreePage() {
-  const [nodes, setNodes] = useState<TreeNode[] | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [git, setGit] = useState<ApiResponse["status"] | null>(null);
-  const [adminToken, setAdminToken] = useState<string>("");
+  const [nodes, setNodes] = useState<TreeNode[] | null>(null),
+  const [error, setError] = useState<string | null>(null),
+  const [git, setGit] = useState<ApiResponse["status"] | null>(null),
+  const [adminToken, setAdminToken] = useState<string>(""),
 
   const fetchTree = async (token?: string) => {
     try {
-      const resp = await fetch("/api/dev/source-map", {
-        headers: token ? { "x-admin-token": token } : undefined});
+      const resp = await fetch($2);
       if (!resp.ok) {
-        const j = await resp.json().catch(() => ({}));
-        throw new Error(j.error || `HTTP ${resp.status}`);
+        const j = $2;
+        throw new Error(j.error || `HTTP ${resp.status}`)
       }
-      const data: ApiResponse = await resp.json();
-      setNodes(data.nodes);
-      setGit(data.status);
+      const data: ApiResponse = await resp.json($2);
+      setNodes($2);
+      setGit(data.status)
     } catch (e: any) {
-      setError(e.message || "Failed to load");
+      setError(e.message || "Failed to load")
     }
-  };
+  },
 
   useEffect(() => {
-    const stored = localStorage.getItem("ADMIN_TOKEN") || "";
-    setAdminToken(stored);
-    fetchTree(stored);
-  }, []);
+    const stored = $2;
+    setAdminToken($2);
+    fetchTree(stored)
+  }, []),
 
   const handleSaveToken = () => {
-    localStorage.setItem("ADMIN_TOKEN", adminToken);
-    fetchTree(adminToken);
-  };
+    localStorage.setItem($2);
+    fetchTree(adminToken)
+  },
 
   const onDeploy = async (p: string) => {
     try {
@@ -46,16 +44,16 @@ export default function DevTreePage() {
         headers: {
           "Content-Type": "application/json",
           "x-admin-token": adminToken},
-        body: JSON.stringify({ path: p })});
+        body: JSON.stringify({ path: p})}),
       if (!resp.ok) {
-        const j = await resp.json().catch(() => ({}));
-        throw new Error(j.error || `HTTP ${resp.status}`);
+        const j = $2;
+        throw new Error(j.error || `HTTP ${resp.status}`)
       }
-      await fetchTree(adminToken);
+      await fetchTree(adminToken)
     } catch (e: any) {
-      setError(e.message || "Deploy failed");
+      setError(e.message || "Deploy failed")
     }
-  };
+  },
 
   return (
     <div className="p-6 max-w-5xl mx-auto">
@@ -89,5 +87,5 @@ export default function DevTreePage() {
         <div>Loading...</div>
       )}
     </div>
-  );
+  )
 }

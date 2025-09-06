@@ -9,19 +9,16 @@ import Link from "next/link";
 import { Calendar, Clock, Video } from 'lucide-react'
 import { Avatar } from "@/components/ui/avatar";
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 export function UpcomingInterviewsCard() {
 
-  const { fetchInterviews } = useInterviews();
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
+  const { fetchInterviews } = useInterviews($2);
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState($2);
   useEffect(() => {
     const loadInterviews = async () => {
-      setIsLoading(true);
+      setIsLoading($2);
       try {
-        const interviews = await fetchInterviews();
-        
+        const interviews = await fetchInterviews($2);
         // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview => 
@@ -31,18 +28,18 @@ export function UpcomingInterviewsCard() {
           .sort((a, b) => 
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
           )
-          .slice(0, 3); // Take only the next 3 interviews
+          .slice(0, 3), // Take only the next 3 interviews
         
-        setUpcomingInterviews(upcoming);
+        setUpcomingInterviews(upcoming)
       } catch (error) {
-        logErrorToProduction('Error loading upcoming interviews:', { data: error });
+        logErrorToProduction('Error loading upcoming interviews:', { data: error})
       } finally {
-        setIsLoading(false);
+        setIsLoading(false)
       }
-    };
+    },
 
-    loadInterviews();
-  }, []);
+    loadInterviews()
+  }, []),
 
   if (isLoading) {
     return (
@@ -67,7 +64,7 @@ export function UpcomingInterviewsCard() {
           </div>
         </CardContent>
       </Card>
-    );
+    )
   }
 
   if (upcomingInterviews.length === 0) {
@@ -89,30 +86,17 @@ export function UpcomingInterviewsCard() {
           </div>
         </CardContent>
       </Card>
-    );
+    )
   }
 
-  return (
-    <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
-      <CardHeader>
-        <CardTitle className="text-lg flex items-center">
-          <Video className="h-5 w-5 mr-2 text-zion-purple" />
-          Upcoming Interviews
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
-          {upcomingInterviews.map(interview => {
-            const interviewDate = parseISO(interview.scheduled_date);
-            const formattedDate = format(interviewDate, 'EEE, MMM d');
-            const formattedTime = format(interviewDate, 'h:mm a');
-            
+  return($2);
+            const formattedDate = format($2);
+            const formattedTime = format($2);
             // Determine if interview is happening soon (within 30 minutes)
-            const now = new Date();
+            const now = new Date($2);
             const isStartingSoon = 
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
-              interviewDate.getTime() > now.getTime();
-            
+              interviewDate.getTime() > now.getTime($2);
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -145,7 +129,7 @@ export function UpcomingInterviewsCard() {
                   </div>
                 </div>
               </div>
-            );
+            )
           })}
         </div>
         
@@ -158,5 +142,5 @@ export function UpcomingInterviewsCard() {
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }

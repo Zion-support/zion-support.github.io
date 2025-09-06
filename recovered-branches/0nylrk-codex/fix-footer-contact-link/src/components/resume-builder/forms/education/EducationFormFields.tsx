@@ -15,34 +15,32 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from '@/components/ui/form';
+  FormMessage} from '@/components/ui/form',
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
 import { Education } from '@/types/resume';
-
 // Define schema for form validation
 const educationSchema = z.object({
-  institution: z.string().min(1, 'Institution is required'),
-  degree: z.string().min(1, 'Degree is required'),
-  field_of_study: z.string().optional(),
-  start_date: z.string().min(1, 'Start date is required'),
-  end_date: z.string().optional(),
-  is_current: z.boolean().default(false),
-  description: z.string().optional(),
-  location: z.string().optional()});
+  institution: z.string().min($2);
+  degree: z.string().min($2);
+  field_of_study: z.string().optional($2);
+  start_date: z.string().min($2);
+  end_date: z.string().optional($2);
+  is_current: z.boolean().default($2);
+  description: z.string().optional($2);
+  location: z.string().optional()}),
 
-type EducationFormValues = z.infer<typeof educationSchema>;
-
+type EducationFormValues = $2;
 export function EducationFormFields({ 
   isEditing, 
   onSubmit, 
   onCancel 
 }: EducationFormFieldsProps) {
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
 
   const form = useForm<EducationFormValues>({
-    resolver: zodResolver(educationSchema),
+    resolver: zodResolver($2);
     defaultValues: {
       institution: '',
       degree: '',
@@ -50,19 +48,19 @@ export function EducationFormFields({
       start_date: format(new Date(), 'yyyy-MM-dd'),
       is_current: false,
       description: '',
-      location: ''}});
+      location: ''}}),
 
   const handleSubmit = async (data: EducationFormValues) => {
-    setIsLoading(true);
-    setError(null);
+    setIsLoading($2);
+    setError($2);
     try {
-      await onSubmit(data);
+      await onSubmit(data)
     } catch (err: any) {
-      setError(err.message || 'An error occurred');
+      setError(err.message || 'An error occurred')
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
-  };
+  },
 
   return (
     <Form {...form}>
@@ -221,5 +219,5 @@ export function EducationFormFields({
         </div>
       </form>
     </Form>
-  );
+  )
 }

@@ -2,51 +2,48 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight } from 'lucide-react';
 import SEO from '../components/SEO';
-
-const aiServices = [
-  {
-    title: 'AI Consciousness Evolution',
+const aiServices = $2;
     description: 'Advanced AI systems with evolving consciousness and emotional intelligence',
-    icon: <Brain className="w-8 h-8 text-cyan-400" />,
+    icon: <Brain className = $2;
     href: '/ai-consciousness-evolution-2029',
-    features: ['Emotional Intelligence', 'Consciousness Development', 'Ethical AI Framework']
+    features: ['Emotional IntelligenceConsciousness DevelopmentEthical AI Framework']
   },
   {
     title: 'AI Autonomous Research',
     description: 'Self-directed AI research assistants for breakthrough discoveries',
-    icon: <Target className="w-8 h-8 text-purple-400" />,
+    icon: <Target className = $2;
     href: '/ai-autonomous-research-assistant',
-    features: ['Independent Research', 'Data Analysis', 'Hypothesis Generation']
+    features: ['Independent ResearchData AnalysisHypothesis Generation']
   },
   {
     title: 'AI Predictive Maintenance',
     description: 'Predictive analytics for industrial equipment and systems',
-    icon: <Zap className="w-8 h-8 text-yellow-400" />,
+    icon: <Zap className = $2;
     href: '/ai-predictive-maintenance-platform',
-    features: ['Equipment Monitoring', 'Failure Prediction', 'Cost Optimization']
+    features: ['Equipment MonitoringFailure PredictionCost Optimization']
   },
   {
     title: 'AI Content Personalization',
     description: 'Dynamic content adaptation based on user behavior and preferences',
-    icon: <Users className="w-8 h-8 text-green-400" />,
+    icon: <Users className = $2;
     href: '/ai-content-personalization-engine',
-    features: ['User Profiling', 'Dynamic Content', 'Engagement Optimization']
+    features: ['User ProfilingDynamic ContentEngagement Optimization']
   },
   {
     title: 'AI Autonomous Business Operations',
     description: 'End-to-end automation of business processes and decision-making',
-    icon: <Rocket className="w-8 h-8 text-blue-400" />,
+    icon: <Rocket className = $2;
     href: '/autonomous-business-operations-platform',
-    features: ['Process Automation', 'Decision Intelligence', 'Operational Efficiency']
+    features: ['Process AutomationDecision IntelligenceOperational Efficiency']
   },
   {
     title: 'AI Ethics & Governance',
     description: 'Framework for responsible AI development and deployment',
-    icon: <Shield className="w-8 h-8 text-red-400" />,
+    icon: <Shield className = $2;
     href: '/ai-ethics-governance-framework',
-    features: ['Ethical Guidelines', 'Governance Framework', 'Compliance Monitoring']
+    features: ['Ethical GuidelinesGovernance FrameworkCompliance Monitoring']
   }
-];
+],
 
 export default function AIServices() {
   return (
@@ -94,8 +91,8 @@ export default function AIServices() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center mb-16"
             >
@@ -111,8 +108,8 @@ export default function AIServices() {
               {aiServices.map((service, index) => (
                 <motion.div
                   key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  animate={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 group"
                 >
@@ -135,7 +132,7 @@ export default function AIServices() {
                   </ul>
                   <motion.a
                     href={service.href}
-                    whileHover={{ x: 5 }}
+                    whileHover={{ x: 5}}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:text-cyan-300 transition-colors"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -150,8 +147,8 @@ export default function AIServices() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -171,7 +168,7 @@ export default function AIServices() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-cyan-500 hover:text-white transition-all duration-300"
                 >
                   View Case Studies
                 </motion.button>
@@ -181,5 +178,5 @@ export default function AIServices() {
         </section>
       </div>
     </>
-  );
+  )
 }

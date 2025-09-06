@@ -10,31 +10,30 @@ import {
   ArrowRight, Search, Menu, X as CloseIcon,
   Target, BookOpen, Truck, BarChart3,
   Sparkles, Eye, Lightbulb, Palette, Code
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface SidebarItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: SidebarItem[];
-  badge?: string;
-  isNew?: boolean;
-  isHot?: boolean;
+  name: string,
+  href: string,
+  icon?: React.ReactNode,
+  description?: string,
+  children?: SidebarItem[],
+  badge?: string,
+  isNew?: boolean,
+  isHot?: boolean
 }
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const sidebarItems: SidebarItem[] = [
   {
     name: 'All Services',
     href: '/comprehensive-services-showcase-2025',
-    icon: <Globe className="w-5 h-5" />,
+    icon: <Globe className = $2;
     description: 'Complete portfolio of all technology services',
     badge: 'Showcase',
     children: [
@@ -51,7 +50,7 @@ const sidebarItems: SidebarItem[] = [
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
+    icon: <Brain className = $2;
     description: 'Revolutionary AI consciousness and emotional intelligence',
     badge: 'New',
     isNew: true,
@@ -75,7 +74,7 @@ const sidebarItems: SidebarItem[] = [
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum-services',
-    icon: <Atom className="w-5 h-5" />,
+    icon: <Atom className = $2;
     description: 'Quantum computing and breakthrough technologies',
     badge: 'Hot',
     isHot: true,
@@ -98,7 +97,7 @@ const sidebarItems: SidebarItem[] = [
   {
     name: 'Enterprise IT',
     href: '/enterprise-it',
-    icon: <Shield className="w-5 h-5" />,
+    icon: <Shield className = $2;
     color: 'text-blue-400',
     items: [
       { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', badge: 'New' },
@@ -117,7 +116,7 @@ const sidebarItems: SidebarItem[] = [
   {
     name: 'Micro SAAS',
     href: '/micro-saas',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className = $2;
     description: 'Innovative business solutions for modern enterprises',
     badge: 'Popular',
     children: [
@@ -136,7 +135,7 @@ const sidebarItems: SidebarItem[] = [
   {
     name: 'Creative & Design',
     href: '/creative-services',
-    icon: <Palette className="w-5 h-5" />,
+    icon: <Palette className = $2;
     description: 'AI-powered creative and design solutions',
     children: [
       { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },
@@ -150,7 +149,7 @@ const sidebarItems: SidebarItem[] = [
   {
     name: 'Research & Development',
     href: '/research-development',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className = $2;
     description: 'Cutting-edge research and development services',
     children: [
       { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed research' },
@@ -164,7 +163,7 @@ const sidebarItems: SidebarItem[] = [
   {
     name: 'Industry Solutions',
     href: '/industry-solutions',
-    icon: <Truck className="w-5 h-5" />,
+    icon: <Truck className = $2;
     description: 'Specialized solutions for specific industries',
     children: [
       { name: 'Healthcare AI', href: '/healthcare-ai-solutions', description: 'Medical AI applications' },
@@ -178,7 +177,7 @@ const sidebarItems: SidebarItem[] = [
   {
     name: 'Pricing & Plans',
     href: '/pricing',
-    icon: <DollarSign className="w-5 h-5" />,
+    icon: <DollarSign className = $2;
     description: 'Flexible pricing options for all services',
     children: [
       { name: '2025 Pricing', href: '/pricing-2025', description: 'Current year pricing' },
@@ -192,7 +191,7 @@ const sidebarItems: SidebarItem[] = [
   {
     name: 'Resources',
     href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className = $2;
     description: 'Educational resources and documentation',
     children: [
       { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
@@ -206,7 +205,7 @@ const sidebarItems: SidebarItem[] = [
   {
     name: 'Support',
     href: '/support',
-    icon: <Settings className="w-5 h-5" />,
+    icon: <Settings className = $2;
     description: 'Technical support and customer service',
     children: [
       { name: 'Help Center', href: '/help', description: 'Self-service support' },
@@ -217,18 +216,15 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Status Page', href: '/status', description: 'Service status' }
     ]
   }
-];
+],
 
 const resources = [
-  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
-  { name: 'API Reference', href: '/api-documentation', icon: <Settings className="w-4 h-4" /> },
-  { name: 'Case Studies', href: '/case-studies', icon: <BookOpen className="w-4 h-4" /> },
-  { name: 'Blog & News', href: '/blog', icon: <FileText className="w-4 h-4" /> },
-  { name: 'Training & Certification', href: '/training', icon: <Award className="w-4 h-4" /> },
-  { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
-];
-
-
+  { name: 'Documentation', href: '/docs', icon: <FileText className = $2;
+  { name: 'API Reference', href: '/api-documentation', icon: <Settings className = $2;
+  { name: 'Case Studies', href: '/case-studies', icon: <BookOpen className = $2;
+  { name: 'Blog & News', href: '/blog', icon: <FileText className = $2;
+  { name: 'Training & Certification', href: '/training', icon: <Award className = $2;
+  { name: 'Community Forum', href: '/community', icon: <Users className = $2;
 const supportLinks = [
   { name: 'Contact Support', href: '/support', description: 'Get help from our team' },
   { name: 'Documentation', href: '/docs', description: 'Technical guides' },
@@ -236,29 +232,23 @@ const supportLinks = [
   { name: 'Status Page', href: '/status', description: 'Service status' },
   { name: 'Training', href: '/training', description: 'Learn our platforms' },
   { name: 'Community', href: '/community', description: 'Connect with users' }
-];
+],
 
   const toggleSection = (title: string) => {
-    const newExpanded = new Set(expandedSections);
+    const newExpanded = new Set($2);
     if (newExpanded.has(title)) {
-      newExpanded.delete(title);
+      newExpanded.delete(title)
     } else {
-      newExpanded.add(title);
+      newExpanded.add(title)
     }
-    setExpandedSections(newExpanded);
-  };
+    setExpandedSections(newExpanded)
+  },
 
-  const filteredServices = sidebarItems.flatMap(item =>
-    item.children?.filter(child =>
-      child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      child.description?.toLowerCase().includes(searchQuery.toLowerCase())
-    ) || []
-  );
-
+  const filteredServices = $2;
   return (
     <motion.aside
-      initial={{ x: -300, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
+      initial={{ x: -300, opacity: 0}}
+      animate={{ x: 0, opacity: 1}}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-cyan-500/20 shadow-2xl shadow-cyan-500/20 z-40 overflow-y-auto scrollbar-thin scrollbar-thumb-cyan-500/50 scrollbar-track-transparent"
     >
@@ -325,9 +315,9 @@ const supportLinks = [
             <AnimatePresence>
               {expandedSections.has(section.title) && (
                 <motion.div
-                  initial={{ opacity: 0, height: 0 }}
+                  initial={{ opacity: 0, height: 0}}
                   animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
+                  exit={{ opacity: 0, height: 0}}
                   transition={{ duration: 0.2 }}
                   className="ml-8 space-y-1"
                 >
@@ -420,7 +410,7 @@ const supportLinks = [
                   <motion.div
                     key={stat.label}
                     initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    animate={{ opacity: 1, scale: 1}}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                     className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30"
                   >
@@ -487,109 +477,8 @@ const supportLinks = [
                     <AnimatePresence>
                       {expandedCategory === item.name && (
                         <motion.div
-                          initial={{ opacity: 0, height: 0 }}
+                          initial={{ opacity: 0, height: 0}}
                           animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.2 }}
-                          className="ml-8 mt-2 space-y-1"
-                        >
-                          {item.children?.map((child) => (
-                            <Link
-                              key={child.name}
-                              href={child.href}
-                              onClick={onClose}
-                              className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/30 transition-colors duration-200 group"
-                            >
-                              <span className="text-sm text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
-                                {child.name}
-                              </span>
-                              {child.badge && (
-                                <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">
-                                  {child.badge}
-                                </span>
-                              )}
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div className="p-6 border-b border-cyan-500/30">
-              <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
-                <Zap className="w-5 h-5 text-cyan-400" />
-                <span>Quick Links</span>
-              </h3>
-              <div className="space-y-2">
-                <Link
-                  href="/contact"
-                  onClick={onClose}
-                  className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                >
-                  <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
-                    Contact Us
-                  </div>
-                  <div className="text-xs text-gray-500">Get in touch with our team</div>
-                </Link>
-                <Link
-                  href="/pricing"
-                  onClick={onClose}
-                  className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                >
-                  <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
-                    View Pricing
-                  </div>
-                  <div className="text-xs text-gray-500">Explore our pricing plans</div>
-                </Link>
-                <Link
-                  href="/about"
-                  onClick={onClose}
-                  className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                >
-                  <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
-                    About Us
-                  </div>
-                  <div className="text-xs text-gray-500">Learn about Zion Tech Group</div>
-                </Link>
-              </div>
-            </div>
-            <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-              <div className="text-lg font-bold text-blue-400">1000+</div>
-              <div className="text-xs text-gray-400">Clients</div>
-            </div>
-            <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-              <div className="text-lg font-bold text-purple-400">24/7</div>
-              <div className="text-xs text-gray-400">Support</div>
-            </div>
-            <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-              <div className="text-lg font-bold text-green-400">99.9%</div>
-              <div className="text-xs text-gray-400">Uptime</div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="pt-4 border-t border-gray-800 px-3">
-          <Link
-            href="/contact"
-            className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
-          >
-            <span>Get Started Today</span>
-            <ArrowRight className="w-4 h-4 ml-2 inline" />
-          </Link>
-        </div>
-      </div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-1/4 left-4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
-      <div className="absolute top-1/2 right-4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
-      <div className="absolute bottom-1/4 left-4 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-2000"></div>
-    </motion.aside>
-  );
-};
-
-export default EnhancedSidebar2025;
+                          exit={{ opacity: 0, height: 0}}
+                          transition = $2;
+export default EnhancedSidebar2025,

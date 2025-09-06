@@ -13,40 +13,35 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form",
 
 const profileSchema = z.object({
-  displayName: z.string().min(2, "Name must be at least 2 characters"),
-  bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters"),
-  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")});
+  displayName: z.string().min($2);
+  bio: z.string().min(10, "Bio must be at least 10 characters").max($2);
+  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")}),
 
-type ProfileFormValues = z.infer<typeof profileSchema>;
-
+type ProfileFormValues = $2;
 interface ProfileSetupProps {
-  onComplete: (data: ProfileFormValues) => void;
-  userType: string;
-}
+  onComplete: (data: ProfileFormValues) => void,
+  userType: string}
 
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
-    resolver: zodResolver(profileSchema),
+    resolver: zodResolver($2);
     defaultValues: {
       displayName: "",
       bio: "",
-      headline: ""}});
+      headline: ""}}),
 
-  const getTypeLabel = () => {
-    switch (userType) {
-      case "serviceProvider":
-        return "Service Provider";
+  const getTypeLabel = $2;
       case "talent":
-        return "Talent";
+        return "Talent",
       case "client":
-        return "Client";
+        return "Client",
       default:
-        return "User";
+        return "User"
     }
-  };
+  },
 
   return (
     <div className="space-y-6">
@@ -129,12 +124,12 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           
           <Button
             type="submit"
-            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
           >
             Complete Profile
           </Button>
         </form>
       </Form>
     </div>
-  );
+  )
 }

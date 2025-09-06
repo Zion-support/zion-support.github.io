@@ -20,48 +20,47 @@ import { useLanguage } from "@/context/LanguageContext";
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react'
 
 export default function LandingPage() {
-  const { t } = useTranslation();
-  const { isRTL } = useLanguage();
-  
+  const { t } = useTranslation($2);
+  const { isRTL } = useLanguage($2);
   // Tools and features showcase
   const toolsFeatures = [
     {
-      title: t("home.tool_ai_matcher"),
-      description: t("home.tool_ai_matcher_desc"),
-      icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,
+      title: t($2);
+      description: t($2);
+      icon: <Sparkles className = $2;
       link: "/match"
     },
     {
-      title: t("home.tool_talent"),
-      description: t("home.tool_talent_desc"),
-      icon: <Users className="h-6 w-6 text-zion-purple" />,
+      title: t($2);
+      description: t($2);
+      icon: <Users className = $2;
       link: "/talent"
     },
     {
-      title: t("home.tool_services"),
-      description: t("home.tool_services_desc"),
-      icon: <Zap className="h-6 w-6 text-zion-cyan" />,
+      title: t($2);
+      description: t($2);
+      icon: <Zap className = $2;
       link: "/services"
     },
     {
-      title: t("home.tool_equipment"),
-      description: t("home.tool_equipment_desc"),
-      icon: <Settings className="h-6 w-6 text-zion-purple" />,
+      title: t($2);
+      description: t($2);
+      icon: <Settings className = $2;
       link: "/equipment"
     },
     {
-      title: t("home.tool_analytics"),
-      description: t("home.tool_analytics_desc"),
-      icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />,
+      title: t($2);
+      description: t($2);
+      icon: <BarChart3 className = $2;
       link: "/analytics"
     },
     {
       title: "Mobile App",
       description: "Take Zion with you on the go with our mobile app for iOS and Android",
-      icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
+      icon: <Smartphone className = $2;
       link: "/mobile-launch"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-zion-blue text-white">
@@ -126,5 +125,5 @@ export default function LandingPage() {
       <WaitlistSection />
       <FloatingCTA />
     </div>
-  );
+  )
 }

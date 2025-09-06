@@ -1,30 +1,27 @@
 import React, { useMemo, useState } from 'react';
-
 export default function ServiceDescriptionGeneratorPage() {
-  const [title, setTitle] = useState('');
-  const [targetAudience, setTargetAudience] = useState('');
-  const [featuresInput, setFeaturesInput] = useState('');
-  const [additionalNotes, setAdditionalNotes] = useState('');
-  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
+  const [title, setTitle] = useState($2);
+  const [targetAudience, setTargetAudience] = useState($2);
+  const [featuresInput, setFeaturesInput] = useState($2);
+  const [additionalNotes, setAdditionalNotes] = useState($2);
+  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional'),
 
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [generated, setGenerated] = useState('');
-  const [accepted, setAccepted] = useState(false);
-
+  const [loading, setLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
+  const [generated, setGenerated] = useState($2);
+  const [accepted, setAccepted] = useState($2);
   const keyFeatures = useMemo(() => {
     return featuresInput
       .split('\n')
       .map((f) => f.trim())
-      .filter(Boolean);
-  }, [featuresInput]);
+      .filter(Boolean)
+  }, [featuresInput]),
 
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
-    setAccepted(false);
-
+    e.preventDefault($2);
+    setLoading($2);
+    setError($2);
+    setAccepted($2);
     try {
       const response = await fetch('/api/generate-service-description', {
         method: 'POST',
@@ -34,29 +31,29 @@ export default function ServiceDescriptionGeneratorPage() {
           keyFeatures,
           targetAudience,
           additionalNotes: additionalNotes || undefined,
-          tone})});
+          tone})}),
 
       if (!response.ok) {
-        const data = await response.json().catch(() => ({}));
-        throw new Error(data.error || 'Failed to generate');
+        const data = $2;
+        throw new Error(data.error || 'Failed to generate')
       }
 
-      const data = (await response.json()) as { description: string };
-      setGenerated(data.description || '');
+      const data = $2;
+      setGenerated(data.description || '')
     } catch (err: any) {
-      setError(err.message || 'Something went wrong');
+      setError(err.message || 'Something went wrong')
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
   }
 
   function handleAccept() {
-    setAccepted(true);
+    setAccepted(true)
   }
 
   function handleCopy() {
-    if (!generated) return;
-    navigator.clipboard.writeText(generated).catch(() => {});
+    if (!generated) return,
+    navigator.clipboard.writeText(generated).catch(() => {})
   }
 
   return (
@@ -145,7 +142,7 @@ export default function ServiceDescriptionGeneratorPage() {
             <div className="flex items-center gap-2">
               <button
                 onClick={handleCopy}
-                className="rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
+                className="rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark: hover: bg-gray-800"
               >
                 Copy
               </button>
@@ -170,5 +167,5 @@ export default function ServiceDescriptionGeneratorPage() {
         </div>
       )}
     </div>
-  );
+  )
 }

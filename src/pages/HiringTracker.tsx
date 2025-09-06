@@ -9,9 +9,9 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase } from 'lucide-react'
 
 function HiringTrackerContent() {
-  const router = useRouter();
-  const jobId = router.query.jobId as string;
-  const [activeTab, setActiveTab] = useState<string>("kanban");
+  const router = useRouter($2);
+  const jobId = $2;
+  const [activeTab, setActiveTab] = useState<string>("kanban"),
 
   return (
     <>
@@ -48,7 +48,7 @@ function HiringTrackerContent() {
         </Tabs>
       </main>
     </>
-  );
+  )
 }
 
 export default function HiringTracker() {
@@ -56,5 +56,5 @@ export default function HiringTracker() {
     <ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>
-  );
+  )
 }

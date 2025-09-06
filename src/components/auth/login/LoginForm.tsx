@@ -15,96 +15,88 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form",
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import Link from "next/link";
-
 import { Checkbox } from "@/components/ui/checkbox";
 // Form validation schema
 const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email").min(1, "Email is required"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
-  rememberMe: z.boolean()});
+  email: z.string().email("Please enter a valid email").min($2);
+  password: z.string().min($2);
+  rememberMe: z.boolean()}),
 
 
-type LoginFormValues = z.infer<typeof loginSchema>;
-
+type LoginFormValues = $2;
 export function LoginForm() {
-  const { isLoading, login } = useAuth();
-  const [showPassword, setShowPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isResending, setIsResending] = useState(false);
-  const [verificationMessage, setVerificationMessage] = useState('');
-  const router = useRouter();
-  
-  const form = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema) as any,
+  const { isLoading, login } = useAuth($2);
+  const [showPassword, setShowPassword] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const [isResending, setIsResending] = useState($2);
+  const [verificationMessage, setVerificationMessage] = useState($2);
+  const router = useRouter($2);
+  const form = $2;
     defaultValues: {
       email: "",
       password: "",
-      rememberMe: false}});
+      rememberMe: false}}),
 
-  const onSubmit = async (data: LoginFormValues) => {
-    if (isSubmitting) return;
-
+  const onSubmit = $2;
     try {
-      setIsSubmitting(true);
+      setIsSubmitting($2);
       // Pass email and password to the login function
-      const result = await login(data.email, data.password, data.rememberMe);
+      const result = await login($2);
       if (result?.error) {
-        let errorMessage = "Login failed. Please try again."; // Default generic error
+        let errorMessage = "Login failed. Please try again.", // Default generic error
         if (result?.error && result?.error?.message) {
           if (result.error.message.toLowerCase().includes("email not confirmed")) {
-            errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link.";
+            errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
           } else {
-            errorMessage = result.error.message;
+            errorMessage = result.error.message
           }
         }
-        form.setError("root", { message: errorMessage });
+        form.setError("root", { message: errorMessage})
       } else {
-        fireEvent('login', { method: 'email' });
+        fireEvent('login', { method: 'email' })
       }
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  },
 
   const handleResendEmail = async () => {
-    const email = form.getValues('email');
+    const email = form.getValues($2);
     if (!email) {
-      form.setError('root', { message: 'Please enter your email address.' });
-      return;
+      form.setError($2);
+      return
     }
-    setIsResending(true);
-    setVerificationMessage('');
+    setIsResending($2);
+    setVerificationMessage($2);
     try {
       const response = await fetch('/api/auth/resend-verification-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
-      });
-      const data = await response.json();
+      }),
+      const data = await response.json($2);
       if (response.ok) {
-        setVerificationMessage('Verification email sent. Please check your inbox.');
+        setVerificationMessage('Verification email sent. Please check your inbox.')
       } else {
-        setVerificationMessage(data.message || 'Failed to resend verification email.');
+        setVerificationMessage(data.message || 'Failed to resend verification email.')
       }
     } catch (err) {
-      setVerificationMessage('Failed to resend verification email.');
+      setVerificationMessage('Failed to resend verification email.')
     } finally {
-      setIsResending(false);
+      setIsResending(false)
     }
-  };
+  },
 
   const handleCheckStatus = () => {
-    const email = form.getValues('email');
+    const email = form.getValues($2);
     if (!email) {
-      form.setError('root', { message: 'Please enter your email address.' });
-      return;
+      form.setError($2);
+      return
     }
-    router.push(`/verify-status?email=${encodeURIComponent(email)}`);
-  };
-
+    router.push(`/verify-status?email = $2;
   return (
     <Form {...form}>
       {form.formState.errors.root && (
@@ -114,9 +106,9 @@ export function LoginForm() {
       )}
       <form
         onSubmit={form.handleSubmit(onSubmit, (errors) => {
-          const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
+          const firstError = $2;
           if (firstError) {
-            form.setFocus(firstError);
+            form.setFocus(firstError)
           }
         })}
         className="space-y-6"
@@ -244,11 +236,11 @@ export function LoginForm() {
           </Button>
         </div>
         <p className="text-sm text-center mt-4">
-          <Link href="/signup" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
+          <Link href="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">
             Create account
           </Link>
         </p>
       </form>
     </Form>
-  );
+  )
 }

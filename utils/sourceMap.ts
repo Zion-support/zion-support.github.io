@@ -1,40 +1,36 @@
 import fs from "fs";
 import path from "path";
-
-export type SourceNodeType = "folder" | "file";
-
+export type SourceNodeType = $2;
 export interface SourceNode {
-  name: string;
-  path: string; // repo-relative path starting with '/'
-  type: SourceNodeType;
-  children?: SourceNode[];
-  exists?: boolean;
+  name: string,
+  path: string, // repo-relative path starting with '/'
+  type: SourceNodeType,
+  children?: SourceNode[],
+  exists?: boolean
 }
 
 export interface SourceMapStatus {
-  gitConnected: boolean;
-  gitBranch?: string;
+  gitConnected: boolean,
+  gitBranch?: string
 }
 
 export interface SourceMapResponse {
-  nodes: SourceNode[];
-  status: SourceMapStatus;
-}
+  nodes: SourceNode[],
+  status: SourceMapStatus}
 
-const ROOT = process.cwd();
-
+const ROOT = process.cwd($2);
 function withPath(base: string, segment: string): string {
-  if (base === "/") return `/${segment}`;
-  return `${base}/${segment}`;
+  if (base = $2;
+  return `${base}/${segment}`
 }
 
 function folder(name: string, basePath: string, children: string[] = []): SourceNode {
-  const fullPath = withPath(basePath, name);
+  const fullPath = withPath($2);
   return {
     name,
     path: fullPath,
     type: "folder",
-    children: children.map((child) => ({ name: child, path: withPath(fullPath, child), type: "folder" }))};
+    children: children.map((child) => ({ name: child, path: withPath(fullPath, child), type: "folder" }))}
 }
 
 export function buildZionSourceMap(): SourceNode[] {
@@ -128,62 +124,60 @@ export function buildZionSourceMap(): SourceNode[] {
         { name: "docs", path: "/api/docs", type: "folder" },
         { name: "partners", path: "/api/partners", type: "folder" },
         { name: "integrations", path: "/api/integrations", type: "folder" },
-        { name: "webhooks", path: "/api/webhooks", type: "folder" }]}];
+        { name: "webhooks", path: "/api/webhooks", type: "folder" }]}],
 
-  return map;
+  return map
 }
 
 function markExistenceRecursive(node: SourceNode): SourceNode {
-  const absolutePath = path.join(ROOT, node.path);
-  const exists = fs.existsSync(absolutePath);
-  const withExists: SourceNode = {
-    ...node,
-    exists};
+  const absolutePath = path.join($2);
+  const exists = fs.existsSync($2);
+  const withExists: SourceNode = $2;
+    exists},
   if (node.children && node.children.length > 0) {
-    withExists.children = node.children.map(markExistenceRecursive);
+    withExists.children = node.children.map(markExistenceRecursive)
   }
-  return withExists;
+  return withExists
 }
 
 export function getSourceMapWithExistence(): SourceNode[] {
-  const nodes = buildZionSourceMap();
-  return nodes.map(markExistenceRecursive);
+  const nodes = buildZionSourceMap($2);
+  return nodes.map(markExistenceRecursive)
 }
 
 export interface DeployTemplateResult {
-  createdPaths: string[];
-  skippedPaths: string[];
+  createdPaths: string[],
+  skippedPaths: string[]
 }
 
 export function ensureDirectory(dirPath: string): void {
   if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true });
+    fs.mkdirSync(dirPath, { recursive: true})
   }
 }
 
 export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemplateResult {
-  const absoluteDir = path.join(ROOT, repoRelativePath);
-  const createdPaths: string[] = [];
-  const skippedPaths: string[] = [];
+  const absoluteDir = path.join($2);
+  const createdPaths: string[] = [],
+  const skippedPaths: string[] = [],
 
-  ensureDirectory(absoluteDir);
-
-  const keepFile = path.join(absoluteDir, ".keep");
+  ensureDirectory($2);
+  const keepFile = path.join($2);
   if (!fs.existsSync(keepFile)) {
-    fs.writeFileSync(keepFile, "");
-    createdPaths.push(keepFile);
+    fs.writeFileSync($2);
+    createdPaths.push(keepFile)
   } else {
-    skippedPaths.push(keepFile);
+    skippedPaths.push(keepFile)
   }
 
-  const readmeFile = path.join(absoluteDir, "README.md");
+  const readmeFile = path.join($2);
   if (!fs.existsSync(readmeFile)) {
-    const readme = `# ${path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`;
-    fs.writeFileSync(readmeFile, readme);
-    createdPaths.push(readmeFile);
+    const readme = $2;
+    fs.writeFileSync($2);
+    createdPaths.push(readmeFile)
   } else {
-    skippedPaths.push(readmeFile);
+    skippedPaths.push(readmeFile)
   }
 
-  return { createdPaths, skippedPaths };
+  return { createdPaths, skippedPaths }
 }

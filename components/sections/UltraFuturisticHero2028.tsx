@@ -5,7 +5,7 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   ArrowRight, Star, TrendingUp, Users, Award, Play,
   CheckCircle, DollarSign, Clock, Target, Crown
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function UltraFuturisticHero2028() {
   const features = [
@@ -13,14 +13,14 @@ export default function UltraFuturisticHero2028() {
     { icon: Atom, text: 'Quantum Time Manipulation', color: 'from-violet-500 to-purple-500' },
     { icon: Rocket, text: 'Space Debris Management', color: 'from-blue-500 to-cyan-500' },
     { icon: Shield, text: 'Quantum Internet Security', color: 'from-red-500 to-orange-500' }
-  ];
+  ],
 
   const stats = [
-    { value: '50+', label: 'Cutting-Edge Services', icon: Rocket },
-    { value: '25+', label: 'AI Solutions', icon: Brain },
-    { value: '15+', label: 'Quantum Technologies', icon: Atom },
-    { value: '1000+', label: 'Happy Clients', icon: Users }
-  ];
+    { value: '50+', label: 'Cutting-Edge Services', icon: Rocket},
+    { value: '25+', label: 'AI Solutions', icon: Brain},
+    { value: '15+', label: 'Quantum Technologies', icon: Atom},
+    { value: '1000+', label: 'Happy Clients', icon: Users}
+  ],
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black pt-20">
@@ -59,8 +59,8 @@ export default function UltraFuturisticHero2028() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
@@ -73,8 +73,8 @@ export default function UltraFuturisticHero2028() {
 
         {/* Main Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-8"
         >
@@ -99,8 +99,8 @@ export default function UltraFuturisticHero2028() {
 
         {/* CTA Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
         >
@@ -125,8 +125,8 @@ export default function UltraFuturisticHero2028() {
 
         {/* Features Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-16"
         >
@@ -135,7 +135,7 @@ export default function UltraFuturisticHero2028() {
               <motion.div
                 key={feature.text}
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1}}
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
                 className="group relative"
               >
@@ -154,8 +154,8 @@ export default function UltraFuturisticHero2028() {
 
         {/* Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 1.0 }}
           className="mb-16"
         >
@@ -164,7 +164,7 @@ export default function UltraFuturisticHero2028() {
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1}}
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
                 className="text-center group"
               >
@@ -184,8 +184,8 @@ export default function UltraFuturisticHero2028() {
 
         {/* Trust Indicators */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 1.4 }}
           className="mb-16"
         >
@@ -204,8 +204,8 @@ export default function UltraFuturisticHero2028() {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 1.6 }}
           className="text-center"
         >
@@ -226,9 +226,9 @@ export default function UltraFuturisticHero2028() {
 
       {/* Scroll Indicator */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 2 }}
+        initial={{ opacity: 0}}
+        animate={{ opacity: 1}}
+        transition={{ duration: 1, delay: 2}}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <motion.div
@@ -244,5 +244,5 @@ export default function UltraFuturisticHero2028() {
         </motion.div>
       </motion.div>
     </section>
-  );
+  )
 }

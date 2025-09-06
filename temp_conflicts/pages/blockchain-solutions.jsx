@@ -1,6 +1,5 @@
 
 import Head from 'next/head';
-
 const BlockchainSolutions = () => {
   return (
     <div>
@@ -14,7 +13,7 @@ const BlockchainSolutions = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default BlockchainSolutions;
+export default BlockchainSolutions,

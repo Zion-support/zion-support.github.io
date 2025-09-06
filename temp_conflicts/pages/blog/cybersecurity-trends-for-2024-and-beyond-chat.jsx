@@ -1,7 +1,6 @@
 
 import Head from 'next/head';
 import Link from 'next/link';
-
 const CybersecurityTrendsFor2024AndBeyondChat = () => {
   return (
     <div>
@@ -16,7 +15,7 @@ const CybersecurityTrendsFor2024AndBeyondChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default CybersecurityTrendsFor2024AndBeyondChat;
+export default CybersecurityTrendsFor2024AndBeyondChat,

@@ -4,10 +4,9 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-
 export default function WCAGScannerPage() {
-  const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
-  if (!service) return null;
+  const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner')),
+  if (!service) return null,
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -50,6 +49,6 @@ export default function WCAGScannerPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  )
 }
 

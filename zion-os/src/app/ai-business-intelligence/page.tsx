@@ -1,32 +1,11 @@
 import Link from "next/link";
-
-export const metadata = {
-  title: "AI Business Intelligence - Zion Tech Group",
+export const metadata = $2;
   description: "Transform your business with AI-powered analytics, predictive insights, and intelligent decision-making solutions.",
-  keywords: "AI business intelligence, predictive analytics, data insights, business analytics, Zion Tech Group"};
+  keywords: "AI business intelligence, predictive analytics, data insights, business analytics, Zion Tech Group"},
 
 export default function AIBusinessIntelligencePage() {
   return (
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="gradient-text">AI Business Intelligence</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Unlock the power of your data with AI-driven business intelligence that transforms raw information 
-            into actionable insights and predictive intelligence.
-          </p>
-        </div>
-
-        {/* Overview Section */}
-        <section className="mb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Intelligent Data Analytics</h2>
-              <p className="text-lg text-gray-300 mb-6">
-                Our AI Business Intelligence platform goes beyond traditional analytics to provide real-time insights, 
+    <div className = $2;
                 predictive modeling, and automated decision-making capabilities that drive business growth.
               </p>
               <p className="text-lg text-gray-300 mb-8">
@@ -299,7 +278,7 @@ export default function AIBusinessIntelligencePage() {
             <p className="text-xl text-gray-300 mb-8">
               Discover how AI-powered business intelligence can unlock new insights and drive growth for your organization.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary">
                 Get AI Demo
               </Link>
@@ -311,5 +290,5 @@ export default function AIBusinessIntelligencePage() {
         </section>
       </div>
     </div>
-  );
+  )
 }

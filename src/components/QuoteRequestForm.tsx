@@ -16,21 +16,18 @@ import { AutoFillModal } from "@/components/QuoteRequestForm/AutoFillModal";
 import { QuoteFormData } from "@/types/quotes";
 import { Sparkles, Loader2 } from 'lucide-react'
 import { z } from "zod";
-
-export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
-
+export type QuoteRequestSteps = $2;
 const serviceStepSchema = z.object({
-  serviceType: z.string().min(1),
-  specificItem: z.object({ id: z.string() })});
+  serviceType: z.string().min($2);
+  specificItem: z.object({ id: z.string() })}),
 
 export function QuoteRequestForm() {
-  const router = useRouter();
-  const { toast } = useToast();
-  const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [autoFillLoading, setAutoFillLoading] = useState(false);
-  const [autoFillOpen, setAutoFillOpen] = useState(false);
-  
+  const router = useRouter($2);
+  const { toast } = useToast($2);
+  const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service"),
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const [autoFillLoading, setAutoFillLoading] = useState($2);
+  const [autoFillOpen, setAutoFillOpen] = useState($2);
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: "",
     serviceCategory: "",
@@ -50,137 +47,114 @@ export function QuoteRequestForm() {
       phone: "",
       company: ""
     }
-  });
+  }),
   
-  const updateFormData = (data: Partial<QuoteFormData>) => {
-    setFormData(prev => ({
-      ...prev,
+  const updateFormData = $2;
       ...data
-    }));
-  };
+    }))
+  },
   
   const handleNext = () => {
     switch (currentStep) {
       case "service": {
-        const result = serviceStepSchema.safeParse({
-          serviceType: formData.serviceType,
-          specificItem: formData.specificItem});
+        const result = serviceStepSchema.safeParse($2);
         if (!result.success) {
-          toast({
-            title: "Service Required",
-            description: "Please select a service before continuing.",
-            variant: "destructive"});
-          return;
+          toast($2);
+          return
         }
-        setCurrentStep("details");
-        break;
+        setCurrentStep($2);
+        break
       }
-      case "details":
-        setCurrentStep("timeline");
-        break;
+      case "details": setCurrentStep($2);
+        break,
       case "timeline":
-        setCurrentStep("budget");
-        break;
+        setCurrentStep($2);
+        break,
       case "budget":
-        setCurrentStep("summary");
-        break;
-      default:
-        break;
-    }
-  };
+        setCurrentStep($2);
+        break,
+      default: break}
+  },
   
   const handleBack = () => {
     switch (currentStep) {
-      case "details":
-        setCurrentStep("service");
-        break;
+      case "details": setCurrentStep($2);
+        break,
       case "timeline":
-        setCurrentStep("details");
-        break;
+        setCurrentStep($2);
+        break,
       case "budget":
-        setCurrentStep("timeline");
-        break;
+        setCurrentStep($2);
+        break,
       case "summary":
-        setCurrentStep("budget");
-        break;
-      default:
-        break;
-    }
-  };
+        setCurrentStep($2);
+        break,
+      default: break}
+  },
   
   const handleSubmit = async () => {
-    setIsSubmitting(true);
-    
+    setIsSubmitting($2);
     try {
       // In a real application, you would send the data to your backend
-      logDebug("Submitting form data:", { data: formData });
-      
+      logDebug($2);
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      await new Promise(resolve => setTimeout(resolve, 1500)),
       
-      toast({
-        title: "Quote Request Submitted",
-        description: "We've received your request and will get back to you soon."});
-      
+      toast($2);
       // Redirect to confirmation page or homepage
-      router.push("/");
+      router.push("/")
     } catch (error) {
       toast({
         title: "Submission Failed",
         description: "There was an error submitting your request. Please try again.",
-        variant: "destructive"});
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  },
 
   const handleAutoFill = async (description: string) => {
-    setAutoFillLoading(true);
+    setAutoFillLoading($2);
     try {
       const res = await fetch("/api/openai/match", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ projectDescription: description })});
-      if (!res.ok) throw new Error("Request failed");
-      const { category, itemId, timeline, budget } = await res.json();
+        body: JSON.stringify({ projectDescription: description})}),
+      if (!res.ok) throw new Error($2);
+      const { category, itemId, timeline, budget } = await res.json($2);
       updateFormData({
         projectDescription: description,
         serviceType: category,
         serviceCategory: category,
-        specificItem: itemId
-          ? { id: itemId, title: "AI Selected Item", category }
+        specificItem: itemId ? { id: itemId, title: "AI Selected Item", category }
           : formData.specificItem,
         timeline: timeline || formData.timeline,
-        budget: { ...formData.budget, ...(budget || {}) }});
-      setCurrentStep("summary");
-      setAutoFillOpen(false);
+        budget: { ...formData.budget, ...(budget || {}) }}),
+      setCurrentStep($2);
+      setAutoFillOpen(false)
     } catch (err) {
-      logErrorToProduction("Auto-fill API error", err as Error, { component: 'QuoteRequestForm', projectDescription: description });
+      logErrorToProduction($2);
       toast({
         title: "Auto-fill Failed",
         description: "We couldn't process your request. Please try again.",
-        variant: "destructive"});
+        variant: "destructive"})
     } finally {
-      setAutoFillLoading(false);
+      setAutoFillLoading(false)
     }
-  };
+  },
   
-  const renderStepContent = () => {
-    switch (currentStep) {
-      case "service":
-        return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;
+  const renderStepContent = $2;
       case "details":
-        return <ProjectDetailsStep formData={formData} updateFormData={updateFormData} />;
+        return <ProjectDetailsStep formData = $2;
       case "timeline":
-        return <TimelineStep formData={formData} updateFormData={updateFormData} />;
+        return <TimelineStep formData = $2;
       case "budget":
-        return <BudgetStep formData={formData} updateFormData={updateFormData} />;
+        return <BudgetStep formData = $2;
       case "summary":
-        return <SummaryStep formData={formData} updateFormData={updateFormData} />;
-      default:
-        return null;
+        return <SummaryStep formData = $2;
+      default: return null
     }
-  };
+  },
   
   return (
     <div className="container mx-auto px-4 py-12">
@@ -253,5 +227,5 @@ export function QuoteRequestForm() {
         loading={autoFillLoading}
       />
     </div>
-  );
+  )
 }

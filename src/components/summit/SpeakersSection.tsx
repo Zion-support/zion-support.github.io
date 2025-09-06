@@ -2,11 +2,11 @@ import Image from "next/image";
 import { Twitter, Linkedin } from 'lucide-react'
 
 interface Speaker {
-  name: string;
-  title: string;
-  avatar: string;
-  twitter?: string;
-  linkedin?: string;
+  name: string,
+  title: string,
+  avatar: string,
+  twitter?: string,
+  linkedin?: string
 }
 
 const speakers: Speaker[] = [
@@ -15,7 +15,7 @@ const speakers: Speaker[] = [
     title: 'Founder & CEO',
     avatar: 'https://placehold.co/100x100',
     twitter: '#',
-    linkedin: '#'}];
+    linkedin: '#'}],
 
 export function SpeakersSection() {
   return (
@@ -66,5 +66,5 @@ export function SpeakersSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

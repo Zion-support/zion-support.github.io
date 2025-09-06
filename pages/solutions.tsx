@@ -11,110 +11,86 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
-} from 'lucide-react';
+} from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
-
-const Solutions: NextPage = () => {
-  const industrySolutions = [
-    {
-      id: 'healthcare',
+const Solutions: NextPage = $2;
       name: 'Healthcare Solutions',
       description: 'AI-powered healthcare technology solutions',
-      features: ['Patient Care Optimization', 'Diagnostic AI', 'Healthcare Analytics', 'Compliance Management'],
+      features: ['Patient Care OptimizationDiagnostic AIHealthcare AnalyticsCompliance Management'],
       price: '$3,999',
       period: 'month',
       popular: true,
-      icon: <Heart className="w-8 h-8" />
-    },
+      icon: <Heart className = $2;
     {
       id: 'financial',
       name: 'Financial Solutions',
       description: 'Advanced financial technology and services',
-      features: ['Risk Management', 'Fraud Detection', 'Trading Systems', 'Compliance Automation'],
+      features: ['Risk ManagementFraud DetectionTrading SystemsCompliance Automation'],
       price: '$2,999',
       period: 'month',
       popular: false,
-      icon: <TrendingUp className="w-8 h-8" />
-    },
+      icon: <TrendingUp className = $2;
     {
       id: 'manufacturing',
       name: 'Manufacturing Solutions',
       description: 'Smart manufacturing and Industry 4.0',
-      features: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization', 'IoT Integration'],
+      features: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationIoT Integration'],
       price: '$2,799',
       period: 'month',
       popular: false,
-      icon: <Settings className="w-8 h-8" />
-    },
+      icon: <Settings className = $2;
     {
       id: 'retail',
       name: 'Retail Solutions',
       description: 'Digital transformation for retail businesses',
-      features: ['E-commerce Platforms', 'Customer Analytics', 'Inventory Management', 'Omnichannel Solutions'],
+      features: ['E-commerce PlatformsCustomer AnalyticsInventory ManagementOmnichannel Solutions'],
       price: '$2,499',
       period: 'month',
       popular: false,
-      icon: <ShoppingCart className="w-8 h-8" />
-    },
+      icon: <ShoppingCart className = $2;
     {
       id: 'government',
       name: 'Government Solutions',
       description: 'Technology solutions for public sector',
-      features: ['Digital Services', 'Security & Compliance', 'Data Management', 'Citizen Engagement'],
+      features: ['Digital ServicesSecurity & ComplianceData ManagementCitizen Engagement'],
       price: '$3,499',
       period: 'month',
       popular: false,
-      icon: <Building className="w-8 h-8" />
-    },
+      icon: <Building className = $2;
     {
       id: 'education',
       name: 'Education Solutions',
       description: 'Innovative educational technology',
-      features: ['Learning Platforms', 'Student Analytics', 'Administrative Systems', 'Virtual Classrooms'],
+      features: ['Learning PlatformsStudent AnalyticsAdministrative SystemsVirtual Classrooms'],
       price: '$1,999',
       period: 'month',
       popular: false,
-      icon: <BookOpenCheck className="w-8 h-8" />
-    }
-  ];
-
-  const solutionCapabilities = [
-    {
-      title: 'Industry Expertise',
+      icon: <BookOpenCheck className = $2;
+  const solutionCapabilities = $2;
       description: 'Deep domain knowledge across sectors',
-      icon: <Briefcase className="w-6 h-6" />
-    },
+      icon: <Briefcase className = $2;
     {
       title: 'Custom Development',
       description: 'Tailored solutions for unique needs',
-      icon: <Code className="w-6 h-6" />
-    },
+      icon: <Code className = $2;
     {
       title: 'Integration Services',
       description: 'Seamless system integration',
-      icon: <Network className="w-6 h-6" />
-    },
+      icon: <Network className = $2;
     {
       title: 'AI & Automation',
       description: 'Intelligent automation solutions',
-      icon: <Brain className="w-6 h-6" />
-    },
+      icon: <Brain className = $2;
     {
       title: 'Cloud & Security',
       description: 'Secure cloud infrastructure',
-      icon: <Shield className="w-6 h-6" />
-    },
+      icon: <Shield className = $2;
     {
       title: 'Analytics & Insights',
       description: 'Data-driven decision making',
-      icon: <BarChart3 className="w-6 h-6" />
-    }
-  ];
-
-  const caseStudies = [
-    {
-      title: "Healthcare Provider Digital Transformation",
+      icon: <BarChart3 className = $2;
+  const caseStudies = $2;
       industry: "Healthcare",
       description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency.",
       results: [
@@ -146,7 +122,7 @@ const Solutions: NextPage = () => {
       ],
       technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
     }
-  ];
+  ],
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -160,8 +136,8 @@ const Solutions: NextPage = () => {
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
@@ -192,10 +168,10 @@ const Solutions: NextPage = () => {
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -210,10 +186,10 @@ const Solutions: NextPage = () => {
               {solutionCapabilities.map((capability, index) => (
                 <motion.div
                   key={capability.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
@@ -233,10 +209,10 @@ const Solutions: NextPage = () => {
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -251,10 +227,10 @@ const Solutions: NextPage = () => {
               {industrySolutions.map((solution, index) => (
                 <motion.div
                   key={solution.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
                     solution.popular 
                       ? 'border-orange-500 shadow-lg shadow-orange-500/25' 
@@ -328,37 +304,7 @@ const Solutions: NextPage = () => {
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-                Ready for Industry Transformation?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Partner with us to build industry-specific solutions that drive your business forward
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact" 
-                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Your Transformation
-                </a>
-                <a 
-                  href="/contact" 
-                  className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                >
-                  Schedule Consultation
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-  );
-};
-
-export default Solutions;
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
+export default Solutions,

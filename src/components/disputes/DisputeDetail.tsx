@@ -5,7 +5,7 @@ import { useDisputes } from "@/hooks/useDisputes";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
  Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType
-} from "@/types/disputes";
+} from "@/types/disputes",
 
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -19,137 +19,106 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react'
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
-
 export function DisputeDetail() {
-  const router = useRouter();
-  const { disputeId } = router.query as { disputeId?: string };
-  const { user } = useAuth();
-  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
-
-  const [dispute, setDispute] = useState<Dispute | null>(null);
-  const [messages, setMessages] = useState<DisputeMessage[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [message, setMessage] = useState("");
-  const [adminNote, setAdminNote] = useState("");
-  const [isSending, setIsSending] = useState(false);
-  const [resolution, setResolution] = useState<{ summary: string; resolution_type: ResolutionType }>({
+  const router = useRouter($2);
+  const { disputeId } = router.query as { disputeId?: string },
+  const { user } = useAuth($2);
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes($2);
+  const [dispute, setDispute] = useState<Dispute | null>(null),
+  const [messages, setMessages] = useState<DisputeMessage[]>([]),
+  const [isLoading, setIsLoading] = useState($2);
+  const [message, setMessage] = useState($2);
+  const [adminNote, setAdminNote] = useState($2);
+  const [isSending, setIsSending] = useState($2);
+  const [resolution, setResolution] = useState<{ summary: string, resolution_type: ResolutionType}>({
   summary: "",
-  resolution_type: "compromise"});
+  resolution_type: "compromise"}),
    
-  const [activeTab, setActiveTab] = useState("overview");
-
+  const [activeTab, setActiveTab] = useState($2);
   // Check if user is admin (placeholder - implement proper admin check)
-  const isAdmin = user?.userType === "admin";
-  
+  const isAdmin = $2;
   useEffect(() => {
-    if (!disputeId) return;
+    if (!disputeId) return,
 
     const loadDisputeData = async () => {
-      setIsLoading(true);
+      setIsLoading($2);
       try {
-        const disputeData = await getDisputeById(disputeId);
+        const disputeData = await getDisputeById($2);
         if (!disputeData) {
-          toast.error("Dispute not found");
-          router.push("/dashboard/disputes");
-          return;
+          toast.error($2);
+          router.push($2);
+          return
         }
-        setDispute(disputeData);
-        
-        const messagesData = await getDisputeMessages(disputeId);
-        setMessages(messagesData);
+        setDispute($2);
+        const messagesData = await getDisputeMessages($2);
+        setMessages(messagesData)
       } catch (error) {
-        logErrorToProduction('Error loading dispute data:', { data: error });
-        toast.error("Failed to load dispute");
+        logErrorToProduction($2);
+        toast.error("Failed to load dispute")
       } finally {
-        setIsLoading(false);
+        setIsLoading(false)
       }
-    };
+    },
     
-    loadDisputeData();
-  }, [disputeId, getDisputeById, getDisputeMessages, router]);
+    loadDisputeData()
+  }, [disputeId, getDisputeById, getDisputeMessages, router]),
 
-  const handleStatusChange = async (status: DisputeStatus) => {
-    if (!disputeId) return;
-
-    const success = await updateDisputeStatus(disputeId, status);
+  const handleStatusChange = $2;
+    const success = await updateDisputeStatus($2);
     if (success) {
       // Update the dispute object with the new status
-      setDispute({ ...dispute!, status: status });
+      setDispute({ ...dispute!, status: status})
     } else {
-      toast.error("Failed to update dispute status");
+      toast.error("Failed to update dispute status")
     }
-  };
+  },
 
-  const handleResolveDispute = async () => {
-    if (!disputeId) return;
-    
+  const handleResolveDispute = $2;
     if (!resolution.summary) {
-      toast.error("Please provide a resolution summary");
-      return;
+      toast.error($2);
+      return
     }
     
     const success = await resolveDispute(disputeId, {
       summary: resolution.summary,
-      resolution_type: (resolution.resolution_type as ResolutionType) || "compromise"});
+      resolution_type: (resolution.resolution_type as ResolutionType) || "compromise"}),
     if (success && dispute) {
       setDispute({
         ...dispute,
         resolution_summary: resolution.summary,
         resolution_type: resolution.resolution_type,
-        resolved_at: new Date().toISOString()});
+        resolved_at: new Date().toISOString()})
     } else {
-      toast.error("Failed to resolve dispute");
+      toast.error("Failed to resolve dispute")
     }
-  };
+  },
 
-  const handleSendMessage = async () => {
-    if (!disputeId || !message.trim()) return;
-    
-    setIsSending(true);
+  const handleSendMessage = $2;
+    setIsSending($2);
     try {
-      const success = await addDisputeMessage(disputeId, message, isAdmin);
+      const success = await addDisputeMessage($2);
       if (success) {
         // Refresh messages
-        const updatedMessages = await getDisputeMessages(disputeId);
-        setMessages(updatedMessages);
-        setMessage("");
+        const updatedMessages = await getDisputeMessages($2);
+        setMessages($2);
+        setMessage("")
       }
     } catch (error) {
-      logErrorToProduction('Error sending message:', { data: error });
+      logErrorToProduction('Error sending message:', { data: error})
     } finally {
-      setIsSending(false);
+      setIsSending(false)
     }
-  };
+  },
 
   if (isLoading) {
     return (
-      <div className="p-8 text-center">
-        <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>
-        <p>Loading dispute details...</p>
-      </div>
-    );
-  }
-
-  if (!dispute) {
-    return (
-      <div className="p-8 text-center">
-        <p>Dispute not found</p>
-        <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
-          Back to Disputes
-        </Button>
-      </div>
-    );
-  }
-
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
-    switch (status) {
-      case "open": return "default";
-      case "under_review": return "secondary";
-      case "resolved": return "outline"; // Changed from "success" to "outline"
-      case "closed": return "outline";
-      default: return "default";
+      <div className = $2;
+      case "under_review": return "secondary",
+      case "resolved": return "outline", // Changed from "success" to "outline"
+      case "closed": return "outline",
+      default: return "default"
     }
-  };
+  },
 
   return (
     <div className="container mx-auto p-4 space-y-6">
@@ -158,11 +127,11 @@ export function DisputeDetail() {
           <div className="flex items-center gap-2">
             <h1 className="text-2xl font-bold">Dispute Case</h1>
             <Badge variant={getStatusBadgeVariant(dispute.status)}>
-              {dispute.status.replace('_', ' ')}
+              {dispute.status.replace('_ ')}
             </Badge>
           </div>
           <p className="text-muted-foreground">
-            Reported {formatDistanceToNow(new Date(dispute?.created_at || ""), { addSuffix: true })}
+            Reported {formatDistanceToNow(new Date(dispute?.created_at || ""), { addSuffix: true})}
           </p>
         </div>
         
@@ -260,44 +229,7 @@ export function DisputeDetail() {
                 </CardContent>
               </Card>
               
-              {dispute.status === "resolved" && (
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Resolution</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
-                    
-                    {dispute.resolution_type && (
-                      <div className="mt-4">
-                        <Badge>
-                          Resolution: {dispute.resolution_type.replace('_', ' ')}
-                        </Badge>
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-              )}
-            </TabsContent>
-            
-            <TabsContent value="messages" className="space-y-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Messages</CardTitle>
-                  <CardDescription>Communication regarding this dispute</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-6 max-h-[600px] overflow-y-auto p-2">
-                    {messages.length === 0 ? (
-                      <div className="text-center py-12">
-                        <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" />
-                        <p className="text-muted-foreground">No messages yet</p>
-                      </div>
-                    ) : (
-                      messages
-                        .filter(msg => !msg.is_admin_note)
-                        .map((msg) => {
-                          const isCurrentUser = user?.id === msg.user_id;
+              {dispute.status = $2;
                           return (
                             <div
                               key={msg.id}
@@ -327,7 +259,7 @@ export function DisputeDetail() {
                                 <p className="whitespace-pre-wrap">{msg.message}</p>
                               </div>
                             </div>
-                          );
+                          )
                         })
                     )}
                   </div>
@@ -478,9 +410,9 @@ export function DisputeDetail() {
                           onClick={() => {
                             if (adminNote.trim()) {
                               addDisputeMessage(disputeId!, adminNote, true).then(() => {
-                                getDisputeMessages(disputeId!).then(setMessages);
-                                setAdminNote("");
-                              });
+                                getDisputeMessages(disputeId!).then($2);
+                                setAdminNote("")
+                              })
                             }
                           }}
                         >
@@ -549,7 +481,7 @@ export function DisputeDetail() {
               <div className="flex justify-between">
                 <span className="font-medium">Status:</span>
                 <Badge variant={getStatusBadgeVariant(dispute.status)}>
-                  {dispute.status.replace('_', ' ')}
+                  {dispute.status.replace('_ ')}
                 </Badge>
               </div>
               <div className="flex justify-between">
@@ -561,5 +493,5 @@ export function DisputeDetail() {
         </div>
       </div>
     </div>
-  );
+  )
 }

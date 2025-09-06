@@ -1,45 +1,37 @@
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-
-export type FeedbackWidgetProps = {
-  responseId?: string;
-  aiModel?: string;
-};
+export type FeedbackWidgetProps = $2;
+  aiModel?: string
+},
 
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
-  const [rating, setRating] = useState<null | 'up' | 'down'>(null);
-  const [comment, setComment] = useState('');
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [rating, setRating] = useState<null | 'up' | 'down'>(null),
+  const [comment, setComment] = useState($2);
+  const [submitting, setSubmitting] = useState($2);
+  const [submitted, setSubmitted] = useState($2);
+  const [error, setError] = useState<string | null>(null),
 
-  const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]);
+  const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]),
 
   const submit = async () => {
     if (!rating) {
-      setError('Please choose 👍 or 👎');
-      return;
+      setError($2);
+      return
     }
-    setError(null);
-    setSubmitting(true);
+    setError($2);
+    setSubmitting($2);
     try {
-      const res = await fetch('/api/feedback/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          responseId: effectiveResponseId,
-          rating,
-          comment: comment.trim(),
+      const res = await fetch($2);
           pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined,
-          aiModel})});
-      if (!res.ok) throw new Error('Failed to submit feedback');
-      setSubmitted(true);
+          aiModel})}),
+      if (!res.ok) throw new Error($2);
+      setSubmitted(true)
     } catch (e: any) {
-      setError(e?.message || 'Something went wrong');
+      setError(e?.message || 'Something went wrong')
     } finally {
-      setSubmitting(false);
+      setSubmitting(false)
     }
-  };
+  },
 
   return (
     <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">
@@ -84,5 +76,5 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
         </div>
       )}
     </div>
-  );
+  )
 }

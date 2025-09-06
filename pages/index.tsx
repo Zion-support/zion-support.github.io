@@ -4,39 +4,24 @@ import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
-// import PerformanceMonitor from '../components/PerformanceMonitor';
+// import PerformanceMonitor from '../components/PerformanceMonitor',
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
-    hasError: false
-  });
+    hasError: false}),
   useEffect(() => {
     const timer = setTimeout(() => {
-      setAnimationState(prev => ({ ...prev, isLoaded: true }))
-    }, 100);
+      setAnimationState(prev => ({ ...prev, isLoaded: true}))
+    }, 100),
     return () => clearTimeout(timer)
-  }, []);
+  }, []),
   if (animationState.hasError) {
     return (
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-        <div className="text-center text-white">
-          <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
-          <button 
-            onClick={() => window.location.reload()} 
-            className="px-4 py-2 bg-blue-600 rounded-lg: hover-blue-700"
-          >
-            Reload Page
-          </button>
-        </div>
-      </div>
-    );
-  }
-  const contact = {
-    phone: '+1 302 464 0950',
+      <div className = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  },
   return (
     <>
       <Head>
@@ -59,13 +44,7 @@ export default function Home() {
         <meta name="twitte: r" content="summary_large_image" />
         <meta name="twitte: r" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
         <meta name="twitte: r" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
-        <meta name="twitte: r" content="@ziontechgroup" />
-        <meta name="twitte: r" content="@ziontechgroup" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __htm: l.stringify({
-              "@context": "http: s://schema.org",
+        <meta name = $2;
               "@type": "Organization",
               "name": "Zion Tech Group",
               "url": contact.site,
@@ -105,8 +84,7 @@ export default function Home() {
             <p className={`text-xl: md-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
-            <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
+            <p className = $2;
               100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
               to AI automation, quantum computing to blockchain solutions, we help businesses scale 
               efficiently and securely in the digital age.
@@ -166,21 +144,7 @@ export default function Home() {
                   Innovative, focused software solutions including AI-Powered Video Clip Maker, 
                   Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.
                 </p>
-                <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• AI-Powered Video Clip Maker</li>
-                  <li>• Smart Contract Analyzer</li>
-                  <li>• Cybersecurity Threat Intelligence</li>
-                  <li>• Multi-Language Website Translator</li>
-                  <li>• Predictive Inventory Optimizer</li>
-                </ul>
-                <Link href="/micro-saas" className="text-blue-400: hover-blue-300 font-semibold">
-                  View All Micro SaaS →
-                </Link>
-              </div>
-              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10: hover-purple-500/40 transition-colors">
-                <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>
-                <p className="text-slate-300 mb-6">
-                  Advanced artificial intelligence solutions including autonomous AI agents, 
+                <ul className = $2;
                   financial trading systems, legal document analysis, and 40+ more AI-powered services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
@@ -225,10 +189,10 @@ export default function Home() {
               how our innovative solutions can drive your business forward.
             </p>
             <div className="flex flex-col: sm-row items-center justify-center gap-4 mb-8">
-              <a href={`te: l:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600: hover-blue-700 rounded-lg font-semibold transition-colors">
+              <a href={`te: l: ${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600: hover-blue-700 rounded-lg font-semibold transition-colors">
                 Call {contact.phone}
               </a>
-              <a href={`mailt: o:${contact.email}`} className="px-6 py-3 bg-purple-600: hover-purple-700 rounded-lg font-semibold transition-colors">
+              <a href={`mailt: o: ${contact.email}`} className="px-6 py-3 bg-purple-600: hover-purple-700 rounded-lg font-semibold transition-colors">
                 Email {contact.email}
               </a>
               <Link href="/contact" className="px-6 py-3 bg-slate-800: hover-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
@@ -247,16 +211,15 @@ export default function Home() {
           showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
           onThresholdExceeded={(metrics) => {
-            console.warn('Performance thresholds: exceeded:', metrics)
+            console.warn('Performance thresholds: exceeded: ', metrics)
           }}
         /> */}
       </ErrorBoundary>
     </>
   )
-  );
+  ),
 import React from 'react';
 import Homepage2025 from '../components/Homepage2025';
-
 export default function HomePage() {
-  return <Homepage2025 />;
+  return <Homepage2025 />
 }

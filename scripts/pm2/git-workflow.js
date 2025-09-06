@@ -1,331 +1,310 @@
 
 
 #!/usr/bin/env node,
-const fs = require('fs'),
-const path = require('path'),
-const { execSync } = require('child_process'),
+const fs = require($2);
+const path = require($2);
+const { execSync } = require($2);
 ,
 class GitWorkflow {,
   constructor() {,
-    this.projectRoot = process.cwd(),
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log'),
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json'),
-    this.startTime = Date.now(),
-  };
+    this.projectRoot = process.cwd($2);
+    this.logFile = path.join($2);
+    this.reportFile = path.join($2);
+    this.startTime = $2;
 ,
   log(message) {,
-    const timestamp = new Date().toISOString(),
-    const logMessage = `[${timestamp}] ${message}\n`,
+    const timestamp = new Date().toISOString($2);
+    const logMessage = $2;
 ,
     try {,
-      fs.appendFileSync(this.logFile, logMessage),
+      fs.appendFileSync(this.logFile, logMessage)
     } catch (error) {,
-      console.error('Error writing to log: file:', error.message),
-    };
-  };
+      console.error('Error writing to log: file: ', error.message)
+    }
+  },
 ,
   async checkGitStatus() {,
     try {,
-      this.log('📋 Checking git status...'),
+      this.log($2);
 ,
-      const status = execSync('git status --porcelain', {,
-        cw: d: this.projectRoot,
-        encodin: g: 'utf8',
-      }),
+      const status = execSync($2);
 ,
-      const branches = execSync('git branch -a', {,
-        cw: d: this.projectRoot,
-        encodin: g: 'utf8',
-      }),
+      const branches = execSync($2);
 ,
       const currentBranch = execSync('git branch --show-current', {,
-        cw: d: this.projectRoot,
-        encodin: g: 'utf8',
-      }).trim(),
+        cw: this.projectRoot,
+        encodin: g: 'utf8'
+      }).trim($2);
 ,
       return {,
-        succes: s: true,
-        hasChange: s: status.trim().length > 0,
-        change: s: status.trim().split('\n').filter(line => line.trim()),
-        branche: s: branches.trim().split('\n'),
-        currentBranc: h: currentBranch,
-      };
+        succes: true,
+        hasChange: status.trim().length > 0,
+        change: status.trim().split('\n').filter(line = $2;
+        branche: branches.trim().split($2);
+        currentBranc: currentBranch}
     } catch (error) {,
       return {,
-        succes: s: false,
-        erro: r: error.message,
-        hasChange: s: false,
-        change: s: [],
-        branche: s: [],
-        currentBranc: h: null,
-      };
-    };
-  };
+        succes: false,
+        erro: error.message,
+        hasChange: false,
+        change: [],
+        branche: [],
+        currentBranc: null}
+    }
+  },
 ,
   async checkBranchHealth() {,
     try {,
-      this.log('🌿 Checking branch health...'),
+      this.log($2);
 ,
       const branches = execSync('git branch -r', {,
-        cw: d: this.projectRoot,
-        encodin: g: 'utf8',
-      }).trim().split('\n'),
+        cw: this.projectRoot,
+        encodin: g: 'utf8'
+      }).trim().split($2);
 ,
-      const branchInfo = [],
+      const branchInfo = $2;
 ,
       for (const branch of branches) {,
-        const branchName = branch.replace('origin/', '').trim(),
+        const branchName = branch.replace('origin/', '').trim($2);
         if (branchName && !branchName.includes('HEAD')) {,
           try {,
             const lastCommit = execSync(`git log -1 --format="%H %s %an %ad" origin/${branchName}`, {,
-              cw: d: this.projectRoot,
-              encodin: g: 'utf8',
-            }).trim(),
+              cw: this.projectRoot,
+              encodin: g: 'utf8'
+            }).trim($2);
 ,
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
-              cw: d: this.projectRoot,
-              encodin: g: 'utf8',
-            }).trim(),
+              cw: this.projectRoot,
+              encodin: g: 'utf8'
+            }).trim($2);
 ,
-            branchInfo.push({,
-              nam: e: branchName,
-              lastCommi: t: lastCommit,
-              commitCoun: t: parseInt(commitCount),
-              isActiv: e: true,
-            }),
+            branchInfo.push($2);
+              isActiv: true})
           } catch (error) {,
-            // Skip if can't access branch,
-          };
-        };
-      };
+            // Skip if can't access branch
+          }
+        }
+      },
 ,
       return {,
-        succes: s: true,
-        branche: s: branchInfo,
-      };
+        succes: true,
+        branche: branchInfo}
     } catch (error) {,
       return {,
-        succes: s: false,
-        erro: r: error.message,
-        branche: s: [],
-      };
-    };
-  };
+        succes: false,
+        erro: error.message,
+        branche: []
+      }
+    }
+  },
 ,
   async checkMergeConflicts() {,
     try {,
-      this.log('🔀 Checking for merge conflicts...'),
+      this.log($2);
 ,
-      const status = execSync('git status --porcelain', {,
-        cw: d: this.projectRoot,
-        encodin: g: 'utf8',
-      }),
+      const status = execSync($2);
 ,
-      const conflictFiles = status,
-        .split('\n'),
-        .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD')),
-        .map(line => line.trim().split(/\s+/)[1]),
+      const conflictFiles = $2;
+        .split($2);
+        .filter(line = $2;
+        .map(line = $2;
 ,
       return {,
-        succes: s: true,
-        hasConflict: s: conflictFiles.length > 0,
-        conflictFile: s: conflictFiles,
-      };
+        succes: true,
+        hasConflict: conflictFiles.length > 0,
+        conflictFile: conflictFiles}
     } catch (error) {,
       return {,
-        succes: s: false,
-        erro: r: error.message,
-        hasConflict: s: false,
-        conflictFile: s: [],
-      };
-    };
-  };
+        succes: false,
+        erro: error.message,
+        hasConflict: false,
+        conflictFile: []
+      }
+    }
+  },
 ,
   async checkStaleBranches() {,
     try {,
-      this.log('🍂 Checking for stale branches...'),
+      this.log($2);
 ,
       const branches = execSync('git branch -r', {,
-        cw: d: this.projectRoot,
-        encodin: g: 'utf8',
-      }).trim().split('\n'),
+        cw: this.projectRoot,
+        encodin: g: 'utf8'
+      }).trim().split($2);
 ,
-      const staleBranches = [],
-      const mainBranch = 'main',
+      const staleBranches = $2;
+      const mainBranch = $2;
 ,
       for (const branch of branches) {,
-        const branchName = branch.replace('origin/', '').trim(),
+        const branchName = branch.replace('origin/', '').trim($2);
         if (branchName && !branchName.includes('HEAD') && branchName !== mainBranch) {,
           try {,
             const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {,
-              cw: d: this.projectRoot,
-              encodin: g: 'utf8',
-            }).trim(),
+              cw: this.projectRoot,
+              encodin: g: 'utf8'
+            }).trim($2);
 ,
-            const lastCommitDate = new Date(lastCommit),
-            const daysSinceLastCommit = (Date.now() - lastCommitDate.getTime()) / (1000 * 60 * 60 * 24),
+            const lastCommitDate = new Date($2);
+            const daysSinceLastCommit = $2;
 ,
             if (daysSinceLastCommit > 30) {,
               staleBranches.push({,
-                nam: e: branchName,
-                lastCommi: t: lastCommit,
-                daysSinceLastCommi: t: Math.floor(daysSinceLastCommit),
-              }),
-            };
+                nam: branchName,
+                lastCommi: lastCommit,
+                daysSinceLastCommi: Math.floor(daysSinceLastCommit)
+              })
+            }
           } catch (error) {,
-            // Skip if can't access branch,
-          };
-        };
-      };
+            // Skip if can't access branch
+          }
+        }
+      },
 ,
       return {,
-        succes: s: true,
-        staleBranche: s: staleBranches,
-      };
+        succes: true,
+        staleBranche: staleBranches}
     } catch (error) {,
       return {,
-        succes: s: false,
-        erro: r: error.message,
-        staleBranche: s: [],
-      };
-    };
-  };
+        succes: false,
+        erro: error.message,
+        staleBranche: []
+      }
+    }
+  },
 ,
   async generateReport(statusInfo, branchInfo, conflictInfo, staleInfo) {,
-    const report = {,
-      timestam: p: new Date().toISOString(),
-      summar: y: {,
-        hasChange: s: statusInfo.hasChanges,
-        currentBranc: h: statusInfo.currentBranch,
-        totalBranche: s: branchInfo.branches?.length || 0,
-        hasConflict: s: conflictInfo.hasConflicts,
-        staleBranche: s: staleInfo.staleBranches?.length || 0,
-        healthScor: e: 0,
-      },
-      detail: s: {,
-        statu: s: statusInfo,
-        branche: s: branchInfo,
-        conflict: s: conflictInfo,
-        stal: e: staleInfo,
-      },
-      recommendation: s: [],
-    };
+    const report = $2;
+      timestam: new Date().toISOString($2);
+      summar: {,
+        hasChange: statusInfo.hasChanges,
+        currentBranc: statusInfo.currentBranch,
+        totalBranche: branchInfo.branches?.length || 0,
+        hasConflict: conflictInfo.hasConflicts,
+        staleBranche: staleInfo.staleBranches?.length || 0,
+        healthScor: 0},
+      detail: {,
+        statu: statusInfo,
+        branche: branchInfo,
+        conflict: conflictInfo,
+        stal: staleInfo},
+      recommendation: []
+    },
 ,
     // Calculate health score,
-    let score = 100,
+    let score = $2;
     if (statusInfo.hasChanges) score -= 10,
     if (conflictInfo.hasConflicts) score -= 30,
     if (staleInfo.staleBranches?.length > 0) score -= 20,
     if (branchInfo.branches?.length > 10) score -= 10,
 ,
-    report.summary.healthScore = Math.max(score, 0),
+    report.summary.healthScore = Math.max($2);
 ,
     // Generate recommendations,
     if (statusInfo.hasChanges) {,
       report.recommendations.push({,
-        priorit: y: 'medium',
-        messag: e: 'Uncommitted changes detected',
-        actio: n: 'Commit or stash changes before switching branches',
-      }),
-    };
+        priorit: 'medium',
+        messag: 'Uncommitted changes detected',
+        actio: 'Commit or stash changes before switching branches'
+      })
+    },
 ,
     if (conflictInfo.hasConflicts) {,
       report.recommendations.push({,
-        priorit: y: 'high',
-        messag: e: 'Merge conflicts detected',
-        actio: n: 'Resolve merge conflicts before continuing',
-      }),
-    };
+        priorit: 'high',
+        messag: 'Merge conflicts detected',
+        actio: 'Resolve merge conflicts before continuing'
+      })
+    },
 ,
     if (staleInfo.staleBranches?.length > 0) {,
       report.recommendations.push({,
-        priorit: y: 'low',
-        messag: e: `${staleInfo.staleBranches.length} stale branches found`,
-        actio: n: 'Consider deleting or updating stale branches',
-      }),
-    };
+        priorit: 'low',
+        messag: `${staleInfo.staleBranches.length} stale branches found`,
+        actio: 'Consider deleting or updating stale branches'
+      })
+    },
 ,
     if (branchInfo.branches?.length > 10) {,
       report.recommendations.push({,
-        priorit: y: 'low',
-        messag: e: 'Many branches detected',
-        actio: n: 'Consider cleaning up unused branches',
-      }),
-    };
+        priorit: 'low',
+        messag: 'Many branches detected',
+        actio: 'Consider cleaning up unused branches'
+      })
+    },
 ,
-    return report,
-  };
+    return report
+  },
 ,
   async saveReport(report) {,
     try {,
-      const reportDir = path.dirname(this.reportFile),
+      const reportDir = path.dirname($2);
       if (!fs.existsSync(reportDir)) {,
-        fs.mkdirSync(reportDir, { recursiv: e: true }),
-      };
+        fs.mkdirSync(reportDir, { recursiv: true})
+      },
 ,
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
-      this.log(`Report saved: to: ${this.reportFile}`),
+      this.log(`Report saved: to: ${this.reportFile}`)
     } catch (error) {,
-      this.log(`Error saving: report: ${error.message}`),
-    };
-  };
+      this.log(`Error saving: report: ${error.message}`)
+    }
+  },
 ,
   async run() {,
-    this.log('🌿 Starting Git Workflow Monitor...'),
-    this.log(`Project: root: ${this.projectRoot}`),
+    this.log($2);
+    this.log($2);
 ,
     try {,
       // Create logs directory if it doesn't exist,
-      const logsDir = path.dirname(this.logFile),
+      const logsDir = path.dirname($2);
       if (!fs.existsSync(logsDir)) {,
-        fs.mkdirSync(logsDir, { recursiv: e: true }),
-      };
+        fs.mkdirSync(logsDir, { recursiv: true})
+      },
 ,
       // Run all git checks,
-      const statusInfo = await this.checkGitStatus(),
-      const branchInfo = await this.checkBranchHealth(),
-      const conflictInfo = await this.checkMergeConflicts(),
-      const staleInfo = await this.checkStaleBranches(),
+      const statusInfo = await this.checkGitStatus($2);
+      const branchInfo = await this.checkBranchHealth($2);
+      const conflictInfo = await this.checkMergeConflicts($2);
+      const staleInfo = await this.checkStaleBranches($2);
 ,
       // Generate report,
-      this.log('📊 Generating git workflow report...'),
-      const report = await this.generateReport(statusInfo, branchInfo, conflictInfo, staleInfo),
+      this.log($2);
+      const report = await this.generateReport($2);
 ,
       // Save report,
-      await this.saveReport(report),
+      await this.saveReport($2);
 ,
-      const duration = Date.now() - this.startTime,
+      const duration = $2;
 ,
       // Log summary,
-      this.log('\n📊 Git Workflow: Summary: '),
-      this.log(`Current: branch: ${report.summary.currentBranch}`),
-      this.log(`Has: changes: ${report.summary.hasChanges ? 'Yes' : 'No'}`),
-      this.log(`Total: branches: ${report.summary.totalBranches}`),
-      this.log(`Has: conflicts: ${report.summary.hasConflicts ? 'Yes' : 'No'}`),
-      this.log(`Stale: branches: ${report.summary.staleBranches}`),
-      this.log(`Health: score: ${report.summary.healthScore}/100`),
-      this.log(`Duratio: n: ${duration}ms`),
+      this.log($2);
+      this.log($2);
+      this.log($2);
+      this.log($2);
+      this.log($2);
+      this.log($2);
+      this.log($2);
+      this.log($2);
 ,
       if (report.recommendations.length > 0) {,
-        this.log('\n💡 Recommendation: s: '),
-        report.recommendations.forEach(rec => {,
+        this.log($2);
+        report.recommendations.forEach(rec = $2;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
-          this.log(`    Actio: n: ${rec.action}`),
-        }),
+          this.log(`    Actio: ${rec.action}`)
+        })
       } else {,
-        this.log('\n✨ Git workflow is healthy!'),
-      };
-,
+        this.log('\n✨ Git workflow is healthy!')
+      }
+
     } catch (error) {,
-      this.log(`❌ Error running git workflow: monitor: ${error.message}`),
-      process.exit(1),
-    };
-  };
-};
+      this.log($2);
+      process.exit(1)
+    }
+  }
+},
 ,
 // Run the git workflow monitor,
-const gitWorkflow = new GitWorkflow(),
-gitWorkflow.run().catch(error => {,
-  process.exit(1),
+const gitWorkflow = new GitWorkflow($2);
+gitWorkflow.run().catch(error = $2;
+  process.exit(1)
 }),
 

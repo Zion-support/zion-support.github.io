@@ -9,39 +9,36 @@ import {
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogTitle} from '@/components/ui/dialog';
+  DialogTitle} from '@/components/ui/dialog',
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
 import { isProdDomain } from '@/utils/getStripe';
-
 interface GuestCheckoutModalProps {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  onSubmit: (details: { email: string; address: string }) => void;
+  open: boolean,
+  onOpenChange: (open: boolean) => void,
+  onSubmit: (details: { email: string, address: string}) => void
 }
 
 export default function GuestCheckoutModal({
   open,
   onOpenChange,
   onSubmit}: GuestCheckoutModalProps) {
-  const [email, setEmail] = useState('');
-  const [address, setAddress] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
+  const [email, setEmail] = useState($2);
+  const [address, setAddress] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
+    e.preventDefault($2);
     if (!email || !address) {
-      alert('Please fill in all required fields');
-      return;
+      alert($2);
+      return
     }
 
-    setIsSubmitting(true);
+    setIsSubmitting($2);
     try {
-      onSubmit({ email, address });
+      onSubmit({ email, address })
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  },
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -127,5 +124,5 @@ export default function GuestCheckoutModal({
         </form>
       </DialogContent>
     </Dialog>
-  );
+  )
 }

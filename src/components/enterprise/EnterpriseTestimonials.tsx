@@ -6,11 +6,9 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious} from "@/components/ui/carousel";
+  CarouselPrevious} from "@/components/ui/carousel",
 
-const testimonials = [
-  {
-    quote: "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.",
+const testimonials = $2;
     author: "Sarah Johnson",
     title: "VP of Talent Acquisition",
     company: "TechGlobal Inc.",
@@ -26,7 +24,7 @@ const testimonials = [
     author: "Elena Rodriguez",
     title: "CTO",
     company: "FutureTech Systems",
-    image: "/placeholder.svg"}];
+    image: "/placeholder.svg"}],
 
 export function EnterpriseTestimonials() {
   return (
@@ -77,5 +75,5 @@ export function EnterpriseTestimonials() {
         </Carousel>
       </div>
     </section>
-  );
+  )
 }

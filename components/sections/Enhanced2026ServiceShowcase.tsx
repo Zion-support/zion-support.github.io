@@ -4,10 +4,8 @@ import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
-
 export default function Enhanced2026ServiceShowcase() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
@@ -15,11 +13,9 @@ export default function Enhanced2026ServiceShowcase() {
         delayChildren: 0.1
       }
     }
-  };
+  },
 
-  const itemVariants = {
-    hidden: { 
-      opacity: 0, 
+  const itemVariants = $2;
       y: 50,
       scale: 0.9
     },
@@ -32,18 +28,16 @@ export default function Enhanced2026ServiceShowcase() {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
-  const cardVariants = {
-    hover: {
-      y: -10,
+  const cardVariants = $2;
       scale: 1.02,
       transition: {
         duration: 0.3,
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
   const renderServiceCard = (service: any, index: number) => (
     <motion.div
@@ -89,45 +83,7 @@ export default function Enhanced2026ServiceShowcase() {
             <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
             <div className="grid grid-cols-1 gap-1">
               {service.features.slice(0, 3).map((feature: string, idx: number) => (
-                <div key={idx} className="flex items-center space-x-2 text-xs text-slate-400">
-                  <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full" />
-                  <span>{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Price and CTA */}
-          <div className="flex items-center justify-between">
-            <div className="text-right">
-              <div className="text-2xl font-bold text-white">{service.price}</div>
-              <div className="text-slate-400 text-sm">{service.period}</div>
-            </div>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
-            >
-              <span>Learn More</span>
-              <ArrowRight className="w-4 h-4" />
-            </motion.button>
-          </div>
-
-          {/* Market info */}
-          <div className="mt-4 pt-4 border-t border-slate-700/50">
-            <div className="flex items-center justify-between text-xs text-slate-500">
-              <span>Market: {service.marketSize}</span>
-              <span>Growth: {service.growthRate}</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Hover glow effect */}
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      </motion.div>
-    </motion.div>
-  );
-
+                <div key = $2;
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Background effects */}
@@ -136,8 +92,8 @@ export default function Enhanced2026ServiceShowcase() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -164,8 +120,8 @@ export default function Enhanced2026ServiceShowcase() {
 
         {/* AI Services Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-20"
         >
@@ -186,8 +142,8 @@ export default function Enhanced2026ServiceShowcase() {
 
         {/* IT Infrastructure Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-20"
         >
@@ -208,8 +164,8 @@ export default function Enhanced2026ServiceShowcase() {
 
         {/* Micro SAAS Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <div className="flex items-center space-x-3 mb-8">
@@ -229,8 +185,8 @@ export default function Enhanced2026ServiceShowcase() {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-16"
         >
@@ -252,7 +208,7 @@ export default function Enhanced2026ServiceShowcase() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
+                className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
               >
                 Schedule Demo
               </motion.button>
@@ -261,5 +217,5 @@ export default function Enhanced2026ServiceShowcase() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

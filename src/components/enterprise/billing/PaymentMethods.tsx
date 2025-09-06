@@ -6,9 +6,7 @@ import { CreditCard, Plus, Trash } from 'lucide-react'
 
 export function PaymentMethods() {
   // Mock payment methods
-  const paymentMethods = [
-    {
-      id: "pm-1",
+  const paymentMethods = $2;
       type: "credit_card",
       brand: "Visa",
       last4: "4242",
@@ -23,7 +21,7 @@ export function PaymentMethods() {
       expMonth: 4,
       expYear: 2026,
       isDefault: false}
-  ];
+  ],
 
   return (
     <Card>
@@ -75,5 +73,5 @@ export function PaymentMethods() {
         </Button>
       </CardFooter>
     </Card>
-  );
+  )
 }

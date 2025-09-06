@@ -1,40 +1,33 @@
 import React from 'react';
 import type { Room } from 'livekit-client';
-
-type Props = {
-  room: Room | null;
-  onLeave: () => void;
-  accent?: 'blue' | 'cyan';
-};
+type Props = $2;
+  onLeave: () => void,
+  accent?: 'blue' | 'cyan'
+},
 
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
-  const [micEnabled, setMicEnabled] = React.useState(true);
-  const [camEnabled, setCamEnabled] = React.useState(true);
-  const [sharing, setSharing] = React.useState(false);
+  const [micEnabled, setMicEnabled] = React.useState($2);
+  const [camEnabled, setCamEnabled] = React.useState($2);
+  const [sharing, setSharing] = React.useState($2);
+  const accentClass = $2;
+  const toggleMic = $2;
+    const enabled = await room.localParticipant.setMicrophoneEnabled($2);
+    setMicEnabled(enabled)
+  },
 
-  const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
+  const toggleCam = $2;
+    const enabled = await room.localParticipant.setCameraEnabled($2);
+    setCamEnabled(enabled)
+  },
 
-  const toggleMic = async () => {
-    if (!room) return;
-    const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled);
-    setMicEnabled(enabled);
-  };
-
-  const toggleCam = async () => {
-    if (!room) return;
-    const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
-    setCamEnabled(enabled);
-  };
-
-  const toggleScreenShare = async () => {
-    if (!room) return;
+  const toggleScreenShare = $2;
     try {
-      const enabled = await room.localParticipant.setScreenShareEnabled(!sharing);
-      setSharing(enabled);
+      const enabled = await room.localParticipant.setScreenShareEnabled($2);
+      setSharing(enabled)
     } catch (e) {
-      console.warn('Screen share failed', e);
+      console.warn('Screen share failed', e)
     }
-  };
+  },
 
   return (
     <div className="flex items-center gap-3">
@@ -49,5 +42,5 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
       </button>
       <button onClick={onLeave} className="px-4 py-2 rounded bg-red-600 text-white">Leave</button>
     </div>
-  );
+  )
 }

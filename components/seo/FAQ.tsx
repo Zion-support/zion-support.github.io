@@ -1,11 +1,9 @@
 import React from 'react';
+type QA = { q: string, a: string},
 
-type QA = { q: string; a: string };
-
-type Props = { items: QA[] };
-
+type Props = $2;
 export default function FAQ({ items }: Props) {
-  if (!items || items.length === 0) return null;
+  if (!items || items.length = $2;
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">
       <h2 className="text-lg font-semibold mb-4">Frequently Asked Questions</h2>
@@ -18,5 +16,5 @@ export default function FAQ({ items }: Props) {
         ))}
       </div>
     </div>
-  );
+  )
 }

@@ -1,45 +1,42 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Innovative2026ITInfrastructureService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
 
 export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [
   // Quantum-Enhanced Cloud Infrastructure
@@ -51,16 +48,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     period: '/month',
     description: 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.',
     features: [
-      'Hybrid quantum-classical computing',
-      'Quantum-resistant encryption',
-      'Quantum machine learning acceleration',
-      'Multi-cloud orchestration',
-      'Auto-scaling infrastructure',
-      'Quantum key distribution',
-      'Advanced security protocols',
-      'Real-time performance monitoring',
-      'Global edge computing network',
-      'Quantum-safe data storage'
+      'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoringGlobal edge computing networkQuantum-safe data storage'
     ],
     popular: true,
     icon: '⚛️',
@@ -73,11 +61,11 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     setupTime: '2 weeks',
     category: 'Quantum & Cloud Infrastructure',
     realService: true,
-    technology: ['Quantum Computing', 'Kubernetes', 'Docker', 'Terraform', 'Python', 'Go', 'Rust', 'AWS', 'Azure'],
-    integrations: ['AWS Services', 'Azure Services', 'Google Cloud', 'Kubernetes', 'Docker', 'Terraform', 'Ansible', 'Jenkins'],
-    useCases: ['High-performance computing', 'Cryptographic applications', 'Machine learning acceleration', 'Financial modeling', 'Drug discovery', 'Climate modeling'],
+    technology: ['Quantum ComputingKubernetesDockerTerraformPythonGoRustAWSAzure'],
+    integrations: ['AWS ServicesAzure ServicesGoogle CloudKubernetesDockerTerraformAnsibleJenkins'],
+    useCases: ['High-performance computingCryptographic applicationsMachine learning accelerationFinancial modelingDrug discoveryClimate modeling'],
     roi: 'Average customer sees 500% ROI within 12 months through improved performance and competitive advantage.',
-    competitors: ['AWS', 'Google Cloud', 'Microsoft Azure', 'IBM Cloud', 'Oracle Cloud'],
+    competitors: ['AWSGoogle CloudMicrosoft AzureIBM CloudOracle Cloud'],
     marketSize: '$397.4B market',
     growthRate: '280% annual growth',
     variant: 'quantum-futuristic',
@@ -92,8 +80,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     launchDate: '2025-08-15',
     customers: 800,
     rating: 4.9,
-    reviews: 400
-  },
+    reviews: 400},
 
   // Edge Computing Orchestration Platform
   {
@@ -104,16 +91,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     period: '/month',
     description: 'Advanced edge computing platform that intelligently orchestrates distributed computing resources, optimizing performance and reducing latency for IoT and real-time applications.',
     features: [
-      'AI-powered edge orchestration',
-      'Global edge network management',
-      'Real-time load balancing',
-      'Edge AI model deployment',
-      'IoT device management',
-      '5G network optimization',
-      'Edge security and compliance',
-      'Performance analytics',
-      'Automated scaling',
-      'Multi-cloud edge integration'
+      'AI-powered edge orchestrationGlobal edge network managementReal-time load balancingEdge AI model deploymentIoT device management5G network optimizationEdge security and compliancePerformance analyticsAutomated scalingMulti-cloud edge integration'
     ],
     popular: true,
     icon: '🌐',
@@ -126,11 +104,11 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     setupTime: '1 week',
     category: 'Edge Computing & IoT',
     realService: true,
-    technology: ['Kubernetes', 'Docker', 'Python', 'Go', 'Rust', 'TensorFlow', 'AWS', 'Azure', '5G Networks'],
-    integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'Docker', 'MQTT', 'CoAP', 'HTTP/2'],
-    useCases: ['Smart manufacturing', 'Autonomous vehicles', 'Smart cities', 'Healthcare monitoring', 'Retail analytics', 'Energy management'],
+    technology: ['KubernetesDockerPythonGoRustTensorFlowAWSAzure5G Networks'],
+    integrations: ['AWS IoTAzure IoTGoogle Cloud IoTKubernetesDockerMQTTCoAPHTTP/2'],
+    useCases: ['Smart manufacturingAutonomous vehiclesSmart citiesHealthcare monitoringRetail analyticsEnergy management'],
     roi: 'Average customer sees 380% ROI within 8 months through improved performance and reduced infrastructure costs.',
-    competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT Edge', 'FogHorn', 'ClearBlade'],
+    competitors: ['AWS GreengrassAzure IoT EdgeGoogle Cloud IoT EdgeFogHornClearBlade'],
     marketSize: '$43.4B market',
     growthRate: '240% annual growth',
     variant: 'edge-futuristic',
@@ -145,8 +123,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     launchDate: '2025-07-20',
     customers: 1200,
     rating: 4.8,
-    reviews: 600
-  },
+    reviews: 600},
 
   // Zero-Trust Network Architecture
   {
@@ -157,16 +134,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     period: '/month',
     description: 'Comprehensive zero-trust network security platform that continuously verifies every user, device, and connection, providing enterprise-grade security for modern distributed networks.',
     features: [
-      'Continuous identity verification',
-      'Micro-segmentation',
-      'AI-powered threat detection',
-      'Just-in-time access',
-      'Multi-factor authentication',
-      'Device trust scoring',
-      'Network traffic analysis',
-      'Compliance reporting',
-      'Real-time monitoring',
-      'Automated response'
+      'Continuous identity verificationMicro-segmentationAI-powered threat detectionJust-in-time accessMulti-factor authenticationDevice trust scoringNetwork traffic analysisCompliance reportingReal-time monitoringAutomated response'
     ],
     popular: true,
     icon: '🔒',
@@ -179,11 +147,11 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     setupTime: '2 weeks',
     category: 'Network Security',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker', 'Kubernetes'],
-    integrations: ['Active Directory', 'LDAP', 'SAML', 'OAuth', 'RADIUS', 'Cisco', 'Palo Alto', 'Fortinet'],
-    useCases: ['Network access control', 'Remote work security', 'Cloud security', 'IoT security', 'Compliance management', 'Threat prevention'],
+    technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisAWSDockerKubernetes'],
+    integrations: ['Active DirectoryLDAPSAMLOAuthRADIUSCiscoPalo AltoFortinet'],
+    useCases: ['Network access controlRemote work securityCloud securityIoT securityCompliance managementThreat prevention'],
     roi: 'Average customer saves $1.8M annually through prevented security breaches and simplified compliance.',
-    competitors: ['Palo Alto Networks', 'Cisco', 'Fortinet', 'Check Point', 'Juniper Networks'],
+    competitors: ['Palo Alto NetworksCiscoFortinetCheck PointJuniper Networks'],
     marketSize: '$45.2B market',
     growthRate: '260% annual growth',
     variant: 'security-futuristic',
@@ -198,8 +166,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     launchDate: '2025-09-10',
     customers: 900,
     rating: 4.9,
-    reviews: 450
-  },
+    reviews: 450},
 
   // AI-Powered DevOps Platform
   {
@@ -210,16 +177,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     period: '/month',
     description: 'Intelligent DevOps platform that uses AI to automate deployment, optimize performance, and predict potential issues before they impact your applications.',
     features: [
-      'AI-powered CI/CD automation',
-      'Intelligent testing and QA',
-      'Performance optimization',
-      'Predictive issue detection',
-      'Automated rollback',
-      'Infrastructure as code',
-      'Monitoring and alerting',
-      'Security scanning',
-      'Cost optimization',
-      'Team collaboration tools'
+      'AI-powered CI/CD automationIntelligent testing and QAPerformance optimizationPredictive issue detectionAutomated rollbackInfrastructure as codeMonitoring and alertingSecurity scanningCost optimizationTeam collaboration tools'
     ],
     popular: true,
     icon: '🚀',
@@ -232,11 +190,11 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     setupTime: '3 days',
     category: 'DevOps & Automation',
     realService: true,
-    technology: ['React', 'Node.js', 'Python', 'TensorFlow', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'Jenkins'],
-    integrations: ['GitHub', 'GitLab', 'Bitbucket', 'Jira', 'Slack', 'Microsoft Teams', 'AWS', 'Azure', 'Google Cloud'],
-    useCases: ['Continuous integration', 'Automated testing', 'Deployment automation', 'Performance monitoring', 'Security scanning', 'Cost optimization'],
+    technology: ['ReactNode.jsPythonTensorFlowDockerKubernetesAWSAzureJenkins'],
+    integrations: ['GitHubGitLabBitbucketJiraSlackMicrosoft TeamsAWSAzureGoogle Cloud'],
+    useCases: ['Continuous integrationAutomated testingDeployment automationPerformance monitoringSecurity scanningCost optimization'],
     roi: 'Average customer sees 320% ROI within 6 months through improved development efficiency and reduced deployment issues.',
-    competitors: ['GitLab', 'GitHub Actions', 'Jenkins', 'CircleCI', 'Travis CI'],
+    competitors: ['GitLabGitHub ActionsJenkinsCircleCITravis CI'],
     marketSize: '$8.2B market',
     growthRate: '190% annual growth',
     variant: 'devops-futuristic',
@@ -251,8 +209,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     launchDate: '2025-10-15',
     customers: 2500,
     rating: 4.7,
-    reviews: 1250
-  },
+    reviews: 1250},
 
   // Quantum-Safe Data Storage
   {
@@ -263,16 +220,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     period: '/month',
     description: 'Advanced data storage platform that uses quantum-resistant encryption algorithms to protect your data against future quantum computing threats.',
     features: [
-      'Quantum-resistant encryption',
-      'Multi-layer security',
-      'Automated backup and recovery',
-      'Global data distribution',
-      'Compliance certifications',
-      'Real-time monitoring',
-      'Disaster recovery',
-      'Data deduplication',
-      'API access',
-      'Mobile applications'
+      'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplicationAPI accessMobile applications'
     ],
     popular: true,
     icon: '💾',
@@ -285,11 +233,11 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     setupTime: '1 week',
     category: 'Data Storage & Security',
     realService: true,
-    technology: ['Post-Quantum Cryptography', 'React', 'Node.js', 'Python', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['AWS S3', 'Azure Blob', 'Google Cloud Storage', 'Dropbox', 'OneDrive', 'Box', 'API Access'],
-    useCases: ['Secure document storage', 'Compliance data management', 'Backup and recovery', 'Data archiving', 'Collaborative storage', 'API-driven applications'],
+    technology: ['Post-Quantum CryptographyReactNode.jsPythonPostgreSQLRedisAWSDocker'],
+    integrations: ['AWS S3Azure BlobGoogle Cloud StorageDropboxOneDriveBoxAPI Access'],
+    useCases: ['Secure document storageCompliance data managementBackup and recoveryData archivingCollaborative storageAPI-driven applications'],
     roi: 'Average customer saves $500K annually through improved security and compliance management.',
-    competitors: ['AWS S3', 'Google Cloud Storage', 'Azure Blob', 'Dropbox Business', 'Box'],
+    competitors: ['AWS S3Google Cloud StorageAzure BlobDropbox BusinessBox'],
     marketSize: '$78.4B market',
     growthRate: '220% annual growth',
     variant: 'quantum-futuristic',
@@ -304,6 +252,5 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     launchDate: '2025-11-20',
     customers: 1100,
     rating: 4.8,
-    reviews: 550
-  }
-];
+    reviews: 550}
+],

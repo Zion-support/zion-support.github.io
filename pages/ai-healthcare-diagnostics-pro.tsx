@@ -9,13 +9,9 @@ import {
   ArrowRight, Cpu, Network, Database, 
   Lock, Clock, DollarSign, PieChart,
   Activity, Zap, Pill, Syringe, Hospital, Ambulance
-} from 'lucide-react';
+} from 'lucide-react',
 import Link from 'next/link';
-
-const AIHealthcareDiagnosticsPro: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
+const AIHealthcareDiagnosticsPro: React.FC = $2;
       title: "Advanced AI Diagnostics",
       description: "Deep learning algorithms analyze medical images, lab results, and patient data with 99.2% accuracy for early disease detection.",
       color: "from-blue-500 to-cyan-500"
@@ -50,11 +46,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       description: "Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
-  const useCases = [
-    {
-      icon: Microscope,
+  const useCases = $2;
       title: "Radiology & Imaging",
       description: "AI-powered analysis of X-rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.",
       benefits: ["95% accuracy rate", "80% faster diagnosis", "Reduced radiologist workload"]
@@ -77,11 +71,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       description: "Digital pathology analysis for cancer detection, grading, and personalized treatment recommendations.",
       benefits: ["Precision medicine", "Faster results", "Standardized analysis"]
     }
-  ];
+  ],
 
-  const pricingPlans = [
-    {
-      name: "Starter",
+  const pricingPlans = $2;
       price: "$4,999",
       period: "/month",
       description: "Perfect for small clinics and practices",
@@ -94,8 +86,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         "API access (5,000 calls/month)"
       ],
       color: "from-blue-500 to-cyan-500",
-      popular: false
-    },
+      popular: false},
     {
       name: "Professional",
       price: "$12,999",
@@ -112,8 +103,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         "Training & certification"
       ],
       color: "from-purple-500 to-pink-500",
-      popular: true
-    },
+      popular: true},
     {
       name: "Enterprise",
       price: "$29,999",
@@ -131,13 +121,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         "Custom compliance features"
       ],
       color: "from-green-500 to-emerald-500",
-      popular: false
-    }
-  ];
+      popular: false}
+  ],
 
-  const integrations = [
-    {
-      name: "PACS Systems",
+  const integrations = $2;
       icon: Database,
       description: "DICOM integration with major PACS vendors",
       color: "from-blue-500 to-cyan-500"
@@ -172,11 +159,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       description: "AWS, Azure, Google Cloud, IBM Cloud",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
-  const specialties = [
-    {
-      icon: Heart,
+  const specialties = $2;
       name: "Cardiology",
       description: "Heart disease detection, ECG analysis, cardiovascular risk assessment",
       accuracy: "99.1%"
@@ -211,7 +196,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       description: "Kidney disease detection, renal function analysis, transplant assessment",
       accuracy: "98.8%"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -240,8 +225,8 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -265,7 +250,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1}}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
@@ -274,7 +259,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1}}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
@@ -283,7 +268,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1}}
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
@@ -295,16 +280,16 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
               >
                 Schedule Demo
               </motion.button>
               <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: 1.0 }}
                 className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300"
               >
@@ -320,10 +305,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -338,10 +323,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -360,10 +345,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -378,10 +363,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             {specialties.map((specialty, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -406,10 +391,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -425,9 +410,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm"
               >
                 <div className="flex items-start space-x-4">
@@ -458,10 +443,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -476,10 +461,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 border rounded-2xl p-8 backdrop-blur-sm ${
                   plan.popular 
                     ? 'border-green-500/50 shadow-lg shadow-green-500/25' 
@@ -526,10 +511,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -544,10 +529,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             {integrations.map((integration, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
@@ -566,35 +551,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join leading healthcare institutions worldwide who have already revolutionized patient care with AI-powered diagnostics.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25">
-                Schedule Demo
-              </button>
-              <button className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300">
-                Contact Sales
-              </button>
-            </div>
-            
-            <div className="mt-8 text-sm text-gray-400">
-              <p>Questions? Call us at <a href="tel:+13024640950" className="text-green-400 hover:text-green-300">+1 302 464 0950</a> or email <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300">kleber@ziontechgroup.com</a></p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </Layout>
-  );
-};
-
-export default AIHealthcareDiagnosticsPro;
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition = $2;
+export default AIHealthcareDiagnosticsPro,

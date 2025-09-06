@@ -1,10 +1,10 @@
-'use client';
+'use client',
 
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
+  Brain,
   Cloud, 
   RefreshCw, 
   Wifi, 
@@ -12,15 +12,12 @@ import {
   BarChart3,
   ArrowRight,
   Zap
-} from 'lucide-react';
+} from 'lucide-react',
 
-const ServicesSection: React.FC = () => {
-  const services = [
-    {
-      icon: Brain,
+const ServicesSection: React.FC = $2;
       title: 'AI Development',
       description: 'Custom AI solutions and machine learning models tailored to your business needs.',
-      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      features: ['Machine Learning ModelsNatural Language ProcessingComputer VisionPredictive Analytics'],
       color: 'from-blue-500 to-cyan-500',
       href: '/services/ai-development'
     },
@@ -28,7 +25,7 @@ const ServicesSection: React.FC = () => {
       icon: Cloud,
       title: 'Cloud Architecture',
       description: 'Scalable cloud solutions and infrastructure design for modern applications.',
-      features: ['AWS/Azure/GCP', 'Microservices', 'Serverless Architecture', 'DevOps Automation'],
+      features: ['AWS/Azure/GCPMicroservicesServerless ArchitectureDevOps Automation'],
       color: 'from-purple-500 to-pink-500',
       href: '/services/cloud-architecture'
     },
@@ -36,7 +33,7 @@ const ServicesSection: React.FC = () => {
       icon: RefreshCw,
       title: 'Digital Transformation',
       description: 'End-to-end digital transformation services to modernize your business.',
-      features: ['Process Automation', 'Legacy System Migration', 'Change Management', 'Digital Strategy'],
+      features: ['Process AutomationLegacy System MigrationChange ManagementDigital Strategy'],
       color: 'from-green-500 to-emerald-500',
       href: '/services/digital-transformation'
     },
@@ -44,7 +41,7 @@ const ServicesSection: React.FC = () => {
       icon: Wifi,
       title: 'IoT Platforms',
       description: 'Connected device solutions and IoT platform development.',
-      features: ['Sensor Networks', 'Real-time Monitoring', 'Data Analytics', 'Edge Computing'],
+      features: ['Sensor NetworksReal-time MonitoringData AnalyticsEdge Computing'],
       color: 'from-orange-500 to-red-500',
       href: '/services/iot-platforms'
     },
@@ -52,7 +49,7 @@ const ServicesSection: React.FC = () => {
       icon: Shield,
       title: 'Blockchain Solutions',
       description: 'Decentralized technology platforms and smart contract development.',
-      features: ['Smart Contracts', 'DeFi Applications', 'NFT Platforms', 'Supply Chain Solutions'],
+      features: ['Smart ContractsDeFi ApplicationsNFT PlatformsSupply Chain Solutions'],
       color: 'from-indigo-500 to-purple-500',
       href: '/services/blockchain-solutions'
     },
@@ -60,26 +57,25 @@ const ServicesSection: React.FC = () => {
       icon: BarChart3,
       title: 'Data Analytics',
       description: 'Advanced analytics and business intelligence solutions.',
-      features: ['Big Data Processing', 'Real-time Dashboards', 'Predictive Modeling', 'Data Visualization'],
+      features: ['Big Data ProcessingReal-time DashboardsPredictive ModelingData Visualization'],
       color: 'from-teal-500 to-blue-500',
       href: '/services/data-analytics'
     }
-  ];
+  ],
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
+    hidden: { opacity: 0, y: 20},
+    visible: { opacity: 1, y: 0}
+  },
 
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
@@ -92,17 +88,17 @@ const ServicesSection: React.FC = () => {
       <div className="relative container mx-auto px-4">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="text-center mb-16"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6"
           >
             <Zap className="w-5 h-5 text-blue-400" />
@@ -127,7 +123,7 @@ const ServicesSection: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {services.map((service, index) => (
@@ -183,10 +179,10 @@ const ServicesSection: React.FC = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto">
@@ -194,20 +190,8 @@ const ServicesSection: React.FC = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-300 mb-6">
-              Let&apos;s discuss how our technology solutions can drive your success and accelerate your growth.
+              Let&apos,s discuss how our technology solutions can drive your success and accelerate your growth.
             </p>
             <Link
-              href="/contact"
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              <span>Get Started Today</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-export default ServicesSection;
+              href = $2;
+export default ServicesSection,

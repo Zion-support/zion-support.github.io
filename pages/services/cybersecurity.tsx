@@ -4,14 +4,11 @@ import { motion } from 'framer-motion';
 import { 
   Shield, Lock, Eye, Zap, Cpu, Database, 
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
+} from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
-
 export default function CybersecurityServicesPage() {
-  const services = [
-    {
-      title: "Advanced Threat Detection",
+  const services = $2;
       description: "AI-powered threat detection and response systems",
       features: ["Real-time Monitoring", "Behavioral Analysis", "Automated Response", "24/7 Protection"],
       price: "From $8,000",
@@ -42,14 +39,14 @@ export default function CybersecurityServicesPage() {
       icon: Zap,
       color: "from-emerald-500 to-teal-500"
     }
-  ];
+  ],
 
   const stats = [
-    { number: "99.99%", label: "Threat Detection Rate", icon: Shield },
-    { number: "24/7", label: "Security Monitoring", icon: Eye },
-    { number: "0", label: "Security Breaches", icon: Lock },
-    { number: "500+", label: "Protected Systems", icon: CheckCircle }
-  ];
+    { number: "99.99%", label: "Threat Detection Rate", icon: Shield},
+    { number: "24/7", label: "Security Monitoring", icon: Eye},
+    { number: "0", label: "Security Breaches", icon: Lock},
+    { number: "500+", label: "Protected Systems", icon: CheckCircle}
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -67,8 +64,8 @@ export default function CybersecurityServicesPage() {
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -81,8 +78,8 @@ export default function CybersecurityServicesPage() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-12"
           >
@@ -105,10 +102,10 @@ export default function CybersecurityServicesPage() {
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -126,10 +123,10 @@ export default function CybersecurityServicesPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Cybersecurity Services</h2>
@@ -142,10 +139,10 @@ export default function CybersecurityServicesPage() {
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-red-500/30 transition-all duration-300"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -177,10 +174,10 @@ export default function CybersecurityServicesPage() {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Secure Your Business?
@@ -188,7 +185,7 @@ export default function CybersecurityServicesPage() {
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Security Assessment
               </button>
@@ -202,5 +199,5 @@ export default function CybersecurityServicesPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

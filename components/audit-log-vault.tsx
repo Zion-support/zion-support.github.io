@@ -4,23 +4,16 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react';
-
 export default function AuditLogVaultPage() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const features = [
-    'Append-only, tamper-evident storage',
-    'Flexible retention and legal holds',
-    'Cryptographic digests and attestations',
-    'Fine-grained search and export bundles',
-    'Chain-of-custody and access reviews',
-    'Alerts for risky access patterns'
-  ];
+    'Append-only, tamper-evident storageFlexible retention and legal holdsCryptographic digests and attestationsFine-grained search and export bundlesChain-of-custody and access reviewsAlerts for risky access patterns'
+  ],
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -68,6 +61,6 @@ export default function AuditLogVaultPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  )
 }
 

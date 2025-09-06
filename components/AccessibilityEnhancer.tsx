@@ -1,122 +1,101 @@
 import React, { useEffect } from 'react';
-
-const: AccessibilityEnhancer: React.FC = () => {
+const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Add skip link for keyboard navigation
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only: focus:not-sr-only: focus:absolute: focus:top-4: focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-    document.body.insertBefore(skipLink, document.body.firstChild);
-
+    const skipLink = document.createElement($2);
+    skipLink.href = $2;
+    skipLink.textContent = $2;
+    skipLink.className = $2;
+    document.body.insertBefore($2);
     // Focus management
-    let isUsingMouse = false;
-    const handleMouseDown = () => {
-      isUsingMouse = true;
-      document.body.classList.add('using-mouse');
-    };
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        isUsingMouse = false;
-        document.body.classList.remove('using-mouse');
+    let isUsingMouse = $2;
+    const handleMouseDown = $2;
+      document.body.classList.add('using-mouse')
+    },
+    const handleKeyDown = $2;
+        document.body.classList.remove('using-mouse')
       }
-    };
+    },
 
-    document.addEventListener('mousedown', handleMouseDown);
-    document.addEventListener('keydown', handleKeyDown);
-
+    document.addEventListener($2);
+    document.addEventListener($2);
     // Add ARIA live region for announcements
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    liveRegion.id = 'live-region';
-    document.body.appendChild(liveRegion);
-
+    const liveRegion = document.createElement($2);
+    liveRegion.setAttribute($2);
+    liveRegion.setAttribute($2);
+    liveRegion.className = $2;
+    liveRegion.id = $2;
+    document.body.appendChild($2);
     // Announce page changes
-    const announcePageChange = (messag: e: string) => {
-      const liveRegion = document.getElementById('live-region');
+    const announcePageChange = (messag: string) => {
+      const liveRegion = document.getElementById($2);
       if (liveRegion) {
-        liveRegion.textContent = message;
-      }
-    };
-
+        liveRegion.textContent = $2;
     // Listen for route changes (Next.js specific)
-    const handleRouteChange = () => {
-      announcePageChange('Page loaded');
-    };
-
+    const handleRouteChange = $2;
     // Add route change listener if available
     if (typeof window !== 'undefined' && window.history) {
-      const originalPushState = window.history.pushState;
-      const originalReplaceState = window.history.replaceState;
-
+      const originalPushState = $2;
+      const originalReplaceState = $2;
       window.history.pushState = function(...args) {
-        originalPushState.apply(this, args);
-        setTimeout(handleRouteChange, 100);
-      };
+        originalPushState.apply($2);
+        setTimeout(handleRouteChange, 100)
+      },
 
       window.history.replaceState = function(...args) {
-        originalReplaceState.apply(this, args);
-        setTimeout(handleRouteChange, 100);
-      };
+        originalReplaceState.apply($2);
+        setTimeout(handleRouteChange, 100)
+      },
 
-      window.addEventListener('popstate', handleRouteChange);
+      window.addEventListener('popstate', handleRouteChange)
     }
 
     // Cleanup
     return () => {
-      document.removeEventListener('mousedown', handleMouseDown);
-      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener($2);
+      document.removeEventListener($2);
       if (skipLink.parentNode) {
-        skipLink.parentNode.removeChild(skipLink);
+        skipLink.parentNode.removeChild(skipLink)
       }
       if (liveRegion.parentNode) {
-        liveRegion.parentNode.removeChild(liveRegion);
+        liveRegion.parentNode.removeChild(liveRegion)
       }
-    };
-  }, []);
+    }
+  }, []),
 
-  return null;
-};
+  return null
+},
 
 // Add CSS for focus management
-const focusStyles = `
-  .using-mouse *:focus {
-    outlin: e: none !important;
-  }
-  .focus-visibl: e:focus {
-    outlin: e: 2px solid #2563eb !important;
-    outline-offse: t: 2px !important;
+const focusStyles = $2;
+    outline-offse: 2px !important
   }
   .sr-only {
-    positio: n: absolute;
-    widt: h: 1px;
-    heigh: t: 1px;
-    paddin: g: 0;
-    margi: n: -1px;
-    overflo: w: hidden;
-    cli: p: rect(0, 0, 0, 0);
-    white-spac: e: nowrap;
-    borde: r: 0;
-  }
-  .sr-only.focu: s:not-sr-onl: y:focus {
-    positio: n: static;
-    widt: h: auto;
-    heigh: t: auto;
-    paddin: g: inherit;
-    margi: n: inherit;
-    overflo: w: visible;
-    cli: p: auto;
-    white-spac: e: normal;
-  }
-`;
+    positio: absolute,
+    widt: 1px,
+    heigh: 1px,
+    paddin: g: 0,
+    margi: -1px,
+    overflo: w: hidden,
+    cli: rect($2);
+    white-spac: nowrap,
+    borde: 0}
+  .sr-only.focu: not-sr-onl: focus {
+    positio: static,
+    widt: auto,
+    heigh: auto,
+    paddin: g: inherit,
+    margi: inherit,
+    overflo: w: visible,
+    cli: auto,
+    white-spac: normal}
+`,
 
 // Inject styles
 if (typeof document !== 'undefined') {
-  const styleSheet = document.createElement('style');
-  styleSheet.textContent = focusStyles;
-  document.head.appendChild(styleSheet);
+  const styleSheet = document.createElement($2);
+  styleSheet.textContent = $2;
+  document.head.appendChild(styleSheet)
 }
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer,

@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
-
 export default function CloudAutomationHub() {
-  const [logs, setLogs] = useState<any[]>([]);
+  const [logs, setLogs] = useState<any[]>([]),
 
   useEffect(() => {
     fetch('/api/automation/cloud-logs')
       .then((r) => r.json())
       .then((d) => setLogs(d.logs || []))
-      .catch(() => setLogs([]));
-  }, []);
+      .catch(() => setLogs([]))
+  }, []),
 
   return (
     <div className="space-y-6">
@@ -18,15 +17,15 @@ export default function CloudAutomationHub() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="/docs/ROADMAP.md" className="rounded-lg border p-4 hover:bg-gray-50 dark:hover:bg-gray-900">
+        <a href="/docs/ROADMAP.md" className="rounded-lg border p-4 hover:bg-gray-50 dark: hover: bg-gray-900">
           <h3 className="font-semibold">Roadmap (Autonomous)</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">Docs/ROADMAP.md</p>
         </a>
-        <a href="/docs/LINK_HEALTH.md" className="rounded-lg border p-4 hover:bg-gray-50 dark:hover:bg-gray-900">
+        <a href="/docs/LINK_HEALTH.md" className="rounded-lg border p-4 hover:bg-gray-50 dark: hover: bg-gray-900">
           <h3 className="font-semibold">Link Health</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">Docs/LINK_HEALTH.md</p>
         </a>
-        <a href="/docs/INTELLIGENCE_DIGEST.md" className="rounded-lg border p-4 hover:bg-gray-50 dark:hover:bg-gray-900">
+        <a href="/docs/INTELLIGENCE_DIGEST.md" className="rounded-lg border p-4 hover:bg-gray-50 dark: hover: bg-gray-900">
           <h3 className="font-semibold">Intelligence Digest</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">Docs/INTELLIGENCE_DIGEST.md</p>
         </a>
@@ -46,9 +45,9 @@ export default function CloudAutomationHub() {
       </div>
 
       <div className="flex items-center gap-3">
-        <a href="https://github.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700">View Workflow</a>
+        <a href="https: //github.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700">View Workflow</a>
         <a href="/api/automation/cloud-logs" className="inline-flex items-center px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700">Refresh Logs</a>
       </div>
     </div>
-  );
+  )
 }

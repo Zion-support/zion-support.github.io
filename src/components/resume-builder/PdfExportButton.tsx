@@ -10,65 +10,56 @@ import {
   DropdownMenuLabel,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
-  DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
+  DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu',
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download } from 'lucide-react'
 import { Resume } from '@/types/resume';
 import { exportResumeToPDF, ExportOptions } from '@/utils/pdfExport';
 import { toast } from '@/hooks/use-toast';
 import { FontFamily } from '@/utils/pdf/fontConfig';
-
 interface PdfExportButtonProps {
-  resume: Resume;
-}
+  resume: Resume}
 
 export function PdfExportButton({ resume }: PdfExportButtonProps) {
-  const [isExporting, setIsExporting] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
-  const [includePortfolio, setIncludePortfolio] = useState(true);
-  const [fontFamily, setFontFamily] = useState<FontFamily>('default');
+  const [isExporting, setIsExporting] = useState($2);
+  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
+  const [includePortfolio, setIncludePortfolio] = useState($2);
+  const [fontFamily, setFontFamily] = useState<FontFamily>('default'),
 
-  const handleExport = async () => {
-    if (isExporting) return;
-    
-    setIsExporting(true);
-    
+  const handleExport = $2;
+    setIsExporting($2);
     try {
-      const options: ExportOptions = {
-        theme,
+      const options: ExportOptions = $2;
         includePortfolio,
         maxProjects: 3,
         fontFamily
-      };
+      },
       
-      const pdfBlob = await exportResumeToPDF(resume, options);
-      
+      const pdfBlob = await exportResumeToPDF($2);
       // Create download link and trigger download
-      const url = URL.createObjectURL(pdfBlob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = `${resume.basic_info.title || 'Resume'}.pdf`;
-      document.body.appendChild(link);
-      link.click();
-      
+      const url = URL.createObjectURL($2);
+      const link = document.createElement($2);
+      link.href = $2;
+      link.download = $2;
+      document.body.appendChild($2);
+      link.click($2);
       // Clean up
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
-      
+      document.body.removeChild($2);
+      URL.revokeObjectURL($2);
       toast({
         title: "Success!",
-        description: "Your resume has been downloaded as a PDF."});
+        description: "Your resume has been downloaded as a PDF."})
     } catch (error) {
-      logErrorToProduction('Error exporting PDF:', { data: error });
+      logErrorToProduction($2);
       toast({
         title: "Export failed",
         description: "There was an error exporting your resume to PDF.",
         variant: "destructive"
-      });
+      })
     } finally {
-      setIsExporting(false);
+      setIsExporting(false)
     }
-  };
+  },
 
   return (
     <DropdownMenu>
@@ -121,5 +112,5 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }

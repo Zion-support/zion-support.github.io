@@ -2,10 +2,7 @@
 import React from "react";
 import { Star } from "lucide-react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
-const testimonials = [
-  {
-    name: "Alex Johnson",
+const testimonials = $2;
     role: "AI Developer",
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",
     rating: 5,
@@ -25,7 +22,7 @@ const testimonials = [
     rating: 4,
     avatar: "/placeholder.svg"
   }
-];
+],
 
 export const AppTestimonials: React.FC = () => {
   return (
@@ -43,30 +40,6 @@ export const AppTestimonials: React.FC = () => {
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">
               <CardContent className="pt-6">
                 <div className="flex mb-4">
-                  {Array.from({ length: 5 }).map((_, i) => (
+                  {Array.from({ length: 5}).map((_, i) => (
                     <Star 
-                      key={i}
-                      className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-200 mb-6">"{testimonial.text}"</p>
-              </CardContent>
-              <CardFooter className="border-t border-zion-purple/20 pt-4">
-                <div className="flex items-center">
-                  <div className="h-10 w-10 rounded-full overflow-hidden mr-4">
-                    <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-sm text-gray-400">{testimonial.role}</p>
-                  </div>
-                </div>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+                      key = $2;

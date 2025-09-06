@@ -5,12 +5,11 @@ import {
   Users, Rocket, Brain, Shield, Globe, Award, 
   Zap, Heart, Star, MapPin, Clock, DollarSign,
   ExternalLink, Send, ArrowRight
-} from 'lucide-react';
+} from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-
 export default function CareersPage() {
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
+  const [selectedDepartment, setSelectedDepartment] = useState('all'),
 
   const departments = [
     { id: 'all', name: 'All Departments' },
@@ -19,7 +18,7 @@ export default function CareersPage() {
     { id: 'engineering', name: 'Engineering' },
     { id: 'research', name: 'Research & Development' },
     { id: 'business', name: 'Business Development' }
-  ];
+  ],
 
   const jobOpenings = [
     {
@@ -132,11 +131,11 @@ export default function CareersPage() {
         "Career advancement potential"
       ]
     }
-  ];
+  ],
 
   const filteredJobs = selectedDepartment === 'all' 
     ? jobOpenings 
-    : jobOpenings.filter(job => job.department === selectedDepartment);
+    : jobOpenings.filter(job => job.department === selectedDepartment),
 
   const values = [
     {
@@ -159,7 +158,7 @@ export default function CareersPage() {
       title: "Work-Life Balance",
       description: "We believe in sustainable innovation and personal well-being"
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -192,7 +191,7 @@ export default function CareersPage() {
       title: "Recognition",
       description: "Regular recognition and rewards for outstanding contributions"
     }
-  ];
+  ],
 
   return (
     <>
@@ -472,7 +471,7 @@ export default function CareersPage() {
                 technology and innovation. Send us your resume and let's discuss how 
                 you can contribute to our mission.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
@@ -495,5 +494,5 @@ export default function CareersPage() {
 
       <EnhancedFooter />
     </>
-  );
+  )
 }

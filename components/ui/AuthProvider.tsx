@@ -1,39 +1,33 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
+type UserRole = $2;
+type AuthContextType = $2;
+  setRole: (role: UserRole) => void
+},
 
-type UserRole = 'talent' | 'client';
-
-type AuthContextType = {
-  role: UserRole;
-  setRole: (role: UserRole) => void;
-};
-
-const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: () => {} });
+const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: () => {} }),
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [role, setRoleState] = useState<UserRole>('talent');
+  const [role, setRoleState] = useState<UserRole>('talent'),
 
   useEffect(() => {
     try {
-      const stored = window.localStorage.getItem('userRole') as UserRole | null;
+      const stored = $2;
       if (stored === 'talent' || stored === 'client') {
-        setRoleState(stored);
+        setRoleState(stored)
       }
     } catch {}
-  }, []);
+  }, []),
 
   const setRole = (r: UserRole) => {
-    setRoleState(r);
+    setRoleState($2);
     try { 
-      window.localStorage.setItem('userRole', r);
-      document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;
-    } catch {}
-  };
-
+      window.localStorage.setItem($2);
+      document.cookie = `userRole=${r}, path=/, max-age = $2;
   return (
     <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
-  );
+  )
 }
 
 export function useAuth() {
-  return useContext(AuthContext);
+  return useContext(AuthContext)
 }

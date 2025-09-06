@@ -1,7 +1,6 @@
 
 import Head from 'next/head';
 import Link from 'next/link';
-
 const DigitalTwinsRevolutionizingIndustry40Chat = () => {
   return (
     <div>
@@ -16,7 +15,7 @@ const DigitalTwinsRevolutionizingIndustry40Chat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default DigitalTwinsRevolutionizingIndustry40Chat;
+export default DigitalTwinsRevolutionizingIndustry40Chat,
