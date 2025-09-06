@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Button from './components/Button'
 import Card from './components/Card'
 import ServiceCard from './components/ServiceCard'
-import Header from './components/Header'
+import { Header } from './components/Header'
 import Footer from './components/Footer'
 import About from './pages/About'
 import Services from './pages/ServicesPage'
@@ -58,10 +58,14 @@ const Home = () => (
 )
 
 function App() {
+  const handleMenuClick = () => {
+    // Handle menu click if needed
+  };
+
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
-        <Header />
+        <Header onMenuClick={handleMenuClick} />
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
