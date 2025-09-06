@@ -60,6 +60,27 @@ export default function ServicesOverviewPage() {
           bullets={["BI dashboards", "Predictive analytics", "Real-time insights"]}
           icon="📊"
         />
+        <ServiceCard
+          href="/services/ai-powered-tools"
+          title="AI-Powered Tools"
+          description="Cutting-edge AI micro SAAS tools for content, automation, and analytics"
+          bullets={["Content generation", "Business automation", "AI analytics"]}
+          icon="🤖"
+        />
+        <ServiceCard
+          href="/services/business-automation"
+          title="Business Automation"
+          description="Intelligent workflow automation and process optimization tools"
+          bullets={["Workflow automation", "Data processing", "Communication automation"]}
+          icon="⚡"
+        />
+        <ServiceCard
+          href="/services/industry-solutions"
+          title="Industry Solutions"
+          description="Specialized micro SAAS solutions for specific industries"
+          bullets={["Healthcare", "Financial services", "Real estate"]}
+          icon="🏢"
+        />
       </div>
       <CTA />{" "}
     </div>;
