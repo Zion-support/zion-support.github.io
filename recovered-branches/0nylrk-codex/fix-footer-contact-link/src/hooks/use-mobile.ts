@@ -1,8 +1,9 @@
 
-
+import { useState, useEffect } from 'react';
 import {useState, useEffect} from 'react';
-
-
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
     typeof window !== 'undefined' ? window && window.innerWidth < 768 : false
@@ -23,33 +24,10 @@ export function useIsMobile() {
   }, []);
 
   return isMobile
-
-import {useState, useEffect} from 'react';
-export /**
- * useIsMobile - Function description
- */
-function useIsMobile() {
-  const [is_mobile, setIsMobile] = useState (
-    typeof window !== 'undefined' ? window.inner_width < 768 : false);
-;
-  useEffect (() => {
-    const handle_resize = () =>: any {
-      setIsMobile (window.inner_width < 768);
-    }
-;
-    // Check condition
-if ( {) {
-  $2
 }
-      window.addEventListener ('resize', handle_resize);
-      return () => window.removeEventListener ('resize', handle_resize);
-    }
-    return undefined;
-  }, []);
-=======
-
-
-=======
+;
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { useState, useEffect } from 'react',;
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
@@ -66,12 +44,13 @@ export function useIsMobile() {;
     return undefined;
   }, []);
   return isMobile;
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
-  return is_mobile;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

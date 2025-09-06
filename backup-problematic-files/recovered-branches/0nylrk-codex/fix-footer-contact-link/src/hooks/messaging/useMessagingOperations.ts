@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { Message, Conversation, ConversationContextData } from '@/types/messaging',;
 import { useConversationState } from './useConversationState',;
@@ -97,3 +99,4 @@ setUnreadCount;
 setIsLoading;
 fetchConversations);
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

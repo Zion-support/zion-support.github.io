@@ -1,50 +1,35 @@
-
-import React from './react';
-;
-
+import React from "react";
 interface ModernNavigationProps {
-  class_name?: string;
+class_name?: string;
 }
 
-
-export default function ModernNavigation() {
-
-=======
-interface ModernNavigationProps {
-
-
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export default function Docs({ }: DocsProps) {
+ursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
   className?: string;
 }
 export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
->>>>>>> origin/main
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+origin/main
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>
       <p>This component is currently under development.</p>
-    </div>
-=======
-
+</div>
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -58,30 +43,18 @@ export default function ModernNavigation(): any ({}: ModernNavigationProps) {;
       <h1>ModernNavigation</h1>;
       <p>This component is currently under development.</p>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-
-export default /**
- * ModernNavigation - Function description
- */
-function ModernNavigation() {
-  return (
-    <div className={class_name}>;
-      <h1 > ModernNavigation</h1>;
-      <p > This component is currently under development.</p>;
-    </div>);
-
+:ModernNavigation.tsx
 }
-=======
-
-
-
-=======
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
-=======
+ursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
 }
->>>>>>> origin/main
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+:ModernNavigation.tsx
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
+}
+origin/main

@@ -1,5 +1,10 @@
-
-
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
+import { ChatMessage  } from './ChatMessage';
+import { ChatInput  } from './ChatInput';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
+export interface Message {
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -12,18 +17,31 @@ import { ChatInput } from './ChatInput',
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export interface Message {
   id: string,
   role: 'user' | 'assistant',
   message: string,
   timestamp: Date,
   read?: boolean
+}
 
+  id: string
+  role: 'user' | 'assistant'
+  message: string
+  timestamp: Date
+
+  read?: boolean
+}
+export interface ChatAssistantProps {
+
+  isOpen: boolean
+  onClose: () => void
+  recipient: {
+    id: string
+    name: string
     id: string,
     name: string,;
-
-
     avatarUrl?: string;
     role?: string
   }
@@ -33,10 +51,10 @@ export interface Message {
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
   contextHeader?: ReactNode
 }
+export function ChatAssistant({
 
-import {ChatMessage} from './ChatMessage';
-import {ChatInput} from './ChatInput';
-
+export function ChatAssistant({;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   isOpen;
   onClose;
   recipient;
@@ -44,6 +62,17 @@ import {ChatInput} from './ChatInput';
 
   initialMessages = [];
   onSendMessage;
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  contextHeader
+}: ChatAssistantProps) {
+  const [messages, setMessages] = useState<Message[]>(initialMessages);
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    if (initialMessages.length > 0) {
+      setMessages(initialMessages)
+    }
+  }, [initialMessages]);
   contextHeader;
 }: ChatAssistantProps) {;
 
@@ -54,73 +83,56 @@ import {ChatInput} from './ChatInput';
       setMessages(initialMessages);
     }
   }, [initialMessages]),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState, useEffect, useRef, ReactNode } from 'react',;
+import { ChatMessage } from './ChatMessage',;
+import { ChatInput } from './ChatInput',;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { X } from "lucide-react",;
+export interface Message {;
+  id: string,;
+  role: 'user' | 'assistant',;
+  message: string,;
+  timestamp: Date,;
+  read?: boolean;
+}
+;
+export interface ChatAssistantProps {;
+  isOpen: boolean,;
+  onClose: () => void,;
+  recipient: {;
+    id: string,;
+    name: string,;
+    avatarUrl?: string,;
+    role?: string;
+  },;
+  conversationId?: string,;
+  initialMessages?: Message[],;
+  onSendMessage: (message: string, conversationId?: string) => Promise<void>,;
+  contextHeader?: ReactNode;
+}
+;
+export function ChatAssistant({;
+  isOpen,;
+  onClose,;
+  recipient,;
+  conversationId,;
+  initialMessages = [],;
+  onSendMessage,;
   useEffect(() => {
     scrollToBottom()
   }, [messages]);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
+  },
+
   const handleSendMessage = async (message: string) => {
     if (!message.trim()) return
     // Add user message to the chat
     const newMessage: Message = {
-
-
-  useEffect(() => {;
-    if (initialMessages && initialMessages.length > 0) {;
-      setMessages(initialMessages);
-    }
-  }, [initialMessages]);
-
-  useEffect(() => {;
-    scrollToBottom();
-  }, [messages]);
-
-  const scrollToBottom = () => {;
-    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleSendMessage = async (message: string) => {;
-    if (!message && message.trim()) return,;
-
-    // Add user message to the chat;
-    const newMessage: Message = {;
-      id: Date && Date.now().toString(),;
-      role: 'user',;
-      message;
-      timestamp: new Date();
-    };
-
-    setMessages((prev: Message[]) => [...prev, newMessage]);
-
-    // Send message to recipient via the provided handler;
-    await onSendMessage(message, conversationId);
-  };
-
-
-  if (!isOpen) return null;
-=======
-
-      id: Date.now().toString(),
-      role: 'user',
-      message,
-      timestamp: new Date()
-    },
-    
-    setMessages((prev: Message[]) => [...prev, newMessage]),
-    
-    // Send message to recipient via the provided handler
-    await onSendMessage(message, conversationId)
-  },
-
-  if (!isOpen) return null,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">;
@@ -171,10 +183,6 @@ import {ChatInput} from './ChatInput';
             messages && messages.map((msg) => (;
               <ChatMessage
 
-
-                key={msg.id} 
-
-
                 role={msg.role}
                 message={msg.message}
               />
@@ -182,17 +190,6 @@ import {ChatInput} from './ChatInput';
           )}
           <div ref={messagesEndRef} />
         </div>
-=======
-                key={msg && msg.id} 
-                role={msg && msg.role}
-                message={msg && msg.message}
-              />;
-            ));
-          )}
-          <div ref={messagesEndRef} />;
-        </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Input */}
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
@@ -319,13 +316,4 @@ if (return null) {
     </div>);
 
 }
-=======
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
-          <ChatInput onSend={handleSendMessage} />
-        </div>
-      </div>
-    </div>
-  )
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

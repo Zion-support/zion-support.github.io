@@ -1,4 +1,5 @@
 
+=======
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed',;
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null,;
 ;
@@ -54,21 +55,12 @@ export interface DisputeAttachment {;
 }
 ;
 export type DisputeReason = ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   | 'milestone_quality';
   | 'delayed_delivery';
   | 'scope_change';
   | 'communication';
   | 'payment';
   | 'contract_terms';
-  | 'other',;
-;
-export const disputeReasonLabels:Record<DisputeReason string> = {;
-  milestone_quality:'Quality of Deliverable',;
-  delayed_delivery:'Delayed Delivery',;
-  scope_change:'Scope Change Disagreement',;
-  communication:'Communication Issues',;
-  payment:'Payment Dispute',;
-  contract_terms:'Contract Terms Disagreement',;
-  other:'Other Issue'},; export type DisputeStatus = 'open' | 'under review' | 'resolved' | 'closed';
-export type ResolutionType = 'client favor' | 'talent favor' | 'compromise' | 'dismissed' | null;
-export type DisputeReason = | 'milestone quality' | 'delayed delivery' | 'scope change' | 'communication' | 'payment' | 'contract terms' | 'other';
+<<<<<<< HEAD
+

@@ -1,43 +1,14 @@
 
-=======
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-=======
-
-
-=======
-
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-
-=======
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+main
+main
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+main
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import React from 'react';
 import Link from 'next/link';
@@ -295,50 +266,50 @@ export default function Services() {;
 				</div>;
 			</section>;
 			{/* Expanded Service Catalog */}
-			<section className='py-16 sm:py-24 bg-white'>;
-				<div className='mx-auto max-w-7xl px-6 lg:px-8'>;
-					<div className='mx-auto max-w-4xl text-center mb-14'>;
-						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Comprehensive Technology Solutions</h2>;
-						<p className='mt-6 text-lg leading-8 text-gray-600'>;
-							Zion Tech Group delivers cutting-edge, production-ready services across AI, IT infrastructure, and Micro SaaS platforms. ;
-							Our solutions are designed for enterprise scalability with transparent pricing and measurable outcomes. ;
+			<section className='py-16 sm:py-24 bg-white'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-4xl text-center mb-14'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Comprehensive Technology Solutions</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							Zion Tech Group delivers cutting-edge, production-ready services across AI, IT infrastructure, and Micro SaaS platforms.
+							Our solutions are designed for enterprise scalability with transparent pricing and measurable outcomes.
 							Explore our full capabilities at{' '}
 							<a href='https://ziontechgroup && ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline font-semibold' target='_blank' rel='noreferrer'>ziontechgroup && ziontechgroup.com</a>.{' '}
 							Check our latest additions in the{' '}
-							<Link href='/additional-services' className='text-blue-600 hover:text-blue-500 underline font-semibold'>Expanded Services Catalog</Link>.;
-						</p>;
-						<div className='mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6'>;
-							<h3 className='text-lg font-semibold text-blue-900 mb-3'>Ready to Get Started?</h3>;
-							<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-								<div>;
-									<p className='text-blue-800 text-sm mb-2'>Contact us for a free consultation:</p>;
-									<div className='space-y-1 text-sm'>;
-										<p className='text-blue-700'><strong>Phone:</strong> <a href='tel:+13024640950' className='hover:underline'>+1 302 464 0950</a></p>;
-										<p className='text-blue-700'><strong>Email:</strong> <a href='mailto:kleber@ziontechgroup && ziontechgroup.com' className='hover:underline'>kleber@ziontechgroup && ziontechgroup.com</a></p>;
-									</div>;
-								</div>;
-								<div>;
-									<p className='text-blue-800 text-sm mb-2'>Our office location:</p>;
-									<p className='text-blue-700 text-sm'>364 E Main St STE 1008<br />Middletown DE 19709</p>;
-								</div>;
-							</div>;
-						</div>;
-						<div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>;
-							<div className='bg-blue-50 p-4 rounded-lg'>;
-								<h3 className='font-semibold text-blue-900 mb-2'>AI & Machine Learning</h3>;
-								<p className='text-blue-700'>Advanced AI solutions from computer vision to generative content creation</p>;
-							</div>;
-							<div className='bg-green-50 p-4 rounded-lg'>;
-								<h3 className='font-semibold text-green-900 mb-2'>IT Infrastructure</h3>;
-								<p className='text-green-700'>Next-gen technologies including edge computing, blockchain, and quantum readiness</p>;
-							</div>;
-							<div className='bg-purple-50 p-4 rounded-lg'>;
-								<h3 className='font-semibold text-purple-900 mb-2'>Micro SaaS Platforms</h3>;
-								<p className='text-purple-700'>Scalable software solutions from real-time analytics to mobile development</p>;
-							</div>;
-						</div>;
-						<p className='mt-6 text-sm text-gray-500'>;
-							Pricing based on market research from leading technology consultancies and enterprise software vendors. ;
+							<Link href='/additional-services' className='text-blue-600 hover:text-blue-500 underline font-semibold'>Expanded Services Catalog</Link>.
+						</p>
+						<div className='mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6'>
+							<h3 className='text-lg font-semibold text-blue-900 mb-3'>Ready to Get Started?</h3>
+							<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+								<div>
+									<p className='text-blue-800 text-sm mb-2'>Contact us for a free consultation:</p>
+									<div className='space-y-1 text-sm'>
+										<p className='text-blue-700'><strong>Phone:</strong> <a href='tel:+13024640950' className='hover:underline'>+1 302 464 0950</a></p>
+										<p className='text-blue-700'><strong>Email:</strong> <a href='mailto:kleber@ziontechgroup.com' className='hover:underline'>kleber@ziontechgroup.com</a></p>
+									</div>
+								</div>
+								<div>
+									<p className='text-blue-800 text-sm mb-2'>Our office location:</p>
+									<p className='text-blue-700 text-sm'>364 E Main St STE 1008<br />Middletown DE 19709</p>
+								</div>
+							</div>
+						</div>
+						<div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>
+							<div className='bg-blue-50 p-4 rounded-lg'>
+								<h3 className='font-semibold text-blue-900 mb-2'>AI & Machine Learning</h3>
+								<p className='text-blue-700'>Advanced AI solutions from computer vision to generative content creation</p>
+							</div>
+							<div className='bg-green-50 p-4 rounded-lg'>
+								<h3 className='font-semibold text-green-900 mb-2'>IT Infrastructure</h3>
+								<p className='text-green-700'>Next-gen technologies including edge computing, blockchain, and quantum readiness</p>
+							</div>
+							<div className='bg-purple-50 p-4 rounded-lg'>
+								<h3 className='font-semibold text-purple-900 mb-2'>Micro SaaS Platforms</h3>
+								<p className='text-purple-700'>Scalable software solutions from real-time analytics to mobile development</p>
+							</div>
+						</div>
+						<p className='mt-6 text-sm text-gray-500'>
+							Pricing based on market research from leading technology consultancies and enterprise software vendors.
 							For custom enterprise solutions and volume discounts, see our{' '}
 							<Link href='/pricing' className='text-blue-600 hover:text-blue-500 underline'>Enterprise Pricing Guide</Link>.;
 						</p>;
@@ -899,16 +870,16 @@ export default function Services() {;
 				</div>;
 			</section>;
 			{/* New Innovative Services Section */}
-			<section className='py-24 sm:py-32 bg-gradient-to-br from-blue-50 to-indigo-50'>;
-				<div className='mx-auto max-w-7xl px-6 lg:px-8'>;
-					<div className='mx-auto max-w-3xl text-center mb-16'>;
-						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Innovative AI & Automation Services</h2>;
-						<p className='mt-6 text-lg leading-8 text-gray-600'>;
-							Cutting-edge AI solutions and automation tools that transform how businesses operate. ;
-							Visit <a href='https://ziontechgroup && ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup && ziontechgroup.com</a> for live demos.;
-						</p>;
-					</div>;
-					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+			<section className='py-24 sm:py-32 bg-gradient-to-br from-blue-50 to-indigo-50'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-3xl text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Innovative AI & Automation Services</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							Cutting-edge AI solutions and automation tools that transform how businesses operate.
+							Visit <a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a> for live demos.
+						</p>
+					</div>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 						{/* AI Content Creation Tools */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>;
 							<div className='flex items-center gap-3 mb-3'>;
@@ -1042,16 +1013,16 @@ export default function Services() {;
 				</div>;
 			</section>;
 			{/* Advanced IT Services Section */}
-			<section className='py-24 sm:py-32 bg-white'>;
-				<div className='mx-auto max-w-7xl px-6 lg:px-8'>;
-					<div className='mx-auto max-w-3xl text-center mb-16'>;
-						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Advanced IT & Infrastructure Services</h2>;
-						<p className='mt-6 text-lg leading-8 text-gray-600'>;
-							Enterprise-grade IT solutions and infrastructure management services. ;
-							Professional implementation with 99 && 99.9% uptime guarantee.;
-						</p>;
-					</div>;
-					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+			<section className='py-24 sm:py-32 bg-white'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-3xl text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Advanced IT & Infrastructure Services</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							Enterprise-grade IT solutions and infrastructure management services.
+							Professional implementation with 99.9% uptime guarantee.
+						</p>
+					</div>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 						{/* DevOps Automation Platform */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>;
 							<div className='flex items-center gap-3 mb-3'>;
@@ -1185,16 +1156,16 @@ export default function Services() {;
 				</div>;
 			</section>;
 			{/* Micro SaaS Solutions Section */}
-			<section className='py-24 sm:py-32 bg-gradient-to-br from-purple-50 to-pink-50'>;
-				<div className='mx-auto max-w-7xl px-6 lg:px-8'>;
-					<div className='mx-auto max-w-3xl text-center mb-16'>;
-						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Micro SaaS Solutions</h2>;
-						<p className='mt-6 text-lg leading-8 text-gray-600'>;
-							Specialized software solutions designed to solve specific business challenges. ;
-							Ready-to-deploy tools with customizable features and integrations.;
-						</p>;
-					</div>;
-					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+			<section className='py-24 sm:py-32 bg-gradient-to-br from-purple-50 to-pink-50'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-3xl text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Micro SaaS Solutions</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							Specialized software solutions designed to solve specific business challenges.
+							Ready-to-deploy tools with customizable features and integrations.
+						</p>
+					</div>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 						{/* Project Management Suite */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>;
 							<div className='flex items-center gap-3 mb-3'>;
@@ -1371,16 +1342,16 @@ export default function Services() {;
 				</div>;
 			</section>;
 			{/* Pricing & Market Positioning Section */}
-			<section className='py-24 sm:py-32 bg-gray-50'>;
-				<div className='mx-auto max-w-7xl px-6 lg:px-8'>;
-					<div className='mx-auto max-w-2xl text-center mb-16'>;
-						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>;
-							Competitive Pricing & Market Leadership;
-						</h2>;
-						<p className='mt-6 text-lg leading-8 text-gray-600'>;
-							Our pricing reflects the true value of cutting-edge technology solutions, with transparent costs and exceptional ROI.;
-						</p>;
-					</div>;
+			<section className='py-24 sm:py-32 bg-gray-50'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-2xl text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+							Competitive Pricing & Market Leadership
+						</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							Our pricing reflects the true value of cutting-edge technology solutions, with transparent costs and exceptional ROI.
+						</p>
+					</div>
 
 					{/* Pricing Tiers */}
 					<div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16'>;
@@ -1479,47 +1450,47 @@ export default function Services() {;
 					</div>;
 
 					{/* Market Positioning */}
-					<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm'>;
-						<div className='text-center mb-8'>;
-							<h3 className='text-2xl font-bold text-gray-900 mb-4'>Why Choose Zion Tech Group?</h3>;
-							<p className='text-lg text-gray-600 max-w-3xl mx-auto'>;
-								We combine cutting-edge technology with proven expertise to deliver solutions that drive real business value.;
-							</p>;
-						</div>;
+					<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm'>
+						<div className='text-center mb-8'>
+							<h3 className='text-2xl font-bold text-gray-900 mb-4'>Why Choose Zion Tech Group?</h3>
+							<p className='text-lg text-gray-600 max-w-3xl mx-auto'>
+								We combine cutting-edge technology with proven expertise to deliver solutions that drive real business value.
+							</p>
+						</div>
 
-						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
-							<div className='text-center'>;
-								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 mb-4'>;
-									<Award className='h-6 w-6 text-blue-600' />;
-								</div>;
-								<h4 className='text-lg font-semibold text-gray-900 mb-2'>Industry Leaders</h4>;
-								<p className='text-sm text-gray-600'>500+ successful projects across diverse industries</p>;
-							</div>;
-							<div className='text-center'>;
-								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-green-100 mb-4'>;
-									<Zap className='h-6 w-6 text-green-600' />;
-								</div>;
-								<h4 className='text-lg font-semibold text-gray-900 mb-2'>Rapid Delivery</h4>;
-								<p className='text-sm text-gray-600'>50% faster deployment than industry average</p>;
-							</div>;
-							<div className='text-center'>;
-								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100 mb-4'>;
-									<Shield className='h-6 w-6 text-purple-600' />;
-								</div>;
-								<h4 className='text-lg font-semibold text-gray-900 mb-2'>Enterprise Security</h4>;
-								<p className='text-sm text-gray-600'>99 && 99.9% uptime with enterprise-grade security</p>;
-							</div>;
-							<div className='text-center'>;
-								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100 mb-4'>;
-									<TrendingUp className='h-6 w-6 text-orange-600' />;
-								</div>;
-								<h4 className='text-lg font-semibold text-gray-900 mb-2'>Proven ROI</h4>;
-								<p className='text-sm text-gray-600'>Average 300% ROI within first year</p>;
-							</div>;
-						</div>;
-					</div>;
-				</div>;
-			</section>;
+						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+							<div className='text-center'>
+								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 mb-4'>
+									<Award className='h-6 w-6 text-blue-600' />
+								</div>
+								<h4 className='text-lg font-semibold text-gray-900 mb-2'>Industry Leaders</h4>
+								<p className='text-sm text-gray-600'>500+ successful projects across diverse industries</p>
+							</div>
+							<div className='text-center'>
+								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-green-100 mb-4'>
+									<Zap className='h-6 w-6 text-green-600' />
+								</div>
+								<h4 className='text-lg font-semibold text-gray-900 mb-2'>Rapid Delivery</h4>
+								<p className='text-sm text-gray-600'>50% faster deployment than industry average</p>
+							</div>
+							<div className='text-center'>
+								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100 mb-4'>
+									<Shield className='h-6 w-6 text-purple-600' />
+								</div>
+								<h4 className='text-lg font-semibold text-gray-900 mb-2'>Enterprise Security</h4>
+								<p className='text-sm text-gray-600'>99.9% uptime with enterprise-grade security</p>
+							</div>
+							<div className='text-center'>
+								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100 mb-4'>
+									<TrendingUp className='h-6 w-6 text-orange-600' />
+								</div>
+								<h4 className='text-lg font-semibold text-gray-900 mb-2'>Proven ROI</h4>
+								<p className='text-sm text-gray-600'>Average 300% ROI within first year</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
 			{/* CTA Section */}
 
@@ -1544,34 +1515,28 @@ export default function Services() {;
 							<Link
 								href='/'
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
-
-								aria-label='Back to homepage'>;
-								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>;
-							</Link>;
-						</div>;
-					</div>;
-				</div>;
-			</section>;
-		</PageTransition>;
-		</Layout>;
-	),;
-
-}
->>>>>>> origin/chore/merge-open-prs
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
+								aria-label='Back to homepage'
+							>
+								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+		</PageTransition>
+		</Layout>
+	);
 
 }
-
-
-
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+origin/chore/merge-open-prs
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

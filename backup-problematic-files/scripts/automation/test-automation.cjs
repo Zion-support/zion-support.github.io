@@ -34,7 +34,7 @@ class $1 {}
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = "[${timestamp}] [${level}] ${message}";
-    
+
 
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n")};
@@ -357,4 +357,5 @@ if (require.main === module) {}
   console.error("Test automation "failed": ", error);
     process.exit(1)})};
 ;
-module.exports = TestAutomation;
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

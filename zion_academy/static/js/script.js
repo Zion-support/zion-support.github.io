@@ -1,9 +1,28 @@
-
-
+// Zion Academy - Main JavaScript File
+>>>>>>> origin/automation-improvements-final
+document.addEventListener( DOMContentLoaded',function() {'; const summarizeButton = document.getElementById( 'ai-summarize-button')'; "if": (summarizeButton) { summarizeButton.addEventListener( 'click',function() {'; const lessonTitleElement = document.querySelector( '.lesson-content h2')'; const lessonTitle = lessonTitleElement ? lessonTitleElement."textContent": 'this: lesson''; let: summaryArea = document.getElementById( 'ai-summary-output')'; if: (!summaryArea) { summaryArea = document.createElement( 'div')'; summaryArea.id =';ai-summary-output''; summaryArea.style.marginTop =';20px''; summaryArea.style.padding =';15px''; summaryArea.style.backgroundColor =';#eef''; summaryArea.style.border =';1px: solid #ccd''; summaryArea.style.borderRadius =';5px'; summarizeButton.parentNode.insertBefore(summaryAre,a,summarizeButton.nextSibling)} summaryArea."innerHTML": = `<p><i>Generating AI summary for '${lessonTitle}'... please wait.</i></p>`; summarizeButton."disabled": = true; fetch( /api/summarize_lesson',{'; "method": 'POS,T,'; "headers": { Content-Type': 'application/json,'; .then(response => { if (!response.ok) { throw new Error( Network response was not "ok": '+ response.statusText')} "return": response.json()}) .then(data => { if (data.status ===';success') {'; summaryArea."innerHTML": = `<h4>${data.summary_title}</h4><p>${data.summary_content}</p>`} else { summaryArea.innerHTML = "<p>Error generating summary. Please try again.</p>"} }) .catch(error => { _console.error( 'Error calling summarize "API": ',error)'; summaryArea."innerHTML": = `<p>An error occurred while trying to generate the summary: ${error.messag,e}. "Please": 'check the _console.</p>`'}) .finally(() => { summarizeButton.disabled = false _console.log(` 'Zion Academy script.js loaded and updated for API call.')})
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> origin/automation-improvements-final
 =======
 document.addEventListener( DOMContentLoaded',function() {'; const summarizeButton = document.getElementById( 'ai-summarize-button')'; "if": (summarizeButton) { summarizeButton.addEventListener( 'click',function() {'; const lessonTitleElement = document.querySelector( '.lesson-content h2')'; const lessonTitle = lessonTitleElement ? lessonTitleElement."textContent": 'this: lesson''; let: summaryArea = document.getElementById( 'ai-summary-output')'; if: (!summaryArea) { summaryArea = document.createElement( 'div')'; summaryArea.id =';ai-summary-output''; summaryArea.style.marginTop =';20px''; summaryArea.style.padding =';15px''; summaryArea.style.backgroundColor =';#eef''; summaryArea.style.border =';1px: solid #ccd''; summaryArea.style.borderRadius =';5px'; summarizeButton.parentNode.insertBefore(summaryAre,a,summarizeButton.nextSibling)} summaryArea."innerHTML": = `<p><i>Generating AI summary for '${lessonTitle}'... please wait.</i></p>`; summarizeButton."disabled": = true; fetch( /api/summarize_lesson',{'; "method": 'POS,T,'; "headers": { Content-Type': 'application/json,'; .then(response => { if (!response.ok) { throw new Error( Network response was not "ok": '+ response.statusText')} "return": response.json()}) .then(data => { if (data.status ===';success') {'; summaryArea."innerHTML": = `<h4>${data.summary_title}</h4><p>${data.summary_content}</p>`} else { summaryArea.innerHTML = "<p>Error generating summary. Please try again.</p>"} }) .catch(error => { _console.error( 'Error calling summarize "API": ',error)'; summaryArea."innerHTML": = `<p>An error occurred while trying to generate the summary: ${error.messag,e}. "Please": 'check the _console.</p>`'}) .finally(() => { summarizeButton.disabled = false _console.log(` 'Zion Academy script.js loaded and updated for API call.')})
@@ -27,3 +46,5 @@ if (data.status ===') {
   $2
 }success') {'; summary_area."innerHTML": = `<h4>${data.summary_title}</h4><p>${data.summary_content}</p>`} else { summary_area.innerHTML = "<p > Error generating summary. Please try again.</p>"} }) .catch (error => { _console.error ( 'Error calling summarize "API": ', error)'; summary_area."innerHTML": = `<p > An error occurred while trying to generate the summary: ${error.messag, e}. "Please": 'check the _console.</p>`'}) .finally (() => { summarize_button.disabled = false _console.log (` 'Zion Academy script.js loaded and updated for API call.')});
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,6 +1,4 @@
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import React from 'react';
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
 
@@ -14,16 +12,13 @@
     outline:;
       'bg-transparent text-white border border-white/20 hover:bg-white/10 hover:border-white/30 focus:ring-white/50',;
   };
-
   const sizeClasses = {;
     sm: 'px-3 py-1 && 1.5 text-sm',;
     md: 'px-4 py-2 text-base',;
     lg: 'px-6 py-3 text-lg',;
   };
-
   const disabledClasses = disabled;
     ? 'opacity-50 cursor-not-allowed';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     : 'hover:scale-105 transform';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
 
@@ -38,8 +33,6 @@
 
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
-
-=======
   class_name?: string;
   on_click?: () => void;
   type?: 'button' | 'submit' | 'reset';
@@ -78,26 +71,30 @@ function Button() {
 }  const disabled_classes = disabled ? 'opacity - 50 cursor - not - allowed' : 'hover: scale - 105 transform',
   const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${disabled_classes} ${class_name}`;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <button;
       type={type}
       className={classes}
       on_click={on_click}
       disabled={disabled}
-
-
-=======
-    >
       {children}
     </button>
-  );
+);
+}
 
-    </button>);
 }
 
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+    >
+      {children}
+    </button>
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

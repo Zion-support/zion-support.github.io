@@ -1,9 +1,9 @@
 
-// Search parser utilities;
-export const parseSearchQuery = (query: string) =>: any {
-  // Add search query parsing functionality here;
-  return {
+export const suggestDidYouMean = (query: string) => {
+  // Add did you mean functionality here;
+  return null;
 
+}
   }
 
   const words = query && query.toLowerCase().split(/\s+/);
@@ -16,39 +16,22 @@ export const parseSearchQuery = (query: string) =>: any {
       keywords && keywords.push(word);
     }
   }
-  
-  if (keywords && keywords.length > 0) {
-    filters && filters.keywords = keywords;
-  }
-  
-  // Extract skills (simple heuristic)
-  const skillKeywords = ['javascript', 'react', 'node', 'python', 'java', 'typescript', 'vue', 'angular', 'php', 'ruby', 'go', 'rust', 'swift', 'kotlin', 'c++', 'c#', 'html', 'css', 'sql', 'mongodb', 'postgresql', 'mysql', 'redis', 'docker', 'kubernetes', 'aws', 'azure', 'gcp', 'git', 'github', 'gitlab', 'jenkins', 'ci/cd', 'devops', 'frontend', 'backend', 'fullstack', 'mobile', 'ios', 'android', 'web', 'api', 'rest', 'graphql', 'microservices', 'blockchain', 'ai', 'ml', 'data', 'analytics', 'design', 'ui', 'ux', 'figma', 'sketch', 'adobe', 'photoshop', 'illustrator'];
-  
-  for (const word of words) {
-    if (skillKeywords && skillKeywords.includes(word)) {
-      skills && skills.push(word);
-    }
-  }
-  
-  if (skills && skills.length > 0) {
-    filters && filters.skills = skills;
-  }
-  
-  return filters;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     keywords: [],
     skills: [],
     location: null,
     type: null;
-  }
-}
-;
-export const search_all = (parsed: any, access: any) =>: any {
-  // Add search functionality here;
+  };
+};
+
+export const searchAll = (parsed: any, access: any) => {
+  // Add search functionality here
   return {
     all: [],
     talent: [],
@@ -58,19 +41,17 @@ export const search_all = (parsed: any, access: any) =>: any {
   };
 };
 
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const suggestDidYouMean = (query: string) => {
   // Add did you mean functionality here;
   return null;
 
-
-
 }
-=======
 };
-=======
 
 }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

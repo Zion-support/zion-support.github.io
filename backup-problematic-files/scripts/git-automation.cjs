@@ -1,17 +1,18 @@
-  async runCommand(command, options = {}) {
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     try {
-      const { stdout, stderr } = await execAsync(command, { 
-        cwd: process.cwd(), 
-        timeout: 60000, 
-        ...options 
+      const { stdout, stderr } = await execAsync(command, {
+        cwd: process.cwd(),
+        timeout: 60000,
+        ...options
       });
       return { success: true, stdout, stderr };
     } catch (error) {
       this.log(`Command failed: ${command} - ${error.message}`);
-      return { 
-        success: false, 
-        stdout: error.stdout || "", 
-        stderr: error.stderr || error.message 
+      return {
+        success: false,
+        stdout: error.stdout || "",
+        stderr: error.stderr || error.message
       };
     }
   }
@@ -19,7 +20,7 @@
   async checkGitStatus() {
     this.log('Checking git status...');
     const result = await this.runCommand('git status --porcelain');
-    
+
     if (result.success) {
       const changes = result.stdout.trim().split('\n').filter(line => line.length > 0);
       this.log(`Found ${changes.length} changes`);
@@ -33,7 +34,7 @@
   async addAllChanges() {
     this.log('Adding all changes...');
     const result = await this.runCommand('git add .');
-    
+
     if (result.success) {
       this.log('✅ All changes added');
       return true;
@@ -46,7 +47,7 @@
   async commitChanges(message) {
     this.log(`Committing changes: ${message}`);
     const result = await this.runCommand(`git commit -m "${message}"`);
-    
+
     if (result.success) {
       this.log('✅ Changes committed');
       return true;
@@ -59,7 +60,7 @@
   async pushChanges(branch = 'main') {
     this.log(`Pushing changes to ${branch}...`);
     const result = await this.runCommand(`git push origin ${branch}`);
-    
+
     if (result.success) {
       this.log('✅ Changes pushed');
       return true;
@@ -71,7 +72,7 @@
 
   async mergeToMain() {
     this.log('Merging to main branch...');
-    
+
     // Checkout main branch
     const checkoutResult = await this.runCommand('git checkout main');
     if (!checkoutResult.success) {
@@ -106,7 +107,7 @@
 
   async runFullWorkflow() {
     this.log('Starting full git automation workflow...');
-    
+
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, '..', 'automation', 'logs');
     if (!fs.existsSync(logsDir)) {
@@ -213,4 +214,5 @@ const path = require('path')
       return { "success": true, "message"}
     const mergeResult = await this.runCommand('git merge --no-ff -m ""feat": automated improvements and fixes")
       "operation"
-      this.log(" Git automation workflow "failed": ${error.message}")
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

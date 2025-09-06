@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts",;
 ;
 interface ServiceProfileData {;
@@ -186,3 +188,4 @@ raw: responseData.choices[0]?.message?.content
 }) 
 }
 });
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

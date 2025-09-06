@@ -1,42 +1,20 @@
 
-});''
 
-=======
-
-
-=======
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 });''
 });''
 });''
 });''
-
-
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 });''
 
 =======
 
 >>>>>>> origin/automation-improvements-final
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 });''
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-describe ('community category listing', () => {
-  it ('displays posts in Getting Hired category', () => {
-    cy.visit ('/community / getting - hired');
-    cy.get ('[data - testid="post - card"]');
-      .its ('length');
-      .should ('be.greater_than', 0)})});
-describe ('community category listing', () => { it ('displays posts in Getting Hired category', () => { cy.visit ('/community / getting - hired'); cy.get ('[data - testid="post - card"]') .its ('length') .should ('be.greater_than', 0)})});
-describe ("community category listing", () => { it ("displays posts in Getting Hired category", () => { cy.visit ("/community / getting - hired"); cy.get ("[data - testid="post - card"]") .its ("length") .should ("be.greater_than", 0)})});'"'";
-describe ('community category listing', () => { it ('displays posts in Getting Hired category', () => { cy.visit ('/community / getting - hired'); cy.get ('[data - testid="post - card"]') .its ('length') .should ('be.greater_than', 0)})}
-});'';
-});'';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+});''
+});''
+});''

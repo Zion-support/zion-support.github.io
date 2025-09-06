@@ -1,8 +1,16 @@
 
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
+=======
+import { Certification } from '@/types/resume',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { Edit, Trash2 } from 'lucide-react',;
+=======
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
 import { Edit, Trash2 } from 'lucide-react';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/certifications/CertificationsList.tsx
 import { format } from 'date-fns',;
 ;
 interface CertificationsListProps {;
@@ -34,29 +42,30 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
                     <> · Expires:{typeof cert.expiration_date === 'string' ;
                       ? cert.expiration_date ;
                       :format(cert.expiration_date, 'MMM yyyy')}
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/certifications/CertificationsList.tsx
                     </>;
                   )}
                 </p>;
               </div>;
               <div className="flex gap-2">;
-                <Button;
-                  variant="ghost";
-                  size="icon";
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
+
                   onClick={() => onEdit(cert)}
-                  aria-label="Edit certification";
                 >;
                   <Edit className="h-4 w-4" />;
                 </Button>;
-                <Button;
-                  variant="ghost";
-                  size="icon";
-                  onClick={() => onDelete(cert.id!)}
-                  aria-label="Delete certification";
+
                 >;
                   <Trash2 className="h-4 w-4" />;
                 </Button>;
               </div>;
             </div>;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
+
+=======
             {cert.credential_url && (;
               <p className="text-xs mt-2">;
                 <a ;
@@ -68,10 +77,14 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
                   View credential;
                 </a>;
               </p>;            )}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/certifications/CertificationsList.tsx
           </CardContent>;
         </Card>;
       ))}
     </div>;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
+
+=======
   ),;}
  ? cert.issue date : format (cert.issue date, 'MMM yyyy') ) : 'N/A' ;
 }{;
@@ -80,7 +93,9 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
 }</>) ;
 }</p> </div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div> <a href= {;"  cert.credential url ";"}target="blank" rel="noopener noreferrer" className="text-primary hover:underline" > View credential </Link> </p>) ;
 }</CardContent> </Card>) ) ;
-
+:temp_broken_files/resume-builder/forms/certifications/CertificationsList.tsx
+}</div>) ;"}'"
 }</div>) ;
 }'"
-
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/certifications/CertificationsList.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/certifications/CertificationsList.tsx

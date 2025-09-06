@@ -32,7 +32,7 @@ class $1 {}
     console.log("message);
     const logFile = path.join(this.logDir, "error-monitor.log");
     fs.appendFileSync(logFile, message + "\\n");
-    
+
     const logFile = path.join(this.logDir, "error-monitor.log");
     fs.appendFileSync(logFile, message + "\n")};
 ;
@@ -295,4 +295,5 @@ const monitor = new ErrorMonitor();
 monitor.start().catch(error => {})
   console.error("Failed to start Error "Monitor": ", error);
   process.exit(1)}
-});
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

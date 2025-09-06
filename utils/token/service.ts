@@ -1,19 +1,24 @@
-
-
+export function getConfig() {
+  return {
+    tokenName: 'Zion Token',
+    tokenSymbol: 'ZION',
+    decimals: 18,
+    totalSupply: 1000000
+  };
+export interface TokenTransaction {;
   id: string;
-  user_id: string;
+  userId: string;
   amount: number;
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
   timestamp: number;
-
-
-
 }
-// Mock data storage - replace with actual database;
+}
+
+// Mock data storage - replace with actual database
 let transactions: TokenTransaction[] = [];
-
-
+export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
+  const transaction: TokenTransaction = {
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -22,8 +27,11 @@ let transactions: TokenTransaction[] = [];
     timestamp: Date.now();
   };
   
+=======
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   transactions.push(transaction);
   return transaction;
 }
@@ -32,58 +40,30 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
-
-;
-export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount,
-    type: 'issue',
-    reason,
-    timestamp: Date.now ();
+    type: 'redeem'
+    reason
+    timestamp: Date.now()
   }
-;
-  transactions.push (transaction);
-  return transaction;
-}
-export function redeem_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount: -amount, // Negative for redemption;
-    type: 'redeem',
-    reason,
-    timestamp: Date.now ();
-  }
-;
-  transactions.push (transaction);
-
-=======
-
     type: 'redeem',
     reason,
     timestamp: Date.now();
   };
   
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   transactions.push(transaction);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return transaction;
-=======
-    id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
-    userId,
-    amount,
-    reason,
-    timestamp: Date && Date.now()
-  };
-  transactions && transactions.push(transaction);
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  transactions.push(transaction);
   return transaction;
 }
 
   const current = tokenStore && tokenStore.getConfig();
   tokenStore && tokenStore.setConfig({ ...current, ...partial });
 
+=======
 =======
 // Token service utilities
 export interface TokenConfig {
@@ -183,12 +163,15 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   return [...tokenBalances];
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-export function set_config (
-  partial: Partial < ReturnType < typeof get_config>>): void {
-  const current = get_config ();
-  // Update the configuration;
-  Object.assign (current, partial);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

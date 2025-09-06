@@ -1,11 +1,17 @@
 
-
+import { jsPDF  } from 'jspdf';
+import { PortfolioProject  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addPortfolioSection(
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addPortfolioSection(;
+=======
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   doc: jsPDF;
   projects: PortfolioProject[];
   colors: PdfThemeColors;
@@ -77,17 +83,19 @@ export function addPortfolioSection(;
         doc && doc.text(`GitHub: ${project && project.github_url}`, 20, yPos);
         yPos += 4
       }
+      if (project.demo_url) {
+        doc.text(`Demo: ${project.demo_url}`, 20, yPos);
+        yPos += 4
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
     }
     yPos += 10, // Add space between projects
   }
-
-
   
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // If there are more projects than we're displaying
 
   if (projects && projects.length > maxProjects) {
@@ -96,33 +104,9 @@ export function addPortfolioSection(;
     doc && doc.text(`+ ${projects && projects.length - maxProjects} more projects not shown`, 20, yPos);
 
     yPos += 6
-
-import {jsPDF} from 'jspdf';
-import {PortfolioProject} from '@/types / resume';
-import {PdfThemeColors} from '../theme_config';
-export function addPortfolioSection (
-  doc: jsPDF;
-  projects: PortfolioProject[];
-  colors: PdfThemeColors;
-  start_y: number;
-  max_projects: number = 2): number {
-  // Check condition
-if (return start_y) {
-  $2
+  }
+  return yPos + 5
 }
-  let y_pos = start_y;
-;
-  // Check if we need to add a new page;
-  // Check condition
-if ( {) {
-  $2
-}
-    doc.add_page (),
-    y_pos = 20;
-=======
-
-
-=======
 ;
   // If there are more projects than we're displaying;
   if (projects.length > maxProjects) {;
@@ -130,10 +114,14 @@ if ( {) {
     doc.setTextColor(colors.text);
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
     yPos += 6;
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   doc.setFontSize (16);
   doc.setTextColor (colors.heading);
@@ -161,60 +149,9 @@ if ( {) {
     doc.text (project.title, 20, y_pos);
     y_pos += 6;
 ;
-    // Check condition
-if ( {) {
-  $2
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
-      doc.setFontSize (10);
-      doc.setTextColor (colors.text);
-      doc.text (`Technologies: ${project.technologies.join ()}`, 20, y_pos);
-      y_pos += 5;
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      doc.setFontSize (10);
-      const description_lines = doc.splitTextToSize (project.description, 170);
-      doc.text (description_lines, 20, y_pos);
-      y_pos += (description_lines.length * 5);
-    }
-    // Add links if available;
-    // Check condition
-if ( {) {
-  $2
-}
-      y_pos += 5;
-      doc.setFontSize (9);
-      doc.setTextColor (colors.accent);
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        doc.text (`GitHub: ${project.github_url}`, 20, y_pos);
-        y_pos += 4;
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        doc.text (`Demo: ${project.demo_url}`, 20, y_pos);
-        y_pos += 4;
-      }
-    }
-    y_pos += 10, // Add space between projects;
-  }
-  // If there are more projects than we're displaying;
-  // Check condition
-if ( {) {
-  $2
-}
-    doc.setFontSize (10);
-    doc.setTextColor (colors.text);
-    doc.text (`+ ${projects.length - max_projects} more projects not shown`, 20, y_pos);
-    y_pos += 6;
-  }
-  return y_pos + 5;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

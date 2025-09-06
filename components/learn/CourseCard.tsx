@@ -1,9 +1,54 @@
 
 
-=======
+export type Course = {
 
+  id: string;
+  title: string;
+  durationMinutes: number;
+  level: string;
+  isFree: boolean;
+  category: string;
+  certificationBadge: string;
+  description?: string;}
+export default function CourseCard({ course }: { course: Course }) {
+  return (  id: string
+  title: string
+  durationMinutes: number
+  level: string
+  isFree: boolean
+  category: string
+  certificationBadge: string
+  description?: string
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function CourseCard({ course }: { course: Course }) {
+  return (
+    <div className='border rounded-lg p-4 hover:shadow-md transition'>
+      <div className='flex items-center justify-between'>
+        <h3 className='font-semibold text-lg'>{course.title}</h3>
+        <span className='text-xs border px-2 py-0.5 rounded bg-green-50 text-green-700'>
+          {course.isFree ? 'Free' : 'Paid'}
+        </span>
+      </div>
+      <div className='text-xs text-gray-500 mt-1'>
+        {course.category} • {course.level} •{' '}
+        {Math.round(course.durationMinutes / 60)}h          {course.isFree ? 'Free' : 'Paid'}
+
+        </span>
+      </div>
+      <div className="text-xs text-gray-500 mt-1">{course.category} • {course.level} • {Math.round(course.durationMinutes / 60)}h</div>
+      <div className="text-sm mt-2 line-clamp-2">{course.description}</div>
+      <div className="mt-3 flex items-center justify-between">
+        <span className="text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded">Badge: {course.certificationBadge}</span>
+        <Link href={`/learn/${course.id}`}>
+          <a className="text-blue-600 hover: underline text-sm">View course</a>
+</Link>
+      </div>
+    </div>;
+  );
+}
+
+export type Course = {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   title: string;
   duration_minutes: number;
@@ -18,6 +63,7 @@ export default function CourseCard(): any ({ course }: { course: Course }) {;
 
 
 =======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   certification_badge: string,
   description?: string;
 export default /**
@@ -57,11 +103,20 @@ function CourseCard() {
         </Link>;
       </div>;
     </div>);
+        </Link>
+          <a className=&quot;text-blue-600 hover:underline text-sm&quot;>View course</a>
+        </a>
+
+      </div>
+    </div>
+=======
+  )
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  );
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

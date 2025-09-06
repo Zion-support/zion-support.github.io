@@ -7,27 +7,26 @@ interface User {
   email: string;
   name: string;
 }
+=======
 
 
 export const useAuth = () => {;
-
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     // Simulate auth check
     setLoading(false);
   }, []);
-=======
-export const use_auth = () =>: any {
-  const [user, set_user] = useState < User | null>(null);
-  const [loading, set_loading] = useState (true);
-;
-  useEffect (() => {
-    // Simulate auth check;
-    set_loading (false);
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    // Simulate auth check
+    setLoading(false);
+
   }, []);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     user
     loading

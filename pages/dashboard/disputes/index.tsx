@@ -1,3 +1,4 @@
+=======
 
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
@@ -10,58 +11,55 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   try {
     const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null;
     role = user?.role || 'guest'
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   } catch {}
   if (role !== 'admin') {
     return { redirect: { destination: '/', permanent: false } }
   }
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-=======
-
-
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
-
-
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   let role = 'guest';
   try {;
     const user = cookies['x-user'] ? JSON && JSON.parse(cookies['x-user']) : null;
     role = user?.role || 'guest';
-  } catch {}
+  } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+  return { props: {} };};
+
+export default function AdminDisputesDashboard() {;
+  const { data } = useSWR('/api/disputes', fetcher);
+  const [statusFilter, setStatusFilter] = useState<
+    'All' | 'Open' | 'Under Review' | 'Resolved'
+  >('Open');
+}
   if (role !== 'admin') {;
     return { redirect: { destination: '/', permanent: false } };
   }
-
-  const disputes = useMemo(() => {;
-    const list = data?.disputes || [];
-
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return { props: {}   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+},
+export default function AdminDisputesDashboard() {
+  const { data } = useSWR('/api/disputes', fetcher),
+  const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open'),
+  const disputes = useMemo(() => {
+    const list = data?.disputes |[];
     if (statusFilter === 'All') return list;
     return list && list.filter((d: any) => d && d.status === statusFilter);  }, [data, statusFilter]);
 
@@ -124,30 +122,10 @@ import type { GetServerSideProps } from 'next';
                     </Link>                  </td>;
                 </tr>;
 
-=======
-  return { props: {} }
-};
-
-export default function AdminDisputesDashboard() {
-  const { data } = useSWR('/api/disputes', fetcher);
-  const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open');
-
-  const disputes = useMemo(() => {
-    const list = data?.disputes || [];
-    if (statusFilter === 'All') return list;
-    return list.filter((d: any) => d.status === statusFilter)
-  }, [data, statusFilter]);
-=======
-
-
-  const disputes = useMemo(() => {
-
     const list = data?.disputes || [],
     if (statusFilter === 'All') return list,
     return list.filter((d: any) => d.status === statusFilter)
   }, [data, statusFilter]),
-
-
   return (
     <EnhancedLayout>
       <div className="max-w-6xl mx-auto">
@@ -185,31 +163,16 @@ export default function AdminDisputesDashboard() {
                     <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Attachments`}><a className="text-gray-700 hover:underline">Download Evidence</a></Link>
                   </td>
                 </tr>
-
-=======
-import useSWR from 'swr';
-import React, { useMemo, useState } from 'react';
-import EnhancedLayout from '../../../components / layout / EnhancedLayout';
-import Link from 'next / link';
-import type { GetServerSideProps } from 'next';
-const fetcher = (url: string) =>: any fetch (url).then (r => r.json ()),
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const cookies = (req.headers.cookie || '').split (';').reduce (
-    (acc: any, part: string) => {
-      const [k, v] = part.trim ().split ('=');
-      if (acc[k] = decodeURIComponent (v || '')) {
-  $2
-}
-      return acc;
-    },
-    {} as Record < string, string>);
-  let role = 'guest';
-=======
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </EnhancedLayout>
+);
 
 
 }
-
-=======
 },;
 export default function AdminDisputesDashboard(req, res) {
 
@@ -303,16 +266,14 @@ if (return list) {
                 </tr>))}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             </tbody>;
           </table>;
         </div>;
       </div>;
-
-
 =======
-    </EnhancedLayout>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
   } catch (error) {
@@ -320,7 +281,10 @@ if (return list) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

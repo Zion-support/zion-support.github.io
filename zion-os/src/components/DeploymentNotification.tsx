@@ -1,5 +1,4 @@
 
-
 "use client",;
 import { useState } from "react",;
 import {;
@@ -101,29 +100,10 @@ export default function DeploymentNotification({;
     }
   },;
   if (updates.length === 0) return null,;
-
-
   return (;
     <div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;
       {updates.map((update) => (;
-=======
-"use client",
-import { useState  } from './react';,
-import {
-  Rocket,
-  CheckCircle,
-  AlertCircle,
-  Clock,
-  Activity,
-  Play,
-  Eye,
-  Settings,
-  X,
-  ArrowRight,
-  Globe,
-  Shield,
-  Building2,
-  Users,
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Zap;
 } from './lucide-react';,
 interface DeploymentUpdate {
@@ -214,15 +194,11 @@ if ( {) {
 }
       on_action (update_id, action);
     }
-  },
-  // Check condition
-if (return null, ) {
-  $2
-}
-  return (
-    <div className="fixed top - 4 right - 4 z - 50 space - y-3 max - w-md">;
-      {updates.map ((update) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+  return (;
+    <div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;
+      {updates.map((update) => (;
+
         <div;
           key={update.id}
           className={`group relative backdrop - blur - sm rounded - xl border p - 4 transition - all duration - 300 hover:shadow - lg ${getUpdateColor (update.type)}`}
@@ -249,17 +225,14 @@ if (return null, ) {
           </div>;
           {/* Instance Details (if available) */}
 
-          {update.instance_name && (
-            <div className="mb - 3 p - 3 bg - white / 10 rounded - lg border border - white / 20">;
-              <div className="flex items - center gap - 2 mb - 2">;
-                <div className="p - 1 bg - white / 20 rounded">;
-                  {getVerticalIcon (update.vertical || 'GENERAL')}
-
 =======
-
+          {update.instanceName && (;
+            <div className="mb-3 p-3 bg-white/10 rounded-lg border border-white/20">;
+              <div className="flex items-center gap-2 mb-2">;
+                <div className="p-1 bg-white/20 rounded">;
+                  {getVerticalIcon(update.vertical |'GENERAL')}
                   {getVerticalIcon(update.vertical || 'GENERAL')}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </div>;
                 <span className="font - medium text - white text - sm">;
                   {update.instance_name}
@@ -280,13 +253,11 @@ if (return null, ) {
                   </span>)}
               </div>;
 
-            </div>)}
-
 =======
-
+            </div>;
+          )}
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {/* Progress Bar (for deployment updates) */}
           {update.progress !== undefined && (
             <div className="mb - 3 space - y-2">;
@@ -301,13 +272,11 @@ if (return null, ) {
                 ></div>;
               </div>;
 
-            </div>)}
-
 =======
-
+            </div>;
+          )}
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {/* Action Buttons */}
           {update.actions && update.actions.length > 0 && (
             <div className="flex gap - 2 pt - 2 border - t border - white / 20">;
@@ -315,19 +284,15 @@ if (return null, ) {
                 <button;
                   key={index}
 
+=======
                   onClick={() => handleAction(update.id, action.action)}
-
+                  className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${action.action === 'deploy' |action.action === 'retry';
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${;
                     action.action === 'deploy' || action.action === 'retry';
-
-
                       ? 'bg-blue-600 hover:bg-blue-700 text-white';
-=======
-                  on_click={() => handle_action (update.id, action.action)}
-                  className={`flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 text - xs font - medium rounded - lg transition - all duration - 200 ${
-                    action.action === 'deploy' || action.action === 'retry';
-                      ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white';
+
                       : action.action === 'view';
                       ? 'bg - green - 600 hover:bg - green - 700 text - white';
                       : 'bg - white / 20 hover:bg - white / 30 text - white / 80';
@@ -339,14 +304,13 @@ if (return null, ) {
                   {action.action === 'configure' && <Settings className="w - 3 h - 3" />}
                   <span>{action.label}</span>;
 
-                </button>))}
-            </div>)}
-
 =======
-
+                </button>;
+              ))}
+            </div>;
+          )}
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {/* Timestamp */}
           <div className="absolute bottom - 2 right - 4 text - xs text - white / 60">;
             {format_timestamp (update.timestamp)}
@@ -354,70 +318,6 @@ if (return null, ) {
         </div>))}
     </div>);
 }
-
-export /**
- * DeploymentNotificationExample - Function description
- */
-function DeploymentNotificationExample() {
-  const [updates, set_updates] = useState < DeploymentUpdate[]>([;
-    {
-      id: "1",
-      type: "deployment_started",
-      title: "Deployment Started",
-      message: "Zion Health Network is now being deployed to production",
-      timestamp: new Date ().toISOString (),
-      instance_name: "Zion Health Network",
-      vertical: "HEALTH",
-      governance_type: "DAO_FULL",
-      domain: "health.zion.network",
-      progress: 25,
-=======
-
-;
-// Example usage with mock data;
-export function DeploymentNotificationExample() {;
-  const [updates, setUpdates] = useState<DeploymentUpdate[]>([;
-    {;
-      id: "1",;
-      type: "deployment_started",;
-      title: "Deployment Started",;
-      message: "Zion Health Network is now being deployed to production",;
-      timestamp: new Date().toISOString(),;
-      instanceName: "Zion Health Network",;
-      vertical: "HEALTH",;
-      governanceType: "DAO_FULL",;
-      domain: "health.zion.network",;
-      progress: 25,;
-
-      actions: [;
-        { label: "View Progress", action: "view", href: "/admin / deployments" },
-        { label: "Configure", action: "configure", href: "/admin / instances" }
-      ];
-    },
-    {
-      id: "2",
-      type: "instance_ready",
-      title: "Instance Ready",
-      message: "EduDAO Academy has been successfully deployed and is now live",
-      timestamp: new Date (Date.now () - 5 * 60 * 1000).toISOString (),
-      instance_name: "EduDAO Academy",
-      vertical: "EDUCATION",
-      governance_type: "DAO_LITE",
-      domain: "edu.zion.network",
-      actions: [;
-        { label: "View Instance", action: "view", href: "/admin / instances" },
-        { label: "Manage", action: "configure", href: "/admin / instances" }
-      ];
-    }
-  ]),
-  const handle_dismiss = (id: string) =>: any {
-    set_updates (prev => prev.filter (update => update.id !== id));
-  },
-  const handle_action = (id: string, action: string) =>: any {
-    // // // console.log (`Action ${action} for update ${id}`);
-    // Handle different actions here;
-
-  };
 
   return (;
 

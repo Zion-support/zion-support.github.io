@@ -1,5 +1,2 @@
-import { render } from \'@testing-library/react\'; import { MemoryRouter } from \'react-router-dom\'; import { AppLayout } from \'@/layout/AppLayout\'; import AIMatcherPage from \'@/pages/AIMatcher\'; test(\'
-const { render } from "@testing-library/react"; import { MemoryRouter } from "react-router-dom"; import { AppLayout } from "@/layout/AppLayout"; import AIMatcherPage from "@/pages/AIMatcher"; test("""
-import { render, MemoryRouter } from 'lucide-react'; import { AppLayout } from '@/layout/AppLayout'; import AIMatcherPage from '@/pages/AIMatcher'; test('')'
-import { render, MemoryRouter } from 'lucide-react'; import { AppLayout } from '@/layout/AppLayout'; import AIMatcherPage from '@/pages/AIMatcher'; test('')'
-import { render, MemoryRouter } from 'lucide-react'; import { AppLayout } from '@/layout/AppLayout'; import AIMatcherPage from '@/pages/AIMatcher'; test('')'
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

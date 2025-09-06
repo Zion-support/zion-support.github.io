@@ -1,4 +1,5 @@
 
+=======
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
 import { Textarea } from '@/components/ui/textarea',;
@@ -96,88 +97,15 @@ export function AIEnhancementPanel({;
               value={options.instructions}
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </div>;
         )}
 ;
         {/* Generate button */}
-        <Button ;
-          onClick={handleGenerate} ;
-          className="w-full" ;
-          disabled={isEnhancing || !options.content && !options.context}
-        >;
-          {isEnhancing ? (;
-            <>;
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-              Enhancing...;
-            </>;
-          ) :(;
-            <>;
-              <Sparkles className="mr-2 h-4 w-4" />;
-              Generate Enhanced Content;
-            </>;          )}
-        </Button>;
-;
-        {/* Output area */}
-        {generatedContent && (;
-          <div className="space-y-2 mt-4">;
-            <div className="flex justify-between items-center">;
-              <label className="text-sm font-medium">Generated content</label>;
-              <Button ;
-                variant="ghost" ;
-                size="sm" ;
-                onClick={handleCopy}
-                className="h-8";
-              >;
-                {copied ? (;
-                  <><Check className="h-4 w-4 mr-1" /> Copied</>;
-                ) :(;
-                  <><Copy className="h-4 w-4 mr-1" /> Copy</>;
-                )}
-              </Button>;
-            </div>;
-            <div className="relative">;
-              <Textarea;
-                value={generatedContent}
-                onChange={(e) => setGeneratedContent(e.target.value)}
-                className="min-h-[200px]";
-              />;
+<<<<<<< HEAD
+
             </div>;
           </div>;
         )}
       </CardContent>;
-      ;
-      {generatedContent && (;
-        <CardFooter className="flex justify-between">;
-          {onClose && (;
-            <Button variant="outline" onClick={onClose}>;
-              Cancel;
-            </Button>;          )}
-          <Button onClick={handleApply}>;
-            Apply to Form;
-          </Button>;
-        </CardFooter>;
-      )}
-    </Card>;
-  ),;}
- value= {;
-  options.instructions ;
-}onChange= {;
-  (e) => handleInputChange (e, 'instructions') ;
-}/> </div>) ;
-}{;
-  /* Generate button */ ;
-}<Button > {;
-  isEnhancing ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Enhancing... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Generate Enhanced Content </>) ";
-}</Button> <Button variant="ghost" size="sm" onClick={;
-  handleCopy ";
-}className="h-8" >) : (<><Copy className="h-4 w-4 mr-1" /> Copy</>) ";
-}</Button> </div> <div className="relative" > <Textarea /> </div> </div>) ;
-}</CardContent> {";
-  onClose && (<Button variant="outline" onClick={;
-  onClose ;
-}> Cancel </Button>) ;
-}<Button onClick={;
-  handleApply ;
-}> Apply to Form </Button> </CardFooter>) ;
-}</Card>) ;
-}'"
+

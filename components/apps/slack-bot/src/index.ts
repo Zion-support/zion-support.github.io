@@ -1,11 +1,12 @@
 
-
-import { App } from '@slack/bolt';
-
-
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 
+const apiBase = process.env.API_ORIGIN |'http://localhost:4000';
+const app = new App({
+  token: process.env.SLACK_BOT_TOKEN
+  signingSecret: process.env.SLACK_SIGNING_SECRET
+  appToken: process.env.SLACK_APP_LEVEL_TOKEN
 
   socketMode: true,});
 
@@ -90,7 +91,6 @@ if ( {) {
 
         response_type: 'ephemeral',
         text: `Here is a draft job post for *${role}*:\n\n${data && data.description}`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
     }
@@ -206,12 +206,11 @@ if ( {) {
 
       response_type: 'ephemeral',
       text: `Error: ${err && err.message || 'unknown'}`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });  }      });
 
 =======
         headers: {
-       'content-type': 'application/jsonx-user-id': userId 
+       'content-type': 'application/jsonx-user-id': userId
     },
     body: JSON.stringify({ role })
       });
@@ -254,79 +253,22 @@ if ( {) {
   }
 });
 
-
-
-
-
-(async () => {
-
-  const port = Number(process && process.env.SLACK_PORT || 3001);
-  await app && app.start(port);
-  // eslint-disable-next-line no-console
-  console && console.log(`⚡️ Zion Slack bot running on port ${port}`);
-})();  console && console.log(`⚡️ Zion Slack bot running on port ${port}`)
-
-})();
-
 =======
-  console.log(`⚡️ Zion Slack bot running on port ${port}`)
-})();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      const data = (await res.json ()) as any;
-      await respond ({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` });
-      return;
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      const q = rest.join (' ') || 'AI researcher in Brazil';
-      const res = await fetch (`${api_base}/talent / search?q=${encodeURIComponent (q)}`, {
-        headers: { 'x - user - id': user_id }
-      });
-      const data = (await res.json ()) as any;
-      const lines = (data.results || []).slice (0, 5).map ((t: any) => `• ${t.full_name} – ${t.country} – ${t.skills?.slice (0, 3).join () || ''}`);
-      await respond ({ response_type: 'ephemeral', text: lines.length ? lines.join ('\n') : 'No matches yet.' });
-      return;
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      const name = rest.join (' ') || 'Kleber';
-      const res = await fetch (`${api_base}/projects/${encodeURIComponent (name)}/track`, {
-        headers: { 'x - user - id': user_id }
-      });
-      const data = (await res.json ()) as any;
-      // Check condition
-if ( {) {
-  $2
-}
-        await respond ({ response_type: 'ephemeral', text: 'Project not found.' });
-        return;
-      }
-      await respond ({ response_type: 'ephemeral', text: `*${data.project.name}* – status: ${data.project.status}\n_milestones: ${JSON.stringify (data.project.milestones)}` });
-      return;
-    }
-    await respond ({ response_type: 'ephemeral', text: help_text () });
-  } catch (err: any) {
-    await respond ({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` });
-  }
-});
-;
-(async () => {
-  const port = Number (process.env.SLACK_PORT || 3001);
-  await app.start (port);
-  // eslint - disable - next - line no - console;
-console.log (`⚡️ Zion Slack bot running on port ${port}`);
-})();  console.log (`⚡️ Zion Slack bot running on port ${port}`);
+<<<<<<< HEAD
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

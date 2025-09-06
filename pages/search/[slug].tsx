@@ -1,12 +1,28 @@
-
-
-
+import { GetServerSideProps  } from 'next';
+import { useRouter  } from 'next/router';
+import { useState, useEffect  } from 'react';
+import { useAuth  } from '@/context/auth/AuthProvider';
+import { Search, Filter, Grid, List } from 'lucide-react'
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
-
-
+import { Search, Filter, Grid, List } from 'lucide-react';import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import ProductCard from '@/components/ProductCard';
+import { TalentCard  } from '@/components/talent/TalentCard';
+import { CategoryCard  } from '@/components/CategoryCard';
+import { SearchEmptyState  } from '@/components/marketplace/EmptyState';
+import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
+import { TALENT_PROFILES  } from '@/data/talentData';
+import { BLOG_POSTS  } from '@/data/blog-posts';
+import { useDebounce  } from '@/hooks/useDebounce';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+interface BaseSearchResult {
   id: string;
   title: string;
   description?: string;
@@ -62,48 +78,61 @@ type SearchResult =;
   | TalentSearchResult;
   | BlogSearchResult;
   | CategorySearchResult;
-
-
-// Type guard functions;
-const hasPrice = (result: SearchResult): result is ProductSearchResult =>;
-  result && result.type === 'product' || result && result.type === 'equipment';
-
-const hasRating = (;
-  result: SearchResult;
-): result is ProductSearchResult | TalentSearchResult =>;
-  result && result.type === 'product' ||;
-  result && result.type === 'equipment' ||;
-  result && result.type === 'talent';
-
-interface SearchResultsPageProps {;
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+// Type guard functions
+const hasPrice = (result: SearchResult): result is ProductSearchResult =>
+  result.type === 'product' |result.type === 'equipment';
+const hasRating = (
+  result: SearchResult
+): result is ProductSearchResult | TalentSearchResult =>
+  result.type === 'product' |
+  result.type === 'equipment' |
+  result.type === 'talent';
+interface SearchResultsPageProps {
   initialResults: SearchResult[];
   query: string;
   slug: string;
   totalCount: number;
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
-import { Search, Filter, Grid, List } from 'lucide-react'
+import { Search, Filter, Grid, List } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import ProductCard from '@/components/ProductCard';
-import { TalentCard } from '@/components/talent/TalentCard';
-import { CategoryCard } from '@/components/CategoryCard';
-import { SearchEmptyState } from '@/components/marketplace/EmptyState';
-import { MARKETPLACE_LISTINGS } from '@/data/listingData';
-import { TALENT_PROFILES } from '@/data/talentData';
-import { BLOG_POSTS } from '@/data/blog-posts';
-import { useDebounce } from '@/hooks/useDebounce';
+import { TalentCard  } from '@/components/talent/TalentCard';
+import { CategoryCard  } from '@/components/CategoryCard';
+import { SearchEmptyState  } from '@/components/marketplace/EmptyState';
+import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
+import { TALENT_PROFILES  } from '@/data/talentData';
+import { BLOG_POSTS  } from '@/data/blog-posts';
+import { useDebounce  } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
+interface BaseSearchResult {
+  id: string;
+  title: string;
+  description?: string;
+  slug: string;
+  image?: string;
+
+    avatar?: string;
+  }
+  tags?: string[];
+  category?: string;
+  date?: string;
+
+interface ProductSearchResult extends BaseSearchResult {
+  type: 'product' | 'equipment';
+  price?: number;
+  rating?: number;
+
+=======
 
 interface BaseSearchResult {
   id: string,
@@ -147,23 +176,22 @@ const hasPrice = (result: SearchResult): result is ProductSearchResult =>
 
 const hasRating = (result: SearchResult): result is ProductSearchResult | TalentSearchResult => 
   result.type === 'product' || result.type === 'equipment' || result.type === 'talent';
-
-interface SearchResultsPageProps {
-  initialResults: SearchResult[],
-  query: string,
-  slug: string,
-  totalCount: number
-}
-
+interface SearchResultsPageProps {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  initialResults: SearchResult[];
+  query: string;
+  slug: string;
+  totalCount: number;
 interface OfflineFilters {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   sortBy?: string;
   category?: string;
   minPrice?: number;
   maxPrice?: number;
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           return aPrice - bPrice;        });
         break;
       case 'price_desc':;
@@ -172,13 +200,12 @@ interface OfflineFilters {
           const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
           return bPrice - aPrice;        });
         break;
-
-
-=======
-
-            b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
-
-=======
+      case 'rating':;
+        all && all.sort((a, b) => {;
+          const aRating =;
+            a && a.type === 'product' || a && a.type === 'talent' ? (a && a.rating ?? 0) : 0;
+          const bRating =;
+            b && b.type === 'product' || b && b.type === 'talent' ? (b && b.rating ?? 0) : 0;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -342,10 +369,9 @@ function offlineSearch(;
         all.sort((a, b) => {;
           const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
           const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           return bRating - aRating;
         });
         break;
@@ -353,62 +379,54 @@ function offlineSearch(;
         break;
     }
   } else {;
-    all && all.sort((a, b) => a && a.title.localeCompare(b && b.title));
-
-=======
-          return aPrice - bPrice
-        });
-        break;
-      case 'price_desc':
-        all.sort((a, b) => {
-          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
-          const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
-          return bPrice - aPrice
-        });
-        break;
-      case 'rating':
-        all.sort((a, b) => {
-          const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
-          const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
-          return bRating - aRating
-        });
-        break;
-      default: break
-    }
-  } else {
-    all.sort((a, b) => a.title.localeCompare(b.title))
-
+    all.sort((a, b) => a.title.localeCompare(b.title));
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
   const start = (page - 1) * limit;
-
-
-  const paginated = all && all.slice(start, start + limit);
-  return { results: paginated, totalCount: all && all.length };
-=======
-
+  const paginated = all.slice(start, start + limit);
+  return { results: paginated, totalCount: all.length }
+export default function SearchResultsPage({
+  initialResults
+  query
+  slug
+  totalCount
   return { results: paginated, totalCount: all.length };
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+          return bRating - aRating;
+        });
+        break;
+      default:;
+        break;
+    }
+  } else {;
+    all.sort((a, b) => a.title.localeCompare(b.title));
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const start = (page - 1) * limit;
+  const paginated = all.slice(start, start + limit);
+
+}: SearchResultsPageProps) {  const router = useRouter();
+
 
 export default function SearchResultsPage(): any ({;
   initialResults,;
   query,;
   slug,;
   totalCount,;
-
-
 }: SearchResultsPageProps) {  const router = useRouter();
-=======
-  initialResults;
-  query;
-  slug;
-  totalCount}: SearchResultsPageProps) {
-  const router = useRouter();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 }: SearchResultsPageProps) {  const router = useRouter();
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return { results: paginated, totalCount: all.length   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -423,10 +441,12 @@ export default function SearchResultsPage(): any ({;
 export default function SearchResultsPage(req, res) {
   try {
   const router = useRouter();
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
   const [loading, setLoading] = useState(false);
@@ -441,54 +461,11 @@ export default function SearchResultsPage(req, res) {
   const [minRating, setMinRating] = useState('');
   const [totalResults, setTotalResults] = useState(totalCount);
 
-      logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`),
-      const params = new URLSearchParams({
-        query: searchTerm,
-        page: String(page),
-        limit: '12',
-        sort: sortBy}),
-      if (categoryFilter !== 'all') params.append('category', categoryFilter);
-
-=======
-
-  // Fetch search results;
-  const fetchResults = async (searchTerm: string, page = 1) => {;
-    try {
-      setLoading(true);
-      logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`);
-      const params = new URLSearchParams({;
-        query: searchTerm;
-        page: String(page);
-        limit: '12';
-        sort: sortBy});
-      if (categoryFilter !== 'all') params.append('category', categoryFilter);
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (minPrice) params.append('minPrice', minPrice);
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
       const response = await fetch(`/api/search?${params.toString()}`);
 
-
-  // Fetch search results;
-  const fetchResults = async (searchTerm: string, page = 1) => {;
-    try {;
-      setLoading(true);
-      logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`);
-      const params = new URLSearchParams({;
-        query: searchTerm,;
-        page: String(page),;
-        limit: '12',;
-        sort: sortBy,;
-      });      if (categoryFilter !== 'all') params && params.append('category', categoryFilter);
-      if (minPrice) params && params.append('minPrice', minPrice);
-      if (maxPrice) params && params.append('maxPrice', maxPrice);
-      if (minRating) params && params.append('minRating', minRating);
-
-      const response = await fetch(`/api/search?${params && params.toString()}`);
-
-      if (!response && response.ok) {;
-        throw new Error(`Search API error: ${response && response.status}`);
       }
 
       const data = await response && response.json();
@@ -504,62 +481,14 @@ export default function SearchResultsPage(req, res) {
     } catch (error) {;
       logErrorToProduction('Error fetching search results:', { data: error });
 
-=======
-
-      if (!response.ok) {;
-        throw new Error(`Search API error: ${response.status}`);
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-      const data = await response.json();
-      logInfo('Search results received:', { data: data });
-      setTotalResults(data.totalCount || data.results?.length || 0);
-      if (page === 1) {;
-        setResults(data.results || []);
-      } else {;
-        setResults((prev) => [...prev, ...(data.results || [])]);
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-      logErrorToProduction('Error fetching search results:', { data: error });
-
-      const offline = offlineSearch(searchTerm, page, 12, {;
-        sortBy,;
-        category: categoryFilter !== 'all' ? categoryFilter : undefined,;
-        minPrice: minPrice ? Number(minPrice) : undefined,;
-        maxPrice: maxPrice ? Number(maxPrice) : undefined,;
-
-
-
-=======
-        minRating: minRating ? Number(minRating) : undefined}),;
-
       setTotalResults(offline.totalCount);
       if (page === 1) {;
         setResults(offline.results);
 
-      } else {;
-        setResults((prev) => [...prev, ...offline.results]);
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } finally {;
-      setLoading(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  },;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      fetchResults(debouncedQuery, 1);
+    } else {;
+      setResults([]);
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Handle search input change;
   const handleSearch = (newQuery: string) => {;
     setSearchQuery(newQuery),;
@@ -571,312 +500,116 @@ export default function SearchResultsPage(req, res) {
   };
 
   useEffect(() => {;
-
-    fetchResults(searchQuery, nextPage)
-  };
-
+    if (debouncedQuery.trim()) {;
+      fetchResults(debouncedQuery, 1);
+    } else {;
+      setResults([]);
+      setTotalResults(0);    }
+  }, [debouncedQuery]);
+  // Load more results
+  const loadMore = () => {
+    const nextPage = currentPage + 1;
+    setCurrentPage(nextPage);
+    fetchResults(searchQuery, nextPage);
+  }
   const categories = Array.from(
     new Set(results.map((r) => r.category).filter(Boolean));
   );
+=======
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const filteredResults = results.filter((r) => {
     if (
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       categoryFilter !== 'all' &&
       categoryFilter &&
       r.category !== categoryFilter
     ) {
 
-
-=======
-    if (debouncedQuery.trim()) {;
-
-      fetchResults(debouncedQuery, 1);
-    } else {;
-      setResults([]);
-
-      setTotalResults(0);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }, [debouncedQuery]),;
-
-  // Load more results;
-  const loadMore = () => {;
-    const nextPage = currentPage + 1;
-    setCurrentPage(nextPage);
-    fetchResults(searchQuery, nextPage);
-  };
-
-  const categories = Array && Array.from(;
-    new Set(results && results.map(r => r && r.category).filter(Boolean));
-  );
-
-  const filteredResults = results && results.filter(r => {    if (;
-      categoryFilter !== 'all' &&;
-      categoryFilter &&;
-      r && r.category !== categoryFilter;
-    ) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return false;
 
     if (minRating && (r && r.type === 'product' || r && r.type === 'talent')) {;
       if ((r && r.rating ?? 0) < Number(minRating)) {;
 
-=======
-    date: b.published_date,
-  }));
-  let all = [...product_results, ...talent_results, ...blog_results];
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    all = all.filter (r => r.category === filters.category);  }
-  // Check condition
-if ( {) {
-  $2
-}
-    all = all.filter (r => {
-      // Check condition
-if ( {) {
-  $2
-}
-        return (r.price ?? 0) >= filters.min_price!;
-      }
-      return true;
-    });  }
-  // Check condition
-if ( {) {
-  $2
-}
-    all = all.filter (r => {
-      // Check condition
-if ( {) {
-  $2
-}
-        return (r.price ?? 0) <= filters.max_price!;
-      }
-      return true;
-    });  }
-  // Check condition
-if ( {) {
-  $2
-}
-    all = all.filter (r => {
-      // Check condition
-if ( {) {
-  $2
-}
-        return (r.rating ?? 0) >= filters.min_rating!;
-      }
-      return true;
-    });  }
-  // Check condition
-if ( {) {
-  $2
-}
-    switch (filters.sort_by) {
-      case 'price_asc':;
-        all.sort ((a, b) => {
-          const a_price = a.type === 'product' ? (a.price ?? 0) : 0;
-          const b_price = b.type === 'product' ? (b.price ?? 0) : 0;
-          return a_price - b_price;        });
-        break;
-      case 'price_desc':;
-        all.sort ((a, b) => {
-          const a_price = a.type === 'product' ? (a.price ?? 0) : 0;
-          const b_price = b.type === 'product' ? (b.price ?? 0) : 0;
-          return b_price - a_price;        });
-        break;
-      case 'rating':;
-        all.sort ((a, b) => {
-          const a_rating =;
-            a.type === 'product' || a.type === 'talent' ? (a.rating ?? 0) : 0;
-          const b_rating =;
-            b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
-          return b_rating - a_rating;
-        });
-        break;
-      default:;
-        break;
-    }
-  } else {
-    all.sort ((a, b) => a.title.locale_compare (b.title));
-  }
-  const start = (page - 1) * limit;
-  const paginated = all.slice (start, start + limit);
-  return { results: paginated, total_count: all.length }
-;
-export default /**
- * SearchResultsPage - Function description
- */
-function SearchResultsPage() {  const router = use_router ();
-  const { is_authenticated } = use_auth ();
-  const [results, set_results] = useState < SearchResult[]>(initial_results);
-  const [loading, set_loading] = useState (false);
-  const [search_query, setSearchQuery] = useState (query);
-  const debounced_query = use_debounce (search_query, 300);
-  const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [current_page, setCurrentPage] = useState (1);
-  const [sort_by, setSortBy] = useState ('relevance');
-  const [category_filter, setCategoryFilter] = useState ('all');
-  const [min_price, setMinPrice] = useState ('');
-  const [max_price, setMaxPrice] = useState ('');
-  const [min_rating, setMinRating] = useState ('');
-  const [total_results, setTotalResults] = useState (total_count);
-;
-  // Fetch search results;
-  const fetch_results = async (search_term: string, page = 1) => {
-    try {
-      set_loading (true);
-      log_info (`Fetching search results for: ${search_term}, page: ${page}`);
-      const params = new URLSearchParams ({
-        query: search_term,
-        page: String (page),
-        limit: '12',
-        sort: sort_by,
-      });      if (params.append ('category', category_filter)) {
-  $2
-}
-      if (params.append ('min_price', min_price)) {
-  $2
-}
-      if (params.append ('max_price', max_price)) {
-  $2
-}
-      if (params.append ('min_rating', min_rating)) {
-  $2
-}
-      const response = await fetch (`/api / search?${params.to_string ()}`);
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (`Search API error: ${response.status}`);
-      }
-      const data = await response.json ();
-      log_info ('Search results received:', { data: data });
-      setTotalResults (data.total_count || data.results?.length || 0);
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        set_results (data.results || []);
-      } else {
-        set_results (prev => [...prev, ...(data.results || [])]);
-      }
-    } catch (error) {
-      logErrorToProduction ('Error fetching search results:', { data: error });
-      const offline = offline_search (search_term, page, 12, {
-        sort_by,
-        category: category_filter !== 'all' ? category_filter : undefined,
-        min_price: min_price ? Number (min_price) : undefined,
-        max_price: max_price ? Number (max_price) : undefined,
-        min_rating: min_rating ? Number (min_rating) : undefined,
-      });
-      setTotalResults (offline.total_count);
-      // Check condition
-if ( {) {
-  $2
-}
-        set_results (offline.results);
-      } else {
-        set_results (prev => [...prev, ...offline.results]);
-      }
-    } finally {
-      set_loading (false);    }
-  }
-;
-  // Handle search input change;
-  const handle_search = (new_query: string) =>: any {
-    setSearchQuery (new_query),
-    if () {) {
-  $2
-}
-      router.push (`/search?q=${encodeURIComponent (new_query)}`, undefined, {
-        shallow: true,
-      });
-      setCurrentPage (1);    }
-  }
-;
-  useEffect (() => {
-    if () {) {
-  $2
-}
-      fetch_results (debounced_query, 1);
-    } else {
-      set_results ([]);
-      setTotalResults (0);    }
-  }, [debounced_query]);
-;
-  // Load more results;
-  const load_more = () =>: any {
-    const next_page = current_page + 1;
-    setCurrentPage (next_page);
-    fetch_results (search_query, next_page);
-  }
-;
-  const categories = Array.from (
-    new Set (results.map (r => r.category).filter (Boolean)));
-;
-  const filtered_results = results.filter (r => {    // Check condition
-if ( {) {
-  $2
-}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       return false;
-    }
-    // Check condition
-if ( {) {
-  $2
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-      if (< Number (min_price)) {) {
-  $2
-}
-        return false;      }
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      if (> Number (max_price)) {) {
-  $2
-}
-        return false;      }
-    }
-    if () {) {
-  $2
-}
-      if (< Number (min_rating)) {) {
-  $2
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    if (minPrice && r.type === 'product') {;
+      if ((r.price ?? 0) < Number(minPrice)) {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         return false;
       }
     }
     return true;  });
 
+=======
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Group results by type for better display
   const groupedResults = filteredResults.reduce(
     (acc, result) => {
       if (!acc[result.type]) acc[result.type] = [];
       acc[result.type]!.push(result);
 
-      return acc
-    };
-    {} as Record<string, SearchResult[]>;
-  );
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    if (maxPrice && r.type === 'product') {;
+      if ((r.price ?? 0) > Number(maxPrice)) {;
+        return false;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    if (minRating && (r.type === 'product' || r.type === 'talent')) {;
+      if ((r.rating ?? 0) < Number(minRating)) {;
+        return false;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    return true
+  }),
 
+  // Group results by type for better display
+  const groupedResults = filteredResults.reduce(
+    (acc, result) => {
+      if (!acc[result.type]) acc[result.type] = [],
+      acc[result.type]!.push(result),
+      return acc
+    },
+    {} as Record<string SearchResult[]>),
 
   const renderResultCard = (result: SearchResult) => {
     switch (result.type) {
       case 'product':
       case 'equipment':
+=======
 
 
 
@@ -898,47 +631,21 @@ if ( {) {
           <div key={result && result.id} data-testid='result-card'>            <ProductCard
 
 =======
-        return (
-          <div key={result.id} data-testid="result-card">
-            <ProductCard
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-              product={{
-
-                id: result && result.id,
-                name: result && result.title,
-                title: result && result.title,
-                description: result && result.description || '',
-                price: result && result.price || 0,
-                images: result && result.image ? [result && result.image] : [],
-                rating: result && result.rating || 0,
-                reviewCount: 0,
-                tags: result && result.tags || [],
-                category: result && result.category || '',
-=======
-;
-  // Group results by type for better display;
-  const grouped_results = filtered_results.reduce (
-    (acc, result) => {
-      // Check condition
-if (acc[result.type] = []) {
-  $2
-}
-      acc[result.type]!.push (result);
-      return acc;
-    },
-    {} as Record < string, SearchResult[]>  );
-;
-  const renderResultCard = (result: SearchResult) =>: any {
-    switch (result.type) {
-      case 'product':;
-      case 'equipment':;
-        return (
-          <div key={result.id} data - testid='result - card'>            <ProductCard;
-              product={{
-=======
-
-
+                id: result.id
+                name: result.title
+                title: result.title
+                description: result.description |''
+                price: result.price |0
+                images: result.image ? [result.image] : []
+                rating: result.rating |0
+                reviewCount: 0
+                tags: result.tags |[]
+                category: result.category |''
+                currency: '$'
+                created_at: new Date().toISOString()
+                updated_at: new Date().toISOString()
+                stock: (result as any).stock
+                in_stock: ((result as any).stock |0) > 0,              }}
                 id: result.id,
                 name: result.title,
                 title: result.title,
@@ -954,10 +661,16 @@ if (acc[result.type] = []) {
                 created_at: new Date ().toISOString (),
                 updated_at: new Date ().toISOString (),
                 stock: (result as any).stock,
-
-
-        );
-      case 'talent':;
+                in_stock: ((result as any).stock || 0) > 0
+              }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            />
+          </div>
+        ),
+      case 'talent':
         return (
 
                 id: result && result.id,
@@ -980,18 +693,27 @@ if (acc[result.type] = []) {
 =======
           <div key={result.id} data-testid="result-card">
             <TalentCard
-=======
-                in_stock: ((result as any).stock || 0) > 0,              }}
-            />;
-          </div>);
-      case 'talent':;
-        return (
-          <div key={result.id} data - testid='result - card'>            <TalentCard;
-
               talent={{
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                id: result.id
+                user_id: result.id
+                full_name: result.title
+                professional_title: result.description |''
+                profile_picture_url: result.image
+                average_rating: result.rating
+                skills: result.tags |[]
+                location: result.category
+                bio: result.description
+                summary: result.description
+                is_verified: false
+                availability_type: 'available'
+              }}
+              onViewProfile={(id: string) => {
+                router.push(`/talent/${id}`);
+              }}
+              onRequestHire={talent => {
+                router.push(`/talent/${talent.id}?action=hire`);              }}
+              isAuthenticated={isAuthenticated}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 id: result.id,
                 user_id: result.id,
                 full_name: result.title,
@@ -1003,8 +725,78 @@ if (acc[result.type] = []) {
                 bio: result.description,
                 summary: result.description,
                 is_verified: false,
+                availability_type: 'available',
+              }}
+              onViewProfile={(id: string) => {
+                router.push(`/talent/${id}`);
+              }}
+              onRequestHire={talent => {
+                router.push(`/talent/${talent.id}?action=hire`);              }}
+              isAuthenticated={isAuthenticated}
+                availability_type: 'available'}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              onViewProfile={(id: string) => {;
+                router.push(`/talent/${id}`);
+              }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              onRequestHire={(talent) => {;
+                router.push(`/talent/${talent.id}?action=hire`);
+              }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              isAuthenticated={isAuthenticated  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            />
+          </div>
+        ),
+      case 'category':
+        return (
+          <div key={result.id} data-testid='result-card'>            <CategoryCard
+              title={result.title}
+              description={result.description |''}
+              icon={result.image |'📁'}
+            />
+          </div>
+        );
+      default:
+          >
+            <h3 className='font-semibold'>{result.title}</h3>
+            <p className='text-gray-600 dark:text-gray-200'>
+              {result.description}
+            </p>
+          </div>
+        );    }
+  }
+  };
 
-
+          <div key={result.id} data-testid="result-card">
+            <CategoryCard
+              title={result.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              description={result.description || ''  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              icon={result.image || '📁'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             />;
           </div>;
         );
@@ -1021,12 +813,16 @@ if (acc[result.type] = []) {
             <p className="text-gray-600 dark:text-gray-200">
               {result.description}
             </p>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           </div>
-        )
-    }
+        ),
+      case 'category':
+        return (
 
-  };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  return (
+    <>;
+      <SEO
+
 
           >;
             <h3 className='font-semibold'>{result && result.title}</h3>;
@@ -1040,10 +836,12 @@ if (acc[result.type] = []) {
 
 }
   },
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>;
       <SEO
@@ -1053,7 +851,6 @@ if (acc[result.type] = []) {
 
         canonical={`https://app && app.ziontechgroup.com/search/${slug}`}
       />;
-
       <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>;
 
         <div
@@ -1072,20 +869,25 @@ if (acc[result.type] = []) {
                   {filteredResults && filteredResults.length > 0;
                     ? `Found ${filteredResults && filteredResults.length} results for "${query}"`;
 
-=======
-
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-=======
-
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div
           className="container mx-auto px-4 py-8"
           data-testid="search-results"
         >
           {/* Search Header */}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+        <div
+          className="container mx-auto px-4 py-8"
+          data-testid="search-results"
+        >
+          {/* Search Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
           <div className="mb-8">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div className="flex-1">
@@ -1098,8 +900,7 @@ if (acc[result.type] = []) {
                 >
                   {filteredResults.length > 0
                     ? `Found ${filteredResults.length} results for "${query}"`
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
                     : `No results found for "${query}"`}
 
                 </p>;
@@ -1113,6 +914,35 @@ if (acc[result.type] = []) {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
+                    : `No results found for "${query}"`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </p>
+              </div>
+              {/* Search Input */}
+              <div className='relative w-full lg:w-96'>
+                <Search className='absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200' />
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                <Input
+                  type="text"
+                  value={searchQuery  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => handleSearch(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                <Input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => handleSearch(e.target.value)}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   placeholder="Search marketplace..."
                   className="pl-10"
                 />
@@ -1120,18 +950,16 @@ if (acc[result.type] = []) {
               </div>
             </div>
 
-
-                  onChange={e => handleSearch(e && e.target.value)}
-                  placeholder='Search marketplace...';
-                  className='pl-10'                />;
-              </div>;
-            </div>;
-
-
-
             {/* Controls */}
-
-
+            <div className='flex flex-wrap items-center justify-between gap-4 mt-6'>
+              <div className='flex items-center gap-2 flex-wrap'>
+            {/* Controls */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
+              <div className="flex items-center gap-2 flex-wrap">
                 <Button
                   variant="outline"
                   size="sm"
@@ -1143,100 +971,33 @@ if (acc[result.type] = []) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </Button>
                 <select
-
-
-                  data-testid='filter-button'>;
-                  <Filter className='h-4 w-4' />                  Filters;
-                </Button>;
-
-                <select
-                  value={sortBy}
-                  onChange={e => setSortBy(e && e.target.value)}
-                  className='px-3 py-1 border border-gray-300 rounded-md text-sm';
-                  data-testid='sort-select';
-
-=======
-                router.push (`/talent/${id}`);
-              }}
-              onRequestHire={talent => {
-                router.push (`/talent/${talent.id}?action = hire`);              }}
-              is_authenticated={is_authenticated}
-            />;
-          </div>);
-      case 'category':;
-        return (
-          <div key={result.id} data - testid='result - card'>            <CategoryCard;
-              title={result.title}
-              description={result.description || ''}
-              icon={result.image || '📁'}
-            />;
-          </div>);
-      default:;
-          >;
-            <h3 className='font - semibold'>{result.title}</h3>;
-            <p className='text - gray - 600 dark:text - gray - 200'>;
-              {result.description}
-            </p>;
-          </div>);    }
+                  value={sortBy  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-;
-  return (
-    <>;
-      <SEO;
-        title={`Search Results for "${query}" - Zion Marketplace`}
-        description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`}
-        keywords={`${query}, search, marketplace, products, talent, services`}
-        canonical={`https://app.ziontechgroup.com / search/${slug}`}
-      />;
-      <div className='min - h-screen bg - gray - 50 dark:bg - gray - 900'>;
-        <div;
-          className='container mx - auto px - 4 py - 8';
-          data - testid='search - results';
-        >;
-          {/* Search Header */}
-          <div className='mb - 8'>;
-            <div className='flex flex - col lg:flex - row lg:items - center lg:justify - between gap - 4'>;
-              <div className='flex - 1'>;
-                <h1 className='text - 3xl font - bold text - gray - 900 dark:text - white mb - 2'>;
-                  Search Results;
-                </h1>;
-                <p;
-                  className='text - gray - 600 dark:text - gray - 200';
-                  data - testid='results - count'                >;
-                  {filtered_results.length > 0;
-                    ? `Found ${filtered_results.length} results for "${query}"`;
-                    : `No results found for "${query}"`}
-                </p>;
-              </div>;
-              {/* Search Input */}
-              <div className='relative w - full lg:w - 96'>;
-                <Search className='absolute left - 3 top - 1/2 -translate - y-1 / 2 h - 4 w - 4 text - gray - 200' />;
-                <Input;
-                  type='text';
-                  value={search_query}
-                  on_change={e => handle_search (e.target.value)}
-                  placeholder='Search marketplace...';
-                  className='pl - 10'                />;
-              </div>;
-            </div>;
-            {/* Controls */}
-            <div className='flex flex - wrap items - center justify - between gap - 4 mt - 6'>;
-              <div className='flex items - center gap - 2 flex - wrap'>;
-                <Button;
-                  variant='outline';
-                  size='sm';
-                  className='flex items - center gap - 2';
-                  data - testid='filter - button';
-                >;
-                  <Filter className='h - 4 w - 4' />                  Filters;
-                </Button>;
-                <select;
-                  value={sort_by}
-                  on_change={e => setSortBy (e.target.value)}
-                  className='px - 3 py - 1 border border - gray - 300 rounded - md text - sm';
-                  data - testid='sort - select';
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+                  onChange={(e) => setSortBy(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+                  data-testid="sort-select"
+                >
+                  <option value='relevance'>Relevance</option>
+                  <option value='newest'>Newest</option>
+                  <option value='price_asc'>Price: Low to High</option>
+                  <option value='price_desc'>Price: High to Low</option>
+                  <option value='rating'>Highest Rated</option>                </select>
+                  <option value="relevance">Relevance</option>
+                  <option value="newest">Newest</option>
+                  <option value="price_asc">Price: Low to High</option>
+                  <option value="price_desc">Price: High to Low</option>
+                  <option value="rating">Highest Rated</option>
+                </select>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+                <select
+                  value={categoryFilter  } catch (error) {
                 >;
                   <option value='relevance'>Relevance</option>;
                   <option value='newest'>Newest</option>;
@@ -1264,8 +1025,25 @@ if (acc[result.type] = []) {
                 >
 
                 <div className="flex items-center gap-1">
-=======
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </option>;
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+                >
 
+                  <input
+                    type="number"
+                    placeholder="Min $"
+                    value={minPrice}
+                    onChange={(e) => setMinPrice(e.target.value)}
+                <div className='flex items-center gap-1'>
                   <option value="all">All Categories</option>
                   {categories.map((c) => (
                     <option key={c} value={c}>
@@ -1282,34 +1060,43 @@ if (acc[result.type] = []) {
 }
                 </select>
                 <div className="flex items-center gap-1">
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                  <input
+                    type="number"
+                    placeholder="Min $"
+                    value={minPrice  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onChange={(e) => setMinPrice(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <input
                     type="number"
                     placeholder="Min $"
                     value={minPrice}
                     onChange={(e) => setMinPrice(e.target.value)}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
                   />
                   <span>-</span>
                   <input
                     type="number"
                     placeholder="Max $"
-                    value={maxPrice}
-                    onChange={(e) => setMaxPrice(e.target.value)}
+
                     className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
                   />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
                 <select
-                  value={minRating}
 
-                    onChange={e => setMaxPrice(e && e.target.value)}
-                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />;
-                </div>;
-=======
-                  onChange={(e) => setMinRating(e.target.value)}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className="px-3 py-1 border border-gray-300 rounded-md text-sm"
                 >
                   <option value="">All Ratings</option>
@@ -1319,76 +1106,11 @@ if (acc[result.type] = []) {
                 </select>
               </div>
 
-
-                <select
-                  value={minRating}
-                  onChange={e => setMinRating(e && e.target.value)}
-                  className='px-3 py-1 border border-gray-300 rounded-md text-sm';
-
-=======
-                <select;
-                  value={category_filter}
-                  on_change={e => setCategoryFilter (e.target.value)}
-                  className='px - 3 py - 1 border border - gray - 300 rounded - md text - sm';
-                >;
-                  <option value='all'>All Categories</option>;
-                  {categories.map (c => (                    <option key={c} value={c}>;
-                      {c}
-                    </option>))}
-                </select>;
-                <div className='flex items - center gap - 1'>;
-                  <input;
-                    type='number';
-                    placeholder='Min $';
-                    value={min_price}
-                    on_change={e => setMinPrice (e.target.value)}
-                    className='w - 20 px - 2 py - 1 border border - gray - 300 rounded - md text - sm';
-                  />;
-                  <span>-</span>;
-                  <input;
-                    type='number';
-                    placeholder='Max $';
-                    value={max_price}
-                    on_change={e => setMaxPrice (e.target.value)}
-                    className='w - 20 px - 2 py - 1 border border - gray - 300 rounded - md text - sm'                  />;
-                </div>;
-                <select;
-                  value={min_rating}
-                  on_change={e => setMinRating (e.target.value)}
-                  className='px - 3 py - 1 border border - gray - 300 rounded - md text - sm';
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                >;
-                  <option value=''>All Ratings</option>;
-                  <option value='4'>4★ & up</option>;
-                  <option value='3'>3★ & up</option>;
-                  <option value='2'>2★ & up</option>;
-                </select>;
-              </div>;
-
-
-                <Button
-                  variant={viewMode === 'grid' ? 'default' : 'outline'}
-                  size='sm'
-                  onClick={() => setViewMode('grid')}
-                  data-testid='view-mode-grid';
-                  className={viewMode === 'grid' ? 'active' : ''}
-                >;
-                  <Grid className='h-4 w-4' />;
-                </Button>;
-                <Button
-                  variant={viewMode === 'list' ? 'default' : 'outline'}
-                  size='sm'
-                  onClick={() => setViewMode('list')}
-                  data-testid='view-mode-list';
-                  className={viewMode === 'list' ? 'active' : ''}
-
-
-=======
-
               <div className="flex items-center gap-2">
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
@@ -1411,7 +1133,22 @@ if (acc[result.type] = []) {
                   <Grid className="h-4 w-4" />
                 </Button>
                 <Button
-
+                  variant={viewMode === 'list' ? 'default' : 'outline'}
+                  size='sm'
+                  onClick={() => setViewMode('list')}
+                  data-testid='view-mode-list'
+                  className={viewMode === 'list' ? 'active' : ''}
+                >
+                  <List className='h-4 w-4' />                </Button>
+              </div>
+            </div>
+          </div>
+          {/* Loading State */}
+          {loading && results.length === 0 && (
+            <div className='flex justify-center py-12'>
+              <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>            </div>
+          )}
+          {/* Empty State */}
                   variant={viewMode === 'list' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1435,41 +1172,32 @@ if (acc[result.type] = []) {
               </div>;
             </div>;
           </div>;
-
-
-
-=======
-              <div className='flex items - center gap - 2'>;
-                <Button;
-                  variant={view_mode === 'grid' ? 'default' : 'outline'}
-                  size='sm';
-                  on_click={() => setViewMode ('grid')}
-                  data - testid='view - mode - grid';
-                  className={view_mode === 'grid' ? 'active' : ''}
-                >;
-                  <Grid className='h - 4 w - 4' />;
-                </Button>;
-                <Button;
-                  variant={view_mode === 'list' ? 'default' : 'outline'}
-                  size='sm';
-                  on_click={() => setViewMode ('list')}
-                  data - testid='view - mode - list';
-                  className={view_mode === 'list' ? 'active' : ''}
-                >;
-                  <List className='h - 4 w - 4' />                </Button>;
-              </div>;
-            </div>;
-          </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-          {/* Loading State */}
-
+          {/* Loading State */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           {loading && results.length === 0 && (
-
+            <div className="flex justify-center py-12">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+            </div>
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+          {/* Empty State */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           {!loading && filteredResults.length === 0 && (
             <div data-testid="search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
-
+          )}
+          {/* Results */}
           {filteredResults.length > 0 && (
             <div className="space-y-8">
               {Object.entries(groupedResults).map(([type, typeResults]) => (
@@ -1478,16 +1206,41 @@ if (acc[result.type] = []) {
                     {type}s ({typeResults.length})
 
                   </h2>
+                <Button
+                  variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  size="sm"
+                  onClick={() => setViewMode('grid')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  data-testid="view-mode-grid"
+                  className={viewMode === 'grid' ? 'active' : ''  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                >
+                  <Grid className="h-4 w-4" />
+                </Button>
+                <Button
+
+          {!loading && filteredResults.length === 0 && (
+            <div data-testid="search-empty-state">
+              <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
+            </div>
+
+                      </>
+                    ) : (
+                      'Load More Results'
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-          {filteredResults && filteredResults.length > 0 && (;
-            <div className='space-y-8'>;
-              {Object && Object.entries(groupedResults).map(([type, typeResults]) => (;
-                <div key={type}>;
-                  <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults && typeResults.length});
-                  </h2>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   <div
                     className={
                       viewMode === 'grid'
@@ -1501,14 +1254,40 @@ if (acc[result.type] = []) {
               {/* Load More Button */}
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     )}
                   </Button>;
                 </div>;
               )}
             </div>;
           )}
+        </div>
+      </div>
+    </>
 
-
+export const getServerSideProps: GetServerSideProps<
+  SearchResultsPageProps
+> = async (context: any) => {;
+  const params = context.params;
+  const slug = params?.slug as string
+  // Convert slug back to query term
+  const query = slug ? slug.replace(/-/g, ' ') : '';
+  try {
+    // In production, replace with your actual API base URL
+    const apiBaseUrl =
+export const getServerSideProps: GetServerSideProps<;
+  SearchResultsPageProps;
+> = async (context: any) => {;
+  const params = context && context.params;
+  const slug = params?.slug as string,;
+  // Convert slug back to query term;
+  const query = slug ? slug && slug.replace(/-/g, ' ') : '';
+  try {;
+    // In production, replace with your actual API base URL;
+    const apiBaseUrl =;
+      process && process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',;
+    logInfo(`Fetching search results for slug: ${slug}, query: ${query}`);
+    const response = await fetch(;
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`    );
 
 =======
@@ -1522,78 +1301,14 @@ if (acc[result.type] = []) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     let results = [];
     let totalCount = 0;
-
-            <div className='flex justify - center py - 12'>;
-              <div className='animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 600'></div>            </div>)}
-          {/* Empty State */}
-          {!loading && filtered_results.length === 0 && (
-            <div data - testid='search - empty - state'>              <SearchEmptyState on_retry={() => fetch_results (search_query)} />;
-            </div>)}
-          {/* Results */}
-          {filtered_results.length > 0 && (
-            <div className='space - y-8'>;
-              {Object.entries (grouped_results).map (([type, type_results]) => (
-                <div key={type}>;
-                  <h2 className='text - xl font - semibold text - gray - 900 dark:text - white mb - 4 capitalize'>                    {type}s ({type_results.length});
-                  </h2>;
-                  <div;
-                    className={
-                      view_mode === 'grid';
-                        ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6';
-                        : 'space - y-4';
-                    }
-                  >;
-                    {type_results.map (renderResultCard)}
-                  </div>;
-                </div>))}
-              {/* Load More Button */}
-              {results.length < total_results && (
-                <div className='flex justify - center py - 8'>;
-                  <Button;
-                    on_click={load_more}
-                    disabled={loading}
-                    className='flex items - center gap - 2';
-                  >;
-                    {loading ? (
-                      <>;
-                        <div className='animate - spin rounded - full h - 4 w - 4 border - b-2 border - white'></div>                        Loading...;
-                      </>) : (
-                      'Load More Results')}
-                  </Button>;
-                </div>)}
-            </div>)}
-        </div>;
-      </div>;
-    </>);
-export const getServerSideProps: GetServerSideProps<;
-  SearchResultsPageProps;
-> = async (context: any) => {
-  const params = context.params;
-  const slug = params?.slug as string,
-  // Convert slug back to query term;
-  const query = slug ? slug.replace (/-/g, ' ') : '';
-;
-  try {
-    // In production, replace with your actual API base URL;
-    const apiBaseUrl =;
-      process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
-    log_info (`Fetching search results for slug: ${slug}, query: ${query}`);
-;
-    const response = await fetch (
-      `${apiBaseUrl}/api / search?query=${encodeURIComponent (query)}&limit = 12`    );
-;
-    let results = [];
-    let total_count = 0;
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      const data = await response.json ();
-      results = data.results || [];
-      total_count = data.total_count || results.length;
-      log_info (`Server - side fetch successful: ${results.length} results`);
-
+    if (response.ok) {
+      const data = await response.json();
+      results = data.results |[];
+      totalCount = data.totalCount |results.length;
+      logInfo(`Server-side fetch successful: ${results.length} results`);
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     } else {
       logErrorToProduction (
         `Search API error: ${response.status} ${response.status_text}`);
@@ -1638,36 +1353,7 @@ if ( {) {
 
 }
 
-=======
-      results = data.results || [];
-      totalCount = data.totalCount || results.length;
-      logInfo(`Server-side fetch successful: ${results.length} results`)
-    } else {
-      logErrorToProduction(`Search API error: ${response.status} ${response.statusText}`),
-      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
-      results = offline.results;
-      totalCount = offline.totalCount
-    }
-
-    return {
-      props: {
-        initialResults: results,
-        query;
-        slug;
-        totalCount}}
-  } catch (error) {
-    logErrorToProduction('Error fetching search results:', { data: error }),
-    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
-    return {
-      props: {
-        initialResults: offline.results,
-        query;
-        slug;
-        totalCount: offline.totalCount}}
-  }
-
-};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
       total_count = offline.total_count;    }
     return {
@@ -1697,6 +1383,7 @@ total_count: offline.total_count,
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1811,13 +1498,84 @@ export const getServerSideProps: GetServerSideProps<;
     let results = [];
     let totalCount = 0;
     if (response.ok) {;
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       const data = await response.json();
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
+    } else {
+      logErrorToProduction(
+        `Search API error: ${response.status} ${response.statusText}`
+      );
+      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
+      results = offline.results;
+      totalCount = offline.totalCount;    }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    return {
+      props: {
+        initialResults: offline.results,
+        query,
+        slug,
+totalCount: offline.totalCount,
+      },
+    };  }
+};
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+    } else {;
+      logErrorToProduction(;
+        `Search API error: ${response.status} ${response.statusText}`);
+      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
+      results = offline.results;
+      totalCount = offline.totalCount;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    return {;
+      props: {;
+        initialResults: results;
+        query,;
+        slug,;
+        totalCount}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    logErrorToProduction('Error fetching search results:', { data: error });
+    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
+    return {;
+      props: {;
+        initialResults: offline.results,;
+        query,;
+        slug;
+        totalCount: offline.totalCount}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

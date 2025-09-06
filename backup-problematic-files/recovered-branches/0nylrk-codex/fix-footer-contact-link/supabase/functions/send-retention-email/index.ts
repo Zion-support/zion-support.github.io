@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0",;
 import { Resend } from "npm:resend@2.0.0",;
@@ -490,4 +492,5 @@ html: ` <h2>We've missed you!</h2> <p>Hi $ {
   firstName 
 }, </p> <p>We noticed you haven't been active on Zion AI Marketplace recently.</p> 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }

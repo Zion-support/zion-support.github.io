@@ -1,5 +1,7 @@
 
+=======
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const SEOAudit: NextPage = () => {
   return (
     <div>
@@ -12,27 +14,29 @@ const SEOAudit: NextPage = () => {
         <p>Scans pages to detect missing meta tags and basic SEO issues and commits a structured report.</p>
         <div>
 
-
-          <Link href="/data/reports/seo/latest.json"><a className="text-blue-600 underline">Latest SEO Report (JSON)</Link></Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         </div>
       </main>
     </div>
   )
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+}
+export default SEOAudit;
 
 },
 export default SEOAudit,
-
-=======
 },
 
-export default SEOAudit,
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default SEOAudit
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+},
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+export default SEOAudit,;
+export default SEOAudit,
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

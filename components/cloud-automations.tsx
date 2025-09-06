@@ -1,19 +1,6 @@
-
-
-
-
-
-=======
-export default function CloudAutomationsPage() {;
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export default function CloudAutomationsPage() {
-=======
+import React, { useEffect, useState } from 'react';
 
 export default function CloudAutomationsPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [data, setData] = useState<any>(null);
   useEffect(() => {;
     fetch('/api/cloud-automations-status');
@@ -24,19 +11,9 @@ export default function CloudAutomationsPage() {;
       .catch(() => setData({ ok: false }));
 
 =======
-export default function CloudAutomationsPage() {
-  const [data, setData] = useState<any>(null);
-  useEffect(() => {
-    fetch('/api/cloud-automations-status')
-      .then((r) => r.json())
-      .then(setData)
-      .catch(() => setData({ ok: false }))
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, []);
 
   const items = data?.data ? Object && Object.entries(data && data.data) : [];
-
   return (
 
 
@@ -44,17 +21,16 @@ export default function CloudAutomationsPage() {
             ) : null}
           </div>;
         ))}
-
-      </div>;
-    </div>;
+      </div>
+    </div>
+);
+}
   );
 }
 
 =======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               <pre className='mt - 2 text - xs whitespace - pre - wrap'>;
                 {JSON.stringify (value.metrics, null, 2)}
               </pre>            ) : null}        {items.map (([key, value]: any) => (
@@ -68,11 +44,18 @@ export default function CloudAutomationsPage() {
           </div>))}
       </div>;
     </div>);
+  const items = data?.data ? Object.entries(data.data) : []
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+            ) : null}
+          </div>
+        ))}
+      </div>
+    </div>
+=======
+<<<<<<< HEAD
+  )
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  );
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

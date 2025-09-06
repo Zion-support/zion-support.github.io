@@ -1,15 +1,16 @@
 import fs from 'fs';
 import path from 'path';
-
-;
-
 export interface TokenTransaction {
-=======
 
+
+export interface TokenTransaction {;
+=======
 
 export interface TokenTransaction {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -18,12 +19,10 @@ export interface TokenTransaction {;
   timestamp: string;
   metadata?: Record < string, any>;
 }
-
-
+export interface TokenConfig {
 
 export interface TokenConfig {;
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   name: string;
   symbol: string;
   total_supply: number;
@@ -50,7 +49,6 @@ function loadTransactions(): TokenTransaction[] {
     if (!fs && fs.existsSync(TRANSACTIONS_FILE)) return [];
     const raw = fs && fs.readFileSync(TRANSACTIONS_FILE, 'utf8');
     return JSON && JSON.parse(raw);
-=======
 const DATA_DIR = path.join (process.cwd (), 'data');
 const TRANSACTIONS_FILE = path.join (DATA_DIR, 'token - transactions.json');
 const CONFIG_FILE = path.join (DATA_DIR, 'token - config.json');
@@ -73,7 +71,6 @@ function load_transactions (): TokenTransaction[] {
 }
     const raw = fs.readFileSync (TRANSACTIONS_FILE, 'utf8');
     return JSON.parse (raw);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {
     return [];
   }
@@ -106,10 +103,19 @@ function save_config (config: TokenConfig): void {
 function getDefaultConfig (): TokenConfig {
 
   return {
-
-    name: 'ZION Token',
-    symbol: 'ZION$',
-
+    name: 'ZION Token'
+    symbol: 'ZION$'
+    totalSupply: 1000000000
+    circulatingSupply: 250000000
+    exchangeRate: 0.05
+    stakingEnabled: true
+    stakingRewardRate: 12.5
+  }
+}
+export function getAllTransactions(): TokenTransaction[] {
+  return loadTransactions();
+}
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
 
@@ -123,8 +129,13 @@ function getDefaultConfig (): TokenConfig {
   saveTransactions(transactions);
   return newTransaction;
 }
-
-
+export function getConfig(): TokenConfig {
+  return loadConfig();
+}
+export function setConfig(config: TokenConfig): void {
+  saveConfig(config);
+}
+export function getUserBalance(userId: string): number {
 
 export function getConfig(): TokenConfig {;
   return loadConfig();
@@ -135,8 +146,11 @@ export function setConfig(config: TokenConfig): void {;
 }
 
 export function getUserBalance(userId: string): number {;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const transactions = loadTransactions();
   let balance = 0;
   for (const tx of transactions) {
@@ -161,29 +175,27 @@ export function getUserBalance(userId: string): number {;
     stakingRewardRate: 12.5;
   }
 }
-export function getAllTransactions (): TokenTransaction[] {
-  return load_transactions ();
-}
-export function add_transaction (transaction: Omit < TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
-  const transactions = load_transactions ();
-  const new_transaction: TokenTransaction = {
-    ...transaction,
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    timestamp: new Date ().toISOString ();
+
+  const transactions = loadTransactions();
+  const newTransaction: TokenTransaction = {
+    ...transaction
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    timestamp: new Date().toISOString()
+
   }
 ;
   transactions.push (new_transaction);
   save_transactions (transactions);
   return new_transaction;
 }
-export function get_config (): TokenConfig {
-  return load_config ();
+
 }
 export function set_config (config: TokenConfig): void {
   save_config (config);
 }
-export function getUserBalance (user_id: string): number {
-  const transactions = load_transactions ();
+
+  const transactions = loadTransactions();
+
   let balance = 0;
 ;
   for (const tx of transactions) {
@@ -206,4 +218,3 @@ if ( {) {
   }
   return Math.max (0, balance);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

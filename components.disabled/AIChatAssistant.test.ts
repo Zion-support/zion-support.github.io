@@ -1,37 +1,11 @@
 
-
-
-
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import AIChatAssistant from './AIChatAssistant'
 describe('AIChatAssistant'
   it('renders without crashing'
-
-    expect(screen.getByRole('main'
-  it('displays correct content'
-  it('handles user interactions'
-
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import AIChatAssistant from './AIChatAssistant';
-describe('AIChatAssistant', () => {;
-  it('renders without crashing', () => {;
-    render(<AIChatAssistant />);
-    expect(screen.getByRole('main')).toBeInTheDocument()});
-  it('displays correct content', () => {;
-    render(<AIChatAssistant />);
-    // Add specific content checks based on component functionality});
-  it('handles user interactions', () => {;
-    render(<AIChatAssistant />);
-    // Add interaction tests based on component functionality,
-}),
-});
-import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import AIChatAssistant from './AIChatAssistant'; ; describe('AIChatAssistant',() => {; it('renders without crashing',() => {; render(<AIChatAssistant />); expect(screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content',() => {; render(<AIChatAssistant />)}); ; it('handles user interactions',() => {; render(<AIChatAssistant />)});,});
-    // Add interaction tests based on component functionality})});
-
-
-=======
-import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import AIChatAssistant from './AIChatAssistant'; ; describe('AIChatAssistant', () => {; it('renders without crashing', () => {; render(<AIChatAssistant />); expect(screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content', () => {; render(<AIChatAssistant />)}); ; it('handles user interactions'
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

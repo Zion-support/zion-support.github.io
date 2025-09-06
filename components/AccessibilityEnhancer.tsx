@@ -1,4 +1,5 @@
 
+=======
 
 const AccessibilityEnhancer: React.FC = () => {;
   useEffect(() => {;
@@ -12,9 +13,9 @@ const AccessibilityEnhancer: React.FC = () => {;
       left: 6px, background: #000,;
       color: #fff, padding: 8px,;
       text-decoration: none, z-index: 1000,;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     `;
     document && document.body.insertBefore(skipLink, document && document.body.firstChild);
-
     // Focus management;
     const handleMouseDown = () => {;
       document && document.body.classList && classList.add('using-mouse');
@@ -24,10 +25,8 @@ const AccessibilityEnhancer: React.FC = () => {;
         document && document.body.classList && classList.remove('using-mouse'),;
       }
     };
-
     document && document.addEventListener('mousedown', handleMouseDown);
     document && document.addEventListener('keydown', handleKeyDown);
-
     // Add ARIA live region for announcements;
     const liveRegion = document && document.createElement('div');
     liveRegion && liveRegion.setAttribute('aria-live', 'polite');
@@ -35,7 +34,6 @@ const AccessibilityEnhancer: React.FC = () => {;
     liveRegion && liveRegion.className = 'sr-only';
     liveRegion && liveRegion.id = 'live-region';
     document && document.body.appendChild(liveRegion);
-
     // Announce page changes;
     const announcePageChange = (message: string) => {;
       const liveRegion = document && document.getElementById('live-region');
@@ -43,30 +41,24 @@ const AccessibilityEnhancer: React.FC = () => {;
         liveRegion && liveRegion.textContent = message,;
       }
     };
-
     // Listen for route changes (Next && Next.js specific);
     const handleRouteChange = () => {;
       announcePageChange('Page loaded');
     };
-
     // Add route change listener if available;
     if (typeof window !== 'undefined' && window && window.history) {;
       const originalPushState = window && window.history.pushState;
       const originalReplaceState = window && window.history.replaceState;
-
       window && window.history.pushState = function(...args) {;
         originalPushState && originalPushState.apply(this, args);
         setTimeout(handleRouteChange, 100);
       };
-
       window && window.history.replaceState = function(...args) {;
         originalReplaceState && originalReplaceState.apply(this, args);
         setTimeout(handleRouteChange, 100);
       };
-
       window && window.addEventListener('popstate', handleRouteChange);
     }
-
     // Cleanup;
     return () => {;
       document && document.removeEventListener('mousedown', handleMouseDown);
@@ -265,7 +257,6 @@ if ( {) {
   }
 
 };
-
 // Add CSS for focus management;
 const focusStyles = `;
   .using-mouse *:focus {;
@@ -288,7 +279,6 @@ const focusStyles = `;
     clip: auto, white-space: normal,;
   }
 `;
-
 // Inject styles;
 if (typeof document !== 'undefined') {;
   const styleSheet = document && document.createElement('style');
@@ -297,49 +287,40 @@ if (typeof document !== 'undefined') {;
 }
 export default AccessibilityEnhancer;
 import React, { useEffect, useState } from 'react';
-
 interface AccessibilityEnhancerProps {;
   children: React && React.ReactNode;
 }
-
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {;
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
-
   useEffect(() => {;
     const prefersReducedMotion = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
-
     const savedHighContrast = localStorage && localStorage.getItem('highContrast') === 'true';
     const savedFontSize = localStorage && localStorage.getItem('fontSize') || 'normal';
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
   }, []);
-
   const applyAccessibilityStyles = (;
     highContrast: boolean,;
     fontSizeValue: string,;
     reducedMotionValue: boolean;
   ) => {;
     const root = document && document.documentElement;
-
     if (highContrast) {;
       root && root.classList.add('high-contrast');
     } else {;
       root && root.classList.remove('high-contrast');
     }
-
     root && root.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large');
     root && root.classList.add(`font-${fontSizeValue}`);
-
     if (reducedMotionValue) {;
       root && root.classList.add('reduced-motion');
     } else {;
       root && root.classList.remove('reduced-motion');
     }
   };
-
   const toggleHighContrast = () => {;
 
     const newValue = !isHighContrast;
@@ -348,7 +329,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
 
   };
-
   const changeFontSize = (newSize: string) => {;
 
     setFontSize(newSize);
@@ -383,15 +363,30 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 {size && size.charAt(0).toUpperCase()}
               </button>;
             ))}
-
-          </div>;
-        </div>;
-      </div>;
-=======
-
-
+          </div>
+        </div>
+      </div>
+      {/* Skip to main content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+      >
+        Skip to main content
+      </a>
+      {/* Screen reader only content */}
+      <div className="sr-only">
+        <h1>Zion Tech Group - Technology Solutions Provider</h1>
+        <p>
+          Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum
+          computing, blockchain infrastructure, and innovative development services.
+        </p>
+      </div>
+      {/* Main content */}
+      <div id="main-content">{children}</div>
+    </>
+  );
+}
 export default AccessibilityEnhancer;
-=======
 };
 
 
@@ -401,7 +396,6 @@ export default AccessibilityEnhancer;
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">;
         Skip to main content;
       </a>;
-
       {/* Screen reader only content */}
       <div className="sr-only">;
         <h1>Zion Tech Group - Technology Solutions Provider</h1>;
@@ -410,15 +404,15 @@ export default AccessibilityEnhancer;
           computing, blockchain infrastructure, and innovative development services.;
         </p>;
       </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Main content */}
       <div id="main-content">{children}</div>;
     </>;
   );
+
 }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default AccessibilityEnhancer;
-=======
+export default AccessibilityEnhancer;
 ;
   const toggleHighContrast = () =>: any {
     const new_value = !isHighContrast;
@@ -485,5 +479,5 @@ export default AccessibilityEnhancer;
 }
 ;
 export default AccessibilityEnhancer;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

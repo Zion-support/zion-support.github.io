@@ -1,9 +1,12 @@
 
-import React from './react';
-import { use_navigate  } from './react-router-dom';
-import { Button  } from '@/components / ui / button';
-import { ArrowLeft  } from './lucide-react';
+import React from 'react';
+import { useNavigate  } from 'react-router-dom';
+import { Button  } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
 interface ProjectHeaderProps {
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   title: string;
 }
 export /**
@@ -30,24 +33,25 @@ function ProjectHeader() {
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   title: string
 }
 
 export function ProjectHeader({ title }: ProjectHeaderProps) {;
   const navigate = useNavigate();
-
-
-=======
-import {useNavigate} from 'react-router-dom';
-import {Button} from '@/components/ui/button';
-import {ArrowLeft} from 'lucide-react';
+import React from 'react',;
+import { useNavigate } from 'react-router-dom',;
+import { Button } from '@/components/ui/button',;
+import { ArrowLeft } from 'lucide-react',;
 interface ProjectHeaderProps {;
   title: string;
 }
 
-export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
-  const navigate = useNavigate();
-
+export function ProjectHeader({ title }: ProjectHeaderProps) {
+  const navigate = useNavigate(),
+  
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">;
       <div className="flex items-center">;
@@ -72,9 +76,8 @@ export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
         </h1>
       </div>
     </div>
-
+  );
+}
   )
 }
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

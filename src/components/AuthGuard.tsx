@@ -1,4 +1,6 @@
-const redirectTo = options?.redirectTo |'/login'
+
+
+      const redirectTo = options?.redirectTo |'/login'
       const returnUrl = options?.returnUrl |router.asPath
           if (!requireAuth({ showToast: false })) return false
     const userRoles = user?.role ? [user.role] : []
@@ -7,7 +9,7 @@ const redirectTo = options?.redirectTo |'/login'
     checkPermission
     isAuthenticated
     user
-
+<<<<<<< HEAD
 
 
       const redirectTo = options?.redirectTo || '/login';
@@ -27,6 +29,8 @@ const redirectTo = options?.redirectTo |'/login'
     user;
     isLoading}
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -44,3 +48,6 @@ const redirectTo = options?.redirectTo |'/login'
     is_loading}
 }
 ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

@@ -1,20 +1,17 @@
 
-
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-const UiUxDesignChat: NextPage = () => {;
-  return (
-    <div>;
-      <Head>;
-        <title>UiUxDesignChat - Zion Tech Solutions</title>;
-        <meta name="description" content="UiUxDesignChat blog post" />{" "}
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const UiUxDesignChat: NextPage = () => {
   return (
     <div>
       <Head>
+=======
 
       </Head>;
 
@@ -25,36 +22,11 @@ const UiUxDesignChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default UiUxDesignChat;
-
-
-=======
+<<<<<<< HEAD
 
         <title>UiUxDesignChat - Zion Tech Solutions</title>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import type { NextPage } from './next';
-import Head from './next / head';
-import Link from './next / link';
-const UiUxDesignChat: NextPage = () => {
-  return (
-    <div>;
-      <Head>;
-        <title > UiUxDesignChat - Zion Tech Solutions</title>;
-        <meta name="description" content="UiUxDesignChat blog post" />{" "}
-      </Head>;
-      <main>;
-        <h1 > UiUxDesignChat</h1>;
-        <p > Blog content coming soon...</p>;
-        <a href="/blog">Back to Blog</a>;
-      </main>;
-    </div>);
-}
-;
-export default UiUxDesignChat;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        <title>UiUxDesignChat - Zion Tech Solutions</title>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

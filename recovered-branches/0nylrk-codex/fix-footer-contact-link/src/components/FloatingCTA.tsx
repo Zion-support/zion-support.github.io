@@ -1,34 +1,13 @@
 
-
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
-
-export function FloatingCTA() {
 
   const [isVisible, setIsVisible] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
 
-
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
-import { useState, useEffect } from "react",
-import { X } from "lucide-react",
-export function FloatingCTA() {
-  const [isVisible, setIsVisible] = useState(false),
-  const [isClosed, setIsClosed] = useState(false),
-
-
   useEffect(() => {
 
     const handleScroll = () => {
-
-      const scrollPosition = window.scrollY,
-      const threshold = 600, // Show CTA after scrolling 600px
-
-
 
       if (scrollPosition > threshold && !isClosed) {
 =======
@@ -44,6 +23,7 @@ export function FloatingCTA() {
       } else {;
         setIsVisible(false);
       }
+=======
 
     };
 
@@ -61,23 +41,6 @@ export function FloatingCTA() {
   if (!isVisible) return null;
 
   return (
-=======
-
-    },
-
-    window.addEventListener("scroll", handleScroll),
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [isClosed]),
-
-  const handleClose = () => {
-    setIsClosed(true),
-    setIsVisible(false)
-  },
-
-  if (!isVisible) return null,
-
 
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
@@ -87,15 +50,15 @@ export function FloatingCTA() {
           <p className="text-zion-slate-light text-sm">Register today to access all features!</p>
         </div>
         <div className="flex items-center gap-2">
-          <Button 
-            variant="default" 
-            size="sm" 
+          <Button
+            variant="default"
+            size="sm"
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap"
             asChild
           >
             <Link to="/signup">Register Now</Link>
           </Button>
-          <button 
+          <button
             onClick={handleClose}
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close"
@@ -105,6 +68,7 @@ export function FloatingCTA() {
         </div>
       </div>
     </div>
+=======
 
   )
 import { Button } from "@/components/ui/button",;
@@ -233,9 +197,8 @@ if (return null) {
     </div>);
 
 }
-=======
-}
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

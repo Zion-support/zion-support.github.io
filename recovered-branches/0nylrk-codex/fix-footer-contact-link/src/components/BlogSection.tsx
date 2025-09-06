@@ -1,47 +1,26 @@
 
+=======
 
 import { GradientHeading } from "./GradientHeading";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "./ui/button";
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { Link } from "react-router-dom";
 import { BLOG_POSTS } from "@/data/blog-posts";
 // Get the 3 most recent blog posts
 
 const recentPosts = [...BLOG_POSTS]
   .sort((a, b) => {
-=======
-import React from 'react';
-import { GradientHeading } from "./GradientHeading";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "./ui/button";
-import { Link } from "react-router-dom";
-import { BLOG_POSTS } from "@/data/blog-posts";
-// Get the 3 most recent blog posts;
-const recentPosts = [...BLOG_POSTS];
-  .sort((a, b) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
-      new Date(b && b.publishedDate).getTime() - new Date(a && a.publishedDate).getTime();
+      new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
     );
-  });
+  })
   .slice(0, 3);
 
-
-
-import { GradientHeading } from "./GradientHeading",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import { Button } from "./ui/button",
-import { Link } from "react-router-dom",
-import { BLOG_POSTS } from "@/data/blog-posts",
-// Get the 3 most recent blog posts
-const recentPosts = [...BLOG_POSTS].sort((a, b) => {
-  return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
-}).slice(0, 3),
-
-
-
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             className="mt-4 md:mt-0 border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
             asChild
           >
@@ -53,26 +32,8 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
 
 
 =======
-            <Card key={post.id} className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 overflow-hidden">
-              <div className="h-48 bg-zion-blue-dark relative overflow-hidden">
-                <img 
-                  src={post.featuredImage}
-                  alt={post.title}
-                  className="object-cover w-full h-full opacity-60 hover: opacity-80 transition-opacity duration-300"
-                  loading="lazy"
-
-                  onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
-                    const target = e.currentTarget as HTMLImageElement,
-
-=======
-                    e: React.SyntheticEvent<HTMLImageElement, Event>,
-                  ) => {;
-                    const target = e.currentTarget as HTMLImageElement;
-=======
-                  onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
-                    const target = e.currentTarget as HTMLImageElement,
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     target.src =
                       "https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
                   }}
@@ -88,8 +49,8 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
                 <p className="text-zion-slate-light line-clamp-2">{post.excerpt}</p>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                <Button 
-                  variant="link" 
+                <Button
+                  variant="link"
                   className="text-zion-cyan p-0 hover:text-zion-purple"
                   asChild
                 >
@@ -97,6 +58,7 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
                 </Button>
               </CardFooter>
             </Card>
+=======
 
 import { GradientHeading } from "./GradientHeading",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
@@ -276,9 +238,8 @@ function BlogSection() {
     </section>);
 
 }
-=======
-}
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

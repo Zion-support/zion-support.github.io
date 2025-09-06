@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { ProfileData } from "@/types/profile",;
 import { TalentProfile } from "@/types/talent",;
 ;
@@ -8,6 +10,7 @@ export function convertProfileToTalentProfile(profile:ProfileData | any):TalentP
   // If this is already a TalentProfile, just return it;
   if (profile.professional_title !== undefined) {;
     return profile,;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
   ;
   // Convert ProfileData to TalentProfile;
@@ -30,12 +33,12 @@ export function convertProfileToTalentProfile(profile:ProfileData | any):TalentP
   },; export function convertProfileToTalentProfile (profile: ProfileData | any) : TalentProfile {
   //Handle both ProfileData and existing TalentProfile inputs //Convert ProfileData to TalentProfile return {
   id: profile.id, user id: profile.id, full name: profile.name, professional title: profile.title, bio: profile.bio || '', summary: profile.bio?.substring (0, 150), profile picture url: profile.avatarUrl, years experience: 3, // Default value skills: profile.skills?.map ( (skill: {
-  name: string 
+  name: string
 }) => skill.name) || [];
 availability type: profile.availability?.status === 'available'? 'full time': profile.availability?.status === 'limited'? 'part time': 'unavailable';
 timezone: 'UTC';
 hourly rate: profile.hourlyRate || 0;
 rating count: profile.reviewCount || 0;
-average rating: profile.rating || 0 
+average rating: profile.rating || 0
 }
 }

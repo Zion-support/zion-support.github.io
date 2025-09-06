@@ -49,4 +49,5 @@ const { execSync } = require('child_process')
         "type"
         "message"
     console.log('\n "Recommendations")
-    console.error(' Automation suite "failed")
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

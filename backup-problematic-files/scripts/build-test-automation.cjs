@@ -20,7 +20,8 @@ class BuildTestAutomation {}
     const timestamp = new Date().toISOString(;);
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
-    
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     this.report.steps.push({})
       timestamp,
       type,
@@ -30,7 +31,7 @@ class BuildTestAutomation {}
     try {}
       this.log(`"Starting": ${description}`);
       const output = execSync(command, { })
-        "encoding": 'utf8', 
+        "encoding": 'utf8',
         "cwd": '/workspace',
         "stdio": 'pipe'
       };);
@@ -132,4 +133,5 @@ if ( {})
      {}
   const automation = new BuildTestAutomation}(;);
   automation.run().catch(console.error)};
-module.exports = BuildTestAutomation;
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

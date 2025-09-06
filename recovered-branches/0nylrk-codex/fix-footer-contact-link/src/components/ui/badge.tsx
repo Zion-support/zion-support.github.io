@@ -1,47 +1,11 @@
 
-import * as React from &quot;react & quot;
-import { cn } from &quot;@/lib / utils & quot;
-=======
-
-
-import * as React from "react"
-import { cn } from "@/lib/utils"
-
-import { badgeVariants } from "@/components/ui/badge-variants"
-
 
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLSpanElement> {
 
-  variant?:
-    | "default"
-    | "secondary"
-    | "destructive"
-    | "outline"
-    | "success"
-    | "warning"
-    | "info"
-
-}
-
-
-;
-import { badge_variants } from &quot;@/components / ui / badge - variants & quot;
-;
-export interface BadgeProps;
-  extends React.HTMLAttributes < HTMLSpanElement> {
-  variant?:;
-    | &quot;default & quot;
-    | &quot;secondary & quot;
-    | &quot;destructive & quot;
-    | &quot;outline & quot;
-    | &quot;success & quot;
-    | &quot;warning & quot;
-    | &quot;info & quot;
 }
 
 ;
-
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

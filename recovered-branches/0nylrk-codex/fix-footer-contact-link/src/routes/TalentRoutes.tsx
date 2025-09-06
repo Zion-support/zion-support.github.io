@@ -1,10 +1,65 @@
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "../components/ProtectedRoute";
+import TalentDirectory from "../pages/TalentDirectory";
+import TalentsPage from "../pages/TalentsPage";
+import TalentProfilePage from "../pages/TalentProfilePage";
+import SavedTalentsPage from "../pages/SavedTalentsPage";
+import CreateTalentProfile from "../pages/CreateTalentProfile";
+import ProfilePage from "../pages/ProfilePage";
+import { Route, Routes } from "react-router-dom",
+import { ProtectedRoute } from "../components/ProtectedRoute",
+import TalentDirectory from "../pages/TalentDirectory",
+import TalentsPage from "../pages/TalentsPage",
+import TalentProfilePage from "../pages/TalentProfilePage",
+import SavedTalentsPage from "../pages/SavedTalentsPage",
+import CreateTalentProfile from "../pages/CreateTalentProfile";
+import ProfilePage from "../pages/ProfilePage";
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import CreateTalentProfile from "../pages/CreateTalentProfile",
+import ProfilePage from "../pages/ProfilePage",
 const TalentRoutes = () => {
+  return (
+    <Routes>
+      {/* Talent Routes */}
+      <Route path="/talent" element={<TalentDirectory />} />
+      <Route path="/talents" element={<TalentsPage />} />
+      <Route path="/talent/:id" element={<TalentProfilePage />} />
+      <Route
+        path="/saved-talents"
+        element={
+          <ProtectedRoute>
+            <SavedTalentsPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/create-talent-profile"
+        element={
+          <ProtectedRoute>
+            <CreateTalentProfile />
+          </ProtectedRoute>
+        }
+      />
+      <Route path="/profile/:id" element={<ProfilePage />} />
+    </Routes>
+  )
+}
+export default TalentRoutes;
+
+},
+
+export default TalentRoutes,
+import { Route, Routes } from "react-router-dom",;
+import { ProtectedRoute } from "../components/ProtectedRoute",;
+import TalentDirectory from "../pages/TalentDirectory",;
+import TalentsPage from "../pages/TalentsPage",;
+import TalentProfilePage from "../pages/TalentProfilePage",;
+import SavedTalentsPage from "../pages/SavedTalentsPage",;
+import CreateTalentProfile from "../pages/CreateTalentProfile",;
+import ProfilePage from "../pages/ProfilePage",;
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const TalentRoutes = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
@@ -33,51 +88,13 @@ const TalentRoutes = () => {;
       <Route path="/profile/:id" element={<ProfilePage />} />;
     </Routes>;
   );
-};
+},;
 
-
-=======
-import { Route, Routes } from './react-router-dom';
-import { ProtectedRoute } from '../components / ProtectedRoute';
-import TalentDirectory from "../pages / TalentDirectory";
-import TalentsPage from "../pages / TalentsPage";
-import TalentProfilePage from "../pages / TalentProfilePage";
-import SavedTalentsPage from "../pages / SavedTalentsPage";
-import CreateTalentProfile from "../pages / CreateTalentProfile";
-import ProfilePage from "../pages / ProfilePage";
-const TalentRoutes = () =>: any {
-  return (
-    <Routes>;
-      {/* Talent Routes */}
-      <Route path="/talent" element={<TalentDirectory />} />;
-      <Route path="/talents" element={<TalentsPage />} />;
-      <Route path="/talent/:id" element={<TalentProfilePage />} />;
-      <Route;
-        path="/saved - talents";
-        element={
-          <ProtectedRoute>;
-            <SavedTalentsPage />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/create - talent - profile";
-        element={
-          <ProtectedRoute>;
-            <CreateTalentProfile />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route path="/profile/:id" element={<ProfilePage />} />;
-    </Routes>);
-}
-;
-=======
-
-},
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default TalentRoutes;
 export default TalentRoutes;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default TalentRoutes;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

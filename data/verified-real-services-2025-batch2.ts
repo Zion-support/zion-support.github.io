@@ -1,5 +1,8 @@
 
-
+=======
+export interface VerifiedRealService2025Batch2 {;
+export interface VerifiedRealService2025Batch2 {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   name: string;
   tagline: string;
@@ -8,16 +11,13 @@
   features: string[];
   link: string;
   category: string;
-  real_implementation: boolean;
-  contact_info: {
+  realImplementation: boolean;
+  contactInfo: {
     mobile: string;
     email: string;
 
 
-    address: string;
-  };
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     address: string;
   }
@@ -25,7 +25,6 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   {
 
 =======
-    address: string;
   }
 ;
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [;
@@ -55,9 +54,11 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   },
 ];      mobile: "+1 302 464 0950";
 
-
-=======
-
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
     id: "ai-quality-assurance",
     name: "AI Quality Assurance Platform",
     tagline: "Automated testing and quality control",
@@ -76,6 +77,10 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     contactInfo: {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -91,12 +96,9 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     address: string
   }
 }
-
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   {
-    id: "ai-quality-assurance", name: "AI Quality Assurance Platform",
-    tagline: "Automated testing and quality control", price: "$79/month",
-    description: "AI-powered quality assurance platform that automates testing and ensures software quality.",
+
     features: [
       "Automated testing";
       "AI defect detection";
@@ -113,12 +115,10 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     }
   }
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-      email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,11 +1,18 @@
 
-
+import { jsPDF  } from 'jspdf';
+import { Skill  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addSkillsSection(
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addSkillsSection(;
+=======
 
 
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   doc: jsPDF;
   skills: Skill[];
   colors: PdfThemeColors;
@@ -37,61 +44,11 @@ export function addSkillsSection(;
     return acc
   }, {} as Record<string, typeof skills>);
 
+    yPos += (skillLines.length * 5) + 10
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   return yPos + 5
-=======
-import {jsPDF} from 'jspdf';
-import {Skill} from '@/types / resume';
-import {PdfThemeColors} from '../theme_config';
-export function addSkillsSection (
-  doc: jsPDF;
-  skills: Skill[];
-  colors: PdfThemeColors;
-  start_y: number): number {
-  // Check condition
-if (return start_y) {
-  $2
-}
-  let y_pos = start_y;
-;
-  doc.setFontSize (16);
-  doc.setTextColor (colors.heading),
-  doc.text ('Skills', 20, y_pos);
-  y_pos += 8;
-;
-  doc.setDrawColor (colors.accent);
-  doc.line (20, y_pos, 60, y_pos);
-  y_pos += 8;
-;
-  // Group skills by category;
-  const skillsByCategory = skills.reduce ((acc, skill) => {
-    const category = skill.category || 'Other';
-    // Check condition
-if ( {) {
-  $2
-}
-      acc[category] = [];
-    }
-    acc[category].push (skill);
-    return acc;
-  }, {} as Record < string, typeof skills>);
-;
-  doc.setFontSize (11);
-  doc.setTextColor (colors.text);
-;
-  for (const [category, category_skills] of Object.entries (skillsByCategory)) {
-    doc.set_font ('helveticabold');
-    doc.text (category, 20, y_pos);
-    doc.set_font ('helveticanormal');
-;
-    const skills_text = category_skills.map (skill => skill.name).join (', ');
-    const skill_lines = doc.splitTextToSize (skills_text, 160);
-    doc.text (skill_lines, 30, y_pos + 5);
-;
-    y_pos += (skill_lines.length * 5) + 10;
-  }
-  return y_pos + 5;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

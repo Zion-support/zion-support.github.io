@@ -1,15 +1,16 @@
 
-
+import { ReactNode } from 'react';
 import {ReactNode} from 'react';
-
-
 // Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 import {ReactNode} from 'react';
-// Extend FeatureCardProps to include key for mapping;
-declare module '@/components / FeatureCard' {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+// Extend FeatureCardProps to include key for mapping
+declare module '@/components/FeatureCard' {
   export interface FeatureCardProps {
     title: string;
     description: string;
@@ -33,28 +34,86 @@ declare module '@/components / ListingScoreCard' {
     ai_score?: number;
     rating?: number;
 
-    review_count?: number;
-    key?: string | number,
-    variant?: string;
+    key?: string | number
+
+    variant?: string
+=======
   }
 }
-// Extend ChatMessageProps to include key for mapping;
-declare module '@/components / ChatAssistant / ChatMessage' {
-  export interface ChatMessageProps {
+// Extend ChatMessageProps to include key for mapping
+declare module '@/components/ChatAssistant/ChatMessage' {
+  export interface ChatMessageProps {;
     role: 'user' | 'assistant';
     message: string;
-    timestamp?: Date,
-    key?: string | number;
+
+    timestamp?: Date
+
+    key?: string | number
   }
 }
-// Extend ProductListingCardProps to include key for mapping;
-declare module '@/components / ProductListingCard' {
-  export interface ProductListingCardProps {
+// Extend ProductListingCardProps to include key for mapping
+declare module '@/components/ProductListingCard' {
+  export interface ProductListingCardProps {;
     listing: any;
     view: any;
-    onRequestQuote: (listing_id: string) => void,
-    key?: string | number;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    onRequestQuote: (listingId: string) => void
+
+    key?: string | number
+import { ReactNode } from 'react',;
+// Extend FeatureCardProps to include key for mapping;
+declare module '@/components/FeatureCard' {;
+  export interface FeatureCardProps {;
+    title: string,;
+    description: string,;
+    icon: ReactNode,;
+    className?: string,;
+    key?: number | string;
+  }
+}
+;
+// Extend ListingScoreCardProps to include key for mapping;
+declare module '@/components/ListingScoreCard' {;
+  export interface ListingScoreCardProps {;
+    title: string,;
+    description: string,;
+    category: string,;
+    image?: string,;
+    tags?: string[],;
+    author?: string,;
+    authorImage?: string,;
+    aiScore?: number,;
+    rating?: number,;
+    reviewCount?: number,;
+    key?: string | number,;
+    variant?: string;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  }
+}
+// Extend ChatMessageProps to include key for mapping
+declare module '@/components/ChatAssistant/ChatMessage' {
+  export interface ChatMessageProps {;
+    role: 'user' | 'assistant';
+    message: string;
+
+    timestamp?: Date
+
+    key?: string | number
+  }
+}
+// Extend ProductListingCardProps to include key for mapping
+declare module '@/components/ProductListingCard' {
+  export interface ProductListingCardProps {;
+    listing: any;
+    view: any;
+<<<<<<< HEAD
+
+    onRequestQuote: (listingId: string) => void
+
+    key?: string | number
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }

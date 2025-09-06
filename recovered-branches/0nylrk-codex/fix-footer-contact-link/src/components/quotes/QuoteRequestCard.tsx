@@ -1,18 +1,16 @@
 
-
+import React from "react";
+import { format } from "date-fns";
 import {format} from "date-fns";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
 import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
-
 =======
-import React from "react",
-import { format } from "date-fns",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Card;
   CardContent;
   CardHeader;
@@ -22,70 +20,19 @@ import {
 import { Button } from "@/components/ui/button",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 
-import React from './react';
-import { format } from './date - fns';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { QuoteStatusBadge } from '@/components / quotes / QuoteStatusBadge';
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from './lucide-react';
-import type { QuoteRequest } from "@/types / quotes";
-type QuoteRequestCardProps = {
-  quote: QuoteRequest,
-  onViewDetails: (quote: QuoteRequest) => void,
-  onMarkAsResponded?: (id: string) => void,
-  onToggleArchive: (id: string, is_archived: boolean) => void;
-}
-;
-export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
-  quote;
-  onViewDetails;
-  onMarkAsResponded,
-  onToggleArchive;
-
-}) => {
-  // Format date for display;
-  const format_date = (date_string: string) =>: any {
-    try {
-      return format (new Date (date_string), 'PP');
-    } catch (e) {
-
-type QuoteRequestCardProps = {;
-  quote: QuoteRequest,;
-  onViewDetails: (quote: QuoteRequest) => void,;
-  onMarkAsResponded?: (id: string) => void,;
-  onToggleArchive: (id: string, isArchived: boolean) => void;
-};
-
-export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
-  quote;
-  onViewDetails;
-  onMarkAsResponded,;
-  onToggleArchive;
-}) => {;
-  // Format date for display;
-  const formatDate = (dateString: string) => {;
-    try {;
-      return format(new Date(dateString), 'PP');
-    } catch (e) {;
-      return dateString;
-
-    }
-  }
-=======
-
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",
-import type { QuoteRequest } from "@/types/quotes",
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
   onMarkAsResponded?: (id: string) => void,
   onToggleArchive: (id: string, isArchived: boolean) => void
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 
+  onMarkAsResponded,
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onToggleArchive
 }) => {
   // Format date for display
@@ -96,10 +43,7 @@ type QuoteRequestCardProps = {
       return dateString
     }
 
-  },
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
 
     <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
@@ -155,9 +99,15 @@ type QuoteRequestCardProps = {
                 <RefreshCw className="h-4 w-4" />
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
+              )}
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
 
-
-=======
 import React from "react",;
 import { format } from "date-fns",;
 import {;
@@ -229,6 +179,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           <div className="flex items-center">;
             {quote && quote.status !== 'responded' && onMarkAsResponded && (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <Button
                 variant="ghost"
                 size="sm"
@@ -317,15 +268,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           </div>;
         </div>;
       </CardContent>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </Card>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-    </Card>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

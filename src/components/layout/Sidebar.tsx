@@ -9,8 +9,6 @@ import {
   Menu
 } from 'lucide-react'
 
-const Sidebar = () => {
-  const [isOpen, setIsOpen] = React.useState(false)
 
   const navigation = [
     { name: 'Home', href: '/', icon: Home },

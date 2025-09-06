@@ -1,19 +1,42 @@
-
-
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-export const emergingTechServices2026: EmergingTechService2026[] = [
-  // Quantum Computing Services
-  {
-
-
+export interface EmergingTechService2026 {
+export interface EmergingTechService2026 {;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
 ];
+export const getEmergingTechServices2026ByCategory = (category: string) => {
+  return emergingTechServices2026.filter(
+    service => service.category === category;
+  );
 
-  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
-};
-
-
+  return emergingTechServices2026.filter(service => service.popular);
+}
 export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
@@ -26,8 +49,6 @@ export const getEmergingTechServices2026ByPriceRange = (
 
   })
 }
-
-=======
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms', price: '$999',
     period: '/month',
@@ -53,7 +74,6 @@ export const getEmergingTechServices2026ByPriceRange = (
     rating: 4.9,
     reviews: 18
   };
-
   // Blockchain & Web3 Solutions
   {
     id: 'ai-blockchain-intelligence-platform', name: 'AI Blockchain Intelligence Platform',
@@ -81,7 +101,6 @@ export const getEmergingTechServices2026ByPriceRange = (
     rating: 4.7,
     reviews: 89
   };
-
   // Internet of Things (IoT) Platform
   {
     id: 'ai-iot-intelligence-platform', name: 'AI IoT Intelligence Platform',
@@ -109,7 +128,6 @@ export const getEmergingTechServices2026ByPriceRange = (
     rating: 4.6,
     reviews: 45
   };
-
   // Edge Computing & 5G Services
   {
     id: 'edge-computing-optimization-platform', name: 'Edge Computing Optimization Platform',
@@ -137,7 +155,6 @@ export const getEmergingTechServices2026ByPriceRange = (
     rating: 4.5,
     reviews: 23
   };
-
   // Augmented Reality (AR) & Virtual Reality (VR)
   {
     id: 'ai-ar-vr-development-platform', name: 'AI AR/VR Development Platform',
@@ -165,7 +182,6 @@ export const getEmergingTechServices2026ByPriceRange = (
     rating: 4.4,
     reviews: 34
   };
-
   // Robotics & Automation Services
   {
     id: 'ai-robotics-automation-platform', name: 'AI Robotics & Automation Platform',
@@ -193,7 +209,6 @@ export const getEmergingTechServices2026ByPriceRange = (
     rating: 4.3,
     reviews: 18
   };
-
   // Digital Twin & Simulation
   {
     id: 'ai-digital-twin-platform', name: 'AI Digital Twin Platform',
@@ -222,15 +237,12 @@ export const getEmergingTechServices2026ByPriceRange = (
     reviews: 29
   }
 ];
-
 export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(service => service.category === category)
 };
-
 export const getPopularEmergingTechServices2026 = () => {
   return emergingTechServices2026.filter(service => service.popular)
 };
-
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
@@ -238,34 +250,11 @@ export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPri
 
   })
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-;
-export const getEmergingTechServices2026ByCategory = (category: string) =>: any {
-  return emergingTechServices2026.filter (
-    service => service.category === category);
-}
-;
-export const getPopularEmergingTechServices2026 = () =>: any {
-  return emergingTechServices2026.filter (service => service.popular);
-}
-;
-export const getEmergingTechServices2026ByPriceRange = (
-  min_price: number,
-  max_price: number) =>: any {
-  return emergingTechServices2026.filter (service => {
-    const price = parse_int (service.price.replace ('$', ''));
-    return price >= min_price && price <= max_price;
-  });
-}    return price >= min_price && price <= max_price;
-  });
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-export interface EmergingTechService2026 {;
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

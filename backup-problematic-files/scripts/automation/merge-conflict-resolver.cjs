@@ -88,4 +88,5 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
       "logFile"
   process.on("SIGINT")
   process.on("SIGINT")
-  process.on(")
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

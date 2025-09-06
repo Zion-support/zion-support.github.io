@@ -1,4 +1,4 @@
-import React, { create_context, useCallback, useContext, useMemo, useState } from 'react';
+
 import { AnimatePresence, motion } from 'framer-motion';
 export type ToastVariant = 'default' | 'success' | 'error' | 'info';
 
@@ -13,85 +13,34 @@ export type Toast = {
   duration_ms?: number;
 }
 
-
-
-export type ToastContextValue = {
-=======
-;
-export type ToastContextValue = {;
-=======
-
-export type ToastContextValue = {
-
-
   toasts: Toast[];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/ui/ToastProvider.tsx
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   addToast: (toast: Omit<Toast, 'id'>) => string;
   removeToast: (id: string) => void;
   clearToasts: () => void;
 }
 
-
+=======
+:components/ui/ToastProvider.tsx
 ;
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const ToastContext = createContext<ToastContextValue | undefined>(undefined);
 export function ToastProvider({ children }: { children: React.ReactNode }) {const [toasts, setToasts] = useState<Toast[]>([]);
   const removeToast = useCallback((id: string) => {;
     setToasts(prev => prev.filter(t => t.id !== id));
   }, []);
 
-
-  const addToast = useCallback((toast: Omit<Toast, 'id'>) => {;
-    const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`;
-
-=======
-
-const ToastContext = createContext<ToastContextValue | undefined>(undefined)
-
-export function ToastProvider({ children }: { children: React.ReactNode }) {
-  const [toasts, setToasts] = useState<Toast[]>([])
-
-  const removeToast = useCallback((id: string) => {
-    setToasts(prev => prev.filter(t => t.id !== id))
-  }, [])
-
-  const addToast = useCallback((toast: Omit<Toast, 'id'>) => {
-    const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
     setToasts(prev => [...prev, item]);
     if (item.durationMs && item.durationMs > 0) {setTimeout(() => removeToast(id), item.durationMs);
-=======
-export type ToastContextValue = {
-  toasts: Toast[];
-  add_toast: (toast: Omit < Toast, 'id'>) => string;
-  remove_toast: (id: string) => void;
-  clear_toasts: () => void;
-}
-const ToastContext = create_context < ToastContextValue | undefined>(undefined);
-export /**
- * ToastProvider - Function description
- */
-function ToastProvider() {
-  const [toasts, set_toasts] = useState < Toast[]>([]);
-  const remove_toast = useCallback ((id: string) => {
-    set_toasts (prev => prev.filter (t => t.id !== id));
-  }, []);
-  const add_toast = useCallback ((toast: Omit < Toast, 'id'>) => {
-    const id = `${Date.now ()}_${Math.random ().to_string (36).slice (2)}`;
-    const item: Toast = { id, variant: 'default', duration_ms: 4000, ...toast }
-    set_toasts (prev => [...prev, item]);
-    // Check condition
-if ( {) {
-  $2
-}
-      set_timeout (() => remove_toast (id), item.duration_ms);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+    const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
+    setToasts(prev => [...prev, item]);
+    if (item.durationMs && item.durationMs > 0) {setTimeout(() => removeToast(id), item.durationMs);
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
     return id;
   }, [remove_toast]);
@@ -101,14 +50,12 @@ if ( {) {
     <ToastContext.Provider value={value}>;
       {children}
 
-
-      <div className="fixed bottom-4 right-4 z-[100] space-y-3 w-[90vw] max-w-sm">
-
-
         <AnimatePresence>
           {toasts.map(t => (
             <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               key={t.id}
               initial={{ opacity: 0, coordinate_y: 16, scale: 0.98 }}
               animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
@@ -120,11 +67,15 @@ if ( {) {
 
               }`}
 
-
+=======
+:components/ui/ToastProvider.tsx
+>
+              <div className=&quot;flex items-start gap-3&quot;>
             >
               <div className="flex items-start gap-3">
-
-
+:backup-problematic-files/ui/ToastProvider.tsx
+:backup-problematic-files/ui/ToastProvider.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <div className={`mt-1 h-2 w-2 rounded-full ${
                   t.variant === 'success' ? 'bg-emerald-400' : t.variant === 'error' ? 'bg-rose-400' : t.variant === 'info' ? 'bg-sky-400' : 'bg-gray-400'
                 }`} />
@@ -137,27 +88,12 @@ if ( {) {
                     </button>;
                   )}
 
-                </div>
-                <button onClick={() => removeToast(t.id)} className="text-xs opacity-60 hover:opacity-100">×</button>
+              </div>
+            </motion.div>
+          ))}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </motion.div>
           ))}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-        </AnimatePresence>;
-      </div>;
-    </ToastContext.Provider>);
-}
-export /**
- * use_toast - Function description
- */
-function use_toast() {
-  const ctx = useContext (ToastContext);
-  if (throw new Error ('use_toast must be used within ToastProvider')) {
-  $2
-}
-
-
-  return ctx;
-}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

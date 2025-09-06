@@ -1,7 +1,23 @@
-import React from 'react';
-
-interface CookiesProps {
-  className?: string;
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
 }
-import React from 'react'; import Head from 'next/head'; export default function Cookies() { return ( <> <Head> <title>Cookies | Zion Tech Group</title> <meta name="description" content="Cookies page for Zion Tech Group." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Cookies</h1> <p className="text-xl text-center text-gray-600 mb-12"> Cookies information for Zion Tech Group. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Contact Us </a> </div> </div> </div> </> )}
-import React from 'react'; import Head from 'next/head'; export default function Cookies() { return ( <> <Head> <title>Cookies | Zion Tech Group</title> <meta name="description" content="Cookies page for Zion Tech Group." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Cookies</h1> <p className="text-xl text-center text-gray-600 mb-12"> Cookies information for Zion Tech Group. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Contact Us </a> </div> </div> </div> </> )}
+import React from 'react';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

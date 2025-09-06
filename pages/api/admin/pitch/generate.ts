@@ -1,41 +1,68 @@
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 import OpenAI from "openai";
 const client = new OpenAI({
-
-  apiKey: process && process.env.OPENAI_API_KEY || process && process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY |process.env.NEXT_PUBLIC_OPENAI_API_KEY
 
 });
 export default async function handler(
-
-
+  req: NextApiRequest
+  res: NextApiResponse
+) {
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+  const { allowed } = await ensureAdminFromApi(req);
+  if (!allowed) return res.status(403).json({ error: "Forbidden" });
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method Not Allowed" });
+  const { operatorPrompt, inputs, metrics } = req.body |{}
+  const seed = [
+    "Problem & Opportunity"
+    "Solution & Product"
+    "Market Size (TAM/SAM/SOM)"
+    "Traction & Metrics"
+    "Business Model"
+    "Go-To-Market"
+    "Team"
+    "Roadmap"
+    "Token Strategy"
+    "Ask & Call to Action"
+  ];
+  try {
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { allowed } = await ensureAdminFromApi(req);
 
   if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
-
-    "Problem & Opportunity",
-    "Solution & Product",
-    "Market Size (TAM / SAM / SOM)",
-    "Traction & Metrics",
-    "Business Model",
-    "Go - To - Market",
-    "Team",
-    "Roadmap",
-    "Token Strategy",
-    "Ask & Call to Action",
+  if (req && req.method !== "POST")
+    return res && res.status(405).json({ error: "Method Not Allowed" });
+  const { operatorPrompt, inputs, metrics } = req && req.body || {};
+  const seed = [
+    "Problem & Opportunity"
+    "Solution & Product"
+    "Market Size (TAM/SAM/SOM)"
+    "Traction & Metrics"
+    "Business Model"
+    "Go-To-Market"
+    "Team"
+    "Roadmap"
+    "Token Strategy"
+    "Ask & Call to Action"
   ];
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
-Operator Prompt: ${operator_prompt}
+
+  try {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+    const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
+Operator Prompt: ${operatorPrompt}
 Company Mission: ${inputs?.mission}
 
 Key Metrics: ${JSON && JSON.stringify(metrics)}
@@ -77,56 +104,9 @@ function extractSection(body: string, title: string): string {
 }
 
 =======
-  const lines = body.split('\n');
-  const matchIdx = lines.findIndex((l) => l.toLowerCase().includes(title.toLowerCase()));
-  if (matchIdx >= 0) {
-    const snippet = lines.slice(matchIdx + 1, matchIdx + 12).join('\n');
-    return snippet.trim()
-  }
-  return ''
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-      content = chat.choices?.[0]?.message?.content || "";
-;
-    } catch (err) {
-      content = "";
-    }
-    const slides = seed.map ((title, idx) => ({
-      id: `${idx + 1}`,
-      title,
-      content: extract_section (content, title),
-    }));
-    const version = `v${new Date ().toISOString ()}`;
-    res.status (200).json ({ slides, version });
-  } catch (e: any) {
-    res.status (500).json ({ error: e?.message || "Generation failed" });
-  }
-}
-function extract_section (body: string, title: string): string {
-  // Check condition
-if (return "") {
-  $2
-}
-  // naive split by headings;
-  const lines = body.split ("\n");
-  const match_idx = lines.find_index ((l) =>;
-    l.toLowerCase ().includes (title.toLowerCase ()),
-  );
-  // Check condition
-if ( {) {
-  $2
-}
-    const snippet = lines.slice (match_idx + 1, match_idx + 12).join ("\n");
-    return snippet.trim ();
-  }
-  return "";
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
@@ -139,7 +119,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 =======
 =======
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
@@ -177,7 +158,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

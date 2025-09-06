@@ -1,4 +1,5 @@
 
+=======
 // Content monitoring functionality;
 import { FraudFlag, FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -26,6 +27,7 @@ export const monitorContent = async (;
       r.includes('bypass');
     )) {;
       severity = 'dangerous',;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
     ;
     await flagContent(;
@@ -62,7 +64,7 @@ content;
 severity;
 analysis.reasons.join ();
 undefined //IP address would be added in a real implementation);
-//If this is a 'dangerous' flag, automatically hide content //This would be implemented in a real system with appropriate flags // Code to hide content would go here 
+//If this is a 'dangerous' flag, automatically hide content //This would be implemented in a real system with appropriate flags // Code to hide content would go here
 }
-}
-};
+<<<<<<< HEAD
+

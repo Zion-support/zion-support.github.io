@@ -1,12 +1,17 @@
 
-
-
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Sparkles, Loader2  } from 'lucide-react';
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
+=======
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface AIEnhancementButtonProps {
 
   currentContent: string
@@ -14,9 +19,11 @@ interface AIEnhancementButtonProps {
   context?: string;
   onEnhanced: (enhancedContent: string) => void
 
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  buttonText?: string;
+  className?: string
+}
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Sparkles, Loader2} from 'lucide-react';
@@ -24,75 +31,45 @@ import {Sparkles, Loader2} from 'lucide-react';
 export function AIEnhancementButton({;
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   currentContent;
   enhancementType;
   context;
   onEnhanced;
-
-  buttonText = "Enhance with AI";
-
-
-  const handleEnhance = async () => {;
-    if (!currentContent || currentContent && currentContent.trim().length < 10) {;
-
-      setError('Please enter at least some basic content before enhancing');
-      return;
-    }
-
-
-
-    setError(null);
-    const enhancedContent = await enhanceContent(;
-      currentContent;
-      enhancementType;
-      context;
-    );
-
-
-    if (enhancedContent) {;
-      onEnhanced(enhancedContent);
-    }
-  };
-
-
-=======
-
-=======
-import { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import { Sparkles, Loader2 } from 'lucide-react',;
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
-interface AIEnhancementButtonProps {;
-  currentContent: string,;
-  enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general',;
-  context?: string,;
-  onEnhanced: (enhancedContent: string) => void,;
-  buttonText?: string,;
-  className?: string;
-}
-
-export function AIEnhancementButton({
-  currentContent,
-  enhancementType,
-  context,
-  onEnhanced,
-  buttonText = "Enhance with AI",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   className
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useResumeEnhancer(),
   const [error, setError] = useState<string | null>(null),
-  
+
   const handleEnhance = async () => {
     if (!currentContent || currentContent.trim().length < 10) {
       setError('Please enter at least some basic content before enhancing'),
       return
     }
-
-
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    
+    setError(null);
+    const enhancedContent = await enhanceContent(
+      currentContent;
+      enhancementType;
+      context
+    );
+    
+    if (enhancedContent) {
+      onEnhanced(enhancedContent)
+    }
+  };
+;
+    setError(null),;
+    const enhancedContent = await enhanceContent(;
+      currentContent,;
+      enhancementType,;
+      context;
+    );
+    if (enhancedContent) {;
+      onEnhanced(enhancedContent);
+    }
+  },
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <Button
       type="button"
@@ -106,32 +83,13 @@ export function AIEnhancementButton({
       ) : (;
         <Sparkles className="h-3 w-3" />;
       )}
-
-      <span className="text-xs">{buttonText}</span>;
-    </Button>;
-  );
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+  )
 =======
-
-
+}
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
-interface AIEnhancementButtonProps {
-  current_content: string,
-  enhancement_type: 'summary' | 'work - description' | 'skill - categorization' | 'general',
-  context?: string;
-  on_enhanced: (enhanced_content: string) => void,
-  button_text?: string;
-  class_name?: string;
-}
-export /**
- * AIEnhancementButton - Function description
- */
-function AIEnhancementButton() {
-  const { enhance_content, is_enhancing } = useResumeEnhancer ();
-  const [error, set_error] = useState < string | null>(null);
-;
-
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

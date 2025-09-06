@@ -4,7 +4,7 @@ import { Menu, X, Search } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import SearchModal from './SearchModal';
 
-const Header: React.FC = () => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
@@ -52,7 +52,8 @@ const Header: React.FC = () => {
                 {item.name}
               </Link>
             ))}
-          </div>
+          </ul>
+        </nav>
 
           {/* Search Button */}
           <button
@@ -76,7 +77,9 @@ const Header: React.FC = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden ml-auto p-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
 

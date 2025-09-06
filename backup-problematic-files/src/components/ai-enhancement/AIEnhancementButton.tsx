@@ -1,4 +1,5 @@
 
+=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
@@ -91,22 +92,18 @@ export function AIEnhancementButton({;
           {isEnhancing ? (;
             <Loader2 className="h-4 w-4 mr-1 animate-spin" />;
           ) :(;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <RefreshCw className="h-4 w-4 mr-1" />;
           )}
           Regenerate;
         </Button>;
-        <Button;
-          type="button";
-          variant="ghost";
-          size="sm";
-          onClick={handleCancel}
-          className="text-gray-500 hover:text-gray-700 hover:bg-gray-100/20";
-        >;
+<<<<<<< HEAD
+
           <X className="h-4 w-4 mr-1" />;
           Cancel;
         </Button>;
       </div>;
-    );
+
   }
   ;
   return (;
@@ -114,43 +111,9 @@ export function AIEnhancementButton({;
       type="button";      variant={variant}
       size={size}
       className={`gap-1 ${className}`}
-      onClick={handleEnhance}
-      disabled={isEnhancing}
-    >;
-      {isEnhancing ? (;
-        <Loader2 className="h-4 w-4 animate-spin" />;
-      ) :(;
+
         <Sparkles className="h-4 w-4" />;
       )}
       <span className="text-xs">{buttonText}</span>;
     </Button>;
-  ),; ;
-}export function AIEnhancementButton ({;
-  options;
-onEnhanced;
-buttonText = "Enhance with AI";
-className;";
-variant = "ghost";";
-size = "sm";
-contentLength = 10 ;
-}: AIEnhancementButtonProps) {;
-  const {;
-  enhanceContent, isEnhancing ;
-}= useAIContentEnhancer ();
-const [showActions, setShowActions] = useState (false);
-const [generatedContent, setGeneratedContent] = useState<string | null> (null);
-if ( (!options.content || options.content.trim () .length < contentLength) && (!options.context || options.context.trim () .length < contentLength) ) {;
-  toast ({";
-  variant: "destructive" ;
-});
-return ;
-}
-}
-};";
-<Button type="button" variant="ghost" size="sm" onClick={;
-  handleAccept ";
-}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) ";
-}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) ";
-}return (<Button) : (<Sparkles className=" h-4 w-4" />) ;
-}</Button>) ;
-}"
+

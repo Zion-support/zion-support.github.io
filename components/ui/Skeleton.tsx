@@ -1,6 +1,8 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react';
+export type SkeletonProps = {
+  className?: string;
+}
+export type SkeletonProps = {;
 export default function Skeleton({ className = '' }: SkeletonProps) {
     >
       <div className='absolute inset-0 -translate-x-full animate-[shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent' />
@@ -11,67 +13,33 @@ export default function Skeleton({ className = '' }: SkeletonProps) {
 export type SkeletonProps = {;
   className?: string;
 };
-
 export default function Skeleton(): any ({ className = '' }: SkeletonProps) {;
-
     >;
       <div className='absolute inset-0 -translate-x-full animate-[shimmer_1 && shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent' />;
       <style jsx global>{`;
         @keyframes shimmer {;
           100% {;
-
-=======
-
           100% {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            transform: translateX(100%);
-          }        }
-      `}</style>;
-    </div>;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
   );
-=======
-  class_name?: string;
-}
-;
-export default /**
- * Skeleton - Function description
- */
-function Skeleton() {
-    >;
-      <div className='absolute inset - 0 -translate - x-full animate-[shimmer_1.2s_infinite] bg - gradient - to - r from - transparent via - white / 40 dark:via - white / 10 to - transparent' />;
-      <style jsx global>{`;
-        @keyframes shimmer {
-          100% {
-            transform: translate_x (100%);
-          }        }
-      `}</style>;
-    </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
-export type SkeletonProps = {;
+import React from "react";
+interface SkeletonProps {;
   className?: string;
-}
+  width?: string | number;
+  height?: string | number;
+  rounded?: boolean}
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
 
-export default function Skeleton(): any ({ className = '' }: SkeletonProps) {;
-
-  return (
-    <div className={`relative overflow-hidden rounded-md bg-gray-200/60 dark:bg-white/10 ${className}`}>;
-      <div className="absolute inset-0 -translate-x-full animate-[shimmer_1 && shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark: via-white/10 to-transparent" />;
-      <style jsx global>{`;
-        @keyframes shimmer {;
-          100% { transform: translateX(100%) }
-        }
-
-
-export const Skeleton: React.FC<SkeletonProps> = ({ ",;
-  className = ",;
-  width,;
-  height,;
-  rounded = false}) => {;
-  const style: React && React.CSSProperties = {}
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   ";
   if (width) style && style.width = typeof width === "number" ? "${width}px" : width,;
 if (height) style && style.height = typeof height === "number" ? "${height}px" : height,;
@@ -96,20 +64,25 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
   <div className="space-y-2">;
     {Array && Array.from({ length: lines }).map((_, i) => (";
       <Skeletonkey="{i}" "
-        height="{16}" 
+        height="{16}"
         width="{i" === lines - 1 ? "60%" : "100%"}
             />;
     ))}
   </div>"';
 );
 }
+=======
 
 export default Component;
-}
 
-=======
+        }
       `}</style>
+    </div>
+  )
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+  );
+;
+    </div>
+  );
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

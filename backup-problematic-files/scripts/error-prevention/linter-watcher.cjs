@@ -16,12 +16,14 @@ class LinterWatcher {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
-    
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     console.log('Linter Watcher started successfully')};
   async runLint() {}
     try {}
       console.log('Running lint check...');
-      
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       const child = spawn('npm', ['run', 'lint'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -34,7 +36,9 @@ class LinterWatcher {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+=======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       child.on('close', (code) => {}
         if ( {})
           console.log('Lint check passed ✓')) {}
@@ -51,12 +55,12 @@ class LinterWatcher {}
   async attemptAutoFix() {}
     try {}
       console.log('Attempting to auto-fix linting issues...');
-      
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       const child = spawn('npm', ['run', '"lint": fix'], {})
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
-
       child.on('close', (code) => {}
         if ( {})
           console.log('Auto-fix completed ✓')) {}
@@ -91,4 +95,6 @@ if ( {})
     process.exit(0)}
 });
   watcher.start().catch(console.error)};
-module.exports = LinterWatcher;
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

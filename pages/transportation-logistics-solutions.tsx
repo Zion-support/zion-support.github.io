@@ -1,7 +1,12 @@
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react';
+import Head from 'next/head';
+import React from 'react'
+import Head from 'next/head'
+import React from 'react',;
+import Head from 'next/head',;
+import React from 'react'
+import Head from 'next/head'
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function TransportationLogisticsSolutions() {
   return (
     <>
@@ -18,10 +23,7 @@ export default function TransportationLogisticsSolutions() {
       </div>
     </>
   )
-
-=======
-=======
-
+};
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -51,7 +53,11 @@ function TransportationLogisticsSolutions() {
       </div>;
     </>);
 }
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

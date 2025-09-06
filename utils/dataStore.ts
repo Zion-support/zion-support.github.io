@@ -1,5 +1,12 @@
-
-
+=======
+// Data store utilities
+export const dataStore = {
+  // Add data store functionality here
+  getData: () => []
+  setData: (data: any) => null
+  updateData: (id: string, data: any) => null
+  deleteData: (id: string) => null
+}
   getData: () => [],
   setData: (data: any) => null,
   updateData: (id: string, data: any) => null,
@@ -7,56 +14,9 @@
 };
 
 
-=======
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-  status: string;
-  createdAt: Date;
-  updatedAt: Date;
-}
-
-interface Review {
-  id: string;
-  projectId: string;
-  fromRole: 'client' | 'talent';
-  fromId: string;
-  toRole: 'client' | 'talent';
-  toId: string;
-  rating: number;
-  text: string;
-  categories?: any;
-  anonymous: boolean;
-  approved: boolean;
-  removed: boolean;
-  createdAt: Date;
-  updatedAt: Date;
-}
-
-class DataStore {
-  private projects: Project[] = [];
-  private reviews: Review[] = [];
-
-  // Project methods
-  findProjectById(id: string): Project | undefined {
-    return this && this.projects.find(project => project && project.id === id);
-  }
-}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
-
-=======
-// Data store utilities;
-export const data_store = {
-  // Add data store functionality here;
-  get_data: () => [],
-  set_data: (data: any) => null,
-  update_data: (id: string, data: any) => null,
-  delete_data: (id: string) => null;
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 export const findProjectById = (id: string) => store.findProjectById(id);
 export const createProject = (data: Partial<Project>) => store.createProject(data);
@@ -65,7 +25,10 @@ export const upsertReview = (data: Partial<Review>) => store.upsertReview(data);
 export const getReviewsByProject = (projectId: string) => store.getReviewsByProject(projectId);
 export const getAllReviews = () => store.getAllReviews();
 export const counterpartRole = (role: 'client' | 'talent') => store.counterpartRole(role);
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

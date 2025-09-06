@@ -1,19 +1,10 @@
+'use client';
+import { useState } from 'react';
+import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
-
-import React from 'react';
-
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const contactMethods = [
-=======
-  EnvelopeIcon,
-  PhoneIcon,
-  MapPinIcon,
-  ClockIcon,
-  ChatBubbleLeftRightIcon;
-} from '@heroicons / react / 24 / outline';
-const contact_methods = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
     name: 'Email'
     description: 'Get in touch with our team'
@@ -66,33 +57,29 @@ const faqs = [;
     question: 'Do you provide ongoing support?'
     answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'}
   {
+    question: 'What security measures do you have?'
+    answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
 
-    question: 'What security measures do you have?',
-    answer: 'We implement enterprise - grade security including end - to - end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}];
-export default /**
- * ContactPage - Function description
- */
-function ContactPage() {
-
+export default function ContactPage() {;
+  return (;
+    <div className=&quot;bg-black&quot;>
+export default function ContactPage() {
   return (
-    <div className=&quot;bg - black & quot;>;
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    <div className="bg-black">
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
           <div className=&quot;text - center & quot;>;
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               Get in{' '}
-
-
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                Touch
+              </span>
+            </h1>
+            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+              Ready to transform your business with AI? Let's discuss how our cutting-edge
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Ready to transform your business with AI? Let's discuss how our cutting-edge 
-
-
               technology can accelerate your growth and innovation.
             </p>
           </div>
@@ -110,33 +97,34 @@ function ContactPage() {
           </div>;
         </div>;
       </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Contact methods */}
-      <div className=&quot;mx - auto max - w-7xl px - 6 sm:px - 6 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Contact Us</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Multiple ways to reach us;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <dl className=&quot;grid max - w-xl grid - cols - 1 gap - x-8 gap - y-16 lg:max - w-none lg:grid - cols - 3&quot;>;
-            {contact_methods.map ((method) => (
-              <div key={method.name} className=&quot;flex flex - col group & quot;>;
-                <dt className=&quot;flex items - center gap - x-3 text - base font - semibold leading - 7 text - white & quot;>;
-                  <method.icon className=&quot;h - 5 w - 5 flex - none text - blue - 400 & quot; aria - hidden=&quot;true & quot; />;
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Contact Us</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Multiple ways to reach us
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            {contactMethods.map((method) => (
+              <div key={method.name} className="flex flex-col group">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                  <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {method.name}
-
                 </dt>
-
+                <dd className=&quot;mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300&quot;>
+                  <p className=&quot;flex-auto&quot;>{method.description}</p>
+                  <p className=&quot;mt-6&quot;>
+                    <a
+                      href={method.href}
+                      className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
                   <p className="flex-auto">{method.description}</p>
                   <p className="mt-6">
                     <a 
                       href={method.href} 
                       className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
-
-
                     >
                       {method.value} <span aria-hidden=&quot;true&quot;>→</span>
                     </Link>
@@ -158,19 +146,103 @@ function ContactPage() {
                   </p>;
                 </dd>;
               </div>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    question: 'What security measures do you have?'
+    answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
+=======
+
+export default function ContactPage() {;
+  return (;
+    <div className=&quot;bg-black&quot;>
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Form submitted:', formData);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  return (
+    <div className="min-h-screen bg-black text-white pt-20">
+      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+            Contact Us
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Get in touch with our team to discuss your technology needs and how we can help transform your business.
+          </p>
+        </div>
+        
+        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-2xl font-semibold text-white mb-6">Get in Touch</h2>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <EnvelopeIcon className="h-6 w-6 text-blue-400 mt-1" />
+                  <div>
+                    <h3 className="text-sm font-semibold text-white">Email</h3>
+                    <p className="text-gray-300">contact@ziontechgroup.com</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <PhoneIcon className="h-6 w-6 text-blue-400 mt-1" />
+                  <div>
+                    <h3 className="text-sm font-semibold text-white">Phone</h3>
+                    <p className="text-gray-300">+1 (555) 123-4567</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <MapPinIcon className="h-6 w-6 text-blue-400 mt-1" />
+                  <div>
+                    <h3 className="text-sm font-semibold text-white">Address</h3>
+                    <p className="text-gray-300">Global Headquarters<br />Technology Innovation Center</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <form onSubmit={handleSubmit} className="space-y-6">
+                    >
+                      {method.value} <span aria-hidden="true">→</span>
+                    </Link>
+                  </p>
+                </dd>
+              </div>
+            ))}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </dl>;
         </div>;
       </div>;
       {/* Contact form */}
-
-
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Send us a message</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             Let's start a conversation
           </p>
         </div>
@@ -293,6 +365,84 @@ function ContactPage() {
                   </p>;
                   <p className=&quot;flex items - center gap - 2&quot;>;
                     <ClockIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            Let's start a conversation
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
+          <form className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <div>
+                <label htmlFor="name" className="block text-sm font-semibold text-white mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Your full name"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block text-sm font-semibold text-white mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="your.email@company.com"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="company" className="block text-sm font-semibold text-white mb-2">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  name="company"
+                  id="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Your company name"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-semibold text-white mb-2">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows={4}
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Tell us about your project or how we can help..."
+                />
+              </div>
+              
+              <button
+                type="submit"
+                className="w-full bg-blue-600 text-white py-3 px-6 rounded-md font-semibold hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
                     {office.hours}
                   </p>;
                 </div>;
@@ -301,14 +451,14 @@ function ContactPage() {
         </div>;
       </div>;
       {/* FAQ */}
-
-
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Frequently Asked</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Frequently Asked</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
-
             Common questions
           </p>
         </div>
@@ -321,6 +471,19 @@ function ContactPage() {
                   {faq.question}
                 </dt>;
                 <dd className=&quot;text - base leading - 7 text - gray - 300 & quot;>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            Common questions
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
+          <dl className="space-y-8">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+                <dt className="text-lg font-semibold leading-7 text-white mb-4">
+                  {faq.question}
+                </dt>
+                <dd className="text-base leading-7 text-gray-300">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   {faq.answer}
                 </dd>;
               </div>))}
@@ -328,13 +491,17 @@ function ContactPage() {
         </div>;
       </div>;
       {/* CTA section */}
-
-
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
+          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
@@ -350,12 +517,11 @@ function ContactPage() {
             <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               Learn More <span aria-hidden="true">→</span>
             </Link>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default Page;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

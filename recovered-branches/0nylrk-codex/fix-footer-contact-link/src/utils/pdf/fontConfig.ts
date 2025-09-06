@@ -1,9 +1,11 @@
 
-
+import { jsPDF } from 'jspdf';
+export interface FontConfig {
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
-
-
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
 
@@ -36,48 +38,11 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
     console && console.error('Error loading custom fonts:', error);
 
     // Fall back to default font
-    doc && doc.setFont('helvetica')
-=======
-import {jsPDF} from 'jspdf';
-export interface FontConfig {
-  regular: ArrayBuffer;
-  bold?: ArrayBuffer;
-  italic?: ArrayBuffer,
-  bold_italic?: ArrayBuffer;
-}
-export type FontFamily = 'default' | 'montserrat' | 'open - sans' | 'roboto';
-;
-/**;
-* Loads and registers custom fonts for PDF documents;
-*/;
-export async function loadCustomFonts (doc: jsPDF, font_family: FontFamily = 'default'): Promise < void> {
-  // Check condition
-if (return, ) {
-  $2
-}
-  try {
-    // Font loading logic would go here;
-    // For demonstration purposes, we'll just set up the font using standard fonts;
-    switch (font_family) {
-      case 'montserrat':;
-        doc.set_font ('helvetica');
-        break;
-      case 'open - sans':;
-        doc.set_font ('helvetica');
-        break;
-      case 'roboto':;
-        doc.set_font ('helvetica');
-        break;
-      default: doc.set_font ('helvetica');
-    }
-  } catch (error) {
-    console.error ('Error loading custom fonts:', error);
-    // Fall back to default font;
+<<<<<<< HEAD
+    doc.setFont('helvetica')
 
-    doc.setFont('helvetica');
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }

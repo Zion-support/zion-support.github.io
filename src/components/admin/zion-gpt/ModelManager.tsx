@@ -1,18 +1,26 @@
+=======
 // If activating, deactivate all other models with the same purpose;
       // Check condition
 if ( {) {
   $2
 }
-        await supabase;
-
-          .from('model_versions');
-          .update({ active: false });
-          .eq('purpose', purpose);
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+}
 
 
-      }
-
-      // Update this model;
+        .order('createdAt', { ascending: false })
+  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
+    try {
+      // If activating, deactivate all other models with the same purpose
+      if (!currentActive) {
+        await supabase
+          .from('model_versions')
+          .update({ active: false })
+          .eq('purpose', purpose)
+=======
+=======
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
@@ -37,10 +45,15 @@ if ( {) {
           .from('model_versions');
           .update({ active: false });
           .eq('purpose', purpose);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
       // Update this model;
       await supabase;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         .from('model_versions');
         .update({ active: !currentActive });
         .eq('id', modelId),;
@@ -50,10 +63,10 @@ if ( {) {
     } catch (error) {;
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
-  },;
 
   },
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
     <Card className="w-full">;
@@ -103,13 +116,12 @@ if ( {) {
                     ) : (;
                       <Badge className="bg-yellow-500">Queued</Badge>;
                     )}
-
-                    {model && model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
-                  </TableCell>;
-                  <TableCell>{new Date(model && model.createdAt).toLocaleDateString()}</TableCell>;
-                  <TableCell className="text-right">;
-                    {model && model.trainingStatus === 'queued' || model && model.trainingStatus === 'running' ? (;
-
+                    {model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
+                  </TableCell>
+                  <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
+                  <TableCell className="text-right">
+=======
+                    {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
                       <Button
                         variant="ghost"
                         size="sm"
@@ -125,24 +137,12 @@ if ( {) {
                       <Button
                         variant="ghost"
                         size="sm"
-
-                      >
-                        {activeJobs[model.id] ? (
-                          <Loader2 className="h-4 w-4 animate-spin" />
-                        ) : (
-                          <RefreshCw className="h-4 w-4" />
-                        )}
-                        <span className="ml-1">Check</span>;
-                      </Button>;
-                    ) : model && model.trainingStatus === 'succeeded' ? (;
-                      <Button
-
-
-                        variant={model.active ? "outline" : "default"}
-                        size="sm"
-                        onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
-
-
+                        onClick={() => checkTrainingStatus(model.id)}
+                        disabled={activeJobs[model.id]}
+                        onClick = {(,) => checkTrainingStatus(model.id),}
+                        disabled = {activeJobs[model.id],}
+                        onClick={() => checkTrainingStatus(model.id)}
+                        disabled={activeJobs[model.id]}
                       >
                         {model.active ? (
                           <>
@@ -159,26 +159,8 @@ if ( {) {
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
-
-                        title = {model && model.errorMessage || "Training failed",}>;
-                        <AlertCircle className="h-4 w-4 mr-1" /> Error;
-                      </Button>;
-
-                    )}
-                  </TableCell>;
-                </TableRow>;
-
-                        title={model.errorMessage || "Training failed"}
-
-                        title = {model.errorMessage || "Training failed",}
-                        title={model.errorMessage || "Training failed"}
-                      >
-                        <AlertCircle className="h-4 w-4 mr-1" /> Error
-                      </Button>
-                    )}
-
-                  </TableCell>;
-                </TableRow>;
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
               ))}
             </TableBody>;
@@ -188,9 +170,7 @@ if ( {) {
     </Card>;
   );
 }
-
-
-}
+<<<<<<< HEAD
 
   },
   return (
@@ -281,3 +261,4 @@ if ( {) {
     </Card>);
 }
 }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

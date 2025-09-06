@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestonesList.tsx
+=======
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestonesList.tsx
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -7,7 +11,11 @@ import { AddMilestoneForm } from './AddMilestoneForm',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
 // lucide-react doesn't export PlusIcon, use our icon wrapper;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestonesList.tsx
+import { Plus } from '@/components/icons',;
+=======
 import { Plus } from 'lucide-react';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestonesList.tsx
 import { EmptyState } from '@/components/ui/empty-state',;
 ;
 interface MilestonesListProps {;
@@ -46,6 +54,10 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 ;
   if (isLoading) {;
     return (;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestonesList.tsx
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestonesList.tsx
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
           <Card key={i}>;
@@ -57,28 +69,8 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
           </Card>;
         ))}
       </div>;
-    ),;
-  }
-  ;
-  if (milestones.length === 0 && !showAddForm) {;
-    return (;
-      <EmptyState;
-        icon={<span className="text-3xl">📊</span>}
-        title="No Milestones Yet";
-        description={isClient ? ;
-          "Break down the project into manageable milestones to track progress and payments." :;
-          "No milestones have been created for this project yet."}
-        action={isClient ? ;
-          {;
-            text:"Create First Milestone",;
-            onClick:() => setShowAddForm(true);
-          } undefined;
-        }
-      />;
-    ),;
-  }
-;
-  return (;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestonesList.tsx
+
     <div className="space-y-6">;
       {isClient && !showAddForm && (;
         <div className="flex justify-end">;
@@ -88,12 +80,20 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
           </Button>;
         </div>;
       )}
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestonesList.tsx
+
+=======
       ;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestonesList.tsx
       {showAddForm && (;
         <Card>;
           <CardContent className="pt-6">;
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestonesList.tsx
+
+=======
             <AddMilestoneForm ;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestonesList.tsx
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
@@ -101,6 +101,9 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
           </CardContent>;
         </Card>;
       )}
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestonesList.tsx
+
+=======
       ;
       <div className="space-y-4">;
         {milestones.map((milestone) => (;
@@ -112,12 +115,16 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
             amount={parseFloat(milestone.amount.toString())}
             status={milestone.status}
             dueDate={milestone.duedate}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestonesList.tsx
             onApprove={onApprove}
             onReject={onReject}
           />;
         ))}
       </div>;
     </div>;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestonesList.tsx
+
+=======
   ),;
 },; <Card key= {;
   i ;
@@ -155,7 +162,9 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
   onReject ;
 }/>) ) ;
 }</div> </div>) ;
-
+:temp_broken_files/projects/milestones/MilestonesList.tsx
+};""
 };
 "
-
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/MilestonesList.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestonesList.tsx

@@ -1,32 +1,12 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 import React from 'react';
 interface PostJobProps {
   // Add props here as needed
+}
+
+=======
 
 
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function PostJob({ }: PostJobProps) {
   return (
     <div>
@@ -34,11 +14,19 @@ export default function PostJob({ }: PostJobProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
+:src.pages.disabled/PostJob.jsx
 }
+}
+ursor/add-new-services-and-deploy-updates-0462
 
-=======
 
 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+:src.pages.disabled/PostJob.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/PostJob.jsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

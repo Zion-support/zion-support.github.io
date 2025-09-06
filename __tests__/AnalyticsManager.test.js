@@ -19,9 +19,6 @@ describe('AnalyticsManager', () => {'}
     render(<AnalyticsManager />);,
   });
 
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import _React from 'react'
 '
 import '@testing-library/jest-dom';
@@ -32,4 +29,3 @@ describe('AnalyticsManager', () => {'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

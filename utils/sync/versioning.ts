@@ -1,22 +1,7 @@
 
-export interface Version {
-  major: number;
-  minor: number;
-  patch: number;
-  build?: number;
 }
-
-
-}
-=======
-export function nextVersionFor(
-  state: MultiverseState,
-  entityKey: string
-): number {
-  const current = state.latestVersionByEntityId[entityKey] || 0;
-  return current + 1;
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 // Versioning utilities;
 export const versioning = {
@@ -27,3 +12,5 @@ export const versioning = {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

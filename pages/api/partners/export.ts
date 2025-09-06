@@ -1,20 +1,23 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
-
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getServerSupabase } from "../../../utils/supabase/server";
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status(400).json({ error: "Missing code" });
 
   const usingPlaceholder =
-
-    (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-    (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
+    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
 
       "placeholder-key";
   try {
@@ -22,15 +25,8 @@ export default async function handler(
       const csv =
         "event;timestamp\nvisit,2025-01-01T00:00:00Z\nsignup,2025-01-02T00:00:00Z";
 
-      res && res.setHeader("Content-Type", "text/csv");
-      res && res.setHeader(
-        "Content-Disposition",
-        `attachment; filename="${code}-referrals && referrals.csv"`,
-
-      );
-      return res && res.status(200).send(csv);
-
-=======
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -53,22 +49,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
   } catch (e: any) {
-    return res && res.status(500).json({ error: e?.message });
 
   }
 
+  }
 }
-
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { getServerSupabase  } from '../../../utils / supabase / server';
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const code = (req.query.code as string)?.toLowerCase ();
-  if (return res.status (400).json ({ error: "Missing code" })) {
-  $2
+}
 }
   const using_placeholder =;
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
@@ -111,6 +97,7 @@ if ( {) {
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
 
@@ -130,8 +117,7 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,6 +1,7 @@
 
-import {
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Calendar,
   Clock,
   Users,
@@ -12,8 +13,10 @@ import {
   Video,
   MessageSquare,
   Building,;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "lucide-react";
 const timeSlots = [
   { time: "9:00 AM", available: true, type: "Video Call" }
@@ -107,19 +110,6 @@ const teamMembers = [
   }
 ];
 export default function CalendarPage() {
-=======
-import {;
-  Calendar,;
-  Clock,;
-  Users,;
-  CheckCircle,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Video,;
-  MessageSquare,;
-  Building,;
 } from "lucide-react";
 
 const timeSlots = [;
@@ -866,13 +856,7 @@ function CalendarPage() {
               </Link>;
               <Link
                 href="/about"
-                className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors">;
-                Learn About Us;
-              </Link>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
+
     </div>;
   );
 =======

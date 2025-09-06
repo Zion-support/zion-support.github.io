@@ -1,26 +1,26 @@
 
-import {Certification} from '@/types / resume';
-import {format} from 'date - fns';
-
+=======
+import { Certification  } from '@/types/resume';
+import { format } from 'date-fns';
 interface CertificationsSectionProps {
   certifications: Certification[];
 }
-
 
 
 import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
 interface CertificationsSectionProps {
   certifications: Certification[]
-
-=======
 import { Certification } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface CertificationsSectionProps {;
   certifications: Certification[];
+=======
 
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
@@ -30,14 +30,10 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
       return format(new Date(date), 'MMM yyyy');
     }
 
-    return format(date, 'MMM yyyy')
-  },
-
-
   if (certifications.length === 0) return null,
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <div>
       <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>
@@ -51,38 +47,6 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
                   {formatDate(cert.issue_date)}
                   {cert.expiration_date && ` - ${formatDate(cert.expiration_date)}`}
                 </span>
-=======
-import {Certification} from '@/types/resume';
-import {format} from 'date-fns';
-interface CertificationsSectionProps {;
-  certifications: Certification[];
-}
-
-export function CertificationsSection(): any ({ certifications }: CertificationsSectionProps) {;
-  const formatDate = (date: Date | string | undefined) => {;
-    if (!date) return '',;
-    if (typeof date === 'string') {;
-      return format(new Date(date), 'MMM yyyy');
-    }
-    return format(date, 'MMM yyyy');
-  };
-
-  if (certifications && certifications.length === 0) return null;
-
-  return (
-    <div>;
-      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>;
-      <div className="space-y-2">;
-        {certifications && certifications.map((cert, index) => (;
-          <div key={cert && cert.id || index} className="space-y-1">;
-            <div className="flex justify-between">;
-              <h3 className="text-sm font-medium">{cert && cert.name}</h3>;
-              {cert && cert.issue_date && (;
-                <span className="text-sm">;
-                  {formatDate(cert && cert.issue_date)}
-                  {cert && cert.expiration_date && ` - ${formatDate(cert && cert.expiration_date)}`}
-                </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </div>;
             <p className="text-sm">{cert && cert.issuing_organization}</p>;

@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 =======
 =======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -110,7 +101,7 @@ class TestAutomation {
   }
   generateReport(tests, smokeTests, coverage) {
     const coverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD || '80');
-    const avgCoverage = coverage ? 
+    const avgCoverage = coverage ?
       (coverage.statements + coverage.branches + coverage.functions + coverage.lines) / 4 : 0;
     const report = {
       timestamp: new Date().toISOString(),
@@ -214,78 +205,24 @@ testAutomation.run().catch(error => {
   process.exit(1);
 });
 #!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class TestAutomation { constructor() {" this.processName = process.env.PM2_PROCESS_NAME | "test-automation"; this.coverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) | 80;" this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === "true";" this.parallelTests = process.env.PARALLEL_TESTS === "true";" this.logFile = path.join(__dirname, "././logs/pm2/test-automation.log"); this.ensureLogDir(); } ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile, logMessage); } async runTests() { try {" this.log("Starting test automation."); / Check if test script exists in package.json" const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));" const testScript = packageJson.scripts?.test | packageJson.scripts?.["test:smoke"]; if (!testScript) {" this.log("No test script found in package.json");" return { success: false, message: "No test script configured" }; } / Run tests` const testCommand = this.parallelTests ? `${testScript} --run` : testScript;` this.log(`Running tests: ${testCommand}`); const result = execSync(testCommand, { " encoding: "utf8"," stdio: "pipe", cwd: process.cwd() });" this.log("Tests completed successfully");` this.log(`Test output: ${result}`); return { success: true, output: result }; } catch (error) {` this.log(`Test execution failed: ${error.message}`); if (this.autoRetryFailed) {" this.log("Retrying failed tests."); try {" const retryResult = execSync("npm test", { " encoding: "utf8"," stdio: "pipe", cwd: process.cwd() });" this.log("Retry successful"); return { success: true, output: retryResult, retried: true }; } catch (retryError) {` this.log(`Retry also failed: ${retryError.message}`); return { success: false, error: retryError.message, retried: true }; } } return { success: false, error: error.message }; } } async checkCoverage() { try {" this.log("Checking test coverage."); / Try to run coverage command" const coverageCommand = "npm run test:coverage | npm run coverage | npx jest --coverage"; const result = execSync(coverageCommand, { " encoding: "utf8"," stdio: "pipe", cwd: process.cwd() }); / Extract coverage percentage (simplified) const coverageMatch = result.match(/(\d+)%/); const coverage = coverageMatch ? parseInt(coverageMatch[1]) : 0;` this.log(`Test coverage: ${coverage}% (threshold: ${this.coverageThreshold}%)`); if (coverage < this.coverageThreshold) {` this.log(`WARNING: Coverage below threshold!`); return { coverage, belowThreshold: true }; } return { coverage, belowThreshold: false }; } catch (error) {` this.log(`Coverage check failed: ${error.message}`); return { coverage: 0, belowThreshold: true, error: error.message }; } } async generateReport() { const report = { timestamp: new Date().toISOString(), processName: this.processName, testResults: await this.runTests(), coverage: await this.checkCoverage(), environment: { NODE_ENV: process.env.NODE_ENV, coverageThreshold: this.coverageThreshold, autoRetry: this.autoRetryFailed, parallelTests: this.parallelTests } };" const reportFile = path.join(__dirname, "././logs/pm2/test-automation-report.json"); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));` this.log(`Test report generated: ${reportFile}`); return report; } async start() {` this.log(`${this.processName} started`); try { const report = await this.generateReport(); if (report.testResults.success) {" this.log("Test automation completed successfully"); } else {" this.log("Test automation completed with errors"); } if (report.coverage.belowThreshold) {" this.log("WARNING: Test coverage below threshold"); } } catch (error) {` this.log(`Test automation error: ${error.message}`); } }}/ Start the serviceif (require.main === module) { const testAutomation = new TestAutomation(); testAutomation.start().catch(console.error);}module.exports = TestAutomation;"`"`
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node;
 /**
  * PM2 Test Automation Service;
  * Runs automated tests and reports results;
  */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 class TestAutomation {}
   constructor() {}
     this.processName = process.env.PM2_PROCESS_NAME || 'test-automation';
@@ -304,36 +241,10 @@ class TestAutomation {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
-    );
-=======
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
-    );
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -341,55 +252,21 @@ class TestAutomation {}
   async runTests() {}
     try {}
       this.log('Starting test automation...');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
+
       // Check if test script exists in package.json;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       const testScript = packageJson.scripts?.test || packageJson.scripts?.['test:smoke'];
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       
       // Check if test script exists in package.json;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       const testScript = packageJson.scripts?.test || packageJson.scripts?.['test:smoke'];
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      // Check if test script exists in package.json;
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      const testScript = packageJson.scripts?.test || packageJson.scripts?.['test:smoke'];
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       if (!testScript) {}
         this.log('No test script found in package.json');
         return { success: false, message: 'No test script configured' };
@@ -398,64 +275,31 @@ class TestAutomation {}
       const testCommand = this.parallelTests ? `${testScript} --run` : testScript;
       this.log(`Running tests: ${testCommand}`);
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      
-      
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-      
-      
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       const result = execSync(testCommand, { })
         encoding: 'utf8',
         stdio: 'pipe',
         cwd: process.cwd();
       }
 });
+
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
       this.log('Tests completed successfully');
       this.log(`Test output: ${result}`);
       return { success: true, output: result };
     } catch (error) {}
       this.log(`Test execution failed: ${error.message}`);
-=======
 <<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
       this.log('Tests completed successfully');
       this.log(`Test output: ${result}`);
@@ -463,30 +307,11 @@ class TestAutomation {}
       return { success: true, output: result };
     } catch (error) {}
       this.log(`Test execution failed: ${error.message}`);
-      
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      this.log('Tests completed successfully');
-      this.log(`Test output: ${result}`);
-      return { success: true, output: result };
-    } catch (error) {}
-      this.log(`Test execution failed: ${error.message}`);
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       if (this.autoRetryFailed) {}
         this.log('Retrying failed tests...');
         try {}
@@ -509,34 +334,13 @@ class TestAutomation {}
   async checkCoverage() {}
     try {}
       this.log('Checking test coverage...');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      
-      
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-      
-      
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Try to run coverage command;
       const coverageCommand = 'npm run test:coverage || npm run coverage || npx jest --coverage';
       const result = execSync(coverageCommand, { })
@@ -545,59 +349,27 @@ class TestAutomation {}
         cwd: process.cwd();
       }
 });
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
-=======
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-      // Extract coverage percentage (simplified);
-      const coverageMatch = result.match(/(\d+)%/);
-      const coverage = coverageMatch ? parseInt(coverageMatch[1]) : 0;
-      this.log(`Test coverage: ${coverage}% (threshold: ${this.coverageThreshold}%)`);
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
       // Extract coverage percentage (simplified);
       const coverageMatch = result.match(/(\d+)%/);
       const coverage = coverageMatch ? parseInt(coverageMatch[1]) : 0;
-      
       this.log(`Test coverage: ${coverage}% (threshold: ${this.coverageThreshold}%)`);
-      
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
       // Extract coverage percentage (simplified);
       const coverageMatch = result.match(/(\d+)%/);
       const coverage = coverageMatch ? parseInt(coverageMatch[1]) : 0;
+
       this.log(`Test coverage: ${coverage}% (threshold: ${this.coverageThreshold}%)`);
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       if (coverage < this.coverageThreshold) {}
         this.log(`WARNING: Coverage below threshold!`);
         return { coverage, belowThreshold: true };
@@ -621,78 +393,28 @@ class TestAutomation {}
         parallelTests: this.parallelTests;
       };
     };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
+
     const reportFile = path.join(__dirname, '../../logs/pm2/test-automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
     const reportFile = path.join(__dirname, '../../logs/pm2/test-automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    const reportFile = path.join(__dirname, '../../logs/pm2/test-automation-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     this.log(`Test report generated: ${reportFile}`);
     return report;
   };
   async start() {}
     this.log(`${this.processName} started`);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
+
     try {}
       const report = await this.generateReport();
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     
     try {}
@@ -700,24 +422,10 @@ class TestAutomation {}
       
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    try {}
-      const report = await this.generateReport();
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       if (report.testResults.success) {}
         this.log('Test automation completed successfully');
       } else {}
@@ -735,39 +443,4 @@ class TestAutomation {}
 if (require.main === module) {}
   const testAutomation = new TestAutomation();
   testAutomation.start().catch(console.error);
-};
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-module.exports = TestAutomation;module.exports = TestAutomation;
-module.exports = TestAutomation;module.exports = TestAutomation;
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-module.exports = TestAutomation;
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = TestAutomation;module.exports = TestAutomation;
-=======
-module.exports = TestAutomation;
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-module.exports = TestAutomation;module.exports = TestAutomation;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-module.exports = TestAutomation;
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-module.exports = TestAutomation;module.exports = TestAutomation;
-module.exports = TestAutomation;module.exports = TestAutomation;
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

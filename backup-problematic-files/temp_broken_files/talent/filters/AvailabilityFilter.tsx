@@ -1,5 +1,7 @@
 
-import { ChevronDown, ChevronUp } from 'lucide-react';
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/AvailabilityFilter.tsx
+=======
+import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { AvailabilityFilterProps } from "@/types/filters",;
 ;
@@ -46,8 +48,23 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
     </div>;
   ),;}
  ];
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/AvailabilityFilter.tsx
+  toggleSection 
+}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) 
+}</button> {
+  AVAILABILITY OPTIONS.map (option => (<div key= {
+  option.id 
+}className="flex items-center" > <Checkbox > {
+  option.label 
+}</label> </div>) ) 
+}</div>) 
+}</div>) 
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+:temp_broken_files/talent/filters/AvailabilityFilter.tsx
 
-
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/AvailabilityFilter.tsx
   toggleSection ;
 }className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
 }</button> {;
@@ -55,7 +72,9 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
   option.label ;
 }</label> </div>) ) ;
 }</div>) ;
-
+:temp_broken_files/talent/filters/AvailabilityFilter.tsx
+}</div>) ;"}"
 }</div>) ;
 }"
-
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/AvailabilityFilter.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/filters/AvailabilityFilter.tsx

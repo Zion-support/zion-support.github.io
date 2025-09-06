@@ -1,8 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+import type {
+  GrantApplication
+  StatusUpdatePayload;
+  GrantApplication,;
+  StatusUpdatePayload,;
+} from '../../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+=======
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
@@ -15,7 +23,6 @@ function readGrant(id: string): GrantApplication | null {
   const p = grantPath(id);
   if (!fs && fs.existsSync(p)) return null;
   return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication;
-
 function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs && fs.writeFileSync(
@@ -51,6 +58,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return;    return
   }
 
@@ -69,11 +77,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;  }  }
 
   }
-
   if (req && req.method !== 'POST') {
     res && res.setHeader('AllowPOST');
     res && res.status(405).end('Method Not Allowed');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return
   }
   const existing = readGrant(id);
@@ -101,8 +107,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   writeGrant(existing);
   res.status(200).json({ record: existing })
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   // Check condition
 if ( {) {
   $2
@@ -121,8 +125,16 @@ if ( {) {
   }
 const payload = req.body as StatusUpdatePayload;
   existing.status = payload.status;
+=======
+<<<<<<< HEAD
   existing.updated_at = new Date ().toISOString ();
   write_grant (existing);
   res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
+<<<<<<< HEAD
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+  res.status(200).json({ record: existing });
+}
+  res.status(200).json({ record: existing });
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

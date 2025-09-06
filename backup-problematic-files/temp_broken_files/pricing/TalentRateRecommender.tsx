@@ -1,7 +1,8 @@
 
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/TalentRateRecommender.tsx
+=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
-import {logErrorToProduction} from '@/utils/productionLogger',;
 import { ;
   getTalentRateSuggestion,;
   PricingSuggestion,;
@@ -10,7 +11,11 @@ import { ;
 } from "@/services/pricingSuggestionService",;
 import { PricingSuggestionBox } from "./PricingSuggestionBox",;
 import { useAuth } from "@/hooks/useAuth",;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/TalentRateRecommender.tsx
+import { Sparkles } from "lucide-react",;
+=======
 import { Sparkles } from 'lucide-react';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/pricing/TalentRateRecommender.tsx
 ;
 interface TalentRateRecommenderProps {;
   skills:string[],;
@@ -45,7 +50,11 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
       const result = await getTalentRateSuggestion(params),;
       setSuggestion(result),;
     } catch (error) {;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/TalentRateRecommender.tsx
+      console.error("Error generating rate suggestion:", error),;
+=======
       logErrorToProduction('Error generating rate suggestion:', { data:error }),;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/pricing/TalentRateRecommender.tsx
     } finally {;
       setIsLoading(false),;
     }
@@ -58,10 +67,17 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
       onSuggestionApplied(suggestedRate),;
       ;
       // Track this suggestion application;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/TalentRateRecommender.tsx
+      if (user) {;
+        trackPricingSuggestion({;
+          userId:user.id,;
+          suggestionType:'talent',;
+=======
       if (user && user.id) {;
         trackPricingSuggestion({;
           userId:user.id,;
           suggestionType:"talent",;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/pricing/TalentRateRecommender.tsx
           suggestedMin:suggestion.minRate,;
           suggestedMax:suggestion.maxRate,;
           actualValue:suggestedRate,;
@@ -95,6 +111,42 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
       </div>;
     </div>;
   ),;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/TalentRateRecommender.tsx
+},; import {
+  getTalentRateSuggestion;
+PricingSuggestion;
+TalentRateParams;
+trackPricingSuggestion interface TalentRateRecommenderProps {
+  skills: string[];
+yearsExperience: number;
+location?: string;
+}finally {
+  setIsLoading (false) 
+}
+};
+if (suggestion) {
+  //We'll use the middle of the range as the suggested rate //Track this suggestion application if (user) {
+  trackPricingSuggestion ({
+  
+}
+}
+};
+return (<div className="space-y-4" > <div> {
+  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick= {
+  generateSuggestion 
+}> <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {
+  suggestion 
+}isLoading= {
+  isLoading 
+}onApplySuggestion= {
+  handleApplySuggestion 
+}rateType= {
+  rateType 
+}/>) 
+}</div> </div>) 
+};
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
 },; import {;
   getTalentRateSuggestion;
 PricingSuggestion;
@@ -121,7 +173,9 @@ return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<B
   rateType ;
 }/>) ;
 }</div> </div>) ;
-
+:temp_broken_files/pricing/TalentRateRecommender.tsx
+};"'"
 };
 '"
-
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/pricing/TalentRateRecommender.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/pricing/TalentRateRecommender.tsx

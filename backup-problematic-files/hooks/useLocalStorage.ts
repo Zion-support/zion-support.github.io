@@ -1,5 +1,7 @@
 
+import { useState } from 'react';
 
+export function useLocalStorage<T>(key: string, initialValue: T) {
 
 interface UseLocalStorageProps {
   // Add props here as needed
@@ -7,15 +9,27 @@ interface UseLocalStorageProps {
 
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
 
-
     try {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useLocalStorage.ts
+
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
 
+=======
+:hooks/useLocalStorage.ts
+    try {;
+main:hooks/useLocalStorage.ts
+    try {
+:backup-problematic-files/hooks/useLocalStorage.ts
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : initialValue;
+    } catch (error) {
+:backup-problematic-files/hooks/useLocalStorage.ts
+      // Error reading localStorage key
+      return initialValue;
       console.error(`Error reading localStorage key "${key}":`, error);
-
+main:hooks/useLocalStorage.ts
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
   });
 
@@ -30,15 +44,10 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
       }
     } catch (error) {
 
-      // eslint-disable-next-line no-console
-      console.error(`Error setting localStorage key "${key}":`, error);
-
-
   };
 
   return [storedValue, setValue] as const;
 }
-
 
       console.error(`Error setting localStorage key "${key}":`, error)};
   };
@@ -47,6 +56,5 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 };
 };
 };
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

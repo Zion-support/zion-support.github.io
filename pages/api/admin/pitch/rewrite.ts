@@ -1,29 +1,16 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { ensureAdminFromApi } from '../../../../utils/auth';
+import OpenAI from 'openai';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { ensureAdminFromApi } from '../../../../utils/auth',;
+import OpenAI from 'openai',;
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY }),
 
 
-  try {
-    const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
-Title: ${slide.title}\nContent:\n${slide.content}`
-    let title = slide.title
-    let content = slide.content
-    try {
-      const chat = await client.chat.completions.create({
-        model: 'gpt-4o-mini'
-        messages: [
+    if (req.method === 'POST') {
+      const { slide } = req.body;
+      if (!slide) return res.status(400).json({ error: 'Slide required' });
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    } catch (err) {
-      // keep original if AI fails;
-    }
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-  }
-}
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -191,23 +191,9 @@ const aiServices: AIService[] = [;
 ],;
 export default function AISolutionsPage() {;
   const [selectedService, setSelectedService] = useState<string | null>(null);
-
   return (;
     <div className="space-y-8">;
-=======
-"use client",
-import { useState  } from './react';,
-interface AIService {
-  id: string,
-  name: string,
-  description: string,
-  technical_specs: string[],
-  use_cases: string[],
-  pricing: string,
-  starting_price: number,
-  contact_link: string,
-  icon: string,
-  features: string[],
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   integration: string[];
 }
 const ai_services: AIService[] = [;
@@ -383,15 +369,10 @@ const ai_services: AIService[] = [;
       "Cloud services";
     ];
   }
-],
-export default /**
- * AISolutionsPage - Function description
- */
-function AISolutionsPage() {
-  const [selected_service, setSelectedService] = useState < string | null>(null);
-  return (
-    <div className="space - y-8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+  return (;
+    <div className="space-y-8">;
+
       {/* Header */}
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">AI Solutions & Services</h1>;

@@ -1,41 +1,30 @@
 
+=======
+
+export type ForumCategory =
 export type ForumCategory = 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   | 'getting-hired'
   | 'project-help'
   | 'ai-tools'
   | 'feedback'
   | 'announcements';
 =======
-export type ForumCategory =;
-  | 'getting - hired';
-  | 'project - help';
-  | 'ai - tools';
-  | 'feedback';
-  | 'announcements';
-
-
-
-export interface ForumCategoryInfo {;
-
-
+export interface ForumCategoryInfo {
   id: ForumCategory;
   name: string;
   description: string;
-
-  admin_only: boolean,
-  icon: string;
-
+  adminOnly: boolean
+  icon: string
 }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface ForumPost {
-=======
-}
-
 
 export interface ForumPost {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   title: string;
   content: string;
@@ -57,14 +46,14 @@ export interface ForumPost {;
   is_featured?: boolean;
 
 }
-export interface ForumReply {
-=======
-}
+<<<<<<< HEAD
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export interface ForumReply {
 
 export interface ForumReply {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   post_id: string;
   parentReplyId?: string;
@@ -81,14 +70,14 @@ export interface ForumReply {;
   is_answer?: boolean;
 
 }
-export interface Badge {
-=======
-}
+<<<<<<< HEAD
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export interface Badge {
 
 export interface Badge {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   name: string;
   description: string;
@@ -96,27 +85,26 @@ export interface Badge {;
   icon: string,
   color: string;
 }
-export interface UserBadge {
-  user_id: string;
-  badge_id: string,
-  awarded_at: string;
-
+  id: string;
+  name: string;
+  description: string;
+  icon: string
+  color: string
 }
-export interface CommunityUser {
-=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+export interface UserBadge {
 
 
 export interface UserBadge {;
-
   userId: string;
   badgeId: string
   awardedAt: string
 }
-
+export interface CommunityUser {
 
 export interface CommunityUser {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   name: string;
   avatar?: string;
@@ -126,5 +114,9 @@ export interface CommunityUser {;
   reply_count: number;
   badges: Badge[];
 
+  isModerator: boolean
+}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

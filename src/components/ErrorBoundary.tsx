@@ -25,6 +25,14 @@ class ErrorBoundary extends Component<Props, State> {
     this.setState({ error, errorInfo });
   }
 
+  handleReload = () => {
+    window.location.reload();
+  };
+
+  handleReset = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
+
   render() {
     if (this.state.hasError) {
       return (

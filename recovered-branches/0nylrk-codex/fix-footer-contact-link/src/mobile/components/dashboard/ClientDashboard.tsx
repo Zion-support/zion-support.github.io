@@ -1,8 +1,23 @@
 
-
-
+import React from "react";
+import {Card, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {ChevronRight, Plus, UserCheck, FileText, Bell} from "lucide-react";
+import {Link} from "react-router-dom";
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",
+import { Link } from "react-router-dom",
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -154,17 +169,7 @@ export function ClientDashboard() {
       </section>
     </div>
   )
-
-import React from "react";
-import {Card, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {ChevronRight, Plus, UserCheck, FileText, Bell} from "lucide-react";
-import {Link} from "react-router-dom";
-=======
-
-
-=======
+}
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -273,6 +278,7 @@ function ClientDashboard() {
                   <div className="w - 7 h - 7 rounded - full bg - secondary / 20 border - 2 border - background flex items - center justify - center">;
                     <UserCheck className="h - 4 w - 4" />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </div>;
                 </div>;
                 <Button size="sm" variant="outline">View Details</Button>;
@@ -384,11 +390,13 @@ function ClientDashboard() {
           </CardContent>;
         </Card>;
       </section>;
-    </div>);
+    </div>;
+  );
 }
-
-=======
 ;
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -11,7 +11,12 @@ const next_config = {
 /** @type {import('next').NextConfig} */;
 
 const nextConfig = {;
-
+  reactStrictMode: true;
+  reactStrictMode: true,;
+  reactStrictMode: true;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   compress: true,;
   poweredByHeader: false,;
   eslint: { ignoreDuringBuilds: true },;
@@ -34,7 +39,8 @@ const nextConfig = {;
   // Generate ETags;
   generate_etags: true,
   // Dist directory;
-  dist_dir: '.next';
-},
-module.exports = next_config,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+  distDir: '.next';
+},;
+module.exports = nextConfig,;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

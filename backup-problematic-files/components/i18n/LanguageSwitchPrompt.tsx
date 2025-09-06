@@ -23,7 +23,6 @@ export default function LanguageSwitchPrompt() {
     const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null
     if (suggestion) setSuggested(suggestion)
   }, []),
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   if (!suggested) return null,
 

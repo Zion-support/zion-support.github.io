@@ -1,17 +1,28 @@
 
-
-
+import React, { useState } from "react";
+import type { UserProfile } from "@/types/auth";
+/**
+ * Custom hook to manage auth state
+ */
+export function useAuthState() {;
+  const [user, setUser] = useState<UserProfile | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [onboardingStep, setOnboardingStep] = useState<string | null>(null);
+import React, { useState } from "react",
+import type { UserProfile } from "@/types/auth";
+import type { UserProfile } from "@/types/auth",
 /**
  * Custom hook to manage auth state
  */
 export function useAuthState() {
-
+  const [user, setUser] = useState<UserProfile | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [onboardingStep, setOnboardingStep] = useState<string | null>(null);
   const [user, setUser] = useState<UserProfile | null>(null),
   const [isLoading, setIsLoading] = useState<boolean>(true),
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null),
-
   
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return {
     user,
     setUser,
@@ -19,12 +30,12 @@ export function useAuthState() {
     setIsLoading,
     onboardingStep,
     setOnboardingStep
-
-
-=======
+  }
+}
 import React, { useState } from "react",;
 import type { UserProfile } from "@/types/auth",;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 /**;
  * Custom hook to manage auth state;
  */;
@@ -53,26 +64,15 @@ function useAuthState() {
     setIsLoading;
     onboardingStep;
     setOnboardingStep;
+=======
 
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  return {
+<<<<<<< HEAD
 =======
-
-  return {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    user;
-    set_user;
-    is_loading;
-    setIsLoading;
-
-    onboarding_step;
-
-    setOnboardingStep;
-  }
-}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

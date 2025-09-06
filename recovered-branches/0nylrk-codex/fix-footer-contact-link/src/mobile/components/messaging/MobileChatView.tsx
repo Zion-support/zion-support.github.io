@@ -1,8 +1,18 @@
 
+=======
 
 
+import React, { useState } from "react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",
+import { cn } from "@/lib/utils",
 
-
+interface Message {
+  id: string,
+  content: string,
+  timestamp: string,
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -11,23 +21,16 @@ import {Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone} from "luci
 import {cn} from "@/lib/utils";
 import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
-interface Message {;
-  id: string,;
-  content: string,;
-  timestamp: string,;
-  isMe: boolean,;
-
-=======
-import React, { useState } from './react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from './lucide-react';
-import { cn } from '@/lib / utils';
-import { use_navigate } from './react-router-dom';
-import { toast } from './sonner';
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState } from "react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface Message {
   id: string,
   content: string,
@@ -40,34 +43,61 @@ interface MobileChatViewProps {
     id: string
     name: string
     avatar?: string;
-
+    status?: string
+  }
+  messages: Message[]
+  onBack: () => void
+import { useNavigate } from "react-router-dom",
+import { toast } from "sonner",
+interface Message {
+  id: string,
+  content: string,
+  timestamp: string,
   isMe: boolean,
   sender?: string,
   avatar?: string,
   status?: 'sent' | 'delivered' | 'read'
 
-
-
+import React, { useState } from "react",;
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { useNavigate } from "react-router-dom",;
+import { toast } from "sonner",;
+interface Message {;
+  id: string,;
+  content: string,;
+  timestamp: string,;
+  isMe: boolean,;
+  sender?: string,;
+  avatar?: string,;
+  status?: 'sent' | 'delivered' | 'read';
+}
+;
+interface MobileChatViewProps {;
+  contact: {;
+    id: string,;
+    name: string,;
+    avatar?: string,;
+    status?: string;
+  },;
+  messages: Message[],;
+  onBack: () => void,;
+  onSendMessage: (content: string) => void;
+}
+=======
 
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-interface MobileChatViewProps {;
-  contact: {;
-    id: string,;
-    name: string,;
-    avatar?: string;
-    status?: string;
-  };
-  messages: Message[],;
-  onBack: () => void,;
-  onSendMessage: (content: string) => void;
+  onSendMessage: (content: string) => void
 }
-
-export function MobileChatView(): any ({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
-
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
   const [newMessage, setNewMessage] = useState("");
 
   const navigate = useNavigate();
@@ -79,8 +109,13 @@ export function MobileChatView(): any ({ contact, messages, onBack, onSendMessag
       onSendMessage(newMessage);
       setNewMessage("");
     }
-
-
+  }
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      handleSend()
+    }
+  }
   const [newMessage, setNewMessage] = useState(""),
   const navigate = useNavigate(),
   
@@ -104,15 +139,15 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       handleSend();
     }
   },
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`;
     toast.success("Starting video call", {
       description: `Connecting with ${contact.name}...`
-
 
     }),
     
@@ -122,20 +157,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   
 
 
-  const startAudioCall = () => {
-    const roomId = `mobile-audio-${contact.id}`;
-    toast.success("Starting audio call", {
-      description: `Connecting with ${contact.name}...`
-
-
-    }),
-    
-    // Navigate to video call page with audio-only flag
-    navigate(`/call/${roomId}?audioOnly=true`)
-  },
-  
-
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -180,54 +202,18 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             <div
               className={cn(
 
-
-                "max-w-[80%] rounded-2xl px-4 py-2",
-                message.isMe 
-                  ? "bg-primary text-primary-foreground rounded-tr-none" 
-
-
                   : "bg-muted rounded-tl-none"
               )}
             >
               <p>{message.content}</p>
               <div className={cn(
+                "text-xs mt-1 flex justify-end";
 
-    status?: string;
-  }
-  messages: Message[],
-  on_back: () => void,
-  onSendMessage: (content: string) => void;
-}
-export /**
- * MobileChatView - Function description
- */
-function MobileChatView() {
-  const [new_message, setNewMessage] = useState ("");
-  const navigate = use_navigate ();
-;
-  const handle_send = () =>: any {
-    // Check condition
-if (!== "") {) {
-  $2
-}
-      onSendMessage (new_message);
-      setNewMessage ("");
-    }
-  }
-;
-  const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      e.prevent_default (),
-      handle_send ();
-    }
-  }
-;
-  const startVideoCall = () =>: any {
-    const room_id = `mobile-${contact.id}`;
-    toast.success ("Starting video call", {
+  },;
+  const startVideoCall = () => {;
+    const roomId = `mobile-${contact.id}`,;
+    toast.success("Starting video call", {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       description: `Connecting with ${contact.name}...`;
     });
 ;
@@ -383,29 +369,7 @@ if ( {) {
                   ? "bg-primary text-primary-foreground rounded-tr-none" 
                   : "bg-muted rounded-tl-none"
               )}>;
-              <p>{message && message.content}</p>;
-              <divclassName={cn(
-                "text-xs mt-1 flex justify-end"
-                message && message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
-              )}>;
-                {message && message.timestamp}
-                {message && message.isMe && message && message.status && (;
-                  <span className="ml-1">;
-                    {message && message.status === 'read' ? '✓✓' : '✓'}
-                  </span>;
-
-=======
-
-                "text-xs mt-1 flex justify-end",
-                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
-              )}>
-
-                {message.timestamp}
-                {message.isMe && message.status && (
-                  <span className="ml-1">
-                    {message.status === 'read' ? '✓✓' : '✓'}
-                  </span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 )}
               </div>;
             </div>;
@@ -433,50 +397,19 @@ if ( {) {
           <Button
             size="icon" 
             onClick={handleSend}
-            disabled={!newMessage && newMessage.trim()}
-            className={!newMessage && newMessage.trim() ? "opacity-50" : ""}>;
-            <Send className="h-5 w-5" />;
-          </Button>;
-        </div>;
-      </div>;
-    </div>;
-  );
-}
-
-=======
-                  </span>)}
-              </div>;
-            </div>;
-          </div>))}
-      </div>;
-      <div className="sticky bottom - 0 bg - background border - t border - border p - 2">;
-        <div className="flex items - center gap - 2">;
-          <Button variant="ghost" size="icon">;
-            <PaperclipIcon className="h - 5 w - 5" />;
-          </Button>;
-          <Input;
-            value={new_message}
-            on_change={(e) => setNewMessage (e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder="Type a message...";
-            className="flex - 1";
-          />;
-          <Button;
-            size="icon";
-            on_click={handle_send}
-            disabled={!new_message.trim ()}
-            className={!new_message.trim () ? "opacity - 50" : ""}
-          >;
-            <Send className="h - 5 w - 5" />;
-          </Button>;
-        </div>;
-      </div>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            disabled={!newMessage.trim()}
+            className={!newMessage.trim() ? "opacity-50" : ""}
+          >
+            <Send className="h-5 w-5" />
+          </Button>
+        </div>
+      </div>
+    </div>
+  )
 =======
 
 }
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

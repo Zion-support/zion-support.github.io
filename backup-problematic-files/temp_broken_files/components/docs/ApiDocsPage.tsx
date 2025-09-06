@@ -1,11 +1,25 @@
+=======
 
+import React, { useMemo, useState } from 'react';
+import Sidebar from './Sidebar';
+import EndpointDetail from './EndpointDetail';
+import v1 from '../../data/api-docs/v1';
+import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
 import React, { useMemo, useState } from 'react',;
 import Sidebar from './Sidebar',;
 import EndpointDetail from './EndpointDetail',;
 import v1 from '../../data/api-docs/v1',;
 import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',;
 ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+import React, { useMemo, useState } from 'react';
+import Sidebar from './Sidebar';
+import EndpointDetail from './EndpointDetail';
+import v1 from '../../data/api-docs/v1';
+import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1, // could switch by version later
   const [selectedVersion, setSelectedVersion] = useState<string>(spec.defaultVersion)
@@ -24,11 +38,7 @@ export default function ApiDocsPage() {
         onChangeVersion={(v) => { setSelectedVersion(v), setActiveEndpointId(undefined) }}
         visibilityFilter={visibility}
 
-        onChangeVisibility={setVisibility}      />
-      <main className=&quot;p-6 space-y-6&quot;>
-        <header className=&quot;flex items-center justify-between&quot;>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <div>
             <div className="text-2xl font-bold">Zion OS API Documentation</div>
             <div className="text-sm text-high-contrast-muted">Developer-friendly API docs with live testing</div>
@@ -39,11 +49,16 @@ export default function ApiDocsPage() {
             <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/graphql" target="_blank" rel="noreferrer">GraphQL</a>
           </div>
         </header>
-
+<<<<<<< HEAD:components/docs/ApiDocsPage.tsx
+        {activeEndpoint ? (
+=======
+:components/docs/ApiDocsPage.tsx
+        {activeEndpoint ? (
 
         {_activeEndpoint ? (
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <EndpointDetail endpoint={activeEndpoint} />
         ) : (
           <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>
@@ -78,15 +93,6 @@ function ChangelogWidget() {
         <button onClick={save} className="px-3 py-1 rounded bg-high-contrast-accent text-black">Save</button>
         {message && <span className="text-xs text-high-contrast-muted">{message}</span>}
       </div>
-
-      <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
-  )}
-
-=======
-  );
-};
-=======
-      <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
-  )}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

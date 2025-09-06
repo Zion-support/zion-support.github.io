@@ -6,7 +6,9 @@
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
+=======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 class TypeScriptErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -28,7 +30,7 @@ class TypeScriptErrorFixer {}
       data,
       service: 'typescript-error-fixer'
     };
-
+<<<<<<< HEAD
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
@@ -49,7 +51,8 @@ class TypeScriptErrorFixer {}
       this.startContinuousFixing();
       this.setupSignalHandlers();
       this.log('info', 'TypeScript Error Fixer Service started successfully');
-      
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       setInterval(async () => {}
         await this.performTypeScriptFixes()}, this.fixInterval)} catch (error) {}
       this.log('error', 'Failed to start TypeScript Error Fixer Service', error);
@@ -90,7 +93,7 @@ class TypeScriptErrorFixer {}
   async getTypeScriptErrors() {}
     try {}
       const result = execSync('npx tsc --noEmit --json', { })
-        cwd: this.projectRoot, 
+        cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe'
       }
@@ -145,7 +148,8 @@ class TypeScriptErrorFixer {}
         fs.writeFileSync(error.file, fixedContent, 'utf8');
         this.fixesApplied++;
         this.fixedFiles.add(error.file);
-        
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++};
     } catch (error) {}
@@ -154,9 +158,9 @@ class TypeScriptErrorFixer {}
   };
   shouldSkipLine(line) {}
     const trimmed = line.trim();
-    return !trimmed || 
-           trimmed.startsWith('//') || 
-           trimmed.startsWith('/*') || 
+    return !trimmed ||
+           trimmed.startsWith('//') ||
+           trimmed.startsWith('/*') ||
            trimmed.startsWith('*') ||
            trimmed.startsWith('import') ||
            trimmed.startsWith('export')};
@@ -174,7 +178,8 @@ class TypeScriptErrorFixer {}
     const nameMatch = error.message.match(/Cannot find name '([^']+)'/);
     if (!nameMatch) return line;
     const undefinedName = nameMatch[1];
-    
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     // Try to find the name in the file;
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
     const matches = line.match(namePattern);
@@ -205,7 +210,8 @@ class TypeScriptErrorFixer {}
     const moduleMatch = error.message.match(/Cannot find module '([^']+)'/);
     if (!moduleMatch) return line;
     const moduleName = moduleMatch[1];
-    
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     // Try to fix common module issues;
     if (moduleName.startsWith('@/')) {}
       const fixedModule = moduleName.replace('@/', './src/');
@@ -217,7 +223,8 @@ class TypeScriptErrorFixer {}
     const propertyMatch = error.message.match(/Property '([^']+)' does not exist on type/);
     if (!propertyMatch) return line;
     const propertyName = propertyMatch[1];
-    
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     // Add type assertion;
     if (line.includes('.' + propertyName)) {}
       return line.replace(new RegExp(`\\.${propertyName}`), `['${propertyName}']`)};
@@ -239,7 +246,8 @@ class TypeScriptErrorFixer {}
     const namePattern = new RegExp(`\\b${name}\\b`, 'g');
     let firstUsage = -1;
     let declaration = -1;
-    
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     allLines.forEach((line, index) => {}
       if (namePattern.test(line)) {}
         if (firstUsage === -1) firstUsage = index;
@@ -341,4 +349,5 @@ process.on('unhandledRejection', (reason, promise) => {}
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
-});
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

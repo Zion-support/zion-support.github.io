@@ -1,5 +1,12 @@
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-
+export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+;
+export interface CodeSample {
+  language: 'curl' | 'javascript' | 'python';
+  code: string;
+;
 export interface RateLimitInfo {
   tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
@@ -15,8 +22,8 @@ export interface ErrorCode {
 ;
 
 export interface EndpointSpec {
-=======
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export interface CodeSample {;
@@ -34,8 +41,8 @@ export interface ErrorCode {;
   message: string;
 
 export interface EndpointSpec {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   title: string;
   description: string;
@@ -51,34 +58,20 @@ export interface EndpointSpec {;
   errors?: ErrorCode[];
   tags?: string[];
 
-  versions: string[]; // e && e.g., ['v1'] or ['v1','v2']
-
-
-=======
-  versions: string[]; // e.g., ['v1'] or ['v1', 'v2'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface SectionSpec {
-=======
-  versions: string[]; // e.g., ['v1'] or ['v1','v2']
 
-
-export interface SectionSpec {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export interface SectionSpec {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string;
   title: string;
   description?: string;
   endpoints: EndpointSpec[];
-
-;
-
 export interface ApiDocsSpec {
-=======
 
 
 export interface ApiDocsSpec {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   product: 'Zion OS';
   versions: string[]; // available versions;
   default_version: string;
@@ -91,11 +84,8 @@ export interface CodeSample {
   code: string
 =======
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-
-=======
   lastUpdatedIso: string;  auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type Visibility = 'public' | 'partner' | 'internal';
 ;
 export interface CodeSample {
@@ -111,37 +101,32 @@ export interface ErrorCode {
   message: string;
 }
 export interface EndpointSpec {
-  id: string, title: string,
-  description: string, path: string,
-  method: HttpMethod, visibility: Visibility,
-  auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>,
-  query?: Record < string, string>;
-  params?: Record < string, string>;
+
+  query?: Record<string, string>;
+  params?: Record<string, string>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
-
 
   lastUpdatedIso: string
 
 }
+=======
+
 
 =======
-}
-
 
 }
-}
-}
-}
-}
-}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-  lastUpdatedIso: string;
+
 }
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+}
+}
+}
+}
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

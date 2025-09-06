@@ -7,6 +7,7 @@ const server = http && http.createServer((req, res) => {
         res && res.end('Error loading offline && offline.html'),
         return
       }
+=======
       res && res.writeHead(200, { 'Content-Type': 'text/html' }),
       res && res.end(data)
 
@@ -24,7 +25,6 @@ const server = http && http.createServer((req, res) => {
 })
 const PORT = 8080
 =======
-
       res.writeHead(200, { 'Content-Type': 'text/html' }),;
       res.end(data);
     });
@@ -37,6 +37,7 @@ const PORT = 8080
     res.end('Not found');
   }
 }),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -65,65 +66,9 @@ server && server.listen(PORT, () => {
 ╚══════════════════════════════════════════════════════════════════╝
 `)
 
-
-const http = require ('http'),
-const fs = require ('fs'),
-const path = require ('path'),
-const server = http.create_server ((req, res) => {
-  // Check condition
-if ( {) {
-  $2
-}
-    fs.read_file (path.join (__dirname, 'offline.html'), (err, data) => {
-      // Check condition
-if ( {) {
-  $2
-}
-        res.write_head (500),
-        res.end ('Error loading offline.html'),
-        return;
-      }
-      res.write_head (200, { 'Content - Type': 'text / html' }),
-      res.end (data);
-    });
-  } else // Check condition
-if ( {) {
-  $2
-}
-    // Endpoint to check if we're online;
-    res.write_head (200, { 'Content - Type': 'application / json' }),
-    res.end (JSON.stringify ({ online: false, message: 'Running in offline development mode' }));
-  } else {
-    res.write_head (404),
-    res.end ('Not found');
-  }
-}),
-const PORT = 8080,
-server.listen (PORT, () => {
-  console.log (`;
-╔══════════════════════════════════════════════════════════════════╗;
-║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║;
-╠══════════════════════════════════════════════════════════════════╣;
-║                                                                  ║;
-║  🚀 Server running at: http://localhost:${PORT}                    ║;
-║                                                                  ║;
-║  ℹ️  This is a placeholder server that doesn't require npm       ║;
-║     dependencies. Most features will not work until you install  ║;
-║     the required npm packages.                                   ║;
-║                                                                  ║;
-║  🔍 See OFFLINE - DEV - README.md for detailed instructions.         ║;
-║                                                                  ║;
-║  🌐 When internet is available: ║;
-║     1. Run: chmod +x setup.sh                                    ║;
-║     2. Run: ./setup.sh npm                                       ║;
-║     3. Run: npm run dev                                          ║;
-║                                                                  ║;
-╚══════════════════════════════════════════════════════════════════╝;
-`);
-}),
-;
-
-=======
-}),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}),;
+const PORT = 8080,;
+server.listen(PORT, () => {;
+  // // // console.log(`;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Menu, X, Zap, Brain, Cloud, Shield, Rocket, Atom, Bot, Globe, BarChart3, Phone, Mail, MapPin, DollarSign } from 'lucide-react';
 
 const navLinks: { name: string; href: string }[] = [
@@ -14,61 +13,6 @@ const navLinks: { name: string; href: string }[] = [
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' }
 ];
-=======
-import { useRouter } from 'next/router';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  ChevronRight,
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  ArrowRight,
-  Sparkles,
-  Brain,
-  Atom,
-  Shield,
-  DollarSign,
-  FileText,
-  BarChart3,
-  MessageSquare,
-  Truck,
-  Users,
-  Database,
-  Cpu,
-  Cloud,
-  Play,
-  Search,
-  ShieldCheck,
-  TrendingUp,
-  Rocket,
-  Zap,
-  Check,
-  Star,
-  Clock,
-  Target,
-  Building,
-  Award,
-  ChartBar,
-  Lock,
-  Smartphone,
-  Palette,
-  Calendar,
-  CreditCard,
-  Settings,
-  Code,
-  BookOpen,
-  Activity,
-  Bot,
-  ChevronRight as ChevronRightIcon,
-  Factory,
-  FlaskConical,
-  GraduationCap
-} from 'lucide-react';
-import Button from '../ui/Button';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4aaf
 
 export default function NeoFuturisticNavigation() {
   const [open, setOpen] = useState(false);

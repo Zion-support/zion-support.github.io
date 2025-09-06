@@ -1,10 +1,13 @@
 
-
+import { useState, useEffect  } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+export function useJobDetails(jobId: string | undefined) {
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export function useJobDetails(jobId: string | undefined) {;
-
-
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [job, setJob] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -26,46 +29,6 @@ export function useJobDetails(jobId: string | undefined) {;
     } catch (err) {
       console && console.error('Error loading job details:', err);
       setError(err && err.message)
-=======
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-export /**
- * useJobDetails - Function description
- */
-function useJobDetails() {
-  const [job, set_job] = useState (null);
-  const [is_loading, setIsLoading] = useState (true);
-  const [error, set_error] = useState (null);
-;
-  async /**
- * loadJobDetails - Function description
- */
-function loadJobDetails() {
-    // Check condition
-if ( {) {
-  $2
-}
-      setIsLoading (false);
-      return;
-    }
-    try {
-      setIsLoading (true);
-      const { data, error } = await supabase;
-        .from ('jobs');
-        .select ('*');
-        .eq ('id', job_id);
-        .single ();
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      set_job (data);
-      set_error (null);
-    } catch (err) {
-      console.error ('Error loading job details:', err);
-      set_error (err.message);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -85,10 +48,14 @@ if (throw error) {
     loadJobDetails
   }
 }
+export default useJobDetails;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 export function useJobDetails(jobId: string | undefined) {;
@@ -133,12 +100,12 @@ export function useJobDetails(jobId: string | undefined) {;
 }
 
 ;
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default useJobDetails;
-=======
-export default useJobDetails;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

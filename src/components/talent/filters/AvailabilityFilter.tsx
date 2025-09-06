@@ -1,45 +1,19 @@
-return (
-    <div className='mb-6 border-b border-zion-blue-light pb-6'>;
+
+
+  return (
+    <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
 
-
-        className="flex w-full items-center justify-between text-white font-medium"
-      >
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <span>Availability</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
         ) : (
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
-
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from '@/components / ui / checkbox';
-import { AvailabilityFilterProps } from '@/types / filters';
-const AVAILABILITY_OPTIONS = [;
-  { id: 'full_time', label: 'Full - time' },
-  { id: 'part_time', label: 'Part - time' },
-  { id: 'project', label: 'Project - based' },
-];
-export /**
- * AvailabilityFilter - Function description
- */
-function AvailabilityFilter() {
-  return (
-    <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
-      <button;
-        on_click={toggle_section}
-        className='flex w - full items - center justify - between text - white font - medium'      >;
-        <span > Availability</span>;
-        {expanded ? (
-          <ChevronUp className='h - 4 w - 4 text - zion - slate - light' />) : (
-          <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
-      </button>;
-
-
-      
+      </button>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
       {expanded && (
         <div className='mt - 4 space - y-2'>;
@@ -70,11 +44,11 @@ const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
   { id: "project", label: "Project-based" }
-]
+],
 
-export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {;
+export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
-    <div className="mb-6 border-b border-zion-blue-light pb-6">;
+    <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium">;
@@ -104,6 +78,9 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
                 id={`availability-${option.id}`}
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
+=======
+  { id: "full_time", label: "Full-time" },
+  { id: "part_time", label: "Part-time" },
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label
@@ -111,7 +88,7 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
 
           ))}
-        </div>;
+        </div>
       )}
 
     </div>;
@@ -192,7 +169,8 @@ import { AvailabilityFilterProps } from "@/types/filters",;
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 
   { id: "project", label: "Project-based" }
 ]
@@ -222,22 +200,4 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
               <label
                 htmlFor={`availability-${option.id}`}
-
-  option.label 
-}</label> </div>) ) 
-}</div>) ;
-}</div>) ;
-}"};
-
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer";
-              >;
-                {option.label}
-              </label>;
-            </div>;
-          ))}
-        </div>;
-      )}
-    </div>;
-  );
-}
-;
+<<<<<<< HEAD

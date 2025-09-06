@@ -1,4 +1,5 @@
 
+=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
@@ -44,6 +45,7 @@ export function useTranslationService() {;
         },;
         initialTranslations[sourceLanguage] = content,;
         return { translations:initialTranslations, error:error.message },;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
       ;
       return { translations:data.translations },;
@@ -64,23 +66,5 @@ export function useTranslationService() {;
         error:err instanceof Error ? err.message :'Unknown translation error' ;
       },;
     }
-  },;
-  ;
-  const getTranslation = (translations:Record<SupportedLanguage string>, fallback:string = '') => {;
-    if (!translations) return fallback,;
-    return translations[currentLanguage] || translations.en || fallback;
-  },;
-  ;
-  return {;
-    translateContent,;
-    isTranslating,;
-    getTranslation;
-  },;
-} type ContentType = 'job' | 'profile' | 'service' | 'general';
-const translateContent = async (content: string;
-contentType: ContentType = 'general';
-sourceLanguage: SupportedLanguage = 'en';
-setIsTranslating (false);
-}
-};
-}
+<<<<<<< HEAD
+

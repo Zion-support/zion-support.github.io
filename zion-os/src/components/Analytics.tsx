@@ -1,31 +1,6 @@
 
-"use client",
-import { useEffect  } from './react';,
-interface FirstInputEntry extends PerformanceEntry {
-  processing_start: number,
-  processing_end: number,
-  target?: Element;
-}
-export /**
- * Analytics - Function description
- */
-function Analytics() {
-  useEffect (() => {
 
-=======
-
-"use client",;
-import { useEffect } from "react",;
-interface FirstInputEntry extends PerformanceEntry {;
-  processingStart: number,;
-  processingEnd: number,;
-  target?: Element;
-}
-;
-export function Analytics() {;
-  useEffect(() => {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Performance monitoring;
     // Check condition
 if ( {) {
@@ -40,18 +15,6 @@ if ( {) {
 }
             // // // console.log ("LCP:", entry.start_time);
           }
-
-          // Check condition
-if ( {) {
-  $2
-}
-            const firstInputEntry = entry as FirstInputEntry,
-            // // // console.log ("FID:", firstInputEntry.processing_start - firstInputEntry.start_time);
-=======
-
-          if (entry.entryType === "first-input") {;
-            const firstInputEntry = entry as FirstInputEntry,;
-            // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
 
           }
         }
@@ -77,9 +40,15 @@ if ( {) {
       }),
       // Cleanup;
 
+<<<<<<< HEAD
+=======
       return () => {;
         observer.disconnect();
+<<<<<<< HEAD
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         observer2.disconnect();
 
       }

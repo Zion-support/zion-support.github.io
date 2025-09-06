@@ -7,7 +7,9 @@ const fs = // // require('fs');
 const path = // // require('path');
 const { execSync, spawn } = // // require('child_process');
 const chokidar = // // require('chokidar');
+=======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 class ErrorDetectionService {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -16,7 +18,8 @@ class ErrorDetectionService {}
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.maxRetries = parseInt(process.env.MAX_RETRIES) || 3;
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
-    
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     this.errorTypes = {}
       "syntax": [],
       "typescript": [],
@@ -36,7 +39,6 @@ class ErrorDetectionService {}
       data,
       "service": 'error-detection-service'
     };
-
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}
@@ -62,7 +64,8 @@ class ErrorDetectionService {}
       // Start file watching for real-time detection;
       this.startFileWatching();
       this.log('info', 'Error Detection Service started successfully');
-      
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       // Keep the process alive;
       setInterval(() => {}
         if (!this.isRunning) {}
@@ -77,7 +80,6 @@ class ErrorDetectionService {}
       'backups',
       'temp'
     ];
-
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -226,7 +228,6 @@ class ErrorDetectionService {}
         'vite.config.ts',
         'tailwind.config.js'
       ];
-
       for (const configFile of configFiles) {}
         const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {}
@@ -257,7 +258,6 @@ class ErrorDetectionService {}
     const sourceDirs = ['src', 'components', 'pages', 'utils', 'hooks', 'types'];
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const files = [];
-
     sourceDirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(fullPath)) {}
@@ -296,14 +296,16 @@ class ErrorDetectionService {}
     const blockComments = content.match(commentRegex) || [];
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
-    
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     if (openComments !== closeComments) {}
       return true};
     // Check for missing semicolons in certain contexts;
     const lines = content.split('\n');
     for (let i = 0; i < lines.length; i++) {}
       const line = lines[i].trim();
-      if (line && !line.endsWith(';') && !line.endsWith('{') && !line.endsWith('}') && 
+      if (line && !line.endsWith(';') && !line.endsWith('{') && !line.endsWith('}') &&
           !line.endsWith('[') && !line.endsWith(']') && !line.endsWith('(') && !line.endsWith(')') &&
           !line.startsWith('//') && !line.startsWith('/*') && !line.startsWith('*') &&
           !line.includes('function') && !line.includes('class') && !line.includes('const') &&
@@ -325,7 +327,7 @@ class ErrorDetectionService {}
   runTypeScriptCheck() {}
     try {}
       const result = execSync('npx tsc --noEmit --json', { })
-        "cwd": this.projectRoot, 
+        "cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe'
       }
@@ -340,7 +342,7 @@ class ErrorDetectionService {}
   runESLintCheck() {}
     try {}
       const result = execSync('npx eslint . --format json', { })
-        "cwd": this.projectRoot, 
+        "cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe'
       }
@@ -355,7 +357,7 @@ class ErrorDetectionService {}
   runBuildCheck() {}
     try {}
       const result = execSync('npm run build', { })
-        "cwd": this.projectRoot, 
+        "cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe'
       }
@@ -368,7 +370,7 @@ class ErrorDetectionService {}
   runDependencyCheck() {}
     try {}
       const result = execSync('npm audit --json', { })
-        "cwd": this.projectRoot, 
+        "cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe'
       }
@@ -441,9 +443,9 @@ class ErrorDetectionService {}
         })})};
     return { errors }};
   categorizeTypeScriptSeverity(error) {}
-    if (error.message.includes('Cannot find module') || 
+    if (error.message.includes('Cannot find module') ||
         error.message.includes('Module not found')) {}
-      return 'critical'} else if (error.message.includes('Type') || 
+      return 'critical'} else if (error.message.includes('Type') ||
                error.message.includes('Interface')) {}
       return 'medium'} else {}
       return 'low'};
@@ -493,7 +495,8 @@ class ErrorDetectionService {}
       const count = this.errorTypes[type].length;
       report.summary.totalErrors += count;
       report.summary.errorsByType[type] = count;
-      
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       this.errorTypes[type].forEach(error => {})
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++})}
@@ -642,4 +645,5 @@ process.on('unhandledRejection', (reason, promise) => {}
 service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);
   process.exit(1)}
-});
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

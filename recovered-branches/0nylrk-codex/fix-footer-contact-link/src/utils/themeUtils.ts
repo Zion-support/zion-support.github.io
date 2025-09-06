@@ -1,8 +1,10 @@
 
 
+export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
+export interface ThemeColors {
+export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
+
 export interface ThemeColors {;
-
-
   primaryColor: string;
   backgroundColor: string;
   textColor: string;
@@ -12,20 +14,52 @@ export interface ThemeColors {;
 }
 // Define theme presets
 export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
-=======
-export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
-;
-export interface ThemeColors {
-  primary_color: string;
-  background_color: string;
-  text_color: string;
-  accent_color: string;
-  button_color: string,
-  card_background: string;
+  switch (preset) {
+    case 'dark':
+      return {;
+        primaryColor;
+        backgroundColor: '#0f172a';
+        textColor: '#e2e8f0';
+        accentColor: primaryColor;
+        buttonColor: primaryColor
+        cardBackground: '#1e293b'}
+    case 'neon':
+      return {
+        primaryColor;
+        backgroundColor: '#030712';
+        textColor: '#f8fafc';
+        accentColor: '#00ffbb';
+        buttonColor: primaryColor
+        cardBackground: '#0f172a'}
+    case 'corporate':
+      return {
+        primaryColor;
+        backgroundColor: '#f8fafc';
+        textColor: '#334155';
+        accentColor: primaryColor;
+        buttonColor: primaryColor
+        cardBackground: '#ffffff'}
+    case 'startup':
+      return {
+        primaryColor;
+        backgroundColor: '#16181d';
+        textColor: '#fafafa';
+        accentColor: '#ff7f50';
+        buttonColor: primaryColor
+        cardBackground: '#1e2127'}
+    case 'light':
+    default: return {
+        primaryColor;
+        backgroundColor: '#ffffff';
+        textColor: '#0f172a';
+        accentColor: primaryColor;
+        buttonColor: primaryColor
+        cardBackground: '#f8fafc'}
+  }
 }
-// Define theme presets;
-export function getThemeColors (preset: ThemePreset, primary_color: string): ThemeColors {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+// Apply theme colors to document CSS variables
+export function applyThemeColors(colors: ThemeColors) {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   switch (preset) {
     case 'dark':;
       return {
@@ -33,7 +67,9 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
 
   const root = document.documentElement,;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   root.style.setProperty('--primary-color', colors.primaryColor);
   root.style.setProperty('--background-color', colors.backgroundColor);
   root.style.setProperty('--text-color', colors.textColor);
@@ -44,7 +80,9 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
   document.body.style.backgroundColor = colors.backgroundColor;
 
   document.body.style.color = colors.textColor
-
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
   const root = document && document.documentElement,
   root && root.style.setProperty('--primary-color', colors && colors.primaryColor);
   root && root.style.setProperty('--background-color', colors && colors.backgroundColor);
@@ -60,6 +98,7 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 export interface ThemeColors {;
   primaryColor: string,;
@@ -125,14 +164,13 @@ export function applyThemeColors(colors: ThemeColors) {;
   // Set background and text colors on body;
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
-  // Set background and text colors on body;
-  document.body.style.background_color = colors.background_color;
-  document.body.style.color = colors.text_color;
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

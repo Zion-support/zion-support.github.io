@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { jsPDF } from 'jspdf',;
 import { ResumeBasicInfo } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -46,3 +48,4 @@ doc.line (20, yPos, 190, yPos);
 yPos += 10;
 // Add summary if available return yPos 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,6 +1,20 @@
 
-
-
+import React, { useState } from "react";
+import {
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table",
+import {
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
+  DialogTitle;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -12,8 +26,9 @@ import {toast} from "@/hooks/use-toast";
 export function TeamManagement() {;
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState("");
-
 =======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useState } from "react",
 import {
   Table,
@@ -29,24 +44,16 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Badge } from "@/components/ui/badge",
 
-
-import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react",
-import { toast } from "@/hooks/use-toast",
-export function TeamManagement() {
-  const [isAddingMember, setIsAddingMember] = useState(false),
-  const [newMemberEmail, setNewMemberEmail] = useState(""),
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   // Mock team members data
 
   const teamMembers = [
@@ -88,16 +95,19 @@ export function TeamManagement() {
       return
     }
     toast({
-
-
+=======
+      title: "Invitation sent"
+      description: `An invitation has been sent to ${newMemberEmail}`})
+    setNewMemberEmail("");
+    setIsAddingMember(false)
+  }
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
     setNewMemberEmail(""),
     setIsAddingMember(false)
   },
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const handleRemoveMember = (memberId: number) => {
     // In a real app, this would make an API call to remove the member
@@ -105,97 +115,11 @@ export function TeamManagement() {
       title: "Team member removed"
       description: "The team member has been removed from your workspace."})
 
-
-  },
-
-
-
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent"
       description: `A new invitation has been sent to ${memberEmail}`})
-
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {Badge} from "@/components/ui/badge";
-import {PlusCircle, Trash, Mail, UserPlus} from "lucide-react";
-import {toast} from "@/hooks/use-toast";
-export function TeamManagement() {;
-  const [isAddingMember, setIsAddingMember] = useState(false);
-  const [newMemberEmail, setNewMemberEmail] = useState("");
-
-  // Mock team members data;
-  const teamMembers = [;
-    {;
-      id: 1,;
-      name: "Alex Johnson",;
-      email: "alex@example && example.com",;
-      role: "Admin",;
-      status: "active",;
-      lastActive: "2 hours ago"},;
-    {;
-      id: 2,;
-      name: "Jamie Smith",;
-      email: "jamie@example && example.com",;
-      role: "Recruiter",;
-      status: "active",;
-      lastActive: "Yesterday"},;
-    {;
-      id: 3,;
-      name: "Sam Williams",;
-      email: "sam@example && example.com",;
-      role: "Manager",;
-      status: "pending",;
-      lastActive: "Never"},;
-    {;
-      id: 4,;
-      name: "Taylor Brown",;
-      email: "taylor@example && example.com",;
-      role: "Viewer",;
-      status: "active",;
-      lastActive: "3 days ago"}],;
-
-  const handleAddMember = () => {;
-    // In a real app, this would make an API call to add the member;
-    if (!newMemberEmail) {;
-      toast({;
-        title: "Email required",;
-        description: "Please enter an email address for the new team member.",;
-        variant: "destructive"}),;
-      return;
-    }
-
-    toast({;
-      title: "Invitation sent",;
-      description: `An invitation has been sent to ${newMemberEmail}`}),;
-
-    setNewMemberEmail("");
-    setIsAddingMember(false);
-  };
-
-  const handleRemoveMember = (memberId: number) => {;
-    // In a real app, this would make an API call to remove the member;
-    toast({;
-      title: "Team member removed",;
-      description: "The team member has been removed from your workspace."});
-  };
-
-  const handleResendInvite = (memberEmail: string) => {;
-    // In a real app, this would make an API call to resend the invitation;
-    toast({;
-      title: "Invitation resent",;
-      description: `A new invitation has been sent to ${memberEmail}`});
-  };
-
-=======
-
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-6">;
@@ -536,25 +460,7 @@ export function TeamManagement() {;
 }
 
 =======
-                <TableCell>{member.role}</TableCell>;
-                <TableCell>;
-                  <Badge;
-                    variant={member.status === "active" ? "default" : "outline"}
-                  >;
-                    {member.status}
-                  </Badge>;
-                </TableCell>;
-                <TableCell>{member.last_active}</TableCell>;
-                <TableCell className="text - right">;
-                  <div className="flex justify - end gap - 2">;
-                    {member.status === "pending" ? (
-                      <Button;
-                        variant="ghost";
-                        size="sm";
-
-                        className="text-destructive hover:text-destructive";
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                         onClick={() => handleRemoveMember(member.id)}
                       >
                         <Trash className="h-4 w-4" />

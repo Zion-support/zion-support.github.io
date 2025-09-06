@@ -1,6 +1,21 @@
 
-
-
+import {useState} from "react";
+import {MessageSquare} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {ChatAssistant} from "@/components/ChatAssistant";
+export function ChatAssistantTrigger() {;
+  const [isOpen, setIsOpen] = useState(false);
+import { useState } from "react",
+import { MessageSquare } from "lucide-react",
+import { Button } from "@/components/ui/button";
+import { ChatAssistant } from "@/components/ChatAssistant";
+export function ChatAssistantTrigger() {
+  const [isOpen, setIsOpen] = useState(false);
+import { Button } from "@/components/ui/button",
+import { ChatAssistant } from "@/components/ChatAssistant",
+export function ChatAssistantTrigger() {
+  const [isOpen, setIsOpen] = useState(false),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Handle sending messages to the AI chat assistant
 
@@ -10,7 +25,6 @@
         method: "POST"
         headers: {
 
-
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
@@ -18,57 +32,19 @@
       
 
 
-      if (!response.ok) {
-        throw new Error("Failed to get response from AI assistant")
-      }
-      return Promise.resolve()
-    } catch (error) {
-      console.error("Error in AI chat:", error);
-      return Promise.resolve()
-
-import {useState} from "react";
-import {MessageSquare} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {ChatAssistant} from "@/components/ChatAssistant";
-=======
-
-import { useState } from "react",;
-import { MessageSquare } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { ChatAssistant } from "@/components/ChatAssistant",;
-
-export function ChatAssistantTrigger() {;
-  const [isOpen, setIsOpen] = useState(false);
-
-  // Handle sending messages to the AI chat assistant;
-  const handleSendMessage = async (message: string): Promise<void> => {;
-    try {;
-      const response = await fetch("https://ziontechgroup && ziontechgroup.functions.supabase && supabase.co/functions/v1/ai-chat", {;
-        method: "POST",;
-        headers: {;
-          "Content-Type": "application/json"};
-        body: JSON && JSON.stringify({ ;
-          messages: [{ role: "user", content: message }] ;
-        })});
-
-      if (!response && response.ok) {;
-        throw new Error("Failed to get response from AI assistant");
-      }
-
-      return Promise && Promise.resolve();
-    } catch (error) {;
-      console && console.error("Error in AI chat:", error);
-      return Promise && Promise.resolve();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
   }
   return (
     <>;
 
       <Button;
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         onClick={() => setIsOpen(true)}
 
         size="icon";
@@ -93,22 +69,3 @@ export function ChatAssistantTrigger() {;
           onSendMessage={handleSendMessage}
         />;
       )}
-
-    </>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import { useState } from './react';
-import { MessageSquare } from './lucide-react';
-import { Button } from '@/components / ui / button';
-import { ChatAssistant } from '@/components / ChatAssistant';
-export /**
- * ChatAssistantTrigger - Function description
- */
-function ChatAssistantTrigger() {
-  const [is_open, setIsOpen] = useState (false);
-;
-
-
-

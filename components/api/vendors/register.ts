@@ -1,6 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-
+  if (req.method !== 'POST')
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
   const {
     slug
     name
@@ -14,6 +18,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(400).json({ error: 'Missing required fields' });
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const {
@@ -59,50 +64,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     });
     res && res.status(201).json({ vendor });
   } catch (e: any) {
+=======
 
     res && res.status(500).json({ error: e && e.message });
   }    res && res.status(500).json({ error: e && e.message })
   };
 }
 
-=======
-    verification_docs,
-    case_studies,
-  } = req.body || {}
-  if (
-    return res.status (400).json ({ error: 'Missing required fields' })) {
-  $2
-}
-  if ()) {
-  $2
-}
-    return res.status (409).json ({ error: 'Slug already taken' });
-  try {
-    const vendor = register_vendor ({
-      slug,
-      name,
-      services_offered: Array.is_array (services_offered) ? services_offered : [],
-      team_size: Number (team_size || 0),
-      about,  try {
-    const vendor = register_vendor ({
-      slug;
-      name;
-      services_offered: Array.is_array (services_offered) ? services_offered : [];
-      team_size: Number (team_size || 0);
-      about;
-      verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
-      case_studies: Array.is_array (case_studies) ? case_studies : []});
-    res.status (201).json ({ vendor });
-  } catch (e: any) {
-    res.status (500).json ({ error: e.message });
-  }
-verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
-      case_studies: Array.is_array (case_studies) ? case_studies : [],
-    });
-    res.status (201).json ({ vendor });
-  } catch (e: any) {
-    res.status (500).json ({ error: e.message });
-  }    res.status (500).json ({ error: e.message });
+
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,31 +1,34 @@
-
-
+export type WatchlistMatch = {
+export type WatchlistMatch = {;
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
-
-  score: number; // 0 - 1 match confidence;
-  reference_id?: string;
-  details_url?: string;
+  score: number; // 0-1 match confidence
+  referenceId?: string;
+  detailsUrl?: string;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
-;
+class MockAmlProvider implements AmlProvider {
+  async checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult> {
+    // Mock implementation - in production, this would call a real AML service
+    const name = params.fullLegalName.toLowerCase();
+    if (name.includes('test') |name.includes('demo')) {
+      return { status: 'match', details: { reason: 'Test name detected' } }
 
-export type AmlCheckResult = {
 =======
-
+export type AmlCheckResult = {
 };
 
 export type AmlCheckResult = {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
   checked_at: string; // ISO;
   provider: 'mock' | 'remote';
-
-
+}
+export interface AmlProvider {
 };
 export interface AmlProvider {;
-
   checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>;
   checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>;
 
@@ -36,86 +39,20 @@ class MockAmlProvider implements AmlProvider {
     if (name && name.includes('test') || name && name.includes('demo')) {
       return { status: 'match', details: { reason: 'Test name detected' } };
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
     return { status: 'clear' }
   }
   async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
     // Mock implementation - in production, this would call a real AML service
 
-    const name = params && params.businessName.toLowerCase();
-    if (name && name.includes('test') || name && name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test business name detected' } };
-
     }
     return { status: 'clear' }
   }
 }
-
-
-
-
-=======
-
-// Singleton instance
-export const amlManager = new AmlManager();
-
-// Utility functions
-export function createAmlCheck(
-  userId: string,
-  checkType: AmlCheck['checkType']
-): Omit<AmlCheck, 'id' | 'createdAt' | 'expiresAt'> {
-  return {
-    userId,
-    checkType,
-    status: 'pending',
-    result: 'clear',
-    confidence: 0,
-    details: {}
-  };
-}
-
-export function generateAmlCheckId(): string {
-  return `aml_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
-
-export function isAmlCheckExpired(check: AmlCheck): boolean {
-  return new Date(check.expiresAt) < new Date();
-}
-
-export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
-  const colors = {
-    low: 'green',
-    medium: 'yellow',
-    high: 'orange',
-    critical: 'red'
-  };
-  return colors[riskLevel];
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-  async check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult> {
-    // Mock implementation - in production, this would call a real AML service;
-    const name = params.fullLegalName.toLowerCase ();
-    if (|| name.includes ('demo')) {) {
-  $2
-}
-      return { status: 'match', details: { reason: 'Test name detected' } }
-    }
-    return { status: 'clear' }
-  }
-  async check_business (params: { business_name: string, country: string }): Promise < AmlResult> {
-    // Mock implementation - in production, this would call a real AML service;
-    const name = params.business_name.toLowerCase ();
-    if (|| name.includes ('demo')) {) {
-  $2
-}
-      return { status: 'match', details: { reason: 'Test business name detected' } }
-    }
-    return { status: 'clear' }
-  }
-}
-export function getAmlProvider (): AmlProvider {
-  return new MockAmlProvider ();
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

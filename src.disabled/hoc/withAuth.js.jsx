@@ -1,12 +1,9 @@
-
-
-=======
-
-
-=======
+:src.disabled/hoc/withAuth.js.jsx
 import { useEffect } from\';react\' import { useRouter } from\';\';next/router\' import { useSelector } from\';\';react-redux\' \"function\": withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router.push(\'';/login?next=/community/new\')} },[isLoggedIn,router]) \"if\": (!isLoggedIn) { return null} return <Component {...props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth\'';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/hoc/withAuth.js.jsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import { useEffect } from\';react\' import { useRouter } from\';\';next/router\' import { useSelector } from\';\';react-redux\' \"function\": withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router.push(\'';/login?next=/community/new\')} },[isLoggedIn,router]) \"if\": (!isLoggedIn) { return null} return <Component {...props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth\'';
+:temp_exclude/src.disabled/hoc/withAuth.js.jsx
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const { useEffect } from";react" import { useRouter } from";";next/router" import { useSelector } from";";react-redux" function: withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router.push("";/login?next=/community/new")} },[isLoggedIn,router]) if: (!isLoggedIn) { return null} return <Component {.props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth"";"""
 =======
 =======

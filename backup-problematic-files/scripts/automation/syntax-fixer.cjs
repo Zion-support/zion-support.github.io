@@ -66,4 +66,5 @@ const { exec } = require("child_process")
   this.log("info", "Syntax Fixer heartbeat - running normally")
   this.log("info", "Syntax Fixer shutting down...")
   fixer.log("info", "Syntax Fixer started in continuous mode")
-  console.error("Syntax fixer "failed")
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

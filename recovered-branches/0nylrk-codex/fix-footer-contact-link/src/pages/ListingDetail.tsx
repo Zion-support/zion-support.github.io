@@ -1,4 +1,19 @@
 
+
+import { useState } from "react",
+import { useParams } from "react-router-dom",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Skeleton } from "@/components/ui/skeleton",
+import { Star, MessageSquare, Brain, Shield } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
+import { toast } from "@/hooks/use-toast",
+import { PaymentButton } from "@/components/transactions/PaymentButton",
+import { AppLayout } from "@/layout/AppLayout",
+import { ProfileContact } from "@/components/profile/ProfileContact",
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
@@ -20,10 +35,40 @@ export default function ListingDetail() {;
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+import { useState } from "react",
+import { useParams } from "react-router-dom",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Skeleton } from "@/components/ui/skeleton",
+import { Star, MessageSquare, Brain, Shield } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
+import { toast } from "@/hooks/use-toast",
+import { PaymentButton } from "@/components/transactions/PaymentButton",
+import { AppLayout } from "@/layout/AppLayout",
+import { ProfileContact } from "@/components/profile/ProfileContact",
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+export default function ListingDetail() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const { id } = useParams() as { id?: string }
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+  // Find the listing from our shared data source - now also checking equipment listings
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 
-=======
+export default function ListingDetail() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const { id } = useParams() as { id?: string },
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0),
+  const [isLoading, setIsLoading] = useState(false),
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-
+  // Find the listing from our shared data source - now also checking equipment listings
+  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
 
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
   if (!listing) {
@@ -45,9 +90,10 @@ export default function ListingDetail() {;
   }
   const handleContact = () => {
     setIsContactDialogOpen(true)
-
+=======
+  }
   },
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <AppLayout>
@@ -192,30 +238,26 @@ export default function ListingDetail() {;
                           onError={(e) => {;
                             const target = e && e.target as HTMLImageElement;
                             target && target.src = "/placeholder && placeholder.svg";
-=======
-                      >;
-                        <img;
-                          src={image} ;
-                          alt={`${listing.title} - image ${index + 1}`} ;
-                          className="w-full h-full object-cover";
-                          onError={(e) => {;
-                            const target = e.target as HTMLImageElement,;
-                            target.src = "/placeholder.svg";
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                           }}
                         />;
                       </div>;
                     ))}
                   </div>;
                 )}
+              </div>
+              {/* Description Section */}
+              <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
+                <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
+                <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
 
-
-                
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -240,40 +282,6 @@ export default function ListingDetail() {;
                     </div>
                   </div>
                 </div>
-=======
-              </div>;
-
-              {/* Description Section */}
-              <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;
-                <h2 className="text-2xl font-bold text-white mb-4">Description</h2>;
-                <p className="text-zion-slate-light whitespace-pre-line">{listing && listing.description}</p>;
-
-                {/* Features */}
-                <div className="mt-8">;
-                  <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>;
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-                    <div className="flex items-start gap-3">;
-                      <div className="p-2 rounded-full bg-zion-purple/20">;
-                        <Brain className="h-5 w-5 text-zion-purple" />;
-                      </div>;
-                      <div>;
-                        <h4 className="font-medium text-white">Advanced AI</h4>;
-                        <p className="text-sm text-zion-slate-light">State-of-the-art machine learning techniques</p>;
-                      </div>;
-                    </div>;
-                    <div className="flex items-start gap-3">;
-                      <div className="p-2 rounded-full bg-zion-cyan/20">;
-                        <Shield className="h-5 w-5 text-zion-cyan" />;
-                      </div>;
-                      <div>;
-                        <h4 className="font-medium text-white">Enterprise Security</h4>;
-                        <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Tags */}
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>;
@@ -316,10 +324,11 @@ export default function ListingDetail() {;
                           key={i}
                           className={cn(
 
-
                             "h-5 w-5",
+=======
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           )}
@@ -358,37 +367,18 @@ export default function ListingDetail() {;
                       providerId={listing && listing.author.id}
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      onPaymentInitiated={() => {
+                        toast({
+                          title: "Payment Processing"
+                          description: "Redirecting to secure checkout..."
+                        })
 
-
-                <div className="space-y-3 mb-8">;
-                  {listing.price !== null ? (;
-                    <PaymentButton;
-                      amount={listing.price}
-                      serviceId={listing.id}
-                      providerId={listing.author.id}
-                      buttonText="Buy Now";
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
-                      onPaymentInitiated={() => {;
-                        toast({;
-                          title: "Payment Processing";
-                          description: "Redirecting to secure checkout...";
-                        });
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       }}
                     />
                   ) : (
-=======
-                      onPaymentInitiated={() => {;
-                        toast({;
-                          title: "Payment Processing",;
-                          description: "Redirecting to secure checkout...";
-                        });
-                      }}
-                    />;
-                  ) : (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <Button
                       onClick={handleContact}
                       disabled={isLoading}
@@ -402,43 +392,6 @@ export default function ListingDetail() {;
 
 
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
-=======
-
-                  <Button
-                    variant="outline" 
-                    onClick={handleContact}
-                    disabled={isLoading}
-                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">;
-                    <MessageSquare className="h-4 w-4 mr-2" />;
-                    Contact Publisher;
-                  </Button>;
-                </div>;
-
-                {/* Publisher Info */}
-                <div className="border-t border-zion-blue-light pt-6">;
-                  <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>;
-                  <div className="flex items-center gap-3">;
-                    {listing && listing.author.avatarUrl ? (;
-                      <img
-                        src={listing && listing.author.avatarUrl} 
-                        alt={listing && listing.author.name} 
-                        className="h-12 w-12 rounded-full"
-                        onError={(e) => {;
-                          const target = e && e.target as HTMLImageElement;
-                          target && target.src = "https: //ui-avatars && avatars.com/api/?name=" + encodeURIComponent(listing && listing.author.name);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                        }}
-                      />;
-                    ) : (;
-                      <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">;
-                        <span className="text-lg font-medium text-zion-purple">{listing && listing.author.name && name.charAt(0)}</span>;
-                      </div>;
-                    )}
-
-=======
-
-
-=======
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;
                       {isLoading ? "Processing..." : "Request Quote"}
@@ -759,6 +712,8 @@ if ( {) {
           />;
         </DialogContent>;
       </Dialog>;
-    </AppLayout>);
+    </AppLayout>;
+  );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

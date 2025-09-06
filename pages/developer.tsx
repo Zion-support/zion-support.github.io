@@ -1,6 +1,15 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
+import React from 'react',;
+import Head from 'next/head',;
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
+import Link from 'next/link',;
+import React from 'react'
+import Head from 'next/head'
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground'
+import Link from 'next/link'
 export default function DeveloperPage() {
   return (
     <>
@@ -13,18 +22,21 @@ export default function DeveloperPage() {
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Developer Portal</h1>
         <p className="text-gray-300 mb-6">Access docs, SDKs, and quickstarts for all services. Contact us for enterprise onboarding.</p>
               <div className="space-x-4">
-
-
+        <a href="/api-docs" className="text-cyan-400 underline">API Docs</a>
+        <a href="/docs" className="text-cyan-400 underline">Guides</a>
+        <a href="/support" className="text-cyan-400 underline">Support</a>
         <a href="/api-docs" className="text-cyan-400 underline">API Docs</Link>
         <a href="/docs" className="text-cyan-400 underline">Guides</Link>
         <a href="/support" className="text-cyan-400 underline">Support</Link>
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>
       </div>
     </>
   )
-
+};
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -54,39 +66,11 @@ export default function DeveloperPage() {_return (
     </>
   )
 
-=======
-}
-
-=======
-import React from 'react',
-import Head from 'next / head',
-import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground',
-import Link from 'next / link',
-export default /**
- * DeveloperPage - Function description
- */
-function DeveloperPage() {
-  return (
-    <>;
-      <Head>;
-        <title > Developer Portal | Zion Tech Group</title>;
-        <meta name="description" content="Developer resources, API keys, examples, and SDKs." />;
-        <link rel="canonical" href="https://ziontechgroup.com / developer" />;
-      </Head>;
-      <div className="container mx - auto px - 4 py - 16 text - gray - 200">;
-        <h1 className="text - 4xl md:text - 6xl font - bold mb - 4">Developer Portal</h1>;
-        <p className="text - gray - 300 mb - 6">Access docs, SDKs, and quickstarts for all services. Contact us for enterprise onboarding.</p>;
-              <div className="space - x-4">;
-        <a href="/api - docs" className="text - cyan - 400 underline">API Docs</a>;
-        <a href="/docs" className="text - cyan - 400 underline">Guides</a>;
-        <a href="/support" className="text - cyan - 400 underline">Support</a>;
-      </div>;
-      </div>;
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

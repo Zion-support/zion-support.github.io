@@ -1,19 +1,23 @@
-
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
 import {
-
+  parseUserFromRequest
+  ensureInvolvedOrAdmin
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getDisputeById } from "../../../utils/fsdb";
+import {
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
-
 } from "../../../utils/auth";
 export default async function handler(
-
+  req: NextApiRequest
+  res: NextApiResponse
+) {
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
-
   const { id } = req.query;
 
   if (typeof id !== "string")
@@ -41,18 +45,46 @@ export default async function handler(
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { getDisputeById  } from '../../../utils / fsdb';
-import {
-  parseUserFromRequest,
-  ensureInvolvedOrAdmin,
-} from '../../../utils / auth';
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader('Allow', ['GET']);
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getDisputeById } from '../../../utils/fsdb';
+import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../utils/auth';
+export default async function handler(req, res) {
+  try {
+  const { id } = req.query;
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+    } catch (error) {
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    return res.status(200).json({ dispute });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
 export default async /**
  * handler - Function description
@@ -69,8 +101,5 @@ function handler() {
 if ( {) {
   $2
 }
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

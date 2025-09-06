@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react';
 import { Badge } from "@/types/community",;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -75,3 +77,4 @@ badge.id ;
 };
 export default UserBadges;
 '"
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

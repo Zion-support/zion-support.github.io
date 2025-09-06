@@ -1,12 +1,13 @@
 
 
-
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Admin Pages
 import QuoteManager from "@/pages/admin/QuoteManager",
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",
@@ -16,25 +17,7 @@ import AppMetadataManager from "@/pages/admin/AppMetadataManager",
 import SupportRequests from "@/pages/admin/SupportRequests",
 import FraudDetection from "@/pages/admin/FraudDetection",
 
-
-import TokenManager from "@/pages/admin/TokenManager",
-import IntegrationsPage from "@/pages/admin/IntegrationsPage",
-
-
 const AdminRoutes = () => {
-=======
-// Admin Pages;
-import QuoteManager from "@/pages/admin/QuoteManager";
-import ReviewsModeration from "@/pages/admin/ReviewsModeration";
-import WhitelabelManager from "@/pages/admin/WhitelabelManager";
-import PartnerManager from "@/pages/admin/PartnerManager";
-import AppMetadataManager from "@/pages/admin/AppMetadataManager";
-import SupportRequests from "@/pages/admin/SupportRequests";
-import FraudDetection from "@/pages/admin/FraudDetection";
-import TokenManager from "@/pages/admin/TokenManager";
-import IntegrationsPage from "@/pages/admin/IntegrationsPage";
-const AdminRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       <Route
@@ -128,28 +111,17 @@ const AdminRoutes = () => {;
       <Route
         path="/admin/integrations"
         element={
-
-      />;
-    </Routes>;
-  );
-};
-
-
-export default AdminRoutes;
-
-=======
-import { Fragment } from './react';
-import { Route, Routes } from './react-router-dom';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-=======
           <ProtectedRoute adminOnly={true}>
             <IntegrationsPage />
           </ProtectedRoute>
+        }
+      />
+    </Routes>
+  )
+}
+export default AdminRoutes;
 
-import { Fragment } from "react",;
-import { Route, Routes } from "react-router-dom",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default AdminRoutes;
 // Admin Pages;
 import QuoteManager from "@/pages / admin / QuoteManager";
 import ReviewsModeration from "@/pages / admin / ReviewsModeration";
@@ -239,8 +211,11 @@ const AdminRoutes = () =>: any {
     </Routes>;
   );
 },;
-
-
+<<<<<<< HEAD
 export default AdminRoutes;
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

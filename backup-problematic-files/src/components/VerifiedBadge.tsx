@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import React from 'react',;
 import { CheckCircle } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
@@ -37,3 +39,4 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
   label ;
 }</p> </TooltipContent> </Tooltip> </TooltipProvider>) ;
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

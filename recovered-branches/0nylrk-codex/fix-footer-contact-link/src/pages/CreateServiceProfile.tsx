@@ -1,17 +1,12 @@
 
-
-
+import React from "react";
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
-
-=======
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
-=======
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function CreateServiceProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -27,12 +22,7 @@ export default function CreateServiceProfile() {
       </div>
     </div>
   )
-
-import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
-=======
-
-
-=======
+}
 import React from "react",;
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 
@@ -55,6 +45,7 @@ export default function CreateServiceProfile() {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from './react';
 import { ServiceProviderRegistrationForm } from '@/components / profile / ServiceProviderRegistrationForm';
 export default /**
@@ -74,9 +65,13 @@ function CreateServiceProfile() {
         <ServiceProviderRegistrationForm />;
       </div>;
     </div>);
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 
 ;
+=======
 
 
 
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

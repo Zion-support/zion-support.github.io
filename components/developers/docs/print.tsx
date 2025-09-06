@@ -1,31 +1,30 @@
-
-
+ export const getStaticProps: GetStaticProps<PageProps> = async () => {
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
+ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent,
-    },
-  }}import React, { useEffect } from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    },;
+  };};import React, { useEffect } from 'react';
 import type { GetStaticProps } from 'next';
-import content from '../../../data / docs / content.json';
+import content from '../../../data/docs/content.json';
 export type Section = {
   id: string,
-  title: string,
+  title: string,;
   html?: string;
-  code?: { language?: string, content: string }[];
-}
-;
+  code?: { language?: string, content: string }[]
+};
+
 type DocsContent = {
   title: string,
-  sections: Section[];
-}
-;
-type PageProps = {
+  sections: Section[]
+};
 
-  docs: DocsContent;
-}
-;
-export const getStaticProps: GetStaticProps < PageProps> = async () => {
+type PageProps = {
+  docs: DocsContent
+};
+
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
 
   return {
     props: {
@@ -51,72 +50,16 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
-
-
-
-
+=======
 
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
- export const getStaticProps: GetStaticProps<PageProps> = async () => {;
-  return {;
-    props: {;
-      docs: content as DocsContent,;
-    },;
-  };};import React, { useEffect } from 'react';
-import type { GetStaticProps } from 'next';
-import content from '../../../data/docs/content ;
-export type Section = {;
-  id: string,;
-  title: string,;
-  html?: string;
-  code?: { language?: string, content: string }[];
-};
-
-type DocsContent = {;
-  title: string,;
-  sections: Section[];
-};
-
-type PageProps = {;
-  docs: DocsContent;
-};
-
-export const getStaticProps: GetStaticProps<PageProps> = async () => {;
-  return {;
-    props: {;
-      docs: content as DocsContent}}
-
-export default function PrintDocs(): any ({ docs }: PageProps) {;
+export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {;
-    const id = setTimeout(() => window && window.print(), 500);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    const id = setTimeout(() => window.print(), 500);
+
     return () => clearTimeout(id);
   }, []);
   return (
@@ -136,16 +79,6 @@ export default function PrintDocs(): any ({ docs }: PageProps) {;
                 </pre>;
               ))}          </section>  }, []);
 
-=======
-};
-
-export default function PrintDocs({ docs }: PageProps) {
-  useEffect(() => {
-    const id = setTimeout(() => window.print(), 500);
-    return () => clearTimeout(id)
-  }, []);
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
     <div className="p-8 max-w-4xl mx-auto">;
@@ -161,17 +94,14 @@ export default function PrintDocs({ docs }: PageProps) {
 
 
         ))}
-
-      </div>;
-    </div>;
+      </div>
+    </div>
+);
+}
   );
 }
 
-=======
-  );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default /**
  * PrintDocs - Function description
  */
@@ -211,15 +141,34 @@ function PrintDocs() {
           </section>))}
       </div>;
     </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-  );
-}
+export const getStaticProps: GetStaticProps<PageProps> = async () => {_return {
+    props: {
+      docs: content as DocsContent}}
+},
 
-=======
+export default function PrintDocs({ docs }: PageProps) {
+  useEffect(() => {
+    const id = setTimeout(() => window.print(), 500),
+    return () => clearTimeout(id)
+  }, []),
 
+  return (
+    <div className=&quot;p-8 max-w-4xl mx-auto&quot;>
+      <h1 className=&quot;text-3xl font-bold mb-6&quot;>{docs.title}</h1>
+      <div className=&quot;space-y-8&quot;>
+        {docs.sections.map((s) => (
+          <section key={s.id}>
+            <h2 className=&quot;text-2xl font-semibold mb-2&quot;>{s.title}</h2>
+            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
+            {s.code && s.code.map((c, i) => (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ))}
+          </section>
+        ))}
+      </div>
+    </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

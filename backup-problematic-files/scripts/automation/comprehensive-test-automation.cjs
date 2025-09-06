@@ -42,7 +42,7 @@ class ComprehensiveTestAutomation {}
     this.log('Running unit tests...');
     try {}
       execSync('npm test -- --coverage --watchAll=false', { })
-        "cwd": this.projectRoot, 
+        "cwd": this.projectRoot,
         "stdio": 'pipe',
         "timeout": 120000;
       }
@@ -60,7 +60,7 @@ class ComprehensiveTestAutomation {}
     this.log('Running TypeScript type checking...');
     try {}
       execSync('npx tsc --noEmit', { })
-        "cwd": this.projectRoot, 
+        "cwd": this.projectRoot,
         "stdio": 'pipe',
         "timeout": 60000;
       }
@@ -78,7 +78,7 @@ class ComprehensiveTestAutomation {}
     this.log('Running ESLint...');
     try {}
       execSync('npx eslint . --max-warnings 0', { })
-        "cwd": this.projectRoot, 
+        "cwd": this.projectRoot,
         "stdio": 'pipe',
         "timeout": 60000;
       }
@@ -96,7 +96,7 @@ class ComprehensiveTestAutomation {}
     this.log('Running build test...');
     try {}
       execSync('npm run build', { })
-        "cwd": this.projectRoot, 
+        "cwd": this.projectRoot,
         "stdio": 'pipe',
         "timeout": 300000;
       }
@@ -117,7 +117,7 @@ class ComprehensiveTestAutomation {}
     try {}
       // Check bundle size;
       const buildOutput = execSync('npm run build', { })
-        "cwd": this.projectRoot, 
+        "cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe',
         "timeout": 300000;
@@ -214,7 +214,7 @@ class ComprehensiveTestAutomation {}
       // Run npm audit;
       try {}
         execSync('npm audit --audit-level=moderate', { })
-          "cwd": this.projectRoot, 
+          "cwd": this.projectRoot,
           "stdio": 'pipe',
           "timeout": 60000;
         }
@@ -244,11 +244,11 @@ class ComprehensiveTestAutomation {}
   findReactFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
-    
+
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
-      
+
       if () {}
         files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.js')) {}
         files.push(fullPath)};
@@ -301,4 +301,5 @@ if ( {})
      {}
   const testAutomation = new ComprehensiveTestAutomation}(;);
   testAutomation.run().catch(console.error)};
-module.exports = ComprehensiveTestAutomation;
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

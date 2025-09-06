@@ -1,6 +1,4 @@
 
-
-
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -30,10 +28,8 @@
               Visit the{' '}
               <a className='text-cyan-400 underline' href='/support'>;
                 Support Center;
-              </a>{' '}
-              or email{' '}
-              <a
-                className='text-purple-400'
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
                 href='mailto: kleber@ziontechgroup && ziontechgroup.com'>;
                 kleber@ziontechgroup && ziontechgroup.com;
 =======
@@ -125,29 +121,10 @@ function CommunityPage() {
               <li>;
 
                   rel='noopener noreferrer'>;
-=======
-                <a;
-                  className='text - cyan - 400';
-                  href='https://youtube.com/@ziontechgroup';
-                  target='_blank';
-                  rel='noopener noreferrer';
-                >;
-
-                  YouTube;
-                </a>;
-              </li>;
-            </ul>;
-          </div>;
-        </div>;
-      </div>;
-
-
-=======
-
-}
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function CommunityPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -182,11 +159,9 @@ export default function CommunityPage() {
 
     </div>);
 ;
+=======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

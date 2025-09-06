@@ -1,12 +1,11 @@
 
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  if (req && req.method !== "GET")
-    return res && res.status(405).json({ error: "Method not allowed" });
-  const { since } = req && req.query as { since?: string };
+  if (req.method !== "GET");
+    return res.status(405).json({ error: "Method not allowed" });
+  const { since } = req.query as { since?: string }
 
   const state = readState();
   const sinceTs = since ? Number(since) : 0;
@@ -18,23 +17,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   );
   res && res.status(200).json({ events });
 }
-
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { read_state  } from '../../../../lib / integrations / file_store';
-;
-export default /**
- * handler - Function description
- */
-function handler() {
-  if (
-    return res.status (405).json ({ error: "Method not allowed" })) {
-  $2
 }
   const { since } = req.query as { since?: string }
   const state = read_state ();
@@ -44,8 +26,11 @@ function handler() {
   );
   res.status (200).json ({ events });
 }
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

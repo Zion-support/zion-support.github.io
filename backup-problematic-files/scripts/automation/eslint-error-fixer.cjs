@@ -194,7 +194,7 @@ console.log(`[${type.toUpperCase()}] ${message}`)};
       error.rule === "prefer-const" ||;
       error.message.includes("prefer const");
     ) {}
-  
+
 } else if (;)
       error.rule === "prefer-const" ||;
       error.message.includes("prefer const");
@@ -431,4 +431,5 @@ if (require.main === module) {}
   console.error("ESLint Error Fixer "failed": ', error);
       process.exit(1)})};
 ;
-module.exports = ESLintErrorFixer;
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

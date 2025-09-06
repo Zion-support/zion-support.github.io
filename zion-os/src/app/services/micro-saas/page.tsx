@@ -296,23 +296,8 @@ const microSAASServices: MicroSAASService[] = [;
 ],;
 export default function MicroSAASPage() {;
   return (;
-
     <div className="space-y-8">;
-=======
-"use client",
-import { useState  } from './react';,
-interface MicroSAASService {
-  id: string,
-  name: string,
-  description: string,
-  target_market: string[],
-  features: string[],
-  pricing: string,
-  starting_price: number,
-  contact_link: string,
-  icon: string,
-  benefits: string[],
-  integrations: string[],
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   deployment: string;
 }
 const microSAASServices: MicroSAASService[] = [;
@@ -592,14 +577,9 @@ const microSAASServices: MicroSAASService[] = [;
     ],
     deployment: "Enterprise cloud with compliance features";
   }
-],
-export default /**
- * MicroSAASPage - Function description
- */
-function MicroSAASPage() {
-  return (
-    <div className="space - y-8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+    <div className="space-y-8">;
+
       {/* Header */}
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">Micro SAAS Solutions</h1>;

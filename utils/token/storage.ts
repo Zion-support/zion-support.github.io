@@ -1,15 +1,23 @@
 
 
+export interface TokenConfig {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  tokenName: string;
+  tokenSymbol: string;
+=======
+
+
 
 
 
 export interface TokenConfig {
   token_name: string;
   token_symbol: string;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   decimals: number;
-  total_supply: number;
-  issue_rate: number;
-  redeem_rate: number;
+  totalSupply: number;
+  issueRate: number;
+  redeemRate: number;
   minIssueAmount: number;
   maxIssueAmount: number;
 }
@@ -49,9 +57,15 @@ class TokenStore {
     redeemRate: 1.0
     minIssueAmount: 1
     maxIssueAmount: 10000
+=======
 
   }
 export interface TokenStoreData {
+
+=======
+export interface TokenStoreData {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
@@ -59,18 +73,21 @@ export interface TokenStoreData {
 function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir();
-
 =======
-  set_config (new_config: Partial < TokenConfig>): void {
-    this.config = { ...this.config, ...new_config }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+    if (!fs.existsSync(STORE_FILE)) return null;
+    const raw = fs.readFileSync(STORE_FILE, 'utf8');
+    const parsed = JSON.parse(raw) as TokenStoreData;
+    return parsed;
+  } catch {
+    return null;
+  }
+  setConfig(newConfig: Partial<TokenConfig>): void {
+    this.config = { ...this.config, ...newConfig }
+<<<<<<< HEAD
   }
 }
-export const token_store = new TokenStore ();
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export const tokenStore = new TokenStore();
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -12,21 +12,12 @@ export default function HomePage() {
   const [activeSection, setActiveSection] = React.useState('hero');
 
   const heroStats = [
-<<<<<<< HEAD
     { value: '200+', label: 'Revolutionary Micro SaaS Services', color: 'text-cyan-400', icon: <Cpu className="w-6 h-6" /> },
     { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: <ShieldCheck className="w-6 h-6" /> },
     { value: '21', label: 'Day Free Trials', color: 'text-blue-400', icon: <Clock className="w-6 h-6" /> },
     { value: '24/7', label: 'AI Support', color: 'text-green-400', icon: <Bot className="w-6 h-6" /> },
     { value: '$50B+', label: 'Market Value', color: 'text-yellow-400', icon: <DollarSign className="w-6 h-6" /> },
     { value: '300%+', label: 'Average ROI', color: 'text-purple-400', icon: <TrendingUp className="w-6 h-6" /> },
-=======
-    { value: '100+', label: 'Real Micro SaaS Services', color: 'text-cyan-400', icon: <Sparkles className="w-5 h-5" /> },
-    { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: <Shield className="w-5 h-5" /> },
-    { value: '21', label: 'Day Free Trials', color: 'text-blue-400', icon: <Clock className="w-5 h-5" /> },
-    { value: '24/7', label: 'AI Support', color: 'text-green-400', icon: <Bot className="w-5 h-5" /> },
-    { value: '$1B+', label: 'Market Value', color: 'text-yellow-400', icon: <Trophy className="w-5 h-5" /> },
-    { value: '1500%+', label: 'Average ROI', color: 'text-purple-400', icon: <TrendingUp className="w-5 h-5" /> },
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a01f
   ];
 
   const contactInfo = {
@@ -39,7 +30,6 @@ export default function HomePage() {
   // Enhanced service advertising content with real market data and competitive advantages
   const serviceHighlights = [
     {
-<<<<<<< HEAD
       title: '🧠 Revolutionary Quantum AI Cognitive Platform',
       description: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months.',
       price: 'Starting at $299/month',
@@ -54,14 +44,6 @@ export default function HomePage() {
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'
       }
-=======
-      icon: <Cloud className="w-8 h-8 text-white" />,
-      title: '100+ Real Micro SaaS Services',
-      description: 'Complete portfolio of fully functional micro SaaS tools with real implementations, not just mockups. Starting from $29/month with 21-day free trials.',
-      color: 'bg-gradient-to-br from-cyan-500 to-blue-600',
-      gradient: 'from-cyan-400 to-blue-500',
-      features: ['Quantum Computing', 'Edge AI', 'Autonomous Systems', 'Synthetic Biology', 'Neuromorphic Computing']
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a01f
     },
     {
       title: '🏭 Autonomous Manufacturing AI Platform',
@@ -288,11 +270,7 @@ export default function HomePage() {
   ];
 
   return (
-<<<<<<< HEAD
     <UltraFuturisticBackground variant="neural" intensity="extreme">
-=======
-          <EnhancedFuturisticBackground variant="quantum-entanglement" intensity="high">
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a01f
       <div className="min-h-screen">
         <Head>
           <title>Zion Tech Group - Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>
@@ -667,297 +645,9 @@ export default function HomePage() {
                   Ready to Transform Your Business?
                 </span>
               </h2>
-<<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Join thousands of businesses that have already revolutionized their operations 
                 with Zion Tech Group's cutting-edge solutions. Start your transformation today.
-=======
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our track record speaks for itself. Join thousands of successful businesses worldwide.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {marketData.map((data, index) => (
-                <Card key={index} className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-8 text-center hover:border-cyan-500/50 transition-all duration-300">
-                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">{data.value}</div>
-                  <div className="text-lg font-semibold text-gray-300 mb-2">{data.metric}</div>
-                  <div className="text-sm text-green-400 font-medium mb-3">{data.growth}</div>
-                  <p className="text-sm text-gray-400">{data.description}</p>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section className="py-20 relative">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                What Our Customers Say
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Don't just take our word for it. Here's what industry leaders have to say about Zion Tech Group.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <Card key={index} className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-8 hover:border-cyan-500/50 transition-all duration-300">
-                  <div className="flex items-center mb-6">
-                    <div className="text-3xl mr-4">{testimonial.avatar}</div>
-                    <div>
-                      <h4 className="text-lg font-bold text-white">{testimonial.name}</h4>
-                      <p className="text-gray-400">{testimonial.role}</p>
-                      <p className="text-sm text-gray-500">{testimonial.company}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                    {testimonial.verified && (
-                      <span className="ml-2 text-sm text-green-400 font-medium">✓ Verified</span>
-                    )}
-                  </div>
-                  
-                  <p className="text-gray-300 leading-relaxed">{testimonial.content}</p>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Emerging Technologies Showcase */}
-        <section className="py-20 relative">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Emerging Technologies
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Discover the future with our cutting-edge micro SaaS services in quantum computing, synthetic biology, 
-                neuromorphic computing, and autonomous systems. Be the first to leverage tomorrow's technology today.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {/* Quantum Computing */}
-              <Card className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm border border-indigo-500/30 p-8 hover:border-indigo-400/50 transition-all duration-300 group hover:scale-105 futuristic-card">
-                <div className="text-5xl mb-4">⚛️</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Quantum Computing</h3>
-                <p className="text-gray-300 mb-6">
-                  Revolutionary quantum computing services including quantum AI training, quantum cryptography, 
-                  and quantum financial modeling with 1000x speedup for specific algorithms.
-                </p>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    Quantum AI Training Platform
-                  </div>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    Quantum Cryptography Service
-                  </div>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    Quantum Financial Modeling
-                  </div>
-                </div>
-                <Button href="/micro-saas" variant="primary" className="w-full group">
-                  Explore Quantum Services
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Card>
-
-              {/* Synthetic Biology */}
-              <Card className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 backdrop-blur-sm border border-green-500/30 p-8 hover:border-green-400/50 transition-all duration-300 group hover:scale-105 futuristic-card">
-                <div className="text-5xl mb-4">🧬</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Synthetic Biology</h3>
-                <p className="text-gray-300 mb-6">
-                  Design and simulate biological systems with AI-powered synthetic biology platform. 
-                  Perfect for drug discovery, biofuel production, and agricultural biotechnology.
-                </p>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    DNA Sequence Design
-                  </div>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    Protein Structure Prediction
-                  </div>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    CRISPR Design Tools
-                  </div>
-                </div>
-                <Button href="/micro-saas" variant="primary" className="w-full group">
-                  Explore Bio Services
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Card>
-
-              {/* Neuromorphic Computing */}
-              <Card className="bg-gradient-to-br from-purple-900/50 to-violet-900/50 backdrop-blur-sm border border-purple-500/30 p-8 hover:border-purple-400/50 transition-all duration-300 group hover:scale-105 futuristic-card">
-                <div className="text-5xl mb-4">🧠</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Neuromorphic Computing</h3>
-                <p className="text-gray-300 mb-6">
-                  Brain-inspired computing infrastructure that mimics neural architecture for ultra-efficient AI processing 
-                  with 1000x energy efficiency improvement.
-                </p>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    Spiking Neural Networks
-                  </div>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    Event-Driven Processing
-                  </div>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    Ultra-Low Power Consumption
-                  </div>
-                </div>
-                <Button href="/micro-saas" variant="primary" className="w-full group">
-                  Explore Neural Services
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Card>
-
-              {/* Autonomous Systems */}
-              <Card className="bg-gradient-to-br from-orange-900/50 to-red-900/50 backdrop-blur-sm border border-orange-500/30 p-8 hover:border-orange-400/50 transition-all duration-300 group hover:scale-105 futuristic-card">
-                <div className="text-5xl mb-4">🤖</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Autonomous Systems</h3>
-                <p className="text-gray-300 mb-6">
-                  AI-powered autonomous systems for vehicles, drones, robotics, and manufacturing with 
-                  99.9% accuracy and real-time learning capabilities.
-                </p>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    Autonomous Vehicle Simulation
-                  </div>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    Autonomous Drones Platform
-                  </div>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    Autonomous Robotics Platform
-                  </div>
-                </div>
-                <Button href="/micro-saas" variant="primary" className="w-full group">
-                  Explore Autonomous Services
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Card>
-
-              {/* Edge AI */}
-              <Card className="bg-gradient-to-br from-teal-900/50 to-cyan-900/50 backdrop-blur-sm border border-teal-500/30 p-8 hover:border-teal-400/50 transition-all duration-300 group hover:scale-105 futuristic-card">
-                <div className="text-5xl mb-4">📡</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Edge AI Orchestration</h3>
-                <p className="text-gray-300 mb-6">
-                  Intelligent edge computing management that optimizes AI model deployment across distributed devices 
-                  with 90% reduction in deployment time.
-                </p>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    Intelligent Model Deployment
-                  </div>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    Edge Device Management
-                  </div>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    Real-Time Performance Monitoring
-                  </div>
-                </div>
-                <Button href="/micro-saas" variant="primary" className="w-full group">
-                  Explore Edge AI Services
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Card>
-
-              {/* Quantum Internet */}
-              <Card className="bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 p-8 hover:border-blue-400/50 transition-all duration-300 group hover:scale-105 futuristic-card">
-                <div className="text-5xl mb-4">🌐</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Quantum Internet</h3>
-                <p className="text-gray-300 mb-6">
-                  Next-generation quantum internet protocol with unhackable communication channels and 
-                  quantum key distribution for military-grade security.
-                </p>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    Quantum Key Distribution
-                  </div>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    Entanglement-Based Communication
-                  </div>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-green-400 mr-2" />
-                    Quantum Network Management
-                  </div>
-                </div>
-                <Button href="/micro-saas" variant="primary" className="w-full group">
-                  Explore Quantum Internet
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Card>
-            </div>
-
-            <div className="text-center">
-              <Button href="/micro-saas" variant="primary" size="lg" className="group">
-                View All 100+ Services
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Integration Partners */}
-        <section className="py-20 relative">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Seamless Integrations
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Connect with your favorite tools and platforms. Our services integrate with everything you already use.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-              {integrationPartners.map((partner, index) => (
-                <Card key={index} className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 text-center hover:border-cyan-500/50 transition-all duration-300 group hover:scale-105">
-                  <div className="text-4xl mb-4">{partner.logo}</div>
-                  <h3 className="text-lg font-bold text-white mb-2">{partner.name}</h3>
-                  <p className="text-sm text-gray-400">{partner.category}</p>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Final CTA */}
-        <section className="py-20 relative">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 backdrop-blur-sm border border-cyan-500/30 rounded-3xl p-12 text-center">
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join thousands of successful businesses that have already discovered the power of Zion Tech Group's micro SaaS services.
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a01f
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">

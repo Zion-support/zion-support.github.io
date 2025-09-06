@@ -1,6 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { authenticateRequest } from '@/utils/auth';
 
+=======
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const method = (req && req.method || 'GET').toUpperCase(),
@@ -12,7 +15,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const auth = authenticateRequest(req, false);
 
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
-
   if (method === 'POST') {
 
     if (!branding?.name)
@@ -22,13 +24,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const tenant = createTenant(branding);
     return res && res.status(201).json({ tenant })
 
-=======
-    const { branding } = req.body || {};
-    if (!branding?.name) return res.status(400).json({ error: 'branding.name required' });
-    const tenant = createTenant(branding);
-    return res.status(201).json({ tenant })
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   if (method === 'PUT') {
 
@@ -37,7 +32,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const result = updateTenant(tenantId, update || {});
     if (!result) return res && res.status(404).json({ error: 'Tenant not found' });
     return res && res.status(200).json({ tenant: result });  }
-
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req && req.body || {};
     if (!tenantId || !rotateKey)
@@ -49,8 +43,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { tenantId, rotateKey } = req && req.body || {};
     if (!tenantId || !rotateKey)
       return res && res.status(400).json({ error: 'tenantId and rotateKey required' });
+    const { tenantId, update } = req.body || {};
+    if (!tenantId) return res.status(400).json({ error: 'tenantId required' });
+    const result = updateTenant(tenantId, update || {});
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+
+    return res.status(200).json({ tenant: result })
+  }
     const result = rotateTenantApiKey(tenantId);
     if (!result) return res && res.status(404).json({ error: 'Tenant not found' });
     return res && res.status(200).json({ tenant: result });
@@ -143,6 +144,7 @@ if ( {) {
     return res.status (200).json ({ tenant: result });
   }
 return res.status (405).json ({ error: 'Method not allowed' });
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -177,10 +179,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { tenantId, update } = req.body || {};
     if (!tenantId) return res.status(400).json({ error: 'tenantId required' });
     const result = updateTenant(tenantId, update || {});
-
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
 
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
     if (!tenantId || !rotateKey)
@@ -188,6 +191,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body || {};
+    if (!tenantId || !rotateKey)
+      return res.status(400).json({ error: 'tenantId and rotateKey required' });
+    const result = rotateTenantApiKey(tenantId);
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+    return res.status(200).json({ tenant: result });
+  }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+  return res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+    return res.status(200).json({ tenant: result })
+  }
+return res.status(405).json({ error: 'Method not allowed' });
+}
+
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body || {};
+    const { tenantId, rotateKey } = req.body || {};
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

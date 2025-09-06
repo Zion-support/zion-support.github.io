@@ -1,7 +1,15 @@
 
+        </section>
+      </div>
+    </>
+  )
+=======
 }
-
-
+import React from 'react';
+import Head from 'next/head';
+export default function AICustomerService(req, res) {
+  try {
+  return (;
     <>;
       <Head>;
         <title > AI Customer Service | Zion Tech Group</title>;
@@ -16,6 +24,8 @@
       </div>;
     </>);
 }
+<<<<<<< HEAD
+;
 
-
-
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

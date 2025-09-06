@@ -1,16 +1,20 @@
 
-
-
 import React from "react";
 import {
-
+  Dialog
+  DialogContent
+  DialogDescription
+  DialogHeader
+  DialogTitle
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
 DialogTitle,;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";
@@ -30,52 +34,16 @@ export function ApplyToJobModal({
             Complete your application for this position
           </DialogDescription>
         </DialogHeader>
-
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogDescription,;
-  DialogHeader,;
-  DialogTitle,;
-} from "@/components/ui/dialog";
-import { ApplyForm } from "./ApplyForm";
-import { ApplyToJobModalProps } from "./types";
-export function ApplyToJobModal(): any ({;
-  job,;
-  isOpen,;
-  onClose,;
-  onApplySuccess,;
-}: ApplyToJobModalProps) {;
-  return (
-    <Dialog open={isOpen} onOpenChange={onClose}>;
-      <DialogContent className="sm:max-w-[600px]">;
-        <DialogHeader>;
-          <DialogTitle>Apply to Job: {job && job.title}</DialogTitle>;
-=======
+        <ApplyForm
+          job={job}
+          onClose={onClose}
+          onApplySuccess={onApplySuccess}
+        />
+      </DialogContent>
+    </Dialog>
 
 
 
-=======
-import React from './react';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from '@/components / ui / dialog';
-import { ApplyForm  } from './ApplyForm';
-import { ApplyToJobModalProps  } from './types';
-export /**
- * ApplyToJobModal - Function description
- */
-function ApplyToJobModal() {
-  return (
-    <Dialog open={is_open} onOpenChange={on_close}>;
-      <DialogContent className="sm:max - w-[600px]">;
-        <DialogHeader>;
-          <DialogTitle > Apply to Job: {job.title}</DialogTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           <DialogDescription>;
             Complete your application for this position;
           </DialogDescription>;
@@ -88,14 +56,11 @@ function ApplyToJobModal() {
           onApplySuccess={onApplySuccess}
         />;
       </DialogContent>;
-
-
     </Dialog>;
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
-=======
-    </Dialog>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

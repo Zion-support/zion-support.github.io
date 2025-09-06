@@ -1,6 +1,19 @@
+=======
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from "lucide-react";
+import Layout from "../components/Layout";
+export default function RegisterPage() {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+export default function RegisterPage() {;
+=======
 
 
 export default function RegisterPage() {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({;

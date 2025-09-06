@@ -1,9 +1,19 @@
-
-  attachments: string[],
-  conversation_history: CustomerMessage[];
-
-}
-export interface CustomerMessage {
+export interface CustomerTicket {
+export interface CustomerTicket {;
+  id: string;
+  customerId: string;
+  subject: string;
+  description: string;
+  priority: 'low' | 'medium' | 'high' | 'urgent';
+  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
+  category: string;
+  assignedTo?: string;
+  createdAt: Date;
+  updatedAt: Date;
+  resolvedAt?: Date;
+  customerSatisfaction?: number;
+  tags: string[];
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   ticket_id: string;
   sender_id: string;
@@ -17,7 +27,8 @@ export interface CustomerMessage {
   confidence: number;
 
 }
-export interface CustomerProfile {
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   email: string;
   name: string;
@@ -35,10 +46,10 @@ export interface CustomerProfile {
     language: string,
     timezone: string;
   }
-  tags: string[];
-
+  tags: string[]
 }
-export interface AIResponse {
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   ticket_id: string;
   response: string;
@@ -50,10 +61,11 @@ export interface AIResponse {
   generated_at: Date;
 
 }
-export interface CustomerServiceMetrics {
-  total_tickets: number;
-  open_tickets: number;
-  resolved_tickets: number;
+
+  totalTickets: number;
+  openTickets: number;
+  resolvedTickets: number;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   averageResolutionTime: number;
 
     ticketsResolved: number
@@ -61,19 +73,12 @@ export interface CustomerServiceMetrics {
 
     customerSatisfaction: number
   }>
-=======
-  customer_satisfaction: number;
-  firstResponseTime: number,
-  ticketVolumeByCategory: Record < string, number>;
-  agent_performance: Record < string, {
-    tickets_resolved: number;
-    averageResolutionTime: number,
-    customer_satisfaction: number;
-  }>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-export interface CustomerServiceRequest {
-  customer_id: string;
+
+  customerId: string;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   subject: string;
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
@@ -83,8 +88,9 @@ export interface CustomerServiceRequest {
   preferred_channel?: 'email' | 'chat' | 'phone';
 
 }
-export interface CustomerServiceResponse {
-  ticket_id: string;
+
+  ticketId: string;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   ai_response?: AIResponse;
   estimatedResolutionTime: string;
@@ -93,6 +99,7 @@ export interface CustomerServiceResponse {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
+  assignedAgent?: string
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
@@ -320,15 +327,16 @@ export interface CustomerServiceResponse {
       throw error
     }
   }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
-export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
 
+  private apiKey: string;
 
-export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
-
-=======
-  next_steps: string[],
-  assigned_agent?: string;
+  private baseUrl: string
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
+    this.apiKey = apiKey
+    this.baseUrl = baseUrl
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 export class AICustomerServiceService {
   private api_key: string;
@@ -566,9 +574,12 @@ if ( {) {
 }
 export const aiCustomerServiceService = new AICustomerServiceService (process.env.CUSTOMER_SERVICE_API_KEY || '');
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
 export interface CustomerTicket {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

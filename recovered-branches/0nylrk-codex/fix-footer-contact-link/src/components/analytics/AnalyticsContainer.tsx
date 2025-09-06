@@ -1,23 +1,41 @@
+import React from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { Navigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
 
-
-export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
-=======
-
-
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { Navigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+interface AnalyticsContainerProps {
+  children: React.ReactNode
+}
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
 
+interface AnalyticsContainerProps {
+  children: React.ReactNode
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
+  const { isAuthenticated, isLoading, user } = useAuth();
+  // Check if user is admin (using either role or userType)
 
-  const { isAuthenticated, isLoading, user } = useAuth(),
-  
+  const isAdmin = user?.role === "admin" |user?.userType === "admin";
 
   // Check if user is admin (using either role or userType)
   const isAdmin = user?.role === 'admin' || user?.userType === 'admin',
-  
 
   // If still loading auth status, show loading
   if (isLoading) {
@@ -28,14 +46,13 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
     )
   }
 
+=======
   
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // If not authenticated, redirect
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: '/analytics' }} replace />
   }
-
-  
 
   // If not admin, redirect
   if (!isAdmin) {
@@ -43,8 +60,8 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   }
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
-      <SEO 
-        title="Analytics Dashboard" 
+      <SEO
+        title="Analytics Dashboard"
         description="Track user behavior, page views, and conversion rates to improve your platform performance"
         noindex
       />
@@ -56,7 +73,13 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
             Track user behavior, page views, and conversion rates
           </p>
         </div>
-
+=======
+        {children}
+      </main>
+      <Footer />
+    </div>
+  );
+}
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -69,6 +92,7 @@ interface AnalyticsContainerProps {;
 ;
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { isAuthenticated, isLoading, user } = useAuth();
 
   // Check if user is admin (using either role or userType);
@@ -109,64 +133,6 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
             Analytics Dashboard;
           </h1>;
           <p className="text-zion-slate-light">;
-=======
-import React from './react';
-import { Header  } from '@/components / Header';
-import { Footer  } from '@/components / Footer';
-import { SEO  } from '@/components / SEO';
-import { Navigate  } from './react-router-dom';
-import { use_auth  } from '@/hooks / use_auth';
-interface AnalyticsContainerProps {
-  children: React.ReactNode;
-}
-export /**
- * AnalyticsContainer - Function description
- */
-function AnalyticsContainer() {
-  const { is_authenticated, is_loading, user } = use_auth ();
-;
-  // Check if user is admin (using either role or user_type);
-  const is_admin = user?.role === "admin" || user?.user_type === "admin";
-;
-  // If still loading auth status, show loading;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="flex justify - center items - center min - h-screen bg - zion - blue">;
-        <div className="animate - pulse text - zion - purple text - lg">Loading...</div>;
-      </div>);
-  }
-  // If not authenticated, redirect;
-  // Check condition
-if ( {) {
-  $2
-}
-    return <Navigate to="/login" state={{ from: "/analytics" }} replace />;
-  }
-  // If not admin, redirect;
-  // Check condition
-if ( {) {
-  $2
-}
-    return <Navigate to="/unauthorized" replace />;
-  }
-  return (
-    <div className="min - h-screen flex flex - col bg - zion - blue">;
-      <SEO;
-        title="Analytics Dashboard";
-        description="Track user behavior, page views, and conversion rates to improve your platform performance";
-        noindex;
-      />;
-      <Header />;
-      <main className="flex - 1 p - 6 md:p - 8 container mx - auto">;
-        <div className="mb - 8">;
-          <h1 className="text - 3xl font - bold text - white mb - 2">;
-            Analytics Dashboard;
-          </h1>;
-          <p className="text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Track user behavior, page views, and conversion rates;
           </p>;
         </div>;
@@ -177,9 +143,5 @@ if ( {) {
     </div>);
 
 }
-=======
-}
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

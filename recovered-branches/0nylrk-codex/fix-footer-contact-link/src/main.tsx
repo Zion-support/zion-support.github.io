@@ -1,10 +1,12 @@
-
-
+import React from 'react',
+import ReactDOM from 'react-dom/client',
+import App from './App.tsx',
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
-
-
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import './index.css';
 import { HelmetProvider  } from 'react-helmet-async';
 import { BrowserRouter as Router  } from 'react-router-dom';
@@ -37,7 +39,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>
         </Router>
       </WhitelabelProvider>
     </HelmetProvider>
+  </React.StrictMode>);
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App ;
@@ -48,6 +53,7 @@ import {BrowserRouter, as, Router} from 'react-router-dom';
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import ReactDOM from 'react-dom/client',;
 import App from './App.tsx',;
@@ -83,6 +89,7 @@ ReactDOM && ReactDOM.createRoot(document && document.getElementById('root')!).re
         </Router>;
       </WhitelabelProvider>;
     </HelmetProvider>;
+=======
 
 import React from 'react';
 import ReactDOM from 'react-dom / client';
@@ -118,11 +125,6 @@ ReactDOM.create_root (document.getElementById ('root')!).render (<React.StrictMo
         </Router>;
       </WhitelabelProvider>;
     </HelmetProvider>;
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   </React.StrictMode>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

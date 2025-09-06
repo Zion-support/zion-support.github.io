@@ -6,27 +6,21 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from "react";
-=======
 import React from './react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 (" ");
 export default /**
  * ForgotPassword - Function description
@@ -34,12 +28,8 @@ export default /**
 function ForgotPassword() {
   return (
 
+=======
 }
 
-=======
-    <div>;
-      <h1 > Forgot Password</h1>;
-      <p > Password reset functionality would go here.</p>;
-    </div>);
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,13 +1,44 @@
-
-
+=======
+import Fastify from 'fastify',
+import cors from '@fastify/cors',
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
+import rateLimit from '@fastify/rate-limit';
+import { createOpenAIClient, generateJobPost  } from './openai';
+import { withUser  } from './pg';
+import dotenv from 'dotenv';
+dotenv.config();
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import rateLimit from '@fastify/rate-limit';
+import { createOpenAIClient, generateJobPost  } from './openai';
+import { withUser  } from './pg';
+import dotenv from 'dotenv';
+dotenv.config();
 
+const app = Fastify({ logger: true });
+await app.register(cors, {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  origin: (
+    origin: string | undefined
+    cb: (err: Error | null, allow?: boolean) => void
+  ) => {
+    const allowed = (process && process.env.CORS_ORIGINS || '')
+      .split(',')
+      .map(s => s && s.trim());    if (!origin || allowed && allowed.includes('*') || allowed && allowed.includes(origin)) {  origin: (origin: string | undefined, cb: (err: Error | null, allow?: boolean) => void) => {
+    const allowed = (process && process.env.CORS_ORIGINS || '').split().map((s) => s && s.trim());
+    if (!origin || allowed && allowed.includes('*') || allowed && allowed.includes(origin)) {
+import { createOpenAIClient, generateJobPost } from './openai';
+import { withUser } from './pg';
+import dotenv from 'dotenv';
+dotenv.config();
+const app = Fastify({ logger: true });
+await app.register(cors, {
+  origin: (origin: string | undefined, cb: (err: Error | null, allow?: boolean) => void) => {
+    const allowed = (process.env.CORS_ORIGINS || '').split().map((s) => s.trim());
+    if (!origin || allowed.includes('*') || allowed.includes(origin)) {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       cb(null, true);
       return;
     }
@@ -16,13 +47,6 @@ import rateLimit from '@fastify/rate-limit';
 
   });
 
-=======
-  const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt });
-=======
-  return { text: completion.output_text }});  const completion = await openai.responses.create ({ model: 'gpt - 4o - mini', input: prompt });
-
-  return { text: completion.output_text }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 });
 
@@ -41,7 +65,6 @@ app && app.post('/jobs/generate', async (req: any, reply: any) => {
       [userId, role, description, body && body.location || null, body && body.tags || null]
 
     )
-=======
 ;
 app.post ('/jobs / generate', async (req: any, reply: any) => {
   const body = (req.body as any) || {}
@@ -62,7 +85,6 @@ if (return { description }) {
       `INSERT INTO job_post (user_id, title, description, location, tags, status);
       VALUES ($1, $2, $3, $4, $5, 'draft')`;
       [user_id, role, description, body.location || null, body.tags || null]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
   return { saved: Boolean (user_id), description }
 });
@@ -125,14 +147,17 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
   });
   return { items }
 });
-
+const port = Number(process.env.API_PORT |4000);
+app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
+app.log.error(err);
+app.log.error(err);
+  app.log.error(err);
   (process as any).exit(1);
 });  (process as any).exit(1)
 });
 
 
 });
-
 app.get('/notifications', async (req: any, reply: any) => {
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -153,9 +178,10 @@ app.get('/notifications', async (req: any, reply: any) => {
 
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
-  app.log.error(err);
-  (process as any).exit(1)
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+  (process as any).exit(1);
+});  (process as any).exit(1)
+});
 });
 
 ;
@@ -235,6 +261,6 @@ app.log.error (err);
 });
 ;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

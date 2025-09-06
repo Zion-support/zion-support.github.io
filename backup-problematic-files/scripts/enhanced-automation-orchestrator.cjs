@@ -65,4 +65,5 @@ const { execSync } = require("child_process")
     console.log(`"Errors"`)
     this.log(" Starting Enhanced Automation Orchestrator...")
       this.log(" Enhanced Automation Orchestrator completed!")
-      this.log(` Fatal "error": ${error.message}`, "ERROR"`)
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

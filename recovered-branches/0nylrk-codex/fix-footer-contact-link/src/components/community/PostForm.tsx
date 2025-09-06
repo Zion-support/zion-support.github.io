@@ -1,6 +1,6 @@
 
-
-
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -9,13 +9,10 @@ import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import {ForumCategory} from "@/types/community";
-
 =======
-import { useState } from "react",
-import { useForm } from "react-hook-form",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Card;
   CardContent;
   CardFooter;
@@ -33,16 +30,26 @@ import {
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 
+interface PostFormValues {
 
-import { Textarea } from "@/components/ui/textarea",
-import { ForumCategory } from "@/types/community",
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string
+=======
 
+  title: string
+  content: string
+  categoryId: ForumCategory
+
+  tags: string
+}
+interface PostFormProps {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,
   isEditing?: boolean
@@ -51,8 +58,9 @@ interface PostFormValues {
 export const PostForm = ({;
   initialValues;
   onSubmit;
-
 =======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import {;
@@ -86,55 +94,19 @@ interface PostFormProps {;
   onSubmit: (values: PostFormValues) => void,;
   isEditing?: boolean;
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void
   isEditing?: boolean
 }
 export const PostForm = ({
-  initialValues;
-  onSubmit;
-  isEditing = false
-}: PostFormProps) => {
-  const form = useForm<PostFormValues>({
-    defaultValues: {
+  initialValues,
+  onSubmit,
 
-import {useState} from "react";
-import {useForm} from "react-hook-form";
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {ForumCategory} from "@/types/community";
-interface PostFormValues {;
-  title: string,;
-  content: string,;
-  categoryId: ForumCategory,;
-  tags: string;
-}
-
-interface PostFormProps {;
-  initialValues?: Partial<PostFormValues>;
-  onSubmit: (values: PostFormValues) => void,;
-  isEditing?: boolean;
-}
-
-export const PostForm = ({;
-  initialValues;
-  onSubmit;
-  isEditing = false;
-}: PostFormProps) => {;
-  const form = useForm<PostFormValues>({;
-    defaultValues: {;
-      title: initialValues?.title || "",;
-      content: initialValues?.content || "",;
-      categoryId: initialValues?.categoryId || "project-help",;
-      tags: initialValues?.tags || "";
-
-    }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -179,8 +151,12 @@ export const PostForm = ({
     try {
       await on_submit (values);
     } finally {
+      setIsSubmitting(false)
+    }
 
-
+  }),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
@@ -189,13 +165,10 @@ export const PostForm = ({
       setIsSubmitting(false);
 
     }
-  }
-=======
+  },
 
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <Card>;
       <CardHeader>;
@@ -210,26 +183,6 @@ export const PostForm = ({
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Title</FormLabel>;
-=======
-      setIsSubmitting (false);
-    }
-  }
-;
-  return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle>{is_editing ? "Edit Post" : "Create New Post"}</CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <Form {...form}>;
-          <form className="space - y-6" on_submit={form.handle_submit (handle_submit)}>;
-            <FormField;
-              control={form.control}
-              name="title";
-              render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <Input placeholder="Enter post title..." {...field} />;
                   </FormControl>;
@@ -301,77 +254,12 @@ export const PostForm = ({
 
             <Button type="submit" disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
-=======
-                </FormItem>)}
-            />;
-            <FormField;
-              control={form.control}
-              name="content";
-              render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > Content</FormLabel>;
-                  <FormControl>;
-                    <Textarea;
-                      placeholder="Write your post content here...";
-                      className="min - h-[200px]";
-                      {...field}
-                    />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>)}
-            />;
-            <FormField;
-              control={form.control}
-              name="category_id";
-              render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > Category</FormLabel>;
-                  <FormControl>;
-                    <select;
-                      className="w - full p - 2 border rounded - md";
-                      {...field}
-                    >;
-                      <option value="getting - hired">Getting Hired</option>;
-                      <option value="project - help">Project Help</option>;
-                      <option value="ai - tools">AI Tools Discussion</option>;
-                      <option value="feedback">Feedback & Feature Requests</option>;
-                    </select>;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>)}
-            />;
-            <FormField;
-              control={form.control}
-              name="tags";
-              render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > Tags (comma - separated)</FormLabel>;
-                  <FormControl>;
-                    <Input;
-                      placeholder="e.g. resume, hiring, flutter";
-                      {...field}
-                    />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>)}
-            />;
-            <Button type="submit" disabled={is_submitting}>;
-              {is_submitting ? "Submitting..." : is_editing ? "Update Post" : "Create Post"}
-
-            </Button>;
-          </form>;
-        </Form>;
-      </CardContent>;
-
-    </Card>);
-}
-;
-export default PostForm;
-;
-
-=======
-
-},
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            </Button>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
+  )
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { useState, useEffect } from 'react',;
 ;
 export function useIsMobile() {;
@@ -23,3 +25,4 @@ export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState (typeof window !== 'undefined' ? window.innerWidth < 768 : false);
 return isMobile 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

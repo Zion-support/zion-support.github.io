@@ -10,4 +10,5 @@ const { execSync } = require('child_process')
         {"pattern": /,+/g, "replacement"}
         { "pattern": /{\s*,\s*/g, "replacement"}
         {"pattern": /\[\s*,\s*/g, "replacement"}]
-      this.log('\n Errors "encountered")
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

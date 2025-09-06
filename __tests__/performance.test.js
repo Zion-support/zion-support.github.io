@@ -1,6 +1,4 @@
 
-=======
-
 import { test, expect } from '@playwright/test';
 
 test.describe('Performance Tests', () => {
@@ -27,7 +25,7 @@ test.describe('Performance Tests', () => {
         }
       });
     });
-    
+
     // Check performance score
     if (lighthouse.lhr && lighthouse.lhr.categories) {
       const performanceScore = lighthouse.lhr.categories.performance.score * 100;
@@ -44,11 +42,9 @@ test.describe('Performance Tests', () => {
         consoleMessages.push(msg.text());
       }
     });
-    
+
     await page.waitForTimeout(2000);
 
-
-=======
     expect(consoleMessages.length).toBe(0);
   });
   
@@ -69,10 +65,14 @@ test.describe('Performance Tests', () => {
       expect(metrics.usedJSHeapSize).toBeLessThan(50 * 1024 * 1024); // 50MB
     }
   });
-});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+});
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"Performance"
   test('"page"
@@ -83,6 +83,7 @@ test && test.describe('"Performance"
     "await"
     page && page.on('console', "msg"
               "output"
-          resolve({ "error"
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+          resolve({ "error"'"
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

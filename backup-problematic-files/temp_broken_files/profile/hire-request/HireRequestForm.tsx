@@ -1,10 +1,18 @@
 
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/HireRequestForm.tsx
+=======
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/hire-request/HireRequestForm.tsx
 import React from "react",;
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",;
 import { Button } from "@/components/ui/button",;
 import { DialogFooter } from "@/components/ui/dialog",;
 import { Form } from "@/components/ui/form",;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/HireRequestForm.tsx
+import { Loader2 } from "lucide-react",;
+=======
 import { Loader2 } from 'lucide-react';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/hire-request/HireRequestForm.tsx
 import { TalentProfile } from "@/types/talent",;
 import { PersonalInfoFields } from "./PersonalInfoFields",;
 import { ProjectDetailsField } from "./ProjectDetailsField",;
@@ -60,18 +68,26 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
             disabled={isSubmitting}
           >;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/HireRequestForm.tsx
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/hire-request/HireRequestForm.tsx
             {isSubmitting ? (;
               <>;
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                 Submitting...;
               </>;
-            ) :(;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/HireRequestForm.tsx
+
               'Submit Request';
             )}
           </Button>;
         </DialogFooter>;
       </form>;
     </Form>;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/HireRequestForm.tsx
+
+=======
   ),;}
  export interface HireRequestFormProps {;
   talent: TalentProfile;
@@ -101,11 +117,14 @@ return (<Form {;
 }className="space-y-6" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <PersonalInfoFields form= {;
   form ;
 }/> form ;
-
+:temp_broken_files/profile/hire-request/HireRequestForm.tsx
+}/> <TimelineField form= {;"  form ";"}/> </div> <DialogFooter className="pt-4" > <Button > Cancel </Button> <Button >{";"  isSubmitting ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting... </>) : ('Submit Request') ;
+}</Button> </DialogFooter> </form> </Form>) ;"}'"
 }/> <TimelineField form= {;
   form ";
 }/> </div> <DialogFooter className="pt-4" > <Button > Cancel </Button> <Button > {";
   isSubmitting ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting... </>) : ('Submit Request') ;
 }</Button> </DialogFooter> </form> </Form>) ;
 }'"
-
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/hire-request/HireRequestForm.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/hire-request/HireRequestForm.tsx

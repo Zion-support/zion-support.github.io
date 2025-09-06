@@ -1,11 +1,12 @@
-
-  if (typeof window === 'undefined' || !window && window.ethereum) {
-
+export async function connectMetaMask(): Promise<string[]> {
+  if (typeof window === 'undefined' |!window.ethereum) {
+  if (typeof window === 'undefined' || !window.ethereum) {;
 =======
-
   if (typeof window === 'undefined' || !window.ethereum) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -27,17 +28,14 @@ if ( {) {
     });
     return accounts;
   } catch (error) {
-    throw new Error ('Failed to connect to MetaMask');
+    throw new Error('Failed to connect to MetaMask');
   }
 }
+export async function getAccounts(): Promise<string[]> {
 
-  if (typeof window === 'undefined' || !window && window.ethereum) {
-
-=======
-
-  if (typeof window === 'undefined' || !window.ethereum) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return [];
   }
   try {
@@ -62,14 +60,11 @@ if ( {) {
     return [];
   }
 }
+export async function getBalance(address: string): Promise<string> {
 
-  if (typeof window === 'undefined' || !window && window.ethereum) {
-
-=======
-
-  if (typeof window === 'undefined' || !window.ethereum) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -92,17 +87,14 @@ if ( {) {
     });
     return balance;
   } catch (error) {
-    throw new Error ('Failed to get balance');
+    throw new Error('Failed to get balance');
   }
 }
+export async function signMessage(message: string, address: string): Promise<string> {
 
-  if (typeof window === 'undefined' || !window && window.ethereum) {
-
-=======
-
-  if (typeof window === 'undefined' || !window.ethereum) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -125,7 +117,7 @@ if ( {) {
     });
     return signature;
   } catch (error) {
-    throw new Error ('Failed to sign message');
+    throw new Error('Failed to sign message');
   }
 }
 
@@ -134,23 +126,14 @@ if ( {) {
 declare global {
   interface Window {
     ethereum?: {
-      request: (args: { method: string; params?: any[] }) => Promise < any>;
+      request: (args: { method: string; params?: any[] }) => Promise<any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
-
-      remove_listener: (event: string, callback: (accounts: string[]) => void) => void;
-
-    }
-=======
       removeListener: (event: string, callback: (accounts: string[]) => void) => void;
+    }
 
-
-
-=======
     };
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }

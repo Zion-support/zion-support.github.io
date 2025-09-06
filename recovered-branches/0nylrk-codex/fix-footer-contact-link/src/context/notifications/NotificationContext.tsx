@@ -1,17 +1,13 @@
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { useAuth  } from '@/hooks/useAuth';
+import { useNotificationOperations  } from './useNotificationOperations';
+import { NotificationContextType } from './types';
+// Default context used when React type definitions are missing. Providing a
+// fully-typed object here avoids TypeScript errors that occur when an untyped
+// `createContext` call returns `{}` instead of the expected shape.
 
-import {supabase} from '@/integrations/supabase/client';
-import {useAuth} from '@/hooks/useAuth';
-import {useNotificationOperations} from './useNotificationOperations';
-import {NotificationContextType} from './types';
-=======
 
-
-export const useNotifications = (): NotificationContextType => {;
-  const context = useContext(NotificationContext) as NotificationContextType;
-  if (!context) {
-    throw new Error('useNotifications must be used within a NotificationProvider')
-
-=======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -40,27 +36,33 @@ const NotificationContext = createContext(;
 
 export const useNotifications = (): NotificationContextType => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {;
     throw new Error('useNotifications must be used within a NotificationProvider');
+=======
 
 
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
   return context
 },
 
+  // Load notifications when user changes
+  useEffect(() => {
+    notificationOps.fetchNotifications(),
 
-export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
-  const { user } = useAuth(),
-  const notificationOps = useNotificationOperations(user?.id),
-
-  
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Load notifications when user changes
   useEffect(() => {
     notificationOps.fetchNotifications();
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  // Load notifications when user changes
+  useEffect(() => {
+    notificationOps.fetchNotifications(),
+    
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     // Set up real-time subscription for new notifications
     if (user) {
       const channel = supabase
@@ -71,46 +73,30 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
             schema: 'public'
             table: 'notifications'
             filter: `user_id=eq.${user.id}`
-
-
+          }
           },
-
-
           (payload) => {
             console.log('Notification change received:', payload);
             notificationOps.fetchNotifications()
-
+          }
+        )
+        .subscribe();
+      return () => {
+        supabase.removeChannel(channel)
+      }
+    }
+  }, [user]);
+  return (
+    <NotificationContext.Provider value={notificationOps}>
+      {children}
+    </NotificationContext.Provider>
+  )
+}
 
 };
-
-
-=======
-  return context;
-};
-
-export const NotificationProvider = ({ children }: { children: ReactNode }): JSX && JSX.Element => {;
-  const { user } = useAuth();
-  const notificationOps = useNotificationOperations(user?.id);
-
-  // Load notifications when user changes;
-  useEffect(() => {;
-    notificationOps && notificationOps.fetchNotifications();
-
-    // Set up real-time subscription for new notifications;
-    if (user) {;
-      const channel = supabase;
-        .channel('notifications-changes');
-        .on('postgres_changes', ;
-          {;
-            event: '*', ;
-            schema: 'public',;
-            table: 'notifications',;
-            filter: `user_id=eq.${user && user.id}`;
-          };
-          (payload) => {;
-            console && console.log('Notification change received:', payload);
-            notificationOps && notificationOps.fetchNotifications();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+          (payload) => {
+            console.log('Notification change received:', payload);
+            notificationOps.fetchNotifications()
           }
         );
         .subscribe();
@@ -200,9 +186,8 @@ if ( {) {
     </NotificationContext && NotificationContext.Provider>;
   );
 };
-
 =======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

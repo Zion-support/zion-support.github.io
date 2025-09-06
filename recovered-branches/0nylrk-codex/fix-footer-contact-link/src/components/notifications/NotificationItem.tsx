@@ -1,5 +1,7 @@
 
-// Use the centralized icon wrapper to avoid missing icons;
+=======
+import React from 'react';
+// Use the centralized icon wrapper to avoid missing icons
 
 import {Check, Trash2, ChevronRight} from '@/components/icons';
 import {Button} from '@/components/ui/button';
@@ -10,14 +12,22 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/compon
 import {useNavigate} from 'react-router-dom';
 import {Notification, NotificationType} from '@/context/notifications';
 
+    case 'quote_request':
+      return <span className="text-purple-500">📝</span>,
+    case 'booking_confirmation':
+      return <span className="text-green-500">✅</span>,
+    case 'hire_request':
+      return <span className="text-zion-purple">🤝</span>,
+    case 'onboarding':
+      return <span className="text-zion-cyan">🚀</span>,
+    case 'system':
+      return <span className="text-yellow-500">⚠️</span>
+    default:
+      return <span className="text-gray-500">📣</span>
 
+  }
+}
 
-export const getTypeIcon = (type: NotificationType) => {
-  switch (type) {
-    case 'message':;
-      return <span className="text-blue-500">💬</span>;
-
-=======
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from '@/components/icons',
@@ -29,18 +39,23 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { useNavigate } from 'react-router-dom',
 import { Notification, NotificationType } from '@/context/notifications',
 
-
-
-
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
-=======
-
-export const getTypeIcon = (type: NotificationType) => {;
-  switch (type) {;
-    case 'message':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      return <span className="text-blue-500">💬</span>,
+    case 'quote_request':
+      return <span className="text-purple-500">📝</span>,
+    case 'booking_confirmation':
+      return <span className="text-green-500">✅</span>,
+    case 'hire_request':
+      return <span className="text-zion-purple">🤝</span>,
+    case 'onboarding':
+      return <span className="text-zion-cyan">🚀</span>,
+    case 'system':
+      return <span className="text-yellow-500">⚠️</span>
+    default:
+      return <span className="text-gray-500">📣</span>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       return <span className="text-blue-500">💬</span>;
     case 'quote_request':;
       return <span className="text-purple-500">📝</span>;
@@ -57,8 +72,6 @@ export const getTypeIcon = (type: NotificationType) => {;
       return <span className="text-gray-500">📣</span>;
   }
 };
-=======
-
   }
 };
 
@@ -78,63 +91,15 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
   const handleClick = () => {
     if (!notification.read) {
       onMarkAsRead(notification.id)
-
 =======
-import React from 'react',;
-// Use the centralized icon wrapper to avoid missing icons;
-import { Check, Trash2, ChevronRight } from '@/components/icons',;
-import { Button } from '@/components/ui/button',;
-import { Badge } from '@/components/ui/badge',;
-import { formatDistanceToNow } from 'date-fns',;
-import { cn } from '@/lib/utils',;
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
-import { useNavigate } from 'react-router-dom',;
-import { Notification, NotificationType } from '@/context/notifications',;
-export const getTypeIcon = (type: NotificationType) => {;
-  switch (type) {;
-    case 'message':;
-      return <span className="text-blue-500">💬</span>,;
-    case 'quote_request':;
-      return <span className="text-purple-500">📝</span>,;
-    case 'booking_confirmation':;
-      return <span className="text-green-500">✅</span>,;
-    case 'hire_request':;
-      return <span className="text-zion-purple">🤝</span>,;
-    case 'onboarding':;
-      return <span className="text-zion-cyan">🚀</span>,;
-    case 'system':;
-      return <span className="text-yellow-500">⚠️</span>,;
-    default:;
-      return <span className="text-gray-500">📣</span>;
 
-  }
-}
-
-;
-export const NotificationItem: React.FC<NotificationItemProps> = ({;
-  notification,;
-  onMarkAsRead,;
-  onDismiss;
-}) => {;
-  const navigate = useNavigate(),;
-  const handleClick = () => {;
-    if (!notification.read) {;
-      onMarkAsRead(notification.id);
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
     // If there's an action URL, navigate to it
     if (notification.action_url) {
       navigate(notification.action_url)
     }
 
-  },
-=======
-  };
-=======
-  },
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 interface NotificationItemProps {;
@@ -160,6 +125,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
       navigate(notification && notification.action_url);
     }
   }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  };
+  },
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div
       className={cn(
@@ -193,34 +163,58 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
                 <ChevronRight className="h-3 w-3 ml-1" />;
               </Button>;
             )}
-
-          </div>;
-        </div>;
-      </div>;
-
+          </div>
+        </div>
+      </div>
       {/* Action buttons that appear on hover */}
+      <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
         <TooltipProvider>;
           <Tooltip>;
             <TooltipTrigger asChild>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <Button
-                variant="ghost" 
-                size="icon" 
+                variant="ghost"
+                size="icon"
                 className="h-6 w-6"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  onMarkAsRead(notification.id)
+                }}
+              >
+                <Check className="h-3.5 w-3.5 text-green-400" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Mark as read</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-6 w-6"
+                onClick={(e) => {
+                  e.stopPropagation(),
+                  onDismiss(notification.id)
 
+};
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
             </TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;
       </div>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </div>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </div>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

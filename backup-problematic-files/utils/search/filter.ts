@@ -1,22 +1,10 @@
+=======
 
 };
 
-=======
 
-export type AccessLevel = 'public' | 'private' | 'admin';
 
-export interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  type: string;
-  rating?: number;
-  price?: number;
-  location?: string;
-  skills?: string[];
-  keywords?: string[];
-}
-
+<<<<<<< HEAD
 export interface SearchResults {
   all: SearchResult[];
   talent: SearchResult[];
@@ -183,3 +171,4 @@ export function suggestDidYouMean(query: string): string[] {
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

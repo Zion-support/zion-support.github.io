@@ -249,4 +249,5 @@ this.log(` Optimization Report "generated"`)
 this.log(" Smart Dependency Optimization completed successfully")
       this.log(� Total "savings": ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
         " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
-        ` Smart Dependency Optimization "failed": ${error.message}"
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

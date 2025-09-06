@@ -1,11 +1,22 @@
 
-
+import React from 'react';
+import { format  } from 'date-fns';
+import { cn  } from '@/lib/utils';
+import { Conversation  } from '@/types/messaging';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+interface ConversationItemProps {
+  conversation: Conversation,
+  isActive: boolean,
+  onClick: () => void
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
 
   conversation: Conversation,
   isActive: boolean,
   onClick: () => void
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { format } from 'date-fns',;
 import { cn } from '@/lib/utils',;
@@ -15,12 +26,13 @@ interface ConversationItemProps {;
   conversation: Conversation,;
   isActive: boolean,;
   onClick: () => void;
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   conversation: Conversation
   isActive: boolean
@@ -30,11 +42,19 @@ interface ConversationItemProps {;
 export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {
   return (
 
-
+    <div
     <div 
+      className={cn(;
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30",
+      className={cn(
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30"
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}
@@ -55,45 +75,6 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
         <div className="text-sm text-zion-slate truncate">
           {conversation.last_message?.content |'(No messages yet)'}
         </div>
-=======
-import {format} from 'date - fns';
-import {cn} from '@/lib / utils';
-import {Conversation} from '@/types / messaging';
-import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
-interface ConversationItemProps {
-  conversation: Conversation,
-  is_active: boolean,
-  on_click: () => void;
-}
-export /**
- * ConversationItem - Function description
- */
-function ConversationItem() {
-  return (
-    <div;
-      className={cn (
-        "flex items - start gap - 3 p - 3 cursor - pointer rounded - md transition - colors";
-        is_active ? "bg - zion - purple / 10 border - l-2 border - zion - purple" : "hover: bg - zion - blue - dark / 30",
-        conversation.unread_count > 0 && "bg - zion - blue - dark / 20")}
-      on_click={on_click}
-    >;
-      <Avatar className="h - 12 w - 12 border border - zion - purple / 20">;
-        <AvatarImage src={conversation.other_user.avatar_url} alt={conversation.other_user.name} />;
-        <AvatarFallback className="bg - zion - blue - dark text - white">;
-          {conversation.other_user.name.char_at (0).toUpperCase ()}
-        </AvatarFallback>;
-      </Avatar>;
-      <div className="flex - 1 min - w-0">;
-        <div className="flex justify - between items - start">;
-          <div className="font - medium text - white truncate">{conversation.other_user.name}</div>;
-          <div className="text - xs text - zion - slate whitespace - nowrap">;
-            {format (new Date (conversation.updated_at), 'MMM d')}
-          </div>;
-        </div>;
-        <div className="text - sm text - zion - slate truncate">;
-          {conversation.last_message?.content || '(No messages yet)'}
-        </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {conversation.context_data?.title && (
           <div className="text - xs mt - 1 text - zion - cyan truncate">;
             Re: {conversation.context_data.title}

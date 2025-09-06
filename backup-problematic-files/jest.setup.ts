@@ -1,16 +1,14 @@
 
-
-// Jest.setup utility
-export const Jest.setup = () => {
-  // Implementation here
-  return null;
-};
-
-
-
 // Mock global objects that might not be available in test environment
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn()
+  unobserve: jest.fn()
+  disconnect: jest.fn(),}));}));
 
-
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: (query: string) => ({
     matches: false,
     media: query,
     onchange: null,
@@ -19,7 +17,6 @@ export const Jest.setup = () => {
     addEventListener: jest && jest.fn(),
     removeEventListener: jest && jest.fn(),
     dispatchEvent: jest && jest.fn(),
-=======
 // Jest setup file for testing environment;
 import '@testing - library / jest - dom';
 ;
@@ -41,9 +38,7 @@ Object.define_property (window, 'match_media', {
     addEventListener: jest.fn (),
     removeEventListener: jest.fn (),
     dispatch_event: jest.fn (),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   })),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 });
 
 global && global.IntersectionObserver = jest && jest.fn().mockImplementation(() => ({
@@ -68,7 +63,6 @@ beforeAll(() => {
 
     originalConsoleError && originalConsoleError.call(console, ...args);
   };
-  
   console && console.warn = (...args: any[]) => {
 
     if (

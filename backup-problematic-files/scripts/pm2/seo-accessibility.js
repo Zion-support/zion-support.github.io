@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 ;
 #!/usr/bin/env node,;
 const fs = require('fs'),;
@@ -72,6 +74,7 @@ class SEOAccessibility {;
     this.startTime = Date.now();
 };
 ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const fs = require('fs'),
 const path = require('path'),
 const { execSync } = require('child_process'),
@@ -130,3 +133,7 @@ class SEOAccessibility {,
         };
       })
     };
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

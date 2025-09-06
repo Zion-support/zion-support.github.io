@@ -13,23 +13,10 @@ import {
   Zap as ZapIcon, Leaf as LeafIcon
 } from 'lucide-react';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import AdvancedFuturisticCard from '../components/ui/AdvancedFuturisticCard';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { motion } from 'framer-motion';
-=======
-import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
-import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
-import ServiceAds from '../components/sections/ServiceAds';
-import RevolutionaryServices from '../components/sections/RevolutionaryServices';
-import Card from '../components/ui/Card';
-import { motion } from 'framer-motion';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../data/extra-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { revolutionaryMicroSaasServices } from '../data/revolutionary-micro-saas-services';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-71e4
 
 export default function HomePage() {
   const heroStats = [

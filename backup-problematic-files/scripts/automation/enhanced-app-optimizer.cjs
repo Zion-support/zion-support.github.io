@@ -44,7 +44,7 @@ class EnhancedAppOptimizer {}
     try {}
       // Analyze bundle size;
       const bundleAnalysis = execSync('npm run "build": analyze', { })
-        "cwd": this.projectRoot, 
+        "cwd": this.projectRoot,
         "stdio": 'pipe',
         "timeout": 120000;
       };);
@@ -122,7 +122,7 @@ class EnhancedAppOptimizer {}
     // Run security audit;
     try {}
       execSync('npm audit --audit-level=moderate', { })
-        "cwd": this.projectRoot, 
+        "cwd": this.projectRoot,
         "stdio": 'pipe',
         "timeout": 60000;
       }
@@ -182,9 +182,9 @@ class EnhancedAppOptimizer {}
 });
 
       accessibilityOptimizations.push({ })
-        "type": 'alt-text-check', 
-        "status": 'completed', 
-        "images": imageCount, 
+        "type": 'alt-text-check',
+        "status": 'completed',
+        "images": imageCount,
         "altTexts": altTextCount,
         "coverage": imageCount > 0 ? Math.round((altTextCount / imageCount) * 100) : 100;
       }
@@ -196,11 +196,11 @@ class EnhancedAppOptimizer {}
   findImageFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
-    
+
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
-      
+
       if () {}
         files.push(...this.findImageFiles(fullPath))} else if (/\.(jpg|jpeg|png|gif|webp|svg)$/i.test(item)) {}
         files.push(fullPath)};
@@ -213,11 +213,11 @@ class EnhancedAppOptimizer {}
   findPageFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
-    
+
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
-      
+
       if () {}
         files.push(...this.findPageFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {}
         files.push(fullPath)};
@@ -230,11 +230,11 @@ class EnhancedAppOptimizer {}
   findReactFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
-    
+
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
-      
+
       if () {}
         files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.js')) {}
         files.push(fullPath)};
@@ -315,4 +315,5 @@ if ( {})
      {}
   const optimizer = new EnhancedAppOptimizer}(;);
   optimizer.run().catch(console.error)};
-module.exports = EnhancedAppOptimizer;
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

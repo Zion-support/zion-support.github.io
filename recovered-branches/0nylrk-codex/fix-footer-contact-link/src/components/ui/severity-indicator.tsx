@@ -1,11 +1,11 @@
 
-
-
-
-
 import React from "react";
 import {cn} from "@/lib/utils";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
+import React from "react",
+import { cn } from "@/lib/utils";
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
+interface SeverityIndicatorProps {
 
 interface SeverityIndicatorProps {;
   severity: "safe" | "suspicious" | "dangerous",;
@@ -16,25 +16,18 @@ interface SeverityIndicatorProps {;
   className?: string;
 }
 
+export function SeverityIndicator({
+  severity
+  showIcon = true
+  showText = true
+  size = "md";
+  className
+import { cn } from "@/lib/utils",
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-interface SeverityIndicatorProps {
-  severity: "safe" | "suspicious" | "dangerous",
-  showIcon?: boolean,
-  showText?: boolean,
-  size?: "sm" | "md" | "lg",
-  className?: string
-}
-
-export function SeverityIndicator({ 
-  severity, 
-  showIcon = true, 
-
-  showText = true, 
-  size = "md",
-
-  className 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }: SeverityIndicatorProps) {
   const getSeverityIcon = () => {
     switch (severity) {
@@ -55,6 +48,7 @@ export function SeverityIndicator(): any ({ ;
         return <AlertTriangle className={cn(
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
           "text-amber-500"
+=======
 
         )} />,
       default:
@@ -65,16 +59,8 @@ export function SeverityIndicator(): any ({ ;
     }
   },
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-  return (
-    <div className={cn("flex items-center gap-1", className)}>
-      {showIcon && getSeverityIcon()}
-      {showText && <span className="capitalize text-sm">{severity}</span>}
-    </div>
-  )
-
-
-=======
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
@@ -84,22 +70,9 @@ interface SeverityIndicatorProps {;
   showText?: boolean,;
   size?: "sm" | "md" | "lg",;
   className?: string;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 ;
-export function SeverityIndicator({;
-  severity,;
-  showIcon = true,;
-  showText = true,;
-  size = "md",;
-  className;
-
-}: SeverityIndicatorProps) {;
-  const getSeverityIcon = () => {;
-    switch (severity) {;
-      case 'dangerous':;
-        return <AlertCircleclassName={cn(
-          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           "text-destructive"
         )} />;
       case 'suspicious':;
@@ -123,44 +96,10 @@ export function SeverityIndicator({;
 
     </div>;
   );
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import React from './react';
-import { cn } from '@/lib / utils';
-import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
-interface SeverityIndicatorProps {
-  severity: "safe" | "suspicious" | "dangerous",
-  show_icon?: boolean;
-  show_text?: boolean;
-  size?: "sm" | "md" | "lg";
-  class_name?: string;
-}
-export /**
- * SeverityIndicator - Function description
- */
-function SeverityIndicator() {
-  const getSeverityIcon = () =>: any {
-    switch (severity) {
-      case 'dangerous':;
-        return <AlertCircle className={cn (
-          size === "sm" ? "h - 3 w - 3" : size === "lg" ? "h - 5 w - 5" : "h - 4 w - 4";
-          "text - destructive")} />;
-      case 'suspicious':;
-        return <AlertTriangle className={cn (
-          size === "sm" ? "h - 3 w - 3" : size === "lg" ? "h - 5 w - 5" : "h - 4 w - 4";
-          "text - amber - 500")} />;
-      default: return <CheckCircle className={cn (
-          size === "sm" ? "h - 3 w - 3" : size === "lg" ? "h - 5 w - 5" : "h - 4 w - 4",
-          "text - green - 500")} />;
-    }
-  }
-;
-  return (
-    <div className={cn ("flex items - center gap - 1", class_name)}>;
-      {show_icon && getSeverityIcon ()}
-      {show_text && <span className="capitalize text - sm">{severity}</span>}
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

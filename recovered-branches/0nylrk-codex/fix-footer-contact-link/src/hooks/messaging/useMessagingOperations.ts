@@ -1,32 +1,27 @@
 
-
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { Message, Conversation, ConversationContextData  } from '@/types/messaging';
+import { useConversationState  } from './useConversationState';
+import { useConversations  } from './useConversations';
+import { useMessages } from './useMessages';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation, ConversationContextData} from '@/types/messaging';
 import {useConversationState} from './useConversationState';
 import {useConversations} from './useConversations';
 import {useMessages} from './useMessages';
+=======
 
 
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook that combines all messaging operations
-=======
-import {UserProfile, UserDetails} from '@/types / auth';
-import {Message, Conversation, ConversationContextData} from '@/types / messaging';
-import {useConversationState} from './useConversationState';
-import {use_conversations} from './use_conversations';
-import {use_messages} from './use_messages';
-// Allow either UserProfile or UserDetails;
-type UserWithProfile = UserProfile | UserDetails | null;
-;
-/**;
-* Hook that combines all messaging operations;
-*/;
-export /**
- * useMessagingOperations - Function description
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
  */
 function useMessagingOperations() {
   // State management;
@@ -95,7 +90,8 @@ function useMessagingOperations() {
     send_message;
     create_conversation;
     markAsRead;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    fetchConversations;
+    loadMessages;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }

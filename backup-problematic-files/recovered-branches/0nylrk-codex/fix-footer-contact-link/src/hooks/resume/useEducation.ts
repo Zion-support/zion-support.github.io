@@ -1,4 +1,5 @@
 
+=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Education } from '@/types/resume',;
@@ -66,6 +67,7 @@ export function useEducation() {;
           description:education.description,;
           institution_logo_url:education.institution_logo_url,;
           location:education.location;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         });
         .eq('id', eduId),;
       ;
@@ -101,62 +103,6 @@ export function useEducation() {;
     } finally {;
       setIsLoading(false),;
     }
-  },;
-;
-  return {;
-    isLoading,;
-    error,;
-    addEducation,;
-    updateEducation,;
-    deleteEducation;
-  },; setIsLoading (true);
-setError (null);
-try {
-  const {
-  error 
-}= await supabase .from ('education') if (error) throw error;
-}catch (e: any) {
-  return handleResumeError (e, 'Could not add education') 
-}finally {
-  setIsLoading (false) 
-}
-};
-const updateEducation = async (eduId: string, education: Education) : Promise<boolean> => {
-  if (!user) {
-  setError ('You must be logged in to update education');
-return false;
-}setError (null);
-try {
-  const {
-  error 
-}= await supabase .from ('education') if (error) throw error;
-}catch (e: any) {
-  return handleResumeError (e, 'Could not update education') 
-}finally {
-  setIsLoading (false) 
-}
-};
-const deleteEducation = async (eduId: string) : Promise<boolean> => {
-  if (!user) {
-  setError ('You must be logged in to delete education');
-return false;
-}setError (null);
-try {
-  const {
-  error 
-}= await supabase .from ('education') .delete () .eq ('id', eduId);
-if (error) throw error;
-}catch (e: any) {
-  return handleResumeError (e, 'Could not delete education') 
-}finally {
-  setIsLoading (false) 
-}
-};
-return {
-  isLoading;
-error;
-addEducation;
-updateEducation;
-deleteEducation 
-}
+<<<<<<< HEAD
+
 }

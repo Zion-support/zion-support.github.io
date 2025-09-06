@@ -1,20 +1,17 @@
 
-
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-const SecurityAuditingChat: NextPage = () => {;
-  return (
-    <div>;
-      <Head>;
-        <title>SecurityAuditingChat - Zion Tech Solutions</title>;
-        <meta name="description" content="SecurityAuditingChat service" />{" "}
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const SecurityAuditingChat: NextPage = () => {
   return (
     <div>
       <Head>
+=======
 
       </Head>;
 
@@ -25,36 +22,11 @@ const SecurityAuditingChat: NextPage = () => {
         <a href="/services">Back to Services</a>;
       </main>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default SecurityAuditingChat;
-
-
-=======
+<<<<<<< HEAD
 
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import type { NextPage } from './next';
-import Head from './next / head';
-import Link from './next / link';
-const SecurityAuditingChat: NextPage = () => {
-  return (
-    <div>;
-      <Head>;
-        <title > SecurityAuditingChat - Zion Tech Solutions</title>;
-        <meta name="description" content="SecurityAuditingChat service" />{" "}
-      </Head>;
-      <main>;
-        <h1 > SecurityAuditingChat</h1>;
-        <p > Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;
-      </main>;
-    </div>);
-}
-;
-export default SecurityAuditingChat;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        <title>SecurityAuditingChat - Zion Tech Solutions</title>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

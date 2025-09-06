@@ -1,17 +1,11 @@
 
-
-
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
-
-=======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function ReferralGuide() {
 
   const steps = [
@@ -27,20 +21,27 @@ function ReferralGuide() {
       title: "Share your referral link"
       description: "Copy your unique referral link and share it with potential clients or talent"}
     {
-
+      title: "They sign up"
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"}
+    {
+      title: "They complete onboarding"
+      description: "Once they complete their profile setup, your referral is confirmed"}
+      title: "They sign up",;
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"};
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
 
       title: "They sign up",;
       description: "When someone clicks your link and creates an account, they're tagged as your referral"};
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"},
-
     {
       title: "They complete onboarding",
       description: "Once they complete their profile setup, your referral is confirmed"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     {
       title: "You earn rewards"
       description: "Rewards are issued based on the type of user who completes onboarding"}]
@@ -66,9 +67,12 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
                 <p className="text-sm text-muted-foreground">{step.description}</p>
               </div>
             </div>
-
-
-=======
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 
 export function ReferralGuide() {;
@@ -86,6 +90,7 @@ export function ReferralGuide() {;
       title: "You earn rewards",;
       description: "Rewards are issued based on the type of user who completes onboarding"}],;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <Card>;
@@ -98,19 +103,14 @@ export function ReferralGuide() {;
           {steps && steps.map((step, index) => (;
             <div key={index} className="flex gap-4">;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
-=======
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"}
@@ -143,3 +143,4 @@ export function ReferralGuide() {;
     </Card>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

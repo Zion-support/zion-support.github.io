@@ -1,20 +1,17 @@
 
-
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-const WebDevelopmentChat: NextPage = () => {;
-  return (
-    <div>;
-      <Head>;
-        <title>WebDevelopmentChat - Zion Tech Solutions</title>;
-        <meta name="description" content="WebDevelopmentChat blog post" />{" "}
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const WebDevelopmentChat: NextPage = () => {
   return (
     <div>
       <Head>
+=======
 
       </Head>;
 
@@ -25,36 +22,11 @@ const WebDevelopmentChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default WebDevelopmentChat;
-
-
-=======
+<<<<<<< HEAD
 
         <title>WebDevelopmentChat - Zion Tech Solutions</title>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import type { NextPage } from './next';
-import Head from './next / head';
-import Link from './next / link';
-const WebDevelopmentChat: NextPage = () => {
-  return (
-    <div>;
-      <Head>;
-        <title > WebDevelopmentChat - Zion Tech Solutions</title>;
-        <meta name="description" content="WebDevelopmentChat blog post" />{" "}
-      </Head>;
-      <main>;
-        <h1 > WebDevelopmentChat</h1>;
-        <p > Blog content coming soon...</p>;
-        <a href="/blog">Back to Blog</a>;
-      </main>;
-    </div>);
-}
-;
-export default WebDevelopmentChat;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

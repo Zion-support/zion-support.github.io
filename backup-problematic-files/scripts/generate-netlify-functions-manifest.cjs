@@ -1,23 +1,15 @@
 #!/usr/bin/env node/usr/bin/env node;/ No-op Netlify functions manifest generator placeholder;/ Writes a minimal manifest file if functions dir exists;const fs = require("$1");"const path = require("$1");"const outDir = path.resolve(process.cwd(), "automation");"const manifestPath = path.join(outDir, "netlify-functions-manifest.json");try {;" fs.mkdirSync(outDir, { recursive: true }),} catch {};"const manifest = { functions: [], generatedAt: new Date().toISOString() }try {; fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));" console.log("[netlify: manifest] wrote", manifestPath),} catch (e) {;" console.log("[netlify: manifest] skipped (write failed)"),}process.exit(0);"const fs = require("$1");"const path = require("path")";const outDir = path.resolve(process.cwd(), "automation");const manifestPath = path.join(outDir, "netlify-functions-manifest.json");try { fs.mkdirSync(outDir, { recursive: true }),"} catch {};"const manifest = { functions: [], generatedAt: new Date().toISOString() };";try {; fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));" console.log("[netlify:manifest] wrote", manifestPath)} catch (e) { console.log("[netlify:manifest] skipped (write failed)")}";process.exit(0)""#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-
 const outDir = path.join(__dirname, '..', 'automation');
 const outFile = path.join(outDir, 'netlify-functions-manifest.json');
-
 const manifest = {
 	generatedAt: new Date().toISOString(),
 	functions: []
 };
-
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(outFile, JSON.stringify(manifest, null, 2));
 console.log('[netlify:manifest] wrote', outFile);
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-build-nav-links
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
 // Placeholder Netlify functions manifest generator to satisfy build pipeline.
 // If Netlify Functions are used, implement manifest generation here.
@@ -28,13 +20,8 @@ fs.mkdirSync(outDir, { recursive: true });
 const manifestPath = path.join(outDir, 'functions-manifest.json');
 const manifest = { generatedAt: new Date().toISOString(), functions: [] };
 fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-console.log('[netlify] Functions manifest generated at', manifestPath);
->>>>>>> origin/chore/resolve-conflicts-1756215853
 =======
->>>>>>> 5d987fe43090d7728810c06da2fede859a7f3c62
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+console.log('[netlify] Functions manifest generated at', manifestPath);
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

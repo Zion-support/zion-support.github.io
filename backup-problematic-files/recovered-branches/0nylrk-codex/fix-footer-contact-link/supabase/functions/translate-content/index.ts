@@ -1,4 +1,5 @@
 
+=======
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2",;
@@ -21,6 +22,7 @@ serve(async (req) => {;
 ;
     if (!content || content.trim() === "") {;
       throw new Error("Content is required"),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
 ;
     if (!OPENAI_API_KEY) {;
@@ -43,96 +45,5 @@ serve(async (req) => {;
         translations[targetLang] = content,;
         continue,;
       }
-      ;
-      const response = await fetch("https://api.openai.com/v1/chat/completions", {;
-        method:"POST",;
-        headers:{;
-          "Authorization":`Bearer ${OPENAI_API_KEY}`,;
-          "Content-Type":"application/json"},;
-        body:JSON.stringify({;
-          model:"gpt-4o-mini",;
-          messages:[;
-            {;
-              role:"system",;
-              content:systemPrompt},;
-            {;
-              role:"user",;
-              content:`Translate the following ${contentType || "content"} from ${sourceLanguage} to ${targetLang} ${content}
-              ;
-              Only provide the translated text, no explanations or additional comments.`}],;
-          temperature:0.3})}),;
-;
-      if (!response.ok) {;
-        const errorData = await response.json(),;
-        throw new Error(`OpenAI API error:${JSON.stringify(errorData)}`),;
-      }
-;
-      const data = await response.json(),;
-      translations[targetLang] = data.choices[0].message.content.trim(),;
-    }
-;
-    return new Response(;
-      JSON.stringify({;
-        translations}),;
-      {;
-        headers:{ ...corsHeaders, "Content-Type":"application/json" }}
-    ),;
-;
-  } catch (error) {;
-    console.error("Error in translate-content function:", error),;
-    return new Response(;
-      JSON.stringify({;
-        error:error.message}),;
-      {;
-        status:500,;
-        headers:{ ...corsHeaders, "Content-Type":"application/json" }}
-    ),;  }
-}),;
- serve (async (req) => {
-  //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
-}try {
-  //Extract request data 
-}//Create translations for each target language const translations = {
-  
-};
-for (const targetLang of targetLanguages) {
-  if (targetLang === sourceLanguage) {
-  translations[targetLang] = content;
-continue 
-}const response = await fetch ("https://api.openai.com/v1/chat/completions", {
-  method: "POST";
-headers: {
-  "Authorization" : `Bearer $ {
-  OPENAI API KEY 
-}`;
-"Content-Type" : "application/json" 
-};
-body: JSON.stringify ({
-  model: "gpt-4o-mini";
-messages: [ {
-  role: "system";
-content: systemPrompt 
-};
-{
-  role: "user";
-content: `Translate the following $ {
-  contentType || "content" 
-}from $ {
-  sourceLanguage 
-}to $ {
-  targetLang 
-}: content 
-}Only provide the translated text, no explanations or additional comments.` 
-}];
-temperature: 0.3 
-}) 
-});
-return new Response (JSON.stringify ({
-  error: error.message 
-});
-{
-  status: 500;
-);
-}
-});
+<<<<<<< HEAD
+

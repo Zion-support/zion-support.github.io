@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-#!/usr/bin/env node/usr/bin/env node;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 #!/usr/bin/env node;
 /**;
  * Comprehensive Error Fixer Automation;
@@ -833,7 +830,7 @@ class ComprehensiveErrorFixer {
       return false;
     console.log('🔧 Fixing TypeScript errors...');
     // Check if we have TypeScript errors in the priority errors
-    const tsErrors = this.errorReport.priorityErrors.filter(error => 
+    const tsErrors = this.errorReport.priorityErrors.filter(error =>
       error.file && (error.file.endsWith('.ts') || error.file.endsWith('.tsx'))
     );
     if (!tsErrors || tsErrors.length === 0) {
@@ -958,14 +955,14 @@ class ComprehensiveErrorFixer {
   async fixESLintErrors() {
     console.log('🔧 Fixing ESLint errors...');
     // Check if we have ESLint errors
-    const eslintErrors = this.errorReport.priorityErrors.filter(error => 
+    const eslintErrors = this.errorReport.priorityErrors.filter(error =>
       error.message && error.message.includes('eslint')
     );
     if (!eslintErrors || eslintErrors.length === 0) {
       return}
     try {
       // Try to auto-fix ESLint errors
-      execSync('npx eslint . --fix', { 
+      execSync('npx eslint . --fix', {
         "stdio": 'pipe',
         "cwd": process.cwd()
       });
@@ -1002,7 +999,7 @@ class ComprehensiveErrorFixer {
       return}
     try {
       // Try to fix security vulnerabilities
-      execSync('npm audit fix', { 
+      execSync('npm audit fix', {
         "stdio": 'pipe',
         "cwd": process.cwd()
       });
@@ -1024,7 +1021,7 @@ class ComprehensiveErrorFixer {
       return}
     try {
       // Update dependencies to fix security issues
-      execSync('npm update', { 
+      execSync('npm update', {
         "stdio": 'pipe',
         "cwd": process.cwd()
       });
@@ -1133,11 +1130,7 @@ module.exports = ComprehensiveErrorFixer;
       return}
     // Build errors are usually resolved by fixing TypeScript and ESLint errors
     // This method will be called after those fixes are applied
-<<<<<<< HEAD
-    }
-  async generateFixReport() {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
     console.log('✅ Build errors should be resolved by previous fixes')}
   async generateFixReport() {
     console.log('📊 Generating fix report...');
@@ -1150,14 +1143,7 @@ module.exports = ComprehensiveErrorFixer;
   async saveFixReport() {
     const reportPath = path.join(process.cwd(), 'error-fix-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(this.fixReport, null, 2));
-<<<<<<< HEAD
-    }
-  printSummary() {
-    );
-    this.fixesApplied.forEach((fix, index) => {
-      }] ${fix.action || fix.file}`)});
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
     console.log(`📄 Fix report saved "to": ${reportPath}`)}
   printSummary() {
     console.log('\n🔧 ERROR FIXING SUMMARY');
@@ -1188,8 +1174,4 @@ async function main() {
 module.exports = { ComprehensiveErrorFixer };
 // Run if called directly
 if (require.main === module) {
-<<<<<<< HEAD
-  main()}
-=======
-  main()}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+

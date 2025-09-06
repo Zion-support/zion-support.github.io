@@ -1,42 +1,63 @@
 
-import { useState } from './react';
-import { use_form } from './react - hook - form';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { z } from './zod';
-import { useHireRequest } from '@/hooks / useHireRequest';
-import { TalentProfile } from '@/types / talent';
+=======
+import {useState} from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {useHireRequest} from "@/hooks/useHireRequest";
+import {TalentProfile} from "@/types/talent";
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { useHireRequest } from "@/hooks/useHireRequest";
+import { TalentProfile } from "@/types/talent";
+import { useHireRequest } from "@/hooks/useHireRequest",
+import { TalentProfile } from "@/types/talent",
 
-interface UseHireRequestFormProps {
-  talent: TalentProfile;
-  on_close: () => void;
-  initialJobTitle?: string;
-  user_details?: {
-    name?: string;
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
 
-
-
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface UseHireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
   initialJobTitle?: string,
   userDetails?: {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-
-
-    email?: string,
-    id?: string;
-
-  }
-}
-export interface FormValues {
-  requester_name: string;
-  requester_email: string;
-  project_overview: string;
+  requesterName: string;
+  requesterEmail: string;
+  projectOverview: string;
   timeline: string;
 
-
+import { useState } from "react",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
+import { useHireRequest } from "@/hooks/useHireRequest",;
+import { TalentProfile } from "@/types/talent",;
+interface UseHireRequestFormProps {;
+  talent: TalentProfile,;
+  onClose: () => void,;
+  initialJobTitle?: string,;
+  userDetails?: {;
+    name?: string,;
+    email?: string,;
+    id?: string;
+  }
+}
+;
+export interface FormValues {;
+  requesterName: string,;
+  requesterEmail: string,;
+  projectOverview: string,;
+  timeline: string,;
+  budgetMin: number,;
+  budgetMax: number;
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   budgetMin: number
 
@@ -44,67 +65,30 @@ export interface FormValues {
 }
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {
 
-
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const { submitHireRequest } = useHireRequest(),
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Define the form schema with validation rules
 
-  const formSchema = z && z.object({
-    requesterName: z && z.string().min(2, "Name is required");
-    requesterEmail: z && z.string().email("Valid email is required"),
-    projectOverview: z && z.string().min(10, "Please provide more details about your project");
-    timeline: z && z.string().min(5, "Please specify your timeline");
-    budgetMin: z && z.number().min(1, "Budget minimum is required");
-    budgetMax: z && z.number().min(1, "Budget maximum is required")
-  }).refine(data => data && data.budgetMax >= data && data.budgetMin, {
-    message: "Maximum budget must be greater than or equal to minimum budget",
+  const formSchema = z.object({
+  // Define the form schema with validation rules
 
-    path: ["budgetMax"]
-  });
-=======
-
+  const formSchema = z.object({
+    requesterName: z.string().min(2, "Name is required");
+    requesterEmail: z.string().email("Valid email is required")
+    projectOverview: z.string().min(10, "Please provide more details about your project");
+    timeline: z.string().min(5, "Please specify your timeline");
+    budgetMin: z.number().min(1, "Budget minimum is required");
     requesterName: z.string().min(2, "Name is required"),
     requesterEmail: z.string().email("Valid email is required"),
     projectOverview: z.string().min(10, "Please provide more details about your project"),
     timeline: z.string().min(5, "Please specify your timeline"),
     budgetMin: z.number().min(1, "Budget minimum is required"),
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-    budgetMax: z.number().min(1, "Budget maximum is required")
-  }).refine(data => data.budgetMax >= data.budgetMin, {
-    message: "Maximum budget must be greater than or equal to minimum budget"
-    path: ["budgetMax"]
-
-  }),
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Initialize the form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema);
     defaultValues: {
 
-      budgetMin: talent && talent.hourly_rate || 25,
-      budgetMax: talent && talent.hourly_rate ? talent && talent.hourly_rate * 1 && 1.5 : 50
-
-    }
-  });
-=======
-
-      requesterName: userDetails?.name || "",
-      requesterEmail: userDetails?.email || "",
-      projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "",
-      timeline: "",
-      budgetMin: talent.hourly_rate || 25,
-      budgetMax: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50
-    }
-  }),
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Handle form submission
   const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true);
@@ -153,29 +137,64 @@ function useHireRequestForm() {
       const request_data = {
         talent: {
 
-          id: talent && talent.id || "";
-          full_name: talent && talent.full_name,
-          professional_title: talent && talent.professional_title};
-        requester: {
-          name: values && values.requesterName;
-          email: values && values.requesterEmail,
-
-          id: userDetails?.id
+;
+export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const { submitHireRequest } = useHireRequest(),;
+  // Define the form schema with validation rules;
+  const formSchema = z.object({;
+    requesterName: z.string().min(2, "Name is required"),;
+    requesterEmail: z.string().email("Valid email is required"),;
+    projectOverview: z.string().min(10, "Please provide more details about your project"),;
+    timeline: z.string().min(5, "Please specify your timeline"),;
+    budgetMin: z.number().min(1, "Budget minimum is required"),;
+    budgetMax: z.number().min(1, "Budget maximum is required");
+  }).refine(data => data.budgetMax >= data.budgetMin, {;
+    message: "Maximum budget must be greater than or equal to minimum budget",;
+    path: ["budgetMax"];
+  }),;
+  // Initialize the form;
+  const form = useForm<FormValues>({;
+    resolver: zodResolver(formSchema),;
+    defaultValues: {;
+      requesterName: userDetails?.name || "",;
+      requesterEmail: userDetails?.email || "",;
+      projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "",;
+      timeline: "",;
+      budgetMin: talent.hourly_rate || 25,;
+      budgetMax: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50;
+    }
+  }),;
+  // Handle form submission;
+  const onSubmit = async (values: FormValues) => {;
+    setIsSubmitting(true),;
+    try {;
+      const requestData = {;
+        talent: {;
+          id: talent.id || "",;
+          full_name: talent.full_name,;
+          professional_title: talent.professional_title},;
+        requester: {;
+          name: values.requesterName,;
+          email: values.requesterEmail,;
+          id: userDetails?.id;
+        },;
+        project: {;
+          overview: values.projectOverview,;
+          timeline: values.timeline,;
+          budgetMin: values.budgetMin,;
+          budgetMax: values.budgetMax;
         }
-        project: {
+      },;
+      const result = await submitHireRequest(requestData),;
+      if (result.success) {;
+        onClose();
 
-          overview: values && values.projectOverview;
-          timeline: values && values.timeline;
-          budgetMin: values && values.budgetMin,
-          budgetMax: values && values.budgetMax
-
-        }
       }
+=======
       const result = await submitHireRequest(requestData);
       if (result && result.success) {
         onClose()
-=======
-
           id: talent.id || "",
           full_name: talent.full_name,
           professional_title: talent.professional_title},
@@ -189,45 +208,77 @@ function useHireRequestForm() {
           timeline: values.timeline,
           budgetMin: values.budgetMin,
           budgetMax: values.budgetMax
+        }
+      };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      const result = await submitHireRequest(requestData);
+      if (result.success) {
+        onClose()
+;
+export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const { submitHireRequest } = useHireRequest(),;
+  // Define the form schema with validation rules;
+  const formSchema = z.object({;
+    requesterName: z.string().min(2, "Name is required"),;
+    requesterEmail: z.string().email("Valid email is required"),;
+    projectOverview: z.string().min(10, "Please provide more details about your project"),;
+    timeline: z.string().min(5, "Please specify your timeline"),;
+    budgetMin: z.number().min(1, "Budget minimum is required"),;
+    budgetMax: z.number().min(1, "Budget maximum is required");
+  }).refine(data => data.budgetMax >= data.budgetMin, {;
+    message: "Maximum budget must be greater than or equal to minimum budget",;
+    path: ["budgetMax"];
+  }),;
+  // Initialize the form;
+  const form = useForm<FormValues>({;
+    resolver: zodResolver(formSchema),;
+    defaultValues: {;
+      requesterName: userDetails?.name || "",;
+      requesterEmail: userDetails?.email || "",;
+      projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "",;
+      timeline: "",;
+      budgetMin: talent.hourly_rate || 25,;
+      budgetMax: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50;
+    }
+  }),;
+  // Handle form submission;
+  const onSubmit = async (values: FormValues) => {;
+    setIsSubmitting(true),;
+    try {;
+      const requestData = {;
+        talent: {;
+          id: talent.id || "",;
+          full_name: talent.full_name,;
+          professional_title: talent.professional_title},;
+        requester: {;
+          name: values.requesterName,;
+          email: values.requesterEmail,;
+          id: userDetails?.id;
+        },;
+        project: {;
+          overview: values.projectOverview,;
+          timeline: values.timeline,;
+          budgetMin: values.budgetMin,;
+          budgetMax: values.budgetMax;
+        }
+      },;
+      const result = await submitHireRequest(requestData),;
+      if (result.success) {;
+        onClose();
+      }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+    } catch (error) {
+      console.error("Error submitting hire request:", error)
+    } finally {
+      setIsSubmitting(false)
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
     } catch (error) {
       console && console.error("Error submitting hire request:", error)
-=======
-          id: talent.id || "";
-          full_name: talent.full_name,
-          professional_title: talent.professional_title}
-        requester: {
-          name: values.requester_name;
-          email: values.requester_email,
-          id: user_details?.id;
-        }
-        project: {
-          overview: values.project_overview;
-          timeline: values.timeline;
-          budget_min: values.budget_min,
-          budget_max: values.budget_max;
-        }
-      }
-;
-      const result = await submitHireRequest (request_data);
-      // Check condition
-if ( {) {
-  $2
-}
-        on_close ();
-      }
-    } catch (error) {
-      console.error ("Error submitting hire request:", error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
 
-=======
-      setIsSubmitting(false)
-
-
-=======
     } catch (error) {;
       console.error("Error submitting hire request:", error);
     } finally {;
@@ -238,17 +289,19 @@ if ( {) {
     form;
     isSubmitting;
     onSubmit;
+=======
 
 
 
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
-  return {
-    form;
-    is_submitting;
-    on_submit;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
   }
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

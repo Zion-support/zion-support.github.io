@@ -1,11 +1,18 @@
 
-
+import { jsPDF  } from 'jspdf';
+import { ResumeBasicInfo  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addBasicInfoSection(
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addBasicInfoSection(;
+=======
 
 
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   doc: jsPDF;
   basicInfo: ResumeBasicInfo;
   colors: PdfThemeColors
@@ -32,53 +39,11 @@ export function addBasicInfoSection(;
   yPos += 10;
   // Add summary if available
 
+    yPos += (summaryLines.length * 6) + 10
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   return yPos
-=======
-import {jsPDF} from 'jspdf';
-import {ResumeBasicInfo} from '@/types / resume';
-import {PdfThemeColors} from '../theme_config';
-export function addBasicInfoSection (
-  doc: jsPDF;
-  basic_info: ResumeBasicInfo;
-  colors: PdfThemeColors): number {
-  // Add header with name and title;
-  doc.setFontSize (24);
-  doc.setTextColor (colors.heading),
-  doc.text (basic_info.title || 'Resume', 20, 20);
-;
-  let y_pos = 30;
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    doc.setFontSize (14);
-    doc.setTextColor (colors.subheading);
-    doc.text (basic_info.headline, 20, y_pos);
-    y_pos += 5;
-  }
-  // Add horizontal line divider;
-  doc.setDrawColor (colors.accent);
-  doc.setLineWidth (0.5);
-  doc.line (20, y_pos, 190, y_pos);
-  y_pos += 10;
-;
-  // Add summary if available;
-  // Check condition
-if ( {) {
-  $2
-}
-    doc.setFontSize (12);
-    doc.setTextColor (colors.text);
-;
-    // Split text into multiple lines to fit within page width;
-    const summary_lines = doc.splitTextToSize (basic_info.summary, 170);
-    doc.text (summary_lines, 20, y_pos);
-    y_pos += (summary_lines.length * 6) + 10;
-  }
-  return y_pos;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

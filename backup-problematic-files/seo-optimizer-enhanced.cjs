@@ -8,4 +8,5 @@ const path = require('path')
         const content = fs.readFileSync(filePath, 'utf8')
         if (!content.includes('<Head>') && !content.includes('<title>')
             "issue"
-            "recommendation"
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

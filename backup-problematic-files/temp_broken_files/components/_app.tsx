@@ -4,15 +4,9 @@ import '../styles/globals.css',;
 function MyApp({ Component, pageProps }: AppProps) {;
   return <Component {...pageProps} />;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 export default MyApp;
-=======
-import type { AppProps } from 'next/app',
-import '../styles/globals.css',
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />}
 
-export default MyApp,
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

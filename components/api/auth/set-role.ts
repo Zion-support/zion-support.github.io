@@ -1,9 +1,9 @@
+import type { NextApiRequest, NextApiResponse } from "next";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-
-=======
+  const { role = "guest", talent } = req.query as {
   const { role = "guest", talent } = req.query as {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     role?: string;
     talent?: string;
   }
@@ -102,6 +102,7 @@ if ( {) {
   headers["Set - Cookie"] = cookies.join ();
   res.write_head (302, { ...headers, Location: "/" });
   res.end ();
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

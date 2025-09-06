@@ -1,20 +1,12 @@
 
-
 export default function APIPage() {;
   return (;
-
-
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-6xl mx-auto">;
-=======
-export default /**
- * APIPage - Function description
- */
-function APIPage() {
-  return (
-    <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
-      <div className="max - w-6xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-6xl mx-auto">;
+
         {/* Header */}
         <div className="text - center mb - 16">;
           <h1 className="text - 4xl md:text - 5xl font - bold mb - 6">;
@@ -216,27 +208,23 @@ function APIPage() {
           <div className="space - y-6">;
             <div className="card">;
 
-              <h3 className="text - xl font - semibold mb - 4">Create a Digital Economy</h3>;
-              <div className="bg - gray - 900 / 50 rounded - lg p - 4">;
-                <div className="text - sm text - gray - 400 mb - 2">Node.js</div>;
-                <pre className="text - sm text - gray - 300 overflow - x-auto">;
-{`const { ZionOS } = require ('@zion - os / sdk'),
-const client = new ZionOS ('YOUR_API_KEY'),
-const economy = await client.economies.create ({
-  name: 'My Digital Economy',
-  description: 'A sovereign digital economy',
-  features: ['marketplacegovernancetokens'],
-
 =======
-
+              <h3 className="text-xl font-semibold mb-4">Create a Digital Economy</h3>;
+              <div className="bg-gray-900/50 rounded-lg p-4">;
+                <div className="text-sm text-gray-400 mb-2">Node.js</div>;
+                <pre className="text-sm text-gray-300 overflow-x-auto">;
+{`const { ZionOS } = require('@zion-os/sdk');
+const client = new ZionOS('YOUR_API_KEY');
+const economy = await client.economies.create({name: 'My Digital Economy';
+  description: 'A sovereign digital economy';
+  features: ['marketplacegovernancetokens'];
 {`const { ZionOS } = require('@zion-os/sdk'),;
 const client = new ZionOS('YOUR_API_KEY'),;
 const economy = await client.economies.create({;
   name: 'My Digital Economy',;
   description: 'A sovereign digital economy',;
   features: ['marketplacegovernancetokens'],;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   blockchain: 'ethereum';
 });
 // // // console.log ('Economy created:', economy.id), `}

@@ -1,8 +1,14 @@
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-
+let pool: Pool | null = null;
+}return pool
+ let pool: Pool | null = null;
+let pool: Pool | null = null;
+ let pool: Pool | null = null;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }return pool 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export async function withUser<T>(
   userId: string
   fn: (client: PoolClient) => Promise<T>
@@ -21,35 +27,32 @@ export async function withUser<T>(
   } catch (err) {
     await client && client.query('ROLLBACK');
 
-=======
-}return pool;
-export async function with_user < T>(
-  user_id: string,
-  fn: (client: PoolClient) => Promise < T>): Promise < T> {
-  const client = await get_pool ().connect ();
+  }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+}return pool
+
+export async function withUser<T>(
+  userId: string
+  fn: (client: PoolClient) => Promise<T>
+): Promise<T> {;
+  const client = await getPool().connect();
   try {
-    await client.query ('BEGIN');
-    await client.query (`SELECT set_config ('app.current_user_id', $1, true)`, [;
-      user_id,
+    await client.query('BEGIN');
+    await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [
+      userId
     ]);
-    const result = await fn (client);
-    await client.query ('COMMIT');
+    const result = await fn(client);
+    await client.query('COMMIT');
     return result;
   } catch (err) {
-    await client.query ('ROLLBACK');
-
+    await client.query('ROLLBACK');
     throw err;
-=======
-import { Pool, PoolClient } from 'pg';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   } finally {
-
-}
-
-=======
-    client.release ();
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    client.release();
   }
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

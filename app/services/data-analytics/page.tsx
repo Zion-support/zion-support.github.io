@@ -6,6 +6,7 @@ export const metadata = {
 
 export default function DataAnalyticsPage() {
   return (
+=======
     <div className="animate-fade-in">
       <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -256,7 +257,7 @@ function DataAnalyticsTechStack({ title, technologies }: {
             {tech}
           </span>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }
@@ -389,5 +390,5 @@ function CTASection() {
         <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
       </div>
     </div>
-  );
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 }

@@ -1,42 +1,18 @@
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { exec } = require('child_process');
-const { promisify } = require('util');
-const execAsync = promisify(exec);
-class GitAutomation {
-  constructor() {
-    this.logFile = path.join(__dirname, '..', 'automation', 'logs', 'git-automation.log');
-  }
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(logMessage.trim());
-    fs.appendFileSync(this.logFile, logMessage);
-  }
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString(});
-    const logMessage = `[${timestamp}] [${level}] ${message};`;
-    const logFile = path.join(this.logDir, 'git-automation.log';);
-    fs.appendFileSync(logFile, logMessage + '\n')}
-  async runCommand(command, description, timeout = 300000) {
-    this.log(`🔧 ${description}`);
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
   async runCommand(command, options = {}) {
     try {
-      const { stdout, stderr } = await execAsync(command, { 
-        cwd: process.cwd(), 
-        timeout: 60000, 
-        ...options 
+      const { stdout, stderr } = await execAsync(command, {
+        cwd: process.cwd(),
+        timeout: 60000,
+        ...options
       });
       return { success: true, stdout, stderr };
     } catch (error) {
       this.log(`Command failed: ${command} - ${error.message}`);
-      return { 
-        success: false, 
-        stdout: error.stdout || "", 
-        stderr: error.stderr || error.message 
+      return {
+        success: false,
+        stdout: error.stdout || "",
+        stderr: error.stderr || error.message
       };
     }
   }
@@ -212,8 +188,4 @@ const path = require('path')
       return { "success": true, "message"}
     const mergeResult = await this.runCommand('git merge --no-ff -m ""feat": automated improvements and fixes")
       "operation"
-<<<<<<< HEAD
-      this.log(" Git automation workflow "failed": ${error.message}")
-=======
-      this.log(" Git automation workflow "failed": ${error.message}")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+

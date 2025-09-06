@@ -1,6 +1,3 @@
-// TypeScript file;
-export const placeholder = 'placeholder';
-;
+// TypeScript file
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-
-export const placeholder = 'placeholder';

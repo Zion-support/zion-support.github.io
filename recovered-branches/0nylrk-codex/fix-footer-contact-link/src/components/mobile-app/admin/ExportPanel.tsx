@@ -1,8 +1,23 @@
 
-
-
+import React from "react";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Download} from "lucide-react";
+import {AppPlatform, AppMetadataValues} from "./MetadataManager";
+import {toast} from "sonner";
+import React from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Download } from "lucide-react",
+import { AppPlatform, AppMetadataValues } from "./MetadataManager";
+import { toast } from "sonner";
+import { AppPlatform, AppMetadataValues } from "./MetadataManager",
+import { toast } from "sonner",
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ExportPanelProps {
 
   platform: AppPlatform
@@ -13,44 +28,15 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 
   const handleExport = (format: 'json' | 'csv') => {
     try {
-
-import React from "react";
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Download} from "lucide-react";
-import {AppPlatform, AppMetadataValues} from "./MetadataManager";
-import {toast} from "sonner";
-interface ExportPanelProps {;
-  platform: AppPlatform,;
-  metadata: AppMetadataValues;
-}
-
-export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) => {;
-  const handleExport = (format: 'json' | 'csv') => {;
-    try {;
-      let content: string,;
-      let fileName: string,;
-
-      if (format === 'json') {;
-        content = JSON && JSON.stringify(metadata, null, 2);
-        fileName = `zion-app-metadata-${platform}-${metadata && metadata.version}.json`;
-      } else {;
-        // Convert object to CSV format;
-
-        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
-        const values = [;
-          metadata && metadata.appTitle;
-          metadata && metadata.shortDescription;
-          metadata && metadata.longDescription;
-          metadata && metadata.version;
-          metadata && metadata.platform;
-        ];
-
-
+      let content: string
+      let fileName: string
       let content: string,
       let fileName: string,
       
-
+      if (format === 'json') {;
+        content = JSON.stringify(metadata, null, 2);
+      if (format === 'json') {
+        content = JSON.stringify(metadata, null, 2),
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
         // Convert object to CSV format
@@ -70,92 +56,35 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         content += '\n\nKeywords:\n' + metadata.keywords.join(),
         
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       // Create download link
 
-      const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' }),
-      const url = URL.createObjectURL(blob),
-      const link = document.createElement('a'),
-      link.href = url,
-      link.download = fileName,
-      document.body.appendChild(link),
-      link.click(),
-      document.body.removeChild(link),
-      URL.revokeObjectURL(url),
-      
-
-
       toast.success(`Exported ${format.toUpperCase()} file successfully`)
-=======
-import React from './react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Download } from './lucide-react';
-import { AppPlatform, AppMetadataValues } from './MetadataManager';
-import { toast } from './sonner';
-interface ExportPanelProps {
-  platform: AppPlatform,
-  metadata: AppMetadataValues;
-}
-export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }) => {
-  const handle_export = (format: 'json' | 'csv') =>: any {
-    try {
-      let content: string,
-      let file_name: string,
-      // Check condition
-if ( {) {
-  $2
-}
-        content = JSON.stringify (metadata, null, 2);
-        file_name = `zion - app - metadata-${platform}-${metadata.version}.json`;
-      } else {
-        // Convert object to CSV format;
-        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
-        const values = [;
-          metadata.app_title;
-          metadata.short_description;
-          metadata.long_description;
-          metadata.version;
-          metadata.platform;
-        ];
-;
-        content = headers.join () + '\n' + values.map (value => `"${String (value).replace (/"/g, '""')}"`).join ();
-;
-        // Add keywords as additional rows;
-        content += '\n\n_keywords: \n' + metadata.keywords.join (),
-        file_name = `zion - app - metadata-${platform}-${metadata.version}.csv`;
-      }
-      // Create download link;
-      const blob = new Blob ([content], { type: format === 'json' ? 'application / json' : 'text / csv' }),
-      const url = URL.createObjectURL (blob);
-      const link = document.create_element ('a');
-      link.href = url;
-      link.download = file_name;
-      document.body.append_child (link);
-      link.click ();
-      document.body.remove_child (link);
-      URL.revokeObjectURL (url);
-;
-      toast.success (`Exported ${format.toUpperCase ()} file successfully`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error) {
 
       console.error("Export failed:", error),
       toast.error(`Failed to export ${format.toUpperCase()} file`)
 
-    }
-
-
   const trackAnalytics = () => {
     console.log("Tracking app installation analytics...");
     toast.success("Analytics tracking enabled")
 
-
+=======
+    };
+  };
+    }
+  }
   },
   
-
-
+  const trackAnalytics = () => {
+    console.log("Tracking app installation analytics...");
+    toast.success("Analytics tracking enabled")
+  }
+  },
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -192,14 +121,8 @@ if ( {) {
       </CardContent>
     </Card>
   )
+}
 
-
-        content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
-
-=======
-
-
-=======
 },
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -307,6 +230,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
               <Button variant="outline" on_click={() => handle_export ('csv')} className="flex - 1">;
                 <Download className="mr - 2 h - 4 w - 4" />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 CSV;
               </Button>;
             </div>;
@@ -324,15 +248,12 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           </div>;
         </div>;
       </CardContent>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </Card>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-    </Card>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,4 +1,5 @@
 
+=======
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 import {;
@@ -60,58 +61,11 @@ export function IntegrationsSyncLog() {;
       case "success":return <Badge className="bg-green-500">Success</Badge>,;
       case "error":;
         return <Badge variant="destructive">Error</Badge>,;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       case "warning":;
         return <Badge className="bg-amber-500">Warning</Badge>,;
       default:;
         return <Badge variant="outline">Unknown</Badge>;
-    }
-  },;
-  ;
-  return (;
-    <Card>;
-      <div className="p-4">;
-        <Table>;
-          <TableHeader>;
-            <TableRow>;
-              <TableHead>Integration</TableHead>;
-              <TableHead>Event</TableHead>;
-              <TableHead>Status</TableHead>;
-              <TableHead>Time</TableHead>;
-              <TableHead className="hidden md:table-cell">Details</TableHead>;
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-            {syncLogs.map((log) => (;
-              <TableRow key={log.id}>;
-                <TableCell className="font-medium">{log.integration}</TableCell>;
-                <TableCell>;
-                  {log.event.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
-                </TableCell>;
-                <TableCell>{getStatusBadge(log.status)}</TableCell>;
-                <TableCell>{new Date(log.timestamp).toLocaleString()}</TableCell>;
-                <TableCell className="hidden md:table-cell">{log.details}</TableCell>;
-              </TableRow>;
-            ))}
-          </TableBody>;
-        </Table>;
-      </div>;
-    </Card>;
-  ),; import {
-  Table;
-TableBody;
-TableCell;
-TableHead;
-TableHeader;
-  const getStatusBadge = (status: string) => {
-  switch (status) {
-  
-}
-};
-return (<Card> <div className="p-4" > hidden md:table-cell" >Details</TableHead> </TableRow> </TableHeader> <TableBody> {
-  syncLogs.map ( (log) => (<TableRow key= {
-  log.id 
-}> <TableCell> {
-  log.event.replace (/ /g, ' ') .replace (/\b\w/g, l => l.toUpperCase () ) 
-}</TableCell> </TableRow>) ) 
-}</TableBody> </Table> </div> </Card>) 
+<<<<<<< HEAD
+
 }

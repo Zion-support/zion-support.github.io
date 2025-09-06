@@ -1,12 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+=======
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req && req.method !== 'POST') {
     res && res.status(405).json({ error: 'Method Not Allowed' });
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     return;
   }
@@ -24,16 +26,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     : { agents: [] };
 
   const merged = {
-    ...existing,
-    ...body,
-    updatedAt: new Date().toISOString(),
-  };
-  fs && fs.writeFileSync(statusPath, JSON && JSON.stringify(merged, null, 2));
-  res && res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') {
-    res && res.status(405).json({ error: 'Method Not Allowed' });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    res.status(405).json({ error: 'Method Not Allowed' });
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     return
   }
   if (!isInternalAgentRequest(req)) {
@@ -46,27 +41,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!fs && fs.existsSync(dataDir)) fs && fs.mkdirSync(dataDir, { recursive: true });
   const statusPath = path && path.join(dataDir, 'agents-status && status.json');
   const existing = fs && fs.existsSync(statusPath) ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8')) : { agents: [] };
-=======
-
-
-  const merged = {
-    ...existing;
-    ...body;
-    updatedAt: new Date().toISOString()};
-  fs && fs.writeFileSync(statusPath, JSON && JSON.stringify(merged, null, 2));
-  res && res.status(200).json({ ok: true })
-}
-
-
-=======
-import { isInternalAgentRequest } from '../../../utils / admin_auth';
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
     res.status (405).json ({ error: 'Method Not Allowed' });
     return;
@@ -124,12 +100,14 @@ if ( {) {
     updated_at: new Date ().toISOString ()}
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
   res.status (200).json ({ ok: true });
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  res.status(200).json({ ok: true })
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

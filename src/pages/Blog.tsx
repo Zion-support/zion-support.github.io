@@ -1,54 +1,48 @@
+
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useDebounce } from '@/hooks/useDebounce'
+import { GradientHeading } from '@/components/GradientHeading'
+import { SEO } from '@/components/SEO'
+import { Card, CardContent, CardFooter } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import {
+  Select
+  SelectValue
+  SelectTrigger
+  SelectContent
+  SelectItem
+} from '@/components/ui/select'
+import { BlogPost } from '@/types/blog'
+import { generateRandomBlogPost } from '@/utils/generateRandomBlogPost'
+import { BLOG_POSTS } from '@/data/blog-posts'
+
+import { Search } from 'lucide-react'
+
 // Categories for filtering
+=======
 
 const CATEGORIES = [
-
-  "All Categories",
-  "Trends",
-  "Marketing",
-  "Sustainability",
-  "Ethics",
-  "Recruitment",
-  "Infrastructure"
-],
-
+  'All Categories'
+  'Trends'
+  'Marketing'
+  'Sustainability'
+  'Ethics'
+  'Recruitment'
+  'Infrastructure'
+]
 export interface BlogProps {
   posts?: BlogPost[]
-}
-
 export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
-  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts }),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [selectedCategory, setSelectedCategory] = useState("All Categories"),
-  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]),
-  const query = useDebounce(searchQuery, 300),
-  const [isLoading, setIsLoading] = useState(false),
-  const router = useRouter(),
-
-
-  // Reset state when navigating away to avoid cross-page leakage
-  useEffect(() => {
-    return () => {
-
-      setSearchQuery(""),
-      setSelectedCategory("All Categories"),
-      setPosts([...initialPosts])
-    }
-  }, [router.asPath, initialPosts]),
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setPosts(prev => [...prev, generateRandomBlogPost()]),
-  //   }, 120000), // every 2 minutes
-  //   return () => clearInterval(interval),
-  // }, []),
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      setIsLoading(true),
-      try {
-        const data: BlogPost[] = await fetchWithRetry(
-          `/api/blog?query=${encodeURIComponent(query)}`
-        ),
+  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts })
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('All Categories')
+  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts])
+  const query = useDebounce(searchQuery, 300)
+  const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter()
 
         setPosts(data)
       } catch (err) {
@@ -56,36 +50,16 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       } finally {
         setIsLoading (false);
       }
-
-
-    },
-
+    }
     fetchPosts()
-  }, [query]),
-
-
-
-  // Filter blog posts based on selected category only.
-  // Search filtering is handled server-side.
-  const filteredPosts = posts.filter(post => {
-    const matchesCategory =
-
-
+  }, [query])
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory = null;
       selectedCategory === 'All Categories' ||
-
-
-      post.category === selectedCategory
-    return matchesCategory
-  })
-  // Get featured posts
-  const featuredPosts = posts.filter(post => post.isFeatured)
-  logInfo('BlogPage filteredPosts:', { data: filteredPosts })
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },
 
     fetchPosts()
@@ -95,7 +69,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
-
       selectedCategory === "All Categories" || post.category === selectedCategory,
 
     return matchesCategory
@@ -106,38 +79,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
 
   logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
   
-
-
-
-  return (
-    <>
-      <SEO
-        title="Blog - Latest from Zion Tech Marketplace"
-        description="Read expert insights and news on the Zion Tech Marketplace blog. Stay informed about trends, tips, and stories that help you succeed. Sign up for updates and never miss a breakthrough."
-        keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"
-        canonical="https://app.ziontechgroup.com/blog"
-      />
-      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
-        <h1>Blog</h1>
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <GradientHeading>AI & Tech Insights</GradientHeading>
-
-
-                    </div>
-                  </div>
-                  <Button 
-                    asChild
-                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit"
-                  >
-                    <Link href={`/blog/${featuredPost.slug}`}>
-                      Read Article
-                    </Link>
-                  </Button>
-                </div>
-
-              </div>
-            </div>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             )
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
@@ -280,176 +222,73 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
               and digital transformation;
             </p>;
           </div>;
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
           {/* Featured Post Section - Only show if there are featured posts */}
-          {featured_posts.length > 0 &&;
+          {featuredPosts.length > 0 &&
             (() => {
-
-        canonical='https://app && app.ziontechgroup.com/blog'
-      />;
-      <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>;
-        <h1>Blog</h1>;
-        <div className='container mx-auto'>;
-          <div className='text-center mb-12'>;
-            <GradientHeading>AI & Tech Insights</GradientHeading>;
-            <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>;
-              Expert perspectives on artificial intelligence, tech innovation,;
-              and digital transformation;
-            </p>;
-          </div>;
-
-          {/* Featured Post Section - Only show if there are featured posts */}
-          {featuredPosts && featuredPosts.length > 0 &&;
-            (() => {;
-              const featuredPost = featuredPosts[0];
-              if (!featuredPost) return null;
-
-
+              const featuredPost = featuredPosts[0]
+              if (!featuredPost) return null
               return (
-                <div className='mb-16'>;
-                  <h2 className='text-2xl font-bold text-white mb-6'>;
-                    Featured Article;
-                  </h2>;
-                  <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-                    <div className='aspect-video overflow-hidden rounded-lg'>;
+                <div className='mb-16'>
+                  <h2 className='text-2xl font-bold text-white mb-6'>
+                    Featured Article
+                  </h2>
+                  <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+                    <div className='aspect-video overflow-hidden rounded-lg'>
                       <img
-                        src={featuredPost && featuredPost.featuredImage}
+                        src={featuredPost.featuredImage}
                         alt={
-
-                          featuredPost && featuredPost.featuredImageAlt || featuredPost && featuredPost.title
+                          featuredPost.featuredImageAlt |featuredPost.title
                         }
                         className='object-cover w-full h-full hover:scale-105 transition-transform duration-300'
-                        onError={e => {;
-                          const target = e && e.currentTarget as HTMLImageElement;
-                          target && target.src = '/images/blog-placeholder && placeholder.svg';
-
+                        onError={e => {
+                          const target = e.currentTarget as HTMLImageElement
+                          target.src = '/images/blog-placeholder.svg'
                         }}
-                      />;
-                    </div>;
-                    <div className='flex flex-col justify-center'>;
-                      <span className='text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2'>;
-                        {featuredPost && featuredPost.category}
-                      </span>;
-                      <h3 className='text-3xl font-bold text-white mb-4'>;
-                        {featuredPost && featuredPost.title}
-                      </h3>;
-                      <p className='text-zion-slate-light mb-6'>;
-                        {featuredPost && featuredPost.excerpt}                      </p>;
-                      <div className='flex items-center mb-6'>;
+                      />
+                    </div>
+                    <div className='flex flex-col justify-center'>
+                      <span className='text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2'>
+                        {featuredPost.category}
+                      </span>
+                      <h3 className='text-3xl font-bold text-white mb-4'>
+                        {featuredPost.title}
+                      </h3>
+                      <p className='text-zion-slate-light mb-6'>
+                        {featuredPost.excerpt}                      </p>
+                      <div className='flex items-center mb-6'>
                         <img
-                          src={featuredPost && featuredPost.author.avatarUrl}
-                          alt={featuredPost && featuredPost.author.name}
+                          src={featuredPost.author.avatarUrl}
+                          alt={featuredPost.author.name}
                           className='w-10 h-10 rounded-full mr-3'
-
-                          onError={e => {;
-                            const target = e && e.currentTarget as HTMLImageElement;
-                            target && target.src = '/images/blog-placeholder && placeholder.svg';
-
+                          onError={e => {
+                            const target = e.currentTarget as HTMLImageElement
+                            target.src = '/images/blog-placeholder.svg'
                           }}
-                        />;
-                        <div>;
-                          <p className='text-white font-medium'>;
-                            {featuredPost && featuredPost.author.name}
-                          </p>;
-                          <p className='text-sm text-zion-slate-light'>;
-                            {featuredPost && featuredPost.publishedDate} •{' '}
-                            {featuredPost && featuredPost.readTime}
-                          </p>;
-                        </div>;
-                      </div>;
+                        />
+                        <div>
+                          <p className='text-white font-medium'>
+                            {featuredPost.author.name}
+                          </p>
+                          <p className='text-sm text-zion-slate-light'>
+                            {featuredPost.publishedDate} •{' '}
+                            {featuredPost.readTime}
+                          </p>
+                        </div>
+                      </div>
                       <Button
                         asChild
-
-                        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit'>;
-                        <Link href={`/blog/${featuredPost && featuredPost.slug}`}>;
-              const featured_post = featured_posts[0];
-              // Check condition
-if (return null) {
-  $2
-}
-              return (
-                <div className='mb - 16'>;
-                  <h2 className='text - 2xl font - bold text - white mb - 6'>;
-                    Featured Article;
-                  </h2>;
-                  <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
-                    <div className='aspect - video overflow - hidden rounded - lg'>;
-                      <img;
-                        src={featured_post.featured_image}
-                        alt={
-                          featured_post.featuredImageAlt || featured_post.title;
-                        }
-                        className='object - cover w - full h - full hover:scale - 105 transition - transform duration - 300';
-                        on_error={e => {
-                          const target = e.current_target as HTMLImageElement;
-                          target.src = '/images / blog - placeholder.svg';
-                        }}
-                      />;
-                    </div>;
-                    <div className='flex flex - col justify - center'>;
-                      <span className='text - sm text - zion - cyan bg - zion - blue - dark px - 3 py - 1 rounded - full inline - block mb - 2'>;
-                        {featured_post.category}
-                      </span>;
-                      <h3 className='text - 3xl font - bold text - white mb - 4'>;
-                        {featured_post.title}
-                      </h3>;
-                      <p className='text - zion - slate - light mb - 6'>;
-                        {featured_post.excerpt}                      </p>;
-                      <div className='flex items - center mb - 6'>;
-                        <img;
-                          src={featured_post.author.avatar_url}
-                          alt={featured_post.author.name}
-                          className='w - 10 h - 10 rounded - full mr - 3';
-                          on_error={e => {
-                            const target = e.current_target as HTMLImageElement;
-                            target.src = '/images / blog - placeholder.svg';
-                          }}
-                        />;
-                        <div>;
-                          <p className='text - white font - medium'>;
-                            {featured_post.author.name}
-                          </p>;
-                          <p className='text - sm text - zion - slate - light'>;
-                            {featured_post.published_date} •{' '}
-                            {featured_post.read_time}
-                          </p>;
-                        </div>;
-                      </div>;
-                      <Button;
-                        as_child;
-                        className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple w - fit';
-                      >;
-                        <Link href={`/blog/${featured_post.slug}`}>;
-
-                          Read Article;
-                        </Link>;
-                      </Button>;
-                    </div>;
-                  </div>;
-
-                  onChange={e => setSearchQuery(e && e.target.value)}
-                  className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />;
-              </div>;
-
-
-              <Select
-                value={selectedCategory}
-                onValueChange={setSelectedCategory}>;
-                <SelectTrigger
-                  className='bg-zion-blue border border-zion-blue-light text-white'
-                  aria-label='Filter by category'>;
-                  <SelectValue placeholder='Select Category' />;
-                </SelectTrigger>;
-                <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>;
-                  {CATEGORIES && CATEGORIES.map(category => (;
-                    <SelectItem
-                      key={category}
-                      value={category}
-                      className='text-white'>                      {category}
-                    </SelectItem>;
+                        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit'
+                      >
+                        <Link href={`/blog/${featuredPost.slug}`}>
+                          Read Article
+                        </Link>
+                      </Button>
 
 
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   ))}
                 </SelectContent>;
               </Select>;
@@ -467,16 +306,25 @@ if (return null) {
 
           {!isLoading && filteredPosts.length > 0 ? (
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
-                <Card
-                  key={post.id}
-
-
                   asChild
                   className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
                 >
 
+                      />
+                    </div>
+
+                  asChild
+                  className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
+                >
+                  <Link href={`/blog/${post.slug}`} className='block group'>
+                    <div className='aspect-[16/9] relative overflow-hidden'>
+                      <img
+                        src={post.featuredImage}
+                        alt={post.featuredImageAlt |post.title}
+                        className='object-cover w-full h-full hover:scale-105 transition-transform duration-300'
+                        onError={e => {
+                          const target = e.currentTarget as HTMLImageElement
+                          target.src = '/images/blog-placeholder.svg' }}
                   <Link href={`/blog/${post.slug}`} className="block group">
                   <div className="aspect-[16/9] relative overflow-hidden">
                     <img
@@ -513,83 +361,17 @@ if (return null) {
                           const target = e.currentTarget as HTMLImageElement,
                           target.src = "/images/blog-placeholder.svg"
                         }}
-
-                      />
-                    </div>
-
-                </div>);
-            })()}
-          {/* Filters and Search */}
-          <div className='bg - zion - blue - dark rounded - lg p - 6 mb - 8 border border - zion - blue - light'>;
-            <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-              <div className='relative'>;
-                <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate' />;
-                <Input;
-                  type='text';
-                  placeholder='Search articles...';
-                  value={search_query}
-                  on_change={e => setSearchQuery (e.target.value)}
-                  className='pl - 10 bg - zion - blue border border - zion - blue - light text - white'                />;
-              </div>;
-              <Select;
-                value={selected_category}
-                onValueChange={setSelectedCategory}
-              >;
-                <SelectTrigger;
-                  className='bg - zion - blue border border - zion - blue - light text - white';
-                  aria - label='Filter by category';
-                >;
-                  <SelectValue placeholder='Select Category' />;
-                </SelectTrigger>;
-                <SelectContent className='bg - zion - blue - dark border border - zion - blue - light'>;
-                  {CATEGORIES.map (category => (
-                    <SelectItem;
-                      key={category}
-                      value={category}
-                      className='text - white';
-                    >                      {category}
-                    </SelectItem>))}
-                </SelectContent>;
-              </Select>;
-            </div>;
-            {is_loading && (
-              <div className='text - center py - 4 text - white'>;
-                Loading articles...;
-              </div>)}
-          </div>;
-          {/* Blog Posts Grid */}
-          {!is_loading && filtered_posts.length > 0 ? (
-            <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
-              {filtered_posts.map (post => (                <Card;
-                  key = {post.id, }
-                  as_child;
-                  className='bg - zion - blue - dark border border - zion - blue - light hover:border - zion - purple transition - all duration - 300 group - hover:shadow - lg';
-                >;
-                  <Link href={`/blog/${post.slug}`} className='block group'>;
-                    <div className='aspect-[16 / 9] relative overflow - hidden'>;
-                      <img;
-                        src={post.featured_image}
-                        alt={post.featuredImageAlt || post.title}
-                        className='object - cover w - full h - full hover:scale - 105 transition - transform duration - 300';
-                        on_error={e => {
-                          const target = e.current_target as HTMLImageElement;
-                          target.src = '/images / blog - placeholder.svg' }}
-                      />;
-                    </div>;
-                    <CardContent className='p - 6'>;
-                      <div className='flex items - center justify - between mb - 3'>;
-                        <span className='text - xs text - zion - cyan bg - zion - blue px - 3 py - 1 rounded - full'>;
-
+<<<<<<< HEAD
                           {post.category}
-                        </span>;
-                        <div className='text - xs text - zion - slate - light'>;
-                          {post.published_date} • {post.read_time}
-                        </div>;
-                      </div>;
-                      <h3 className='text - xl font - bold text - white mb - 3'>;
+                        </span>
+                        <div className='text-xs text-zion-slate-light'>
+                          {post.publishedDate} • {post.readTime}
+                        </div>
+                      </div>
+                      <h3 className='text-xl font-bold text-white mb-3'>
                         {post.title}
-                      </h3>;
-                      <p className='text - zion - slate - light mb - 4 line - clamp - 3'>;
+                      </h3>
+                      <p className='text-zion-slate-light mb-4 line-clamp-3'>
                         {post.excerpt}
 
                         src={post && post.featuredImage}
@@ -618,8 +400,8 @@ if (return null) {
                       <div className='flex items-center'>;
 
                         <img
-                          src={post && post.author.avatarUrl}
-                          alt={post && post.author.name}
+                          src={post.author.avatarUrl}
+                          alt={post.author.name}
                           className='w-8 h-8 rounded-full mr-2'
 
                           onError={e => {;
@@ -627,243 +409,26 @@ if (return null) {
                             target && target.src = '/images/blog-placeholder && placeholder.svg';
 
                           }}
-                        />;
-                        <span className='text-sm text-white'>;
-                          {post && post.author.name}
-                        </span>;
-                      </div>;
-                    </CardContent>;
-                    <CardFooter className='p-6 pt-0'>;
-                      <span className='text-zion-cyan group-hover:text-zion-purple'>;
-                      </p>;
-                      <div className='flex items - center'>;
-                        <img;
-                          src={post.author.avatar_url}
-                          alt={post.author.name}
-                          className='w - 8 h - 8 rounded - full mr - 2';
-                          on_error={e => {
-                            const target = e.current_target as HTMLImageElement;
-                            target.src = '/images / blog - placeholder.svg';
-                          }}
-                        />;
-                        <span className='text - sm text - white'>;
-                          {post.author.name}
-                        </span>;
-                      </div>;
-                    </CardContent>;
-                    <CardFooter className='p - 6 pt - 0'>;
-                      <span className='text - zion - cyan group - hover:text - zion - purple'>;
-                        Read More →;
-                      </span>;
-                    </CardFooter>;
-                  </Link>;
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 
-                  </CardContent>
-                  <CardFooter className="p-6 pt-0">
-                    <span className="text-zion-cyan group-hover:text-zion-purple">Read More →</span>
-                  </CardFooter>
-                  </Link>
-                </Card>
-          {!isLoading && filteredPosts.length > 0 ? (;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {filteredPosts.map((post) => (;
-                <Card;
-                  key={post.id}
-                  asChild;
-                  className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg";
-                >;
-                  <Link href={`/blog/${post.slug}`} className="block group">;
-                  <div className="aspect-[16/9] relative overflow-hidden">;
-                    <img;
-                      src={post.featuredImage}
-                      alt={post.featuredImageAlt || post.title}
-                      className="object-cover w-full h-full hover: scale-105 transition-transform duration-300";
-                      onError={(e) => {;
-                        const target = e.currentTarget as HTMLImageElement,;
-                        target.src = "/images/blog-placeholder.svg";
-                      }}
-                    />;
-                  </div>;
-                  <CardContent className="p-6">;
-                    <div className="flex items-center justify-between mb-3">;
-                      <span className="text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full">;
-                        {post.category}
-                      </span>;
-                      <div className="text-xs text-zion-slate-light">;
-                        {post.publishedDate} • {post.readTime}
-                      </div>;
-                    </div>;
-                    <h3 className="text-xl font-bold text-white mb-3">;
-                      {post.title}
-                    </h3>;
-                    <p className="text-zion-slate-light mb-4 line-clamp-3">;
-                      {post.excerpt}
-                    </p>;
-                    <div className="flex items-center">;
-                      <img;
-                        src={post.author.avatarUrl}
-                        alt={post.author.name}
-                        className="w-8 h-8 rounded-full mr-2";
-                        onError={(e) => {;
-                          const target = e.currentTarget as HTMLImageElement;
-                          target.src = "/images/blog-placeholder.svg";
-                        }}
-                      />;
-                      <span className="text-sm text-white">{post.author.name}</span>;
-                    </div>;
-                  </CardContent>;
-                  <CardFooter className="p-6 pt-0">;
-                    <span className="text-zion-cyan group-hover:text-zion-purple">Read More →</span>;
-                  </CardFooter>;
-                  </Link>;
-                </Card>;
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               ))}
-            </div>;
+            </div>
           ) : null}
           {/* No Results Message - Show only if not loading and no posts */}
-          {!isLoading && filteredPosts && filteredPosts.length === 0 && (;
-            <div className='text-center py-16'>;
-              <h3 className='text-xl font-bold text-white mb-2'>;
-                No articles found;
-              </h3>;
-              <p className='text-zion-slate-light mb-6'>;
-                Try adjusting your search or filter criteria;
-              </p>;
+          {!isLoading && filteredPosts.length === 0 && (
+            <div className="text-center py-16">
+              <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>
+              <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>
               <Button
+                variant='outline'
+                onClick={() => {
+                  setSearchQuery('')
+                  setSelectedCategory('All Categories') }}
+                className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
 
-                </Card>))}
-            </div>) : null}
-          {/* No Results Message - Show only if not loading and no posts */}
-          {!is_loading && filtered_posts.length === 0 && (
-            <div className='text - center py - 16'>;
-              <h3 className='text - xl font - bold text - white mb - 2'>;
-                No articles found;
-              </h3>;
-              <p className='text - zion - slate - light mb - 6'>;
-                Try adjusting your search or filter criteria;
-              </p>;
-              <Button;
-                variant='outline';
-                on_click={() => {
-                  setSearchQuery ('');
-                  setSelectedCategory ('All Categories') }}
-                className='border - zion - purple text - zion - purple hover:bg - zion - purple / 10';
-              >;
-                Clear all filters;
-              </Button>;
-            </div>)}
-        </div>;
-      </div>;
-    </>);
-}, [query]);
-//Filter blog posts based on selected category only. //Search filtering is handled server - side. return matches_category;
-});
-//Get featured posts const featured_posts = posts.filter (post => post.is_featured);';
-log_info ('BlogPage filtered_posts:', {
-  data: filtered_posts;
-});";
-min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div className=" container mx - auto"> <div className=" text - center mb - 12"> <GradientHeading > AI & Tech Insights</GradientHeading>;
-}";
-}/> </div> <div className=" flex flex - col justify - center"> <span className=" text - sm text - zion - cyan bg - zion - blue - dark px - 3 py - 1 rounded - full inline - block mb - 2"> {
-  featured_post.category ";
-}</span> <h3 className=" text - 3xl font - bold text - white mb - 4"> {
-  featured_post.title ";
-}</h3> <p className=" text - zion - slate - light mb - 6"> {
-  featured_post.excerpt ";
-}flex items - center mb - 6" > <img;
-}";
-}/> <div> <p className="text - white font - medium" > {
-  featured_post.author.name ";
-}</p> <p className="text - sm text - zion - slate - light" > {
-  featured_post.published_date;
-
-}• {
-  featured_post.read_time ";
-}bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple w - fit"> <Link href= {
-  `/blog/$ {
-
-  featured_post.slug;
-}`;
-}> Read Article </Link> </Button> </div> </div> </div>);
-}) ();
-}</SelectItem>) );
-}</SelectContent> </Select> </div> Loading articles... </div>);
-}</div> key= {
-  post.id ";
-}as_child className=" bg - zion - blue - dark border border - zion - blue - light hover:border - zion - purple transition - all duration - 300 group - hover:shadow - lg">;
-}";
-}/> </div> <CardContent className=" p - 6"> <div className=" flex items - center justify - between mb - 3"> <span className=" text - xs text - zion - cyan bg - zion - blue px - 3 py - 1 rounded - full"> {
-  post.category ";
-}</span> <div className=" text - xs text - zion - slate - light"> {
-  post.published_date;
-}• {
-  post.read_time ";
-}</div> </div> <h3 className=" text - xl font - bold text - white mb - 3"> {
-  post.title ";
-}</h3> <p className=" text - zion - slate - light mb - 4 line - clamp - 3"> {
-  post.excerpt ";
-}flex items - center" > <img;
-}";
-}/> <span className="text - sm text - white" > {
-  post.author.name ";
-}</span> p - 6 pt - 0"> <span className=" text - zion - cyan group - hover:text - zion - purple">Read More →</span> </CardFooter> </Link> </Card>) );
-}</div>) : null ";
-}<Button variant=" outline" on_click={
-  () => {
-}</div> </div> </>);
-}'"  const featured_posts = blog_posts.filter (post => post.featured);
-
-}
-  const regular_posts = blog_posts.filter (post => !post.featured);
-}
-  return (
-
-    <>";
-      <SEO ;";
-        title="Blog - Zion Tech Group | Technology Insights & Industry News";";
-        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group"s expert team.";";
-        keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news">;
-    />;";
-      <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">;
-        {/* comment */}";
-        <section className="py - 20 bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20">;";
-          <div className="container mx - auto px - 4">;
-            <motion.div;";
-              initial = "{{" opacity: 0, coordinate_y: 20 }}";
-              animate="{{" opacity: 1, coordinate_y: 0 }}";
-              transition="{{" duration: 0.8 }}";
-              className="text - center max - w-4xl mx - auto">;
-            >;";
-              <h1 className="text - 5xl md: text - 6xl font - bold text - white mb - 6">,
-                Technology Insights,
-              </h1>, ";
-              <p class_name = "text - xl text - gray - 300 mb - 8">,
-                Stay ahead of the curve with expert insights on AI, quantum computing,
-                cybersecurity, and the latest technology trends shaping our future.;
-              </p>;";
-              <div className="flex flex - wrap justify - center gap - 4">;
-                {categories.slice (0, 4).map ((category, index) => (
-                  <span;";
-
-                    key = "{category.name}
-                    className="px - 4 py - 2 bg - blue - 600 / 20 border border - blue - 400 / 30 rounded - full text - blue - 300 text - sm">;
-                  >;
-                    {category.name}
-
-
-      id: 2,
-      title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot,
-      excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,
-      author: &quot,Prof. Michael Rodriguez&quot,
-      date: &quot,2025-01-12&quot,
-      readTime: &quot,12 min read&quot,;
-      category: &quot,Quantum Computing&quot;
-      tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot],
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       image: &quot,/api/placeholder/600/400&quot,"
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.","
       author: "Prof. Michael Rodriguez", date: "2025-01-12","
@@ -1033,7 +598,7 @@ function Blog() {
   const categories = [];
   const featured_posts = blog_posts.filter (post => post.featured);
 }
-  const regular_posts = blog_posts.filter ();
+  const regularPosts = blogPosts.filter()
 }
   return (
 
@@ -1582,6 +1147,8 @@ key = "{post && post.id}
                         <spanclassName="&quottext-sm" text-gray-400&quot>{category && category.count}&quot;</span>;
                       </Link>;
                     ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
                   </div>;
                 {/* comment */}";
@@ -1956,32 +1523,7 @@ key = "{post.id}
 </>),
   )})))))))));
 }
-
-;
-
-                variant="outline"
-                onClick={() => {
-                  setSearchQuery(""),
-                  setSelectedCategory("All Categories")
-          {!isLoading && filteredPosts.length === 0 && (;
-            <div className="text-center py-16">;
-              <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>;
-              <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>;
-              <Button;
-                variant="outline";
-                onClick={() => {;
-                  setSearchQuery("");
-                  setSelectedCategory("All Categories");
-                }}
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-              >;
-                Clear all filters;
-              </Button>;
-            </div>;
-          )}
-        </div>;
-      </div>;
-    </>;
-  );
-}
-;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

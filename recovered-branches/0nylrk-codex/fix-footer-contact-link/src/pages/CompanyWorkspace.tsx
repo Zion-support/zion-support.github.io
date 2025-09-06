@@ -1,7 +1,42 @@
 
-
-
-
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CompanyDashboard} from "@/components/enterprise/workspace/CompanyDashboard";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate, useParams} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
+import {useWhitelabel} from "@/context/WhitelabelContext";
+export default function CompanyWorkspace() {;
+  const { companySlug } = useParams() as { companySlug?: string };
+  const { user } = useAuth();
+  const { company, isLoading, error } = useCompanyWorkspace(companySlug);
+  const { isWhitelabel, tenant, brandName } = useWhitelabel();
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate, useParams } from "react-router-dom",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
+import { useWhitelabel } from "@/context/WhitelabelContext";
+export default function CompanyWorkspace() {
+  const { companySlug } = useParams() as { companySlug?: string }
+  const { user } = useAuth();
+  const { company, isLoading, error } = useCompanyWorkspace(companySlug);
+  const { isWhitelabel, tenant, brandName } = useWhitelabel();
+import { useWhitelabel } from "@/context/WhitelabelContext",
+export default function CompanyWorkspace() {
+  const { companySlug } = useParams() as { companySlug?: string },
+  const { user } = useAuth(),
+  const { company, isLoading, error } = useCompanyWorkspace(companySlug),
+  const { isWhitelabel, tenant, brandName } = useWhitelabel(),
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (isLoading) {
     return (
 
@@ -25,44 +60,11 @@
   if (!hasAccess) {
     return <Navigate to="/unauthorized" />
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {CompanyDashboard} from "@/components/enterprise/workspace/CompanyDashboard";
-import {useAuth} from "@/hooks/useAuth";
-import {Navigate, useParams} from "react-router-dom";
-import {SEO} from "@/components/SEO";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
-import {useWhitelabel} from "@/context/WhitelabelContext";
-=======
-
+  return (
+    <ProtectedRoute>
+      <SEO
       <SEO 
-
-=======
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -105,16 +107,19 @@ export default function CompanyWorkspace() {;
   if (!hasAccess) {;
     return <Navigate to="/unauthorized" />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 
 ;
   return (;
     <ProtectedRoute>;
       <SEO;
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
       />
@@ -128,93 +133,9 @@ export default function CompanyWorkspace() {;
       <Footer />
     </ProtectedRoute>
   )
-
-    <ProtectedRoute>;
-      <SEO
-        title={`${company && company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
-        description={`${company && company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
-      />;
-      <Header
-        customLogo={isWhitelabel ? tenant?.logo_url : company && company.logoUrl}
-        customTheme={effectiveTheme}
-      />;
-      <main className="min-h-screen" style={{ backgroundColor: effectiveTheme?.backgroundColor || 'var(--background)' }}>;
-        <CompanyDashboard company={company} />;
-      </main>;
-      <Footer />;
-    </ProtectedRoute>;
-  );
-}
-
-=======
-import React from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { CompanyDashboard } from '@/components / enterprise / workspace / CompanyDashboard';
-import { use_auth } from '@/hooks / use_auth';
-import { Navigate, use_params } from './react-router-dom';
-import { SEO } from '@/components / SEO';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { useCompanyWorkspace } from '@/hooks / useCompanyWorkspace';
-import { use_whitelabel } from '@/context / WhitelabelContext';
-export default /**
- * CompanyWorkspace - Function description
- */
-function CompanyWorkspace() {
-  const { company_slug } = use_params () as { company_slug?: string }
-  const { user } = use_auth ();
-  const { company, is_loading, error } = useCompanyWorkspace (company_slug);
-  const { is_whitelabel, tenant, brand_name } = use_whitelabel ();
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="flex items - center justify - center min - h-screen">;
-        <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion - cyan"></div>;
-      </div>);
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return <Navigate to="/not - found" />;
-  }
-  // In white - label mode, use the tenant's theme instead of the company's theme;
-  const effective_theme = is_whitelabel ? {
-    primary_color: tenant?.primary_color || company.theme?.primary_color,
-    background_color: company.theme?.background_color || 'var (--background)',
-    text_color: company.theme?.text_color || 'var (--foreground)';
-  } : company.theme;
-;
-  // Check if user has access to this company workspace;
-  const has_access = true, // For demo purposes, always grant access;
-  // Check condition
-if ( {) {
-  $2
-}
-    return <Navigate to="/unauthorized" />;
-  }
-  return (
-    <ProtectedRoute>;
-      <SEO;
-        title={`${company.name} Workspace - ${is_whitelabel ? brand_name : 'Zion AI Marketplace'}`}
-        description={`${company.name}'s dedicated workspace ${is_whitelabel ? `on ${brand_name}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
-      />;
-      <Header;
-        custom_logo={is_whitelabel ? tenant?.logo_url : company.logo_url}
-        custom_theme={effective_theme}
-      />;
-      <main className="min - h-screen" style={{ background_color: effective_theme?.background_color || 'var (--background)' }}>;
-        <CompanyDashboard company={company} />;
-      </main>;
-      <Footer />;
-    </ProtectedRoute>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

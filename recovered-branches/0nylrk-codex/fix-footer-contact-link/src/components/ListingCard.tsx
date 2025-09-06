@@ -1,16 +1,10 @@
 
-
-
-
-
 import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
-interface ListingCardProps {;
-=======
-import { cn } from '@/lib / utils';
-import { Badge } from '@/components / ui / badge';
-import { Link } from './react-router-dom';
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 interface ListingCardProps {
 
   id?: string;
@@ -19,6 +13,7 @@ interface ListingCardProps {
   image?: string;
   category: string,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   tags?: string[];
   author?: string;
 
@@ -46,7 +41,12 @@ export function ListingCard(): any ({ ;
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer"
 
+import { Badge } from "@/components/ui/badge",
+import { Link } from "react-router-dom",
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ListingCardProps {
   id?: string,
   title: string,
@@ -58,13 +58,47 @@ interface ListingCardProps {
   authorImage?: string,
   className?: string,
   profileType?: 'service' | 'talent'
+}
 
-
+import { cn } from "@/lib/utils",;
+import { Badge } from "@/components/ui/badge",;
+import { Link } from "react-router-dom",;
+interface ListingCardProps {;
+  id?: string,;
+  title: string,;
+  description: string,;
+  image?: string,;
+  category: string,;
+  tags?: string[],;
+  author?: string,;
+  authorImage?: string,;
+  className?: string,;
+  profileType?: 'service' | 'talent';
+}
+;
+export function ListingCard({;
+  id,;
+  title,;
+  description,;
+  image,;
+  category,;
+  tags,;
+  author,;
+  authorImage,;
+  className,;
+  profileType = 'service';
+}: ListingCardProps) {;
+  // Generate a profile ID based on the listing data;
+  // In a real app, this would be a proper ID from the database;
+  const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
+  return (;
+    <Link;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       to={`/profile/${profileId}`}
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         className
 
       )}>;
@@ -99,25 +133,12 @@ interface ListingCardProps {
           </div>;
         )}
 
-
-        
-
-
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {authorImage ? (
               <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" />
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
-=======
-
-        {author && (;
-          <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">;
-            {authorImage ? (;
-              <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" />;
-            ) : (;
-              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
             <span className="text-sm text-zion-slate-light">{author}</span>;
           </div>;

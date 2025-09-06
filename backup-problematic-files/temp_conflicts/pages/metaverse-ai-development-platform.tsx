@@ -1,44 +1,9 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from "react";
-import Head from "next/head";
-import {;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Check,;
-  ArrowRight,;
-  Sparkles,;
-  Star,;
-
-=======
-
-
 import React from "react";
 import Head from "next/head";
 import {
 
+=======
   Phone,
   Mail,
   MapPin,
@@ -48,20 +13,16 @@ import {
   Star,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
+<<<<<<< HEAD
+export default function MetaverseAIPlatformPage() {
+  const service = enhancedRealMicroSaasServices.find((s) =>
 
-export default function MetaverseAIPlatformPage() {;
-  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
-    s && s.link.endsWith("/metaverse-ai-development-platform"),;
-
-=======
-
-    s.link.endsWith("/metaverse-ai-development-platform"),;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
   if (!service) return null;
 
@@ -102,87 +63,9 @@ export default function MetaverseAIPlatformPage() {;
                   </li>;
                 ))}
 
+}
 
-              </ul>
-            </div>
-            <div className="bg-black/30 rounded-2xl border border-violet-500/30 p-6 h-fit">
-              <div className="flex items-end justify-between mb-3">
-                <div>
-                  <div className="text-3xl font-bold text-white">
-                    {service.price}
-                    <span className="text-slate-400 text-base">
-                      {service.period}
-                    </span>
-                  </div>
-                  <div className="text-slate-400">
-                    {service.trialDays}-day free trial • Setup:{" "}
-                    {service.setupTime}
-                  </div>
-                </div>
-                <div className="flex items-center text-yellow-400">
-                  <Star className="w-4 h-4 mr-1" />
-                  {service.rating.toFixed(1)}
-                </div>
-              </div>
-
-              <Button
-                href="/contact"
-                variant="quantum"
-                size="lg"
-
-import React from './react';
-import Head from './next / head';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Sparkles,
-  Star,
-} from './lucide-react';
-import UltraAdvancedFuturisticBackground from "../components / ui / UltraAdvancedFuturisticBackground";
-import Button from "../components / ui / Button";
-import { enhancedRealMicroSaasServices  } from '../data / enhanced - real - micro - saas - services';
-export default /**
- * MetaverseAIPlatformPage - Function description
- */
-function MetaverseAIPlatformPage() {
-  const service = enhancedRealMicroSaasServices.find ((s) =>;
-    s.link.ends_with ("/metaverse - ai - development - platform"),
-  );
-  // Check condition
-if (return null) {
-  $2
-=======
-                className="w-full"
-              >
-                Request a Demo
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span>{service.contactInfo.mobile}</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4 text-purple-400" />
-                  <span>{service.contactInfo.email}</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4 text-green-400" />
-                  <span className="text-xs">{service.contactInfo.address}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-  );
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
 }
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -271,3 +154,4 @@ if (return null) {
     </UltraAdvancedFuturisticBackground>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

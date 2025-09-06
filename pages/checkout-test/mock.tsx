@@ -1,4 +1,5 @@
 
+=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,35 +23,70 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-
-
+import { useRouter  } from 'next/router';
 import { useRouter } from 'next/router';
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
-=======
-
-export default function MockCheckoutPage(req, res) {
-  try {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    router.push('/checkout');
+    return <div>Redirecting...</div>;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const router = useRouter();
-
-  const { mock } = router && router.query;
-
-  if (!mock) {;
-    router && router.push('/checkout');
-
+  const { mock } = router.query;
+  if (!mock) {
+    router.push('/checkout');
     return <div>Redirecting...</div>;
 
   }
   return (
-
-    return <div>Redirecting...</div>
+    <div className='min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4'>
+      <div className='container mx-auto max-w-2xl'>
+        <div className='bg-zion-blue-light/80 backdrop-blur-md rounded-lg border border-zion-cyan/20 p-8 text-center'>
+          <CheckCircle className='h-16 w-16 text-green-400 mx-auto mb-4' />
+          <h1 className='text-3xl font-bold text-white mb-4'>
+            Mock Checkout Complete!
+          </h1>
+          <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-6'>
+            <p className='text-yellow-400 text-sm'>
+              <strong>Development Mode:</strong> This is a mock checkout page
+              shown when using dummy Stripe keys. In production, users would be
+              redirected to the actual Stripe checkout flow.
+            </p>
+          </div>
+          <div className='text-left bg-zion-blue/50 rounded-lg p-4 mb-6'>
+            <h3 className='text-lg font-semibold text-white mb-2'>
+              What happened:
+            </h3>
+            <ul className='text-zion-slate-light space-y-1 text-sm'>
+  if (!mock) {;
+  if (!mock) {;
+    router.push('/checkout');
+    return <div>Redirecting...</div>;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 
+    return <div>Redirecting...</div>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    router.push('/checkout');
+    return <div>Redirecting...</div>;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  }
+
+}
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4">
       <div className="container mx-auto max-w-2xl">
@@ -63,35 +99,16 @@ export default function MockCheckoutPage(req, res) {
           
           <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-6">
             <p className="text-yellow-400 text-sm">
-              <strong>Development Mode:</strong> This is a mock checkout page shown when using dummy Stripe keys.
-              In production, users would be redirected to the actual Stripe checkout flow.
-            </p>
-          </div>
 
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <li>• Payment would be handled by Stripe</li>
               <li>• Order confirmation would be sent</li>
             </ul>
           </div>
 
-
           <div className="space-y-4">
             <div className="text-zion-slate-light text-sm">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              <p>To test with real Stripe: </p>
-              <ol className='list-decimal list-inside space-y-1 mt-2'>
-                <li>
-                  Configure real Stripe test keys in environment variables
-                </li>                <li>Set STRIPE_TEST_MODE=true for test environment</li>
-                <li>Use test card: 4242 4242 4242 4242</li>
-              </ol>
-            </div>
-
-
-          <div className="space-y-4">
-            <div className="text-zion-slate-light text-sm">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <p>To test with real Stripe: </p>
               <ol className="list-decimal list-inside space-y-1 mt-2">
                 <li>Configure real Stripe test keys in environment variables</li>
@@ -99,10 +116,8 @@ export default function MockCheckoutPage(req, res) {
                 <li>Use test card: 4242 4242 4242 4242</li>
               </ol>
             </div>
-=======
 
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <Button asChild variant="outline" className="border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10">
                 <Link href="/cart">
                   ← Back to Cart
@@ -111,10 +126,6 @@ export default function MockCheckoutPage(req, res) {
               
               <Button asChild className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue">
                 <Link href="/marketplace">
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Continue Shopping
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
@@ -125,20 +136,11 @@ export default function MockCheckoutPage(req, res) {
         </div>
       </div>
     </div>
-
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4'>;
-      <div className='container mx-auto max-w-2xl'>;
-        <div className='bg-zion-blue-light/80 backdrop-blur-md rounded-lg border border-zion-cyan/20 p-8 text-center'>;
-          <CheckCircle className='h-16 w-16 text-green-400 mx-auto mb-4' />;
-
-
-          <h1 className='text-3xl font-bold text-white mb-4'>;
 =======
+);
 
 
 }
-
-=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -153,6 +155,7 @@ export default function MockCheckoutPage(req, res) {
           <CheckCircle className="h-16 w-16 text-green-400 mx-auto mb-4" />;
           <h1 className="text-3xl font-bold text-white mb-4">;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             Mock Checkout Complete!;
           </h1>;
 
@@ -160,38 +163,6 @@ export default function MockCheckoutPage(req, res) {
             <p className='text-yellow-400 text-sm'>;
               <strong>Development Mode:</strong> This is a mock checkout page;
 
-=======
-import {use_router} from 'next / router';
-import Link from 'next / link';
-import { Button } from '@/components / ui / button';
-import { CheckCircle, ArrowRight } from 'lucide-react';
-export default /**
- * MockCheckoutPage - Function description
- */
-function MockCheckoutPage() {
-  const router = use_router ();
-  const { mock } = router.query;
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    router.push ('/checkout');
-    return <div > Redirecting...</div>;
-  }
-  return (
-    <div className='min - h-screen bg - gradient - to - br from - zion - blue to - zion - blue - dark py - 8 px - 4'>;
-      <div className='container mx - auto max - w-2xl'>;
-        <div className='bg - zion - blue - light / 80 backdrop - blur - md rounded - lg border border - zion - cyan / 20 p - 8 text - center'>;
-          <CheckCircle className='h - 16 w - 16 text - green - 400 mx - auto mb - 4' />;
-          <h1 className='text - 3xl font - bold text - white mb - 4'>;
-            Mock Checkout Complete!;
-          </h1>;
-          <div className='bg - yellow - 500 / 10 border border - yellow - 500 / 30 rounded - lg p - 4 mb - 6'>;
-            <p className='text - yellow - 400 text - sm'>;
-              <strong > Development Mode:</strong> This is a mock checkout page;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               shown when using dummy Stripe keys. In production, users would be;
               redirected to the actual Stripe checkout flow.;
             </p>;
@@ -199,27 +170,6 @@ if ( {) {
 
 
               </li>              <li>• Cart items would be processed</li>;
-              <li>• Payment would be handled by Stripe</li>;
-              <li>• Order confirmation would be sent</li>;
-            </ul>;
-          </div>;
-
-
-              </Button>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-
-=======
-    </div>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-} ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

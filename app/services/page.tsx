@@ -33,16 +33,23 @@ export default function ServicesOverviewPage() {
         <ServiceCard
           href="/services/ai-services"
           title="AI Services"
-          description="LLM applications, RAG systems, and MLOps pipelines"
-          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
+          description="LLM applications, RAG systems, and AI automation"
+          bullets={[
+            'Custom LLM development',
+            'RAG systems',
+            'AI agents & automation'
+          ]}
           icon="🤖"
         />
         <ServiceCard
           href="/services/it-services"
           title="IT Services"
           description="Cloud migration, DevOps, and security solutions"
-          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
-          icon="⚙️"
+          href="/services/blockchain-solutions"
+          title="Blockchain Solutions"
+          description="DeFi, NFTs, smart contracts, and Web3 applications"
+          bullets={["Smart contracts", "DeFi protocols", "Web3 apps"]}
+          icon="⛓️"
         />
       </div>
       

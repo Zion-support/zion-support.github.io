@@ -1,29 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')      return size}}
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/main
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')      return size}}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node
 /**
  * Simple Automation Runner
@@ -96,7 +76,7 @@ async function runSimpleAutomation() {
         const result = execSync('npm audit --json', { "encoding": 'utf8', "stdio": 'pipe' };);
         const auditData = JSON.parse(result;);
         return { ;
-          "status": 'success', 
+          "status": 'success',
           "vulnerabilities": auditData.vulnerabilities || 0,
           "advisories": auditData.advisories || 0
         }} catch (error) {
@@ -110,7 +90,7 @@ async function runSimpleAutomation() {
     ) {
         const stats = analyzeBuildSize(buildDi}r;);
         return { ;
-          "status": 'success', 
+          "status": 'success',
           "totalSize": stats.totalSize,
           "recommendations": stats.recommendations
         }} else {
@@ -160,20 +140,7 @@ async function runSimpleAutomation() {
         "timestamp": new Date().toISOString()
       });
       throw error}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
   }
   log(message) {
     const timestamp = new Date().toISOString();
@@ -261,10 +228,7 @@ const path = require('path')
       await this.runBuild();
       await this.runSecurityAudit();
       await this.applyImprovements();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
       this.generateReport();
       this.log('✅ Automation completed successfully');
     } catch (error) {
@@ -272,24 +236,16 @@ const path = require('path')
       this.results.status = 'failed';
     }
   }
-<<<<<<< HEAD
-=======
-=======
-      
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
       return size}}
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+
 =======
 >>>>>>> origin/main
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     totalSize = getDirectorySize(buildDir);
-    totalSize = getDirectorySize(buildDir);
-
     const recommendations = [];
     if ( { // > 1MB
       recommendations.push('Consider code splitting to reduce bundle size')}
@@ -314,45 +270,20 @@ if (require.main === module) {
     process.exit(1);
   });
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-module.exports = SimpleAutomationRunner;
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-module.exports = SimpleAutomationRunner;
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
-=======
-=======
->>>>>>> origin/main
 
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
-
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
-
 module.exports = { runSimpleAutomation }}
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')
@@ -375,35 +306,13 @@ const { execSync } = require('child_process')
           "status"
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        "status"
-        "status"
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
+
         "status"
         "status"
 <<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-        "status"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-        "status"
-=======
-        "status"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

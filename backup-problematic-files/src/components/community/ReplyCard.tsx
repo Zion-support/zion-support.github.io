@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { formatDistanceToNow } from "date-fns",;
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
@@ -122,3 +124,4 @@ className) ";
 };
 export default ReplyCard;
 "
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

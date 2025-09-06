@@ -1,6 +1,14 @@
 
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+ursor/fix-syntax-push-and-merge-to-main-40de
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import WebVitals from "./components/WebVitals" describe("WebVitals",() => {" test("renders without crashing",() => {" render(<WebVitals / />) expect(screen.getByTestId("webvitals")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<WebVitals / />) }) test("handles user interactions",() => {" render(<WebVitals / />) }) test("applies correct styling",() => {" render(<WebVitals / />) }) })'"'"
+import _React from 'react"  import '@testing-library/jest-dom import WebVitals from '../components/WebVitals" describe('WebVitals',() => {' test('renders without crashing',() => {' render(<WebVitals / />) expect(screen.getByTestId("webvitals")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<WebVitals / />) }) test('handles user interactions',() => {' render(<WebVitals / />) }) test('applies correct styling',() => {' render(<WebVitals / />) }) })
+import _React from 'react"  import '@testing-library/jest-dom import WebVitals from '../components/WebVitals" describe('WebVitals',() => {' test('renders without crashing',() => {' render(<WebVitals / />) expect(screen.getByTestId("webvitals")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<WebVitals / />) }) test('handles user interactions',() => {' render(<WebVitals / />) }) test('applies correct styling',() => {' render(<WebVitals / />) }) })
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import WebVitals from "./components/WebVitals" describe("WebVitals",() => {" test("renders without crashing",() => {" render(<WebVitals / />) expect(screen.getByTestId("webvitals")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<WebVitals / />) }) test("handles user interactions",() => {" render(<WebVitals / />) }) test("applies correct styling",() => {" render(<WebVitals / />) }) })'"'"
+import _React from 'react"  import '@testing-library/jest-dom import WebVitals from '../components/WebVitals" describe('WebVitals',() => {' test('renders without crashing',() => {' render(<WebVitals / />) expect(screen.getByTestId("webvitals")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<WebVitals / />) }) test('handles user interactions',() => {' render(<WebVitals / />) }) test('applies correct styling',() => {' render(<WebVitals / />) }) })
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

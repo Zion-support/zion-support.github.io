@@ -82,7 +82,6 @@ export default function ServicesPage() {
   ];
 
   return (
-<<<<<<< HEAD
     <QuantumNeuralBackground variant="holographic" intensity="high">
       <div className="min-h-screen">
         <Head>
@@ -118,11 +117,6 @@ export default function ServicesPage() {
                 <Button href="#services" variant="secondary" size="lg">
                   Explore Services
                 </Button>
-=======
-    <AdvancedFuturisticBackground theme="quantum" intensity="high">
-=======
-          <UltraAdvancedFuturisticBackground variant="holographic" intensity="medium">
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ae10
       <Head>
         <title>Innovative Micro SAAS Services | Zion Tech Group</title>
         <meta name="description" content="Discover our cutting-edge micro SAAS services including AI, quantum computing, blockchain, and more. Real implementations with 1500%+ average ROI." />

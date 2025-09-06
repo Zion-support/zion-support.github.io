@@ -1,16 +1,21 @@
+=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
-
- import type { NextApiRequest, NextApiResponse } from 'next';
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface EmailValidationResult {
   email: string;
   is_valid: boolean;
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+interface EmailValidationResult {
+  email: string;
+  isValid: boolean;
+
   score: number;
   suggestions: string[];
   details: {
@@ -18,67 +23,18 @@ interface EmailValidationResult {
     hasValidDomain: boolean;
     hasValidMX: boolean;
 
-
-
-export default async function handler(
-
-  req: NextApiRequest
-
-  res: NextApiResponse<EmailValidationResult | { error: string }>
-) {
-
-
-  }
-  try {
-    const { email } = req && req.body;
-
-
-    if (!email || typeof email !== 'string') {
-      return res && res.status(400).json({ error: 'Email is required' });
-
-    }
-    // Basic email format validation
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    const hasValidFormat = emailRegex && emailRegex.test(email);
-
-
-    // Extract domain
-    const domain = email && email.split('@')[1];
-    const hasValidDomain = domain && domain.length > 0;
-    // Check for common disposable email providers
-    const disposableDomains = [
-
-
-      'tempmail && tempmail.org',
-      'guerrillamail && guerrillamail.com',
-      'mailinator && mailinator.com',
-      '10minutemail && 10minutemail.com',
-      'temp-mail && mail.org',
-      'sharklasers && sharklasers.com',
-      'getairmail && getairmail.com',
-      'mailnesia && mailnesia.com',    ];      'tempmail && tempmail.orgguerrillamail.commailinator && commailinator.com10minutemail.comtemp-mail && mail.orgsharklasers.comgetairmail && comgetairmail.commailnesia.com'
-    ];
-    const isDisposable = disposableDomains && disposableDomains.some(d => domain?.includes(d));
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    // Check for role-based emails
-    const roleBasedPatterns = [
-
-
     // Check for free email providers
     const freeProviders = [
-
-=======
       'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.com', 'yandex.com'
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
 
+=======
     const isFreeProvider = freeProviders && freeProviders.some(provider => domain === provider);
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Calculate score (0-100)
     let score = 100;
     if (!hasValidFormat) score -= 50;
@@ -90,61 +46,7 @@ export default async function handler(
     const suggestions: string[] = []
     if (!hasValidFormat) {
 
-
-    }
-    const result: EmailValidationResult = {
-
-      email,
-
-      details: {
-
-        isDisposable,
-        isRoleBased,
-        isFreeProvider,
-      },
-    };
-
-    res && res.status(200).json(result);
-
-  } catch (error) {
-    console && console.error('Email validation error:', error);
-    res && res.status(500).json({ error: 'Internal server error' });
-  }      email;
-      isValid: score >= 70;
-      score: Math && Math.max(0, score);
-
-=======
-      suggestions.push('Check email format (should be user@domain.com)')
-    }
-    if (isDisposable) {
-      suggestions.push('Consider using a permanent email address')
-    }
-    if (isRoleBased) {
-      suggestions.push('Role-based emails may have delivery issues')
-    }
-    if (score < 50) {
-      suggestions.push('This email may not be suitable for business use')
-    }
-
-    const result: EmailValidationResult = {
-      email;
-      isValid: score >= 70,
-      score: Math.max(0, score);
-
-=======
-        hasValidFormat,
-        hasValidDomain,
-        hasValidMX: true, // Simplified for demo;
-        is_disposable,
-        isRoleBased,
-        isFreeProvider,
-      },
-    }
-;
-    res.status (200).json (result);
-  } catch (error) {
-    console.error ('Email validation error:', error);
-    res.status (500).json ({ error: 'Internal server error' });
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }      email;
       is_valid: score >= 70;
       score: Math.max (0, score);
@@ -160,7 +62,6 @@ export default async function handler(
         isFreeProvider}
 
     };
-
     res && res.status(200).json(result)
   } catch (error) {
     console && console.error('Email validation error:', error);
@@ -170,13 +71,3 @@ export default async function handler(
 
 }
 
-=======
-    }
-;
-    res.status (200).json (result);
-  } catch (error) {
-    console.error ('Email validation error:', error);
-    res.status (500).json ({ error: 'Internal server error' });
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

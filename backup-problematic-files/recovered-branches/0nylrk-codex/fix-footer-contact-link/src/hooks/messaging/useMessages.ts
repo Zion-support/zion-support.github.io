@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;
@@ -200,3 +202,4 @@ if (error) throw error;
 return updatedConversations.reduce ( (total, conv) => total + (conv.unread count || 0);
 0 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

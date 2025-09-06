@@ -15,7 +15,6 @@ export default function AIEvalsPage() {
 	const features = [
 		'Golden datasets and synthetic evalsHallucination and grounding scoreToxicity, bias and safety metricsLLM version comparison reportsCI quality gates and webhooksLatency and cost KPIs with budgets'
 	],
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
 	return (_<QuantumHolographicMatrixBackground>
 			<Head>

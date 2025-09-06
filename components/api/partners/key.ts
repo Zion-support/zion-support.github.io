@@ -1,50 +1,59 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import {
 
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
+} from '../../../utils/api/partnerAuth';
+import { v4 as uuidv4 } from 'uuid';
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST') {;
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method Not Allowed' });
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method Not Allowed" })
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   const auth = await authenticateRequest(req);
   if (!auth) {
-    return res.status(401).json({ error: "Unauthorized" });
-  }
+    return res.status(401).json({ error: 'Unauthorized' });  }
   const { apiKey } = auth;
   const keys = await listApiKeys();
   // Deactivate old key
-  const existing = keys.find((k) => k.id === apiKey.id);
+  const existing = keys.find(k => k.id === apiKey.id);  if (existing) existing.active = false;
+  // Create new key
+  const now = new Date().toISOString();
+  const newKey = {import type { NextApiRequest, NextApiResponse } from "next";
+
+import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
+import { v4 as uuidv4 } from "uuid";
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") {;
+    res.setHeader("Allow", "POST");
+    return res.status(405).json({ error: "Method Not Allowed" })
+  }
+
+  const auth = await authenticateRequest(req);
+  if (!auth) {
+    return res.status(401).json({ error: "Unauthorized" });
+  const { apiKey } = auth;
+  const keys = await listApiKeys();
+  // Deactivate old key
+  const existing = keys.find(k => k.id === apiKey.id);  const existing = keys.find((k) => k.id === apiKey.id);
   if (existing) existing.active = false;
   // Create new key
   const now = new Date().toISOString();
-  const newKey = {
-    id: uuidv4(), partnerId: auth.partner.id,
-    key: uuidv4(), active: true,
-    createdAt: now,
-    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60};
-  keys.push(newKey as any);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   await saveApiKeys(keys);
   return res.status(201).json({ apiKey: newKey.key })
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-  authenticate_request,
-  listApiKeys,
-  saveApiKeys,
-} from '../../../utils / api / partner_auth';
-import { v4 as uuidv4 } from 'uuid';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
+  const newKey = {
+
 }
     res.set_header ('Allow', 'POST');
     return res.status (405).json ({ error: 'Method Not Allowed' });
@@ -113,5 +122,27 @@ if (existing.active = false) {
   keys.push (new_key as any);
   await saveApiKeys (keys);
   return res.status (201).json ({ api_key: new_key.key });
+  }
+  const { apiKey } = auth
+  const keys = await listApiKeys()
+  // Deactivate old key
+  const existing = keys.find((k) => k.id === apiKey.id)
+  if (existing) existing.active = false,
+  // Create new key
+  const now = new Date().toISOString()
+  const newKey = {
+    id: uuidv4(),
+    partnerId: auth.partner.id,
+    key: uuidv4(),
+    active: true,
+    createdAt: now,
+    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60},
+  keys.push(newKey as any),
+  await saveApiKeys(keys),
+  return res.status(201).json({ apiKey: newKey.key })
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,14 +1,17 @@
 
-import { useAuthStatus } from './talent / useAuthStatus';
-import { useTalentData } from './talent / useTalentData';
-import { useFilterTalents } from './talent / useFilterTalents';
-import { useUIState } from './talent / useUIState';
-export /**
- * useTalentDirectory - Function description
- */
-function useTalentDirectory() {
-  // Fetch auth status and saved talents;
 
+import { useAuthStatus } from "./talent/useAuthStatus",
+import { useTalentData } from "./talent/useTalentData",
+
+    userDetails,
+    savedTalents,
+    handleToggleSave
+  } = useAuthStatus(),
+
+  // Fetch talent data
+  const {
+    talents,
+    isLoading
   const {
     is_authenticated;
     user_details,
@@ -18,79 +21,25 @@ function useTalentDirectory() {
 ;
   // Fetch talent data;
   const {
-    talents,
-    is_loading;
-  } = useTalentData ();
-;
-  // Apply filters and sorting;
-  const {
-    filtered_talents;
-    search_term;
-    setSearchTerm;
-    selected_skills;
-    selected_availability;
-    selected_regions;
-    price_range;
-    setPriceRange;
-    experience_range;
-    setExperienceRange;
-    sort_option;
-    setSortOption;
+    talents
+    isLoading
+import { useFilterTalents } from "./talent/useFilterTalents",
+import { useUIState } from "./talent/useUIState",
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+  const { 
+    isAuthenticated,
+    userDetails, 
+    savedTalents, 
+    handleToggleSave 
+  } = useAuthStatus(),
 
-    toggle_skill;
-    toggle_availability;
-    toggle_region;
-    clear_filters;
-  } = useFilterTalents (talents);
-;
-  // Manage UI state;
-
-  const {
-    isMobileFilterOpen;
-    setIsMobileFilterOpen;
-    isHireModalOpen;
-    setIsHireModalOpen;
-    selected_talent;
-    setSelectedTalent;
-
-    expanded_sections;
-    toggle_section;
-  } = useUIState ();
-;
-
-  return {
-    // Talents and loading state;
-    talents;
-
-    filtered_talents;
-    is_loading;
-;
-    // Search and filter state;
-    search_term;
-
-    setSearchTerm;
-    selected_skills;
-    selected_availability;
-    selected_regions;
-    price_range;
-    setPriceRange;
-    experience_range;
-    setExperienceRange;
-    sort_option;
-    setSortOption;
-
-;
-    // UI state;
-
-    isMobileFilterOpen;
-    setIsMobileFilterOpen;
-    isHireModalOpen;
-    setIsHireModalOpen;
-    selected_talent;
-    setSelectedTalent;
-
-
-
+  // Fetch talent data
+  const { 
+    talents, 
+    isLoading 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  } = useTalentData(),
 
   } = useTalentData();
   // Apply filters and sorting
@@ -111,9 +60,10 @@ function useTalentDirectory() {
     toggleAvailability,
     toggleRegion,
     clearFilters
-
+=======
+  } = useFilterTalents(talents);
   } = useFilterTalents(talents),
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Manage UI state
   const {
@@ -126,43 +76,6 @@ function useTalentDirectory() {
     expandedSections,
     toggleSection
 
-  } = useUIState(),
-
-  return {
-    // Talents and loading state
-    talents,
-    filteredTalents,
-    isLoading,
-    
-    // Search and filter state
-    searchTerm,
-    setSearchTerm,
-    selectedSkills,
-    selectedAvailability,
-    selectedRegions,
-    priceRange,
-    setPriceRange,
-    experienceRange,
-    setExperienceRange,
-    sortOption,
-    setSortOption,
-    
-    // UI state
-    isMobileFilterOpen,
-    setIsMobileFilterOpen,
-    isHireModalOpen,
-    setIsHireModalOpen,
-    selectedTalent,
-    setSelectedTalent,
-    expandedSections,
-    
-    // Auth and user state
-    isAuthenticated,
-    userDetails,
-    savedTalents,
-    
-
-
     // Actions
     toggleSkill;
     toggleAvailability;
@@ -170,12 +83,8 @@ function useTalentDirectory() {
     clearFilters;
     toggleSection;
     handleToggleSave
-
-    expanded_sections;
-=======
-
-
-=======
+  }
+}
 import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
@@ -259,25 +168,15 @@ export function useTalentDirectory() {;
     clearFilters;
     toggleSection;
     handleToggleSave;
-
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
-    // Auth and user state;
-    is_authenticated;
-    user_details;
-    saved_talents;
-;
-    // Actions;
-    toggle_skill;
-    toggle_availability;
-    toggle_region;
-    clear_filters;
-    toggle_section;
-    handleToggleSave;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

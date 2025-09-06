@@ -1,5 +1,13 @@
-return (
-    <>;
+
+import React, { useEffect } from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import Link from 'next/link',
+
+  return (
+    <>
       <SEO
         title='AI Content Generation'
         description='Generate SEO-optimized blog posts, service descriptions and FAQs with ZionGPT.'
@@ -22,23 +30,69 @@ return (
           </p>;
           <div className='relative w-full h-auto aspect-video mb-12 mx-auto rounded-lg shadow-xl overflow-hidden'>;
             <img
-              src='https://placehold && placehold.co/800x400'
-              alt='Screenshot of ZionGPT content tool'
-              className='object-cover'
-
-
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
-              <Link href="/open-app">Try ZionGPT Now</Link>
-            </Button>
+=======
+<<<<<<< HEAD
+              src='https://placehold.co/800x400'
+              alt='Screenshot of ZionGPT content tool';
+              className='object-cover';
+            />;
+          </div>;
+          <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
+          <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>
+            <li>
+              Save time drafting marketing content for your products or
+              services.
+            </li>
+              src="https: //placehold.co/800x400"
+              alt="Screenshot of ZionGPT content tool"
+              className="object-cover"
+            />
           </div>
-        </div>
-      </main>
-    </>
+          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
+          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
+            <li>Save time drafting marketing content for your products or services.</li>
+            <li>Improve search rankings with keyword optimized text.</li>
+            <li>Create multilingual content to reach a global audience.</li>
+          </ul>
+          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div className="space-y-4 mb-12">
+            <div>
+              <p className="font-semibold">How does ZionGPT generate content?</p>
+              <p className="text-zion-slate-light">Our fine-tuned AI model analyzes your prompts and produces human-like copy tailored for SEO.</p>
+            </div>
+            <div>
+              <p className="font-semibold">Can I edit the generated text?</p>
+              <p className="text-zion-slate-light">Yes, you can review and modify all suggestions before publishing.</p>
+            </div>
+          </div>
+          <div className='text-center'>
+            <Button size='lg' className='bg-zion-purple text-white' asChild>
+              <Link href='/open-app'>Try ZionGPT Now</Link>            </Button>          <div className="text-center">
+          <div className="text-center">
+
+            <li>Improve search rankings with keyword optimized text.</li>
+            <li>Create multilingual content to reach a global audience.</li>
+          </ul>
+          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div className="space-y-4 mb-12">
+            <div>
+              <p className="font-semibold">How does ZionGPT generate content?</p>
+              <p className="text-zion-slate-light">Our fine-tuned AI model analyzes your prompts and produces human-like copy tailored for SEO.</p>
+            </div>
+            <div>
+              <p className="font-semibold">Can I edit the generated text?</p>
+              <p className="text-zion-slate-light">Yes, you can review and modify all suggestions before publishing.</p>
+            </div>
+          </div>
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 ;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
@@ -130,34 +184,31 @@ function AIPoweredContent() {
   useEffect (() => {
     markAiExplored ();
   }, [markAiExplored]);
-  return (
+  return (;
     <>;
       <SEO;
-        title='AI Content Generation';
-        description='Generate SEO - optimized blog posts, service descriptions and FAQs with ZionGPT.';
-        keywords='AI content generation, ZionGPT, SEO tools';
-        canonical='https://app.ziontechgroup.com / features / ai - content - generation';
+        title="AI Content Generation";
+        description="Generate SEO-optimized blog posts, service descriptions and FAQs with ZionGPT.";
+        keywords="AI content generation, ZionGPT, SEO tools";
+        canonical="https://app.ziontechgroup.com/features/ai-content-generation";
       />;
-      {/* Use a normal script tag so JSON - LD is correctly parsed */}
+      {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script;
-        type='application / ld + json';
-        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
+        type="application/ld+json";
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
       <Header />;
-      <main className='bg - background text - white py - 12'>;
-        <div className='container mx - auto px - 4 md:px - 6'>;
-          <GradientHeading className='mb - 4 text - center'>;
-            AI Content Generation;
-          </GradientHeading>;
-          <p className='text - center text - zion - slate - light max - w-3xl mx - auto mb - 8'>;
-            ZionGPT helps you craft high quality articles, service descriptions;
-            and FAQs in minutes.;
+      <main className="bg-background text-white py-12">;
+        <div className="container mx-auto px-4 md:px-6">;
+          <GradientHeading className="mb-4 text-center">AI Content Generation</GradientHeading>;
+          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">;
+            ZionGPT helps you craft high quality articles, service descriptions and FAQs in minutes.;
           </p>;
-          <div className='relative w - full h - auto aspect - video mb - 12 mx - auto rounded - lg shadow - xl overflow - hidden'>;
+          <div className="relative w-full h-auto aspect-video mb-12 mx-auto rounded-lg shadow-xl overflow-hidden">;
             <img;
-              src='https://placehold.co / 800x400';
-              alt='Screenshot of ZionGPT content tool';
-              className='object - cover';
+              src="https: //placehold.co/800x400";
+              alt="Screenshot of ZionGPT content tool";
+              className="object-cover";
             />;
           </div>;
           <h2 className='text - 2xl font - bold mb - 4'>Benefits &amp; Use Cases</h2>;
@@ -180,6 +231,10 @@ function AIPoweredContent() {
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
 
 
 ;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

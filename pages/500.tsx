@@ -1,13 +1,16 @@
 
+    <>
+      <Head>
+        <title>500 - Server Error | Zion Tech Group</title>
+        <meta name="description" content="Something went wrong on our end. We're working to fix it." />
+        <meta property="og: title" content="500 - Server Error" />
+        <meta property="og:description" content="Something went wrong on our end. We're working to fix it." />
+      </Head>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Please try again in a few moments.
             </p>
           </div>
           <div className="space-y-4">
-
-
-
 
               className="inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
             >
@@ -15,25 +18,70 @@
             </Link>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
-
-
-
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 About Us
               </Link>
-
-
-
 
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 Services
               </Link>
 
+                className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
 
-
-
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+              Please try again in a few moments.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <Link
+              href="/"
+            <Link 
+              href="/" 
+            <Link
+              href="/"
+              className="inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
+            >
+              Go Home
+            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/about"
+              <Link 
+                href="/about" 
+              <Link
+                href="/about"
+                className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
+              >
+                About Us
+              </Link>
+              <Link
+                href="/services"
+              <Link 
+                href="/services" 
+              <Link
+                href="/services"
+                className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
+              >
+                Services
+              </Link>
+              <Link
+                href="/contact"
+              <Link 
+                href="/contact" 
+              <Link
+                href="/contact"
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 Contact
@@ -44,21 +92,7 @@
       </div>
     </>
   )
-
-=======
-}
-
-=======
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-export default /**
- * Custom500 - Function description
- */
-function Custom500() {
-  return (
-=======
-
+};
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -119,6 +153,10 @@ export default function Custom500(req, res) {
       </div>;
     </>);
 }
+<<<<<<< HEAD
 
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

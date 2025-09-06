@@ -1,38 +1,15 @@
-
-  const { provider } = req && req.query as { provider: string };
+=======
 
   const callbackUrl = `/api/integrations/oauth/${provider}/callback?code=mock_code&state=mock_state`;
   res && res.writeHead(302, { Location: callbackUrl });
   res && res.end();
 
 }
-
-=======
-  const { provider } = req.query as { provider: string };
-  const callbackUrl = `/api/integrations/oauth/${provider}/callback?code=mock_code&state=mock_state`;
-  res.writeHead(302, { Location: callbackUrl });
-  res.end()
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-export default /**
- * handler - Function description
- */
-function handler() {
-  const { provider } = req.query as { provider: string }
-  const callback_url = `/api / integrations / oauth/${provider}/callback?code = mock_code & state = mock_state`;
-  res.write_head (302, { Location: callback_url });
-  res.end ();
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -40,10 +17,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req, res) {
   try {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  const { provider } = req.query as { provider: string };
-  const callbackUrl = `/api/integrations/oauth/${provider}/callback?code=mock_code&state=mock_state`;
-  res.writeHead(302, { Location: callbackUrl });
-  res.end();
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

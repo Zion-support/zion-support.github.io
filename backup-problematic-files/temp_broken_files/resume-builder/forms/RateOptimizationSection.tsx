@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/RateOptimizationSection.tsx
+=======
+import React, { useState } from "react",;
+import { Control } from "react-hook-form",;
+import { ;
+  FormField,;
+  FormItem, ;
+  FormLabel, ;
+  FormControl, ;
+=======
 import React, { useState } from "react",;
 import { Control, UseFormSetValue } from "react-hook-form",;
 import {;
@@ -6,6 +16,7 @@ import {;
   FormItem,;
   FormLabel,;
   FormControl,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/RateOptimizationSection.tsx
   FormDescription,;
   FormMessage;
 } from "@/components/ui/form",;
@@ -15,7 +26,11 @@ import { Card, CardContent } from "@/components/ui/card",;
 ;
 interface RateOptimizationSectionProps {;
   control:Control<any>,;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/RateOptimizationSection.tsx
+  setValue:(name:string, value:any) => void,;
+=======
   setValue:UseFormSetValue<any>,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/RateOptimizationSection.tsx
   skills:string[],;
   yearsExperience:number,;
   location?:string,;
@@ -39,36 +54,30 @@ export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({
       <FormField;
         control={control}
         name="hourlyRate";
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/RateOptimizationSection.tsx
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" :"Fixed Rate"} ($USD)</FormLabel>;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
         render={({ field } { field:any }) => (;
           <FormItem>;
             <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" :"Fixed Rate"} ($USD)</FormLabel>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/RateOptimizationSection.tsx
             <FormControl>;
               <Input;
                 type="number";
                 min="1";
                 step="0.01";
-                {...field}
-              />;
-            </FormControl>;
-            <FormDescription>;
-              Set a competitive rate based on your skills and experience;
-            </FormDescription>;
-            <FormMessage />;
-          </FormItem>;
-        )}
-      />;
-;
-      <Card>;
-        <CardContent className="pt-4">;
-          <TalentRateRecommender;
-            skills={skills}            yearsExperience={yearsExperience}
-            location={location}
-            onSuggestionApplied={handleSuggestionApplied}
-            rateType={rateType}
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/RateOptimizationSection.tsx
+
           />;
         </CardContent>;
       </Card>;
     </div>;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/RateOptimizationSection.tsx
+
+=======
   ),;
 },; import {;
   FormField;
@@ -98,7 +107,9 @@ return (<div className="space-y-4" > <FormField control= {;"  control ";"}name="
 }rateType= {;
   rateType ;
 }/> </CardContent> </Card> </div>) ;
-
+:temp_broken_files/resume-builder/forms/RateOptimizationSection.tsx
+};""
 };
 "
-
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/RateOptimizationSection.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/RateOptimizationSection.tsx

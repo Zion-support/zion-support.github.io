@@ -9,18 +9,12 @@ const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), {
   ssr: false
 });
 
-<<<<<<< HEAD
 export default function ExpoRoute() {
   return <ExpoPage />;const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false })
 export default function ExpoRoute() {
 <<<<<<< HEAD:components/expo.tsx
   return <ExpoPage />;
 }
-=======
->>>>>>> main:components/expo.tsx
-  return <ExpoPage />;
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/components/expo.tsx.backup.1755991270
 =======
 export default function ExpoRoute() {;
   return <ExpoPage />;const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false }),

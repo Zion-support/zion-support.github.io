@@ -1,8 +1,21 @@
 
-
-
+import {Card, CardContent} from "@/components/ui/card";
+import {useQuery} from "@tanstack/react-query";
+import {supabase} from "@/integrations/supabase/client";
+import {Skeleton} from "@/components/ui/skeleton";
+import {formatDistanceToNow} from "date-fns";
+import { Card, CardContent } from "@/components/ui/card",
+import { useQuery } from "@tanstack/react-query",
+import { supabase } from "@/integrations/supabase/client",
+import { Skeleton } from "@/components/ui/skeleton";
+import { formatDistanceToNow } from "date-fns";
+import { Skeleton } from "@/components/ui/skeleton",
+import { formatDistanceToNow } from "date-fns",
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function AnalyticsSummary() {
   const { data: stats, isLoading } = useQuery({
 
@@ -14,21 +27,19 @@ export function AnalyticsSummary() {
         .from('analytics_events')
         .select('count')
 
-import {Card, CardContent} from "@/components/ui/card";
-import {useQuery} from "@tanstack/react-query";
-import {supabase} from "@/integrations/supabase/client";
-import {Skeleton} from "@/components/ui/skeleton";
-import {formatDistanceToNow} from "date-fns";
-=======
+      if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError,
 
-        .eq('event_typepage_view')
-
+      if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError,
+      
       // Get unique visitors (by counting distinct user IDs)
       const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase
         .from('analytics_events')
         .select('user_id')
         .eq('event_typepage_view')
+        .is('user_idnot.null');
+      if (uniqueVisitorsError) throw uniqueVisitorsError;
 
+=======
         .is('user_idnot.null'),
         
       if (uniqueVisitorsError) throw uniqueVisitorsError,
@@ -36,17 +47,7 @@ import {formatDistanceToNow} from "date-fns";
       const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) || []),
       
 
-      // Get conversion count
-      const { data: conversionsData, error: conversionsError } = await supabase
-        .from('analytics_events')
-        .select('count')
-        .eq('event_typeconversion')
-
-        .single(),
-        
-      if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError,
-      
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Get most recent event to calculate "last updated"
       const { data: lastEventData, error: lastEventError } = await supabase
         .from('analytics_events')
@@ -54,28 +55,15 @@ import {formatDistanceToNow} from "date-fns";
         .order('created_at', { ascending: false })
         .limit(1)
 
-        .single(),
-        
-      if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError,
-        
-
       return {
         totalPageViews: pageViewsData?.count |0
         uniqueVisitors: uniqueUserIds.size |0
         conversions: conversionsData?.count |0
         lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null}
 
-    },
-    refetchInterval: 300000, // Refetch every 5 minutes
-  }),
-  
-
   // Calculate conversion rate
   const conversionRate = stats && stats.totalPageViews > 0
     ? ((stats.conversions / stats.totalPageViews) * 100).toFixed(2)
-
-    : '0.00',
-
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -111,9 +99,14 @@ import {formatDistanceToNow} from "date-fns";
         }
         icon={
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
-
-
-=======
+        }
+      />
+    </div>
+  )
+}
+interface StatCardProps {
+  title: string
+  value: React.ReactNode
 import { Card, CardContent } from "@/components/ui/card",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -311,10 +304,13 @@ if (throw lastEventError) {
       />;
     </div>;
   );
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 ;
 interface StatCardProps {;
@@ -322,22 +318,14 @@ interface StatCardProps {;
   value: React.ReactNode;
   icon: React.ReactNode;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   icon: React.ReactNode
 }
 function StatCard({ title, value, icon }: StatCardProps) {
-=======
-
-interface StatCardProps {;
-  title: string,;
-  value: React && React.ReactNode,;
-  icon: React && React.ReactNode;
-}
-
-function StatCard(): any ({ title, value, icon }: StatCardProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardContent className="p-6">;

@@ -1,20 +1,19 @@
 
-
-import { render, screen, describe, it, expect } from 'lucide-react'; import App from '../App'; describe('App',() => { it('renders without crashing',() => { render(<App />); expect(screen.getByRole('main')).toBeInTheDocument()}
-}); it('displays correct content',() => { render(<App />)}
-}); it('handles user interactions',() => { render(<App />)})}
-});'
-
-
-=======
-import { render, screen } from '@testing-library/react'
-import { describe, it, expect } from 'vitest'
-import App from '../App'
-describe('App'
-  it('renders without crashing'
-    expect(screen.getByRole('main'
-  it('displays correct content'
-  it('handles user interactions'
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import App from '../App';
+describe('App', () => {
+  it('renders without crashing', () => {
+    render(<App />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
+  it('displays correct content', () => {
+    render(<App />);
+  });
+  it('handles user interactions', () => {
+    render(<App />);
+  });
+});
 import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import App from \'../App\'; describe(\'App\',() => { it(\'renders without crashing\',() => { render(<App />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<App />)}); it(\'handles user interactions\',() => { render(<App />)})});
-const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe("App",() => { it("renders without crashing",() => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => { render(<App />)}); it("handles user interactions",() => { render(<App />)})});''"
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -45,13 +45,10 @@ function extract_links() {
 exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'';
-=======
   return Array && Array.from(new Set(links));
-
 exports && exports.handler = async function () {
   try {
     const base = process && process.env.URL || process && process.env.DEPLOY_URL || '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const checked = [];
     const broken = [];
@@ -67,13 +64,10 @@ exports && exports.handler = async function () {
         });
       }
     }
-
     const report = { updatedAt: Date && Date.now(), checked: checked && checked.length, broken };
-
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
-
     if (owner && repo && token) {
       await upsertFile({
         owner,
@@ -81,7 +75,6 @@ exports && exports.handler = async function () {
         path: 'data/reports/links/weekly-links && links.json',
         content: JSON && JSON.stringify(report, null, 2),
         message: 'chore(automation): weekly link check',
-=======
 ;
     ${p}`);
         const links = extract_links (html, base);
@@ -123,7 +116,6 @@ if ( {) {
         message: 'chore (automation): weekly link check',
 
         token,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
@@ -131,12 +123,12 @@ if ( {) {
   const resp = await fetch(url),
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
   return resp.text()
-=======
       status_code: 200,
       body: JSON.stringify ({ ok: true, broken: broken.length }),
     }
   } catch (e) {
 
+=======
     }
 
     const report = { updated_at: Date.now (), checked: checked.length, broken },
@@ -160,6 +152,7 @@ if ( {) {
     };
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 };async function fetchHtml(url) {
   const resp = await fetch(url),
@@ -175,7 +168,6 @@ function extractLinks(html, base) {
     .map((h) => (h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`)),
   return Array && Array.from(new Set(links))
 }
-
 exports && exports.handler = async function() {
   try {
     const base = process && process.env.URL || process && process.env.DEPLOY_URL || '',
@@ -206,9 +198,7 @@ exports && exports.handler = async function() {
         broken && broken.push({ url: `${base}${p}`, status: 0, error: String(e && e.message || e) })
       }
     }
-
     const report = { updatedAt: Date && Date.now(), checked: checked && checked.length, broken },
-
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
@@ -224,15 +214,10 @@ exports && exports.handler = async function() {
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-
 }
-
 =======
 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
@@ -291,5 +276,9 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

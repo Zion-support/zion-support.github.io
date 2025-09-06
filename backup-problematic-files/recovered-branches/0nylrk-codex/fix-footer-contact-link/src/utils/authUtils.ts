@@ -1,4 +1,5 @@
 
+=======
 import { supabase } from "@/integrations/supabase/client",;
 import type { UserDetails } from "@/types/auth",;
 ;
@@ -72,12 +73,14 @@ export const checkNewRegistration = async (user:UserDetails) => {;
     }
   } catch (error) {;
     console.error("Error checking or scheduling welcome email:", error),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 },;   if (key.startsWith ('supabase.auth.') || key.includes ('sb-') ) {
   /** * Utility function to check new user registration and schedule welcome emails */export const checkNewRegistration = async (user: UserDetails) => {
   try {
   //Check if user has received welcome email already .from ("email campaigns") .select ("id") .eq ("user id", user.id) .eq ("campaign type", "welcome series") .maybeSingle ();
 // Create a scheduled job for the welcome email await supabase .from ("scheduled jobs") .insert ({
-  
+
 }
-};
+<<<<<<< HEAD
+

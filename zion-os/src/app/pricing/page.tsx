@@ -243,7 +243,6 @@ const servicePricing: ServicePricing[] = [;
 const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"],;
 export default function PricingPage() {;
   const [selectedCategory, setSelectedCategory] = useState("All");
-
   const filteredServices = selectedCategory === "All";
     ? servicePricing;
     : servicePricing.filter(service => service.category === selectedCategory);
@@ -252,18 +251,7 @@ export default function PricingPage() {;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">Pricing & Plans</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
-=======
-"use client",
-import { useState  } from './react';,
-interface PricingTier {
-  name: string,
-  price: string,
-  period: string,
-  description: string,
-  features: string[],
-  popular?: boolean,
-  cta: string,
-  cta_link: string;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 interface ServicePricing {
   service_name: string,
@@ -491,22 +479,16 @@ const service_pricing: ServicePricing[] = [;
       }
     ];
   }
-],
-const categories = ["All", "Core Platform", "AI Services", "IT Services", "E - commerce & Services"],
-export default /**
- * PricingPage - Function description
- */
-function PricingPage() {
-  const [selected_category, setSelectedCategory] = useState ("All");
-  const filtered_services = selected_category === "All";
-    ? service_pricing;
-    : service_pricing.filter (service => service.category === selected_category);
-  return (
-    <div className="space - y-8">;
-      <div className="text - center space - y-4">;
-        <h1 className="text - 4xl font - bold">Pricing & Plans</h1>;
-        <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+  const filteredServices = selectedCategory === "All";
+    ? servicePricing;
+    : servicePricing.filter(service => service.category === selectedCategory);
+  return (;
+    <div className="space-y-8">;
+      <div className="text-center space-y-4">;
+        <h1 className="text-4xl font-bold">Pricing & Plans</h1>;
+        <p className="text-xl opacity-80 max-w-3xl mx-auto">;
+
           Choose the perfect plan for your business needs. All plans include our core features with transparent pricing and no hidden fees.;
         </p>;
       </div>;
@@ -517,11 +499,8 @@ function PricingPage() {
             <button;
               key={category}
 
-              on_click={() => setSelectedCategory (category)}
-              className={`px - 4 py - 2 rounded - md text - sm font - medium transition - colors ${
-                selected_category === category;
-                  ? 'bg - blue - 600 text - white';
-                  : 'text - gray - 300 hover:text - white hover:bg - zinc - 700';
+                  ? 'bg-blue-600 text-white';
+                  : 'text-gray-300 hover:text-white hover:bg-zinc-700';
 
               }`}
             >;
@@ -565,11 +544,8 @@ function PricingPage() {
               {service.tiers.map ((tier, tier_index) => (
                 <div;
 
-                  key={tier_index}
-                  className={`relative border rounded - lg p - 6 ${
-                    tier.popular;
-                      ? 'border - blue - 500 bg - blue - 500 / 10';
-                      : 'border - white / 10';
+                      ? 'border-blue-500 bg-blue-500/10';
+                      : 'border-white/10';
 
                   }`}
                 >;
@@ -579,9 +555,8 @@ function PricingPage() {
                         Most Popular;
                       </span>;
 
-                    </div>)}
-                  <div className="text - center space - y-4">;
-                    <h3 className="text - xl font - semibold">{tier.name}</h3>;
+                  <div className="text-center space-y-4">;
+                    <h3 className="text-xl font-semibold">{tier.name}</h3>;
 
                     <div>;
                       <span className="text - 3xl font - bold">{tier.price}</span>;
@@ -599,11 +574,8 @@ function PricingPage() {
                   <div className="mt - 6">;
                     <a;
 
-                      href={tier.cta_link}
-                      className={`block w - full text - center py - 3 px - 4 rounded - lg font - medium transition - colors ${
-                        tier.popular;
-                          ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
-                          : 'bg - zinc - 700 hover:bg - zinc - 600 text - white';
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white';
+                          : 'bg-zinc-700 hover:bg-zinc-600 text-white';
 
                       }`}
                     >;

@@ -1,18 +1,15 @@
-
-
+import * as React from 'react';
+import * as ProgressPrimitive from '@radix-ui/react-progress';
+import {cn} from '@/lib/utils';
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
-=======
-=======
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
-
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 import { cn } from "@/lib/utils"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
@@ -29,30 +26,18 @@ const Progress = React && React.forwardRef<;
     ref={ref}
     className={cn(
 
-=======
-
-      "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
-
       className
     )}
     {...props}
   >
     <ProgressPrimitive.Indicator
-
-
-export { Progress };
-
 =======
       className="h-full w-full flex-1 bg-primary transition-all"
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-      style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
-    />;
-  </ProgressPrimitive && ProgressPrimitive.Root>;
-));
-Progress && Progress.displayName = ProgressPrimitive && ProgressPrimitive.Root.displayName;
 
 export { Progress };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import * as ProgressPrimitive from '@radix - ui / react - progress';
 ;
@@ -78,8 +63,11 @@ Progress.display_name = ProgressPrimitive.Root.display_name;
 ;
 export { Progress }
 ;
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

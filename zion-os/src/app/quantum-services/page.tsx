@@ -1,5 +1,4 @@
 
-
 import Link from "next/link",;
 export const metadata = {;
   title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",;
@@ -7,22 +6,10 @@ export const metadata = {;
   keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"},;
 export default function QuantumServicesPage() {;
   return (;
-
-
     <div className="min-h-screen">;
-=======
-import Link from './next / link';,
-export const metadata = {
-  title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",
-  description: "Transform your business with Zion Tech Group's cutting - edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.",
-  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"},
-export default /**
- * QuantumServicesPage - Function description
- */
-function QuantumServicesPage() {
-  return (
-    <div className="min - h-screen">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    <div className="min-h-screen">;
+
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -104,15 +91,12 @@ function QuantumServicesPage() {
                 </svg>;
               </div>;
 
-              <h3 className="text - xl font - semibold mb - 3">Quantum Algorithm Development</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Custom quantum algorithms designed for your specific business problems,
-
 =======
-
+              <h3 className="text-xl font-semibold mb-3">Quantum Algorithm Development</h3>;
+              <p className="text-gray-400 mb-4">;
+                Custom quantum algorithms designed for your specific business problems;
                 Custom quantum algorithms designed for your specific business problems,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 from optimization challenges to complex simulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;

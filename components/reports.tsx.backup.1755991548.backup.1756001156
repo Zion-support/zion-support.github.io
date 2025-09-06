@@ -94,7 +94,6 @@ const ReportsPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Reports & Content | Zion Tech Group</title>
@@ -113,14 +112,6 @@ const ReportsPage: React.FC = () => {
             Discover our extensive library of AI, cloud, and technology content
           </p>
         </div>
-=======
-    <UltraFuturisticBackground>
-      <div className="min-h-screen">
-        <Head>
-          <title>Research Reports - Zion Tech Group | Industry Analysis & Technology Insights</title>
-          <meta name="description" content="Access Zion Tech Group's comprehensive research reports, whitepapers, and industry analysis covering AI, quantum computing, cybersecurity, and emerging technologies." />
-        </Head>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1849
 
         <QuickNavigation />
 

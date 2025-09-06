@@ -1,4 +1,5 @@
-
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJson, writeJson } from "../../../utils/fsDb";
@@ -28,41 +29,18 @@ function handler() {
 }
   const { session_id, reason, tag } = req.body as {
     session_id: string;
-    reason?: string;
-    tag?: string;
-  }
-  if (return res.status (400).json ({ error: "Missing session_id" })) {
-  $2
-}
-  const requests = read_json < any[]>("support / requests.json", []);
-  const id = `sr_${Math.random ().to_string (36).slice (2)}_${Date.now ()}`;
 
-  const record = {
-    id
-    sessionId
-    reason: reason ?? "User requested escalation"
-    tag: tag ?? "escalate"
-    status: "open"
-    createdAt: Date.now()
-  }
-  requests.push(record);
-  writeJson("support/requests.json", requests);
-
-  };
-  if (!sessionId) return res && res.status(400).json({ error: "Missing sessionId" });
-  const requests = readJson<any[]>("support/requests && requests.json", []);
-  const id = `sr_${Math && Math.random().toString(36).slice(2)}_${Date && Date.now()}`;
-  const record = {
-    id,
-    session_id,
-    reason: reason ?? "User requested escalation",
-    tag: tag ?? "escalate",
-    status: "open",
-
-}
-
-    created_at: Date.now (),
-=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readJson, writeJson } from "../../../utils/fsDb";
+import { tagOperatorSession } from "../../../utils/operator";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "POST");
+    return res.status(405).json({ error: "Method not allowed" });
+  const { sessionId, reason, tag } = req.body as {
+    sessionId: string;
 
   } catch (error) {
     console.error("Error:", error);
@@ -74,7 +52,6 @@ function handler() {
   await tagOperatorSession (session_id, tag ?? "escalate");
   return res.status (200).json ({ ok: true, id });
 }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,14 +1,11 @@
-class_name, class_names,  showOutsideDays = true, ...props;
-}: CalendarProps) {
-}/>);
-}";
 
+<<<<<<< HEAD
+=======
 }/>) ;
 }";
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-import * as React from "react",
-import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { DayPicker } from "react-day-picker",
-import { cn } from "@/lib/utils",
-import { buttonVariants } from "@/components/ui/button",
-export type CalendarProps = React.ComponentProps<typeof DayPicker>,
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

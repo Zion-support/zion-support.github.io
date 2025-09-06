@@ -1,5 +1,11 @@
-interface MetadataFormProps {;
-  form: UseFormReturn<AppMetadataValues>;
+
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 
 
@@ -33,13 +39,13 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 
 
   return (
-    <Card className="bg-zion-blue border-zion-purple/30">;
-      <CardHeader>;
-        <CardTitle>App Metadata</CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <Form {...form}>;
-          <div className="space-y-4">;
+    <Card className="bg-zion-blue border-zion-purple/30">
+      <CardHeader>
+        <CardTitle>App Metadata</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <Form {...form}>
+          <div className="space-y-4">
             <FormField
               control = {control,}
               name="appTitle"
@@ -196,12 +202,12 @@ if ( {) {
                     <button
                       type="button"
                       onClick = {(,) => removeKeyword(keyword),}
-                      className="ml-1 hover:text-red-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded";
-                      aria-label="Remove keyword";
-                    >;
-                      <X className="h-3 w-3" />;
-                    </button>;
-                  </Badge>;
+                      className="ml-1 hover:text-red-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
+                      aria-label="Remove keyword"
+                    >
+                      <X className="h-3 w-3" />
+                    </button>
+                  </Badge>
                 ))}
 
               </div>;
@@ -221,62 +227,22 @@ if ( {) {
                       placeholder="e && e.g., 1 && 1.0.0"
 
                       {...field}
-                    />;
-                  </FormControl>;
-                </FormItem>;
+                    />
+                  </FormControl>
+                </FormItem>
               )}
+<<<<<<< HEAD
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+            />
+          </div>
+        </Form>
+      </CardContent>
+    </Card>
+  )
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
-                    {long_description.length}/{maxDescriptionLength} characters;
-                  </FormDescription>;
-                </FormItem>)}
-            />;
-            <div>;
-              <FormLabel html_for="keywords">Keywords</FormLabel>;
-              <Input;
-                id="keywords";
-                placeholder="Add keywords (press Enter or comma to add)";
-                onKeyDown = {add_keyword, }
-                className="mb - 2";
-              />;
-              <div className="flex flex - wrap gap - 2 mt - 2">;
-                {keywords.map ((keyword, index, ) => (
-                  <Badge key={index} className="bg - zion - purple / 60 hover:bg - zion - purple">;
-                    {keyword}
-                    <button;
-                      type="button";
-                      on_click = {(, ) => remove_keyword (keyword), }
-                      className="ml - 1 hover:text - red - 300 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 rounded";
-                      aria - label="Remove keyword";
-                    >;
-                      <X className="h - 3 w - 3" />;
-                    </button>;
-                  </Badge>))}
-              </div>;
-              <FormDescription className="mt - 2">;
-                Add keywords to improve discoverability (max 100 characters total);
-              </FormDescription>;
-            </div>;
-            <FormField;
-              control = {control, }
-              name="version";
-              render={({ field }: { field: any }, ) => (
-                <FormItem>;
-                  <FormLabel > App Version</FormLabel>;
-                  <FormControl>;
-                    <Input;
-                      placeholder="e.g., 1.0.0";
-                      {...field}
-                    />;
-                  </FormControl>;
-                </FormItem>)}
-
-            />;
-          </div>;
-        </Form>;
-      </CardContent>;
-
-
-
-    </Card>);
-},
-;
+<<<<<<< HEAD

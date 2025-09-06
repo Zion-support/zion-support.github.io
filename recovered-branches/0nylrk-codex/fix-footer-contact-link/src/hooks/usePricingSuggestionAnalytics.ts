@@ -1,6 +1,5 @@
-
-import {useState, useEffect} from 'react';
-import { supabase } from '@/integrations / supabase / client';
+import { useState, useEffect  } from 'react';
+import { supabase } from "@/integrations/supabase/client";
 interface PricingSuggestionAnalytics {
   total_suggestions: number;
   acceptance_rate: number;
@@ -15,17 +14,18 @@ interface PricingSuggestionAnalytics {
     actual_value?: number;
     accepted: boolean;
 
-
+    createdAt: string
+    type: 'client' | 'talent'
+  }[];
+  isLoading: boolean
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
-=======
 import {useState, useEffect} from 'react';
 import {supabase} from "@/integrations/supabase/client";
-=======
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
@@ -42,23 +42,23 @@ interface PricingSuggestionAnalytics {
     type: 'client' | 'talent'
   }[],
   isLoading: boolean,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   error: string | null
 }
 export function usePricingSuggestionAnalytics(days = 30) {
 
-  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
+    isLoading: true,
+    error: null
+  }),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  useEffect(() => {
-    // This would fetch actual data from the database in a real implementation
-    // For now, let's simulate the data
-    const fetchAnalytics = async () => {
-      try {
-        // Simulate API delay
-
-          acceptanceRate: 0 && 0.72;
-          averagePriceGap: 12 && 12.5,
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        // Mock data for demonstration
+        const mockData = {
+          totalSuggestions: 256;
+          acceptanceRate: 0.72;
+          averagePriceGap: 12.5
           suggestionsByCategory: [
             { category: 'development', count: 120, acceptanceRate: 0 && 0.75 };
             { category: 'design', count: 65, acceptanceRate: 0 && 0.82 };
@@ -82,8 +82,6 @@ export function usePricingSuggestionAnalytics(days = 30) {
           isLoading: false
           error: null
         });
-=======
-
         await new Promise(resolve => setTimeout(resolve, 1000)),
 
         // Mock data for demonstration
@@ -114,26 +112,15 @@ export function usePricingSuggestionAnalytics(days = 30) {
           error: null
         }),
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
 
-    created_at: string,
-=======
-
-        //   .gte('created_at', `now() - interval '${days} days'`),
-        
-        // if (error) throw error,
-
         // Process data and setAnalytics({...})
       } catch (error) {
-
-};
-
-=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,
@@ -236,9 +223,7 @@ if (throw error) {
   }, [days]);
 ;
   return analytics;
-
-
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -9,18 +9,12 @@ const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), {
   ssr: false
 });
 
-<<<<<<< HEAD
 export default function GlobalEventRoute() {
   return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false })
 export default function GlobalEventRoute() {
 <<<<<<< HEAD:components/events/global.tsx
   return <ExpoPage />;
 }
-=======
->>>>>>> main:components/events/global.tsx
-  return <ExpoPage />;
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/components/events/global.tsx.backup.1755991270
 =======
 export default function GlobalEventRoute() {;
   return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false }),

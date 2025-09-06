@@ -1,9 +1,11 @@
 
-  description: string,
-  icon: string;
+
+  id: string;
+  name: string;
 
 }
-export interface ProductListing {
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   title: string;
   description: string;
@@ -33,20 +35,20 @@ export interface ProductListing {
   availability?: string, // Adding availability property to fix TypeScript errors;
 
 }
-export interface ListingItem {
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   title: string;
   category: string;
 
-  image?: string,
-  description?: string;
+  image?: string
+  description?: string
 }
-=======
-
-
-export interface ListingCategory {;
-
-
 export type ListingView = 'grid' | 'list';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export type ListingView = 'grid' | 'list';
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

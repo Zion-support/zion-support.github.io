@@ -1,48 +1,45 @@
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-
+export default function InteractiveSearch({
+  placeholder = 'Search talent, skills, or jobs...'
+}: {
+  placeholder = 'Search talent, skills, or jobs...',
+}: {;
   placeholder?: string;
-}) {;
-=======
-export default function InteractiveSearch({ placeholder = 'Search talent, skills, or jobs...' }: { placeholder?: string }) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+}) {
   const [value, setValue] = useState('');
-
-
-    >;
-
+    >
       <input
         value={value}
-        onChange={e => setValue(e && e.target.value)}
+        onChange={e => setValue(e.target.value)}
         placeholder={placeholder}
-
-    </motion && motion.div>;
-  );
-
+        className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'      />
+      {value && (
+        <button
+          onClick={() => setValue('')}
+          className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'        >  const [value, setValue] = useState('');
 }
 import React from "react";
 interface InteractiveSearchProps {;
@@ -50,17 +47,14 @@ interface InteractiveSearchProps {;
 
   onSearch?: (query: string) => void,;
   className?: string}
-
 export default function InteractiveSearch() {;
 export default function InteractiveSearch() {;
-
   const handleSubmit = (e: React && React.FormEvent) => {,;
     e && e.preventDefault(),;
     const formData = new FormData(e && e.target as HTMLFormElement),";
     const query = formData && formData.get("search") as string,;
 
     onSearch?.(query)}
-=======
 ;
 export default /**
  * InteractiveSearch - Function description
@@ -114,7 +108,6 @@ function InteractiveSearch() {
     const form_data = new FormData (e.target as HTMLFormElement), ";
     const query = form_data.get ("search") as string,
     on_search?.(query)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (";
     <form on_submit = "{handle_submit}" className="{class_name}">";
       <div className="relative">";
@@ -129,6 +122,12 @@ function InteractiveSearch() {
         </button>;
       </div>;
     </form>;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  );
+}}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }}
 
@@ -139,6 +138,11 @@ function InteractiveSearch() {
         <button
           onClick={() => setValue('')}
           className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
+      />
+      {_value && (_<button
+          onClick={() => setValue('')}
+          className=&quot;absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300&quot;
+
         >
           ✕
         </button>
@@ -151,8 +155,6 @@ function InteractiveSearch() {
 
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           className="w - full px - 4 py - 2 border border - gray - 300 rounded - lg focus: ring - 2 focus:ring - blue - 500 focus:border - transparent"  />";
         <button type="submit;
           className="absolute right - 2 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 hover:text - gray - 600">";
@@ -165,3 +167,17 @@ function InteractiveSearch() {
 }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  );
+}}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  );
+}}
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,9 +1,10 @@
-
-  keywords?: string[],
-  target_audience?: string;
-
-}
-export interface ContentGenerationResponse {
+export interface ContentGenerationRequest {
+export interface ContentGenerationRequest {;
+  type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
+  topic: string;
+  tone: 'professional' | 'casual' | 'friendly' | 'formal';
+  length: 'short' | 'medium' | 'long';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   content: string;
   word_count: number;
   seo_score: number;
@@ -17,7 +18,8 @@ export interface ContentGenerationResponse {
 
   }
 }
-export interface ContentTemplate {
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   name: string;
   description: string;
@@ -27,15 +29,70 @@ export interface ContentTemplate {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
+  price: number
+}
   }
   async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
-
-
+      const response = await fetch(`${this.baseUrl}/content/generate`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`;
+          'Content-Type': 'application/json'}
+        body: JSON.stringify(request)});
+      if (!response.ok) {
+        throw new Error(`Content generation failed: ${response.statusText}`)
 export interface ContentGenerationRequest {;
-
-
+  type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',;
+  topic: string,;
+  tone: 'professional' | 'casual' | 'friendly' | 'formal',;
+  length: 'short' | 'medium' | 'long',;
+  keywords?: string[],;
+  targetAudience?: string;
+}
+;
+export interface ContentGenerationResponse {;
+  content: string,;
+  wordCount: number,;
+  seoScore: number,;
+  readabilityScore: number,;
+  suggestions: string[],;
+  metadata: {;
+    title: string,;
+    description: string,;
+    tags: string[];
+  }
+}
+;
+export interface ContentTemplate {;
+  id: string,;
+  name: string,;
+  description: string,;
+  type: string,;
+  preview: string,;
+  price: number;
+}
+;
+export class AIContentGeneratorService {;
+  private apiKey: string,;
+  private baseUrl: string,;
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {;
+    this.apiKey = apiKey,;
+    this.baseUrl = baseUrl;
+  }
+;
+  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {;
+    try {;
+      // In a real implementation, this would call OpenAI, Claude, or similar API;
+      const response = await fetch(`${this.baseUrl}/content/generate`, {;
+        method: 'POST',;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`,;
+          'Content-Type': 'application/json'},;
+        body: JSON.stringify(request)}),;
+      if (!response.ok) {;
+        throw new Error(`Content generation failed: ${response.statusText}`);
       }
       return await response.json()
 =======
@@ -58,48 +115,9 @@ export interface ContentGenerationRequest {;
     }
   }
 
-
-
-
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async getTemplates(): Promise<ContentTemplate[]> {
     return [
-=======
-  preview: string,
-  price: number;
-}
-export class AIContentGeneratorService {
-  private api_key: string;
-  private base_url: string,
-  constructor (api_key: string, base_url: string = 'https://api.ziontech.ai') {
-    this.api_key = api_key,
-    this.base_url = base_url;
-  }
-  async generate_content (request: ContentGenerationRequest): Promise < ContentGenerationResponse> {
-    try {
-      // In a real implementation, this would call OpenAI, Claude, or similar API;
-      const response = await fetch (`${this.base_url}/content / generate`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.api_key}`;
-          'Content - Type': 'application / json'}
-        body: JSON.stringify (request)});
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (`Content generation failed: ${response.status_text}`);
-      }
-      return await response.json ();
-    } catch (error) {
-      // Fallback to mock data for demo purposes;
-      return this.generateMockContent (request);
-    }
-  }
-  async get_templates (): Promise < ContentTemplate[]> {
-    return [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         id: 'blog - post - starter';
         name: 'Blog Post Starter';
@@ -134,18 +152,22 @@ if ( {) {
       {
         id: 'landing - page - copy';
         name: 'Landing Page Copy';
-        description: 'High - converting landing page content';
-        type: 'landing - page';
-        preview: 'Turn visitors into customers with compelling copy...',
-        price: 59;
+        description: 'High-converting landing page content';
+        type: 'landing-page';
+        preview: 'Turn visitors into customers with compelling copy...'
+        price: 59
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
     ];
   }
+  private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
+    const mockContent = `# ${request.topic}
 
-
-
-
-
+=======
+  private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
+    const mockContent = `# ${request.topic}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
 ## Key Points
 - Point 1: ${request.topic} is essential for modern businesses
@@ -189,9 +211,20 @@ ${request && request.topic} represents a significant opportunity for organizatio
     readabilityScore: number;
     suggestions: string[]
     keywordDensity: Record<string, number>
+  }> {
+    // Mock content analysis
 =======
-  private generateMockContent (request: ContentGenerationRequest): ContentGenerationResponse {
-    const mock_content = `# ${request.topic}
+    return {
+      seoScore: Math.floor(Math.random() * 30) + 70;
+      readabilityScore: Math.floor(Math.random() * 30) + 70;
+      suggestions: [
+        'Add more headings for better structureInclude internal links to related contentOptimize meta description'
+      ];
+      keywordDensity: {
+        'content': 2.1;
+        'seo': 1.8
+        'marketing': 1.5
+;
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.;
 ## Key Points;
 - Point 1: ${request.topic} is essential for modern businesses;
@@ -200,27 +233,18 @@ This is a ${request.length} ${request.type} about ${request.topic}. The content 
 ## Conclusion;
 ${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
 ;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return {
-      content: mock_content;
-      word_count: mock_content.split (' ').length;
-      seo_score: 85;
-      readability_score: 78;
-      suggestions: [;
-        'Add more specific examples_include relevant statistics_optimize for target keywords';
-      ],
-      metadata: {
-        title: `${request.topic} - Complete Guide`;
-        description: `Learn everything about ${request.topic} and how to implement it effectively.`;
-        tags: [request.topic, request.type, 'guidetutorial'];
-      }
-    }
-  }
-  async analyze_content (content: string): Promise<{
-    seo_score: number;
-    readability_score: number;
-    suggestions: string[],
-    keyword_density: Record < string, number>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      seoScore: Math.floor(Math.random() * 30) + 70;
+      readabilityScore: Math.floor(Math.random() * 30) + 70;
+      suggestions: [
+        'Add more headings for better structureInclude internal links to related contentOptimize meta description'
+      ];
+      keywordDensity: {
+        'content': 2.1;
+        'seo': 1.8
+        'marketing': 1.5
+
   }> {
     // Mock content analysis;
 
@@ -228,17 +252,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'seo': 1 && 1.8,
         'marketing': 1 && 1.5
 
-=======
-      seo_score: Math.floor (Math.random () * 30) + 70;
-      readability_score: Math.floor (Math.random () * 30) + 70;
-      suggestions: [;
-        'Add more headings for better structure_include internal links to related content_optimize meta description';
-      ];
-      keyword_density: {
-        'content': 2.1;
-        'seo': 1.8,
-        'marketing': 1.5;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     return {;
       seoScore: Math.floor(Math.random() * 30) + 70,;
@@ -250,23 +263,20 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1,;
         'seo': 1.8,;
         'marketing': 1.5;
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
     }
   }
 }
 
-
-
-
-
 // Pricing tiers for the AI Content Generator
-=======
-// Pricing tiers for the AI Content Generator;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+// Pricing tiers for the AI Content Generator
 export const AI_CONTENT_PRICING = {
   starter: {
     name: 'Starter';
@@ -291,12 +301,7 @@ export const AI_CONTENT_PRICING = {
   enterprise: {
     name: 'Enterprise';
     price: 299;
-
-    period: '/month',
-=======
-
-
-=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {;
@@ -325,11 +330,8 @@ export const AI_CONTENT_PRICING = {;
     features: [;
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee';
     ];
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+};
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

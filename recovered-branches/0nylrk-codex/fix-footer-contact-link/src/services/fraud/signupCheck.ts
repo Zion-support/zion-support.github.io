@@ -1,19 +1,8 @@
 
-// Signup checking functionality;
-import {supabase} from '@/integrations / supabase / client';
-import {analyze_email} from './analyze_email';
-import {SignupCheckResult} from './types';
-/**;
-* Check for suspicious signup patterns;
-*/;
 
-export const checkSignupPatterns = async (
-=======
-
-
-export const checkSignupPatterns = async (;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   email: string;
   ip_address?: string): Promise < SignupCheckResult> => {
   const reasons: string[] = [];
@@ -35,40 +24,10 @@ export const checkSignupPatterns = async (;
       if (!error && recentSignups && recentSignups.length >= 3) {
 
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)
-=======
-// Signup checking functionality;
-import { supabase } from '@/integrations/supabase/client',;
-import { analyzeEmail } from './analyzeEmail',;
-import { SignupCheckResult } from './types',;
-/**;
- * Check for suspicious signup patterns;
- */;
-export const checkSignupPatterns = async (;
-  email: string,;
-  ipAddress?: string;
-): Promise<SignupCheckResult> => {;
-  const reasons: string[] = [],;
-  // Check email against suspicious patterns;
-  const emailCheck = analyzeEmail(email),;
-  if (emailCheck.isSuspicious) {;
-    reasons.push(...emailCheck.reasons);
-  }
-;
-  // If IP address is provided, check for rapid signups from same IP;
-  if (ipAddress) {;
-    try {;
-      const { data: recentSignups, error } = await supabase;
-        .from('profiles');
-        .select('created_at');
-        .eq('ip_address', ipAddress);
-        .gte('created_at', new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours;
-        .order('created_at', { ascending: false }),;
-      if (!error && recentSignups && recentSignups.length >= 3) {;
-        reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`);
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
     } catch (error) {
       console && console.error('Error checking signup patterns:', error)
@@ -81,47 +40,4 @@ export const checkSignupPatterns = async (;
     reasons
   }
 
-;
-  // Check email against suspicious patterns;
-  const email_check = analyze_email (email),
-  // Check condition
-if ( {) {
-  $2
-}
-    reasons.push (...email_check.reasons);
-  }
-  // If IP address is provided, check for rapid signups from same IP;
-  // Check condition
-if ( {) {
-  $2
-}
-    try {
-      const { data: recent_signups, error } = await supabase;
-        .from ('profiles');
-        .select ('created_at');
-        .eq ('ip_address', ip_address);
-        .gte ('created_at', new Date (Date.now () - 24 * 60 * 60 * 1000).toISOString ()) // Last 24 hours;
-        .order ('created_at', { ascending: false });
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        reasons.push (`Multiple accounts (${recent_signups.length}) created from same IP in last 24 hours`);
-      }
-    } catch (error) {
-      console.error ('Error checking signup patterns:', error);
-    }
-  }
-  return {
-    is_suspicious: reasons.length > 0,
-    reasons;
-  }
-}
-;
-
-=======
-
-};
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

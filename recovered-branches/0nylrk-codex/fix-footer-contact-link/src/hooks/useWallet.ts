@@ -1,29 +1,21 @@
 
-import {useEffect, useState} from 'react';
-import {use_auth} from '@/hooks / use_auth';
-import {supabase} from '@/integrations / supabase / client';
-import type { Wallet, TokenTransaction } from '@/types / tokens';
-export /**
- * use_wallet - Function description
- */
-function use_wallet() {
-  const { user } = use_auth ();
-  const [wallet, set_wallet] = useState < Wallet | null>(null);
-  const [transactions, set_transactions] = useState < TokenTransaction[]>([]);
-  const [loading, set_loading] = useState (true);
-  const [error, set_error] = useState < string | null>(null);
-;
-  async /**
- * fetch_wallet - Function description
- */
-function fetch_wallet() {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_wallet (null);
-      set_loading (false);
-      return;
+
+import type { Wallet, TokenTransaction } from '@/types/tokens';
+export function useWallet() {;
+  const { user } = useAuth();
+  const [wallet, setWallet] = useState<Wallet | null>(null),
+  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
+  const [loading, setLoading] = useState(true);
+
+  const [error, setError] = useState<string | null>(null);
+
+  async function fetchWallet() {
+    if (!user?.id) {
+      setWallet(null);
+      setLoading(false);
+      return
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
     try {
       set_loading (true);
@@ -158,7 +150,8 @@ if (return) {
     transactions;
     loading;
     error;
-
+    fetchWallet;
+=======
 import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -255,16 +248,9 @@ export function useWallet() {;
     error,;
     fetchWallet,;
 
-
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     fetchTransactions;
     earnTokens;
 
     spendTokens}
-=======
-    fetch_wallet;
-    fetch_transactions;
-    earn_tokens;
-    spend_tokens}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

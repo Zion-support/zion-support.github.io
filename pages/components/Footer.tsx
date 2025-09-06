@@ -1,58 +1,93 @@
 
-
-
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Facebook,;
-  Twitter,;
-  Linkedin,;
-  Instagram,;
+  Mail
+  Phone
+  MapPin
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Github
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
   Github,;
-
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
 import React from 'react';
 import Link from 'next/link';
+ursor/integrate-build-improve-and-re-verify-8f7d
+import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
->>>>>>> origin/automation-improvements-final
+import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Brain,
+  Network,
+  Cloud,
+  Shield,
+  BarChart3,
+  Users,
+  Settings,
+  FileText,
+  MessageSquare,
+  Calendar,
+  ShoppingCart,
+  BookOpen,
+  Building,
+  Heart,
+  DollarSign,
+  Target,
+  Zap,
+  Award,
+  Star,
+  CheckCircle,
+  Clock,
+  TrendingUp,
+  Eye,
+  Lock,
+  Code,
+  Home,
+  Camera,
+  Music,
+  Gamepad2,
+  Truck,
+  Calculator,
+  CreditCard,
+  Paintbrush,
+  HardDrive,
+  Activity,
+  Lightbulb,
+  Wrench,
+  PieChart,
+  ClipboardList,
+  Layers;
+} from 'lucide-react';
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -62,7 +97,6 @@ import Link from 'next/link';
       { name: "Cybersecurity", href: "/cybersecurity" }
       { name: "Database Solutions", href: "/database-solutions" }
     ]
-
 
 
     solutions: [
@@ -101,6 +135,7 @@ import Link from 'next/link';
 
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
@@ -150,22 +185,6 @@ import Link from 'next/link';
       { name: "Accessibility", href: "/accessibility" },;
     ],;
   };
-=======
-  ];
-
-const microSaasCategories = [
-  { title: 'Marketing Tools', icon: Target, count: 15 },
-  { title: 'Productivity', icon: Settings, count: 12 },
-  { title: 'Analytics', icon: BarChart3, count: 18 },
-  { title: 'Automation', icon: Zap, count: 22 },
-  { title: 'Security', icon: Shield, count: 8 },
-  { title: 'Finance', icon: DollarSign, count: 10 },
-  { title: 'Design', icon: Paintbrush, count: 6 },
-  { title: 'Development', icon: Code, count: 14 }
-];
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const socialLinks = [;
     { name: "Facebook", href: "#", icon: Facebook },;
@@ -173,8 +192,8 @@ const microSaasCategories = [
     { name: "LinkedIn", href: "#", icon: Linkedin },;
     { name: "Instagram", href: "#", icon: Instagram },;
     { name: "GitHub", href: "#", icon: Github },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
+
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -300,22 +319,32 @@ const microSaasCategories = [
                     </Link>;
                   </li>;
                 ))}
-
-              </ul>;
-
-              <h3 className="text-lg font-semibold mb-6">Legal</h3>;
-              <ul className="space-y-3">;
-                {footerLinks && footerLinks.legal.map((link, index) => (;
-                  <li key={index}>;
-
+              </ul>
+              <h3 className="text-lg font-semibold mb-6">Legal</h3>
+              <ul className="space-y-3">
+                {footerLinks.legal.map((link, index) => (
+                  <li key={index}>
                     <Link
-                      href={link && link.href}
-                      className="text-gray-400 hover:text-white transition-colors">;
-                      {link && link.name}
-                    </Link>;
-                  </li>;
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
                 ))}
+              </ul>
+            </motion.div>
+          </div>
+        </div>
 
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
               </ul>;
             </motion && motion.div>;
           </div>;
@@ -326,31 +355,27 @@ const microSaasCategories = [
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-gray-400 text-sm mb-4 md:mb-0"
+            >
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </motion.div>
 
-
-=======
-
-
-=======
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <motion.div
 =======
-              transition={{ duration: 0 && 0.8 }}
-              className="text-gray-400 text-sm mb-4 md:mb-0">;
-              © {currentYear} Zion Tech Group. All rights reserved.;
-            </motion && motion.div>;
-
-            <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -365,7 +390,6 @@ const microSaasCategories = [
                 </a>;
               ))}
 
-=======
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -441,15 +465,17 @@ const microSaasCategories = [
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © 2025 Zion Tech Group. All rights reserved. | 
-              <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
+              © 2025 Zion Tech Group. All rights reserved. |
+              <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> |
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
 
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
             
-
-
-
+origin/main
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -467,31 +493,11 @@ const microSaasCategories = [
                 </a>
               ))}
             </motion.div>
-=======
 
-            <div className="flex items-center space-x-6">
-              <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Sitemap
-              </Link>
-              <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Accessibility
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Cookie Policy
-              </Link>
-            </div>
->>>>>>> origin/automation-improvements-final
           </div>
         </div>
       </div>
     </footer>
-=======
-            </motion && motion.div>;
-          </div>;
-        </div>;
-      </div>;
-    </footer>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default Footer;

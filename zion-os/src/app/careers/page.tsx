@@ -1,34 +1,4 @@
 
-export const metadata = {
-  title: 'Careers - Zion Tech Group',
-  description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',
-  keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs'},
-export default /**
- * CareersPage - Function description
- */
-function CareersPage() {
-  const open_positions = [;
-    {
-      title: 'Senior AI Research Engineer',
-      department: 'Research & Development',
-      location: 'Remote / Global',
-      type: 'Full - time',
-      description: 'Lead cutting - edge research in AI consciousness, autonomous systems, and quantum neural networks.',
-=======
-
-export const metadata = {;
-  title: 'Careers - Zion Tech Group',;
-  description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',;
-  keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs'},;
-export default function CareersPage() {;
-  const openPositions = [;
-    {;
-      title: 'Senior AI Research Engineer',;
-      department: 'Research & Development',;
-      location: 'Remote / Global',;
-      type: 'Full-time',;
-      description: 'Lead cutting-edge research in AI consciousness, autonomous systems, and quantum neural networks.',;
-
       requirements: [;
         'PhD in Computer Science, AI, or related field5+ years experience in AI research_expertise in machine learning and neural networks_experience with quantum computing concepts']},
     {
@@ -57,6 +27,8 @@ export default function CareersPage() {;
         '5+ years experience in cybersecurity_expertise in threat detection and prevention_knowledge of AI security and adversarial attacks_relevant certifications (CISSP, CEH, etc.)']}],
   const benefits = [;
 
+<<<<<<< HEAD
+=======
     {;
       title: 'Remote First',;
       description: 'Work from anywhere in the world with our distributed team.',;
@@ -80,8 +52,12 @@ export default function CareersPage() {;
     {;
       title: 'Health & Wellness',;
       description: 'Comprehensive health coverage and wellness programs.',;
+<<<<<<< HEAD
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       icon: '🏥'}];
   return (
     <div className="space - y-16">;

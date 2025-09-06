@@ -290,23 +290,8 @@ const itServices: ITService[] = [;
 ],;
 export default function ITSolutionsPage() {;
   return (;
-
     <div className="space-y-8">;
-=======
-"use client",
-import { useState  } from './react';,
-interface ITService {
-  id: string,
-  name: string,
-  description: string,
-  deliverables: string[],
-  timeline: string,
-  pricing: string,
-  starting_price: number,
-  contact_link: string,
-  icon: string,
-  features: string[],
-  technologies: string[],
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   industries: string[];
 }
 const it_services: ITService[] = [;
@@ -580,14 +565,9 @@ const it_services: ITService[] = [;
       "Financial Services";
     ];
   }
-],
-export default /**
- * ITSolutionsPage - Function description
- */
-function ITSolutionsPage() {
-  return (
-    <div className="space - y-8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+    <div className="space-y-8">;
+
       {/* Header */}
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">IT Solutions & Services</h1>;

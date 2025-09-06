@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 export default function Page(){return null}
-=======
-export default function Page(){return null}
-=======
-=======
->>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd
 import React from 'react';
 import SEO from '../components/SEO';
 

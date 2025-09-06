@@ -1,4 +1,5 @@
 
+=======
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
 import { toast } from "./ui/use-toast",;
@@ -88,25 +89,12 @@ export function SocialShareSection() {;
                 {link.icon}
                 <span className="sr-only">{link.name}</span>;
                 <span aria-hidden="true">{link.name}</span>;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </Button>;
             ))}
           </div>;
         </div>;
       </div>;
     </section>;
-  ),;}
- export function SocialShareSection () {;
-  const {;
-  t ;
-}= useTranslation ();
-};
-  navigator.clipboard.writeText (window.location.href) .then ( () => {;
-  toast ({;
-  ;
-}) .catch ( () => {;
-  toast ({;
-  title: t ('errors.failed to copy');
-});
-};
-}</div> </div> </div> </section>) ;
-}'"
+<<<<<<< HEAD
+

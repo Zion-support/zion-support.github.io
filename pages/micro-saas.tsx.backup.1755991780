@@ -1000,7 +1000,6 @@ export default function MicroSaasPage() {
   };
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen futuristic-bg particle-bg">
       <ParticleBackground />
       <Head>
@@ -1012,21 +1011,6 @@ export default function MicroSaasPage() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/micro-saas" />
       </Head>
-=======
-    <EnhancedFuturisticBackground>
-      <div className="min-h-screen">
-        <Head>
-          <title>75+ Micro SaaS Services | Zion Tech Group - AI, Cloud, Security Solutions</title>
-          <meta name="description" content="Explore 75+ real micro SaaS services from Zion Tech Group. AI-powered solutions, cloud infrastructure, cybersecurity, IoT, blockchain, and emerging technologies. Start your free trial today." />
-          <meta name="keywords" content="micro SaaS services, AI solutions, cloud services, cybersecurity, data analytics, IoT platform, blockchain analytics, quantum computing, AR/VR development" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta property="og:title" content="75+ Micro SaaS Services | Zion Tech Group" />
-          <meta property="og:description" content="Comprehensive micro SaaS platform with AI, cloud, security, and emerging technology solutions." />
-          <meta property="og:url" content="https://ziontechgroup.com/micro-saas" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
-        </Head>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7a5d
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">

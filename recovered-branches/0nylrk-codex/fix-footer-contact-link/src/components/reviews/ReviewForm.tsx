@@ -1,40 +1,7 @@
 
-import {useState} from "react";
-import {Star} from "lucide-react";
-import {useForm} from "react-hook-form";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
-import {Switch} from "@/components/ui/switch";
-import {Review} from "@/types/reviews";
-interface ReviewFormValues {;
-
-=======
-import { useState } from './react';
-import { Star } from './lucide-react';
-import { use_form } from './react - hook - form';
-import { Button } from '@/components / ui / button';
-import { Textarea } from '@/components / ui / textarea';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
-import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';
-import { Switch } from '@/components / ui / switch';
-import { Review } from '@/types / reviews';
-interface ReviewFormValues {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  rating?: number;
-  review_text?: string;
-  communication_rating?: number;
-  quality_rating?: number;
-  timeliness_rating?: number;
-  would_work_again?: boolean;
-  is_anonymous?: boolean;
-}
-
 =======
 
-
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -43,18 +10,14 @@ interface ReviewFormValues {
   timeliness_rating?: number,
   would_work_again?: boolean,
   is_anonymous?: boolean
+}
+interface ReviewFormProps {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-interface ReviewFormProps {;
-  projectId: string,;
-  revieweeId: string,;
-  revieweeName: string,;
-  onSubmit: (data: any) => Promise<boolean>, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   defaultValues?: Review;
   isSubmitting: boolean;
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export function ReviewForm(): any ({;
@@ -64,59 +27,17 @@ export function ReviewForm(): any ({;
   revieweeName;
   onSubmit;
   defaultValues;
-
-
-=======
-import { useState } from "react",;
-import { Star } from "lucide-react",;
-import { useForm } from "react-hook-form",;
-import { Button } from "@/components/ui/button",;
-import { Textarea } from "@/components/ui/textarea",;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from "@/components/ui/form",;
-import {;
-  RadioGroup,;
-  RadioGroupItem} from "@/components/ui/radio-group",;
-import { Switch } from "@/components/ui/switch",;
-import { Review } from "@/types/reviews",;
-interface ReviewFormValues {;
-  rating?: number,;
-  review_text?: string,;
-  communication_rating?: number,;
-  quality_rating?: number,;
-  timeliness_rating?: number,;
-  would_work_again?: boolean,;
-  is_anonymous?: boolean;
-}
-;
-interface ReviewFormProps {;
-  projectId: string,;
-  revieweeId: string,;
-  revieweeName: string,;
-  onSubmit: (data: any) => Promise<boolean>,;
-  defaultValues?: Review,;
-  isSubmitting: boolean;
-}
-
-
 export function ReviewForm({
   projectId,
   revieweeId,
   revieweeName,
   onSubmit,
   defaultValues,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  isSubmitting}: ReviewFormProps) {
 
+=======
   const [hoveredStar, setHoveredStar] = useState<number>(0),
   
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
       rating: defaultValues.rating
@@ -127,24 +48,12 @@ export function ReviewForm({
       would_work_again: defaultValues.would_work_again
       is_anonymous: defaultValues.is_anonymous} : {
 
-  const form = useForm<ReviewFormValues>({;
-    defaultValues: defaultValues ? {;
-      rating: defaultValues && defaultValues.rating,;
-      review_text: defaultValues && defaultValues.review_text,;
-      communication_rating: defaultValues && defaultValues.communication_rating,;
-      quality_rating: defaultValues && defaultValues.quality_rating,;
-      timeliness_rating: defaultValues && defaultValues.timeliness_rating,;
-      would_work_again: defaultValues && defaultValues.would_work_again,;
-      is_anonymous: defaultValues && defaultValues.is_anonymous} : {;
-      rating: 0,;
-      review_text: "",;
-      communication_rating: undefined,;
-      quality_rating: undefined,;
-      timeliness_rating: undefined,;
-      would_work_again: undefined,;
-      is_anonymous: false}
   });
-
+  const handleSubmit = async (values: ReviewFormValues) => {
+    const formattedData = {
+      ...values
+      project_id: projectId
+      reviewee_id: revieweeId}
   const handleSubmit = async (values: ReviewFormValues) => {;
     const formattedData = {;
       ...values,;
@@ -152,19 +61,25 @@ export function ReviewForm({
       reviewee_id: revieweeId},;
 
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const success = await onSubmit(formattedData);
-    if (success) {;
-      form && form.reset();
+    if (success) {
+      form.reset()
     }
-
-  };
-
-  const watchRating = form && form.watch("rating");
-
+  }
+  const watchRating = form.watch("rating");
 
   return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+
+  },;
+  const watchRating = form.watch("rating"),;
+  return (;
     <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Main Rating */}
         <FormField
           control={form && form.control}
@@ -204,14 +119,39 @@ export function ReviewForm({
               </div>;
             </FormItem>;
           )}
-
-        />;
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        />
+      rating: 0,
+      review_text: "",
+      communication_rating: undefined,
+      quality_rating: undefined,
+      timeliness_rating: undefined,
+      would_work_again: undefined,
+      is_anonymous: false}
+  }),;
+  const handleSubmit = async (values: ReviewFormValues) => {;
+    const formattedData = {;
+      ...values,;
+      project_id: projectId,;
+      reviewee_id: revieweeId},;
+    const success = await onSubmit(formattedData),;
+    if (success) {;
+      form.reset();
+    }
+  },
+  
+  const watchRating = form.watch("rating"),
+  
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+        
+  },;
+  const watchRating = form.watch("rating"),;
+  return (;
+    <Form {...form}>;
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Review Text */}
         <FormField
           control={form && form.control}
@@ -342,17 +282,15 @@ if ( {) {
         />;
 
         {/* Additional Rating Categories (only shown if main rating is provided) */}
-        {watchRating > 0 && (;
-          <div className="space-y-6 border-t pt-6">;
-            <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>;
+        {watchRating > 0 && (
+          <div className="space-y-6 border-t pt-6">
+            <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
 
-
-=======
-
-            
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {/* Communication */}
             <FormField
               control={form && form.control}
@@ -624,53 +562,14 @@ if ( {) {
           className="w-full"
           disabled={isSubmitting || !form && form.formState.isValid}>;
           {isSubmitting ? "Submitting..." : defaultValues ? "Save Changes" : "Submit Review"}
-        </Button>;
-      </form>;
-    </Form>;
-  );
-}
-
-=======
-                </FormItem>)}
-            />;
-          </div>)}
-        {/* Anonymous Review */}
-        <FormField;
-          control={form.control}
-          name="is_anonymous";
-          render={({ field }) => (
-            <FormItem>;
-              <div className="flex items - center gap - 2">;
-                <FormControl>;
-                  <Switch;
-                    checked={field.value}
-                    onCheckedChange={field.on_change}
-                  />;
-                </FormControl>;
-                <FormLabel className="cursor - pointer font - normal">;
-                  Submit anonymously;
-                </FormLabel>;
-              </div>;
-              <p className="text - xs text - muted - foreground mt - 1">;
-                Anonymous reviews won't display your name but will still be linked to your account.;
-              </p>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        <Button;
-          type="submit";
-          className="w - full";
-          disabled={is_submitting || !form.form_state.is_valid}
-        >;
-          {is_submitting ? "Submitting..." : default_values ? "Save Changes" : "Submit Review"}
-        </Button>;
-      </form>;
-    </Form>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        </Button>
+      </form>
+    </Form>
+  )
 =======
 
 }
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

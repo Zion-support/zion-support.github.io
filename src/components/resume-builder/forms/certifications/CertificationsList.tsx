@@ -1,83 +1,46 @@
-interface CertificationsListProps {
-  certifications: Certification[]
-  onEdit: (cert: Certification) => void
 
-  onDelete: (id: string) => void
-}
-export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
-  if (certifications.length === 0) {
-    return null
-interface CertificationsListProps {;
-  certifications: Certification[];
-  onEdit: (cert: Certification) => void;
-  onDelete: (id: string) => void;
-export function CertificationsList(): any ({;
-  certifications,;
-  onEdit,;
-  onDelete,;
-}: CertificationsListProps) {  if (certifications && certifications.length === 0) {;
-export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
-import { Certification } from '@/types/resume';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Edit, Trash2 } from 'lucide-react';
-import { format } from 'date-fns';
-interface CertificationsListProps {;
-  certifications: Certification[],;
-  onEdit: (cert: Certification) => void,;
-  onDelete: (id: string) => void;
-}
-
-export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
-  if (certifications && certifications.length === 0) {;
-
-import { Certification } from '@/types/resume';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Edit, Trash2 } from 'lucide-react'
 import { format } from 'date-fns';
 interface CertificationsListProps {
-  certifications: Certification[],
-  on_edit: (cert: Certification) => void,
-  on_delete: (id: string) => void;
-}
 
-    return null;
-  }
-  return (
-
-
+  certifications: Certification[]
+  onEdit: (cert: Certification) => void
+  onDelete: (id: string) => void
+export function CertificationsList({
+  certifications
+  onEdit
+  onDelete
+}: CertificationsListProps) {  if (certifications.length === 0) {
+export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
                 <Button
-                  variant='ghost'
-                  size='icon'
+                  variant="ghost"
+                  size="icon"
                   onClick={() => onEdit(cert)}
-
-                  className='text-primary hover:underline'>              <p className="text-xs mt-2">;
-                <a
+                  aria-label="Edit certification"
+                >
+                  <Edit className="h-4 w-4" />
+                </Button>
+                <Button
                   href = {cert && cert.credential_url,}
 
                   variant="ghost"
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   size="icon"
-                  onClick={() => onDelete(cert.id!)}
-                  aria-label="Delete certification"
-                >
-                  <Trash2 className="h-4 w-4" />
-                </Button>
-              </div>
-            </div>
-            {cert.credential_url && (
-              <p className="text-xs mt-2">
-                <a 
-                  href={cert.credential_url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  onClick = {() => onEdit(cert),}
 
+                  aria-label="Edit certification"
+                >
+                  <Edit className="h-4 w-4" />
+                </Button>
+                <Button
+
+<<<<<<< HEAD
+=======
                 >
 
                   View credential
-                </a>;
-              </p>;
+                </Link>
+              </p>
             )}
           </CardContent>;
         </Card>;
@@ -86,6 +49,8 @@ interface CertificationsListProps {
     </div>;
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 export /**
  * CertificationsList - Function description
@@ -186,3 +151,6 @@ if ( {) {
     </div>);
 }
 ;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

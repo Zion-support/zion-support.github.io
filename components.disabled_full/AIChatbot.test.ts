@@ -1,33 +1,12 @@
 
-
-
-
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import AIChatbot from '
 describe('AIChatbot'
   it('renders without crashing'
     expect(screen ;'  });
   it('displays correct content'
   it('handles user interactions'
-
-
-import AIChatbot from './AIChatbot;
-describe('AIChatbot', () => {;
-  it('renders without crashing', () => {;
-    render(<AIChatbot />);
-    expect(screen.getByRole('main')).toBeInTheDocument();'  });';
-  it('displays correct content', () => {;
-    render(<AIChatbot />);
-    // Add specific content checks based on component functionality});
-  it('handles user interactions', () => {;
-    render(<AIChatbot />);
-// Add interaction tests based on component functionality,
-}),
-});
-import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />); }); ; it('handles user interactions',() => {; render(<AIChatbot />)});,});
-// Add interaction tests based on component functionality})});
-
-
-=======
-import AIChatbot from './AIChatbot; ; describe('AIChatbot', () => {; it('renders without crashing', () => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AIChatbot />); }); ; it('handles user interactions'
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

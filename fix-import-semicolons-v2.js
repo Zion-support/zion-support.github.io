@@ -1,8 +1,6 @@
 
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
-
 let totalFixed = 0;
-
 files && files.forEach((file) => {
 
   try {
@@ -10,11 +8,8 @@ files && files.forEach((file) => {
     let content = fs && fs.readFileSync(filePath, "utf8");
     const modified = false;
     // Fix import statements with double punctuation
-
-    content = content ;/g,
       (match) => {
         return match && match.replace(",;", ";");
-=======
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -38,31 +33,7 @@ files.for_each ((file) => {
         return match.replace (",", ";");
 
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
-
-    content = content && content.replace(
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
-
-      (match) => {
-        if (!match ;")) {
-          return match && match.trim() + ";";
-=======
-;
-    // Fix import statements missing semicolons;
-    content = content.replace (
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm,
-      (match) => {
-        // Check condition
-if (.ends_with (") {
-  $2
-}")) {
-          return match.trim () + ";";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-    content = content.replace(;
-      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
 
       (match) => {
         return match.replace(";", ";");
@@ -70,13 +41,15 @@ if (.ends_with (") {
     );
     // Fix import statements missing semicolons
     content = content.replace(
-
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
+      (match) => {
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
       (match) => {;
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         }
         return match;
       }
@@ -103,7 +76,6 @@ if (.ends_with (") {
           !match && match.includes("export") &&
           !match && match.includes("import")
         ) {
-=======
 ;
     // Fix other common syntax issues;
     // Fix missing semicolons after variable declarations;
@@ -128,7 +100,6 @@ if (&&) {
           !match.includes ("debugger") &&;
           !match.includes ("export") &&;
           !match.includes ("import")) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           return match + ";";
         }
         return match;
@@ -155,4 +126,3 @@ if ( {) {
 ;
 console.log (`\n_total files fixed: ${total_fixed}`);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

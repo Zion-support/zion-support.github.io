@@ -1,15 +1,17 @@
 {
 
+=======
+  "timestamp": "2025-09-06T09:17:27.840Z",
+  "totalDuration": 164850,
+  "successfulTasks": 3,
   "timestamp": "2025-09-06T10:43:14.243Z",
   "totalDuration": 27782,
   "successfulTasks": 6,
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
-
-      "duration": 5595,
 
       "errors": [],
       "warnings": []
@@ -17,19 +19,17 @@
     "codeQuality": {
       "success": false,
 
-      "duration": 6393,
       "errors": [],
       "warnings": []
     },
     "securityAudit": {
-      "success": true,
-      "duration": 1714,
+
       "errors": [],
       "warnings": []
     },
     "buildOptimization": {
       "success": true,
-      "duration": 5672,
+
       "errors": [],
 
       "warnings": []
@@ -37,21 +37,18 @@
     "seoOptimization": {
       "success": true,
 
-      "duration": 42,
-
       "errors": [],
       "warnings": []
     },
     "accessibilityImprovement": {
       "success": false,
 
-      "duration": 291,
       "errors": [],
       "warnings": []
     },
     "performanceOptimization": {
       "success": true,
-      "duration": 6276,
+
       "errors": [],
 
       "warnings": []
@@ -59,10 +56,8 @@
     "deployment": {
       "success": true,
 
-      "duration": 1796,
       "errors": [],
       "warnings": []
     }
   }
-}
-
+<<<<<<< HEAD

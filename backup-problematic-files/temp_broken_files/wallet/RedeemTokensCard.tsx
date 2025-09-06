@@ -1,9 +1,17 @@
 
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/RedeemTokensCard.tsx
+=======
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/wallet/RedeemTokensCard.tsx
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/RedeemTokensCard.tsx
+import { Gift, ArrowRight, ExternalLink } from "lucide-react",;
+=======
 import { Gift, ArrowRight, ExternalLink } from 'lucide-react';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/wallet/RedeemTokensCard.tsx
 import {;
   Dialog,;
   DialogContent,;
@@ -56,6 +64,10 @@ export function RedeemTokensCard() {;
   },;
 ;
   return (;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/RedeemTokensCard.tsx
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/wallet/RedeemTokensCard.tsx
     <Card>;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -76,18 +88,8 @@ export function RedeemTokensCard() {;
               </DialogDescription>;
             </DialogHeader>;
             <div className="space-y-4 py-4">;
-              {REWARD_OPTIONS.map((option) => (;
-                <div key={option.id} className="flex justify-between items-center border-b pb-4">;
-                  <div>;
-                    <h3 className="font-medium">{option.title}</h3>;
-                    <p className="text-sm text-muted-foreground">{option.description}</p>;
-                  </div>;
-                  <div className="flex flex-col items-end gap-1">;
-                    <span className="text-sm font-bold">{option.cost} ZION$</span>;
-                    <Button ;
-                      size="sm" ;
-                      variant={wallet && wallet.balance >= option.cost ? "default" :"outline"}
-                      disabled={!wallet || wallet.balance < option.cost}
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/RedeemTokensCard.tsx
+
                       onClick={() => handleRedeem(option)}
                     >;
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />;
@@ -100,6 +102,9 @@ export function RedeemTokensCard() {;
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>;
               <Button variant="ghost" size="sm">;
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/RedeemTokensCard.tsx
+
+=======
               </Button>;
             </div>;
           </DialogContent>;
@@ -159,7 +164,9 @@ await spendTokens (option.cost, `Redeemed: $ {;
 setOpen (false) ;
 };"flex items-center gap-2"> <Gift className=" h-5 w-5"/> Redeem Rewards </CardTitle> <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription> </CardHeader> <CardContent> <Dialog open= {;
   open ;
-
+:temp_broken_files/wallet/RedeemTokensCard.tsx
+}onOpenChange= {;"  setOpen ";"}> <DialogTrigger asChild> <Button className=" w-full">View Available Rewards</Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle>Available Rewards</DialogTitle> <DialogDescription> Exchange your tokens for these rewards. You currently have {;"  wallet?.balance || 0 ";"}ZION$. </DialogDescription> </DialogHeader> > Redeem <ArrowRight className=" ml-1 h-3 w-3" /> </Button> </div> </div>) ) ;
+}</div> </Button> </div> </DialogContent> </Dialog> </CardContent> </Card>) ;"}'"
 }onOpenChange= {;
   setOpen ";
 }> <DialogTrigger asChild> <Button className=" w-full">View Available Rewards</Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle>Available Rewards</DialogTitle> <DialogDescription> Exchange your tokens for these rewards. You currently have {;
@@ -167,4 +174,5 @@ setOpen (false) ;
 }ZION$. </DialogDescription> </DialogHeader> > Redeem <ArrowRight className=" ml-1 h-3 w-3" /> </Button> </div> </div>) ) ;
 }</div> </Button> </div> </DialogContent> </Dialog> </CardContent> </Card>) ;
 }'"
-
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/wallet/RedeemTokensCard.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/wallet/RedeemTokensCard.tsx

@@ -1,17 +1,9 @@
+import { App } from '@slack/bolt';
+import dotenv from 'dotenv';
+import fetch from 'node-fetch';
 
-import fetch from 'node - fetch';
-dotenv.config (),
-const api_base = process.env.API_ORIGIN || 'http: //localhost:4000';
-const app = new App ({
-  token: process.env.SLACK_BOT_TOKEN,
-  signing_secret: process.env.SLACK_SIGNING_SECRET,
-  app_token: process.env.SLACK_APP_LEVEL_TOKEN,
-  socket_mode: true;
-}),
-function help_text (): string {
-  return [;
-    '*Zion Assistant Commands*`/zion post - job [role]` – generate a job post`/zion suggest - talent [query]` – AI match talent`/zion track - project [name]` – milestone status`/zion help` – command list';
-  ].join ('\n');
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 app.command ('/zion', async ({ command, ack, respond }) => {
   await ack (),
@@ -74,20 +66,7 @@ if ( {) {
     }
     await respond ({ response_type: 'ephemeral', text: help_text () });
   } catch (err: any) {
-    await respond ({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` });
-  }
-}),
-(async () => {
-  const port = Number (process.env.SLACK_PORT || 3001),
-  await app.start (port),
-  // eslint - disable - next - line no - console;
-  console.log (`⚡️ Zion Slack bot running on port ${port}`);
-})(),
-
-=======
-
-
-=======
+    await respond({ response_type: 'ephemeral', text: `Error: ${err.message |'unknown'}` })
 import { App } from '@slack/bolt',;
 import dotenv from 'dotenv',;
 import fetch from 'node-fetch',;
@@ -103,9 +82,12 @@ function helpText(): string {;
   return [;
     '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list';
   ].join('\n');
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 ;
 app.command('/zion', async ({ command, ack, respond }) => {;
@@ -156,13 +138,17 @@ app.command('/zion', async ({ command, ack, respond }) => {;
     await respond({ response_type: 'ephemeral', text: helpText() });
   } catch (err: any) {;
     await respond({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  }
-})
-(async () => {
+<<<<<<< HEAD
 
-  const port = Number(process.env.SLACK_PORT || 3001),
-  await app.start(port),
-  // eslint-disable-next-line no-console
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  // // // console.log(`⚡️ Zion Slack bot running on port ${port}`)
+})(),
+}),;
+(async () => {;
+  const port = Number(process.env.SLACK_PORT || 3001),;
+  await app.start(port),;
+  // eslint-disable-next-line no-console;
+  // // // console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

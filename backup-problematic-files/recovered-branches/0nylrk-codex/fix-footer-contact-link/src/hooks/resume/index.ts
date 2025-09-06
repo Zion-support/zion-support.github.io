@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { useState } from 'react',;
 import { Resume } from '@/types/resume',;
 import { useFetchResume } from './useFetchResume',;
@@ -95,6 +97,7 @@ export * from './useResumeUtils',; // Determine overall loading state const isLo
 // Determine overall error state (use first non-null error) const error = fetchResumeOperations.error || resumeActions.error || workOperations.error || educationOperations.error || skillsOperations.isLoading || certOperations.error || resumeListOperations.error;
 // Override the fetch resume function to update local state 
 }// Export all hooks export * from './useFetchResume';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export * from './useResumeActions';
 export * from './useWorkExperience';
 export * from './useEducation';
@@ -102,3 +105,7 @@ export * from './useSkills';
 export * from './useCertifications';
 export * from './useResumeList';
 export * from './useResumeUtils';
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

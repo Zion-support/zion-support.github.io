@@ -1,20 +1,5 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-console.log('🔧 Starting comprehensive merge conflict resolution...');
-
-// Function to fix merge conflicts in a file
-function fixMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Remove merge conflict markers and keep the HEAD version (first part)
-    const conflictRegex = /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g;
-    
     content = content.replace(conflictRegex, (match, headContent, originContent) => {
       modified = true;
       // Clean up the head content
@@ -24,14 +9,12 @@ function fixMergeConflicts(filePath) {
         .replace(/&lt;/g, '<')
         .replace(/&gt;/g, '>')
         .replace(/&amp;/g, '&');
-      
+
       return cleaned;
     });
 
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD\n?/g, '');
-    content = content.replace(/=======\n?/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+    content = content.replace(/
 
     // Clean up HTML entities
     content = content.replace(/&apos;/g, "'");
@@ -54,15 +37,15 @@ function fixMergeConflicts(filePath) {
 // Function to recursively find files with merge conflicts
 function findFilesWithConflicts(dir, extensions = ['.js', '.ts', '.tsx', '.jsx', '.json', '.md']) {
   const files = [];
-  
+
   function traverse(currentDir) {
     try {
       const items = fs.readdirSync(currentDir);
-      
+
       for (const item of items) {
         const fullPath = path.join(currentDir, item);
         const stat = fs.statSync(fullPath);
-        
+
         if (stat.isDirectory()) {
           // Skip certain directories
           if (!['node_modules', '.git', 'dist', 'build', '.next', 'coverage'].includes(item)) {
@@ -79,7 +62,7 @@ function findFilesWithConflicts(dir, extensions = ['.js', '.ts', '.tsx', '.jsx',
       // Skip directories we can't read
     }
   }
-  
+
   traverse(dir);
   return files;
 }
@@ -99,7 +82,7 @@ let errorCount = 0;
 const batchSize = 100;
 for (let i = 0; i < allFiles.length; i += batchSize) {
   const batch = allFiles.slice(i, i + batchSize);
-  
+
   for (const filePath of batch) {
     try {
       if (fixMergeConflicts(filePath)) {
@@ -110,7 +93,7 @@ for (let i = 0; i < allFiles.length; i += batchSize) {
       console.error(`❌ Error processing ${filePath}:`, error.message);
     }
   }
-  
+
   // Progress update
   if (i % 500 === 0) {
     console.log(`📊 Processed ${Math.min(i + batchSize, allFiles.length)}/${allFiles.length} files...`);

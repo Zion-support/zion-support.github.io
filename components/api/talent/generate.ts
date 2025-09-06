@@ -1,7 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
-
+  }
+  const { name, title, bio, experience, skills } = req.body as {
+  const { name, title, bio, experience, skills } = req && req.body as {
     name: string;
     title?: string;
     bio?: string;
@@ -9,37 +11,20 @@ import OpenAI from 'openai';
 
 
   };
-
   if (!name) return res && res.status(400).json({ error: 'Name is required' });
-
   try {
     const prompt = `You are assisting with creating a professional marketplace talent profile. Return strict JSON with fields: summary (100-150 words), skills (array of standardized skill tags), title (optimized), category (one of: AI/ML, Engineering, DevOps/Cloud, Security, Data, Product). Use concise, compelling language.
-
 INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperience: ${experience || ''}\nSkills: ${skills || ''}`;
 
     const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
-
-
-        {
-          role: 'system',
-          content: 'You produce only valid JSON. No commentary.',
-        },
-        { role: 'user', content: prompt },
-      ],
-      response_format: { type: 'json_object' },
-
-=======
-        { role: 'system', content: 'You produce only valid JSON. No commentary.' };
-        { role: 'user', content: prompt }];
-      response_format: {
-       type: 'json_object' 
-    },
-    temperature: 0.6
-      });
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    skills?: string;  }    skills?: string;
+  }
+;
+  if (return res.status (400).json ({ error: 'Name is required' })) {
+  $2
+}
 
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
@@ -59,20 +44,12 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
       summary: parsed.summary || '',
 
   } catch (e: any) {
-    return res && res.status(500).json({ error: e && e.message || 'OpenAI error' })
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return res.status(500).json({ error: e.message |'OpenAI error' })
 }
+  }
 
-
-=======
-      skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
-  } catch (e: any) {
-    return res.status (500).json ({ error: e.message || 'OpenAI error' });
-}
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

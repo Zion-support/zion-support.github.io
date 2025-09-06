@@ -1,18 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-  try {
-
-    const top = agendaItems && agendaItems.slice(0, 3);
-    const baseSummary = `Highlights:\n- ${top && top.map(i => `${i && i.title} (${i && i.track})`).join('\n- ')}`;
-=======
-    if (!apiKey) {
-      return res.status(200).json({ summary: baseSummary, provider: 'local' })
-    }
-
-
-    const apiKey = process && process.env.OPENAI_API_KEY;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (!apiKey) {
       return res && res.status(200).json({ summary: baseSummary, provider: 'local' });    }      return res && res.status(200).json({ summary: baseSummary, provider: 'local' })
     }
@@ -37,53 +25,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message || 'Failed to generate highlights' })
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-
-
-=======
-import { agenda_items } from '../../../../data / expo / agenda';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {  try {export default async /**
- * handler - Function description
- */
-function handler() {
-  try {
-    const top = agenda_items.slice (0, 3);
-    const base_summary = `Highlights:\n- ${top.map (index => `${i.title} (${i.track})`).join ('\n- ')}`;
-;
-    const api_key = process.env.OPENAI_API_KEY;
-    // Check condition
-if ( {) {
-  $2
-}
-      return res.status (200).json ({ summary: base_summary, provider: 'local' });    }      return res.status (200).json ({ summary: base_summary, provider: 'local' });
-    }
-    const { OpenAI } = await import ('openai');
-    const client = new OpenAI ({ api_key });
-    const prompt = `Summarize today’s top 3 Zion Expo highlights, including multiverse launches, DAO decisions, and global talent trends. Context: ${JSON.stringify (top)}`;
-    const chat = await client.chat.completions.create ({
-      model: 'gpt - 4o - mini',
-      messages: [{ role: 'user', content: prompt }],
-      temperature: 0.3,
-    });
-    const content = chat.choices?.[0]?.message?.content || base_summary;
-    return res.status (200).json ({ summary: content, provider: 'openai' });
-  } catch (e: any) {
-    return res;
-      .status (500);
-      .json ({ error: e.message || 'Failed to generate highlights' });
-  }    const content = chat.choices?.[0]?.message?.content || base_summary;
-    return res.status (200).json ({ summary: content, provider: 'openai' });
-  } catch (e: any) {
-    return res.status (500).json ({ error: e.message || 'Failed to generate highlights' });
-}
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,51 +1,16 @@
 
-import crypto from 'crypto';
-
-
 }
-=======
-export function getSyncSecret(): string | null {
-  const raw = process.env.ZION_SYNC_SECRET || '';
-  return raw.length > 0 ? raw : null;
-}
-
-export function signPayload(payload: unknown): string | null {
-  const secret = getSyncSecret();
-  if (!secret) return null;
-  const body = typeof payload === 'string' ? payload : JSON.stringify(payload);
-  return crypto.createHmac('sha256', secret).update(body).digest('hex');
-}
-
-export function verifySignature(
-  payload: unknown,
-  signature?: string | null
-): boolean {
-  const secret = getSyncSecret();
-  if (!secret) return true;
-  if (!signature) return false;
-  const body = typeof payload === 'string' ? payload : JSON.stringify(payload);
-  const expected = crypto
-    .createHmac('sha256', secret)
-    .update(body)
-    .digest('hex');
-  try {
-    // Constant-time comparison
-    return crypto.timingSafeEqual(
-      Buffer.from(signature),
-      Buffer.from(expected)
-    );
-  } catch {
-    return false;
-  }
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 // Signature utilities;
 export const signature = {
   // Add signature functionality here;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   verify: (signature: string, message: string, address: string) => false,
-  sign: (message: string, private_key: string) => '',
+  sign: (message: string, privateKey: string) => '',
   recover: (signature: string, message: string) => '';
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+};
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

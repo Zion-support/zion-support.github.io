@@ -1,27 +1,24 @@
 
-
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-
-=======
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
-
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,;
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { IntegrationCards } from "./IntegrationCards";
@@ -31,23 +28,18 @@ import { Badge } from "@/components/ui/badge";
 import { WebhookManager } from "./WebhookManager";
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
 
-
-export function IntegrationsHub() {
-  const [activeTab, setActiveTab] = useState("marketplace");
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <div className="flex gap-2">
           <Button variant="outline">View Documentation</Button>
           <Button>Connect New Integration</Button>
         </div>
       </div>
 
-
-      
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="pb-2">
@@ -78,11 +70,9 @@ export function IntegrationsHub() {
           </CardContent>
         </Card>
 
-
-        
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <Card className="md:col-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg">Recent Activity</CardTitle>
@@ -122,11 +112,9 @@ export function IntegrationsHub() {
         </Card>
       </div>
 
-
-      
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid grid-cols-3 md: w-[400px]">
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
@@ -134,25 +122,17 @@ export function IntegrationsHub() {
           <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
         </TabsList>
 
-
-        
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <div className="mt-6">
           <TabsContent value="marketplace" className="m-0">
             <IntegrationCards />
           </TabsContent>
 
-
-          
-          <TabsContent value="zapier" className="m-0">
-            <ZapierIntegration />
-          </TabsContent>
-          
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <TabsContent value="webhooks" className="m-0">
             <Card>
               <CardHeader>
@@ -167,11 +147,9 @@ export function IntegrationsHub() {
               </CardContent>
             </Card>
 
-
-            
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <Card className="mt-6">
               <CardHeader>
                 <CardTitle>Synchronization Log</CardTitle>
@@ -188,11 +166,8 @@ export function IntegrationsHub() {
         </div>
       </Tabs>
     </div>
-
-=======
-
-
-=======
+  );
+}
   )
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -228,50 +203,7 @@ export function IntegrationsHub() {;
             <div className="flex justify-between items-center">;
               <CardTitle className="text-lg">Status</CardTitle>;
               <Badge variant="outline" className="bg-green-100 text-green-800">;
-=======
-import React, { useState } from './react';
-import { Button  } from '@/components / ui / button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
-import { IntegrationCards  } from './IntegrationCards';
-import { ZapierIntegration  } from './ZapierIntegration';
-import { Badge  } from '@/components / ui / badge';
-import { WebhookManager  } from './WebhookManager';
-import { IntegrationsSyncLog  } from './IntegrationsSyncLog';
-export /**
- * IntegrationsHub - Function description
- */
-function IntegrationsHub() {
-  const [active_tab, setActiveTab] = useState ("marketplace");
 ;
-  return (
-    <div className="space - y-6">;
-      <div className="flex justify - between items - center">;
-        <div>;
-          <h1 className="text - 3xl font - bold">Integrations Hub</h1>;
-          <p className="text - muted - foreground mt - 1">;
-            Connect your platform with the tools and services you use every day;
-          </p>;
-        </div>;
-        <div className="flex gap - 2">;
-          <Button variant="outline">View Documentation</Button>;
-          <Button > Connect New Integration</Button>;
-        </div>;
-      </div>;
-      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;
-        <Card>;
-          <CardHeader className="pb - 2">;
-            <div className="flex justify - between items - center">;
-              <CardTitle className="text - lg">Status</CardTitle>;
-              <Badge variant="outline" className="bg - green - 100 text - green - 800">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Healthy;
               </Badge>;
             </div>;
@@ -390,12 +322,13 @@ function IntegrationsHub() {
       </Tabs>;
 
     </div>;
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
-=======
-    </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,9 +1,14 @@
+=======
 BarChart3,;
   Smartphone,;
 } from 'lucide-react';
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export default function LandingPage() {
   const { t } = useTranslation();
@@ -32,14 +37,26 @@ export default function LandingPage() {
   const { t } = useTranslation(),
   const { isRTL } = useLanguage(),
   
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Tools and features showcase
 
   const toolsFeatures = [
     {
 
+    <div className="min-h-screen bg-zion-blue text-white">
+      <SEO
+        title={t("home.seo_title")}
+        description={t("home.seo_description")}
+        keywords={t("home.seo_keywords")}
+        canonical="https://app.ziontechgroup.com/"
+      />
+      <Header />
+      <HeroSection />
+=======
 
   // Tools and features showcase;
   const toolsFeatures = [;
@@ -91,29 +108,29 @@ function LandingPage() {
   // Tools and features showcase;
   const tools_features = [;
     {
-      title: t ('home.tool_ai_matcher'),
-      description: t ('home.tool_ai_matcher_desc'),
-      icon: <Sparkles className='h - 6 w - 6 text - zion - cyan' />,
-      link: '/match',
-    },
+      title: t('home.tool_talent')
+      description: t('home.tool_talent_desc')
+      icon: <Users className='h-6 w-6 text-zion-purple' />
+      link: '/talent'
+    }
     {
-      title: t ('home.tool_talent'),
-      description: t ('home.tool_talent_desc'),
-      icon: <Users className='h - 6 w - 6 text - zion - purple' />,
-      link: '/talent',
-    },
+      title: t('home.tool_services')
+      description: t('home.tool_services_desc')
+      icon: <Zap className='h-6 w-6 text-zion-cyan' />
+      link: '/services'
+    }
     {
-      title: t ('home.tool_services'),
-      description: t ('home.tool_services_desc'),
-      icon: <Zap className='h - 6 w - 6 text - zion - cyan' />,
-      link: '/services',
-    },
+      title: t('home.tool_equipment')
+      description: t('home.tool_equipment_desc')
+      icon: <Settings className='h-6 w-6 text-zion-purple' />
+      link: '/equipment'
+    }
     {
-      title: t ('home.tool_equipment'),
-      description: t ('home.tool_equipment_desc'),
-      icon: <Settings className='h - 6 w - 6 text - zion - purple' />,
-      link: '/equipment',
-    },
+      title: t('home.tool_analytics')
+      description: t('home.tool_analytics_desc')
+      icon: <BarChart3 className='h-6 w-6 text-zion-cyan' />
+      link: '/analytics'
+    }
     {
       title: t ('home.tool_analytics'),
       description: t ('home.tool_analytics_desc'),
@@ -128,7 +145,7 @@ function LandingPage() {
       link: '/mobile - launch',
     },
   ];
-;
+
   return (
 
         title={t('home && home.seo_title')}
@@ -247,9 +264,7 @@ export default function LandingPage() { const { t  } = useTranslation(),
 
 
   return (
-
-
-
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -261,9 +276,16 @@ export default function LandingPage() { const { t  } = useTranslation(),
               {t("home.tools_description")}
             </p>
           </div>
-
-
-
+=======
+          <div
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}
+          >
+            {toolsFeatures.map((feature, index) => (
+              <Link
+                key={index}
+                href={feature.link}
+                className='bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300'              >
+                <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4'>
           
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {toolsFeatures.map((feature, index) => (
@@ -273,8 +295,8 @@ export default function LandingPage() { const { t  } = useTranslation(),
                 className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
               >
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 
                   {feature.icon}
                 </div>
@@ -283,39 +305,58 @@ export default function LandingPage() { const { t  } = useTranslation(),
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <span>{t("general.explore")}</span>
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
-
-      
-
-      <CategoriesSection />
-      <BenefitsSection />
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
-
-      
-
-      <HowItWorksSection />
-      <FeaturedListingsSection />
-      <TestimonialCarousel />
-      <TrustedBySection />
-      <BlogSection />
+<<<<<<< HEAD
 
 
           </div>;
         </div>;
       </section>;
 
-      <CategoriesSection />;
-      <BenefitsSection />;
-      <CategoriesSection />;
-      <BenefitsSection />;
+      {/* Features Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+            Our Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>
+              <p className="text-gray-600">
+                Machine learning, natural language processing, and computer vision solutions.
+              </p>
+            </div>
 
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />;
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-4">Cybersecurity</h3>
+              <p className="text-gray-600">
+                Advanced security solutions and compliance to protect your digital assets.
+              </p>
+            </div>
 
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />;
-      <CategoriesSection />;
-      <BenefitsSection />;
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-4">Cloud Infrastructure</h3>
+              <p className="text-gray-600">
+                Scalable cloud solutions and infrastructure management services.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />;
@@ -323,6 +364,8 @@ export default function LandingPage() { const { t  } = useTranslation(),
 
 
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
     <div className='min - h-screen bg - zion - blue text - white'>;
@@ -403,3 +446,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
     </div>);
 }
 ;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

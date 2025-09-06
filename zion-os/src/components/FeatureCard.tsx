@@ -38,22 +38,9 @@ export function FeatureCard({;
       onClick={onClick}
       onKeyDown={(e) => {;
         if (e.key === 'Enter' || e.key === ' ') {;
-
           e.preventDefault();
           onClick();
-=======
-"use client",
-import Link from './next / link';,
-import { ReactNode  } from './react';,
-interface FeatureCardProps {
-  id: number,
-  title: string,
-  description: string,
-  icon: ReactNode,
-  color: string,
-  href: string,
-  is_active: boolean,
-  on_click: () => void;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 export /**
  * FeatureCard - Function description
@@ -69,18 +56,10 @@ function FeatureCard() {
   }
   return (
     <div;
-      className={`card group cursor - pointer transition - all duration - 300 ${
-        is_active ? 'scale - 105 shadow - 2xl' : 'hover:scale - 105';
-      } ${color_classes[color as keyof typeof color_classes]}`}
-      on_click={on_click}
-      onKeyDown={(e) => {
-        // Check condition
-if ( {) {
-  $2
-}
-          e.prevent_default ();
-          on_click ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+          e.preventDefault();
+          onClick();
+
         }
       }}
       tab_index={0}

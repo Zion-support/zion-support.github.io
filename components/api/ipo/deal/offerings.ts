@@ -1,11 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+=======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req && req.method === 'GET') {
     const offerings = readJsonFile('deal/offerings && offerings.json', {
-=======
 import { readJsonFile, writeJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -25,6 +25,7 @@ if ( {) {
       equity: true,
       token: false,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     });
 
   if (req && req.method === 'POST') {
@@ -38,11 +39,8 @@ if ( {) {
     return res && res.status(200).json(offerings);
 
   }
-  return res && res.status(405).json({ error: 'Method not allowed' });export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (!requireSuperadminApi(req, res)) return;
   if (req && req.method === 'GET') {
     const offerings = readJsonFile('deal/offerings && offerings.json', { safe: true, equity: true, token: false });
@@ -58,8 +56,8 @@ if ( {) {
   return res && res.status(405).json({ error: 'Method not allowed' });
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
     return res.status (200).json (offerings);
   }
@@ -100,15 +98,9 @@ if ( {) {
     return res.status (200).json (offerings);
   }
 return res.status (405).json ({ error: 'Method not allowed' });
+
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  return res.status(405).json({ error: 'Method not allowed' });
-}
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

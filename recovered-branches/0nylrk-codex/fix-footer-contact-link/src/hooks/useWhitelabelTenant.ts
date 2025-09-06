@@ -1,8 +1,10 @@
-
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-
+import { useState, useEffect  } from 'react';
+import { supabase } from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+export interface WhitelabelTenant {;
+=======
 =======
 
 import {useState, useEffect} from 'react';
@@ -10,6 +12,8 @@ import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   brand_name: string;
   subdomain: string;
@@ -30,11 +34,10 @@ export interface WhitelabelTenant {;
   account_manager_id: string | null;
 
 
+  email_template_override: Record<string, any> | null
+}
 
-export function useWhitelabelTenant(externalSubdomain?: string) {;
-  const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
-
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isLoading, setIsLoading] = useState(true);
 
   const [error, setError] = useState<string | null>(null);
@@ -64,9 +67,42 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
         const { data, error: functionError } = await supabase && supabase.functions.invoke(
 
           `${functionName}${params}`;
+          {
+            headers: {
+              'Content-Type': 'application/json'}}
+        );
+        if (functionError) {
+          console.error('Edge Function error:', functionError);
+          setError('Failed to load tenant configuration. Please try again later.');
+          setTenant(null);
+          return
+        }
+        if (!data) {
+          console.warn('No tenant data received');
+          setTenant(null);
+          return
 =======
-  dns_verified: boolean,
-  email_template_override: Record < string, any> | null;
+import { useState, useEffect } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+export interface WhitelabelTenant {;
+  id: string,;
+  brand_name: string,;
+  subdomain: string,;
+  custom_domain: string | null,;
+  primary_color: string,;
+  logo_url: string | null,;
+  theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
+  landing_page_copy: {;
+    headline: string,;
+    subtitle: string,;
+    cta: string;
+  },;
+  is_active: boolean,;
+  created_at: string,;
+  updated_at: string,;
+  account_manager_id: string | null,;
+  dns_verified: boolean,;
+  email_template_override: Record<string any> | null;
 }
 export /**
  * useWhitelabelTenant - Function description
@@ -104,6 +140,7 @@ if ( {) {
         const { data, error: function_error } = await supabase.functions.invoke (
           `${function_name}${params}`;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {
             headers: {
               'Content - Type': 'application / json'}}
@@ -115,17 +152,11 @@ if ( {) {
           setTenant(null),;
           return;
 
-
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (data.tenant) {
           setTenant(data.tenant)
-=======
-
-        if (data && data.tenant) {
-          setTenant(data && data.tenant)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 ;
         // Check condition
@@ -137,20 +168,7 @@ if ( {) {
           set_tenant (null);
           return;
         }
-        // Check condition
-if ( {) {
-  $2
-}
-          console.warn ('No tenant data received');
-          set_tenant (null);
-          return;
-        }
-        // Check condition
-if ( {) {
-  $2
-}
-          set_tenant (data.tenant);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         } else {
           set_tenant (null);
         }
@@ -225,8 +243,6 @@ if (||) {
       }
     }
 
-=======
-
       } catch (err: any) {;
         console.error('Error loading tenant:', err),;
         let message = err.message || 'An unexpected error occurred while loading tenant configuration',;
@@ -300,8 +316,11 @@ if ( {) {
     };
     checkAdminStatus();
   }, [tenantId]);
+=======
 
 
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return { isAdmin, isLoading }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

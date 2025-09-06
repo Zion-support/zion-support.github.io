@@ -1,36 +1,28 @@
 
-const securityEnhancements = { addCSP: () => { const meta = document && document.createElement("meta"); meta && meta.httpEquiv = "Content-Security-Policy"; meta && meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document && document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document && document.createElement("div"); div && div.textContent = input; return div && div.innerHTML,},addSecurityHeaders: () => { },init: () => { this && this.addCSP(); } }; ; if (document && document.readyState === "loading") { document && document.addEventListener("DOMContentLoaded",securityEnhancements && securityEnhancements.init)} else { securityEnhancements && securityEnhancements.init()}
-
+=======
+:public/security.js
+const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { },init: () => { this.addCSP(); } }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Security enhancements for Zion Tech Group;
 const securityEnhancements = {
   // Content Security Policy;
   "addCSP": () => {
-
-
-// Security utility
-export const Security = () => {
-  // Implementation here
-  return null;
-};
-
 
 // Auto-initialize when DOM is ready;
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", securityEnhancements.init)} else {
   securityEnhancements.init()}
 
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-=======
-
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "selfunsafe-inline"; style-src "selfunsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},; sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML;,},; addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},; init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
 const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
 const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
@@ -42,6 +34,29 @@ const securityEnhancements = { addCSP: () => { const meta = document.createEleme
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
+const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
+ursor/integrate-build-improve-and-re-verify-8f7d
+const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
+origin/automation-improvements-final
+const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
+const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
+const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
+const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
+ursor/fix-lint-push-and-merge-to-main-ae4e
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
+const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
+const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
+const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "selfunsafe-inline"; style-src "selfunsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)}; sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML;,}; addSecurityHeaders: () => { console.log("Security headers should be configured on the server")}; init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
 const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
 const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
@@ -49,6 +64,7 @@ const securityEnhancements = { addCSP: () => { const meta = document.createEleme
 const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
 const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
 const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
+=======
 
   const meta = document && document.createElement("meta");
     meta && meta.httpEquiv = "Content-Security-Policy";
@@ -80,64 +96,8 @@ const securityEnhancements = { addCSP: () => { const meta = document && document
 const securityEnhancements = { addCSP: () => { const meta = document && document.createElement("meta"); meta && meta.httpEquiv = "Content-Security-Policy"; meta && meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document && document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document && document.createElement("div"); div && div.textContent = input; return div && div.innerHTML,},addSecurityHeaders: () => { console && console.log("Security headers should be configured on the server")},init: () => { this && this.addCSP(); console && console.log("Security enhancements initialized")} }; ; if (document && document.readyState === "loading") { document && document.addEventListener("DOMContentLoaded",securityEnhancements && securityEnhancements.init)} else { securityEnhancements && securityEnhancements.init()}
 const securityEnhancements = { addCSP: () => { const meta = document && document.createElement("meta"); meta && meta.httpEquiv = "Content-Security-Policy"; meta && meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document && document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document && document.createElement("div"); div && div.textContent = input; return div && div.innerHTML,},addSecurityHeaders: () => { console && console.log("Security headers should be configured on the server")},init: () => { this && this.addCSP(); console && console.log("Security enhancements initialized")} }; ; if (document && document.readyState === "loading") { document && document.addEventListener("DOMContentLoaded",securityEnhancements && securityEnhancements.init)} else { securityEnhancements && securityEnhancements.init()}
 
-=======
-const security_enhancements = { addCSP: () => { const meta = document.create_element ("meta"); meta.http_equiv = "Content - Security - Policy"; meta.content = "default - src "self"; script - src "self" "unsafe - inline"; style - src "self" "unsafe - inline"; img - src "self" data: https:;"; document.head.append_child (meta)}, sanitize_input: (input) => { const div = document.create_element ("div"); div.text_content = input; return div.innerHTML, }, addSecurityHeaders: () => { }, init: () => { this.addCSP (); } } ; if ( { document.addEventListener ("DOMContentLoaded", security_enhancements.init)} else { security_enhancements.init ()}
-// Security enhancements for Zion Tech Group) {
-  $2
-}
-const security_enhancements = {
-  // Content Security Policy;
-  "addCSP": () => {
-  const meta = document.create_element ("meta");
-    meta.http_equiv = "Content - Security - Policy";
-    meta.content = "default - src "self"; script - src "self" "unsafe - inline"; style - src "self" "unsafe - inline"; img - src "self" data: https:;";
-    document.head.append_child (meta)},
-  // XSS Protection;
-  "sanitize_input": (input) => {
-  const div = document.create_element ("div");
-    div.text_content = input;
-    return div.innerHTML},
-  // Add security headers;
-  "addSecurityHeaders": () => {
-  // This would typically be handled by the server;
-    console.log ("Security headers should be configured on the server")},
-  // Initialize security enhancements;
-  "init": () => {
-  this.addCSP ();
-    console.log ("Security enhancements initialized")}
-}
-// Auto - initialize when DOM is ready;
-// Check condition
-if ( {) {
-  $2
-}
-  document.addEventListener ("DOMContentLoaded", security_enhancements.init)} else {
-  security_enhancements.init ()}
-const security_enhancements = { addCSP: () => { const meta = document.create_element ("meta"); meta.http_equiv = "Content - Security - Policy"; meta.content = "default - src "self"; script - src "selfunsafe - inline"; style - src "selfunsafe - inline"; img - src "self" data: https:;"; document.head.append_child (meta)}, sanitize_input: (input) => { const div = document.create_element ("div"); div.text_content = input; return div.innerHTML;, }, addSecurityHeaders: () => { console.log ("Security headers should be configured on the server")}, init: () => { this.addCSP (); console.log ("Security enhancements initialized")} } ; if ( { document.addEventListener ("DOMContentLoaded", security_enhancements.init)} else { security_enhancements.init ()}
-const security_enhancements = { addCSP: () => { const meta = document.create_element ("meta")) {
-  $2
-} meta.http_equiv = "Content - Security - Policy"; meta.content = "default - src "self"; script - src "self" "unsafe - inline"; style - src "self" "unsafe - inline"; img - src "self" data: https:;"; document.head.append_child (meta)}, sanitize_input: (input) => { const div = document.create_element ("div"); div.text_content = input; return div.innerHTML, }, addSecurityHeaders: () => { console.log ("Security headers should be configured on the server")}, init: () => { this.addCSP (); console.log ("Security enhancements initialized")} } ; if ( { document.addEventListener ("DOMContentLoaded", security_enhancements.init)} else { security_enhancements.init ()}
-const security_enhancements = { addCSP: () => { const meta = document.create_element ("meta")) {
-  $2
-} meta.http_equiv = "Content - Security - Policy"; meta.content = "default - src "self"; script - src "self" "unsafe - inline"; style - src "self" "unsafe - inline"; img - src "self" data: https:;"; document.head.append_child (meta)}, sanitize_input: (input) => { const div = document.create_element ("div"); div.text_content = input; return div.innerHTML, }, addSecurityHeaders: () => { console.log ("Security headers should be configured on the server")}, init: () => { this.addCSP (); console.log ("Security enhancements initialized")} } ; if ( { document.addEventListener ("DOMContentLoaded", security_enhancements.init)} else { security_enhancements.init ()}
-const security_enhancements = { addCSP: () => { const meta = document.create_element ("meta")) {
-  $2
-} meta.http_equiv = "Content - Security - Policy"; meta.content = "default - src "self"; script - src "self" "unsafe - inline"; style - src "self" "unsafe - inline"; img - src "self" data: https:;"; document.head.append_child (meta)}, sanitize_input: (input) => { const div = document.create_element ("div"); div.text_content = input; return div.innerHTML, }, addSecurityHeaders: () => { console.log ("Security headers should be configured on the server")}, init: () => { this.addCSP (); console.log ("Security enhancements initialized")} } ; if ( { document.addEventListener ("DOMContentLoaded", security_enhancements.init)} else { security_enhancements.init ()}
-const security_enhancements = { addCSP: () => { const meta = document.create_element ("meta")) {
-  $2
-} meta.http_equiv = "Content - Security - Policy"; meta.content = "default - src "self"; script - src "self" "unsafe - inline"; style - src "self" "unsafe - inline"; img - src "self" data: https:;"; document.head.append_child (meta)}, sanitize_input: (input) => { const div = document.create_element ("div"); div.text_content = input; return div.innerHTML, }, addSecurityHeaders: () => { console.log ("Security headers should be configured on the server")}, init: () => { this.addCSP (); console.log ("Security enhancements initialized")} } ; if ( { document.addEventListener ("DOMContentLoaded", security_enhancements.init)} else { security_enhancements.init ()}
-const security_enhancements = { addCSP: () => { const meta = document.create_element ("meta")) {
-  $2
-} meta.http_equiv = "Content - Security - Policy"; meta.content = "default - src "self"; script - src "self" "unsafe - inline"; style - src "self" "unsafe - inline"; img - src "self" data: https:;"; document.head.append_child (meta)}, sanitize_input: (input) => { const div = document.create_element ("div"); div.text_content = input; return div.innerHTML, }, addSecurityHeaders: () => { console.log ("Security headers should be configured on the server")}, init: () => { this.addCSP (); console.log ("Security enhancements initialized")} } ; if ( { document.addEventListener ("DOMContentLoaded", security_enhancements.init)} else { security_enhancements.init ()}
-const security_enhancements = { addCSP: () => { const meta = document.create_element ("meta")) {
-  $2
-} meta.http_equiv = "Content - Security - Policy"; meta.content = "default - src "self"; script - src "self" "unsafe - inline"; style - src "self" "unsafe - inline"; img - src "self" data: https:;"; document.head.append_child (meta)}, sanitize_input: (input) => { const div = document.create_element ("div"); div.text_content = input; return div.innerHTML, }, addSecurityHeaders: () => { console.log ("Security headers should be configured on the server")}, init: () => { this.addCSP (); console.log ("Security enhancements initialized")} } ; if ( { document.addEventListener ("DOMContentLoaded", security_enhancements.init)} else { security_enhancements.init ()}
-) {
-  $2
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+origin/main
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

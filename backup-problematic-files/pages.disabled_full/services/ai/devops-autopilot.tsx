@@ -2,6 +2,8 @@ export default function DevOpsAutopilot() {}; return null} } ; function Article(
 module.exports = default function DevOpsAutopilot() { return; }; return null} } ; function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) {}; return null} <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Engagement: </strong> {price}></div> <ul> {}; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() { return; }; return null} } ;'"'"
 import React from 'react';
 
+<<<<<<< HEAD
+=======
 interface Devops-autopilotProps {
   className?: string;
 }
@@ -14,3 +16,5 @@ const Devops-autopilot: React.FC<Devops-autopilotProps> = ({ className }) => {
     </div>
   );
 }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -1,8 +1,7 @@
 
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState} from 'react';
 import {useLoadMilestones} from './useLoadMilestones';
 import {useCreateMilestone} from './useCreateMilestone';
@@ -39,15 +38,21 @@ if (return null, ) {
     is_submitting;
     create_milestone;
     updateMilestoneStatus;
-
-    update_milestone;
-    delete_milestone;
-    upload_deliverable: handleUploadDeliverable,
-    refetch;
 =======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+    updateMilestone;
+    deleteMilestone;
+    uploadDeliverable: handleUploadDeliverable
+    refetch
+<<<<<<< HEAD
 
-
-=======
+  }
+};
+  }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { useState } from 'react',;
 import { useLoadMilestones } from './useLoadMilestones',;
 import { useCreateMilestone } from './useCreateMilestone',;
@@ -80,11 +85,8 @@ export const useMilestones = (projectId?: string) => {;
     deleteMilestone,;
     uploadDeliverable: handleUploadDeliverable;
     refetch;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+};
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

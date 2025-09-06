@@ -33,6 +33,7 @@ export default function BookBuilder() {
   const [busy, setBusy] = useState<boolean>(false),
   const coverPreview = useMemo_(() => {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     return (
       <div className="w-full max-w-2xl border rounded-lg overflow-hidden shadow bg-white text-gray-900">
         <div className="p-8 space-y-2">
@@ -42,11 +43,7 @@ export default function BookBuilder() {
           <div className="pt-6 text-sm opacity-70">By {project.meta.author}</div>
           {project.meta.isbn ? (
 
-            <div className=&quot;pt-4&quot;>              <img,
-alt=&quot;ISBN barcode&quot;
-                className=&quot;h-16&quot;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 src={`/api/barcode/isbn?code=${encodeURIComponent(project.meta.isbn)}`}
               />
             </div>
@@ -125,23 +122,13 @@ alt=&quot;ISBN barcode&quot;
             <Wand2 className="w-4 h-4 mr-1" /> AI Assist
           </button>
 
-          <select,
-className=&quot;border rounded px-2 py-1 text-sm&quot;
-            value={pageSize}
-            onChange={(e) => setPageSize(e.target.value as any)}          >
-            <option value=&quot;LETTER&quot;>8.5x11 Letter</option>
-            <option value=&quot;A4&quot;>A4</option>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </select>
           <button className="btn btn-sm btn-primary" onClick={handleExportPdf} disabled={busy}>
             <Download className="w-4 h-4 mr-1" /> PDF
           </button>
 
-          <button className=&quot;btn btn-sm btn-secondary&quot; onClick={handleExportEpub} disabled={busy}>
-            <FileType className=&quot;w-4 h-4 mr-1&quot; /> EPUB          </button>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         </div>
       </div>
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -150,57 +137,29 @@ className=&quot;border rounded px-2 py-1 text-sm&quot;
             <BookOpen className="w-4 h-4" /> Cover & Branding
           </h2>
 
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3&quot;>
-            <label className=&quot;space-y-1&quot;>
-              <div className=&quot;text-xs uppercase opacity-60&quot;>Title</div>
-              <input,
-className=&quot;w-full border rounded px-3 py-2&quot;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 value={project.meta.title}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, title: e.target.value } })}              />
             </label>
 
-            <label className=&quot;space-y-1&quot;>
-              <div className=&quot;text-xs uppercase opacity-60&quot;>Subtitle</div>
-              <input,
-className=&quot;w-full border rounded px-3 py-2&quot;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 value={project.meta.subtitle}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}              />
             </label>
 
-            <label className=&quot;space-y-1&quot;>
-              <div className=&quot;text-xs uppercase opacity-60&quot;>Author</div>
-              <input,
-className=&quot;w-full border rounded px-3 py-2&quot;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 value={project.meta.author}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}              />
             </label>
 
-            <label className=&quot;space-y-1&quot;>
-              <div className=&quot;text-xs uppercase opacity-60&quot;>ISBN (optional)</div>
-              <input,
-className=&quot;w-full border rounded px-3 py-2&quot;
-                placeholder=&quot;9781234567897&quot;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 value={project.meta.isbn}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, isbn: e.target.value } })}
               />
             </label>
           </div>
 
-          <div className=&quot;pt-2&quot;>{coverPreview}</div>        </div>
-
-        <div className=&quot;space-y-4&quot;>
-          <h2 className=&quot;font-semibold flex items-center gap-2&quot;>
-            <Settings className=&quot;w-4 h-4&quot; /> Visual Elements
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </h2>
           <div className="space-y-3">
             <label className="block">
@@ -218,10 +177,7 @@ className=&quot;w-full border rounded px-3 py-2&quot;
             <div className="grid grid-cols-3 gap-2">
               {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(0, 6).map((src, i) => (
 
-                <div key={i} className=&quot;aspect-video bg-gray-100 rounded flex items-center justify-center overflow-hidden&quot;>
-                  <img src={src} alt=&quot;visual&quot; className=&quot;object-cover w-full h-full&quot; />                </div>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               ))}
             </div>
           </div>
@@ -232,21 +188,13 @@ className=&quot;w-full border rounded px-3 py-2&quot;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {project.chapters.map((ch, idx) => (
 
-
-=======
-            <div key={idx} className=&quot;border rounded-lg p-4 space-y-2&quot;>
-              <div className=&quot;font-medium&quot;>{ch.title}</div>
-              <textarea,
-className=&quot;w-full min-h-[160px] border rounded p-2&quot;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 value={ch.content}
                 onChange={(e) => {
                   const chapters: BookChapter[] = [...project.chapters],
                   chapters[idx] = { ...chapters[idx], content: e.target.value },
                   setProject({ ...project, chapters })                }}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+
               />
             </div>
           ))}
@@ -257,11 +205,7 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
         <div className="space-y-2">
           {project.visuals.quoteCallouts.map((q, i) => (
 
-            <div key={i} className=&quot;grid grid-cols-1 md:grid-cols-3 gap-2&quot;>
-              <input,
-className=&quot;border rounded px-2 py-1&quot;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 value={q.text}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts]
@@ -270,19 +214,11 @@ className=&quot;border rounded px-2 py-1&quot;
                 }}
               />
 
-              <input,
-className=&quot;border rounded px-2 py-1&quot;
-=======
-=======
-              <input,
-className=&quot;border rounded px-2 py-1&quot;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 value={q.attribution ?? ''}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts],
                   quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value },
-
 
               />
               <div />
@@ -291,5 +227,4 @@ className=&quot;border rounded px-2 py-1&quot;
         </div>
       </section>
     </div>
-
-
+<<<<<<< HEAD

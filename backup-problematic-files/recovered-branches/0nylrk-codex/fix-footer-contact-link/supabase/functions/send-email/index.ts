@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import { Resend } from "npm:resend@2.0.0",;
 ;
@@ -11,6 +13,7 @@ const resend = new Resend(Deno.env.get("RESEND_API_KEY")),;
 serve(async (req) => {;
   if (req.method === "OPTIONS") {;
     return new Response(null, { headers:corsHeaders }),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 ;
   try {;
@@ -30,19 +33,23 @@ serve(async (req) => {;
       headers:{ ...corsHeaders, "Content-Type":"application/json" },;
       status:500}),;  }
 }),;
- 
+
 }try {
   const {
-  to, subject, html 
+  to, subject, html
 }= await req.json ();
 const emailResponse = await resend.emails.send ({
   from: "Lovable <onboarding@resend.dev>";
 to: [to];
 subject;
-html 
+html
 });
 return new Response (JSON.stringify (emailResponse), {
-  status: 500 
+  status: 500
 });
 }
 });
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,14 +1,11 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const { execSync, spawn } = require('child_process');
 class MasterAutomationOrchestrator {
   constructor() {
@@ -226,18 +223,9 @@ class MasterAutomationOrchestrator {
       this.log(`💥 Fatal error in "orchestrator": ${error.message}`, 'ERROR');
       await this.generateFinalReport();
       process.exit(1);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    }
-  }
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
+
 const { execSync } = require('child_process');
-
 console.log('🚀 Starting Master Automation Orchestrator');
-
 // Run all automation tasks
 async function runAllAutomations() {
   const tasks = [
@@ -277,21 +265,17 @@ async function runAllAutomations() {
       critical: false,
     },
   ];
-
   const results = [];
   let successCount = 0;
   let failureCount = 0;
-
   for (const task of tasks) {
     try {
       console.log(`\n🔧 Running: ${task.name}`);
       const startTime = Date.now();
-
       execSync(task.command, {
         stdio: 'pipe',
         cwd: '/workspace',
       });
-
       const duration = Date.now() - startTime;
       results.push({
         task: task.name,
@@ -312,25 +296,16 @@ async function runAllAutomations() {
       });
       failureCount++;
       console.log(`❌ ${task.name} failed: ${error.message}`);
-
       if (task.critical) {
         console.log(`⚠️ Critical task failed: ${task.name}`);
       }
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
     }
   }
-
   return { results, successCount, failureCount };
->>>>>>> origin/automation-improvements-final
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/main
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 // Generate comprehensive report
 function generateReport(results) {
@@ -353,67 +328,45 @@ function generateReport(results) {
       'Implement security recommendations',
     ],
   };
-
   // Ensure reports directory exists
   const reportsDir = '/workspace/automation/reports';
   if (!fs.existsSync(reportsDir)) {
     fs.mkdirSync(reportsDir, { recursive: true });
   }
-
   fs.writeFileSync(
     '/workspace/automation/reports/master-automation-report.json',
     JSON.stringify(report, null, 2)
   );
-
   return report;
 }
-
 // Main execution
 async function main() {
   try {
     console.log('🎯 Starting comprehensive automation run...\n');
-
     const results = await runAllAutomations();
     const report = generateReport(results);
-
     console.log('\n📊 AUTOMATION SUMMARY');
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.log('====================');
-=======
->>>>>>> origin/main
-=======
-=======
-    console.log('====================');
->>>>>>> origin/automation-improvements-final
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.log(`Total Tasks: ${report.summary.totalTasks}`);
     console.log(`Successful: ${report.summary.successful}`);
     console.log(`Failed: ${report.summary.failed}`);
     console.log(`Success Rate: ${report.summary.successRate}`);
-
     if (results.failureCount > 0) {
       console.log('\n❌ FAILED TASKS: '),
       results.results
         .filter(r => r.status === 'failed')
         .forEach(r => console.log(`  - ${r.task}: ${r.error}`));
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
-
     console.log('\n✅ Master automation orchestration completed');
     console.log(
       '📄 Detailed report saved to: /workspace/automation/reports/master-automation-report.json'
     );
-
     // Return success/failure based on critical tasks
     const criticalFailures = results.results.filter(
       r => r.critical && r.status === 'failed'
@@ -430,16 +383,6 @@ async function main() {
     process.exit(1);
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-main();
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
@@ -463,20 +406,6 @@ const { execSync, spawn } = require('child_process')
     this.log(`Overall "Success"`)
     this.log('\n� Phase "Results")
         this.log(`    "Errors"`)
-<<<<<<< HEAD
       this.log(`� Fatal error in "orchestrator"`)
-=======
-      this.log(`� Fatal error in "orchestrator"`)
-=======
-
-main();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-
-main();
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

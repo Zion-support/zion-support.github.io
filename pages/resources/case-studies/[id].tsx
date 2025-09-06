@@ -1,37 +1,16 @@
+=======
 
 
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { useRouter } from 'next/router',;
-export default function CaseStudyResourcePage() {
-  const router = useRouter(),
-  const { id } = router.query,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-      id: 'ai-automation-manufacturing',
-      title: 'AI-Powered Manufacturing Automation',
-      company: 'Global Manufacturing Corp',
-      industry: 'Manufacturing',
-      results: '40% increase in production efficiency, 60% reduction in downtime',
-    description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
-      fullContent: `
-        <h2>Executive Summary</h2>
-        <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations,
-
-        delivering significant improvements in efficiency, quality, and cost reduction.</p>
-        <h2>Background</h2>
-        <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
-        High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line
-        and preventing them from meeting growing customer demands.</p>
-        <h2>Challenge</h2>
-
+        <h2>Solution</h2>
+        <p>We implemented a comprehensive AI automation system that included:</p>
 
         <ul>
           <li><strong>Predictive Maintenance:</strong> AI algorithms that predict equipment failures before they occur</li>
@@ -39,14 +18,7 @@ import { useRouter } from 'next/router';
           <li><strong>Automated Quality Control:</strong> Computer vision systems for defect detection</li>
           <li><strong>Intelligent Scheduling:</strong> AI-powered production planning and optimization</li>
         </ul>
-        <h2>Implementation</h2>
-        <p>The system was deployed in phases over 6 months:</p>
-        <ul>
-          <li><strong>Phase 1:</strong> Infrastructure setup and data collection</li>
-          <li><strong>Phase 2:</strong> Core AI algorithms deployment</li>
-          <li><strong>Phase 3:</strong> Integration with existing systems</li>
-          <li><strong>Phase 4:</strong> Training and optimization</li>
-        </ul>
+
         <h2>Results</h2>
         <p>The implementation delivered exceptional results:</p>
         <ul>
@@ -55,22 +27,26 @@ import { useRouter } from 'next/router';
           <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
           <li><strong>30% reduction in operational costs</strong> - Optimized resource allocation and reduced waste</li>
         </ul>
-        <h2>Key Learnings</h2>
-        <p>This project revealed several important insights:</p>
-        <ul>
-          <li>AI systems require high-quality data for optimal performance</li>
-          <li>Human oversight remains crucial for complex decision-making</li>
-          <li>Gradual implementation reduces resistance and improves adoption</li>
-          <li>Continuous monitoring and optimization is essential for long-term success</li>
-        </ul>
-        <h2>Conclusion</h2>
+
         <p>The AI automation implementation at Global Manufacturing Corp demonstrates the transformative potential
         of autonomous systems in traditional industries. The results exceeded expectations and positioned the company
         as a leader in smart manufacturing.</p>
       `
-
-
+    };
+import React from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+import { use_router } from 'next / router',
+export default /**
+ * CaseStudyResourcePage - Function description
+ */
+function CaseStudyResourcePage() {
+  const router = use_router (),
+  const { id } = router.query,
+  // Case studies data - this should match the data in resources.tsx;
+  const case_studies = [;
     {
+=======
       id: 'content - generation - scale',
       title: 'Scaling Content Generation 10x',
       company: 'Digital Marketing Agency',
@@ -186,18 +162,13 @@ import { useRouter } from 'next/router';
         optimal performance and cost efficiency.</p>
       `
     }
+  ]
+  const caseStudy = caseStudies.find(study => study.id === id)
 
-
-
-=======
-
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
 export default function CaseStudyResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -379,30 +350,31 @@ export default function CaseStudyResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (!caseStudy) {
     return (
       <>
         <Head>
           <title>Case Study Resource Not Found | Zion Tech Group</title>
         </Head>
-        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <main className="container mx-auto px-6 py-12">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl font-bold mb-6 text-white">Case Study Resource Not Found</h1>
               <p className="text-xl text-white/80 mb-8">
                 The case study resource you're looking for doesn't exist.
               </p>
-
-
-
-
+              <Link
+              <Link 
+              <Link
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -415,15 +387,12 @@ export default function CaseStudyResourcePage(req, res) {
     )
   }
 
-
-}
-
-
   return (
     <>
       <Head>
         <title>{caseStudy.title} | Zion Tech Group - Case Study Resource</title>
-        <meta name="description" content={caseStudy.description} />
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />
         <meta property="og:description" content={caseStudy.description} />
       </Head>
@@ -439,15 +408,9 @@ export default function CaseStudyResourcePage(req, res) {
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
 
-
-                  {caseStudy.industry  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -459,10 +422,25 @@ export default function CaseStudyResourcePage(req, res) {
               <p className="text-green-400 font-semibold text-lg">{caseStudy.results}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
-
-
-
-
+              <div 
+                className="prose prose-invert max-w-none"
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+              />
+            </div>
+            <div className="text-center">
+              <Link 
+              <div
+                className="prose prose-invert max-w-none"
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              />
+            </div>
+            <div className="text-center">
+              <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -473,10 +451,14 @@ export default function CaseStudyResourcePage(req, res) {
         </main>
       </div>
     </>
-
+  );
+};
+  )
+  ];
+  const caseStudy = caseStudies.find(study => study.id === id);
+  if (!caseStudy) {;
+    return (;
 =======
-}
-
 =======
       description: 'Building self - healing, auto - scaling cloud infrastructure.',
       full_content: `;
@@ -536,6 +518,7 @@ if ( {) {
   $2
 }
     return (
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <>;
         <Head>;
           <title > Case Study Resource Not Found | Zion Tech Group</title>;
@@ -545,59 +528,19 @@ if ( {) {
             <div className="max - w-4xl mx - auto text - center">;
               <h1 className="text - 4xl font - bold mb - 6 text - white">Case Study Resource Not Found</h1>;
               <p className="text - xl text - white / 80 mb - 8">;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 The case study resource you're looking for doesn't exist.;
               </p>;
               <Link;
                 href="/resources";
-                className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
+
               >;
                 ← Back to Resources;
               </Link>;
             </div>;
           </main>;
         </div>;
-      </>);
-  }
-  return (
-    <>;
-      <Head>;
-        <title>{case_study.title} | Zion Tech Group - Case Study Resource</title>;
-        <meta name="description" content={case_study.description} />;
-        <meta property="og:title" content={`${case_study.title} | Zion Tech Group`} />;
-        <meta property="og:description" content={case_study.description} />;
-      </Head>;
-      <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;
-        <main className="container mx - auto px - 6 py - 12">;
-          <div className="max - w-4xl mx - auto">;
-            <nav className="mb - 8">;
-              <Link href="/resources" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
-                ← Back to Resources;
-              </Link>;
-            </nav>;
-            <header className="mb - 12">;
-              <div className="mb - 6">;
-                <span className="px - 3 py - 1 bg - cyan - 400 / 20 text - cyan - 400 text - sm rounded - full border border - cyan - 400 / 30">;
-                  {case_study.industry}
-                </span>;
-              </div>;
-              <h1 className="text - 4xl font - bold mb - 4 text - white">{case_study.title}</h1>;
-              <p className="text - xl text - cyan - 400 font - semibold mb - 2">{case_study.company}</p>;
-              <p className="text - white / 80 text - lg">{case_study.description}</p>;
-            </header>;
-            <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 20 mb - 8">;
-              <h2 className="text - 2xl font - bold mb - 4 text - white">Key Results</h2>;
-              <p className="text - green - 400 font - semibold text - lg">{case_study.results}</p>;
-            </div>;
-            <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20 mb - 12">;
-              <div;
-                className="prose prose - invert max - w-none";
-                dangerouslySetInnerHTML={{ __html: case_study.full_content }}
-              />;
-            </div>;
-            <div className="text - center">;
-              <Link;
-                href="/contact";
-                className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
+
               >;
                 Get Started with Your Project;
               </Link>;
@@ -605,11 +548,12 @@ if ( {) {
           </div>;
         </main>;
       </div>;
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

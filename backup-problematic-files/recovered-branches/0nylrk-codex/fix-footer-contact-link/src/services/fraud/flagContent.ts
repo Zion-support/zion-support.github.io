@@ -1,4 +1,5 @@
 
+=======
 // Content flagging functionality;
 import { supabase } from '@/integrations/supabase/client',;
 import { FraudSeverity, FraudFlag } from '@/types/fraud',;
@@ -48,6 +49,7 @@ export const flagContent = async (;
       success:false, ;
       error:error instanceof Error ? error.message :'Unknown error' ;
     },;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 },; //Content flagging functionality /** * Flag content for review */export const flagContent = async (userId: string;
 userEmail: string | undefined;
@@ -60,10 +62,10 @@ ipAddress?: string userId;
 contentType;
 contentId;
 reason;
-severity 
+severity
 });
 const {
-  error 
+  error
 }= await supabase.from ('fraud flags') .insert ({
   user id: userId;
 user email: userEmail;
@@ -73,7 +75,8 @@ content excerpt: contentExcerpt.substring (0, 200), // Limit excerpt length seve
 reason;
 ip address: ipAddress;
 timestamp: new Date () .toISOString ();
-status: 'pending' 
+status: 'pending'
 });
 }
-};
+<<<<<<< HEAD
+

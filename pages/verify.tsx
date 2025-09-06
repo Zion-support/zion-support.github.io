@@ -1,18 +1,4 @@
 
-=======
-
-import React, { useEffect, useMemo, useState } from 'react';
-import Head from 'next/head';
-import { getBadgeLabels } from '../utils/kyc';
-import type { KycProfile, KycRole, KycDocumentMeta } from '../utils/kyc';
-
-import { VerifiedBadge } from '../components/ui/VerifiedBadge';
-
-export default function VerifyPage() {
-  const [userId, setUserId] = useState<string>('demo-user');
-  const [role, setRole] = useState<KycRole>('client');
-  const [profile, setProfile] = useState<KycProfile | null>(null);
-
   const [requiredDocs, setRequiredDocs] = useState<KycDocumentMeta['kind'][]>([]);
   const [optionalDocs, setOptionalDocs] = useState<KycDocumentMeta['kind'][]>([]);
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -21,22 +7,12 @@ export default function VerifyPage() {
   const [businessReg, setBusinessReg] = useState('');
   const [busy, setBusy] = useState(false);
 
-
-    const uploaded = new Set((profile.documents || []).map((d) => d.kind));
-    const required = requiredDocs.length;
-    const have = Array.from(uploaded).filter((k) => requiredDocs.includes(k as any)).length;
-    const base = required > 0 ? Math.round((have / required) * 80) : 0, // up to 80%
-    const submitted = profile.status === 'submitted' ? 90 : 0;
-    const approved = profile.status === 'approved' ? 100 : 0;
-    return Math.max(base, submitted, approved)
-  }, [profile, requiredDocs]);
-
-
   async function start() {
     setBusy(true);
     setMessage('');
     const res = await fetch('/api/kyc/start', {
 
+=======
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, role, fullLegalName, businessName, businessRegistrationNumber: businessReg })}),
@@ -79,7 +55,16 @@ if (return 0) {
     const have = Array.from (uploaded).filter (key =>;
       required_docs.includes (k as any)).length;
     const base = required > 0 ? Math.round ((have / required) * 80) : 0; // up to 80%;
+
+  async function upload(): any (kind: KycDocumentMeta['kind']) {;
+    const filename = prompt(`Enter filename for ${kind}`) || '';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ userId, kind, filename })
+    });
+  const [message, setMessage] = useState<string>('');
   const progress = useMemo(() => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const base = required > 0 ? Math.round((have / required) * 80) : 0, // up to 80%;
@@ -128,14 +113,11 @@ if (return 0) {
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify({ userId, kind, filename })}),;
-
     const data = await res.json();
     if (data.ok) {;
       setProfile(data.profile);
-
-
-    } else {;
-      setMessage(data && data.error || 'Failed to start');
+    } else {
+      setMessage(data.error |'Upload failed');
     }
     setBusy(false);  }
 
@@ -157,158 +139,113 @@ if (return 0) {
     setBusy(true);
 
     const res = await fetch('/api/kyc/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId })}),
-    const data = await res.json();
-    if (data.ok) {
-      setProfile(data.profile);
-      setMessage('Submitted. AML check performed.')
-    } else {
-      setMessage(data.error || 'Submit failed')
-    }
-    setBusy(false)
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ userId })
+    });
+    } else {;
+      setMessage(data.error || 'Upload failed');
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   async function upload(): any (kind: KycDocumentMeta['kind']) {;
     const filename = prompt(`Enter filename for ${kind}`) || '';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     if (!filename) return;
     setBusy(true);
     const res = await fetch('/api/kyc/upload', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({ userId, kind, filename }),;
-    });
-    const data = await res && res.json();
-    if (data && data.ok) {;
-      setProfile(data && data.profile);
-    } else {;
-      setMessage(data && data.error || 'Upload failed');
-    }
-    setBusy(false);  }
-
-
-    } else {;
-      setMessage(data && data.error || 'Submit failed');
-
+      body: JSON.stringify({ userId })}),;
+    const data = await res.json();
+    if (data.ok) {;
+      setProfile(data.profile);
+      setMessage('Submitted. AML check performed.');
+    } else {
+      setMessage(data.error |'Submit failed');
     }
     setBusy(false);  }
   const labels = getBadgeLabels(profile |undefined);
-  return (
-    <>;
-      <Head>;
-        <title>Verify Identity - Zion</title>;
-        <meta
-          name='description'
-          content='Complete KYC/AML verification to secure marketplace trust'
-
-        />;
-        <meta name='viewport' content='width=device-width, initial-scale=1' />;
-      </Head>;
-      <main className='max-w-3xl mx-auto px-4 py-8'>;
-        <h1 className='text-2xl font-bold mb-4'>Identity Verification</h1>;
-        <p className='text-sm text-gray-600 mb-6'>;
-          Guided step-by-step KYC/AML verification with progress tracking.;
-        </p>;
-
-        {labels && labels.length > 0 && (;
-          <div className='mb-4'>            <VerifiedBadge labels={labels} />;
-          </div>;
-        )}
-
-        <div className='mb-6 grid grid-cols-1 md:grid-cols-2 gap-4'>;
-          <div>;
-            <label className='block text-sm font-medium'>User ID</label>;
-
-            <input
-              className='mt-1 w-full border rounded px-3 py-2'
-              value={userId}
-              onChange={e => setUserId(e && e.target.value)}
-            />;
-          </div>;
-          <div>;
-            <label className='block text-sm font-medium'>Role</label>;
-            <select
-              className='mt-1 w-full border rounded px-3 py-2'
-              value={role}
-              onChange={e => setRole(e && e.target.value as KycRole)}
-=======
-      set_message (data.error || 'Upload failed');
+    } else {;
+      setMessage(data.error || 'Submit failed');
+    } else {;
+      setMessage(data.error || 'Submit failed');
     }
-    set_busy (false);  }
-  async /**
- * submit - Function description
- */
-function submit() {
-    set_busy (true);
-    const res = await fetch ('/api / kyc / submit', {
-      method: 'POST',
-      headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify ({ user_id }),
-    });
-    const data = await res.json ();
-    // Check condition
-if ( {) {
-  $2
+    setBusy(false);  }
+
+  const labels = getBadgeLabels(profile || undefined);
+
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-      set_profile (data.profile);
-      set_message ('Submitted. AML check performed.');
-    } else {
-      set_message (data.error || 'Submit failed');
-    }
-    set_busy (false);  }
-  const labels = getBadgeLabels (profile || undefined);
-;
+    setBusy(false);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const labels = getBadgeLabels(profile || undefined),
   return (
-    <>;
-      <Head>;
-        <title > Verify Identity - Zion</title>;
-        <meta;
-          name='description';
-          content='Complete KYC / AML verification to secure marketplace trust';
-        />;
-        <meta name='viewport' content='width = device - width, initial - scale = 1' />;
-      </Head>;
-      <main className='max - w-3xl mx - auto px - 4 py - 8'>;
-        <h1 className='text - 2xl font - bold mb - 4'>Identity Verification</h1>;
-        <p className='text - sm text - gray - 600 mb - 6'>;
-          Guided step - by - step KYC / AML verification with progress tracking.;
-        </p>;
-        {labels.length > 0 && (
-          <div className='mb - 4'>            <VerifiedBadge labels={labels} />;
-          </div>)}
-        <div className='mb - 6 grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-          <div>;
-            <label className='block text - sm font - medium'>User ID</label>;
-            <input;
-              className='mt - 1 w - full border rounded px - 3 py - 2';
-              value={user_id}
-              on_change={e => setUserId (e.target.value)}
-            />;
-          </div>;
-          <div>;
-            <label className='block text - sm font - medium'>Role</label>;
-            <select;
-              className='mt - 1 w - full border rounded px - 3 py - 2';
-              value={role}
-              on_change={e => set_role (e.target.value as KycRole)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    <>
+      <Head>
+        <title>Verify Identity - Zion</title>
+        <meta name="description" content="Complete KYC/AML verification to secure marketplace trust" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <main className='max-w-3xl mx-auto px-4 py-8'>
+        <h1 className='text-2xl font-bold mb-4'>Identity Verification</h1>
+        <p className='text-sm text-gray-600 mb-6'>
+          Guided step-by-step KYC/AML verification with progress tracking.
+        </p>
+      <main className="max-w-3xl mx-auto px-4 py-8">
+        <h1 className="text-2xl font-bold mb-4">Identity Verification</h1>
+        <p className="text-sm text-gray-600 mb-6">Guided step-by-step KYC/AML verification with progress tracking.</p>
+
+    const data = await res.json();
+    if (data.ok) {;
+      setProfile(data.profile);
+
+    const data = await res.json();
+    if (data.ok) {;
+      setProfile(data.profile);
+      setMessage('Submitted. AML check performed.');
+
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    setBusy(false);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const labels = getBadgeLabels(profile || undefined),
             >;
               <option value='client'>Client</option>;
               <option value='talent'>Talent</option>;
               <option value='enterprise'>Enterprise</option>;
             </select>;
           </div>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-          )}
+  return (
+    <>
+      <Head>
+        <title>Verify Identity - Zion</title>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {labels.length > 0 && (
           <div className="mb-4">
             <VerifiedBadge labels={labels} />
           </div>
-
 
         )  } catch (error) {
     console.error("Error:", error);
@@ -318,41 +255,13 @@ if ( {) {
         <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
 
 
-          <div>
-            <label className="block text-sm font-medium">User ID</label>
-            <input className="mt-1 w-full border rounded px-3 py-2" value={userId} onChange={(e) => setUserId(e.target.value)} />
-          </div>
-          <div>
-            <label className="block text-sm font-medium">Role</label>
-            <select className="mt-1 w-full border rounded px-3 py-2" value={role} onChange={(e) => setRole(e.target.value as KycRole)}>
-              <option value="client">Client</option>
-              <option value="talent">Talent</option>
-              <option value="enterprise">Enterprise</option>
-            </select>
-          </div>
-          <div className="md:col-span-2">
-            <label className="block text-sm font-medium">Full legal name</label>
-            <input className="mt-1 w-full border rounded px-3 py-2" value={fullLegalName} onChange={(e) => setFullLegalName(e.target.value)} />
-          </div>
-          {role === 'enterprise' && (
-            <>
-              <div>
-                <label className="block text-sm font-medium">Business name</label>
-                <input className="mt-1 w-full border rounded px-3 py-2" value={businessName} onChange={(e) => setBusinessName(e.target.value)} />
-              </div>
-              <div>
-
-
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <label className="block text-sm font-medium">Registration number</label>
                 <input className="mt-1 w-full border rounded px-3 py-2" value={businessReg} onChange={(e) => setBusinessReg(e.target.value)} />
               </div>
             </>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-          )}
-        </div>
 
-        <div className="mb-6">
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <button disabled={busy} onClick={start} className="rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50">Start/Update</button>
         </div>
 
@@ -365,106 +274,31 @@ if ( {) {
               </div>
               <div className="w-full bg-gray-100 rounded h-3 overflow-hidden">
                 <div className="bg-blue-600 h-3" style={{ width: `${progress}%` }} />
+=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
             <section>
 
-        </div>;
-
-        <div className='mb-6'>;
-          <button
-            disabled={busy}
-            onClick={start}
-            className='rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50'>;
-            Start/Update;
-          </button>;
-        </div>;
-
-        {profile && (;
-          <div className='space-y-6'>;
-            <div>;
-              <div className='flex items-center justify-between mb-2'>;
-                <span className='text-sm text-gray-600'>Progress</span>;
-                <span className='text-sm font-medium'>;
-                  {progress}% {profile && profile.status === 'submitted' && '→ Pending ID'}{' '}
-                  {profile && profile.status === 'approved' && '→ Approved'}
-                </span>;
-              </div>;
-              <div className='w-full bg-gray-100 rounded h-3 overflow-hidden'>;
-                <div
-                  className='bg-blue-600 h-3'
-                  style={{ width: `${progress}%` }}
-                />              </div>;
-            </div>;
-
-            <section>;
-              <h2 className='font-semibold mb-2'>Required documents</h2>;
-              <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>;
-                {requiredDocs && requiredDocs.map(k => {;
-                  const hasIt = (profile && profile.documents || []).some(;
-                    d => d && d.kind === k;
-                  );
-
-                    >;
-                      <div>;
-                        <div className='text-sm font-medium'>{k}</div>;
-                        <div className='text-xs text-gray-500'>;
-
-                          {hasIt ? 'Uploaded' : 'Missing'}
-                        </div>;
-                      </div>;
-                      <button
-                        disabled={busy}
-                        onClick={() => upload(k)}
-                        className='text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50';
-                      >;
-                        {hasIt ? 'Replace' : 'Upload'}
-                      </button>;
-                    </div>;
-                  );                })}
-
-=======
-
-
-              <h2 className="font-semibold mb-2">Required documents</h2>
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
-                {requiredDocs.map((k) => {
-                  const hasIt = (profile.documents || []).some((d) => d.kind === k);
-                  return (
-                    <div key={k} className="flex items-center justify-between border rounded p-3">
-
-
-
                       <div>
                         <div className="text-sm font-medium">{k}</div>
                         <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Missing'}</div>
                       </div>
-                      <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled: opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
-                    </div>
-                  )
-                })}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </div>
             </section>
             {optionalDocs.length > 0 && (
               <section>
-
-
-              </div>;
-            </section>;
-
-            {optionalDocs && optionalDocs.length > 0 && (;
-              <section>;
-                <h2 className='font-semibold mb-2'>Optional documents</h2>;
-                <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>;
-                  {optionalDocs && optionalDocs.map(k => {;
-                    const hasIt = (profile && profile.documents || []).some(;
-                      d => d && d.kind === k;
+                <h2 className='font-semibold mb-2'>Optional documents</h2>
+                <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
+                  {optionalDocs.map(k => {
+                    const hasIt = (profile.documents |[]).some(
+                      d => d.kind === k
                     );
 
                       >;
@@ -489,24 +323,37 @@ if ( {) {
             )}
 
 
-=======
-                <h2 className="font-semibold mb-2">Optional documents</h2>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
-                  {optionalDocs.map((k) => {
-                    const hasIt = (profile.documents || []).some((d) => d.kind === k),
-                    return (
-                      <div key={k} className="flex items-center justify-between border rounded p-3">
-
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         <div>
                           <div className="text-sm font-medium">{k}</div>
                           <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Optional'}</div>
                         </div>
                         <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
+                    );                  })}
+                </div>
+              </section>
+            )}
+            <div>
+              <button
+                disabled={
+                  busy |
+                  profile.status === 'submitted' |
+                  profile.status === 'approved'
+                }
+                onClick={submit}
+                className='rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50'
+              >
+                Submit for review
+              </button>
+            </div>
+            {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>
+        )}
+      </main>
+    </>
+);
 
-
-
-=======
                     )
 ;
   const labels = getBadgeLabels(profile || undefined);
@@ -585,37 +432,6 @@ if ( {) {
 
 
 =======
-                <h2 className="font-semibold mb-2">Optional documents</h2>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
-                  {optionalDocs.map((k) => {
-                    const hasIt = (profile.documents || []).some((d) => d.kind === k);
-                    return (
-                      <div key={k} className="flex items-center justify-between border rounded p-3">
-                        <div>
-                          <div className="text-sm font-medium">{k}</div>
-                          <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Optional'}</div>
-                        </div>
-                        <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
-                      </div>
-                    )
-                  })}
-                </div>
-              </section>
-            )}
-
-            <div>
-              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
-            </div>
-
-            {message && <div className="text-sm text-blue-700">{message}</div>}
-          </div>
-        )}
-      </main>
-    </>
-  )
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 />              </div>;
             </div>;
             <section>;
@@ -669,79 +485,16 @@ if ( {) {
               </section>)}
             <div>;
               <button;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 disabled={
                   busy ||;
                   profile.status === 'submitted' ||;
                   profile.status === 'approved';
                 }
-                on_click={submit}
-                className='rounded bg - green - 600 text - white px - 4 py - 2 disabled:opacity - 50';
-              >;
-                Submit for review;
-              </button>;
-            </div>;
-            {message && <div className='text - sm text - blue - 700'>{message}</div>}          </div>)}
-      </main>;
-    </>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-            <section>;
-              <h2 className="font-semibold mb-2">Required documents</h2>;
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-2">;
-                {requiredDocs.map((k) => {;
-                  const hasIt = (profile.documents || []).some((d) => d.kind === k);
-                  return (;
-                    <div key={k} className="flex items-center justify-between border rounded p-3">;
-                      <div>;
-                        <div className="text-sm font-medium">{k}</div>;
-                        <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Missing'}</div>;
-                      </div>;
-                      <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>;
-                    </div>;
-                  );
-                })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </div>;
-            </section>;
-            {optionalDocs.length > 0 && (;
-              <section>;
-                <h2 className="font-semibold mb-2">Optional documents</h2>;
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-2">;
-                  {optionalDocs.map((k) => {;
-                    const hasIt = (profile.documents || []).some((d) => d.kind === k);
-                    return (;
-                      <div key={k} className="flex items-center justify-between border rounded p-3">;
-                        <div>;
-                          <div className="text-sm font-medium">{k}</div>;
-                          <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Optional'}</div>;
-                        </div>;
-                        <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>;
-                      </div>;
-                    );
-                  })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </div>;
-              </section>;
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-            <div>
-              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
-            </div>
-
-
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {message && <div className="text-sm text-blue-700">{message}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -761,7 +514,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

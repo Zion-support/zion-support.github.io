@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { useState, useMemo } from "react",;
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
@@ -125,4 +127,5 @@ handleFilterChange;
 clearAllFilters;
 filterOptions 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }

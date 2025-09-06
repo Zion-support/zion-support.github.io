@@ -1,18 +1,60 @@
 
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Mail, Send} from "lucide-react";
+import {useState} from "react";
+import {toast} from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Mail, Send } from "lucide-react",
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
+interface ProfileContactProps {
+  email?: string;
+  profileName: string;
+  profileType: 'service' | 'talent'
+}
 
-
+export function ProfileContact({
+  email
+  profileName
+  profileType
+}: ProfileContactProps) {
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSending(true);
+    // Here would be the actual API call to send the message
+    setTimeout(() => {
+      setIsSending(false);
+      setMessage("");
+      (setSubject("")
+        toast({
+          title: "Message Sent"
+          description: `Your message has been sent to ${profileName}.`
+        }));
+    }, 1000);
+  }
+import { useState } from "react",
+import { toast } from "@/hooks/use-toast",
 interface ProfileContactProps {
   email?: string,
   profileName: string,
   profileType: 'service' | 'talent'
 }
 
-
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {;
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [isSending, setIsSending] = useState(false);
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
   const [message, setMessage] = useState(""),
   const [subject, setSubject] = useState(""),
   const [isSending, setIsSending] = useState(false),
-
   
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault(),
@@ -28,8 +70,6 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         description: `Your message has been sent to ${profileName}.`})
     }, 1000)
   },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -85,13 +125,54 @@ function ProfileContact() {
           <span className="block">Email: </span>;
           <a;
             href={`mailto:${email}`}
-
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Mail, Send} from "lucide-react";
-import {useState} from "react";
-import {toast} from "@/hooks/use-toast";
+            className="text-zion-cyan hover:underline truncate block"
+          >
+            {email}
+          </Link>
+        </div>
+      )}
+      <form onSubmit={handleSendMessage}>
+        <div className="space-y-4">
+          <div>
+            <Input
+              placeholder="Subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              className="bg-zion-blue border-zion-blue-light text-white"
+              required
+            />
+          </div>
+          <div>
+            <Textarea
+              placeholder={`Message to ${profileName}...`}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
+              required
+            />
+          </div>
+          <Button
+            type="submit"
+            className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
+            disabled={isSending}
+          >
+            <Send className="mr-2 h-4 w-4" />
+            {isSending ? "Sending..." : "Send Message"}
+          </Button>
+        </div>
+      </form>
+    </div>
+  );
+}
+  )
+  )
+}
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Mail, Send } from "lucide-react",;
+import { useState } from "react",;
+import { toast } from "@/hooks/use-toast",;
 interface ProfileContactProps {;
   email?: string;
   profileName: string,;
@@ -197,29 +278,7 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
     </div>;
   );
 }
-
-=======
-            <Textarea;
-              placeholder={`Message to ${profile_name}...`}
-              value={message}
-              on_change={(e) => set_message (e.target.value)}
-              className="bg - zion - blue border - zion - blue - light text - white min - h-[120px]";
-              required;
-            />;
-          </div>;
-          <Button;
-            type="submit";
-            className="w - full bg - zion - cyan hover:bg - zion - cyan / 90";
-            disabled={is_sending}
-          >;
-            <Send className="mr - 2 h - 4 w - 4" />;
-            {is_sending ? "Sending..." : "Send Message"}
-          </Button>;
-        </div>;
-      </form>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;
 =======
 
   )
@@ -227,3 +286,4 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
   )
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

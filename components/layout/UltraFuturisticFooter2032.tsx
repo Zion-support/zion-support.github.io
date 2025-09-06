@@ -1,45 +1,54 @@
 
-
-import React from 'react';
-
-
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
+import { motion } from 'framer-motion';
+import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom,
 import {
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Link from 'next / link';
 import { motion } from 'framer-motion';
-
-=======
+import { 
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
 import {
-=======
+  Phone
+  Mail
+  MapPin
+  Globe
+  Zap
+  Brain
+  Atom
+  Rocket
+  Shield
+  Cpu
+  Target
+  Microscope
+  Users
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Youtube
+  Github
+  ArrowRight
+  Heart
+  Star
+  Award
+  CheckCircle
+  Home
+  Briefcase
+  BookOpen
+  MessageCircle
+  DollarSign
+  TrendingUp
+  Target as TargetIcon
+  Users as UsersIcon
+  Briefcase as BriefcaseIcon
+  BookOpen as BookOpenIcon
+  MessageCircle as MessageCircleIcon
+  Star as StarIcon;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Phone,
   Mail,
   MapPin,
@@ -78,8 +87,9 @@ import {
   MessageCircle as MessageCircleIcon,;
   Star as StarIcon,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
-
-
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
@@ -281,7 +291,6 @@ const quickLinks = [
     icon: Target
     description: 'Ultimate service portfolio'
   }
-=======
     name: 'Contact',
     href: '/contact',
     icon: MessageCircle,
@@ -291,7 +300,7 @@ const quickLinks = [
   { name: 'Solutions', href: '/solutions', icon: TargetIcon, description: 'Tailored solutions for your business' },
   { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent pricing and packages' },
   { name: 'Resources', href: '/resources', icon: BookOpen, description: 'Knowledge base and documentation' },
-  { name: 'Case Studies', href: '/case - studies', icon: Users, description: 'Success stories and implementations' },
+{ name: 'Case Studies', href: '/case - studies', icon: Users, description: 'Success stories and implementations' },
   { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
 const service_categories = [;
@@ -448,7 +457,6 @@ const quick_links = [;
     icon: Target,
     description: 'Ultimate service portfolio',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     name: 'News & Updates'
     href: '/news'
@@ -458,9 +466,7 @@ const quick_links = [;
   {
 
 ];
-
 const companyInfo = [
-=======
     name: 'Support',
     href: '/support',
     icon: Users,
@@ -489,19 +495,15 @@ const contactInfo = {;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
-=======
       duration: 0.8,
       staggerChildren: 0.1
     }
-  }
-};
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 }
 
 };
-
 const mainNavigationRoutes = [;
   {;
     name: 'Home',;
@@ -558,7 +560,6 @@ const mainNavigationRoutes = [;
   { name: 'Case Studies', href: '/case-studies', icon: Users, description: 'Success stories and implementations' },;
   { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },;
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
-
 const serviceCategories = [;
   {;
     title: '🚀 2032 Revolutionary AI Services',;
@@ -675,7 +676,6 @@ const serviceCategories = [;
     ],;
   },;
 ];
-
 const quickLinks = [;
   {;
     name: '2032 Services',;
@@ -732,7 +732,6 @@ const quickLinks = [;
   { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Target, description: 'Ultimate service portfolio' },;
   { name: 'News & Updates', href: '/news', icon: MessageCircle, description: 'Latest company news' },;
   { name: 'Support', href: '/support', icon: Users, description: 'Technical support and help' }
-
 const companyInfo = [;
   { name: 'About Us', href: '/about' },;
   { name: 'Careers', href: '/careers' },;
@@ -741,7 +740,6 @@ const companyInfo = [;
   { name: 'Support', href: '/support' },;
   { name: 'Status', href: '/status' },;
 ];
-
 const socialLinks = [;
   {;
     name: 'LinkedIn',;
@@ -761,7 +759,6 @@ const socialLinks = [;
   },;
   { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
   { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },];];
-
 const socialLinks = [;
   { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter },;
@@ -770,7 +767,6 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
   { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github }
 ];
-
 const footerVariants = {;
   hidden: { opacity: 0, y: 50 },;
   visible: {;
@@ -781,20 +777,17 @@ const footerVariants = {;
       staggerChildren: 0 && 0.1,;
     },;
   },};
-
 const itemVariants = {;
   hidden: { opacity: 0, y: 20 },;
   visible: { opacity: 1, y: 0 },};
-
 export default function UltraFuturisticFooter2032() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-
-
+    <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>      staggerChildren: 0.1
+    }
+  }
+}
   };
 };
-
-
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 }
@@ -803,22 +796,19 @@ const itemVariants = {
 export default function UltraFuturisticFooter2032() {
 =======
 };
-
 const itemVariants = {;
   hidden: { opacity: 0, y: 20 },;
   visible: { opacity: 1, y: 0 },  visible: { opacity: 1, y: 0 }
 };
-
 export default function UltraFuturisticFooter2032() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <div className='absolute inset-0'>;
         <div className='absolute top-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl'></div>;
         <div className='absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;
         <div className='absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>;
       </div>;
-
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10'>;
         <motion&& motion.div
 
@@ -841,7 +831,6 @@ export default function UltraFuturisticFooter2032() {;
                     Zion Tech Group;
                   </h3>;
                   <p className='text-sm text-cyan-300 font-medium'>;
-=======
 ;
 const social_links = [;
   {
@@ -951,17 +940,14 @@ function UltraFuturisticFooter2032() {
       </div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
         <motion.div
-=======
                     className='hover:text-cyan-300 transition-colors'>                    {contactInfo && contactInfo.website}      {/* Animated Background Elements */}
       <div className="absolute inset-0">;
         <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>;
         <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>;
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>;
       </div>;
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">;
         <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           variants={footerVariants}
           initial="hidden"
           whileInView="visible"
@@ -970,11 +956,67 @@ function UltraFuturisticFooter2032() {
           {/* Main Footer Content */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">;
             {/* Company Info */}
+            <motion.div variants={itemVariants} className="lg:col-span-1">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/30">
+                  <Rocket className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    Zion Tech Group
+                  </h3>
+                  <p className="text-sm text-cyan-300 font-medium">2032 Future Technology</p>
+                </div>
+              </div>
+              <p className="text-slate-300 mb-6 leading-relaxed">
+                Leading the future of technology with revolutionary AI, quantum computing, space technology, and autonomous systems.
+                Empowering businesses with cutting-edge solutions for tomorrow's challenges.
+              </p>
+              {/* Contact Information */}
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-300 transition-colors">
+                    {contactInfo.mobile}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">
+                  <Mail className="w-4 h-4 text-cyan-400" />
+                  <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-300 transition-colors">
+                    {contactInfo.email}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-slate-300">
+                  <MapPin className="w-4 h-4 text-cyan-400" />
+                  <span>{contactInfo.address}</span>
+                </div>
+                <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">
+                  <Globe className="w-4 h-4 text-cyan-400" />
+                  <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">
+                    {contactInfo.website}
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },};
+
+
+
+
+};
+
+export default function UltraFuturisticFooter2032() {
+  return (
+
+                    {contactInfo.website}
+
+
+                    {contactInfo.website}
+
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </a>
                 </div>
               </div>
@@ -992,49 +1034,22 @@ function UltraFuturisticFooter2032() {
                   <p className="text-sm text-cyan-300 font-medium">2032 Future Technology</p>;
                 </div>;
               </div>;
-
               <p className="text-slate-300 mb-6 leading-relaxed">;
                 Leading the future of technology with revolutionary AI, quantum computing, space technology, and autonomous systems. ;
                 Empowering businesses with cutting-edge solutions for tomorrow's challenges.;
               </p>;
-
               {/* Contact Information */}
-              <div className="space-y-3">;
-                <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">;
-                  <Phone className="w-4 h-4 text-cyan-400" />;
-                  <a href={`tel:${contactInfo && contactInfo.mobile}`} className="hover:text-cyan-300 transition-colors">;
-                    {contactInfo && contactInfo.mobile}
-                  </a>;
-                </div>;
-                <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">;
-                  <Mail className="w-4 h-4 text-cyan-400" />;
-                  <a href={`mailto:${contactInfo && contactInfo.email}`} className="hover:text-cyan-300 transition-colors">;
-                    {contactInfo && contactInfo.email}
-                  </a>;
-                </div>;
-                <div className="flex items-center space-x-3 text-slate-300">;
-                  <MapPin className="w-4 h-4 text-cyan-400" />;
-                  <span>{contactInfo && contactInfo.address}</span>;
-                </div>;
-                <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">;
-                  <Globe className="w-4 h-4 text-cyan-400" />;
-                  <a href={contactInfo && contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">;
-                    {contactInfo && contactInfo.website}
-                  </a>;
-                </div>;
-              </div>;
-            </motion && motion.div>;
 
-
-            {/* Service Categories */}
-
+                  </a>
+                </div>
+              </div>
+            </motion.div>
             {/* Service Categories */}
             <motion.div variants={itemVariants} className='lg:col-span-2'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
 
-
-
-
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 Our Revolutionary Services
               </h3>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -1064,21 +1079,6 @@ function UltraFuturisticFooter2032() {
                           </Link>;
                         </li>;
 
-=======
-            <motion.div variants={itemVariants} className="lg:col-span-2">
-              <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Our Revolutionary Services
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {serviceCategories.map((category, index) => (
-                  <div key={index} className="space-y-4">
-                    <h4 className="text-lg font-medium text-white">{category.title}</h4>
-                    <ul className="space-y-2">
-                      {category.services.map((service, serviceIndex) => (
-                        <li key={serviceIndex}>
-                          <Link
-                            href={service.href}
-                            className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform"
                           >
                             {service.name}
                           </Link>
@@ -1091,209 +1091,23 @@ function UltraFuturisticFooter2032() {
                 ))}
 
 
-
             {/* Quick Links & Company Info */}
             <motion.div variants={itemVariants} className='lg:col-span-1'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 Quick Access
               </h3>
-=======
-              </div>;
-            </motion && motion.div>;
-
-            {/* Quick Links & Company Info */}
-            <motion && motion.div variants={itemVariants} className='lg:col-span-1'>;
-              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                Quick Access;
-              </h3>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-              {/* Quick Links */}
-              <div className='mb-8'>;
-                <h4 className='text-lg font-medium text-white mb-4'>;
-                  Quick Links;
-                </h4>;
-                <ul className='space-y-2'>                  {quickLinks && quickLinks.map((link, index) => (;
-                    <li key={index}>;
-                      <Link
-
-                        href={link && link.href}
-                        className='flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group'>;
-                        <link && link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />                        <span>{link && link.name}</span>                Quick Access;
-              </h3>;
-
-
-              {/* Quick Links */}
-              <div className="mb-8">;
-                <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>;
-                <ul className="space-y-2">;
-                  {quickLinks && quickLinks.map((link, index) => (;
-                    <li key={index}>;
-                      <Link
-                        href={link && link.href}
-                        className='flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group'>;
-                        <link && link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />                        className="flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group";
-                      >;
-                        <link && link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />;
-                        <span>{link && link.name}</span>;
-                      </Link>;
-                    </li>;
-
-=======
-            <motion.div variants={itemVariants} className="lg:col-span-1">
-              <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Quick Access
               </h3>
-              
-=======
-              <p className='text - slate - 300 mb - 6 leading - relaxed'>;
-                Leading the future of technology with revolutionary AI, quantum;
-                computing, space technology, and autonomous systems. Empowering;
-                businesses with cutting - edge solutions for tomorrow's;
-                challenges.;
-              </p>;
-              {/* Contact Information */}
-              <div className='space - y-3'>;
-                <div className='flex items - center space - x-3 text - slate - 300 hover:text - cyan - 300 transition - colors'>;
-                  <Phone className='w - 4 h - 4 text - cyan - 400' />;
-                  <a;
-                    href={`tel:${contact_info.mobile}`}
-                    className='hover:text - cyan - 300 transition - colors';
-                  >;
-                    {contact_info.mobile}
-                  </a>;
-                </div>;
-                <div className='flex items - center space - x-3 text - slate - 300 hover:text - cyan - 300 transition - colors'>;
-                  <Mail className='w - 4 h - 4 text - cyan - 400' />;
-                  <a;
-                    href={`mailto:${contact_info.email}`}
-                    className='hover:text - cyan - 300 transition - colors';
-                  >;
-                    {contact_info.email}
-                  </a>;
-                </div>;
-                <div className='flex items - center space - x-3 text - slate - 300'>;
-                  <MapPin className='w - 4 h - 4 text - cyan - 400' />;
-                  <span>{contact_info.address}</span>;
-                </div>;
-                <div className='flex items - center space - x-3 text - slate - 300 hover:text - cyan - 300 transition - colors'>;
-                  <Globe className='w - 4 h - 4 text - cyan - 400' />;
-                  <a;
-                    href={contact_info.website}
-                    target='_blank';
-                    rel='noopener noreferrer';
-                    className='hover:text - cyan - 300 transition - colors';
-                  >                    {contact_info.website}      {/* Animated Background Elements */}
-      <div className="absolute inset - 0">;
-        <div className="absolute top - 0 left - 0 w - 96 h - 96 bg - cyan - 500 / 5 rounded - full blur - 3xl"></div>;
-        <div className="absolute top - 0 right - 0 w - 96 h - 96 bg - purple - 500 / 5 rounded - full blur - 3xl"></div>;
-        <div className="absolute bottom - 0 left - 1/4 w - 96 h - 96 bg - pink - 500 / 5 rounded - full blur - 3xl"></div>;
-      </div>;
-      <div className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 pt - 20 pb - 10">;
-        <motion.div;
-          variants={footer_variants}
-          initial="hidden";
-          whileInView="visible";
-          viewport={{ once: true }}
-          className="space - y-16";
-        >;
-          {/* Main Footer Content */}
-          <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 12">;
-            {/* Company Info */}
-            <motion.div variants={item_variants} className="lg:col - span - 1">;
-              <div className="flex items - center space - x-3 mb - 6">;
-                <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 rounded - xl flex items - center justify - center shadow - lg shadow - cyan - 500 / 30">;
-                  <Rocket className="w - 7 h - 7 text - white" />;
-                </div>;
-                <div>;
-                  <h3 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
-                    Zion Tech Group;
-                  </h3>;
-                  <p className="text - sm text - cyan - 300 font - medium">2032 Future Technology</p>;
-                </div>;
-              </div>;
-              <p className="text - slate - 300 mb - 6 leading - relaxed">;
-                Leading the future of technology with revolutionary AI, quantum computing, space technology, and autonomous systems.;
-                Empowering businesses with cutting - edge solutions for tomorrow's challenges.;
-              </p>;
-              {/* Contact Information */}
-              <div className="space - y-3">;
-                <div className="flex items - center space - x-3 text - slate - 300 hover:text - cyan - 300 transition - colors">;
-                  <Phone className="w - 4 h - 4 text - cyan - 400" />;
-                  <a href={`tel:${contact_info.mobile}`} className="hover:text - cyan - 300 transition - colors">;
-                    {contact_info.mobile}
-                  </a>;
-                </div>;
-                <div className="flex items - center space - x-3 text - slate - 300 hover:text - cyan - 300 transition - colors">;
-                  <Mail className="w - 4 h - 4 text - cyan - 400" />;
-                  <a href={`mailto:${contact_info.email}`} className="hover:text - cyan - 300 transition - colors">;
-                    {contact_info.email}
-                  </a>;
-                </div>;
-                <div className="flex items - center space - x-3 text - slate - 300">;
-                  <MapPin className="w - 4 h - 4 text - cyan - 400" />;
-                  <span>{contact_info.address}</span>;
-                </div>;
-                <div className="flex items - center space - x-3 text - slate - 300 hover:text - cyan - 300 transition - colors">;
-                  <Globe className="w - 4 h - 4 text - cyan - 400" />;
-                  <a href={contact_info.website} target="_blank" rel="noopener noreferrer" className="hover:text - cyan - 300 transition - colors">;
-                    {contact_info.website}
-                  </a>;
-                </div>;
-              </div>;
-            </motion.div>;
-            {/* Service Categories */}
-            <motion.div variants={item_variants} className='lg:col - span - 2'>;
-              <h3 className='text - xl font - semibold text - white mb - 8 bg - gradient - to - r from - cyan - 400 to - purple - 400 bg - clip - text text - transparent'>;
-                Our Revolutionary Services;
-              </h3>;
-              <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
-                {service_categories.map ((category, index) => (
-                  <div key={index} className='space - y-4'>;
-                    <h4 className='text - lg font - medium text - white'>;
-                      {category.title}
-                    </h4>;
-                    <ul className='space - y-2'>                      {category.services.map ((service, service_index) => (
-                        <li key={service_index}>;
-                          <Link;
-                            href={service.href}
-                            className='text - slate - 300 hover:text - cyan - 300 transition - colors duration - 200 text - sm hover:translate - x-1 inline - block transform transition - transform'                          >                Our Revolutionary Services;
-              </h3>;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
-                {service_categories.map ((category, index) => (
-                  <div key={index} className="space - y-4">;
-                    <h4 className="text - lg font - medium text - white">{category.title}</h4>;
-                    <ul className="space - y-2">;
-                      {category.services.map ((service, service_index) => (
-                        <li key={service_index}>;
-                          <Link;
-                            href={service.href}
-                            className='text - slate - 300 hover:text - cyan - 300 transition - colors duration - 200 text - sm hover:translate - x-1 inline - block transform transition - transform'                            className="text - slate - 300 hover:text - cyan - 300 transition - colors duration - 200 text - sm hover:translate - x-1 inline - block transform transition - transform";
-                          >;
-                            {service.name}
-                          </Link>;
-                        </li>))}
-                    </ul>;
-                  </div>))}
-              </div>;
-            </motion.div>;
-            {/* Quick Links & Company Info */}
-            <motion.div variants={item_variants} className='lg:col - span - 1'>;
-              <h3 className='text - xl font - semibold text - white mb - 8 bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
-                Quick Access;
-              </h3>;
+
               {/* Quick Links */}
-              <div className='mb - 8'>;
-                <h4 className='text - lg font - medium text - white mb - 4'>;
-                  Quick Links;
-                </h4>;
-                <ul className='space - y-2'>                  {quick_links.map ((link, index) => (
-                    <li key={index}>;
-                      <Link;
+              <div className="mb-8">
+                <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>
+                <ul className="space-y-2">
+                  {quickLinks.map((link, index) => (
+                    <li key={index}>
+                      <Link
                         href={link.href}
                         className='flex items - center space - x-2 text - slate - 300 hover:text - purple - 300 transition - colors duration - 200 text - sm group';
                       >;
@@ -1301,17 +1115,10 @@ function UltraFuturisticFooter2032() {
               </h3>;
 
               {/* Quick Links */}
-              <div className="mb - 8">;
-                <h4 className="text - lg font - medium text - white mb - 4">Quick Links</h4>;
-                <ul className="space - y-2">;
-                  {quick_links.map ((link, index) => (
-                    <li key={index}>;
-                      <Link;
-                        href={link.href}
 
-
-
-
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Company Info */}
               <div className='mb-8'>
                 <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
@@ -1320,11 +1127,22 @@ function UltraFuturisticFooter2032() {
                       <Link
                         href={item.href}
 
-                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >
+                  {companyInfo.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        href={item.href}
+                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                        className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {companyInfo.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -1336,6 +1154,8 @@ function UltraFuturisticFooter2032() {
                     </li>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   ))}
+                </ul>
+              </div>
 
                 </ul>;
               </div>;
@@ -1363,14 +1183,37 @@ function UltraFuturisticFooter2032() {
 
                 </ul>;
               </div>;
-
-
+=======
+              <div className="mb-8">
+                <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>
+                <ul className="space-y-2">
+                  {quickLinks.map((link, index) => (
+                    <li key={index}>
+                      <Link
+                        href={link.href}
+                        className='flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group'
+                      >
+                        <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />                        className="flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group"
+                      >
+                        <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                        <span>{link.name}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 =======
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* Social Links */}
               <div>;
                 <h4 className='text-lg font-medium text-white mb-4'>;
@@ -1405,31 +1248,41 @@ function UltraFuturisticFooter2032() {
                       key={index}
                       href={social.href}
 
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20"
+                    >
+                      <social.icon className="w-5 h-5" />
 =======
 
 
                     </a>
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
 
-                </div>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Newsletter Signup */}
+          <motion.div
+            variants={itemVariants}
+            className='border-t border-cyan-500/30 pt-12'
+          >
+            <div className='text-center'>
+              <h3 className='text-2xl font-bold text-white mb-4'>
 
-
+                Stay Ahead with Future Technology
+              </h3>
+              <p className='text-slate-300 mb-8 max-w-2xl mx-auto'>
+                Get the latest insights on AI breakthroughs, quantum computing
+                advances, space technology innovations, and autonomous systems
+                development. Join our community of future technology pioneers.
+              </p>
+              <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
                 <input
                   type='email'
                   placeholder='Enter your email address'
@@ -1438,15 +1291,31 @@ function UltraFuturisticFooter2032() {
           <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-12">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-white mb-4">
+=======
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Newsletter Signup */}
+          <motion.div
+            variants={itemVariants}
+            className='border-t border-cyan-500/30 pt-12'
+          >
+            <div className='text-center'>
+              <h3 className='text-2xl font-bold text-white mb-4'>
+
                 Stay Ahead with Future Technology
 
               </h3>
               <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.
-
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-=======
                 />;
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105'>                  Subscribe                Stay Ahead with Future Technology;
               </h3>;
@@ -1462,6 +1331,7 @@ function UltraFuturisticFooter2032() {
                   placeholder="Enter your email address"
                   className="flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
 
+=======
 
                   Subscribe;
                 </button>;
@@ -1478,6 +1348,7 @@ function UltraFuturisticFooter2032() {
 
               <div className='flex items-center space-x-6 text-sm'>;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <Link
                   href='/privacy'
                   className='text-slate-400 hover:text-cyan-300 transition-colors'>;
@@ -1490,85 +1361,34 @@ function UltraFuturisticFooter2032() {
                 </Link>;
                 <Link
                   href='/cookies'
-
-
-                  Cookie Policy;
-                </Link>;
-              </div>;
-            </div>;
-
-
-      {/* Floating Action Button */}
-      <div className='fixed bottom-8 right-8 z-50'>;
-        <motion&& motion.button
-          whileHover={{ scale: 1 && 1.1 }}
-          whileTap={{ scale: 0 && 0.9 }}
-          className='w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white'
-          onClick={() => window && window.scrollTo({ top: 0, behavior: 'smooth' })}
-        >;
-          <ArrowRight className='w-6 h-6 transform rotate-[-90deg]' />        </motion && motion.button>;
-      </div>;
-    </footer>;
-  );
-}        <motion&& motion.button
-          whileHover={{ scale: 1 && 1.1 }}
-          whileTap={{ scale: 0 && 0.9 }}
-
-=======
-
-      {/* Floating Action Button */}
-      <div className="fixed bottom-8 right-8 z-50">
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-
-          className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white"
-
-
-          onClick={() => window && window.scrollTo({ top: 0, behavior: 'smooth' })}
-        >;
-          <ArrowRight className="w-6 h-6 transform rotate-[-90deg]" />;
-        </motion && motion.button>;
-      </div>;
-    </footer>;
-  );
-=======
+          <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-8">
+            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+              <div className="flex items-center space-x-2 text-slate-400 text-sm">
+                <span>© 2024 Zion Tech Group. All rights reserved.</span>
+                <span className="text-cyan-400">|</span>
+                <span>Leading the Future of Technology</span>
+              </div>
+              <div className="flex items-center space-x-6 text-sm">
+                <Link href="/privacy" className="text-slate-400 hover:text-cyan-300 transition-colors">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="text-slate-400 hover:text-cyan-300 transition-colors">
+                  Terms of Service
+                </Link>
+                <Link href="/cookies" className="text-slate-400 hover:text-cyan-300 transition-colors">
+                  Cookie Policy
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
 
   );
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-          </motion.div>;
-        </motion.div>;
-      </div>;
-      {/* Floating Action Button */}
-      <div className='fixed bottom - 8 right - 8 z - 50'>;
-        <motion.button;
-          while_hover={{ scale: 1.1 }}
-          while_tap={{ scale: 0.9 }}
-          className='w - 14 h - 14 bg - gradient - to - r from - cyan - 500 to - purple - 500 rounded - full shadow - 2xl shadow - cyan - 500 / 30 hover:shadow - cyan - 500 / 50 transition - all duration - 300 flex items - center justify - center text - white';
-          on_click={() => window.scroll_to ({ top: 0, behavior: 'smooth' })}
-        >;
-          <ArrowRight className='w - 6 h - 6 transform rotate-[-90deg]' />        </motion.button>;
-      </div>;
-    </footer>);
-}        <motion.button;
-          while_hover={{ scale: 1.1 }}
-          while_tap={{ scale: 0.9 }}
-          className="w - 14 h - 14 bg - gradient - to - r from - cyan - 500 to - purple - 500 rounded - full shadow - 2xl shadow - cyan - 500 / 30 hover:shadow - cyan - 500 / 50 transition - all duration - 300 flex items - center justify - center text - white";
-          on_click={() => window.scroll_to ({ top: 0, behavior: 'smooth' })}
-        >;
-          <ArrowRight className="w - 6 h - 6 transform rotate-[-90deg]" />;
-        </motion.button>;
-      </div>;
-    </footer>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

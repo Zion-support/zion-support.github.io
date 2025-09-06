@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 module.exports = {;
   testEnvironmen:t:'jsdom',;
   setupFilesAfterEn:v:['<rootDir>/jest.setup.js'],;
@@ -30,64 +22,13 @@ module.exports = {;
   moduleFileExtension:s:['ts', 'tsx', 'js', 'jsx', 'json'],;
   testPathIgnorePattern:s:['<rootDir>/.next/', '<rootDir>/node_modules/'],;
 };  transform: {
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-<<<<<<< HEAD
 module.exports = { preset: "ts-jest","" testEnvironment: "jsdom"," globals: {" "ts-jest": { diagnostics: false," isolatedModules: true}},"" setupFilesAfterEnv: ["<rootDir>/jest.setup.js"]," moduleNameMapper: {" "^@/(.*)$": "<rootDir>/src/$1"," "\.(css|less|scss|sass)$": "identity-obj-proxy"},"" testMatch: ["**/__tests__*.(js|jsx|ts|tsx)"," "***.{js,jsx,ts,tsx}"," "!src*.d.ts"," "!src*.stories.{js,jsx,ts,tsx}", ]," coverageThreshold: { global: { branches: 50," functions: 50," lines: 50," statements: 50}}," transform: {" "^.+\.(ts|tsx)$": "ts-jest"," "^.+\.(js|jsx)$": "babel-jest"},"" moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],"" testPathIgnorePatterns: ["/node_modules/"," "/dist/"," "/pages\.disabled/"," "/pages-disabled/"," "/pages\.broken/"," "/pages\.bak/"," "/pages-backup/"," "/pages\.__backup/"," "/src\.pages\.disabled/"," "/src\.disabled/"," "/src/disabled/"," "/tests/integration/", ]};'"'"
-=======
-module.exports = {}
-  "preset": 'ts-jest',
-  "testEnvironment": 'jsdom',
-  "globals": {}
-    'ts-jest': {}
-      diagnostics: false,
-      "isolatedModules": true}},
-  "setupFilesAfterEnv": ['<rootDir>/jest.setup.js'],
-  "moduleNameMapper": {}
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'},
-  "testMatch": ['**/__tests__/**/*.(js|jsx|ts|tsx)',]
-    '**/*.(test|spec).(js|jsx|ts|tsx)',
-  ],
-  "collectCoverageFrom": ['src/**/*.{js,jsx,ts,tsx}',]
-    '!src/**/*.d.ts',
-    '!src/**/*.stories.{js,jsx,ts,tsx}',
-  ],
-  "coverageThreshold": {}
-    global: {}
-      branches: 50,
-      "functions": 50,
-      "lines": 50,
-      "statements": 50}},
-  "transform": {}
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-    '^.+\\.(js|jsx)$': 'babel-jest'},
-  "moduleFileExtensions": ['ts', 'tsx', 'js', 'jsx', 'json'],
-  "testPathIgnorePatterns": ['/node_modules/',]
-    '/dist/',
-    '/pages\\.disabled/',
-    '/pages-disabled/',
-    '/pages\\.broken/',
-    '/pages\\.bak/',
-    '/pages-backup/',
-    '/pages\\.__backup/',
-    '/src\\.pages\\.disabled/',
-    '/src\\.disabled/',
-    '/src/disabled/',
-    '/tests/integration/',
-  ]};
->>>>>>> main
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 module.exports = {
   preset: 'ts-jest',
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/automation-improvements-final
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -98,20 +39,11 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-module.exports = {
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
-module.exports = {
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   testEnvironment: 'jsdom',
   testMatch: [
     '**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
@@ -135,75 +67,28 @@ module.exports = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1'
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
-=======
-  transformIgnorePatterns: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     '/node_modules/',
     '^.+\\.module\\.(css|sass|scss)$',
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   verbose: true,
   collectCoverage: false,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  coverageReporters: ['text', 'lcov'],
-  coverageThreshold: {
-    global: {
-      branches: 60,
-      functions: 60,
-      lines: 60,
-      statements: 60
-    }
-  }
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-};
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-build-nav-links
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/automation-improvements-final
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
   testTimeout: 10000,
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
-<<<<<<< HEAD
-module.exports = createJestConfig(customJestConfig)
 =======
 module.exports = createJestConfig(customJestConfig)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-  // setupFilesAfterEnv: ['<rootDir>/jest.setup.simple.js'],
-  transform: {
-    '^.+\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
-  },
-  transformIgnorePatterns: [
-    '/node_modules/(?!(.*\.mjs$))'
-  ]
-};
->>>>>>> origin/main
-=======
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/automation-improvements-final
 =======
     '/node_modules/(?!(.*\.mjs$))'
@@ -211,3 +96,4 @@ module.exports = createJestConfig(customJestConfig)
 };
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

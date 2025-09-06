@@ -75,4 +75,3 @@ export function getProjectById(id: string): Project | undefined {
   const db = readDb()
   return db.projects.find((p) => p.id === id)
 }
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231

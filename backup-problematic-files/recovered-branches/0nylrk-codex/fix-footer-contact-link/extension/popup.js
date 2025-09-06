@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 async function ask() {;
   const prompt = document.getElementById('prompt').value,;
   if (!prompt.trim()) {;
@@ -23,3 +25,4 @@ document.addEventListener('DOMContentLoaded', () => {;
     chrome.runtime.sendMessage({ type:'view-notifications' }),;
   }),;
 }),; 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

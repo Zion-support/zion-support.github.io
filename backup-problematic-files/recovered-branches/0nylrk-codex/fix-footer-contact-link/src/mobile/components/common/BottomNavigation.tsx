@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
 import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",;
@@ -60,3 +62,4 @@ isActive ? "text-primary" : "text-muted-foreground")
 }) 
 }</div>) 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

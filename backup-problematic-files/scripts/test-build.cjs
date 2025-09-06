@@ -7,4 +7,5 @@ const problematicFiles = ['components/ContactForm.tsx']
   'components/PerformanceMonitor.tsx'
   console.log('� Attempting build without problematic files...')
     execSync('npm run build', { "stdio"})
-    console.log(' Build "failed")
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

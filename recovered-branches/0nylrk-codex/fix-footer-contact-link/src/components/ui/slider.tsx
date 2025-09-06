@@ -1,18 +1,15 @@
-
-
+import * as React from 'react';
+import * as SliderPrimitive from '@radix-ui/react-slider';
+import {cn} from '@/lib/utils';
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
-=======
-=======
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
-
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 import { cn } from "@/lib/utils"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const Slider = React.forwardRef<
   React.ElementRef<typeof SliderPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
@@ -29,39 +26,10 @@ const Slider = React && React.forwardRef<;
     ref={ref}
     className={cn(
 
-Slider && Slider.displayName = SliderPrimitive && SliderPrimitive.Root.displayName,;
-
-export { Slider };
-
 =======
-import * as SliderPrimitive from '@radix - ui / react - slider';
-;
-import {cn} from '@/lib / utils';
-;
-const Slider = React.forward_ref<;
-  React.ElementRef < typeof SliderPrimitive.Root>,
-  React.ComponentPropsWithoutRef < typeof SliderPrimitive.Root>;
-></typeof>(({ class_name, ...props }, ref) => (
-  <SliderPrimitive.Root;
-    ref={ref}
-    className={cn (
-      'relative flex w - full touch - none select - none items - center',
-      class_name)}
-    {...props}
-  >;
-    <SliderPrimitive.Track className='relative h - 2 w - full grow overflow - hidden rounded - full bg - secondary'>;
-      <SliderPrimitive.Range className='absolute h - full bg - primary' />;
-    </SliderPrimitive.Track>;
-    <SliderPrimitive.Thumb className='block h - 5 w - 5 rounded - full border - 2 border - primary bg - background ring - offset - background transition - colors focus - visible: outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:pointer - events - none disabled:opacity - 50' />;
-  </SliderPrimitive.Root>));
-Slider.display_name = SliderPrimitive.Root.display_name,
-export { Slider }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
+      'relative flex w-full touch-none select-none items-center'
       "relative flex w-full touch-none select-none items-center",
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       className
     )}
     {...props}
@@ -71,9 +39,13 @@ export { Slider }
     </SliderPrimitive.Track>
     <SliderPrimitive.Thumb className="block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" />
   </SliderPrimitive.Root>
-
+<<<<<<< HEAD
 ))
 Slider.displayName = SliderPrimitive.Root.displayName
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export { Slider }
+;
+export { Slider };
+export { Slider }
+;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

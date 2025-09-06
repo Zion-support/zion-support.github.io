@@ -34,7 +34,7 @@ class PerformanceOptimizer {
 
   async optimizeImages() {
     this.log('\n🖼️ OPTIMIZING IMAGES');
-    
+
     const imageOptimization = await this.runCommand(
       'find . -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" | head -10 | wc -l',
       'Image Count Check'
@@ -47,7 +47,7 @@ class PerformanceOptimizer {
 
   async optimizeBundle() {
     this.log('\n📦 OPTIMIZING BUNDLE');
-    
+
     const bundleCheck = await this.runCommand(
       'npm run build 2>&1 | grep -E "(First Load JS|Route|Size)" || echo "Build completed"',
       'Bundle Analysis'
@@ -60,7 +60,7 @@ class PerformanceOptimizer {
 
   async setupPerformanceMonitoring() {
     this.log('\n📊 SETTING UP PERFORMANCE MONITORING');
-    
+
     const monitoringSetup = await this.runCommand(
       'echo "Performance monitoring setup completed"',
       'Performance Monitoring Setup'
@@ -73,7 +73,7 @@ class PerformanceOptimizer {
 
   async generateReport() {
     this.log('\n📊 GENERATING PERFORMANCE REPORT');
-    
+
     const totalDuration = Date.now() - this.startTime.getTime();
     const report = {
       timestamp: new Date().toISOString(),
@@ -87,13 +87,13 @@ class PerformanceOptimizer {
 
     const reportPath = path.join(this.projectRoot, 'automation-reports', 'performance-optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
+
     this.log(`📊 Report saved to: ${reportPath}`);
   }
 
   async run() {
     this.log('🚀 Starting Performance Optimizer');
-    this.log('==================================');
+    this.log('======');
 
     await this.optimizeImages();
     await this.optimizeBundle();

@@ -1,25 +1,32 @@
 
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {toast} from 'sonner';
-export interface MilestoneInput {
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   scope: string;
   start_date: string;
   end_date: string | null,
   project_type: string;
 
 }
-
+export interface GeneratedMilestone {
 
 export interface GeneratedMilestone {;
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   title: string;
   description: string;
 
       setIsGenerating(true),
 
-      const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
+  isAiGenerated: boolean
+}
 
+  const [isGenerating, setIsGenerating] = useState(false);
+
+  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
+  const generateMilestones = async (input: MilestoneInput): Promise<GeneratedMilestone[]> => {
+    try {
+      setIsGenerating(true)
+      const { data, error } = await supabase.functions.invoke('generate-milestones', {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         body: input
       });
       if (error) throw error;
@@ -68,7 +75,12 @@ if (throw error) {
       setIsGenerating (false);
     }
   }
-
+  const clearGeneratedMilestones = () => {
+    setGeneratedMilestones([])
+  }
+  return {
+    generateMilestones;
+=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from 'sonner',;
@@ -117,21 +129,9 @@ export function useMilestoneGenerator() {;
   return {;
     generateMilestones,;
 
-
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     generatedMilestones;
     isGenerating;
 
-=======
-;
-  const clearGeneratedMilestones = () =>: any {
-    setGeneratedMilestones ([]);
-  }
-;
-  return {
-    generate_milestones;
-    generated_milestones;
-    is_generating;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     clearGeneratedMilestones}
 }

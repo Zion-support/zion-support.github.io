@@ -94,12 +94,8 @@ function containsVagueJobClaims (text: string): string[] {
   });
   return reasons;
 }
-
-
-    ip: string,
-    source: MonitoredSource,
-    withinMinutes: number;
-
+export interface HeuristicDeps {
+  countEventsByIp: (
 
   ) => Promise<number>;
 
@@ -150,6 +146,7 @@ export async function evaluateHeuristics(
       if (severity === 'low') severity = 'medium';
     }
   }
+=======
 export function runHeuristics(data: any): HeuristicResult {
   // Mock implementation - in production, this would run actual fraud detection heuristics
   const flags = new Set<string>();
@@ -164,89 +161,7 @@ export function runHeuristics(data: any): HeuristicResult {
   
 
 =======
-export interface HeuristicDeps {
-  countEventsByIp: (
-    ip: string,
-    source: MonitoredSource,
-    within_minutes: number) => Promise < number>;
-;
-export async function evaluate_heuristics (
-  event: FraudEvent,
-  deps: HeuristicDeps): Promise < HeuristicEvaluation> {
-  const reasons: string[] = [];
-  let severity: HeuristicEvaluation['severity'] = 'low';
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    const recent = await deps.countEventsByIp (event.ip_address, 'signup', 10);
-    // Check condition
-if ( {) {
-  $2
-}
-      reasons.push (
-        `rapid_fire_signups_from_ip:${event.ip_address}:${recent}in10m`);
-      severity = recent >= 10 ? 'high' : 'medium';
-    }
-  }
-  // Check condition
-if (&&) {
-  $2
-}
-    event.content) {
-    if () {) {
-  $2
-}
-      reasons.push ('outside_payment_link_detected');
-      severity = 'high';
-    }
-    const phrases = containsSuspiciousPhrase (event.content);
-    // Check condition
-if ( {) {
-  $2
-}
-      reasons.push (...phrases.map (p => `suspicious_phrase:"${p}"`));
-      // Check condition
-if (severity = 'medium') {
-  $2
-}
-    }
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    const vague = containsVagueJobClaims (event.content);
-    // Check condition
-if ( {) {
-  $2
-}
-      reasons.push (...vague);
-      // Check condition
-if (severity = 'medium') {
-  $2
-}
-    }
-  }
-export function run_heuristics (data: any): HeuristicResult {
-  // Mock implementation - in production, this would run actual fraud detection heuristics;
-  const flags = new Set < string>();
-;
-  // Simple heuristics;
-  if () flags.add ('test_email')) {
-  $2
-}
-  if (flags.add ('high_amount')) {
-  $2
-}
-  if (flags.add ('high_frequency')) {
-  $2
-}
-  const confidence = flags.size > 0 ? 0.8 : 0.1;
-  const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return {
     flagged: reasons && reasons.length > 0,
     reasons,
@@ -290,12 +205,10 @@ export function shouldBlockEvent(result: HeuristicResult): boolean {
   return result.severity === 'critical' && result.confidence > 80;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;
   return {;
     flagged: reasons.length > 0;
@@ -303,10 +216,16 @@ export function shouldBlockEvent(result: HeuristicResult): boolean {
     severity}
 }
 
-=======
-
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/heuristics.ts
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+main:utils/fraud/heuristics.ts
+:backup-problematic-files/utils/fraud/heuristics.ts
+:utils/fraud/heuristics.ts
+
+}
+}
+main:utils/fraud/heuristics.ts
+:backup-problematic-files/utils/fraud/heuristics.ts
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

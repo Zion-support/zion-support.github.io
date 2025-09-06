@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { jsPDF } from 'jspdf',;
 import { PortfolioProject } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -108,4 +110,5 @@ yPos += 4
 }yPos += 10, // Add space between projects 
 }// If there are more projects than we're displaying 
 }return yPos + 5 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }

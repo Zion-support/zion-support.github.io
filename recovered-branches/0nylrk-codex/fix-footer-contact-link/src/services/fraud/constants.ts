@@ -1,7 +1,6 @@
 
-// Common constants used across fraud detection modules;
-// Phrases that might indicate fraud;
-export const suspicious_phrases = [;
+// Common constants used across fraud detection modules
+// Phrases that might indicate fraud
 
   "whatsapp me";
   "contact me outside";
@@ -14,11 +13,28 @@ export const suspicious_phrases = [;
   "avoid fees";
   "payment link";
   "urgent payment";
-  "deal outside";
-];
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+export const suspiciousPhrases = [
+  "whatsapp me",
+  "contact me outside",
+  "cashapp only",
+  "western union",
+  "pay directly",
+  "bypass",
+  "telegram",
+  "signal me",
+  "avoid fees",
+  "payment link",
+  "urgent payment",
+<<<<<<< HEAD
 
-;
-// Email domains often used for throwaway accounts;
+  "deal outside"
+
+// Email domains often used for throwaway accounts
+];
+],
+
+// Email domains often used for throwaway accounts
 export const suspiciousEmailDomains = [;
 
   "tempmail";
@@ -26,20 +42,7 @@ export const suspiciousEmailDomains = [;
   "fakeemail";
   "mailinator";
   "guerrillamail";
-  "10minutemail";
-];
-
-;
-
-=======
-
-  "deal outside"
-
-],
-
-
-// Email domains often used for throwaway accounts
-
+  "10minutemail"
 export const suspiciousEmailDomains = [
   "tempmail",
   "throwaway",
@@ -47,7 +50,38 @@ export const suspiciousEmailDomains = [
   "mailinator",
   "guerrillamail",
   "10minutemail"
+];
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+],
+// Common constants used across fraud detection modules;
+// Phrases that might indicate fraud;
+export const suspiciousPhrases = [;
+  "whatsapp me",;
+  "contact me outside",;
+  "cashapp only",;
+  "western union",;
+  "pay directly",;
+  "bypass",;
+  "telegram",;
+  "signal me",;
+  "avoid fees",;
+  "payment link",;
+  "urgent payment",;
+  "deal outside";
+],;
+// Email domains often used for throwaway accounts;
+export const suspiciousEmailDomains = [;
+  "tempmail",;
+  "throwaway",;
+  "fakeemail",;
+  "mailinator",;
+  "guerrillamail",;
+  "10minutemail";
+<<<<<<< HEAD
 
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+];
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

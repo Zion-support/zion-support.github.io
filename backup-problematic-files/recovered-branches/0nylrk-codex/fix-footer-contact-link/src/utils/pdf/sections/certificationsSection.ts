@@ -1,4 +1,5 @@
 
+=======
 import { jsPDF } from 'jspdf',;
 import { Certification } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -49,27 +50,10 @@ export function addCertificationsSection(;
       const expirationText = cert.expiration_date ? ` - ${formatDate(cert.expiration_date)}` :'',;
       doc.setFontSize(10),;
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
     ;
     yPos += 16,;
   }
-  ;
-  return yPos,;}
- doc.setFontSize (16);
-doc.setTextColor (colors.heading);
-doc.text ('Certifications', 20, yPos);
-yPos += 8;
-doc.setDrawColor (colors.accent);
-doc.line (20, yPos, 80, yPos);
-yPos += 8;
-for (const cert of certifications) {
-  // Check if we need to add a new page if (yPos > 260) {
-  doc.setFontSize (12);
-doc.setTextColor (colors.subheading);
-doc.text (cert.name, 20, yPos);
-doc.setFontSize (11);
-doc.setTextColor (colors.text);
-doc.text (cert.issuing organization, 20, yPos + 5);
-}yPos += 16 
-}return yPos 
-}
+<<<<<<< HEAD
+

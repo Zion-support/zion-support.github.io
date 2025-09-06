@@ -1,4 +1,5 @@
 
+=======
 import { supabase } from "@/integrations/supabase/client",;
 ;
 /**;
@@ -80,28 +81,15 @@ export const ensureProfilesTableExists = async () => {;
       END,;
       $$ LANGUAGE plpgsql SECURITY DEFINER,;
       ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       -- Check if trigger exists before creating it;
       DO $$;
       BEGIN;
         IF NOT EXISTS (SELECT 1 FROM pg_trigger WHERE tgname = 'on_auth_user_created') THEN;
           CREATE TRIGGER on_auth_user_created;
             AFTER INSERT ON auth.users;
-            FOR EACH ROW EXECUTE FUNCTION public.handle_new_user(),;
-        END IF,;
-      END;
-      $$,;
-    `,;
-    ;
-    // Execute the creation query using RPC to avoid TypeScript errors;
-    const { error:createError } = await supabase.rpc('exec', { sql:createTableQuery }),;
-    ;
-    if (createError) {;
-      console.error('Error creating profiles table:', createError),;
-    } else {;
-      // // // console.log('Profiles table setup completed'),;
-    }
-  } catch (error) {;
-    console.error('Error setting up profiles table:', error),;
+<<<<<<< HEAD
+
   }
 },;
 ;
@@ -110,9 +98,9 @@ export const initializeDatabase = async () => {;
   await ensureProfilesTableExists(),;
 },;   try {
   //Try to execute a simple query to check if the table exists const {
-  error 
+  error
 }= await supabase.rpc ('exec', {
-  sql: `SELECT EXISTS (SELECT FROM information schema.tables WHERE table schema = 'public'AND table name = 'profiles' 
+  sql: `SELECT EXISTS (SELECT FROM information schema.tables WHERE table schema = 'public'AND table name = 'profiles'
 }display name TEXT;
 user type TEXT;
 profile complete BOOLEAN DEFAULT FALSE;
@@ -139,12 +127,9 @@ $$ LANGUAGE plpgsql SECURITY DEFINER;
 END IF;
 END $$;
 `;
-//Execute the creation query using RPC to avoid TypeScript errors 
+//Execute the creation query using RPC to avoid TypeScript errors
 }
 }catch (error) {
-  console.error ('Error setting up profiles table:', error) 
+  console.error ('Error setting up profiles table:', error)
 }
-};
-// Call this when the app starts to ensure the table exists export const initializeDatabase = async () => {
-  await ensureProfilesTableExists () 
-};
+

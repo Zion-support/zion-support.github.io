@@ -1,9 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 =======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
     }
     // TODO: Integrate with actual provider
     return res && res.status(200).json({ status: 'queued', provider });
@@ -41,14 +39,29 @@ return res;
       .status (500);
       .json ({ error: e.message || 'Failed to queue emails' });
   }    return res.status (500).json ({ error: e.message || 'Failed to queue emails' });
+    }
+    // TODO: Integrate with actual provider
+    return res.status(200).json({ status: 'queued', provider })
+  } catch (e: any) {
+    return res.status(500).json({ error: e.message || 'Failed to queue emails' })
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+    }
+    // TODO: Integrate with actual provider
+    return res.status(200).json({ status: 'queued', provider });
+  } catch (e: any) {
+return res
+      .status(500)
+
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
       .json({ error: e.message || 'Failed to queue emails' });
   }    return res.status(500).json({ error: e.message || 'Failed to queue emails' })
   };
 }
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

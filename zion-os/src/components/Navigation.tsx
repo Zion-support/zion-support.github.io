@@ -1,30 +1,18 @@
 
-
 "use client",;
 import { useState, useEffect, useRef } from "react",;
 import Link from "next/link",;
 export function Navigation() {;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
   const [isSearchOpen, setIsSearchOpen] = useState(false),;
-
-
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
-=======
-"use client",
-import { useState, useEffect, useRef  } from './react';,
-import Link from './next / link';,
-export /**
- * Navigation - Function description
- */
-function Navigation() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false),
-  const [isSearchOpen, setIsSearchOpen] = useState (false),
-  const [isServicesOpen, setIsServicesOpen] = useState (false);
-  const [is_scrolled, setIsScrolled] = useState (false);
-  return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  return (;
+
     <nav;
       className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
         is_scrolled;
@@ -201,13 +189,11 @@ function Navigation() {
               </svg>;
             </div>;
 
-          </div>)}
-
 =======
-
+          </div>;
+        )}
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate - fade - in">;
@@ -285,9 +271,4 @@ function Navigation() {
         </div>;
       </div>;
 
-    </nav>;
-  );
-
-
 }
-

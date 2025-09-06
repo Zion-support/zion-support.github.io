@@ -1,8 +1,11 @@
+ursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react'';
 import { Outlet } from 'react-router-dom'';
 import { Footer } from '@/components/Footer';
 
 
+<<<<<<< HEAD
+=======
 
 interface AppLayoutProps {
 	children?: React.ReactNode
@@ -16,8 +19,7 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 				{children ?? <Outlet />}
 			</main>
 			{!hideFooter && <Footer />}
-
-
+ursor/integrate-build-improve-and-re-verify-8f7d
 		</div>
 	)
 }
@@ -39,6 +41,7 @@ export function AppLayout({ children }: AppLayoutProps) {
 }
 
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 		</div>;
 	);
 }'"

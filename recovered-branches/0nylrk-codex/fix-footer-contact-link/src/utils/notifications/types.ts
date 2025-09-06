@@ -1,34 +1,37 @@
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 ;
 
 export interface CreateNotificationParams {
   user_id: string;
-=======
 
-export interface CreateNotificationParams {;
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   userId: string;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   message: string;
   type: NotificationType;
+=======
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  relatedId?: string | null;
+  sendEmail?: boolean;
+  actionUrl?: string | null
+  actionText?: string | null
+}
+<<<<<<< HEAD
 
-
-
-export interface CreateNotificationResult {;
-
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   success: boolean;
   notificationId?: string
   error?: any
 }
-
-
+export interface HireRequestNotificationParams {
 
 export interface HireRequestNotificationParams {;
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   talentId: string;
   adminId?: string;
   requesterName: string;
@@ -37,51 +40,27 @@ export interface HireRequestNotificationParams {;
   projectSummary?: string
   hireRequestId: string
 }
-
-  related_id?: string | null;
-  send_email?: boolean;
-  action_url?: string | null,
-  action_text?: string | null;
-}
-export interface CreateNotificationResult {
-  success: boolean;
-  notification_id?: string,
-  error?: any;
-}
-export interface HireRequestNotificationParams {
-  talent_id: string;
-  admin_id?: string;
-  requester_name: string;
-  requester_email: string;
-  project_type?: string;
-  project_summary?: string,
-  hireRequestId: string;
-}
 export interface OnboardingNotificationParams {
-  user_id: string;
-  missing_milestone: string,
-  user_role: 'talent' | 'client';
-
-}
-export interface SystemNotificationParams {
-  user_id: string;
-=======
 
 
 export interface OnboardingNotificationParams {;
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   userId: string;
   missingMilestone: string
   userRole: 'talent' | 'client'
 }
-
+export interface SystemNotificationParams {
 
 export interface SystemNotificationParams {;
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   userId: string;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   message: string;
 
+  sendEmail?: boolean
+}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

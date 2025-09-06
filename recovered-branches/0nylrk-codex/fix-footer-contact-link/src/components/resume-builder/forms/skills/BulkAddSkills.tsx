@@ -1,8 +1,7 @@
 
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
@@ -70,171 +69,46 @@ if ( {) {
               }
             }
           }
-          // Reset the form and bulk input;
-          setBulkSkills ('');
-;
-          // Refresh the skills;
-          await on_success ();
-
-        } catch (err) {
-          set_error ('Failed to parse categorized skills. Please try again.');
-        }
-      }
-    } catch (err: any) {
-
-
-      if (enhancedContent) {;
-        try {;
-          // Parse the JSON response;
-          const categorizedSkills = JSON && JSON.parse(enhancedContent);
-
-          // Add the categorized skills;
-          for (const [category, skillsList] of Object && Object.entries(categorizedSkills)) {;
-            if (Array && Array.isArray(skillsList)) {;
-              for (const skillName of skillsList as string[]) {;
-                await addSkill(resumeId, {;
-                  name: skillName,;
-                  category: category,;
-                  proficiency: 3});
-              }
-            }
-          }
-
-          // Reset the form and bulk input;
+          // Reset the form and bulk input
           setBulkSkills('');
+          // Refresh the skills
+          await onSuccess()
+        } catch (err) {
+          setError('Failed to parse categorized skills. Please try again.')
 
-          // Refresh the skills;
-          await onSuccess();
-        } catch (err) {;
-          setError('Failed to parse categorized skills. Please try again.');
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
     } catch (err: any) {;
       setError(err && err.message || 'Failed to categorize skills');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-
-
+  }
   },
-=======
   };
-=======
   },
 
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
-
-    <div className="bg-muted/40 p-6 rounded-lg">;
-      <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>;
-      <div className="space-y-4">;
-        <div className="space-y-2">;
-          <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>;
-
+    <div className="bg-muted/40 p-6 rounded-lg">
+      <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
+      <div className="space-y-4">
+        <div className="space-y-2">
+          <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
           <Textarea
-=======
-
           <Textarea 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value={bulkSkills}
-
-
+            onChange={(e) => setBulkSkills(e.target.value)}
+          />
+        </div>
+        <Button
         <Button 
-
           onClick={handleCategorizeSkills}
-
+          disabled={isEnhancing |!bulkSkills.trim()}
           disabled={isEnhancing || !bulkSkills.trim()}
 
 
-          className="gap-2"
-        >
-          {isEnhancing ? (
-            <Loader2 className="h-4 w-4 animate-spin" />
-          ) : (
-            <Sparkles className="h-4 w-4" />
-          )}
-          Categorize with AI
-        </Button>
-        <p className="text-xs text-muted-foreground mt-1">
-          AI will identify skills and categorize them automatically. This may take a moment to process.
-        </p>
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      </div>
-    </div>
-  )
-
-            onChange={(e) => setBulkSkills(e && e.target.value)}
-          />;
-        </div>;
-
-        <Button
-          onClick={handleCategorizeSkills}
-          disabled={isEnhancing || !bulkSkills && bulkSkills.trim()}
-          className="gap-2">;
-          {isEnhancing ? (;
-            <Loader2 className="h-4 w-4 animate-spin" />;
-          ) : (;
-            <Sparkles className="h-4 w-4" />;
-          )}
-          Categorize with AI;
-        </Button>;
-
-        <p className="text-xs text-muted-foreground mt-1">;
-          AI will identify skills and categorize them automatically. This may take a moment to process.;
-        </p>;
-
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      </div>;
-    </div>;
-  );
-=======
-
-},
-
-=======
-
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-      set_error (err.message || 'Failed to categorize skills');
-    }
-  }
-;
-  return (
-    <div className="bg - muted / 40 p - 6 rounded - lg">;
-      <h3 className="text - md font - medium mb - 4">Bulk Add & AI Categorization</h3>;
-      <div className="space - y-4">;
-        <div className="space - y-2">;
-          <label className="text - sm font - medium">Enter multiple skills (comma separated)</label>;
-          <Textarea;
-            className="min - h-24";
-            placeholder="Python, React, TypeScript, Project Management, Communication...";
-            value={bulk_skills}
-            on_change={(e) => setBulkSkills (e.target.value)}
-          />;
-        </div>;
-        <Button;
-          on_click={handleCategorizeSkills}
-          disabled={is_enhancing || !bulk_skills.trim ()}
-          className="gap - 2";
-        >;
-          {is_enhancing ? (
-            <Loader2 className="h - 4 w - 4 animate - spin" />) : (
-            <Sparkles className="h - 4 w - 4" />)}
-          Categorize with AI;
-        </Button>;
-        <p className="text - xs text - muted - foreground mt - 1">;
-          AI will identify skills and categorize them automatically. This may take a moment to process.;
-        </p>;
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      </div>;
-    </div>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

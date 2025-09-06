@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
+=======
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -8,7 +9,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { moduleTitle, moduleContent } = req && req.body || {};
   const apiKey = process && process.env.OPENAI_API_KEY;
-
   const fallback = () =>
     res && res.status(200).json({
       summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`,
@@ -17,12 +17,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const fallback = () => res && res.status(200).json({
 
     summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
-=======
   const fallback = () => res.status(200).json({
 
     summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (!apiKey) return fallback();
   try {
     const client = new OpenAI({ apiKey });
@@ -97,18 +94,15 @@ function handler() {
 
 
 =======
+=======
     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status(200).json({ summary: text.trim() });
   } catch (err) {
     return fallback();
+  }
+    const text = completion.choices?.[0]?.message?.content ?? '';
 
   }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    return res.status (200).json ({ summary: text.trim () });
-  } catch (err) {
-    return fallback ();
-}
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

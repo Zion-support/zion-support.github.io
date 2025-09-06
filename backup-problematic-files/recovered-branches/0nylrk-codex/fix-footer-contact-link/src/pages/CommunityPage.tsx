@@ -1,4 +1,5 @@
 
+=======
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -108,6 +109,7 @@ export default function CommunityPage() {;
         keywords="community, forum, discussion, AI marketplace, questions, answers";
       />;
       ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="container py-8">;
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">;
           <div>;
@@ -116,44 +118,20 @@ export default function CommunityPage() {;
               Join the conversation, ask questions, and share your knowledge;
             </p>;
           </div>;
-          ;
-          <Button asChild>;
-            <Link to={user ? "/community/create" :"/login?next=/community/create"}>;
+<<<<<<< HEAD
+
               Create New Post;
             </Link>;
           </Button>;
         </div>;
-        ;
-        <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">;
-          <TabsList className="mb-6">;
+
             <TabsTrigger value="categories">Categories</TabsTrigger>;
             <TabsTrigger value="featured">Featured</TabsTrigger>;
             <TabsTrigger value="recent">Recent</TabsTrigger>;
           </TabsList>;
-          ;
-          <TabsContent value="categories">;
-            <ForumCategories />;
-          </TabsContent>;
-          ;
-          <TabsContent value="featured">;
-            <div className="space-y-4">;
-              {featuredPosts.map((post) => (;
-                <PostCard key={post.id} post={post} />;
-              ))}
-            </div>;
-          </TabsContent>;
-          ;
-          <TabsContent value="recent">;
-            <div className="space-y-4">;
-              {recentPosts.map((post) => (;
-                <PostCard key={post.id} post={post} />;
-              ))}
+
             </div>;
           </TabsContent>;
         </Tabs>;
       </div>;
-    </AppLayout>;
-  ),;}
- }</div> </TabsContent>) ) 
-}</div> </TabsContent> </Tabs> </div> </AppLayout>) 
-}
+
