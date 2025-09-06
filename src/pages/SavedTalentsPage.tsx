@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState, useEffect } from 'react'
 import { SEO } from '@/components/SEO'
 import { TalentCard } from '@/components/talent/TalentCard'
@@ -19,15 +16,12 @@ export default function SavedTalentsPage() {
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const router = useRouter()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { SEO } from "@/components/SEO",
 import { TalentCard } from "@/components/talent/TalentCard",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
 import { toast } from "@/components/ui/use-toast";
 import { useRouter  } from 'next/router';
 import { logErrorToProduction  } from '@/utils/productionLogger';
@@ -52,7 +46,6 @@ export default function SavedTalentsPage() {
       try {
         if (!user) {
           logWarn('User not authenticated.')
-=======
 import { toast } from "@/components/ui/use-toast",
 import { useRouter } from 'next/router',
 import { logErrorToProduction } from '@/utils/productionLogger',
@@ -66,19 +59,12 @@ export default function SavedTalentsPage() {
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const router = useRouter(),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Using router.asPath instead of useLocation
 
   useEffect(() => {
     if (!user) {
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`)
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }, [user, router])
   useEffect((,) => {
     const fetchSavedTalents = async () => {
@@ -87,8 +73,6 @@ export default function SavedTalentsPage() {
         if (!user) {
           logWarn('User not authenticated.')
           return;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }, [user, router]),
 
   useEffect(() => {
@@ -97,12 +81,7 @@ export default function SavedTalentsPage() {
       try {
         if (!user) {
           logWarn("User not authenticated."),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           return
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
         const { data, error } = await supabase
           .from("saved_talents")
@@ -125,7 +104,6 @@ export default function SavedTalentsPage() {
             )
           `
           )
-<<<<<<< HEAD
           .eq('user_id', user.id)
         if (error) {
           throw error
@@ -153,7 +131,6 @@ export default function SavedTalentsPage() {
     }
     fetchSavedTalents()
   }, [user])
-<<<<<<< HEAD
   const handleViewProfile = (talentId: string) => {
     router.push(`/talent/${talentId}`)
   }
@@ -188,9 +165,6 @@ export default function SavedTalentsPage() {
           title: 'Talent Removed'
           description: 'Talent removed from saved list.'
         })
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           .eq("user_id", user.id),
 
         if (error) {
@@ -302,7 +276,6 @@ export default function SavedTalentsPage() {;
     },;
     fetchSavedTalents();
   }, [user]),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const handleViewProfile = (talentId: string) => {;
     router.push(`/talent/${talentId}`);
   };
@@ -320,7 +293,6 @@ export default function SavedTalentsPage() {;
         logWarn('User not authenticated.')
         return;
       }
-<<<<<<< HEAD
 
       if (isCurrentlySaved) {
         // Remove from saved talents
@@ -340,7 +312,6 @@ export default function SavedTalentsPage() {;
           title: 'Talent Removed',
           description: 'Talent removed from saved list.',
         })
-=======
 ;
       if (isCurrentlySaved) {;
         // Remove from saved talents;
@@ -359,41 +330,27 @@ export default function SavedTalentsPage() {;
         toast({
           title: "Talent Removed",
           description: "Talent removed from saved list."})
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } else {
         // Add to saved talents
         const { error } = await supabase
           .from('saved_talents')
-<<<<<<< HEAD
           .insert([{ user_id: user.id, talent_id: talentId }])
-<<<<<<< HEAD
         if (error) {
           throw error
         }
-=======
           .insert([{ user_id: user.id, talent_id: talentId }]),
   
-=======
-=======
           .insert([{ user_id: user.id, talent_id: talentId }]),
   
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         if (error) {
           throw error
         }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Fetch the updated talent profile and add it to the list
         const { data: talentData, error: talentError } = await supabase
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
-<<<<<<< HEAD
           .single()
         if (talentError) {
           logErrorToProduction(
@@ -409,7 +366,6 @@ export default function SavedTalentsPage() {;
               'Failed to update saved talents. Please try again later.'
             variant: 'destructive'
           })
-<<<<<<< HEAD
           return
         }
         if (talentData) {
@@ -436,10 +392,7 @@ export default function SavedTalentsPage() {;
       })
     }
   }
-=======
           return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           .single(),
   
         if (talentError) {
@@ -449,13 +402,9 @@ export default function SavedTalentsPage() {;
             description: "Failed to update saved talents. Please try again later.",
             variant: "destructive"}),
           return
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
   
         if (talentData) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
           setSavedTalents(prevTalents => [
             ...prevTalents,
             talentData as unknown as TalentProfile,
@@ -479,8 +428,6 @@ export default function SavedTalentsPage() {;
       })
     }
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
           toast({
             title: "Talent Saved",
@@ -495,12 +442,7 @@ export default function SavedTalentsPage() {;
         variant: "destructive"})
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -512,37 +454,22 @@ export default function SavedTalentsPage() {;
         <p className="text-muted-foreground">
           Here are the talents you've saved for future reference.
         </p>
-<<<<<<< HEAD
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
           <div className="py-8">
             <EmptyState
-<<<<<<< HEAD
               icon={<Heart className='h-8 w-8' />}
               title='No Saved Talents'              description="You haven't saved any talents yet."
-=======
               icon={<Heart className="h-8 w-8" />}
               title="No Saved Talents"
               description="You haven't saved any talents yet."
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               action={{ text: 'Browse Talent', href: '/talent' }}
               className="border-none bg-transparent text-center"
             />
           </div>
         ) : (
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
             {savedTalents.map(talent => (              <TalentCard
                 key = {talent.id,}
@@ -551,7 +478,6 @@ export default function SavedTalentsPage() {;
                 onRequestHire = {handleRequestHire,}
                 isAuthenticated = {!!user,}
               />
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {savedTalents.map((talent) => (
               <TalentCard
@@ -634,15 +560,9 @@ export default function SavedTalentsPage() {;
                 onRequestHire={handleRequestHire}
                 isAuthenticated={!!user}
               />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         )}
-<<<<<<< HEAD
       </div>
     </>
   )
@@ -702,14 +622,8 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div>)
 }</div> </>)
 }'"}
-=======
       </div>;
     </>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

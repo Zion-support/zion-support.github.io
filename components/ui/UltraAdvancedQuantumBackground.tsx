@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationFrameId: number;
@@ -91,22 +88,12 @@ const UltraAdvancedQuantumBackground: React.FC<
         if (this.life <= 0) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
-<<<<<<< HEAD
           this.y = Math.random() * canvas.height;        }          this.y = Math.random() * canvas.height
-=======
           this.y = Math.random() * canvas.height;        }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       draw() {
         if (!ctx) return;
         ctx.save();
@@ -293,16 +280,9 @@ const UltraAdvancedQuantumBackground: React.FC<
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
-=======
             ctx.stroke();          }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }
       }
@@ -378,19 +358,16 @@ const UltraAdvancedQuantumBackground: React.FC<
           scale: [1, 1.4, 1];
           opacity: [0.2, 0.6, 0.2]}}
         transition={{
-<<<<<<< HEAD
           duration: 6
           repeat: Infinity
           ease: 'easeInOut'
           delay: 2,          ease: "easeInOut"
           delay: 2
-=======
           duration: 6,
           repeat: Infinity,
           ease: 'easeInOut',
           delay: 2,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         }}
         transition={{
           duration: 5
@@ -410,14 +387,7 @@ const UltraAdvancedQuantumBackground: React.FC<
           ease: 'easeInOut'
           delay: 2,        }}
       />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
@@ -429,7 +399,6 @@ const UltraAdvancedQuantumBackground: React.FC<
       />
       {/* Content Layer */}
       <div className='relative z-10'>{children}</div>
-<<<<<<< HEAD
       {/* Quantum Energy Waves */}
       <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden'>
         <motion.div
@@ -456,38 +425,27 @@ const UltraAdvancedQuantumBackground: React.FC<
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
 export default UltraAdvancedQuantumBackground;            ease: "linear"
-=======
 };
-=======
 
         style={{ zIndex: 1 }}
       />
 
       {/* Content Layer */}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 export default UltraAdvancedQuantumBackground;            ease: "linear",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             delay: 2
           }}
         />
       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>
   );
 }
 export default UltraAdvancedQuantumBackground;  )
 }
 export default UltraAdvancedQuantumBackground;
-<<<<<<< HEAD
 
-=======
 
         style={{ zIndex: 1 }}
       />
@@ -498,9 +456,4 @@ export default UltraAdvancedQuantumBackground;
         />
       </div>
     </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
     </div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

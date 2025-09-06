@@ -1,26 +1,14 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
 import {AppSidebar} from "@/components/creator/CreatorSidebar";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",
 import { AppSidebar } from "@/components/creator/CreatorSidebar",
-<<<<<<< HEAD
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-=======
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CreatorDashboard() {
   return (
     <SidebarProvider>
@@ -61,7 +49,6 @@ export default function CreatorDashboard() {
               <p className="text-zion-slate text-lg mb-2 max-w-prose">
                 Create new content, monitor your analytics, or manage your account using the sidebar menu.
               </p>
-<<<<<<< HEAD
               {/* Placeholder for more creator-specific content */}
             </div>
           </main>
@@ -71,11 +58,7 @@ export default function CreatorDashboard() {
       <SidebarTrigger />
     </SidebarProvider>
   )
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;
 import { Header } from "@/components/Header",;
@@ -90,12 +73,7 @@ export default function CreatorDashboard() {;
           <main className="flex-1 p-6 md:p-10 bg-zion-blue">;
             <h1 className="text-2xl font-bold text-white mb-8">Creator Dashboard</h1>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">;
-<<<<<<< HEAD
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

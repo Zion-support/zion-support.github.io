@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -10,15 +7,12 @@ import {Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone} from "luci
 import {cn} from "@/lib/utils";
 import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 interface Message {
@@ -42,13 +36,8 @@ interface MobileChatViewProps {
   }
   messages: Message[]
   onBack: () => void
-=======
 import { useNavigate } from "react-router-dom",
 import { toast } from "sonner",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface Message {
   id: string,
   content: string,
@@ -57,9 +46,6 @@ interface Message {
   sender?: string,
   avatar?: string,
   status?: 'sent' | 'delivered' | 'read'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }
 
 interface MobileChatViewProps {
@@ -91,8 +77,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       handleSend()
     }
   };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button",;
@@ -122,12 +106,10 @@ interface MobileChatViewProps {;
   onBack: () => void,;
   onSendMessage: (content: string) => void;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-<<<<<<< HEAD
   const [newMessage, setNewMessage] = useState("");
 
   const navigate = useNavigate();
@@ -143,7 +125,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       handleSend()
     }
   }
-=======
   const [newMessage, setNewMessage] = useState(""),
   const navigate = useNavigate(),
   
@@ -167,46 +148,35 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       handleSend();
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`,
     toast.success("Starting video call", {
       description: `Connecting with ${contact.name}...`
-<<<<<<< HEAD
     });
     // Navigate to video call page
     navigate(`/call/${roomId}`)
   }
-=======
     }),
     
     // Navigate to video call page
     navigate(`/call/${roomId}`)
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`,
     toast.success("Starting audio call", {
       description: `Connecting with ${contact.name}...`
-<<<<<<< HEAD
     });
     // Navigate to video call page with audio-only flag
     navigate(`/call/${roomId}?audioOnly=true`)
   }
-=======
     }),
     
     // Navigate to video call page with audio-only flag
     navigate(`/call/${roomId}?audioOnly=true`)
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -250,34 +220,24 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           >
             <div
               className={cn(
-<<<<<<< HEAD
                 "max-w-[80%] rounded-2xl px-4 py-2";
                 message.isMe
                   ? "bg-primary text-primary-foreground rounded-tr-none"
-=======
                 "max-w-[80%] rounded-2xl px-4 py-2",
                 message.isMe 
                   ? "bg-primary text-primary-foreground rounded-tr-none" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   : "bg-muted rounded-tl-none"
               )}
             >
               <p>{message.content}</p>
               <div className={cn(
-<<<<<<< HEAD
                 "text-xs mt-1 flex justify-end";
 
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
-=======
                 "text-xs mt-1 flex justify-end",
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },;
   const startVideoCall = () => {;
     const roomId = `mobile-${contact.id}`,;
@@ -349,11 +309,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                 "text-xs mt-1 flex justify-end";
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground";
               )}>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {message.timestamp}
                 {message.isMe && message.status && (
                   <span className="ml-1">
@@ -389,9 +344,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
-=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -4,7 +4,6 @@ import './globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
-<<<<<<< HEAD
 export const metadata: Metadata = {title: 'Zion Tech Group - Leading AI and Technology Solutions';
   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.';
   keywords: ['AIartificial intelligencetechnologyinnovationquantum computingautonomous systemsbusiness solutionszion tech'];
@@ -28,7 +27,6 @@ export const metadata: Metadata = {title: 'Zion Tech Group - Leading AI and Tech
     title: 'Zion Tech Group - Leading AI and Technology Solutions';
     description: 'Transform your business with cutting-edge AI and technology solutions.';
     images: ['/og-image.jpg']}
-=======
 export const metadata: Metadata = {;
   title: 'Zion Tech Group - Leading AI and Technology Solutions',;
   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',;
@@ -55,20 +53,16 @@ export const metadata: Metadata = {;
     title: 'Zion Tech Group - Leading AI and Technology Solutions',;
     description: 'Transform your business with cutting-edge AI and technology solutions.',;
     images: ['/og-image.jpg']};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   viewport: 'width=device-width, initial-scale=1';
   themeColor: '#000000'}
 export default function RootLayout({
   children}: {
   children: React.ReactNode
 }) {
-<<<<<<< HEAD
   return (;
     <html lang=&quot;en&quot; className=&quot;scroll-smooth&quot;>
-=======
   return (
     <html lang="en" className="scroll-smooth">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <body className={`${inter.className} bg-black text-white antialiased`}>
         <Navigation />
         <main className="min-h-screen">
@@ -78,9 +72,6 @@ export default function RootLayout({
       </body>;
     </html>;
   );
-<<<<<<< HEAD
 }
-=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

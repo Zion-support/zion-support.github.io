@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 import { IntegrationProviderMeta } from "./types";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
@@ -43,42 +40,27 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     description: "Recruiting software"
   }
   {
-<<<<<<< HEAD
     id: "bamboohr"
     name: "BambooHR"
     category: "ats"
     description: "HRIS & ATS"
   }
-=======
     id: "bamboohr",
     name: "BambooHR",
     category: "ats",
     description: "HRIS & ATS",
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];
 export function getProviderById(
-<<<<<<< HEAD
   id: string
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find((p) => p.id === id);
 }
-=======
   id: string,
-<<<<<<< HEAD
 ): IntegrationProviderMeta | undefined {;
   return PROVIDERS.find((p) => p.id === id);
 }
-=======
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
-=======
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

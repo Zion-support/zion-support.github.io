@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
-=======
 import React, { useState } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 
 import {
-<<<<<<< HEAD
   Check
   Star
   Zap
@@ -94,7 +90,6 @@ import {
   Microscope as MicroscopeIcon
   GraduationCap as GraduationCapIcon
   ShieldCheck as ShieldCheckIcon;
-=======
   Check,
   Star,
   Zap,
@@ -182,7 +177,6 @@ import {
   Microscope as MicroscopeIcon,
   GraduationCap as GraduationCapIcon,;
   ShieldCheck as ShieldCheckIcon,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -191,7 +185,6 @@ import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import {
-<<<<<<< HEAD
   innovativeMicroSaasServices
   getInnovativeServicesByCategory
   getPopularInnovativeServices
@@ -200,7 +193,6 @@ import {
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
 export default function InnovativeServicesPage() {
-=======
   innovativeMicroSaasServices,
   getInnovativeServicesByCategory,
   getPopularInnovativeServices,
@@ -208,7 +200,6 @@ export default function InnovativeServicesPage() {
   getInnovativeServiceCategories,;
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 export default function InnovativeServicesPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -258,7 +249,6 @@ export default function InnovativeServicesPage() {;
   }
   // Search filter
   if (searchQuery) {
-<<<<<<< HEAD
     filteredServices = filteredServices.filter(
       service =>
         service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
@@ -308,11 +298,9 @@ export default function InnovativeServicesPage() {;
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-=======
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const popularServices = getPopularInnovativeServices();
   const categories = getInnovativeServiceCategories();
 
@@ -479,7 +467,6 @@ export default function InnovativeServicesPage() {;
                       className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                     >
                       <option value='All'>All Categories</option>
-<<<<<<< HEAD
                       {categories.map(category => (                        <option key={category.name} value={category.name}>                    <select
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
@@ -488,40 +475,26 @@ export default function InnovativeServicesPage() {;
                       <option value="All">All Categories</option>
                       {categories.map((category) => (
                         <option key={category.name} value={category.name}>
-=======
                       {categories.map(category => (                        <option key={category.name} value={category.name}>
 
                         <option key={category.name} value={category.name}>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           {category.name} ({category.count})
                         </option>
                       ))}
                     </select>
                   </div>
-<<<<<<< HEAD
                   {/* Price Range Filter */}
                   <div className='flex-shrink-0'>
-=======
 
                   {/* Price Range Filter */}
                   <div className='flex-shrink-0'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <select
                       value={priceRange}
                       onChange={e => setPriceRange(e.target.value)}
                       className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                     >
-<<<<<<< HEAD
                       {priceRanges.map(range => (                        <option key={range.value} value={range.value}>                    <select
                       value={priceRange}
                       onChange={(e) => setPriceRange(e.target.value)}
@@ -529,40 +502,26 @@ export default function InnovativeServicesPage() {;
                     >
                       {priceRanges.map((range) => (
                         <option key={range.value} value={range.value}>
-=======
                       {priceRanges.map(range => (                        <option key={range.value} value={range.value}>
 
                         <option key={range.value} value={range.value}>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           {range.label}
                         </option>
                       ))}
                     </select>
                   </div>
-<<<<<<< HEAD
                   {/* Sort Options */}
                   <div className='flex-shrink-0'>
-=======
 
                   {/* Sort Options */}
                   <div className='flex-shrink-0'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <select
                       value={sortBy}
                       onChange={e => setSortBy(e.target.value)}
                       className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                     >
-<<<<<<< HEAD
                       {sortOptions.map(option => (                        <option key={option.value} value={option.value}>                    <select
                       value={sortBy}
                       onChange={(e) => setSortBy(e.target.value)}
@@ -570,36 +529,23 @@ export default function InnovativeServicesPage() {;
                     >
                       {sortOptions.map((option) => (
                         <option key={option.value} value={option.value}>
-=======
                       {sortOptions.map(option => (                        <option key={option.value} value={option.value}>
 
                         <option key={option.value} value={option.value}>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           {option.value}
                         </option>
                       ))}
                     </select>
                   </div>
-<<<<<<< HEAD
                   {/* View Mode Toggle */}
                   <div className='flex-shrink-0'>
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
-=======
 
                   {/* View Mode Toggle */}
                   <div className='flex-shrink-0'>
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${
@@ -619,7 +565,6 @@ export default function InnovativeServicesPage() {;
                       <button
                         onClick={() => setViewMode('list')}
                         className={`px-3 py-2 rounded-lg transition-all ${
-<<<<<<< HEAD
                           viewMode === 'list'
                             ? 'bg-cyan-500 text-white'
                             : 'text-gray-400 hover:text-white'
@@ -629,15 +574,9 @@ export default function InnovativeServicesPage() {;
                         }`}
                       >
                         <List className="w-5 h-5" />
-=======
 
                       </button>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   </div>
                 </div>
@@ -682,7 +621,6 @@ export default function InnovativeServicesPage() {;
                             </div>
                           </div>
                           {service.popular && (
-<<<<<<< HEAD
                             <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'>                              POPULAR              {filteredServices.length === 0 ? (
                 <div className="text-center py-20">
                   <div className="text-6xl mb-4">🔍</div>
@@ -711,7 +649,6 @@ export default function InnovativeServicesPage() {;
                             </div>
                           )}
                         </div>
-=======
                             <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'>                              POPULAR
 
                               POPULAR
@@ -720,23 +657,11 @@ export default function InnovativeServicesPage() {;
                           )}
                         </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
                         </p>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
                           {service.description}
@@ -824,10 +749,8 @@ export default function InnovativeServicesPage() {;
                             )}
                           </div>
                         </div>
-<<<<<<< HEAD
                         {/* Market Info */}
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
-=======
 
                         {/* Key Features */}
 
@@ -841,11 +764,6 @@ export default function InnovativeServicesPage() {;
                         {/* Market Info */}
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -917,27 +835,13 @@ export default function InnovativeServicesPage() {;
               )}
             </div>
           </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Call to Action */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>
             <div className='max-w-4xl mx-auto text-center'>
               <EnhancedFuturisticCard className='p-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Ready to Lead the Future?
                 </h2>
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -956,7 +860,6 @@ export default function InnovativeServicesPage() {;
                   <Button
                     href={`mailto:${contactInfo.email}`}
                     variant='secondary'
-<<<<<<< HEAD
                     className='px-8 py-4 text-lg'                  Ready to Lead the Future?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -991,7 +894,6 @@ export default function InnovativeServicesPage() {;
                 <div className="mt-8 text-sm text-gray-400">
                   <div>Address: {contactInfo.address}</div>
                   <div className="mt-1">Website: {contactInfo.website}</div>
-=======
                     className='px-8 py-4 text-lg'
 
                     Call Now: {contactInfo.mobile}
@@ -999,11 +901,6 @@ export default function InnovativeServicesPage() {;
                   <Button
                     href={`mailto:${contactInfo.email}`}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -1011,20 +908,12 @@ export default function InnovativeServicesPage() {;
         </div>
       </QuantumHolographicBackground>
     </>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 
 }
 }
 }
-=======
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

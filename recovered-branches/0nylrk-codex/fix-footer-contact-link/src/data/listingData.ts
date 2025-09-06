@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion } from '@/types/search';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion } from "@/types/search";
 // Shared data source for marketplace listings
@@ -191,13 +185,8 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     text
     type: 'product', // Use a valid type from the SearchSuggestion interface
   }));};  ];
-=======
 import { ProductListing } from "@/types/listings",
 import { SearchSuggestion } from "@/types/search",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -317,7 +306,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     rating: 4.8,
     reviewCount: 36,
     featured: true,
-<<<<<<< HEAD
     location: 'Global',
     availability: 'Immediate',
     aiScore: 94,;
@@ -330,9 +318,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     reviewCount: 36;
     featured: true;
     location: "Global";
-=======
     location: "Global",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     availability: "Immediate",
     aiScore: 94
   }
@@ -341,7 +327,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
-<<<<<<< HEAD
     'AI models',
     'GPT integration',
     'Machine learning',
@@ -358,7 +343,6 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     text,
     type: 'product', // Use a valid type from the SearchSuggestion interface
   }));};  ];
-=======
     "AI models",
     "GPT integration",
     "Machine learning",
@@ -370,14 +354,11 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     "Virtual assistant",
     "Enterprise AI solutions"
   ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return suggestions.map(text => ({
     text,
     type: 'product' // Use a valid type from the SearchSuggestion interface
   }))
-<<<<<<< HEAD
 }
 // Generate filter options for sidebar
 export const generateFilterOptions = () => {
@@ -469,13 +450,11 @@ ratingOptions: [1, 2, 3, 4, 5]
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 
-=======
 },
 
 // Generate filter options for sidebar
 export const generateFilterOptions = () => {
   // Extract unique categories, locations, and availability options from listings
-<<<<<<< HEAD
   const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),;
   ].sort();
@@ -490,13 +469,11 @@ export const generateFilterOptions = () => {
     ),
   ].sort();
 
-=======
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),
   const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
   
   return {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     productTypes: productTypes.map(type => ({
       label: type,
       value: type
@@ -509,9 +486,6 @@ export const generateFilterOptions = () => {
       label: item,
       value: item
     })),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     ratingOptions: [1, 2, 3, 4, 5],
   };
 };
@@ -574,8 +548,6 @@ availabilityOptions: availability.map (item => ({
 ratingOptions: [1, 2, 3, 4, 5] 
 
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ratingOptions: [1, 2, 3, 4, 5]
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion } from "@/types/search",;
@@ -745,9 +717,4 @@ export const generateFilterOptions = () => {;
   }
 },;
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

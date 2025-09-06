@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
-<<<<<<< HEAD
 
 type Note = {
   id: string
@@ -29,15 +27,9 @@ export default function AdminNotesConsole() {
     if (isAdmin) load()
   }, [isAdmin])
 
-=======
-=======
-<<<<<<< HEAD
 import { useEffect, useState } from 'react',;
 ;
-=======
 import { useEffect, useState } from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Note = {
   id: string;
   targetType: string;
@@ -73,7 +65,6 @@ export default function AdminNotesConsole(req, res) {
 }
     if (isAdmin) load()
   }, [isAdmin]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -95,17 +86,12 @@ export default function AdminNotesConsole(req, res) {
               <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>
               <div>{n.text}</div>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
           ))}
         </div>
       )}
     </div>
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -123,9 +109,5 @@ export default function AdminNotesConsole(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

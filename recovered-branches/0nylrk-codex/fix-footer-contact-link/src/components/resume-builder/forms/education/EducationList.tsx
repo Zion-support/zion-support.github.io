@@ -1,28 +1,18 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Education  } from '@/types/resume';
 import { EducationItem } from './EducationItem';
-=======
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void
-=======
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
 interface EducationListProps {;
   educationEntries: Education[],;
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function EducationList({
   educationEntries
@@ -32,10 +22,7 @@ export function EducationList({
   if (!educationEntries |educationEntries.length === 0) {
     return null;
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Education</h3>
@@ -48,11 +35,8 @@ export function EducationList({
         />
       ))}
     </div>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

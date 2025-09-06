@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Image from "next/image";
-=======
 import Image from 'next/image'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Twitter, Linkedin } from 'lucide-react'
 interface Speaker {
   name: string
@@ -14,14 +10,10 @@ interface Speaker {
   linkedin?: string
 }
 interface Speaker {
-<<<<<<< HEAD
-=======
   name: string,
   title: string,
   avatar: string,
   twitter?: string
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import Image from "next/image",
 import { Twitter, Linkedin } from 'lucide-react'
 
@@ -30,13 +22,8 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   linkedin?: string
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   name: string
   title: string
@@ -47,7 +34,6 @@ interface Speaker {
 }
 const speakers: Speaker[] = [
   {
-<<<<<<< HEAD
 
     name: 'Alex Zion'
     title: 'Founder & CEO'
@@ -56,26 +42,15 @@ const speakers: Speaker[] = [
     linkedin: '#'
   }
 ]
-=======
     name: 'Alex Zion',
     title: 'Founder & CEO',
     avatar: 'https://placehold.co/100x100',
     twitter: '#',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     linkedin: '#',
   },
 ]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     linkedin: '#'}],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function SpeakersSection() {
   return (
     <section className="py-12 bg-zion-blue-dark text-white" id="speakers">
@@ -84,8 +59,6 @@ export function SpeakersSection() {
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
           {speakers.map((sp) => (
             <div key={sp.name} className="text-center space-y-2">
-<<<<<<< HEAD
-=======
               <Image
 import Image from "next/image",;
 import { Twitter, Linkedin } from 'lucide-react';
@@ -113,16 +86,10 @@ export function SpeakersSection() {;
           {speakers.map((sp) => (;
             <div key={sp.name} className="text-center space-y-2">;
               <Image;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 src={sp.avatar}
                 alt={sp.name}
                 width={96}
                 height={96}
-<<<<<<< HEAD
                 className='rounded-full mx-auto'
                 loading='lazy'
               <p className='font-semibold'>{sp.name}</p>
@@ -136,7 +103,6 @@ export function SpeakersSection() {;
                     rel='noopener noreferrer'
                     className='flex items-center'
                     href = {sp.twitter,}
-=======
                 className="rounded-full mx-auto"
                 loading="lazy"
               />
@@ -146,17 +112,11 @@ export function SpeakersSection() {;
                 {sp.twitter && (
                   <a
                     href={sp.twitter}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     aria-label="Twitter"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
-<<<<<<< HEAD
                     <Twitter className='h-4 w-4' aria-hidden='true' />
                     <span className='sr-only'>Twitter</span>                  </a>                    <Twitter className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">Twitter</span>
@@ -172,7 +132,6 @@ export function SpeakersSection() {;
                   >
                     <Linkedin className='h-4 w-4' aria-hidden='true' />
                     <span className='sr-only'>LinkedIn</span>                  </a>                    aria-label="LinkedIn"
-=======
                     <Twitter className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">Twitter</span>
                   </Link>
@@ -181,45 +140,26 @@ export function SpeakersSection() {;
                   <a;
                     href={sp.linkedin}
                     aria-label="LinkedIn"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
                     <Linkedin className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">LinkedIn</span>
-<<<<<<< HEAD
-=======
                   </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
               </div>
             </div>
           ))}
-<<<<<<< HEAD
         </div>
       </div>;
     </section>;
   );
 };
 }
-=======
         </div>;
       </div>;
     </section>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

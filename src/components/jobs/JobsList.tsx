@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from "react"
 import { useAuth } from "@/hooks/useAuth"
 import { supabase } from "@/integrations/supabase/client"
@@ -23,14 +20,11 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   useEffect((,) => {
     const fetchJobs = async () => {
       if (!user) return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { format } from "date-fns";
 import Link from "next/link";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface JobsListProps {
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -40,7 +34,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge",
 import { Loader2, Edit, X, Eye } from 'lucide-react'
 import { format } from "date-fns",
-<<<<<<< HEAD
 import Link from "next/link";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface JobsListProps {
@@ -54,7 +47,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   useEffect((,) => {
     const fetchJobs = async () => {
       if (!user) return
-=======
 import Link from "next/link",
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface JobsListProps {
@@ -71,23 +63,13 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
     const fetchJobs = async () => {
       if (!user) return,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       try {
         let query = supabase
           .from("jobs")
           .select("*")
           .eq("client_id", user.id)
-<<<<<<< HEAD
-<<<<<<< HEAD
           .order("created_at", { ascending: false })
-=======
           .order("created_at", { ascending: false }),
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         if (filter) {
           query = query.eq("status", filter)
         }
@@ -102,11 +84,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
     }
     fetchJobs()
   }, [user, filter])
-=======
-<<<<<<< HEAD
           .order("created_at", { ascending: false }),
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
         if (filter) {
           query = query.eq("status", filter)
@@ -156,11 +134,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
     fetchJobs()
   }, [user, filter]),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
@@ -172,16 +145,13 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
     return (
       <div className="text-center p-8 border rounded-md bg-muted/20">
         <p className="text-lg text-muted-foreground">
-<<<<<<< HEAD
           {filter
             ? `No jobs with status "${filter}" found.`
             : "You haven't posted any jobs yet.", }
-=======
           {filter 
             ? `No jobs with status "${filter}" found.` 
             : "You haven't posted any jobs yet."
           }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         </p>
         <Button asChild className="mt-4">
           <Link href="/post-job">Post Your First Job</Link>
@@ -189,64 +159,42 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
       </div>
     )
   }
-<<<<<<< HEAD
   const getStatusColor = (status: JobStatus,) => {
     switch (status) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       case "new": return "bg-blue-100 text-blue-800"
       case "in_progress":
         return "bg-yellow-100 text-yellow-800"
       case "filled":
         return "bg-green-100 text-green-800"
-=======
-<<<<<<< HEAD
 
   const getStatusColor = (status: JobStatus) => {
     switch (status) {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       case "new": return "bg-blue-100 text-blue-800",
       case "in_progress":
         return "bg-yellow-100 text-yellow-800",
       case "filled":
         return "bg-green-100 text-green-800",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       case "closed":
         return "bg-gray-100 text-gray-800"
       default:
         return "bg-gray-100 text-gray-800"
     }
-<<<<<<< HEAD
   }
-<<<<<<< HEAD
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job,) => (
         <Card
           key = {job.id,}
-=======
   },
 
-=======
-=======
   },
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job) => (
         <Card 
           key={job.id} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
@@ -270,10 +218,8 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
               {job.description}
             </p>
             <div className="flex flex-wrap gap-1 mt-2">
-<<<<<<< HEAD
               {job.skills.slice(0, 3).map((skill, index,) => (
                 <Badge key={index} variant="outline" className="text-xs">
-=======
               {job.skills.slice(0, 3).map((skill, index) => (
                 <Badge key={index} variant="outline" className="text-xs">
     },;
@@ -346,11 +292,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
             <div className="flex flex-wrap gap-1 mt-2">;
               {job.skills.slice(0, 3).map((skill, index) => (;
                 <Badge key={index} variant="outline" className="text-xs">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {skill}
                 </Badge>
               ))}
@@ -384,19 +325,14 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
               </Button>
             </div>
           </CardFooter>
-<<<<<<< HEAD
         </Card>
       ))}
-<<<<<<< HEAD
     </div>
   )
-=======
-<<<<<<< HEAD
         </Card>;
       ))};
     </div>;
   );
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };"
 return (<div className="grid gap-6 md:grid-cols-2" > {
   jobs.map ( (job) => (<Card key= {
@@ -418,18 +354,9 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
 }</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) )
 }</div>)
 }'"}
-=======
-<<<<<<< HEAD
-=======
         </Card>
       ))}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

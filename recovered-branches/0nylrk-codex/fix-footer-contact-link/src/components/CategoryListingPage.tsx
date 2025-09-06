@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -10,8 +7,6 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Select, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
 import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -19,7 +14,6 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
-<<<<<<< HEAD
 import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react";
 // Example listing type
@@ -110,14 +104,9 @@ export function CategoryListingPage({
           <div className="text-center mb-12">
             <GradientHeading>{title}</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-=======
 import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Example listing type
 interface Listing {
   id: string,
@@ -134,11 +123,6 @@ interface Listing {
   reviewCount?: number,
   price?: number | null,
   createdAt: string
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -164,10 +148,6 @@ interface Listing {;
   reviewCount?: number,;
   price?: number | null,;
   createdAt: string;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 interface CategoryListingPageProps {;
@@ -177,9 +157,6 @@ interface CategoryListingPageProps {;
   sortOptions?: { label: string, value: string }[],;
   filterOptions?: { label: string, value: string }[];
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 export function CategoryListingPage({ 
   title, ;
@@ -246,8 +223,6 @@ export function CategoryListingPage({
           <div className="text-center mb-12">
             <GradientHeading>{title}</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 export function CategoryListingPage({;
   title,;
@@ -310,11 +285,6 @@ export function CategoryListingPage({;
           <div className="text-center mb-12">;
             <GradientHeading>{title}</GradientHeading>;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {description}
             </p>
           </div>
@@ -378,14 +348,7 @@ export function CategoryListingPage({;
               {searchQuery && ` for "${searchQuery}"`}
             </p>
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Listings Grid */}
           {processedListings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -412,12 +375,9 @@ export function CategoryListingPage({;
               <Button
                 variant="outline"
                 onClick={() => {
-<<<<<<< HEAD
                   setSearchQuery("");
 
-=======
                   setSearchQuery(""),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   setSelectedFilter(filterOptions[0].value)
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -425,8 +385,6 @@ export function CategoryListingPage({;
                 Clear all filters
               </Button>
             </div>
-<<<<<<< HEAD
-=======
             </div>;
           ) : (;
             <div className="text-center py-20">;
@@ -443,11 +401,6 @@ export function CategoryListingPage({;
                 Clear all filters
               </Button>
             </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </div>
       </div>

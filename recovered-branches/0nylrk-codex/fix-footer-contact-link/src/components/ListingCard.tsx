@@ -1,14 +1,8 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 interface ListingCardProps {
@@ -47,13 +41,8 @@ export function ListingCard({
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer"
 
-=======
 import { Badge } from "@/components/ui/badge",
 import { Link } from "react-router-dom",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ListingCardProps {
   id?: string,
   title: string,
@@ -65,9 +54,6 @@ interface ListingCardProps {
   authorImage?: string,
   className?: string,
   profileType?: 'service' | 'talent'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }
 
 export function ListingCard({ ;
@@ -88,8 +74,6 @@ export function ListingCard({ ;
 
   return (
     <Link 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Link } from "react-router-dom",;
@@ -123,14 +107,9 @@ export function ListingCard({;
   const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
   return (;
     <Link;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       to={`/profile/${profileId}`}
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         className
       )}
     >
@@ -160,10 +139,7 @@ export function ListingCard({;
             ))}
           </div>
         )}
-<<<<<<< HEAD
-=======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {authorImage ? (

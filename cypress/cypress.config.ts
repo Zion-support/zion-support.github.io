@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { defineConfig } from 'cypress';
 export default defineConfig({
   e2e: {
@@ -8,7 +7,6 @@ export default defineConfig({
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
-=======
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;
@@ -18,20 +16,15 @@ export default defineConfig({;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors;
     setupNodeEvents(on, config) {;
       on('before:browser:launch', (browser = {}, launchOptions) => {;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         if (browser.family === 'chromium') {;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
-<<<<<<< HEAD
       });export default defineConfig({
   e2e: {
-<<<<<<< HEAD
     baseUrl: 'http://localhost:3000', // Standard Next.js port
 
-=======
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     supportFile: 'cypress/support/e2e.ts';
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
@@ -83,9 +76,7 @@ export default defineConfig({;
     toConsole: true
   }
 });
-<<<<<<< HEAD
 
-=======
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;
@@ -99,9 +90,6 @@ export default defineConfig({;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       });
     },;
     env: {;
@@ -120,8 +108,3 @@ export default defineConfig({;
     toConsole: true;
   }
 });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

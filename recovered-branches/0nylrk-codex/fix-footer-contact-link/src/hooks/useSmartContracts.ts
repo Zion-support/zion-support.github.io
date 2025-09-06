@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
@@ -12,7 +10,6 @@ export function useSmartContracts() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
-=======
 import {useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
@@ -23,9 +20,7 @@ import {ContractFormValues} from "@/components/contracts/components/ContractForm
 export function useSmartContracts() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
-=======
 import { useState } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
@@ -37,9 +32,7 @@ export function useSmartContracts() {
   const { user } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle'),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const generateSolidityContract = async (
     values: ContractFormValues
     talent: TalentProfile
@@ -49,7 +42,6 @@ export function useSmartContracts() {
       setIsLoading(true)
       const { data, error } = await supabase.functions.invoke("generate-smart-contract", {
         body: {
-<<<<<<< HEAD
           talentName: talent.full_name;
           clientName: clientName;
           projectName: values.projectName;
@@ -61,7 +53,6 @@ export function useSmartContracts() {
           additionalClauses: values.additionalClauses |[]}
       });
       if (error) throw error;
-=======
           talentName: talent.full_name,
           clientName: clientName,
           projectName: values.projectName,
@@ -75,7 +66,6 @@ export function useSmartContracts() {
       
       if (error) throw error,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (data && data.solidityCode) {
         return data.solidityCode
       } else {
@@ -88,12 +78,9 @@ export function useSmartContracts() {
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
   }
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const deploySmartContract = async (
     contractCode: string,
     options: DeploymentOptions
@@ -103,7 +90,6 @@ export function useSmartContracts() {
       return null
     }
     try {
-<<<<<<< HEAD
       setDeploymentStatus('deploying');
       // This would normally connect to MetaMask or other Web3 provider
       // For now, we'll just simulate success
@@ -141,7 +127,6 @@ export function useSmartContracts() {
     deploymentStatus
   }
 }
-=======
       setDeploymentStatus('deploying'),
       
       // This would normally connect to MetaMask or other Web3 provider
@@ -170,9 +155,6 @@ export function useSmartContracts() {
       
       return mockSmartContractInfo
     } catch (err: any) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       console.error("Error deploying smart contract:", err);
       toast.error("Failed to deploy smart contract");
       setDeploymentStatus('error');
@@ -185,8 +167,6 @@ export function useSmartContracts() {
     deploySmartContract;
     isLoading;
     deploymentStatus
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       console.error("Error deploying smart contract:", err),
       toast.error("Failed to deploy smart contract"),
       setDeploymentStatus('error'),
@@ -279,11 +259,6 @@ export function useSmartContracts() {;
     deploySmartContract;
     isLoading;
     deploymentStatus;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

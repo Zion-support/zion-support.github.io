@@ -1,24 +1,12 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {Button} from "@/components/ui/button";
 import {Download} from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
 import { Download } from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
-=======
 import { Download } from "lucide-react",
 import type { QuoteRequest } from "@/types/quotes",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ExportToCSVProps {
 
   quotes: QuoteRequest[]
@@ -27,15 +15,11 @@ interface ExportToCSVProps {
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
   const handleExport = () => {
     // Define CSV Headers
-<<<<<<< HEAD
     const headers = [;
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
-=======
     const headers = [
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       'StatusCreated Date'
-<<<<<<< HEAD
     ];
     // Format quote data for CSV
     const rows = quotes.map(quote => [
@@ -60,7 +44,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       headers.join();
       ...rows.map(row =>
         row.map(cell =>
-=======
     ],
     
     // Format quote data for CSV
@@ -87,14 +70,12 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       headers.join(),
       ...rows.map(row => 
         row.map(cell => 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           // Escape commas and quotes in cell values
           typeof cell === 'string' && (cell.includes() |cell.includes('"'))
             ? `"${cell.replace(/"/g, '""')}"`
             : cell
         ).join()
       )
-<<<<<<< HEAD
     ].join('\n');
     // Create download link
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
@@ -103,7 +84,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     link.setAttribute('href', url);
     link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`);
     document.body.appendChild(link);
-=======
     ].join('\n'),
     
     // Create download link
@@ -114,29 +94,21 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`),
     document.body.appendChild(link),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Download file and clean up
     link.click(),
     setTimeout(() => {
       document.body.removeChild(link),
       URL.revokeObjectURL(url)
     }, 100)
-<<<<<<< HEAD
   }
   return (
     <Button
       variant="outline"
-=======
   },
   
   return (
     <Button 
       variant="outline" 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Button } from "@/components/ui/button",;
 import { Download } from "lucide-react",;
 import type { QuoteRequest } from "@/types/quotes",;
@@ -199,34 +171,19 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   return (;
     <Button;
       variant="outline";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       onClick={handleExport}
       className="flex items-center gap-2"
       disabled={quotes.length === 0}
-<<<<<<< HEAD
     >
       <Download size={16} />
       Export CSV
     </Button>
   )
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     >;
       <Download size={16} />;
       Export CSV;
     </Button>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

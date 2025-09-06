@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import NextHead from 'next/head';
 import { DollarSign, Check, Phone, Mail, MapPin  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
 import { innovativeAIServices } from '../data/innovative-ai-services';
 export default function AIFinancialRiskPage() {
 
@@ -73,14 +71,11 @@ const AIFinancialRisk: React.FC = () => {
                     <span>{feat}</span>
                   </li>
                 ))}
-=======
 import {innovativeAIServices} from '../data/innovative-ai-services';
 export default function AIFinancialRiskPage() {
   const service = innovativeAIServices.find(s =>
     (s.link || '').endsWith('/ai-financial-risk');
   );
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import NextHead from 'next/head',
 import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
@@ -88,7 +83,6 @@ import Button from '../components/ui/Button',
 import { innovativeAIServices } from '../data/innovative-ai-services',
 export default function AIFinancialRiskPage() {
   const service = innovativeAIServices.find(s => (s.link || '').endsWith('/ai-financial-risk')),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -125,22 +119,18 @@ export default function AIFinancialRiskPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">
               <div className="flex items-end justify-between mb-3">
                 <div>
-<<<<<<< HEAD
                   <div className='text-3xl font-bold text-white'>
                     {service?.price |'Custom pricing'}
                     <span className='text-slate-400 text-base'>
                       {service?.period |''}
                     </span>
                   </div>
-=======
                   <div className="text-3xl font-bold text-white">{service?.price || 'Custom pricing'}<span className="text-slate-400 text-base">{service?.period || ''}</span></div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </div>
               </div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Discuss Controls</Button>
@@ -154,15 +144,10 @@ export default function AIFinancialRiskPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
 
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 import NextHead from 'next/head';
 import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
@@ -234,8 +219,3 @@ export default function AIFinancialRiskPage(req, res) {
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { v4 as uuidv4 } from 'uuid',;
 import { readJsonFile, writeJsonFile } from '../../utils/db',;
@@ -53,14 +50,11 @@ createdAtIso: now},
   res.setHeader('AllowGET, POST'),
   res.status(405).end('Method Not Allowed');
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { rateLimit } from '../../utils/rate-limit';
 import { readJsonFile, writeJsonFile } from '../../utils/file-utils';
 import { v4 as uuidv4 } from 'uuid';
 
-<<<<<<< HEAD
 import { readJsonFile, writeJsonFile } from '../../utils/db';
 import type { Application } from '../../utils/types';
 import { rateLimit } from '../../utils/rateLimit';
@@ -105,7 +99,6 @@ createdAtIso: now}
   res.status(405).end('Method Not Allowed')
 }
 
-=======
 type Application = {
   id: string;
   jobId: string;
@@ -170,8 +163,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

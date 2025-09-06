@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Cpu, Network, Zap, Shield, Database, Globe;
@@ -12,11 +7,7 @@ import { Cpu, Network, Zap, Shield, Database, Globe;
  } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-=======
-<<<<<<< HEAD
-=======
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -25,16 +16,10 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function EdgeComputingPage() {
 
   const features = [
     {
-<<<<<<< HEAD
       icon: Cpu
       title: 'Edge Orchestration'
       description:
@@ -160,7 +145,6 @@ export default function EdgeComputingPage() {
       ]
       popular: false
     },  ];
-=======
       icon: Cpu,
       title: "Edge Orchestration",
       description: "Intelligent distribution and management of computing workloads across edge nodes for optimal window.window.window.performance.",
@@ -192,7 +176,6 @@ export default function EdgeComputingPage() {
     },
     {
       icon: Globe,
-<<<<<<< HEAD
       title: 'Global Distribution',
       description:
         'Worldwide edge network deployment with intelligent traffic routing and load balancing.',
@@ -200,7 +183,6 @@ export default function EdgeComputingPage() {
     },;
   ];
 
-=======
       title: "Global Distribution",
       description: "Worldwide edge network deployment with intelligent traffic routing and load balancing.",
       color: "from-yellow-500 to-orange-500"
@@ -210,7 +192,6 @@ export default function EdgeComputingPage() {
   }
 }
   ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const benefits = [
     "Reduce latency by 80-90% with edge processing",
     "Cut bandwidth costs by 60% through local data processing",
@@ -300,12 +281,10 @@ export default function EdgeComputingPage() {
   }
 }
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
         <title>Edge Computing Orchestration - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name='description'
           content='Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing with our advanced edge computing platform.'
@@ -335,7 +314,6 @@ export default function EdgeComputingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='text-center'
-=======
         <meta name="description" content="Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing with our advanced edge computing platform." />
         <meta name="keywords" content="edge computing, IoT management, edge orchestration, real-time processing, distributed computing, Zion Tech Group" />
         <meta property="og:title" content="Edge Computing Orchestration - Zion Tech Group" />
@@ -522,11 +500,6 @@ export default function EdgeComputingPage(req, res) {
   }
 }
             className="text-center"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Edge Computing
@@ -555,7 +528,6 @@ export default function EdgeComputingPage(req, res) {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Features */}
       <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -809,7 +781,6 @@ export default function EdgeComputingPage(req, res) {
                       <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0' />
                       <span className='text-slate-700'>{feature}</span>                    </li>
                   ))}
-=======
       {/* Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1250,11 +1221,6 @@ export default function EdgeComputingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </ul>
                 <a
                   href="/contact"
@@ -1263,7 +1229,6 @@ export default function EdgeComputingPage(req, res) {
                   Get Started
                 </Link>
               </motion.div>
-<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -1274,7 +1239,6 @@ export default function EdgeComputingPage(req, res) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1306,11 +1270,6 @@ export default function EdgeComputingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -1335,22 +1294,12 @@ export default function EdgeComputingPage(req, res) {
       </section>
       <EnhancedFooter />
     </>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

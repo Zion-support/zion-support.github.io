@@ -1,35 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
-<<<<<<< HEAD
-=======
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/main
+origin/automation-improvements-final
 import {
-<<<<<<< HEAD
   BookOpen
   Clock
   User
@@ -227,7 +214,6 @@ import {
   SleepyFace2
   YawningFace2
   DizzyFace2
-=======
   BookOpen,
   Clock,
   User,
@@ -425,7 +411,6 @@ import {
   SleepyFace2,
   YawningFace2,
   DizzyFace2,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 const guides = [
   {
@@ -528,16 +513,13 @@ const categories = [
   { name: "Database", count: 1, icon: Database }
   { name: "Performance", count: 1, icon: Zap }
 ];
-<<<<<<< HEAD
 export default function GuidesPage() {
-=======
 
 interface GuidesProps {
   className?: string;
 }
 
 const Guides: React.FC<GuidesProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Layout>
       <Head>
@@ -772,9 +754,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-=======
 import Layout from '../components/Layout';
 
 export default function GuidesPage() {
@@ -793,12 +772,9 @@ export default function GuidesPage() {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
       </div>
     </Layout>;
   );

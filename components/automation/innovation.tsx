@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
 </header> {
@@ -7,27 +5,15 @@
 }</li>) )
 }</ul> </div>)
 
-=======
  
-=======
-=======
  
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 </header> {
   items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) 
 }</li>) ) 
-<<<<<<< HEAD
 }</ul> </div>) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 }</ul> </div>)
-=======
 }</ul> </div>) 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function InnovationDigest({ items }: Props) {
   return (
     <div className="space-y-6">
@@ -50,15 +36,9 @@ export default function InnovationDigest({ items }: Props) {
           </li>
         ))}
       </ul>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-=======
     </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 );
 }
-=======
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

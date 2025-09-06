@@ -144,8 +144,5 @@ return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

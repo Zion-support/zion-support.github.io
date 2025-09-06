@@ -1,21 +1,18 @@
 import React from 'react';
 
 import {
-<<<<<<< HEAD
   Star
   Quote
   Users
   Award
   TrendingUp
   CheckCircle;
-=======
   Star,
   Quote,
   Users,
   Award,
   TrendingUp,;
   CheckCircle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 interface Testimonial {
@@ -197,13 +194,11 @@ const EnhancedTestimonialsSection: React.FC = () => {
               <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
               <p className="text-blue-300 font-medium">{stat.label}</p>
             </div>
-<<<<<<< HEAD
           ))}
         </div>
         {/* Testimonials Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {testimonials.map(testimonial => (
-=======
 
           ))}
         </div>
@@ -212,11 +207,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {testimonials.map(testimonial => (
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div
               key={testimonial.id}
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
@@ -233,7 +223,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
                 {/* Testimonial Text */}
                 <p className='text-white/80 text-sm leading-relaxed mb-6'>                  "{testimonial.content}"
                 </p>
-<<<<<<< HEAD
                 {/* Author Info */}            <div
               key={testimonial.id}
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
@@ -250,7 +239,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
                 </div>
                 {/* Testimonial Text */}
                 <p className='text-white/80 text-sm leading-relaxed mb-6'>                <p className="text-white/80 text-sm leading-relaxed mb-6">
-=======
 
                 {/* Author Info */}
 
@@ -259,15 +247,9 @@ const EnhancedTestimonialsSection: React.FC = () => {
 
                 {/* Testimonial Text */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
-<<<<<<< HEAD
                 <div className='flex items-center gap-4'>
                   <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm'>
                     {testimonial.avatar}
@@ -295,46 +277,26 @@ const EnhancedTestimonialsSection: React.FC = () => {
                   <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>                <div className="mt-4">
                   <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
                     {testimonial.category}
-=======
 
                     {testimonial.category}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </span>
                 </div>
               </div>
               {/* Hover Effect */}
               <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />            </div>              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
             </div>
-<<<<<<< HEAD
           ))}
         </div>
-=======
 
           ))}
         </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Ready to Join Our Success Stories?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -399,24 +361,12 @@ const EnhancedTestimonialsSection: React.FC = () => {
       </div>
     </section>
   );
-<<<<<<< HEAD
 }
-=======
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default EnhancedTestimonialsSection;  )
 }
 export default EnhancedTestimonialsSection;
 
-<<<<<<< HEAD
-=======
 export default EnhancedTestimonialsSection;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 export default EnhancedTestimonialsSection;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

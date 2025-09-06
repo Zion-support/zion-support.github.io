@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -30,14 +29,11 @@ interface Activity {
     avatar_url: string | null
   }
 }
-<<<<<<< HEAD
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   const [activities, setActivities] = useState<Activity[]>([]),
-=======
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   const [activities, setActivities] = useState<Activity[]>([]);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     async function fetchActivities() {
@@ -60,7 +56,6 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         console.error('Error fetching milestone activities:', err)
       } finally {
         setIsLoading(false)
-=======
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -111,17 +106,11 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         console.error('Error fetching milestone activities:', err);
       } finally {;
         setIsLoading(false);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     }
     if (projectId) {
       fetchActivities()
     }
-<<<<<<< HEAD
   }, [projectId]);
   function getActivityDescription(activity: Activity): string {
     switch (activity.action) {
@@ -137,12 +126,8 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         return 'added a deliverable';
       default:
         return activity.action.replace(/_/g, ' ')
-<<<<<<< HEAD
     }
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;
@@ -156,14 +141,9 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         return 'added a deliverable';
       default:;
         return activity.action.replace(/_/g, ' ');
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -183,10 +163,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
       </div>
     )
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (activities.length === 0) {
     return (
       <Card>
@@ -231,14 +208,12 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
                 </div>
               </div>
             ))}
-<<<<<<< HEAD
           </div>
         </CardContent>
       </Card>
     </div>
   )
 }
-=======
           </div>;
         </CardContent>;
       </Card>;
@@ -246,4 +221,3 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

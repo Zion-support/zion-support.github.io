@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -24,10 +20,8 @@ import { generateRandomBlogPost } from '@/utils/generateRandomBlogPost'
 import { BLOG_POSTS } from '@/data/blog-posts'
 
 import { Search } from 'lucide-react'
-<<<<<<< HEAD
 import { fetchWithRetry  } from '@/utils/fetchWithRetry';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-=======
 import { fetchWithRetry } from '@/utils/fetchWithRetry'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 import { useState, useEffect } from "react"
@@ -63,8 +57,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const query = useDebounce(searchQuery, 300)
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -83,11 +75,9 @@ import { fetchWithRetry } from '@/utils/fetchWithRetry',
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Categories for filtering
 
 const CATEGORIES = [
-<<<<<<< HEAD
   'All Categories'
   'Trends'
   'Marketing'
@@ -106,7 +96,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const query = useDebounce(searchQuery, 300)
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
-=======
   "All Categories",
   "Trends",
   "Marketing",
@@ -129,15 +118,9 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const [isLoading, setIsLoading] = useState(false),
   const router = useRouter(),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Reset state when navigating away to avoid cross-page leakage
   useEffect(() => {
     return () => {
-<<<<<<< HEAD
       setSearchQuery('')
       setSelectedCategory('All Categories')
       setPosts([...initialPosts])
@@ -156,7 +139,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         const data: BlogPost[] = await fetchWithRetry(
           `/api/blog?query=${encodeURIComponent(query)}`
         )
-=======
       setSearchQuery(""),
       setSelectedCategory("All Categories"),
       setPosts([...initialPosts])
@@ -177,51 +159,36 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         const data: BlogPost[] = await fetchWithRetry(
           `/api/blog?query=${encodeURIComponent(query)}`
         ),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         setPosts(data)
       } catch (err) {
         logErrorToProduction('Failed to fetch blog posts', { data: err })
       } finally {
         setIsLoading(false)
       }
-<<<<<<< HEAD
     }
     fetchPosts()
   }, [query])
-<<<<<<< HEAD
-=======
     },
 
     fetchPosts()
   }, [query]),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
-<<<<<<< HEAD
       selectedCategory === 'All Categories' |
-=======
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory = null;
       selectedCategory === 'All Categories' ||
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       post.category === selectedCategory
     return matchesCategory
   })
   // Get featured posts
   const featuredPosts = posts.filter(post => post.isFeatured)
   logInfo('BlogPage filteredPosts:', { data: filteredPosts })
-=======
-<<<<<<< HEAD
-=======
     },
 
     fetchPosts()
@@ -231,7 +198,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       selectedCategory === "All Categories" || post.category === selectedCategory,
 
     return matchesCategory
@@ -242,11 +208,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
 
   logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -260,16 +221,11 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <GradientHeading>AI & Tech Insights</GradientHeading>
-<<<<<<< HEAD
             <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
               Expert perspectives on artificial intelligence, tech innovation
               and digital transformation
             </p>
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 &&
             (() => {
@@ -331,14 +287,10 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                           Read Article
                         </Link>
                       </Button>
-=======
-<<<<<<< HEAD
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation
             </p>
           </div>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (() => {
@@ -385,11 +337,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                       <p className="text-sm text-zion-slate-light">
                         {featuredPost.publishedDate} • {featuredPost.readTime}
                       </p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   </div>
                   <Button 
@@ -401,7 +348,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                     </Link>
                   </Button>
                 </div>
-<<<<<<< HEAD
               )
             })()}
           {/* Filters and Search */}
@@ -434,7 +380,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                       className='text-white'
                     >                      {category}
                     </SelectItem>
-=======
               </div>
             </div>
             )
@@ -616,11 +561,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                     <SelectItem key={category} value={category} className="text-white">
                       {category}
                     </SelectItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </SelectContent>
               </Select>
@@ -633,24 +573,16 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
           </div>
           {/* Blog Posts Grid */}
           {!isLoading && filteredPosts.length > 0 ? (
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {filteredPosts.map(post => (                <Card
                   key = {post.id,}
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post) => (
                 <Card
                   key={post.id}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   asChild
                   className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
                 >
-<<<<<<< HEAD
                   <Link href={`/blog/${post.slug}`} className='block group'>
                     <div className='aspect-[16/9] relative overflow-hidden'>
                       <img
@@ -660,7 +592,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                         onError={e => {
                           const target = e.currentTarget as HTMLImageElement
                           target.src = '/images/blog-placeholder.svg' }}
-=======
                   <Link href={`/blog/${post.slug}`} className="block group">
                   <div className="aspect-[16/9] relative overflow-hidden">
                     <img
@@ -697,15 +628,9 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                           const target = e.currentTarget as HTMLImageElement,
                           target.src = "/images/blog-placeholder.svg"
                         }}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       />
                       <span className="text-sm text-white">{post.author.name}</span>
                     </div>
-<<<<<<< HEAD
                     <CardContent className='p-6'>
                       <div className='flex items-center justify-between mb-3'>
                         <span className='text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full'>
@@ -743,7 +668,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                     </CardFooter>
                   </Link>
                 </Card>
-=======
                   </CardContent>
                   <CardFooter className="p-6 pt-0">
                     <span className="text-zion-cyan group-hover:text-zion-purple">Read More →</span>
@@ -803,11 +727,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                   </CardFooter>;
                   </Link>;
                 </Card>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           ) : null}
@@ -817,7 +736,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
               <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>
               <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>
               <Button
-<<<<<<< HEAD
                 variant='outline'
                 onClick={() => {
                   setSearchQuery('')
@@ -931,7 +849,6 @@ export default function Blog() {
       date: "2025-01-15", readTime: "8 min read","
       category: "AI & Machine Learning", tags: ["AI,Enterprise,Technology"], image: "/api/placeholder/600/400"
       featured: true}, { id: 2}, {
-<<<<<<< HEAD
       id: 2
       title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot
       excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot
@@ -940,7 +857,6 @@ export default function Blog() {
       readTime: &quot,12 min read&quot
       category: &quot,Quantum Computing&quot
       tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot]
-=======
       id: 2,
       title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot,
       excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,
@@ -949,7 +865,6 @@ export default function Blog() {
       readTime: &quot,12 min read&quot,;
       category: &quot,Quantum Computing&quot;
       tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       image: &quot,/api/placeholder/600/400&quot,"
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.","
       author: "Prof. Michael Rodriguez", date: "2025-01-12","
@@ -1389,11 +1304,7 @@ key = "{post.id}
   )
   )})))))))))
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 variant="outline"
                 onClick={() => {
                   setSearchQuery(""),
@@ -1420,8 +1331,3 @@ key = "{post.id}
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

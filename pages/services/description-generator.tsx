@@ -1,42 +1,24 @@
 import React, { useMemo, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function ServiceDescriptionGeneratorPage() {
-=======
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 export default function ServiceDescriptionGeneratorPage() {;
-=======
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
   const [additionalNotes, setAdditionalNotes] = useState('');
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional'),
 
-=======
   const [tone, setTone] = useState<
     'professional' | 'friendly' | 'persuasive' | 'technical'
   >('professional');
-=======
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const keyFeatures = useMemo(() => {
     return featuresInput
@@ -74,20 +56,15 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
   function handleAccept() {
     setAccepted(true);  }
   function handleCopy() {
-<<<<<<< HEAD
     if (!generated) return;
     navigator.clipboard.writeText(generated).catch(() => {});
 
   }
-=======
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const keyFeatures = useMemo(() => {;
     return featuresInput;
       .split('\n');
@@ -144,44 +121,26 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 }
 ;
   function handleCopy() {;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (!generated) return;
     navigator.clipboard.writeText(generated).catch(() => {});
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="max-w-3xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Service Description Generator</h1>
       <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
         Enter your service details. We will generate a polished description using GPT-4. You can edit it on the page and accept when ready.
       </p>
-<<<<<<< HEAD
       <form
         onSubmit={handleSubmit}
         className='space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4'
       >
-=======
       <form onSubmit={handleSubmit} className="space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div>
           <label className="block text-sm font-medium mb-1">Service Title</label>
           <input
@@ -280,15 +239,8 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 }
           />
         </div>
-<<<<<<< HEAD
         <div className='flex items-center gap-3'>
-=======
         <div className="flex items-center gap-3">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <button
             type="submit"
             disabled={loading  } catch (error) {
@@ -352,7 +304,6 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 }
           />
           {accepted && (
-<<<<<<< HEAD
             <div className='text-emerald-700 dark:text-emerald-400 text-sm'>
               Accepted. You can copy and paste this into your CMS.
             </div>          )}
@@ -360,12 +311,8 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
       )}
     </div>
 );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
           )  } catch (error) {
     console.error("Error:", error);
@@ -385,8 +332,3 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Check } from 'lucide-react'
@@ -12,13 +9,10 @@ export function FeatureHighlights({
   className,
   style,
 }: FeatureHighlightsProps) {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from 'lucide-react'
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 interface FeatureHighlightsProps {
   className?: string;
@@ -63,7 +57,6 @@ export function FeatureHighlights({
       ]
     }
   ]
-=======
 import { cn } from "@/lib/utils",
 interface FeatureHighlightsProps {
   className?: string,
@@ -71,10 +64,6 @@ interface FeatureHighlightsProps {
 }
 
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const highlightsData = [
     {
       title: "For Talent Seekers",
@@ -101,9 +90,6 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
     {
       title: "For Enterprise Clients",
       features: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         'White-labeled talent portal with your company branding',
         'Dedicated account management and priority support',
         'Custom talent pools and preferred provider networks',
@@ -113,8 +99,6 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       ],
     },
   ]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         "White-labeled talent portal with your company branding",
         "Dedicated account management and priority support",
         "Custom talent pools and preferred provider networks",
@@ -124,12 +108,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       ]
     }
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -139,7 +118,6 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
           </p>
         </div>
-<<<<<<< HEAD
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
           {highlightsData.map((category, index) => (
             <Card
@@ -316,15 +294,11 @@ export function FeatureHighlights() {
       </div>
     </section>
   )}
-<<<<<<< HEAD
 '"`
 )
-=======
 ;
 '"`;
 );
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {highlightsData.map((category, index) => (
@@ -413,8 +387,3 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

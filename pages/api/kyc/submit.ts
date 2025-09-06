@@ -1,20 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { KycProfile } from '../../../utils/kyc';
-<<<<<<< HEAD
 import { validateKycSubmission } from '[^']*';
 import { getAmlProvider } from '[^']*';
 import fs from 'fs';
 import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
-<<<<<<< HEAD
-=======
 
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'KYC submitted' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -25,16 +17,10 @@ import fs from 'fs';
 import path from 'path';
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   } catch {
     return {}
   }
@@ -46,13 +32,10 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  const { userId } = req.body as { userId?: string }
-=======
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  const { userId } = req.body as { userId?: string };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!userId) return res.status(400).json({ error: 'Missing userId' });
   const db = load();
   const profile = db[userId];
@@ -106,7 +89,6 @@ export default async function handler(
       )
     ).length;
     if (sameIpCount >= 2) flags.add('duplicate_ip');  }
-=======
 import { validateKycSubmission } from '../../../utils/kyc';
 import { getAmlProvider } from '../../../utils/aml';
 import fs from 'fs';
@@ -156,7 +138,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (sameIpCount >= 2) flags.add('duplicate_ip')
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Compute simple risk score
   let riskScore = 10; // base low risk
   if (flags.has('aml_alert')) riskScore += 50;
@@ -168,7 +149,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   profile.status = 'submitted';
   const now = new Date().toISOString();
   profile.lastUpdatedAt = now;
-<<<<<<< HEAD
   profile.auditTrail.push({
     at: now
     by: userId
@@ -180,9 +160,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 res.status(200).json({ ok: true, profile, aml: amlResult });
 }
 
-=======
-<<<<<<< HEAD
-=======
   } catch {;
     return {  } catch (error) {
     console.error("Error:", error);
@@ -288,19 +265,13 @@ export default async function handler(req, res) {
   profile.status = 'submitted';
   const now = new Date().toISOString();
   profile.lastUpdatedAt = now;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   profile.auditTrail.push({ at: now, by: userId, action: 'kyc_submitted', details: { aml: amlResult, ip } });
   db[userId] = profile;
   save(db);
   res.status(200).json({ ok: true, profile, aml: amlResult })
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

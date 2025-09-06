@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -13,8 +10,6 @@ import {Badge} from "@/components/ui/badge";
 import {Skeleton} from "@/components/ui/skeleton";
 import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -24,7 +19,6 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Skeleton } from "@/components/ui/skeleton",
-<<<<<<< HEAD
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 interface Transaction {
@@ -88,13 +82,8 @@ export function TransactionHistory() {
         body: { transactionId, action }
       });
       if (error) throw error;
-=======
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface Transaction {
   id: string,
   user_id: string,
@@ -113,9 +102,6 @@ interface Transaction {
   },
   service?: {
     title?: string
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
 }
 
@@ -163,8 +149,6 @@ export function TransactionHistory() {;
       });
       
       if (error) throw error;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -235,12 +219,7 @@ export function TransactionHistory() {;
       }),
       
       if (error) throw error,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast({
         title: "Success"
         description: data.message |"Transaction updated successfully"})
@@ -252,12 +231,9 @@ export function TransactionHistory() {;
         description: error.message |"Failed to update transaction"
         variant: "destructive"})
     }
-<<<<<<< HEAD
   }
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'pending':
@@ -295,23 +271,17 @@ export function TransactionHistory() {;
           </Badge>
         )
     }
-<<<<<<< HEAD
   }
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const formatCurrency = (amount: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
       currency: currency.toUpperCase()
     }).format(amount)
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (error) {
     return (
       <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">
@@ -391,7 +361,6 @@ export function TransactionHistory() {;
         ) : transactions && transactions.length > 0 ? (
           <div className="space-y-4">
             {transactions.map((transaction) => {
-<<<<<<< HEAD
               const isClient = user?.id === transaction.user_id;
               const isPending = transaction.status === 'pending';
               const isInEscrow = transaction.in_escrow;
@@ -401,7 +370,6 @@ export function TransactionHistory() {;
               const counterpartyName = isClient
                 ? transaction.provider?.display_name |'Service Provider'
                 : 'Client';
-=======
               const isClient = user?.id === transaction.user_id,
               const isPending = transaction.status === 'pending',
               const isInEscrow = transaction.in_escrow,
@@ -412,7 +380,6 @@ export function TransactionHistory() {;
               const counterpartyName = isClient 
                 ? transaction.provider?.display_name || 'Service Provider' 
                 : 'Client',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
               return (
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
@@ -427,8 +394,6 @@ export function TransactionHistory() {;
                             <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>
                           ) : (
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>
-<<<<<<< HEAD
-=======
       }),;
       if (error) throw error,;
       toast({;
@@ -589,11 +554,6 @@ export function TransactionHistory() {;
                             <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>;
                           ) : (;
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           )}
                         </CardDescription>
                       </div>
@@ -614,11 +574,8 @@ export function TransactionHistory() {;
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
                       </span>
                     </div>
-<<<<<<< HEAD
                     {(transaction.completed_at |transaction.refunded_at |transaction.cancelled_at) && (
-=======
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
                           {transaction.completed_at ? 'Completed:' :
@@ -683,15 +640,12 @@ export function TransactionHistory() {;
             </p>
           </div>
         )}
-<<<<<<< HEAD
       </div>
     </div>
   )
 }
-=======
       </div>;
     </div>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -32,13 +31,9 @@ const pricingRanges = [
   '$500 - $800'
   '$800+',];
 export default function ComprehensiveServicesShowcase2025() {
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {motion, AnimatePresence} from 'framer-motion';
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search, Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart,} from 'lucide-react';
 
@@ -72,8 +67,6 @@ const pricingRanges = [
   '$800+',];
 
 export default function ComprehensiveServicesShowcase2025() {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
@@ -96,16 +89,10 @@ const pricingRanges = [;
 ];
 export default function ComprehensiveServicesShowcase2025(req, res) {
   try {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-<<<<<<< HEAD
   const [sortBy, setSortBy] = useState<
     'name' | 'price' | 'rating' | 'popularity'
   >('popularity');
@@ -153,7 +140,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
       default:
         return 0;    }
   });
-<<<<<<< HEAD
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', ''));
     if (numPrice < 300) return 'Under $300';
@@ -172,10 +158,7 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
       category.toLowerCase().includes(cat.id.toLowerCase())
     );
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';  }
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
   // Filter services based on selections;
   const filteredServices = comprehensiveRealServices2025.filter(service => {;
@@ -230,10 +213,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
   }
 }
   }),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', '')),
     if (numPrice < 300) return 'Under $300',
@@ -253,7 +232,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
     ),
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -266,7 +244,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-showcase-2025" />
       </Head>
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className='relative py-20 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden'>
         {/* Animated Background */}
@@ -308,7 +285,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
               <div className='text-center'>
                 <div className='text-3xl font-bold text-cyan-400 mb-2'>
                   {comprehensiveRealServices2025.length}+
-=======
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -366,11 +342,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{comprehensiveRealServices2025.length}+</div>
                   <div className="text-gray-400">Real Services</div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">$2.5B+</div>
@@ -385,7 +356,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                   <div className="text-gray-400">Average ROI</div>
                 </div>
               </div>
-<<<<<<< HEAD
             </div>
             {/* Contact CTA */}
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -708,7 +678,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                       <Link
                         href={service.link}
                         className='px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'
-=======
               {/* Contact CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1079,17 +1048,11 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
   }
 }
                         className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2 inline" />
                       </Link>
                     </div>
-<<<<<<< HEAD
                   </div>
                 </motion.div>
               ))}
@@ -1161,7 +1124,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
               <p className='mb-2'>{contactInfo.address}</p>
               <p>
                 Visit us at:{' '}
-=======
                   </motion.div>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -1404,11 +1366,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                 Get in touch with our experts today.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <a
                   href={`tel:${contactInfo.mobile}`  } catch (error) {
     console.error("Error:", error);
@@ -1448,20 +1405,10 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
           </div>
         </section>
     </>
-<<<<<<< HEAD
 );
 export default ComprehensiveServicesShowcase2025;
 
-<<<<<<< HEAD
-=======
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 },
 export default ComprehensiveServicesShowcase2025,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

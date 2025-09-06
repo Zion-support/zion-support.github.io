@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -19,8 +16,6 @@ import {useAuth} from "@/hooks/useAuth";
 import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
 import {useToast} from "@/hooks/use-toast";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -36,17 +31,11 @@ import { formatDistanceToNow, format } from "date-fns",
 import { ForumPost, ForumReply } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
 import ReplyCard from "@/components/community/ReplyCard",
-<<<<<<< HEAD
 import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
-=======
 import ReplyForm from "@/components/community/ReplyForm",
 import { useToast } from "@/hooks/use-toast",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -66,7 +55,6 @@ const mockPost: ForumPost = {
   isAnswered: true,
   isFeatured: true
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 const mockPost: ForumPost = {
   id: "1"
@@ -99,7 +87,6 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-01T14:30:00Z"
     upvotes: 12
     downvotes: 0
-<<<<<<< HEAD
   }
   {
     id: "reply2"
@@ -126,7 +113,6 @@ const mockReplies: ForumReply[] = [
     downvotes: 0
     isAnswer: true
   }
-=======
   },
   {
     id: "reply2",
@@ -153,7 +139,6 @@ const mockReplies: ForumReply[] = [
     downvotes: 0,
     isAnswer: true
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   {
     id: "reply4"
     postId: "1"
@@ -165,25 +150,19 @@ const mockReplies: ForumReply[] = [
     upvotes: 4
     downvotes: 0
   }
-<<<<<<< HEAD
 ];
-=======
 ],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
-<<<<<<< HEAD
   // Cast the result instead to provide the expected shape.;
   const { postId } = useParams() as { postId?: string };
   const { user } = useAuth();
   const { toast } = useToast();
   const [post, setPost] = useState(mockPost);
   const [replies, setReplies] = useState(mockReplies);
-=======
   // Cast the result instead to provide the expected shape.
-<<<<<<< HEAD
   const { postId } = useParams() as { postId?: string }
   const { user } = useAuth();
   const { toast } = useToast();
@@ -193,13 +172,11 @@ export default function ForumPostPage() {
   const isAuthor = user?.id === post?.authorId;
   // Check if user is admin/mod
   const isAdminOrMod = user?.userType === 'admin' |user?.role === 'admin';
-=======
   const { postId } = useParams() as { postId?: string },
   const { user } = useAuth(),
   const { toast } = useToast(),
   const [post, setPost] = useState(mockPost),
   const [replies, setReplies] = useState(mockReplies),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // Check if this is the user's own post
   const isAuthor = user?.id === post?.authorId,
@@ -207,7 +184,6 @@ export default function ForumPostPage() {
   // Check if user is admin/mod
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // For this demo, we'll assume the post is found
   if (!post) {
     return (
@@ -232,12 +208,9 @@ export default function ForumPostPage() {
     toast({
       title: "Vote recorded"
       description: "You upvoted this post"})
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleDownvote = () => {
     if (!user) {
       toast({
@@ -249,12 +222,9 @@ export default function ForumPostPage() {
     toast({
       title: "Vote recorded"
       description: "You downvoted this post"})
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSubmitReply = async (content: string) => {
     if (!user) {
       toast({
@@ -264,7 +234,6 @@ export default function ForumPostPage() {
     }
     // Create a new reply
     const newReply: ForumReply = {
-<<<<<<< HEAD
       id: `reply${Date.now()}`
       postId: post.id
       content;
@@ -278,7 +247,6 @@ export default function ForumPostPage() {
     }
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 })
-=======
       id: `reply${Date.now()}`,
       postId: post.id,
       content,
@@ -294,16 +262,12 @@ export default function ForumPostPage() {
     setReplies([...replies, newReply]),
     setPost({ ...post, replyCount: post.replyCount + 1 }),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     toast({
       title: "Reply posted"
       description: "Your reply has been added to the discussion"})
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer
     if (!isAuthor && !isAdminOrMod) {
@@ -318,26 +282,20 @@ export default function ForumPostPage() {
     const updatedReplies = replies.map(reply => ({
       ...reply,
       isAnswer: reply.id === replyId
-<<<<<<< HEAD
     }));
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true })
-=======
     })),
     
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true }),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     toast({
       title: "Answer marked"
       description: "The reply has been marked as the accepted answer"})
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleReportPost = () => {
     if (!user) {
       toast({
@@ -348,12 +306,10 @@ export default function ForumPostPage() {
     toast({
       title: "Report submitted"
       description: "A moderator will review this content"})
-<<<<<<< HEAD
   }
   const handlePinPost = () => {
     if (!isAdminOrMod) return;
     setPost({ ...post, isPinned: !post.isPinned })
-=======
   },
 
   const handlePinPost = () => {
@@ -361,16 +317,13 @@ export default function ForumPostPage() {
     
     setPost({ ...post, isPinned: !post.isPinned }),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     toast({
       title: post.isPinned ? "Post unpinned" : "Post pinned"
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
-<<<<<<< HEAD
   }
   const handleLockPost = () => {
     if (!isAdminOrMod) return;
     setPost({ ...post, isLocked: !post.isLocked })
-=======
   },
 
   const handleLockPost = () => {
@@ -378,22 +331,18 @@ export default function ForumPostPage() {
     
     setPost({ ...post, isLocked: !post.isLocked }),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked"
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
-<<<<<<< HEAD
   }
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
 
-=======
   },
   
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <AppLayout>
       <SEO
@@ -425,8 +374,6 @@ export default function ForumPostPage() {
                   <div className="font-medium text-lg">{post.authorName}</div>
                   {post.authorRole && (
                     <Badge variant="outline" className="mt-1">
-<<<<<<< HEAD
-=======
 import { useState } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -675,11 +622,6 @@ export default function ForumPostPage() {;
                   <div className="font-medium text-lg">{post.authorName}</div>;
                   {post.authorRole && (;
                     <Badge variant="outline" className="mt-1">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {post.authorRole}
                     </Badge>
                   )}
@@ -780,10 +722,7 @@ export default function ForumPostPage() {;
               ))}
             </div>
           )}
-<<<<<<< HEAD
-=======
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {!post.isLocked && (
             <div className="mb-8">
               <h3 className="text-lg font-medium mb-4">Your Response</h3>
@@ -798,10 +737,7 @@ export default function ForumPostPage() {;
               )}
             </div>
           )}
-<<<<<<< HEAD
-=======
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {post.isLocked && (
             <Alert className="mb-8">
               <AlertDescription className="flex items-center">
@@ -818,7 +754,6 @@ export default function ForumPostPage() {;
                   key={reply.id}
                   reply={reply}
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
-<<<<<<< HEAD
                   canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
                 />
               ))}
@@ -828,7 +763,6 @@ export default function ForumPostPage() {;
     </AppLayout>
   )
 }
-=======
                   canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
                 />
               ))}
@@ -839,4 +773,3 @@ export default function ForumPostPage() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

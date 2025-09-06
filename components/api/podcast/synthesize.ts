@@ -31,12 +31,9 @@ export default async function handler(
   const idx = episodes.findIndex(e => e.id === episodeId);  if (idx === -1) return res.status(404).json({ error: 'Episode not found' });  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8');
   if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true })
 }
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
   const { episodeId } = req.body |{}
@@ -103,16 +100,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       mp4Url: publicBase + '.mp4'
     }
     episodes[idx] = episode;
-<<<<<<< HEAD
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
       mp3Url: publicBase + '.mp3';
       wavUrl: publicBase + '.wav'
       mp4Url: publicBase + '.mp4'}
     episodes[idx] = episode;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
     return res.status(200).json({ episode });
   } catch (error: any) {
@@ -126,13 +118,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: error?.message |'Synthesis failed' })
 
 }
-<<<<<<< HEAD
 }
-=======
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -155,9 +155,8 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
   onReject ;
 }/>) ) ;
 }</div> </div>) ;
-<<<<<<< HEAD:temp_broken_files/projects/milestones/MilestonesList.tsx
+:temp_broken_files/projects/milestones/MilestonesList.tsx
 };""
-=======
 };
 "
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/MilestonesList.tsx
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/MilestonesList.tsx

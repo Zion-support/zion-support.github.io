@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {useForm, useFieldArray} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -18,8 +15,6 @@ import {User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Uplo
 import {useAuth} from "@/hooks/useAuth";
 import {useTalentProfileEnhancer} from "@/hooks/useTalentProfileEnhancer";
 import {supabase} from "@/integrations/supabase/client";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -42,32 +37,22 @@ import {
   Trash2, Plus, CheckCircle2
 } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
 import { supabase } from "@/integrations/supabase/client";
-=======
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Define the form schema with validation
 
 const talentSchema = z.object({
   // Step 1: Basic Info
   basicInfo: z.object({
-<<<<<<< HEAD
     fullName: z.string().min(2, "Name must be at least 2 characters");
     professionalTitle: z.string().min(2, "Professional title is required");
     profilePicture: z.any().optional()})
-=======
     fullName: z.string().min(2, "Name must be at least 2 characters"),
     professionalTitle: z.string().min(2, "Professional title is required"),
     profilePicture: z.any().optional()}),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Step 2: Experience
   experience: z.object({
     bio: z.string().min(50, "Bio must be at least 50 characters"),
@@ -75,7 +60,6 @@ const talentSchema = z.object({
       z.object({
         title: z.string().min(2, "Project title is required"),
         description: z.string().min(10, "Project description is required")})
-<<<<<<< HEAD
     ).min(1, "Add at least one key project");
     yearsOfExperience: z.string().min(1, "Years of experience is required")});
   // Step 3: Skills & Tech Stack
@@ -103,7 +87,6 @@ export function TalentOnboardingForm() {
   const [showSuccessScreen, setShowSuccessScreen] = useState(false);
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
   const totalSteps = 4;
-=======
     ).min(1, "Add at least one key project"),
     yearsOfExperience: z.string().min(1, "Years of experience is required")}),
   
@@ -125,7 +108,6 @@ export function TalentOnboardingForm() {
 
 type TalentFormValues = z.infer<typeof talentSchema>,
 
-<<<<<<< HEAD
 export function TalentOnboardingForm() {;
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -134,7 +116,6 @@ export function TalentOnboardingForm() {;
   const [cvFileName, setCvFileName] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState(false);
-=======
 export function TalentOnboardingForm() {
   const { user } = useAuth(),
   const navigate = useNavigate(),
@@ -143,13 +124,11 @@ export function TalentOnboardingForm() {
   const [cvFileName, setCvFileName] = useState<string | null>(null),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [showSuccessScreen, setShowSuccessScreen] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),
   
   const totalSteps = 4,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema)
     defaultValues: {
@@ -181,25 +160,20 @@ export function TalentOnboardingForm() {
       control: form.control})
   // Handle profile picture upload
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-<<<<<<< HEAD
     const file = e.target.files?.[0];
     if (!file) return;
-=======
     const file = e.target.files?.[0],
     if (!file) return,
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
-<<<<<<< HEAD
     }
     reader.readAsDataURL(file);
     // Store the file in the form data
     form.setValue("basicInfo.profilePicture", file)
   }
-=======
     },
     reader.readAsDataURL(file),
     
@@ -207,22 +181,17 @@ export function TalentOnboardingForm() {
     form.setValue("basicInfo.profilePicture", file)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Handle CV upload
   const handleCvUpload = async (file: File) => {
     const fileName = `cv-${user?.id}-${Date.now()}`,
     const { error: cvError } = await supabase.storage
       .from('resumes')
-<<<<<<< HEAD
       .upload(fileName, file);
-=======
       .upload(fileName, file),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (cvError) {
       console.error("Error uploading CV:", cvError),
       throw new Error("Failed to upload CV")
-<<<<<<< HEAD
     }
     // Get the public URL
     const { data: { publicUrl } } = supabase.storage
@@ -234,11 +203,7 @@ export function TalentOnboardingForm() {
   // Rest of the file remains unchanged...
   // [Previous implementation continues...]
   return null
-<<<<<<< HEAD
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from "react",;
 import { useForm, useFieldArray } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -366,10 +331,5 @@ export function TalentOnboardingForm() {;
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
   return null;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

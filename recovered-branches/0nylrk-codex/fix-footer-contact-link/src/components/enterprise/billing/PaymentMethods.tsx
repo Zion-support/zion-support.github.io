@@ -1,35 +1,27 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 import {
-<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
   CardTitle
-=======
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
-<<<<<<< HEAD
 export function PaymentMethods() {
   // Mock payment methods
 
   const paymentMethods = [
     {
-<<<<<<< HEAD
       id: "pm-1"
       type: "credit_card"
       brand: "Visa"
@@ -48,7 +40,6 @@ export function PaymentMethods() {
       isDefault: false
     }
   ];
-=======
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
@@ -57,18 +48,12 @@ export function PaymentMethods() {
       expYear: 2025,
       isDefault: true,
     },
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from "lucide-react",
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       id: "pm-2",
       type: "credit_card",
@@ -76,18 +61,11 @@ import { CreditCard, Plus, Trash } from "lucide-react",
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
-<<<<<<< HEAD
       isDefault: false,
     },;
   ];
-=======
       isDefault: false}
   ],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <Card>
@@ -139,13 +117,8 @@ import { CreditCard, Plus, Trash } from "lucide-react",
         </Button>
       </CardFooter>
     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -223,11 +196,6 @@ export function PaymentMethods() {;
         </Button>;
       </CardFooter>;
     </Card>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

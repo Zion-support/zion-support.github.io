@@ -1,32 +1,19 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { SEO } from '@/components/SEO'
 import { GradientHeading } from '@/components/GradientHeading'
 import { Button } from '@/components/ui/button'
 import { Leaf, Server, Cloud } from 'lucide-react'
 import Link from 'next/link'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button";
 import { Leaf, Server, Cloud } from 'lucide-react'
-<<<<<<< HEAD
 import Link from "next/link";
-=======
 import Link from "next/link",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function GreenIT() {
 
   const greenITSolutions = [
     {
-<<<<<<< HEAD
       title: 'Energy-Efficient Hardware'
       description:
         'Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.'
@@ -45,7 +32,6 @@ export default function GreenIT() {
       icon: Leaf
     }
   ]
-=======
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
       icon: Server},
@@ -54,27 +40,17 @@ export default function GreenIT() {
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
       icon: Cloud},
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       title: 'Renewable Energy Integration',
       description:
         'Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.',
       icon: Leaf,
     },
   ]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       title: "Renewable Energy Integration",
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
       icon: Leaf}
   ],
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -91,20 +67,13 @@ export default function GreenIT() {
               Sustainable technology solutions that reduce environmental impact without compromising performance
             </p>
           </div>
-<<<<<<< HEAD
           <div className='mb-16'>
             <div className='bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16'>
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
-=======
           
           <div className="mb-16">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
                   <p className="text-zion-slate-light text-lg mb-6">
@@ -116,7 +85,6 @@ export default function GreenIT() {
                     From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions 
                     for reducing your carbon footprint.
                   </p>
-<<<<<<< HEAD
                   <div className='mt-8'>
                     <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>                      Explore Green IT Solutions
                     </Button>
@@ -174,19 +142,12 @@ export default function GreenIT() {
                     From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions
                     for reducing your carbon footprint.
                   </p>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className="mt-8">
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       Explore Green IT Solutions
                     </Button>
                   </div>
                 </div>
-<<<<<<< HEAD
                 <div className='rounded-lg overflow-hidden relative w-full h-full'>
                   <img
                     src='https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80'
@@ -195,18 +156,11 @@ export default function GreenIT() {
                 </div>
               </div>
             </div>                <div className="rounded-lg overflow-hidden relative w-full h-full">
-=======
                 <div className="rounded-lg overflow-hidden relative w-full h-full">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <img
                     src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80"
                     alt="Green IT sustainability"
                     className="object-cover"
-<<<<<<< HEAD
                 </div>
               </div>
             </div>
@@ -682,7 +636,6 @@ export default function GreenIT(...args: unknown[]): unknown {
         'Meet compliance requirements'
         'Enhance stakeholder communication'
         'Track progress toward goals'
-<<<<<<< HEAD
       ]
       savings: 'Time and resource savings'
       implementation: '6 - 8 weeks'
@@ -690,7 +643,6 @@ export default function GreenIT(...args: unknown[]): unknown {
 }
   ]
 export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
-=======
       ],
       savings: 'Time and resource savings',
       implementation: '6 - 8 weeks',
@@ -698,7 +650,6 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
 };
   ];
 export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
   const [selectedCategory, setSelectedCategory] = useState('all')}
   return()
@@ -862,7 +813,6 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
             </div>
                     <h3 className="text-white font-medium text-xl text-center mb-3">{solution.title}</h3>
                     <p className="text-zion-slate-light text-center">{solution.description}</p>
-=======
                   />
                 </div>
               </div>
@@ -872,11 +822,6 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
               <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {greenITSolutions.map((solution, index) => (
                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
                     <div className="flex justify-center mb-4">
@@ -888,7 +833,6 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
             <div className='mb-16'>
               <h2 className='text-2xl font-bold text-white mb-6'>
                 Why Choose Green IT?
@@ -922,7 +866,6 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
                     <li>
                       • Compliance with emerging environmental regulations
                     </li>                    <li>• Improved operational efficiency and performance</li>                    <li>• Lower energy consumption and resource utilization</li>
-=======
             
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-6">Why Choose Green IT?</h2>
@@ -933,23 +876,11 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
                   <ul className="text-zion-slate-light space-y-2">
                     <li>• Reduced carbon footprint and greenhouse gas emissions</li>
                     <li>• Lower energy consumption and resource utilization</li>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <li>• Decreased electronic waste through better lifecycle management</li>
                     <li>• Support for renewable energy initiatives</li>
                   </ul>
                 </div>
-<<<<<<< HEAD
-=======
                 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                   <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>
                   <ul className="text-zion-slate-light space-y-2">
@@ -962,7 +893,6 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
               </div>
             </div>
           </div>
-<<<<<<< HEAD
           <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
               Ready to implement Green IT solutions?
@@ -983,7 +913,6 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
             </p>
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" asChild>
               <Link href="/contact">Contact Our Team</Link>
-=======
           
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to implement Green IT solutions?</h2>
@@ -993,17 +922,11 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" asChild>
               <Link href="/contact">Contact Our Team</Link>
             </Button>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </div>
       </main>
     </>
   )
-<<<<<<< HEAD
 "                    {expandedSection === solution.id && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}'
@@ -1211,14 +1134,10 @@ export { GreenIT }
 export { GreenIT }
 export { GreenIT }
 export { GreenIT }
-<<<<<<< HEAD
 export { GreenIT, GreenIT }
 }
-=======
 export { GreenIT, GreenIT };
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -1337,8 +1256,3 @@ export default function GreenIT() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

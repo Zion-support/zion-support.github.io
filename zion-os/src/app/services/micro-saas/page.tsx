@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 interface MicroSAASService {id: string;
@@ -287,7 +286,6 @@ const microSAASServices: MicroSAASService[] = [;
   }
 ];
 export default function MicroSAASPage() {return (;
-=======
 "use client",;
 import { useState } from "react",;
 interface MicroSAASService {;
@@ -585,7 +583,6 @@ const microSAASServices: MicroSAASService[] = [;
 ],;
 export default function MicroSAASPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="space-y-8">;
       {/* Header */}
       <div className="text-center space-y-4">;

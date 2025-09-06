@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -17,7 +15,6 @@ import { useReviews } from "@/hooks/useReviews";
 
 import { Project } from "@/types/projects";
 import { useAuth } from "@/hooks/useAuth";
-=======
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -27,8 +24,6 @@ import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
 import {useReviews} from "@/hooks/useReviews";
 import {Project} from "@/types/projects";
 import {useAuth} from "@/hooks/useAuth";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",
 import { Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -38,26 +33,15 @@ import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
 import { useReviews } from "@/hooks/useReviews",
 import { Project } from "@/types/projects",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ProjectReviewSectionProps {
   project: Project;
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
   const { user } = useAuth();
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id);
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
-<<<<<<< HEAD
   const { user } = useAuth();
 
   const { reviews, userReview, isLoading, reportReview } = useReviews(
@@ -77,11 +61,9 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview;
   const hasLeftReview = userReview != null;
 
-=======
   const { user } = useAuth(),
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const isCompleted = project.status === "completed",
   const isClient = user?.id === project.client_id,
@@ -99,7 +81,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -145,8 +126,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                       >
                         Edit Review
                       </Button>
-<<<<<<< HEAD
-=======
 import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -212,11 +191,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
                         Edit Review;
                       </Button>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     )}
                   </div>
                 ) : null}
@@ -241,11 +215,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
         )}
       </CardContent>
       {/* Review Modal */}
-<<<<<<< HEAD
       {(isClient |isTalent) && (
-=======
       {(isClient || isTalent) && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <LeaveReviewModal
           projectId={project.id}
           revieweeId={revieweeId}

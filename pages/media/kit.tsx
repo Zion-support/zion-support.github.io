@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useCallback, useMemo, useState  } from 'react';
 import Head from 'next/head',
-=======
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next/head';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import DatePicker from 'react-datepicker';
 
 import type {
-<<<<<<< HEAD
   MediaBundle
   MediaAsset
   PressReleaseType;
@@ -18,7 +13,6 @@ import {
   getDefaultAssets
   buildPressRelease
   buildTimeline;
-=======
   MediaBundle,
   MediaAsset,;
   PressReleaseType,;
@@ -27,27 +21,19 @@ import {
   getDefaultAssets,
   buildPressRelease,;
   buildTimeline,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../utils/mediaKit';
 const KitPage = () => {
-=======
 import { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import DatePicker from 'react-datepicker';
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
 import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
 const KitPage = () => {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [bundle, setBundle] = useState<MediaBundle>('general');
   const [startDate, setStartDate] = useState<Date>(new Date());
   const [companyName, setCompanyName] = useState('Zion');
   const [raiseAmount, setRaiseAmount] = useState('$5M');
   const [tokenName, setTokenName] = useState('ZION');
-<<<<<<< HEAD
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>(
     []
   );
@@ -90,7 +76,6 @@ const KitPage = () => {;
     const { saveAs } = await import('file-saver');
     saveAs(blob, `zion-media-kit-${bundle}.zip`);  }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
   const onGeneratePdf = useCallback(async () => {
-=======
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>([]),;
   const assets: MediaAsset[] = useMemo(() => getDefaultAssets(bundle), [bundle]),;
   const onGenerateTimeline = useCallback(() => {;
@@ -141,24 +126,14 @@ const KitPage = () => {;
     saveAs(blob, `zion-media-kit-${bundle}.zip`);
   }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]),;
   const onGeneratePdf = useCallback(async () => {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
-<<<<<<< HEAD
     const drawText = (text: string, x: number, y: number, size = 12) => {
       page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
     }
     let y = 760;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     drawText('Zion Media Kit', 50, y, 18);
     y -= 24;
     drawText(`Bundle: ${bundle}`, 50, y);
@@ -205,14 +180,10 @@ const KitPage = () => {;
       tokenName
     });
     const onCopy = () => navigator.clipboard.writeText(text);
-=======
-<<<<<<< HEAD
     const drawText = (text: string, x: number, y: number, size = 12) => {;
       page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
     },;
     let y = 760;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     drawText('Zion Media Kit', 50, y, 18), y -= 24,;
     drawText(`Bundle: ${bundle}`, 50, y), y -= 16,;
     drawText('Assets:', 50, y), y -= 16,;
@@ -241,11 +212,6 @@ const KitPage = () => {;
     const nowStr = new Date().toISOString().substring(0, 10),
     const text = buildPressRelease(type, { companyName, date: nowStr, raiseAmount, tokenName }),
     const onCopy = () => navigator.clipboard.writeText(text),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return (
       <div className="p-4 border rounded-lg space-y-2">
         <div className="flex items-center justify-between">
@@ -254,19 +220,15 @@ const KitPage = () => {;
         </div>
         <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
       </div>
-<<<<<<< HEAD
     );  }
-=======
     )
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div>
       <Head>
         <title>Media Kit - Zion</title>
         <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." />
       </Head>
-<<<<<<< HEAD
       <div className='space-y-8'>
         <header className='flex items-center justify-between'>
           <h1 className='text-2xl font-bold'>Media Kit</h1>
@@ -300,7 +262,6 @@ const KitPage = () => {;
                   </button>
                 )
               )}
-=======
       <div className="space-y-8">
         <header className="flex items-center justify-between">
           <h1 className="text-2xl font-bold">Media Kit</h1>
@@ -320,11 +281,6 @@ const KitPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
             <p className="text-xs text-gray-500 mt-2">Toggle to tailor assets and legal docs.</p>
           </div>
@@ -357,19 +313,12 @@ const KitPage = () => {;
 }
           </div>
         </section>
-<<<<<<< HEAD
         <section className='p-4 border rounded-lg'>
           <h3 className='font-semibold mb-3'>Assets Included</h3>
           <ul className='grid md:grid-cols-2 gap-3'>
-=======
         <section className="p-4 border rounded-lg">
           <h3 className="font-semibold mb-3">Assets Included</h3>
           <ul className="grid md:grid-cols-2 gap-3">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {assets.map(a => (
               <li key={a.filename} className="flex items-center justify-between border rounded p-2">
                 <span className="text-sm">{a.filename}</span>
@@ -386,7 +335,6 @@ const KitPage = () => {;
 }
           </ul>
         </section>
-<<<<<<< HEAD
         <section className='p-4 border rounded-lg space-y-4'>
           <h3 className='font-semibold'>Prewritten Press Releases</h3>
           <div className='grid md:grid-cols-3 gap-4'>
@@ -399,14 +347,10 @@ const KitPage = () => {;
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
 export default KitPage;
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-=======
         <section className="p-4 border rounded-lg space-y-4">
           <h3 className="font-semibold">Prewritten Press Releases</h3>
           <div className="grid md:grid-cols-3 gap-4">
@@ -538,9 +482,4 @@ export default KitPage,
     </div>;
   );
 },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default KitPage;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

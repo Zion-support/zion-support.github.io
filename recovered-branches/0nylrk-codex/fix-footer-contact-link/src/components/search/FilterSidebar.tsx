@@ -1,28 +1,16 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
 import {Filter, X, Star} from "lucide-react";
 import {FilterOptions} from "@/types/search";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox",
-<<<<<<< HEAD
 import { Filter, X, Star } from "lucide-react";
 import { FilterOptions } from "@/types/search";
-=======
 import { Filter, X, Star } from "lucide-react",
 import { FilterOptions } from "@/types/search",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface FilterSidebarProps {
   filters: {
 
@@ -30,37 +18,28 @@ interface FilterSidebarProps {
     selectedLocations: string[]
     selectedAvailability: string[]
     selectedRating: number | null
-<<<<<<< HEAD
   }
   filterOptions: FilterOptions
   onFilterChange: (filterType: string, value: string) => void
   onRatingChange: (rating: number | null) => void
 
-=======
   },
   filterOptions: FilterOptions,
   onFilterChange: (filterType: string, value: string) => void,
   onRatingChange: (rating: number | null) => void,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onClearFilters: () => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function FilterSidebar({;
   filters;
   filterOptions;
   onFilterChange;
   onRatingChange;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function FilterSidebar({
   filters,
   filterOptions,
   onFilterChange,
   onRatingChange,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onClearFilters
 }: FilterSidebarProps) {
   return (
@@ -69,21 +48,14 @@ export function FilterSidebar({
         <h3 className="text-lg font-medium text-white flex items-center">
           <Filter className="mr-2 h-5 w-5" /> Filters
         </h3>
-<<<<<<< HEAD
         <Button
           variant="outline"
           size="sm"
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-=======
         <Button 
           variant="outline" 
           size="sm"
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
@@ -119,11 +91,6 @@ export function FilterSidebar({;
           variant="outline";
           size="sm";
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           onClick={onClearFilters}
         >
           Clear All

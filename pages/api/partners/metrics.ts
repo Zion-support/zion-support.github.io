@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
@@ -7,14 +5,12 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status($1).json({ $2 });
   const usingPlaceholder =
@@ -32,7 +28,6 @@ export default async function handler(
         payout_amount: 210
         currency: "USD"
       });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -49,10 +44,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         conversion_rate: 7 / 12,
         payout_amount: 210,
         currency: 'USD'})
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
     const supabase = getServerSupabase();
-<<<<<<< HEAD
     const events = ["visitsignupprofile_completedjob_createdhire"] as const;
     const counts: Record<string, number> = {}
     for (const ev of events) {
@@ -77,19 +70,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       total_job_creations
       conversion_rate: total_signups
         ? total_profile_completions / total_signups
-<<<<<<< HEAD
         : 0
       payout_amount: total_profile_completions * 50
       currency: "USD"
-=======
-=======
         : 0,
       payout_amount: total_profile_completions * 50,
       currency: "USD",
     });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -141,7 +130,6 @@ export default async function handler(req, res) {
 }
 ;
     const supabase = getServerSupabase();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const events = ['visitsignupprofile_completedjob_createdhire'] as const;
     const counts: Record<string, number> = {};
     for (const ev of events) {
@@ -167,19 +155,13 @@ export default async function handler(req, res) {
       conversion_rate: total_signups ? total_profile_completions / total_signups : 0,
       payout_amount,
       currency: 'USD'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     });
 
   } catch (e: any) {
-<<<<<<< HEAD
     return res.status(500).json({ error: e?.message });
-=======
     return res.status(500).json({ error: e?.message })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
-<<<<<<< HEAD
 }
-=======
 }
   } catch (error) {
     console.error("Error:", error);
@@ -197,7 +179,5 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -13,7 +13,6 @@ const server = http.createServer((req, res) => {
         res.end('Error loading offline.html')
         return
       }
-<<<<<<< HEAD
       res.writeHead(200, { 'Content-Type': 'text/html' })
 
       res.end(data)
@@ -29,7 +28,6 @@ const server = http.createServer((req, res) => {
   }
 })
 const PORT = 8080
-=======
       res.writeHead(200, { 'Content-Type': 'text/html' }),;
       res.end(data);
     });
@@ -42,7 +40,6 @@ const PORT = 8080
     res.end('Not found');
   }
 }),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 server.listen(PORT, () => {
   // // // console.log(`
@@ -65,18 +62,11 @@ server.listen(PORT, () => {
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 `)
-<<<<<<< HEAD
 
 });
 
-=======
 }),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }),;
 const PORT = 8080,;
 server.listen(PORT, () => {;
@@ -101,8 +91,3 @@ server.listen(PORT, () => {;
 ╚══════════════════════════════════════════════════════════════════╝;
 `);
 }),;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,11 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 
   const { role = "guest", talent } = req.query as {
-=======
   const { role = "guest", talent } = req.query as {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     role?: string;
     talent?: string;
   }
@@ -44,7 +41,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.writeHead(302, { ...headers, Location: "/" });
   res.end();
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,17 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const PerformancePage: React.FC = () => {
   const performanceMetrics = [
     {
-<<<<<<< HEAD
       category: 'System Performance'
       metrics: [
         { name: 'Response Time', value: '45ms', status: 'excellent', trend: '+12%' }
@@ -61,27 +54,17 @@ const PerformancePage: React.FC = () => {
       summary: 'Stress testing results under high traffic conditions'
       status: 'completed'
     }
-=======
       category: 'System Performance',
       metrics: [
         { name: 'Response Time', value: '45ms', status: 'excellent', trend: '+12%' },
         { name: 'Throughput', value: '2.4k req/s', status: 'good', trend: '+8%' },
         { name: 'Error Rate', value: '0.02%', status: 'excellent', trend: '-15%' },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         { name: 'Uptime', value: '99.97%', status: 'excellent', trend: '+0.1%' }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { name: 'Uptime', value: '99.97%', status: 'excellent', trend: '+0.1%'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       ]
     },
     {
@@ -90,21 +73,12 @@ const PerformancePage: React.FC = () => {
         { name: 'CPU Usage', value: '23%', status: 'good', trend: '-5%' },
         { name: 'Memory Usage', value: '67%', status: 'good', trend: '+3%' },
         { name: 'Disk I/O', value: '45 MB/s', status: 'excellent', trend: '+18%' },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         { name: 'Network', value: '1.2 GB/s', status: 'good', trend: '+7%' }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { name: 'Network', value: '1.2 GB/s', status: 'good', trend: '+7%'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       ]
     },
     {
@@ -113,16 +87,11 @@ const PerformancePage: React.FC = () => {
         { name: 'Page Load Time', value: '1.2s', status: 'excellent', trend: '-20%' },
         { name: 'Core Web Vitals', value: '98/100', status: 'excellent', trend: '+5%' },
         { name: 'Accessibility Score', value: '96/100', status: 'excellent', trend: '+2%' },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         { name: 'SEO Score', value: '94/100', status: 'excellent', trend: '+3%' }
       ]
     }
   ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { name: 'SEO Score', value: '94/100', status: 'excellent', trend: '+3%'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -135,10 +104,6 @@ const PerformancePage: React.FC = () => {
   }
 }
   ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const recentReports = [
     {
       id: 'performance-weekly-2025-01-17',
@@ -160,25 +125,15 @@ const PerformancePage: React.FC = () => {
       date: '2025-01-15',
       summary: 'Stress testing results under high traffic conditions',
       status: 'completed'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
   ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'excellent': return 'text-green-400';
@@ -186,18 +141,13 @@ const PerformancePage: React.FC = () => {
       case 'warning': return 'text-orange-400';
       case 'critical': return 'text-red-400';
       default: return 'text-gray-400';
-<<<<<<< HEAD
     }
   }
   const getTrendColor = (trend: string) => {
     return trend.startsWith('+') ? 'text-green-400' : 'text-red-400';
-<<<<<<< HEAD
   }
-=======
   };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -207,11 +157,6 @@ const PerformancePage: React.FC = () => {
   const getTrendColor = (trend: string) => {
     return trend.startsWith('+') ? 'text-green-400' : 'text-red-400';
   };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <Head>
@@ -220,19 +165,12 @@ const PerformancePage: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="container mx-auto px-4 py-8">
-<<<<<<< HEAD
         {/* Header */}
-=======
         {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mb-8">
           <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Home
@@ -244,19 +182,12 @@ const PerformancePage: React.FC = () => {
             Real-time system performance metrics and analytics dashboard
           </p>
         </div>
-<<<<<<< HEAD
         {/* Performance Overview */}
-=======
         {/* Performance Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-cyan-400">Overall Score</h3>
@@ -274,19 +205,12 @@ const PerformancePage: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Real-time monitoring</p>
           </div>
         </div>
-<<<<<<< HEAD
         {/* Performance Metrics */}
-=======
         {/* Performance Metrics */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -299,7 +223,6 @@ const PerformancePage: React.FC = () => {
                       <span className="text-gray-300">{metric.name}</span>
                       <div className="flex items-center space-x-3">
                         <span className={`font-semibold ${getStatusColor(metric.status)}`}>
-<<<<<<< HEAD
                           {metric.value}
                         </span>
                         <span className={`text-sm ${getTrendColor(metric.trend)}`}>
@@ -314,7 +237,6 @@ const PerformancePage: React.FC = () => {
           </div>
         </div>
         {/* Recent Reports */}
-=======
                           {metric.value  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -349,11 +271,6 @@ const PerformancePage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Recent Reports</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -362,57 +279,36 @@ const PerformancePage: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{report.title}</h3>
                   <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
-<<<<<<< HEAD
                     {report.status}
-=======
                     {report.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{report.summary}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400 text-sm">{report.date}</span>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   <Link 
                     href={`/reports/${report.id}`}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Link
-<<<<<<< HEAD
                     href={`/reports/${report.id}`}
-=======
                     href={`/reports/${report.id}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors"
                   >
                     View Report →
                   </Link>
                 </div>
               </div>
-<<<<<<< HEAD
             ))}
           </div>
         </div>
         {/* Performance Trends */}
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -425,11 +321,6 @@ const PerformancePage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Trends</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -437,18 +328,10 @@ const PerformancePage: React.FC = () => {
               <div className="text-6xl font-bold text-cyan-400 mb-4">📈</div>
               <h3 className="text-xl font-semibold mb-2 text-white">Continuous Improvement</h3>
               <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
                 Our automated systems continuously monitor and optimize performance
-=======
                 Our automated systems continuously monitor and optimize performance,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                 Our automated systems continuously monitor and optimize performance, 
-=======
                 Our automated systems continuously monitor and optimize performance,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ensuring consistent improvement across all metrics.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -472,54 +355,32 @@ const PerformancePage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         {/* Navigation */}
-<<<<<<< HEAD
-=======
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
           >
             All Reports
           </Link>
-<<<<<<< HEAD
           <Link
-=======
-<<<<<<< HEAD
           <Link 
-=======
           <Link
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             href="/reports/updates"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50"
           >
             Recent Updates
           </Link>
-<<<<<<< HEAD
           <Link
-=======
-<<<<<<< HEAD
           <Link 
-=======
           <Link
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             href="/automation-health"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50"
           >
@@ -529,16 +390,7 @@ const PerformancePage: React.FC = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default PerformancePage;

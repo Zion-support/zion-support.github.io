@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useResume  } from '@/hooks/useResume';
@@ -20,7 +18,6 @@ import { useResumeProgress  } from './useResumeProgress';
 import { ResumeVersionSelector  } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
 export function ResumeWizard() {
-=======
 import {useState, useEffect} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {useResume} from '@/hooks/useResume';
@@ -40,7 +37,6 @@ import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
 import {RESUME_STEPS} from './constants';
 export function ResumeWizard() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { user } = useAuth();
   const {
     isLoading;
@@ -79,16 +75,12 @@ export function ResumeWizard() {;
     if (currentIndex > 0) {
       setActiveTab(RESUME_STEPS[currentIndex - 1].id)
     }
-<<<<<<< HEAD
   }
   const handleResumeChange = (resumeId: string) => {
     fetchResume(resumeId)
   }
 
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useResume } from '@/hooks/useResume',;
@@ -144,16 +136,11 @@ export function ResumeWizard() {;
       setActiveTab(RESUME_STEPS[currentIndex - 1].id);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const handleResumeChange = (resumeId: string) => {
     fetchResume(resumeId)
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -169,16 +156,9 @@ export function ResumeWizard() {;
         <AlertDescription>{error}</AlertDescription>
       </Alert>
     )
-<<<<<<< HEAD
   }
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   if (showNewResumeForm) {
     return (
@@ -189,10 +169,7 @@ export function ResumeWizard() {;
       />
     )
   }
-<<<<<<< HEAD
-=======
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -223,25 +200,20 @@ export function ResumeWizard() {;
               onChange={setActiveTab}
             />
             {resume && (
-<<<<<<< HEAD
               <ResumeStepContent
-=======
               <ResumeStepContent 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 activeTab={activeTab}
                 resume={resume as Resume}
                 onNextStep={nextStep}
                 onPrevStep={prevStep}
               />
             )}
-<<<<<<< HEAD
           </Tabs>
         </CardContent>
       </Card>
     </div>
   )
 }
-=======
           </Tabs>;
         </CardContent>;
       </Card>;
@@ -249,4 +221,3 @@ export function ResumeWizard() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

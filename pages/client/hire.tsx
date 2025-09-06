@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react";
 import FeedbackModal from "../../components/ui/FeedbackModal";
-=======
 import {useState} from 'react';
 import FeedbackModal from '../../components/ui/FeedbackModal';
 export default function ClientHirePage() {;
@@ -20,15 +17,11 @@ export default function ClientHirePage() {;
   const [result, setResult] = useState<any | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",
 import FeedbackModal from "../../components/ui/FeedbackModal",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function ClientHirePage() {
   const [talentSlug, setTalentSlug] = useState("ava-chen");
   const [startDateIso, setStartDateIso] = useState<string>(new Date().toISOString().slice(0, 10)),
-<<<<<<< HEAD
   const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module");
   const [termsType, setTermsType] = useState("hourly");
   const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
@@ -75,7 +68,6 @@ export default function ClientHirePage() {
     <div className='max-w-3xl mx-auto p-6 space-y-6'>
       <h1 className='text-xl font-semibold'>Hire Talent</h1>
       <div className='space-y-4 border rounded p-4'>
-=======
   const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module"),
   const [termsType, setTermsType] = useState("hourly"),
   const [hourlyRateUsd, setHourlyRateUsd] = useState(120),
@@ -84,17 +76,10 @@ export default function ClientHirePage() {
   const [loading, setLoading] = useState(false),
   const [result, setResult] = useState<any | null>(null),
   const [showFeedback, setShowFeedback] = useState(false),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   async function sendOffer() {
     setLoading(true),
     setResult(null),
     const paymentTerms =
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       termsType === 'hourly'
         ? { type: 'hourly', hourlyRateUsd }
         : termsType === 'fixed'
@@ -123,16 +108,10 @@ export default function ClientHirePage() {
     } else {
       setResult(json.offer);
       setShowFeedback(true);    }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       termsType === "hourly"
         ? { type: "hourly", hourlyRateUsd   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
         : termsType === "fixed";
@@ -164,19 +143,12 @@ export default function ClientHirePage() {
   }
 }
   return (
-<<<<<<< HEAD
     <div className='max-w-3xl mx-auto p-6 space-y-6'>
       <h1 className='text-xl font-semibold'>Hire Talent</h1>
       <div className='space-y-4 border rounded p-4'>
-=======
     <div className="max-w-3xl mx-auto p-6 space-y-6">
       <h1 className="text-xl font-semibold">Hire Talent</h1>
       <div className="space-y-4 border rounded p-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div>
           <label className="block text-sm font-medium">Talent</label>
           <input value={talentSlug} onChange={(e) => setTalentSlug(e.target.value)} className="w-full border rounded px-3 py-2" />
@@ -197,20 +169,12 @@ export default function ClientHirePage() {
             <option value="milestone">Milestone</option>
           </select>
         </div>
-<<<<<<< HEAD
         {termsType === 'hourly' && (
-=======
         {termsType === "hourly" && (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div>
             <label className="block text-sm font-medium">Hourly rate (USD)</label>
             <input type="number" value={hourlyRateUsd} onChange={(e) => setHourlyRateUsd(Number(e.target.value))} className="w-full border rounded px-3 py-2" />
           </div>
-<<<<<<< HEAD
         )}
         {termsType === 'fixed' && (
           <div>
@@ -224,7 +188,6 @@ export default function ClientHirePage() {
               className='w-full border rounded px-3 py-2'
             />          </div>
         )}
-=======
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -240,12 +203,10 @@ export default function ClientHirePage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <div>
           <label className="block text-sm font-medium">Agreement URL (optional)</label>
           <input value={agreementUrl} onChange={(e) => setAgreementUrl(e.target.value)} placeholder="https://..." className="w-full border rounded px-3 py-2" />
         </div>
-<<<<<<< HEAD
         <div className='flex justify-end'>
           <button
             onClick={sendOffer}
@@ -253,7 +214,6 @@ export default function ClientHirePage() {
             className='px-4 py-2 rounded bg-indigo-600 text-white'
           >
             {loading ? 'Sending…' : 'Send Offer to Confirm'}          </button>
-<<<<<<< HEAD
         </div>
       </div>
       {result && (
@@ -275,7 +235,6 @@ export default function ClientHirePage() {
       />
     </div>
 );
-=======
         <div className="flex justify-end">
           <button onClick={sendOffer} disabled={loading} className="px-4 py-2 rounded bg-indigo-600 text-white">
             {loading ? "Sending…" : "Send Offer to Confirm"  } catch (error) {
@@ -287,7 +246,6 @@ export default function ClientHirePage() {
         </div>
       </div>
       {result && (
-=======
         </div>
       </div>
       {result && (
@@ -312,7 +270,6 @@ export default function ClientHirePage() {
 );
 
 }
-=======
         <div className="flex justify-end">
           <button onClick={sendOffer} disabled={loading} className="px-4 py-2 rounded bg-indigo-600 text-white">
             {loading ? "Sending…" : "Send Offer to Confirm"  } catch (error) {
@@ -324,7 +281,6 @@ export default function ClientHirePage() {
         </div>
       </div>
       {result && (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="border rounded p-4 bg-emerald-50">
           <div className="font-medium">Offer sent</div>
           <div className="text-sm">Offer ID: {result.id}</div>
@@ -452,8 +408,3 @@ export default function ClientHirePage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

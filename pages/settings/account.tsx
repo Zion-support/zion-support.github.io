@@ -1,25 +1,15 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 export default function AccountSettingsPage() {
-<<<<<<< HEAD
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null);
-=======
   const [user, setUser] = useState<{;
     address: string;
     chain: 'evm' | 'sol';
   } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export default function AccountSettingsPage(req, res) {
   try {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
   const [ceramic, setCeramic] = useState('');
@@ -27,7 +17,6 @@ export default function AccountSettingsPage(req, res) {
   const [linking, setLinking] = useState(false);
   const [backupCid, setBackupCid] = useState('');
   const [restoreCid, setRestoreCid] = useState('');
-<<<<<<< HEAD
 
   const [status, setStatus] = useState<string | null>(null);
   useEffect(() => {
@@ -46,7 +35,6 @@ export default function AccountSettingsPage(req, res) {
     if (typeof window !== 'undefined')
       window.localStorage.setItem('zion-web3-display', String(val));  }
   const linkDID = async () => {
-=======
   const [status, setStatus] = useState<string | null>(null);
   useEffect(() => {;
     const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
@@ -59,14 +47,12 @@ export default function AccountSettingsPage(req, res) {
     if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-display', String(val));
   },;
   const linkDID = async () => {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (!user) return;
     setLinking(true);
     setStatus(null);
     try {
       const nonceRes = await fetch('/api/auth/nonce');
       const { nonce } = await nonceRes.json();
-<<<<<<< HEAD
       const payload = {
         ens
         lens
@@ -77,9 +63,7 @@ export default function AccountSettingsPage(req, res) {
         nonce
         ts: Date.now()
       }
-=======
       const payload = { ens, lens, ceramic, farcaster, address: user.address, chain: user.chain, nonce, ts: Date.now() },;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       const msg = `Link Web3 identities to Zion account\n${JSON.stringify(payload)}`;
       // Sign message with connected wallet if possible (best effort);
       let signature: string | null = null;
@@ -91,7 +75,6 @@ export default function AccountSettingsPage(req, res) {
           signature = await signer.signMessage(msg);
         } else if (user.chain === 'sol' && (window as any).solana?.isPhantom) {;
           const enc = new TextEncoder().encode(msg);
-<<<<<<< HEAD
           const { signature: sig } = await (window as any).solana.signMessage(
             enc
             'utf8'
@@ -127,7 +110,6 @@ export default function AccountSettingsPage(req, res) {
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify(profile)
       });
-=======
           const { signature: sig } = await (window as any).solana.signMessage(enc, 'utf8');
           const bs58 = (await import('bs58')).default;
           signature = bs58.encode(sig);
@@ -172,12 +154,10 @@ export default function AccountSettingsPage(req, res) {
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON.stringify(profile)}),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Backup failed');
       setBackupCid(data.cid);
       setStatus('Backup saved to decentralized storage');
-<<<<<<< HEAD
     } catch (e: any) {
       setStatus(e?.message |'Backup failed');    }
   }
@@ -202,7 +182,6 @@ export default function AccountSettingsPage(req, res) {
       setStatus(e?.message |'Restore failed');    }
   }
 
-=======
     } catch (error) {
       setStatus(e?.message || 'Backup failed');
       } catch (error) {
@@ -231,15 +210,10 @@ export default function AccountSettingsPage(req, res) {
   }
 }
       setStatus('Profile restored from backup');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     } catch (e: any) {
       setStatus(e?.message || 'Restore failed');    }
   };
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } catch (error) {
       setStatus(e?.message || 'Restore failed');
       } catch (error) {
@@ -248,11 +222,6 @@ export default function AccountSettingsPage(req, res) {
   }
 }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
@@ -275,7 +244,6 @@ export default function AccountSettingsPage(req, res) {
             </label>
           </div>
         </section>
-<<<<<<< HEAD
         <section className='rounded-xl border p-5'>
           <h2 className='font-semibold mb-2'>Link Web3 identities</h2>
           <div className='grid grid-cols-1 gap-3'>
@@ -333,7 +301,6 @@ export default function AccountSettingsPage(req, res) {
                 </code>
               </span>
             )}
-=======
         <section className="rounded-xl border p-5">
           <h2 className="font-semibold mb-2">Link Web3 identities</h2>
           <div className="grid grid-cols-1 gap-3">
@@ -354,28 +321,18 @@ export default function AccountSettingsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div className="mt-4 flex gap-2">
             <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />
             <button onClick={doRestore} className="rounded-md border px-4 py-2">Restore profile</button>
           </div>
         </section>
-<<<<<<< HEAD
         {status && <div className='text-sm text-gray-600'>{status}</div>}
       </div>
     </>
 );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         {status && <div className="text-sm text-gray-600">{status}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -389,8 +346,3 @@ export default function AccountSettingsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

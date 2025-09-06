@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = {title: 'Careers - Zion Tech Group';
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.';
   keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs'}
@@ -50,7 +49,6 @@ export default function CareersPage() {const openPositions = [;
       icon: '💰'}
     {title: 'Health & Wellness';
       description: 'Comprehensive health coverage and wellness programs.';
-=======
 export const metadata = {;
   title: 'Careers - Zion Tech Group',;
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',;
@@ -113,7 +111,6 @@ export default function CareersPage() {;
     {;
       title: 'Health & Wellness',;
       description: 'Comprehensive health coverage and wellness programs.',;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       icon: '🏥'}];
   return (;
     <div className="space-y-16">;

@@ -1,20 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-=======
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
@@ -26,7 +18,6 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   const supabaseAdmin = createClient(
-<<<<<<< HEAD
     Deno.env.get("SUPABASE_URL") ?? "";
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
     { auth: { persistSession: false } }
@@ -72,7 +63,6 @@ serve(async (req) => {
           await processContentGeneration(supabaseAdmin, 'newsletter');
           break;
         // Add more job types as needed
-=======
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -131,11 +121,6 @@ serve(async (req) => {;
           await processContentGeneration(supabaseAdmin, 'newsletter'),;
           break,;
         // Add more job types as needed;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       // Update job status
       await supabaseAdmin
@@ -146,7 +131,6 @@ serve(async (req) => {;
         })
         .eq('id', job.id)
     }
-<<<<<<< HEAD
     return new Response(JSON.stringify({ processed: jobs?.length |0 }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 200})
@@ -156,7 +140,6 @@ serve(async (req) => {;
       status: 500})
   }
 });
-=======
 
     return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -168,12 +151,10 @@ serve(async (req) => {;
   }
 }),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 async function processOnboardingReminder(supabase, userId, milestone, role) {
   try {
     // Create notification for user
     const milestoneMessages = {
-<<<<<<< HEAD
       profile_completed: "Complete your profile to get noticed by clients";
       skills_added: "Add your skills to get better job matches";
       availability_set: "Set your availability to receive project offers";
@@ -191,7 +172,6 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
       type: 'onboarding_reminder'
       read: false
     });
-=======
       profile_completed: "Complete your profile to get noticed by clients",
       skills_added: "Add your skills to get better job matches",
       availability_set: "Set your availability to receive project offers",
@@ -212,7 +192,6 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
       read: false
     }),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Here you could also add logic to send an email
     // For example, call another edge function to send email
   } catch (error) {
@@ -227,28 +206,18 @@ async function processResumeScoring(supabase, applicationId) {
       {
         method: "POST",
         headers: {
-<<<<<<< HEAD
-<<<<<<< HEAD
           "Content-Type": "application/json"
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`}
-=======
           "Content-Type": "application/json",
-<<<<<<< HEAD
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         body: JSON.stringify({ applicationId })}
     );
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`)
-<<<<<<< HEAD
     }
     console.log(`Successfully scored application ${applicationId}`);
-=======
           "Content-Type": "application/json",
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
 ;
     return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {;
@@ -303,32 +272,23 @@ async function processResumeScoring(supabase, applicationId) {;
     if (!response.ok) {;
       const errorData = await response.json(),;
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
     // // // console.log(`Successfully scored application ${applicationId}`),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Notify the client that their application has been scored
     const { data: application } = await supabase
       .from("job_applications")
       .select("job_id")
       .eq("id", applicationId)
-<<<<<<< HEAD
       .single();
-=======
       .single(),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (application) {
       const { data: job } = await supabase
         .from("jobs")
         .select("client_id, title")
         .eq("id", application.job_id)
-<<<<<<< HEAD
         .single();
       if (job) {
         // Create notification for the client
@@ -338,7 +298,6 @@ async function processResumeScoring(supabase, applicationId) {;
           message: `An application for "${job.title}" has been scored and is ready for review.`;
           type: "application_scored";
           related_id: applicationId
-=======
         .single(),
         
       if (job) {
@@ -349,7 +308,6 @@ async function processResumeScoring(supabase, applicationId) {;
           message: `An application for "${job.title}" has been scored and is ready for review.`,
           type: "application_scored",
           related_id: applicationId,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           read: false
         })
       }
@@ -360,19 +318,15 @@ async function processResumeScoring(supabase, applicationId) {;
 }
 async function processContentGeneration(supabase, contentType) {
   try {
-<<<<<<< HEAD
     console.log(`Starting scheduled content generation for ${contentType}`);
-=======
     // // // console.log(`Starting scheduled content generation for ${contentType}`),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Call the content generation function
     const response = await fetch(
       `${Deno.env.get("SUPABASE_URL")}/functions/v1/generate-content`,
       {
         method: "POST",
         headers: {
-<<<<<<< HEAD
           "Content-Type": "application/json"
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`}
         body: JSON.stringify({
@@ -387,16 +341,12 @@ async function processContentGeneration(supabase, contentType) {
     }
     const contentData = await response.json();
     console.log(`Successfully generated ${contentType} content`);
-=======
           "Content-Type": "application/json",
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
         body: JSON.stringify({ 
           contentType,
           autoPublish: contentType === 'blog' ? true : false,
           includeImage: contentType === 'blog' ? true : false
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         })}
     );
 
@@ -404,8 +354,6 @@ async function processContentGeneration(supabase, contentType) {
       const errorData = await response.json();
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`)
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     // // // console.log(`Successfully scored application ${applicationId}`),;
     // Notify the client that their application has been scored;
@@ -458,15 +406,10 @@ async function processContentGeneration(supabase, contentType) {;
       const errorData = await response.json(),;
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`);
     }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     const contentData = await response.json(),
     // // // console.log(`Successfully generated ${contentType} content`),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // If it's a newsletter, send a test email to the admin
     if (contentType === 'newsletter') {
       // Get admin email from profiles
@@ -483,13 +426,10 @@ async function processContentGeneration(supabase, contentType) {;
           {
             method: "POST",
             headers: {
-<<<<<<< HEAD
               "Content-Type": "application/json"
               "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`}
-=======
               "Content-Type": "application/json",
               "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             body: JSON.stringify({
               subject: contentData.subject;
               previewText: contentData.previewText;
@@ -501,24 +441,17 @@ async function processContentGeneration(supabase, contentType) {;
         // Create notification for admin
         await supabase.from('notifications').insert({
           user_id: null, // System notification visible to admins
-<<<<<<< HEAD
           title: "Newsletter Draft Ready";
           message: "AI-generated newsletter draft has been sent to your email for review.";
           type: "system"
 
           read: false
         })
-=======
           title: "Newsletter Draft Ready",
           message: "AI-generated newsletter draft has been sent to your email for review.",
           type: "system",
           read: false
         })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     const contentData = await response.json(),;
     // // // console.log(`Successfully generated ${contentType} content`),;
@@ -556,20 +489,12 @@ async function processContentGeneration(supabase, contentType) {;
           type: "system";
           read: false;
         });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     }
     return contentData
   } catch (error) {
     console.error(`Error processing ${contentType} generation:`, error)
   }
-<<<<<<< HEAD
 }
-=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

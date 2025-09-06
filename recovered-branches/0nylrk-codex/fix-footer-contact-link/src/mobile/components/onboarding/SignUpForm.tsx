@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
@@ -13,15 +10,12 @@ import {Alert, AlertDescription} from "@/components/ui/alert";
 export function SignUpForm() {;
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Label } from "@/components/ui/label",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { useNavigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 export function SignUpForm() {
@@ -35,14 +29,12 @@ export function SignUpForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [signupMode, setSignupMode] = useState(true);
   const [error, setError] = useState("");
-=======
 import { AlertCircle } from "lucide-react",
 import { Alert, AlertDescription } from "@/components/ui/alert",
 
 export function SignUpForm() {
   const navigate = useNavigate(),
   const { signup, login, loginWithGoogle } = useAuth(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [formData, setFormData] = useState({
     email: "",
@@ -52,18 +44,15 @@ export function SignUpForm() {
   const [signupMode, setSignupMode] = useState(true),
   const [error, setError] = useState(""),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value })),
     setError("")
-<<<<<<< HEAD
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
     setIsLoading(true)
-=======
   },
   
   const handleSubmit = async (e: React.FormEvent) => {
@@ -71,7 +60,6 @@ export function SignUpForm() {
     setError(""),
     setIsLoading(true),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       if (signupMode) {
         const { error } = await signup(formData.email, formData.password, {
@@ -81,18 +69,13 @@ export function SignUpForm() {
         }
         navigate("/mobile")
       } else {
-<<<<<<< HEAD
         const { error } = await login(formData.email, formData.password);
-=======
         const { error } = await login(formData.email, formData.password),
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         if (error) {
           throw new Error(error)
         }
         navigate("/mobile")
-<<<<<<< HEAD
-=======
 import React, { useState } from "react",;
 import { Label } from "@/components/ui/label",;
 import { Input } from "@/components/ui/input",;
@@ -136,25 +119,15 @@ export function SignUpForm() {;
         }
 ;
         navigate("/mobile");
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (err: any) {
       setError(err.message)
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   };
-<<<<<<< HEAD
   
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleGoogleLogin = async () => {
     try {
       await loginWithGoogle()
@@ -163,12 +136,7 @@ export function SignUpForm() {;
     }
   }
 
-=======
   };
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
@@ -176,12 +144,7 @@ export function SignUpForm() {;
       setError(err.message);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">
@@ -201,13 +164,10 @@ export function SignUpForm() {;
           </svg>
           Continue with Google
         </Button>
-<<<<<<< HEAD
         <Button
           variant="outline"
-=======
         <Button 
           variant="outline" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -265,13 +225,10 @@ export function SignUpForm() {;
             placeholder="Create a password"
           />
         </div>
-<<<<<<< HEAD
         <Button
           type="submit"
-=======
         <Button 
           type="submit" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           className="w-full py-6"
           disabled={isLoading}
         >
@@ -298,9 +255,6 @@ export function SignUpForm() {;
       </p>
     </div>
   )
-<<<<<<< HEAD
 }
-=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

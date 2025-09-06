@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 export default function Placeholder() {
   return (
     <main className='min-h-screen p-8'>
@@ -23,15 +22,9 @@ export default function Placeholder() {
     </main>;
   );export default function Placeholder() {
   return (
-=======
 
 export default function Placeholder() {
   return (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <main className="min-h-screen p-8">
       <Head>
         <title>Reports • Seo • Latest.json - Placeholder</title>
@@ -42,22 +35,15 @@ export default function Placeholder() {
         <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/reports/seo/latest.json</code>.</p>
         <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></a>
       </div>
-<<<<<<< HEAD
     </main>
-<<<<<<< HEAD
   );
 }
-=======
-=======
-<<<<<<< HEAD
     </main>;
   );
 }
 
 }
-=======
     </main>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
   } catch (error) {
     console.error("Error:", error);
@@ -65,8 +51,3 @@ export default function Placeholder() {
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

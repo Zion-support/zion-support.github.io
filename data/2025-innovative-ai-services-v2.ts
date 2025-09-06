@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface InnovativeAIService {
-=======
 export interface InnovativeAIService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -425,7 +420,6 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     support:
       '24/7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.'
     compliance: [
-<<<<<<< HEAD
       'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'
     ]
     link: 'https://ziontechgroup.com/ai-ethics-governance-platform'
@@ -439,7 +433,6 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     marketSize: '$15B AI governance market'
     growthRate: '28% annually'
   }
-=======
       'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations',
     ],
     link: 'https://ziontechgroup.com/ai-ethics-governance-platform',
@@ -453,7 +446,6 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     marketSize: '$15B AI governance market',
     growthRate: '28% annually',
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'AI bias detectionEthical complianceGovernance automationRisk assessmentAudit preparationPolicy enforcement'
 
     ];
@@ -675,14 +667,9 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     marketSize: '$15B AI governance market'
 
     growthRate: '28% annually'
-<<<<<<< HEAD
   }
 ];
-=======
 export interface InnovativeAIService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -956,10 +943,5 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
     reviews: 220,;
     marketSize: '$15B AI governance market',;
     growthRate: '28% annually';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,26 +1,14 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {Config} from "tailwindcss";
 import {fontFamily} from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 import animatePlugin from "tailwindcss-animate";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Config } from "tailwindcss",
 import { fontFamily } from "tailwindcss/defaultTheme",
-<<<<<<< HEAD
 import plugin from "tailwindcss/plugin";
 import animatePlugin from "tailwindcss-animate";
 
-=======
 import plugin from "tailwindcss/plugin",
 import animatePlugin from "tailwindcss-animate",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const config: Config = {
   darkMode: ["class"]
   content: [
@@ -31,17 +19,14 @@ const config: Config = {
   safelist: ['border-border'],
   theme: {
     container: {
-<<<<<<< HEAD
       center: true;
       padding: "2rem"
       screens: {
         "2xl": "1400px"}}
-=======
       center: true,
       padding: "2rem",
       screens: {
         "2xl": "1400px"}},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -50,7 +35,6 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-<<<<<<< HEAD
           DEFAULT: "hsl(var(--primary))"
           foreground: "hsl(var(--primary-foreground))"}
         secondary: {
@@ -104,7 +88,6 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out"
         "accordion-up": "accordion-up 0.2s ease-out"}}}
-=======
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))"},
         secondary: {
@@ -158,13 +141,11 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out"}}},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   plugins: [
     animatePlugin
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
-<<<<<<< HEAD
           direction: 'rtl'
           textAlign: 'right'}
         '.ltr': {
@@ -174,7 +155,6 @@ const config: Config = {
     })]}
 export default config;
 
-=======
           direction: 'rtl',
           textAlign: 'right'},
         '.ltr': {
@@ -183,11 +163,6 @@ export default config;
       addUtilities(newUtilities)
     })]},
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default config,
 import { Config } from "tailwindcss",;
 import { fontFamily } from "tailwindcss/defaultTheme",;
@@ -280,9 +255,4 @@ const config: Config = {;
           textAlign: 'left'}},;
       addUtilities(newUtilities);
     })]},;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default config;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

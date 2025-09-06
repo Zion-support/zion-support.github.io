@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
 
   mobile: '+1 302 464 0950'
@@ -276,21 +275,18 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Enterprise platform with monitoring engine, observability tools, and alerting system.'
     launchDate: '2025-01-18'
     customers: 56
     rating: 4.8
     reviews: 38
   }
-=======
       'Enterprise platform with monitoring engine, observability tools, and alerting system.',
     launchDate: '2025-01-18',
     customers: 56,
     rating: 4.8,
     reviews: 38,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];	{
 		id: 'enterprise-data-governance-automation';
 		name: 'Enterprise Data Governance Automation'
@@ -475,13 +471,9 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		customers: 56;
 		rating: 4.8
 		reviews: 38
-<<<<<<< HEAD
 	}
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { MicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -674,10 +666,5 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 		customers: 56,;
 		rating: 4.8;
 		reviews: 38;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

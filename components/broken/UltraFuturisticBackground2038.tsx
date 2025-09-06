@@ -11,15 +11,12 @@ import { motion } from 'framer-motion';
     | 'consciousness';
   children?: React.ReactNode;
 export default function UltraFuturisticBackground2038({
-<<<<<<< HEAD
   intensity = 'medium'
   theme = 'consciousness'
   children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038({
-=======
   intensity = 'medium',
   theme = 'consciousness',
   children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038({ ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   intensity = 'medium';
   theme = 'consciousness';
   children
@@ -365,7 +362,6 @@ export default function UltraFuturisticBackground2038({
             const alpha = (noise + 0.5) * 0.1;
             if (alpha > 0.05) {
               ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`;
-<<<<<<< HEAD
               ctx.fillRect(x, y, 20, 20);            }      // Create quantum field effects
       if (theme === 'consciousness' |theme === 'quantum') {
         const time = Date.now() * 0.001;
@@ -376,22 +372,13 @@ export default function UltraFuturisticBackground2038({
             if (alpha > 0.05) {
               ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`;
               ctx.fillRect(x, y, 20, 20)
-=======
               ctx.fillRect(x, y, 20, 20);            }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             }
           }
         }
       }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update particle properties
@@ -512,11 +499,7 @@ export default function UltraFuturisticBackground2038({
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fill();
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
         // Boundary wrapping with quantum tunneling effect
         if (
           particle.x < 0 |
@@ -543,22 +526,13 @@ export default function UltraFuturisticBackground2038({
           } else {
             particle.x = (particle.x + canvas.width) % canvas.width;
             particle.y = (particle.y + canvas.height) % canvas.height
-=======
-<<<<<<< HEAD
 
         // Standard particle rendering
         if (particle.type === 'particle') {
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Regenerate particles
         if (particle.life <= 0) {
           particle.x = Math.random() * canvas.width;
@@ -578,10 +552,7 @@ export default function UltraFuturisticBackground2038({
       window.removeEventListener('resize', resizeCanvas);
     }
   }, [intensity, theme]);
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div ref={containerRef} className='fixed inset-0 pointer-events-none'>
       <canvas
@@ -608,13 +579,8 @@ export default function UltraFuturisticBackground2038({
                 key={i}
                 className='absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-20'
                 style={{
-<<<<<<< HEAD
-<<<<<<< HEAD
                   left: `${(i * 5) % 100}%`
-=======
                   left: `${(i * 5) % 100}%`,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
                 animate={{
                   height: [32, 64, 32];
@@ -623,17 +589,11 @@ export default function UltraFuturisticBackground2038({
                   duration: 3 + i * 0.2
                   repeat: Infinity
                   ease: "easeInOut"
-=======
-<<<<<<< HEAD
                   left: `${(i * 5) % 100}%`,
                   top: `${(i * 3) % 100}%`,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                   top: `${(i * 3) % 100}%`,
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }}
                 animate={{
                   height: [32, 64, 32]
@@ -647,10 +607,7 @@ export default function UltraFuturisticBackground2038({
             ))}
           </div>
         )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Holographic grid */}
         {theme === 'holographic' && (
           <div className='absolute inset-0'>
@@ -659,7 +616,6 @@ export default function UltraFuturisticBackground2038({
                 key={i}
                 className='absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30'
                 style={{
-<<<<<<< HEAD
                   top: `${(i * 7) % 100}%`,            {[...Array(15)].map((_, i) => (
               <motion.div
                 key={i}
@@ -672,14 +628,8 @@ export default function UltraFuturisticBackground2038({
                   duration: 4 + i * 0.3
                   repeat: Infinity
                   ease: "easeInOut"
-=======
                   top: `${(i * 7) % 100}%`,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }}
                 animate={{
                   opacity: [0.3, 0.8, 0.3]
@@ -692,10 +642,7 @@ export default function UltraFuturisticBackground2038({
             ))}
           </div>
         )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Consciousness waves */}
         {theme === 'consciousness' && (
           <div className='absolute inset-0'>
@@ -704,13 +651,8 @@ export default function UltraFuturisticBackground2038({
                 key={i}
                 className='absolute w-96 h-96 border border-pink-500/20 rounded-full'
                 style={{
-<<<<<<< HEAD
-<<<<<<< HEAD
                   left: `${(i * 12) % 100}%`
-=======
                   left: `${(i * 12) % 100}%`,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
               <motion.div
                 key={i}
@@ -722,25 +664,15 @@ export default function UltraFuturisticBackground2038({
                   scale: [1, 1.5, 1];
                   opacity: [0.2, 0.6, 0.2]}}
                 transition={{
-<<<<<<< HEAD
                   duration: 6 + i * 0.5
                   repeat: Infinity
-=======
                   left: `${(i * 12) % 100}%`,
-=======
                   duration: 6 + i * 0.5,
                   repeat: Infinity,
                   ease: "easeInOut"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   top: `${(i * 8) % 100}%`,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
                   ease: "easeInOut"
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }}
                 animate={{
                   scale: [1, 1.5, 1]
@@ -755,14 +687,7 @@ export default function UltraFuturisticBackground2038({
           </div>
         )}
       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {children}
     </div>
   );
@@ -786,7 +711,6 @@ fieldSize)
 }
 initParticles ();
 animate ();
-<<<<<<< HEAD
 />) )
 }</div>)
 }/>) )
@@ -797,7 +721,6 @@ animate ();
   children
 }</div>)   )
 }
-=======
 />) ) 
 }</div>) 
 }/>) ) 
@@ -806,15 +729,8 @@ animate ();
 }</div>) 
 }</div> {
   children 
-<<<<<<< HEAD
 }</div>)
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 }</div>)   )
 }
 ;
-=======
 }</div>)
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

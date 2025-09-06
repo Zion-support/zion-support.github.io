@@ -1,30 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+ursor/integrate-build-improve-and-re-verify-8f7d
 
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
+origin/main
+origin/automation-improvements-final
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Shield
   Rocket
@@ -36,7 +19,6 @@ import {
   Building
   Globe
   Target
-=======
 import { 
   Shield, 
   Rocket, 
@@ -48,29 +30,14 @@ import {
   Building,
   Globe,
   Target;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import Layout from '../../components/Layout';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
+origin/main
+origin/automation-improvements-final
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const solutions = [
   {
     title: "Enterprise Solutions"
@@ -123,7 +90,6 @@ const solutions = [
       "Ongoing Support"
     ]
     color: "from-orange-600 to-orange-800"
-<<<<<<< HEAD
   }
 ];
 const industries = [
@@ -143,8 +109,6 @@ const stats = [
 export default function SolutionsPage() {
   return (
     <Layout
-=======
-=======
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -368,7 +332,6 @@ const SolutionsPage: NextPage = () => {
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
       ];
@@ -379,9 +342,7 @@ const SolutionsPage: NextPage = () => {
 }
   ],
   return (
-<<<<<<< HEAD
     <Layout 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       title="Solutions - Zion Tech Group"
       description="Comprehensive technology solutions for enterprises, startups, and industries. Custom development and specialized services."
       keywords="enterprise solutions, startup solutions, custom development, industry solutions, technology consulting"
@@ -407,11 +368,8 @@ const SolutionsPage: NextPage = () => {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-<<<<<<< HEAD
                 From startups to enterprises, we provide tailored technology solutions that drive growth
-=======
                 From startups to enterprises, we provide tailored technology solutions that drive growth, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 efficiency, and innovation across all industries.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -437,8 +395,6 @@ const SolutionsPage: NextPage = () => {
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Our Solution Categories
-<<<<<<< HEAD
-=======
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 We offer comprehensive technology solutions tailored to different business needs and stages.
@@ -477,7 +433,6 @@ const SolutionsPage: NextPage = () => {
                     <Link
                       href={solution.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
       <Head>
         <title>Industry Solutions - Zion Tech Group | Tailored Technology Solutions</title>
@@ -514,7 +469,6 @@ const SolutionsPage: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 We offer comprehensive technology solutions tailored to different business needs and stages.
@@ -542,11 +496,7 @@ const SolutionsPage: NextPage = () => {
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {solution.description}
                     </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     <ul className="space-y-2 mb-6">
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -558,7 +508,6 @@ const SolutionsPage: NextPage = () => {
                     <Link
                       href={solution.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
-=======
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-800 mb-2">Use Cases:</h4>
                       <ul className="space-y-1">
@@ -613,16 +562,10 @@ const SolutionsPage: NextPage = () => {
   }
 }
                       className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <span>Explore {solution.title}</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </motion.div>
                 );
               })}
@@ -719,12 +662,9 @@ const SolutionsPage: NextPage = () => {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
 }
   )
 }
-=======
-=======
                   </div>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -776,7 +716,6 @@ const SolutionsPage: NextPage = () => {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
         <div className="mt-16 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
@@ -855,10 +794,8 @@ const SolutionsPage: NextPage = () => {
       </main>
     </div>
   )
-<<<<<<< HEAD
 };
 
-=======
 },
 export default SolutionsPage,
         <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 mt-16 text-center text-white">;
@@ -972,11 +909,6 @@ export default SolutionsPage,
     </div>;
   );
 },;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default SolutionsPage;
 
-<<<<<<< HEAD
-=======
 export default SolutionsPage;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

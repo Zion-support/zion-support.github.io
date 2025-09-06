@@ -19,8 +19,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     { label: 'CAC/LTV ratio', value: '1:5.6', trend: 0.4 }];
 
   res.status(200).json(data)
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

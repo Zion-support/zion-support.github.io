@@ -5,14 +5,8 @@ export default function Custom404() {
   return (
     <>
       <Head>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <title>404 - Page Not Found</title>
       </Head>
-<<<<<<< HEAD
       <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
         <main className="text-center max-w-2xl px-4">
           <h1 className="text-6xl font-bold mb-4 gradient-text">404</h1>
@@ -22,9 +16,6 @@ export default function Custom404() {
           </p>
           <Link href="/" className="btn-primary">
             Go Back Home
-=======
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
-=======
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
           <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
@@ -33,23 +24,13 @@ export default function Custom404() {
             Go back home
           >
             Go Home
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </Link>
         </main>
       </div>
     </>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -105,10 +86,5 @@ export default function Custom404(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

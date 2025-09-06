@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {useParams, Link, useNavigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
@@ -10,15 +7,12 @@ import {ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook,
 import type { BlogPost as BlogPostType } from "@/types/blog";
 import {Separator} from "@/components/ui/separator";
 import {AppLayout} from "@/layout/AppLayout";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { useParams, Link, useNavigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 import { Button } from "@/components/ui/button",
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react",
 import type { BlogPost as BlogPostType } from "@/types/blog",
-<<<<<<< HEAD
 import { Separator } from "@/components/ui/separator";
 import { AppLayout } from "@/layout/AppLayout";
 // Importing the sample blog posts - in a real app, you would fetch this from an API
@@ -35,29 +29,21 @@ export default function BlogPost() {
     const currentPost = BLOG_POSTS.find(p => p.slug === slug);
     if (currentPost) {
       setPost(currentPost);
-=======
 import { Separator } from "@/components/ui/separator",
 import { AppLayout } from "@/layout/AppLayout",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts",
 export default function BlogPost() {
-<<<<<<< HEAD
   const { slug } = useParams() as { slug: string },;
   const navigate = useNavigate();
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
   const [showShareMenu, setShowShareMenu] = useState(false);
-=======
   const { slug } = useParams() as { slug: string },
   const navigate = useNavigate(),
   const [post, setPost] = useState<BlogPostType | null>(null),
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),
   const [showShareMenu, setShowShareMenu] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   useEffect(() => {
     // Find the current post by slug
@@ -66,18 +52,14 @@ export default function BlogPost() {
     if (currentPost) {
       setPost(currentPost),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Find related posts (same category, excluding current post)
       const related = BLOG_POSTS.filter(p =>
         p.id !== currentPost.id &&
         (p.category === currentPost.category |
          p.tags.some(tag => currentPost.tags.includes(tag)))
-<<<<<<< HEAD
       ).slice(0, 3);
-=======
       ).slice(0, 3),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       setRelatedPosts(related)
     } else {
       // Post not found
@@ -85,12 +67,9 @@ export default function BlogPost() {
     }
     // Scroll to top when post changes
     window.scrollTo(0, 0)
-<<<<<<< HEAD
   }, [slug, navigate]);
-=======
   }, [slug, navigate]),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!post) {
     return (
       <AppLayout>
@@ -99,7 +78,6 @@ export default function BlogPost() {
         </div>
       </AppLayout>
     )
-<<<<<<< HEAD
   }
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
@@ -114,12 +92,8 @@ export default function BlogPost() {
         return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
       default: return '#'
     }
-<<<<<<< HEAD
   }
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useEffect } from "react",;
 import { useParams, Link, useNavigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
@@ -180,12 +154,7 @@ export default function BlogPost() {;
       default: return '#';
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <AppLayout>
       <SEO
@@ -224,15 +193,12 @@ export default function BlogPost() {;
             {/* Author and metadata */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
               <div className="flex items-center mb-4 sm:mb-0">
-<<<<<<< HEAD
                 <img
                   src={post.author.avatarUrl}
                   alt={post.author.name}
-=======
                 <img 
                   src={post.author.avatarUrl} 
                   alt={post.author.name} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   className="w-12 h-12 rounded-full mr-3"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement,
@@ -273,33 +239,27 @@ export default function BlogPost() {;
                       >
                         <Facebook className="h-4 w-4 mr-2" />
                         <span>Facebook</span>
-<<<<<<< HEAD
                       </a>
                       <a
                         href={getShareUrl('twitter')}
                         target="_blank"
-=======
                       </Link>
                       <a 
                         href={getShareUrl('twitter')} 
                         target="_blank" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
                       >
                         <Twitter className="h-4 w-4 mr-2" />
                         <span>Twitter</span>
-<<<<<<< HEAD
                       </a>
                       <a
                         href={getShareUrl('linkedin')}
                         target="_blank"
-=======
                       </Link>
                       <a 
                         href={getShareUrl('linkedin')} 
                         target="_blank" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
                       >
@@ -307,8 +267,6 @@ export default function BlogPost() {;
                         <span>LinkedIn</span>
                       </Link>
                     </div>
-<<<<<<< HEAD
-=======
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">;
               <div className="flex items-center mb-4 sm:mb-0">;
                 <img;
@@ -374,11 +332,6 @@ export default function BlogPost() {;
                         <span>LinkedIn</span>;
                       </a>;
                     </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   )}
                 </div>
               </div>
@@ -387,7 +340,6 @@ export default function BlogPost() {;
           {/* Featured image */}
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
-<<<<<<< HEAD
               <img
                 src={post.featuredImage}
                 alt={post.title}
@@ -395,19 +347,13 @@ export default function BlogPost() {;
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
-=======
               <img 
                 src={post.featuredImage} 
                 alt={post.title}
                 className="object-cover w-full h-full"
                 onError={(e) => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   const target = e.target as HTMLImageElement;
                   target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   const target = e.target as HTMLImageElement,
                   target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
           <div className="mb-12 max-w-5xl mx-auto">;
@@ -419,11 +365,6 @@ export default function BlogPost() {;
                 onError={(e) => {;
                   const target = e.target as HTMLImageElement;
                   target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }}
               />
             </div>
@@ -463,12 +404,9 @@ export default function BlogPost() {;
                           alt={relatedPost.title}
                           className="object-cover w-full h-full"
                           onError={(e) => {
-<<<<<<< HEAD
                             const target = e.target as HTMLImageElement;
 
-=======
                             const target = e.target as HTMLImageElement,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                             target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
                           }}
                         />
@@ -478,8 +416,6 @@ export default function BlogPost() {;
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
                       </div>
                     </Link>
-<<<<<<< HEAD
-=======
             </div>;
             <Separator className="my-12 bg-zion-blue-light" />;
             {/* Related articles */}
@@ -509,11 +445,6 @@ export default function BlogPost() {;
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>;
                       </div>;
                     </Link>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </div>
               </div>
@@ -536,9 +467,7 @@ export default function BlogPost() {;
       </div>
     </AppLayout>
   )
-<<<<<<< HEAD
 }
-=======
             <div className="flex justify-between items-center mt-12">;
               <Button;
                 variant="outline";
@@ -558,8 +487,3 @@ export default function BlogPost() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

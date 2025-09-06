@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { ProfileData } from '@/types/profile';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
 import { ProfileData } from "@/types/profile";
 // Mock talent profiles for development and testing
 export const MOCK_TALENTS: ProfileData[] = [
@@ -505,12 +499,7 @@ hourlyRate: 125;
 contactEmail: "david.martinez@example.com"
 }];
 
-=======
 import { ProfileData } from "@/types/profile",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Mock talent profiles for development and testing
 export const MOCK_TALENTS: ProfileData[] = [
   {
@@ -899,9 +888,6 @@ export const MOCK_TALENTS: ProfileData[] = [
       ]
     },
     hourlyRate: 125,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 contactEmail: 'david.martinez@example.com',
   },;
 ];
@@ -960,8 +946,6 @@ availableHours: [ {
 hourlyRate: 125;
 contactEmail: "david.martinez@example.com" 
 }];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     contactEmail: "david.martinez@example.com"
 import { ProfileData } from "@/types/profile",;
 // Mock talent profiles for development and testing;
@@ -1355,8 +1339,3 @@ export const MOCK_TALENTS: ProfileData[] = [;
     contactEmail: "david.martinez@example.com";
   }
 ];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -63,9 +63,8 @@ export function AIEnhancementButton({;
 enhancementType;
 context);
 ) : (<Sparkles className="h-3 w-3" />) ;
-<<<<<<< HEAD:temp_broken_files/resume-builder/forms/AIEnhancementButton.tsx
+:temp_broken_files/resume-builder/forms/AIEnhancementButton.tsx
 }</Button>) ;"}"
-=======
 }</Button>) ;
 }"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/AIEnhancementButton.tsx
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/AIEnhancementButton.tsx

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -29,7 +28,6 @@ export function CTAButton({href;
   return (;
     <Link;
       href={href}
-=======
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -65,7 +63,6 @@ export function CTAButton({;
   return (;
     <Link;
       href={href} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       className={classes}
       onClick={onClick}
       role="button";

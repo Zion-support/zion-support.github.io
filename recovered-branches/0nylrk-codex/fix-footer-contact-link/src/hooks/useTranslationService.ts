@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
@@ -12,12 +8,9 @@ interface TranslationResponse {
   translations: Record<SupportedLanguage, string>;
   error?: string
 }
-<<<<<<< HEAD
 export function useTranslationService() {
-=======
 
 export function useTranslationService() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isTranslating, setIsTranslating] = useState(false);
   const { currentLanguage } = useLanguage();
   const translateContent = async (
@@ -46,7 +39,6 @@ export function useTranslationService() {;
           ar: ''
         }
         initialTranslations[sourceLanguage] = content;
-=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
@@ -85,15 +77,9 @@ export function useTranslationService() {;
           ar: '';
         },;
         initialTranslations[sourceLanguage] = content,;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         return { translations: initialTranslations, error: error.message }
       }
       return { translations: data.translations }
-<<<<<<< HEAD
     } catch (err) {
       setIsTranslating(false);
       console.error('Translation service error:', err);
@@ -119,7 +105,6 @@ export function useTranslationService() {;
     isTranslating;
 
     getTranslation
-=======
     } catch (err) {;
       setIsTranslating(false),;
       console.error('Translation service error:', err),;
@@ -144,10 +129,5 @@ export function useTranslationService() {;
     translateContent;
     isTranslating;
     getTranslation;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }

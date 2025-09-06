@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
-=======
 import React, { useState, useEffect } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import {
   Menu,
   ChevronDown,
@@ -67,7 +62,6 @@ import {
   Youtube,;
   MapPin,;
 } from 'lucide-react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {
   Menu
@@ -131,11 +125,8 @@ import {
 } from 'lucide-react';
 interface NavigationItem {
   name: string;
-<<<<<<< HEAD
   href: string;  icon?: React.ReactNode;import {
-=======
   href: string;  icon?: React.ReactNode;import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
 
   Brain, Rocket, Target, Atom, Shield;
@@ -157,21 +148,13 @@ interface NavigationItem {
   title?: string;
   featured?: boolean;
   category?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
   color?: string
 }
-=======
   color?: string;
-=======
   color?: string;  color?: string
 }
-=======
   color?: string;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const navigationItems: NavigationItem[] = [
   {
 
@@ -187,7 +170,6 @@ const navigationItems: NavigationItem[] = [
     color: 'from-emerald-500 to-cyan-500'
     children: [
       {
-<<<<<<< HEAD
         name: 'Home'
         href: '/'
         description: 'Main homepage'
@@ -575,7 +557,6 @@ const UltraFuturisticNavigation2047 = () => {
   const handleDropdownToggle = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);  };    setActiveDropdown(activeDropdown === name ? null : name)
   }
-=======
 
     description: 'Main pages and core information',
     category: 'core',
@@ -651,9 +632,6 @@ const UltraFuturisticNavigation2047 = () => {
     category: 'company',
     color: 'from-gray-500 to-slate-500',
     children: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       {
         href: '/about',
         description: 'Our story and mission',
@@ -687,13 +665,9 @@ const UltraFuturisticNavigation2047 = () => {
       }
     ]
   }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -706,7 +680,6 @@ const UltraFuturisticNavigation2047 = () => {
     }
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-<<<<<<< HEAD
   }, []);
   return (
     <nav className='relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50'>
@@ -730,14 +703,12 @@ const UltraFuturisticNavigation2047 = () => {
                 <Rocket className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-=======
 
       }
     };
 
     window.addEventListener('resize', handleResize);
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 Zion Tech Group
               </span>
             </Link>
@@ -768,14 +739,7 @@ const UltraFuturisticNavigation2047 = () => {
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
                       className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <div className='space-y-4'>
                         {item.children?.map(child => (
@@ -827,14 +791,7 @@ const UltraFuturisticNavigation2047 = () => {
                                 {child.description}
                               </p>                              <p className="text-sm text-gray-400 mt-1">{child.description}</p>
                             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </Link>
                         ))}
                       </div>
@@ -844,14 +801,7 @@ const UltraFuturisticNavigation2047 = () => {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex lg:items-center lg:space-x-4'>
             <div className='flex items-center space-x-4 text-sm text-gray-400'>
@@ -866,15 +816,8 @@ const UltraFuturisticNavigation2047 = () => {
             <div className="flex items-center space-x-4 text-sm text-gray-400">
               <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
-<<<<<<< HEAD
-=======
 
                 <span>{contactInfo.mobile}</span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </a>
             </div>
             <Link
@@ -885,7 +828,6 @@ const UltraFuturisticNavigation2047 = () => {
               <ArrowRight className='ml-2 w-4 h-4' />            </Link>
           </div>
           {/* Mobile menu button */}
-<<<<<<< HEAD
           <div className='lg:hidden'>              href="/contact"
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
             >
@@ -912,27 +854,14 @@ const UltraFuturisticNavigation2047 = () => {
               ) : (
                 <Menu className="block h-6 w-6" />
               )}
-=======
 
               )}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </button>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -942,14 +871,7 @@ const UltraFuturisticNavigation2047 = () => {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='px-2 pt-2 pb-3 space-y-1'>
               {navigationItems.map(item => (
@@ -987,20 +909,12 @@ const UltraFuturisticNavigation2047 = () => {
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.2 }}
                         className='ml-4 mt-2 space-y-1'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         {item.children?.map(child => (
                           <Link
                             key={child.name}
                             href={child.href}
-<<<<<<< HEAD
                             className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'                            onClick={closeMenu}                      >
                         {item.children?.map((child) => (
                           <Link
@@ -1008,16 +922,10 @@ const UltraFuturisticNavigation2047 = () => {
                             href={child.href}
                             className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200"
                             onClick={closeMenu}
-=======
                             className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'                            onClick={closeMenu}
 
                             onClick={closeMenu}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           >
                             {child.name}
                           </Link>
@@ -1027,10 +935,7 @@ const UltraFuturisticNavigation2047 = () => {
                   </AnimatePresence>
                 </div>
               ))}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Mobile Contact Info */}
               <div className='pt-4 pb-3 border-t border-slate-700/50'>
                 <div className='px-3 py-2 text-sm text-gray-400'>
@@ -1101,24 +1006,12 @@ const UltraFuturisticNavigation2047 = () => {
       </AnimatePresence>
     </nav>
   );
-<<<<<<< HEAD
 }
-=======
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraFuturisticNavigation2047;  )
 }
 export default UltraFuturisticNavigation2047;
 
-<<<<<<< HEAD
-=======
 export default UltraFuturisticNavigation2047;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 export default UltraFuturisticNavigation2047;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
   mobile: '+1 302 464 0950'
@@ -17,7 +16,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description:
       'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.'
     features: [
-<<<<<<< HEAD
       'Intent classification + prioritization'
       'On-brand response drafting'
       'Automatic polite follow-ups'
@@ -45,7 +43,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     variant: 'network-futuristic'
     contactInfo: contact
     realImplementation: true
-=======
       'Intent classification + prioritization',
       'On-brand response drafting',
       'Automatic polite follow-ups',
@@ -73,7 +70,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     variant: 'network-futuristic',
     contactInfo: contact,
     realImplementation: true,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     implementationDetails:
       'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
     launchDate: '2025-08-20'
@@ -807,7 +803,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description:
       'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.'
     features: [
-<<<<<<< HEAD
       'Repo scanner'
       'Flag inventory'
       'Risk detection'
@@ -841,7 +836,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.4
     reviews: 3
   }
-=======
       'Repo scanner',
       'Flag inventory',
       'Risk detection',
@@ -875,7 +869,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.4,
     reviews: 3,
   },
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
     id: 'postgres-index-advisor-pro'
     name: 'Postgres Index Advisor Pro'
@@ -1003,7 +996,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     reviews: 5
   }
   {
-<<<<<<< HEAD
     id: 'api-breaking-change-watcher'
     name: 'API Breaking Change Watcher'
     tagline: 'Schema diffs with CI gates and notifications'
@@ -1011,7 +1003,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     period: '/month'
     description:
       'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.'
-=======
     id: 'api-breaking-change-watcher',
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -1019,7 +1010,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description:;
       'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     features: [
       'Schema registry'
       'Diff rules'
@@ -2252,13 +2242,9 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 24;
 		rating: 4.6
 		reviews: 6
-<<<<<<< HEAD
 	}
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -3254,10 +3240,5 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 24,;
 		rating: 4.6;
 		reviews: 6;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

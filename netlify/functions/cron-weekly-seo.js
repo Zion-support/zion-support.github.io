@@ -1,8 +1,5 @@
 const { upsertFile } = require('./_lib/github');
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 async function scorePage(url) {
   const t0 = Date.now();
   try {
@@ -44,7 +41,6 @@ exports.handler = async function () {
       });
     }
     return {
-<<<<<<< HEAD
       statusCode: 200
       body: JSON.stringify({ ok: true, pages: results.length })
     }
@@ -91,7 +87,6 @@ exports.handler = async function() {
 
 }
 
-=======
       statusCode: 200,
       body: JSON.stringify({ ok: true, pages: results.length }),
     };
@@ -137,4 +132,3 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

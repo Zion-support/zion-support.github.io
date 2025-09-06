@@ -1,28 +1,22 @@
-<<<<<<< HEAD:pages-disabled/biotech-ai.tsx
+:pages-disabled/biotech-ai.tsx
 import React from 'react',
-=======
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
+:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
 import Head from 'next/head';
 import { Activity, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-<<<<<<< HEAD:pages-disabled/biotech-ai.tsx
+:pages-disabled/biotech-ai.tsx
 import { Button  } from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-=======
 import {Button} from '../components/ui/Button';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
+:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
 export default function IncidentAutomationSuitePage() {
 
-=======
-<<<<<<< HEAD:pages-disabled/biotech-ai.tsx
+:pages-disabled/biotech-ai.tsx
 export default function IncidentAutomationSuitePage() {;
-=======
 export default function IncidentAutomationSuitePage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
   if (!service) return null;
 
@@ -47,7 +41,7 @@ export default function IncidentAutomationSuitePage() {
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /><span>{feat}</span></li>
                 ))}
-<<<<<<< HEAD:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
+:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
               </ul>;
             </div>;
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">;
@@ -71,7 +65,6 @@ export default function IncidentAutomationSuitePage() {
   ),;
 }
 ;
-=======
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">
@@ -93,18 +86,13 @@ export default function IncidentAutomationSuitePage() {
       </div>
     </UltraFuturisticBackground>
   )
-<<<<<<< HEAD:pages-disabled/biotech-ai.tsx
+:pages-disabled/biotech-ai.tsx
 }
-=======
 }
 
-<<<<<<< HEAD
->>>>>>> main:pages-disabled/biotech-ai.tsx
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
-=======
-<<<<<<< HEAD:pages-disabled/biotech-ai.tsx
+main:pages-disabled/biotech-ai.tsx
+:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
+:pages-disabled/biotech-ai.tsx
 ;
-=======
->>>>>>> main:pages-disabled/biotech-ai.tsx
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+main:pages-disabled/biotech-ai.tsx
+:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx

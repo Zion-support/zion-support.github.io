@@ -1,19 +1,13 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react";
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
-=======
 import {Button} from "@/components/ui/button";
 import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
 import {useAuth} from "@/hooks/useAuth";
 import {Sparkles} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { 
   getTalentRateSuggestion;
   PricingSuggestion;
@@ -21,7 +15,6 @@ import {
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from "lucide-react";
 interface TalentRateRecommenderProps {
@@ -56,24 +49,14 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
         yearsExperience
         location}
       const result = await getTalentRateSuggestion(params);
-=======
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface TalentRateRecommenderProps {
   skills: string[],
   yearsExperience: number,
   location?: string,
   onSuggestionApplied: (value: number) => void,
   rateType: "hourly" | "fixed"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
@@ -91,11 +74,9 @@ interface TalentRateRecommenderProps {;
   location?: string,;
   onSuggestionApplied: (value: number) => void,;
   rateType: "hourly" | "fixed";
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
-<<<<<<< HEAD
   skills;
   yearsExperience;
   location;
@@ -108,7 +89,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   const generateSuggestion = async () => {
     if (skills.length === 0 || yearsExperience <= 0) {
       return
-=======
   skills,;
   yearsExperience,;
   location,;
@@ -120,10 +100,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   const generateSuggestion = async () => {;
     if (skills.length === 0 || yearsExperience <= 0) {;
       return;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
     setIsLoading(true),
@@ -134,13 +110,11 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
         location},
 
       const result = await getTalentRateSuggestion(params),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       setSuggestion(result)
     } catch (error) {
       console.error("Error generating rate suggestion:", error)
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
     }
   }
   const handleApplySuggestion = () => {
@@ -160,12 +134,8 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
         })
       }
     }
-<<<<<<< HEAD
   }
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
     setIsLoading(true),;
     try {;
@@ -199,12 +169,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       }
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4">
       <div>
@@ -226,22 +191,12 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
             rateType={rateType}
           />
         )}
-<<<<<<< HEAD
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

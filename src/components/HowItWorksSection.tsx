@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { GradientHeading } from './GradientHeading'
 import { Check, Handshake, Search, Send } from 'lucide-react'
@@ -7,11 +6,7 @@ import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {
   className?: string;
   style?: React.CSSProperties
-<<<<<<< HEAD
-=======
 const getSteps = (t: any,) => [
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
@@ -22,15 +17,9 @@ interface HowItWorksSectionProps {
   className?: string,
   style?: React.CSSProperties
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 const getSteps = (t: any) => [
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
-<<<<<<< HEAD
     title: t('how_it_works.post')
     description: t('how_it_works.post_desc')
     icon: Send
@@ -130,7 +119,6 @@ export function HowItWorksSection({
 }: HowItWorksSectionProps) {
   const { t } = useTranslation()
   const steps = getSteps(t)
-=======
     title: t('how_it_works.post'),
     description: t('how_it_works.post_desc'),
     icon: Send},
@@ -145,9 +133,6 @@ export function HowItWorksSection({
   {
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     icon: Check,
   },
 ]
@@ -230,49 +215,31 @@ export function HowItWorksSection({
 }: HowItWorksSectionProps) {
   const { t } = useTranslation()
   const steps = getSteps(t)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     icon: Check}],
 
 export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {
   const { t } = useTranslation(),
   const steps = getSteps(t),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-<<<<<<< HEAD
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>            {t('home.how_it_works_subtitle')}
           </p>
         </div>
         <div className='relative'>
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
             {t('home.how_it_works_subtitle')}
           </p>
         </div>
-<<<<<<< HEAD
         <div className='relative'>
           <div className='absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden'></div>
           <div className='space-y-12 md:space-y-0'>
@@ -332,14 +299,10 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
     </section>
   )
 }
-<<<<<<< HEAD
 }
 }
-=======
 };
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
         <div className="relative">
           {/* Timeline line */}
@@ -429,8 +392,3 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

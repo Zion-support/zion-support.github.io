@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
@@ -36,8 +33,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     res.status(200).json({ ok: true })
   })
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

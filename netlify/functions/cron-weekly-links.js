@@ -59,7 +59,6 @@ exports.handler = async function () {
       body: JSON.stringify({ ok: true, broken: broken.length })
     }
   } catch (e) {
-<<<<<<< HEAD
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 };async function fetchHtml(url) {
@@ -116,7 +115,6 @@ exports.handler = async function() {
 
 }
 
-=======
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };async function fetchHtml(url) {
@@ -173,4 +171,3 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

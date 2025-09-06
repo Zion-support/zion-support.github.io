@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useMemo } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { cn } from '@/lib/utils'
@@ -26,22 +23,18 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
   const sanitizedHtml = useMemo<{ __html: string }>(
     () => ({ __html: formatMessageWithLinks(message) }),    [message]
   )
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useMemo } from "react",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 // Use the wrapper hook so TypeScript properly infers the return type
 // from the ThemeProvider context
-<<<<<<< HEAD
 import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {
   message: string;
   isUser: boolean;
   timestamp: Date
 export const ChatMessage: React.FC<ChatMessageProps> = ({
-=======
 import { useTheme } from "@/hooks/useTheme",
 interface ChatMessageProps {
   message: string,
@@ -61,9 +54,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
     () => ({ __html: formatMessageWithLinks(message) }),
     [message]
   ),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
   message
   isUser
   timestamp
@@ -74,9 +65,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
   const sanitizedHtml = useMemo<{ __html: string }>(
     () => ({ __html: formatMessageWithLinks(message) }),    [message]
   )
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
       <Avatar className="h-8 w-8">
@@ -95,14 +83,10 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
           </>
         )}
       </Avatar>
-<<<<<<< HEAD
       <div
         className={cn(
-<<<<<<< HEAD
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
-=======
           'max-w-[80%] rounded-lg px-4 py-2 text-sm',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           isUser
             ? 'bg-zion-purple text-white'
             : theme === 'dark'
@@ -110,7 +94,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
               : 'bg-gray-100 text-gray-800'
         )}
       >
-<<<<<<< HEAD
         <div dangerouslySetInnerHTML={sanitizedHtml} />
         <div
           className={cn(
@@ -123,9 +106,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
           )}
         >
           {format(timestamp, 'h:mm a')}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       
       <div className={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
@@ -135,7 +115,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
             ? "bg-zion-blue-light text-white"
             : "bg-gray-100 text-gray-800"
       )}>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div dangerouslySetInnerHTML={sanitizedHtml} />
         <div className={cn(
           "text-xs mt-1",
@@ -146,33 +125,23 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
               : "text-gray-500"
         )}>
           {format(timestamp, "h:mm a")}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         </div>
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
 },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
-=======
 },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
 // characters. This ensures any user-supplied string is rendered harmless
 // before we perform our link replacements below.
 function escapeHtml(unsafe: string): string {
   return unsafe
-<<<<<<< HEAD
-<<<<<<< HEAD
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -197,9 +166,6 @@ function formatMessageWithLinks(message: string): string {
   return formattedMessage; return formattedMessage
 }
 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
     .replace(/>/g, ">")
@@ -294,7 +260,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 },;
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy;
 // dependency like DOMPurify for now and instead escape the five critical;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // characters. This ensures any user-supplied string is rendered harmless;
 // before we perform our link replacements below.;
 function escapeHtml(unsafe: string): string {;
@@ -323,10 +288,8 @@ function formatMessageWithLinks(message: string): string {
   return formattedMessage; return formattedMessage
 }
 ;
-<<<<<<< HEAD
 }
 }
-=======
 function formatMessageWithLinks(message: string): string {;
   // First, escape any HTML so that user input cannot break out of the intended;
   // markup.;
@@ -346,8 +309,3 @@ function formatMessageWithLinks(message: string): string {;
   return formattedMessage;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
@@ -19,7 +15,6 @@ import {
   Wallet
 } from 'lucide-react'
 import { LanguageSelector } from '@/components/header/LanguageSelector'
-<<<<<<< HEAD
   HoverCard
   HoverCardTrigger
   HoverCardContent
@@ -28,7 +23,6 @@ import { MiniCartPreview } from '@/components/cart/MiniCartPreview'
 import { LoginModal } from '@/components/auth/LoginModal'; import { LanguageSelector } from '@/components/header/LanguageSelector'
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card'
 import { LoginModal } from '@/components/auth/LoginModal'
-=======
   HoverCard,
   HoverCardTrigger,
   HoverCardContent,
@@ -37,7 +31,6 @@ import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
 import { LoginModal } from '@/components/auth/LoginModal'; import { LanguageSelector } from '@/components/header/LanguageSelector'
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card'
 import { LoginModal } from '@/components/auth/LoginModal'
-=======
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { useState } from "react",
@@ -51,33 +44,24 @@ import { LanguageSelector } from '@/components/header/LanguageSelector',
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card',
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview',
 import { LoginModal } from '@/components/auth/LoginModal',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
   className?: string
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
   className?: string
 export function MainNavigation({
-<<<<<<< HEAD
   isAdmin = false
   unreadCount = 0
   className
 }: MainNavigationProps) {
-=======
   isAdmin = false,;
   unreadCount = 0,;
   className;
 }: MainNavigationProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Add state
   const { user } = useAuth()
   const isAuthenticated = !!user
@@ -161,8 +145,6 @@ export function MainNavigation({
         className={cn('navbar', className)}
         role='navigation'
         aria-label='Main navigation'      >
-=======
-<<<<<<< HEAD
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { useState } from "react",
@@ -180,8 +162,6 @@ interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
   className?: string
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Link from "next/link",;
 import { useRouter } from "next/router",;
 import { useState } from "react",;
@@ -288,67 +268,43 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         role="navigation"
         aria-label="Main navigation"
       >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div
           id="main-navbar-collapse"
           className={cn(
-<<<<<<< HEAD
             'navbar-collapse'
             { open: isMobileMenuOpen }
             'w-full md:flex md:w-auto', // Handles visibility and desktop layout
             !isMobileMenuOpen && 'hidden' // Explicitly hide when not open and on mobile
           )}
         >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <ul className='navbar-nav flex flex-col md:flex-row md:items-center md:gap-1'>
             {' '}
             {/* Added navbar-nav and flex direction classes */}
             {links.map(link => (
               <li key={link.name} className='nav-item'>
                 <Link
-=======
-<<<<<<< HEAD
             "navbar-collapse",
             { "open": isMobileMenuOpen },
             "w-full md:flex md:w-auto", // Handles visibility and desktop layout
             !isMobileMenuOpen && "hidden" // Explicitly hide when not open and on mobile
           )}
         >
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <ul className="navbar-nav flex flex-col md:flex-row md:items-center md:gap-1"> {/* Added navbar-nav and flex direction classes */}
             {links.map((link) => (
               <li key={link.name} className="nav-item">
                 <Link 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   href={link.href}
                   aria-label={link.name}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
                     'nav-link'
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
-=======
                     'nav-link',
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     link.matches(router.pathname)
                       ? 'bg-zion-purple/20 text-zion-cyan'
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}                >
-=======
                     "nav-link",
                     "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
                     link.matches(router.pathname)
@@ -356,16 +312,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {link.name}
                 </Link>
               </li>
             ))}
-<<<<<<< HEAD
             {/* Wishlist link */}
             {isAuthenticated && (
               <li className='nav-item'>
@@ -445,7 +395,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                         ? 'bg-zion-purple/20 text-zion-cyan'
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                     ),}
-=======
 ;
             {/* Wishlist link */}
             {isAuthenticated && (
@@ -531,16 +480,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                         ? 'bg-zion-purple/20 text-zion-cyan';
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
                     )}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   >
                     <ShoppingCart className="w-4 h-4 mr-1" />
                     {t('nav.cartCart')}
                     {cartCount > 0 && (
-<<<<<<< HEAD
                       <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>
                         {cartCount}
                       </span>
@@ -694,16 +637,13 @@ export default function Page() { [])
                           className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm font-medium rounded-md transition-colors ${isActive(link)
                               ? 'bg-zion-cyan text-white''
                               : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
-<<<<<<< HEAD
 }`}
                           {link.name}'`
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>
-=======
 }`};
 ;
                           {link.name}'`;
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {activeDropdown === link.key && (;"
                           <div className="ml-4 mt-2 space-y-1">
                             {link.children.map((child: unknown (
@@ -729,7 +669,6 @@ export default function Page() { [])
                         onClick={: unknown setIsMobileMenuOpen(false)}
                         {link.name}
                       </Link>
-=======
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   >;
                     <ShoppingCart className="w-4 h-4 mr-1" />;
@@ -738,11 +677,6 @@ export default function Page() { [])
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                         {cartCount}
                       </span>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     )}
                   </Link>
                 </HoverCardTrigger>
@@ -759,20 +693,10 @@ export default function Page() { [])
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-<<<<<<< HEAD
   );  )
 }
-<<<<<<< HEAD
-=======
 ;
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

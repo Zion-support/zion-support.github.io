@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   UserGroupIcon
   LightBulbIcon
@@ -7,10 +6,8 @@ import {
   AcademicCapIcon
   RocketLaunchIcon
 } from '@heroicons/react/24/outline'
-=======
 import React from 'react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const values = [
   {
     name: 'Innovation First'
@@ -49,19 +46,13 @@ const team = [
     role: 'Chief Operations Officer'
     bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.'
     image: '/images/team/james-kim.jpg'}]
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export default function AboutPage() {;
   return (;
     <div className=&quot;bg-black&quot;>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AboutPage() {
   return (
     <div className="bg-black">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -72,13 +63,10 @@ export default function AboutPage() {
                 Zion Tech Group
               </span>
             </h1>
-<<<<<<< HEAD
             <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
               We are pioneers in artificial intelligence, quantum computing, and autonomous systems
-=======
             <p className="mt-6 text-lg leading-8 text-gray-300">
               We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               dedicated to transforming industries and advancing human potential through technology.
             </p>
           </div>
@@ -99,13 +87,10 @@ export default function AboutPage() {
                 <RocketLaunchIcon className="h-8 w-8 text-blue-400" />
                 <h3 className="text-xl font-semibold text-white">Our Mission</h3>
               </div>
-<<<<<<< HEAD
               <p className=&quot;text-gray-300&quot;>
                 To accelerate human progress through cutting-edge AI and technology solutions that solve
-=======
               <p className="text-gray-300">
                 To accelerate human progress through cutting-edge AI and technology solutions that solve 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 the world's most complex challenges while maintaining the highest ethical standards.
               </p>
             </div>
@@ -114,13 +99,10 @@ export default function AboutPage() {
                 <LightBulbIcon className="h-8 w-8 text-purple-400" />
                 <h3 className="text-xl font-semibold text-white">Our Vision</h3>
               </div>
-<<<<<<< HEAD
               <p className=&quot;text-gray-300&quot;>
                 A future where AI and technology seamlessly enhance human capabilities, creating a more
-=======
               <p className="text-gray-300">
                 A future where AI and technology seamlessly enhance human capabilities, creating a more 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 intelligent, efficient, and sustainable world for generations to come.
               </p>
             </div>
@@ -135,7 +117,6 @@ export default function AboutPage() {
             From Research to Revolution
           </p>
         </div>
-<<<<<<< HEAD
         <div className=&quot;mx-auto mt-16 max-w-2xl lg:max-w-none&quot;>
           <div className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm&quot;>
             <p className=&quot;text-lg text-gray-300 mb-6&quot;>
@@ -152,7 +133,6 @@ export default function AboutPage() {
             <p className=&quot;text-lg text-gray-300&quot;>
               Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative
               startups, helping them harness the power of AI to transform their operations and
-=======
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
             <p className="text-lg text-gray-300 mb-6">
@@ -169,7 +149,6 @@ export default function AboutPage() {
             <p className="text-lg text-gray-300">
               Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative 
               startups, helping them harness the power of AI to transform their operations and 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               accelerate their growth.
             </p>
           </div>
@@ -200,21 +179,14 @@ export default function AboutPage() {
         </div>;
       </div>;
       {/* Leadership Team */}
-<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Leadership</h2>
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Meet Our Team
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -250,30 +222,20 @@ export default function AboutPage() {
         </div>;
       </div>;
       {/* CTA section */}
-<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-<<<<<<< HEAD
             Join us in shaping the future
           </h2>
           <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
             Ready to be part of the AI revolution? Let's discuss how we can work together to
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Join us in shaping the future
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Ready to be part of the AI revolution? Let's discuss how we can work together to 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             transform your organization.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">

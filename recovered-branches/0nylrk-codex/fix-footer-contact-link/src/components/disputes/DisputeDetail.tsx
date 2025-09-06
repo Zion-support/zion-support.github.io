@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {useDisputes} from "@/hooks/useDisputes";
@@ -25,8 +22,6 @@ export function DisputeDetail() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
 import { useDisputes } from "@/hooks/useDisputes",
@@ -42,7 +37,6 @@ import { format, formatDistanceToNow } from "date-fns",
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
 import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 import { toast } from "sonner";
 export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -65,7 +59,6 @@ export function DisputeDetail() {
   const isAdmin = user?.userType === "admin";
   useEffect(() => {
     if (!disputeId) return;
-=======
 import { toast } from "sonner",
 export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -74,7 +67,6 @@ export function DisputeDetail() {
   const navigate = useNavigate(),
   const { user } = useAuth(),
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [dispute, setDispute] = useState<any>(null),
   const [messages, setMessages] = useState<DisputeMessage[]>([]),
@@ -92,7 +84,6 @@ export function DisputeDetail() {
   useEffect(() => {
     if (!disputeId) return,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const loadDisputeData = async () => {
       setIsLoading(true),
       try {
@@ -102,21 +93,17 @@ export function DisputeDetail() {
           navigate("/dashboard/disputes"),
           return
         }
-<<<<<<< HEAD
         setDispute(disputeData);
         const messagesData = await getDisputeMessages(disputeId);
-=======
         setDispute(disputeData),
         
         const messagesData = await getDisputeMessages(disputeId),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         setMessages(messagesData)
       } catch (error) {
         console.error("Error loading dispute data:", error),
         toast.error("Failed to load dispute")
       } finally {
         setIsLoading(false)
-<<<<<<< HEAD
       }
     }
     loadDisputeData()
@@ -127,14 +114,10 @@ export function DisputeDetail() {
     if (success && dispute) {
       setDispute({ ...dispute, status })
     }
-<<<<<<< HEAD
   }
   const handleResolveDispute = async () => {
     if (!disputeId) return;
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;
@@ -199,25 +182,17 @@ export function DisputeDetail() {;
       setDispute({ ...dispute, status });
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const handleResolveDispute = async () => {
     if (!disputeId) return,
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (!resolution.summary) {
       toast.error("Please provide a resolution summary"),
       return
     }
-<<<<<<< HEAD
     const success = await resolveDispute(disputeId, resolution);
-=======
     
     const success = await resolveDispute(disputeId, resolution),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (success && dispute) {
       setDispute({
         ...dispute
@@ -227,19 +202,16 @@ export function DisputeDetail() {;
         resolved_at: new Date().toISOString()
       })
     }
-<<<<<<< HEAD
   }
   const handleSendMessage = async () => {
     if (!disputeId |!message.trim()) return;
     setIsSending(true);
-=======
   },
 
   const handleSendMessage = async () => {
     if (!disputeId || !message.trim()) return,
     
     setIsSending(true),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       const success = await addDisputeMessage(disputeId, message, isAdmin),
       if (success) {
@@ -252,7 +224,6 @@ export function DisputeDetail() {;
       console.error("Error sending message:", error)
     } finally {
       setIsSending(false)
-<<<<<<< HEAD
     }
   }
   if (isLoading) {
@@ -262,11 +233,7 @@ export function DisputeDetail() {;
         <p>Loading dispute details...</p>
       </div>
     )
-<<<<<<< HEAD
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   },;
   const handleResolveDispute = async () => {;
     if (!disputeId) return,;
@@ -310,13 +277,8 @@ export function DisputeDetail() {;
         <p>Loading dispute details...</p>;
       </div>;
     );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!dispute) {
     return (
       <div className="p-8 text-center">
@@ -329,17 +291,13 @@ export function DisputeDetail() {;
   }
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
-<<<<<<< HEAD
       case "open": return "default";
       case "under_review": return "secondary"
-=======
       case "open": return "default",
       case "under_review": return "secondary",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       case "resolved": return "outline", // Changed from "success" to "outline"
       case "closed": return "outline",
       default: return "default"
-<<<<<<< HEAD
     }
   }
   return (
@@ -349,7 +307,6 @@ export function DisputeDetail() {;
           <div className="flex items-center gap-2">
             <h1 className="text-2xl font-bold">Dispute Case</h1>
             <Badge variant={getStatusBadgeVariant(dispute.status)}>
-=======
 ;
   if (!dispute) {;
     return (;
@@ -378,11 +335,6 @@ export function DisputeDetail() {;
           <div className="flex items-center gap-2">;
             <h1 className="text-2xl font-bold">Dispute Case</h1>;
             <Badge variant={getStatusBadgeVariant(dispute.status)}>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
@@ -410,10 +362,7 @@ export function DisputeDetail() {;
           </AlertDescription>
         </Alert>
       )}
-<<<<<<< HEAD
-=======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
@@ -639,7 +588,6 @@ export function DisputeDetail() {;
                         </div>
                       </div>
                     )}
-<<<<<<< HEAD
                     <div>
                       <h3 className="font-medium mb-2">Admin Notes</h3>
                       <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">
@@ -657,7 +605,6 @@ export function DisputeDetail() {;
                                 </Avatar>
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name |'Admin'}
-=======
 ;
                     <div>;
                       <h3 className="font-medium mb-2">Admin Notes</h3>;
@@ -676,7 +623,6 @@ export function DisputeDetail() {;
                                 </Avatar>
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name || 'Admin'}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                                 </span>
                               </div>
                               <span className="text-xs opacity-70">
@@ -701,20 +647,13 @@ export function DisputeDetail() {;
                           onClick={() => {
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
-<<<<<<< HEAD
                                 getDisputeMessages(disputeId!).then(setMessages);
 
                                 setMessage("")
                               })
-=======
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setMessage("")
                               })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>;
                       <div className="mt-4 space-y-4">;
                         <Textarea;
@@ -730,11 +669,6 @@ export function DisputeDetail() {;
                                 getDisputeMessages(disputeId!).then(setMessages);
                                 setMessage("");
                               });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             }
                           }}
                         >
@@ -812,9 +746,6 @@ export function DisputeDetail() {;
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
-=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

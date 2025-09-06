@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -195,7 +192,4 @@ const EnhancedNavigation = () => {
 }
 export default EnhancedNavigation;}
 export default EnhancedNavigation;
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

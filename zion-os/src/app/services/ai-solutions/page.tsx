@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 interface AIService {id: string;
@@ -184,7 +183,6 @@ const aiServices: AIService[] = [;
   }
 ];
 export default function AISolutionsPage() {const [selectedService, setSelectedService] = useState<string | null>(null);
-=======
 "use client",;
 import { useState } from "react",;
 interface AIService {;
@@ -377,7 +375,6 @@ const aiServices: AIService[] = [;
 ],;
 export default function AISolutionsPage() {;
   const [selectedService, setSelectedService] = useState<string | null>(null);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div className="space-y-8">;
       {/* Header */}

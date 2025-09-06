@@ -1,13 +1,7 @@
 import React from "react";
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export interface Notification {
-=======
 export interface Notification {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   type: "success" | "error" | "warning" | "info";
   title?: string;
@@ -25,7 +19,6 @@ interface NotificationSystemProps {
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
   const typeStyles = {
-<<<<<<< HEAD
     success: "bg-green-50 border-green-400 text-green-800"
     error: "bg-red-50 border-red-400 text-red-800"
     warning: "bg-yellow-50 border-yellow-400 text-yellow-800"
@@ -67,7 +60,6 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
       setToasts((prev) => prev.filter((t) => t.id !== id))
     }, 3000)
   }, [])
-=======
     success: "bg-green-50 border-green-400 text-green-800",
     error: "bg-red-50 border-red-400 text-red-800",
     warning: "bg-yellow-50 border-yellow-400 text-yellow-800",
@@ -79,10 +71,6 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
 export default function NotificationSystem({
   notifications,
   onDismiss,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 key={notification.id},
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`},
 
@@ -123,10 +111,7 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
   }, []),
 
 }: NotificationSystemProps) {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }: NotificationSystemProps) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (notifications.length === 0) return null;
 
   return (
@@ -156,17 +141,8 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
       ))}
     </div>;
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
 }
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

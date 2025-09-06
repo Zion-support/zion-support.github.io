@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -19,8 +16,6 @@ import {ClientOnboardingSteps} from "@/components/onboarding/ClientOnboardingSte
 import {ActiveProjectsCard} from "@/components/projects/ActiveProjectsCard";
 import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
 import {useIsMobile} from "@/hooks/use-mobile";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -37,7 +32,6 @@ import { useJobs } from "@/hooks/useJobs",
 import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-<<<<<<< HEAD
 import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
@@ -46,12 +40,7 @@ function ClientDashboardContent() {
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
-=======
 import { useIsMobile } from "@/hooks/use-mobile",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -59,27 +48,20 @@ function ClientDashboardContent() {
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
   const isMobile = useIsMobile(),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Set the first job as selected when jobs are loaded (if any)
   useEffect(() => {
     if (jobs.length > 0 && !selectedJobId) {
       setSelectedJobId(jobs[0].id),
       setSelectedJobTitle(jobs[0].title)
     }
-<<<<<<< HEAD
   }, [jobs, selectedJobId]);
-=======
   }, [jobs, selectedJobId]),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId)
     setSelectedJobTitle(jobTitle)
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <>
@@ -140,8 +122,6 @@ function ClientDashboardContent() {
           </div>
           <div>
             <div className="sticky top-4 space-y-6">
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -235,11 +215,6 @@ function ClientDashboardContent() {;
           </div>;
           <div>;
             <div className="sticky top-4 space-y-6">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Active Projects Card */}
               <ActiveProjectsCard />
               {/* Upcoming Interviews Card */}
@@ -268,7 +243,6 @@ function ClientDashboardContent() {;
     </>
   )
 }
-<<<<<<< HEAD
 export default function ClientDashboard() {
   return (
     <ProtectedRoute>
@@ -276,8 +250,6 @@ export default function ClientDashboard() {
     </ProtectedRoute>
   )
 }
-<<<<<<< HEAD
-=======
 ;
 export default function ClientDashboard() {;
   return (;
@@ -287,7 +259,4 @@ export default function ClientDashboard() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

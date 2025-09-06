@@ -1,21 +1,13 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
 const RATE_LIMIT_MAX_REQUESTS = 100; // 100 requests per window
 export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
-<<<<<<< HEAD
   const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() |
              req.socket.remoteAddress |
-=======
   const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() || 
              req.socket.remoteAddress || ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
              'unknown';
   const now = Date.now();
   const key = `rate_limit_${ip}`;
@@ -36,13 +28,6 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   rateLimitMap.set(key, current);
   return true;
 }
-<<<<<<< HEAD
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

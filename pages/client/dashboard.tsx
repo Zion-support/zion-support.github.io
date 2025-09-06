@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import useSWR from 'swr';
 import Link from 'next/link';
 
@@ -15,9 +14,7 @@ export default function ClientDashboard() {
     });
     mutate();
 
-<<<<<<< HEAD
   }
-=======
 export default function ClientDashboard() {;
   const { data, error, mutate } = useSWR('/api/jobs', fetcher);
 
@@ -25,8 +22,6 @@ export default function ClientDashboard() {;
 
   const jobs = data.jobs as any[];
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import useSWR from 'swr'
 import Link from 'next/link'
 const fetcher = (url: string) => fetch(url).then((r) => r.json())
@@ -37,7 +32,6 @@ export default function ClientDashboard() {
   if (error) return <div className="text-red-600">Failed to load</div>,
   if (!data) return <div>Loading…</div>,
   const jobs = data.jobs as any[]
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   async function closeJob(id: string) {
     await fetch(`/api/jobs/${id}`, {
       method: 'PATCH',
@@ -49,7 +43,6 @@ export default function ClientDashboard() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -71,7 +64,6 @@ export default function ClientDashboard() {
                 {job.requiredSkills?.length > 0 && (
                   <div className="mt-2 flex flex-wrap gap-2">
                     {job.requiredSkills.map((s: string) => (
-<<<<<<< HEAD
                       <span
                         key={s}
                         className='px-2 py-0.5 text-xs rounded bg-gray-100 dark:bg-gray-800'
@@ -80,7 +72,6 @@ export default function ClientDashboard() {
                       </span>                    ))}
                   </div>
                 )}
-=======
                       <span key={s} className="px-2 py-0.5 text-xs rounded bg-gray-100 dark:bg-gray-800">{s}</span>
 import useSWR from 'swr';
 import Link from 'next/link';
@@ -141,25 +132,15 @@ export default function ClientDashboard(req, res) {
                 <Link href={`/client/jobs/${job.id}/applicants`}><a className="px-2 py-1 text-sm border rounded">View Applicants</Link></Link>
                 <Link href={`/client/jobs/${job.id}/edit`}><a className="px-2 py-1 text-sm border rounded">Edit Job</Link></Link>
                 <button className="px-2 py-1 text-sm border rounded" onClick={() => closeJob(job.id)}>Close Job</button>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         ))}
       </div>
     </div>
 );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -173,8 +154,3 @@ export default function ClientDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -9,29 +6,19 @@ import {BrowseFilters} from "../components/browse/BrowseFilters";
 import {BrowseCards} from "../components/browse/BrowseCards";
 import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { BrowseFilters } from "../components/browse/BrowseFilters",
 import { BrowseCards } from "../components/browse/BrowseCards",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
-=======
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Mock data for demonstration
 
 const jobsData = [
   {
-<<<<<<< HEAD
     id: "1"
     title: "Senior React Developer"
     subtitle: "TechCorp Inc."
@@ -104,7 +91,6 @@ export function MobileBrowse() {
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
-=======
     id: "1",
     title: "Senior React Developer",
     subtitle: "TechCorp Inc.",
@@ -175,29 +161,22 @@ const talentsData = [
   }
 ],
 
-<<<<<<< HEAD
 export function MobileBrowse() {;
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
-=======
 export function MobileBrowse() {
   const { user } = useAuth(),
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleViewDetails = (id: string) => {
     // // // console.log(`View details for item ${id}`),
     // Navigate to details page
-<<<<<<< HEAD
   }
 
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="min-h-screen">
       <MobileHeader
@@ -225,8 +204,6 @@ export function MobileBrowse() {
       <BrowseFilters type={browseType} />
       <div className="py-4 px-4">
         <BrowseCards
-<<<<<<< HEAD
-=======
           items={browseType === "jobs" ? jobsData : talentsData}
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
@@ -341,11 +318,6 @@ export function MobileBrowse() {;
       <BrowseFilters type={browseType} />;
       <div className="py-4 px-4">;
         <BrowseCards;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           items={browseType === "jobs" ? jobsData : talentsData}
           type={browseType}
           onViewDetails={handleViewDetails}

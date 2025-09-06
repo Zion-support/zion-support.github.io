@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -33,8 +30,6 @@ export function DynamicListingPage({;
   categorySlug;
   listings: allListings,
   categoryFilters;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { useNavigate } from "react-router-dom",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -45,7 +40,6 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
 import { Skeleton } from "@/components/ui/skeleton",
 import { Slider } from "@/components/ui/slider",
 import { ProductListing, ListingView } from "@/types/listings",
-<<<<<<< HEAD
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 interface PriceRange {
@@ -80,7 +74,6 @@ export function DynamicListingPage({
   const [isLoading, setIsLoading] = useState(false);
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-=======
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
 interface PriceRange {
@@ -118,10 +111,6 @@ export function DynamicListingPage({;
   categorySlug,;
   listings: allListings,;
   categoryFilters,;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate(),
@@ -133,17 +122,13 @@ export function DynamicListingPage({;
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     const listingsWithPrice = allListings.filter(l => l.price !== null),
     if (listingsWithPrice.length > 0) {
-<<<<<<< HEAD
       const min = Math.min(...listingsWithPrice.map(l => l.price |0));
       const max = Math.max(...listingsWithPrice.map(l => l.price |0));
-=======
       const min = Math.min(...listingsWithPrice.map(l => l.price || 0)),
       const max = Math.max(...listingsWithPrice.map(l => l.price || 0)),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       setPriceRange({ min, max })
     }
   }, [allListings]);
@@ -153,7 +138,6 @@ export function DynamicListingPage({;
   ]);
   const handleSliderChange = (values: number[]) => {
     setCurrentPriceFilter([values[0], values[1]])
-<<<<<<< HEAD
   }
   const filteredListings = allListings.filter(listing => {
     const matchesSearch = !searchQuery |
@@ -163,7 +147,6 @@ export function DynamicListingPage({;
     const matchesCategory = selectedCategory === "all" |listing.category === selectedCategory;
     const matchesPrice = listing.price === null |(
       listing.price >= currentPriceFilter[0] &&
-=======
   },
 
   const filteredListings = allListings.filter(listing => {
@@ -176,7 +159,6 @@ export function DynamicListingPage({;
     
     const matchesPrice = listing.price === null || (
       listing.price >= currentPriceFilter[0] && 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       listing.price <= currentPriceFilter[1]
     );
     const matchesRating =
@@ -202,8 +184,6 @@ export function DynamicListingPage({;
               title: listing.title
               category: listing.category
               image: listing.images?.[0]
-<<<<<<< HEAD
-=======
 }: DynamicListingPageProps) {;
   const navigate = useNavigate(),;
   const [searchQuery, setSearchQuery] = useState(""),;
@@ -260,16 +240,10 @@ export function DynamicListingPage({;
               title: listing.title,;
               category: listing.category,;
               image: listing.images?.[0];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             }
           }
         })
       }
-<<<<<<< HEAD
     }, 500)
   }
   return (
@@ -278,7 +252,6 @@ export function DynamicListingPage({;
         <div className="text-center mb-12">
           <GradientHeading>{title}</GradientHeading>
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-=======
     }, 500);
   },;
   return (;
@@ -287,11 +260,6 @@ export function DynamicListingPage({;
         <div className="text-center mb-12">;
           <GradientHeading>{title}</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {description}
           </p>
         </div>
@@ -319,8 +287,6 @@ export function DynamicListingPage({;
                     <SelectItem value="all" className="text-white">All Categories</SelectItem>
                     {categoryFilters.map((filter) => (
                       <SelectItem key={filter.value} value={filter.value} className="text-white">
-<<<<<<< HEAD
-=======
           </p>;
         </div>;
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
@@ -347,11 +313,6 @@ export function DynamicListingPage({;
                     <SelectItem value="all" className="text-white">All Categories</SelectItem>;
                     {categoryFilters.map((filter) => (;
                       <SelectItem key={filter.value} value={filter.value} className="text-white">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {filter.label}
                       </SelectItem>
                     ))}
@@ -370,8 +331,6 @@ export function DynamicListingPage({;
                     step={(priceRange.max - priceRange.min) / 100}
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
-<<<<<<< HEAD
-=======
                     className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
@@ -393,11 +352,6 @@ export function DynamicListingPage({;
                     step={(priceRange.max - priceRange.min) / 100}
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
@@ -435,8 +389,6 @@ export function DynamicListingPage({;
                           ))}
                           <span className="ml-1">& Up</span>
                         </div>
-<<<<<<< HEAD
-=======
                     className="mb-4";
                   />;
                   <div className="flex justify-between text-sm text-zion-slate-light">;
@@ -474,36 +426,25 @@ export function DynamicListingPage({;
                           ))}
                           <span className="ml-1">& Up</span>;
                         </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       )}
                     </Button>
                   ))}
                 </div>
               </div>
-<<<<<<< HEAD
               <Button
                 variant="outline"
-=======
               <Button 
                 variant="outline" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
-<<<<<<< HEAD
                   console.log("Resetting filters");
                   setSearchQuery("");
                   setSelectedCategory("all")
                   setCurrentPriceFilter([priceRange.min, priceRange.max]);
-=======
                   // // // console.log("Resetting filters"),
                   setSearchQuery(""),
                   setSelectedCategory("all"),
                   setCurrentPriceFilter([priceRange.min, priceRange.max]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   setSelectedRating(null)
                 }}
               >
@@ -575,15 +516,8 @@ export function DynamicListingPage({;
             ) : filteredListings.length > 0 ? (
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
                 {filteredListings.map((listing) => (
-<<<<<<< HEAD
                   <ProductListingCard
-=======
                   <ProductListingCard 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>;
               </div>;
               <Button;
@@ -666,11 +600,6 @@ export function DynamicListingPage({;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
                 {filteredListings.map((listing) => (;
                   <ProductListingCard;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     key={listing.id}
                     listing={listing}
                     view={view}
@@ -685,13 +614,11 @@ export function DynamicListingPage({;
                 <Button
                   variant="outline"
                   onClick={() => {
-<<<<<<< HEAD
                     setSearchQuery("");
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
 
                     setSelectedRating(null)
-=======
                     setSearchQuery(""),
                     setSelectedCategory("all"),
                     setCurrentPriceFilter([priceRange.min, priceRange.max]),
@@ -708,11 +635,6 @@ export function DynamicListingPage({;
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
                     setSelectedRating(null);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                 >

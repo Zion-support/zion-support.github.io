@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAgricultureService {;
   id: string;
@@ -43,20 +42,17 @@ export interface InnovativeAgricultureService {;
 
   reviews: number;
 const contact = {
-<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',}
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
-=======
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -336,21 +332,18 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.'
     launchDate: '2025-02-02'
     customers: 123
     rating: 4.6
     reviews: 89
   }
-=======
       'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.',
     launchDate: '2025-02-02',
     customers: 123,
     rating: 4.6,
     reviews: 89,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
       'Compliance management'
     ];
@@ -380,13 +373,9 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     customers: 123;
     rating: 4.6
     reviews: 89
-<<<<<<< HEAD
   }
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAgricultureService {;
   id: string,;
@@ -625,10 +614,5 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     customers: 123,;
     rating: 4.6;
     reviews: 89;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

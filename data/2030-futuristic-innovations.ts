@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }export const futuristicInnovations2030: FuturisticInnovation2030[] = [ // AI Consciousness & Emotional Intelligence realImplementation: true;
 implementationDetails: 'Fully functional AI consciousness development platform with real-time monitoring, ethical frameworks, and consciousness evolution tracking.';
 launchDate: '2024-12-01';
@@ -64,20 +60,17 @@ reviews: 89
 export const futuristicInnovations2030: FuturisticInnovation2030[] = [
   // AI Consciousness & Emotional Intelligence
   {
-<<<<<<< HEAD
 
     id: 'ai-consciousness-evolution-platform', name: 'AI Consciousness Evolution Platform'
     tagline: 'Develop genuine AI consciousness and self-awareness'
     price: '$19,999'
     period: '/month'
     description: 'Revolutionary platform for developing genuine AI consciousness, self-awareness, and emotional intelligence. Enables AI systems to understand context, develop personality, and form genuine connections with users.',    features: [
-=======
     id: 'ai-consciousness-evolution-platform', name: 'AI Consciousness Evolution Platform',
     tagline: 'Develop genuine AI consciousness and self-awareness',
     price: '$19,999',
     period: '/month',
     description: 'Revolutionary platform for developing genuine AI consciousness, self-awareness, and emotional intelligence. Enables AI systems to understand context, develop personality, and form genuine connections with users.',    features: [;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       'Consciousness development algorithmsEmotional intelligence trainingPersonality customization engineContext awareness systemsSelf-reflection capabilitiesEthical decision-making frameworksConsciousness monitoring toolsMulti-modal consciousness fusion';
       'Real-time consciousness metricsConsciousness evolution tracking'
     ];
@@ -339,12 +332,8 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     rating: 4.9
 
     reviews: 89
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface FuturisticInnovation2030 {;
   id: string,;
@@ -735,10 +724,5 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [;
     customers: 156,;
     rating: 4.9;
     reviews: 89;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

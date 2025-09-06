@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
-=======
 import React from 'react';
 import Head from 'next/head';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
   Brain
   Monitor
   Search
@@ -26,7 +22,6 @@ import {
   BarChart3
   Calendar
   Target;} from 'lucide-react';import {
-=======
   Brain,
   Monitor,
   Search,
@@ -41,14 +36,10 @@ import {
   Globe,
   Lock,
   BarChart3,
-<<<<<<< HEAD
   Calendar,
   Target,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   Calendar,;
   Target,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Brain;
   Monitor
   Search
@@ -115,7 +106,6 @@ export default function MicroSaasServicesPage() {
         enterprise: {
           price: 299
           features: [
-<<<<<<< HEAD
             'Unlimited generations'
             'Custom templates'
             'White-label options'
@@ -152,7 +142,6 @@ export default function MicroSaasServicesPage() {
         'CDN performance analysis'
         'Mobile performance testing'
       ]
-=======
             'Unlimited generations',
             'Custom templates',
             'White-label options',
@@ -441,7 +430,6 @@ export default function MicroSaasServicesPage() {
         'Performance tracking',
         'Brand consistency',
       ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       pricing: {
         starter: {
           price: 19
@@ -467,7 +455,6 @@ export default function MicroSaasServicesPage() {
         enterprise: {
           price: 149
           features: [
-<<<<<<< HEAD
             'Unlimited URLs'
             'Real-time monitoring'
             'All metrics'
@@ -733,7 +720,6 @@ export default function MicroSaasServicesPage() {
       competitors: ['Buffer', 'Hootsuite', 'Later']
       website: 'https://social.ziontech.ai'
       demo: 'https://demo.social.ziontech.ai'
-=======
             'Unlimited accounts',
             'Enterprise scheduling',
             'Advanced calendar',
@@ -747,7 +733,6 @@ export default function MicroSaasServicesPage() {
       competitors: ['Buffer', 'Hootsuite', 'Later'],
       website: 'https://social.ziontech.ai',
       demo: 'https://demo.social.ziontech.ai',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     },  ];      demo: 'https://demo.social.ziontech.ai'
     }
   ];
@@ -829,10 +814,7 @@ export default function MicroSaasServicesPage() {
     },      description: 'Increasing need for multi-platform social media coordination'
     }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -923,7 +905,6 @@ export default function MicroSaasServicesPage() {
                       {insight.growth}
                     </div>
                   </div>
-<<<<<<< HEAD
                   <p className='text-gray-400 text-sm'>{insight.description}</p>                </div>              Market Overview & Competitive Analysis
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -945,42 +926,22 @@ export default function MicroSaasServicesPage() {
                   </div>
                   <p className="text-gray-400 text-sm">{insight.description}</p>
                 </div>
-=======
                   <p className='text-gray-400 text-sm'>{insight.description}</p>                </div>
 
                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Card>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Services Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Our Micro SaaS Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1150,7 +1111,6 @@ export default function MicroSaasServicesPage() {
                             ))}
                         </div>
                         <div>
-<<<<<<< HEAD
                           <p className='text-sm text-gray-400 mb-1'>
                             Key Competitors
                           </p>
@@ -1284,13 +1244,7 @@ export default function MicroSaasServicesPage() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Global Infrastructure</h3>
                 <p className="text-gray-400 text-sm">Worldwide availability with enterprise-grade reliability</p>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </Card>
           </div>
@@ -1331,7 +1285,6 @@ export default function MicroSaasServicesPage() {
             >
               Get Started
             </Button>
-<<<<<<< HEAD
             <Button
               href='/pricing'
               variant='outline'
@@ -1348,10 +1301,4 @@ export default function MicroSaasServicesPage() {
     </>
 );
 }
-=======
             <Button
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

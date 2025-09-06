@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, {
   createContext
   useContext
@@ -93,7 +89,6 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
             label: 'Log In'
             onClick: loginAction
           }
-<<<<<<< HEAD
         : undefined
     })
   }, [])
@@ -208,15 +203,12 @@ export function useErrorHandler() {
 
     handleAsyncOperation}
 }
-=======
         : undefined,;
     });
   }, []);
   const clearAllErrors = useCallback(() => {;
     setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
   }, [])
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
@@ -309,18 +301,11 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
     // Clear any active toasts would go here if the toast system supports it
   }, []),
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const contextValue: ErrorContextType = {
     reportError,
     showRetryableError,
     showNetworkError,
     showAuthError,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     clearAllErrors,
   }
   return (
@@ -336,8 +321,6 @@ export function useGlobalErrorHandler(): ErrorContextType {
     )
   }
   return context
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     clearAllErrors},
 
   return (
@@ -355,17 +338,10 @@ export function useGlobalErrorHandler(): ErrorContextType {;
   return context;
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase(),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   if (
     message.includes('fetch') ||
     message.includes('network') ||
@@ -462,8 +438,6 @@ export function useErrorHandler() {
 
 }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
     return "Unable to connect to our servers. Please check your internet connection."
   }
@@ -552,8 +526,3 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 } ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

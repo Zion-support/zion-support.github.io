@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
@@ -90,7 +89,6 @@ export function useAuth() {const context = useContext(AuthContext);
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
   }
-=======
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 import { useSession, signIn, signOut } from "next-auth/react",;
@@ -209,6 +207,5 @@ export function useAuth() {;
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return context;
 }

@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
@@ -16,8 +13,6 @@ import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
 import {toast} from "@/hooks/use-toast";
 import {Check, Flag, Search, Settings, X} from "lucide-react";
 import {supabase} from "@/integrations/supabase/client";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useNavigate } from "react-router-dom",
@@ -30,7 +25,6 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
 import { toast } from "@/hooks/use-toast",
-<<<<<<< HEAD
 import { Check, Flag, Search, Settings, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 interface PartnerProfile {
@@ -48,13 +42,8 @@ interface PartnerProfile {
   bio?: string;
   payout_method?: string;
   fraud_flags?: number;
-=======
 import { Check, Flag, Search, Settings, X } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -68,21 +57,16 @@ interface PartnerProfile {
   bio?: string,
   payout_method?: string,
   fraud_flags?: number,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   commission_rate?: number
 }
-<<<<<<< HEAD
 export default function PartnerManager() {
   const [partners, setPartners] = useState<PartnerProfile[]>([]),
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
-<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeTab, setActiveTab] = useState("pending");
   const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
-=======
 
-<<<<<<< HEAD
 export default function PartnerManager() {;
   const [partners, setPartners] = useState<PartnerProfile[]>([]);
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
@@ -90,13 +74,10 @@ export default function PartnerManager() {;
   const [searchQuery, setSearchQuery] = useState("");
   const [activeTab, setActiveTab] = useState("pending");
   const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
-<<<<<<< HEAD
-=======
   const [isLoading, setIsLoading] = useState(true),
   const [searchQuery, setSearchQuery] = useState(""),
   const [activeTab, setActiveTab] = useState("pending"),
@@ -106,18 +87,11 @@ export default function PartnerManager() {;
   const [commissionRate, setCommissionRate] = useState(25),
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   const navigate = useNavigate();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const navigate = useNavigate();
   useEffect(() => {
     if (!isAuthenticated) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       navigate("/login");
       return
     }
@@ -216,9 +190,6 @@ export default function PartnerManager() {;
       } else {
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery)
-=======
-<<<<<<< HEAD
-=======
 export default function PartnerManager() {
   const [partners, setPartners] = useState<PartnerProfile[]>([]),
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
@@ -234,7 +205,6 @@ export default function PartnerManager() {
 
   useEffect(() => {
     if (!isAuthenticated) {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       navigate("/login"),
       return
 import { useState, useEffect } from "react",;
@@ -380,11 +350,6 @@ export default function PartnerManager() {;
       } else {;
         setPartners(data as PartnerProfile[]),;
         filterPartners(data as PartnerProfile[], activeTab, searchQuery);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (error) {
       console.error("Error fetching partners:", error),
@@ -395,18 +360,14 @@ export default function PartnerManager() {;
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
     let filtered = partners
     // Filter by status
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
-<<<<<<< HEAD
     }
     // Filter by search query
     if (query) {
@@ -418,12 +379,8 @@ export default function PartnerManager() {;
         p.website?.toLowerCase().includes(lowerQuery)
       )
     }
-<<<<<<< HEAD
     setFilteredPartners(filtered)
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     } catch (error) {;
       console.error("Error fetching partners:", error),;
       toast({;
@@ -451,44 +408,31 @@ export default function PartnerManager() {;
         p.website?.toLowerCase().includes(lowerQuery);
       );
     }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     
     setFilteredPartners(filtered)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value)
     filterPartners(partners, activeTab, e.target.value)
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleTabChange = (value: string) => {
     setActiveTab(value)
     filterPartners(partners, value, searchQuery)
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleViewDetails = (partner: PartnerProfile) => {
     setSelectedPartner(partner)
     setIsDetailsOpen(true)
-<<<<<<< HEAD
   }
   const handleOpenSettings = (partner: PartnerProfile) => {
     setSelectedPartner(partner);
     setCommissionRate(partner.commission_rate |25)
     setIsSettingsOpen(true)
   }
-=======
   },
 
   const handleOpenSettings = (partner: PartnerProfile) => {
@@ -497,28 +441,21 @@ export default function PartnerManager() {;
     setIsSettingsOpen(true)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
     try {
       // In a real app, this would update the database
       setPartners(partners.map(p =>
         p.id === partnerId ? { ...p, status } : p
-<<<<<<< HEAD
       ));
-=======
       )),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       filterPartners(
         partners.map(p => p.id === partnerId ? { ...p, status } : p),
         activeTab,
         searchQuery
-<<<<<<< HEAD
       );
-=======
       ),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast({
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected"
         description: `The partner has been ${status}.`
@@ -534,29 +471,24 @@ export default function PartnerManager() {;
         description: "Failed to update partner status"
         variant: "destructive"})
     }
-<<<<<<< HEAD
   }
   const handleSaveSettings = async () => {
     if (!selectedPartner) return;
-=======
   },
 
   const handleSaveSettings = async () => {
     if (!selectedPartner) return,
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       // Update commission rate
       setPartners(partners.map(p =>
         p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
-<<<<<<< HEAD
       ));
       filterPartners(
         partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p)
         activeTab;
         searchQuery
       );
-=======
       )),
       
       filterPartners(
@@ -565,7 +497,6 @@ export default function PartnerManager() {;
         searchQuery
       ),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast({
         title: "Settings Updated"
         description: "Partner settings have been updated successfully."
@@ -577,7 +508,6 @@ export default function PartnerManager() {;
         title: "Error"
         description: "Failed to update partner settings"
         variant: "destructive"})
-<<<<<<< HEAD
     }
   }
   const getAudienceSizeLabel = (size: string) => {
@@ -589,12 +519,8 @@ export default function PartnerManager() {;
       case 'over100k': return 'Over 100,000';
       default: return size
     }
-<<<<<<< HEAD
   }
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
     setFilteredPartners(filtered);
   },;
@@ -677,12 +603,7 @@ export default function PartnerManager() {;
       default: return size;
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
@@ -694,18 +615,14 @@ export default function PartnerManager() {;
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getFraudFlagBadge = (flags: number = 0) => {
     if (flags === 0) return null
     return (
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
         <Flag className="h-3 w-3" />
-<<<<<<< HEAD
         {flags}
       </Badge>
     )
@@ -730,7 +647,6 @@ export default function PartnerManager() {;
                   Pending Applications
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
-=======
   },;
   const getStatusBadge = (status: string) => {;
     switch (status) {;
@@ -773,11 +689,6 @@ export default function PartnerManager() {;
                   Pending Applications;
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {partners.filter(p => p.status === 'pending').length}
                 </div>
               </CardHeader>
@@ -794,7 +705,6 @@ export default function PartnerManager() {;
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
                   {partners.filter(p => p.status === 'approved').length}
-<<<<<<< HEAD
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -810,7 +720,6 @@ export default function PartnerManager() {;
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
                   {partners.reduce((total, p) => total + (p.fraud_flags |0), 0)}
-=======
                 </div>;
               </CardHeader>;
               <CardContent className="pt-0">;
@@ -826,7 +735,6 @@ export default function PartnerManager() {;
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
                   {partners.reduce((total, p) => total + (p.fraud_flags || 0), 0)}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -865,13 +773,10 @@ export default function PartnerManager() {;
               <TabsTrigger value="all">All</TabsTrigger>
             </TabsList>
             <TabsContent value="pending" className="space-y-4">
-<<<<<<< HEAD
               <PartnerTable
                 partners={filteredPartners}
-=======
               <PartnerTable 
                 partners={filteredPartners} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 isLoading={isLoading}
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
@@ -881,13 +786,10 @@ export default function PartnerManager() {;
               />
             </TabsContent>
             <TabsContent value="approved" className="space-y-4">
-<<<<<<< HEAD
               <PartnerTable
                 partners={filteredPartners}
-=======
               <PartnerTable 
                 partners={filteredPartners} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 isLoading={isLoading}
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
@@ -897,10 +799,8 @@ export default function PartnerManager() {;
               />
             </TabsContent>
             <TabsContent value="rejected" className="space-y-4">
-<<<<<<< HEAD
               <PartnerTable
                 partners={filteredPartners}
-=======
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
@@ -914,7 +814,6 @@ export default function PartnerManager() {;
             <TabsContent value="all" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 isLoading={isLoading}
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
@@ -991,10 +890,7 @@ export default function PartnerManager() {;
                   </div>
                 </div>
               )}
-<<<<<<< HEAD
-=======
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <p className="text-xs text-zion-slate-light">Payout Method</p>
@@ -1018,14 +914,9 @@ export default function PartnerManager() {;
               )}
               {selectedPartner.status === 'pending' && (
                 <div className="flex justify-end gap-2 mt-4">
-<<<<<<< HEAD
                   <Button
                     variant="destructive"
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   >
                     <X className="h-4 w-4 mr-1" />
                     Reject
@@ -1040,13 +931,9 @@ export default function PartnerManager() {;
                 </div>
               )}
             </div>
-=======
-<<<<<<< HEAD
                   <Button 
                     variant="destructive" 
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   >;
                     <X className="h-4 w-4 mr-1" />;
                     Reject;
@@ -1061,11 +948,6 @@ export default function PartnerManager() {;
                 </div>;
               )}
             </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </DialogContent>
       </Dialog>
@@ -1124,19 +1006,15 @@ interface PartnerTableProps {
   getStatusBadge: (status: string) => JSX.Element
   getFraudFlagBadge: (flags?: number) => JSX.Element | null
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 function PartnerTable({
   partners
   isLoading
   onViewDetails
-=======
 
 function PartnerTable({ 
   partners, 
   isLoading, 
   onViewDetails, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   onUpdateStatus;
   onOpenSettings;
   getStatusBadge;
@@ -1149,7 +1027,6 @@ function PartnerTable({
         <p className="text-zion-slate-light">Loading partner data...</p>
       </div>
     )
-=======
 ;
 function PartnerTable({;
   partners,;
@@ -1166,11 +1043,6 @@ function PartnerTable({;
         <p className="text-zion-slate-light">Loading partner data...</p>;
       </div>;
     );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   if (partners.length === 0) {
     return (
@@ -1241,17 +1113,11 @@ function PartnerTable({;
                   <Settings className="h-4 w-4" />
                   <span className="sr-only">Settings</span>
                 </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <Button
                   variant="outline"
-=======
                 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Button 
                   variant="outline" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   size="sm"
                   onClick={() => onViewDetails(partner)}
                 >
@@ -1261,15 +1127,12 @@ function PartnerTable({;
             </TableCell>
           </TableRow>
         ))}
-<<<<<<< HEAD
       </TableBody>
     </Table>
   )
 }
-=======
       </TableBody>;
     </Table>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

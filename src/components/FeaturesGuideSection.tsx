@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import Link from "next/link",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Button } from "./ui/button",
 import { fireEvent } from '@/lib/analytics',
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Link from 'next/link'
 import { GradientHeading } from './GradientHeading'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -38,14 +32,12 @@ import { Zap } from 'lucide-react'
 export function FeaturesGuideSection() {
   const features = [
     {
-<<<<<<< HEAD
       id: 'ai-matcher'
       title: 'AI Matcher'
       description:
         'Find the perfect match for your project needs with our intelligent AI-powered matching system.'
       icon: <Sparkles className='h-10 w-10 text-zion-cyan' />
       instructions: [
-<<<<<<< HEAD
         'Navigate to the AI Matcher page from the homepage or marketplace'
         'Fill in your project requirements and specifications'
         'Review the AI-recommended matches tailored to your needs'
@@ -53,8 +45,6 @@ export function FeaturesGuideSection() {
       ]
       link: '/match'
       buttonText: 'Try AI Matcher'
-=======
-=======
         'Navigate to the AI Matcher page from the homepage or marketplace',
         'Fill in your project requirements and specifications',
         'Review the AI-recommended matches tailored to your needs',
@@ -314,7 +304,6 @@ export function FeaturesGuideSection() {
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
-=======
 import Link from "next/link",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -325,7 +314,6 @@ import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, P
 export function FeaturesGuideSection() {
   const features = [
     {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
@@ -579,7 +567,6 @@ export function FeaturesGuideSection() {;
       ],;
       link: "/help";
       buttonText: "View Resources";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
     {
       id: 'talent-directory'
@@ -704,7 +691,6 @@ export function FeaturesGuideSection() {;
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
-<<<<<<< HEAD
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace"
@@ -834,19 +820,12 @@ export function FeaturesGuideSection() {;
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
-=======
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
               >;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {feature.title}
               </TabsTrigger>
             ))}
           </TabsList>
-<<<<<<< HEAD
           <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
             {features.slice(4).map(feature => (
               <TabsTrigger
@@ -857,17 +836,11 @@ export function FeaturesGuideSection() {;
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
-=======
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
             {features.slice(4).map(feature => (
               <TabsTrigger 
                 key={feature.id} 
                 value={feature.id}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
                 {feature.title}
@@ -885,7 +858,6 @@ export function FeaturesGuideSection() {;
                   <p className="text-zion-slate-light mb-6">{feature.description}</p>
                   <Button
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-<<<<<<< HEAD
                   >
                     <Link href={feature.link}>
                       {feature.buttonText}
@@ -908,7 +880,6 @@ export function FeaturesGuideSection() {;
                       <li key={idx} className="text-zion-slate-light">
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
                       </li>
-=======
                     asChild
                   >
                     <Link href={feature.link}>
@@ -926,11 +897,6 @@ export function FeaturesGuideSection() {;
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
                         {instruction}
                       </li>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ))}
                   </ol>
                 </div>
@@ -938,46 +904,31 @@ export function FeaturesGuideSection() {;
             </TabsContent>
           ))}
         </Tabs>
-<<<<<<< HEAD
         <div className='mt-12 text-center'>
-=======
         
         <div className="mt-12 text-center">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Button
             variant="outline"
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             asChild
           >
             <Link
-<<<<<<< HEAD
               href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
               href="/marketplace"
               onClick = {() => fireEvent('explore_marketplace_click'),}
             >
               Explore Full Marketplace
               <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />
-=======
               href="/marketplace"
               onClick={() => fireEvent('explore_marketplace_click')}
             >
               Explore Full Marketplace
               <ArrowRight className="ml-2 h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </Link>
           </Button>
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   );
 };
   );
@@ -985,15 +936,7 @@ export function FeaturesGuideSection() {;
 }
 }
 }
-=======
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 }
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

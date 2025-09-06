@@ -1,39 +1,23 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation';
 import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero';
 import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase';
 import {Phone, Mail} from 'lucide-react';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
 import Head from 'next/head',
 import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation',
 import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero',
-<<<<<<< HEAD
 import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase';
 import { Phone, Mail } from 'lucide-react';
-=======
 import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase',
 import { Phone, Mail } from 'lucide-react',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function Revolutionary2026ServicesPage() {
   return (
     <>
       <Head>
         <title>Revolutionary 2026 Services - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <meta
           name='description'
           content='Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions.'
@@ -85,7 +69,6 @@ export default function Revolutionary2026ServicesPage() {
           content='364 E Main St STE 1008 Middletown DE 19709'
         />
         {/* Structured Data */}
-=======
         <meta name="description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions." />
         <meta name="keywords" content="AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -123,16 +106,10 @@ export default function Revolutionary2026ServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-<<<<<<< HEAD
               '@context': 'https://schema.org'
               '@type': 'Organization'
               name: 'Zion Tech Group'
@@ -226,7 +203,6 @@ export default function Revolutionary2026ServicesPage() {
 
                   color: 'from-indigo-500 to-purple-500'
                 }
-=======
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Zion Tech Group",
@@ -258,9 +234,6 @@ export default function Revolutionary2026ServicesPage() {
 }
         />
       </Head>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       <main className='min-h-screen bg-gray-900'>
         {/* Navigation */}
         <Revolutionary2026UltimateNavigation />
@@ -276,8 +249,6 @@ export default function Revolutionary2026ServicesPage() {
             <div className='text-center mb-16'>
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <main className="min-h-screen bg-gray-900">
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
@@ -313,10 +284,6 @@ export default function Revolutionary2026ServicesPage() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Why Choose Zion Tech Group?
                 </span>
               </h2>
@@ -325,10 +292,8 @@ export default function Revolutionary2026ServicesPage() {
                 and emerging technologies, delivering revolutionary solutions that transform industries.
               </p>
             </div>
-<<<<<<< HEAD
             {/* Features Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {[
-=======
             {/* Features Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -336,7 +301,6 @@ export default function Revolutionary2026ServicesPage() {
 }
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {
                   icon: '🧠',
                   title: 'AI Consciousness',
@@ -377,7 +341,6 @@ export default function Revolutionary2026ServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ].map((feature, index) => (
                 <div key={index} className="group">
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105">
@@ -392,14 +355,12 @@ export default function Revolutionary2026ServicesPage() {
                     <p className="text-gray-400 leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
-<<<<<<< HEAD
               ))}
             </div>
             {/* Call to Action */}
             <div className='text-center'>
               <div className='bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20'>
                 <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -414,11 +375,6 @@ export default function Revolutionary2026ServicesPage() {
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Ready to Experience the Future?
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -446,20 +402,13 @@ export default function Revolutionary2026ServicesPage() {
           </div>
         </section>
       </main>
-<<<<<<< HEAD
     </>
-<<<<<<< HEAD
   );
-=======
-=======
-<<<<<<< HEAD
     </>;
   );
 
 }
-=======
     </>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
             <div className="text-center">;
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">;
@@ -498,8 +447,3 @@ export default function Revolutionary2026ServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

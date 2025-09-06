@@ -182,9 +182,8 @@ return (<> <Dialog open= {;
   loginOpen ;
 }onOpenChange= {;
   setLoginOpen ;
-<<<<<<< HEAD:temp_broken_files/profile/ContactPublisherModal.tsx
+:temp_broken_files/profile/ContactPublisherModal.tsx
 }/> </>) ;"}'"
-=======
 }/> </>) ;
 }'"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ContactPublisherModal.tsx
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ContactPublisherModal.tsx

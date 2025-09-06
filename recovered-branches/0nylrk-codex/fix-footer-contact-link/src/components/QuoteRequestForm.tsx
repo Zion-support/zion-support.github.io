@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {useState} from "react";
 import {useToast} from "@/hooks/use-toast";
 import {useNavigate} from "react-router-dom";
@@ -19,17 +15,13 @@ import {SummaryStep} from "@/components/QuoteRequestForm/SummaryStep";
 import {QuoteFormData} from "@/types/quotes";
 import {Sparkles} from "lucide-react";
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
-<<<<<<< HEAD
 export function QuoteRequestForm() {
-=======
 
 export function QuoteRequestForm() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const navigate = useNavigate();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
   const [isSubmitting, setIsSubmitting] = useState(false);
-=======
 import { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { useNavigate } from "react-router-dom",
@@ -51,12 +43,7 @@ export function QuoteRequestForm() {
   const { toast } = useToast(),
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service"),
   const [isSubmitting, setIsSubmitting] = useState(false),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -69,34 +56,25 @@ export function QuoteRequestForm() {
     budget: {
       amount: 0
       type: "fixed"
-<<<<<<< HEAD
     }
-=======
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     contactInfo: {
       name: ""
       email: ""
       phone: ""
       company: ""
     }
-<<<<<<< HEAD
   });
-=======
   }),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
       ...prev
       ...data
     }))
-<<<<<<< HEAD
   }
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleNext = () => {
     switch (currentStep) {
       case "service": setCurrentStep("details"),
@@ -113,12 +91,9 @@ export function QuoteRequestForm() {
       default:
         break
     }
-<<<<<<< HEAD
   }
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleBack = () => {
     switch (currentStep) {
       case "details": setCurrentStep("service"),
@@ -135,7 +110,6 @@ export function QuoteRequestForm() {
       default:
         break
     }
-<<<<<<< HEAD
   }
   const handleSubmit = async () => {
     setIsSubmitting(true);
@@ -144,7 +118,6 @@ export function QuoteRequestForm() {
       console.log("Submitting form data:", formData);
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
-=======
   },
   
   const handleSubmit = async () => {
@@ -157,7 +130,6 @@ export function QuoteRequestForm() {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500)),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast({
         title: "Quote Request Submitted"
         description: "We've received your request and will get back to you soon."})
@@ -171,12 +143,9 @@ export function QuoteRequestForm() {
     } finally {
       setIsSubmitting(false)
     }
-<<<<<<< HEAD
   }
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const renderStepContent = () => {
     switch (currentStep) {
       case "service":
@@ -191,13 +160,10 @@ export function QuoteRequestForm() {
         return <SummaryStep formData={formData} updateFormData={updateFormData} />,
       default: return null
     }
-<<<<<<< HEAD
   }
 
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-3xl mx-auto">
@@ -242,7 +208,6 @@ export function QuoteRequestForm() {
                 >
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
-<<<<<<< HEAD
               )}
             </div>
           </CardContent>
@@ -250,11 +215,7 @@ export function QuoteRequestForm() {
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { useNavigate } from "react-router-dom",;
@@ -431,10 +392,5 @@ export function QuoteRequestForm() {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

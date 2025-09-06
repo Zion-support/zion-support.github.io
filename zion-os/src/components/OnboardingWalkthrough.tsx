@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
@@ -69,7 +68,6 @@ export function OnboardingWalkthrough() {const [currentStep, setCurrentStep] = u
   const currentStepData = walkthroughSteps[currentStep];
   if (!isVisible |isCompleted) {return null;
   }
-=======
 "use client",;
 import { useState, useEffect } from "react",;
 import { useAuth } from "@/contexts/AuthContext",;
@@ -157,7 +155,6 @@ export function OnboardingWalkthrough() {;
     return null;
   }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <>;
       {/* Overlay */}
@@ -216,30 +213,24 @@ export function OnboardingWalkthrough() {;
       {currentStepData.target && (;
         <div;
           className="fixed z-30 pointer-events-none";
-<<<<<<< HEAD
           style={{top: 0;
             left: 0;
             right: 0;
-=======
           style={{;
             top: 0,;
             left: 0,;
             right: 0,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             bottom: 0}}
         >;
           <div;
             className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10";
-<<<<<<< HEAD
             style={{top: "50%";
               left: "50%";
               transform: "translate(-50%, -50%)";
-=======
             style={{;
               top: "50%",;
               left: "50%",;
               transform: "translate(-50%, -50%)",;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               width: "300px";
               height: "200px"}}
           />;
@@ -248,15 +239,12 @@ export function OnboardingWalkthrough() {;
     </>;
   );
 }
-<<<<<<< HEAD
 // Hook to add data attributes for walkthrough targeting;
 export function useWalkthroughTarget(id: string) {return {;
-=======
 ;
 // Hook to add data attributes for walkthrough targeting;
 export function useWalkthroughTarget(id: string) {;
   return {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     "data-walkthrough-target": id;
     id}
 }

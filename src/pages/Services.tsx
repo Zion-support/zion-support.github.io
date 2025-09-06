@@ -83,7 +83,7 @@ const Services: React.FC = () => {
         </div>
 
         {/* Industry Solutions */}
-        <div className="text-center">
+        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             <div className="text-center">
@@ -121,6 +121,28 @@ const Services: React.FC = () => {
                 <span className="text-2xl">🏛️</span>
               </div>
               <h3 className="text-lg font-semibold">Government</h3>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-blue-100 mb-8">Let's discuss how our services can help transform your business.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
+              >
+                Get Free Consultation
+              </Link>
+              <Link 
+                to="/pricing" 
+                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
+              >
+                View Pricing
+              </Link>
             </div>
           </div>
         </div>

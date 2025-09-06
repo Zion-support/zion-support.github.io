@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Marketplace data store utilitiesexport interface Project {
-=======
 // Marketplace data store utilitiesexport interface Project {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   summary: string;
@@ -33,12 +29,9 @@
   createdAt: string;
   updatedAt: string
 }
-<<<<<<< HEAD
 export interface Offer {
-=======
 
 export interface Offer {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   createdAtIso: string;
   clientId: string;
@@ -60,12 +53,9 @@ export interface Offer {;
   expiresAt?: string;
   notes?: string
 }
-<<<<<<< HEAD
 export interface Application {
-=======
 
 export interface Application {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   projectId: string;
   talentSlug: string;
@@ -77,12 +67,9 @@ export interface Application {;
   portfolioItems?: string[];
   notes?: string
 }
-<<<<<<< HEAD
 export interface Message {
-=======
 
 export interface Message {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   conversationId: string;
   senderId: string;
@@ -96,12 +83,9 @@ export interface Message {;
   readAtIso?: string;
   isRead: boolean
 }
-<<<<<<< HEAD
 export interface Conversation {
-=======
 
 export interface Conversation {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -336,12 +320,9 @@ export async function createProject(project: Project): Promise<Project> {
 export async function getProject(id: string): Promise<Project | null> {
   return marketplaceStore.getProject(id)
 }
-<<<<<<< HEAD
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
-=======
 
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return marketplaceStore.updateProject(id, updates);
 }
 export async function deleteProject(id: string): Promise<boolean> {
@@ -353,12 +334,9 @@ export async function createOffer(offer: Offer): Promise<Offer> {
 export async function getOffer(id: string): Promise<Offer | null> {
   return marketplaceStore.getOffer(id)
 }
-<<<<<<< HEAD
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
-=======
 
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return marketplaceStore.updateOffer(id, updates);
 }
 export async function deleteOffer(id: string): Promise<boolean> {
@@ -370,12 +348,9 @@ export async function createApplication(application: Application): Promise<Appli
 export async function getApplication(id: string): Promise<Application | null> {
   return marketplaceStore.getApplication(id)
 }
-<<<<<<< HEAD
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
-=======
 
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return marketplaceStore.updateApplication(id, updates);
 }
 export async function deleteApplication(id: string): Promise<boolean> {
@@ -387,12 +362,9 @@ export async function createMessage(message: Message): Promise<Message> {
 export async function getMessage(id: string): Promise<Message | null> {
   return marketplaceStore.getMessage(id)
 }
-<<<<<<< HEAD
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
-=======
 
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return marketplaceStore.updateMessage(id, updates);
 }
 export async function deleteMessage(id: string): Promise<boolean> {
@@ -406,7 +378,6 @@ export function createProjectData(
   additionalData?: Partial<Project>
 ): Omit<Project, 'id' | 'createdAt' | 'updatedAt'> {
   return {
-<<<<<<< HEAD
     title
     summary
     clientId
@@ -416,7 +387,6 @@ export function createProjectData(
     documents: []
     ...additionalData
   }
-=======
     title,
     summary,
     clientId,
@@ -426,7 +396,6 @@ export function createProjectData(
     documents: [],
     ...additionalData;
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function createOfferData(
   clientId: string
@@ -436,7 +405,6 @@ export function createOfferData(
   additionalData?: Partial<Offer>
 ): Omit<Offer, 'id' | 'createdAtIso'> {
   return {
-<<<<<<< HEAD
     clientId
     talentSlug
     startDateIso: new Date().toISOString()
@@ -445,7 +413,6 @@ export function createOfferData(
     status: 'SENT'
     ...additionalData
   }
-=======
     clientId,
     talentSlug,
     startDateIso: new Date().toISOString(),
@@ -454,7 +421,6 @@ export function createOfferData(
     status: 'SENT',
     ...additionalData;
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function createApplicationData(
   projectId: string
@@ -462,19 +428,16 @@ export function createApplicationData(
   additionalData?: Partial<Application>
 ): Omit<Application, 'id' | 'appliedAtIso'> {
   return {
-<<<<<<< HEAD
     projectId
     talentSlug
     status: 'PENDING'
     ...additionalData
   }
-=======
     projectId,
     talentSlug,
     status: 'PENDING',
     ...additionalData;
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function createMessageData(
   conversationId: string
@@ -484,7 +447,6 @@ export function createMessageData(
   additionalData?: Partial<Message>
 ): Omit<Message, 'id' | 'sentAtIso'> {
   return {
-<<<<<<< HEAD
     conversationId
     senderId
     recipientId
@@ -495,10 +457,7 @@ export function createMessageData(
 }
 export function generateId(prefix: string = 'item'): string {
   return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
     conversationId,
     senderId,
     recipientId,
@@ -510,8 +469,5 @@ export function generateId(prefix: string = 'item'): string {
 
 export function generateId(prefix: string = 'item'): string {;
   return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

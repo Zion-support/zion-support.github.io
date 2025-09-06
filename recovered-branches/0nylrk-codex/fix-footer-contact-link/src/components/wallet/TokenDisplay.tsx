@@ -1,20 +1,15 @@
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
 
-<<<<<<< HEAD
 import React from "react";
 import {BadgeDollarSign} from "lucide-react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Skeleton} from "@/components/ui/skeleton";
-<<<<<<< HEAD
 
 export function TokenDisplay() {
-=======
 export function TokenDisplay() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { wallet, loading } = useWallet();
-=======
 import React from "react",
 import { BadgeDollarSign } from "lucide-react",
 import { useWallet } from "@/hooks/useWallet",
@@ -23,9 +18,7 @@ import { Button } from "@/components/ui/button",
 import { Skeleton } from "@/components/ui/skeleton",
 export function TokenDisplay() {
   const { wallet, loading } = useWallet(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -53,13 +46,11 @@ export function TokenDisplay() {
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
         )}
       </CardContent>
     </Card>
   )
 }
-=======
 import React from "react",;
 import { BadgeDollarSign } from "lucide-react",;
 import { useWallet } from "@/hooks/useWallet",;
@@ -101,8 +92,3 @@ export function TokenDisplay() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 'use client';
 import { useState, useEffect } from 'react';
 import {
-<<<<<<< HEAD
   Rocket
   Clock
   CheckCircle
@@ -25,7 +23,6 @@ import {
   Pause
   StopCircle
   MapPin
-=======
   Rocket,
   Clock,
   CheckCircle,
@@ -48,7 +45,6 @@ import {
   Pause,
   StopCircle,
   MapPin,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 interface Deployment {
   id: string;
@@ -109,12 +105,9 @@ const mockDeployments: Deployment[] = [
     country: 'Singapore'
   }
 ];
-<<<<<<< HEAD
 export default function DeploymentsPage() {
-=======
 
 export default function DeploymentsPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments);
   const [filter, setFilter] = useState<
     'all' | 'pending' | 'deploying' | 'completed' | 'failed'
@@ -358,7 +351,6 @@ const getVerticalIcon = (vertical: string) => {
           >
             {label} ({count})
           </button>
-=======
 "use client",;
 import { useState, useEffect } from "react",;
 import {;
@@ -587,15 +579,9 @@ export default function DeploymentsPage() {;
           >;
             {label} ({count});
           </button>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ))}
       </div>
       {/* Deployments Grid */}
-<<<<<<< HEAD
       <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>
         {filteredDeployments.map(deployment => (
           <div
@@ -673,7 +659,6 @@ export default function DeploymentsPage() {;
                     ></div>
                   </div>
                 </div>
-=======
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">;
         {filteredDeployments.map((deployment) => (;
           <div key={deployment.id} className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
@@ -719,36 +704,27 @@ export default function DeploymentsPage() {;
                     ></div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </div>
             {/* Deployment Details */}
-<<<<<<< HEAD
             <div className='p-6 space-y-4'>
               {/* Domain & Location */}
               <div className='grid grid-cols-2 gap-4 text-sm'>
                 <div className='flex items-center gap-2 text-white/70'>
                   <Globe className='w-4 h-4' />
                   <span className='font-mono'>
-<<<<<<< HEAD
                     {deployment.domain |
                       deployment.subdomain |
                       'No domain set'}
                   </span>
                 </div>
                 {(deployment.region |deployment.country) && (
-=======
                     {deployment.domain ||
                       deployment.subdomain ||
                       'No domain set'}
                   </span>
                 </div>
                 {(deployment.region || deployment.country) && (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className='flex items-center gap-2 text-white/70'>
                     <MapPin className='w-4 h-4' />
                     <span>
@@ -760,22 +736,18 @@ export default function DeploymentsPage() {;
                 <div className="flex items-center gap-2 text-white/70">
                   <span>🌐</span>
                   <span className="font-mono">
-<<<<<<< HEAD
                     {deployment.domain |deployment.subdomain |'No domain set'}
                   </span>
                 </div>
                 {(deployment.region |deployment.country) && (
-=======
                     {deployment.domain || deployment.subdomain || 'No domain set'}
                   </span>
                 </div>
                 {(deployment.region || deployment.country) && (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className="flex items-center gap-2 text-white/70">
                     <span>📍</span>
                     <span>{deployment.region} {deployment.country}</span>
                   </div>
-=======
             <div className="p-6 space-y-4">;
               {/* Domain & Location */}
               <div className="grid grid-cols-2 gap-4 text-sm">;
@@ -790,15 +762,9 @@ export default function DeploymentsPage() {;
                     <MapPin className="w-4 h-4" />;
                     <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>;
                   </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
               </div>
               {/* Features */}
-<<<<<<< HEAD
               <div className='space-y-2'>
                 <div className='text-sm font-medium text-white/80'>
                   Active Features
@@ -824,7 +790,6 @@ export default function DeploymentsPage() {;
                     <span className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">
                       +{deployment.features.length - 4} more
                     </span>
-=======
               <div className="space-y-2">;
                 <div className="text-sm font-medium text-white/80">Active Features</div>;
                 <div className="flex flex-wrap gap-2">;
@@ -837,16 +802,10 @@ export default function DeploymentsPage() {;
                     <span className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">;
                       +{deployment.features.length - 4} more;
                     </span>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   )}
                 </div>
               </div>
               {/* Timestamps */}
-<<<<<<< HEAD
               <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>
                 <div className='flex items-center gap-1'>
                   <Calendar className='w-3 h-3' />
@@ -863,7 +822,6 @@ export default function DeploymentsPage() {;
                   <div className="flex items-center gap-1">
                     <span>🔄</span>
                   </div>
-=======
               <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">;
                 <div className="flex items-center gap-1">;
                   <Calendar className="w-3 h-3" />;
@@ -874,16 +832,10 @@ export default function DeploymentsPage() {;
                     <RefreshCw className="w-3 h-3" />;
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>;
                   </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
               </div>
             </div>
             {/* Action Buttons */}
-<<<<<<< HEAD
             <div className='p-6 pt-0'>
               <div className='flex gap-2'>
                 {deployment.status === 'pending' && (
@@ -948,7 +900,6 @@ export default function DeploymentsPage() {;
               </div>
             </div>
           </div>
-=======
             <div className="p-6 pt-0">;
               <div className="flex gap-2">;
                 {deployment.status === 'pending' && (;
@@ -991,15 +942,9 @@ export default function DeploymentsPage() {;
               </div>;
             </div>;
           </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ))}
       </div>
       {/* Empty State */}
-<<<<<<< HEAD
       {filteredDeployments.length === 0 && (
         <div className='text-center py-16'>
           <div className='w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full'>
@@ -1086,12 +1031,8 @@ export default function DeploymentsPage() {;
     </div>
   );      )}
     </div>
-<<<<<<< HEAD
   );
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       {filteredDeployments.length === 0 && (;
         <div className="text-center py-16">;
           <div className="w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full">;
@@ -1116,10 +1057,5 @@ export default function DeploymentsPage() {;
         </div>;
       )}
     </div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

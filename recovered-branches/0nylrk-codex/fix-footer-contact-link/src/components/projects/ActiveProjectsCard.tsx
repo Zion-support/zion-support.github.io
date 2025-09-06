@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {BriefcaseIcon, Clock} from "lucide-react";
@@ -13,30 +10,24 @@ import {Project} from "@/types/projects";
 export function ActiveProjectsCard() {;
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useEffect, useState } from "react",
 import { Link } from "react-router-dom",
 import { BriefcaseIcon, Clock } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
 
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
-=======
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects(),
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     if (projects && !isLoading) {
       const active = projects.filter(p =>
@@ -44,13 +35,10 @@ export function ActiveProjectsCard() {
       ).slice(0, 3), // Limit to 3 most recent projects
       setActiveProjects(active)
     }
-<<<<<<< HEAD
   }, [projects, isLoading]);
 
-=======
   }, [projects, isLoading]),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <Card>
@@ -65,8 +53,6 @@ export function ActiveProjectsCard() {
           <div className="space-y-2">
             {[1, 2].map(idx => (
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
-<<<<<<< HEAD
-=======
 import { useEffect, useState } from "react",;
 import { Link } from "react-router-dom",;
 import { BriefcaseIcon, Clock } from "lucide-react",;
@@ -100,21 +86,13 @@ export function ActiveProjectsCard() {;
           <div className="space-y-2">;
             {[1, 2].map(idx => (;
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </CardContent>
       </Card>
     )
   }
-<<<<<<< HEAD
-=======
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (activeProjects.length === 0) {
     return (
       <Card>
@@ -172,13 +150,10 @@ export function ActiveProjectsCard() {;
           </Button>
         </CardFooter>
       )}
-<<<<<<< HEAD
     </Card>
   )
 }
-=======
     </Card>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

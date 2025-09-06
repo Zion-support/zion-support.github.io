@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
  export const getStaticProps: GetStaticProps<PageProps> = async () => {
-=======
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
-=======
  export const getStaticProps: GetStaticProps<PageProps> = async () => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return {
     props: {
       docs: content as DocsContent,
@@ -30,7 +23,6 @@ type DocsContent = {
 type PageProps = {
   docs: DocsContent
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
@@ -57,10 +49,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {;
     const id = setTimeout(() => window.print(), 500);
@@ -99,18 +88,9 @@ export default function PrintDocs({ docs }: PageProps) {
         ))}
       </div>
     </div>
-<<<<<<< HEAD
 );
 }
-<<<<<<< HEAD
-=======
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

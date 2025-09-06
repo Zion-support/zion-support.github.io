@@ -1,27 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import * as React from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import {DayPicker} from "react-day-picker";
 import {cn} from "@/lib/utils";
 import {buttonVariants} from "@/components/ui/button";
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
-=======
 import * as React from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react",
 import { DayPicker } from "react-day-picker",
 import { cn } from "@/lib/utils",
 import { buttonVariants } from "@/components/ui/button",
 export type CalendarProps = React.ComponentProps<typeof DayPicker>,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function Calendar({
   className,
   classNames,
@@ -39,7 +29,6 @@ function Calendar({
         caption_label: "text-sm font-medium"
         nav: "space-x-1 flex items-center"
         nav_button: cn(
-<<<<<<< HEAD
           buttonVariants({ variant: "outline" })
           "h-7 w-7 bg-transparent p-0 opacity-50 hover: opacity-100"
         )
@@ -64,7 +53,6 @@ function Calendar({
         ...classNames}}
       components={{
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />
-=======
           buttonVariants({ variant: "outline" }),
           "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
         ),
@@ -94,11 +82,6 @@ function Calendar({
       components={{
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import * as React from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
 import { DayPicker } from "react-day-picker",;
@@ -150,28 +133,16 @@ function Calendar({;
         ...classNames}}
       components={{;
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {...props}
     />
   )
 }
-<<<<<<< HEAD
 Calendar.displayName = "Calendar";
 export { Calendar }
 
-=======
 Calendar.displayName = "Calendar",
 
 export { Calendar },
 Calendar.displayName = "Calendar";
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export { Calendar };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

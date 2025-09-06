@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge";
-=======
 
         .order('createdAt', { ascending: false }),
 
@@ -17,15 +14,11 @@ import { Badge } from "@/components/ui/badge";
           .from('model_versions')
           .update({ active: false })
           .eq('purpose', purpose)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
 import { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
 import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig  } from '@/utils/zion-gpt';
@@ -33,8 +26,6 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -47,9 +38,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',;
 interface ModelVersionData extends ModelConfig {;
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',;
   errorMessage?: string;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-<<<<<<< HEAD
 
 
         .order('createdAt', { ascending: false })
@@ -61,7 +50,6 @@ interface ModelVersionData extends ModelConfig {;
           .from('model_versions')
           .update({ active: false })
           .eq('purpose', purpose)
-=======
 ;
 export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]),;
@@ -136,8 +124,6 @@ export function ZionGPTModelManager() {;
           .from('model_versions');
           .update({ active: false });
           .eq('purpose', purpose);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       // Update this model
       await supabase
@@ -149,11 +135,8 @@ export function ZionGPTModelManager() {;
     } catch (error) {
       logErrorToProduction('Error toggling model active state:', { data: error })
     }
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card className="w-full">
@@ -207,31 +190,22 @@ export function ZionGPTModelManager() {;
                   </TableCell>
                   <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
-<<<<<<< HEAD
                     {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
                       <Button
                         variant="ghost"
                         size="sm"
                         onClick = {(,) => checkTrainingStatus(model.id),}
                         disabled = {activeJobs[model.id],}
-=======
                     {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
                       <Button
                         variant="ghost"
                         size="sm"
-<<<<<<< HEAD
                         onClick={() => checkTrainingStatus(model.id)}
                         disabled={activeJobs[model.id]}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
                         onClick = {(,) => checkTrainingStatus(model.id),}
                         disabled = {activeJobs[model.id],}
-=======
                         onClick={() => checkTrainingStatus(model.id)}
                         disabled={activeJobs[model.id]}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
@@ -242,19 +216,12 @@ export function ZionGPTModelManager() {;
                       </Button>
                     ) : model.trainingStatus === 'succeeded' ? (
                       <Button
-<<<<<<< HEAD
                         variant = {model.active ? "outline" : "default",}
                         size="sm"
                         onClick = {(,) => toggleModelActive(model.id, model.active, model.purpose),}
-=======
                         variant={model.active ? "outline" : "default"}
                         size="sm"
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         {model.active ? (
                           <>
@@ -271,33 +238,18 @@ export function ZionGPTModelManager() {;
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
-<<<<<<< HEAD
-<<<<<<< HEAD
                         title = {model.errorMessage |"Training failed",}
-=======
                         title={model.errorMessage || "Training failed"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                         title = {model.errorMessage || "Training failed",}
-=======
                         title={model.errorMessage || "Training failed"}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
-<<<<<<< HEAD
                   </TableCell>
                 </TableRow>
-=======
                   </TableCell>;
                 </TableRow>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </TableBody>
           </Table>
@@ -306,18 +258,6 @@ export function ZionGPTModelManager() {;
     </Card>
   )
 }
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+main

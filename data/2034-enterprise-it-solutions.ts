@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export type EnterpriseITSolution = {
-=======
 export type EnterpriseITSolution = {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline?: string;
@@ -19,11 +15,8 @@ export type EnterpriseITSolution = {;
     starter: string; // e.g. "$2,999/mo"
     professional?: string;
     enterprise?: string;
-<<<<<<< HEAD
   }
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   features: string[];
   integrations?: string[];
   useCases?: string[];
@@ -31,7 +24,6 @@ export type EnterpriseITSolution = {;
   realService?: boolean;
   rating?: number;
   launchDate?: string;
-<<<<<<< HEAD
 }
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
   {
@@ -191,7 +183,6 @@ rating: 4.8
 }
 link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub';
 realService: true
-=======
 };
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
@@ -352,44 +343,33 @@ rating: 4.8
 };
 link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub';
 realService: true 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }];	id: string;
 	name: string;
 	tagline?: string;
 	description: string;
-<<<<<<< HEAD
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export type EnterpriseITSolution = {
 	id: string,
 	name: string,
 	tagline?: string,
 	description: string,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 	pricing: {
 		starter: string, // e.g. "$2,999/mo"
 		professional?: string,
 		enterprise?: string
-<<<<<<< HEAD
 	}
 	features: string[];
 	integrations?: string[];
 	useCases?: string[]
-=======
 	},
 	features: string[],
 	integrations?: string[],
 	useCases?: string[],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 	link: string, // canonical internal link under /services/*
 	realService?: boolean,
 	rating?: number,
 	launchDate?: string
-<<<<<<< HEAD
 }
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
 	{
@@ -493,19 +473,15 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 	}
 ];
 
-=======
 },
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
-<<<<<<< HEAD
 	{;
 		id: 'zero-trust-network-architecture';
 		name: 'Zero Trust Network Architecture';
-=======
 	{
 		id: 'zero-trust-network-architecture',
 		name: 'Zero Trust Network Architecture',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 		tagline: 'Identity-first perimeterless security for modern enterprises',
 		description: 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.',
 		category: 'Enterprise Security',
@@ -601,11 +577,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		useCases: ['Audit readinessInsider risk reduction'],
 		link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
 		realService: true
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export type EnterpriseITSolution = {;
 	id: string,;
 	name: string,;
@@ -724,10 +695,5 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		useCases: ['Audit readinessInsider risk reduction'],;
 		link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',;
 		realService: true;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

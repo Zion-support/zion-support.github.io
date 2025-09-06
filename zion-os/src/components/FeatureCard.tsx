@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -32,7 +31,6 @@ export function FeatureCard({title;
       } ${colorClasses[color as keyof typeof colorClasses]}`}
       onClick={onClick}
       onKeyDown={(e) => {if (e.key === 'Enter' |e.key === ' ') {;
-=======
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -72,7 +70,6 @@ export function FeatureCard({;
       onClick={onClick}
       onKeyDown={(e) => {;
         if (e.key === 'Enter' || e.key === ' ') {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           e.preventDefault();
           onClick();
         }

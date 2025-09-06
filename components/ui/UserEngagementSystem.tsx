@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
-<<<<<<< HEAD
 export type EmptyStateProps = {;
-=======
 export type EmptyStateProps = {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   emoji?: string;
   title: string;
   message: string;
@@ -28,14 +22,8 @@ export default function EmptyState({
       <h2 className="mt-4 text-lg font-semibold">{title}</h2>
       <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{message}</p>
       {action && <div className="mt-3">{action}</div>}
-<<<<<<< HEAD
     </div>;
-=======
     </div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

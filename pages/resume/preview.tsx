@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) )
 }</select> </>)
-=======
 > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) ) 
 }</select> </>) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> </div> <PdfExportButton targetRef= {
   targetRef
 }fileName= {
@@ -22,29 +18,22 @@
   email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com'
 }
 export default function ResumePreviewPage({
-<<<<<<< HEAD
   initialData
   versions = []
 }: ResumePreviewPageProps) {
-=======
   initialData,
   versions = [],
 }: ResumePreviewPageProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [selectedVersionId, setSelectedVersionId] = useState<string>(
     versions[0]?.id |'current'
   );  const targetRef = useRef<HTMLDivElement>(null);
-<<<<<<< HEAD
   const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData;
     const found = versions.find(v => v.id === selectedVersionId);
     return found?.data |initialData;
   }, [selectedVersionId, initialData, versions]);
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { GetServerSideProps } from 'next',
 import React, { useMemo, useRef, useState } from 'react',
 import PdfExportButton from '../../components/ui/PdfExportButton',
@@ -58,16 +47,11 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
   const [selectedVersionId, setSelectedVersionId] = useState<string>(versions[0]?.id || 'current'),
   const targetRef = useRef<HTMLDivElement>(null),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData,
     const found = versions.find(v => v.id === selectedVersionId),
     return found?.data || initialData
   }, [selectedVersionId, initialData, versions]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="relative">
       <div className="flex items-center justify-between mb-4">
@@ -86,18 +70,11 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
 }
             className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
           >
-<<<<<<< HEAD
             <option value='light'>Light</option>
             <option value='dark'>Dark</option>          </select>
-=======
             <option value="light">Light</option>
             <option value="dark">Dark</option>
           </select>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {versions.length > 0 && (
             <>
               <label className="text-sm ml-4">Version</label>
@@ -116,14 +93,12 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
               >
                 <option value="current">Current</option>
                 {versions.map(v => (
-<<<<<<< HEAD
                   <option value={v.id} key={v.id}>
                     {v.label}
                   </option>                ))}
               </select>
             </>
           )}
-<<<<<<< HEAD
         </div>
       </div>
       <PdfExportButton
@@ -205,7 +180,6 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
 return { props: { initialData, versions } }
 }
 
-=======
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -219,8 +193,6 @@ return { props: { initialData, versions } }
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       </div>
       <PdfExportButton
@@ -231,8 +203,6 @@ return { props: { initialData, versions } }
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
-<<<<<<< HEAD
-=======
   );
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
@@ -310,7 +280,6 @@ return { props: { initialData, versions } };
 };
 
 }
-=======
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -331,7 +300,6 @@ return { props: { initialData, versions } };
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
   } catch (error) {
     console.error("Error:", error);
@@ -387,8 +355,3 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   }
 }
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

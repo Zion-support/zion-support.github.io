@@ -1,8 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
-=======
 import {useState} from 'react';
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -20,10 +17,7 @@ import {format} from "date-fns";
 import {CalendarIcon, Loader2} from "lucide-react";
 import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButton";
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from 'react',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
 import { z } from "zod",
@@ -38,24 +32,16 @@ import { cn } from "@/lib/utils",
 import { Switch } from "@/components/ui/switch",
 import { format } from "date-fns",
 import { CalendarIcon, Loader2 } from "lucide-react",
-<<<<<<< HEAD
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
-=======
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Define form schema
 
 const formSchema = z.object({
   company_name: z.string().min(1, "Company name is required"),
   role_title: z.string().min(1, "Role title is required"),
   start_date: z.date({
-<<<<<<< HEAD
     required_error: "Start date is required"})
   end_date: z.date().optional()
   is_current: z.boolean().default(false)
@@ -65,7 +51,6 @@ type FormValues = z.infer<typeof formSchema>;
 interface WorkExperienceItemFormProps {
   initialData?: WorkExperience;
   onSubmit: (data: WorkExperience) => Promise<void>
-=======
     required_error: "Start date is required"}),
   end_date: z.date().optional(),
   is_current: z.boolean().default(false),
@@ -77,34 +62,23 @@ type FormValues = z.infer<typeof formSchema>,
 interface WorkExperienceItemFormProps {
   initialData?: WorkExperience,
   onSubmit: (data: WorkExperience) => Promise<void>,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onCancel: () => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function WorkExperienceItemForm({;
   initialData;
   onSubmit;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function WorkExperienceItemForm({
   initialData,
   onSubmit,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onCancel}: WorkExperienceItemFormProps) {
-<<<<<<< HEAD
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
-=======
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
-<<<<<<< HEAD
       company_name: initialData?.company_name |""
       role_title: initialData?.role_title |""
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date()
@@ -116,7 +90,6 @@ export function WorkExperienceItemForm({
   const watchIsCurrent = form.watch("is_current");
   const watchRoleTitle = form.watch("role_title");
   const watchCompanyName = form.watch("company_name");
-=======
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
@@ -130,7 +103,6 @@ export function WorkExperienceItemForm({
   const watchRoleTitle = form.watch("role_title"),
   const watchCompanyName = form.watch("company_name"),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleFormSubmit = async (values: FormValues) => {
     // Create a properly typed WorkExperience object with all required fields
     const workExperience: WorkExperience = {
@@ -142,26 +114,20 @@ export function WorkExperienceItemForm({
       is_current: values.is_current,      // Required
       description: values.description,    // Optional
       location: values.location,          // Optional
-<<<<<<< HEAD
     }
     await onSubmit(workExperience)
   }
-=======
     },
     
     await onSubmit(workExperience)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleAIEnhancement = (content: string) => {
     form.setValue("description", content, { shouldDirty: true })
     setIsEnhancementDialogOpen(false)
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Form {...form}>
@@ -178,8 +144,6 @@ export function WorkExperienceItemForm({
                   </FormControl>
                   <FormMessage />
                 </FormItem>
-<<<<<<< HEAD
-=======
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -268,11 +232,6 @@ export function WorkExperienceItemForm({;
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             />
             <FormField
@@ -302,17 +261,10 @@ export function WorkExperienceItemForm({;
                   <FormMessage />
                 </FormItem>
               )}
-<<<<<<< HEAD
             />
             <FormField
-=======
             />;
             <FormField;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               control={form.control}
               name="is_current"
               render={({ field }) => (
@@ -490,9 +442,6 @@ export function WorkExperienceItemForm({;
       />
     </>
   )
-<<<<<<< HEAD
 }
-=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -31,13 +31,11 @@ const ContentCard: React.FC<ContentCardProps> = ({
           <span className='text-2xl'>{icon}</span>
         </div>
         {category && (
-<<<<<<< HEAD
           <span className='px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20'>            {category}          <span className="px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20">
             {category}
           </span>
         )}
       </div>
-=======
           <span className='px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20'>            {category}
 
             {category}
@@ -46,11 +44,6 @@ const ContentCard: React.FC<ContentCardProps> = ({
         )}
       </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Content */}
       <h3 className='text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2'>
         {title}
@@ -63,7 +56,6 @@ const ContentCard: React.FC<ContentCardProps> = ({
           Read More
           <span className='ml-2 group-hover:translate-x-1 transition-transform duration-300'>
             →
-<<<<<<< HEAD
           </span>      <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
         {title}
       </h3>
@@ -95,11 +87,7 @@ export default ContentCard;    </Link>
   )
 }
 export default ContentCard;
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           </span>
 
         {description}
@@ -111,8 +99,3 @@ export default ContentCard;
       </div>
 
       {/* Hover Effects */}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

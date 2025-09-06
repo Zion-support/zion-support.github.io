@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface Service {id: string;
   name: string;
   category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics';
@@ -336,7 +335,6 @@ export const getServiceById = (id: string) => {return services.find(service => s
 }
 export const getCategories = () => {return Array.from(new Set(services.map(service => service.category)));
 }
-=======
 export interface Service {;
   id: string,;
   name: string,;
@@ -702,4 +700,3 @@ export const getServiceById = (id: string) => {;
 export const getCategories = () => {;
   return Array.from(new Set(services.map(service => service.category)));
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

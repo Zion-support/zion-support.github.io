@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface Attachment {
-=======
 export interface Attachment {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   filename: string;
   originalName: string;
@@ -16,12 +11,9 @@ export interface Attachment {;
 
   uploadedBy: string
 }
-<<<<<<< HEAD
 export interface SupportTicket {
-=======
 
 export interface SupportTicket {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   description: string;
@@ -41,12 +33,9 @@ export interface SupportTicket {;
   firstResponseTime?: number, // in minutes
   resolutionTime?: number, // in hours
 }
-<<<<<<< HEAD
 export interface TicketMessage {
-=======
 
 export interface TicketMessage {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   content: string;
   senderType: 'customer' | 'agent' | 'system';
@@ -57,12 +46,9 @@ export interface TicketMessage {;
 
   attachments: Attachment[]
 }
-<<<<<<< HEAD
 export interface Customer {
-=======
 
 export interface Customer {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   email: string;
@@ -77,12 +63,9 @@ export interface Customer {;
 
   createdAt: Date
 }
-<<<<<<< HEAD
 export interface SupportAgent {
-=======
 
 export interface SupportAgent {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   email: string;
@@ -94,7 +77,6 @@ export interface SupportAgent {;
   maxTickets: number
 
   performance: AgentPerformance
-<<<<<<< HEAD
 }
 export interface AgentPerformance {
 
@@ -298,7 +280,6 @@ class AICustomerSupportService {
         notHelpful: 12;
         lastUpdated: new Date('2025-01-05')
         createdBy: 'agent_001'
-=======
 export interface Attachment {;
   id: string,;
   filename: string,;
@@ -363,8 +344,6 @@ export interface SupportAgent {;
   currentTickets: number,;
   maxTickets: number,;
   performance: AgentPerformance;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 export interface AgentPerformance {;
@@ -374,8 +353,6 @@ export interface AgentPerformance {;
   firstResponseTime: number, // in minutes;
   escalationRate: number, // percentage;
 }
-<<<<<<< HEAD
-=======
 
 export interface ChatbotSession {;
   id: string;
@@ -567,7 +544,6 @@ class AICustomerSupportService {
         notHelpful: 12;
         lastUpdated: new Date('2025-01-05'),
         createdBy: 'agent_001'
-=======
   id: string,;
   filename: string,;
   originalName: string,;
@@ -640,7 +616,6 @@ export interface AgentPerformance {;
   firstResponseTime: number, // in minutes;
   escalationRate: number, // percentage;
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 export interface ChatbotSession {;
   id: string,;
@@ -828,19 +803,10 @@ class AICustomerSupportService {;
         notHelpful: 12,;
         lastUpdated: new Date('2025-01-05'),;
         createdBy: 'agent_001';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     ]
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
     const ticket: SupportTicket = {
       id: `ticket_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -873,7 +839,6 @@ class AICustomerSupportService {;
         ticket.resolvedAt = new Date()
         if (ticket.createdAt && ticket.resolvedAt) {
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
-=======
 ;
   async createTicket(ticketData: Omit<SupportTicket 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {;
     const ticket: SupportTicket = {;
@@ -909,21 +874,12 @@ class AICustomerSupportService {;
         ticket.resolvedAt = new Date(),;
         if (ticket.createdAt && ticket.resolvedAt) {;
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
       this.updateAnalytics()
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
     const ticket = this.tickets.find(t => t.id === ticketId);
     if (!ticket) {
@@ -975,7 +931,6 @@ class AICustomerSupportService {;
       const intent = this.detectIntent(message.content);
       session.intent = intent.intent;
       session.confidence = intent.confidence
-=======
 ;
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage 'id' | 'createdAt'>): Promise<TicketMessage> {;
     const ticket = this.tickets.find(t => t.id === ticketId),;
@@ -1033,36 +988,21 @@ class AICustomerSupportService {;
       const intent = this.detectIntent(message.content),;
       session.intent = intent.intent,;
       session.confidence = intent.confidence;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return message
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
     if (lowerMessage.includes('login') |lowerMessage.includes('password')) {
-=======
 
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
     
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
   private detectIntent(message: string): { intent: string, confidence: number } {;
     const lowerMessage = message.toLowerCase(),;
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
@@ -1074,11 +1014,7 @@ class AICustomerSupportService {;
       return { intent: 'general_inquiry', confidence: 0.6 }
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
     const session = this.chatbotSessions.find(s => s.id === sessionId);
     if (session) {
@@ -1101,7 +1037,6 @@ class AICustomerSupportService {;
     }
     this.knowledgeBase.push(article);
     return article
-=======
 ;
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {;
     const session = this.chatbotSessions.find(s => s.id === sessionId),;
@@ -1126,11 +1061,6 @@ class AICustomerSupportService {;
     },;
     this.knowledgeBase.push(article),;
     return article;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
     const lowerQuery = query.toLowerCase()
@@ -1140,11 +1070,7 @@ class AICustomerSupportService {;
       article.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
     ).sort((a, b) => b.views - a.views)
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   async getAIRecommendations(): Promise<AIRecommendation[]> {
     const recommendations: AIRecommendation[] = [];
     // Ticket prioritization recommendation
@@ -1191,7 +1117,6 @@ class AICustomerSupportService {;
           'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles'
         ]
       })
-=======
 ;
   async getAIRecommendations(): Promise<AIRecommendation[]> {;
     const recommendations: AIRecommendation[] = [],;
@@ -1241,19 +1166,10 @@ class AICustomerSupportService {;
           'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles';
         ];
       });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return recommendations
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   private updateAnalytics(): void {
     const totalTickets = this.tickets.length;
     const openTickets = this.tickets.filter(t => ['openin_progresswaiting_customer'].includes(t.status)).length;
@@ -1300,7 +1216,6 @@ class AICustomerSupportService {;
       chatbotResolutionRate;
       topCategories;
       agentPerformance
-=======
 ;
   private updateAnalytics(): void {;
     const totalTickets = this.tickets.length,;
@@ -1348,11 +1263,6 @@ class AICustomerSupportService {;
       chatbotResolutionRate,;
       topCategories,;
       agentPerformance;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
   async getTicket(ticketId: string): Promise<SupportTicket | null> {
@@ -1383,17 +1293,9 @@ class AICustomerSupportService {;
     return this.analytics
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export const aiCustomerSupportService = new AICustomerSupportService();
-
-=======
 ;
 export const aiCustomerSupportService = new AICustomerSupportService();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+;
+export const aiCustomerSupportService = new AICustomerSupportService();

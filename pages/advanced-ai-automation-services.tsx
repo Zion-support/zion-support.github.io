@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
 import Head from 'next/head',
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
@@ -165,7 +159,6 @@ const testimonials = [
     avatar: '👨‍🔒'
   },];
 
-=======
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
@@ -178,10 +171,6 @@ import {
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -237,9 +226,6 @@ const serviceCategories = [
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Data Management'),
     icon: Database,
     color: 'from-cyan-500 to-blue-600',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     features: [
       'Pipeline Management',
       'Quality Assurance',
@@ -304,8 +290,6 @@ const testimonials = [
     avatar: '👨‍🔒',
   },];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     features: ['Pipeline ManagementQuality AssuranceGovernance Automation']
 import React from 'react';
 import Head from 'next/head';
@@ -443,11 +427,6 @@ const testimonials = [;
   }
 }
 ],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AdvancedAIAutomationServices() {
   return (
     <Layout>
@@ -461,7 +440,6 @@ export default function AdvancedAIAutomationServices() {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/advanced-ai-automation-services" />
       </Head>
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20'></div>
@@ -469,7 +447,6 @@ export default function AdvancedAIAutomationServices() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -494,11 +471,6 @@ export default function AdvancedAIAutomationServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Advanced AI Automation Services
@@ -509,13 +481,11 @@ export default function AdvancedAIAutomationServices() {
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
                 <motion.div
-<<<<<<< HEAD
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30'
-=======
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -537,11 +507,6 @@ export default function AdvancedAIAutomationServices() {
   }
 }
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   {stat.icon  } catch (error) {
     console.error("Error:", error);
@@ -569,7 +534,6 @@ export default function AdvancedAIAutomationServices() {
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -578,7 +542,6 @@ export default function AdvancedAIAutomationServices() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-=======
       </section>
       {/* Features Section */  } catch (error) {
     console.error("Error:", error);
@@ -609,16 +572,10 @@ export default function AdvancedAIAutomationServices() {
   }
 }
             className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our AI Automation Services?
             </h2>
-<<<<<<< HEAD
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI automation services provide unprecedented efficiency
               accuracy, and cost savings across all aspects of technology
@@ -633,27 +590,21 @@ export default function AdvancedAIAutomationServices() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='relative group'
-=======
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI automation services provide unprecedented efficiency, accuracy, and cost savings across all aspects of technology operations
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
               <motion.div
-<<<<<<< HEAD
-=======
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='relative group'
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {heroFeatures.map((feature, index) => (
               <motion.div
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -680,11 +631,6 @@ export default function AdvancedAIAutomationServices() {
   }
 }
                 className="relative group"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -698,7 +644,6 @@ export default function AdvancedAIAutomationServices() {
                   </div>
                 </div>
               </motion.div>
-<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -710,7 +655,6 @@ export default function AdvancedAIAutomationServices() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -748,11 +692,6 @@ export default function AdvancedAIAutomationServices() {
   }
 }
             className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               AI Automation Service Categories
@@ -761,7 +700,6 @@ export default function AdvancedAIAutomationServices() {
               Comprehensive AI automation solutions covering every aspect of modern technology operations
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
@@ -770,7 +708,6 @@ export default function AdvancedAIAutomationServices() {
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
                 className='relative'
-=======
           <div className="space-y-16">
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
@@ -800,11 +737,6 @@ export default function AdvancedAIAutomationServices() {
   }
 }
                 className="relative"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -813,7 +745,6 @@ export default function AdvancedAIAutomationServices() {
                   <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
-<<<<<<< HEAD
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
@@ -822,7 +753,6 @@ export default function AdvancedAIAutomationServices() {
                       transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
                       className='relative group'
-=======
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
@@ -852,11 +782,6 @@ export default function AdvancedAIAutomationServices() {
   }
 }
                       className="relative group"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -878,7 +803,6 @@ export default function AdvancedAIAutomationServices() {
                             <span className="text-2xl font-bold text-white">{service.price}</span>
                             <span className="text-gray-400">{service.period}</span>
                           </div>
-<<<<<<< HEAD
                           <p className='text-gray-300 text-sm mb-4'>
                             {service.description}
                           </p>
@@ -894,7 +818,6 @@ export default function AdvancedAIAutomationServices() {
                                   {feature}
                                 </div>
                               ))}
-=======
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                           <div className="space-y-2 mb-6">
                             {service.features.slice(0, 3).map((feature, featureIndex) => (
@@ -911,11 +834,6 @@ export default function AdvancedAIAutomationServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
@@ -943,7 +861,6 @@ export default function AdvancedAIAutomationServices() {
                         </div>
                       </div>
                     </motion.div>
-<<<<<<< HEAD
                   ))}
                 </div>
               </motion.div>
@@ -959,7 +876,6 @@ export default function AdvancedAIAutomationServices() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-=======
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1004,11 +920,6 @@ export default function AdvancedAIAutomationServices() {
   }
 }
             className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -1017,7 +928,6 @@ export default function AdvancedAIAutomationServices() {
               Real feedback from organizations that have transformed their operations with our AI automation services
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -1026,7 +936,6 @@ export default function AdvancedAIAutomationServices() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20'
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -1056,11 +965,6 @@ export default function AdvancedAIAutomationServices() {
   }
 }
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -1074,7 +978,6 @@ export default function AdvancedAIAutomationServices() {
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
                       <Star key={i} className='w-4 h-4 fill-current' />                    ))}
                   </div>
                 </div>
@@ -1090,7 +993,6 @@ export default function AdvancedAIAutomationServices() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))  } catch (error) {
     console.error("Error:", error);
@@ -1136,11 +1038,6 @@ export default function AdvancedAIAutomationServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Operations with AI Automation?
@@ -1157,13 +1054,11 @@ export default function AdvancedAIAutomationServices() {
 }
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
               >
-<<<<<<< HEAD
                 <Phone className='mr-2 w-5 h-5' />                Call Now: {contactInfo.mobile}
               </Link>
               <Link
                 href={`mailto:${contactInfo.email}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300'
-=======
                 <Phone className="mr-2 w-5 h-5" />
                 Call Now: {contactInfo.mobile  } catch (error) {
     console.error("Error:", error);
@@ -1178,11 +1073,6 @@ export default function AdvancedAIAutomationServices() {
   }
 }
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -1195,28 +1085,16 @@ export default function AdvancedAIAutomationServices() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
     </Layout>
-<<<<<<< HEAD
 );
-=======
-=======
-<<<<<<< HEAD
     </Layout>;
 );
 
 }
-=======
     </Layout>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

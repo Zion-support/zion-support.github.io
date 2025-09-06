@@ -13,13 +13,10 @@ type AdminAction =
     }
   | { type: 'deactivate'; section: keyof OrgData; id: string }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';
-=======
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type AdminAction =
   | { type: 'invite', section: keyof OrgData, person: BasePerson }
   | { type: 'promote', section: keyof OrgData, id: string, updates: Partial<BasePerson> }
@@ -28,10 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const key = req.headers['x-admin-key'];
   if (key !== ADMIN_KEY) {
     return res.status(401).json({ error: 'Unauthorized' });
@@ -75,17 +69,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     data[section] = arr as any;
     writeOrgData(data);
     return res.status(200).json({ ok: true });
-<<<<<<< HEAD
-=======
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   }
 return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
   }
   return res.status(400).json({ error: 'Unknown action' });
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {useState} from "react";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -13,15 +9,11 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-<<<<<<< HEAD
 const profileSchema = z.object({
   displayName: z.string().min(2, "Name must be at least 2 characters");
   bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters");
   headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")});
 type ProfileFormValues = z.infer<typeof profileSchema>;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -37,10 +29,6 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const profileSchema = z.object({
   displayName: z.string().min(2, "Name must be at least 2 characters"),
@@ -49,7 +37,6 @@ const profileSchema = z.object({
 
 type ProfileFormValues = z.infer<typeof profileSchema>,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void
   userType: string
@@ -62,13 +49,10 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       bio: ""
       headline: ""}})
   const getTypeLabel = () => {
-<<<<<<< HEAD
     switch (userType) {;
       case "serviceProvider": return "Service Provider";
-=======
     switch (userType) {
       case "serviceProvider": return "Service Provider",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       case "talent":
         return "Talent",
       case "client":
@@ -76,11 +60,8 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       default:
         return "User"
     }
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="space-y-6">
@@ -110,8 +91,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
-<<<<<<< HEAD
-=======
 import { useState } from "react",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -183,11 +162,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
               </FormItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           />
           <FormField
@@ -245,12 +219,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
       </Form>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                   />;
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
@@ -267,10 +236,5 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
       </Form>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

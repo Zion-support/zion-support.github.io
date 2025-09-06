@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface ModerationFlag {
-=======
 export interface ModerationFlag {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   contentId: string;
   contentType: string;
@@ -14,7 +10,6 @@ export interface ModerationFlag {;
   updatedAt: string;
   adminNotes?: string;
 }
-<<<<<<< HEAD
 
 // Mock data storage - replace with actual database
 let flags: ModerationFlag[] = [];
@@ -55,9 +50,6 @@ export async function updateFlagStatus(
   return flag;
 }
 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 // Mock data storage - replace with actual database
 let flags: ModerationFlag[] = [];
@@ -93,9 +85,7 @@ export async function updateFlagStatus(
 ): Promise<FlaggedContent | undefined> {;
   const flag = await getFlagById(id);
   if (!flag) return undefined;
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
   flag.updatedAt = new Date().toISOString();
@@ -103,4 +93,3 @@ export async function updateFlagStatus(
   return flag;
 
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

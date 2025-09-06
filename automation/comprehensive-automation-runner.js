@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 import fs from "fs";
 import path from "path";
-<<<<<<< HEAD
 import {execSync, spawn} from "child_process";
 import {fileURLToPath} from "url";
 const __filename = fileURLToPath(import.meta.url);
@@ -24,7 +23,6 @@ class ComprehensiveAutomationRunner {constructor() {; this.logFile = path.join(_
 // Main execution;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const runner = new ComprehensiveAutomationRunner(); runner.runAll().catch(console.error)}
 export default ComprehensiveAutomationRunner;
-=======
 import { execSync, spawn } from "child_process";
 import { fileURLToPath } from "url";
 ;
@@ -74,11 +72,6 @@ class ComprehensiveAutomationRunner {; constructor() {; this.logFile = path.join
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const runner = new ComprehensiveAutomationRunner(); runner.runAll().catch(console.error)};
 ;
 export default ComprehensiveAutomationRunner;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 #!/usr/bin/env node,
@@ -531,8 +524,3 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ,;
 export default ComprehensiveAutomationRunner;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

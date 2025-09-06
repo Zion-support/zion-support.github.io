@@ -1,20 +1,15 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
 import { mutate  } from 'swr';
 import { Button  } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
-=======
-<<<<<<< HEAD
 import React from 'react'
 import {ErrorBoundary, FallbackProps} from 'react-error-boundary'
 import * as Sentry from '@sentry/nextjs'
 import { mutate } from 'swr'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { RefreshCcw, AlertCircle } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface MarketplaceErrorFallbackProps extends FallbackProps {
@@ -66,11 +61,7 @@ function MarketplaceErrorFallback({
           </Button>
         </div>            variant="outline"
             className="w-full"
-=======
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {ErrorBoundary, FallbackProps} from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
 import { mutate } from 'swr';
@@ -116,11 +107,6 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
           </Button>
           
           <Button 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             onClick={() => window.location.reload()}
             variant="outline"
             className="w-full"
@@ -128,46 +114,31 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
             Reload Page
           </Button>
         </div>
-<<<<<<< HEAD
         <div className='text-center text-sm text-muted-foreground'>
           If the problem persists, please{' '}
           <a
             href='mailto:support@example.com'
             className='text-primary hover:underline'          >
-<<<<<<< HEAD
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a
             href="mailto: support@example.com"
             className="text-primary hover:underline"
-=======
         
-=======
-=======
         
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a 
             href="mailto: support@example.com" 
             className="text-primary hover:underline"
-<<<<<<< HEAD
           >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
           >
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             contact support
           </Link>
         </div>
       </div>
     </div>
   )
-<<<<<<< HEAD
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode
 export function MarketplaceErrorBoundary({
@@ -192,7 +163,6 @@ export function MarketplaceErrorBoundary({
     </ErrorBoundary>
   )
 }   return (
-<<<<<<< HEAD
     <ErrorBoundary
 
       FallbackComponent={MarketplaceErrorFallback}
@@ -202,10 +172,7 @@ export function MarketplaceErrorBoundary({
     </ErrorBoundary>
   )
 }
-=======
     <ErrorBoundary 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   },;
   return (;
     <div className="flex items-center justify-center min-h-[400px] p-6">;
@@ -266,7 +233,6 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
   };
   return (;
     <ErrorBoundary;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}
     >
@@ -274,13 +240,6 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
     </ErrorBoundary>;
   );
 } ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 }
 }
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

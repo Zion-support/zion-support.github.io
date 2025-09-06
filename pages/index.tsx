@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> origin/main
+origin/main
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -45,7 +39,6 @@ export default function Home() {
 
         {/* Features Section */}
         <section className="py-20 bg-slate-900/50">
-=======
 import Link from 'next/link',
 import Head from 'next/head';
 import { useState, useEffect, Suspense  } from 'react';
@@ -53,9 +46,6 @@ import { ContactInfo, AnimationState  } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary',
 import LoadingSpinner from '../components/LoadingSpinner';
 // import PerformanceMonitor from '../components/PerformanceMonitor';
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Link from 'next/link';
 import Head from 'next/head';
 import {useState, useEffect, Suspense} from 'react';
@@ -63,27 +53,21 @@ import {ContactInfo, AnimationState} from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
 
     isLoaded: false
     hasError: false
-=======
-=======
 import React, { useState, useEffect, Suspense } from 'react';
 import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState, Service } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   });
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -104,16 +88,10 @@ export default function Home() {
           </button>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     )
   }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ),
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <>;
       <Head>;
@@ -140,7 +118,6 @@ export default function Home() {
         <meta name="twitter:creator" content="@ziontechgroup" />;
         <script;
           type="application/ld+json";
-<<<<<<< HEAD
           dangerouslySetInnerHTML={{__html:JSON.stringify({;
               "@context":"https://schema.org";
               "@type":"Organization";
@@ -160,7 +137,6 @@ export default function Home() {
                 "contactType":"customer service";
                 "email":contact.email;
               }
-=======
           dangerouslySetInnerHTML={{;
             __html:JSON.stringify({;
               "@context":"https://schema.org",;
@@ -183,7 +159,6 @@ export default function Home() {
                 "contactType":"customer service",;
                 "email":contact.email;
               },;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               "sameAs":[contact.site];
             });
           }}
@@ -262,11 +237,8 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-colors">;
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">Micro SaaS Products</h3>;
                 <p className="text-slate-300 mb-6">;
-<<<<<<< HEAD
                   Innovative, focused software solutions including AI-Powered Video Clip Maker;
-=======
                   Innovative, focused software solutions including AI-Powered Video Clip Maker, ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.;
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
@@ -283,11 +255,8 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">;
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>;
                 <p className="text-slate-300 mb-6">;
-<<<<<<< HEAD
                   Advanced artificial intelligence solutions including autonomous AI agents;
-=======
                   Advanced artificial intelligence solutions including autonomous AI agents, ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   financial trading systems, legal document analysis, and 40+ more AI-powered services.;
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
@@ -304,11 +273,8 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">;
                 <h3 className="text-2xl font-bold mb-4 text-green-400">IT & Cloud Services</h3>;
                 <p className="text-slate-300 mb-6">;
-<<<<<<< HEAD
                   Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions;
-=======
                   Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions, ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   DevSecOps automation, and 40+ more enterprise-grade services.;
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
@@ -356,16 +322,13 @@ export default function Home() {
         </Suspense>;
         {/* <PerformanceMonitor ;          showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
-<<<<<<< HEAD
           onThresholdExceeded={(metrics) => {console.warn('Performance thresholds exceeded:', metrics);
           }}
         /> */}
       </ErrorBoundary>;
     </>;
   );}
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -386,12 +349,7 @@ export default function HomePage() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import MainLayout from '../components/layout/MainLayout';
 import SEOHead from '../components/SEOHead';
 import { motion } from 'framer-motion';
@@ -530,18 +488,9 @@ export default function HomePage() {
                   </div>
                 </motion.div>
               ))}
-<<<<<<< HEAD
             </div>
-=======
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
-=======
+origin/automation-improvements-final
 import React from 'react';
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
@@ -575,7 +524,7 @@ export default function Home() {
       </div>
     );
   };
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -639,7 +588,6 @@ export default function Home() {
         <Suspense fallback={<LoadingSpinner fullScreen text="Loading Zion Tech Group..." />}>
           <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
           <div className="max-w-4xl mx-auto">
             <h1 
@@ -696,16 +644,12 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-green-400 mb-2" aria-label="100 plus IT solutions">100+</h3>
                 <p className="text-slate-300">IT Solutions</p>
               </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
             </div>
           </div>
         </section>
         {/* Services Overview */}
-=======
-<<<<<<< HEAD
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">;
           <div className="max-w-4xl mx-auto">;
             <h1 ;
@@ -858,10 +802,8 @@ export default function Home() {
         {/* <PerformanceMonitor ;          showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
           onThresholdExceeded={(metrics) => {console.warn('Performance thresholds exceeded:', metrics);
-=======
           onThresholdExceeded={(metrics) => {;
             console.warn('Performance thresholds exceeded:', metrics);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }}
         /> */}
       </ErrorBoundary>;
@@ -886,10 +828,6 @@ export default function HomePage() {
       </div>
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
           <div className="max-w-4xl mx-auto">
             <h1 
@@ -946,12 +884,11 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-green-400 mb-2" aria-label="100 plus IT solutions">100+</h3>
                 <p className="text-slate-300">IT Solutions</p>
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
         {/* Services Overview */}
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         <section className="py-16 px-4" role="main">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" id="service-categories">
@@ -1051,34 +988,20 @@ export default function HomePage() {
       </ErrorBoundary>
     </>
   )
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+origin/automation-improvements-final
 }
-<<<<<<< HEAD
 import {Button} from '../src/components/ui/button';
 
-<<<<<<< HEAD
-=======
-=======
           </div>
         </section>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
         {/* Services Section */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
         {/* Services Section */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
   return (
     <>
       <Head>
@@ -1095,25 +1018,14 @@ import {Button} from '../src/components/ui/button';
         {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-4 py-20">
           <div className="max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/automation-improvements-final
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -1121,13 +1033,7 @@ import {Button} from '../src/components/ui/button';
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
@@ -1166,26 +1072,19 @@ import {Button} from '../src/components/ui/button';
                 </div>
               ))}
             </motion.div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
           </div>
         </section>
-<<<<<<< HEAD
 
-=======
           </div>
         </section>
->>>>>>> origin/main
-=======
+origin/main
 }
           </div>
-=======
 }          </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+ursor/fix-lint-push-and-merge-to-main-ae4e
         </section>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Services Section */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1198,48 +1097,28 @@ import {Button} from '../src/components/ui/button';
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Core Services
               </h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
-=======
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive IT solutions designed to accelerate your digital transformation journey.
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
               </p>
             </motion.div>
-=======
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
               </p>
             </motion.div>
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                 >
@@ -1268,18 +1147,14 @@ import {Button} from '../src/components/ui/button';
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Featured Services */}
         <section className="py-16 bg-white">
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 gradient-text">Why Choose Zion Tech Group?</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 We deliver innovative solutions that drive business growth and technological advancement
               </p>
-<<<<<<< HEAD
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1324,12 +1199,8 @@ import {Button} from '../src/components/ui/button';
 
         {/* Services Preview */}
         <section className="py-20">
-=======
             </motion.div>
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Featured Services */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1346,11 +1217,7 @@ import {Button} from '../src/components/ui/button';
                 Our most popular and effective technology solutions
               </p>
             </motion.div>
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredServices.map((service, index) => (
                 <motion.div
@@ -1371,12 +1238,6 @@ import {Button} from '../src/components/ui/button';
                   <div className="mt-4">
                     <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -1400,40 +1261,22 @@ import {Button} from '../src/components/ui/button';
                       ))}
                     </ul>
                   </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/automation-improvements-final
         {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-=======
 
         {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -1444,18 +1287,12 @@ import {Button} from '../src/components/ui/button';
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 We deliver exceptional results through innovation, expertise, and dedication
-=======
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 gradient-text">Our Services</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Comprehensive technology solutions tailored to your business requirements
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
               </p>
-<<<<<<< HEAD
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1498,16 +1335,11 @@ import {Button} from '../src/components/ui/button';
                 <h3 className="text-lg font-semibold mb-2">AI & ML</h3>
                 <p className="text-gray-400 text-sm">Artificial intelligence and machine learning solutions</p>
               </div>
-=======
-<<<<<<< HEAD
                 We deliver exceptional results through innovation, expertise, and dedication              </p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-=======
+ursor/fix-lint-push-and-merge-to-main-ae4e
                 We deliver exceptional results through innovation, expertise, and dedication
               </p>
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+origin/automation-improvements-final
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
@@ -1522,23 +1354,13 @@ import {Button} from '../src/components/ui/button';
                     <item.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <p className="text-gray-600">{item.description}</p>
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                   <p className="text-gray-600">{item.description}</p>
-=======
               {services.map((service, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -1562,26 +1384,16 @@ import {Button} from '../src/components/ui/button';
                       ))}
                     </ul>
                   </Card>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 <p className="text-gray-600">{item.description}</p>
->>>>>>> origin/main
+origin/main
                 </motion.div>
               ))}
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1597,13 +1409,10 @@ import {Button} from '../src/components/ui/button';
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 We deliver exceptional results through innovation, expertise, and dedication
               </p>
-=======
                 We deliver exceptional results through innovation, expertise, and dedication
               </p>
-=======
                 We deliver exceptional results through innovation, expertise, and dedication              </p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+ursor/fix-lint-push-and-merge-to-main-ae4e
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
@@ -1618,10 +1427,8 @@ import {Button} from '../src/components/ui/button';
                     <item.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
-<<<<<<< HEAD
                   <p className="text-gray-600">{item.description}</p>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
         {/* Features Section */}
         <section className="py-20 px-4 bg-slate-900/50">
           <div className="max-w-7xl mx-auto">
@@ -1733,67 +1540,37 @@ import {Button} from '../src/components/ui/button';
                       <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                     </div>
                   </Card>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
-=======
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 <p className="text-gray-600">{item.description}</p>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                 </motion.div>
-=======
-<<<<<<< HEAD
                   <p className="text-gray-600">{item.description}</p>
                 </motion.div>
-=======
                   <p className="text-gray-600">{item.description}</p>                </motion.div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+ursor/fix-lint-push-and-merge-to-main-ae4e
               ))}
             </div>
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className="py-16 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
         <section className="py-16 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<<<<<<< HEAD
-=======
-=======
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Ready to Transform Your Business?
               </h2>
@@ -1814,13 +1591,7 @@ import {Button} from '../src/components/ui/button';
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </Link>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1829,8 +1600,7 @@ import {Button} from '../src/components/ui/button';
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
               </h2>
@@ -1845,25 +1615,15 @@ import {Button} from '../src/components/ui/button';
                 <Button variant="outline" size="lg">
                   Schedule Consultation
                 </Button>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
               </div>
-=======
                 </Link>              </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+ursor/fix-lint-push-and-merge-to-main-ae4e
             </motion.div>
-=======
-<<<<<<< HEAD
         {/* CTA Section */}
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold mb-6 gradient-text">Ready to Transform Your Business?</h2>
@@ -1878,11 +1638,8 @@ import {Button} from '../src/components/ui/button';
                 Learn More About Us
               </Link>
             </div>
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
+origin/main
 </Link>
-=======
     );
     } catch (error) {
     console.error("Error:", error);
@@ -1985,7 +1742,6 @@ import {Button} from '../src/components/ui/button';
                     </Link>
                   </div>
                 </div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
             </section>
             {/* Stats Section */  } catch (error) {
@@ -1993,10 +1749,8 @@ import {Button} from '../src/components/ui/button';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 </main>
     </>
-=======
             <section className="py-16 bg-slate-900/50">
               <div className="container mx-auto px-4">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -2152,65 +1906,29 @@ import {Button} from '../src/components/ui/button';
                 </div>
               </div>
             </section>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </section>
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           </div>
         </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/automation-improvements-final
       </div>
-<<<<<<< HEAD
     </>
   );
 }
-<<<<<<< HEAD
-=======
     </MainLayout>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
       </main>
     </>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
-<<<<<<< HEAD
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
       </main>
     </>
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
+ursor/fix-lint-push-and-merge-to-main-ae4e
       </main>
     </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 </main>
     </>
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+origin/main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react'
 import { GradientHeading } from '@/components/GradientHeading'
 import { ListingScoreCard } from '@/components/ListingScoreCard'
@@ -11,13 +10,10 @@ import {
   SelectItem
 } from '@/components/ui/select'
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
-<<<<<<< HEAD
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
 import { safeStorage } from "@/utils/safeStorage";
-=======
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
 import { safeStorage } from '@/utils/safeStorage'
-=======
 import { useState, useEffect } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
@@ -27,8 +23,6 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/u
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",
 import { safeStorage } from "@/utils/safeStorage",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Example listing type
 interface Listing {
   id: string;
@@ -45,10 +39,6 @@ interface Listing {
   reviewCount?: number;
   price?: number | null;
   createdAt: string
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface CategoryListingPageProps {
 
   title: string
@@ -108,32 +98,26 @@ export function CategoryListingPage({
   const processedListings = initialListings
     .filter(listing => {
       // Apply search filter
-<<<<<<< HEAD
       const matchesSearch =
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
-=======
       const matchesSearch = null;
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         (listing.tags &&
           listing.tags.some(tag =>
             tag.toLowerCase().includes(searchQuery.toLowerCase())
           ))
       // Apply category filters
       if (selectedFilter === 'all') return matchesSearch
-<<<<<<< HEAD
       if (selectedFilter === 'high-rating')
         return matchesSearch && (listing.rating |0) >= 4
       if (selectedFilter === 'best-match')
         return matchesSearch && (listing.aiScore |0) >= 85
-=======
       if (true) {}
         return matchesSearch && (listing.rating || 0) >= 4
       if (true) {}
         return matchesSearch && (listing.aiScore || 0) >= 85
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return matchesSearch
     })
     .sort((a, b,) => {
@@ -166,8 +150,6 @@ export function CategoryListingPage({
           <div className='text-center mb-12'>
             <GradientHeading>{title}</GradientHeading>
             <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
-=======
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
@@ -193,8 +175,6 @@ interface Listing {
   reviewCount?: number,
   price?: number | null,
   createdAt: string
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { ListingScoreCard } from "@/components/ListingScoreCard",;
@@ -312,16 +292,10 @@ export function CategoryListingPage({;
           <div className="text-center mb-12">;
             <GradientHeading>{title}</GradientHeading>;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {description}
             </p>
           </div>
           {/* Filters and Search */}
-<<<<<<< HEAD
           <div className='bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
               <div className='relative'>
@@ -379,7 +353,6 @@ export function CategoryListingPage({;
                       className='text-white'
                     >                      {option.label}
                     </SelectItem>
-=======
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="relative">
@@ -427,33 +400,20 @@ export function CategoryListingPage({;
                     <SelectItem key={option.value} value={option.value} className="text-white">;
                       {option.label}
                     </SelectItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </SelectContent>
               </Select>
             </div>
           </div>
           {/* Results Count */}
-<<<<<<< HEAD
           <div className='mb-6'>
             <p className='text-zion-slate-light'>
-=======
           <div className="mb-6">
             <p className="text-zion-slate-light">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Showing {processedListings.length} results
               {searchQuery && ` for "${searchQuery}"`}
             </p>
           </div>
-<<<<<<< HEAD
           {/* Listings Grid */}
           <div aria-busy={isLoading}>
             {isLoading ? (
@@ -473,7 +433,6 @@ export function CategoryListingPage({;
                     rating = {listing.rating,}
                     reviewCount = {listing.reviewCount,}
                   />
-=======
 
           {/* Listings Grid */}
           <div aria-busy={isLoading}>;
@@ -495,11 +454,6 @@ export function CategoryListingPage({;
                     rating={listing.rating}
                     reviewCount={listing.reviewCount}
                   />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ))}
               </div>
             ) : (
@@ -507,33 +461,22 @@ export function CategoryListingPage({;
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
                 <Button
-<<<<<<< HEAD
                   variant='outline'
                   onClick={() => {
                     setSearchQuery('')
                     setSelectedFilter(filterOptions[0]?.value |'all') }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                   variant="outline"
                   onClick={() => {
                     setSearchQuery(""),
                     setSelectedFilter(filterOptions[0]?.value || 'all')
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   Clear all filters
                 </Button>
               </div>
-<<<<<<< HEAD
             )}
           </div>
         </div>
@@ -622,7 +565,6 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 }</div> </div> </div> </>)
 }'"}
-=======
               </div>;
             ) : (;
               <div className="text-center py-20">;
@@ -646,8 +588,3 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
     </>;
   );
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

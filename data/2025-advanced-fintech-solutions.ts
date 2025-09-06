@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedFintechSolution2025 {;
   id: string;
@@ -346,21 +345,18 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.'
     launchDate: '2025-02-12'
     customers: 89
     rating: 4.5
     reviews: 52
   }
-=======
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
     launchDate: '2025-02-12',
     customers: 89,
     rating: 4.5,
     reviews: 52,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -375,12 +371,8 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     rating: 4.5
 
     reviews: 52
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedFintechSolution2025 {;
   id: string,;
@@ -638,10 +630,5 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     customers: 89,;
     rating: 4.5;
     reviews: 52;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

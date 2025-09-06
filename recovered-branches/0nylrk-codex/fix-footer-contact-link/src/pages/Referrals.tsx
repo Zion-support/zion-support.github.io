@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useReferrals  } from '@/hooks/useReferrals';
@@ -29,7 +27,6 @@ export default function ReferralsPage() {
     getReferralLink;
     copyReferralLink;
     shareOnSocialMedia} = useReferrals();
-=======
 import {useEffect} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {useReferrals} from '@/hooks/useReferrals';
@@ -48,8 +45,6 @@ import {useNavigate} from 'react-router-dom';
 export default function ReferralsPage() {;
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { useReferrals } from '@/hooks/useReferrals',
@@ -68,7 +63,6 @@ import { useNavigate } from 'react-router-dom',
 export default function ReferralsPage() {
   const navigate = useNavigate(),
   const { isAuthenticated } = useAuth(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const {
     isLoading,
     referralCode,
@@ -79,7 +73,6 @@ export default function ReferralsPage() {
     copyReferralLink,
     shareOnSocialMedia} = useReferrals(),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     if (!isAuthenticated) {
       toast({
@@ -88,14 +81,11 @@ export default function ReferralsPage() {
         variant: "destructive"})
       navigate("/login")
     }
-<<<<<<< HEAD
   }, [isAuthenticated, navigate]);
   const referralLink = getReferralLink();
-=======
   }, [isAuthenticated, navigate]),
 
   const referralLink = getReferralLink(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="container max-w-7xl py-10">
@@ -145,12 +135,7 @@ export default function ReferralsPage() {
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
@@ -236,10 +221,5 @@ export default function ReferralsPage() {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

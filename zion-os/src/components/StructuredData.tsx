@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 export function StructuredData() {const structuredData = {;
     "@context": "https://schema.org";
@@ -45,7 +44,6 @@ export function StructuredData() {const structuredData = {;
       "url": "https://ziontechgroup.com";
     }
   }
-=======
 "use client",;
 export function StructuredData() {;
   const structuredData = {;
@@ -96,7 +94,6 @@ export function StructuredData() {;
       "url": "https://ziontechgroup.com";
     }
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <script;
       type="application/ld+json";

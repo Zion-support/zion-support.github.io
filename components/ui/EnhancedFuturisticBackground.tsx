@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const colorSchemes = {
   quantum: {
   resizeCanvas ();
@@ -191,22 +188,12 @@ const EnhancedFuturisticBackground: React.FC<
         if (this.y > canvas.height) this.y = 0;
         // Fade out near end of life
         if (this.life < 20) {
-<<<<<<< HEAD
           this.opacity *= 0.95;        }          this.opacity *= 0.95
-=======
           this.opacity *= 0.95;        }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
@@ -231,29 +218,16 @@ const EnhancedFuturisticBackground: React.FC<
         ctx.restore();
       }
       isDead() {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return this.life <= 0 |this.opacity < 0.01;      }
-=======
         return this.life <= 0 || this.opacity < 0.01;      }        
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ctx.restore()
-=======
         return this.life <= 0 || this.opacity < 0.01;      }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Connection lines between particles
     class Connection {
       p1: Particle;
@@ -333,7 +307,6 @@ const EnhancedFuturisticBackground: React.FC<
           }
           drops[i]++;
         }
-<<<<<<< HEAD
       }
       return drawMatrix;    };          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
@@ -344,14 +317,12 @@ const EnhancedFuturisticBackground: React.FC<
       }
       return drawMatrix
     }
-=======
       };
 
       return drawMatrix;    };
 
     };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const drawMatrix = matrixRain();
     // Main animation loop
     const animate = () => {
@@ -376,13 +347,8 @@ const EnhancedFuturisticBackground: React.FC<
       }
       // Create connections between nearby particles
       connections = [];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
-<<<<<<< HEAD
           const distance = Math.sqrt(
             Math.pow(particles[i].x - particles[j].x, 2) +
               Math.pow(particles[i].y - particles[j].y, 2)
@@ -394,25 +360,16 @@ const EnhancedFuturisticBackground: React.FC<
           );
           if (distance < 150) {
             connections.push(new Connection(particles[i], particles[j]))
-=======
 
-<<<<<<< HEAD
       }
 
       // Create connections between nearby particles
       connections = [];
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }
       }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Draw connections
       connections.forEach(connection => connection.draw());
       // Add floating geometric shapes
@@ -496,14 +453,6 @@ const EnhancedFuturisticBackground: React.FC<
 }
 export default EnhancedFuturisticBackground;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default EnhancedFuturisticBackground;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 export default EnhancedFuturisticBackground;
-=======
 export default EnhancedFuturisticBackground;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

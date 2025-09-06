@@ -251,9 +251,8 @@ return (<div ref= {;
   ... (otherProps as any) ;
 }/>) ;
 }
-<<<<<<< HEAD:temp_broken_files/utils/imageOptimization.tsx
+:temp_broken_files/utils/imageOptimization.tsx
 }// Utility to preload critical images ;"}'"
-=======
 }// Utility to preload critical images ;
 }'"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/utils/imageOptimization.tsx
+ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/imageOptimization.tsx

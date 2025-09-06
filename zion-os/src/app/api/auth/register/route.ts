@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { prisma } from "@/lib/prisma";
@@ -42,7 +41,6 @@ export async function POST() {
     console.error("Registration error:", error);
     return NextResponse.json(;
       { error: "Internal server error" }
-=======
 import { NextRequest, NextResponse } from "next/server",;
 import bcrypt from "bcryptjs",;
 import { prisma } from "@/lib/prisma",;
@@ -95,7 +93,6 @@ export async function POST(request: NextRequest) {;
     console.error("Registration error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       { status: 500 }
     );
   }

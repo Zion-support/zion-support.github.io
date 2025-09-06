@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
 
 import {
   X
@@ -21,7 +20,6 @@ import {
   Mail
 
   ExternalLink
-=======
 import { 
   X, 
   Building2, 
@@ -39,7 +37,6 @@ import {
   Phone,
   Mail,
   ExternalLink;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 interface SidebarProps {
   isOpen: boolean, onClose: () => void
@@ -168,19 +165,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
       )}
     </AnimatePresence>
   );
-<<<<<<< HEAD
 }
 export default Sidebar;
-=======
 };
 
 export default Sidebar;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

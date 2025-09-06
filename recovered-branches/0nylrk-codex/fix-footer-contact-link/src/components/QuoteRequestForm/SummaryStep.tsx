@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useEffect, useState} from "react";
 import {QuoteFormData} from "@/types/quotes";
 import {Card, CardContent} from "@/components/ui/card";
@@ -33,15 +30,12 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useEffect, useState } from "react",
 import { QuoteFormData } from "@/types/quotes",
 import { Card, CardContent } from "@/components/ui/card",
 import { Label } from "@/components/ui/label",
 import { Textarea } from "@/components/ui/textarea",
 import { AIMatchingResults } from "@/components/AIMatchingResults",
-<<<<<<< HEAD
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
 import { toast } from "@/hooks/use-toast";
 interface SummaryStepProps {
@@ -68,7 +62,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `;
-=======
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
 import { toast } from "@/hooks/use-toast",
 interface SummaryStepProps {
@@ -104,12 +97,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Get AI matches
         const results = await findMatches(
           queryString,
@@ -126,12 +114,9 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
       } finally {
         setIsMatching(false)
       }
-<<<<<<< HEAD
     }
-=======
     },
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     runMatching()
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
@@ -143,17 +128,14 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
     toast({
       title: "Match Selected"
       description: `You've selected ${match.item.title}`})
-<<<<<<< HEAD
   }
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item);
-=======
   },
   
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
@@ -161,20 +143,16 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
     if (matchResult) {
       handleSelectMatch(matchResult)
     }
-<<<<<<< HEAD
   }
 
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
-=======
   },
   
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
-<<<<<<< HEAD
-=======
       
         `,;
         // Get AI matches;
@@ -219,11 +197,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
   return (;
     <div className="space-y-6">;
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -288,10 +261,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
                   </div>
                 </div>
               )}
-<<<<<<< HEAD
-=======
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {formData.endDate && (
                 <div>
                   <Label className="text-zion-slate-light">End Date</Label>
@@ -353,12 +323,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
 };
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

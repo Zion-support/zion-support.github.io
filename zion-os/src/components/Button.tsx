@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { forwardRef } from 'react';
 import Link from 'next/link';
@@ -50,7 +49,6 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({children;
   }
   const widthClasses = fullWidth ? 'w-full' : '';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${roundedClasses[rounded]} ${widthClasses} ${className}`;
-=======
 'use client',;
 import React, { forwardRef } from 'react',;
 import Link from 'next/link',;
@@ -108,7 +106,6 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
   },;
   const widthClasses = fullWidth ? 'w-full' : '',;
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${roundedClasses[rounded]} ${widthClasses} ${className}`,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const content = (;
     <>;
       {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}
@@ -116,23 +113,17 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
       <span className={loading ? 'opacity-0' : ''}>{children}</span>;
       {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
     </>;
-<<<<<<< HEAD
   );
   if (href) {return (;
-=======
   ),;
   if (href) {;
     return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <Link href={href} className={classes}>;
         {content}
       </Link>;
     );
   }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <button;
       ref={ref}
@@ -145,7 +136,6 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
       {content}
     </button>;
   );
-<<<<<<< HEAD
 });
 Button.displayName = 'Button';
 export default Button;
@@ -163,7 +153,6 @@ export function IconButton({icon;
   children;
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {return (;
-=======
 }),;
 Button.displayName = 'Button',;
 export default Button,;
@@ -191,20 +180,17 @@ export function IconButton({;
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <Button {...props} icon={icon} iconPosition="left" size="sm">;
       {children}
     </Button>;
   );
 }
-<<<<<<< HEAD
 // Floating action button;
 export function FloatingActionButton({icon;
   onClick;
   className = '';
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {return (;
-=======
 ;
 // Floating action button;
 export function FloatingActionButton({;
@@ -214,7 +200,6 @@ export function FloatingActionButton({;
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <Button;
       {...props}
       icon={icon}
