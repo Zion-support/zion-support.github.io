@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react'
+import { X } from 'lucide-react'
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8824
 import React from 'react';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -145,4 +152,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Sidebar;
+=======
+export default Sidebar;
+>>>>>>> 7f75898722d8fd84372e93f8a34999dbfb36e377
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8824

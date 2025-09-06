@@ -42,12 +42,21 @@ export const PerformanceMonitor: React.FC = () => {
 };
 =======
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8824
 
 const PerformanceMonitor: React.FC = () => {
   return null; // Placeholder component
 };
 
 export default PerformanceMonitor;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 7f75898722d8fd84372e93f8a34999dbfb36e377
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8824

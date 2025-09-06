@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react'
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8824
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -105,4 +111,9 @@ export function SEO({
       </script>
     </Helmet>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7f75898722d8fd84372e93f8a34999dbfb36e377
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8824
