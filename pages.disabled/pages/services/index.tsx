@@ -93,6 +93,7 @@ export default function ServicesIndex() {
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center text-sm text-gray-600\">
                       <Check className=\"w-4 h-4 text-green-500 mr-2\" />
+=======
 export default function ServicesIndex() {;
   const services = [;
     {;
@@ -191,6 +192,7 @@ export default function ServicesIndex() {;
                   {service && service.features.map((feature, featureIndex) => (;
                     <li key={featureIndex} className=\"flex items-center text-sm text-gray-600\">;
                       <Check className=\"w-4 h-4 text-green-500 mr-2\" />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled/pages/services/index.tsx
                       {feature}
                     </li>;
                   ))}

@@ -182,6 +182,7 @@ Goals:;
 4) Include explicit risks and validation signals per stage;
 5) Output concise, skimmable, exec - ready text;
 Format:;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 Zion v{n} — {theme}
 Objective: ...;
 Highlights:;
@@ -209,10 +210,6 @@ Validation:;
 
       setTimeout(() => setCopied(false), 1500)
 =======
-      await navigator.clipboard.writeText(operatorPrompt)
-      setCopied(true)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      setTimeout(() => setCopied(false), 1500)
 export default function RoadmapPage (): JSX.Element {
   const [milestones, set_milestones] = useState ('MVP live, First 50 users, First 10 paid engagements'),
   const [keywords, set_keywords] = useState ('AI - native, trustless, talent - first, sovereign tools'),
@@ -227,6 +224,7 @@ export default function RoadmapPage (): JSX.Element {
       await navigator.clipboard.write_text (operator_prompt),
       set_copied (true),
       set_timeout (() => set_copied (false), 1500);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch {
 
       set_copied (false);
@@ -381,24 +379,15 @@ export default function RoadmapPage (): JSX.Element {
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       {stage.highlights.map((h, i) => (
                         <li key={i}>{h}</li>
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      ))}
                     </ul>
                   </div>
                   <div className="mt-3">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <p className="font-semibold">Metrics</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       {stage.metrics.map((m, i) => (
                         <li key={i}>{m}</li>
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      ))}
                     </ul>
                   </div>
                   <div className="mt-3">
@@ -410,7 +399,6 @@ export default function RoadmapPage (): JSX.Element {
                     </ul>
                   </div>
                   <div className="mt-3">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <p className="font-semibold">Validation</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       <li>Leading indicator movement on activation and retention</li>
@@ -426,90 +414,11 @@ export default function RoadmapPage (): JSX.Element {
 =======
                   on_change={(e) => set_priorities (e.target.value)}
                   className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
-=======
-  );
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  };
-  return (;
-    <>;
-      <Head>;
-        <title>Zion Roadmap</title>;
-        <meta name="description" content="Zion 10-stage product evolution and roadmap generator." />;
-      </Head>;
-      <main className="min-h-screen bg-white text-gray-900">;
-        <div className="mx-auto w-full max-w-6xl px-6 py-12">;
-          <header className="mb-8">;
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Zion Roadmap</h1>;
-            <p className="mt-3 text-gray-700">Public-facing product evolution from v1 → v10 with a generator for operators.</p>;
-          </header>;
-          <section className="mb-10 grid gap-6 rounded-lg border border-gray-200 bg-gray-50 p-6 md:grid-cols-3">;
-            <div className="md:col-span-1">;
-              <h2 className="text-xl font-semibold">Generator Inputs</h2>;
-              <p className="mt-1 text-sm text-gray-600">Tune the roadmap with current context and focus.</p>;
-            </div>;
-            <div className="md:col-span-2 grid gap-4">;
-              <div>;
-                <label className="block text-sm font-medium text-gray-700">Milestones achieved so far</label>;
-                <textarea;
-                  value={milestones  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  onChange={(e) => setMilestones(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  rows={3  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none";
-                  placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors";
-                />;
-              </div>;
-              <div>;
-                <label className="block text-sm font-medium text-gray-700">Vision keywords</label>;
-                <input;
-                  value={keywords  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  onChange={(e) => setKeywords(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none";
-                  placeholder="e.g., AI-native, trustless, talent-first, sovereign tools";
-                />;
-              </div>;
-              <div>;
-                <label className="block text-sm font-medium text-gray-700">Upcoming priorities</label>;
-                <input;
-                  value={priorities  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  onChange={(e) => setPriorities(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   placeholder="e.g., governance, scale, regional expansion";
                 />;
               </div>;
             </div>;
           </section>;
-<<<<<<< HEAD
           <section className="mb - 12">;
             <div className="mb - 3 flex items - center justify - between gap - 3">;
               <h2 className="text - xl font - semibold">Operator Prompt</h2>;
@@ -560,86 +469,10 @@ export default function RoadmapPage (): JSX.Element {
                     </ul>;
                   </div>;
                 </article>))}
-=======
-          <section className="mb-12">;
-            <div className="mb-3 flex items-center justify-between gap-3">;
-              <h2 className="text-xl font-semibold">Operator Prompt</h2>;
-              <button;
-                onClick={copyPrompt  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900";
-              >;
-                {copied ? 'Copied' : 'Copy'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </button>;
-            </div>;
-            <pre className="whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800">{operatorPrompt}</pre>;
-          </section>;
-          <section>;
-            <h2 className="mb-4 text-xl font-semibold">Zion v1 → v10</h2>;
-            <div className="grid gap-6 md:grid-cols-2">;
-              {stages.map((stage) => (;
-                <article key={stage.id} className="rounded-lg border border-gray-200 p-5 shadow-sm">;
-                  <h3 className="text-lg font-bold">{stage.name} — {stage.theme}</h3>;
-                  <p className="mt-2 text-gray-700"><span className="font-semibold">Objective:</span> {stage.objective}</p>;
-                  <div className="mt-3">;
-                    <p className="font-semibold">Highlights</p>;
-                    <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">;
-                      {stage.highlights.map((h, i) => (;
-                        <li key={i}>{h}</li>;
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </ul>;
-                  </div>;
-                  <div className="mt-3">;
-                    <p className="font-semibold">Metrics</p>;
-                    <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">;
-                      {stage.metrics.map((m, i) => (;
-                        <li key={i}>{m}</li>;
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </ul>;
-                  </div>;
-                  <div className="mt-3">;
-                    <p className="font-semibold">Risks</p>;
-                    <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">;
-                      <li>Scope creep, unclear ownership</li>;
-                      <li>Model hallucinations or bias affecting matches</li>;
-                      <li>Regulatory and payment-compliance variability</li>;
-                    </ul>;
-                  </div>;
-                  <div className="mt-3">;
-                    <p className="font-semibold">Validation</p>;
-                    <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">;
-                      <li>Leading indicator movement on activation and retention</li>;
-                      <li>Faster time-to-hire and time-to-pay</li>;
-                      <li>Positive contributor NPS and dispute resolution rates</li>;
-                    </ul>;
-                  </div>;
-                </article>;
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           </section>;
         </div>;
       </main>;
-<<<<<<< HEAD
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

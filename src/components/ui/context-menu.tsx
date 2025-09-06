@@ -13,12 +13,12 @@ const ContextMenuSubTrigger = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.SubTrigger> & {
     inset?: boolean;
   }
->(({ className, inset, children, ...props }, ref) => (;
+>(({ class_name, inset, children, ...props }, ref) => (
   <ContextMenuPrimitive.SubTrigger;
     ref={ref}
     inset?: boolean;
   }
->(({ className, inset, ...props }, ref) => (;
+>(({ class_name, inset, ...props }, ref) => (
   <ContextMenuPrimitive.Item;
     ref={ref}
 
@@ -53,12 +53,12 @@ className={cn (
       class_name)}
     checked={checked}
     {...props}
-  >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <ContextMenuPrimitive.ItemIndicator>
-        <Check className="h-4 w-4" />
-      </ContextMenuPrimitive.ItemIndicator>
-    </span>
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <ContextMenuPrimitive.ItemIndicator>;
+        <Check className=&quot;h - 4 w - 4&quot; />;
+      </ContextMenuPrimitive.ItemIndicator>;
+    </span>;
     {children}
 
 
@@ -90,12 +90,12 @@ className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
     {...props}
-  >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <ContextMenuPrimitive.ItemIndicator>
-        <Circle className="h-2 w-2 fill-current" />
-      </ContextMenuPrimitive.ItemIndicator>
-    </span>
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <ContextMenuPrimitive.ItemIndicator>;
+        <Circle className=&quot;h - 2 w - 2 fill - current & quot; />;
+      </ContextMenuPrimitive.ItemIndicator>;
+    </span>;
     {children}
 
   </ContextMenuPrimitive.RadioItem>));
@@ -110,7 +110,7 @@ const ContextMenuLabel = React.forward_ref<;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
     inset?: boolean;
   }
->(({ className, inset, ...props }, ref) => (;
+>(({ class_name, inset, ...props }, ref) => (
   <ContextMenuPrimitive.Label;
     ref={ref}
 
@@ -132,8 +132,7 @@ const ContextMenuSeparator = React.forwardRef<;
         &quot;ml - auto text - xs tracking - widest text - muted - foreground & quot;,
         class_name)}
       {...props}
-    />;
-  );
+    />);
 }
 
 ContextMenuShortcut.display_name = &quot;ContextMenuShortcut & quot;

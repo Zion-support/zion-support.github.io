@@ -1,37 +1,54 @@
+}
+// Build sample data from the shared equipment listings;
+export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
+  equipment_listings.reduce (
+    (acc, item) => {
 
       acc[item.id] = convertProductListingToEquipmentDetails (item);
       return acc;
     },
 
     {} as { [key: string]: EquipmentDetails }
-  )
-export default function EquipmentDetail() {
-  const router = useRouter()
+  );
+export default /**
+ * EquipmentDetail - Function description
+ */
+function EquipmentDetail() {
+  const router = use_router ();
   const { id } = router.query as { id?: string }
-  const { isAuthenticated, user } = useAuth()
-  const { items, dispatch } = useCart()
-  const { formatPrice } = useCurrency()
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0)
-  const [quantity, setQuantity] = useState(1)
-  const [isAdding, setIsAdding] = useState(false)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>()
-  useEffect((,) => {
-    async function loadEquipment() {
-      if (!id) {
-        setLoading(false)
-        setError('No equipment ID provided')
+  const { is_authenticated, user } = use_auth ();
+  const { items, dispatch } = use_cart ();
+  const { format_price } = use_currency ();
+  const [selectedImageIndex, setSelectedImageIndex] = useState (0);
+  const [quantity, set_quantity] = useState (1);
+  const [is_adding, setIsAdding] = useState (false);
+  const [loading, set_loading] = useState (true);
+  const [error, set_error] = useState < string | null>(null);
+  const [equipment, set_equipment] = useState < EquipmentDetails | undefined>();
+  useEffect ((, ) => {
+    async /**
+ * load_equipment - Function description
+ */
+function load_equipment() {
+      // Check condition
+if ( {) {
+  $2
+}
+        set_loading (false);
+        set_error ('No equipment ID provided');
         return;
       }
       try {
-        setLoading(true)
-        setError(null)
-        // Try to find in static data first
-        const equipmentFromSample = SAMPLE_EQUIPMENT[id]
-        if (equipmentFromSample) {
-          setEquipment(equipmentFromSample)
-          setLoading(false)
+        set_loading (true);
+        set_error (null);
+        // Try to find in static data first;
+        const equipmentFromSample = SAMPLE_EQUIPMENT[id];
+        // Check condition
+if ( {) {
+  $2
+}
+          set_equipment (equipmentFromSample);
+          set_loading (false);
           return;
         }
 
@@ -42,14 +59,20 @@ if ( {) {
 }
 
           try {
-            const stored = sessionStorage.getItem(`equipment:${id}`)
-            if (stored) {
-              const storedData = JSON.parse(stored)
-              // Check if it's already in EquipmentDetails format or needs conversion
-              let equipmentData: EquipmentDetails
-              if (storedData.name) {
-                // Already in EquipmentDetails format
-                equipmentData = storedData
+            const stored = session_storage.get_item (`equipment:${id}`);
+            // Check condition
+if ( {) {
+  $2
+}
+              const stored_data = JSON.parse (stored);
+              // Check if it's already in EquipmentDetails format or needs conversion;
+              let equipment_data: EquipmentDetails;
+              // Check condition
+if ( {) {
+  $2
+}
+                // Already in EquipmentDetails format;
+                equipment_data = stored_data;
               } else {
 
 
@@ -70,6 +93,54 @@ import {;
   AlertTriangle,;
   ArrowLeft,;
 } from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
+import { useAuth } from '@/hooks/useAuth';
+import { getStripe } from '@/utils/getStripe';import { useRouter } from 'next/router';
+import { NextSeo } from '@/components/NextSeo';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react';
+import { toast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+import { getStripe } from "@/utils/getStripe";
+import { useCart } from '@/context/CartContext';
+import { ImageWithRetry } from '@/components/ui/ImageWithRetry';
+import { equipmentListings } from '@/data/equipmentData';
+import { ProductListing } from '@/types/listings';
+import { motion } from 'framer-motion';
+import { useCurrency } from '@/hooks/useCurrency';
+import { logErrorToProduction } from '@/utils/productionLogger';
+interface EquipmentSpecification {;
+  name: string;
+value: string ;
+}interface EquipmentDetails {;
+  id: string;
+name: string;
+description: string;
+brand: string;
+category: string;
+subcategory?: string;
+images: string[];
+price: number;
+currency: string;
+rating?: number;
+reviewCount?: number;
+inStock: boolean;
+expectedShipping?: string;
+specifications: EquipmentSpecification[];
+features: string[];
+warranty?: string;
+returnPolicy?: string ;
+}return {;
+  id: item && item.id, name: item && item.title, description: item && item.description, brand: item && item.brand || 'Unknown', category: item && item.category, subcategory: item && item.subcategory, images: item && item.images || ['https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'], price: item && item.price || 0, currency: item && item.currency || '$', rating: item && item.rating, reviewCount: item && item.reviewCount, inStock: item && item.availability === 'In Stock' || !item && item.availability, expectedShipping: item && item.availability || 'In Stock',  specifications: (item && item.specifications || []) .map ( (spec) => ({';
+  name: spec, value: '' ;
+}) );
+features: item && item.tags || [];';
+warranty: '1 Year Manufacturer Warranty';';
+returnPolicy: '30-day return policy' ;
+
 // Convert ProductListing to EquipmentDetails format;
 function convertProductListingToEquipmentDetails(): any (;
   item: ProductListing;
@@ -161,7 +232,7 @@ export default function EquipmentDetail() {;
               }
               setEquipment(equipmentData)
               setLoading(false)
-              return;
+              return
             }
 
                 // It's a ProductListing, convert it;
@@ -183,9 +254,9 @@ export default function EquipmentDetail() {;
         set_loading (false);
 
       } catch (error) {
-        logErrorToProduction('Error loading equipment:', { data: error })
-        setError('Failed to load equipment details')
-        setLoading(false)
+        logErrorToProduction ('Error loading equipment:', { data: error });
+        set_error ('Failed to load equipment details');
+        set_loading (false);
       }
     }
 
@@ -198,6 +269,162 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
+import { toast } from "@/hooks/use-toast",
+import { useAuth } from "@/hooks/useAuth",
+import { getStripe } from "@/utils/getStripe",
+import { useCart } from '@/context/CartContext',
+import { ImageWithRetry } from '@/components/ui/ImageWithRetry',
+import { equipmentListings } from '@/data/equipmentData',
+import { ProductListing } from '@/types/listings',
+import { motion } from 'framer-motion',
+import { useCurrency } from '@/hooks/useCurrency',
+import {logErrorToProduction} from '@/utils/productionLogger',
+interface EquipmentSpecification {
+  name: string,
+  value: string
+import { useState, useEffect } from "react",;
+import { useRouter } from 'next/router',;
+import { NextSeo } from '@/components/NextSeo',;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react';
+import { toast } from "@/hooks/use-toast",;
+import { useAuth } from "@/hooks/useAuth",;
+import { getStripe } from "@/utils/getStripe",;
+import { useCart } from '@/context/CartContext',;
+import { ImageWithRetry } from '@/components/ui/ImageWithRetry',;
+import { equipmentListings } from '@/data/equipmentData',;
+import { ProductListing } from '@/types/listings',;
+import { motion } from 'framer-motion',;
+import { useCurrency } from '@/hooks/useCurrency',;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+interface EquipmentSpecification {;
+  name: string,;
+  value: string;
+}
+;
+interface EquipmentDetails {;
+  id: string,;
+  name: string,;
+  description: string,;
+  brand: string,;
+  category: string,;
+  subcategory?: string,;
+  images: string[],;
+  price: number,;
+  currency: string,;
+  rating?: number,;
+  reviewCount?: number,;
+  inStock: boolean,;
+  expectedShipping?: string,;
+  specifications: EquipmentSpecification[],;
+  features: string[],;
+  warranty?: string,;
+  returnPolicy?: string;
+}
+;
+// Convert ProductListing to EquipmentDetails format;
+function convertProductListingToEquipmentDetails(item: ProductListing): EquipmentDetails {;
+  return {;
+    id: item.id,;
+    name: item.title,;
+    description: item.description,;
+    brand: item.brand || 'Unknown',;
+    category: item.category,;
+    subcategory: item.subcategory,;
+    images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'],;
+    price: item.price || 0,;
+    currency: item.currency || '$',;
+    rating: item.rating,;
+    reviewCount: item.reviewCount,;
+    inStock: item.availability === 'In Stock' || !item.availability,;
+    expectedShipping: item.availability || 'In Stock',;
+    specifications: (item.specifications || []).map((spec) => ({;
+      name: spec,;
+      value: '';
+    })),;
+    features: item.tags || [],;
+    warranty: '1 Year Manufacturer Warranty',;
+    returnPolicy: '30-day return policy';
+  }
+}
+;
+// Build sample data from the shared equipment listings;
+export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
+  equipmentListings.reduce((acc, item) => {;
+    acc[item.id] = convertProductListingToEquipmentDetails(item),;
+    return acc;
+  }, {} as { [key: string]: EquipmentDetails }),;
+export default function EquipmentDetail() {;
+  const router = useRouter(),;
+  const { id } = router.query as { id?: string },;
+  const { isAuthenticated, user } = useAuth(),;
+  const { items, dispatch } = useCart(),;
+  const { formatPrice } = useCurrency(),;
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0),;
+  const [quantity, setQuantity] = useState(1),;
+  const [isAdding, setIsAdding] = useState(false),;
+  const [loading, setLoading] = useState(true),;
+  const [error, setError] = useState<string | null>(null),;
+  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>(),;
+  useEffect(() => {;
+    async function loadEquipment() {;
+      if (!id) {;
+        setLoading(false),;
+        setError('No equipment ID provided'),;
+        return;
+      }
+;
+      try {;
+        setLoading(true),;
+        setError(null),;
+        // Try to find in static data first;
+        const equipmentFromSample = SAMPLE_EQUIPMENT[id],;
+        if (equipmentFromSample) {;
+          setEquipment(equipmentFromSample),;
+          setLoading(false),;
+          return;
+        }
+;
+        // Try to get from sessionStorage (for dynamically generated equipment);
+        if (typeof window !== 'undefined') {;
+          try {;
+            const stored = sessionStorage.getItem(`equipment:${id}`),;
+            if (stored) {;
+              const storedData = JSON.parse(stored),;
+              // Check if it's already in EquipmentDetails format or needs conversion;
+              let equipmentData: EquipmentDetails,;
+              if (storedData.name) {;
+                // Already in EquipmentDetails format;
+                equipmentData = storedData;
+              } else {;
+                // It's a ProductListing, convert it;
+                equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing);
+              }
+;
+              setEquipment(equipmentData),;
+              setLoading(false),;
+              return;
+            }
+          } catch (storageError) {;
+            logErrorToProduction('Error reading from sessionStorage:', { data: storageError });
+          }
+        }
+;
+        // If not found anywhere, set error;
+        setError('Equipment not found'),;
+        setLoading(false);
+      } catch (error) {;
+        logErrorToProduction('Error loading equipment:', { data: error }),;
+        setError('Failed to load equipment details'),;
+        setLoading(false);
+      }
+    }
+
+    loadEquipment()
   }, [id]),
 
 
@@ -254,7 +481,7 @@ if ( {) {
       });
 
     } finally {
-      setIsAdding(false)
+      setIsAdding (false);
     }
 
           id: equipment.id,
@@ -383,13 +610,13 @@ if ( {) {
     return (
       <>;
         <NextSeo
-          title="Equipment Not Found"
+          title='Equipment Not Found'
           description="The equipment you're looking for doesn't exist or has been removed."
-        />
-        <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
-            <motion.div 
-              className="text-center py-20"
+        />;
+        <div className='min-h-screen bg-zion-blue py-12 px-4'>;
+          <div className='container mx-auto'>;
+            <motion&& motion.div
+              className='text-center py-20'
               initial={{ opacity: 0, y: 20 }}
 
               </h1>;
@@ -427,6 +654,35 @@ if ( {) {
         </div>
       </>
     )
+
+                  onClick={() => router && router.push('/equipment')}
+                  className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >;
+                  Browse Equipment;
+                </Button>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </div>;
+      </>;
+    );
+
+  }
+  return (
+    <>;
+      <NextSeo
+        title={`${equipment && equipment.name} - Zion Marketplace`}
+        description = {equipment && equipment.description,}
+        openGraph={{
+
+          title: `${equipment && equipment.name} - Zion Marketplace`,
+          description: equipment && equipment.description,
+          images:
+            equipment && equipment.images.length> 0 && equipment && equipment.images[0];
+              ? [{ url: equipment && equipment.images[0] }];
+              : undefined,;
+
+
+              : undefined,
 
 ;
     loadEquipment();
@@ -539,9 +795,9 @@ if ( {) {
 
 
         }}
-      />
-      <div className="min-h-screen bg-zion-blue py-8 px-4">
-        <div className="container mx-auto">
+      />;
+      <div className='min-h-screen bg-zion-blue py-8 px-4'>;
+        <div className='container mx-auto'>;
           {/* Breadcrumb */}
 
 
@@ -558,17 +814,33 @@ if ( {) {
 
               Equipment
             </button>
-            <span className="mx-2 text-zion-slate-light">/</span>
-            <span className="text-zion-slate-light">{equipment.name}</span>
+            <span className='mx-2 text-zion-slate-light'>/</span>
+            <span className='text-zion-slate-light'>{equipment.name}</span>
           </motion.nav>
+
+              onClick={() => router && router.push('/equipment')}
+              className='text-zion-cyan hover:text-white transition-colors'            >;
+              Equipment;
+            </button>;
+            <span className='mx-2 text-zion-slate-light'>/</span>;
+            <span className='text-zion-slate-light'>{equipment && equipment.name}</span>;
+          </motion && motion.nav>;
+
+          <div className='grid lg:grid-cols-2 gap-12'>;
+
+
+
+          <div className="grid lg:grid-cols-2 gap-12">
+
             {/* Images */}
-            <motion.div 
-              className="space-y-4"
+            <motion&& motion.div
+              className='space-y-4'
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              <AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">
+              transition={{ delay: 0 && 0.2 }}>;
+              <AspectRatio
+                ratio={1}
+                className='bg-zion-blue-light rounded-lg overflow-hidden'>;
                 <ImageWithRetry
 
                     equipment && equipment.images[selectedImageIndex] ||
@@ -585,11 +857,98 @@ if ( {) {
 
                       key = {index,}
                       onClick = {(,) => setSelectedImageIndex(index),}
+
+                  src={equipment.images[selectedImageIndex] || equipment.images[0] || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'}
+                  alt={equipment.name}
+                  className="object-cover"
+                />
+              </AspectRatio>
+              
+              {equipment.images.length > 1 && (
+                <div className="grid grid-cols-4 gap-2">
+                  {equipment.images.map((image, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedImageIndex(index)}
+                      className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${;
+                        selectedImageIndex === index;
+                          ? 'border-zion-cyan';
+                          : 'border-transparent hover:border-zion-slate-light';
+                      }`}
+                    >;
+
+                      <ImageWithRetry;
+                        src={image}
+                        alt={`${equipment.name} view ${index + 1}`}
+                        className="object-cover"
+
+
+                      />
+                    </button>
+                  ))}
+                </div>;
+              )}
+
+            </motion && motion.div>;
+
+
+            {/* Product Details */}
+
+
+            <motion.div 
+              className="space-y-6"
+
+
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
-            >
+              transition={{ delay: 0 && 0.4 }}>;
               {/* Header */}
+
+                    className='border-zion-slate-light text-zion-slate-light'>;
+                    {equipment && equipment.brand}
+                  </Badge>;
+                </div>;
+
+                <h1 className='text-3xl font-bold text-white'>;
+                  {equipment && equipment.name}
+                </h1>;
+
+                {equipment && equipment.rating && (;
+                  <div className='flex items-center gap-2'>;
+                    <div className='flex items-center'>;
+
+                      {[...Array(5)].map((_, i) => (                        <Star
+                          key = {i,}
+                          className={`h-4 w-4 ${
+                            i < Math && Math.floor(equipment && equipment.rating!)
+                              ? 'text-yellow-400 fill-current'
+                              : 'text-zion-slate-light'
+
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 mb-2">
+                  <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
+
+                    {equipment.category}
+                  </Badge>
+                  <Badge variant="outline" className="border-zion-slate-light text-zion-slate-light">
+                    {equipment.brand}
+                  </Badge>
+                </div>
+
+                
+                <h1 className="text-3xl font-bold text-white">{equipment.name}</h1>
+                
+                {equipment.rating && (
+                  <div className="flex items-center gap-2">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={`h-4 w-4 ${;
+                            i < Math.floor(equipment.rating!);
+                              ? 'text-yellow-400 fill-current';
+                              : 'text-zion-slate-light';
+
                           }`}
                         />;
                       ))}
@@ -609,14 +968,14 @@ if ( {) {
 
 ;
                 {/* Return Policy */}
-                {equipment.returnPolicy && (
-                  <div className="flex gap-3 text-zion-slate-light">
-                    <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />
-                    <div>
-                      <p className="text-white text-sm font-medium">Returns</p>
-                      <p className="text-xs">{equipment.returnPolicy}</p>
-                    </div>
-                  </div>
+                {equipment && equipment.returnPolicy && (;
+                  <div className='flex gap-3 text-zion-slate-light'>;
+                    <RotateCcw className='h-5 w-5 text-zion-cyan flex-shrink-0' />;
+                    <div>;
+                      <p className='text-white text-sm font-medium'>Returns</p>;
+                      <p className='text-xs'>{equipment && equipment.returnPolicy}</p>;
+                    </div>;
+                  </div>;
                 )}
 
 
@@ -660,5 +1019,10 @@ if ( {) {
           </div>;
         </div>;
       </div>;
-    </>;
-  );
+    </>);
+}finally {
+  setIsAdding (false);
+}
+;
+}
+;

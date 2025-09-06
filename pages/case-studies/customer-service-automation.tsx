@@ -843,73 +843,12 @@ export default function CaseStudyPage(req, res) {
                   <Link;
                     href="/contact";
                     className="bg - gradient - to - r from - green - 400 to - cyan - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - green - 500 hover:to - cyan - 500 transition - all duration - 300";
-=======
-<<<<<<< HEAD
-};
-=======
-            <section className="mb-16">;
-              <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>;
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">;
-                <div className="space-y-6">;
-                  <div className="flex items-center gap-4">;
-                    <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-white font-bold">1</div>;
-                    <div>;
-                      <h4 className="text-lg font-semibold text-white">System Design & Planning (Month 1)</h4>;
-                      <p className="text-white/70">Customer service workflow analysis and system architecture design</p>;
-                    </div>;
-                  </div>;
-                  <div className="flex items-center gap-4">;
-                    <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-white font-bold">2</div>;
-                    <div>;
-                      <h4 className="text-lg font-semibold text-white">AI Model Training (Months 2-3)</h4>;
-                      <p className="text-white/70">Training chatbots and routing algorithms on historical customer data</p>;
-                    </div>;
-                  </div>;
-                  <div className="flex items-center gap-4">;
-                    <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-white font-bold">3</div>;
-                    <div>;
-                      <h4 className="text-lg font-semibold text-white">Integration & Testing (Month 4)</h4>;
-                      <p className="text-white/70">System integration and comprehensive testing with live customer interactions</p>;
-                    </div>;
-                  </div>;
-                  <div className="flex items-center gap-4">;
-                    <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-white font-bold">4</div>;
-                    <div>;
-                      <h4 className="text-lg font-semibold text-white">Deployment & Training (Month 5)</h4>;
-                      <p className="text-white/70">Full deployment and staff training on new systems</p>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-            </section>;
-            {/* Call to Action */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <section className="text-center">;
-              <div className="bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-2xl p-8 border border-green-500/20">;
-                <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Customer Service?</h2>;
-                <p className="text-white/80 mb-6 max-w-2xl mx-auto">;
-                  This case study demonstrates the real impact of customer service automation.;
-                  Let's discuss how we can help you achieve similar results.;
-                </p>;
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-                  <Link;
-                    href="/contact";
-                    className="bg-gradient-to-r from-green-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-500 hover:to-cyan-500 transition-all duration-300";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   >;
                     Get Started;
                   </Link>;
                   <Link;
-<<<<<<< HEAD
                     href="/case - studies";
                     className="px - 8 py - 4 border border - white / 20 rounded - lg text - white hover:border - green - 400 / 50 transition - all duration - 300";
-=======
-                    href="/case-studies";
-                    className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-green-400/50 transition-all duration-300";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   >;
                     View All Case Studies;
                   </Link>;
@@ -919,7 +858,6 @@ export default function CaseStudyPage(req, res) {
           </div>;
         </main>;
       </div>;
-<<<<<<< HEAD
     </>);
 }
 

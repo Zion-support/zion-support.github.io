@@ -14,11 +14,7 @@ export default /**
 function AdminLayout() {
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - gray - 800 to - black">;
-=======
-import { ReactNode } from "react";
-
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Admin Header */}
       <div className="glass border - b border - white / 10">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;

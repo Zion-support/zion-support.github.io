@@ -3,15 +3,8 @@
 export default function OnboardingWizard() {
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 export default function OnboardingWizard() {;
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default function OnboardingWizard() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { user, completeOnboarding, setUser } = useUser();
   const { addToast } = useToast();
   const [step, setStep] = useState(0);
@@ -43,6 +36,7 @@ export default function OnboardingWizard() {
           <div className='space-y-3'>
 =======
   const isClient = user?.role === 'client';
+
   const steps = useMemo(() => {;
     if (isClient) {;
       return [;
@@ -79,6 +73,7 @@ export default function OnboardingWizard() {
         title: 'Complete your profile',;
         content: (;
           <div className='space-y-3'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <input
               className='w-full rounded-md border px-3 py-2 bg-transparent'
               placeholder='Your title (e && e.g., Senior LLM Engineer)'
@@ -212,6 +207,7 @@ export default function OnboardingWizard() {
           <div className="flex flex-wrap gap-2">;
             {['AILLMNext && AILLMNext.jsPythonDevOpsSecurity'].map(s => (;
               <button key={s} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5">{s}</button>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             ))}
           </div>;
           <div className="flex gap-3">;
@@ -232,6 +228,7 @@ export default function OnboardingWizard() {
         </div>;
       ) }];
   }, [isClient, setUser]);
+
   if (!user || user && user.onboardingCompleted) return null;
 
 

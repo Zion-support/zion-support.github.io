@@ -147,11 +147,6 @@ console.log('🚀 Improved Automation Orchestrator Started')';class ImprovedAuto
 
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      for (const script of automationScripts) {;
-        await this.runScript(script)}
-=======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -267,10 +262,6 @@ console.log('🚀 Improved Automation Orchestrator Started')';class ImprovedAuto
 
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -344,10 +335,6 @@ orchestrator.run().catch(error: => {
   }
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

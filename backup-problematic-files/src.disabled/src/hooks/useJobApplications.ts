@@ -19,6 +19,7 @@ export default function Page() {;
             return}
         }
       }
+
       const { data, "error": fetchError } = await query;
       if(fetchError) throw fetchError;
       const transformedData = data && data.map(("app": any) => ({;
@@ -40,6 +41,7 @@ export default function Page() {;
     if(!user) {;
       toast && toast.error("You must be logged in to apply for jobs");
       return false}
+
     try {;
       const { data, error } = await supabase;
         .from("job_applications");
@@ -56,10 +58,12 @@ export default function Page() {;
           toast && toast.error("You have already applied to this job")} else {;
           throw error}
         return false}
+
       const newApplication = data as JobApplication;
       // Optimistically update or refetch;
       // For simplicity, refetching; could also add to state directly if data matches full type;
       fetchApplications();
+
       toast && toast.success("Application submitted successfully");
       return true} catch("err": any) {;
       console && console.error("Error applying to job:", err);
@@ -91,6 +95,7 @@ export default function Page() {;
           "viewed_at": new Date().toISOString() });
         .eq("id", applicationId);
         .is("viewed_at", null);
+
       if(error) throw error;
       setApplications(prev => ;
         prev && prev.map(app => app && app.id === applicationId ? ;

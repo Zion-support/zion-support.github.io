@@ -22,24 +22,7 @@ export default /**
 function EnterpriseITPage() {
   return (
     <div className="min - h-screen">;
-=======
-<<<<<<< HEAD
-import Link from "next/link";
-export const metadata = {title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services";
-  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.";
-  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"}
-export default function EnterpriseITPage() {return (;
-=======
-import Link from "next/link",;
-export const metadata = {;
-  title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",;
-  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",;
-  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"},;
-export default function EnterpriseITPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-    <div className="min-h-screen">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;

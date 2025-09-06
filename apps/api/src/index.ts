@@ -18,6 +18,7 @@ import rateLimit from '@fastify/rate-limit';
 
 =======
   const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt });
+=======
   return { text: completion.output_text }});  const completion = await openai.responses.create ({ model: 'gpt - 4o - mini', input: prompt });
 
   return { text: completion.output_text }
@@ -40,6 +41,7 @@ app && app.post('/jobs/generate', async (req: any, reply: any) => {
       [userId, role, description, body && body.location || null, body && body.tags || null]
 
     )
+=======
 ;
 app.post ('/jobs / generate', async (req: any, reply: any) => {
   const body = (req.body as any) || {}
@@ -60,6 +62,7 @@ if (return { description }) {
       `INSERT INTO job_post (user_id, title, description, location, tags, status);
       VALUES ($1, $2, $3, $4, $5, 'draft')`;
       [user_id, role, description, body.location || null, body.tags || null]);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
   return { saved: Boolean (user_id), description }
 });
@@ -129,6 +132,7 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
 
 
 });
+
 app.get('/notifications', async (req: any, reply: any) => {
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -149,7 +153,6 @@ app.get('/notifications', async (req: any, reply: any) => {
 
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
-<<<<<<< HEAD
   app.log.error(err);
   (process as any).exit(1)
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

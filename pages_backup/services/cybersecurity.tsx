@@ -1,3 +1,26 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React from 'react';
 
 
@@ -37,9 +60,8 @@ export default function CybersecurityServices() {;
     <Layout
       title="Cybersecurity Services - Zion Tech Group"
       description="Comprehensive cybersecurity services to protect your business from threats. Advanced security solutions, compliance, and 24/7 monitoring."
-      keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit"
-    >
-      <div className="min-h-screen bg-white">
+      keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit">;
+      <div className="min-h-screen bg-white">;
         {/* Hero Section */}
 
   {
@@ -106,11 +128,11 @@ export default function CybersecurityPage() {
 
 
         {/* Services Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {securityServices.map((service, index) => (
-                <motion.div
+        <section className="py-16 px-4">;
+          <div className="max-w-7xl mx-auto">;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+              {securityServices && securityServices.map((service, index) => (;
+                <motion&& motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -155,41 +177,90 @@ export default function CybersecurityPage() {
 
 
 =======
+=======
+                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">;
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">;
+                    <service && service.icon className="w-6 h-6 text-blue-600" />;
+        {/* Features Section */}
+        <section className="py-20 bg-gray-50">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="text-center mb-16">;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
+                Cybersecurity Solutions;
+              </h2>;
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+                Comprehensive security services designed to protect your business;
+                from evolving cyber threats and ensure regulatory compliance.;
+              </p>;
+            </div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {features && features.map((feature, index) => (;
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">;
+                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">;
+                    <feature && feature.icon className="w-6 h-6 text-red-600" />;
+
+        {/* Services Grid */}
+        <section className="py-16 px-4">;
+          <div className="max-w-7xl mx-auto">;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+              {securityServices && securityServices.map((service, index) => (;
+                <motion&& motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">;
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">;
+                    <service && service.icon className="w-6 h-6 text-blue-600" />;
+                  </div>;
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">;
+                    {feature && feature.title}
+                  </h3>;
+                  <p className="text-gray-600">;
+                    {feature && feature.description}
+                  </p>;
+                </div>;
+              ))}
+            </div>;
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/cybersecurity.tsx
         {/* Benefits Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Why Choose Our Cybersecurity Services?
-                </h2>
-                <p className="text-xl text-gray-600 mb-8">
-                  Our cybersecurity experts provide comprehensive protection against
-                  evolving threats while ensuring compliance with industry regulations.
-                </p>
-                <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
+        <section className="py-20">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
+              <div>;
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
+                  Why Choose Our Cybersecurity Services?;
+                </h2>;
+                <p className="text-xl text-gray-600 mb-8">;
+                  Our cybersecurity experts provide comprehensive protection against;
+                  evolving threats while ensuring compliance with industry regulations.;
+                </p>;
+                <ul className="space-y-4">;
+                  {benefits && benefits.map((benefit, index) => (;
+                    <li key={index} className="flex items-start">;
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
+                      <span className="text-gray-700">{benefit}</span>;
+                    </li>;
                   ))}
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-red-600 to-orange-700 p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Ready to Secure Your Business?</h3>
-                <p className="text-lg mb-6">
-                  Let our cybersecurity experts help you implement comprehensive
-                  security solutions that protect your business and data.
-                </p>
-                <button className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
-                  Schedule Security Audit
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
+                </ul>;
+              </div>;
+              <div className="bg-gradient-to-r from-red-600 to-orange-700 p-8 rounded-xl text-white">;
+                <h3 className="text-2xl font-bold mb-6">Ready to Secure Your Business?</h3>;
+                <p className="text-lg mb-6">;
+                  Let our cybersecurity experts help you implement comprehensive;
+                  security solutions that protect your business and data.;
+                </p>;
+                <button className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
+                  Schedule Security Audit;
+                  <ArrowRight className="w-5 h-5 ml-2" />;
+                </button>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
 
 
 

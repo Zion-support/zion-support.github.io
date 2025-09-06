@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -31,6 +35,7 @@ import { ArrowRight, Star, TrendingUp, Users, Shield, Zap } from 'lucide-react';
 const RevolutionaryServicesShowcase: React.FC = () => {;
   const [activeCategory, setActiveCategory] = useState('all');
   const [visibleServices, setVisibleServices] = useState(12);
+=======
     { id: 'all', name: 'All Services', count: revolutionary2025MicroSaasServices.length + emergingTech2025Services.length + enterpriseIT2025Services.length },
     { id: 'ai', name: 'AI & ML', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('AI')).length };
     { id: 'quantum', name: 'Quantum Tech', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('Quantum')).length };
@@ -38,6 +43,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
     { id: 'enterprise', name: 'Enterprise IT', count: enterpriseIT2025Services.length },
     { id: 'revolutionary', name: 'Revolutionary', count: revolutionary2025MicroSaasServices.length }
   ];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   const categories = [;
     {;
       id: 'all',;
@@ -79,6 +86,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
       id: 'revolutionary',;
       name: 'Revolutionary',;
       count: revolutionary2025MicroSaasServices && revolutionary2025MicroSaasServices.length,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     },  ];
 
 
@@ -113,6 +121,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices && revolutionary2025MicroSaasServices.includes(service);
         return true;
       });
+
   const loadMore = () => {;
     setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));
   };
@@ -193,6 +202,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             Transform your business with services that were once science fiction.;
           </p>;
         </motion && motion.div>;
+
         {/* Category Filter */}
 
           initial={{ opacity: 0, y: 20 }}
@@ -244,7 +254,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               key={service && service.id}
               variants={itemVariants}
               className='group relative cursor-pointer'
-<<<<<<< HEAD
               style={{ perspective: '1000px' }}>;
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>;
@@ -262,9 +271,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             >;
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75"></div>;
               <div className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full">;
+=======
             >
               {category.name}
               <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
+=======
         stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
@@ -353,6 +364,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             >;
               {category.name}
               <span className='ml - 2 px - 2 py - 1 bg - white / 20 rounded - full text - xs'>                {category.count}              <span className="ml - 2 px - 2 py - 1 bg - white / 20 rounded - full text - xs">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {category.count}
               </span>;
             </button>))}
@@ -376,6 +388,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>;
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>;
                 </div>;
+=======
+
                 {/* Popular Badge */}
                 {service.popular && (
                   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
@@ -455,24 +469,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                       <div className='text - 4xl'>{service.icon}</div>;
                       <div>;
                         <h3 className='text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;
-=======
-<<<<<<< HEAD
-=======
-
-                {/* Service Header */}
-                <div className='relative z-10'>
-                  <div className='flex items-start justify-between mb-4'>
-                    <div className='flex items-center space-x-3'>
-                      <div className='text-4xl'>{service.icon}</div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                      <div>
-                        <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           {service.name}
                         </h3>;
                         <p className='text - gray - 400 text - sm'>;
@@ -534,6 +531,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                         {service && service.period}
                       </div>                    </div>;
                   </div>;
+
                   {/* Description */}
                   <p className='text-gray-300 mb-4 leading-relaxed'>;
                     {service && service.description}
@@ -549,10 +547,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                       <div className="text-gray-400 text-sm">{service && service.period}</div>;
                     </div>;
                   </div>;
+
                   {/* Description */}
                   <p className='text-gray-300 mb-4 leading-relaxed'>;
                     {service && service.description}
                   </p>;
+=======
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
 
 
@@ -582,6 +582,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                         {service && service.trialDays} day trial;
                       </span>                    </div>;
                   </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Action Buttons */}
                   <div className='flex space-x-3 mt-6'>;
                   {/* Stats Grid */}
@@ -620,6 +622,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />;
                     </a>;
                     <button className="px-4 py-3 border border-white/20 hover:border-cyan-400/50 text-white rounded-lg transition-all duration-300 hover:bg-white/5">;
+=======
                   </p>                      <div>;
                         <h3 className="text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300">;
                           {service.name}
@@ -751,6 +754,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           ))}
 
         </motion && motion.div>;
+
         {/* Load More Button */}
         {visibleServices < filteredServices && filteredServices.length && (;
           <motion&& motion.div
@@ -763,6 +767,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             className='text-center'            initial={{ opacity: 0 }}          <motion.div 
 
             className="text-center"
+=======
 
         {/* Load More Button */}
         {visibleServices < filteredServices.length && (
@@ -786,6 +791,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               Load More Revolutionary Services
             </button>
           </motion.div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         )}
 
         <motion&& motion.div
@@ -861,6 +867,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
     </section>;
   );
 };
+
 export default RevolutionaryServicesShowcase;  );
 
 =======
@@ -868,6 +875,8 @@ export default RevolutionaryServicesShowcase;  );
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default RevolutionaryServicesShowcase;
 
 

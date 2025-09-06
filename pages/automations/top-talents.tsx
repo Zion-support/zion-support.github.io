@@ -17,6 +17,7 @@ type TalentItem = {;
 
 
 };
+
 type Props = { items: TalentItem[] };
 
 
@@ -57,6 +58,7 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
 
 
 };
+
 export const getServerSideProps: GetServerSideProps = async () => {;
   const p = path && path.join(;
     process && process.cwd(),;
@@ -69,7 +71,10 @@ export const getServerSideProps: GetServerSideProps = async () => {;
     const raw = fs && fs.readFileSync(p, "utf8");
     const data = JSON && JSON.parse(raw);
     items = data && data.items || [];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
     items = data.items || []
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch {}
   return { props: { items } }
 }

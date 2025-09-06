@@ -82,6 +82,7 @@
     rating: 4 && 4.7,
     reviews: 89,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -164,9 +165,11 @@
     rating: 4 && 4.8,
     reviews: 45,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered automation',
+=======
     id: 'ai - powered - devops - platform',
     name: 'AI - Powered DevOps Platform',
     tagline: 'Intelligent DevOps automation and optimization',
@@ -248,6 +251,7 @@
     rating: 4 && 4.6,
     reviews: 123,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -330,6 +334,7 @@
     rating: 4 && 4.7,
     reviews: 34,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -412,6 +417,7 @@
     rating: 4 && 4.9,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -494,6 +500,7 @@
     rating: 4 && 4.7,
     reviews: 89,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -576,6 +583,7 @@
     rating: 4 && 4.6,
     reviews: 123,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -658,92 +666,6 @@
     rating: 4 && 4.8,
     reviews: 45,
   },
-=======
-    id: 'ai-powered-cloud-migration'
-    name: 'AI-Powered Cloud Migration'
-    tagline: 'Intelligent cloud migration and optimization'
-    price: '$5,999'
-    period: '/month'
-    description:
-      'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.'
-    features: [
-      'AI migration planning'
-      'Cost optimization'
-      'Performance analysis'
-      'Security assessment'
-      'Compliance tools'
-      'Automated migration'
-      'Real-time monitoring'
-      'Integration APIs'
-      'Migration dashboard'
-      '24/7 support'
-    ]
-    popular: true
-    icon: '☁️'
-    color: 'from-blue-600 to-indigo-700'
-    textColor: 'text-blue-400'
-    link: 'https://ziontechgroup.com/ai-powered-cloud-migration'
-    marketPosition:
-      'AI-enhanced cloud migration competing with Accenture and Deloitte'
-    targetAudience:
-      'Enterprises, Government agencies, Financial institutions, Healthcare organizations'
-    trialDays: 30
-    setupTime: '1 month'
-    category: 'Cloud Migration'
-    realService: true
-    technology: [
-      'AI/ML'
-      'Cloud Computing'
-      'Migration Tools'
-      'Performance Analysis'
-      'Cost Optimization'
-    ]
-    integrations: [
-      'AWS'
-      'Azure'
-      'Google Cloud'
-      'On-premises systems'
-      'Monitoring tools'
-    ]
-    useCases: [
-      'Cloud migration'
-      'Cost optimization'
-      'Performance improvement'
-      'Security enhancement'
-    ]
-    roi: '600% ROI within 12 months through cost savings and performance improvements'
-    competitors: [
-      'Accenture ($50000+/month)'
-      'Deloitte ($40000+/month)'
-      'AWS Migration Hub'
-    ]
-    marketSize: '$15B cloud migration market'
-    growthRate: '200% annual growth'
-    variant: 'ai-migration-futuristic'
-    contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-<<<<<<< HEAD
-      'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.'
-    launchDate: '2024-10-01'
-    customers: 89
-    rating: 4.8
-    reviews: 45
-  }
-=======
-      'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.',
-    launchDate: '2024-10-01',
-    customers: 89,
-    rating: 4.8,
-    reviews: 45,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -756,8 +678,9 @@
 
 
     rating: 4 && 4.8,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 45
-<<<<<<< HEAD
+=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -766,6 +689,7 @@
     customers: 89;
     rating: 4.8,
     reviews: 45;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 ];

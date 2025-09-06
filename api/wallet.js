@@ -26,6 +26,7 @@ const { withErrorLogging } = require(
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+
 async function handler(req, res) {
   if (req.method !== 'GET') {
     res.statusCode = 405;
@@ -33,9 +34,11 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
+
   try {
     // Authentication would normally be checked here
     // This is a placeholder implementation
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     res.statusCode = 200;
     res.json({ "points": 0, "history": [] })} catch (err) {
     console.error(',

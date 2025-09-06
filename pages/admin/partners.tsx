@@ -7,16 +7,9 @@ import Head from 'next / head';
 
 interface Partner {
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-interface Partner {
 interface Partner {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   code: string;
   name: string;
@@ -81,11 +74,13 @@ const AdminPartnersPage: React.FC = () => {;
 
 =======
 import { useEffect, useState } from 'react';
+
 export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]);
   const [selected, setSelected] = useState<string>('');
   const [flags, setFlags] = useState<any[]>([]);
-useEffect(() => {
+
+  useEffect(() => {
     (async () => {
       try {
         const res = await fetch('/api/admin/partners/list');
@@ -94,6 +89,7 @@ useEffect(() => {
       } catch {}
     })()
   }, []);
+
   async function updatePartner(code: string, updates: any) {
     await fetch('/api/admin/partners/update', {
       method: 'POST',
@@ -103,18 +99,22 @@ useEffect(() => {
     const json = await res.json();
     setPartners(json.partners || [])
   }
+
   async function viewFlags(code: string) {
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
     const json = await res.json();
     setFlags(json.flags || [])
   }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   useEffect(() => {;
     // Simulate loading partners;
     setTimeout(() => {;
       setPartners(mockPartners);
       setLoading(false);
     }, 1000);  }, []);
+
   async function updatePartner(): any (code: string, updates: any) {;
     await fetch('/api/admin/partners/update', {;
       method: 'POST',;
@@ -147,7 +147,6 @@ useEffect(() => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-<<<<<<< HEAD
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
       <div className='overflow-auto'>;
@@ -224,6 +223,7 @@ useEffect(() => {
           </tbody>;
         </table>;
       </div>;
+
       {selected && (;
         <div className='p-4 rounded border'>;
           <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>;
@@ -241,6 +241,7 @@ useEffect(() => {
 
           </ul>;
         </div>;
+
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;
           <div className="bg-white rounded-lg shadow p-4">;
@@ -429,11 +430,13 @@ useEffect(() => {
             </div>;
           </div>;
         </div>;
+
         {/* Partners Table */}
         <div className="bg-white rounded-lg shadow overflow-hidden">;
           <div className="px-6 py-4 border-b">;
             <h2 className="text-lg font-semibold">Partners ({filteredPartners && filteredPartners.length})</h2>;
           </div>;
+
           {loading ? (;
             <div className="text-center py-8">Loading partners...</div>;
           ) : filteredPartners && filteredPartners.length === 0 ? (;
@@ -530,6 +533,7 @@ useEffect(() => {
                             </button>;
                           )}
                           <button className="text-blue-600 hover:text-blue-900">;
+=======
                             <>;
                               <button;
                                 on_click={() => handleStatusChange (partner.id, 'active')}
@@ -559,6 +563,7 @@ useEffect(() => {
                               Activate;
                             </button>)}
                           <button className="text - blue - 600 hover:text - blue - 900">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             Edit;
                           </button>;
                         </div>;

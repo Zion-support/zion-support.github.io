@@ -131,10 +131,6 @@ function main() {};
 };
         fixedCount++}
     } catch (error) {_;
-<<<<<<< HEAD
-      errorCount++}
-}
-=======
   
       errorCount++}
 }

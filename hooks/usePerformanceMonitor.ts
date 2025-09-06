@@ -11,6 +11,7 @@ interface PerformanceMetrics {
             loadTime: navEntry && navEntry.loadEventEnd - navEntry && navEntry.loadEventStart,
           }));
         }
+        
         if (entry && entry.entryType === 'paint') {
 
           const paintEntry = entry as PerformancePaintTiming;
@@ -22,6 +23,7 @@ interface PerformanceMetrics {
             }));
           }
         }
+        
         if (entry && entry.entryType === 'largest-contentful-paint') {
           const lcpEntry = entry as PerformanceEntry;
           setMetrics(prev => ({
@@ -29,6 +31,7 @@ interface PerformanceMetrics {
             largestContentfulPaint: lcpEntry && lcpEntry.startTime,
           }));
         }
+        
         if (entry && entry.entryType === 'first-input') {
           const fidEntry = entry as PerformanceEventTiming;
           setMetrics(prev => ({
@@ -36,6 +39,7 @@ interface PerformanceMetrics {
             firstInputDelay: fidEntry && fidEntry.processingStart - fidEntry && fidEntry.startTime,
           }));
         }
+        
         if (entry && entry.entryType === 'layout-shift') {
           const clsEntry = entry as PerformanceEntry & { value: number };
           setMetrics(prev => ({
@@ -125,6 +129,7 @@ if ( {) {
           set_metrics (prev => ({
             ...prev,
             cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + cls_entry.value,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }));
         }
       });
@@ -136,6 +141,8 @@ if ( {) {
   }, []);
   return { metrics, isSupported }
 }
+
+=======
 ;
     // Observe different performance entry types;
     try {
@@ -151,3 +158,4 @@ if ( {) {
 ;
   return { metrics, is_supported }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

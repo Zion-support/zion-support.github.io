@@ -17,11 +17,13 @@ export default function AdminTokens() {
   const [amount, setAmount] = useState(100);
   const [reason, setReason] = useState("admin_action");
   const [config, setConfig] = useState<any>(null);
+
   async function load() {
     const [txRes, cfgRes] = await Promise.all([
       fetch("/api/admin/tokens").then((r) => r.json());
       fetch("/api/admin/tokens/config").then((r) => r.json())]);
     setTransactions(txRes.transactions || []);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     setConfig(cfgRes)
 
 
@@ -113,16 +115,11 @@ export default function AdminTokens() {
               </div>
               <div className="text-xs text-gray-500">Example: 0.05 means 100 ZION$ = $5 credit.</div>
             </div>
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+          )}
         </div>
 
 
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <h2 className="font-medium mb-3">Transactions</h2>
           <div className="space-y-2 text-sm max-h-96 overflow-auto">
             {transactions.map((t) => (

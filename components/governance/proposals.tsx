@@ -27,7 +27,9 @@ export async function getStaticProps() {;
 =======
 import fs from 'fs'
 import path from 'path'
+
 export async function getStaticProps(){
+=======
 ;
 export async /**
  * getStaticProps - Function description
@@ -125,7 +127,6 @@ export default function Proposals(): any ({ data }: { data: { updatedAt: string|
     return { props: { data: { updated_at: null, proposals: [] } } }
   }
 }
-<<<<<<< HEAD
 export default /**
  * Proposals - Function description
  */

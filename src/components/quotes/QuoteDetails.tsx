@@ -24,12 +24,12 @@ interface QuoteDetailsProps {;
   isOpen: boolean,;
   onClose: () => void;
 }
-;
+
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
-  if (!quote) return null,;
+  if (!quote) return null;
+
   const formatDate = (dateString?: string) => {;
-    if (!dateString) return 'Not specified',;
-    try {;
+    if (!dateString) return 'Not specified';    try {;
       return format(new Date(dateString), 'PPP');
     } catch (e) {;
       return dateString;

@@ -46,6 +46,7 @@
     rating: 4 && 4.7,
     reviews: 5,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -92,9 +93,11 @@
     rating: 4 && 4.5,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Flexible cron/rate',
+=======
     id: 'edge - cron - orchestrator',
     name: 'Edge Cron Orchestrator',
     tagline: 'Reliable schedules with retries, jitter and DLQs',
@@ -138,6 +141,7 @@
     rating: 4 && 4.5,
     reviews: 4,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -186,9 +190,11 @@
     rating: 4 && 4.6,
     reviews: 5,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Brand/tone controls',
+=======
     id: 'ai - marketing - content - studio',
     name: 'AI Marketing Content Studio',
     tagline: 'Campaign - ready blogs, emails and ads with brand guardrails',
@@ -232,9 +238,11 @@
     rating: 4 && 4.6,
     reviews: 9,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'CSP/HSTS checks',
+=======
     id: 'security - headers - scanner',
     name: 'Security Headers Scanner',
     tagline: 'Continuous CSP / HSTS / cookie flag auditing with diffs',
@@ -280,6 +288,7 @@
     rating: 4 && 4.5,
     reviews: 10,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -326,6 +335,7 @@
     rating: 4 && 4.5,
     reviews: 3,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -374,6 +384,7 @@
     rating: 4 && 4.5,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -422,6 +433,7 @@
     rating: 4 && 4.5,
     reviews: 3,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -468,6 +480,7 @@
     rating: 4 && 4.6,
     reviews: 4,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -516,6 +529,7 @@
     rating: 4 && 4.7,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];	{
 
 

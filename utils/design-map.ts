@@ -179,13 +179,8 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 
   const tokens = await buildTokenSet(fileId);
 =======
-    };
-  };
-}
-
-export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const tokens = await buildTokenSet(fileId);
+export async function buildTokenSet (file_id: string): Promise < TokenSet> {
+  // Placeholder implementation;
   return {
 
     id,

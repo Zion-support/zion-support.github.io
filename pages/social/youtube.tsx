@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -32,6 +36,7 @@ if ( {) {
   $2
 }
       window.location.replace ('https: //youtube.com/@ziontechgroup'),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
 =======
 
@@ -56,8 +61,7 @@ export default function YouTubeRedirect() {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //youtube.com/@ziontechgroup')
 		}
-}, []);
-
+	}, []);
 	return (
 		<>
 			<Head>
@@ -68,7 +72,7 @@ export default function YouTubeRedirect() {
 			</Head>
 			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
 				<a href="https: //youtube.com/@ziontechgroup" className="text-cyan-400 underline">
-Continue to YouTube
+					Continue to YouTube
 				</a>
 			</div>
 		</>

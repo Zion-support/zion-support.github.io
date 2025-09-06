@@ -271,9 +271,16 @@ body::after {
 <<<<<<< HEAD
 >>>>>>> main
 .quantum-grid {
-
-<<<<<<< HEAD
 =======
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(0, 255, 255, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 70% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(236, 73, 153, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: -1;
+  animation: quantumPulse 20s ease-in-out infinite;
+}
+
 /* Advanced Quantum Field Animation */
 @keyframes backgroundFloat {
   0%, 100% {
@@ -317,7 +324,6 @@ body::after {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   background-image: 
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
@@ -434,8 +440,18 @@ body::after {
 =======
   animation: matrixMove 30s linear infinite;
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
+@keyframes matrixMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* Holographic Scan Lines */
+.holographic-scan::before {
   content: '';
 <<<<<<< HEAD
   position: absolute;
@@ -527,7 +543,7 @@ body::after {
 .cyberpunk-glitch::before,
 .cyberpunk-glitch::after {
   content: attr(data-text);
-
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-465f
   position: absolute;
 =======
 =======
@@ -972,7 +988,7 @@ body::after {
 .quantum-ripple {
   position: relative;
   overflow: hidden;
-
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-465f
 }
 =======
 =======
@@ -1102,7 +1118,7 @@ body::after {
       rgba(139, 92, 246, 0.1) 1px,
       rgba(139, 92, 246, 0.1) 2px
     );
-
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-465f
   }
 =======
 =======
@@ -1176,8 +1192,6 @@ body::after {
     box-shadow: none;
     text-shadow: none;
   }
-<<<<<<< HEAD
-=======
   
 <<<<<<< HEAD
 =======
@@ -1202,17 +1216,15 @@ body::after {
     --neon-red: #ef4444;
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-  .particle {
+/* Print Styles */
+@media print {
+  .quantum-matrix,
+  .holographic-scan,
+  .quantum-entanglement,
+  .neural-network,
+  .cyberpunk-glitch {
     display: none;
-<<<<<<< HEAD
-
-    display: none;
-  .particle {    display: none;
-  .particle {    display: none;
-
-=======
   }
   
   body::before,

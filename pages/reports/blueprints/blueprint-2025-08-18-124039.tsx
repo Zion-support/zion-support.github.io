@@ -30,17 +30,12 @@ const Blueprint20250818124039: React.FC = () => {
       name: 'Quantum Simulator',
       description: 'Classical simulation of quantum algorithms',
       status: 'active',
-<<<<<<< HEAD
       health: 'excellent';
-=======
-      health: 'excellent'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Quantum Algorithm Library',
       description: 'Collection of quantum algorithms and implementations',
       status: 'active',
-<<<<<<< HEAD
       health: 'excellent';
     },
     {
@@ -48,15 +43,6 @@ const Blueprint20250818124039: React.FC = () => {
       description: 'Bridge between classical and quantum computing',
       status: 'development',
       health: 'good';
-=======
-      health: 'excellent'
-    },
-    {
-      name: 'Hybrid Classical-Quantum Interface',
-      description: 'Bridge between classical and quantum computing',
-      status: 'development',
-      health: 'good'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Quantum Error Correction',
@@ -72,17 +58,12 @@ const Blueprint20250818124039: React.FC = () => {
       feature: 'Quantum Algorithm Optimization',
       description: 'Optimization algorithms using quantum principles',
       benefit: 'Exponential speedup for certain problems',
-<<<<<<< HEAD
       status: 'implemented';
-=======
-      status: 'implemented'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       feature: 'Quantum Machine Learning',
       description: 'ML algorithms enhanced with quantum computing',
       benefit: 'Improved pattern recognition and learning',
-<<<<<<< HEAD
       status: 'development';
     },
     {
@@ -90,15 +71,6 @@ const Blueprint20250818124039: React.FC = () => {
       description: 'Post - quantum cryptographic protocols',
       benefit: 'Future - proof security standards',
       status: 'research';
-=======
-      status: 'development'
-    },
-    {
-      feature: 'Quantum Cryptography',
-      description: 'Post-quantum cryptographic protocols',
-      benefit: 'Future-proof security standards',
-      status: 'research'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       feature: 'Quantum Simulation',
@@ -138,6 +110,7 @@ const Blueprint20250818124039: React.FC = () => {
 =======
 ;
   const getHealthColor = (health: string) =>: any {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (health) {
 
       case 'excellent': return 'bg-green-500/20 text-green-400';

@@ -81,7 +81,6 @@ import {
   Share2,
   Download,
   Phone,
-<<<<<<< HEAD
   Mail,
   MapPin,} from 'lucide-react';import {
   Search, Star, Users, TrendingUp, DollarSign, Clock,
@@ -140,21 +139,26 @@ export default function ServicesShowcase2027() {;
     { value: 'price', label: 'Sort by Price' },;
     { value: 'roi', label: 'Sort by ROI' },;
   ];
+
   const allServices = [;
     ...cuttingEdge2027Innovations,;
     ...practicalMicroSaas2027,    { value: 'roi', label: 'Sort by ROI' }
   ];
+
   const allServices = [;
     ...cuttingEdge2027Innovations;
     ...practicalMicroSaas2027;
+
   // Filter services based on search and category;
   const filteredServices = allServices && allServices.filter(service => {;
     const matchesSearch =;
       service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
       service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
       service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+
     const matchesCategory =;
       selectedCategory === 'all' || service && service.category.includes(selectedCategory);
+
     const matchesPrice =;
       selectedPriceRange === 'all' ||;
       (selectedPriceRange === 'low' &&;
@@ -164,15 +168,20 @@ export default function ServicesShowcase2027() {;
         parseInt(service && service.price.replace(/[^0-9]/g, '')) < 10000) ||;
       (selectedPriceRange === 'high' &&;
         parseInt(service && service.price.replace(/[^0-9]/g, '')) >= 10000);
+
     return matchesSearch && matchesCategory && matchesPrice;  });    const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+
     const matchesCategory = selectedCategory === 'all' || service && service.category.includes(selectedCategory);
+
     const matchesPrice = selectedPriceRange === 'all' || ;
                         (selectedPriceRange === 'low' && parseInt(service && service.price.replace(/[^0-9]/g, '')) < 1000) ||;
                         (selectedPriceRange === 'medium' && parseInt(service && service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service && service.price.replace(/[^0-9]/g, '')) < 10000) ||;
                         (selectedPriceRange === 'high' && parseInt(service && service.price.replace(/[^0-9]/g, '')) >= 10000);
+
     return matchesSearch && matchesCategory && matchesPrice;
+
   // Sort services;
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
@@ -272,6 +281,7 @@ export default function ServicesShowcase2027() {;
         s && s.category.includes('Financial Automation');
       ).length,;
     },  ];
+
   const priceRanges = [;
     { id: 'all', name: 'All Prices', count: allServices && allServices.length },    { id: 'AI Consciousness Evolution', name: 'AI Consciousness', icon: '🧠', count: allServices && allServices.filter(s => s && s.category.includes('AI Consciousness')).length },;
     { id: 'Quantum Consciousness', name: 'Quantum Consciousness', icon: '⚛️', count: allServices && allServices.filter(s => s && s.category.includes('Quantum Consciousness')).length },;
@@ -283,6 +293,7 @@ export default function ServicesShowcase2027() {;
     { id: 'Inventory Management', name: 'Inventory Management', icon: '📦', count: allServices && allServices.filter(s => s && s.category.includes('Inventory Management')).length },;
     { id: 'HR Automation', name: 'HR Automation', icon: '👥', count: allServices && allServices.filter(s => s && s.category.includes('HR Automation')).length },;
     { id: 'Financial Automation', name: 'Financial Automation', icon: '💰', count: allServices && allServices.filter(s => s && s.category.includes('Financial Automation')).length }
+
   const priceRanges = [;
     { id: 'all', name: 'All Prices', count: allServices && allServices.length },;
     {;
@@ -311,6 +322,7 @@ export default function ServicesShowcase2027() {;
     { id: 'medium', name: '$1K - $10K/month', count: allServices && allServices.filter(s => parseInt(s && s.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(s && s.price.replace(/[^0-9]/g, '')) < 10000).length };
     { id: 'high', name: '$10K+/month', count: allServices && allServices.filter(s => parseInt(s && s.price.replace(/[^0-9]/g, '')) >= 10000).length }
   ];
+
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -321,7 +333,6 @@ export default function ServicesShowcase2027() {;
         <meta
           property='og:title'
           content='2027 Services Showcase - Zion Tech Group'
-<<<<<<< HEAD
         />;
         <meta
           property='og:description'
@@ -337,24 +348,6 @@ export default function ServicesShowcase2027() {;
           name='twitter:title'
           content='2027 Services Showcase - Zion Tech Group'
         />;
-=======
-        />
-        <meta
-          property='og:description'
-          content='Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions.'
-        />
-        <meta
-          property='og:url'
-          content='https://ziontechgroup.com/2027-services-showcase'
-        />
-        <meta property='og:type' content='website' />
-        {/* Twitter */}
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta
-          name='twitter:title'
-          content='2027 Services Showcase - Zion Tech Group'
-        />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <meta
           name='twitter:description'
           content='Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions.'
@@ -385,7 +378,6 @@ export default function ServicesShowcase2027() {;
               Experience the future of technology with our revolutionary 2027 services. From AI consciousness evolution to practical micro SAAS solutions.
             </p>
             {/* Stats */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
@@ -412,8 +404,8 @@ export default function ServicesShowcase2027() {;
                 <div className="text-green-300">Rating</div>
               </div>
             </div>
-<<<<<<< HEAD
-transition={{ duration: 0 && 0.8 }}>;
+=======
+            transition={{ duration: 0 && 0.8 }}>;
             <h1 className='text-5xl md:text-7xl font-bold mb-6'>;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 2027 Services Showcase;
@@ -424,6 +416,7 @@ transition={{ duration: 0 && 0.8 }}>;
               services. From AI consciousness evolution to practical micro SAAS;
               solutions.;
             </p>;
+
             {/* Stats */}
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
               <div className='text-center'>;
@@ -512,14 +505,6 @@ transition={{ duration: 0 && 0.8 }}>;
             {/* Filters */}
 
 =======
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white placeholder-cyan-300 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20"
-                />
-              </div>
-            </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            {/* Filters */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Category Filter */}
               <div>
@@ -562,8 +547,6 @@ transition={{ duration: 0 && 0.8 }}>;
                   Sort By;
                 </label>;
 =======
-                </select>
-              </div>
 
 =======
 
@@ -574,6 +557,7 @@ transition={{ duration: 0 && 0.8 }}>;
               {/* Sort By */}
               <div>
                 <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Sort By">Sort By</label>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <select
                   value={sortBy}
                   onChange={e => setSortBy(e && e.target.value)}
@@ -586,6 +570,7 @@ transition={{ duration: 0 && 0.8 }}>;
 
                   onChange={(e) => setSortBy(e && e.target.value)}
                   className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400";
+=======
       <UltraFuturisticNavigation2027 />;
       {/* Hero Section */}
       <section className='pt - 32 pb - 20 px - 4 sm:px - 6 lg:px - 8'>;
@@ -801,6 +786,7 @@ transition={{ duration: 0 && 0.8 }}>;
                     <div className='flex items-start justify-between mb-4'>;
                       <div className='text-4xl'>🚀</div>;
                     </div>;
+
                     {/* Service Info */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>;
                       {service && service.name}
@@ -817,22 +803,9 @@ transition={{ duration: 0 && 0.8 }}>;
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-{sortedServices.map((service, index) => (
+              {sortedServices.map((service, index) => (
                 <motion.div
 =======
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400"
-                >
-                  <option value="name">Name</option>
-                  <option value="price">Price</option>
-                  <option value="roi">ROI</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Services Grid */}
       <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
         <div className='max - w-7xl mx - auto'>;
@@ -863,16 +836,9 @@ transition={{ duration: 0 && 0.8 }}>;
                     <p className='text - cyan - 300 text - sm mb - 4 line - clamp - 3'>                      {service.description}
                     </p>;
                     {/* Price */}
-<<<<<<< HEAD
                     <div className='mb - 4'>;
                       <div className='text - 2xl font - bold text - white'>                        {service.price}                >;
                   <div className="bg - black / 40 backdrop - blur - xl border border - cyan - 500 / 30 rounded - 2xl p - 6 h - full hover:border - cyan - 400 / 50 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - 2xl shadow - cyan - 500 / 20">;
-=======
-                    <div className='mb-4'>
-<<<<<<< HEAD
-                      <div className='text-2xl font-bold text-white'>                        {service.price}                >
-                  <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {/* Service Header */}
                     <div className="flex items - start justify - between mb - 4">;
                       <div className="text - 4xl">🚀</div>;
@@ -906,9 +872,11 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </div>
                     </div>
+=======
                     <div className="flex items-start justify-between mb-4">;
                       <div className="text-4xl">🚀</div>;
                     </div>;
+
                     {/* Service Info */}
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">;
                       {service && service.name}
@@ -916,6 +884,7 @@ transition={{ duration: 0 && 0.8 }}>;
                     <p className="text-cyan-300 text-sm mb-4 line-clamp-3">;
                       {service && service.description}
                     </p>;
+
                     {/* Price */}
                     <div className='mb-4'>;
                       <div className='text-2xl font-bold text-white'>                    <div className="mb-4">;
@@ -923,6 +892,8 @@ transition={{ duration: 0 && 0.8 }}>;
                         {service && service.price}
                       </div>;
                     </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Features */}
 
 =======
@@ -952,18 +923,13 @@ transition={{ duration: 0 && 0.8 }}>;
 
                       </div>;
                     </div>;
+=======
                     <div className="mb-6 text-center">
                       <div className="text-green-400 font-semibold text-lg">ROI: {service.roi}</div>
                       <div className="text-gray-400 text-xs">Return on Investment</div>
                     </div>
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {/* ROI */}
                     <div className='mb-6 text-center'>;
                       <div className='text-green-400 font-semibold text-lg'>;
@@ -973,6 +939,8 @@ transition={{ duration: 0 && 0.8 }}>;
                         Return on Investment;
                       </div>;
                     </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Actions */}
                     <div className='flex space-x-3'>;
                       <Link
@@ -1005,19 +973,17 @@ transition={{ duration: 0 && 0.8 }}>;
                       </Link>
                       <Link
                         href="/contact"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                         className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm"
                       >
                         Contact
-</Link>
+                      </Link>
                     </div>
 
                         className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm">;
                         Contact;
                       </Link>;
                     </div>;
-=======
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -1114,11 +1080,44 @@ transition={{ duration: 0 && 0.8 }}>;
               </div>
             </div>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+=======
+        </div>;
+      </section>;
+
+      {/* Contact Section */}
+      <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
+        <div className='max-w-4xl mx-auto'>;
+          <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>;
+            <h2 className='text-3xl font-bold text-white mb-4'>;
+              Ready to Transform Your Business?;
+            </h2>;
+            <p className='text-cyan-300 mb-8 text-lg'>;
+              Contact our team to discuss how our 2027 services can;
+              revolutionize your operations and drive unprecedented growth.;
+            </p>;
+
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>;
+              <div className='flex items-center justify-center space-x-3'>;
+                <Phone className='w-5 h-5 text-cyan-400' />;
+                <span className='text-white'>{contactInfo && contactInfo.mobile}</span>;
+              </div>;
+              <div className='flex items-center justify-center space-x-3'>;
+                <Mail className='w-5 h-5 text-purple-400' />;
+                <span className='text-white'>{contactInfo && contactInfo.email}</span>;
+              </div>;
+              <div className='flex items-center justify-center space-x-3'>;
+                <MapPin className='w-5 h-5 text-pink-400' />;
+                <span className='text-white'>{contactInfo && contactInfo.address}</span>;
+              </div>;
+            </div>;
+
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Link
                 href='/contact'
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'              >
-                Get Started Today
-              </Link>
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'>;
+                Get Started Today;
+              </Link>;
               <Link
                 href='/pricing'
 
@@ -1128,6 +1127,7 @@ transition={{ duration: 0 && 0.8 }}>;
             <p className="text-cyan-300 mb-8 text-lg">;
               Contact our team to discuss how our 2027 services can revolutionize your operations and drive unprecedented growth.;
             </p>;
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
               <div className="flex items-center justify-center space-x-3">;
                 <Phone className="w-5 h-5 text-cyan-400" />;
@@ -1142,7 +1142,9 @@ transition={{ duration: 0 && 0.8 }}>;
                 <span className="text-white">{contactInfo && contactInfo.address}</span>;
               </div>;
             </div>;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Link
                 href="/contact"
 
@@ -1150,6 +1152,8 @@ transition={{ duration: 0 && 0.8 }}>;
 =======
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
     </UltraFuturisticMatrixBackground2027>));
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

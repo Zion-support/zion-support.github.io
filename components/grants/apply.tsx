@@ -140,12 +140,14 @@ function ApplyGrantPage() {
             .split('\n');
             .map((s) => s && s.trim());
             .filter(Boolean);
+=======
       set_loading (false);    }          budget_amount: Number (budget_amount || 0),
           budget_currency;
           supporting_links: supporting_links;
             .split ('\n');
             .map ((s) => s.trim ());
             .filter (Boolean);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           pitchDeckUrl;
           region;
 

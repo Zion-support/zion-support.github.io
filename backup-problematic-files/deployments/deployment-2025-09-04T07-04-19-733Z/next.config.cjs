@@ -1,5 +1,3 @@
-<<<<<<< HEAD:deployments/deployment-2025-09-04T07-04-19-733Z/next.config.cjs
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -66,8 +64,6 @@ const nextConfig = {}
         "headers": [{ key: 'Cache-Control', "value": 'public, max-age=31536000, immutable' };]
         ];
       },
-<<<<<<< HEAD:deployments/deployment-2025-09-04T07-04-19-733Z/next.config.cjs
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -105,11 +101,6 @@ const nextConfig = {}
       };
     ]};
 };
-<<<<<<< HEAD:deployments/deployment-2025-09-04T07-04-19-733Z/next.config.cjs
-module.exports = nextConfig;
-=======
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD

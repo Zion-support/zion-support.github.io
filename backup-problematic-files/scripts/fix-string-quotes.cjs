@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -100,9 +98,6 @@ const filesToFix = ['pages/api/docs.ts']
     "pattern"
     "replacement"
     "replacement": '"$1${$2}$3"
-<<<<<<< HEAD
-    "replacement": '"$1\\\\\n  $2"
-=======
 <<<<<<< HEAD
     "replacement": '"$1\\\\\n  $2"
 =======

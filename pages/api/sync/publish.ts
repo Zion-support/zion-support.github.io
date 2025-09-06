@@ -7,7 +7,7 @@ import { verifySignature } from "../../../utils/sync/signature";
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";
 import { SyncEvent } from "../../../utils/sync/types";
 function isAllowedByScope(stateType: string, scope: string): boolean {
-<<<<<<< HEAD
+
   if (scope === "full") return true;
   if (scope === "dao") return stateType === "proposal" |stateType === "dao_endorsement";
   if (scope === "marketplace") return stateType === "token_transfer" |stateType === "talent_mobility" |stateType === "leaderboard_entry"
@@ -68,10 +68,12 @@ export default async function handler(req, res) {
   }
 
   if (req && req.method !== "POST") return res && res.status(405).json({ error: "Method not allowed" });
+
   const state = readState();
   if (!state && state.config.optIn || state && state.config.paused) {
     return res && res.status(403).json({ error: "Sync disabled for this instance" })
   }
+
   const signature = req && req.headers["x-zion-signature"];
   const payload = req && req.body;
   const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array && Array.isArray(signature) ? signature[0] : undefined);
@@ -95,6 +97,7 @@ export default async function handler(req, res) {
 
 
   const signature = req.headers["x-zion-signature"];
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import axios from './axios';
 import { read_state, write_state, upsert_event, getEntityId } from '../../../utils / sync / storage';
@@ -191,23 +194,6 @@ if ( {) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    const computed = computeMerkleRootFromVotes(votes),
-    if (computed !== providedRoot) {
-      return res.status(400).json({ error: "Merkle root mismatch" })
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
   const entityId = getEntityId(event);
   const currentState = readState();
   upsertEvent(currentState, event);
@@ -221,7 +207,7 @@ if ( {) {
     const localBody = { ...event, propagate: false };
 
     const baseSignature = require("../../../utils/sync/signature");
-    const sig = baseSignature.signPayload(localBody);
+    const sig = baseSignature && baseSignature.signPayload(localBody);
     if (sig) headers["x-zion-signature"] = sig;
 
       return res.status(400).json({ error: "Merkle root mismatch" })

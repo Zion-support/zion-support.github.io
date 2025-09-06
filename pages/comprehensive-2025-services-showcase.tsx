@@ -57,7 +57,6 @@ export default function Comprehensive2025ServicesShowcase() {
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
         case 'price':
           return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''))
@@ -70,7 +69,7 @@ export default function Comprehensive2025ServicesShowcase() {
     })
   const containerVariants = {
     hidden: { opacity: 0 }
-<<<<<<< HEAD
+=======
 import React, { useState, useEffect } from 'react',
 import Head from 'next / head',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -127,6 +126,7 @@ function Comprehensive2025ServicesShowcase() {
     }),
   const container_variants = {
     hidden: { opacity: 0 },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
@@ -1091,126 +1091,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
       </section>;
       <EnhancedFooter />;
     </div>);
-        case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
-        case 'price':
-          return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', '')),
-        case 'rating':
-          return b.rating - a.rating,
-        case 'newest':
-        case 'rating':
-          return b.rating - a.rating,
-        case 'newest':
-
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
-        default: return 0
-      }
-    }),
-
-  const _containerVariants = {_hidden: { opacity: 0}
-    visible: {_opacity: 1, _transition: {
-        staggerChildren: 0.1}
-    }
-  },
-
-  const _itemVariants = {_hidden: { opacity: 0, _y: 20},
-    visible: {_opacity: 1, _y: 0, _transition: {
-        duration: 0.5}
-    }
-  },
-
-  return (
-    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden&quot;>
-      <Head>
-        <title>Comprehensive 2025 Innovative Services Showcase — Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transform your business with Zion Tech Group.&quot; />
-        <meta property=&quot;og:title&quot; content=&quot;Comprehensive 2025 Innovative Services Showcase — Zion Tech Group&quot; />
-        <meta property=&quot;og:description&quot; content=&quot;Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group&quot; />
-        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/comprehensive-2025-services-showcase&quot; />
-      
-        <script type=&quot;application/ld+json&quot;>{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;WebPage&quot;,&quot;headline&quot;:&quot;Comprehensive 2025 Innovative Services Showcase — Zion Tech Group&quot;,&quot;url&quot;:&quot;https://ziontechgroup.com/comprehensive-2025-services-showcase&quot;,&quot;isPartOf&quot;:{&quot;@type&quot;:&quot;WebSite&quot;,&quot;name&quot;:&quot;Zion Tech Group&quot;,&quot;url&quot;:&quot;https://ziontechgroup.com&quot;}}</script></Head>
-
-      <EnhancedNavigation />
-
-      {/* Hero Section */}
-      <section className=&quot;relative py-20 px-6&quot;>
-        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
-          <motion.div
-            initial={_{ opacity: 0, _y: 30}}
-            animate={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8}}
-          >
-            <h1 className=&quot;text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent&quot;>
-              2025 Innovative Services Showcase
-            </h1>
-            <p className=&quot;text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8&quot;>
-              Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions, 
-              quantum technologies, and revolutionary IT services that are transforming industries worldwide.
-            </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center mb-12&quot;>
-              <div className=&quot;px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full text-lg font-semibold&quot;>
-                {innovative2025MicroSaasExpansionV3.length}+ Revolutionary Services
-              </div>
-              <div className=&quot;px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-lg font-semibold&quot;>
-                AI-Powered Solutions
-              </div>
-              <div className=&quot;px-6 py-3 bg-gradient-to-r from-green-600 to-teal-600 rounded-full text-lg font-semibold&quot;>
-=======
-    visible: {
-      opacity: 1
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-<<<<<<< HEAD
-  }
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 }
-    visible: {
-      opacity: 1
-      y: 0
-      transition: {
-        duration: 0.5
-      }
-    }
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import {;
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,;
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,;
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,;
-  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2;
-} from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
-export default function Comprehensive2025ServicesShowcase(req, res) {
-  try {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
-  const categories = [;
-    { id: 'all', name: 'All Services', count: innovative2025MicroSaasExpansionV3.length },;
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('AI') && !s.category.includes('Healthcare') && !s.category.includes('HR') && !s.category.includes('Content') && !s.category.includes('Energy')).length },;
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Healthcare')).length },;
-    { id: 'AI & HR Tech', name: 'AI & HR Tech', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('HR')).length },;
-    { id: 'AI & Content Creation', name: 'AI & Content Creation', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Content')).length },;
-    { id: 'AI & Energy', name: 'AI & Energy', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Energy')).length },;
-    { id: 'AI & Robotics', name: 'AI & Robotics', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Robotics')).length },;
-    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Cybersecurity') || s.category.includes('Quantum')).length },;
-    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Edge') || s.category.includes('IoT')).length },;
-    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Space')).length },;
-    { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Neural')).length   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

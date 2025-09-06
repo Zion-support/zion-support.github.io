@@ -26,25 +26,6 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {
 =======
 
 
-const ClientPage: NextPage<Props> = ({ clientId }) => {
-  const [summary, setSummary] = useState<ReviewsSummary | null>(null),
-  const [reviews, setReviews] = useState<PublicReview[]>([]),
-
-  useEffect(() => {
-    (async () => {
-      const res = await fetch(`/api/reviews/list?targetType=client&targetId=${clientId}`),
-      const data = await res.json(),
-      if (res.ok) { setSummary(data.summary), setReviews(data.reviews) }
-    })()
-  }, [clientId]),
-
-  async function handleReport(id: string) {
-    await fetch('/api/reviews/report', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ reviewId: id, reason: 'Inappropriate content' })})
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useEffect, useState } from 'react';
-
 import React, { useEffect, useState } from 'react';
 
 import type { NextPage, GetServerSideProps } from 'next';
@@ -64,6 +45,7 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {
   async function handleReport(id: string) {
     await fetch('/api/reviews/report', {
       method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ reviewId: id, reason: 'Inappropriate content' })})
+=======
 import React, { useEffect, useState } from 'react',
 import type { NextPage, GetServerSideProps } from 'next',
 import ReviewSummary from '../../components / reviews / ReviewSummary',
@@ -104,8 +86,8 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {;
 function handle_report() {
     await fetch ('/api / reviews / report', {
       method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ review_id: id, reason: 'Inappropriate content' })});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-<<<<<<< HEAD
   return (
 
 

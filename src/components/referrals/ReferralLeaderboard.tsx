@@ -74,7 +74,7 @@ export function ReferralLeaderboard() {;
 
                       : "bg-muted text-muted-foreground";
                   }`}
-                >;
+                >
                   {entry.rank}
                 </div>
                 <span className="font-medium">{entry.name}</span>

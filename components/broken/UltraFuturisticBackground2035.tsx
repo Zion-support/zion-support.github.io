@@ -1,12 +1,13 @@
 
 
 }
-<<<<<<< HEAD
  canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
 canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
 if (ctx) {;
+
 export default function UltraFuturisticBackground2035(): any ({;
   children,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 
@@ -37,8 +38,10 @@ interface UltraFuturisticBackground2035Props {;
     const prefersReducedMotion = window && window.matchMedia(;
       '(prefers-reduced-motion: reduce)';
     ).matches;    const prefersReducedMotion = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches,;
+
     const ctx = canvas && canvas.getContext('2d');
     if (!ctx) return;
+
     canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
     canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
     if (ctx) {;
@@ -49,6 +52,7 @@ interface UltraFuturisticBackground2035Props {;
     let particles: Array<{;
       x: number;
       y: number;
+=======
 canvas.width = window.inner_width * (window.devicePixelRatio || 1);
 canvas.height = window.inner_height * (window.devicePixelRatio || 1);
 // Check condition
@@ -92,6 +96,7 @@ if ( {) {
     let particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
@@ -110,6 +115,7 @@ if ( {) {
       type: 'quantum' | 'hologram' | 'neon' | 'energy',;
       life: number,;
       maxLife: number;
+
     // Initialize particles with enhanced types;
     const initParticles = () => {;
 
@@ -128,10 +134,12 @@ if ( {) {
 =======
       ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
     }
+
     let animationFrameId: number,
     let particles: Array<{
       x: number,
       y: number,
+=======
       max_life: number;    }> = [];      coordinate_x: number,
       coordinate_y: number,
 
@@ -282,6 +290,7 @@ if ( {) {
       if (animationFrameId) {
 
       });
+
     // Handle window resize;
     const handleResize = () => {;
       canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
@@ -293,9 +302,11 @@ if ( {) {
       }
       initParticles();
     };
+
     window && window.addEventListener('resize', handleResize);
     initParticles();
     updateParticles();
+
     return () => {;
       window && window.removeEventListener('resize', handleResize);
       if (animationFrameId) {;
@@ -324,7 +335,7 @@ if ( {) {
             background: [
               'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)'
             ]
-<<<<<<< HEAD
+=======
       max_life: number;
     // Initialize particles with enhanced types;
     const init_particles = () =>: any {
@@ -748,8 +759,7 @@ if ( {) {
             background: [;
               'radial - gradient (circle at 20% 80%, rgba (139, 92, 246, 0.3) 0%, transparent 50%)radial - gradient (circle at 80% 20%, rgba (6, 182, 212, 0.3) 0%, transparent 50%)radial - gradient (circle at 40% 40%, rgba (236, 72, 153, 0.3) 0%, transparent 50%)radial - gradient (circle at 20% 80%, rgba (139, 92, 246, 0.3) 0%, transparent 50%)';
             ];
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           transition={{
             duration: 8
@@ -777,16 +787,7 @@ if ( {) {
               linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
             `,
               backgroundSize: '50px 50px',
-=======
-<<<<<<< HEAD
-              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px)
-=======
-              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-              linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
-            `
-              backgroundSize: '50px 50px'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             }}
           />        </div>        {/* Holographic grid effect */}
         <div className="absolute inset-0 opacity-20">;
@@ -794,6 +795,7 @@ if ( {) {
 
 =======
         />
+        
         {/* Holographic grid effect */}
         <div className="absolute inset-0 opacity-20">
           <div className="h-full w-full" style={{
@@ -887,6 +889,7 @@ if ( {) {
           }}
 
         />;
+
         <motion&& motion.div
           className='absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20'
           animate={{

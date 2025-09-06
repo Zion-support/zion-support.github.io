@@ -147,8 +147,6 @@ describe('${componentName}')
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
     console.error(' Test file fixing "failed")
 =======
 <<<<<<< HEAD

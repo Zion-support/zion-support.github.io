@@ -44,7 +44,6 @@ import path from 'path';
 
 
 interface BlogPostPageProps {
-<<<<<<< HEAD
   /**;
   * Preloaded blog post for static generation. Can be null if not found.;
   */;
@@ -76,11 +75,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
       } else {
         // If getStaticProps is working correctly, this path (slug exists, no initialPost, no fallback)
         // should ideally not be hit frequently, as getStaticProps would have returned notFound.
-<<<<<<< HEAD
-// However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps: setPost(null)
-=======
         // However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps: setPost(null)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         setError('Article not found')
       }
     }
@@ -141,6 +136,7 @@ if ( {) {
   $2
 }
     return <div>{error}</div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   // Check condition
 if ( {) {

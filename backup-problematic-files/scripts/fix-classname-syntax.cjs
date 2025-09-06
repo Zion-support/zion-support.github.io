@@ -103,7 +103,6 @@ class ClassNameSyntaxFixer {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     this.log(`Fixes Applied: ${this.fixes.length}`);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     this.log(`Errors Found: ${this.errors.length}`);
     if (this.fixes.length > 0) {
       this.log('\n✅ Fixes Applied:');
@@ -156,9 +155,6 @@ fixer.run().catch(console.error);
 const fs = require('fs')
 const path = require('path')
 const glob = require('glob')
-<<<<<<< HEAD
-  log(message, type = 'INFO')
-=======
   log(message, type = 'INFO')
 <<<<<<< HEAD
 <<<<<<< HEAD

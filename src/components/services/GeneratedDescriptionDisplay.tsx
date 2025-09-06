@@ -68,12 +68,12 @@ export function GeneratedDescriptionDisplay({;
           >;
             {isEditing ? (;
               <>;
-                <Check className="h-4 w-4 mr-1" />;
+                <Check className='h-4 w-4 mr-1' />;
                 Done;
               </>;
             ) : (;
               <>;
-                <Pencil className="h-4 w-4 mr-1" />;
+                <Pencil className='h-4 w-4 mr-1' />;
                 Edit;
               </>;
             )}
@@ -108,7 +108,7 @@ export function GeneratedDescriptionDisplay({;
 
 
             {editedDescription}
-          </div>
+          </div>;
         )}
 
 
@@ -116,7 +116,7 @@ export function GeneratedDescriptionDisplay({;
       </CardContent>;
       {isEditing && (;
         <CardFooter>;
-          <Button;
+          <Button
             onClick={handleSave}
 
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
@@ -135,4 +135,16 @@ export function GeneratedDescriptionDisplay({;
 
     </Card>;
   );
+
+  isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>) ;
+}</Button> </CardTitle> </CardHeader> <CardContent> {;
+  isEditing ? (<Textareavalue= {
+  editedDescription 
+}</div>) ;
+}</CardContent> {;
+  isEditing && (<CardFooter> <ButtononClick={
+  handleSave "
+}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"> Save Changes </Button> </CardFooter>) ;
+}</Card>) ;
+}'";
 }

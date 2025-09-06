@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -39,7 +43,6 @@ const securityStats = [
   { number: '100%', label: 'Data Encryption' }
 ];
 export default function SecurityPage() {
-<<<<<<< HEAD
 
   return (
     <Layout
@@ -221,6 +224,31 @@ export default function Security(req, res) {
             </motion.div>
           </div>
         </section>
+=======
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
+          <div className="absolute inset-0">;
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
+          </div>;
+
+          <div className="container mx-auto px-4 relative z-10">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+                Security & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Protection</span>;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+                Your security is our top priority. Learn about our comprehensive security measures and how we protect your data.;
+              </p>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Security Stats */}
 
             </div>;
@@ -229,9 +257,9 @@ export default function Security(req, res) {
 
 
         {/* Security Features */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <motion.div
+        <section className="py-16">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
 
@@ -327,8 +355,8 @@ function SecurityPage() {
               {security_stats.map ((stat, index) => (
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, coordinate_y: 30 }}
+                  animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text - center";
                 >;
@@ -483,7 +511,6 @@ function SecurityPage() {
                         <li key={idx} className="flex items - center text - sm text - gray - 600">;
                           <CheckCircle className="w - 3 h - 3 text - green - 500 mr - 2 flex - shrink - 0" />;
                           {detail}
-<<<<<<< HEAD
                         </li>))}
                     </ul>;
                   </div>;
@@ -491,19 +518,6 @@ function SecurityPage() {
             </div>;
           </div>;
         </section>;
-=======
-                        </li>
-                      ))}
-<<<<<<< HEAD
-=======
-                    </ul>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Compliance Section */}
         <section className="py - 16 bg - white">;
           <div className="container mx - auto px - 4">;
@@ -641,6 +655,8 @@ function SecurityPage() {
 =======
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4 text - center">;

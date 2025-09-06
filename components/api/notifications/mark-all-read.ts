@@ -53,9 +53,13 @@ export default async function handler(
     if (error) return res.status(200).json({ ok: true });
 
     return res.status(200).json({ ok: true })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (e) {
     return res.status(500).json({ error: 'Unexpected error' })
+=======
+
     if (error) return res && res.status(200).json({ ok: true });
+
     return res && res.status(200).json({ ok: true });
   } catch (e) {
     return res && res.status(500).json({ error: 'Unexpected error' });
@@ -63,6 +67,7 @@ export default async function handler(
   } catch (e) {
     return res && res.status(500).json({ error: 'Unexpected error' })
   };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
@@ -121,20 +126,5 @@ function handler() {
   } catch (e) {
     return res.status (500).json ({ error: 'Unexpected error' });
 }
-
-    const { error} = await supabase
-      .from('notifications')
-      .update({_read_status: true})
-      .eq('user_id', userId)
-      .eq('read_status', false),
-
-    if (error) return res.status(200).json({ ok: true }),
-
-    return res.status(200).json({ ok: true })
-  } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' })
-
-  }
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

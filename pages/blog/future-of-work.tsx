@@ -4,6 +4,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react',;
 export default function FutureOfWork() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
 import Head from 'next / head';
 import Link from 'next / link';
 import React from 'react',
@@ -11,6 +13,7 @@ export default /**
  * FutureOfWork - Function description
  */
 function FutureOfWork() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <>;
       <Head>;
@@ -19,6 +22,7 @@ function FutureOfWork() {
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
+
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
         <main className='container mx-auto px-6 py-12'>;
           <div className='max-w-4xl mx-auto'>;
@@ -29,6 +33,7 @@ function FutureOfWork() {
                 ← Back to Blog;
               </Link>;
             </nav>;
+
             <article className='prose prose-invert prose-lg max-w-none'>;
               <header className='mb-12 text-center'>;
                 <div className='flex items-center gap-3 justify-center mb-4'>;
@@ -48,6 +53,7 @@ function FutureOfWork() {
                   enhances productivity and innovation.;
                 </p>;
               </header>;
+
               <section className='mb-12'>;
                 <h2 className='text-2xl font-semibold mb-6 text-cyan-400'>;
                   The Evolution of Work;
@@ -66,6 +72,7 @@ function FutureOfWork() {
                   problem-solving, strategic thinking, and innovation.;
                 </p>;
               </section>;
+
               <section className='mb-12'>;
                 <h2 className='text-2xl font-semibold mb-6 text-fuchsia-400'>;
                   Augmented Intelligence in Practice;
@@ -93,6 +100,7 @@ function FutureOfWork() {
                   </li>;
                 </ul>;
                 <p className='text-white/90 mb-4'>;
+=======
           The Future of Work: Human - AI Collaboration | Zion Tech Group;
         </title>;
         <meta;
@@ -288,6 +296,7 @@ function FutureOfWork() {
               </section>;
 
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'>;
+=======
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - yellow - 400'>;
                   Measuring Success;

@@ -15,6 +15,7 @@ function readGrant(id: string): GrantApplication | null {
   const p = grantPath(id);
   if (!fs && fs.existsSync(p)) return null;
   return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication;
+
 function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs && fs.writeFileSync(
@@ -42,7 +43,6 @@ function isAuthorized(req: NextApiRequest) {
     token === process && process.env.ZION_ADMIN_TOKEN
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
     return;  }  return token && process && process.env.ZION_ADMIN_TOKEN && token === process && process.env.ZION_ADMIN_TOKEN
@@ -51,17 +51,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
-=======
-  if (!isAuthorized(req)) {;
-    res.status(401).json({ error: 'Unauthorized' });
-    return;  }  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {;
-    res.status(401).json({ error: 'Unauthorized' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return;    return
+=======
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
+=======
   GrantApplication,
   MilestonesUpdatePayload,
 } from '../../../../types / grants';
@@ -148,13 +141,14 @@ function write_grant() {
     return res && res.status(200).json({ milestones: existing && existing.milestones || [] });  }    return res && res.status(200).json({ milestones: existing && existing.milestones || [] })
 
   }
-<<<<<<< HEAD
+
   if (req && req.method === 'POST') {
     const existing = readGrant(id);
     if (!existing) return res && res.status(404).json({ error: 'Not found' });
     const payload = req && req.body as MilestonesUpdatePayload;
     existing && existing.milestones = payload && payload.milestones || [];
     existing && existing.updatedAt = new Date().toISOString();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     writeGrant(existing);
     return res && res.status(200).json({ record: existing });
   }
@@ -172,9 +166,14 @@ function write_grant() {
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');    return res && res.status(200).json({ record: existing })
   }
+
   res && res.setHeader('AllowGET, POST');
   res && res.status(405).end('Method Not Allowed')
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
   fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8');
 }
 /**
@@ -244,16 +243,5 @@ if ( {) {
   }
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
-=======
-  res.setHeader('Allow', 'GET, POST');
-<<<<<<< HEAD
-  res.status(405).end('Method Not Allowed');    return res.status(200).json({ record: existing })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  }
-
-<<<<<<< HEAD
-  res.setHeader('AllowGET, POST'),
-  res.status(405).end('Method Not Allowed')
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

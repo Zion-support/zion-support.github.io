@@ -1,7 +1,7 @@
 yearsExperience
 }: TalentCardHeaderProps) {
   return (
-    <div className="flex items-start gap-4 mb-4">
+    <div className='flex items-start gap-4 mb-4'>
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />
             {/* AI score could be used for verification badge */}
             {yearsExperience > 5 && (
@@ -20,7 +20,8 @@ yearsExperience
 
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
-        <p className="text-zion-cyan text-sm">{professionalTitle}</p>;
+
+        <p className='text-zion-cyan text-sm'>{professionalTitle}</p>;
       </div>;
     </div>;
   );

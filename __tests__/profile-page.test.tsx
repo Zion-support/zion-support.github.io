@@ -2,13 +2,10 @@
 
 =======
 // Mock test for profile page
-describe('Profile Page', () => {'
+describe('Profile Page', () => {
   it('should render without crashing', () => {
     expect(true).toBe(true);
   });
-<<<<<<< HEAD
-});'
-=======
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 

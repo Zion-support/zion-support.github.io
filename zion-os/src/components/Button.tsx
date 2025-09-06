@@ -84,25 +84,6 @@ interface ButtonProps {
   class_name?: string,
   type?: 'button' | 'submit' | 'reset',
   full_width?: boolean,
-=======
-<<<<<<< HEAD
-'use client';
-import React, { forwardRef } from 'react';
-import Link from 'next/link';
-import LoadingSpinner from './LoadingSpinner';
-interface ButtonProps {children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  href?: string;
-  onClick?: () => void;
-  disabled?: boolean;
-  loading?: boolean;
-  icon?: React.ReactNode;
-  iconPosition?: 'left' | 'right';
-  className?: string;
-  type?: 'button' | 'submit' | 'reset';
-  fullWidth?: boolean;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 }
 const Button = forward_ref < HTMLButtonElement ButtonProps>(({
@@ -119,7 +100,6 @@ const Button = forward_ref < HTMLButtonElement ButtonProps>(({
   type = 'button',
   full_width = false,
   rounded = 'lg';
-<<<<<<< HEAD
 }, ref) => {
   const base_classes = 'inline - flex items - center justify - center font - semibold transition - all duration - 300 transform hover: scale - 105 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - offset - black focus:ring - purple - 500 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none',
   const variant_classes = {
@@ -175,13 +155,7 @@ if ( {) {
   return (;
 =======
   return (
-=======
-<<<<<<< HEAD
-=======
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     <button;
       ref={ref}
       type={type}
@@ -192,7 +166,6 @@ if ( {) {
       aria - label={typeof children === 'string' ? children : undefined}
     >;
       {content}
-<<<<<<< HEAD
     </button>);
 }),
 Button.display_name = 'Button',

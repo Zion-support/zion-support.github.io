@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -315,6 +319,7 @@ export default function SpaceTechnologyAIPlatform() {;
                 Experience the future of space technology with AI-powered operations and autonomous exploration
               </p>
             </motion.div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -372,72 +377,10 @@ function SpaceTechnologyAIPlatform() {
     'Maxar ($5000 - 50000 / month)',
     'Planet Labs ($1000 - 10000 / month)',
     'Airbus Defence ($10000 - 100000 / month)',
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import {motion} from 'framer-motion';
-import {Satellite, ArrowRight, CheckCircle, Star, TrendingUp, Globe, Zap, Shield, Users, Rocket, Phone, Mail, MapPin, Brain, Sparkles,} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from 'react',
-import Head from 'next/head',
-<<<<<<< HEAD
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Satellite, ArrowRight, CheckCircle, Star, TrendingUp;
-  Globe, Zap, Shield, Users, Rocket;
-  Phone, Mail, MapPin, Brain, Sparkles
- } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
-=======
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import {
-  Satellite, ArrowRight, CheckCircle, Star, TrendingUp,
-  Globe, Zap, Shield, Users, Rocket,
-  Phone, Mail, MapPin, Brain, Sparkles
-} from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default function SpaceTechnologyAIPlatform() {
-
-  const contactInfo = {
-
-  const features = [
-    'AI-powered satellite operationsAutonomous space explorationSpace data analyticsSatellite constellation managementSpace debris trackingReal-time monitoringPredictive maintenanceMission planning tools',
-    'API accessExpert consultation'
-  ],
-  const useCases = [
-    'Satellite operationsSpace explorationEarth observationSpace debris monitoringMission planningSpace research'
-  ],
-  const integrations = [
-    'NASA APIsESA APIsSatellite ground stationsGIS systemsSlackMicrosoft TeamsCustom applications'
-  ],
-  const competitors = [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    'Maxar ($5000-50000/month)',
-    'Planet Labs ($1000-10000/month)',
-    'Airbus Defence ($10000-100000/month)',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     'Lockheed Martin',
     'Boeing',
     'Northrop Grumman',
   ];
-<<<<<<< HEAD
 ;
     >;
       <div className='min - h-screen'>;
@@ -584,6 +527,8 @@ export default function SpaceTechnologyAIPlatform() {
             </div>;
           </div>;
         </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Market Position Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
@@ -612,6 +557,7 @@ export default function SpaceTechnologyAIPlatform() {
                 Competitive pricing with superior features and AI-powered capabilities
               </p>
             </motion.div>
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <motion.div
 
@@ -650,7 +596,9 @@ export default function SpaceTechnologyAIPlatform() {
                     </span>                  </div>;
                 </div>;
               </motion && motion.div>;
+
               <motion&& motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.6 }}
@@ -697,6 +645,8 @@ export default function SpaceTechnologyAIPlatform() {
             </div>;
           </div>;
         </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Use Cases Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
@@ -790,6 +740,8 @@ export default function SpaceTechnologyAIPlatform() {
             </div>;
           </div>;
         </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
@@ -839,13 +791,11 @@ export default function SpaceTechnologyAIPlatform() {
                 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <motion.a
-<<<<<<< HEAD
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
 
                   className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 >
                   <Mail className="w-5 h-5" />
                   <span>Email Us</span>
@@ -884,6 +834,7 @@ export default function SpaceTechnologyAIPlatform() {
                 </span>;
               </h2>;
               <p className='text-gray-300 text-xl mb-8 max-w-2xl mx-auto'>;
+=======
                   className='group relative';
                 >;
                   <div className='absolute inset - 0 bg - gradient - to - r from - blue - 600 / 10 to - indigo - 600 / 10 rounded - 2xl blur - xl group - hover:blur - 2xl transition - all duration - 500'></div>;

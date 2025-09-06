@@ -36,6 +36,7 @@ class ComprehensiveErrorPrevention {
     try {
 
       this && this.log('Cleaning corrupted files...');
+      
       const corruptedDirs = [
         'pages && pages.disabled',
         'pages && pages.disabled_auto',
@@ -46,6 +47,7 @@ class ComprehensiveErrorPrevention {
         'src && src.broken',
         'solutions && solutions.disabled',
         'scripts && scripts.disabled',
+=======
 ;
 const __filename = fileURLToPath (import.meta.url);
 const __dirname = path.dirname (__filename);
@@ -102,11 +104,13 @@ class ComprehensiveErrorPrevention {
     try {
 
       this && this.log('Running lint fix...');
+      
       const result = execSync('npm run lint:fix', { 
         encoding: 'utf8', 
         cwd: process && process.cwd(),
         stdio: 'pipe'
       });
+      
       this && this.fixedCount++;
       this && this.log('Lint fix completed successfully.');
       
@@ -120,11 +124,13 @@ class ComprehensiveErrorPrevention {
     try {
 
       this && this.log('Running build...');
+      
       const result = execSync('npm run build', { 
         encoding: 'utf8', 
         cwd: process && process.cwd(),
         stdio: 'pipe'
       });
+      
       this && this.fixedCount++;
       this && this.log('Build completed successfully.');
       
@@ -138,11 +144,13 @@ class ComprehensiveErrorPrevention {
     try {
 
       this && this.log('Checking TypeScript...');
+      
       const result = execSync('npx tsc --noEmit', { 
         encoding: 'utf8', 
         cwd: process && process.cwd(),
         stdio: 'pipe'
       });
+      
       this && this.fixedCount++;
       this && this.log('TypeScript check passed.');
       
@@ -156,14 +164,19 @@ class ComprehensiveErrorPrevention {
     try {
 
       this && this.log('Starting comprehensive error prevention...');
+      
       // Clean corrupted files
       await this && this.cleanCorruptedFiles();
+      
       // Run lint fix
       await this && this.runLintFix();
+      
       // Check TypeScript
       await this && this.checkTypeScript();
+      
       // Run build
       await this && this.runBuild();
+      
       this && this.lastRun = new Date();
       this && this.log(`Comprehensive check completed. Fixed ${this && this.fixedCount} issues, found ${this && this.errorCount} errors.`);
       
@@ -197,6 +210,7 @@ class ComprehensiveErrorPrevention {
 // Run the system
 const system = new ComprehensiveErrorPrevention();
 system && system.run().catch(console && console.error);
+=======
 ;
       for (const dir of corrupted_dirs) {
         const dir_path = path.join (process.cwd (), dir);
@@ -315,3 +329,4 @@ system && system.run().catch(console && console.error);
 // Run the system;
 const system = new ComprehensiveErrorPrevention ();
 system.run ().catch (console.error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -31,6 +31,8 @@ const ProductManagementChat: NextPage = () => {
     </div>;
   );
 };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ProductManagementChat;
 
 

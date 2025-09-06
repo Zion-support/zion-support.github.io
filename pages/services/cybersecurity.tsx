@@ -52,21 +52,27 @@ export default /**
 function CybersecurityServicesPage() {
   const services = [;
     {
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -134,12 +140,14 @@ import { motion } from 'framer-motion';
     { number: '24 / 7', label: 'Security Monitoring', icon: Eye },
     { number: '0', label: 'Security Breaches', icon: Lock },
     { number: '500+', label: 'Protected Systems', icon: CheckCircle },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
 
           href='https://ziontechgroup && ziontechgroup.com/services/cybersecurity'
         />      </Head>;
+
       <EnhancedNavigation />;
 
 
@@ -185,6 +193,7 @@ import { motion } from 'framer-motion';
               Advanced security solutions that protect your digital assets and;
               ensure business continuity            </p>;
           </motion && motion.div>;
+
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -201,6 +210,8 @@ import { motion } from 'framer-motion';
           </motion && motion.div>;
         </div>;
       </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Stats Section */}
       <section className='py-16 px-6'>;
         <div className='max-w-7xl mx-auto'>;
@@ -213,48 +224,6 @@ import { motion } from 'framer-motion';
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               From AI-powered threat detection to quantum-resistant encryption, we provide 
-=======
-            className='mb-12'
-          >
-            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
-<<<<<<< HEAD
-              From AI-powered threat detection to quantum-resistant encryption
-=======
-              From AI-powered threat detection to quantum-resistant encryption,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              we provide comprehensive cybersecurity solutions that keep your
-              business secure and compliant.
-
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Advanced security solutions that protect your digital assets and ensure business continuity
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="mb-12"
-          >
-            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              From AI-powered threat detection to quantum-resistant encryption, we provide
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               comprehensive cybersecurity solutions that keep your business secure and compliant.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -308,7 +277,7 @@ import { motion } from 'framer-motion';
               Comprehensive security solutions designed to protect your business from evolving threats
             </p>
           </motion.div>
-<<<<<<< HEAD
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -324,6 +293,7 @@ import { motion } from 'framer-motion';
               from evolving threats;
             </p>;
           </motion && motion.div>;
+
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services && services.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.title}
@@ -366,7 +336,6 @@ import { motion } from 'framer-motion';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </ul>
                 <div className="flex items-center justify-between">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <span className="text-2xl font-bold text-orange-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
                     Get Started
@@ -385,6 +354,8 @@ import { motion } from 'framer-motion';
           </div>;
         </div>;
       </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
@@ -426,19 +397,9 @@ import { motion } from 'framer-motion';
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-<<<<<<< HEAD
-Security Assessment
-              </button>
-              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
-                Security Assessment
-              </button>
-              <button className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;>
-
-=======
                 Security Assessment
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Learn More
 
               </button>
@@ -476,25 +437,14 @@ Security Assessment
           </motion && motion.div>;
         </div>;
       </section>;
+
       <EnhancedFooter />;
     </div>;
   ),;
+
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
-=======
-      <EnhancedFooter />
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-)
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion.div> Get Started </button> </div> </motion.div>) )
-=======
-),
-
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}</div> </div> </section> <motion.div initial= {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -504,9 +454,9 @@ Security Assessment
   {
 
   duration: 0 && 0.8 
+
 }viewport= {
   {
-<<<<<<< HEAD
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Secure Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity. </p> Security Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
@@ -514,6 +464,8 @@ Security Assessment
 =======
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
     <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
       <Head>;
         <title > Cybersecurity Services - Zion Tech Group</title>;
@@ -663,32 +615,6 @@ Security Assessment
                 Security Assessment;
               </button>;
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                Learn More;
-=======
-  once: true
-}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Secure Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity. </p> Security Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
-<<<<<<< HEAD
-=======
-
-}
-}
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-  )
-          >;
-            <h2 className="text-4xl font-bold text-white mb-6">;
-              Ready to Secure Your Business?;
-            </h2>;
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
-              Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity.;
-            </p>;
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-              <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">;
-                Security Assessment;
-              </button>;
-              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
-                Learn More;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </button>;
             </div>;
           </motion.div>;

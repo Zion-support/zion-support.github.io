@@ -40,6 +40,7 @@ export default function CaseStudy() {;
 
   const router = useRouter();
   const slug = router.query.slug as string,
-  const study = CASE_STUDIES.find((s) => s.slug === slug),
-  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`),
+  const study = CASE_STUDIES.find((s) => s.slug === slug);
+
+  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);
 

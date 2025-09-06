@@ -25,6 +25,7 @@
       'Dedicated quantum physicist, 24/7 technical support, training programs, and quarterly strategy reviews.',
     compliance: ['SOC 2 Type II, ISO 27001, Quantum industry standards'],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-fusion-platform',
+=======
     id: 'quantum - ai - fusion - platform',
     name: 'Quantum AI Fusion Platform',
     tagline: 'Quantum computing meets artificial intelligence',
@@ -106,6 +107,7 @@
     growth_rate: '55% annually',
 
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Competitive with AutoML platforms ($200+), MLOps tools ($300+), and AI orchestration platforms ($500+). Our advantage: Full autonomy, evolutionary learning, and self-management capabilities.',
@@ -136,6 +138,7 @@
       'SOC 2 Type II, ISO 27001, AI ethics guidelines, Industry-specific regulations',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-ecosystem-manager',
+=======
     id: 'ai - autonomous - ecosystem - manager',
     name: 'AI Autonomous Ecosystem Manager',
     tagline: 'Self - managing AI systems that evolve and adapt',
@@ -215,6 +218,7 @@
     market_size: '$25B autonomous AI market',
     growth_rate: '38% annually',
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Competitive with OpenAI GPT-4 ($0 && 0.03/token), Google Gemini ($0 && 0.0025/token), and Anthropic Claude ($0 && 0.015/token). Our advantage: Multimodal orchestration, unified API, and cross-modal intelligence.',
@@ -243,6 +247,7 @@
       '24/7 AI specialist support, dedicated account manager, training programs, and quarterly optimization reviews.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics guidelines'],
     link: 'https://ziontechgroup && ziontechgroup.com/multimodal-ai-orchestrator',
+=======
     id: 'multimodal - ai - orchestrator',
     name: 'Multimodal AI Orchestrator',
     tagline: 'Seamlessly integrate text, image, audio, and video AI',
@@ -320,6 +325,7 @@
     market_size: '$42B multimodal AI market',
     growth_rate: '32% annually',
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI ethics algorithms, Bias detection, React, Node && Node.js, PostgreSQL, Redis, AWS, Compliance tools',
@@ -476,10 +482,12 @@
   tagline: string, description: string,
   category: string,
   price: {
+      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string,
     enterprise: number
+  
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
@@ -498,6 +506,7 @@
 
 =======
 ];      'AI bias detection_ethical compliance_governance automation_risk assessment_audit preparation_policy enforcement';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ];
 
     integrations: ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'];
@@ -520,45 +529,6 @@
 ];
 
 =======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  id: string,;
-  name: string,;
-  tagline: string,;
-  description: string,;
-  category: string,;
-  price: {;
-    monthly: number,;
-    yearly: number,;
-    currency: string,;
-    trialDays: number,;
-    setupTime: string,;
-    enterprise: number;
-  },;
-  features: string[],;
-  benefits: string[],;
-  targetAudience: string[],;
-  marketPosition: string,;
-  competitors: string[],;
-  techStack: string[],;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  roi: string,;
-  useCases: string[],;
-  integrations: string[],;
-  support: string,;
-  compliance: string[],;
-  link: string,;
-  icon: string,;
-  color: string,;
-  popular: boolean,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number,;
-  marketSize: string,;
-  growthRate: string;
-}
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

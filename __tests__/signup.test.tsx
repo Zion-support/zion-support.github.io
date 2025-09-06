@@ -2,13 +2,10 @@
 
 =======
 // Mock test for signup
-describe('Signup', () => {'
+describe('Signup', () => {
   it('should render without crashing', () => {
     expect(true).toBe(true);
   });
-<<<<<<< HEAD
-});'
-=======
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 

@@ -11,6 +11,7 @@ import {
 
 =======
   FileText,;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   HelpCircle} from 'lucide-react';
 export default function EnhancedFooter() {
   const scrollToTop = () => {

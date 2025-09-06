@@ -51,13 +51,9 @@ const glob = require('glob');
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-/**
- * Generate sitemap for the website
- */
-=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD

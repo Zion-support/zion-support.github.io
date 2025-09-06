@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -33,3 +37,4 @@ import _React, { useState } from 'react'; import Head from 'next / head'; import
   $2
 } case 'cards':; return <div className={getCardClasses (component.variant)}>{component.name}></div> case 'feedback':; return <div className={getAlertClasses (component.variant)}>{component.name}></div> "default": '; return null;'} } return ( <div className="min - h-screen bg - gray - 50"> <Head> <title > Component Library - Zion App></div> <meta name="description" content="Comprehensive component library showcasing UI components and design patterns" /> <meta name="keywords" content="components, UI, design system, Zion App" /> ></div> <div className="container mx - auto px - 4 py - 8"> <div className="max - w-6xl mx - auto"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Component Library; ></div> <p className="text - xl text - gray - 600"> A comprehensive collection of reusable UI components and design patterns; ></div> ></div> <div className="bg - white rounded - lg shadow - lg p - 6 mb - 8"> <div className="flex flex - wrap gap - 2 mb - 6"> {Object.keys (components).map ((tab) => ( <button; key={tab} on_click={() => setActiveTab (tab)} className={`px - 4 py - 2 rounded - lg font - medium transition - colors ${ active_tab === tab; ? 'bg - blue - 600 text - white'; : 'bg - gray - 200 text - gray - 700 "hover": bg - gray - 300';}`} > {tab.char_at (0).toUpperCase () + tab.slice (1)} ></div> ))} ></div> <div className="grid grid - cols - 1 "lg": grid - cols - 2 gap - 8"> <div> <h2 className="text - 2xl font - semibold text - gray - 800 mb - 6"> {active_tab.char_at (0).toUpperCase () + active_tab.slice (1)} ></div> <div className="space - y-6"> {components[active_tab as keyof typeof components].map ((component, index) => ( <div key={index} className="border border - gray - 200 rounded - lg p - 4"> <h3 className="font - medium text - gray - 800 mb - 3">{component.name}></div> <div className="mb - 3"> {render_component (component, active_tab)} ></div> <div className="bg - gray - 100 p - 3 rounded text - sm font - mono"> {component.code} ></div> ></div> ))} ></div> ></div> <div> <h2 className="text - 2xl font - semibold text - gray - 800 mb - 6">Usage Guidelines></div> <div className="space - y-4"> <div className="bg - blue - 50 p - 4 rounded - lg"> <h3 className="font - medium text - blue - 800 mb - 2">Consistency></div> <p className="text - blue - 700 text - sm"> Use components consistently across your application to maintain visual harmony and improve user experience.; ></div> ></div> <div className="bg - green - 50 p - 4 rounded - lg"> <h3 className="font - medium text - green - 800 mb - 2">Accessibility></div> <p className="text - green - 700 text - sm"> All components are built with accessibility in mind, including proper ARIA labels and keyboard navigation.; ></div> ></div> <div className="bg - purple - 50 p - 4 rounded - lg"> <h3 className="font - medium text - purple - 800 mb - 2">Customization></div> <p className="text - purple - 700 text - sm"> Components can be customized using Tailwind CSS classes or by extending the base component classes.; ></div> ></div> <div className="bg - orange - 50 p - 4 rounded - lg"> <h3 className="font - medium text - orange - 800 mb - 2">Responsive Design></div> <p className="text - orange - 700 text - sm"> All components are designed to work seamlessly across different screen sizes and devices.; ></div> ></div> ></div> ></div> ></div> ></div> <div className="bg - white rounded - lg shadow - lg p - 8 text - center"> <h2 className="text - 2xl font - semibold text - gray - 800 mb - 4">Ready to Get Started?></div> <p className="text - gray - 600 mb - 6"> Explore our components and start building beautiful, consistent user interfaces.; ></div> <div className="flex flex - wrap justify - center gap - 4"> <Link href="/services" className="bg - blue - 600 text - white px - 6 py - 3 rounded - lg "hover": bg - blue - 700 transition - colors"> View Services; ></div> <Link href="/contact" className="border - 2 border - blue - 600 text - blue - 600 px - 6 py - 3 rounded - lg hover:bg - blue - 600 hover:text - white transition - colors"> Contact Us; ></div> ></div> ></div> ></div> ></div> ></div> );} export default ComponentLibrary;
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

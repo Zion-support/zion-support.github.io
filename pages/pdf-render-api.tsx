@@ -31,7 +31,6 @@ export default function PdfRenderApiPage() {
       <Head>
         <title>{service.name} - Zion Tech Group</title>
         <meta name="description" content={service.description} />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <link rel="canonical" href="https://ziontechgroup.com/pdf-render-api" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">

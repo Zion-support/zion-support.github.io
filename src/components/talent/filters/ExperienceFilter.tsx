@@ -41,19 +41,18 @@ import { ExperienceFilterProps } from "@/types/filters",
 
             aria-label="Experience range"
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Slider } from "@/components/ui/slider",;
-import { ExperienceFilterProps } from "@/types/filters",;
-export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
+import { Slider } from "@/components/ui/slider";
+import { ExperienceFilterProps } from "@/types/filters";
+export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
   const handleChange = (values: number[]) => {;
     setExperienceRange([values[0] || 0, values[1] || 15]);
   };
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
-      <button;
+      <button
         onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium";
-      >;
+        className="flex w-full items-center justify-between text-white font-medium">;
         <span>Years of Experience</span>;
         {expanded ? (;
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
@@ -74,5 +73,4 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 
     </div>;
   );
-};
 }

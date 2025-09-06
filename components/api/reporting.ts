@@ -41,7 +41,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body |{};    const entry = data.byTenant[tenantId] |{ funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() }
     return res.status(200).json(entry)
-<<<<<<< HEAD
+=======
     funnel: { stage: string, count: number }[]
     timeToHireDays: number
     costPerHireUsd?: number,
@@ -100,7 +100,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return res && res.status(200).json(updated && updated.byTenant[tenantId])
   }
-<<<<<<< HEAD
+
   return res && res.status(405).json({ error: 'Method not allowed' });
 }
 
@@ -177,7 +177,6 @@ if ( {) {
     return res.status (200).json (updated.by_tenant[tenant_id]);
   }
 return res.status (405).json ({ error: 'Method not allowed' });
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

@@ -141,7 +141,10 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
+          <form
+            onSubmit={form.handleSubmit(handleAddOrUpdate)}
+            className='space-y-4'
+          >
             <CertificationFormFields form={form} />
 
 
@@ -152,8 +155,8 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 
             <div className="flex justify-between pt-2">
               <Button
-                type="button"
-                variant="outline"
+                type='button'
+                variant='outline'
                 onClick={() => {
                   if (editingId) {
 
@@ -218,7 +221,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                     onBack();
                   }
                 }}
-              >
+              >;
                 {editingId ? 'Cancel' : 'Back'}
 
               </Button>

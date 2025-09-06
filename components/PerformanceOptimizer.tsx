@@ -4,24 +4,30 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React, { useEffect, useState, useCallback } from 'react';
+
 import { motion } from 'framer-motion';
 
 
 } from 'lucide-react';
+
 interface PerformanceMetrics {;
   loadTime: number;
 =======
@@ -42,6 +48,7 @@ interface PerformanceMetrics {;
 } from 'lucide-react';
 interface PerformanceMetrics {
   load_time: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
@@ -61,7 +68,9 @@ interface PerformanceMetrics {
   largestContentfulPaint: number
   cumulativeLayoutShift: number
   firstInputDelay: number
+
   timeToInteractive: number
+=======
 //Add responsive sizes if not present // Check condition
 if ( {) {
   $2
@@ -76,7 +85,8 @@ interface PerformanceMetrics {
   largestContentfulPaint: number,
   cumulativeLayoutShift: number,
   firstInputDelay: number,
-timeToInteractive: number;
+  timeToInteractive: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 interface PerformanceOptimizerProps {
   class_name?: string;
@@ -87,6 +97,7 @@ interface PerformanceOptimizerProps {
   //Add lazy loading img && img.loading = 'lazy';
 //Add responsive sizes if not present if (!img && img.sizes) {;
   optimizedCount++ ;
+
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
   className = '',;
 }) => {  const [metrics, setMetrics] = useState<PerformanceMetrics>({;
@@ -98,9 +109,11 @@ interface PerformanceMetrics {;
   firstInputDelay: number,;
   timeToInteractive: number;
 }
+
 interface PerformanceOptimizerProps {;
   className?: string;
 }
+
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {;
   const [metrics, setMetrics] = useState<PerformanceMetrics>({;
     loadTime: 0,;
@@ -159,10 +172,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
 
       const fcp = paintEntries && paintEntries.find(entry => entry && entry.name === 'first-contentful-paint');
       const lcp = performance && performance.getEntriesByType('largest-contentful-paint')[0];
+
       const fcp = paintEntries && paintEntries.find(;
         entry => entry && entry.name === 'first-contentful-paint';
       );
       const lcp = performance && performance.getEntriesByType('largest-contentful-paint')[0];
+
       const newMetrics: PerformanceMetrics = {;
         loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,;
         firstContentfulPaint: fcp ? fcp && fcp.startTime : 0,;
@@ -172,6 +187,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
         timeToInteractive:;
           navigation && navigation.domContentLoadedEventEnd - navigation && navigation.navigationStart,;
       };
+
       setMetrics(newMetrics);    }        timeToInteractive: navigation && navigation.domContentLoadedEventEnd - navigation && navigation.navigationStart;
       };
       setMetrics(newMetrics);
@@ -212,6 +228,7 @@ if ( {) {
     } finally {
       setIsOptimizing (false);
     }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, []);
 
 
@@ -247,6 +264,7 @@ if ( {) {
   const optimizeFonts = useCallback(async () => {;
     setIsOptimizing(true);
     setOptimizationStatus('Optimizing fonts...');
+
     try {;
       // Add font-display: swap to improve font loading;
       const style = document && document.createElement('style'),;
@@ -320,6 +338,7 @@ if ( {) {
         }
       `;
       document && document.head.appendChild(style);
+
       setOptimizationStatus('Font optimization complete');
 
 
@@ -340,6 +359,7 @@ if ( {) {
       
       // Simulate optimization delay
       await new Promise(resolve => setTimeout(resolve, 800))
+=======
       document.head.append_child (style);
 ;
       setOptimizationStatus ('Font optimization complete');
@@ -363,6 +383,7 @@ if ( {) {
   const optimizeCode = useCallback(async () => {;
     setIsOptimizing(true);
     setOptimizationStatus('Optimizing code...');
+
     try {;
       // Add resource hints for critical resources;
       const preloadLinks = [;
@@ -381,11 +402,15 @@ if ( {) {
           crossorigin: 'anonymous',;
         },      ];        { rel: 'preload', href: '/fonts/inter-var && var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },;
         { rel: 'preload', href: '/fonts/jetbrains-mono-var && var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
+=======
         { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
         { rel: 'preload', href: '/fonts/jetbrains-mono-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
 
       ];
+
       preloadLinks && preloadLinks.forEach(linkAttrs => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
       setIsOptimizing (false);
     }
   }, []);
@@ -416,6 +441,7 @@ if ( {) {
       ];
 ;
       preload_links.for_each (link_attrs => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import React, { useEffect } from 'react;
 import Head from 'next / head;
 interface PerformanceOptimizerProps {preload_images?: string[];
@@ -480,12 +506,14 @@ if ( {) {
             link.set_attribute (key, value as string);
 
           } else {
+=======
       const addResourceHint = (href: string, as: string, type?: string) => {;
         const link = document && document.createElement('link');
         Object && Object.entries(linkAttrs).forEach(([key, value]) => {;
           if (key === 'crossorigin') {;
             link && link.setAttribute(key, value as string);
           } else {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             (link as any)[key] = value;
           }
         });
@@ -508,6 +536,7 @@ if ( {) {
   const runAllOptimizations = useCallback(async () => {;
     setIsOptimizing(true);
     setOptimizationStatus('Starting comprehensive optimization...');
+
     try {;
 
       await optimizeImages();
@@ -530,6 +559,7 @@ if ( {) {
     if (typeof window !== 'undefined') {;
       // Measure initial performance;
       window && window.addEventListener('load', measurePerformance);
+
       // Monitor for performance issues;
       const observer = new PerformanceObserver(list => {;
         for (const entry of list && list.getEntries()) {;
@@ -552,25 +582,6 @@ if ( {) {
 =======
       
       // Monitor for performance issues
-=======
-  }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
-  // Initialize performance monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Measure initial performance
-      window.addEventListener('load', measurePerformance);
-      // Monitor for performance issues
-      const observer = new PerformanceObserver(list => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            const lcp = entry.startTime;
-            if (lcp > 2500) {
-              // LCP should be under 2.5s
-              console.warn('LCP is too slow:', lcp);            }
-          }
-        }
-      });      // Monitor for performance issues
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
@@ -701,6 +712,7 @@ if ( { // LCP should be under 2.5s) {
 
 
       observer && observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
       return () => {;
         window && window.removeEventListener('load', measurePerformance);
         observer && observer.disconnect();
@@ -711,12 +723,15 @@ if ( { // LCP should be under 2.5s) {
         observer && observer.disconnect();
       }
   }, [measurePerformance]);
+
   const getPerformanceScore = (): number => {;
     let score = 100;
+
     if (metrics && metrics.firstContentfulPaint > 1800) score -= 20;
     if (metrics && metrics.largestContentfulPaint > 2500) score -= 25;
     if (metrics && metrics.loadTime > 3000) score -= 15;
     if (metrics && metrics.timeToInteractive > 3500) score -= 20;
+
     return Math && Math.max(0, score);  };    ;
     return Math && Math.max(0, score);
 
@@ -726,13 +741,9 @@ if ( { // LCP should be under 2.5s) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
+
   const getPerformanceGrade = (score: number): string => {;
-=======
-    return Math.max(0, score);  }
-    return Math.max(0, score)
-  }
-  const getPerformanceGrade = (score: number): string => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (score >= 90) return 'A';
     if (score >= 80) return 'B';
     if (score >= 70) return 'C';
@@ -762,6 +773,7 @@ if ( { // LCP should be under 2.5s) {
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-xl font-bold text-white flex items-center gap-2">
           <Gauge className="w-5 h-5 text-cyan-400" />
+          Performance Optimizer
         </h3>
         <button
           onClick={() => setShowMetrics(!showMetrics)}
@@ -771,7 +783,7 @@ if ( { // LCP should be under 2.5s) {
           {showMetrics ? 'Hide' : 'Show'} Metrics
         </button>
       </div>
-<<<<<<< HEAD
+=======
           className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'          className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300";
         >;
           {showMetrics ? 'Hide' : 'Show'} Metrics;
@@ -858,6 +870,40 @@ if ( { // LCP should be under 2.5s) {
               {Math.round(metrics.firstInputDelay)}ms
             </div>
             <div className='text-xs text-white/60'>FID</div>          </div>
+=======
+          className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
+        >
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Clock className="w-6 h-6 text-blue-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.loadTime)}ms</div>
+            <div className="text-xs text-white/60">Load Time</div>
+          </div>
+          
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Activity className="w-6 h-6 text-green-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.firstContentfulPaint)}ms</div>
+            <div className="text-xs text-white/60">FCP</div>
+          </div>
+          
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <TrendingUp className="w-6 h-6 text-purple-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.largestContentfulPaint)}ms</div>
+            <div className="text-xs text-white/60">LCP</div>
+          </div>
+          
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Cpu className="w-6 h-6 text-yellow-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.timeToInteractive)}ms</div>
+            <div className="text-xs text-white/60">TTI</div>
+          </div>
+          
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Database className="w-6 h-6 text-orange-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{metrics.cumulativeLayoutShift.toFixed(3)}</div>
+            <div className="text-xs text-white/60">CLS</div>
+          </div>
+          
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
             <Network className="w-6 h-6 text-red-400 mx-auto mb-2" />
             <div className="text-lg font-bold text-white">{Math.round(metrics.firstInputDelay)}ms</div>
@@ -944,6 +990,7 @@ if ( { // LCP should be under 2.5s) {
           </div>
 
         </button>;
+
         {optimizationStatus !== 'idle' && (;
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
             <div className='text-sm text-white/80'>{optimizationStatus}</div>          </div>          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">;
@@ -992,6 +1039,7 @@ addResourceHint(image, 'image');
       {preloadImages && preloadImages.map((image, index) => (;
         <link
 key={`preload-image-${index}}          rel="preload""          as="image""          href={image}"        />))}
+
       {preloadFonts && preloadFonts.map((font, index) => (;
         <link
 key={`preload-font-${index}`}          rel="preload""          as="style""          href={font}"          onLoad={() => {;
@@ -1016,21 +1064,8 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
 
 };
   );
-      {/* Performance Tips */}
-      <div className="mt-6 pt-4 border-t border-white/10">
-        <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
-        <ul className="text-xs text-white/60 space-y-1">
-=======
 =======
 
-        )}
-      </div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Performance Tips */}
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
@@ -1261,11 +1296,6 @@ if (return 'D') {
       </div>;
     </div>);
 }export default PerformanceOptimizer;}
-=======
-  );
-<<<<<<< HEAD
-};export default PerformanceOptimizer;}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       // Preload critical resources;
       preload_images.for_each (image => {
 addResourceHint (image, 'image');
@@ -1275,21 +1305,9 @@ addResourceHint (image, 'image');
 '      });'    }}, [preload_images, preload_fonts]);
   return (
     <Head>;
-<<<<<<< HEAD
       {/* Critical CSS inlined for above - the - fold content */}
       {criticalCSS && (
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />)}
-=======
-      {/* Critical CSS inlined for above-the-fold content */}
-      {criticalCSS && (;
-        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
-      )}
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 {/* Preload critical resources */}
       {preload_images.map ((image, index) => (
         <link;
@@ -1346,25 +1364,31 @@ interface PerformanceOptimizerProps {;
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enableReporting?: boolean;
 }
+
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
   onMetricsUpdate,;
   enableReporting = false;
 }) => {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+
   const measureWebVitals = useCallback(() => {;
     if (typeof window === 'undefined' || !('performance' in window)) return;
+
     const navigation = performance && performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const paint = performance && performance.getEntriesByType('paint');
+
     // Core Web Vitals;
     const fcp = paint && paint.find(entry => entry && entry.name === 'first-contentful-paint')?.startTime || 0;
     const lcp = performance && performance.getEntriesByType('largest-contentful-paint')[0]?.startTime || 0;
     const ttfb = navigation && navigation.responseStart - navigation && navigation.requestStart;
+
     // Memory usage (if available);
     const memory = (performance as any).memory ? {;
       used: (performance as any).memory && memory.usedJSHeapSize,;
       total: (performance as any).memory && memory.totalJSHeapSize,;
       limit: (performance as any).memory && memory.jsHeapSizeLimit;
     } : undefined;
+
     const newMetrics: PerformanceMetrics = {;
       fcp,;
       lcp,;
@@ -1373,14 +1397,18 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
       ttfb,;
       memory;
     };
+
     setMetrics(newMetrics);
+
     if (onMetricsUpdate) {;
       onMetricsUpdate(newMetrics);
     }
+
     if (enableReporting && process && process.env.NODE_ENV === 'development') {;
       console && console.log('Performance Metrics:', newMetrics);
     }
   }, [onMetricsUpdate, enableReporting]);
+
   useEffect(() => {;
     if (document && document.readyState === 'complete') {;
 
@@ -1394,6 +1422,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
       window && window.removeEventListener('load', measureWebVitals);
     };
   }, [measureWebVitals]);
+
   // Monitor for performance issues;
   useEffect(() => {;
 
@@ -1404,10 +1433,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
     if (metrics && metrics.fcp > 1800) warnings && warnings.push('First Contentful Paint is slow (>1 && 1.8s)');
     if (metrics && metrics.lcp > 2500) warnings && warnings.push('Largest Contentful Paint is slow (>2 && 2.5s)');
     if (metrics && metrics.ttfb > 600) warnings && warnings.push('Time to First Byte is slow (>600ms)');
+
     if (metrics && metrics.memory) {;
       const memoryUsage = (metrics && metrics.memory.used / metrics && metrics.memory.limit) * 100;
       if (memoryUsage > 80) warnings && warnings.push('High memory usage detected');
     }
+
     if (warnings && warnings.length > 0 && enableReporting) {;
       console && console.warn('Performance Issues Detected:', warnings);
 

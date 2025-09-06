@@ -232,3 +232,4 @@ import _React,{ useState,useEffect } from 'react'; import { Link,useLocation } f
 }
 ;
 export default EnhancedHeader;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

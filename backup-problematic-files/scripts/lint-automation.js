@@ -35,12 +35,14 @@ class LintAutomation {
     try {
 
       this && this.log('Starting lint fix automation...');
+      
       // Run ESLint with auto-fix
       const result = execSync('npm run lint:fix', { 
         encoding: 'utf8', 
         cwd: process && process.cwd(),
         stdio: 'pipe'
       });
+      
       this && this.fixedCount++;
       this && this.log(`Lint fix completed successfully. Fixed ${this && this.fixedCount} issues.`);
       
@@ -74,6 +76,7 @@ class LintAutomation {
 // Run the automation
 const automation = new LintAutomation();
 automation && automation.run().catch(console && console.error);
+=======
 ;
 const __filename = fileURLToPath (import.meta.url);
 const __dirname = path.dirname (__filename);
@@ -137,3 +140,4 @@ class LintAutomation {
 // Run the automation;
 const automation = new LintAutomation ();
 automation.run ().catch (console.error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

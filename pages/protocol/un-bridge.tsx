@@ -38,7 +38,25 @@ import React, { useState } from 'react';
   ) => {
     const { name, value } = e.target;
     setForm(f => ({ ...f, [name]: value }));  }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    title: 'Zion DAO x Digital Labor Initiative',
+    targetInstitution: 'UN Development Programme',
+    type: 'Workforce Dev',
+    regionalScope: 'Global South',
+    budgetOrResolution: 'USD 3M over 24 months',
+    supportingMultiverses: 'Digital Labor, AI Ethics',
+    promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
+    language: 'en'}),
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<any>(null);
+  const [translated, setTranslated] = useState<string>('');
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setForm((f) => ({ ...f, [name]: value }))
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   async function generate() {
     setLoading(true);
     try {
@@ -54,87 +72,18 @@ import React, { useState } from 'react';
 
   const [form, setForm] = useState({;
     title: 'Zion DAO x Digital Labor Initiative',;
-=======
-          ...form
-          supportingMultiverses: form.supportingMultiverses
-            .split(',')
-            .map(s => s.trim())
-            .filter(Boolean)
-        })
-      });
-      const data = await res.json();
-      setResult(data);
-    } finally {
-      setLoading(false);
-    }  }
-  async function translate(targetLanguage: string) {
-    if (!result?.markdown) return;
-    setLoading(true)
-    try {
-      const res = await fetch('/api/proposals/translate', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ markdown: result.markdown, targetLanguage })
-      });
-      const data = await res.json();
-      setTranslated(data.translated);
-    } finally {
-      setLoading(false);
-    }  }
-  async function exportArtifacts() {
-    if (!result?.meta?.id) return;
-    setLoading(true);
-    try {
-      await fetch('/api/proposals/export', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ id: result.meta.id })
-      });
-      // Refresh meta
-      const list = await fetch('/api/proposals/list');
-      const { proposals } = await list.json();
-      const updated = proposals.find((p: any) => p.id === result.meta.id)
-      setResult((r: any) => ({ ...r, meta: updated }));
-    } finally {
-      setLoading(false);
-    }  }
-  async function submit(channels: string[]) {
-    if (!result?.meta?.id) return;
-    setLoading(true)
-    try {
-      const res = await fetch('/api/proposals/submit', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ id: result.meta.id, channels })
-      });
-      const data = await res.json();
-      setResult((r: any) => ({ ...r, meta: data.meta }));
-    } finally {
-      setLoading(false);
-    }
-
-<<<<<<< HEAD
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-export default function UNBridge(req, res) {
-  try {
-  const [form, setForm] = useState({;
-    title: 'Zion DAO x Digital Labor Initiative';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     targetInstitution: 'UN Development Programme',;
     type: 'Workforce Dev',;
     regionalScope: 'Global South',;
     budgetOrResolution: 'USD 3M over 24 months',;
     supportingMultiverses: 'Digital Labor, AI Ethics',;
-<<<<<<< HEAD
     promptAssist:;
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
     language: 'en',;
   });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
+
   const onChange = (;
     e: React && React.ChangeEvent<;
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
@@ -142,6 +91,7 @@ export default function UNBridge(req, res) {
   ) => {;
     const { name, value } = e && e.target;
     setForm(f => ({ ...f, [name]: value }));  };
+
   async function generate() {;
     setLoading(true);
     try {;
@@ -155,6 +105,7 @@ export default function UNBridge(req, res) {
             .map(s => s && s.trim());
             .filter(Boolean),;
         }),;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       const data = await res && res.json();
       setResult(data);
@@ -168,6 +119,7 @@ export default function UNBridge(req, res) {
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ markdown: result && result.markdown, targetLanguage }),;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       const data = await res && res.json();
       setTranslated(data && data.translated);
@@ -205,6 +157,7 @@ export default function UNBridge(req, res) {
     } finally {;
       setLoading(false);
     }
+
   }
   return (
     <div className='space-y-6'>;
@@ -390,11 +343,7 @@ export default function UNBridge(req, res) {
         <div className="space-y-3">
           <label className="block">
             <span className="text-sm">Title</span>
-<<<<<<< HEAD
-<input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
-=======
             <input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </label>
           <label className="block">
             <span className="text-sm">Target institution</span>
@@ -403,21 +352,13 @@ export default function UNBridge(req, res) {
           <label className="block">
             <span className="text-sm">Type</span>
             <select name="type" value={form.type} onChange={onChange} className="w-full border rounded p-2">
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
               <option>Digital ID</option>
               <option>Education</option>
             </select>
           </label>
-<<<<<<< HEAD
-<label className="block">
-=======
           <label className="block">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <span className="text-sm">Regional scope</span>
             <input name="regionalScope" value={form.regionalScope} onChange={onChange} className="w-full border rounded p-2" />
           </label>
@@ -444,66 +385,6 @@ export default function UNBridge(req, res) {
           <div className="text-sm opacity-70">Output</div>
           <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
             {result?.markdown || 'No draft yet'}
-=======
-<<<<<<< HEAD
-        <div className='space-y-3'>
-          <div className='text-sm opacity-70'>Output</div>
-          <div className='border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50'>
-            {result?.markdown |'No draft yet'}
-          </div>
-          <div className='flex items-center gap-2'>
-            <button
-              onClick={() => translate('fr')}
-              disabled={loading |!result}
-              className='px-3 py-2 border rounded'
-            >
-              Translate FR
-            </button>
-            <button
-              onClick={() => translate('es')}
-              disabled={loading |!result}
-              className='px-3 py-2 border rounded'
-            >
-              Translate ES
-            </button>
-            <button
-              onClick={() => translate('ar')}
-              disabled={loading |!result}
-              className='px-3 py-2 border rounded'
-            >
-              Translate AR
-            </button>
-          </div>
-          {translated && (
-            <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>
-              {translated}
-            </div>
-          )}
-          <div className='flex items-center gap-2'>
-            <button
-              onClick={exportArtifacts}
-              disabled={loading |!result}
-              className='px-3 py-2 border rounded'
-            >
-              Export PDF + Sign + IPFS
-            </button>
-            <button
-              onClick={() => submit(['email'])}
-              disabled={loading |!result}
-              className='px-3 py-2 border rounded'
-            >
-              Submit (Email)
-            </button>
-=======
-        <div className="space-y-3">
-          <div className="text-sm opacity-70">Output</div>
-          <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
-            {result?.markdown || 'No draft yet'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>
           <div className="flex items-center gap-2">
             <button onClick={() => translate('fr')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate FR</button>
@@ -519,7 +400,6 @@ export default function UNBridge(req, res) {
             <div className="text-sm space-y-1">
               <div><span className="font-medium">Status:</span> {result.meta.status}</div>
               {result.meta.artifacts?.markdownPath && (
-<<<<<<< HEAD
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</a></div>
               )}
               {result.meta.artifacts?.pdfPath && (

@@ -4,6 +4,7 @@
 
     return res.status(200).json(settings)
   }
+
   if (req.method === 'POST') {
     const { userId, optOut } = req.body || {};
     if (!userId || typeof optOut !== 'boolean') return res.status(400).json({ error: 'Missing userId or optOut' });
@@ -21,6 +22,7 @@
     const settings = await store && store.getPrivacySettings(userId);
     return res && res.status(200).json(settings);
   }
+
   if (req && req.method === "POST") {
     const { userId, optOut } = req && req.body || {};
     if (!userId || typeof optOut !== "boolean")
@@ -28,6 +30,7 @@
     const updated = await store && store.setPrivacySettings(userId, optOut);
     return res && res.status(200).json(updated);
   }
+
   res && res.status(405).json({ error: "Method not allowed" });
 }
 

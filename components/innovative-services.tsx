@@ -46,27 +46,6 @@ import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopula
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function InnovativeServicesPage() {;
-=======
-import {
-<<<<<<< HEAD
-  innovativeMicroSaasServices
-  getInnovativeServicesByCategory
-  getPopularInnovativeServices
-  getInnovativeServicesByPriceRange
-  getInnovativeServiceCategories;
-} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-
-export default function InnovativeServicesPage() {
-=======
-  innovativeMicroSaasServices,
-  getInnovativeServicesByCategory,
-  getPopularInnovativeServices,
-  getInnovativeServicesByPriceRange,;
-  getInnovativeServiceCategories,;
-} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-export default function InnovativeServicesPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -228,6 +207,7 @@ export default function InnovativeServicesPage() {;
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
+=======
 ;
   // Filter and sort services;
   let filtered_services = innovativeMicroSaasServices;
@@ -282,6 +262,7 @@ if ( {) {
   filtered_services.sort ((a, b) => {
     switch (sort_by) {
       case 'price':;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         return a.price.monthly - b.price.monthly;
       case 'popularity':;
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
@@ -297,7 +278,6 @@ if ( {) {
 
           // Innovation level sorting
           const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           const aLevel = a.innovationLevel.split(' - ')[0];
           const bLevel = b.innovationLevel.split(' - ')[0];
           return (innovationOrder[aLevel as keyof typeof innovationOrder] |0) - (innovationOrder[bLevel as keyof typeof innovationOrder] |0)
@@ -328,6 +308,7 @@ if ( {) {
       service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
       service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
     );
+
   // Sort services;
   filteredServices && filteredServices.sort((a, b) => {;
     switch (sortBy) {;
@@ -367,6 +348,7 @@ if ( {) {
 
   const popularServices = getPopularInnovativeServices();
   const categories = getInnovativeServiceCategories();
+
   return (
 
 
@@ -382,23 +364,6 @@ if ( {) {
               <div className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                 <div className="flex flex-col lg:flex-row gap-6">
                   {/* Search */}
-=======
-          {/* Filters and Search */}
-          <section className='px-4 sm:px-6 lg:px-8 mb-12'>
-            <div className='max-w-7xl mx-auto'>
-              <div className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10'>
-                <div className='flex flex-col lg:flex-row gap-6'>
-                  {/* Search */}
-                  <div className='flex-1'>
-                    <div className='relative'>
-                      <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
-                      <input
-                        type='text'
-                        placeholder='Search innovative services...'
-                        value={searchQuery}
-                        onChange={e => setSearchQuery(e.target.value)}
-                        className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'                      />                  {/* Search */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="flex-1">
                     <div className="relative">
                       <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -416,16 +381,6 @@ if ( {) {
                   <div className="flex-shrink-0">
                     <select
                       value={selectedCategory}
-<<<<<<< HEAD
-=======
-                      onChange={e => setSelectedCategory(e.target.value)}
-                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-                    >
-                      <option value='All'>All Categories</option>
-<<<<<<< HEAD
-                      {categories.map(category => (                        <option key={category.name} value={category.name}>                    <select
-                      value={selectedCategory}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       onChange={(e) => setSelectedCategory(e.target.value)}
                       className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
@@ -492,12 +447,7 @@ if ( {) {
                   {/* View Mode Toggle */}
                   <div className='flex-shrink-0'>;
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>;
-                  {/* View Mode Toggle */}
-                  <div className="flex-shrink-0">
-                    <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
 =======
-                    </select>
-                  </div>
 
                   {/* View Mode Toggle */}
                   <div className="flex-shrink-0">
@@ -535,9 +485,10 @@ if ( {) {
               </div>
             </div>
           </section>
-<<<<<<< HEAD
->;
+=======
+                      >;
                         <List className="w-5 h-5" />;
+=======
           {/* Filters and Search */}
           <section className='px - 4 sm:px - 6 lg:px - 8 mb - 12'>;
             <div className='max - w-7xl mx - auto'>;
@@ -652,6 +603,7 @@ if ( {) {
                         }`}
                       >;
                         <List className="w - 5 h - 5" />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </div>;
                   </div>;
                 </div>;
@@ -700,18 +652,20 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {/* Description */}
-                        <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
-                          {service.description}
-                        </p>
+                        <p className='text-gray-400 text-sm mb-6 leading-relaxed'>;
+                          {service && service.description}
+                        </p>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         {/* Innovation Level */}
-                        <div className='mb-4'>
-                          <div className='flex items-center space-x-2 mb-2'>
-                            <Sparkles className='w-4 h-4 text-yellow-400' />
-                            <span className='text-sm font-medium text-yellow-400'>
-                              Innovation Level
-                            </span>
-                          </div>
-                          <div className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-lg text-xs font-bold text-center'>                            {service.innovationLevel}
+                        <div className='mb-4'>;
+                          <div className='flex items-center space-x-2 mb-2'>;
+                            <Sparkles className='w-4 h-4 text-yellow-400' />;
+                            <span className='text-sm font-medium text-yellow-400'>;
+                              Innovation Level;
+                            </span>;
+                          </div>;
+                          <div className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-lg text-xs font-bold text-center'>                            {service && service.innovationLevel}
                         {/* Description */}
 
                         <div className="grid grid-cols-2 gap-4 mb-6">
@@ -727,7 +681,9 @@ if ( {) {
                           </div>
 
                         </div>
+=======
                         <p className="text-gray-400 text-sm mb-6 leading-relaxed">{service && service.description}</p>;
+
                         {/* Innovation Level */}
                         <div className="mb-4">;
                           <div className="flex items-center space-x-2 mb-2">;
@@ -738,6 +694,7 @@ if ( {) {
                             {service && service.innovationLevel}
                           </div>;
                         </div>;
+
                         {/* Price and ROI */}
                         <div className='grid grid-cols-2 gap-4 mb-6'>;
                           <div className='text-center'>;
@@ -756,6 +713,7 @@ if ( {) {
                               average ROI;
                             </div>                          </div>;
                         </div>;
+
                         {/* Key Features */}                        <div className="grid grid-cols-2 gap-4 mb-6">;
                           <div className="text-center">;
                             <div className="text-2xl font-bold text-cyan-400">${service && service.price.monthly && monthly.toLocaleString()}</div>;
@@ -765,6 +723,8 @@ if ( {) {
                             <div className="text-lg font-bold text-green-400">{service && service.roi.split(' ')[0]}</div>;
                             <div className="text-xs text-gray-400">average ROI</div>;
                         </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         {/* Key Features */}
 
 =======
@@ -802,7 +762,10 @@ if ( {) {
                         </div>
                         {/* CTA Buttons */}
                         <div className='flex space-x-3'>                          <div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+                        <div className="grid grid-cols-2 gap-4 mb-6 text-xs">
+                          <div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                             <div className="text-gray-400">Market Size</div>
                             <div className="text-white font-medium">{service.marketSize}</div>
                           </div>
@@ -811,8 +774,10 @@ if ( {) {
                             <div className="text-white font-medium">{service.growthRate}</div>
                           </div>
                         </div>
+=======
                           </div>;
                         </div>;
+
                         {/* Market Info */}
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>;
                           <div>;
@@ -827,6 +792,7 @@ if ( {) {
                               {service && service.growthRate}
                             </div>                          </div>;
                         </div>;
+
                         {/* CTA Buttons */}
 
                             className='px-4'>;
@@ -877,7 +843,7 @@ if ( {) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
-</div>;
+                </div>;
               )}
 
 
@@ -903,6 +869,7 @@ if ( {) {
 =======
             </div>;
           </section>;
+
           {/* Call to Action */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
             <div className='max-w-4xl mx-auto text-center'>;
@@ -916,39 +883,9 @@ if ( {) {
                   and cutting-edge technology.;
                 </p>;
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     href={`tel:${contactInfo && contactInfo.mobile}`}
-=======
-            </div>
-          </section>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          {/* Call to Action */}
-          <section className='px-4 sm:px-6 lg:px-8 mb-20'>
-            <div className='max-w-4xl mx-auto text-center'>
-              <EnhancedFuturisticCard className='p-12'>
-                <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  Ready to Lead the Future?
-                </h2>
-                <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-                  Join the revolution with our breakthrough micro SAAS services.
-                  Transform your business with quantum AI, autonomous systems
-                  and cutting-edge technology.
-                </p>
-                <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                  <Button
-                    href={`tel:${contactInfo.mobile}`}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     variant='primary'
                     className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'>;
                     <Phone className='w-5 h-5 mr-2' />                    Call Now: {contactInfo && contactInfo.mobile}
@@ -969,12 +906,14 @@ if ( {) {
                   Transform your business with quantum AI, autonomous systems, and cutting-edge technology.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
+=======
                 </h2>;
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
                   Join the revolution with our breakthrough micro SAAS services. ;
                   Transform your business with quantum AI, autonomous systems, and cutting-edge technology.;
                 </p>;
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     href={`tel:${contactInfo && contactInfo.mobile}`}
                     variant="primary"
@@ -1019,6 +958,7 @@ if ( {) {
                 <div className="mt-8 text-sm text-gray-400">;
                   <div>Address: {contactInfo && contactInfo.address}</div>;
                   <div className="mt-1">Website: {contactInfo && contactInfo.website}</div>;
+=======
                         <p className='text - gray - 300 mb - 4 font - medium'>;
                           {service.tagline}
                         </p>;
@@ -1252,13 +1192,5 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
     </>);
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

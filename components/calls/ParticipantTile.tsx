@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -95,12 +99,15 @@ type Props = {
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.detach(audioRef && audioRef.current);
     };
+
     participant && participant.tracks.forEach(pub => {;
       const track = pub && pub.track;
       if (track) handleTrackSubscribed(pub, track);    });      if (track) handleTrackSubscribed(pub, track);
     });
+
     participant && participant.on('trackSubscribed', handleTrackSubscribed);
     participant && participant.on('trackUnsubscribed', handleTrackUnsubscribed);
+
     return () => {;
       participant && participant.off('trackSubscribed', handleTrackSubscribed);
       participant && participant.off('trackUnsubscribed', handleTrackUnsubscribed);
@@ -109,13 +116,6 @@ type Props = {
   }, [participant]);
   return (
     <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>;
-=======
-      participant.off('trackUnsubscribed', handleTrackUnsubscribed);
-    }
-  }, [participant]);
-  return (
-    <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <video
         ref={videoRef}
         autoPlay
@@ -276,27 +276,6 @@ if ( {) {
         {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}
       </div>;
     </div>);
-
-    participant.on('trackSubscribed', handleTrackSubscribed),
-    participant.on('trackUnsubscribed', handleTrackUnsubscribed),
-
-    return () => {
-      participant.off('trackSubscribed', handleTrackSubscribed),
-      participant.off('trackUnsubscribed', handleTrackUnsubscribed)
-    }
-  }, [participant]),
-
-  return (
-    <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">
-      <video ref={_videoRef} autoPlay playsInline muted={_Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />
-      <audio ref={_audioRef} autoPlay className="hidden" />
-      <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white">
-        {_displayName || (participant as any).name || (isLocal ? 'You' : 'Participant')}
-
-      </div>
-    </div>
-  )
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

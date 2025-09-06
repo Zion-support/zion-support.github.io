@@ -7,6 +7,7 @@ const checks = [
   { name: 'Lint Status', command: 'npm run lint:check' },
   { name: 'Type Check', command: 'npm run type-check' }
 ];
+
 checks.forEach(check => {
   try {
     execSync(check.command, { stdio: 'pipe' });
@@ -14,7 +15,6 @@ checks.forEach(check => {
   } catch (error) {
     console.log(`❌ ${check.name}: FAILED`);
   }
-<<<<<<< HEAD
 });
 =======
 });

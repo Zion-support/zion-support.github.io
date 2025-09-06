@@ -1,8 +1,6 @@
 
 
 export default function RegisterPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({;
@@ -15,6 +13,7 @@ export default function RegisterPage() {;
     agreeToTerms: false,;
     subscribeNewsletter: false,;
   });
+
   const [passwordRequirements, setPasswordRequirements] = useState({;
     length: false,;
     uppercase: false,;
@@ -22,16 +21,19 @@ export default function RegisterPage() {;
     number: false,;
     special: false,;
   });
+
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     // Handle registration logic here;
   };
+
   const handleChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value, type, checked } = e && e.target;
     setFormData((prev) => ({;
       ...prev,;
       [name]: type === "checkbox" ? checked : value,;
     }));
+
     // Check password requirements;
     if (name === "password") {;
       setPasswordRequirements({;
@@ -43,6 +45,7 @@ export default function RegisterPage() {;
       });
     }
   };
+
   const isPasswordValid = Object && Object.values(passwordRequirements).every(Boolean);
   const isFormValid =;
     formData && formData.firstName &&;
@@ -221,6 +224,7 @@ export default function RegisterPage() {;
                           className={
                             isValid ? "text-green-400" : "text-gray-400"
                           }>;
+=======
 import React, { useState } from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
@@ -450,6 +454,7 @@ if ( {) {
                             is_valid ? "text - green - 400" : "text - gray - 400";
                           }
                         >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           {key === "length" && "At least 8 characters"}
                           {key === "uppercase" && "One uppercase letter"}
                           {key === "lowercase" && "One lowercase letter"}
@@ -504,6 +509,7 @@ if ( {) {
                   )}
 
               </div>;
+
               <div className="space-y-4">;
                 <div className="flex items-center">;
 
@@ -530,6 +536,7 @@ if ( {) {
                       href="/privacy"
 
                       className="text-blue-400 hover:text-blue-300">;
+=======
                         </span>;
                       </div>),
                   )}
@@ -611,6 +618,7 @@ if ( {) {
                   </label>;
                 </div>;
               </div>;
+
               <div>;
                 <button
                   type="submit"
@@ -618,6 +626,7 @@ if ( {) {
                   className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed">;
                   <span className="absolute left-0 inset-y-0 flex items-center pl-3">;
                     <ArrowRight className="h-5 w-5 text-white group-hover:translate-x-1 transition-transform" />;
+=======
                 <div className="flex items - center">;
                   <input;
                     id="subscribe_newsletter";

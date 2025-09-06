@@ -89,8 +89,8 @@ interface CertificationsListProps {
                   href = {cert && cert.credential_url,}
 
                   View credential
-                </Link>
-              </p>
+                </a>;
+              </p>;
             )}
           </CardContent>;
         </Card>;

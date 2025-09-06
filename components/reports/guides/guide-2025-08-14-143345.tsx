@@ -25,7 +25,6 @@
         <div
           className='mt-4'
           dangerouslySetInnerHTML={{
-<<<<<<< HEAD
             __html:
 
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></p><h2>Overview</h2><p>Focus: techcrunch, pebble, newsroomupdated, automatically, multiple, sources.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p>',;

@@ -12,21 +12,27 @@ interface AisalesassistantProps {
 
 
 export default function Aisalesassistant({ }: AisalesassistantProps) {
+=======
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -36,6 +42,7 @@ interface AisalesassistantProps {;
   // Add props here as needed;
 }
 export default function Aisalesassistant(): any ({ }: AisalesassistantProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/services/ai-sales-assistant.tsx
   return (
     <div>;
       <h1>Aisalesassistant</h1>;

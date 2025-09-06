@@ -47,15 +47,11 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
   log_event: (event: any) => null,
   get_articles: () => [],
   getArticleById: (id: string) => null;
-};
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export const logSupportEventToOperator = (event: any) => {
+}
+;
+export const logSupportEventToOperator = (event: any) =>: any {
   // Add support event logging functionality here;
   return null;
-<<<<<<< HEAD
-=======
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

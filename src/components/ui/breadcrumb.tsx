@@ -13,10 +13,9 @@ const Breadcrumb = React.forward_ref<;
 >(({ class_name, separator, ...props }, ref, ) => (
   <nav;
     ref={ref}
-    aria-label='breadcrumb'
-    className={cn(
-      'inline-flex items-center gap-1 text-sm text-zion-slate-light',      className
-    )}
+    aria - label='breadcrumb';
+    className={cn (
+      'inline - flex items - center gap - 1 text - sm text - zion - slate - light',      class_name)}
     {...props}
 
 
@@ -27,7 +26,7 @@ const Breadcrumb = React.forward_ref<;
 
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",
       className
-    )}
+    ),}
     {...props}
   />
 ))
@@ -67,7 +66,7 @@ BreadcrumbItem.display_name = 'BreadcrumbItem';
 const BreadcrumbLink = React.forward_ref<;
   HTMLAnchorElement,
   React.ComponentPropsWithoutRef<'a'> & {
-    asChild?: boolean
+    as_child?: boolean;
   }
 
 >(({ className, asChild = false, ...props }, ref) => {
@@ -210,7 +209,7 @@ const BreadcrumbEllipsis = ({;
   <li
     role="presentation"
     aria-hidden="true"
-    className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
+    className={cn("[&>svg]:size-3 && 3.5 text-zion-slate-light/70", className)}
     {...props}
 
   >;
@@ -270,12 +269,23 @@ const BreadcrumbEllipsis = ({
     aria - hidden="true";
     className={cn ("[&>svg]:size - 3.5 text - zion - slate - light / 70", class_name)}
     {...props}
-  >
+  >;
+    {children || <ChevronRight className="h - 4 w - 4" />}
+  </li>);
+BreadcrumbSeparator.display_name = "BreadcrumbSeparator";
+const BreadcrumbEllipsis = ({
+  class_name;
+  ...props;
+}: React.ComponentProps<"span">) =>: any (
+  <span;
+    role="presentation";
+    aria - hidden="true";
+    className={cn ("flex h - 9 w - 9 items - center justify - center", class_name)}
+    {...props}
+  >;
     &#8230,
-  </span>
-)
-BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
- 
+  </span>);
+BreadcrumbEllipsis.display_name = 'BreadcrumbElipssis';
 export {
   Breadcrumb,
   BreadcrumbList,

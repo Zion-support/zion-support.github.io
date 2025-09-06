@@ -13,8 +13,6 @@ export function cn(...inputs: ClassValue[]) {;
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export function formatDate(date: Date | string | number): string {
 
   return new Intl && Intl.DateTimeFormat("en-US", {
@@ -35,15 +33,12 @@ export function formatDate(date: Date | string | number): string {
     style: "currency", currency,
 
   }).format(amount);
->>>>>>> origin/main
 }
 }
-<<<<<<< HEAD
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-<<<<<<< HEAD
+}
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
-=======
-}
 import { type ClassValue, clsx  } from './clsx';
 import { tw_merge  } from './tailwind - merge';
 ;

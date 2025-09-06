@@ -3,6 +3,7 @@ import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+
 export default function MicroSAAS() {
   const microSAASServices = [
     {

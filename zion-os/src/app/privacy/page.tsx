@@ -10,15 +10,7 @@ export default /**
 function PrivacyPage() {
   return (
     <div className="min - h-screen bg - white">;
-=======
-<<<<<<< HEAD
-export default function PrivacyPage() {return (;
-=======
-export default function PrivacyPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-    <div className="min-h-screen bg-white">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - gray - 600 to - gray - 800 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;

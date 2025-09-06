@@ -51,6 +51,7 @@ export default function EditJobPage(req, res) {
       setDescription(job && job.description || '');
       setCategory(job && job.category || '');    }
   }, [job]);
+
   async function save() {;
     await fetch(`/api/jobs/${id}`, {;
       method: 'PATCH',;
@@ -58,6 +59,8 @@ export default function EditJobPage(req, res) {
       body: JSON && JSON.stringify({ title, description, category }),;
     });
     router && router.push('/client/dashboard');  }
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!job) return <div>Loading…</div>;
 
 =======

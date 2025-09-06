@@ -14,6 +14,7 @@ export default async /**
  * handler - Function description
  */
 function handler() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const {
 
@@ -78,6 +79,7 @@ if ( {) {
 
       ok: false,
       error: "Failed to generate press release",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
 
 =======

@@ -35,28 +35,6 @@ import { emergingTech2027Services } from '../../data/2027-emerging-tech-services
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
 
 
-=======
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Atom,
-  Rocket,
-  Shield,
-  Target,
-  CheckCircle,
-  ExternalLink,
-  Search,
-  Filter,
-  Grid,
-  List,;
-  ChevronDown,;} from 'lucide-react';
-import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
-import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
-  ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Rocket, Shield, Target, CheckCircle, ExternalLink;
   Search, Filter, Grid, List, ChevronDown
  } from 'lucide-react';
@@ -109,9 +87,23 @@ import { motion, AnimatePresence } from 'framer-motion';
   const categories = [
     'all'
     ...Array.from(new Set(all2027Services.map(service => service.category)))
+=======
+
+  // Combine all 2027 services;
+  const all2027Services = [;
+    ...cuttingEdge2027Innovations,;
+    ...practicalMicroSaas2027,;
+    ...emergingTech2027Services,;
+  ];
+
+  // Get unique categories;
+  const categories = [;
+    'all',;
+    ...Array && Array.from(new Set(all2027Services && all2027Services.map(service => service && service.category))),;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];    ...cuttingEdge2027Innovations;
     ...practicalMicroSaas2027;
-    ...emergingTech2027Services
+    ...emergingTech2027Services;
   ];
 
 
@@ -234,10 +226,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
   return (
-    <section className='py-20 bg-gray-900'>
-      <div className='container mx-auto px-4'>
+    <section className='py-20 bg-gray-900'>;
+      <div className='container mx-auto px-4'>;
         {/* Header */}
-        <motion.div
+        <motion&& motion.div
           className='text-center mb-16'          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
 
@@ -276,45 +268,6 @@ import { motion, AnimatePresence } from 'framer-motion';
               <div className='flex-1 max-w-md'>;
                 <div className='relative'>;
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
-=======
-          <h2 className='text-5xl font-bold mb-6'>
-            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-              2027 Revolutionary Services
-            </span>
-          </h2>
-          <p className='text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
-            Discover our cutting-edge portfolio of 500+ innovative services
-            spanning AI consciousness, quantum computing, synthetic biology, and
-            beyond. Each service delivers measurable ROI and transforms your
-            business into a future-ready powerhouse.          </p>
-        </motion.div>
-        {/* Search and Filters */}
-        <motion.div
-          className='mb-12'          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6'>
-            <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover our cutting-edge portfolio of 500+ innovative services spanning AI consciousness
-            quantum computing, synthetic biology, and beyond. Each service delivers measurable ROI
-            and transforms your business into a future-ready powerhouse.
-        </motion.div>
-        {/* Search and Filters */}
-        <motion.div
-          className='mb-12'        <motion.div
-          className="mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6'>
-            <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
-              {/* Search */}
-              <div className='flex-1 max-w-md'>
-                <div className='relative'>
-                  <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <input
                     type='text'
                     placeholder='Search services, features, or use cases...'
@@ -352,13 +305,6 @@ import { motion, AnimatePresence } from 'framer-motion';
               <div className="flex items-center space-x-4">
                 <div className="relative">
                   <select
-=======
-                    onChange={e => setSelectedCategory(e.target.value)}
-                    className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10'
-                  >
-<<<<<<< HEAD
-                    {categories.map(category => (                      <option key={category} value={category}>                  <select
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10"
@@ -386,6 +332,8 @@ import { motion, AnimatePresence } from 'framer-motion';
                   </select>;
                   <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />;
                 </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Sort */}
                 <div className='relative'>;
                   <select
@@ -393,6 +341,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
                     onChange={e => setSortBy(e && e.target.value)}
                     className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10';
+=======
   ArrowRight,
   Star,
   TrendingUp,
@@ -639,6 +588,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
                 </div>
+
                 {/* Sort */}
                 <div className="relative">
                   <select
@@ -652,6 +602,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
                 </div>
+
                 {/* View Mode */}
                 <div className="flex bg-gray-700/50 rounded-xl p-1">
                   <button
@@ -682,6 +633,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     }`}
                   >;
                     <List className="w-5 h-5" />;
+=======
                   <ChevronDown className='absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5 pointer - events - none' />;
                 </div>;
                 {/* View Mode */}
@@ -725,8 +677,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           </div>;
 
         </motion.div>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Results Count */}
         <motion.div;
           className='mb - 8'          initial={{ opacity: 0 }}
@@ -799,7 +749,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
-<<<<<<< HEAD
               className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'            >          <p className="text - gray - 400">;
             Showing <span className="text - cyan - 400 font - semibold">{filtered_services.length}</span> of{' '}
             <span className="text - cyan - 400 font - semibold">{all2027Services.length}</span> services;
@@ -953,6 +902,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                       {service.description}
 
                     </p>
+=======
                         className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service && service.category)} shadow-lg`}>;
                         {getCategoryIcon(service && service.category)}
                       </div>;
@@ -964,12 +914,14 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           ROI: {service && service.roi}
                         </div>                      </div>;
                     </div>;
+
                     {/* Content */}
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors'>;
                       {service && service.name}
                     </h3>;
                     <p className='text-gray-300 mb-4 leading-relaxed'>                      {service && service.description}
                     </p>;
+
                     {/* Features */}                >;
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2">;
                     {/* Header */}
@@ -982,6 +934,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         <div className="text-sm text-gray-400">ROI: {service && service.roi}</div>;
                       </div>;
                     </div>;
+
                     {/* Content */}
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors'>;
                       {service && service.name}
@@ -991,6 +944,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     </h3>;
                     <p className="text-gray-300 mb-4 leading-relaxed">;
                     </p>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Features */}
 
 =======
@@ -1046,8 +1001,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                       ))}
 
                     </div>;
-=======
-                    </div>
 
 
 =======
@@ -1087,6 +1040,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300">
                     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       {/* Icon and Category */}
 
 
@@ -1109,8 +1063,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                           {service.name}
                         </h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <p className="text-gray-300 mb-3 leading-relaxed">
+=======
                           </div>                        </div>;
                       </div>;
                       {/* Content */}
@@ -1140,7 +1094,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           {service.tags.slice (0, 4).map ((tag, idx) => (
                             <span;
                               key={idx}
-<<<<<<< HEAD
                               className='px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50'                            >                          {service.name}
                         </h3>;
                         <p className="text - gray - 300 mb - 3 leading - relaxed">;
@@ -1189,20 +1142,11 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                 </motion && motion.div>;
 
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      <div className="flex flex-col items-end space-y-3">
+                        <div className="text-right">
+                          <div className="text-sm text-gray-400">ROI</div>
+                          <div className="text-lg font-bold text-green-400">{service.roi}</div>
                         </div>
-                        <Link
-                          href={service.link}
-                          className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'
-                        >
-                          <span>Learn More</span>
-                          <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />                        </Link>                        </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <Link
                           href={service.link}
                           className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
@@ -1217,7 +1161,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
-</motion && motion.div>;
+            </motion && motion.div>;
           )}
 
         </AnimatePresence>;
@@ -1251,7 +1195,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 =======
         </AnimatePresence>
-<<<<<<< HEAD
+
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div 
@@ -1302,7 +1246,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div 
 
           className="mt-20 text-center"
-
+=======
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 
 
@@ -1317,6 +1261,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               Ready to Transform Your Business?;
             </h3>;
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+=======
                               className="px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50";
                             >;
                               {tag}
@@ -1408,6 +1353,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               Ready to Transform Your Business?;
             </h3>;
             <p className='text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Our team of experts is ready to help you implement these;
               revolutionary services and achieve unprecedented growth. Let's;
               build the future together.;
@@ -1419,7 +1365,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               Our team of experts is ready to help you implement these revolutionary services
               and achieve unprecedented growth. Let's build the future together.
             </p>
@@ -1431,6 +1376,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                 <span>Get Started Today</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
+=======
                 className='inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50'>;
                 <span>View Pricing</span>;
                 <TrendingUp className='w-5 h-5' />              </Link>              Ready to Transform Your Business?;
@@ -1446,6 +1392,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                 <span>Get Started Today</span>;
                 <ArrowRight className="w-5 h-5" />;
               </Link>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Link
                 href="/pricing"
 
@@ -1499,20 +1446,6 @@ export default Enhanced2027ServicesShowcase;
 }
 ;
 /* Search and Filters */;
-=======
-  );
-
-<<<<<<< HEAD
-  /* Search and Filters */ 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-/* Search and Filters */ 
-=======
-  /* Search and Filters */ 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }<motion.div /> </div> </div> > {
   categories.map ( (category) => (<option key= {
   category;
@@ -1559,14 +1492,8 @@ export default Enhanced2027ServicesShowcase;
 }</motion.div>);
 }</AnimatePresence> > <div className="text - 6xl mb - 4" >🔍</div> <h3 className="text - 2xl font - bold text - white mb - 4" >No services found</h3> <p className="text - gray - 400 mb - 8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>);
 }{
-<<<<<<< HEAD
   /* CTA Section */;
 }<motion.div > Ready to Transform Your Business? </h3> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center" > <Link href="/contact" className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow - purple - 500 / 25" > <span > Get Started Today</span> <ArrowRight className="w - 5 h - 5" /> </a> <Link href="/pricing" className="inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50" > <span > View Pricing</span> <TrendingUp className="w - 5 h - 5" /> </a> </div> </div> </motion.div> </div> </section>);
-=======
-<<<<<<< HEAD
-  /* CTA Section */
-}<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 export default Enhanced2027ServicesShowcase);
 }

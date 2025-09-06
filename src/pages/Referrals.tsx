@@ -50,12 +50,13 @@ export default function ReferralsPage() {
 
         title: "Authentication required",
         description: "Please login to access the referral program",
-        variant: "destructive"}),
+        variant: "destructive"});
       router.push("/login"), // Changed to router.push
     }
   }, [isAuthenticated, router]), // Changed navigate to router in dependencies
 
-  const referralLink = getReferralLink(),
+  const referralLink = getReferralLink();
+
 
   return (
 import { useEffect } from 'react',;
@@ -118,6 +119,7 @@ export default function ReferralsPage() {;
             onShare={shareOnSocialMedia}
 
           />;
+
           <Tabs defaultValue="referrals" className="w-full">;
             <TabsList className="w-full grid grid-cols-2">;
               <TabsTrigger value="referrals" className="flex items-center gap-2">;

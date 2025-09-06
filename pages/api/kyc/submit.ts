@@ -11,7 +11,6 @@ function load(): Record<string, KycProfile> {
     return {}
   }
 function save(db: Record<string, KycProfile>) {
-<<<<<<< HEAD
   fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   fs && fs.writeFileSync(FILE, JSON && JSON.stringify(db, null, 2));
 }
@@ -20,6 +19,8 @@ function save(db: Record<string, KycProfile>) {
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });  const { userId } = req && req.body as { userId?: string };
   if (!userId) return res && res.status(400).json({ error: 'Missing userId' });
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const db = load();
   const profile = db[userId];
   if (!profile) return res && res.status($1).json({$2});
@@ -41,6 +42,7 @@ function save(db: Record<string, KycProfile>) {
   ).toLowerCase();
   if (name && name.includes('test') || name && name.includes('demo') || name && name.includes('fake'))
     flags && flags.add('fraud_risk');
+
   const ip = (
     (req && req.headers['x-forwarded-for'] as string) ||
     req && req.socket.remoteAddress ||
@@ -57,7 +59,6 @@ function save(db: Record<string, KycProfile>) {
         a => a && a.action === 'kyc_submitted' && (a && a.details as any)?.ip === ip
       )
     ).length;
-<<<<<<< HEAD
     if (sameIpCount >= 2) flags && flags.add('duplicate_ip');  }
 
 
@@ -85,7 +86,8 @@ function load(): Record<string, KycProfile> {
 
 
 }
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 import type { KycProfile } from '../../../utils / kyc';
 import {validateKycSubmission} from '../../../utils / kyc';
 import {getAmlProvider} from '../../../utils / aml';

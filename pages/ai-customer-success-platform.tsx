@@ -40,27 +40,6 @@ return (
     industries={["SaaS", "Fintech", "Media", "E‑commerce"]}
     canonical="https: //ziontechgroup.com / ai - customer - success - platform";
   />);
-
-export default function AICustomerSuccessPlatform() {_return (
-		<ServiceLanding
-			title=&quot;AI Customer Success Platform&quot;
-			slug=&quot;ai-customer-success-platform&quot;
-			description=&quot;Predict churn, orchestrate proactive outreach, and increase lifetime value. Our AI monitors accounts across product usage, tickets, billing, and NPS to trigger playbooks that prevent churn and expand revenue.&quot;
-			subtitle=&quot;Reduce churn by 20–45% and grow NRR with automated, data-driven customer health.&quot;
-			pricePerMonthUSD={1999}
-			implementationWeeks=&quot;Implementation: 2–4 weeks&quot;
-			roiNote=&quot;Average ROI 4–10x within 90 days&quot;
-			features={[
-				&quot;Unified customer health scoring (usage, support, sentiment, billing)&quot;,
-				&quot;Churn risk prediction with explainable insights&quot;,
-				&quot;Playbook automation (email, CS tasks, in-app guides, offers)&quot;,
-				&quot;Expansion signals for upsell/cross-sell&quot;,
-				&quot;Executive QBR reports and cohort analytics&quot;,
-				&quot;Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment&quot;
-			]}
-		/>
-	)
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

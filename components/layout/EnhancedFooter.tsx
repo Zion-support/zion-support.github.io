@@ -3,22 +3,20 @@
 import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear();
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const company = null;
   ];
+
   const resources = null;
   ];
+
   const socialLinks = null;
+
 const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYear();
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -86,21 +84,12 @@ const socialLinks = [
 export default function EnhancedFooter() {
   const currentYear = new Date().getFullYear()
   const services = [
-<<<<<<< HEAD
     { name: 'AI Services', href: '/ai-services' }
     { name: 'IT Services', href: '/it-services' }
     { name: 'Blockchain Solutions', href: '/blockchain-solutions' }
     { name: 'Micro SaaS', href: '/micro-saas' }
     { name: 'Security', href: '/security' }
     { name: 'Case Studies', href: '/case-studies' }
-=======
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
-    { name: 'Micro SaaS', href: '/micro-saas' },;
-    { name: 'Security', href: '/security' },;
-    { name: 'Case Studies', href: '/case-studies' },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const company = [
     { name: 'About Us', href: '/about' }
@@ -119,6 +108,7 @@ export default function EnhancedFooter() {
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin }
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github }
+
   ];
 =======
 
@@ -157,6 +147,7 @@ export default function EnhancedFooter() {
               their digital presence.;
             </p>;
             <div className="flex space-x-4">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <a
                 href="#"
                 className="text-gray-400 hover:text-white transition-colors">;
@@ -171,6 +162,7 @@ export default function EnhancedFooter() {
                 href="#"
                 className="text-gray-400 hover:text-white transition-colors">;
                 <Github className="h-5 w-5" />;
+=======
 import React from './react';
 import Link from './next / link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github  } from './lucide-react';
@@ -229,42 +221,6 @@ const company_links = [;
   { name: 'Resources', href: '/resources' }
 ],
 const support_links = [;
-
-const _serviceCategories = [
-  {_title: 'Next-Generation AI', _services: [
-      { name: 'AI Multimodal Fusion', _href: '/ai-multimodal-fusion-platform'},
-      {_name: 'AI Autonomous Decision Engine', _href: '/ai-autonomous-decision-engine'},
-      {_name: 'AI Emotional Intelligence', _href: '/ai-emotional-intelligence-platform'},
-      {_name: 'AI Quantum Hybrid Computing', _href: '/ai-quantum-hybrid-computing'}
-    ]
-  },
-  {_title: 'Cutting-Edge IT', _services: [
-      { name: 'Zero Trust Architecture', _href: '/zero-trust-network-architecture'},
-      {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration'},
-      {_name: '5G Private Networks', _href: '/5g-private-network-solutions'},
-      {_name: 'Blockchain Infrastructure', _href: '/blockchain-infrastructure-platform'}
-    ]
-  },
-  {_title: 'Innovative SaaS', _services: [
-      { name: 'AI Brand Personality', _href: '/ai-brand-personality-generator'},
-      {_name: 'Virtual Event Holograms', _href: '/virtual-event-hologram-platform'},
-      {_name: 'AI Meeting Transcriber', _href: '/ai-meeting-transcriber-pro'},
-      {_name: 'AI Mental Health Companion', _href: '/ai-mental-health-companion'}
-    ]
-  }
-],
-
-const companyLinks = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'News', href: '/news' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Resources', href: '/resources' }
-],
-
-const supportLinks = [
-
   { name: 'Contact Support', href: '/contact' },
   { name: 'Documentation', href: '/docs' },
   { name: 'API Reference', href: '/api' },
@@ -343,6 +299,7 @@ function EnhancedFooter() {
                 className="text - gray - 400 hover:text - white transition - colors";
               >;
                 <Github className="h - 5 w - 5" />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </a>;
             </div>;
           </div>;

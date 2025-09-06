@@ -27,6 +27,7 @@
       'Research ethics, Data privacy, Scientific standards, Industry regulations',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-bio-computing-platform',
+=======
     id: 'quantum - bio - computing - platform',
     name: 'Quantum Bio - Computing Platform',
     tagline: 'Quantum computing meets biological systems',
@@ -108,6 +109,7 @@
     market_size: '$12B quantum bio - computing market',
     growth_rate: '65% annually',
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Neural signal processing, AI/ML, React, Node && Node.js, PostgreSQL, Redis, AWS, Neural hardware',
@@ -135,6 +137,7 @@
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface-platform',
+=======
     id: 'brain - computer - interface - platform',
     name: 'Brain - Computer Interface Platform',
     tagline: 'Direct neural interface for human - computer interaction',
@@ -216,6 +219,7 @@
     market_size: '$18B BCI market',
     growth_rate: '55% annually',
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Quantum computing, Energy algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Energy systems',
@@ -243,6 +247,7 @@
       'Energy regulations, Safety standards, Environmental regulations, Industry standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-energy-platform',
+=======
     id: 'quantum - energy - platform',
     name: 'Quantum Energy Platform',
     tagline: 'Quantum - enhanced energy optimization and fusion simulation',
@@ -324,6 +329,7 @@
     market_size: '$25B quantum energy market',
     growth_rate: '45% annually',
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Advanced AI/ML, Computer Vision, Robotics, React, Node && Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
@@ -482,10 +488,12 @@
   tagline: string, description: string,
   category: string,
   price: {
+      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string,
     enterprise: number
+  
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
@@ -504,6 +512,7 @@
 
 =======
 ];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ];
 
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
@@ -526,45 +535,6 @@
 ];
 
 =======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  id: string,;
-  name: string,;
-  tagline: string,;
-  description: string,;
-  category: string,;
-  price: {;
-    monthly: number,;
-    yearly: number,;
-    currency: string,;
-    trialDays: number,;
-    setupTime: string,;
-    enterprise: number;
-  },;
-  features: string[],;
-  benefits: string[],;
-  targetAudience: string[],;
-  marketPosition: string,;
-  competitors: string[],;
-  techStack: string[],;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  roi: string,;
-  useCases: string[],;
-  integrations: string[],;
-  support: string,;
-  compliance: string[],;
-  link: string,;
-  icon: string,;
-  color: string,;
-  popular: boolean,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number,;
-  marketSize: string,;
-  growthRate: string;
-}
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

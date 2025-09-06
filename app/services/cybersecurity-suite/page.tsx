@@ -1,208 +1,126 @@
-import Link from "next/link";
-
-export const metadata = {
-  title: "Cybersecurity Suite | Zion Tech Group",
-  description: "Comprehensive cybersecurity solutions with threat detection, vulnerability assessment, and 24/7 monitoring.",
+export const metadata = { 
+  title: 'Cybersecurity Suite | Zion Tech Group',
+  description: 'Comprehensive cybersecurity solutions including threat detection, vulnerability assessment, and 24/7 security monitoring to protect your business.'
 };
 
 export default function CybersecuritySuitePage() {
   return (
-    <div className="animate-fade-in">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Cybersecurity Suite
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Protect your business with enterprise-grade cybersecurity solutions including 
-          threat detection, vulnerability assessment, and 24/7 security monitoring.
-        </p>
+    <section>
+      <h1 style={{fontSize: 26, fontWeight: 800}}>Cybersecurity Suite</h1>
+      <p style={{marginTop: 8, color: '#374151'}}>Protect your business with enterprise-grade cybersecurity solutions that detect, prevent, and respond to threats in real-time.</p>
+      
+      <div style={{display: 'grid', gap: 12, marginTop: 16}}>
+        <Item 
+          title="Threat Detection & Response" 
+          details={[
+            "AI-powered threat detection with 99.9% accuracy",
+            "Real-time security monitoring and alerting",
+            "Automated incident response and containment",
+            "Advanced persistent threat (APT) detection"
+          ]} 
+        />
+        <Item 
+          title="Vulnerability Management" 
+          details={[
+            "Automated vulnerability scanning and assessment",
+            "Penetration testing and security audits",
+            "Patch management and security updates",
+            "Compliance monitoring (SOC2, ISO27001, HIPAA)"
+          ]} 
+        />
+        <Item 
+          title="Network Security" 
+          details={[
+            "Next-generation firewall configuration and management",
+            "Intrusion detection and prevention systems",
+            "Secure remote access and VPN solutions",
+            "Network segmentation and micro-segmentation"
+          ]} 
+        />
+        <Item 
+          title="Security Operations Center (SOC)" 
+          details={[
+            "24/7 security monitoring and analysis",
+            "Security incident response and forensics",
+            "Threat intelligence and threat hunting",
+            "Security awareness training and phishing simulation"
+          ]} 
+        />
       </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Security Solutions</h2>
-          <div className="space-y-6">
-            <FeatureItem
-              icon="🛡️"
-              title="Threat Detection"
-              description="AI-powered threat detection and response with real-time monitoring and automated incident response"
-            />
-            <FeatureItem
-              icon="🔍"
-              title="Vulnerability Assessment"
-              description="Comprehensive security audits, penetration testing, and vulnerability scanning"
-            />
-            <FeatureItem
-              icon="🔐"
-              title="Identity Management"
-              description="Multi-factor authentication, single sign-on, and identity governance solutions"
-            />
-            <FeatureItem
-              icon="📊"
-              title="Security Analytics"
-              description="Advanced security analytics with threat intelligence and behavioral analysis"
-            />
-            <FeatureItem
-              icon="🌐"
-              title="Network Security"
-              description="Firewall management, network segmentation, and secure remote access solutions"
-            />
-            <FeatureItem
-              icon="📋"
-              title="Compliance Management"
-              description="GDPR, HIPAA, SOX, and other regulatory compliance monitoring and reporting"
-            />
-          </div>
-        </div>
-
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Service Tiers</h2>
-          <div className="space-y-6">
-            <PricingCard
-              name="Essential"
-              price="$299"
-              period="month"
-              description="Perfect for small businesses"
-              features={[
-                "Basic threat monitoring",
-                "Monthly security reports",
-                "Email support",
-                "Standard compliance",
-                "Basic incident response"
-              ]}
-              popular={false}
-            />
-            <PricingCard
-              name="Professional"
-              price="$799"
-              period="month"
-              description="Most popular for growing companies"
-              features={[
-                "Advanced threat detection",
-                "Weekly security reports",
-                "24/7 monitoring",
-                "Priority support",
-                "Penetration testing",
-                "Compliance management"
-              ]}
-              popular={true}
-            />
-            <PricingCard
-              name="Enterprise"
-              price="$1,999"
-              period="month"
-              description="For large organizations"
-              features={[
-                "Full security suite",
-                "Real-time monitoring",
-                "Dedicated security team",
-                "Custom compliance",
-                "White-label solutions",
-                "SLA guarantee"
-              ]}
-              popular={false}
-            />
-          </div>
-        </div>
+      
+      <Pricing />
+      
+      <div style={{marginTop: 24, padding: 16, backgroundColor: '#fef2f2', borderRadius: 12, border: '1px solid #ef4444'}}>
+        <h3 style={{fontWeight: 700, color: '#991b1b', marginBottom: 8}}>Security Guarantee</h3>
+        <ul style={{color: '#991b1b', paddingLeft: 18}}>
+          <li>• <strong>99.9% uptime</strong> security monitoring</li>
+          <li>• <strong>15-minute</strong> average response time</li>
+          <li>• <strong>Zero data breaches</strong> guarantee</li>
+          <li>• <strong>24/7 expert</strong> security support</li>
+        </ul>
       </div>
+    </section>
+  );
+}
 
-      <div className="bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Security Statistics</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-red-600 mb-2">43%</div>
-            <p className="text-gray-600">of cyber attacks target small businesses</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-red-600 mb-2">$4.45M</div>
-            <p className="text-gray-600">Average cost of a data breach</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-red-600 mb-2">287</div>
-            <p className="text-gray-600">Days to identify a breach</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-red-600 mb-2">60%</div>
-            <p className="text-gray-600">of SMBs close within 6 months of breach</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Secure Your Business Today</h2>
-        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Don't wait for a breach. Join 500+ businesses protected by our Cybersecurity Suite.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors"
-          >
-            Get Security Audit
-          </a>
-        </div>
-        <div className="mt-6 text-sm text-gray-500">
-          <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-          <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-        </div>
-      </div>
+function Item({ title, details }: { title: string; details: string[] }) {
+  return (
+    <div style={{border: '1px solid #e5e7eb', borderRadius: 12, padding: 16}}>
+      <h3 style={{fontWeight: 700}}>{title}</h3>
+      <ul style={{paddingLeft: 18, color: '#4b5563'}}>{details.map(d => (<li key={d} style={{listStyle: 'disc'}}>{d}</li>))}</ul>
     </div>
   );
 }
 
-function FeatureItem({ icon, title, description }: {
-  icon: string;
-  title: string;
-  description: string;
-}) {
+function Pricing() {
   return (
-    <div className="flex items-start space-x-4">
-      <div className="text-3xl">{icon}</div>
-      <div>
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-        <p className="text-gray-600">{description}</p>
-      </div>
+    <div style={{marginTop: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))'}}>
+      <Plan 
+        name="Essential Security" 
+        price="$1,800/month" 
+        features={[
+          "Up to 50 endpoints", 
+          "Basic threat detection", 
+          "Vulnerability scanning", 
+          "Email security",
+          "Standard support"
+        ]} 
+      />
+      <Plan 
+        name="Advanced Security" 
+        price="$4,200/month" 
+        features={[
+          "Up to 200 endpoints", 
+          "Advanced threat detection", 
+          "Penetration testing", 
+          "24/7 monitoring",
+          "Priority support",
+          "Compliance reporting"
+        ]} 
+      />
+      <Plan 
+        name="Enterprise Security" 
+        price="$12,000/month" 
+        features={[
+          "Unlimited endpoints", 
+          "Full SOC services", 
+          "Custom security solutions", 
+          "Dedicated security team",
+          "White-label options",
+          "SLA guarantee"
+        ]} 
+      />
     </div>
   );
 }
 
-function PricingCard({ name, price, period, description, features, popular }: {
-  name: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-}) {
+function Plan({ name, price, features }: { name: string; price: string; features: string[] }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-red-500 bg-red-50' : 'border-gray-200 bg-white'}`}>
-      {popular && (
-        <div className="text-center mb-4">
-          <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-            Most Popular
-          </span>
-        </div>
-      )}
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{name}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="mb-6">
-        <span className="text-3xl font-bold text-gray-900">{price}</span>
-        <span className="text-gray-600">/{period}</span>
-      </div>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center">
-            <span className="text-green-500 mr-2">✓</span>
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
+    <div style={{border: '1px solid #e5e7eb', borderRadius: 12, padding: 16}}>
+      <h4 style={{fontWeight: 700}}>{name}</h4>
+      <div style={{color: '#111827', fontWeight: 800, marginTop: 4, fontSize: 18}}>{price}</div>
+      <ul style={{paddingLeft: 18, color: '#4b5563', marginTop: 8}}>{features.map(f => (<li key={f} style={{listStyle: 'disc'}}>{f}</li>))}</ul>
+      <a href="tel:+13024640950" style={{display: 'inline-block', marginTop: 12, padding: '8px 16px', backgroundColor: '#3b82f6', color: 'white', textDecoration: 'none', borderRadius: 6}}>Call +1 302 464 0950</a>
     </div>
   );
 }

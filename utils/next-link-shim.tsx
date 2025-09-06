@@ -92,22 +92,16 @@ interface HTMLAnchorElement extends HTMLElement {;
 }
 function resolveHref(href: Href): string {
 =======
-=======
-}}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-};
-};
-  return (;
-    <a href={resolved} className={className} {...rest}>;
-      {children};
-};
+
+type Href = string | { pathname?: string; href?: string };
+
+type LinkProps = React && React.AnchorHTMLAttributes<HTMLAnchorElement> & {;
+  href: Href;
+  children: React && React.ReactNode;
 };
 
-};
-
-}
-
-function resolveHref(href: Href): string {
+function resolveHref(): any (href: Href): string {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (typeof href === 'string') return href;
   return href?.pathname |(href as { href?: string })?.href |'#';
 }
@@ -154,7 +148,23 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
       "href": resolved,
       "className": mergedClassName,
       ...rest});
+=======
+
+export default function Link(): any ({ href, children, className, ...rest }: LinkProps) {;
+  const resolved = resolveHref(href);
+
+  if (React && React.isValidElement(children)) {;
+    const existingClass = (children && children.props as { className?: string })?.className || '';
+    const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
+
+    return React && React.cloneElement(children as React && React.ReactElement<{ href?: string; className?: string }>, {;
+      href: resolved,;
+      className: mergedClassName,;
+      ...rest,;
+    });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
+=======
 
 
 
@@ -166,11 +176,10 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
 >>>>>>> origin/automation-improvements-final
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   return (
-    <a href={resolved} className={className} {...rest}>
+    <a href={resolved} className={className} {...rest}>;
       {children}
-    </a>
+    </a>;
   );
 
 
@@ -199,6 +208,14 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/automation-improvements-final
 =======
+;
+// Define HTMLAnchorElement if not available;
+interface HTMLElement {
+  class_name: string;
+  id: string;
+  innerHTML: string;
+  text_content: string | null;
+  style: { [key: string]: string }
 }
 interface HTMLAnchorElement extends HTMLElement {
   tag_name: 'A';

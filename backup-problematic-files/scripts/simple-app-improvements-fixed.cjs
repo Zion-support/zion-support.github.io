@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -215,9 +213,6 @@ console.log('=====')
     this.log('===')
       this.log('\\n Improvements created:')
       this.log('\\n Errors encountered:')
-<<<<<<< HEAD
-    this.log('\\n� App improvements completed!')
-=======
 <<<<<<< HEAD
     this.log('\\n� App improvements completed!')
 =======

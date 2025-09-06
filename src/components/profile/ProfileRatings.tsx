@@ -4,8 +4,8 @@
 
 import { useState, useEffect } from "react";
   return (
-    <div className='space-y-6'>
-      <div className='flex flex-col md:flex-row gap-6'>
+    <div className='space-y-6'>;
+      <div className='flex flex-col md:flex-row gap-6'>;
         <div className='md:w-1/3'>          <ReviewStats
 
 

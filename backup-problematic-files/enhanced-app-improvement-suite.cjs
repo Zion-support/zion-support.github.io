@@ -578,8 +578,6 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
       console.error(' Error in improvement "suite")
 =======
 <<<<<<< HEAD

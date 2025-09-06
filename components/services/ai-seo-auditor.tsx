@@ -9,6 +9,7 @@ export default function Placeholder() {;
         <title>Services • Ai-seo-auditor - Placeholder</title>;
         <meta name="robots" content="noindex" />;
       </Head>;
+
       <main>;
         <h1>AiSeoAuditor</h1>;
         <p>Service details coming soon...</p>;

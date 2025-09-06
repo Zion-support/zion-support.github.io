@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -25,7 +29,6 @@ import {GetStaticPaths, GetStaticProps} from 'next';
         return false;
       }
     });
-<<<<<<< HEAD
     // Check condition
 if (return by_link) {
   $2
@@ -53,55 +56,12 @@ function getAllServices(): any (): Service[] {;
     .concat(newlyAddedServices as unknown as Service[]);
     .concat(curatedMarketServices as Service[]);
     .concat(new2025Services as unknown as Service[]);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		.concat(marketValidatedServices as unknown as Service[]);
 		.concat(moreRealServices2025 as unknown as Service[]);
 		.concat(verified2025Additions as unknown as Service[]);
 		.concat(realServicesQ12025 as unknown as Service[]);
 		.concat(realEnterpriseServices2025 as unknown as Service[]);
-=======
-    if (byLink) return byLink;
-  }, [slug]);
-=======
-import React, { useMemo } from 'react';
-import Head from 'next/head';
-=======
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../data/extra-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { newlyAddedServices } from '../data/newly-added-services';
-import { new2025Services } from '../data/new-2025-services';
-import { marketValidatedServices } from '../data/market-validated-services';
-import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
-import { realServicesQ32025 } from '../data/real-services-q3-2025';
-import { realQ4Services2025, real2025Q4Additions } from '../data/real-2025-q4-additions';
-import { real2026Q1Additions } from '../data/real-2026-q1-additions';
-import fs from 'fs';
-import path from 'path';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-type Service = typeof enhancedRealMicroSaasServices[number];
-
-function getAllServices(): Service[] {
-  return enhancedRealMicroSaasServices
-    .concat(extraServices as Service[], additionalEnhancedServices as Service[])
-    .concat(newlyAddedServices as unknown as Service[])
-    .concat(curatedMarketServices as Service[])
-    .concat(new2025Services as unknown as Service[])
-		.concat(marketValidatedServices as unknown as Service[]);
-		.concat(moreRealServices2025 as unknown as Service[])
-		.concat(verified2025Additions as unknown as Service[])
-		.concat(realServicesQ12025 as unknown as Service[])
-		.concat(realEnterpriseServices2025 as unknown as Service[])
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[]);
 		.concat(realMarketAugmentations2025 as unknown as Service[]);
 		.concat(additionalLiveServices2025 as unknown as Service[]);
@@ -112,7 +72,6 @@ function getAllServices(): Service[] {
 		.concat(realQ4Services2025 as unknown as Service[]);
 		.concat(real2025Q4Additions as unknown as Service[]);
 		.concat(realMarketServicesExtended as unknown as Service[]);
-<<<<<<< HEAD
 		.concat(real2026Q1Additions as unknown as Service[]);
 
 
@@ -132,29 +91,36 @@ export async function getStaticProps() {
 
 function toSlug(): any (value: string): string {;
 	return value && value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
 function getExistingRootPageSlugs(): any (): Set<string> {;
 	const pagesDir = path && path.join(process && process.cwd(), 'pages'),;
 	const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
 	const reserved = new Set<string>(['apireportsservices']),;
 	const slugs = new Set<string>(),;
+
 		}
 		// Directories at root (folder routes);
 		if (entry && entry.isDirectory()) {;
 			slugs && slugs.add(entry && entry.name);
 	}
 	return slugs;
+
+
 export async function getStaticPaths() {;
 	const services = getAllServices(),;
 	const slugs = new Set<string>(),;
 	 })),;
 		fallback: false;
 	}
+
+
 export async function getStaticProps(): any ({ params }: { params: { slug: string } }) {;
 	const services = getAllServices(),;
 	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),;
 	let service: Service | undefined = services && services.find((s) => toSlug(s && s.id || '') === incomingSlug || toSlug(s && s.name || '') === incomingSlug),;
 	if (!service) {;
 		return { notFound: true }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 	}
 	return {props: { service }
 	}
@@ -191,19 +157,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
 									</li>
-								))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+								))}
 							</ul>
 						</Card>
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
@@ -283,6 +237,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							2
 							)}
 				/>;			</Head>;
+
           {/* Service Details */}
           <div className="grid md:grid-cols-2 gap-12 mb-16">;
             <Card className="p-8">;
@@ -306,6 +261,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
                 </div>;
               </div>;
             </Card>;
+
             <Card className="p-8">;
               <h2 className="text-2xl font-bold text-white mb-6">Features</h2>;
               <ul className="space-y-3">;
@@ -318,6 +274,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
               </ul>;
             </Card>;
           </div>;
+
 						<Card className="p-6 bg-black/40 border border-gray-700/50">;
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>;
 							<ul className="space-y-2 text-gray-300">;
@@ -329,6 +286,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								))}
 							</ul>;
 						</Card>;
+
 						<Card className="p-6 bg-black/40 border border-gray-700/50">;
 							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>;
 							<div className="flex flex-wrap gap-2">;
@@ -338,6 +296,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							</div>;
 						</Card>;
 					</div>;
+
 					<div className="space-y-6">;
 						<Card className="p-6 bg-black/40 border border-gray-700/50">;
 							<div className="text-3xl font-bold text-white">{service && service.price} <span className="text-base text-gray-400">{service && service.period}</span></div>;
@@ -356,6 +315,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								<Button href="/contact" className="w-full">Talk to Sales</Button>;
 							</div>;
 						</Card>;
+
 						<Card className="p-6 bg-black/40 border border-gray-700/50">;
 							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>;
 							<a href={service && service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">;
@@ -372,6 +332,8 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 =======
 	)
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 ;
 function getAllServices (): Service[] {
   return enhancedRealMicroSaasServices;

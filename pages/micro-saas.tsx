@@ -184,100 +184,65 @@ export default function MicroSaasPage() {
   Database,
   Sprout;
 } from 'lucide-react';
-
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import {
-  ArrowRight
-  Building2
-  Rocket
-  Factory
-  Brain
-  Cloud
-  Shield
-  CheckCircle
-  Star
-  Users
-  Clock
-  DollarSign
-  Award
-  Globe
-  Lock
-  Cpu
-  Bot
-  FileText
-  Image
-  Video
-  Mic
-  Code
-  Settings
-  Monitor
-  Smartphone
-  Server
-  Network
-  Car
-  Rocket as RocketIcon
-  Heart
-  Building
-  Database
-  Sprout
-} from 'lucide-react';
-
-const microSaasProducts = [
+;
+const microSaasProducts = [;
   {
-    id: 1
-    title: "AI-Powered Voice Assistant Builder"
-    description: "Create custom voice assistants for your business with our no-code platform"
-    icon: Mic
-    category: "Voice Technology"
-    pricing: "$99/month"
-    features: ["No-code voice assistant creation", "Multi-language support", "Custom wake words", "Analytics dashboard"]
-    benefits: ["95% accuracy rate", "24/7 availability", "Easy integration", "Custom branding"]
-  }
+    id: 1,
+    title: "AI - Powered Voice Assistant Builder",
+    description: "Create custom voice assistants for your business with our no - code platform",
+    icon: Mic,
+    category: "Voice Technology",
+    pricing: "$99 / month",
+    features: ["No - code voice assistant creation", "Multi - language support", "Custom wake words", "Analytics dashboard"],
+    benefits: ["95% accuracy rate", "24 / 7 availability", "Easy integration", "Custom branding"];
+  },
   {
-    id: 2
-    title: "Smart IoT Device Manager"
-    description: "Centralized management platform for all your IoT devices and sensors"
-    icon: Cpu
-    category: "IoT Management"
-    pricing: "$149/month"
-    features: ["Device monitoring", "Remote control", "Data visualization", "Alert system"]
-    benefits: ["Real-time monitoring", "Energy savings", "Predictive maintenance", "Scalable solution"]
-  }
+    id: 2,
+    title: "Smart IoT Device Manager",
+    description: "Centralized management platform for all your IoT devices and sensors",
+    icon: Cpu,
+    category: "IoT Management",
+    pricing: "$149 / month",
+    features: ["Device monitoring", "Remote control", "Data visualization", "Alert system"],
+    benefits: ["Real - time monitoring", "Energy savings", "Predictive maintenance", "Scalable solution"];
+  },
   {
-    id: 3
-    title: "AI-Powered Cybersecurity Monitor"
-    description: "Advanced threat detection and response system for small to medium businesses"
-    icon: Shield
-    category: "Cybersecurity"
-    pricing: "$199/month"
-    features: ["Threat detection", "Automated response", "Compliance reporting", "Security dashboard"]
-    benefits: ["99.9% threat detection", "Automated response", "Compliance ready", "24/7 monitoring"]
-<<<<<<< HEAD
+    id: 3,
+    title: "AI - Powered Cybersecurity Monitor",
+    description: "Advanced threat detection and response system for small to medium businesses",
+    icon: Shield,
+    category: "Cybersecurity",
+    pricing: "$199 / month",
+    features: ["Threat detection", "Automated response", "Compliance reporting", "Security dashboard"],
+    benefits: ["99.9% threat detection", "Automated response", "Compliance ready", "24 / 7 monitoring"];
   }
 ];
-const categories = [
-  'Voice Technology'
-  'IoT Management'
-  'Cybersecurity'
-  'Supply Chain'
-  'HR Technology'
-  'Environmental'
-  'Maintenance'
-  'Education'
-  'Fleet Management'
-  'Energy Management'
-  'Quality Assurance'
-  'Customer Analytics'
-  'Document Intelligence'
-  'API Management'
-  'Recommendation Engine'
-  'Data Engineering'
-  'Chat Analytics'
+;
+const categories = [;
+  'Voice Technology',
+  'IoT Management',
+  'Cybersecurity',
+  'Supply Chain',
+  'HR Technology',
+  'Environmental',
+  'Maintenance',
+  'Education',
+  'Fleet Management',
+  'Energy Management',
+  'Quality Assurance',
+  'Customer Analytics',
+  'Document Intelligence',
+  'API Management',
+  'Recommendation Engine',
+  'Data Engineering',
+  'Chat Analytics';
 ];
-export default function MicroSaasPage() {
+;
+export default /**
+ * MicroSaasPage - Function description
+ */
+function MicroSaasPage() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
 =======
 =======
@@ -702,7 +667,6 @@ import {
   AlertTriangle,
   Link as LinkIcon,
   Award as AwardIcon,
-<<<<<<< HEAD
   Star as StarIcon,
   Home;
 } from 'lucide-react';
@@ -750,7 +714,6 @@ export default function MicroSaaS() {
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   const products = [
     {
 
@@ -1495,7 +1458,7 @@ function MicroSaas() {
                       <span className="text-2xl font-bold text-green-400">{product.price}</span>
                       <span className="text-xs text-slate-500 capitalize">{product.category}</span>
                     </div>
-<<<<<<< HEAD
+                    
                     <button className="w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
                       Learn More
 
@@ -1512,6 +1475,7 @@ function MicroSaas() {
                     <p className='text-slate-300 mb-4 text-sm'>;
                       {product && product.description}
                     </p>;
+
                     <div className='mb-4'>;
                       <h4 className='text-sm font-semibold text-blue-400 mb-2'>;
                         Key Features:;
@@ -1524,6 +1488,7 @@ function MicroSaas() {
                         ))}
                       </ul>;
                     </div>;
+
                     <div className='flex items-center justify-between mb-4'>;
                       <span className='text-2xl font-bold text-green-400'>;
                         {product && product.price}
@@ -1532,6 +1497,7 @@ function MicroSaas() {
                         {product && product.category}
                       </span>;
                     </div>;
+
                     <button className='w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>                      Learn More;
                     </button>;
                   </div>;
@@ -1539,12 +1505,14 @@ function MicroSaas() {
               </div>;
             </div>;
           </section>;
+
           {/* Features Section */}
           <section className='py-16 px-4 bg-slate-900/40'>;
             <div className='max-w-6xl mx-auto'>;
               <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>;
                 Why Choose Our Micro SaaS Products?;
               </h2>;
+
               <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>;
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
@@ -1629,6 +1597,7 @@ function MicroSaas() {
                     Quick setup and deployment in minutes, not months;
                   </p>;
                 </div>;
+
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
 
@@ -1664,6 +1633,7 @@ function MicroSaas() {
                     contracts;
                   </p>;
                 </div>;
+
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
 
@@ -1697,6 +1667,7 @@ function MicroSaas() {
                     Specialized tools that solve specific business problems;
                   </p>;
                 </div>;
+
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
 
@@ -1737,6 +1708,7 @@ function MicroSaas() {
               </div>;
             </div>;
           </section>;
+
           {/* CTA Section */}
           <section className='py-16 px-4'>;
             <div className='max-w-4xl mx-auto text-center'>;
@@ -1747,6 +1719,7 @@ function MicroSaas() {
                 Contact our experts to discuss which micro SaaS products are;
                 right for your business and get started with a free trial.;
               </p>;
+
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>;
 
 
@@ -1762,7 +1735,6 @@ function MicroSaas() {
                   <ArrowRight className="ml-2 w-4 h-4" />;
                 </Link>;
                 <a
-<<<<<<< HEAD
                   href={`tel:${contact && contact.phone.replace(/[^\d+]/g, '')}`}
                   className='px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors'>;
                   Call {contact && contact.phone}
@@ -1811,6 +1783,7 @@ function MicroSaas() {
                 Each product is designed to solve a specific business challenge with powerful, easy-to-use tools;
               </p>;
             </motion && motion.div>;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {microSaasProducts && microSaasProducts.map((product, index) => (;
                 <motion&& motion.div
@@ -1997,27 +1970,12 @@ function MicroSaas() {
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
                   className="bg - white rounded - lg shadow - lg p - 6 hover:shadow - xl transition - shadow";
                 >;
                   <div className="flex items - center mb - 4">;
                     <product.icon className="w - 8 h - 8 text - blue - 600 mr - 3" />;
                     <span className="text - sm font - semibold text - blue - 600 bg - blue - 100 px - 3 py - 1 rounded - full">;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-                >
-                  <div className="flex items-center mb-4">
-                    <product.icon className="w-8 h-8 text-blue-600 mr-3" />
-                    <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {product.category}
                     </span>;
                   </div>;
@@ -2066,12 +2024,14 @@ function MicroSaas() {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{solution.title}</h3>
                   <p className="text-gray-600 mb-4">{solution.description}</p>
+                  
                   <div className="mb-4">
                     <span className="text-2xl font-bold text-blue-600">{solution.pricing}</span>
                     {solution.marketPrice && (
                       <span className="text-gray-500 ml-2">(Market: {solution.marketPrice})</span>
                     )}
                   </div>
+
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
@@ -2083,8 +2043,6 @@ function MicroSaas() {
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -2150,6 +2108,7 @@ function MicroSaas() {
                 We cover a wide range of business domains with specialized micro SaaS solutions;
               </p>;
             </motion && motion.div>;
+
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">;
               {categories && categories.map((category, index) => (;
                 <motion&& motion.div
@@ -2222,7 +2181,7 @@ function MicroSaas() {
           </div>
         </section>
       </div>
-    </Layout>;
+    </Layout>
   );
 
 =======
@@ -2252,6 +2211,7 @@ function MicroSaas() {
                 Contact our experts to discuss which micro SaaS products are right for your business 
                 and get started with a free trial.
               </p>
+              
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link 
                   href="/contact" 
@@ -2261,7 +2221,7 @@ function MicroSaas() {
                 </Link>
                 <a 
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
-className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
+                  className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
                 >
                   Call {contact.phone}
                 </a>
@@ -2271,10 +2231,6 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
                 >
                   Email Us
                 </a>
-                >
-                  Email Us
-                </Link>
-
               </div>
 
             </div>

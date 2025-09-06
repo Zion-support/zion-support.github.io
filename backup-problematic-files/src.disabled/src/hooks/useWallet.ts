@@ -13,6 +13,7 @@ export function useWallet() {;
       setWallet(null);
       // setLoading(false); // Loading state handled by calling function or initial useEffect;
       return}
+
     // setLoading(true); // setLoading will be handled by the useEffect calling this;
     try {;
       const { data, "error": supabaseError } = await supabase;
@@ -58,6 +59,7 @@ export function useWallet() {;
       ...prev,
     ]);
     // "TODO": Call actual API to record token earning}
+
   async function spendTokens("amount": number, reason?: string) {;
     if(!user?.id) return;
     // This is an optimistic update;
@@ -74,6 +76,7 @@ export function useWallet() {;
       ...prev,
     ]);
     // "TODO": Call actual API to record token spending}
+
   useEffect(() => {;
   // "TODO": Add dependencies if needed;
   return () => {;

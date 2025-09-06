@@ -23,6 +23,7 @@ const KitPage = () => {;
 =======
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
 import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
+
 const KitPage = () => {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -49,17 +50,21 @@ const KitPage = () => {
     () => getDefaultAssets(bundle),;
     [bundle];
   );
+
   const onGenerateTimeline = useCallback(() => {;
     setTimeline(buildTimeline(startDate));  }, [startDate]);
+
   const onDownloadZip = useCallback(async () => {;
     const JSZip = (await import('jszip')).default;
     const zip = new JSZip();
+
     // Add static/dynamic assets;
      else if (asset && asset.type === 'binary' && asset && asset.path) {;
         const res = await fetch(asset && asset.path);
         const blob = await res && res.blob();
         zip && zip.file(asset && asset.filename, blob);      }
     }
+
     // Add press releases;
     const nowStr = new Date().toISOString().substring(0, 10);
     const prSeed = buildPressRelease('seed-round', {;
@@ -75,30 +80,31 @@ const KitPage = () => {
     });    zip && zip.file('press-releases/seed-round && round.md', prSeed);
     zip && zip.file('press-releases/launch && launch.md', prLaunch);
     if (bundle === 'web3') zip && zip.file('press-releases/token-sale && sale.md', prToken);
+
     // Add timeline if generated;
     if (timeline && timeline.length > 0) {;
       const tl = timeline && timeline.map(t => `${t && t.label}: ${t && t.date}`).join('\n');
       zip && zip.file('rollout-timeline && timeline.txt', tl);
     }
+
     const blob = await zip && zip.generateAsync({ type: 'blob' });
     const { saveAs } = await import('file-saver');
     saveAs(blob, `zion-media-kit-${bundle}.zip`);  }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
+
   const onGeneratePdf = useCallback(async () => {;
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument && PDFDocument.create();
     const page = pdfDoc && pdfDoc.addPage([612, 792]);
     const font = await pdfDoc && pdfDoc.embedFont(StandardFonts && StandardFonts.Helvetica);
+
     const drawText = (text: string, x: number, y: number, size = 12) => {;
       page && page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
     };
 
 
     let y = 760;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     drawText('Zion Media Kit', 50, y, 18);
+=======
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next / head';
 import DatePicker from 'react - datepicker';
@@ -182,6 +188,7 @@ if ( {) {
 ;
     let coordinate_y = 760;
     draw_text ('Zion Media Kit', 50, y, 18);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     y -= 24;
     draw_text (`Bundle: ${bundle}`, 50, y);
     y -= 16;
@@ -239,10 +246,13 @@ if ( {) {
     type
     title
   }: {
+=======
+
   const PressReleaseCard = ({;
     type,;
     title,;
   }: {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     type: PressReleaseType;
     title: string;
 
@@ -253,7 +263,6 @@ if ( {) {
       tokenName,;
 
     });
-<<<<<<< HEAD
     const onCopy = () => navigator && navigator.clipboard.writeText(text);
     return (
       <div className='p-4 border rounded-lg space-y-2'>;
@@ -386,7 +395,6 @@ if ( {) {
             </div>
             {timeline.length>0 && (
               <ul className="mt-3 text-sm list-disc list-inside space-y-1">
-<<<<<<< HEAD
                 {timeline.map((t)=> (<li key={t.label}><span className="font-medium">{t.label}:</span> {t.date}</li>))}
               </ul>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -395,6 +403,7 @@ if ( {) {
 
           </div>;
         </section>;
+
         <section className='p-4 border rounded-lg'>;
           <h3 className='font-semibold mb-3'>Assets Included</h3>;
           <ul className='grid md:grid-cols-2 gap-3'>;
@@ -448,51 +457,6 @@ if ( {) {
             <PressReleaseCard type="seed-round" title="Seed round" />
             <PressReleaseCard type="launch" title="Launch" />
             {bundle === 'web3' && <PressReleaseCard type="token-sale" title="Token sale" />}
-              ))}
-            </div>
-            <p className=&quot;text-xs text-gray-500 mt-2&quot;>Toggle to tailor assets and legal docs.</p>
-          </div>
-          <div className=&quot;p-4 border rounded-lg&quot;>
-            <h3 className=&quot;font-semibold mb-2&quot;>Organization</h3>
-            <div className=&quot;space-y-2&quot;>
-              <input className=&quot;w-full border rounded px-2 py-1&quot; value={companyName} onChange={e=>setCompanyName(e.target.value)} placeholder=&quot;Company name&quot; />
-              <input className=&quot;w-full border rounded px-2 py-1&quot; value={raiseAmount} onChange={e=>setRaiseAmount(e.target.value)} placeholder=&quot;Seed raise amount&quot; />
-              <input className=&quot;w-full border rounded px-2 py-1&quot; value={tokenName} onChange={e=>setTokenName(e.target.value)} placeholder=&quot;Token name&quot; />
-            </div>
-          </div>
-          <div className=&quot;p-4 border rounded-lg&quot;>
-            <h3 className=&quot;font-semibold mb-2&quot;>Rollout Timeline</h3>
-            <div className=&quot;space-y-2&quot;>
-              <DatePicker selected={startDate} onChange={(d)=>d && setStartDate(d)} className=&quot;w-full border rounded px-2 py-1&quot; />
-              <button onClick={onGenerateTimeline} className=&quot;px-3 py-1 rounded bg-green-600 text-white hover:bg-green-700&quot;>Generate</button>
-            </div>
-            {timeline.length>0 && (
-              <ul className=&quot;mt-3 text-sm list-disc list-inside space-y-1&quot;>
-                {timeline.map((t)=> (<li key={t.label}><span className=&quot;font-medium&quot;>{t.label}:</span> {t.date}</li>))}
-              </ul>
-            )}
-          </div>
-        </section>
-
-        <section className=&quot;p-4 border rounded-lg&quot;>
-          <h3 className=&quot;font-semibold mb-3&quot;>Assets Included</h3>
-          <ul className=&quot;grid md:grid-cols-2 gap-3&quot;>
-            {assets.map(a => (
-              <li key={a.filename} className=&quot;flex items-center justify-between border rounded p-2&quot;>
-                <span className=&quot;text-sm&quot;>{a.filename}</span>
-                {a.path ? <a href={a.path} download className=&quot;text-blue-600 text-sm&quot;>Download</Link> : <span className=&quot;text-gray-400 text-xs&quot;>generated</span>}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className=&quot;p-4 border rounded-lg space-y-4&quot;>
-          <h3 className=&quot;font-semibold&quot;>Prewritten Press Releases</h3>
-          <div className=&quot;grid md:grid-cols-3 gap-4&quot;>
-            <PressReleaseCard type=&quot;seed-round&quot; title=&quot;Seed round&quot; />
-            <PressReleaseCard type=&quot;launch&quot; title=&quot;Launch&quot; />
-            {bundle === 'web3' && <PressReleaseCard type=&quot;token-sale&quot; title=&quot;Token sale&quot; />}
-
           </div>
         </section>
       </div>
@@ -500,6 +464,8 @@ if ( {) {
   )
 
 };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
         <section className='p-4 border rounded-lg space-y-4'>;
           <h3 className='font-semibold'>Prewritten Press Releases</h3>;
           <div className='grid md:grid-cols-3 gap-4'>;
@@ -511,62 +477,7 @@ if ( {) {
         </section>;
       </div>;
     </div>;
-=======
-                {timeline.map((t)=> (<li key={t.label}><span className="font-medium">{t.label}:</span> {t.date}</li>))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </ul>
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </section>
-<<<<<<< HEAD
-        <section className='p-4 border rounded-lg'>
-          <h3 className='font-semibold mb-3'>Assets Included</h3>
-          <ul className='grid md:grid-cols-2 gap-3'>
-=======
-        <section className="p-4 border rounded-lg">
-          <h3 className="font-semibold mb-3">Assets Included</h3>
-          <ul className="grid md:grid-cols-2 gap-3">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            {assets.map(a => (
-              <li key={a.filename} className="flex items-center justify-between border rounded p-2">
-                <span className="text-sm">{a.filename}</span>
-                {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</Link> : <span className="text-gray-400 text-xs">generated</span>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </li>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </ul>
-        </section>
-<<<<<<< HEAD
-        <section className='p-4 border rounded-lg space-y-4'>
-          <h3 className='font-semibold'>Prewritten Press Releases</h3>
-          <div className='grid md:grid-cols-3 gap-4'>
-            <PressReleaseCard type='seed-round' title='Seed round' />
-            <PressReleaseCard type='launch' title='Launch' />
-            {bundle === 'web3' && (
-              <PressReleaseCard type='token-sale' title='Token sale' />
-            )}          </div>
-        </section>
-      </div>
-    </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 
 },;

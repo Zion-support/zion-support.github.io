@@ -52,7 +52,6 @@ import {
   TrendingUp,
   Zap,
   Target,
-<<<<<<< HEAD
   Lightbulb,
   BookOpen,} from 'lucide-react';import {
   Rocket;
@@ -94,7 +93,6 @@ import {
 
       bestFor: 'B2B startups, SaaS companies, marketing teams'
     }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       name: 'Mailchimp'
       description:
@@ -124,6 +122,7 @@ import {
 
       name: 'Calendly',
       description: 'Scheduling automation platform that eliminates the back-and-forth of scheduling meetings and calls.',
+=======
   BookOpen;
 export default /**
  * StartupToolsPage - Function description
@@ -261,7 +260,7 @@ function StartupToolsPage() {
       pros: ['Free tierEasy to useGood analyticsAffordable'],
       cons: ['Limited free featuresBasic schedulingLimited platforms'],
       bestFor: 'Social media managers, small businesses, content creators'
-};
+    };
     {
       name: 'Notion',
       description: 'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.',
@@ -301,6 +300,7 @@ function StartupToolsPage() {
     {
       name: 'Intercom',
       description: 'Customer messaging platform that helps businesses build better customer relationships through personalized experiences.',
+=======
       icon: <Lightbulb className='w - 8 h - 8 text - blue - 400' />,
       features: [;
         'Design templates',
@@ -487,7 +487,6 @@ function StartupToolsPage() {
                 {startupTools.length}+
 
               </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-gray-400 text-sm">Essential Tools</div>
             </div>
             <div className="text-center group">
@@ -517,6 +516,7 @@ function StartupToolsPage() {
               </Button>;
             </div>;
           </div>;
+
           {/* Stats */}
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
@@ -564,6 +564,7 @@ function StartupToolsPage() {
                 130M+;
               </div>;
               <div className="text-gray-400 text-sm">Total Users</div>;
+=======
       icon: <BarChart3 className='w - 8 h - 8 text - purple - 400' />,
       features: [;
         'User behavior tracking',
@@ -756,6 +757,7 @@ function StartupToolsPage() {
       </section>;
 
 =======
+
       {/* Category Filter */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -817,6 +819,7 @@ function StartupToolsPage() {
                 size='sm'>                Explore Communities;
               </Button>;
             </Card>;
+
             <Card className='text-center'>;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600'>;
                 <BookOpen className='w-8 h-8 text-white' />              Additional Startup Resources;
@@ -825,6 +828,7 @@ function StartupToolsPage() {
               Beyond tools, here are additional resources to help your startup succeed.;
             </p>;
           </div>;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <Card className="text-center">;
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">;
@@ -838,6 +842,7 @@ function StartupToolsPage() {
                 Explore Communities;
               </Button>;
             </Card>;
+
             <Card className='text-center'>;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600'>;
                 <BookOpen className='w-8 h-8 text-white' />;
@@ -886,10 +891,11 @@ function StartupToolsPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-size='sm'>                Start Learning;
+=======
+                size='sm'>                Start Learning;
               </Button>;
             </Card>;
+
             <Card className='text-center'>;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>;
                 <TrendingUp className='w-8 h-8 text-white' />              </div>;
@@ -901,6 +907,7 @@ size='sm'>                Start Learning;
                 Start Learning;
               </Button>;
             </Card>;
+
             <Card className='text-center'>;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>;
                 <TrendingUp className='w-8 h-8 text-white' />;
@@ -909,6 +916,7 @@ size='sm'>                Start Learning;
                 Growth Strategies;
               </h3>;
               <p className='text-gray-400 mb-4'>;
+=======
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>;
             <Card className='text - center'>;
               <div className='w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center bg - gradient - to - br from - blue - 500 to - indigo - 600'>;
@@ -986,6 +994,7 @@ size='sm'>                Start Learning;
                 Growth Strategies;
               </h3>;
               <p className='text - gray - 400 mb - 4'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Learn proven growth strategies from successful entrepreneurs and;
                 growth hackers.;
               </p>;
@@ -1018,12 +1027,6 @@ size='sm'>                Start Learning;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </>);
-=======
-);
-<<<<<<< HEAD
-=======
-import React from 'react';
-=======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

@@ -26,11 +26,6 @@ export default function PrivacySettingsPage() {
     else setMessage(json.error || 'Failed to load');
     setLoading(false)
   };
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-export default function PrivacySettingsPage() {
 
 
 =======
@@ -62,10 +57,7 @@ export default function PrivacySettingsPage() {
     localStorage.setItem('user-id', userId);
 
     load()
-<<<<<<< HEAD
   }
-<<<<<<< HEAD
-=======
 
 =======
 
@@ -105,7 +97,6 @@ export default function PrivacySettingsPage() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
 
 =======

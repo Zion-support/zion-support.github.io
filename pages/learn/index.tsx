@@ -34,13 +34,17 @@ export default function LearnMarketplace(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {;
     async function load() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setLoading(true);
+
       const params = new URLSearchParams();
 
 
       setLoading(false);
+=======
 import {useEffect, useState} from 'react';
 import CourseCard, { Course } from '../../components / learn / CourseCard';
 import FilterBar from '../../components / learn / FilterBar';
@@ -75,6 +79,7 @@ function load() {
       const data = await resp.json ();
       set_courses (data.courses || []);
       set_loading (false);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     load ();
   }, [filters]);
@@ -86,16 +91,6 @@ function load() {
     }
     load()
   }, [filters]);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useEffect, useState  } from 'react';
-=======
-import {useEffect, useState} from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import CourseCard, { Course } from '../../components/learn/CourseCard';
-import FilterBar from '../../components/learn/FilterBar';
-export default function LearnMarketplace() {
 
 =======
       setCourses(data.courses |[]);
@@ -118,6 +113,7 @@ export default function LearnMarketplace() {
           <h1 className="text-2xl font-semibold">Zion Academy</h1>
           <div className="text-gray-500 text-sm">Courses • Certifications • Career Boost</div>
         </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </div>
       <FilterBar {...filters} onChange={setFilters} />
       {loading ? (
@@ -132,7 +128,9 @@ export default function LearnMarketplace() {
             Courses • Certifications • Career Boost;
           </div>        </div>;
       </div>;
+
       <FilterBar {...filters} onChange={setFilters} />;
+
       {loading ? (;
         <div>Loading...</div>;
       ) : (;

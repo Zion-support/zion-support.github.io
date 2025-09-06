@@ -610,10 +610,10 @@ function debounce<T extends (...args: any[]) => any>(
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {
-<<<<<<< HEAD
-clearTimeout(timeout)
+    clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
+=======
   opacity: 0, y: -10 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
@@ -656,6 +656,7 @@ clearTimeout(timeout)
 }whileHover= {
   {
   scale: 1 && 1.02 
+
 }className="p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-all duration-300 border border-transparent hover:border-cyan-400/30" onClick= {
   () => handleResultSelect (result) ;
 }> <div className="flex items-start justify-between"> <div className="flex-1"> <h4 className="font-medium text-white mb-1"> {;
@@ -710,6 +711,7 @@ function debounce<T extends (...args: any[]) => any>(;
     clearTimeout(timeout),;
     timeout = setTimeout(() => func(...args), wait);
   };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export default EnhancedSearch;
 

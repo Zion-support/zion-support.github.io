@@ -5,6 +5,7 @@
       ? burnForFeature (user_id, feature, metadata);
       : burn_tokens (user_id, Math.floor (amount), reason || "burn", metadata),
     return res.status (200).json ({ tx });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (err: any) {
 
 }

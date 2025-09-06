@@ -120,39 +120,8 @@ import {;
   Video,;
   MessageSquare,;
   Building,;
-=======
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-<<<<<<< HEAD
-  Calendar
-  Clock
-  Users
-  CheckCircle
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  Video
-  MessageSquare
-  Building
-=======
-  Calendar,
-  Clock,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Video,
-  MessageSquare,
-  Building,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from "lucide-react";
+
 const timeSlots = [;
   { time: "9:00 AM", available: true, type: "Video Call" },;
   { time: "9:30 AM", available: true, type: "Phone Call" },;
@@ -170,6 +139,7 @@ const timeSlots = [;
   { time: "4:30 PM", available: true, type: "Video Call" },;
   { time: "5:00 PM", available: true, type: "Phone Call" },;
 ];
+
 const consultationTypes = [;
   {;
     title: "Free Discovery Call",;
@@ -214,6 +184,7 @@ const consultationTypes = [;
     ],;
   },;
 ];
+
 const teamMembers = [;
   {;
     name: "Sarah Johnson",;
@@ -244,7 +215,9 @@ const teamMembers = [;
     available: true,;
   },;
 ];
+
 export default function CalendarPage() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
       <Head>;
@@ -424,6 +397,7 @@ export default function CalendarPage() {;
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">;
             {timeSlots && timeSlots.map((slot, index) => (;
               <motion&& motion.button
+=======
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
@@ -712,6 +686,7 @@ function CalendarPage() {
           <div className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 5 gap - 4">;
             {time_slots.map ((slot, index) => (
               <motion.button;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={index}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -756,6 +731,7 @@ function CalendarPage() {
                   <div>;
                     <div className="font-semibold text-gray-900">Office</div>;
                     <div className="text-gray-600">;
+=======
                 transition={{ duration: 0.8, delay: index * 0.05 }}
                 disabled={!slot.available}
                 className={`p - 4 rounded - lg text - center transition - all ${
@@ -808,6 +784,7 @@ function CalendarPage() {
                   <div>;
                     <div className="font - semibold text - gray - 900">Office</div>;
                     <div className="text - gray - 600">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       123 Tech Street, San Francisco, CA;
                     </div>;
                   </div>;
@@ -889,7 +866,6 @@ function CalendarPage() {
               </Link>;
               <Link
                 href="/about"
-<<<<<<< HEAD
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors">;
                 Learn About Us;
               </Link>;
@@ -897,18 +873,9 @@ function CalendarPage() {
           </motion && motion.div>;
         </div>;
       </section>;
-=======
-                className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
-              >
-                Learn About Us
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </div>;
   );
+=======
               <div className="mt - 8">;
                 <Link;
                   href="/contact";
@@ -956,4 +923,5 @@ function CalendarPage() {
         </div>;
       </section>;
     </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

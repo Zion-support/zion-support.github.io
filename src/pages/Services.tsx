@@ -1,133 +1,158 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Database, 
-  Smartphone, 
-  Globe,
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
 
 const Services: React.FC = () => {
-  const services = [
-    {
-      icon: Brain,
-      title: "AI Services",
-      description: "Advanced artificial intelligence solutions to automate and optimize your business processes.",
-      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and migration services for modern businesses.",
-      features: ["Cloud Migration", "Infrastructure as Code", "DevOps Automation", "Cost Optimization"]
-    },
-    {
-      icon: Shield,
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets and data.",
-      features: ["Security Audits", "Threat Detection", "Compliance Management", "Incident Response"]
-    },
-    {
-      icon: Database,
-      title: "Data Analytics",
-      description: "Transform your data into actionable insights with our analytics solutions.",
-      features: ["Business Intelligence", "Data Visualization", "Real-time Analytics", "Custom Dashboards"]
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile applications for iOS and Android.",
-      features: ["iOS Development", "Android Development", "React Native", "Flutter Apps"]
-    },
-    {
-      icon: Globe,
-      title: "Web Development",
-      description: "Modern, responsive web applications built with cutting-edge technologies.",
-      features: ["React Applications", "Node.js Backend", "API Development", "Performance Optimization"]
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
-            </p>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
-            >
-              Get Started Today
-              <ArrowRight className="ml-2" size={20} />
-            </Link>
-          </div>
+    <div className="min-h-screen bg-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Product engineering and AI-first consulting to deliver measurable
+            outcomes for your business.
+          </p>
         </div>
-      </div>
-
-      {/* Services Grid */}
-      <div className="py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What We Offer
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From AI and cloud solutions to cybersecurity and mobile development, we provide end-to-end technology services.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <service.icon className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
-                </div>
-                
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <ServiceCard
+            href="/services/micro-saas"
+            title="Micro SaaS"
+            description="End-to-end product development with billing, auth, and analytics"
+            bullets={[
+              "Foundational architecture",
+              "Billing + subscriptions",
+              "Growth analytics",
+            ]}
+            icon="🚀"
+          />
+          <ServiceCard
+            href="/services/ai-services"
+            title="AI Services"
+            description="LLM applications, RAG systems, and MLOps pipelines"
+            bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
+            icon="🤖"
+          />
+          <ServiceCard
+            href="/services/it-services"
+            title="IT Services"
+            description="Cloud migration, DevOps, and security solutions"
+            bullets={["Cloud migration", "DevOps + SRE", "Security"]}
+            icon="⚙️"
+          />
+          <ServiceCard
+            href="/services/ai-powered-crm"
+            title="AI-Powered CRM"
+            description="Revolutionary CRM with AI automation, predictive analytics, and 300% sales boost"
+            bullets={["Intelligent lead scoring", "Smart sales automation", "Advanced analytics", "AI customer service"]}
+            icon="🎯"
+          />
+          <ServiceCard
+            href="/services/ai-content-optimizer"
+            title="AI Content Optimizer"
+            description="AI-powered content creation and optimization that increases engagement by 400%"
+            bullets={["AI content generation", "SEO optimization", "Performance analytics", "Multi-language support"]}
+            icon="✍️"
+          />
+          <ServiceCard
+            href="/services/ai-finance-analyzer"
+            title="AI Finance Analyzer"
+            description="Advanced financial analysis with real-time insights and automated investment recommendations"
+            bullets={["Market analysis", "Portfolio optimization", "Financial planning", "Risk assessment"]}
+            icon="💰"
+          />
+          <ServiceCard
+            href="/services/ai-healthcare-assistant"
+            title="AI Healthcare Assistant"
+            description="Revolutionary healthcare AI for diagnosis support, patient monitoring, and treatment optimization"
+            bullets={["Diagnosis support", "Patient monitoring", "Clinical decisions", "Healthcare analytics"]}
+            icon="🏥"
+          />
+          <ServiceCard
+            href="/services/cybersecurity-suite"
+            title="Cybersecurity Suite"
+            description="Comprehensive security solutions with threat detection, monitoring, and 24/7 protection"
+            bullets={["Threat detection", "Vulnerability management", "Network security", "SOC services"]}
+            icon="🔒"
+          />
+          <ServiceCard
+            href="/services/cloud-optimization"
+            title="Cloud Optimization"
+            description="AI-powered cloud optimization that reduces costs by 40% and improves performance by 60%"
+            bullets={["Cost optimization", "Performance tuning", "Security hardening", "Migration services"]}
+            icon="☁️"
+          />
         </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-blue-100 mb-8">Let's discuss how our services can help transform your business.</p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
-          >
-            View Pricing
-            <ArrowRight className="ml-2" size={20} />
-          </Link>
-        </div>
+        <CTA />
       </div>
     </div>
   );
 };
+
+function ServiceCard({
+  href,
+  title,
+  description,
+  bullets,
+  icon,
+}: {
+  href: string;
+  title: string;
+  description: string;
+  bullets: string[];
+  icon: string;
+}) {
+  return (
+    <Link
+      to={href}
+      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
+    >
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+        {title}
+      </h3>
+      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
+      <ul className="text-gray-600 space-y-2">
+        {bullets.map((bullet) => (
+          <li key={bullet} className="flex items-center">
+            <span className="text-blue-500 mr-2">•</span> {bullet}
+          </li>
+        ))}
+      </ul>
+    </Link>
+  );
+}
+
+function CTA() {
+  return (
+    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
+      <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        Ready to Get Started?
+      </h3>
+      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+        Talk to our experts about your project. We'll help you choose the right
+        service and create a custom solution for your business needs.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="tel:+13024640950"
+          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Call +1 302 464 0950
+        </a>
+        <a
+          href="mailto:kleber@ziontechgroup.com"
+          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+        >
+          Email Us
+        </a>
+      </div>
+      <div className="mt-4 text-sm text-gray-500">
+        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+        <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
+      </div>
+    </div>
+  );
+}
 
 export default Services;

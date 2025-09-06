@@ -9,7 +9,7 @@ import { ChevronDown } from 'lucide-react'
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
->(({ className, children, ...props }, ref) => (
+></typeof>(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Root
 import React from 'react';
 import * as React from 'react';
@@ -33,8 +33,7 @@ const NavigationMenu = React && React.forwardRef<;
 
       className
     )}
-    {...props}
-  >
+    {...props}>;
     {children}
 
     <NavigationMenuViewport />;
@@ -80,10 +79,9 @@ const NavigationMenuTrigger = React && React.forwardRef<;
 >(({ className, children, ...props }, ref) => (;
   <NavigationMenuPrimitive&& NavigationMenuPrimitive.Trigger
     ref={ref}
-    className={cn(navigationMenuTriggerStyle(), "group", className)}
-    {...props}
-  >
-    {children}{" "}
+    className={cn(navigationMenuTriggerStyle(), 'group', className)}
+    {...props}>;
+    {children}{' '}
     <ChevronDown
       className='relative top-[1px] ml-1 h-4 w-4 transition duration-200 group-data-[state=open]:rotate-180 pointer-events-none'
       aria-hidden='true'
@@ -99,7 +97,7 @@ const NavigationMenuContent = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>
 >(({ className, ...props }, ref) => (
-  <div className={cn("absolute left-0 top-full z-50 flex justify-center")}>
+  <div className={cn('absolute left-0 top-full z-50 flex justify-center')}>
     <NavigationMenuPrimitive.Viewport
       className={cn(
 

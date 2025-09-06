@@ -7,6 +7,7 @@ export default function Page() {;
       if(!resumeData || resumeData && resumeData.length === 0) {;
         setResumes([]);
         return []}
+
       const "transformedResumes": Resume[] = resumeData && resumeData.map(resume => ({;
         id: resume && resume.id,
         "user_id": resume && resume.user_id,

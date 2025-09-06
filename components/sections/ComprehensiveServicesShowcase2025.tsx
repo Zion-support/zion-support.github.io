@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -86,10 +90,13 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000'></div>;
         <div className='absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000'></div>;
       </div>;
+=======
   };
 
 
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">;
       {/* Animated Background Elements */}
@@ -99,6 +106,7 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>;
         <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>;
       </div>;
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -127,6 +135,7 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6">
             Revolutionary 2025 Services
           </h2>
@@ -312,6 +321,8 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                   </p>;
                 </div>;
               </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Services Grid */}
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -392,20 +403,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                     {/* Features */}
 
 =======
-=======
-                      <p className='text-gray-400 text-sm leading-relaxed'>                        {service.description}
-
-                        {service.description}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                      </p>
-                    </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                    {/* Features */}
                     <div className="mb-4">
                       <h5 className="text-sm font-medium text-purple-300 mb-2">Key Features:</h5>
                       <ul className="space-y-1">
@@ -463,8 +460,10 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                         </div>
                       </div>
                     </div>
-</ul>;
+=======
+                      </ul>;
                     </div>;
+
                     {/* Pricing */}
                     <div className='mb-4'>;
                       <div className='flex items-center justify-between'>;
@@ -486,6 +485,7 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                       <div className="text-xs text-gray-500 mt-1">;
                       </div>;
                     </div>;
+
                     {/* ROI */}
                     <div className='mb-4'>;
                       <h5 className='text-sm font-medium text-purple-300 mb-2'>;
@@ -507,6 +507,8 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                         </div>;
                       </div>;
                     </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Use Cases */}
 
                             </span>;
@@ -519,10 +521,12 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                       <h5 className="text-sm font-medium text-purple-300 mb-2">Perfect for:</h5>;
                       <div className="flex flex-wrap gap-1">;
                         {service && service.useCases?.slice(0, 3).map((useCase, useCaseIndex) => (;
+=======
                     <div className="mb-4">
                       <h5 className="text-sm font-medium text-purple-300 mb-2">Perfect for:</h5>
                       <div className="flex flex-wrap gap-1">
                         {service.useCases?.slice(0, 3).map((useCase, useCaseIndex) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                           <span
                             key={useCaseIndex}
                             className="px-2 py-1 bg-slate-700/50 text-xs text-gray-300 rounded-full">;
@@ -616,8 +620,11 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
 
 
 };
+
 export default ComprehensiveServicesShowcase2025;  );
 };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ComprehensiveServicesShowcase2025;
 
 

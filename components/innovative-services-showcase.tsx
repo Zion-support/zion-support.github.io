@@ -89,6 +89,7 @@ export default function InnovativeServicesShowcase() {
 ;
   const container_variants = {
     hidden: { opacity: 0 },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
@@ -141,6 +142,7 @@ export default function InnovativeServicesShowcase() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
+=======
         stagger_children: 0.1,
         delay_children: 0.2,
       },
@@ -151,6 +153,7 @@ export default function InnovativeServicesShowcase() {
 ;
   const item_variants = {
     hidden: { opacity: 0, coordinate_y: 30 },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1,
       coordinate_y: 0,
@@ -177,6 +180,7 @@ export default function InnovativeServicesShowcase() {;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',    website: 'https://ziontechgroup && ziontechgroup.com';
   };
+
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -203,6 +207,7 @@ export default function InnovativeServicesShowcase() {;
       }
     }
   };
+
   const featuredServices = [;
     {;
       title: '🔐 Quantum Internet Security Platform',;
@@ -274,6 +279,7 @@ export default function InnovativeServicesShowcase() {;
       ],;
       link: 'https://ziontechgroup && ziontechgroup.com/neural-interface-development-platform',;
       color: 'from-purple-600 to-indigo-700',;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     },  ];
 =======
     },  ];
@@ -436,9 +442,9 @@ export default function InnovativeServicesShowcase() {;
 
 
         {/* Hero Section */}
-        <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto text-center'>
-            <motion.div
+        <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-7xl mx-auto text-center'>;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
 
@@ -490,6 +496,7 @@ export default function InnovativeServicesShowcase() {;
                 of what's possible;
               </p>;
             </motion && motion.div>;
+
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>              {featuredServices && featuredServices.map((service, index) => (                  Featured;
                 </span> Innovative Services;
               </h2>;
@@ -497,6 +504,7 @@ export default function InnovativeServicesShowcase() {;
                 Our most revolutionary services that are pushing the boundaries of what's possible;
               </p>;
             </motion && motion.div>;
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
               {featuredServices && featuredServices.map((service, index) => (;
                 <motion&& motion.div
@@ -626,23 +634,11 @@ export default function InnovativeServicesShowcase() {;
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
                   className='bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - sm border border - cyan - 500 / 20 rounded - 2xl p - 8 hover:border - cyan - 500 / 40 transition - all duration - 300';
                 >;
                   <div className='mb - 6'>;
                     <h3 className='text - 2xl font - bold text - white mb - 4'>;
-=======
-                  className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                >
-                  <div className='mb-6'>
-                    <h3 className='text-2xl font-bold text-white mb-4'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {service.title}
                     </h3>;
                     <p className='text - gray - 300 mb - 6 leading - relaxed'>;
@@ -687,6 +683,7 @@ export default function InnovativeServicesShowcase() {;
                     <p className='text-gray-300 mb-6 leading-relaxed'>;
                       {service && service.description}
                     </p>;
+
                     <div className='bg-gradient-to-r from-cyan-500/10 to-purple-500/10 p-4 rounded-lg border border-cyan-500/20 mb-6'>;
                       <div className='text-2xl font-bold text-cyan-400 mb-2'>;
                         {service && service.price}
@@ -698,6 +695,7 @@ export default function InnovativeServicesShowcase() {;
                         {service && service.savings}
                       </div>;
                     </div>;
+
                     <div className='mb-6'>;
                       <h4 className='text-lg font-semibold text-white mb-3'>;
                         Key Features:;
@@ -711,11 +709,13 @@ export default function InnovativeServicesShowcase() {;
                   <div className="mb-6">;
                     <h3 className="text-2xl font-bold text-white mb-4">{service && service.title}</h3>;
                     <p className="text-gray-300 mb-6 leading-relaxed">{service && service.description}</p>;
+
                     <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 p-4 rounded-lg border border-cyan-500/20 mb-6">;
                       <div className="text-2xl font-bold text-cyan-400 mb-2">{service && service.price}</div>;
                       <div className="text-sm text-gray-400">{service && service.marketData}</div>;
                       <div className="text-sm text-green-400 mt-1">{service && service.savings}</div>;
                     </div>;
+
                     <div className="mb-6">;
                       <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>;
                       <ul className="space-y-2">;
@@ -741,18 +741,6 @@ export default function InnovativeServicesShowcase() {;
                         <span>Learn More</span>;
                         <ExternalLink className='w-5 h-5' />;
                       </a>;
-=======
-                      </ul>
-                    </div>
-                    <div className='flex flex-col sm:flex-row gap-3'>
-                      <a
-                        href={service.link}
-                        className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25 inline-flex items-center justify-center space-x-2'
-                      >
-                        <span>Learn More</span>
-                        <ExternalLink className='w-5 h-5' />
-                      </a>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <a
                         href='/contact'
                         className='border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>                      <a
@@ -850,12 +838,14 @@ export default function InnovativeServicesShowcase() {;
                 transforming industries;
               </p>;
             </motion && motion.div>;
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
               {emergingTechServicesEnhanced2025;
                 .slice(0, 6);
                 .map((service, index) => (;
                   <motion&& motion.div
                     key={service && service.id}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -897,35 +887,11 @@ export default function InnovativeServicesShowcase() {;
             <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
-=======
-            </div>
-          </div>
-        </section>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        {/* Emerging Tech Services */}
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>
-            <motion.div
-
-              initial={{ opacity: 0, y: 30 }}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
                   Emerging
 
@@ -939,7 +905,9 @@ export default function InnovativeServicesShowcase() {;
                               {emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (
                 <motion.div
                   key={service.id}
+=======
             </div>;
+
             <motion&& motion.div
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}                  Emerging
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -949,10 +917,12 @@ export default function InnovativeServicesShowcase() {;
                 Discover the latest technologies that are emerging and transforming industries;
               </p>;
             </motion && motion.div>;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                               {emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -977,6 +947,7 @@ export default function InnovativeServicesShowcase() {;
               ))}
 
             </div>;
+
             <motion&& motion.div
 
               className="text-center mt-16"
@@ -1010,7 +981,7 @@ export default function InnovativeServicesShowcase() {;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">
                   ArrowRight-Generation
 
@@ -1024,6 +995,7 @@ export default function InnovativeServicesShowcase() {;
               {nextGenAIServices.slice(0, 6).map((service, index) => (
                 <motion.div
                   key={service.id}
+=======
                 AI Services;
               </h2>;
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
@@ -1031,6 +1003,7 @@ export default function InnovativeServicesShowcase() {;
                 advanced services;
               </p>;
             </motion && motion.div>;
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {nextGenAIServices && nextGenAIServices.slice(0, 6).map((service, index) => (                  ArrowRight-Generation;
                 </span> AI Services;
               </h2>;
@@ -1038,10 +1011,12 @@ export default function InnovativeServicesShowcase() {;
                 Experience the future of artificial intelligence with our most advanced services;
               </p>;
             </motion && motion.div>;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {nextGenAIServices && nextGenAIServices.slice(0, 6).map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
 
@@ -1081,7 +1056,7 @@ export default function InnovativeServicesShowcase() {;
                     <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                     <div className="text-2xl font-bold text-cyan-400 mb-2">
-<<<<<<< HEAD
+=======
                       </div>;
                     </div>;
                     <div className='mb - 6'>;
@@ -1157,74 +1132,6 @@ export default function InnovativeServicesShowcase() {;
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
                 <span className='bg - gradient - to - r from - emerald - 400 to - teal - 400 bg - clip - text text - transparent'>;
                   Emerging;
-=======
-                      {service.price}
-                      <span className="text-sm text-gray-400">{service.period}</span>
-                    </div>
-                    <div className="text-sm text-gray-400 mb-4">{service.marketSize} • {service.growthRate}</div>
-                    <a
-                      href={service.link}
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2"
-                    >
-                      <span>Learn More</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </UltraFuturisticCard>
-                </motion.div>
-              ))}
-            </div>
-            <motion.div
-              className="text-center mt-16"
-=======
-              className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <motion.a
-                href='/services'
-                className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-emerald-500/25 inline-flex items-center space-x-2'                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span>View All Emerging Tech</span>
-                <ArrowRight className='w-6 h-6' />              </motion.a>                href="/services"
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-emerald-500/25 inline-flex items-center space-x-2"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span>View All Emerging Tech</span>
-                <ArrowRight className='w-6 h-6' />                <ArrowRight className="w-6 h-6" />
-              </motion.a>
-            </motion.div>
-          </div>
-        </section>
-        {/* ArrowRight-Gen AI Services */}
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>
-            <motion.div
-
-              initial={{ opacity: 0, y: 30 }}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                <span className='bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent'>
-                  ArrowRight-Generation
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </span>{' '}
                 Tech Services;
               </h2>;
@@ -1303,7 +1210,6 @@ export default function InnovativeServicesShowcase() {;
                     <div className="text - sm text - gray - 400 mb - 4">{service.market_size} • {service.growth_rate}</div>;
                     <a;
                       href={service.link}
-<<<<<<< HEAD
                       className="bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white px - 4 py - 2 rounded - lg text - sm font - semibold hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 300 inline - flex items - center space - x-2";
                     >;
                       <span > Learn More</span>;
@@ -1341,13 +1247,15 @@ export default function InnovativeServicesShowcase() {;
             </motion && motion.div>;
           </div>;
         </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Call to Action */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1394,12 +1302,15 @@ export default function InnovativeServicesShowcase() {;
                 Join the revolution and transform your business with our cutting-edge services
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+=======
                   className='border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300'>                Ready to Experience the Future?;
               </h2>;
               <p className="text-xl text-gray-300 mb-8">;
                 Join the revolution and transform your business with our cutting-edge services;
               </p>;
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <a
                   href="/contact"
 
@@ -1407,6 +1318,8 @@ export default function InnovativeServicesShowcase() {;
 =======
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
             >;
               <motion.a;
                 href='/services';

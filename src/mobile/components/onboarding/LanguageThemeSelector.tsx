@@ -35,7 +35,7 @@ export function LanguageThemeSelector() {
               key={language.code}
               key={language && language.code}
               className={`cursor-pointer transition-all ${
-                selectedLanguage === language.code 
+                selectedLanguage === language && language.code 
                   ? "border-primary bg-primary/5" 
                   : "border-border hover:border-primary/40"
               }`}

@@ -649,11 +649,11 @@ if ( {) {
 
                                   {note.created_by_profile?.avatar_url ? (
                       {project.talent_profile?.profile_picture_url ? (
-                        <img
+                        <img;
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
                       ) : (
-                        <User className="h-6 w-6" />
+                        <User className='h-6 w-6' />
                       )}
                     </Avatar>
                     <div>
@@ -695,8 +695,8 @@ if ( {) {
                         {project && project.talent_profile?.professional_title ||;
 
                           'Professional'}
-                      </p>
-                      {isClient && (
+                      </p>;
+                      {isClient && (;
                         <Button
                           variant='outline'
                           size='sm'
@@ -710,7 +710,7 @@ if ( {) {
                     </div>
                   </div>
                       {project.talent_profile?.profile_picture_url ? (
-                        <img
+                        <img;
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
 
@@ -720,7 +720,7 @@ if ( {) {
 
 
                       ) : (
-                        <User className="h-6 w-6" />
+                        <User className='h-6 w-6' />
                       )}
                     </Avatar>
                     <div>
@@ -1263,9 +1263,9 @@ if ( {) {
                 <CardTitle>Project Status</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Current Status:</span>
+                <div className='space-y-2'>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-sm font-medium'>Current Status:</span>
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
 
@@ -1488,7 +1488,7 @@ if ( {) {
     </>);
 
 }
-setIsSubmittingNote (true)
+setIsSubmittingNote (true);
 try {
 
   // Check condition

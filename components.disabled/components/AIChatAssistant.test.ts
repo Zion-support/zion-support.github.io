@@ -17,3 +17,4 @@ import { render,screen } from "@testing-library/react"; render(<AIChatAssistant 
   it('displays correct content', () => {;
   it('handles user interactions', () => {;
 import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => {; render(<AIChatAssistant />); it("handles user interactions"
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480

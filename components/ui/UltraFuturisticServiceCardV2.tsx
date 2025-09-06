@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -23,6 +27,7 @@ import { motion } from 'framer-motion';
 
 
 } from 'lucide-react';
+
 interface ServiceCardProps {
   service: {
 =======
@@ -39,21 +44,12 @@ import {;
 } from 'lucide-react';
 interface ServiceCardProps {;
   service: {;
-=======
-  Globe,;
-  Rocket,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-} from 'lucide-react';
-
-interface ServiceCardProps {
-  service: {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     id: string;
     name: string;
     tagline: string;
     description: string;
     category: string;
-<<<<<<< HEAD
     price: {;
       monthly: number;
       yearly: number;
@@ -74,28 +70,6 @@ interface ServiceCardProps {
     implementation_details: string;
     roi: string;
     use_cases: string[];
-=======
-    price: {
-      monthly: number;
-      yearly: number;
-      currency: string;
-      trialDays: number;
-      setupTime: string;
-
-      enterprise?: number;
-    }
-
-    features: string[];
-    benefits: string[];
-    targetAudience: string[];
-    marketPosition: string;
-    competitors: string[];
-    techStack: string[];
-    realImplementation: boolean;
-    implementationDetails: string;
-    roi: string;
-    useCases: string[];
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     integrations: string[];
     support: string;
     compliance: string[];
@@ -103,7 +77,6 @@ interface ServiceCardProps {
     icon: string;
     color: string;
     popular: boolean;
-<<<<<<< HEAD
     launch_date: string;
     customers: number;
     rating: number;
@@ -138,8 +111,10 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({;
 
 =======
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
+
 interface ServiceCardProps {
   service: {
+      
     id: string,
     name: string,
     tagline: string,
@@ -152,6 +127,7 @@ interface ServiceCardProps {
       trialDays: number,
       setupTime: string,
       enterprise?: number
+    
     },
     features: string[],
     benefits: string[],
@@ -174,11 +150,12 @@ interface ServiceCardProps {
     customers: number,
     rating: number,
     reviews: number,
-marketSize?: string;
+    marketSize?: string;
     growthRate?: string
   };
   index: number
 }
+
 const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, index }) => {
   const getCategoryIcon = (category: string) => {
     switch (category.toLowerCase()) {
@@ -226,15 +203,20 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
       <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>
 =======
   };
+
   const getGradientClass = (color: string) => {;
     if (color && color.includes('from-') && color && color.includes('to-')) {;
       return color;
     }
     return 'from-cyan-500 to-blue-500';
   };
+
+
     >;
       {/* Glow effect */}
       <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Main card */}
       <div className='relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden'>;
         {/* Background pattern */}
@@ -244,10 +226,12 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
     return 'from-cyan-500 to-blue-500'
   }
+=======
         <div className='absolute inset-0 opacity-5'>;
           <div className='absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400'></div>;
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0 && 0.15)_1px,transparent_0)] bg-[length:20px_20px]'></div>;
         </div>;
+
         {/* Header */}
         <div className='relative z-10 mb-6'>;
           <div className='flex items-start justify-between mb-4'>;
@@ -259,6 +243,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
                   <span className='text-xs font-medium text-gray-400 uppercase tracking-wider'>                    {service && service.category}    }
     return 'from-cyan-500 to-blue-500';
   };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <motion&& motion.div
       initial={{ opacity: 0, y: 50, scale: 0 && 0.9 }}
@@ -346,6 +332,7 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
         scale: 1.02,
 
         transition: { duration: 0.3 }
+=======
         duration: 0 && 0.6,
         delay: index * 0 && 0.1,
         ease: [0 && 0.25, 0 && 0.46, 0 && 0.45, 0 && 0.94]
@@ -398,10 +385,12 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
 
             {service.popular && (
               <motion.div
+=======
         <div className="absolute inset-0 opacity-5">;
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400"></div>;
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0 && 0.15)_1px,transparent_0)] bg-[length:20px_20px]"></div>;
         </div>;
+
         {/* Header */}
         <div className="relative z-10 mb-6">;
           <div className="flex items-start justify-between mb-4">;
@@ -416,8 +405,10 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
                 </div>;
               </div>;
             </div>;
+
             {service && service.popular && (;
               <motion&& motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
 
@@ -512,16 +503,21 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
             </div>
           </div>
         </div>
+=======
           </div>;
+
           <h3 className='text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300'>;
             {service && service.name}
           </h3>;
+
           <p className='text-gray-300 text-sm leading-relaxed'>            {service && service.tagline}          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300">;
             {service && service.name}
           </h3>;
+
           <p className="text-gray-300 text-sm leading-relaxed">;
           </p>;
         </div>;
+
         {/* Stats */}
         <div className='relative z-10 mb-6'>;
           <div className='grid grid-cols-3 gap-4'>;
@@ -552,6 +548,8 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
             </div>;
           </div>;
         </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Pricing */}
 
 =======
@@ -637,7 +635,6 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-<<<<<<< HEAD
                 transition={{ delay: 0 && 0.8 + idx * 0 && 0.1 }}
                 className='flex items-center space-x-2 text-sm'>;
                 <div className='w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full'></div>;
@@ -683,6 +680,7 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
           <div className="space-y-2">
             {service.benefits.slice(0, 2).map((benefit, idx) => (
               <motion.div
+=======
                 className='flex items - center space - x-2 text - sm';
               >;
                 <div className='w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full'></div>;
@@ -750,7 +748,6 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
           </div>;
         </div>;
 =======
-                <span className='text-gray-300'>{benefit}</span>              </motion.div>
 
 =======
 
@@ -833,7 +830,7 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
           </motion.a>
         </div>
-<<<<<<< HEAD
+=======
         <div className='relative z-10'>          <motion&& motion.a
             href={service && service.link}
             whileHover={{ scale: 1 && 1.05 }}
@@ -858,12 +855,11 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
               <span>Learn More</span>;
               <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />;
             </span>;
+
             {/* Button glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>;
           </motion && motion.a>;
         </div>;
-=======
-=======
 
 
 

@@ -64,6 +64,5 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 
 
   );
-};
 }
 }

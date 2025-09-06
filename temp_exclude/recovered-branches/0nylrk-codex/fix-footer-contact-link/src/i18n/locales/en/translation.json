@@ -27,10 +27,14 @@
     "categories": "Categories",
 
     "services": "Services",
+=======
     "services": "Services",
     "micro-saas": "Micro SAAS",
     "categories": "Categories",
+>>>>>>> origin/chore/cleanup-and-build
+=======
     "categories": "Categories",
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
     "talent": "Talent",
     "equipment": "Equipment",
     "dashboard": "Dashboard",
@@ -170,6 +174,7 @@
     "message": "Something went wrong.",
     "retry": "Retry";
 }
+=======
     "pay": "Pay with Stripe (test)"
   },
   "jobs": {

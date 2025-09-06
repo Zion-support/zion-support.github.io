@@ -11,6 +11,7 @@ async function getLatest(pkg) {
   } catch (_) {
     return null;
   }
+
 exports && exports.handler = async function () {
 
   try {

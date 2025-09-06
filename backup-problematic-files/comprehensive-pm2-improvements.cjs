@@ -800,8 +800,6 @@ const { execSync, spawn } = require('child_process')
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
             this.log('� Next "steps")
 =======
 <<<<<<< HEAD

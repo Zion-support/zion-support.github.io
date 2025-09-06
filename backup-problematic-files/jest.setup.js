@@ -1,5 +1,4 @@
 import "@testing-library/jest-dom";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 // Mock Next.js router
 jest.mock("next/router", () => ({

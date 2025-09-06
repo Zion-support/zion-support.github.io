@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD:temp_exclude/hooks.disabled/useWallet.ts
 interface UseWalletProps {
   // Add props here as needed
 }

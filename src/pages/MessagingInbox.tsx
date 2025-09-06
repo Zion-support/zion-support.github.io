@@ -36,15 +36,15 @@ export default function MessagingInbox() {
 
     markAsRead;
     fetchConversations;
-    isLoading
+    isLoading;
   } = useMessaging();
 
   const isMobile = useIsMobile();
-  const router = useRouter(), // Changed from navigate
+  const router = useRouter(), // Changed from navigate;
   const [activeCall, setActiveCall] = useState<string | null>(null);
 
       try {
-        await fetchConversations()
+        await fetch_conversations ();
       } catch (error) {
 
 
@@ -103,27 +103,32 @@ export default function MessagingInbox() {;
         await fetchConversations();
       } catch (error) {;
         logErrorToProduction('Failed to load conversations:', { data: error }),;
-        toast.error("Failed to load messages. Please try again.");
+        toast && toast.error("Failed to load messages. Please try again.");
       }
-    },;
+    };
+
     loadData();
-  }, [fetchConversations]),;
+  }, [fetchConversations]);
+
   const startVideoCall = () => {;
     if (!activeConversation) {;
-      toast.error("Please select a conversation first"),;
+      toast && toast.error("Please select a conversation first");
       return;
     }
-;
-    const roomId = `msg-${activeConversation.id}`,;
-    setActiveCall(roomId),;
+
+    const roomId = `msg-${activeConversation && activeConversation.id}`;
+    setActiveCall(roomId);
+
     // Show toast notification;
-    toast.success("Starting video call", {;
+    toast && toast.success("Starting video call", {;
       description: "Initializing video call connection...";
     });
+
     // Navigate to video call page;
-    router.push(`/call/${roomId}`), // Changed from navigate;
+    router && router.push(`/call/${roomId}`), // Changed from navigate;
   };
-  return (;
+
+  return (
     <ProtectedRoute>;
       <div className="min-h-screen bg-zion-blue">;
         <div className="container mx-auto py-8 px-4">;
@@ -132,6 +137,7 @@ export default function MessagingInbox() {;
               <MessageSquare className="h-6 w-6" />;
               Messages;
             </h1>;
+
             {activeConversation && (;
               <Button
                 onClick = {startVideoCall,}
@@ -142,6 +148,7 @@ export default function MessagingInbox() {;
             )}
 
           </div>;
+
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
 
@@ -151,11 +158,11 @@ export default function MessagingInbox() {;
                   <LoadingSpinner variant="primary" />;
                 </div>;
               ) : (;
-                <ConversationsList;
-                  conversations={conversations}
-                  activeConversation={activeConversation}
-                  setActiveConversation={setActiveConversation}
-                  markAsRead={markAsRead}
+                <ConversationsList
+                  conversations = {conversations,}
+                  activeConversation = {activeConversation,}
+                  setActiveConversation = {setActiveConversation,}
+                  markAsRead = {markAsRead,}
                 />;
               )}
 

@@ -31,6 +31,7 @@ interface HTMLDivElement extends HTMLElement {
 interface HTMLDivElement extends HTMLElement {;
   tagName: 'DIV';
 }
+
 const badgeVariants = cva(;
   "inline-flex items-center rounded-full border px-2 && 2.5 py-0 && 0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",;
   {;
@@ -50,6 +51,7 @@ const badgeVariants = cva(;
     },;
   }
 );
+
 export interface BadgeProps;
   extends React && React.HTMLAttributes<HTMLDivElement>,;
     VariantProps<typeof badgeVariants> {}
@@ -60,6 +62,7 @@ function Badge(): any ({ className, variant, ...props }: BadgeProps) {;
   );
 }
 export { Badge, badgeVariants }
+=======
 const badge_variants = cva (
   "inline - flex items - center rounded - full border px - 2.5 py - 0.5 text - xs font - semibold transition - colors focus:outline - none focus:ring - 2 focus:ring - ring focus:ring - offset - 2",
   {
@@ -88,11 +91,7 @@ export interface BadgeProps;
  */
 function Badge() {
   return (
-<<<<<<< HEAD
     <div className={cn (badge_variants ({ variant }), class_name)} {...props} />);
-=======
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />;
-  );
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 export { Badge, badge_variants }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

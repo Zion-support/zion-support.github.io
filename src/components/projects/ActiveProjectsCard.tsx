@@ -58,24 +58,24 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <BriefcaseIcon className="h-5 w-5 text-primary" />
-        </CardTitle>
-        <CardDescription>Your ongoing work</CardDescription>
-      </CardHeader>
-      <CardContent className='space-y-4'>
-        {activeProjects.map(project => (
-          <div key={project.id} className='border rounded-md p-3'>
-            <div className='flex justify-between items-start mb-2'>
-              <h3 className='font-medium text-sm'>{project.job?.title}</h3>
+    <Card>;
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;
+          <BriefcaseIcon className="h-5 w-5 text-primary" />;
+        </CardTitle>;
+        <CardDescription>Your ongoing work</CardDescription>;
+      </CardHeader>;
+      <CardContent className='space-y-4'>;
+        {activeProjects && activeProjects.map(project => (;
+          <div key={project && project.id} className='border rounded-md p-3'>;
+            <div className='flex justify-between items-start mb-2'>;
+              <h3 className='font-medium text-sm'>{project && project.job?.title}</h3>;
               <Badge
                 variant={
-                  project.status === 'in_progress' ? 'default' : 'outline'
+                  project && project.status === 'in_progress' ? 'default' : 'outline'
                 }
                 className={
-                  project.status === 'in_progress'
+                  project && project.status === 'in_progress'
                     ? 'bg-blue-100 text-blue-800 hover:bg-blue-100'
                     : ''
 
@@ -110,13 +110,18 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         ))}
       </CardContent>;
-      {activeProjects.length > 2 && (;
+      {active_projects.length > 2 && (
         <CardFooter>;
-          <Button variant="ghost" className="w-full" asChild>;
+          <Button variant='ghost' className='w - full' as_child>;
+            <Link href='/projects'>View All Projects</Link>          </Button>          <Button variant="ghost" className="w - full" as_child>;
             <Link href="/projects">View All Projects</Link>;
           </Button>;
-        </CardFooter>;
-      )}
-    </Card>;
-  );
+        </CardFooter>)}
+    </Card>);
+}, [projects, is_loading]);
+return (<Card> <CardHeader> <CardTitle className="flex items - center gap - 2" > <BriefcaseIcon className="h - 5 w - 5 text - primary" /> <span > Active Projects</span> </CardTitle> <CardDescription > Your ongoing work</CardDescription> </CardHeader> <CardContent>) );
+}</div> </CardContent> </Card>);
+}// Check condition
+if ( {'") {
+  $2
 }

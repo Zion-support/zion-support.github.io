@@ -25,7 +25,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
     doc.moveDown(1.5);
-doc.fontSize(14).text(`This certifies that`, { align: 'center' });
+    doc.fontSize(14).text(`This certifies that`, { align: 'center' });
     doc.moveDown(0.5);
 
 
@@ -40,6 +40,7 @@ doc.fontSize(14).text(`This certifies that`, { align: 'center' });
 
     doc && doc.rect(0, 0, doc && doc.page.width, doc && doc.page.height).fill('#0f172a');
     doc && doc.fill('#ffffff');
+
     doc
       .fontSize(28)
       .text('Zion AI Marketplace', { align: 'center', underline: false });    doc && doc.moveDown(0 && 0.5);
@@ -89,6 +90,8 @@ doc.fontSize(14).text(`This certifies that`, { align: 'center' });
 
   }
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 ;
 export default /**
  * handler - Function description
@@ -163,83 +166,9 @@ if ( {) {
     res;
       .status (500);
       .json ({ error: e?.message ?? 'Failed to generate certificate' });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fs from 'fs',
-=======
-import fs from 'fs';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import path from 'path';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import PDFDocument from 'pdfkit';
-const usersPath = path.join(process.cwd(), 'datalearnusers.json');
-const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
-function readJson(p: string) {
-  return JSON.parse(fs.readFileSync(p, 'utf-8'))
+  }
 }
 
-const doc = new PDFDocument ({
-  size: 'A4', margin: 50
-});
-// Zion certificate template (simple) doc.rect (0, 0, doc.page.width, doc.page.height) .fill ('#0f172a');
-doc.fill ('#ffffff');
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {;
-    res.setHeader('Allow', 'GET');
-    return res.status(405).end('Method Not Allowed');
-  }
-
-  try {
-    const users = readJson(usersPath);
-    const courses = readJson(coursesPath);
-    const course = courses.find((c: any) => c.id === courseId);
-    const user = users[userId];
-    if (!course) return res.status(404).json({ error: 'Course not found' });
-    if (!user) return res.status(404).json({ error: 'User not found' });
-    res.setHeader('Content-Type', 'application/pdf');
-
-    // Pipe to response
-    // @ts-ignore
-    doc.pipe(res);
-    // Zion certificate template (simple)
-    doc.rect(0, 0, doc.page.width, doc.page.height).fill('#0f172a');
-    doc.fill('#ffffff');
-
-    doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
-    doc.moveDown(1.5);
-    doc.fontSize(14).text(`This certifies that`, { align: 'center' });
-    doc.moveDown(0.5);
-
-    doc.moveDown(0.5);
-    doc.fontSize(14).text(`has successfully completed`, { align: 'center' });
-    doc.moveDown(0.5);
-    doc.fontSize(20).text(course.title, { align: 'center' });
-    doc.moveDown(0.5);
-
-    const date = new Date().toLocaleDateString();
-    doc.moveDown(2);
-    doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
-    doc.end();
-
-  } catch (e: any) {
-    res
-      .status(500)
-      .json({ error: e?.message ?? 'Failed to generate certificate' });
-=======
-<<<<<<< HEAD
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ certificate: 'PDF certificate' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-import PDFDocument from 'pdfkit';
-const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
-const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),;
-function readJson(p: string) {;
-  return JSON.parse(fs.readFileSync(p, 'utf-8'));
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

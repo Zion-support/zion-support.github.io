@@ -1,6 +1,7 @@
 // Expanded Innovative Services: 2027 - Zion Tech Group
 // Expanded Innovative "Services": 2027 - Zion Tech Group
 // Additional Micro SAAS, IT Infrastructure, and AI Services
+
 export interface ExpandedService2027 {
   "id": string;
   name: string;

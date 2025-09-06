@@ -104,7 +104,7 @@ export default function AdvancedServicesShowcase2025(req, res) {
   const containerVariants = {
 
     hidden: { opacity: 0 }
-<<<<<<< HEAD
+=======
 import React, { useState, useEffect } from 'react',
 import Head from 'next / head',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -178,27 +178,21 @@ function AdvancedServicesShowcase2025() {
 
 
   };
-=======
-    visible: {
-      opacity: 1
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
-<<<<<<< HEAD
+=======
   },
   const item_variants = {
     hidden: { opacity: 0, coordinate_y: 20 },
     visible: {
       opacity: 1,
       coordinate_y: 0,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       transition: {
 
         duration: 0.5;
@@ -208,9 +202,9 @@ function AdvancedServicesShowcase2025() {
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.icon || '🚀'
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -721,10 +715,12 @@ function AdvancedServicesShowcase2025() {
 
                     ? "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                     : "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:shadow-2xl"
+=======
                   variants={item_variants}
                   className={view_mode === 'grid';
                     ? "group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl";
                     : "group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 hover:shadow - 2xl";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }
                 >;
                   {/* Service Header */}
@@ -870,6 +866,7 @@ function AdvancedServicesShowcase2025() {
                         <span className="text - white / 60">({service.reviews})</span>;
                       </div>;
                     </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {/* Features */}
                     <div className="mb - 6">;
                       <h4 className="text - white font - semibold mb - 3">Key Features:</h4>;
@@ -1148,6 +1145,7 @@ function AdvancedServicesShowcase2025() {
             </motion.div>)}
         </div>;
       </section>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* CTA Section */}
       <section className="px - 6 py - 20">;
         <div className="max - w-4xl mx - auto text - center">;
@@ -1206,32 +1204,6 @@ function AdvancedServicesShowcase2025() {
       </section>;
       <EnhancedFooter />;
     </div>);
-              Ready to Transform Your Business?
-            </h2>
-            <p className=&quot;text-xl text-white/80 mb-8 max-w-2xl mx-auto&quot;>
-              Our advanced services are designed to give you a competitive edge in the rapidly evolving technology landscape.
-            </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
-              <a
-                href=&quot;mailto:kleber@ziontechgroup.com&quot;
-                className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2&quot;
-              >
-                Schedule Consultation
-                <ArrowRight className=&quot;w-5 h-5&quot; />
-              </Link>
-              <a
-                href=&quot;tel:+13024640950&quot;
-                className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2&quot;
-              >
-                Call +1 302 464 0950
-              </Link>
-=======
-      {/* CTA Section */}
-=======
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

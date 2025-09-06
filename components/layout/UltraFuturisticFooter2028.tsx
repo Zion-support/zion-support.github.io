@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -339,12 +343,13 @@ export default function UltraFuturisticFooter2028() {;
                 <p className="text-sm text-purple-300">2028 Future Technology</p>;
               </div>;
             </div>;
+
             <p className="text-purple-200 mb-6 leading-relaxed">;
               Leading the future with cutting-edge AI, quantum computing, and innovative technology solutions. ;
               Transforming businesses through intelligent automation and next-generation infrastructure.;
             </p>;
+
             {/* Contact Information */}
-<<<<<<< HEAD
             <div className="space-y-3">;
               <div className="flex items-center space-x-3 text-purple-200">;
                 <Phone className="w-4 h-4 text-purple-400" />;
@@ -395,66 +400,7 @@ export default function UltraFuturisticFooter2028() {;
                 <a
                   key={social.name}
                   href={social.href}
-target="_blank"
-=======
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-purple-200">
-                <Phone className="w-4 h-4 text-purple-400" />
-                <span className="text-sm">{contactInfo.mobile}</span>
-              </div>
-              <div className="flex items-center space-x-3 text-purple-200">
-                <Mail className="w-4 h-4 text-purple-400" />
-                <span className="text-sm">{contactInfo.email}</span>
-              </div>
-              <div className="flex items-center space-x-3 text-purple-200">
-                <MapPin className="w-4 h-4 text-purple-400" />
-                <span className="text-sm">{contactInfo.address}</span>
-              </div>
-              <div className="flex items-center space-x-3 text-purple-200">
-                <Globe className="w-4 h-4 text-purple-400" />
-                <a href={contactInfo.website} className="text-sm hover:text-white transition-colors">
-                  {contactInfo.website}
-=======
-
-<<<<<<< HEAD
-];
-
-export default function UltraFuturisticFooter2028() {
-  return (
-
-                  {contactInfo.website}
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-                  {contactInfo.website}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                </a>
-              </div>
-            </div>
-            {/* Social Links */}
-            <div className='flex space-x-4 mt-6'>
-              {socialLinks.map(social => (
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='w-10 h-10 bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg flex items-center justify-center text-purple-300 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40'
-                >
-<<<<<<< HEAD
-                  <social.icon className='w-5 h-5' />                </a>                <a
-                  key={social.name}
-                  href={social.href}
                   target="_blank"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg flex items-center justify-center text-purple-300 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40"
                 >
@@ -545,6 +491,7 @@ export default function UltraFuturisticFooter2028() {
                     {category.services.map((service) => (
                       <li key={service.name}>
                         <Link
+=======
             <p className='text - purple - 200 mb - 6 leading - relaxed'>;
               Leading the future with cutting - edge AI, quantum computing, and;
               innovative technology solutions. Transforming businesses through;
@@ -680,11 +627,14 @@ export default function UltraFuturisticFooter2028() {
 =======
             </div>;
           </div>;
+
           {/* Quick Links */}
           <div className='lg:col-span-1'>;
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>;
               Quick Links;
             </h3>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Company Links */}
             <div className='mb-6'>;
               <h4 className='font-medium text-purple-300 mb-3'>Company</h4>;
@@ -718,6 +668,8 @@ export default function UltraFuturisticFooter2028() {
             <h3 className="text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2">
               Quick Links
             </h3>
+            
+=======
                         </Link>;
                       </li>))}
                   </ul>;
@@ -729,31 +681,6 @@ export default function UltraFuturisticFooter2028() {
             <h3 className='text - lg font - semibold text - white mb - 6 border - b border - purple - 500 / 30 pb - 2'>;
               Quick Links;
             </h3>;
-=======
-                          className="text-sm text-purple-200 hover:text-white transition-colors hover:underline"
-                        >
-                          {service.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div className='lg:col-span-1'>
-            <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              Quick Links
-            </h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {/* Company Links */}
             <div className='mb - 6'>;
               <h4 className='font - medium text - purple - 300 mb - 3'>Company</h4>;
@@ -809,7 +736,6 @@ export default function UltraFuturisticFooter2028() {
               <p className="text-sm text-purple-200 mb-3">
                 Get the latest insights on future technology and AI innovations.
               </p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="flex space-x-2">
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -835,28 +761,6 @@ export default function UltraFuturisticFooter2028() {
 
             {/* Legal Links */}
             <div className='flex items-center space-x-6 text-sm'>;
-=======
-                />
-                <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded text-sm hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Bottom Bar */}
-      <div className='border-t border-purple-500/20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
-          <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
-            {/* Copyright */}
-            <div className='text-sm text-purple-300'>
-              © 2028 Zion Tech Group. All rights reserved. Leading the future
-              of technology.
-            </div>
-            {/* Legal Links */}
-            <div className='flex items-center space-x-6 text-sm'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Link
                 href='/privacy'
                 className='text-purple-300 hover:text-white transition-colors'>;
@@ -901,11 +805,12 @@ export default function UltraFuturisticFooter2028() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-className='text-purple-300 hover:text-white transition-colors'>                Security            {/* Copyright */}
+=======
+                className='text-purple-300 hover:text-white transition-colors'>                Security            {/* Copyright */}
             <div className="text-sm text-purple-300">;
               © 2028 Zion Tech Group. All rights reserved. Leading the future of technology.;
             </div>;
+
             {/* Legal Links */}
             <div className="flex items-center space-x-6 text-sm">;
               <Link href="/privacy" className="text-purple-300 hover:text-white transition-colors">;
@@ -918,6 +823,7 @@ className='text-purple-300 hover:text-white transition-colors'>                S
                 Cookie Policy;
               </Link>;
               <Link href="/security" className="text-purple-300 hover:text-white transition-colors">;
+=======
       {/* Bottom Bar */}
       <div className='border - t border - purple - 500 / 20'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 6'>;
@@ -966,6 +872,7 @@ className='text-purple-300 hover:text-white transition-colors'>                S
                 Cookie Policy;
               </Link>;
               <Link href="/security" className="text - purple - 300 hover:text - white transition - colors">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Security;
               </Link>;
             </div>;
@@ -996,12 +903,14 @@ className='text-purple-300 hover:text-white transition-colors'>                S
           className='w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-400/40 group'>;
           <MessageCircle className='w-8 h-8 group-hover:rotate-12 transition-transform duration-300' />        </Link>;
       </div>;
+
       {/* Background Effects */}        <Link
           href="/contact"
           className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-400/40 group">;
           <MessageCircle className="w-8 h-8 group-hover:rotate-12 transition-transform duration-300" />;
         </Link>;
       </div>;
+
       {/* Background Effects */}
       <div className='absolute inset-0 pointer-events-none'>;
         <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;

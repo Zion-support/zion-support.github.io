@@ -39,10 +39,9 @@ import { Briefcase, Users, Check } from 'lucide-react';
 type UserRole = "talent" | "client" | null,;
 interface RolePickerProps {;
   onSelect: (role: UserRole) => void;
-}
-;
-export function RolePicker({ onSelect }: RolePickerProps) {;
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null),;
+export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
+  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
+
   const handleSelect = (role: UserRole) => {;
     setSelectedRole(role);
     onSelect(role);
@@ -61,19 +60,21 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
-          onClick={() => handleSelect('talent')}
+          onClick = {(,) => handleSelect('talent'),}
         >;
-          <CardContent className="p-5">;
-            <div className="flex items-center">;
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">;
-                <Briefcase className="h-6 w-6 text-primary" />;
+          <CardContent className='p-5'>;
+            <div className='flex items-center'>;
+              <div className='w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4'>;
+                <Briefcase className='h-6 w-6 text-primary' />;
               </div>;
-              <div className="flex-1">;
-                <h3 className="font-medium">I'm offering services</h3>;
-                <p className="text-sm text-muted-foreground">Find work and showcase your skills</p>;
+              <div className='flex-1'>;
+                <h3 className='font-medium'>I'm offering services</h3>;
+                <p className='text-sm text-muted-foreground'>;
+                  Find work and showcase your skills;
+                </p>;
               </div>;
               {selectedRole === 'talent' && (;
-                <Check className="h-5 w-5 text-primary" />;
+                <Check className='h-5 w-5 text-primary' />;
               )}
 
             </div>;
@@ -87,19 +88,21 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
-          onClick={() => handleSelect('client')}
+          onClick = {() => handleSelect('client'),}
         >;
-          <CardContent className="p-5">;
-            <div className="flex items-center">;
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">;
-                <Users className="h-6 w-6 text-primary" />;
+          <CardContent className='p-5'>;
+            <div className='flex items-center'>;
+              <div className='w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4'>;
+                <Users className='h-6 w-6 text-primary' />;
               </div>;
-              <div className="flex-1">;
-                <h3 className="font-medium">I'm hiring</h3>;
-                <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>;
+              <div className='flex-1'>;
+                <h3 className='font-medium'>I'm hiring</h3>;
+                <p className='text-sm text-muted-foreground'>;
+                  Post jobs and find talented professionals;
+                </p>;
               </div>;
               {selectedRole === 'client' && (;
-                <Check className="h-5 w-5 text-primary" />;
+                <Check className='h-5 w-5 text-primary' />;
               )}
 
 import React, { useState } from 'react';

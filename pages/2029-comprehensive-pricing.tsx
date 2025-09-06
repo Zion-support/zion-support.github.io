@@ -109,11 +109,7 @@ export default function ComprehensivePricing2029() {
         if (selectedCategory === 'ai-autonomous') {
           return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous'))
         } else if (selectedCategory === 'emerging-tech') {
-<<<<<<< HEAD
-return service.category.some(cat => cat.includes('Quantum') |cat.includes('Biotech') |cat.includes('Space'))
-=======
           return service.category.some(cat => cat.includes('Quantum') |cat.includes('Biotech') |cat.includes('Space'))
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         } else if (selectedCategory === 'business-solutions') {
           return service.category.some(cat => cat.includes('Business') |cat.includes('Marketing') |cat.includes('Education'))
         }
@@ -199,6 +195,7 @@ if ( {) {
   $2
 }
       return `$${numeric_price.toLocaleString ()}/month`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
 
       return `$${Math.round (numeric_price * 0.8).toLocaleString ()}/month (billed annually)`;
@@ -339,6 +336,7 @@ export default function ComprehensivePricing2029(req, res) {
               Transparent pricing for our revolutionary 2029 services. Choose the perfect plan;
               for your business transformation journey.;
             </p>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {/* Billing Toggle */}
             <div className="flex items - center justify - center gap - 4 mb - 12">;
               <span className="text - gray - 400">Monthly</span>;
@@ -773,6 +771,7 @@ export default function ComprehensivePricing2029(req, res) {
           </div>;
         </div>;
       </section>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Enterprise Solutions */}
       <section className="py - 20 bg - gradient - to - br from - purple - 900 / 20 via - black to - blue - 900 / 20">;
         <div className="container mx - auto px - 4 text - center">;
@@ -912,6 +911,7 @@ export default function ComprehensivePricing2029(req, res) {
           </motion.div>;
         </div>;
       </section>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Contact CTA */}
       <section className="py - 20 bg - gradient - to - br from - purple - 900 / 20 via - black to - blue - 900 / 20">;
         <div className="container mx - auto px - 4 text - center">;
@@ -944,16 +944,8 @@ export default function ComprehensivePricing2029(req, res) {
 
             <div className="flex flex-wrap justify-center gap-4">
               <motion.div
-                whileHover={{ scale: 1.05 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Link
                   href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
@@ -962,16 +954,8 @@ export default function ComprehensivePricing2029(req, res) {
                 </Link>
               </motion.div>
               <motion.div
-                whileHover={{ scale: 1.05 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Link
                   href="/2029-innovative-services-showcase" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover: bg-purple-500 hover:text-white transition-all duration-300 text-lg">
@@ -982,11 +966,7 @@ export default function ComprehensivePricing2029(req, res) {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-<UltraFuturisticFooter2029 />
-=======
       <UltraFuturisticFooter2029 />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </div>
 
 =======
@@ -1032,63 +1012,6 @@ export default function ComprehensivePricing2029(req, res) {
               >;
                 <Link;
                   href="/2029 - innovative - services - showcase" className="inline - flex items - center px - 8 py - 4 border - 2 border - purple - 500 text - purple - 400 font - semibold rounded - full hover: bg - purple - 500 hover:text - white transition - all duration - 300 text - lg">;
-=======
-          >;
-            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">;
-              Ready to Get Started?;
-            </h2>;
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">;
-              Contact our team to discuss your specific needs and get a personalized quote;
-              for our revolutionary 2029 services.;
-            </p>;
-            <div className="grid md:grid-cols-3 gap-8 mb-12">;
-              <div className="flex items-center justify-center gap-4 text-gray-300">;
-                <Phone className="w-6 h-6 text-purple-400" />;
-                <span>{contactInfo.mobile}</span>;
-              </div>;
-              <div className="flex items-center justify-center gap-4 text-gray-300">;
-                <Mail className="w-6 h-6 text-blue-400" />;
-                <span>{contactInfo.email}</span>;
-              </div>;
-              <div className="flex items-center justify-center gap-4 text-gray-300">;
-                <MapPin className="w-6 h-6 text-green-400" />;
-                <span>{contactInfo.address}</span>;
-              </div>;
-            </div>;
-            <div className="flex flex-wrap justify-center gap-4">;
-              <motion.div;
-                whileHover={{ scale: 1.05 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              >;
-                <Link;
-                  href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">;
-                  Contact Us Now;
-                  <ArrowRight className="ml-2 h-5 w-5" />;
-                </Link>;
-              </motion.div>;
-              <motion.div;
-                whileHover={{ scale: 1.05 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              >;
-                <Link;
-                  href="/2029-innovative-services-showcase" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover: bg-purple-500 hover:text-white transition-all duration-300 text-lg">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   View All Services;
                 </Link>;
               </motion.div>;
@@ -1097,7 +1020,6 @@ export default function ComprehensivePricing2029(req, res) {
         </div>;
       </section>;
       <UltraFuturisticFooter2029 />;
-<<<<<<< HEAD
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

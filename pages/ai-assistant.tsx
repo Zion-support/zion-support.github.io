@@ -14,6 +14,7 @@
               AI Assistant;
             </h1>;
             <p className='text-gray-300 text-lg'>;
+=======
         <title > AI Assistant | Zion Tech Group</title>;
         <meta;
           name='description';
@@ -35,6 +36,7 @@
           </header>;
 
               className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>;
+=======
           <section className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
             {[;
               'Research and summarize documents and web sources',
@@ -121,43 +123,12 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 import Button from '../components/ui/Button';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-const AIAssistant: React.FC = () => {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from 'react',
-<<<<<<< HEAD
-import Head from 'next/head';
-
-import Layout from '../components/layout/Layout';
-const AIAssistant: React.FC = () => {
-
-=======
-import Head from 'next/head',
-import Button from '../components/ui/Button',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function AIAssistantPage() {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
         <title>AI Assistant | Zion Tech Group</title>
-<<<<<<< HEAD
-<meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />
-=======
         <meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <link rel="canonical" href="https://ziontechgroup.com/ai-assistant" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">

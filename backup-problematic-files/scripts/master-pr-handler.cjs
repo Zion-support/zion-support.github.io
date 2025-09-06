@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -219,9 +217,6 @@ async function githubApiCall(endpoint, method = 'GET')
       "automationSuccess"
       "automationFailed"
     console.log('\n Final "Summary")
-<<<<<<< HEAD
-    console.error(' Master PR handler "failed")
-=======
 <<<<<<< HEAD
     console.error(' Master PR handler "failed")
 =======

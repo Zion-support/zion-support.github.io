@@ -8,6 +8,7 @@ export const supabase = {
     signOut: () => Promise<any>;
   };
 }
+
 // Mock Supabase client for development
 export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
   return {
@@ -43,11 +44,13 @@ export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
     }
   };
 }
+
 // Default configuration
 const supabaseConfig: SupabaseConfig = {
   url: process && process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://your-project && project.supabase.co',
   anonKey: process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'your-anon-key'
 };
+
 export const supabase = createSupabaseClient(supabaseConfig);
 
 =======
@@ -63,7 +66,6 @@ export const supabase = createSupabaseClient(supabaseConfig);
     }),
     insert: (data: any) => ({
       select: (columns: string) => ({
-<<<<<<< HEAD
         single: () => null;
       });
     });

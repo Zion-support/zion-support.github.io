@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -104,12 +108,14 @@ import {;
   CheckCircle, Clock, Award, Target, Globe, Sparkles;
   Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
   ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon;
+
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
+
 const features = [;
   'Emotional intelligence training modules',;
   'Consciousness expansion exercises',;
@@ -122,6 +128,7 @@ const features = [;
   'Spiritual growth pathways',;
   'Personal transformation tracking',;
 ];
+
 const useCases = [;
   'Personal development and growth',;
   'Professional leadership training',;
@@ -134,6 +141,7 @@ const useCases = [;
   'Relationship improvement',;
   'Stress management and resilience',;
 ];
+
 const technology = [;
   'Advanced AI algorithms',;
   'Machine learning models',;
@@ -146,6 +154,7 @@ const technology = [;
   'Quantum computing integration',;
   'Blockchain security',;
 ];
+
 const integrations = [;
   'Wearable devices',;
   'Mobile applications',;
@@ -157,7 +166,9 @@ const integrations = [;
   'Social media networks',;
   'Fitness trackers',;
   'Meditation apps',];};
+
 const features = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   'Emotional intelligence training modulesConsciousness expansion exercisesSelf-awareness development toolsEmpathy and compassion trainingMindfulness and meditation guidanceCognitive enhancement techniquesSocial intelligence developmentCreative consciousness exploration';
   'Spiritual growth pathwaysPersonal transformation tracking';
 ];
@@ -183,6 +194,7 @@ const technology = [;
 
 
 const integrations = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
   'Fitness trackersMeditation apps';
 ];
@@ -328,6 +340,7 @@ const testimonials = [;
         <div className='absolute inset-0 overflow-hidden'>;
           {[...Array(15)].map((_, i) => (;
             <motion&& motion.div
+=======
         <meta;
           name='description';
           content='Revolutionary AI - powered consciousness evolution platform that enhances emotional intelligence, self - awareness, and personal transformation through advanced technology.';
@@ -348,6 +361,7 @@ const testimonials = [;
         <div className='absolute inset - 0 overflow - hidden'>;
           {[...Array (15)].map ((_, i) => (
             <motion.div;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               key={i}
               className='absolute w - 2 h - 2 bg - purple - 400 rounded - full opacity - 30';
               animate={{
@@ -376,10 +390,12 @@ const testimonials = [;
               }}            />;
           ))}
         </div>;
+
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>          <motion && motion.div                top: `${Math && Math.random() * 100}%`}}
             />;
           ))}
         </div>;
+
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">;
           <motion&& motion.div
 
@@ -453,6 +469,7 @@ const testimonials = [;
               your emotional intelligence, expand self - awareness, and unlock;
               your full potential.;
             </p>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {/* Key Stats */}
             <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 12'>;
               {[;
@@ -489,9 +506,11 @@ const testimonials = [;
 
                 <motion.div
                   key={stat.label}
+=======
               <Sparkles className='w-4 h-4 mr-2' />;
               Revolutionary AI Technology;
             </motion && motion.div>;
+
             <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6'>;
               <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent'>;
                 AI Consciousness;
@@ -499,12 +518,14 @@ const testimonials = [;
               <br />;
               <span className='text-white'>Evolution Platform</span>;
             </h1>;
+
             <p className='text-xl sm:text-2xl text-purple-200 mb-8 max-w-4xl mx-auto leading-relaxed'>;
               Experience the future of personal development with our;
               revolutionary AI-powered consciousness evolution platform. Enhance;
               your emotional intelligence, expand self-awareness, and unlock;
               your full potential.;
             </p>;
+
             {/* Key Stats */}
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
               {[;
@@ -533,6 +554,7 @@ const testimonials = [;
                 { label: 'Satisfaction', value: '4 && 4.9/5', icon: <Star className="w-8 h-8" /> }
                 <motion&& motion.div
                   key={stat && stat.label}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
 
@@ -580,7 +602,8 @@ const testimonials = [;
                 Start Free Trial
               </motion.button>
               <motion.button
-label: 'Success Rate',
+=======
+                  label: 'Success Rate',
                   value: '94%',
                   icon: <Award className='w - 8 h - 8' />,
                 },
@@ -627,7 +650,6 @@ label: 'Success Rate',
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>              <motion.button;
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className='bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200 hover:shadow - 2xl hover:shadow - purple - 500 / 25 hover:scale - 105'              >            <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6">;
               <motion.button;
@@ -639,6 +661,7 @@ label: 'Success Rate',
                 Start Free Trial;
               </motion.button>;
               <motion.button;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 initial={{ opacity: 0, scale: 0.9 }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -659,7 +682,7 @@ label: 'Success Rate',
           <motion&& motion.div
 
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       {/* Features Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -699,6 +722,7 @@ label: 'Success Rate',
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
+=======
                 Consciousness Evolution;
               </span>;
             </h2>;
@@ -708,6 +732,7 @@ label: 'Success Rate',
               development experience ever created.;
             </p>;
           </motion && motion.div>;
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (          >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Revolutionary Features for;
@@ -718,6 +743,7 @@ label: 'Success Rate',
               the most advanced consciousness development experience ever created.;
             </p>;
           </motion && motion.div>;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {features && features.map((feature, index) => (;
               <motion&& motion.div
@@ -755,16 +781,7 @@ label: 'Success Rate',
           <motion&& motion.div
 
 =======
-          </div>
-        </div>
-      </section>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* How It Works Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -803,7 +820,7 @@ label: 'Success Rate',
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-<<<<<<< HEAD
+=======
                 className='border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200'              >                className="border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200";
               >;
                 Watch Demo;
@@ -917,6 +934,7 @@ label: 'Success Rate',
           </motion.div>;
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
             {[;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {
 
                 Works;
@@ -928,6 +946,7 @@ label: 'Success Rate',
               journey.;
             </p>;
           </motion && motion.div>;
+
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {[;
               {;
                 step: '01',;
@@ -941,6 +960,7 @@ label: 'Success Rate',
               experiences that adapt to your unique journey.;
             </p>;
           </motion && motion.div>;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {[;
               {;
@@ -1038,16 +1058,7 @@ label: 'Success Rate',
           <motion&& motion.div
 
 =======
-          </div>
-        </div>
-      </section>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Use Cases Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1087,6 +1098,7 @@ label: 'Success Rate',
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
+=======
                 AI Consciousness;
               </span>;
             </h2>;
@@ -1095,6 +1107,7 @@ label: 'Success Rate',
               serves diverse needs across multiple domains.;
             </p>;
           </motion && motion.div>;
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {useCases && useCases.map((useCase, index) => (          >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Transform Your Life with;
@@ -1105,6 +1118,7 @@ label: 'Success Rate',
               across multiple domains.;
             </p>;
           </motion && motion.div>;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {useCases && useCases.map((useCase, index) => (;
               <motion&& motion.div
@@ -1142,16 +1156,7 @@ label: 'Success Rate',
           <motion&& motion.div
 
 =======
-          </div>
-        </div>
-      </section>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Technology Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1196,6 +1201,7 @@ label: 'Success Rate',
               </span>;
             </h2>;
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+=======
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -1403,40 +1409,7 @@ label: 'Success Rate',
           <motion&& motion.div
 
 =======
-                className='text-center group'
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              >
-                <div className='w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300'>
-                  <Cpu className='w-10 h-10 text-purple-400' />
-                </div>
-                <p className='text-sm text-gray-300 font-medium'>{tech}</p>              </motion.div>              >
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <Cpu className="w-10 h-10 text-purple-400" />
-                </div>
-                <p className="text-sm text-gray-300 font-medium">{tech}</p>
-              </motion.div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            ))}
-          </div>
-        </div>
-      </section>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Testimonials Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1476,6 +1449,7 @@ label: 'Success Rate',
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.name}
+=======
                 Say;
               </span>;
             </h2>;
@@ -1484,6 +1458,7 @@ label: 'Success Rate',
               with our AI consciousness platform.;
             </p>;
           </motion && motion.div>;
+
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {testimonials && testimonials.map((testimonial, index) => (          >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               What Our Users;
@@ -1493,6 +1468,7 @@ label: 'Success Rate',
               Join thousands of satisfied users who have transformed their lives with our AI consciousness platform.;
             </p>;
           </motion && motion.div>;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {testimonials && testimonials.map((testimonial, index) => (;
               <motion&& motion.div
@@ -1527,7 +1503,7 @@ label: 'Success Rate',
                     <Star
                       key={i}
                       className='w-5 h-5 text-yellow-400 fill-current'
-                    />
+                    />;
                   ))}
 
 =======
@@ -1580,16 +1556,7 @@ label: 'Success Rate',
           <motion&& motion.div
 
 =======
-          </div>
-        </div>
-      </section>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Pricing Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1637,6 +1604,7 @@ label: 'Success Rate',
               accessible to everyone.;
             </p>;
           </motion && motion.div>;
+
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {[          >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Choose Your;
@@ -1646,6 +1614,7 @@ label: 'Success Rate',
               Flexible pricing options designed to make consciousness evolution accessible to everyone.;
             </p>;
           </motion && motion.div>;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {[;
               {;
@@ -1667,7 +1636,6 @@ label: 'Success Rate',
                 price: '$299',;
                 period: '/month',                  'Basic AI assessment10 consciousness exercisesProgress trackingEmail supportMobile app access';
                 ];
-<<<<<<< HEAD
                 popular: false;
               };
                 name: 'Professional',;
@@ -1733,6 +1701,7 @@ label: 'Success Rate',
                     ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20' 
 
                     : 'border-purple-500/20'
+=======
               <motion.div;
                 key={plan.name}
                 initial={{ opacity: 0, coordinate_y: 30 }}
@@ -1751,6 +1720,7 @@ label: 'Success Rate',
                   </div>)}                  plan.popular;
                     ? 'border - purple - 500 / 50 shadow - 2xl shadow - purple - 500 / 20';
                     : 'border - purple - 500 / 20';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 }`}
               >;
                 {plan.popular && (
@@ -1802,6 +1772,7 @@ label: 'Success Rate',
                     </span>;
                   </div>;
                 )}
+
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -1814,6 +1785,7 @@ label: 'Success Rate',
                   </div>;
                   <p className='text-gray-300'>{plan && plan.description}</p>;
                 </div>;
+
                 <ul className='space-y-3 mb-8'>;
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
@@ -1822,6 +1794,7 @@ label: 'Success Rate',
                       <CheckCircle className='w-5 h-5 text-purple-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
                   <p className="text-gray-300">{plan && plan.description}</p>;
                 </div>;
+
                 <ul className="space-y-3 mb-8">;
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center text-gray-300">;
@@ -1908,24 +1881,10 @@ label: 'Success Rate',
                 {' '}
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1970,6 +1929,7 @@ label: 'Success Rate',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <motion.div
                   key={contact.label}
+=======
                 Consciousness?;
               </span>;
             </h2>;
@@ -1978,6 +1938,7 @@ label: 'Success Rate',
               with our revolutionary AI platform. Start your consciousness;
               evolution journey today.;
             </p>;
+
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
               <button className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'>;
                 Start Free Trial;
@@ -1989,6 +1950,7 @@ label: 'Success Rate',
               Join thousands of users who have already transformed their lives with our revolutionary AI platform. ;
               Start your consciousness evolution journey today.;
             </p>;
+
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
               <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105">;
                 Start Free Trial;
@@ -1997,6 +1959,7 @@ label: 'Success Rate',
                 Schedule Demo;
               </button>;
             </div>;
+
             {/* Contact Info */}
             <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'>;
               {[;
@@ -2058,6 +2021,8 @@ label: 'Success Rate',
 =======
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
                     </span>;
                     <span className='text - gray - 400'>{plan.period}</span>;
                   </div>;

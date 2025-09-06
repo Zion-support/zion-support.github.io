@@ -677,7 +677,7 @@ body::after {
 
 /* Enhanced Button Effects */
 .quantum-button {
-
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-adba
   position: relative;
 =======
 <<<<<<< HEAD
@@ -868,14 +868,12 @@ body::after {
 <<<<<<< HEAD
 >>>>>>> main
 .futuristic-card::before {
-
-<<<<<<< HEAD
-  content: '';
-.futuristic-card::before {  content: '';
-
-  content: '';
-
 =======
+/* Advanced Futuristic Effect Classes */
+.quantum-pulse {
+  animation: quantumPulse 4s ease-in-out infinite;
+}
+
 .holographic-flow {
   animation: holographicFlow 6s ease-in-out infinite;
 }

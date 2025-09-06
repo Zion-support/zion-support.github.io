@@ -48,6 +48,7 @@ function handler() {
       c.provider_id === "lever" ||;
       c.provider_id === "workable" ||;
       c.provider_id === "bamboohr",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   );
   const results: any[] = [];
   for (const conn of connections) {
@@ -82,7 +83,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   for (const conn of atsProviders) {
     const { log } = await ats.updateStatus(conn, { applicantId: talent.id, status: 'hired' });
     writeState(s => s.logs.push(log));
-results.push({ providerId: conn.providerId, ok: true })
+    results.push({ providerId: conn.providerId, ok: true })
   }
   res.status(200).json({ ok: true, results })
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

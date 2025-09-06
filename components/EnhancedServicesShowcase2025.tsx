@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -39,7 +43,6 @@ interface Service {;
   FaMobile,
   FaDatabase,
   FaNetworkWired,
-<<<<<<< HEAD
   FaRobot,
   FaSearch,
 import {
@@ -61,34 +64,23 @@ import {
 
 
 interface Service {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   title: string;
   description: string;
-<<<<<<< HEAD
   icon: React && React.ReactNode;
   category: string;
   features: string[];
   pricing: {;
     starter: number;
     professional: number;
-=======
-  icon: React.ReactNode;
-  category: string;
-  features: string[];
-  pricing: {
-    starter: number;
-    professional: number;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     enterprise: number;
   }
   technologies: string[];
   benefits: string[];
 
 ;
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface ServiceCategory {
 
   id: string;
@@ -453,11 +445,13 @@ const services: Service[] = [;
       'Intelligent workflow automation',
       'Natural language processing',
       'Predictive analytics',
-      'Real-time decision making',
+      'Real - time decision making',
       'Custom AI model training',
       'Multi - platform integration',
     ],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     pricing: {
+      
       starter: 299,
       professional: 799,
       enterprise: 1999
@@ -465,11 +459,6 @@ const services: Service[] = [;
     },
 
     technologies: [;
-=======
-      enterprise: 1999,
-    },
-    technologies: [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'TensorFlow',
       'PyTorch',
       'OpenAI',
@@ -477,23 +466,15 @@ const services: Service[] = [;
       'React',
       'Node.js',
     ],
-<<<<<<< HEAD
     benefits: [;
       'Reduce manual tasks by 80%',
       'Improve accuracy by 95%',
       '24 / 7 automated operations',
-=======
-    benefits: [
-      'Reduce manual tasks by 80%',
-      'Improve accuracy by 95%',
-      '24/7 automated operations',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Scalable AI infrastructure',
     ],
   },
 
   {
-<<<<<<< HEAD
     id: 'quantum - computing - platform',
     title: 'Quantum Computing Platform',
 
@@ -504,17 +485,6 @@ const services: Service[] = [;
     features: [;
       'Quantum algorithm optimization',
       'Hybrid classical - quantum computing',
-=======
-    id: 'quantum-computing-platform',
-    title: 'Quantum Computing Platform',
-    description:
-      'Next-generation quantum computing solutions for complex problem solving',
-    icon: <FaBrain className='w-6 h-6' />,
-    category: 'ai-ml',
-    features: [
-      'Quantum algorithm optimization',
-      'Hybrid classical-quantum computing',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Quantum machine learning',
       'Cryptographic solutions',
       'Quantum simulation tools',
@@ -522,6 +492,7 @@ const services: Service[] = [;
     ],
 
     pricing: {
+      
       starter: 999,
       professional: 2499,
       enterprise: 4999
@@ -533,21 +504,11 @@ const services: Service[] = [;
       'Solve previously impossible problems',
       'Exponential speed improvements',
       'Future - proof technology',
-=======
-      enterprise: 4999,
-    },
-    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
-    benefits: [
-      'Solve previously impossible problems',
-      'Exponential speed improvements',
-      'Future-proof technology',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Research and development support',
     ],
   },
 
   {
-<<<<<<< HEAD
     id: 'edge - ai - platform',
     title: 'Edge AI Computing Platform',
 
@@ -565,6 +526,7 @@ const services: Service[] = [;
     ],
 
     pricing: {
+      
       starter: 199,
       professional: 599,
       enterprise: 1499
@@ -578,11 +540,7 @@ const services: Service[] = [;
       'Raspberry Pi',
       'Arduino',
     ],
-<<<<<<< HEAD
     benefits: [;
-=======
-    benefits: [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Reduced latency by 90%',
       'Lower bandwidth costs',
       'Enhanced privacy',
@@ -591,7 +549,6 @@ const services: Service[] = [;
   },
 
   {
-<<<<<<< HEAD
     id: 'quantum - cybersecurity',
     title: 'Quantum Cybersecurity Suite',
 
@@ -606,24 +563,10 @@ const services: Service[] = [;
       'Zero - trust architecture',
       'Compliance frameworks',
       'Real - time monitoring',
-=======
-    id: 'quantum-cybersecurity',
-    title: 'Quantum Cybersecurity Suite',
-    description:
-      'Advanced security solutions leveraging quantum-resistant cryptography',
-    icon: <FaShieldAlt className='w-6 h-6' />,
-    category: 'security',
-    features: [
-      'Post-quantum cryptography',
-      'Quantum key distribution',
-      'Advanced threat detection',
-      'Zero-trust architecture',
-      'Compliance frameworks',
-      'Real-time monitoring',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ],
 
     pricing: {
+      
       starter: 399,
       professional: 999,
       enterprise: 2499
@@ -634,21 +577,12 @@ const services: Service[] = [;
     benefits: [;
       'Future - proof security',
       'Quantum - resistant encryption',
-=======
-      enterprise: 2499,
-    },
-    technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
-    benefits: [
-      'Future-proof security',
-      'Quantum-resistant encryption',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Comprehensive compliance',
       'Advanced threat protection',
     ],
   },
 
   {
-<<<<<<< HEAD
     id: 'data - fabric - platform',
     title: 'Intelligent Data Fabric Platform',
 
@@ -662,24 +596,11 @@ const services: Service[] = [;
       'Data governance',
       'AI - powered insights',
       'Multi - cloud support',
-=======
-    id: 'data-fabric-platform',
-    title: 'Intelligent Data Fabric Platform',
-    description:
-      'Unified data management and analytics across all sources and formats',
-    icon: <FaDatabase className='w-6 h-6' />,
-    category: 'data',
-    features: [
-      'Unified data access',
-      'Real-time analytics',
-      'Data governance',
-      'AI-powered insights',
-      'Multi-cloud support',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Data lineage tracking',
     ],
 
     pricing: {
+      
       starter: 299,
       professional: 799,
       enterprise: 1999
@@ -693,20 +614,13 @@ const services: Service[] = [;
       'Databricks',
       'Airflow',
     ],
-<<<<<<< HEAD
     benefits: [;
       'Unified data view',
       'Real - time insights',
-=======
-    benefits: [
-      'Unified data view',
-      'Real-time insights',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Improved data quality',
       'Reduced integration costs',
     ],
   },  {
-<<<<<<< HEAD
     id: 'cloud - native - platform',
     title: 'Cloud - Native Development Platform',
     description: 'Modern cloud - native development and deployment platform',
@@ -722,6 +636,7 @@ const services: Service[] = [;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
+
 const services: Service[] = [;
   {;
     id: 'ai-automation-suite',;
@@ -952,6 +867,7 @@ const services: Service[] = [;
     
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
 
     
@@ -992,6 +908,7 @@ const services: Service[] = [;
         service && service.technologies.some(tech => tech && tech.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
       );
     }
+
     return filtered && filtered.sort((a, b) => {;
       switch (sortBy) {;
         case 'price':;
@@ -1003,10 +920,13 @@ const services: Service[] = [;
       }
     });
   }, [selectedCategory, searchTerm, sortBy]);
+
   const handleServiceSelect = (service: Service) => {;
     setSelectedService(service);
   };
+
   const closeModal = () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setSelectedService(null);
   }
   return (
@@ -1020,9 +940,11 @@ const services: Service[] = [;
     })
 
   }, [selectedCategory, searchTerm, sortBy])
+
   const handleServiceSelect = (service: Service) => {;
     setSelectedService(service);
   };
+
   const closeModal = () => {;
     setSelectedService(null);
   };
@@ -1040,12 +962,16 @@ const services: Service[] = [;
       }
     })
   }, [selectedCategory, searchTerm, sortBy]);
+
   const handleServiceSelect = (service: Service) => {
     setSelectedService(service)
   };
+
   const closeModal = () => {
     setSelectedService(null)
   };
+
+=======
 ;
 const EnhancedServicesShowcase2025: React.FC = () => {
   const [selected_category, setSelectedCategory] = useState < string>('all');
@@ -1273,6 +1199,7 @@ if ( {) {
               value={sortBy}
               onChange={(e) => setSortBy(e && e.target.value as 'name' | 'price' | 'category')}
               className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500";
+=======
           <div className="flex flex - col md:flex - row gap - 4 items - center justify - center">;
             <div className="relative flex - 1 max - w-md">;
               <input;
@@ -1288,6 +1215,7 @@ if ( {) {
               value={sort_by}
               on_change={(e) => setSortBy (e.target.value as 'name' | 'price' | 'category')}
               className="px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - blue - 500";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             >;
               <option value="name">Sort by Name</option>;
               <option value="price">Sort by Price</option>;
@@ -1404,6 +1332,7 @@ if ( {) {
         >
           {filteredServices.map((service, index) => (
             <motion.div
+=======
         </motion.div>;
         {/* Category Tabs */}
         <motion.div;
@@ -1470,7 +1399,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {tech}
-                  </span>
+                  </span>;
                 ))}
 
                 {service.technologies.length > 3 && (
@@ -1504,6 +1433,7 @@ if ( {) {
                   </span>;
                 )}
               </div>;
+
               <div className='flex items-center justify-between'>;
                 <div className='text-2xl font-bold text-blue-400'>;
                   ${service && service.pricing.starter}
@@ -1521,9 +1451,6 @@ if ( {) {
             </motion && motion.div>;
           ))}
         </motion && motion.div>;
-=======
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -1565,12 +1492,7 @@ if ( {) {
               initial={{ scale: 0.9, opacity: 0 }}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-<<<<<<< HEAD
-className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-=======
+              exit={{ scale: 0 && 0.9, opacity: 0 }}
               className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
 
               onClick={e => e.stopPropagation()}
@@ -1595,22 +1517,21 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
                         )?.name
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       }
-                    </p>                  </div>
-                </div>
+                    </p>                  </div>;
+                </div>;
                 <button
                   onClick={closeModal}
-                  className='p-2 hover:bg-white/10 rounded-lg transition-colors'            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex items-center gap-4">
-                  <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">
-                    {selectedService.icon}
-                  </div>
-                  <div>
-                    <h2 className="text-3xl font-bold text-white mb-2">{selectedService.title}</h2>
-                    <p className="text-gray-400">{serviceCategories.find(c => c.id === selectedService.category)?.name}</p>
-                  </div>
-                </div>
+                  className='p-2 hover:bg-white/10 rounded-lg transition-colors'>;
+              <div className="flex items-start justify-between mb-6">;
+                <div className="flex items-center gap-4">;
+                  <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">;
+                    {selectedService && selectedService.icon}
+                  </div>;
+                  <div>;
+                    <h2 className="text-3xl font-bold text-white mb-2">{selectedService && selectedService.title}</h2>;
+                    <p className="text-gray-400">{serviceCategories && serviceCategories.find(c => c && c.id === selectedService && selectedService.category)?.name}</p>;
+                  </div>;
+                </div>;
                 <button
                   onClick={closeModal}
 
@@ -1626,12 +1547,12 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
 
                 {/* Features */}
-                <div>
-                  <h3 className='text-xl font-bold text-white mb-4'>
-                    Key Features
-                  </h3>
-                  <ul className='space-y-2'>
-                    {selectedService.features.map((feature, index) => (
+                <div>;
+                  <h3 className='text-xl font-bold text-white mb-4'>;
+                    Key Features;
+                  </h3>;
+                  <ul className='space-y-2'>;
+                    {selectedService && selectedService.features.map((feature, index) => (;
                       <li
                         key={index}
 
@@ -1641,13 +1562,15 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
                   <span className="text-2xl">×</span>;
                 </button>;
               </div>;
+
               <p className="text-gray-300 text-lg mb-8">{selectedService && selectedService.description}</p>;
+
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Features */}
 
 
                         {feature}
-<<<<<<< HEAD
                       </li>;
 =======
 
@@ -1718,6 +1641,7 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
               </div>
             </motion.div>
           </motion.div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         )}
 
       </AnimatePresence>;
@@ -1725,9 +1649,14 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
   );
 
 };
+
 export default EnhancedServicesShowcase2025;  );
+=======
   )
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedServicesShowcase2025;
 
 

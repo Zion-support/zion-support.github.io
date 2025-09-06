@@ -1,6 +1,6 @@
 return (<a;
           href={href}
-    return(<button
+    return (<button;
         ref={ref}
 
 SidebarMenuItem.display_name = "SidebarMenuItem";

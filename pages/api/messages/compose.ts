@@ -60,6 +60,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!user) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
+  const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {
+    recipientId: string, body: string,
     linkUrl?: string;
     attachmentBase64?: string;
     attachmentName?: string;
@@ -89,17 +91,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     context,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });
 
 }
 
 =======
     context});
+
   res.status(200).json({ conversation, message })
 
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
   res.status (200).json ({ conversation, message });
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
