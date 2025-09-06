@@ -1,26 +1,35 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ServicesPage: React.FC = () => {
   const services = [
     {
       title: 'AI Solutions',
       description: 'Machine learning, natural language processing, and computer vision solutions.',
-      features: ['Machine Learning Models', 'NLP Applications', 'Computer Vision', 'AI Consulting']
+      features: ['Machine Learning Models', 'NLP Applications', 'Computer Vision', 'AI Consulting'],
+      link: '/services/ai-solutions',
+      icon: '🧠'
     },
     {
       title: 'Cybersecurity',
       description: 'Advanced security solutions and compliance to protect your digital assets.',
-      features: ['Security Audits', 'Threat Detection', 'Compliance Management', 'Incident Response']
+      features: ['Security Audits', 'Threat Detection', 'Compliance Management', 'Incident Response'],
+      link: '/services/cybersecurity',
+      icon: '🛡️'
     },
     {
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions and infrastructure management services.',
-      features: ['Cloud Migration', 'Infrastructure Setup', 'Monitoring & Maintenance', 'Cost Optimization']
+      features: ['Cloud Migration', 'Infrastructure Setup', 'Monitoring & Maintenance', 'Cost Optimization'],
+      link: '/services/cloud-infrastructure',
+      icon: '☁️'
     },
     {
       title: 'Digital Transformation',
       description: 'Complete digital transformation strategies and implementation.',
-      features: ['Process Automation', 'Digital Strategy', 'Change Management', 'Technology Integration']
+      features: ['Process Automation', 'Digital Strategy', 'Change Management', 'Technology Integration'],
+      link: '/services/digital-transformation',
+      icon: '🚀'
     }
   ];
 
@@ -34,14 +43,15 @@ const ServicesPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
+              <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div className="text-4xl mb-4">{service.icon}</div>
                 <h2 className="text-2xl font-semibold mb-4 text-gray-800">
                   {service.title}
                 </h2>
                 <p className="text-gray-600 mb-6">
                   {service.description}
                 </p>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
                       <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,6 +61,12 @@ const ServicesPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
+                <Link 
+                  to={service.link}
+                  className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Learn More
+                </Link>
               </div>
             ))}
           </div>
