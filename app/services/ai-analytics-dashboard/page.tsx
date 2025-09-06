@@ -1,11 +1,11 @@
-export const metadata = {}
+export const metadata = {
   title: "AI-Powered Analytics Dashboard | Zion Tech Group",
-  description:"
-    "Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and automated reporting.",;
+  description:
+    "Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and automated reporting.",
 };
 
-export default function AIAnalyticsDashboardPage() {}
-  return ("
+export default function AIAnalyticsDashboardPage() {
+  return (
     <section className="max-w-6xl mx-auto px-4 py-16">"
       <h1 className="text-4xl font-bold text-gray-900 mb-6">;
         AI-Powered Analytics Dashboard;

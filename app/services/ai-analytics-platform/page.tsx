@@ -1,7 +1,7 @@
 export const metadata = { title: "AI Analytics Platform | Zion Tech Group" };
 
-export default function AIAnalyticsPlatformPage() {}
-  return ("
+export default function AIAnalyticsPlatformPage() {
+  return (
     <div className="max-w-6xl mx-auto px-4 py-12">"
       <div className="text-center mb-16">"
         <h1 className="text-4xl font-bold text-gray-900 mb-6">;

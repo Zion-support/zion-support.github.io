@@ -1,13 +1,13 @@
-import React from "react";"
-import Link from "next/link";"
+import React from "react";
+import Link from "next/link";
 import "./globals.css";
 
-export const metadata = {"
+export const metadata = {
   title: "Zion Tech Group — AI, Micro SaaS, and IT Services",
-  description:"
+  description:
     "Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.",
-  keywords:"
-    "AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software","
+  keywords:
+    "AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software",
   authors: [{ name: "Zion Tech Group" }],
   openGraph: {"
     title: "Zion Tech Group — AI, Micro SaaS, and IT Services",

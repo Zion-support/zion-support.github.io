@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-export const metadata = {"
+export const metadata = {
   title: "AI Chatbot Builder | Zion Tech Group",
-  description:"
-    "Build intelligent chatbots with no-code platform. Custom AI assistants for customer support, sales, and engagement.",;
+  description:
+    "Build intelligent chatbots with no-code platform. Custom AI assistants for customer support, sales, and engagement.",
 };
 
-export default function AIChatbotBuilderPage() {}
-  return ("
+export default function AIChatbotBuilderPage() {
+  return (
     <div className="max-w-6xl mx-auto px-4 py-8">"
       <div className="text-center mb-12">"
         <h1 className="text-5xl font-bold text-gray-900 mb-6">;

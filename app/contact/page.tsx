@@ -1,12 +1,12 @@
-export const metadata = {}
+export const metadata = {
   title: "Contact | Zion Tech Group",
-  description:"
-    "Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.",;
+  description:
+    "Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.",
 };
 
-export default function ContactPage() {}
-  return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+export default function ContactPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">"
         <div className="text-center mb-16">"
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;

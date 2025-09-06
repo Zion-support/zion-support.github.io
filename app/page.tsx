@@ -1,7 +1,7 @@
-import React from 'react';'
+import React from 'react';
 import Link from 'next/link';
 
-interface CardProps {}
+interface CardProps {
   title: string;
   href: string;
   description: string;
@@ -14,12 +14,17 @@ interface CardProps {}
         {icon && <span className="text-2xl mr-3">{icon}</span>}"
         <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
       </div>
-
+      {bullets && (
+        <ul className="mt-4 space-y-2">
+          {bullets.map((bullet, index) => (
+            <li key={index} className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              <span className="text-gray-600">{bullet}</span>
             </li>
           ))}
         </ul>
       )}
-
+    </div>
   );
 }
 
