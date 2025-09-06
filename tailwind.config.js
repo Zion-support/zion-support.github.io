@@ -1,26 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-<<<<<<< HEAD
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-=======
-<<<<<<< HEAD
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       colors: {
-<<<<<<< HEAD
-=======
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -50,34 +39,16 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-        'slide-down': 'slideDown 0.5s ease-out',
-        'slide-left': 'slideLeft 0.5s ease-out',
-        'slide-right': 'slideRight 0.5s ease-out',
         'scale-in': 'scaleIn 0.3s ease-out',
-<<<<<<< HEAD
         'float': 'float 6s ease-in-out infinite',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'bounce-slow': 'bounce 3s infinite',
-        'spin-slow': 'spin 8s linear infinite'
-=======
-        'bounce-in': 'bounceIn 0.6s ease-out',
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'spin-slow': 'spin 3s linear infinite',
-        'gradient-x': 'gradient-x 15s ease infinite',
-        'gradient-y': 'gradient-y 15s ease infinite',
-        'gradient-xy': 'gradient-xy 15s ease infinite',
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
+        'spin-slow': 'spin 8s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -92,62 +63,10 @@ module.exports = {
           '0%': { transform: 'scale(0)' },
           '100%': { transform: 'scale(1)' }
         },
-<<<<<<< HEAD
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' }
         }
-=======
-        bounceIn: {
-          '0%': { transform: 'scale(0.3)', opacity: '0' },
-          '50%': { transform: 'scale(1.05)', opacity: '0.8' },
-          '70%': { transform: 'scale(0.9)', opacity: '1' },
-          '100%': { transform: 'scale(1)', opacity: '1' },
-        },
-        'gradient-x': {
-          '0%, 100%': {
-            'background-size': '200% 200%',
-            'background-position': 'left center'
-          },
-          '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'right center'
-          },
-        },
-        'gradient-y': {
-          '0%, 100%': {
-            'background-size': '200% 200%',
-            'background-position': 'center top'
-          },
-          '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'center bottom'
-          },
-        },
-        'gradient-xy': {
-          '0%, 100%': {
-            'background-size': '400% 400%',
-            'background-position': 'left center'
-          },
-          '50%': {
-            'background-size': '400% 400%',
-            'background-position': 'right center'
-          },
-        },
-      },
-<<<<<<< HEAD
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'gradient-mesh': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        'gradient-aurora': 'linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57)',
-      },
-      boxShadow: {
-        'glow': '0 0 20px rgba(59, 130, 246, 0.5)',
-        'glow-lg': '0 0 40px rgba(59, 130, 246, 0.6)',
-        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.7)',
-        'inner-glow': 'inset 0 0 20px rgba(59, 130, 246, 0.3)',
->>>>>>> main
       },
       spacing: {
         '18': '4.5rem',
@@ -156,34 +75,18 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
-        '5xl': '2.5rem'
+        '5xl': '2.5rem',
       },
-<<<<<<< HEAD
       boxShadow: {
         'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
         'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
-        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)'
-      }
-    }
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
+      },
     },
->>>>>>> main
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-<<<<<<< HEAD
-    require('@tailwindcss/aspect-ratio')
-  ]
-};
-=======
     require('@tailwindcss/aspect-ratio'),
   ],
-<<<<<<< HEAD
-}
-=======
 };
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
