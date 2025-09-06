@@ -42,6 +42,7 @@ export default function DeploymentsPage() {
   };
 
   const getVerticalIcon = (vertical: string) => {
+    void vertical; // Suppress unused parameter warning
     // Return appropriate icon based on vertical
     return <div className="w-6 h-6 bg-blue-500 rounded" />;
   };
@@ -51,6 +52,7 @@ export default function DeploymentsPage() {
   };
 
   const setFilter = (newFilter: string) => {
+    void newFilter; // Suppress unused parameter warning
     // This should be managed with state
   };
 

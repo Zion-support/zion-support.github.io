@@ -2,10 +2,7 @@ import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 
-// Define HTMLDivElement if not available
-declare global {
-  interface HTMLDivElement extends HTMLElement {}
-}
+// HTMLDivElement is already defined in the global scope
 
 const badgeVariants = cva(
   "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",

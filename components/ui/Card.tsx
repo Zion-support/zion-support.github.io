@@ -1,12 +1,7 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
 
-// Define HTML element types if not available
-declare global {
-  interface HTMLDivElement extends HTMLElement {}
-  interface HTMLParagraphElement extends HTMLElement {}
-  interface HTMLHeadingElement extends HTMLElement {}
-}
+// HTML element types are already defined in the global scope
 
 const Card = React.forwardRef<
   HTMLDivElement,
