@@ -263,7 +263,57 @@ export class MemoryCache {
   }
 }
 
+export const redisCache = new RedisCache();
+  `,
+    'cache/memory-cache.js': `// Memory-based caching system
+export class MemoryCache {
+  constructor(maxSize = 1000) {
+    this.cache = new Map();
+    this.accessTimes = new Map();
+    this.maxSize = maxSize;
+  }
+
+  get(key) {
+    if (this.cache.has(key)) {
+      this.accessTimes.set(key, Date.now());
+      return this.cache.get(key);
+    }
+    return null;
+  }
+
+  set(key, value, ttl = 3600) {
+    if (this.cache.size >= this.maxSize) {
+      this.evictLRU();
+    }
+    this.cache.set(key, value);
+    this.accessTimes.set(key, Date.now());
+    
+    if (ttl > 0) {
+      setTimeout(() => {
+        this.delete(key);
+      }, ttl * 1000);
+    }
+  }
+
+  delete(key) {
+    this.cache.delete(key);
+    this.accessTimes.delete(key);
+  }
+
+  clear() {
+    this.cache.clear();
+    this.accessTimes.clear();
+  }
+
+  evictLRU() {
+    const oldestKey = Array.from(this.accessTimes.entries())
+      .sort((a, b) => a[1] - b[1])[0][0];
+    this.delete(oldestKey);
+  }
+}
+
 export const memoryCache = new MemoryCache();
+  `
   };
 
   Object.entries(cachingFiles).forEach(([filename, content]) => {
@@ -566,7 +616,7 @@ async function main() {
     };
     
     fs.writeFileSync('/workspace/ecosystem.config.js', 
-      `module.exports = ${JSON.stringify(pm2Config, null, 2)};);
+      `module.exports = ${JSON.stringify(pm2Config, null, 2)};`);
     console.log('[OK] Created PM2 ecosystem configuration');
     
     // Create logs directory
