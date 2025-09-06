@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FooterNewsletter } from '@/components/FooterNewsletter';
 import { 
   Twitter,
@@ -37,6 +38,11 @@ const GITHUB_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL,
   'https://github.com/ZionTechGroup'
 );
+=======
+import { FooterNewsletter } from "./FooterNewsletter";
+import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react';
+import { Link } from "react-router-dom";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
 
 export function Footer() {
   return (
@@ -327,6 +333,7 @@ export const Footer: React.FC = () => {
 
           {/* Services */}
           <div className="space-y-4">
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold">Services</h3>
             <ul className="space-y-2">
               <li><Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
@@ -346,10 +353,19 @@ export const Footer: React.FC = () => {
               <li><Link to="/solutions/finance" className="text-gray-400 hover:text-white transition-colors">Finance</Link></li>
               <li><Link to="/solutions/government" className="text-gray-400 hover:text-white transition-colors">Government</Link></li>
               <li><Link to="/solutions/retail" className="text-gray-400 hover:text-white transition-colors">Retail</Link></li>
+=======
+            <h3 className="text-lg font-semibold text-foreground">Services</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/services/ai-services" className="text-foreground/80 hover:text-primary transition-colors">AI Services</Link></li>
+              <li><Link to="/services/micro-saas" className="text-foreground/80 hover:text-primary transition-colors">Micro SaaS</Link></li>
+              <li><Link to="/services/it-services" className="text-foreground/80 hover:text-primary transition-colors">IT Services</Link></li>
+              <li><Link to="/pricing" className="text-foreground/80 hover:text-primary transition-colors">Pricing</Link></li>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
             </ul>
           </div>
 
           {/* Company */}
+<<<<<<< HEAD
           <div>
             <h4 className="text-white font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
@@ -357,6 +373,15 @@ export const Footer: React.FC = () => {
               <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
               <li><Link to="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
               <li><Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
+=======
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-foreground">Company</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/about" className="text-foreground/80 hover:text-primary transition-colors">About</Link></li>
+              <li><Link to="/contact" className="text-foreground/80 hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link to="/careers" className="text-foreground/80 hover:text-primary transition-colors">Careers</Link></li>
+              <li><Link to="/blog" className="text-foreground/80 hover:text-primary transition-colors">Blog</Link></li>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
             </ul>
           </div>
         </div>
@@ -373,6 +398,7 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Back to Top Button */}
         <button
           onClick={scrollToTop}
@@ -380,6 +406,30 @@ export const Footer: React.FC = () => {
         >
           <ChevronUp className="w-5 h-5" />
         </button>
+=======
+        <div className="mt-8 pt-8 border-t border-border">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-sm text-foreground/60">
+              © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/privacy" className="text-sm text-foreground/60 hover:text-primary transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="text-sm text-foreground/60 hover:text-primary transition-colors">Terms of Service</Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <button
+            onClick={scrollToTop}
+            className="flex items-center space-x-1 text-foreground/80 hover:text-primary text-sm transition-colors cursor-pointer"
+            aria-label="Back to top"
+          >
+            <ChevronUp className="h-4 w-4" aria-hidden="true" />
+            <span>Back to Top</span>
+          </button>
+        </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
       </div>
     </footer>
   );

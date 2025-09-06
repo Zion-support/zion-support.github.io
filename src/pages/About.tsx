@@ -1,7 +1,13 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+import SEO from "../components/SEO";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
 
 const About: React.FC = () => {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-white py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,6 +41,23 @@ const About: React.FC = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
             <p className="text-lg text-gray-600 mb-4">
               To empower businesses with cutting-edge technology solutions that enhance efficiency, drive innovation, and create sustainable competitive advantages.
+=======
+    <>
+      <SEO
+        title="About Zion Tech Group"
+        description="Learn about Zion Tech Group's mission to deliver cutting-edge AI and technology solutions that empower businesses to achieve their goals."
+        keywords="about, company, mission, vision, AI solutions, technology"
+        url="/about"
+      />
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">About Zion Tech Group</h1>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <p className="text-lg text-gray-600 mb-6">
+              Zion Tech Group is a leading provider of AI and technology solutions
+              that help businesses scale and succeed in the digital age.
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
             </p>
             <p className="text-lg text-gray-600">
               We believe in the power of technology to transform industries and create meaningful impact in the digital world.
@@ -56,6 +79,7 @@ const About: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2">Innovation</h3>
               <p className="text-gray-600">Cutting-edge solutions using the latest technologies and methodologies.</p>
             </div>
+<<<<<<< HEAD
             <div className="bg-white rounded-lg p-6 shadow-lg">
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-semibold mb-2">Excellence</h3>
@@ -65,12 +89,22 @@ const About: React.FC = () => {
               <div className="text-4xl mb-4">🤝</div>
               <h3 className="text-xl font-semibold mb-2">Partnership</h3>
               <p className="text-gray-600">Long-term relationships built on trust, transparency, and mutual success.</p>
+=======
+            <div className="mt-8">
+              <Link
+                to="/contact"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
+                Get in Touch
+              </Link>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
             </div>
           </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 <<<<<<< HEAD
 }

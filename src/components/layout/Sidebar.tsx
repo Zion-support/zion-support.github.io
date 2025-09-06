@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -255,35 +256,50 @@ export default function Sidebar({ isOpen, onClose, className = '' }: SidebarProp
 =======
 import React from 'react'
 import { Link } from 'react-router-dom'
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
 import {
   Home,
   Users,
   Settings,
   DollarSign,
-  Phone,
-  Menu
-} from 'lucide-react'
+  Phone
+} from 'lucide-react';
 
+<<<<<<< HEAD
 
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Sidebar: React.FC = () => {;
+=======
+export const Sidebar: React.FC = () => {
+  const navigation = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Services', href: '/services', icon: Settings },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'Contact', href: '/contact', icon: Phone }
+  ];
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
   return (
-    <aside className="hidden lg:block w-64 bg-white shadow-lg min-h-screen">
+    <aside className="hidden lg:block w-64 bg-slate-800 text-white min-h-screen">
       <div className="p-6">
         <div className="flex items-center space-x-2 mb-8">
           <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-sm">Z</span>
           </div>
-          <span className="text-lg font-semibold text-gray-900">Zion Tech</span>
+          <span className="text-lg font-semibold text-white">Zion Tech</span>
         </div>
         <nav className="space-y-2">
           {navigation.map((item) => (
             <Link
               key={item.name}
               to={item.href}
-              className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200"
+              className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:bg-slate-700 hover:text-white rounded-lg transition-colors duration-200"
             >
               <item.icon className="w-5 h-5" />
               <span className="font-medium">{item.name}</span>
@@ -292,8 +308,13 @@ const Sidebar: React.FC = () => {;
         </nav>
       </div>
     </aside>
+<<<<<<< HEAD
   )
 }
 export default Sidebar
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
