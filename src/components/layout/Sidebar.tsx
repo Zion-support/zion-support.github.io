@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {
@@ -7,8 +5,7 @@ import {
   Users,
   Settings,
   DollarSign,
-  Phone,
-  Menu
+  Phone
 } from 'lucide-react'
 
 const Sidebar = () => {
@@ -19,6 +16,7 @@ const Sidebar = () => {
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Contact', href: '/contact', icon: Phone }
   ]
+
   return (
     <aside className="hidden lg:block w-64 bg-white shadow-lg min-h-screen">
       <div className="p-6">
@@ -41,46 +39,8 @@ const Sidebar = () => {
           ))}
         </nav>
       </div>
-<<<<<<< HEAD
     </aside>
   )
 }
+
 export default Sidebar
-=======
-    </div>
-  );
-};
-
-export default Sidebar;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-e700
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-export default function Sidebar() {
-  return (
-    <aside className="w-64 bg-gray-50 border-r min-h-screen">
-      <nav className="p-4">
-        <ul className="space-y-2">
-          <li>
-            <Link to="/" className="block px-3 py-2 rounded hover:bg-gray-100">
-              Dashboard
-            </Link>
-          </li>
-          <li>
-            <Link to="/services" className="block px-3 py-2 rounded hover:bg-gray-100">
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link to="/pricing" className="block px-3 py-2 rounded hover:bg-gray-100">
-              Pricing
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-  );
-}
