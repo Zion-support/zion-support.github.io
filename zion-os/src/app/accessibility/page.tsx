@@ -1,4 +1,6 @@
-export default function AccessibilityPage () {
+import Link from 'next/link';
+
+export default function AccessibilityPage() {
   return (<div className="min-h-screen bg-white"> {
   /* Hero Section */ 
 }<section className="bg-gradient-to-r from-green-600 to-teal-600 text-white py-20"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> <h1 className="text-4xl md:text-6xl font-bold mb-6"> Accessibility </h1> <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto"> We are committed to making our website and services accessible to everyone, including people with disabilities. </p> </div> </section> {
@@ -29,5 +31,10 @@ export default function AccessibilityPage () {
   /* Contact Information */ 
 }<section className="py-20 bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"> Report Accessibility Issues </h2> <p className="text-xl text-gray-600 max-w-2xl mx-auto"> We welcome feedback on accessibility issues and suggestions for improvement </p> </div> <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-sm"> <div className="space-y-6"> <div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Contact Our Accessibility Team</h3> <p className="text-gray-600"> If you encounter accessibility issues or have suggestions for improvement, please contact us: </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> <div> <h4 className="font-medium text-gray-900 mb-2">Email</h4> <a href="mailto:accessibility@ziontechgroup.com" className="text-blue-600 hover:text-blue-700"> accessibility@ziontechgroup.com </a> </div> <div> <h4 className="font-medium text-gray-900 mb-2">Phone</h4> <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700"> +1 (302) 464-0950 </a> </div> </div> <div> <h4 className="font-medium text-gray-900 mb-2">Response Time</h4> <p className="text-gray-600"> We aim to respond to accessibility feedback within 2 business days and will work to resolve issues promptly. </p> </div> </div> </div> </div> </section> {
   /* CTA Section */ 
-}<section className="py-20 bg-green-600 text-white"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"> <h2 className="text-3xl md:text-4xl font-bold mb-6"> Help Us Improve Accessibility </h2> <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto"> Your feedback helps us create a more inclusive and accessible experience for all users. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <a href="/contact" className="bg-white text-green-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"> Contact Us </a> <a href="/privacy" className="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"> Privacy Policy </a> </div> </div> </section> </div>) 
+}<section className="py-20 bg-green-600 text-white"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"> <h2 className="text-3xl md:text-4xl font-bold mb-6"> Help Us Improve Accessibility </h2> <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto"> Your feedback helps us create a more inclusive and accessible experience for all users. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center">              <Link href="/contact" className="bg-white text-green-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
+                Contact Us
+              </Link>
+              <Link href="/privacy" className="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+                Privacy Policy
+              </Link> </div> </div> </section> </div>) 
 }

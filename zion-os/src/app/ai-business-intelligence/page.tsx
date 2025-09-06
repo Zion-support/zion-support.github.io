@@ -1,4 +1,6 @@
- export default function AIBusinessIntelligencePage () {
+import Link from 'next/link';
+
+export default function AIBusinessIntelligencePage() {
   return (<div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8"> <div className="max-w-7xl mx-auto"> {
   /* Hero Section */ 
 }<div className="text-center mb-16"> <h1 className="text-4xl md:text-6xl font-bold mb-6"> <span className="gradient-text">AI Business Intelligence</span> </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"> Unlock the power of your data with AI-driven business intelligence that transforms raw information into actionable insights and predictive intelligence. </p> </div> {
