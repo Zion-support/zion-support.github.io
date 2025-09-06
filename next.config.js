@@ -9,7 +9,6 @@
       include: /apps\//
       use: "ignore-loader"
     });
-    return config;
   async headers() {
     return [
       {

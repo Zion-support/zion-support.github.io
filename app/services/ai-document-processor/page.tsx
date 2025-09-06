@@ -2,29 +2,16 @@
   );
 }
 
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-          popular={false}
-        />
       </div>
     </div>
   );
 }
 
-        }`}
-      >
-        Get Started
-      </a>
     </div>
   );
 }
 
-function ContactSection() {
+function DocumentTypeCard({ icon, name }: { icon: string; name: string }) {
   return (
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">

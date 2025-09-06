@@ -1,41 +1,3 @@
-    ignores: [
-      '.next/**',
-      'out/**',
-      'dist/**',
-      'build/**',
-      'node_modules/**',
-      'coverage/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      'scripts/**',
-      'automation/**',
-      'backup-merge-conflicts/**',
-      '**/*.backup.*',
-      '**/*.old.*',
-      '**/*.disabled.*',
-      '**/*.broken.*',
-      '**/*.corrupted.*',
-      '**/*.temp.*',
-      '**/*.test.*',
-      '**/*.spec.*',
-      '**/zion-os/**',
-      '**/zion-website/**',
-      '**/zion-academy/**',
-      '**/zion-film/**',
-      '**/zion-ai-assistant/**',
-      '**/*.min.js',
-      '**/*.bundle.js',
-      '**/public/**',
-      '**/static/**',
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      globals: {
         jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
@@ -60,19 +22,19 @@
     },
     settings: {
       react: {
-        version: "detect"
+        version: 'detect'
       }
     }
   },
   {
     files: [
-      "**/*.cjs",
-      "**/scripts/**/*.js",
-      "**/automation/**/*.js",
-      "**/pm2/**/*.js"
+      '**/*.cjs',
+      '**/scripts/**/*.js',
+      '**/automation/**/*.js',
+      '**/pm2/**/*.js'
     ],
     languageOptions: {
       ecmaVersion: 2021,
-      sourceType: "script",
+      sourceType: 'script',
       globals: {
         ...globals.node,
