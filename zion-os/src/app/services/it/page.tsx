@@ -1,34 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-export default function ITServicesPage() {;
-  return (;
-
-
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export default /**
- * ITServicesPage - Function description
- */
-function ITServicesPage() {
-  return (
-    <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-export default function ITServicesPage() {return (;
-export default function ITServicesPage() {;
-  return (;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Hero Section */}
       <div className="bg - gradient - to - r from - green - 600 to - blue - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;
@@ -102,34 +72,6 @@ export default function ITServicesPage() {;
                 Learn More About Cloud Infrastructure;
               </a>;
             </div>;
-<<<<<<< HEAD
-
-            {/* DevOps & CI / CD */}
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">🚀</div>;
-              <h2 className="text - 3xl font - bold mb - 4">DevOps & CI / CD</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Accelerate your software delivery with automated deployment pipelines,
-
-<<<<<<< HEAD
-=======
-
-                Accelerate your software delivery with automated deployment pipelines,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-                Accelerate your software delivery with automated deployment pipelines,;
-
-            {/* DevOps & CI/CD */}
-            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
-              <div className="text-4xl mb-6">🚀</div>;
-              <h2 className="text-3xl font-bold mb-4">DevOps & CI/CD</h2>;
-              <p className="text-zinc-300 mb-6 text-lg">;
-                Accelerate your software delivery with automated deployment pipelines;
-                Accelerate your software delivery with automated deployment pipelines,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 infrastructure as code, and DevOps culture implementation that drives innovation.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -168,32 +110,6 @@ export default function ITServicesPage() {;
               </a>;
             </div>;
             {/* Cybersecurity */}
-<<<<<<< HEAD
-
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">🛡️</div>;
-              <h2 className="text - 3xl font - bold mb - 4">Cybersecurity</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Protect your business with comprehensive cybersecurity solutions including security audits,
-
-<<<<<<< HEAD
-=======
-
-                Protect your business with comprehensive cybersecurity solutions including security audits,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-                Protect your business with comprehensive cybersecurity solutions including security audits,;
-
-            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
-              <div className="text-4xl mb-6">🛡️</div>;
-              <h2 className="text-3xl font-bold mb-4">Cybersecurity</h2>;
-              <p className="text-zinc-300 mb-6 text-lg">;
-                Protect your business with comprehensive cybersecurity solutions including security audits;
-                Protect your business with comprehensive cybersecurity solutions including security audits,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 penetration testing, compliance frameworks, and incident response planning.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -318,32 +234,6 @@ export default function ITServicesPage() {;
               </a>;
             </div>;
             {/* Digital Transformation */}
-<<<<<<< HEAD
-
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">🔄</div>;
-              <h2 className="text - 3xl font - bold mb - 4">Digital Transformation</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Guide your organization through end - to - end digital transformation with strategic consulting,
-
-<<<<<<< HEAD
-=======
-
-                Guide your organization through end-to-end digital transformation with strategic consulting,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-                Guide your organization through end-to-end digital transformation with strategic consulting,;
-
-            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
-              <div className="text-4xl mb-6">🔄</div>;
-              <h2 className="text-3xl font-bold mb-4">Digital Transformation</h2>;
-              <p className="text-zinc-300 mb-6 text-lg">;
-                Guide your organization through end-to-end digital transformation with strategic consulting;
-                Guide your organization through end-to-end digital transformation with strategic consulting,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 legacy system modernization, and change management expertise.;
               </p>;
               <div className="space - y-4 mb - 8">;

@@ -177,26 +177,6 @@ h3 {
   left: 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   right: 0;
   bottom: 0;
   background: 
@@ -341,19 +321,6 @@ h3 {
 .futuristic-bg {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-648a
   background: 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
 =======
@@ -517,25 +484,6 @@ h3 {
   bottom: 0;  background: 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
-  background: 
-  background: 
-  right: 0;
-  bottom: 0;  background: 
-  right: 0;
-  bottom: 0;  background: 
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
@@ -1316,23 +1264,6 @@ h3 {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1350,8 +1281,6 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
-=======
->>>>>>> origin/main
   
   .particle-bg::before {
     display: none;
@@ -1552,23 +1481,6 @@ h3 {
 
 /* Enhanced Quantum Effects */
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1577,25 +1489,7 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 .quantum-field {
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-.quantum-field {
-=======
-.quantum-field {
-}
->>>>>>> origin/main
-
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 }
 
@@ -1679,46 +1573,17 @@ h3 {
   border-radius: 8px;
   font-weight: 600;
   transition: all 0.3s ease;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-648a
 <<<<<<< HEAD
   position: relative;
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   position: relative;
   overflow: hidden;
 }
 
 .quantum-field {  position: relative;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-  position: relative;
-
-  overflow: hidden;
-}
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> main
   overflow: hidden;
 }
@@ -1739,22 +1604,6 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
-  overflow: hidden;
-}
-
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 .quantum-field::before {
   content: '';
   position: absolute;
@@ -1783,29 +1632,6 @@ h3 {
 }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-<<<<<<< HEAD
-=======
-.holographic::before {
-
-  content: '';
-.holographic::before {  content: '';
-
-  content: '';
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1814,56 +1640,35 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
-=======
->>>>>>> origin/main
 .holographic::before {
+=======
 .btn-futuristic::before {
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-648a
+<<<<<<< HEAD
+  content: '';
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   content: '';
 .holographic::before {  content: '';
-.holographic::before {  content: '';
 <<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+.holographic::before {  content: '';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 .holographic::before {  content: '';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1882,19 +1687,6 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.3), transparent);
   animation: holographic-shimmer 4s ease-in-out infinite;
 }
@@ -2035,25 +1827,6 @@ h3 {
     animation: none;
   }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-<<<<<<< HEAD
-=======
-
-}
-}
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 =======
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
@@ -2072,21 +1845,6 @@ h3 {
 }
 <<<<<<< HEAD
 >>>>>>> main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
-}
-}
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 .btn-futuristic:hover::before {
   left: 100%;
@@ -2280,13 +2038,6 @@ h3 {
     0 0 10px rgba(59, 130, 246, 0.3),
     0 0 15px rgba(59, 130, 246, 0.1);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-648a
 <<<<<<< HEAD
 =======
@@ -2302,16 +2053,3 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

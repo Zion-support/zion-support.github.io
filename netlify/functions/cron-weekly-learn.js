@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
-exports.handler = async function() {
-  try {
-    const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
-    const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
-    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
-    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8')),
-    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));    const usersPath = path.join(process.cwd(), 'datalearnusers.json')
-    const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
-    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
-    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'))
-    const summary = {
-      updatedAt: Date.now()
-      totals: {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 exports && exports.handler = async function () {
   try {
     const usersPath = path && path.join(process && process.cwd(), 'data', 'learn', 'users && users.json');
@@ -46,7 +24,6 @@ exports && exports.handler = async function () {
       },
       topBadges: Object && Object.values(users).reduce((map, u) => {
         (u && u.badges || []).forEach(b => {
-=======
 const fs = require ('fs');
 const path = require ('path');
 const { upsert_file } = require ('./_lib / github');
@@ -75,102 +52,30 @@ exports.handler = async function () {
       },
       top_badges: Object.values (users).reduce ((map, u) => {
         (u.badges || []).for_each (boolean => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           map[b] = (map[b] || 0) + 1;
         });
         return map;
       }, {}),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    }
-;
-    const owner = process.env.GITHUB_OWNER;
-    const repo = process.env.GITHUB_REPO;
-    const token = process.env.GITHUB_TOKEN;
-;
-    const content = JSON.stringify (summary, null, 2);
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      await upsert_file ({
-        owner,
-        repo,
-        path: 'data / learn / insights - weekly.json',
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         content,
         message: 'chore (automation): weekly learning insights',
         token,
       });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        users: Object.keys(users).length,
-        courses: courses.length,
-        completions: Object.values(users).reduce((acc, u) => acc + (u.certifications?.length || 0), 0)
-      },
-      topBadges: Object.values(users).reduce((map, u) => {
-        (u.badges || []).forEach((b) => { map[b] = (map[b] || 0) + 1 }),
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return map
       }, {})
     },
-
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
-
     const content = JSON && JSON.stringify(summary, null, 2),
-
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly && weekly.json', content, message: 'chore(automation): weekly learning insights', token })
     }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, summary }) }
-=======
-    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, summary }) }
-<<<<<<< HEAD
-
-
-    const owner = process.env.GITHUB_OWNER,
-    const repo = process.env.GITHUB_REPO,
-    const token = process.env.GITHUB_TOKEN,
-
-    const content = JSON.stringify(summary, null, 2),
-
-    if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })
-    }
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };      }
       topBadges: Object.values(users).reduce((map, u) => {
         (u.badges |[]).forEach((b) => { map[b] = (map[b] |0) + 1 })
@@ -185,7 +90,6 @@ if ( {) {
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })
     }
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
-=======
     return { status_code: 200, body: JSON.stringify ({ ok: true, summary }) }
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
@@ -203,45 +107,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-      await upsert_file ({ owner, repo, path: 'data / learn / insights - weekly.json', content, message: 'chore (automation): weekly learning insights', token });
-    }
-    return { status_code: 200, body: JSON.stringify ({ ok: true, summary }) }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  } catch (e) {
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
-
-},
-
-=======
-},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
-},
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
-
-},
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-},
-},
-
-},
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -52,7 +52,7 @@ if (req && req.method !== "GET")
     return res && res.status(405).json({ error: "method_not_allowed" });
 
   );
-  res && res.status(200).send(pdfBuffer);
+  res.status(200).send(pdfBuffer);
 }
 
 =======

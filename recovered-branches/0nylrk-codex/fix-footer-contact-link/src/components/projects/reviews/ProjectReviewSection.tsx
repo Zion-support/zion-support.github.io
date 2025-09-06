@@ -170,7 +170,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
       <CardContent>
         {isCompleted ? (
           <div className="space-y-6">
-            {(isClient |isTalent) && (
+            {(isClient || isTalent) && (
               <div className="border-b pb-4 mb-4">
 <<<<<<< HEAD
 <<<<<<< HEAD

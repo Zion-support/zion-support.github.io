@@ -1,5 +1,15 @@
 
 <<<<<<< HEAD
+&apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";
+
+&apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";
+
+'const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {\' return (<div className=\'text-center py-16\'>\' <div className=\'bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex\'>\' <MessageSquare className=\'h-10 w-10 text-zion-purple\'/>\' </div>\' <h2 className=\'text-xl font-medium mb-2\'>{title}</h2>\' <p className=\'text-muted-foreground mb-6\'>{subtitle}</p>\' <TooltipProvider>\' <Tooltip> \''\';\'"\";
+"const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {" return (<div className="text-center py-16">" <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">" <MessageSquare className="h-10 w-10 text-zion-purple"/>" </div>" <h2 className="text-xl font-medium mb-2">{title}</h2>" <p className="text-muted-foreground mb-6">{subtitle}</p>" <TooltipProvider>" <Tooltip> """;""";"""
+'const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {' return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>' </div>' <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>' <TooltipProvider>' <Tooltip> ''';'"";
+
+=======
+<<<<<<< HEAD
 
 =======
 :src.disabled/components/community/EmptyState.jsx
@@ -18,3 +28,4 @@ ursor/add-new-services-and-deploy-updates-0462
 =======
 :temp_exclude/src.disabled/components/community/EmptyState.jsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 207d7230e0649fa517bb469b27623282180528c9

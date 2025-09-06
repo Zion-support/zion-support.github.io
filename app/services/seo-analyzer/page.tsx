@@ -2,24 +2,27 @@ import Link from "next/link";
 
 export const metadata = {
   title: "SEO Analyzer | Zion Tech Group",
-  description: "Advanced SEO analysis with AI-powered optimization recommendations, competitor analysis, and automated reporting for maximum search visibility.",
+  description:
+    "Advanced SEO analysis with AI-powered optimization recommendations, competitor analysis, and automated reporting for maximum search visibility.",
 };
 
 export default function SEOAnalyzerPage() {
   return (
     <div className="animate-fade-in">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          SEO Analyzer
-        </h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">SEO Analyzer</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Advanced SEO analysis with AI-powered optimization recommendations, competitor analysis, and automated reporting for maximum search visibility.
+          Advanced SEO analysis with AI-powered optimization recommendations,
+          competitor analysis, and automated reporting for maximum search
+          visibility.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Features & Capabilities</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Features & Capabilities
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               title="AI-Powered SEO Analysis"
@@ -49,7 +52,9 @@ export default function SEOAnalyzerPage() {
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing & Plans</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Pricing & Plans
+          </h2>
           <div className="space-y-4">
             <PricingCard
               plan="Starter"
@@ -60,7 +65,7 @@ export default function SEOAnalyzerPage() {
                 "Basic SEO analysis",
                 "Email support",
                 "Monthly reports",
-                "100 keyword tracking"
+                "100 keyword tracking",
               ]}
             />
             <PricingCard
@@ -73,7 +78,7 @@ export default function SEOAnalyzerPage() {
                 "Priority support",
                 "Weekly reports",
                 "1,000 keyword tracking",
-                "Competitor analysis"
+                "Competitor analysis",
               ]}
             />
             <PricingCard
@@ -87,7 +92,7 @@ export default function SEOAnalyzerPage() {
                 "Real-time monitoring",
                 "Unlimited keyword tracking",
                 "White-label reporting",
-                "API access"
+                "API access",
               ]}
             />
           </div>
@@ -95,7 +100,9 @@ export default function SEOAnalyzerPage() {
       </div>
 
       <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Choose Our SEO Analyzer?</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Why Choose Our SEO Analyzer?
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <BenefitCard
             title="300% Traffic Increase"
@@ -113,9 +120,13 @@ export default function SEOAnalyzerPage() {
       </div>
 
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Dominate Search Results?</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Ready to Dominate Search Results?
+        </h2>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Boost your search rankings with our advanced SEO analyzer that provides intelligent insights and automated optimization recommendations.
+          Boost your search rankings with our advanced SEO analyzer that
+          provides intelligent insights and automated optimization
+          recommendations.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -140,12 +151,26 @@ export default function SEOAnalyzerPage() {
   );
 }
 
-function FeatureItem({ title, description }: { title: string; description: string }) {
+function FeatureItem({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
   return (
     <div className="flex items-start space-x-4">
       <div className="flex-shrink-0 w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center mt-1">
-        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+        <svg
+          className="w-4 h-4 text-white"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            fillRule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clipRule="evenodd"
+          />
         </svg>
       </div>
       <div>
@@ -156,7 +181,12 @@ function FeatureItem({ title, description }: { title: string; description: strin
   );
 }
 
-function PricingCard({ plan, price, description, features }: {
+function PricingCard({
+  plan,
+  price,
+  description,
+  features,
+}: {
   plan: string;
   price: string;
   description: string;
@@ -178,7 +208,13 @@ function PricingCard({ plan, price, description, features }: {
   );
 }
 
-function BenefitCard({ title, description }: { title: string; description: string }) {
+function BenefitCard({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
   return (
     <div className="text-center">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>

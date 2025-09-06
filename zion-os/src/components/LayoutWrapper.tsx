@@ -1,50 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-"use client",;
-import { useWalkthroughTarget } from "./OnboardingWalkthrough",;
-import { useAuth } from "@/contexts/AuthContext",;
-import Link from "next/link",;
-export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
-  const { user, isAuthenticated, logout } = useAuth();
-
-
   return (;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-"use client",
-import { useWalkthroughTarget  } from './OnboardingWalkthrough';,
-import { use_auth  } from '@/contexts / AuthContext';,
-import Link from './next / link';,
-export /**
- * LayoutWrapper - Function description
- */
-function LayoutWrapper() {
-  const { user, is_authenticated, logout } = use_auth ();
-  return (
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-"use client";
-import { useWalkthroughTarget } from "./OnboardingWalkthrough";
-import { useAuth } from "@/contexts/AuthContext";
-import Link from "next/link";
-export function LayoutWrapper({ children }: { children: React.ReactNode }) {const { user, isAuthenticated, logout } = useAuth();
-"use client",;
-import { useWalkthroughTarget } from "./OnboardingWalkthrough",;
-import { useAuth } from "@/contexts/AuthContext",;
-import Link from "next/link",;
-export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
-  const { user, isAuthenticated, logout } = useAuth();
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <>;
       <nav className="border - b border - white / 10 sticky top - 0 z - 50 bg - zinc - 900 / 50 backdrop - blur" {...useWalkthroughTarget ("nav - menu")}>;
         <div className="max - w-6xl mx - auto px - 4 py - 3 flex items - center justify - between">;
@@ -71,32 +25,6 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
                 >;
                   Dashboard;
                 </Link>;
-<<<<<<< HEAD
-
-                <div className="flex items - center gap - 3">;
-                  <span className="text - sm text - zinc - 400">;
-                    Welcome, {user?.name || user?.email}
-
-<<<<<<< HEAD
-=======
-
-                    Welcome, {user?.name || user?.email}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-                    Welcome, {user?.name || user?.email}
-
-                <div className="flex items - center gap - 3">;
-                  <span className="text - sm text - zinc - 400">;
-                    Welcome, {user?.name || user?.email}
-                <div className="flex items-center gap-3">;
-                  <span className="text-sm text-zinc-400">;
-                    Welcome, {user?.name |user?.email}
-                    Welcome, {user?.name || user?.email}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </span>;
                   <button;
                     on_click={logout}

@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import Link from "next/link",;
-export const metadata = {;
-  title: "News & Insights - Zion Tech Group | Latest Technology Updates",;
-  description: "Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.",;
-  keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group"};
-export default function NewsPage() {;
-  return (;
-
-    <div className="min-h-screen">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from './next / link';,
 export const metadata = {
   title: "News & Insights - Zion Tech Group | Latest Technology Updates",
@@ -29,26 +9,6 @@ export default /**
 function NewsPage() {
   return (
     <div className="min - h-screen">;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-import Link from "next/link";
-export const metadata = {title: "News & Insights - Zion Tech Group | Latest Technology Updates";
-  description: "Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.";
-  keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group"}
-export default function NewsPage() {return (;
-import Link from "next/link",;
-export const metadata = {;
-  title: "News & Insights - Zion Tech Group | Latest Technology Updates",;
-  description: "Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.",;
-  keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group"};
-export default function NewsPage() {;
-  return (;
-    <div className="min-h-screen">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;

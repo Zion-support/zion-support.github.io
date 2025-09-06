@@ -29,7 +29,6 @@ if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
   const usingPlaceholder =
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       "placeholder-key";
   try {
     if (usingPlaceholder) {

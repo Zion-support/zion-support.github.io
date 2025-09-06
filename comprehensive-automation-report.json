@@ -1,126 +1,43 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "2025-09-06T10:42:27.266Z",
-  "totalDuration": 60241,
-=======
-  "timestamp": "2025-09-06T10:44:46.097Z",
-  "totalDuration": 76866,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  "successfulTasks": 6,
-  "totalTasks": 8,
+  "timestamp": "2025-09-06T17:31:43.872Z",
+  "duration": "46s",
   "results": {
-    "dependencyFix": {
-      "success": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "duration": 7037,
-=======
-      "duration": 22421,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      "errors": [],
-      "warnings": []
-    },
-    "codeQuality": {
-      "success": false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "duration": 27333,
-=======
-      "duration": 27631,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      "errors": [],
-      "warnings": []
-    },
-    "securityAudit": {
-      "success": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "duration": 1719,
-=======
-      "duration": 1683,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      "errors": [],
-      "warnings": []
-    },
-    "buildOptimization": {
-      "success": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "duration": 6250,
-=======
-      "duration": 6198,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      "errors": [],
-      "warnings": []
-    },
-    "seoOptimization": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "success": false,
-      "duration": 39,
-"errors": [],
-=======
-      "success": true,
-      "duration": 43,
-      "errors": [],
->>>>>>> cursor/automate-test-improve-and-merge-code-88cd
-=======
-      "success": true,
-      "duration": 46,
-      "errors": [],
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-=======
-      "success": true,
-      "duration": 46,
-      "errors": [],
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      "warnings": []
-    },
-    "accessibilityImprovement": {
-      "success": false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "duration": 9508,
-=======
-      "duration": 9692,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      "errors": [],
-      "warnings": []
-    },
-    "performanceOptimization": {
-      "success": true,
-      "errors": [],
-      "warnings": []
-    },
-    "deployment": {
-      "success": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "duration": 1612,
-=======
-      "duration": 2037,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      "errors": [],
-      "warnings": []
-    }
+    "syntaxFixes": 0,
+    "buildSuccess": true,
+    "testsPassed": 0,
+    "optimizations": 0,
+    "errors": [
+      {
+        "command": "npm run lint:fix",
+        "description": "ESLint Auto-fix",
+        "error": "spawnSync /bin/sh ETIMEDOUT"
+      },
+      {
+        "command": "npm run format",
+        "description": "Prettier Code Formatting",
+        "error": "spawnSync /bin/sh ENOBUFS"
+      },
+      {
+        "command": "npm run type-check",
+        "description": "TypeScript Type Checking",
+        "error": "spawnSync /bin/sh ENOBUFS"
+      },
+      {
+        "command": "npm run test:smoke",
+        "description": "Smoke Tests",
+        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      },
+      {
+        "command": "npm test -- --passWithNoTests",
+        "description": "Jest Tests",
+        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      }
+    ]
+  },
+  "summary": {
+    "syntaxFixes": 0,
+    "buildSuccess": true,
+    "testsPassed": 0,
+    "totalErrors": 5
   }
-<<<<<<< HEAD
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

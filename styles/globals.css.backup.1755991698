@@ -38,37 +38,13 @@
   --cyberpunk-glow: 0 0 25px rgba(236, 73, 153, 0.7);
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   --quantum-pulse: 0 0 40px rgba(0, 255, 255, 0.3);
   --holographic-pulse: 0 0 50px rgba(139, 92, 246, 0.4);
   --neural-glow: 0 0 35px rgba(16, 185, 129, 0.5);
-=======
-}
->>>>>>> origin/main
 }
   --quantum-pulse: 0 0 40px rgba(0, 255, 255, 0.3);
   --holographic-pulse: 0 0 50px rgba(139, 92, 246, 0.4);
   --neural-glow: 0 0 35px rgba(16, 185, 129, 0.5);}
-<<<<<<< HEAD
 
   --quantum-pulse: 0 0 40px rgba(0, 255, 255, 0.3);
   --holographic-pulse: 0 0 50px rgba(139, 92, 246, 0.4);
@@ -87,18 +63,6 @@
   --cyberpunk-pulse: 0 0 180px rgba(236, 73, 153, 0.1);
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
 =======
@@ -144,22 +108,6 @@
   --neural-glow: 0 0 35px rgba(16, 185, 129, 0.5);}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
-  --quantum-pulse: 0 0 40px rgba(0, 255, 255, 0.3);
-  --holographic-pulse: 0 0 50px rgba(139, 92, 246, 0.4);
-  --neural-glow: 0 0 35px rgba(16, 185, 129, 0.5);}
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 /* Base styles */
 @layer base {
@@ -360,29 +308,6 @@ body::after {
   z-index: -1;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-<<<<<<< HEAD
-=======
-
-  animation: matrixMove 30s linear infinite;
-
-}
-  animation: matrixMove 30s linear infinite;}
-
-}
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -391,33 +316,29 @@ body::after {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
-=======
->>>>>>> origin/main
   animation: matrixMove 30s linear infinite;
+=======
   animation: particleFloat 20s linear infinite;
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
   animation: matrixMove 30s linear infinite;}
-  animation: matrixMove 30s linear infinite;}
 <<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  animation: matrixMove 30s linear infinite;}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
   animation: matrixMove 30s linear infinite;}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 /* Enhanced Quantum Grid Background */
 .quantum-grid {
@@ -600,23 +521,6 @@ body::after {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -634,19 +538,6 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   33% { transform: translateY(-20px) rotate(1deg); }
   66% { transform: translateY(20px) rotate(-1deg); }
 }
@@ -963,23 +854,6 @@ body::after {
   body::before,
   body::after {
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -988,28 +862,7 @@ body::after {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     display: none;
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-    display: none;
-=======
-    display: none;
-  25% { transform: translateY(-20px) rotate(1deg); }
-  50% { transform: translateY(-10px) rotate(-1deg); }
-  75% { transform: translateY(-15px) rotate(0.5deg); }
-}
->>>>>>> origin/main
-
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
   25% { transform: translateY(-20px) rotate(1deg); }
   50% { transform: translateY(-10px) rotate(-1deg); }
@@ -1072,21 +925,6 @@ body::after {
   .quantum-grid {
     background-size: 25px 25px;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   
   .holographic-matrix {
@@ -1097,48 +935,23 @@ body::after {
     background-size: 100px 100px;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-=======
   }
->>>>>>> origin/main
-  }
-    display: none;  }
     display: none;  }
 <<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    display: none;  }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
     display: none;  }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 /* High Contrast Mode Support */
@@ -1162,30 +975,8 @@ body::after {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
 =======
 =======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1203,19 +994,6 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 /* Enhanced Focus States */
 .futuristic-focus:focus {
@@ -1364,23 +1142,6 @@ body::after {
   100% { transform: translate(0); }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
 =======
 <<<<<<< HEAD
@@ -1400,16 +1161,3 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

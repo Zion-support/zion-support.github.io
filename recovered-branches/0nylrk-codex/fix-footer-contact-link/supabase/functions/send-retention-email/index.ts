@@ -1083,7 +1083,7 @@ if ( {) {
           </div>
         `}
     } else {
-      // For clients
+      // For clients;
       return {
         subject: `Zion's top AI talent this week — don't miss out, ${firstName}`,
         html: `
@@ -1114,7 +1114,7 @@ if ( {) {
           </div>
         `}
     } else {
-      // For clients
+      // For clients;
       return {
         subject: `${firstName}, exclusive hiring discount inside`,
         html: `
@@ -1130,8 +1130,11 @@ if ( {) {
           </div>
         `}
     }
-  } else if (email_type === "no_applications_7_days") {
-    // Email for talent not receiving applications
+  } else // Check condition
+if ( {) {
+  $2
+}
+    // Email for talent not receiving applications;
     return {
       subject: `Boost your profile visibility, ${firstName}`,
       html: `
@@ -1151,8 +1154,11 @@ if ( {) {
           <p>The Zion AI Marketplace Team</p>
         </div>
       `}
-  } else if (email_type === "unfilled_job_14_days") {
-    // Email for clients with unfilled jobs
+  } else // Check condition
+if ( {) {
+  $2
+}
+    // Email for clients with unfilled jobs;
     return {
 <<<<<<< HEAD
       subject: `Tips to find the perfect talent for "${emailData.job_title}"`,

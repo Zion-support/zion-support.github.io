@@ -358,7 +358,7 @@ if (throw fetch_error) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast.error("Failed to fetch applications")
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
 <<<<<<< HEAD
 <<<<<<< HEAD

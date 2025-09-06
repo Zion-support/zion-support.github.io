@@ -30,7 +30,6 @@ export function buildPrintableHtml(project: BookProject): string {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const chapterHtml = chapters;
     .map(;
-=======
 import type { BookProject } from '../book / book_types',
 export function buildPrintableHtml (project: BookProject): string {
   const { meta, chapters, visuals } = project,
@@ -39,7 +38,6 @@ export function buildPrintableHtml (project: BookProject): string {
     .join ('\n'),
   const chapter_html = chapters;
     .map (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       (c) => `;
       <section class="chapter">;
         <h2>${escape_html (c.title)}</h2>;

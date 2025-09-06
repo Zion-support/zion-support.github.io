@@ -1,6 +1,26 @@
-#!/usr/bin/env node
+
+const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🖼️  Image optimization script - placeholder');
-console.log('✅ Image optimization completed');
+async function optimizeImages() {
+  const imagesDir = path.join(__dirname, 'public', 'images');
+  
+  if (fs.existsSync(imagesDir)) {
+    const files = fs.readdirSync(imagesDir);
+    
+    for (const file of files) {
+      if (file.match(/\.(jpg|jpeg|png|webp)$/i)) {
+        const inputPath = path.join(imagesDir, file);
+        const outputPath = path.join(imagesDir, `optimized-${file}`);
+        
+        await sharp(inputPath)
+          .resize(800, 600, { fit: 'inside', withoutEnlargement: true })
+          .webp({ quality: 80 })
+          .toFile(outputPath);
+      }
+    }
+  }
+}
+
+optimizeImages();

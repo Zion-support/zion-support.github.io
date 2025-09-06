@@ -17,5 +17,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `- Responsibilities: ${(responsibilities || []).join()}\n` +
     `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`,
 
-  const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.'),
+  const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.'),;
   return res.status(200).json({ jobDescription: text })}

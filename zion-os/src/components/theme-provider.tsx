@@ -1,100 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-"use client",
-import { create_context, useContext, useEffect, useState  } from './react';,
-type Theme = "dark" | "light" | "system",
-type ThemeProviderProps = {
-  children: React.ReactNode,
-  default_theme?: Theme,
-  storage_key?: string;
-},
-type ThemeProviderState = {
-  theme: Theme,
-  set_theme: (theme: Theme) => void;
-},
-const initial_state: ThemeProviderState = {
-  theme: "system",
-  set_theme: () => null},
-const ThemeProviderContext = create_context < ThemeProviderState>(initial_state),
-export /**
- * ThemeProvider - Function description
- */
-function ThemeProvider() {
-  const [theme, set_theme] = useState < Theme>(default_theme),
-  const [mounted, set_mounted] = useState (false),
-  useEffect (() => {
-    set_mounted (true),
-    // Only access local_storage on the client side;
-    // Check condition
-if ( {) {
-  $2
-<<<<<<< HEAD
-=======
-"use client";
-import { createContext, useContext, useEffect, useState } from "react";
-type Theme = "dark" | "light" | "system";
-type ThemeProviderProps = {children: React.ReactNode;
-  defaultTheme?: Theme;
-  storageKey?: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-}
-      const stored_theme = local_storage.get_item (storage_key) as Theme,
-      // Check condition
-if ( {) {
-  $2
-}
-        set_theme (stored_theme);
-      }
-    }
-  }, [storage_key]),
-  useEffect (() => {
-    // Check condition
-if (return, ) {
-  $2
-}
-    const root = window.document.document_element,
-    root.class_list.remove ("light", "dark"),
-    // Check condition
-if ( {) {
-  $2
-}
-      const system_theme = window.match_media ("(prefers - color - scheme: dark)");
-        .matches;
-        ? "dark";
-        : "light",
-      root.class_list.add (system_theme),
-      return;
-    }
-    root.class_list.add (theme);
-  }, [theme, mounted]),
-  const value = {
-    theme,
-    set_theme: (theme: Theme) => {
-      // Check condition
-if ( {) {
-  $2
-}
-        local_storage.set_item (storage_key, theme);
-      }
-      set_theme (theme);
-    }},
-  // Prevent hydration mismatch by not rendering until mounted;
-  // Check condition
-if ( {) {
-  $2
-}
-    return <>{children}</>;
-  }
-  return (
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <ThemeProviderContext.Provider {...props} value={value}>;
       {children}
     </ThemeProviderContext.Provider>);
@@ -105,23 +8,6 @@ export const use_theme = () =>: any {
     throw new Error ("use_theme must be used within a ThemeProvider")) {
   $2
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  return context;
-}
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-  return context;
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
@@ -197,10 +83,3 @@ export const useTheme = () => {;
     throw new Error("useTheme must be used within a ThemeProvider");
   return context;
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

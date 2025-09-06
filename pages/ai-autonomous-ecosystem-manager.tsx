@@ -137,6 +137,7 @@ export default function AIAutonomousEcosystemManager() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
 		/>
 	)

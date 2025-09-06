@@ -71,54 +71,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const { translateContent, isTranslating } = useTranslationService();
   const { supportedLanguages, currentLanguage } = useLanguage();
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
-  const { t } = useTranslation();
-  const { translateContent, isTranslating } = useTranslationService();
-  const { supportedLanguages, currentLanguage } = useLanguage();
-  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage);
-  // Form fields with translations
-  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
-    en: ""
-    es: ""
-    pt: ""
-    ar: ""})
-  const [description, setDescription] = useState<Record<SupportedLanguage, string>>({
-    en: ""
-    es: ""
-    pt: ""
-    ar: ""})
-  const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({
-    en: ""
-    es: ""
-    pt: ""
-    ar: ""})
-  const [budget, setBudget] = useState("");
-  const [deadline, setDeadline] = useState("");
-  // Handle text changes
-  const handleTitleChange = (value: string) => {
-    setTitle({ ...title, [activeTab]: value })
-  }
-  const handleDescriptionChange = (value: string) => {
-    setDescription({ ...description, [activeTab]: value })
-  }
-  const handleRequirementsChange = (value: string) => {
-    setRequirements({ ...requirements, [activeTab]: value })
-  }
-  // Handle form submission
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    // Complete any missing translations with auto-translation
-    await ensureAllTranslations();
-    onSubmit({
-      title;
-      description;
-      requirements;
-      budget
-      deadline})
-  }
-  const { t } = useTranslation(),
-  const { translateContent, isTranslating } = useTranslationService(),
-  const { supportedLanguages, currentLanguage } = useLanguage(),
-  
+
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage),
   
   // Form fields with translations
@@ -170,7 +123,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       budget,
       deadline})
   },
-  
+
   // Auto translate content when language tab changes
   const handleTabChange = async (tab: SupportedLanguage) => {
     if (tab !== activeTab) {

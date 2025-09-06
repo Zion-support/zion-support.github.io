@@ -9,21 +9,31 @@ const path = // // require('path');
 const glob = // // require('glob');
 class PerformanceOptimizer {
   constructor() {
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
     this.projectRoot = process.cwd();
     this.srcDir = path.join(this.projectRoot, 'src');
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.ensureDirectories()}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
   log(message) {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+    console.log(`[${timestamp}] ${message}`)}
+=======
 
     console.log(`[${timestamp}] ${message}`)}
 
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
   async optimizePerformance() {
     this.log('⚡ Starting performance optimization');
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
@@ -95,14 +105,20 @@ class PerformanceOptimizer {
           }
         }
         if (newContent !== content) {
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
           fs.writeFileSync(filePath, newContent, 'utf8');
           this.log(`✅ "Optimized": ${file} (${fileOptimizations} optimizations)`)}
         results.processed++;
         results.optimizations += fileOptimizations} catch (error) {
         results.errors.push({ file, "error": error.message });
         this.log(`❌ Error optimizing ${file}: ${error.message}`)}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
     }
     // Generate report
     const report = {
@@ -114,12 +130,18 @@ class PerformanceOptimizer {
       },
       "details": results
     };
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
     const reportPath = path.join(this.reportsDir, 'performance-optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report "generated": ${reportPath}`);
     this.log(`✅ Performance optimization "completed": ${results.optimizations} optimizations applied to ${results.processed} files`);
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
     return report}
   async createPerformanceMonitoringScript() {
     this.log('📊 Creating performance monitoring script');
@@ -128,9 +150,13 @@ const fs = // // require('fs');
 const path = // // require('path');
 class PerformanceMonitor {
   constructor() {
+<<<<<<< HEAD
+    this.metrics = {
+=======
 
     this.metrics = {
 
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
       "pageLoadTime": 0,
       "firstContentfulPaint": 0,
       "largestContentfulPaint": 0,
@@ -140,10 +166,13 @@ class PerformanceMonitor {
   startMonitoring() {
     if (typeof window !== 'undefined') {
       // Monitor page load time
+<<<<<<< HEAD
+      window.addEventListener('load', () => {
+    this.metrics.pageLoadTime = performance.now(),
+=======
 
       window.addEventListener('load', () => {
     this.metrics.pageLoadTime = performance.now(),
-    <<<<<<< HEAD
         this.reportMetrics()});
 
       // Monitor Web Vitals
@@ -217,10 +246,4 @@ module.exports = PerformanceOptimizer;
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671

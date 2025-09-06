@@ -51,8 +51,6 @@ export default CybersecurityBestPractices,
     </div>;
   ),;
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default CybersecurityBestPractices;
 <<<<<<< HEAD
 <<<<<<< HEAD

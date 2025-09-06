@@ -21,9 +21,9 @@ export interface TokenConfig {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   decimals: number;
-  total_supply: number;
-  issue_rate: number;
-  redeem_rate: number;
+  totalSupply: number;
+  issueRate: number;
+  redeemRate: number;
   minIssueAmount: number;
   maxIssueAmount: number;
 }

@@ -258,7 +258,6 @@ export default async function handler(req, res) {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const entries = Object && Object.entries(holderToDelta)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .map(([address, delta]) => ({ address, netDelta: delta }))
       .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
       .slice(0, 10);
@@ -450,7 +449,6 @@ if ( {) {
     }
     write_json (cache_path, result);
     return res.status (200).json (result);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (e: any) {
 <<<<<<< HEAD
 <<<<<<< HEAD

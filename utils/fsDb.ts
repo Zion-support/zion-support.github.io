@@ -87,9 +87,9 @@ export function writeJson<T>(filePath: string, data: T): void {
 
 export async function readJsonAsync<T>(filePath: string, defaultValue: T): Promise<T> {
   try {
-    const fullPath = path && path.join(DATA_DIR, filePath);
-    const data = await fs && fs.readFile(fullPath, 'utf8');
-    return JSON && JSON.parse(data);
+    const fullPath = path.join(DATA_DIR, filePath);
+    const data = await fs.readFile(fullPath, 'utf8');
+    return JSON.parse(data);
   } catch (error) {
     return defaultValue;
   }

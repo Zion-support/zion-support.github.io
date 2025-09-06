@@ -290,15 +290,12 @@ module.exports = {
     time: true
   }]
 };
-};
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
+
 }
-origin/main
-origin/automation-improvements-final
-}
+
   }];
 };
+
 ;
 ;
 module.exports = {;

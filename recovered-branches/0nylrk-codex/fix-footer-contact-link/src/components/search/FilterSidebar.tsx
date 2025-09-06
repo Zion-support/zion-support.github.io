@@ -58,6 +58,7 @@ export function FilterSidebar({
   filterOptions,
   onFilterChange,
   onRatingChange,
+
   onClearFilters
 }: FilterSidebarProps) {
   return (
@@ -66,14 +67,7 @@ export function FilterSidebar({
         <h3 className="text-lg font-medium text-white flex items-center">
           <Filter className="mr-2 h-5 w-5" /> Filters
         </h3>
-        <Button
-          variant="outline"
-          size="sm"
-          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-        <Button 
-          variant="outline" 
-          size="sm"
-          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;

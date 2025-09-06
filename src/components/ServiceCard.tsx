@@ -1,47 +1,41 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Card } from './ui/card';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface ServiceCardProps {
   title: string;
   description: string;
-<<<<<<< HEAD
   icon: string;
   features: string[];
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  className?: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({
-  title,
-  description,
-  icon,
-<<<<<<< HEAD
-  features,
-  className = ''
-}) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, features }) => {
   return (
-    <Card className={`p-6 hover:shadow-lg transition-shadow duration-300 ${className}`} role="article" aria-labelledby={`service-${title.toLowerCase().replace(/\s+/g, '-')}`}>
-      <div className="text-center">
-        <div className="text-4xl mb-4" aria-hidden="true">{icon}</div>
-        <h3 id={`service-${title.toLowerCase().replace(/\s+/g, '-')}`} className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
-        <ul className="space-y-2" role="list">
+    <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+      <div className="text-center mb-6">
+        <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span className="text-3xl">{icon}</span>
+        </div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
+        <p className="text-gray-600 leading-relaxed">{description}</p>
+      </div>
+      
+      <div className="space-y-3">
+        <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+        <ul className="space-y-2">
           {features.map((feature, index) => (
-            <li key={index} className="text-sm text-gray-500 flex items-center">
-              <span className="w-2 h-2 bg-blue-500 rounded-full mr-2" aria-hidden="true"></span>
-              {feature}
+            <li key={index} className="flex items-center text-gray-600">
+              <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
+              <span>{feature}</span>
             </li>
           ))}
         </ul>
       </div>
-    </Card>
-=======
+      
+      <div className="mt-6 pt-6 border-t border-gray-100">
+        <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+          Learn More
+        </button>
+      </div>
     </div>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 };
 

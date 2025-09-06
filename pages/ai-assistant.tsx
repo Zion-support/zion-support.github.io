@@ -28,7 +28,6 @@ import Head from 'next/head';
               AI Assistant;
             </h1>;
             <p className='text-gray-300 text-lg'>;
-=======
         <title > AI Assistant | Zion Tech Group</title>;
         <meta;
           name='description';
@@ -62,7 +61,6 @@ import Head from 'next/head';
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>;
-=======
           <section className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
             {[;
               'Research and summarize documents and web sources',

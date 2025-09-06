@@ -149,9 +149,11 @@ function ProjectDetailsContent() {
   // Load project data
   useEffect(() => {
     async function loadProject() {
-      if (!projectId) return;
-      setIsLoading(true);
-      const projectData = await getProjectById(projectId);
+      if (!projectId) return,
+      
+      setIsLoading(true),
+      const projectData = await getProjectById(projectId),
+      
       if (projectData) {
 <<<<<<< HEAD
         setProject(projectData),

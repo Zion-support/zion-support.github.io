@@ -58,27 +58,24 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     fixedContent.includes("import Layout from '../components/Layout';");
-=======
-    fixedContent && fixedContent.includes("import Layout from '../components/Layout'") ||
-    fixedContent ;");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/fix-layout-conflicts.js
   const hasLayoutIcon =
-    fixedContent && fixedContent.includes('Layout,') || fixedContent && fixedContent.includes('Layout }');
+    fixedContent.includes('Layout,') || fixedContent.includes('Layout }');
   if (hasLayoutComponent && hasLayoutIcon) {
-    // Remove Layout from lucide-react import fixedContent = fixedContent ;
-    fixedContent = fixedContent && fixedContent.replace(/,\s*Layout/g, '');
-    fixedContent = fixedContent && fixedContent.replace(/{\s*Layout\s*}/g, '{}');
+    // Remove Layout from lucide-react import
+    fixedContent = fixedContent.replace(/Layout,\s*/g, '');
+    fixedContent = fixedContent.replace(/,\s*Layout/g, '');
+    fixedContent = fixedContent.replace(/{\s*Layout\s*}/g, '{}');
     changes++;
-    console && console.log(`✅ Fixed Layout conflict in ${filePath}`)}
+    console.log(`✅ Fixed Layout conflict in ${filePath}`)}
   return { "content": fixedContent, changes }}
 // Process individual file
 function processFile(filePath) {
   try {
-    const content = fs && fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     const result = fixLayoutConflicts(content, filePath);
-    if (result && result.changes > 0) {
-      fs && fs.writeFileSync(filePath, result && result.content, 'utf8');
-      totalFixes += result && result.changes}
+    if (result.changes > 0) {
+      fs.writeFileSync(filePath, result.content, 'utf8');
+      totalFixes += result.changes}
     filesProcessed++} catch (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,7 +96,7 @@ function processFile(filePath) {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 // Main function
 async function main() {
-  console && console.log('🔧 Starting Layout conflicts fix...\n');
+  console.log('🔧 Starting Layout conflicts fix...\n');
   const patterns = ['pages/**/*.{tsx,jsx}',
     'src/**/*.{tsx,jsx}',
     'components/**/*.{tsx,jsx}',
@@ -111,9 +108,9 @@ async function main() {
       'scripts'
     'automation',
       'automation_backup'
-    'src && src.disabled',
-    'pages && pages.disabled',
-    'components && components.disabled',
+    'src.disabled',
+    'pages.disabled',
+    'components.disabled',
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,10 +134,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
-  console && console.log("\n📊 Layout Conflicts Fix "Summary": ");
-  console && console.log(`   Files processed: ${filesProcessed}`);
-  console && console.log(`   Total "fixes": ${totalFixes}`);
-  console && console.log("\n✨ Layout conflicts fix completed!")}
+  console.log("\n📊 Layout Conflicts Fix "Summary": ");
+  console.log(`   Files processed: ${filesProcessed}`);
+  console.log(`   Total "fixes": ${totalFixes}`);
+  console.log("\n✨ Layout conflicts fix completed!")}
 // Run the script
 <<<<<<< HEAD
 <<<<<<< HEAD

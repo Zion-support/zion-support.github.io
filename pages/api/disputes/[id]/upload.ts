@@ -260,7 +260,6 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
 }
         fs.write_file (file_path, data, (err2: any) =>;
           err2 ? reject (err2) : resolve (),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         );
       }
     );

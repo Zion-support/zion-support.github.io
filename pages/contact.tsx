@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -18,157 +14,20 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-<<<<<<< HEAD
-=======
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     
     return this.props.children;
   }
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-import React from "react";
-import Layout from "../components/Layout";
-=======
-import React from 'react';
-
-=======
-
-
-
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import React from "react";
 import Layout from "../components/Layout";
 import React from 'react';
-<<<<<<< HEAD
-
-
-
-
-import React from 'react';
-
-import Layout from '../components/Layout';
-
-import Layout from '../components/Layout';
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import Head from 'next/head';
-import { useState } from 'react';
-import { ContactInfo } from '../types';
-
-
-
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const contact: ContactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  };
-  const services = [
-    'AI Automation Platform',
-    'Cloud Infrastructure',
-    'Micro SaaS Development',
-    'Cybersecurity Solutions',
-    'Data Analytics & BI',
-    'Blockchain Solutions',
-    'Other'
-  ];
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  };
-  return (
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get in touch with our team for your technology needs.
-=======
-=======
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get in touch with our team for your technology needs.
-
-import React from 'react';
-    return this.props.children;
-  }
-}
-import React from "react";
-import Layout from "../components/Layout";
-import React from 'react';
-import React from "react";
-import Layout from "../components/Layout";
-import React from 'react';
-ursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
 origin/automation-improvements-final
@@ -235,50 +94,14 @@ export default function Contact() {
 }
   };
   return (
-<<<<<<< HEAD
-    <Layout
-      title="Contact Us - Zion Tech Group"
-      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more."
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Contact Us
-            </h1>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get in touch with our team for your technology needs.
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from "react";
-import Layout from "../components/Layout";
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
-=======
-import React from "react";
-import Layout from "../components/Layout";
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-origin/automation-improvements-final
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with our team for your technology needs.
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-origin/main
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import Layout from "../components/Layout";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function Contact() {
   return (
     <>
@@ -301,10 +124,6 @@ export default function Contact() {
             {/* A placeholder for a contact form could go here */}
             <p className="text-gray-500 text-sm">
               (Contact form functionality would be implemented here)
-<<<<<<< HEAD
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </p>
           </div>
           <Link href="/services" className="btn-secondary">
@@ -314,17 +133,6 @@ export default function Contact() {
       </div>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-}
-}
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 
 const ContactPage: React.FC = () => {
@@ -408,102 +216,6 @@ const ContactPage: React.FC = () => {
                   <ContactForm />
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-}
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-<<<<<<< HEAD
-=======
-            </div>
-          </div>
-        </div>
-</div>
-    </>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.">;
-      <div className="min-h-screen bg-gray-50 py-20">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-12">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
-              Contact Us;
-            </h1>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Get in touch with our team for your technology needs.;
-            </p>;
-          </div>;
-          <div className="text-center">;
-            <p className="text-gray-600">Contact page is under construction.</p>;
-          </div>;
-        </div>;
-      </div>;
-    </Layout>;
-<<<<<<< HEAD
-
-  );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-    </>
-
-  );
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-  );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-import React from './react';
-import Layout from "../components / Layout";
-;
-export default /**
- * Contact - Function description
- */
-function Contact() {
-  return (
-    <Layout;
-      title="Contact Us - Zion Tech Group";
-      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.";
-    >;
-      <div className="min - h-screen bg - gray - 50 py - 20">;
-        <div className="container mx - auto px - 4">;
-          <div className="text - center mb - 12">;
-            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
-              Contact Us;
-            </h1>;
-            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-              Get in touch with our team for your technology needs.;
-            </p>;
-          </div>;
-          <div className="text - center">;
-            <p className="text - gray - 600">Contact page is under construction.</p>;
-          </div>;
-        </div>;
-      </div>;
-    </Layout>);
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
@@ -824,7 +536,3 @@ function Contact() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -37,5 +37,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8'),
 
     res.status(200).json({ ok: true, version: ts })
-  } catch (e) {
+  } catch (e) {;
     res.status(500).json({ error: 'Failed to save content' })  }}

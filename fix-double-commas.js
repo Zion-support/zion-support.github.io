@@ -1,38 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node
-import fs from "fs";
-import path from "path";
-function fixDoubleCommas(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, "utf8");
-    let modified = false;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-    const fixedContent = content && content.replace(doubleCommaRegex, ",");
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Fix double commas in import statements
 
     // Fix double commas in import statements;
     const doubleCommaRegex = /,\s*,/g;
     const fixedContent = content.replace(doubleCommaRegex, ",");
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
     const fixedContent = content && content.replace(doubleCommaRegex, ",");
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (fixedContent !== content) {
       fs && fs.writeFileSync(filePath, fixedContent, "utf8");
-=======
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -54,43 +30,10 @@ if ( {) {
   $2
 }
       fs.writeFileSync (file_path, fixed_content, "utf8");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       modified = true;
     }
     return modified;
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    const items = fs && fs.readdirSync(currentDir);
-
-    for (const item of items) {
-      const fullPath = path && path.join(currentDir, item);
-      const stat = fs && fs.statSync(fullPath);
-
-      if (stat && stat.isDirectory()) {
-        // Skip certain directories
-        if (
-          [
-            "node_modules",
-            ".git",
-            ".next",
-            "dist",
-            "build",
-            "out",
-            "ai-optimization-backups",
-            "apps && apps.backup",
-            "backup-merge-conflicts",
-            "apps",
-            "temp_exclude",
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ].includes(item)
         ) {
           continue;
@@ -100,7 +43,6 @@ if ( {) {
         const ext = path && path.extname(item);
         if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
           files && files.push(fullPath);
-=======
     console.error (`Error processing ${file_path}:`, error.message);
     return false;
   }
@@ -141,41 +83,16 @@ if (
   $2
 }
           files.push (full_path);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       }
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-console && console.log(`Found ${files && files.length} files to check for double commas...`);
-
-
-=======
-console && console.log(`Found ${files && files.length} files to check for double commas...`);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 for (const file of files) {
   if (fixDoubleCommas(file)) {
     fixedCount++;
     console && console.log(`Fixed double commas in: ${file}`);
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-console && console.log(`\nFixed double commas in ${fixedCount} files.`);
-
-=======
-=======
-console && console.log(`\nFixed double commas in ${fixedCount} files.`);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   traverse (dir);
   return files;
 }
@@ -194,8 +111,3 @@ for (const file of files) {
   }
 }
 console.log (`\n_fixed double commas in ${fixed_count} files.`);
-<<<<<<< HEAD
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

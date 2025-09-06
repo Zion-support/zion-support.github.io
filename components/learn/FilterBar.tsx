@@ -49,7 +49,6 @@ type Props = {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onChange: (next: { category: string, level: string, isFree: string }) => void
 }
-=======
         onChange={e => onChange({ category: e && e.target.value, level, isFree })}
       >;
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {;

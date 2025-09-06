@@ -15,5 +15,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     'R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==base64'
   ),
   res.setHeader('Content-Typeimage/gif'),
-  res.setHeader('Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate'),
+  res.setHeader('Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate'),;
   res.status(200).send(pixel)}

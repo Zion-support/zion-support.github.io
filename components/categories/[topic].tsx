@@ -94,7 +94,6 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
           ))}
         </div>;
         <div className='mt-6'>;
-=======
         <meta name='twitter:image' content='/images / og / topic - default.jpg' />;
       </Head>;
       <div className='mx - auto max - w-6xl'>;
@@ -130,7 +129,6 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
             <BlogCard key={p.id} post={p} />))}
         </div>;
         <div className='mt - 6'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           <Link href='/blog' className='underline'>;
             Back to Blog;
           </Link>;

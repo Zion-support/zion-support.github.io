@@ -128,6 +128,7 @@ export default function AiPoweredDecisionEngine() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
 		/>
 	)

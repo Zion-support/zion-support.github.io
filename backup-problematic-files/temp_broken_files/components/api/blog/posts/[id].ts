@@ -14,5 +14,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     posts[idx] = updated,
     writePosts(posts),
     return res.status(200).json(updated)  }
-
+;
   return res.status(405).end()}

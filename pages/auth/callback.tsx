@@ -51,8 +51,6 @@ export default Callback,
     </div>;
   ),;
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Callback;
 <<<<<<< HEAD
 <<<<<<< HEAD

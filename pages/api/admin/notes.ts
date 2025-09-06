@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  id: string;
-  targetType: string;
-  targetId: string;
-  text: string;
-  authorId: string;
-  createdAt: number;
-};
-
-const notesStore: Note[] = [];
-
-
-=======
-  id: string;
-const notesStore: Note[] = [];
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { randomUUID } from 'crypto';
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { randomUUID } from 'crypto',;
 type Note = {
@@ -31,9 +9,6 @@ type Note = {
   createdAt: number
 }
 const notesStore: Note[] = []
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   id: string;
   targetType: string;
@@ -46,70 +21,10 @@ const notesStore: Note[] = []
 const notesStore: Note[] = [];
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true'
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' })
   if (req.method === 'GET') {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-  }
-  if (req.method === 'POST') {
-
-=======
-    const { targetType, targetId } = req.query;
-    if (!targetType || Array.isArray(targetType)) {
-      return res.status(400).json({ error: 'Invalid targetType' });
-    }
-    if (!targetId || Array.isArray(targetId)) {
-      return res.status(400).json({ error: 'Invalid targetId' });
-    }
-    const notes = notesStore
-      .filter((n) => n.targetType === targetType && n.targetId === targetId)
-      .sort((a, b) => b.createdAt - a.createdAt);
-    return res.status(200).json({ notes });
-  }
-if (req.method === 'POST') {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    const authorId = String(req.headers['x-admin-user'] || 'admin');
-    const { targetType, targetId, text } = req.body || {};
-    if (!targetType || !targetId || !text?.trim()) {
-      return res.status(400).json({ error: 'Missing fields' });
-    }
-    const note: Note = {
-      id: randomUUID(),
-      targetType,
-      targetId,
-      text: String(text),
-      authorId,
-      createdAt: Date.now(),
-    };
-    notesStore.push(note);
-    return res.status(200).json({ ok: true, note });
-  }
-
-  return res.status(405).json({ error: 'Method not allowed' });
-}
-export function getAllNotes(): Note[] {
-  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
-
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
-export function getAllNotes(): Note[] {
-  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt)
-}
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -174,10 +89,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     notesStore.push(note);
     return res.status(200).json({ ok: true, note });
   }
-<<<<<<< HEAD
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

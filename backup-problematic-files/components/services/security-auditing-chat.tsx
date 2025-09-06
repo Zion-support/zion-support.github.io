@@ -18,4 +18,4 @@ const SecurityAuditingChat: NextPage = () => {
   )
 },
 
-export default SecurityAuditingChat,
+export default SecurityAuditingChat,;

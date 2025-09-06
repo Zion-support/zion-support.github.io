@@ -60,9 +60,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "GET") {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const dispute = await getDisputeById(id);
-    if (!dispute) return res && res.status(404).json({ error: "Dispute not found" });
+    if (!dispute) return res.status(404).json({ error: "Dispute not found" });
     try {
 <<<<<<< HEAD
 
@@ -161,16 +160,22 @@ import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../utils/auth
 export default async function handler(req, res) {
   try {
   const { id } = req.query;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
-    } catch (error) {
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
+  if (typeof id !== "string")
+
+    return res && res.status(400).json({ error: "Invalid id" });
+
+
+  const user = parseUserFromRequest(req);
+
+  if (req && req.method === "GET") {
+    const dispute = await getDisputeById(id);
+    if (!dispute) return res && res.status(404).json({ error: "Dispute not found" });
+    try {
+
+
+    }
+    return res && res.status(200).json({ dispute });
   }
 }
   } catch (error) {

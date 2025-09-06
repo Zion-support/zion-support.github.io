@@ -1,26 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-"use client",;
-export default function BlockchainWeb3Page() {;
-  return (;
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-8">;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">Blockchain & Web3 Solutions</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Enterprise-grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 "use client",
 export default /**
  * BlockchainWeb3Page - Function description
@@ -32,23 +14,6 @@ function BlockchainWeb3Page() {
         <h1 className="text - 4xl font - bold">Blockchain & Web3 Solutions</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
           Enterprise - grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-"use client";
-export default function BlockchainWeb3Page() {return (;
-"use client",;
-export default function BlockchainWeb3Page() {;
-  return (;
-    <div className="space-y-8">;
-      <div className="text-center space-y-4">;
-        <h1 className="text-4xl font-bold">Blockchain & Web3 Solutions</h1>;
-        <p className="text-xl opacity-80 max-w-3xl mx-auto">;
-          Enterprise-grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </p>;
       </div>;
       {/* Service Overview */}
@@ -248,67 +213,6 @@ export default function BlockchainWeb3Page() {;
         </div>;
       </div>;
       {/* Pricing Tiers */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-<div className="space - y-6">;
-        <h2 className="text - 2xl font - semibold text - center">Service Packages</h2>;
-        <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
-          <div className="bg - zinc - 900 border border - white / 10 rounded - lg p - 6 text - center">;
-            <h3 className="text - xl font - semibold mb - 2">Starter</h3>;
-            <div className="text - 3xl font - bold mb - 4">$5, 000</div>;
-            <ul className="text - sm space - y-2 mb - 6 opacity - 80">;
-              <li>• Basic smart contract development</li>;
-              <li>• Simple DApp frontend</li>;
-              <li>• Basic testing</li>;
-              <li>• Documentation</li>;
-              <li>• 2 weeks delivery</li>;
-            </ul>;
-            <a href="mailto:kleber@ziontechgroup.com?subject = Blockchain Starter Package" className="block w - full bg - blue - 600 hover:bg - blue - 700 text - white py - 2 px - 4 rounded - lg font - medium transition - colors">;
-              Get Started;
-            </Link>;
-          </div>;
-          <div className="bg - gradient - to - r from - orange - 600 to - purple - 600 rounded - lg p - 6 text - center text - white relative">;
-            <div className="absolute -top - 3 left - 1/2 transform -translate - x-1 / 2 bg - yellow - 400 text - black px - 3 py - 1 rounded - full text - sm font - semibold">;
-              Most Popular;
-            </div>;
-            <h3 className="text - xl font - semibold mb - 2">Professional</h3>;
-            <div className="text - 3xl font - bold mb - 4">$15, 000</div>;
-            <ul className="text - sm space - y-2 mb - 6 opacity - 90">;
-              <li>• Advanced smart contracts</li>;
-              <li>• Full - stack DApp</li>;
-              <li>• Security auditing</li>;
-              <li>• Multi - chain support</li>;
-              <li>• 4 - 6 weeks delivery</li>;
-            </ul>;
-            <a href="mailto:kleber@ziontechgroup.com?subject = Blockchain Professional Package" className="block w - full bg - white text - orange - 600 py - 2 px - 4 rounded - lg font - medium hover:bg - gray - 100 transition - colors">;
-              Get Started;
-            </Link>;
-          </div>;
-          <div className="bg - zinc - 900 border border - white / 10 rounded - lg p - 6 text - center">;
-            <h3 className="text - xl font - semibold mb - 2">Enterprise</h3>;
-            <div className="text - 3xl font - bold mb - 4">Custom</div>;
-            <ul className="text - sm space - y-2 mb - 6 opacity - 80">;
-              <li>• Complex DeFi protocols</li>;
-              <li>• Enterprise blockchain</li>;
-              <li>• Full security audit</li>;
-              <li>• 24 / 7 support</li>;
-              <li>• Custom timeline</li>;
-            </ul>;
-            <a href="mailto:kleber@ziontechgroup.com?subject = Blockchain Enterprise Package" className="block w - full bg - blue - 600 hover:bg - blue - 700 text - white py - 2 px - 4 rounded - lg font - medium transition - colors">;
-              Contact Sales;
-            </Link>;
-          </div>;
-        </div>;
-      </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Contact Section */}
       <div className="bg - gradient - to - r from - purple - 600 to - orange - 600 rounded - lg p - 8 text - white text - center">;
         <h2 className="text - 2xl font - bold mb - 4">Ready to Build the Future?</h2>;

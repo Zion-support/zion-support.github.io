@@ -1,112 +1,25 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-=======
-<<<<<<< HEAD
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-=======
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   "extends": [
     "next/core-web-vitals",
     "@typescript-eslint/recommended"
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
->>>>>>> origin/main
-=======
 origin/automation-improvements-final
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "node": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     "es6": true,
     "jest": true
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
     "es6": true,
     "jest": true
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     "es6": true,
     "jest": true
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> origin/main
-=======
-    "es6": true,
-    "jest": true
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
-    "es6": true,
-    "jest": true
->>>>>>> origin/main
-=======
-    "es6": true,
-    "jest": true
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "es2021": true
   },
   "globals": {
@@ -116,153 +29,40 @@ origin/automation-improvements-final
     "KeyboardEvent": "readonly",
     "HTMLImageElement": "readonly",
     "alert": "readonly"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
     "es6": true,
     "jest": true
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
->>>>>>> origin/main
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/main
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-=======
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
     "no-console": "warn"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
     "no-console": "warn"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
     "no-console": "warn"
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> origin/main
-=======
-    "react/no-unescaped-entities": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-console": "warn"
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
-    "react/no-unescaped-entities": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-console": "warn"
->>>>>>> origin/main
-=======
-    "react/no-unescaped-entities": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-console": "warn"
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
     "no-undef": "error",
     "react/no-unescaped-entities": "off"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
     "no-console": "warn"
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
->>>>>>> origin/main
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/main
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-=======
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   "ignorePatterns": [
     "node_modules/",
@@ -335,32 +135,7 @@ origin/automation-improvements-final
     "security-reports/",
     "pages.__backup/",
     "pages-disabled/",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
     "pages.disabled_auto/"
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    "pages.disabled_auto/"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-=======
->>>>>>> origin/main
     "pages.disabled_auto/",
     "zion_academy/",
     "pm2-automation/",
@@ -485,23 +260,9 @@ origin/automation-improvements-final
     "automated-merge-conflict-resolver.cjs",
     "automation/**",
     "backup-problematic-files/**"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     "pages.disabled_auto/"
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
->>>>>>> origin/main
-=======
     "pages.disabled_auto/"
-=======
->>>>>>> origin/main
     "pages.disabled_auto/",
     "zion_academy/",
     "pm2-automation/",
@@ -629,23 +390,8 @@ origin/automation-improvements-final
     "pages.disabled_auto/"
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
->>>>>>> origin/main
-=======
     "pages.disabled_auto/"
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-=======
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ]
 }

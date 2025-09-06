@@ -3,6 +3,9 @@ const PerformanceEnhancer = dynamic(() => import("./PerformanceEnhancer"),{"; lo
 const PerformanceEnhancer = dynamic(() => import("./PerformanceEnhancer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceEnhancer' ,'
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
 </p>'
 
 =======
@@ -13,3 +16,4 @@ const PerformanceEnhancer = dynamic(() => import("./PerformanceEnhancer"),{'; "l
 </p>'
 ursor/add-new-services-and-deploy-updates-0462
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 207d7230e0649fa517bb469b27623282180528c9

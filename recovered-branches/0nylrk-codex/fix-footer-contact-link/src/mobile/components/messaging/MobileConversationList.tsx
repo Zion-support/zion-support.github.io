@@ -153,7 +153,7 @@ export function MobileConversationList({
 }: MobileConversationListProps) {;
   return (
           <div
-            key={conversation.id}
+            key={conversation && conversation.id}
             className={cn(
 <<<<<<< HEAD
 

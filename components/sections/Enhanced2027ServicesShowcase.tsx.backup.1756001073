@@ -361,19 +361,10 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
             <p className="text-gray-400 mb-8">
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Try adjusting your search terms or category filter to find what you&apos;re looking for.
 =======
               Try adjusting your search terms or category filter to find what you're looking for.
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </p>
             <button
               onClick={() => {
@@ -401,19 +392,10 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these revolutionary services 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               and achieve unprecedented growth. Let&apos;s build the future together.
 =======
               and achieve unprecedented growth. Let's build the future together.
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 

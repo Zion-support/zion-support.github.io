@@ -78,7 +78,6 @@ function handler() {
       c.provider_id === "hubspot" ||;
       c.provider_id === "zoho" ||;
       c.provider_id === "pipedrive",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   );
   const results: any[] = [];
   for (const conn of connections) {

@@ -236,7 +236,6 @@ return (
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </a>;
           </div>;
         </section>;

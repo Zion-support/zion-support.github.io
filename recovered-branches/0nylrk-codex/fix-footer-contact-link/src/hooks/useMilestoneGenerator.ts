@@ -73,7 +73,6 @@ export interface GeneratedMilestone {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function useMilestoneGenerator() {
 
-export function useMilestoneGenerator() {;
   const [isGenerating, setIsGenerating] = useState(false);
 
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);

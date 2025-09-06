@@ -66,7 +66,6 @@ const DataScienceChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default DataScienceChat;

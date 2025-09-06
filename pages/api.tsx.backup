@@ -9,11 +9,7 @@ import React from 'react';
 =======
 =======
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
@@ -349,8 +345,14 @@ export default function API() {
 =======
 >>>>>>> origin/main
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
                 const IconComponent = feature.icon;
                 return (;
                   <motion.div);
@@ -374,6 +376,9 @@ export default function API() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+<<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
 =======
 >>>>>>> main
         {/* Features Section */}
@@ -559,11 +564,7 @@ export default function APIPage() {
 =======
 =======
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
 
 =======
@@ -628,14 +629,13 @@ import {
   XCircle
 } from 'lucide-react';
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+<<<<<<< HEAD
+=======
 =======
   XCircle,;
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -999,11 +999,7 @@ export default function APIPage() {;
 =======
       keywords="API documentation, REST API, AI API, cloud API, developer resources">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Hero Section */}
 <<<<<<< HEAD
 
@@ -1200,11 +1196,7 @@ export default function APIPage() {;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1477,11 +1469,7 @@ export default function APIPage() {;
             <div className="max-w-4xl mx-auto">;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
                 <motion&& motion.div
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="bg-white border border-gray-200 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1593,10 +1581,11 @@ export default function APIPage() {;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de:pages/api.tsx.backup
 =======
 <<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de:pages/api.tsx.backup
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
@@ -1608,6 +1597,9 @@ export default function APIPage() {;
               viewport={{ once: true }}
             >
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
 <<<<<<< HEAD:pages/api.tsx
               Get API Access
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -1616,13 +1608,12 @@ export default function APIPage() {;
         </section>
       </div>
     </Layout>
-=======
-=======
 <<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Get Started?
               </h2>
@@ -1646,11 +1637,7 @@ export default function APIPage() {;
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 >>>>>>> main
 =======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </a>
               </div>
             </motion.div>
@@ -1749,11 +1736,7 @@ export default function APIPage() {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

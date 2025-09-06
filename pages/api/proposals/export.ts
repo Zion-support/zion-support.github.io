@@ -1,11 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PDFDocument, StandardFonts } from "pdf-lib";
 import crypto from "crypto";
@@ -23,7 +16,6 @@ function buildIpfsClient() {
     process && process.env.IPFS_API_URL || "https: //ipfs && ipfs.infura.io:5001/api/v0";
 
   if (!projectId || !projectSecret) return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const auth =
     "Basic " + Buffer && Buffer.from(projectId + ":" + projectSecret).toString("base64");
   return createIpfsClient({
@@ -34,21 +26,6 @@ function buildIpfsClient() {
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  const apiUrl = process.env.IPFS_API_URL || 'https://ipfs.infura.io:5001/api/v0';
-  if (!projectId || !projectSecret) return null;
-  const auth =
-    "Basic " + Buffer && Buffer.from(projectId + ":" + projectSecret).toString("base64");
-  return createIpfsClient({
-    url: apiUrl
-    headers: { authorization: auth } as any
-  });
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 async function generatePdfFromMarkdown(markdown: string, title: string) {
   } catch (error) {
     console.error("Error:", error);
@@ -64,85 +41,11 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {;
   const margin = 40;
   const maxWidth = page && page.getWidth() - margin * 2;
   const lines = markdown
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { PDFDocument, StandardFonts  } from './pdf - lib';
-import crypto from './crypto';
-import {
-  update_artifacts,
-  get_proposal,
-  save_pdf,
-} from '../../../utils / data / proposals';
-import { create as createIpfsClient  } from './ipfs - http - client';
-import { ethers  } from './ethers';
-import fs from './fs';
-import path from './path';
-/**
- * buildIpfsClient - Function description
- */
-function buildIpfsClient() {
-  const project_id = process.env.IPFS_PROJECT_ID;
-  const project_secret = process.env.IPFS_PROJECT_SECRET;
-  const api_url =;
-    process.env.IPFS_API_URL || "https: //ipfs.infura.io:5001 / api / v0";
-  // Check condition
-if (return null) {
-  $2
-}
-  const auth =;
-    "Basic " + Buffer.from (project_id + ":" + project_secret).to_string ("base64");
-  return createIpfsClient ({
-    url: api_url,
-    headers: { authorization: auth } as any,
-  });
-}
-async /**
- * generatePdfFromMarkdown - Function description
- */
-function generatePdfFromMarkdown() {
-  const pdf_doc = await PDFDocument.create ();
-  const page = pdf_doc.add_page ([595.28, 841.89]); // A4;
-  const font = await pdf_doc.embed_font (StandardFonts.Helvetica);
-  const font_size = 11;
-  const margin = 40;
-  const max_width = page.get_width () - margin * 2;
-  const lines = markdown;
-    .replace (/\r\n / g, "\n");
-    .split ("\n");
-    .flat_map ((line) => {
-      const words = line.split (" ");
-      const wrapped: string[] = [];
-      let current = "";
-      for (const word of words) {
-        const test = current.length ? current + " " + word : word;
-        const width = font.widthOfTextAtSize (test, font_size);
-        // Check condition
-if ( {) {
-  $2
-}
-          if (wrapped.push (current)) {
-  $2
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           current = word;
         } else {
           current = test;
         }
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     .replace(/\r\n/g, '\n')
     .split('\n')
     .flatMap((line) => {
@@ -161,19 +64,10 @@ if ( {) {
       }
       if (current) wrapped.push(current);
       return wrapped.length ? wrapped : [' ']
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
   let y = page && page.getHeight() - margin;
   page && page.drawText(title, { x: margin, y, size: 16, font });
-=======
       if (wrapped.push (current)) {
   $2
 }
@@ -181,12 +75,7 @@ if ( {) {
     });
   let coordinate_y = page.get_height () - margin;
   page.draw_text (title, { coordinate_x: margin, y, size: 16, font });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   y -= 24;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   for (const line of lines) {
@@ -194,26 +83,12 @@ if ( {) {
 
   return pdfDoc && pdfDoc.save();
 
-<<<<<<< HEAD
-=======
-  for (const line of lines) {
-  return pdfDoc && pdfDoc.save();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   for (const line of lines) {
     if (y < margin + 12) {
       y = page.getHeight() - margin;
@@ -235,13 +110,6 @@ export default async function handler(
 }
   try {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  try {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const { id } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 });
     const meta = getProposal(id);
@@ -250,27 +118,12 @@ export default async function handler(
       process && process.cwd(),
       "public",
       meta && meta.artifacts.markdownPath || "",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     );
     const markdown = fs && fs.existsSync(markdownPath)
       ? fs && fs.readFileSync(markdownPath, "utf8")
       : "# Proposal";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return pdfDoc.save()
 }
 
@@ -280,74 +133,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { id } = req.body || {};
     if (!id) return res.status(400).json({ error: 'id is required' });
     const meta = getProposal(id);
-<<<<<<< HEAD
-    if (!meta) return res.status(404).json({ error: 'Proposal not found' });
-
-    const markdownPath = path.join(process.cwd(), 'public', meta.artifacts.markdownPath || '');
-    const markdown = fs.existsSync(markdownPath) ? fs.readFileSync(markdownPath, 'utf8') : '# Proposal';
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const pdfBytes = await generatePdfFromMarkdown(markdown, meta.title);
     const pdfUrl = savePdf(id, pdfBytes);
-
     const hasher = crypto.createHash('sha256');
     hasher.update(markdown);
     const digest = '0x' + hasher.digest('hex');
-
     let signature: string | undefined;
     const privateKey = process.env.WEB3_SIGNER_PRIVATE_KEY;
     if (privateKey) {
       const wallet = new ethers.Wallet(privateKey);
       signature = await wallet.signMessage(ethers.getBytes(digest))
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     let ipfsCid: string | undefined;
     const ipfs = buildIpfsClient();
     if (ipfs) {
       try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    return res && res.status(200).json({ meta: updated });
         const { cid } = await ipfs.add(markdown);
-
-      } catch {}
-    }
-    const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
-    return res.status(200).json({ meta: updated })
-  } catch (error: any) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-  }
-
-        const { cid } = await ipfs.add(markdown);
-
-        ipfsCid = cid.toString();
-
-  }
-
-
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
-    return res && res.status(500).json({ error: error?.message || "Export failed" });
-  }
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        const { cid } = await ipfs.add(markdown);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Check condition
 if ( {) {
   $2
@@ -409,256 +210,6 @@ if ( {) {
         ipfs_cid = cid.to_string ();
       } catch {}
     }
-<<<<<<< HEAD
-    const updated = update_artifacts (id, {
-      pdf_path: pdf_url,
-      signature,
-      ipfs_cid,
-    });
-    return res.status (200).json ({ meta: updated });
-  } catch (error: any) {
-    return res.status (500).json ({ error: error?.message || "Export failed" });
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  }
-}
-
-=======
-
-  const _lines = markdown
-    .replace(/\r\n/g, _'\n')
-    .split('\n')
-    .flatMap((line) => {
-      const words = line.split(' ')
-      const wrapped: string[] = []
-      let current = ''
-      for (const word of words) {
-        const test = current.length ? current + ' ' + word : word
-        const width = font.widthOfTextAtSize(test, fontSize),
-      }
-      if (current) wrapped.push(current),
-      return wrapped.length ? wrapped : [' ']
-    }),
-
-  let y = page.getHeight() - margin
-  page.drawText(title, { x: margin, y, size: 16, font }),
-  y -= 24,
-
-  for (const line of lines) {
-    if (y < margin + 12) {
-      y = page.getHeight() - margin,
-      pdfDoc.addPage()
-    }
-    page.drawText(line, { x: margin, y, size: fontSize, font }),
-    y -= 14
-
-  }
-
-  return pdfDoc.save()
-}
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
-  try {
-    const { id } = req.body || {}
-    if (!id) return res.status(400).json({ error: 'id is required' }),
-    const meta = getProposal(id)
-    if (!meta) return res.status(404).json({ error: 'Proposal not found' }),
-
-    const markdownPath = path.join(process.cwd(), 'public', meta.artifacts.markdownPath || ''),
-    const markdown = fs.existsSync(markdownPath) ? fs.readFileSync(markdownPath, 'utf8') : '# Proposal',
-
-    const pdfBytes = await generatePdfFromMarkdown(markdown, meta.title),
-    const pdfUrl = savePdf(id, pdfBytes),
-
-    const hasher = crypto.createHash('sha256')
-    hasher.update(markdown),
-    const digest = '0x' + hasher.digest('hex')
-
-    let signature: string | undefined
-    const privateKey = process.env.WEB3_SIGNER_PRIVATE_KEY
-    if (privateKey) {
-      const wallet = new ethers.Wallet(privateKey)
-      signature = await wallet.signMessage(ethers.getBytes(digest))
-    }
-
-    let ipfsCid: string | undefined
-    const ipfs = buildIpfsClient()
-    if (ipfs) {
-      try {
-        const { cid } = await ipfs.add(markdown)
-        ipfsCid = cid.toString()
-
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { PDFDocument, StandardFonts } from "pdf-lib";
-import crypto from "crypto";
-import {
-  updateArtifacts
-  getProposal
-  savePdf
-  updateArtifacts,
-  getProposal,
-  savePdf,;
-} from "../../../utils/data/proposals";
-import { create as createIpfsClient } from "ipfs-http-client";
-import { ethers } from "ethers";
-import fs from "fs";
-import path from "path";
-function buildIpfsClient() {
-  const projectId = process.env.IPFS_PROJECT_ID;
-  const projectSecret = process.env.IPFS_PROJECT_SECRET;
-  const apiUrl =
-    process.env.IPFS_API_URL |"https: //ipfs.infura.io:5001/api/v0";
-  if (!projectId |!projectSecret) return null;
-  const auth =
-    "Basic " + Buffer.from(projectId + ":" + projectSecret).toString("base64");
-  return createIpfsClient({
-    url: apiUrl
-    headers: { authorization: auth } as any
-  });
-}
-
-async function generatePdfFromMarkdown(markdown: string, title: string) {
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ export: 'PDF export' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { PDFDocument, StandardFonts } from 'pdf-lib';
-import crypto from 'crypto';
-import { updateArtifacts, getProposal, savePdf } from '../../../utils/data/proposals';
-import { create as createIpfsClient } from 'ipfs-http-client';
-import { ethers } from 'ethers';
-import fs from 'fs';
-import path from 'path';
-function buildIpfsClient() {
-  const projectId = process.env.IPFS_PROJECT_ID;
-  const projectSecret = process.env.IPFS_PROJECT_SECRET;
-  const apiUrl = process.env.IPFS_API_URL || 'https: //ipfs.infura.io:5001/api/v0';
-  if (!projectId || !projectSecret) return null;
-  const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
-  return createIpfsClient({ url: apiUrl, headers: { authorization: auth } as any })
-}
-async function generatePdfFromMarkdown(markdown: string, title: string) {
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-async function generatePdfFromMarkdown(markdown: string, title: string) {;
-  const pdfDoc = await PDFDocument.create();
-  const page = pdfDoc.addPage([595.28, 841.89]); // A4
-  const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
-  const fontSize = 11;
-  const margin = 40;
-  const maxWidth = page.getWidth() - margin * 2;
-  const lines = markdown
-    .replace(/\r\n/g, '\n')
-    .split('\n')
-    .flatMap((line) => {
-      const words = line.split(' ');
-      const wrapped: string[] = [];
-      let current = '';
-      for (const word of words) {
-        const test = current.length ? current + ' ' + word : word;
-        const width = font.widthOfTextAtSize(test, fontSize);
-        if (width > maxWidth) {
-          if (current) wrapped.push(current);
-          current = word
-        } else {
-          current = test
-        }
-      }
-      if (current) wrapped.push(current);
-      return wrapped.length ? wrapped : [' ']
-    });
-  let y = page.getHeight() - margin;
-  page.drawText(title, { x: margin, y, size: 16, font });
-  y -= 24;
-  for (const line of lines) {
-    if (y < margin + 12) {
-      y = page.getHeight() - margin;
-      pdfDoc.addPage()
-    }
-    page.drawText(line, { x: margin, y, size: fontSize, font });
-    y -= 14
-  }
-}
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-  if (req.method !== "POST") return res.status($1).json({ $2 });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  return pdfDoc.save();
-}
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== "POST") return res.status($1).json({ $2 });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export default async function handler(req, res) {
-  try {
-    const { id } = req.body |{}
-    if (!id) return res.status($1).json({ $2 });
-    const meta = getProposal(id);
-    if (!meta) return res.status($1).json({ $2 });
-    const markdownPath = path.join(
-      process.cwd()
-      "public"
-      meta.artifacts.markdownPath |""
-    );
-    const markdown = fs.existsSync(markdownPath)
-      ? fs.readFileSync(markdownPath, "utf8")
-      : "# Proposal";
-
-  return pdfDoc.save()
-}
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status($1).json({$2});
-  try {
-    const { id } = req.body || {};
-    if (!id) return res.status($1).json({$2});
-    const meta = getProposal(id);
-    if (!meta) return res.status($1).json({$2});
-    const markdownPath = path.join(process.cwd(), 'public', meta.artifacts.markdownPath || '');
-    const markdown = fs.existsSync(markdownPath) ? fs.readFileSync(markdownPath, 'utf8') : '# Proposal';
-    const pdfBytes = await generatePdfFromMarkdown(markdown, meta.title);
-    const pdfUrl = savePdf(id, pdfBytes);
-    const hasher = crypto.createHash('sha256');
-    hasher.update(markdown);
-    const digest = '0x' + hasher.digest('hex');
-    let signature: string | undefined;
-    const privateKey = process.env.WEB3_SIGNER_PRIVATE_KEY;
-    if (privateKey) {
-      const wallet = new ethers.Wallet(privateKey);
-      signature = await wallet.signMessage(ethers.getBytes(digest))
-    }
-    let ipfsCid: string | undefined;
-    const ipfs = buildIpfsClient();
-    if (ipfs) {
-      try {
-        const { cid } = await ipfs.add(markdown);
-        ipfsCid = cid.toString()
-        ipfsCid = cid.toString();
-      } catch {}
-    }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const updated = updateArtifacts(id, {
       pdfPath: pdfUrl
       signature
@@ -704,11 +255,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -720,21 +267,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  }
-}
-  }
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  }
-}
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -4035,7 +4035,7 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
   -H "Content - Type: application / json" \\;
   -d '{
 headers = {
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+    'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
     'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
     'budget_max': 12000;

@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-async function fetchHtml(url) {
-
-  if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
-  return resp && resp.text();
-
-
-=======
-if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
-  return resp && resp.text();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return resp.text();
 function extractLinks(html, base) {
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
@@ -24,88 +8,16 @@ function extractLinks(html, base) {
     .map(h =>
       h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-const { upsert_file } = require ('./_lib / github');
-;
-async /**
- * fetch_html - Function description
- */
-function fetch_html() {
-  const resp = await fetch (url);
-  if (throw new Error (`HTTP ${resp.status}`)) {
-  $2
-}
-  return resp.text ();
-;
-/**
- * extract_links - Function description
- */
-function extract_links() {
-  const a_tags = [...html.match_all (/<a[^>]+href=["']([^"']+)["']/gi)].map (
-    m => m[1]);
-  const links = a_tags;
-    .filter (h => h && !h.starts_with ('mailto:') && !h.starts_with ('tel:'));
-    .map (h =>;
-      h.starts_with ('http') ? h : `${base}${h.starts_with ('/') ? h : `/${h}`}`);
-  return Array.from (new Set (links));
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'';
-=======
   return Array && Array.from(new Set(links));
-
 exports && exports.handler = async function () {
   try {
     const base = process && process.env.URL || process && process.env.DEPLOY_URL || '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const checked = [];
     const broken = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-            broken && broken.push({ url: l, status: 0, error: String(e && e.message || e) });
-          }
-        }
-      } catch (e) {
-        broken && broken.push({
-          url: `${base}${p}`,
-          status: 0,
-          error: String(e && e.message || e),
-        });
-      }
-    }
-
-    const report = { updatedAt: Date && Date.now(), checked: checked && checked.length, broken };
-
-    const owner = process && process.env.GITHUB_OWNER;
-    const repo = process && process.env.GITHUB_REPO;
-    const token = process && process.env.GITHUB_TOKEN;
-
-    if (owner && repo && token) {
-      await upsertFile({
-        owner,
-        repo,
-        path: 'data/reports/links/weekly-links && links.json',
-        content: JSON && JSON.stringify(report, null, 2),
-        message: 'chore(automation): weekly link check',
-=======
-;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ${p}`);
         const links = extract_links (html, base);
         for (const l of links.slice (0, 50)) {
@@ -133,288 +45,33 @@ exports && exports.handler = async function () {
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
-<<<<<<< HEAD
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      await upsert_file ({
-        owner,
-        repo,
-        path: 'data / reports / links / weekly - links.json',
-        content: JSON.stringify (report, null, 2),
-        message: 'chore (automation): weekly link check',
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         token,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  const resp = await fetch(url),
-  if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
-  return resp.text()
-=======
-      status_code: 200,
-      body: JSON.stringify ({ ok: true, broken: broken.length }),
-    }
-  } catch (e) {
-
-    }
-
-<<<<<<< HEAD
-=======
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
-}async /**
- * fetch_html - Function description
- */
-function fetch_html() {
-  const resp = await fetch (url),
-  if (throw new Error (`HTTP ${resp.status}`), ) {
-  $2
-}
-  return resp.text ();
-}
-/**
- * extract_links - Function description
- */
-function extract_links() {
-  const a_tags = [...html.match_all (/<a[^>]+href=["']([^"']+)["']/gi)].map ((m) => m[1]),
-  const links = a_tags;
-    .filter ((h) => h && !h.starts_with ('mailto:') && !h.starts_with ('tel:'));
-    .map ((h) => (h.starts_with ('http') ? h : `${base}${h.starts_with ('/') ? h : `/${h}`}`)),
-  return Array.from (new Set (links));
-}
-exports.handler = async function () {
-  try {
-    const base = process.env.URL || process.env.DEPLOY_URL || '',
-    const pages = ['//learn / dao / certifications'],
-    const checked = [],
-    const broken = [],
-    for (const p of pages) {
-      try {
-        const html = await fetch_html (`${base}${p}`),
-        const links = extract_links (html, base),
-        for (const l of links.slice (0, 50)) {
-          try {
-            const resp = await fetch (l, { method: 'HEAD' }),
-            checked.push ({ url: l, status: resp.status }),
-            if (broken.push ({ url: l, status: resp.status })) {
-  $2
-}
-          } catch (e) {
-            broken.push ({ url: l, status: 0, error: String (e.message || e) });
-          }
-        }
-      } catch (e) {
-        broken.push ({ url: `${base}${p}`, status: 0, error: String (e.message || e) });
-      }
-    }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    const report = { updated_at: Date.now (), checked: checked.length, broken },
-    const owner = process.env.GITHUB_OWNER,
-    const repo = process.env.GITHUB_REPO,
-    const token = process.env.GITHUB_TOKEN,
-    // Check condition
-if ( {) {
-  $2
-}
-      await upsert_file ({ owner, repo, path: 'data / reports / links / weekly - links.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly link check', token });
-    }
-    return { status_code: 200, body: JSON.stringify ({ ok: true, broken: broken.length }) }
-<<<<<<< HEAD
-
-  } catch (e) {
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
-
-=======
-  } catch (e) {
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      statusCode: 200,
-      body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }),
-    };
-  } catch (e) {
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
-<<<<<<< HEAD
-=======
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 };async function fetchHtml(url) {
   const resp = await fetch(url),
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`),
   return resp && resp.text()
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 function extractLinks(html, base) {
 
-<<<<<<< HEAD
-=======
-}
-function extractLinks(html, base) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),
   const links = aTags
     .filter((h) => h && !h && h.startsWith('mailto:') && !h && h.startsWith('tel:'))
     .map((h) => (h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`)),
   return Array && Array.from(new Set(links))
 }
-
 exports && exports.handler = async function() {
   try {
-<<<<<<< HEAD
-    const base = process && process.env.URL || process && process.env.DEPLOY_URL || '',
-    const pages = ['//learn/dao/certifications'],
-    const checked = [],
-    const broken = [],
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const base = process.env.URL |process.env.DEPLOY_URL |''
     const pages = ['//learn/dao/certifications']
     const checked = []
     const broken = []
     for (const p of pages) {
       try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        const html = await fetchHtml(`${base}${p}`),
-        const links = extractLinks(html, base),
-        for (const l of links && links.slice(0, 50)) {
-          try {
-            const resp = await fetch(l, { method: 'HEAD' }),
-            checked && checked.push({ url: l, status: resp && resp.status }),
-            if (resp && resp.status >= 400) broken && broken.push({ url: l, status: resp && resp.status })
-          } catch (e) {
-            broken && broken.push({ url: l, status: 0, error: String(e && e.message || e) })
-          }
-        }
-      } catch (e) {
-        broken && broken.push({ url: `${base}${p}`, status: 0, error: String(e && e.message || e) })
-      }
-    }
-
-    const report = { updatedAt: Date && Date.now(), checked: checked && checked.length, broken },
-
-    const owner = process && process.env.GITHUB_OWNER,
-    const repo = process && process.env.GITHUB_REPO,
-    const token = process && process.env.GITHUB_TOKEN,
-<<<<<<< HEAD
-
-
-    if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links && links.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
-    }
-
-
-    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }) }
-
-=======
-    if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links && links.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
-    }
-    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }) }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  } catch (e) {
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
-  }
-
-}
-
-<<<<<<< HEAD
-=======
-},
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
-  }
-};async function fetchHtml(url) {
-  const resp = await fetch(url),
-  if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
-  return resp.text()
-}
-
-function extractLinks(html, base) {
-  const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),
-  const links = aTags
-    .filter((h) => h && !h.startsWith('mailto:') && !h.startsWith('tel:'))
-    .map((h) => (h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h}`}`)),
-  return Array.from(new Set(links))
-}
-
-exports.handler = async function() {
-  try {
-    const base = process.env.URL || process.env.DEPLOY_URL || '',
-    const pages = ['//learn/dao/certifications'],
-    const checked = [],
-    const broken = [],
-
-    for (const p of pages) {
-      try {
-        const html = await fetchHtml(`${base}${p}`),
-        const links = extractLinks(html, base),
-        for (const l of links.slice(0, 50)) {
-          try {
-            const resp = await fetch(l, { method: 'HEAD' }),
-            checked.push({ url: l, status: resp.status }),
-            if (resp.status >= 400) broken.push({ url: l, status: resp.status })
-          } catch (e) {
-            broken.push({ url: l, status: 0, error: String(e.message || e) })
-          }
-        }
-      } catch (e) {
-        broken.push({ url: `${base}${p}`, status: 0, error: String(e.message || e) })
-      }
-    }
-
-    const report = { updatedAt: Date.now(), checked: checked.length, broken },
-
-    const owner = process.env.GITHUB_OWNER,
-    const repo = process.env.GITHUB_REPO,
-    const token = process.env.GITHUB_TOKEN,
-
-    if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
-    }
-
-    return { statusCode: 200, body: JSON.stringify({ ok: true, broken: broken.length }) }
-  } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-  }
-},
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
@@ -473,11 +130,3 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

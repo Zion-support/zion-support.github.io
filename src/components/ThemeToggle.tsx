@@ -1,41 +1,45 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Sun, Moon, Monitor } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
+import React, { useState, useEffect } from 'react';
+import { Sun, Moon } from 'lucide-react';
 
 const ThemeToggle: React.FC = () => {
-  const { theme, setTheme, actualTheme } = useTheme();
+  const [isDark, setIsDark] = useState(false);
 
-  const themes = [
-    { value: 'light', icon: Sun, label: 'Light' },
-    { value: 'dark', icon: Moon, label: 'Dark' },
-    { value: 'system', icon: Monitor, label: 'System' },
-  ] as const;
+  useEffect(() => {
+    // Check for saved theme preference or default to light mode
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      setIsDark(true);
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = !isDark;
+    setIsDark(newTheme);
+    
+    if (newTheme) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
 
   return (
-    <div className="flex items-center bg-gray-800/50 backdrop-blur-sm rounded-lg p-1 border border-gray-700/50">
-      {themes.map(({ value, icon: Icon, label }) => (
-        <button
-          key={value}
-          onClick={() => setTheme(value as 'light' | 'dark' | 'system')}
-          className={`relative flex items-center justify-center w-10 h-10 rounded-md transition-all duration-200 ${
-            theme === value
-              ? 'text-white'
-              : 'text-gray-400 hover:text-gray-300'
-          }`}
-          title={`Switch to ${label} mode`}
-        >
-          {theme === value && (
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-md"
-              layoutId="theme-toggle"
-              transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-            />
-          )}
-          <Icon className="relative z-10 w-4 h-4" />
-        </button>
-      ))}
-    </div>
+    <button
+      onClick={toggleTheme}
+      className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+      aria-label="Toggle theme"
+    >
+      {isDark ? (
+        <Sun className="w-5 h-5" />
+      ) : (
+        <Moon className="w-5 h-5" />
+      )}
+    </button>
   );
 };
 

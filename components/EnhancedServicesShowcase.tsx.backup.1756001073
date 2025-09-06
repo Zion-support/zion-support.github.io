@@ -1,21 +1,12 @@
 import React, { useState } from 'react';
 import { 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
   ChevronRight, Shield, Zap, Globe
 =======
   Brain, Shield, Rocket, Cpu, Database, Atom, Users, 
   CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from 'lucide-react';
 
 interface Service {
@@ -38,10 +29,6 @@ interface Service {
 }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀' },
     { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠' },
@@ -172,11 +159,6 @@ const EnhancedServicesShowcase: React.FC = () => {
       color: 'from-blue-500 to-cyan-500'
     }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
 
   const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))];
@@ -255,10 +237,6 @@ const EnhancedServicesShowcase: React.FC = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <AnimatePresence>
             {filteredServices.map((service, index) => (
               <motion.div
@@ -289,11 +267,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                     <Star className="w-3 h-3" />
                     Popular
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </div>
                 </div>
               )}

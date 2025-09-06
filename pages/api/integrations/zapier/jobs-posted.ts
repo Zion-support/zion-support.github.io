@@ -16,10 +16,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = readState();
   const sinceTs = since ? Number(since) : 0;
-  const events = state && state.events.filter(
-    (e) => e && e.type === "zion && zion.job.posted" && e && e.timestamp > sinceTs,
+  const events = state.events.filter(
+    (e) => e.type === "zion.job.posted" && e.timestamp > sinceTs
   );
-  res && res.status(200).json({ events });
+  res.status(200).json({ events });
 }
 <<<<<<< HEAD
 

@@ -8,8 +8,6 @@
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { PROVIDERS  } from '../../../lib / integrations / registry';
 export default /**

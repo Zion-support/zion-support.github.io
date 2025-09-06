@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export interface InnovativeAIAutomationService {;
-export interface InnovativeAIAutomationService {
-export interface InnovativeAIAutomationService {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -36,31 +28,10 @@ export interface InnovativeAIAutomationService {;
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-  }
-
-<<<<<<< HEAD
-=======
-
-export interface InnovativeAIAutomationService {;
-
-  }
-
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
 
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   customers: number;
   rating: number;
 
@@ -1059,9 +1030,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     reviews: 28;
   }
 ];
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 ;
     website: string;
   }
@@ -1083,4 +1051,3 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     reviews: 28;
   }
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

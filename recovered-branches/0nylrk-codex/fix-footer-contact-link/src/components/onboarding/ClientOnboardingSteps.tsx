@@ -15,19 +15,19 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const steps: OnboardingStep[] = [
     {
-      id: "post-job"
-      label: "Post your first job"
-      completed: onboardingStatus.jobPosted
-      link: "/post-job"
-      action: "Post Job"
-    }
+      id: "post-job",
+      label: "Post your first job",
+      completed: onboardingStatus.jobPosted,
+      link: "/post-job",
+      action: "Post Job",
+    },
     {
-      id: "invite"
-      label: "Send invitation to talent"
-      completed: onboardingStatus.inviteSent
-      link: "/talent"
-      action: "Find Talent"
-    }
+      id: "invite",
+      label: "Send invitation to talent",
+      completed: onboardingStatus.inviteSent,
+      link: "/talent",
+      action: "Find Talent",
+    },
     {
 <<<<<<< HEAD
 

@@ -12,5 +12,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const offerings = { safe: !!body.safe, equity: !!body.equity, token: !!body.token },
     writeJsonFile('deal/offerings.json', offerings),
     return res.status(200).json(offerings)
-  }
+  };
   return res.status(405).json({ error: 'Method not allowed' })}

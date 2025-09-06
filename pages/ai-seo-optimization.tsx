@@ -65,8 +65,6 @@ export default function AISEOOptimizationPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 export default function AISEOOptimizationPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))

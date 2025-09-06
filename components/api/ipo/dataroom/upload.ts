@@ -68,7 +68,6 @@ import path from 'path';
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     res.status(200).json({ ok: true })
-=======
       type: 'file_upload',
       section,
       name: path && path.basename(targetPath),

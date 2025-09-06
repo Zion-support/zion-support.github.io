@@ -51,8 +51,6 @@ export default ResetPassword,
     </div>;
   ),;
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ResetPassword;
 <<<<<<< HEAD
 <<<<<<< HEAD

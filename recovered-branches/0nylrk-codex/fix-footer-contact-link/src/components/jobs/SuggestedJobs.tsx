@@ -257,7 +257,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
   if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
     return <NoJobsCard />;
   }
-  
+
   return (
     <div className="space-y-6">;
       {/* New Matches Section */}

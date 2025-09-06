@@ -77,7 +77,6 @@ export default function Page() {
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Pattern — Cloud Intelligence</title>;
-=======
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -121,7 +120,6 @@ function Page() {
     <div className="min - h-screen bg - slate - 950 text - white">;
       <Head>;
         <title > Pattern — Cloud Intelligence</title>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         <meta name="description" content="Actionable architectural pattern synthesized from live site signals." />;
         <meta property="og:title" content="Pattern — Cloud Intelligence" />;
         <meta property="og:description" content="Actionable architectural pattern synthesized from live site signals." />;
@@ -234,8 +232,6 @@ export default function Page() {
   );
 }
 
-}
-    </div>
   )
 import Head from 'next/head';
 export default function Page(req, res) {

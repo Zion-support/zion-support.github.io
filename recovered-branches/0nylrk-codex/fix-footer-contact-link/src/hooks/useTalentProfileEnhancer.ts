@@ -83,13 +83,9 @@ export interface CategorizedSkills {;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface EnhancedProfile {
-
-  summary: string
-
+  summary: string,
   categorizedSkills: CategorizedSkills
 }
-export function useTalentProfileEnhancer() {
-  const [isGenerating, setIsGenerating] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
   const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {

@@ -97,7 +97,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
 =======
 =======
       } catch (err) {
-        console.error('Error fetching milestone activities:', err)
+        console.error ('Error fetching milestone activities:', err);
       } finally {
         setIsLoading(false)
 import React, { useState, useEffect } from 'react',;

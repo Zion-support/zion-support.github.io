@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-import React from 'react';
-
-
-=======
-import React from 'react';
-
-
-import React from 'react',
-import React from 'react';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AutomationInsightsPage() {
@@ -23,18 +7,6 @@ export default function AutomationInsightsPage() {
       id: 'ai-automation-2025'
       title: 'AI Automation Trends 2025'
       description:
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends'
-      readTime: '8 min read'
-      featured: true
-    }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
       readTime: '8 min read',
 export default function AutomationInsightsPage() {;
@@ -50,14 +22,6 @@ export default function AutomationInsightsPage() {;
       id: 'ai - automation - 2025',
       title: 'AI Automation Trends 2025',
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 'autonomous-systems'
       title: 'Building Autonomous Systems'
@@ -178,34 +142,6 @@ export default function AutomationInsightsPage() {;
       label: 'Average improvement across projects';
     }
     {
-<<<<<<< HEAD
-      metric: '2,960+'
-      label: 'Pages Generated'
-      description: 'Content created autonomously'
-    },  ];      description: 'Content created autonomously'
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-=======
       metric: '2, 960+';
       label: 'Pages Generated',
       description: 'Content created autonomously',
@@ -220,7 +156,6 @@ class ErrorBoundary extends React.Component {
       label: 'Pages Generated',
       description: 'Content created autonomously',
     },  ];      description: 'Content created autonomously';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   ];
 ;
@@ -238,89 +173,6 @@ class ErrorBoundary extends React.Component {
               Automation Insights;
             </h1>;
             <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-    }
-  ];
-
-  return (
-    <>
-      <Head>
-        <title>
-          Automation Insights | Zion Tech Group - AI Automation Expertise
-        </title>
-        <meta
-          name='description'
-          content="Explore Zion Tech Group's automation insights, trends, and expertise in building autonomous systems."
-        />
-        <meta
-          property='og:title'
-          content='Automation Insights | Zion Tech Group'
-        />
-        <meta
-          property='og:description'
-          content='Expert insights on AI automation, autonomous systems, and industry trends.'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
-        <main className='container mx-auto px-6 py-12'>
-          <section className='text-center mb-16'>
-            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>
-              Automation Insights
-            </h1>
-            <p className='text-xl text-white/80 max-w-3xl mx-auto'>
-              Deep insights into AI automation, autonomous systems, and the
-              future of intelligent technology
-            </p>
-          </section>
-          <section className='mx-auto max-w-7xl'>
-            {/* Success Metrics */}
-            <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16'>
-              <h2 className='text-3xl font-bold mb-8 text-center text-cyan-400'>
-                Our Automation Success
-              </h2>
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-                {successMetrics.map((item, index) => (
-                  <div key={index} className='text-center'>
-                    <div className='text-4xl font-bold text-fuchsia-400 mb-2'>
-                      {item.metric}
-                    </div>
-                    <div className='text-lg font-semibold text-white mb-1'>
-                      {item.label}
-                    </div>
-                    <div className='text-sm text-white/70'>
-                      {item.description}
-                    </div>                  </div>                  <div key={index} className="text-center">
-                    <div className="text-4xl font-bold text-fuchsia-400 mb-2">{item.metric}</div>
-                    <div className="text-lg font-semibold text-white mb-1">{item.label}</div>
-                    <div className="text-sm text-white/70">{item.description}</div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        <meta;
-          name='description';
-          content="Explore Zion Tech Group's automation insights, trends, and expertise in building autonomous systems.";
-        />;
-        <meta;
-          property='og:title';
-          content='Automation Insights | Zion Tech Group';
-        />;
-        <meta;
-          property='og:description';
-          content='Expert insights on AI automation, autonomous systems, and industry trends.';
-        />;
-        <meta name='twitter:card' content='summary_large_image' />;
-      <div className='min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white'>;
-        <main className='container mx - auto px - 6 py - 12'>;
-          <section className='text - center mb - 16'>;
-            <h1 className='text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent'>;
-              Automation Insights;
-            </h1>;
-            <p className='text - xl text - white / 80 max - w-3xl mx - auto'>;
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Deep insights into AI automation, autonomous systems, and the;
               future of intelligent technology;
             </p>;
@@ -333,42 +185,12 @@ class ErrorBoundary extends React.Component {
             {/* Automation Trends */}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                ))}
-              </div>
-            </div>
-
-                  </div>
-
-                ))}
-              </div>
-            </div>
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Automation Trends */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Latest Automation Trends
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-                {automationTrends.map((trend, index) => (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-                {automationTrends.map((trend, index) => (
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                 {automationTrends.map((trend, index) => (
             {/* Automation Trends */}
             <div className='mb-16'>;
@@ -377,7 +199,6 @@ class ErrorBoundary extends React.Component {
               </h2>;
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
                 {automationTrends && automationTrends.map((trend, index) => (;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'>;
@@ -394,25 +215,6 @@ class ErrorBoundary extends React.Component {
                     </h3>;
                     <p className='text-white/70 mb-4'>{trend && trend.description}</p>;
                     <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                      href={`/blog/${trend.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
-                    >
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Latest Automation Trends</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {automationTrends.map((trend, index) => (
-
-<<<<<<< HEAD
-=======
-                      Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends.map((trend, index) => (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend.category}</span>
@@ -426,36 +228,14 @@ class ErrorBoundary extends React.Component {
                     >
                       Read More <span className="ml-1">→</span>
                     </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       Read More <span className='ml-1'>→</span>                    </Link>
 
                     </Link>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </div>
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             {/* Automation Tools & Frameworks */}
             <div className='mb-16'>
@@ -486,16 +266,12 @@ class ErrorBoundary extends React.Component {
                     <div className="flex justify-center gap-2">
                       <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{tool.type}</span>
                       <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">{tool.complexity}</span>
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                   </div>
                 ))}
               </div>
             </div>
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                       href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
@@ -549,18 +325,6 @@ class ErrorBoundary extends React.Component {
                 ))}
             {/* Call to Action */}
             {/* Call to Action */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Call to Action */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
                 Ready to Automate Your Business?
@@ -568,22 +332,6 @@ class ErrorBoundary extends React.Component {
               <p className='text-xl text-white/80 mb-6'>
                 Let our experts help you build the automation systems of the
                 future
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-              </p>
-              <div className='flex flex-wrap justify-center gap-4'>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-              </p>
-              <div className='flex flex-wrap justify-center gap-4'>
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>;
@@ -595,7 +343,6 @@ class ErrorBoundary extends React.Component {
                 future;
               </p>;
               <div className='flex flex-wrap justify-center gap-4'>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'>;
@@ -603,16 +350,6 @@ class ErrorBoundary extends React.Component {
                 </Link>;
                 <Link
                   href='/case-studies'
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >              </p>
-              <div className="flex flex-wrap justify-center gap-4">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Link
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
@@ -621,22 +358,6 @@ class ErrorBoundary extends React.Component {
                 </Link>
                 <Link
                   href="/case-studies"
-<<<<<<< HEAD
-
-                  className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
-                >
-                  View Case Studies
-                </Link>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
-    </>
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   View Case Studies;
                 </Link>;
               </div>;
@@ -644,38 +365,12 @@ class ErrorBoundary extends React.Component {
           </section>;
         </main>;
       </div>;
-<<<<<<< HEAD
-
-
-=======
-  );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
   );
 }
     </>;
   );
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-);
-  );
-}
-}
-  );
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

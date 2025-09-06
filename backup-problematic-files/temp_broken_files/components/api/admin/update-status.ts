@@ -21,5 +21,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ...existing,
     ...body,
     updatedAt: new Date().toISOString()},
-  fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2)),
+  fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2)),;
   res.status(200).json({ ok: true })}

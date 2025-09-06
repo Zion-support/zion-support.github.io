@@ -106,5 +106,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   }
 
-  res.setHeader('AllowGET, POST'),
+  res.setHeader('AllowGET, POST'),;
   return res.status(405).json({ error: 'Method not allowed' })}

@@ -302,5 +302,5 @@ can transform your business and propel you into the future.
 
       {_/* Footer */}
       <UltraFuturisticFooter2030 />
-    </UltraFuturisticBackground2030>
+    </UltraFuturisticBackground2030>;
   )}

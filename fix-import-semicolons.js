@@ -1,47 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
-let totalFixed = 0;
-files && files.forEach((file) => {
-
-=======
-const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
-let totalFixed = 0;
-files && files.forEach((file) => {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  try {
-    const filePath = path && path.join(process && process.cwd(), file);
-    let content = fs && fs.readFileSync(filePath, "utf8");
-    let modified = false;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
     // Fix import statements missing semicolons;
 
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
-<<<<<<< HEAD
-
-    const matches = content && content.match(importRegex);
-
-
-<<<<<<< HEAD
-=======
-    // Fix import statements missing semicolons
-
-    // Fix import statements missing semicolons;
-    const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
-    const matches = content && content.match(importRegex);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (matches) {
       matches && matches.forEach((match) => {
         if (!match && match.trim().endsWith(";")) {
           const fixedMatch = match && match.trim() + ";";
           content = content && content.replace(match, fixedMatch);
-=======
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -73,23 +39,10 @@ if (.ends_with (") {
 }")) {
           const fixed_match = match.trim () + ";";
           content = content.replace (match, fixed_match);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           modified = true;
         }
       });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    content = content && content.replace(
-      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
-
-=======
-    content = content && content.replace(
-      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       (match, varName) => {
         if (
           !match && match.includes("function") &&
@@ -108,7 +61,6 @@ if (.ends_with (") {
           !match && match.includes("export") &&
           !match && match.includes("import")
         ) {
-=======
     // Fix other common syntax issues;
     // Fix missing semicolons after variable declarations;
     content = content.replace (
@@ -132,24 +84,11 @@ if (&&) {
           !match.includes ("debugger") &&;
           !match.includes ("export") &&;
           !match.includes ("import")) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           return match + ";";
         }
         return match;
       }
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-console && console.log(`\nTotal files fixed: ${totalFixed}`);
-
-=======
-=======
-console && console.log(`\nTotal files fixed: ${totalFixed}`);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     // Check condition
 if ( {) {
@@ -165,8 +104,3 @@ if ( {) {
 });
 ;
 console.log (`\n_total files fixed: ${total_fixed}`);
-<<<<<<< HEAD
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

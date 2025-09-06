@@ -5,10 +5,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (req.method === 'GET') {;
   if (req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req.query;
-=======
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     let posts = readPosts();
 <<<<<<< HEAD
 <<<<<<< HEAD

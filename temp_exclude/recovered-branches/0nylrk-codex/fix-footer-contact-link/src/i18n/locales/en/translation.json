@@ -13,12 +13,6 @@
     "error": "Error",
     "explore": "Explore",
     "menu": "Menu",
-<<<<<<< HEAD
-:temp_exclude/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
-    "saving": "Saving..."
-  },
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "saving": "Saving...",
     "open_main_menu": "Open main menu",
     "toggle_mobile_menu": "Toggle mobile menu";
@@ -26,22 +20,9 @@
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
-<<<<<<< HEAD
-    "micro-saas": "Micro SAAS",
-    "categories": "Categories",
-ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
-  "nav": {
-    "home": "Home",
-    "marketplace": "Marketplace",
 :public/locales/en-US/common.json
     "micro-saas": "Micro SAAS",
     "categories": "Categories",
-origin/chore/build-setup
-=======
-:public/locales/en-US/common.json
-    "micro-saas": "Micro SAAS",
-    "categories": "Categories",
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "services": "Services",
     "services": "Services",
     "micro-saas": "Micro SAAS",
@@ -53,18 +34,6 @@ ursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/
     "equipment": "Equipment",
     "dashboard": "Dashboard",
     "messages": "Messages",
-<<<<<<< HEAD
-    "faq": "FAQ",
-    "help": "Help Center",
-:public/locales/en-US/common.json
-    "post_job": "Post Job",
-    "analytics": "Analytics",
-    "faq": "FAQ",
-    "help": "Help Center",
-origin/chore/build-setup
-origin/chore/cleanup-and-build
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "about": "About Us",
     "careers": "Careers",
     "partners": "Partners",
@@ -75,25 +44,10 @@ origin/chore/cleanup-and-build
     "api-docs": "API Documentation",
     "sitemap": "Sitemap"
   },
-<<<<<<< HEAD
-    "post_job": "Post Job"
-  },
-    "sitemap": "Sitemap";
-},
-    "sitemap": "Sitemap"
-  },
 origin/chore/build-setup
 :temp_exclude/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
     "post_job": "Post Job"
   },
-ursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
-ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
-=======
-origin/chore/build-setup
-:temp_exclude/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
-    "post_job": "Post Job"
-  },
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "auth": {
     "login": "Login",
     "signup": "Sign Up",
@@ -103,17 +57,6 @@ origin/chore/build-setup
     "forgot_password": "Forgot Password?",
     "remember_me": "Remember Me",
     "login_success": "Logged in successfully",
-<<<<<<< HEAD
-    "logout_success": "Logged out successfully";
-},
-:temp_exclude/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
-    "logout_success": "Logged out successfully"
-  },
-    "logout_success": "Logged out successfully";
-},
-ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "home": {
     "hero_title": "The Future of Tech & AI Marketplace",
     "hero_subtitle": "The world's first free marketplace dedicated to high-tech and artificial intelligence",
@@ -135,12 +78,6 @@ ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
     "tool_analytics": "Analytics",
     "tool_analytics_desc": "Insights and trends in the AI and tech industry",
     "tool_chat": "Chat Support",
-<<<<<<< HEAD
-:temp_exclude/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
-:public/locales/en-US/common.json
-ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "tool_chat_desc": "Get instant assistance from our AI-powered chat";
 },
   "marketplace": {
@@ -160,12 +97,6 @@ ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
     "city": "City",
     "country": "Country",
     "subtotal": "Subtotal",
-<<<<<<< HEAD
-    "pay": "Pay with Stripe (test)";
-},
-:temp_exclude/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "tool_chat_desc": "Get instant assistance from our AI-powered chat"
   },
   "jobs": {
@@ -183,11 +114,6 @@ ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
     "submitting": "Submitting...",
     "post_job_button": "Post Job"
   },
-<<<<<<< HEAD
-ursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
-ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "language": {
     "en": "English",
     "es": "Español",
@@ -215,12 +141,6 @@ ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
     "missing_languages": "Missing in {{count}} languages",
     "edit": "Edit",
     "saved": "Saved",
-<<<<<<< HEAD
-:temp_exclude/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
-:public/locales/en-US/common.json
-ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "changes_saved": "Translation changes have been saved";
 },
   "error_boundary": {
@@ -242,18 +162,3 @@ ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
     "description_placeholder": "Describe the job in detail"
   }
 
-<<<<<<< HEAD
-}
-    "changes_saved": "Translation changes have been saved"
-  }
-}
-origin/chore/build-setup
-:temp_exclude/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
-}
-    "changes_saved": "Translation changes have been saved"
-  }
-ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
-}
-ursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -489,7 +489,7 @@ export const useFraudDetection = () => {;
       return { isSafe: true }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {;
-      console && console.error('Error in fraud detection:', error);
+      console.error('Error in fraud detection:', error),;
       // On error, let the message pass through but log the error;
       return { isSafe: true }
     }

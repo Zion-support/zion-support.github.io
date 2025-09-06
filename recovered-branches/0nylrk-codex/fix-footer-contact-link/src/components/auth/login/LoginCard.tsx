@@ -16,10 +16,7 @@ import { SocialLogin } from "./SocialLogin";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Link } from "react-router-dom",
-import { LoginForm } from "./LoginForm";
-import { SocialLogin } from "./SocialLogin";
-import { LoginForm } from "./LoginForm",
-import { SocialLogin } from "./SocialLogin",
+
 export function LoginCard() {
   return (
   );

@@ -1,85 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React from 'react';
-
-
-=======
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from 'react';
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-import React from 'react';
-
-
-import React from 'react';
-import MainLayout from '../src / components / layout / MainLayout';
-import { motion } from 'framer-motion';
-import {;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  TrendingUp,;
-  CheckCircle,;
-  Users,;
-  Building,;
-  Globe,;
-  Award,;
-  Clock,;
-  BarChart3,;
-  Cloud,;
-  Shield;
-
-import React from 'react';
-origin/automation-improvements-final
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import MainLayout from '../src/components/layout/MainLayout';
-=======
-import MainLayout from '../src / components / layout / MainLayout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-
-
-=======
-import {
-=======
 import React from 'react';
 
 
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ArrowRight
   Phone
   Mail
@@ -94,10 +17,6 @@ import { motion } from 'framer-motion';
   BarChart3
   Cloud
   Shield
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ArrowRight,
   Phone,
   Mail,
@@ -112,14 +31,6 @@ import { motion } from 'framer-motion';
   BarChart3,
   Cloud,
   Shield;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from 'lucide-react';
 const caseStudies = [
   {
@@ -181,106 +92,6 @@ const stats = [
   { number: "500+", label: "Projects Completed" }
   { number: "50+", label: "Happy Clients" }
   { number: "99.9%", label: "Success Rate" }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import {;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  TrendingUp,;
-  CheckCircle,;
-  Users,;
-  Building,;
-  Globe,;
-  Award,;
-  Clock,;
-  BarChart3,;
-  Cloud,;
-=======
-import {
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  TrendingUp,
-  CheckCircle,
-  Users,
-  Building,
-  Globe,
-  Award,
-  Clock,
-  BarChart3,
-  Cloud,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  Shield;
-} from 'lucide-react';
-
-const caseStudies = [;
-  {;
-    id: 1,;
-    title: "AI-Powered Customer Service Transformation",;
-    client: "Global E-commerce Retailer",;
-    industry: "E-commerce",;
-    challenge: "High customer service costs and inconsistent response quality",;
-    solution: "Implemented AI-powered chatbot and intelligent routing system",;
-    results: [;
-      "60% reduction in support costs",;
-      "40% faster response times",;
-      "95% customer satisfaction rate",;
-      "$2M annual savings";
-    ],;
-    duration: "3 months",;
-    team: "8 experts",;
-    technologies: ["AI/ML", "NLP", "Cloud", "Analytics"],;
-    image: "/images/case-studies/ecommerce-ai && ai.jpg";
-  },;
-  {;
-    id: 2,;
-    title: "Cloud Migration for Financial Services",;
-    client: "Regional Bank",;
-    industry: "Financial Services",;
-    challenge: "Legacy systems limiting scalability and innovation",;
-    solution: "Complete cloud migration with microservices architecture",;
-    results: [;
-      "99 && 99.9% uptime achieved",;
-      "50% faster application deployment",;
-      "30% reduction in infrastructure costs",;
-      "Enhanced security compliance";
-    ],;
-    duration: "6 months",;
-    team: "12 experts",;
-    technologies: ["AWS", "Kubernetes", "Microservices", "DevOps"],;
-    image: "/images/case-studies/cloud-migration && migration.jpg";
-  },;
-  {;
-    id: 3,;
-    title: "Cybersecurity Enhancement for Healthcare",;
-    client: "Healthcare Network",;
-    industry: "Healthcare",;
-    challenge: "Increasing cyber threats and compliance requirements",;
-    solution: "Comprehensive security framework and threat detection system",;
-    results: [;
-      "Zero security breaches",;
-      "100% compliance with HIPAA",;
-      "24/7 threat monitoring",;
-      "50% faster incident response";
-    ],;
-    duration: "4 months",;
-    team: "6 experts",;
-    technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"],;
-    image: "/images/case-studies/healthcare-security && security.jpg";
-  }
-];
-
-const stats = [;
-  { number: "500+", label: "Projects Completed" },;
-  { number: "50+", label: "Happy Clients" },;
-  { number: "99 && 99.9%", label: "Success Rate" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   { number: "24/7", label: "Support Available" }
 ];
 
@@ -293,43 +104,13 @@ const stats = [;
 
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Success{' '}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                <span className="bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">;
-                  Stories;
-                </span>;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-                Discover how we've helped businesses transform and achieve their goals ;
-                through innovative technology solutions.;
-              </p>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Stats Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -348,21 +129,6 @@ const stats = [;
                   <div className="text-gray-600 font-medium">{stat && stat.label}</div>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            </div>;
-          </div>;
-        </section>;
-
-
-=======
-            </div>;
-          </div>;
-        </section>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Case Studies */}
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -370,95 +136,6 @@ const stats = [;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  TrendingUp,
-  CheckCircle,
-  Users,
-  Building,
-  Globe,
-  Award,
-  Clock,
-  BarChart3,
-  Cloud,
-  Shield;
-} from 'lucide-react';
-;
-const case_studies = [;
-  {
-    id: 1,
-    title: "AI - Powered Customer Service Transformation",
-    client: "Global E - commerce Retailer",
-    industry: "E - commerce",
-    challenge: "High customer service costs and inconsistent response quality",
-    solution: "Implemented AI - powered chatbot and intelligent routing system",
-    results: [;
-      "60% reduction in support costs",
-      "40% faster response times",
-      "95% customer satisfaction rate",
-      "$2M annual savings";
-    ],
-    duration: "3 months",
-    team: "8 experts",
-    technologies: ["AI / ML", "NLP", "Cloud", "Analytics"],
-    image: "/images / case - studies / ecommerce - ai.jpg";
-  },
-  {
-    id: 2,
-    title: "Cloud Migration for Financial Services",
-    client: "Regional Bank",
-    industry: "Financial Services",
-    challenge: "Legacy systems limiting scalability and innovation",
-    solution: "Complete cloud migration with microservices architecture",
-    results: [;
-      "99.9% uptime achieved",
-      "50% faster application deployment",
-      "30% reduction in infrastructure costs",
-      "Enhanced security compliance";
-    ],
-    duration: "6 months",
-    team: "12 experts",
-    technologies: ["AWS", "Kubernetes", "Microservices", "DevOps"],
-    image: "/images / case - studies / cloud - migration.jpg";
-  },
-  {
-    id: 3,
-    title: "Cybersecurity Enhancement for Healthcare",
-    client: "Healthcare Network",
-    industry: "Healthcare",
-    challenge: "Increasing cyber threats and compliance requirements",
-    solution: "Comprehensive security framework and threat detection system",
-    results: [;
-      "Zero security breaches",
-      "100% compliance with HIPAA",
-      "24 / 7 threat monitoring",
-      "50% faster incident response";
-    ],
-    duration: "4 months",
-    team: "6 experts",
-    technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"],
-    image: "/images / case - studies / healthcare - security.jpg";
-  }
-];
-;
-const stats = [;
-  { number: "500+", label: "Projects Completed" },
-  { number: "50+", label: "Happy Clients" },
-  { number: "99.9%", label: "Success Rate" },
-  { number: "24 / 7", label: "Support Available" }
-];
-export default /**
- * CaseStudiesPage - Function description
- */
-function CaseStudiesPage() {
-=======
                     key={study.id}
                     className="bg - white rounded - lg shadow - lg overflow - hidden";
                     initial={{ opacity: 0, coordinate_y: 30 }}
@@ -509,7 +186,6 @@ function CaseStudiesPage() {
                             <Users className="w-4 h-4 mr-2" />
                             {study.team}
 export default function CaseStudiesPage() {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <MainLayout
       title="Case Studies - Zion Tech Group"
@@ -586,14 +262,7 @@ export default function CaseStudiesPage() {
               <div className="space - y-16">;
                 {case_studies.map ((study, index) => (
                   <motion.div;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     key={study.id}
                     className="bg - white rounded - lg shadow - lg overflow - hidden";
                     initial={{ opacity: 0, coordinate_y: 30 }}
@@ -606,14 +275,7 @@ export default function CaseStudiesPage() {
                         <div className="flex items - center mb - 4">;
                           <span className="bg - green - 100 text - green - 800 px - 3 py - 1 rounded - full text - sm font - semibold mr - 4">;
                             {study.industry}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -668,46 +330,22 @@ export default function CaseStudiesPage() {
                             {study && study.results.map((result, idx) => (;
                               <li key={idx} className="flex items-center text-gray-600">;
                                 <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                                 {result}
                               </li>;
                             ))}
 
-<<<<<<< HEAD
-=======
-                                {result}
-                              </li>;
-                            ))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           </ul>;
                         </div>;
 
                         <div className="flex flex-wrap gap-2 mb-6">;
                           {study && study.technologies.map((tech, idx) => (;
                             <span key={idx} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                               {tech}
                             </span>;
                           ))}
 
-<<<<<<< HEAD
-=======
-                              {tech}
-                            </span>;
-                          ))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </div>;
 
                         <div className="flex items-center justify-between">;
@@ -729,7 +367,6 @@ export default function CaseStudiesPage() {
                           <Building className="w-16 h-16 mx-auto mb-4 opacity-80" />;
                           <h4 className="text-xl font-semibold mb-2">Project Overview</h4>;
                           <p className="text-green-100">;
-=======
                           </span>;
                           <span className="text - gray - 500 text - sm">{study.duration}</span>;
                         </div>;
@@ -784,54 +421,16 @@ export default function CaseStudiesPage() {
                           <Building className="w - 16 h - 16 mx - auto mb - 4 opacity - 80" />;
                           <h4 className="text - xl font - semibold mb - 2">Project Overview</h4>;
                           <p className="text - green - 100">;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             A comprehensive solution that transformed our client's business operations;
                           </p>;
                         </div>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                  </motion.div>))}
-
-=======
-                  </motion.div>))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">;
-                Ready to Start Your Success Story?;
-              </h2>;
-              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">;
-                Let's work together to create your own success story. ;
-                Contact us today to discuss your project.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-white text-green-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
@@ -839,60 +438,14 @@ export default function CaseStudiesPage() {
                 </a>;
                 <a
                   href="/services"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">;
-                  Explore Our Services;
-                </a>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  );
-}
 import Head from 'next/head';
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold"
-                >
-                  Explore Our Services
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </MainLayout>
-  );
-}
-ursor/integrate-build-improve-and-re-verify-8f7d
-import Head from 'next/head';
-<<<<<<< HEAD
-=======
-import Head from 'next/head';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
-export default function CaseStudiesPage() {;
-
-<<<<<<< HEAD
-=======
-origin/main
 import Head from 'next/head';
-origin/automation-improvements-final
-import Link from 'next/link';
-import Layout from '../components/Layout';
-export default function CaseStudiesPage() {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
   return (
     <Layout>;
       <Head>;
@@ -903,94 +456,20 @@ export default function CaseStudiesPage() {
           content='Proven outcomes across AI, IT, and micro SaaS deployments.'
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import Head from 'next/head';
 
 
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
-import Head from 'next/head';
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  );
- </Head> </section> </Layout>
-=======
-import Layout from '../components/layout/Layout';
-export default function CaseStudiesPage() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-        />
-      </Head>
-      <section className='container mx-auto px-4 py-24'>
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>
-          Case Studies
-        </h1>
-        <p className='text-gray-300'>
-          Proven outcomes and detailed success stories. Coming soon.
-        </p>
-      </section>
-    </Layout>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
  </Head> </section> </Layout>
 export default function CaseStudiesPage() {
 import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage() {
-<<<<<<< HEAD
-  return (
-    <Layout>
-      <Head>
-        <title>Case Studies | Zion Tech Group</title>
-        <link rel='canonical' href='https://ziontechgroup.com/case-studies' />
-        <meta
-          name='description'
-          content='Proven outcomes across AI, IT, and micro SaaS deployments.'
-        />
-      </Head>
-      <section className='container mx-auto px-4 py-24'>
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>
-          Case Studies
-        </h1>
-        <p className='text-gray-300'>
-          Proven outcomes and detailed success stories. Coming soon.
-        </p>
-      </section>
-    </Layout>;
-  );
-
- </Head> </section> </Layout>
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout',
-export default function CaseStudiesPage() {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 	return (
 		<Layout>
 			<Head>
@@ -1004,9 +483,6 @@ export default function CaseStudiesPage() {
 			</section>
 		</Layout>
 	)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 import React from 'react';
 import Head from 'next/head';
@@ -1014,7 +490,6 @@ import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage(req, res) {
   try {
 	return (;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         />;
       </Head>;
@@ -1045,15 +520,6 @@ export default function CaseStudiesPage(req, res) {
 	);
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
-        />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - green - 600 to - teal - 600 text - white">;
           <div className="container mx - auto px - 4">;
@@ -1094,84 +560,5 @@ export default function CaseStudiesPage(req, res) {
 import Link from 'next / link';
 import Layout from '../components / Layout';
 ;
-<<<<<<< HEAD
-export default /**
- * CaseStudiesPage - Function description
- */
-function CaseStudiesPage() {
-  return (
-    <Layout>;
-      <Head>;
-        <title > Case Studies | Zion Tech Group</title>;
-        <link rel='canonical' href='https://ziontechgroup.com / case - studies' />;
-        <meta;
-          name='description';
-          content='Proven outcomes across AI, IT, and micro SaaS deployments.';
-        />;
-      </Head>;
-      <section className='container mx - auto px - 4 py - 24'>;
-        <h1 className='text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6'>;
-          Case Studies;
-        </h1>;
-        <p className='text - gray - 300'>;
-          Proven outcomes and detailed success stories. Coming soon.;
-        </p>;
-      </section>;
-    </Layout>);
-;
-</Head> </section> </Layout>;
-return (
-  <Layout>;
-  <Head>;
-    <title > Case Studies | Zion Tech Group</title>;
-    <link rel="canonical" href="https://ziontechgroup.com / case - studies" />;
-    <meta name="description" content="Proven outcomes across AI, IT, and micro SaaS deployments." />;
-  </Head>;
-  <section className="container mx - auto px - 4 py - 24">;
-    <h1 className="text - 4xl md: text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6">Case Studies</h1>;
-    <p className="text - gray - 300">Proven outcomes and detailed success stories. Coming soon.</p>;
-  </section>;
-  </Layout>);
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
-
-}
-}
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-export default function CaseStudiesPage(req, res) {
-  try {
-	return (;
-		<Layout>;
-			<Head>;
-				<title>Case Studies | Zion Tech Group</title>;
-				<link rel="canonical" href="https://ziontechgroup.com/case-studies" />;
-				<meta name="description" content="Proven outcomes across AI, IT, and micro SaaS deployments." />;
-			</Head>;
-			<section className="container mx-auto px-4 py-24">;
-				<h1 className="text-4xl md: text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Case Studies</h1>;
-				<p className="text-gray-300">Proven outcomes and detailed success stories. Coming soon.</p>;
-			</section>;
-		</Layout>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

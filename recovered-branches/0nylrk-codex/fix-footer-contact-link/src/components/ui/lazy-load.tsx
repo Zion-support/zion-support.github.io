@@ -142,8 +142,6 @@ export function LazyLoad({
         threshold: 0.1}
     );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current)
 import { useEffect, useState, useRef, ReactNode } from "react",;
 import { cn } from "@/lib/utils",;
 import { Skeleton } from "@/components/ui/skeleton",;

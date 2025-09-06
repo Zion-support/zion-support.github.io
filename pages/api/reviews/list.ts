@@ -158,9 +158,11 @@ const { targetType, targetId } = req.query as {
     if (!targetType |!targetId) {
 
       return res.status(400).json({ error: "Missing targetType or targetId" });
+
     const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
     if (!targetType || !targetId) {
       return res.status(400).json({ error: 'Missing targetType or targetId' })
+
     }
     if (targetType !== 'talent' && targetType !== 'client') {
       return res.status(400).json({ error: 'Invalid targetType' })

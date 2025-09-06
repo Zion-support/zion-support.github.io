@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-const CAPABILITIES = [;
-  'Full‑stack Web',;
-  'Mobile (iOS/Android)',;
-  'AI/ML',;
-  'Cloud & DevOps',;
-  'Data Engineering',;
-  'Blockchain',;
-  'IoT',;
-  'Security',];const CAPABILITIES = [;
-  'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity';
-const CAPABILITIES = [
-  'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];
 
 export default function CapabilitiesPage() {;
@@ -37,34 +16,8 @@ export default function CapabilitiesPage() {;
           <div key={c} className="rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950">;
           </div>;
         ))}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-    <EnhancedLayout>
-      <h1 className="text-2xl font-semibold">Capabilities</h1>
-      <div className="mt-6 grid md:grid-cols-4 gap-4 text-sm">
-        {CAPABILITIES.map((c) => (
-          <div key={c} className="rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950">
-{c}
-          </div>
-        ))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      </div>;
-    </EnhancedLayout>;
   );
 }
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 const CAPABILITIES = [;
   'Full‑stack Web',
@@ -97,17 +50,6 @@ function CapabilitiesPage() {
           </div>))}
       </div>;
     </EnhancedLayout>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
-import EnhancedLayout from '../components/layout/EnhancedLayout';
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const CAPABILITIES = [
   'Full‑stack Web'
   'Mobile (iOS/Android)'
@@ -120,7 +62,7 @@ const CAPABILITIES = [
   'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
 ];
 
-export default function CapabilitiesPage() {
+export default function CapabilitiesPage() {;
   return (
     <EnhancedLayout>
       <h1 className='text-2xl font-semibold'>Capabilities</h1>
@@ -137,25 +79,6 @@ export default function CapabilitiesPage() {
         ))}
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      </div>
-
-  );
-}
-
-<<<<<<< HEAD
-=======
-    </EnhancedLayout>;
-);
-}
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 );
 }
   );
@@ -164,8 +87,3 @@ export default function CapabilitiesPage() {
 );
 }
 
-<<<<<<< HEAD
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

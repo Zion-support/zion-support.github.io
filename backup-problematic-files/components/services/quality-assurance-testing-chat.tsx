@@ -18,4 +18,4 @@ const QualityAssuranceTestingChat: NextPage = () => {
   )
 },
 
-export default QualityAssuranceTestingChat,
+export default QualityAssuranceTestingChat,;

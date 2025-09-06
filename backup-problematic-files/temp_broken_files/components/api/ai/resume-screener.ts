@@ -15,5 +15,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `Job Description:\n${jobDescription}\n\n` +
     `Resumes:\n${resumes.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`,
 
-  const text = await generateText(prompt, 'You are an expert technical recruiter. Output strictly valid JSON.'),
+  const text = await generateText(prompt, 'You are an expert technical recruiter. Output strictly valid JSON.'),;
   return res.status(200).json({ results: text })}

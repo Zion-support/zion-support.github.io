@@ -78,7 +78,6 @@ function handler() {
       c.provider_id === "lever" ||;
       c.provider_id === "workable" ||;
       c.provider_id === "bamboohr",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   );
   const results: any[] = [];
   for (const conn of connections) {

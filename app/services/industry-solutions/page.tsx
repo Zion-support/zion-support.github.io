@@ -1,17 +1,21 @@
-export const metadata = { 
-  title: 'Industry-Specific Solutions | Zion Tech Group',
-  description: 'Specialized micro SAAS solutions tailored for specific industries including healthcare, finance, real estate, e-commerce, and more. Industry-focused tools that understand your unique challenges.'
-}; 
+export const metadata = {
+  title: "Industry-Specific Solutions | Zion Tech Group",
+  description:
+    "Specialized micro SAAS solutions tailored for specific industries including healthcare, finance, real estate, e-commerce, and more. Industry-focused tools that understand your unique challenges.",
+};
 
-export default function IndustrySolutionsPage() { 
-  return ( 
+export default function IndustrySolutionsPage() {
+  return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Industry-Specific Solutions</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Industry-Specific Solutions
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Specialized micro SAAS solutions tailored for specific industries including healthcare, finance, 
-            real estate, e-commerce, and more. Industry-focused tools that understand your unique challenges.
+            Specialized micro SAAS solutions tailored for specific industries
+            including healthcare, finance, real estate, e-commerce, and more.
+            Industry-focused tools that understand your unique challenges.
           </p>
         </div>
 
@@ -27,7 +31,7 @@ export default function IndustrySolutionsPage() {
               "Medical Billing Automation",
               "Appointment Scheduling AI",
               "Prescription Management",
-              "Health Records Analytics"
+              "Health Records Analytics",
             ]}
           />
           <IndustryCategory
@@ -40,7 +44,7 @@ export default function IndustrySolutionsPage() {
               "Compliance Monitoring",
               "Fraud Detection System",
               "Investment Analytics",
-              "Regulatory Reporting"
+              "Regulatory Reporting",
             ]}
           />
           <IndustryCategory
@@ -53,14 +57,16 @@ export default function IndustrySolutionsPage() {
               "Virtual Tour Platform",
               "Transaction Management",
               "Market Analysis Tool",
-              "Commission Tracker"
+              "Commission Tracker",
             ]}
           />
         </div>
 
         {/* Featured Industry Solutions */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Featured Industry Solutions</h2>
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Featured Industry Solutions
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <IndustrySolution
               title="MediCare Pro"
@@ -72,7 +78,7 @@ export default function IndustrySolutionsPage() {
                 "Insurance verification",
                 "Billing & claims processing",
                 "Telemedicine integration",
-                "Compliance reporting"
+                "Compliance reporting",
               ]}
               price="$199-599/month"
               compliance="HIPAA, HITECH, SOC 2"
@@ -89,7 +95,7 @@ export default function IndustrySolutionsPage() {
                 "Anti-money laundering",
                 "Regulatory compliance",
                 "Customer onboarding",
-                "Fraud detection"
+                "Fraud detection",
               ]}
               price="$299-999/month"
               compliance="PCI DSS, SOX, GDPR, CCPA"
@@ -106,7 +112,7 @@ export default function IndustrySolutionsPage() {
                 "Virtual tour creation",
                 "Transaction tracking",
                 "Market analysis tools",
-                "Commission management"
+                "Commission management",
               ]}
               price="$149-449/month"
               compliance="GDPR, CCPA, Fair Housing"
@@ -123,7 +129,7 @@ export default function IndustrySolutionsPage() {
                 "Grade management",
                 "Parent communication",
                 "Curriculum planning",
-                "Assessment tools"
+                "Assessment tools",
               ]}
               price="$99-299/month"
               compliance="FERPA, COPPA, GDPR"
@@ -140,7 +146,7 @@ export default function IndustrySolutionsPage() {
                 "Customer analytics",
                 "Marketing automation",
                 "Supply chain tracking",
-                "Performance analytics"
+                "Performance analytics",
               ]}
               price="$179-579/month"
               compliance="PCI DSS, GDPR, CCPA"
@@ -157,7 +163,7 @@ export default function IndustrySolutionsPage() {
                 "Document management",
                 "Time tracking & billing",
                 "Court calendar integration",
-                "Compliance tracking"
+                "Compliance tracking",
               ]}
               price="$249-749/month"
               compliance="Attorney-Client Privilege, GDPR, SOX"
@@ -169,7 +175,9 @@ export default function IndustrySolutionsPage() {
 
         {/* Industry Compliance & Security */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Compliance & Security Standards</h2>
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Compliance & Security Standards
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <ComplianceStandard
               title="Healthcare"
@@ -196,7 +204,9 @@ export default function IndustrySolutionsPage() {
 
         {/* Industry-Specific Features */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industry-Specific Features</h2>
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Industry-Specific Features
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCategory
               title="Healthcare Features"
@@ -207,7 +217,7 @@ export default function IndustrySolutionsPage() {
                 "Medical coding automation",
                 "Insurance eligibility verification",
                 "Prescription drug monitoring",
-                "Telehealth integration"
+                "Telehealth integration",
               ]}
             />
             <FeatureCategory
@@ -219,7 +229,7 @@ export default function IndustrySolutionsPage() {
                 "Regulatory reporting automation",
                 "Anti-money laundering checks",
                 "Customer due diligence",
-                "Risk assessment models"
+                "Risk assessment models",
               ]}
             />
             <FeatureCategory
@@ -231,7 +241,7 @@ export default function IndustrySolutionsPage() {
                 "Lead scoring algorithms",
                 "Market trend analysis",
                 "Virtual tour creation",
-                "Commission calculations"
+                "Commission calculations",
               ]}
             />
           </div>
@@ -239,11 +249,19 @@ export default function IndustrySolutionsPage() {
 
         {/* Integration Ecosystem */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industry Integrations</h2>
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Industry Integrations
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <IntegrationCategory
               title="Healthcare Integrations"
-              platforms={["Epic", "Cerner", "Allscripts", "NextGen", "athenahealth"]}
+              platforms={[
+                "Epic",
+                "Cerner",
+                "Allscripts",
+                "NextGen",
+                "athenahealth",
+              ]}
               icon="🏥"
             />
             <IntegrationCategory
@@ -253,7 +271,13 @@ export default function IndustrySolutionsPage() {
             />
             <IntegrationCategory
               title="Real Estate Integrations"
-              platforms={["MLS", "Zillow", "Realtor.com", "ShowingTime", "DocuSign"]}
+              platforms={[
+                "MLS",
+                "Zillow",
+                "Realtor.com",
+                "ShowingTime",
+                "DocuSign",
+              ]}
               icon="🏠"
             />
           </div>
@@ -261,7 +285,9 @@ export default function IndustrySolutionsPage() {
 
         {/* Pricing by Industry */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industry-Specific Pricing</h2>
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Industry-Specific Pricing
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <IndustryPricingPlan
               industry="Healthcare"
@@ -273,7 +299,7 @@ export default function IndustrySolutionsPage() {
                 "Medical coding automation",
                 "Insurance verification",
                 "Telemedicine integration",
-                "24/7 support"
+                "24/7 support",
               ]}
               icon="🏥"
             />
@@ -287,7 +313,7 @@ export default function IndustrySolutionsPage() {
                 "Fraud detection",
                 "Risk assessment",
                 "Regulatory reporting",
-                "Dedicated support"
+                "Dedicated support",
               ]}
               icon="🏦"
             />
@@ -301,7 +327,7 @@ export default function IndustrySolutionsPage() {
                 "Lead management",
                 "Virtual tours",
                 "Market analytics",
-                "Commission tracking"
+                "Commission tracking",
               ]}
               icon="🏠"
             />
@@ -310,7 +336,9 @@ export default function IndustrySolutionsPage() {
 
         {/* Success Stories by Industry */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industry Success Stories</h2>
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Industry Success Stories
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <SuccessStory
               company="Metro Medical Group"
@@ -338,9 +366,13 @@ export default function IndustrySolutionsPage() {
 
         {/* Contact CTA */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">Ready for Industry-Specific Solutions?</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Ready for Industry-Specific Solutions?
+          </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Get specialized micro SAAS tools designed for your industry. Our solutions understand your unique challenges and compliance requirements.
+            Get specialized micro SAAS tools designed for your industry. Our
+            solutions understand your unique challenges and compliance
+            requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -365,7 +397,12 @@ export default function IndustrySolutionsPage() {
   );
 }
 
-function IndustryCategory({ title, icon, description, solutions }: {
+function IndustryCategory({
+  title,
+  icon,
+  description,
+  solutions,
+}: {
   title: string;
   icon: string;
   description: string;
@@ -388,7 +425,16 @@ function IndustryCategory({ title, icon, description, solutions }: {
   );
 }
 
-function IndustrySolution({ title, description, industry, features, price, compliance, useCase, demoUrl }: {
+function IndustrySolution({
+  title,
+  description,
+  industry,
+  features,
+  price,
+  compliance,
+  useCase,
+  demoUrl,
+}: {
   title: string;
   description: string;
   industry: string;
@@ -429,7 +475,9 @@ function IndustrySolution({ title, description, industry, features, price, compl
       <div className="flex justify-between items-center pt-4 border-t border-gray-200">
         <div>
           <div className="font-bold text-blue-600">{price}</div>
-          <a href={demoUrl} className="text-sm text-blue-600 hover:underline">View Demo</a>
+          <a href={demoUrl} className="text-sm text-blue-600 hover:underline">
+            View Demo
+          </a>
         </div>
         <a
           href="tel:+13024640950"
@@ -442,7 +490,11 @@ function IndustrySolution({ title, description, industry, features, price, compl
   );
 }
 
-function ComplianceStandard({ title, standards, icon }: {
+function ComplianceStandard({
+  title,
+  standards,
+  icon,
+}: {
   title: string;
   standards: string[];
   icon: string;
@@ -453,7 +505,10 @@ function ComplianceStandard({ title, standards, icon }: {
       <h3 className="font-bold text-gray-900 mb-4">{title}</h3>
       <div className="flex flex-wrap gap-2">
         {standards.map((standard, index) => (
-          <span key={index} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+          <span
+            key={index}
+            className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+          >
             {standard}
           </span>
         ))}
@@ -462,7 +517,11 @@ function ComplianceStandard({ title, standards, icon }: {
   );
 }
 
-function FeatureCategory({ title, icon, features }: {
+function FeatureCategory({
+  title,
+  icon,
+  features,
+}: {
   title: string;
   icon: string;
   features: string[];
@@ -483,7 +542,11 @@ function FeatureCategory({ title, icon, features }: {
   );
 }
 
-function IntegrationCategory({ title, platforms, icon }: {
+function IntegrationCategory({
+  title,
+  platforms,
+  icon,
+}: {
   title: string;
   platforms: string[];
   icon: string;
@@ -494,7 +557,10 @@ function IntegrationCategory({ title, platforms, icon }: {
       <h3 className="font-bold text-gray-900 mb-4">{title}</h3>
       <div className="flex flex-wrap gap-2">
         {platforms.map((platform, index) => (
-          <span key={index} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+          <span
+            key={index}
+            className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+          >
             {platform}
           </span>
         ))}
@@ -503,7 +569,14 @@ function IntegrationCategory({ title, platforms, icon }: {
   );
 }
 
-function IndustryPricingPlan({ industry, starterPrice, professionalPrice, enterprisePrice, features, icon }: {
+function IndustryPricingPlan({
+  industry,
+  starterPrice,
+  professionalPrice,
+  enterprisePrice,
+  features,
+  icon,
+}: {
   industry: string;
   starterPrice: string;
   professionalPrice: string;
@@ -547,7 +620,13 @@ function IndustryPricingPlan({ industry, starterPrice, professionalPrice, enterp
   );
 }
 
-function SuccessStory({ company, industry, solution, result, description }: {
+function SuccessStory({
+  company,
+  industry,
+  solution,
+  result,
+  description,
+}: {
   company: string;
   industry: string;
   solution: string;
@@ -558,7 +637,9 @@ function SuccessStory({ company, industry, solution, result, description }: {
     <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
       <div className="flex items-center mb-4">
         <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-          <span className="text-blue-600 font-bold text-lg">{company.charAt(0)}</span>
+          <span className="text-blue-600 font-bold text-lg">
+            {company.charAt(0)}
+          </span>
         </div>
         <div>
           <h4 className="font-bold text-gray-900">{company}</h4>

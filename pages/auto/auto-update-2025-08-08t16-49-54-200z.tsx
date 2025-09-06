@@ -51,8 +51,6 @@ export default AutoUpdate20250808t164954200z,
     </div>;
   ),;
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default AutoUpdate20250808t164954200z;
 <<<<<<< HEAD
 <<<<<<< HEAD

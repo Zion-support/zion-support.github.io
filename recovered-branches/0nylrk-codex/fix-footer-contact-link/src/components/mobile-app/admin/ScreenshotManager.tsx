@@ -28,7 +28,6 @@ type Screenshot = {
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
 };
 
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -36,15 +35,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     if (e.target.files) {
       addScreenshots(Array.from(e.target.files))
     }
-  }
-  const addScreenshots = (files: File[]) => {
-    // Filter for image files only
-    const imageFiles = files.filter(file => file.type.startsWith('image/'));
-  };
-import React, { useState, useRef } from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Upload, Trash2, Plus } from "lucide-react",
+
 import { AppPlatform } from "./MetadataManager",
 import { toast } from "sonner",
 interface ScreenshotManagerProps {

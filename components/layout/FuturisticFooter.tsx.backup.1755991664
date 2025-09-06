@@ -1,10 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
 
 export default function FuturisticFooter() {
@@ -259,11 +255,6 @@ export default function FuturisticFooter() {
             <div className="flex items-center space-x-4">
               <span className="text-sm text-gray-400">Follow us:</span>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -271,10 +262,6 @@ export default function FuturisticFooter() {
                   target="_blank"
                   rel="noopener noreferrer"
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110"
                 >
                   <span className="text-lg">{social.icon}</span>
@@ -448,16 +435,6 @@ export default function FuturisticFooter() {
         </div>
       </div>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
-<<<<<<< HEAD
-=======
-=======
-            </div>
-          </div>
-        </div>
-      </div>
-
->>>>>>> origin/main
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </footer>
   );
 }

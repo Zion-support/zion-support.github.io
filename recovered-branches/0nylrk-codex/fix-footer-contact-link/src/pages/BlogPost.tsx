@@ -821,9 +821,6 @@ export default function BlogPost() {;
           {/* Featured image */}
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
-              <img
-                src={post && post.featuredImage} 
-                alt={post && post.title}
 
                 className="object-cover w-full h-full"
 <<<<<<< HEAD

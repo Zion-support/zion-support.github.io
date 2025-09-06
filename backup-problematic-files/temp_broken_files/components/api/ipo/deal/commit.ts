@@ -8,5 +8,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const commits = readJsonFile('deal/soft-commits.json', [] as any[]),
   const record = { amount, timestamp: new Date().toISOString() },
   commits.push(record),
-  writeJsonFile('deal/soft-commits.json', commits),
+  writeJsonFile('deal/soft-commits.json', commits),;
   res.status(200).json(record)}

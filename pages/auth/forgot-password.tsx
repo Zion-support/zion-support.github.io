@@ -51,8 +51,6 @@ export default ForgotPassword,
     </div>;
   ),;
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ForgotPassword;
 <<<<<<< HEAD
 <<<<<<< HEAD

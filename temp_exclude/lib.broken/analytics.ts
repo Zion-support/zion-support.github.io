@@ -33,7 +33,6 @@ interface WebVitalMetric {;
     "e": number;
   i,
     "d": string}
-
 export const trackWebVitals = ("metric": WebVitalMetric) => {";
   if (typeof window !== "undefined" && window && window.gtag) {";
     window && window.gtag("event", metric && metric.name, {;

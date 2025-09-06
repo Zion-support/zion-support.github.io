@@ -1,9 +1,6 @@
 
 export default function ReportsIndex() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export default function ReportsIndex() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <main className='container mx-auto px-4 py-12 max-w-7xl'>;
@@ -224,8 +221,6 @@ export default function ReportsIndex() {
   );
 }
 
-}
-    </div>
   )
         <div className="mt-12 text-center">;
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">;

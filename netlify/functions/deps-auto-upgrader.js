@@ -1,72 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-function runNode(relPath, args = []) {
-
-  const abs = path && path.resolve(__dirname, '..', '..', relPath);
-
-=======
-const abs = path && path.resolve(__dirname, '..', '..', relPath);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    status: res && res.status || 0,
-    stdout: res && res.stdout || '',
-    stderr: res && res.stderr || '',
-  };
-
-exports && exports.config = { schedule: '0 */12 * * *' };
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 exports && exports.handler = async () => {
   const logs = [];
   const step = (name, fn) => {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    if (stdout) logs && logs.push(stdout);
-    if (stderr) logs && logs.push(stderr);
-    logs && logs.push(`exit=${status}`);
-    return status;
-  };
-
-  step('deps:auto-upgrade', () => runNode('automation/deps-auto-upgrade && upgrade.cjs'));
-  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
-
-  return {
-    statusCode: 200,
-    headers: { 'content-type': 'text/plain' },
-    body: logs && logs.join('\n'),
-  };
-};function runNode(relPath, args = []) {
-  const abs = path && path.resolve(__dirname, '....', relPath),
-<<<<<<< HEAD
-
-=======
-  const abs = path.resolve(__dirname, '....', relPath),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
@@ -89,15 +30,6 @@ exports && exports.handler = async () => {
 
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
 },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -167,8 +99,3 @@ exports.handler = async () => {
   step ('deps:auto - upgrade', () => run_node ('automation / deps - auto - upgrade.cjs')),
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
-<<<<<<< HEAD
-},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

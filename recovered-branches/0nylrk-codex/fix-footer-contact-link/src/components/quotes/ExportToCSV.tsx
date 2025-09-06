@@ -430,12 +430,6 @@ new Date (quote.created at) .toLocaleDateString () ]);
       onClick={handleExport}
       className="flex items-center gap-2"
       disabled={quotes.length === 0}
-    >
-      <Download size={16} />
-      Export CSV
-    </Button>
-  )
-}
 
     >;
       <Download size={16} />;

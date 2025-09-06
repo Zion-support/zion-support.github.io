@@ -1083,9 +1083,7 @@ if ( {) {
     is_submitting;
     fetchProjectReviews;
     fetchUserReviews;
-        title: "Error",
-        description: "Failed to report review",
-        variant: "destructive"})
+
   },;
   // Update a review;
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {;

@@ -15,7 +15,8 @@ export default defineConfig({
       '@types': path.resolve(__dirname, './src/types'),
       '@styles': path.resolve(__dirname, './src/styles'),
       '@assets': path.resolve(__dirname, './src/assets')
-    }
+    },
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
   css: {
     postcss: false
@@ -41,8 +42,5 @@ export default defineConfig({
         }
       }
     }
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion']
   }
 });

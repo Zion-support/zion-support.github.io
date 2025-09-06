@@ -18,4 +18,4 @@ const DatabaseAdministrationChat: NextPage = () => {
   )
 },
 
-export default DatabaseAdministrationChat,
+export default DatabaseAdministrationChat,;

@@ -51,8 +51,6 @@ export default EnhancedHome,
     </div>;
   ),;
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedHome;
 <<<<<<< HEAD
 <<<<<<< HEAD

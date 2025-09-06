@@ -1,22 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
-
-    }
-
-
-<<<<<<< HEAD
-  if (req && req.method === 'POST') {
-    try {
-      const { uptime, downtime, incidents } = req && req.body;
-      
-
-=======
-import fs from 'fs';
-import path from 'path';
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const p = path.join(
   process.cwd()
   'data'
@@ -45,82 +28,17 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 if (req.method === 'POST') {
     try {
       const { uptime, downtime, incidents } = req && req.body;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const report = {
         uptime: uptime |0
         downtime: downtime |0
         incidents: incidents |[]
         generatedAt: new Date().toISOString()
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      };
-
-      fs && fs.writeFileSync(p, JSON && JSON.stringify(report, null, 2));
-      return res && res.status(201).json(report);
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
       return res && res.status(500).json({ error: 'Failed to update uptime report' });
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  res && res.setHeader('Allow', 'GET, POST');
-  res && res.status(405).end('Method Not Allowed');
-
-=======
-;
-      const report = {
-        uptime: uptime || 0,
-        downtime: downtime || 0,
-        incidents: incidents || [],
-        generated_at: new Date ().toISOString ();
-      }
-;
-      fs.writeFileSync (p, JSON.stringify (report, null, 2));
-      return res.status (201).json (report);
-    } catch (error) {
-      return res.status (500).json ({ error: 'Failed to update uptime report' });
-    }
-  }
-  res.set_header ('Allow', 'GET, POST');
-  res.status (405).end ('Method Not Allowed');
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
-  res && res.setHeader('Allow', 'GET, POST');
-  res && res.status(405).end('Method Not Allowed');
-
-  res && res.setHeader('Allow', 'GET, POST');
-  res && res.status(405).end('Method Not Allowed');
-}
-const p = path.join(process.cwd(), 'dataopsuptime-log.json');
-  res.setHeader('Allow', 'GET, POST');
-  res.status(405).end('Method Not Allowed');
-}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -147,27 +65,5 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

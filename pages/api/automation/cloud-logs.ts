@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-      } catch {
-        // ignore;
-=======
-        const inner_index = await r.json (),
-        results.push ({ id: j.id || f.name, file: f.name, generated_at: j.generated_at, insights: j.insights });
-      } catch {
-        // ignore;
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-async function fetchFromGitHub(): Promise<any[]> {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
@@ -23,12 +6,7 @@ async function fetchFromGitHub(): Promise<any[]> {
 
 
       } catch {
-<<<<<<< HEAD
-        // ignore
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         // ignore;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
 return results;
@@ -36,92 +14,6 @@ return results;
     return [];
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export default async /**
- * handler - Function description
- */
-function handler() {
-const dir = path.join (process.cwd (), 'automation_logs'),
-  try {
-<<<<<<< HEAD
-    if () {) {
-  $2
-}
-      const files = fs.readdir_sync (dir).filter ((f) => f.ends_with ('.json')).sort ().reverse (),
-      // Check condition
-if ( {) {
-  $2
-}
-        const logs = files.slice (0, 50).map ((f) => {
-          try {
-            const raw = fs.readFileSync (path.join (dir, f), 'utf8'),
-            const json = JSON.parse (raw),
-            return { id: json.id || f, file: f, generated_at: json.generated_at, insights: json.insights }
-          } catch {
-            return { id: f, file: f }
-          }
-        }),
-        return res.status (200).json ({ logs });
-=======
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-      }
-    }
-  } catch {
-    // fall through to GitHub;
-  }
-<<<<<<< HEAD
-
-=======
-}
-
-=======
-=======
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-const remote = await fetchFromGitHub (),
-  return res.status (200).json ({ logs: remote });
-}
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-  return res.status(200).json({ logs: remote });
-
-};
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    if (fs.existsSync(dir)) {
-      const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort().reverse()
-      if (files.length > 0) {
-        const logs = files.slice(0, 50).map((f) => {
-          try {
-            const raw = fs.readFileSync(path.join(dir, f), 'utf8')
-            const json = JSON.parse(raw)
-            return { id: json.id |f, file: f, generatedAt: json.generatedAt, insights: json.insights }
-          } catch {
-            return { id: f, file: f }
-          }
-        })
-        return res.status(200).json({ logs })
-      }
-    }
-  } catch {
-    // fall through to GitHub
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 const remote = await fetchFromGitHub()
 
@@ -221,9 +113,6 @@ export default async function handler(req, res) {
 }
 }
 };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 const remote = await fetchFromGitHub (),
   return res.status (200).json ({ logs: remote });
 }
@@ -234,4 +123,3 @@ const remote = await fetchFromGitHub (),
 
 };
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

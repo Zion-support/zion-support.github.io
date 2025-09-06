@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      const paintEntries = window && window.performance.getEntriesByType("paint");
-
-=======
-const paintEntries = window && window.performance.getEntriesByType("paint");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      const fcp = paintEntries && paintEntries.find(
-        (entry) => entry && entry.name === "first-contentful-paint",
-      );
-      const lcpEntries = window && window.performance.getEntriesByType(
-        "largest-contentful-paint",
-      );
-      const lcp = lcpEntries[0] as PerformanceEntry;
-
-      const clsEntries = window && window.performance.getEntriesByType("layout-shift");
-      const cls = clsEntries && clsEntries.reduce((acc, entry) => {
-        return acc + (entry as PerformanceEntry & { value: number }).value;
-      }, 0);
-
-      const fidEntries = window && window.performance.getEntriesByType("first-input");
-<<<<<<< HEAD
-
-      const fid = fidEntries[0] as PerformanceEventTiming;
-      setMetrics({
-
-=======
-      const fid = fidEntries[0] as PerformanceEventTiming;
-      setMetrics({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
-        firstContentfulPaint: fcp ? fcp && fcp.startTime : 0,
-        largestContentfulPaint: lcp ? lcp && lcp.startTime : 0,
-        cumulativeLayoutShift: cls,
-        firstInputDelay: fid ? fid && fid.processingStart - fid && fid.startTime : 0,
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
     }
     // Wait for all performance entries to be available
@@ -47,7 +5,6 @@ const paintEntries = window && window.performance.getEntriesByType("paint");
     return () => clearTimeout(timer);
   }, []);
   return { metrics, isSupported }
-=======
 import { useEffect, useState  } from './react';
 import { PerformanceMetrics  } from '../types';
 ;
@@ -104,5 +61,4 @@ function usePerformanceMetrics() {
   }, []);
 ;
   return { metrics, is_supported }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
