@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { useToast } from '@/hooks/use-toast';
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardFooter,;
-} from '@/components/ui/card';
-import { Textarea } from '@/components/ui/textarea';
-import { Check, Pencil } from 'lucide-react';
-=======
-
-import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { Textarea } from "@/components/ui/textarea";
-import { Check, Pencil } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface GeneratedDescriptionDisplayProps {
   description: string,
@@ -95,23 +71,4 @@ export function GeneratedDescriptionDisplay({
       )}
     </Card>
   );
-<<<<<<< HEAD
-
-  isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>) ;
-}</Button> </CardTitle> </CardHeader> <CardContent> {;
-  isEditing ? (<Textarea value= {;
-  editedDescription ;
-}</div>) ;
-}</CardContent> {;
-  isEditing && (<CardFooter> <Button onClick={;
-  handleSave ";
-}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ;
-}</Card>) ;
-}'"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

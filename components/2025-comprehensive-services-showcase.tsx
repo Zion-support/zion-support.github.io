@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- // All services combined const allServices = [ ...advancedAIMLServices;
-...advancedCybersecurityServices;
-...advancedCloudDevOpsServices2025;
-...industrySpecificSolutions;
-...emergingTechnologyServices ];
-const filteredServices = activeTab === 'all' ? allServices return (<div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100"> <SEO title="2025 Comprehensive Services Showcase - Zion Tech Group" description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, and AI services. Transform your business with cutting-edge solutions." keywords= {
-  ["micro SAAS", "IT services", "AI services", "business intelligence", "automation", "cloud infrastructure"] 
-}/> {
-  /* Hero Section */ 
-}<section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white"> <div className="absolute inset-0 bg-black/20"></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24"> <motion.div initial= {
-  {
-  opacity: 0, y: 20 
-=======
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Brain, Building, Target, Cpu, Shield, 
-  Check, Phone, Mail, MapPin;
-  TrendingUp, Zap, Globe
-} from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 // Import our new service data
 import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services';
@@ -39,35 +15,6 @@ const getServicePricing = (service: any) => {
   if (typeof service.price === 'string') return service.price;
   return 'Contact for pricing'
 };
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Brain, Building, Target, Cpu, Shield, 
-  Check, Phone, Mail, MapPin;
-  TrendingUp, Zap, Globe
-} from 'lucide-react';
-
-// Import our new service data
-import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services';
-import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services';
-import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services';
-import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions';
-import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
-const ComprehensiveServicesShowcase2025 = () => {
-  const [activeTab, setActiveTab] = useState('all');
-
-// Helper function to get service pricing
-const getServicePricing = (service: any) => {
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`;
-  if (typeof service.price === 'string') return service.price;
-  return 'Contact for pricing'
-};
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 // Helper function to get service features
 const getServiceFeatures = (service: any) => {
@@ -583,8 +530,4 @@ const allServices = [
   )
 };
 
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default ComprehensiveServicesShowcase;

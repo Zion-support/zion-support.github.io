@@ -1,36 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <loc>https://zion.app/</loc>
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     <loc>https://ziontechgroup.com/500</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-<<<<<<< HEAD
-=======
-    <loc>https://zion.app/contact</loc>
-    <lastmod>2025-08-11T11:14:25.268Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     <loc>https://zion.app/front</loc>
-=======
     <loc>https://zion.app/</loc>    <loc>https://zion.app/front</loc>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     <loc>https://zion.app/</loc>    <loc>https://zion.app/front</loc>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     <lastmod>2025-08-11T11:14:25.268Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -102,13 +81,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -116,14 +88,6 @@
   <url>
     <loc>https://ziontechgroup.com/404</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     <loc>https://ziontechgroup.com/</loc>
     <lastmod>2025-08-22T18:38:08.718Z</lastmod>
     <changefreq>daily</changefreq>
@@ -4650,11 +4614,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <loc>https://ziontechgroup.com/services/5g-private-network-solutions-2026/</loc>
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6145,7 +6104,6 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/services/warehouse-native-product-analytics/</loc>
-=======
     <lastmod>2025-08-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -6235,15 +6193,11 @@
     <priority>0.6</priority>
   </url>
   <url>
-=======
     <loc>https://ziontechgroup.com/contact</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/contact</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/contact</loc>
-=======
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -6274,17 +6228,13 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/explore</loc>
-=======
     <loc>https://ziontechgroup.com/explore</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/explore</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/explore</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
-=======
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -48291,7 +48241,6 @@
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T00-27</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T15-19</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -48690,7 +48639,6 @@
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T00-31</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T16-44</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -48747,7 +48695,6 @@
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T00-40</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T16-57</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -48846,7 +48793,6 @@
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T04-00</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T17-24</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -48867,7 +48813,6 @@
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T04-19</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T17-30</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -48888,7 +48833,6 @@
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T04-41</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T17-38</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -48921,7 +48865,6 @@
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T05-40</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T17-52</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -48942,7 +48885,6 @@
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T06-10</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T17-55</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -48975,7 +48917,6 @@
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T07-10</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T18-18</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -49032,7 +48973,6 @@
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T08-50</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T18-27</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -49101,7 +49041,6 @@
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T09-17</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T18-38</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -49128,7 +49067,6 @@
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T09-22</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T18-42</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -49149,7 +49087,6 @@
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T09-25</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T18-45</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -51631,7 +51568,6 @@
     <loc>https://ziontechgroup.com/site-health</loc>
     <loc>https://ziontechgroup.com/site-health</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -52935,7 +52871,6 @@
   <url>
     <loc>https://ziontechgroup.com/services/landing-page-generator</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
     <loc>https://ziontechgroup.com/tutorials/rapid-1755542893114-w4yicd</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -53148,7 +53083,6 @@
   <url>
     <loc>https://ziontechgroup.com/tutorials/rapid-1755575073402-zt8joq</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
-=======
     <loc>https://zion.app/services/price-intelligence-service</loc>
     <lastmod>2025-08-11T11:14:25.268Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -53161,7 +53095,6 @@
     <priority>0.6</priority>
   </url>
 </urlset>
-=======
     <loc>https://zion.app/support</loc>
     <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -53173,55 +53106,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-<<<<<<< HEAD
-  <url>
-    <loc>https://ziontechgroup.com/ai-financial-forecasting/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-marketing-attribution/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/data-governance-starter/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/zero-trust-network-architecture/</loc>
-    <lastmod>2025-08-22T18:38:08.726Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/iot-fleet-telemetry/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/api-security-testing/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/zero-trust-security-platform/</loc>
-    <lastmod>2025-08-22T18:38:08.726Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/cdp-starter/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 </urlset>
-=======
     <loc>https://ziontechgroup.com/services/5g-private-network-solutions-2026/</loc></urlset>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     <loc>https://ziontechgroup.com/services/5g-private-network-solutions-2026/</loc></urlset>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

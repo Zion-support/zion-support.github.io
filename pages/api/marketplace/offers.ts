@@ -12,12 +12,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === "GET") {
       const user = getDemoUser(req);
       if (user.role === "client") {
-        const offers = listOffers({ clientId: user.id }),
-        return res.json({ ok: true, offers })
+        const offers = listOffers({ clientId: user.id });
+        return res.json({ ok: true, offers });
       }
       if (user.role === "talent") {
-        const offers = listOffers({ talentSlug: user.talentSlug }),
-        return res.json({ ok: true, offers })
+        const offers = listOffers({ talentSlug: user.talentSlug });
+        return res.json({ ok: true, offers });
       }
       return bad(res, "Unknown role", 403)
     }
@@ -31,15 +31,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
 
       const offer: Offer = {
-        id: uuidv4();
+        id: uuidv4(),
         createdAtIso: new Date().toISOString(),
         clientId: client.id,
         talentSlug,
-    startDateIso,
-        scopeSummary;
+        startDateIso,
+        scopeSummary,
         paymentTerms: paymentTerms as PaymentTerms,
-        agreementUrl;
-        status: "SENT"},
+        agreementUrl,
+        status: "SENT"
+      };
       saveOffer(offer);
       return res.status(201).json({ ok: true, offer })
     }
@@ -56,7 +57,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         existing.status = "CONFIRMED";
         // Create a project upon acceptance
         const project: Project = {
-          id: uuidv4();
+          id: uuidv4(),
           title: `Project with ${existing.talentSlug}`,
           summary: existing.scopeSummary,
           clientId: existing.clientId,
@@ -72,7 +73,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                   url: existing.agreementUrl,
                   uploadedAtIso: new Date().toISOString()}]
             : [],
-          notes: []},
+          notes: []
+        };
         saveProject(project);
         existing.projectId = project.id;
         saveOffer(existing);

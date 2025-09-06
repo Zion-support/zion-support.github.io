@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Control, UseFormSetValue } from 'react-hook-form';
-=======
-
-import React, { useState } from "react";
-import { Control, UseFormSetValue } from "react-hook-form";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import {
   FormField;
   FormItem;
@@ -78,14 +69,3 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
     </div>
   )
 };
-<<<<<<< HEAD
-"
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

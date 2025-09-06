@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { format } from 'date-fns';
-import { Calendar } from '@/components/ui/calendar';
-import { Button } from '@/components/ui/button';
-import { Label } from '@/components/ui/label';
-import { CalendarIcon } from 'lucide-react';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,;
-} from '@/components/ui/popover';
-import { cn } from '@/lib/utils';
-import { QuoteFormData } from '@/types/quotes';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar";
@@ -123,12 +107,4 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark",
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

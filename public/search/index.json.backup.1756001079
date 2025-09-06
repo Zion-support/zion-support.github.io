@@ -241,20 +241,9 @@
   },
   {
     "route": "/careers",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "title": "Careers - Zion Tech Group",
-=======
-    "title": "Careers - Zion Tech Group | Join Our Revolutionary Technology Team",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
     "h1": "Join Our Team"
-=======
     "title": "Careers - Zion Tech Group",    "h1": "Join Our Team"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     "title": "Careers - Zion Tech Group",    "h1": "Join Our Team"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   },
   {
     "route": "/case-studies",
@@ -287,26 +276,11 @@
     "h1": "2025 Innovative Services"
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/comprehensive-2025-services-showcase",
     "title": "Comprehensive 2025 Innovative Services Showcase — Zion Tech Group",
     "h1": "2025 Innovative Services Showcase"
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/comprehensive-pricing",
     "title": "Comprehensive Pricing | Zion Tech Group - Micro SaaS Services Pricing & Plans",
     "h1": ""
@@ -528,20 +502,9 @@
   },
   {
     "route": "/news",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "title": "News & Press - Zion Tech Group",
-=======
-    "title": "News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
     "h1": "News & Press"
-=======
     "title": "News & Press - Zion Tech Group",    "h1": "News & Press"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     "title": "News & Press - Zion Tech Group",    "h1": "News & Press"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   },
   {
     "route": "/notifications",
@@ -560,24 +523,11 @@
   },
   {
     "route": "/partners",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "title": "Partners - Zion Tech Group",
-    "h1": "Strategic Partners"
-=======
-    "title": "Partners | Zion Tech Group",
-    "h1": "Partners"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
   },
-=======
     "title": "Partners - Zion Tech Group",
     "h1": "Strategic Partners"  },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     "title": "Partners - Zion Tech Group",
     "h1": "Strategic Partners"  },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     "route": "/password-checker",
     "title": "Password Strength Checker - Zion Tech Group",
@@ -589,28 +539,13 @@
     "h1": ""
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "route": "/portfolio",
-    "title": "Our Work - Zion Tech Group",
-    "h1": "Our Work"
-=======
-    "route": "/pricing-2025",
-    "title": "2025 Pricing & Services — Zion Tech Group",
-    "h1": "2025 Pricing & Services"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
   },
-=======
     "route": "/portfolio",
     "title": "Our Work - Zion Tech Group",
     "h1": "Our Work"  },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     "route": "/portfolio",
     "title": "Our Work - Zion Tech Group",
     "h1": "Our Work"  },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     "route": "/pricing-comparison",
     "title": "Pricing Comparison - Zion Tech Group | How We Stack Up Against the Competition",
@@ -723,20 +658,9 @@
   },
   {
     "route": "/services",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "title": "Revolutionary 2029 Technology Services | Zion Tech Group",
-=======
-    "title": "Revolutionary 2025 Technology Services | Zion Tech Group",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
     "h1": ""
-=======
     "title": "Revolutionary 2029 Technology Services | Zion Tech Group",    "h1": ""
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     "title": "Revolutionary 2029 Technology Services | Zion Tech Group",    "h1": ""
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   },
   {
     "route": "/site-health",
@@ -874,22 +798,10 @@
     "h1": "{service.name}"
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/services/ai-ml",
     "title": "AI & Machine Learning Services - Zion Tech Group",
     "h1": "AI & Machine Learning"
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-  {
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
     "route": "/services/ai-model-development-chat",
     "title": "AiModelDevelopmentChat - Zion Tech Solutions",
     "h1": "AiModelDevelopmentChat"
@@ -900,21 +812,9 @@
     "h1": "AiSeoAuditor"
   },
   {
-<<<<<<< HEAD
-    "route": "/services/analytics",
-    "title": "Data Analytics Services - Zion Tech Group",
-    "h1": "Data Analytics"
-  },
-  {
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
     "route": "/services/api-development-chat",
-=======
   {    "route": "/services/api-development-chat",
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   {    "route": "/services/api-development-chat",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "title": "ApiDevelopmentChat - Zion Tech Solutions",
     "h1": "ApiDevelopmentChat"
   },
@@ -929,42 +829,18 @@
     "h1": "CloudMigrationServicesChat"
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/services/cloud",
     "title": "Cloud Infrastructure Services - Zion Tech Group",
     "h1": "Cloud Infrastructure"
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-  {
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
     "route": "/services/customer-support-chatbot",
     "title": "Services • Customer-support-chatbot - Placeholder",
     "h1": "CustomerSupportChatbot"
   },
   {
-<<<<<<< HEAD
-    "route": "/services/cybersecurity",
-    "title": "Cybersecurity Services - Zion Tech Group",
-    "h1": "Cybersecurity"
-  },
-  {
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
     "route": "/services/data-pipeline-engineering-chat",
-=======
   {    "route": "/services/data-pipeline-engineering-chat",
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   {    "route": "/services/data-pipeline-engineering-chat",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "title": "DataPipelineEngineeringChat - Zion Tech Solutions",
     "h1": "DataPipelineEngineeringChat"
   },
@@ -1014,22 +890,10 @@
     "h1": "QualityAssuranceTestingChat"
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/services/quantum",
     "title": "Quantum Computing Services - Zion Tech Group",
     "h1": "Quantum Computing"
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-  {
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
     "route": "/services/security-auditing-chat",
     "title": "SecurityAuditingChat - Zion Tech Solutions",
     "h1": "SecurityAuditingChat"
@@ -1045,21 +909,9 @@
     "h1": "TechnicalDocumentationChat"
   },
   {
-<<<<<<< HEAD
-    "route": "/services/transformation",
-    "title": "Digital Transformation Services - Zion Tech Group",
-    "h1": "Digital Transformation"
-  },
-  {
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
     "route": "/services/ui-ux-design-chat",
-=======
   {    "route": "/services/ui-ux-design-chat",
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   {    "route": "/services/ui-ux-design-chat",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "title": "UiUxDesignChat - Zion Tech Solutions",
     "h1": "UiUxDesignChat"
   },

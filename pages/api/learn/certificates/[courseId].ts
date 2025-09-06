@@ -10,8 +10,8 @@ function readJson(p: string) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
-    res.setHeader('AllowGET'),
-    return res.status(405).end('Method Not Allowed')
+    res.setHeader('Allow', 'GET');
+    return res.status(405).end('Method Not Allowed');
   }
 
   const { courseId, userId = 'demo-user' } = req.query as { courseId: string, userId?: string };
@@ -22,9 +22,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const user = users[userId];
     if (!course) return res.status($1).json({$2});
     if (!user) return res.status($1).json({$2});
-    res.setHeader('Content-Typeapplication/pdf');
+    res.setHeader('Content-Type', 'application/pdf');
     res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`);
-    const doc = new PDFDocument({ size: 'A4'; margin: 50 }),
+    const doc = new PDFDocument({ size: 'A4', margin: 50 });
     // Pipe to response
     // @ts-ignore
     doc.pipe(res);
@@ -43,11 +43,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     doc.moveDown(0.5);
     doc.fontSize(20).text(course.title, { align: 'center' }),
     doc.moveDown(0.5);
-    doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' }),
+    doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' });
     const date = new Date().toLocaleDateString();
     doc.moveDown(2);
-    doc.fontSize(12).text(`Date: ${date}`, { align: 'center' }),
-    doc.end()
+    doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
+    doc.end();
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
   }

@@ -63,22 +63,8 @@
   ],
   "results": [],
   "buildBreakingFiles": [],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "buildBreakingFiles": [],
-  "generatedAt": "2025-08-20T18:46:21.467Z"
-=======
-  "generatedAt": "2025-08-20T18:44:36.333Z"
-=======
-  "generatedAt": "2025-08-20T18:47:22.457Z"
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-602f
 }
-=======
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-20T18:46:21.467Z"}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-20T18:46:21.467Z"}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

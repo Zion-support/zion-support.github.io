@@ -6,17 +6,9 @@ const localeLabelKey: Record<string, string> = {
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ar: 'lang.arabic',
-=======
-  ar: 'lang.arabic'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
-=======
   ar: 'lang.arabic'},
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 export default function LanguageSwitchPrompt() {
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
@@ -24,23 +16,6 @@ export default function LanguageSwitchPrompt() {
   useEffect(() => {
     const key = 'langPromptShown';
     const preferred = localStorage.getItem('preferredLanguage');
-<<<<<<< HEAD
-    if (preferred) return; // user has chosen
-    if (localStorage.getItem(key)) return; // already prompted
-
-    const detected = i18n.language || i18n.resolvedLanguage || navigator.language || 'en';
-    const normalized = detected.split('-')[0];
-    const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null;
-    if (suggestion) setSuggested(suggestion);
-=======
-    if (preferred) return, // user has chosen
-    if (localStorage.getItem(key)) return, // already prompted
-
-    const detected = i18n.language || i18n.resolvedLanguage || navigator.language || 'en';
-    const normalized = detected.split('-')[0];
-    const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null;
-    if (suggestion) setSuggested(suggestion)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   }, []);
 
   if (!suggested) return null;
@@ -48,49 +23,6 @@ export default function LanguageSwitchPrompt() {
   const accept = async () => {
     await i18n.changeLanguage(suggested!);
     localStorage.setItem('preferredLanguage', suggested!);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    localStorage.setItem('langPromptShown', '1');
-    document.documentElement.setAttribute(
-      'dir',
-      isRtl(suggested!) ? 'rtl' : 'ltr'
-    );
-=======
-    localStorage.setItem('langPromptShown1');
-    document.documentElement.setAttribute('dir', isRtl(suggested!) ? 'rtl' : 'ltr');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-    document.documentElement.setAttribute('lang', suggested!);
-    setSuggested(null)
-  };
-
-  const decline = () => {
-    localStorage.setItem('langPromptShown1');
-    setSuggested(null)
-  };
-
-  return (
-    <div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200">
-      <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm">
-        <div>
-          {t('lang.switch_prompt', { language: t(localeLabelKey[suggested]) })}
-        </div>
-<<<<<<< HEAD
-        <div className='flex items-center gap-2'>
-          <button
-            className='px-3 py-1 rounded bg-amber-600 text-white'
-            onClick={accept}
-          >
-            {t('lang.switch_accept')}
-          </button>
-          <button
-            className='px-3 py-1 rounded border border-amber-300 dark:border-amber-700'
-            onClick={decline}
-          >
-            {t('lang.switch_decline')}
-          </button>
-=======
-    localStorage.setItem('langPromptShown1');
-    document.documentElement.setAttribute('dir', isRtl(suggested!) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', suggested!);
     setSuggested(null)
   };
@@ -109,21 +41,8 @@ export default function LanguageSwitchPrompt() {
         <div className="flex items-center gap-2">
           <button className="px-3 py-1 rounded bg-amber-600 text-white" onClick={accept}>{t('lang.switch_accept')}</button>
           <button className="px-3 py-1 rounded border border-amber-300 dark:border-amber-700" onClick={decline}>{t('lang.switch_decline')}</button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        <div className="flex items-center gap-2">
-          <button className="px-3 py-1 rounded bg-amber-600 text-white" onClick={accept}>{t('lang.switch_accept')}</button>
-          <button className="px-3 py-1 rounded border border-amber-300 dark:border-amber-700" onClick={decline}>{t('lang.switch_decline')}</button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

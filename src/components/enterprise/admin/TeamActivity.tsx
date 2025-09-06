@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,;
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import { CalendarIcon, Search } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import {
@@ -163,25 +146,4 @@ export function TeamActivity() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-
-};
-const getCategoryBadge = (category: string) => {;
-  ;
-};";
-  activities.map ( (activity) => (<TableRow key= {;
-  activity.id ;
-}> </TableCell> </TableRow>) ) ";
-}</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
-}"
-=======
-
-<<<<<<< HEAD
-    return <Badge variant={style.variant}>{category}</Badge>
-  };
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

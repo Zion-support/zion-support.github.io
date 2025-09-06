@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { useForm, ControllerRenderProps } from 'react-hook-form';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-=======
-
-import { useState } from "react";
-import { useForm, ControllerRenderProps } from "react-hook-form";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import {
   Form;
   FormControl;
@@ -81,12 +68,4 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
 };
 
 export default ReplyForm;
-=======
 
-<<<<<<< HEAD
-
-
-
-export default ReplyForm;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

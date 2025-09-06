@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,;
-} from '@/components/ui/dialog';
-import { DisputeForm } from './DisputeForm';
-=======
-
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { 
-  Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle;
-  DialogDescription} from "@/components/ui/dialog";
-import { DisputeForm } from "./DisputeForm";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import { ShieldAlert } from 'lucide-react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
@@ -80,14 +56,4 @@ export function RaiseDisputeButton({
       </Dialog>
     </>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-  milestoneId, 
-  variant = "outline", 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -56,26 +56,9 @@ const nextConfig = {
     // Bundle analysis optimizations moved to root level
     // Disable profiling for faster builds
     swcTraceProfiling: false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
-    // Removed esmExternals to prevent external module dynamic import issues
-    esmExternals: undefined,
-    // Enable React 19 streaming features
-    reactRoot: true,
-    // Enable React Compiler for automatic memoization optimizations (experimental)
-    reactCompiler: true,
-    // Partial Prerendering currently requires canary – disabled for now
->>>>>>> origin/cursor/check-logs-and-improve-project-quality-a28f
   },
-=======
       },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   images: {
     unoptimized: isNetlify, // Disable optimization on Netlify to prevent 404s
@@ -326,13 +309,6 @@ const nextConfig = {
         })
       );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
     
     // Development optimizations to prevent memory leaks with 176+ pages
@@ -935,14 +911,6 @@ const nextConfig = {
       },
     ];
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   
   // Skip ESLint during build for faster deployment  
   eslint: {
@@ -952,13 +920,6 @@ const nextConfig = {
   // Enable SWC minification explicitly (already default in Next 15)
   swcMinify: true,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-logs-and-improve-project-quality-a28f
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 module.exports = withSentryConfig(baseConfig);

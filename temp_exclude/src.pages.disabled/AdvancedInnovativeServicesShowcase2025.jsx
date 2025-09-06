@@ -11,13 +11,3 @@ export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInno
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}

@@ -19,8 +19,3 @@ module.exports = {
     '/node_modules/',
     '^.+\\.module\\.(css|sass|scss)$',
   ],
-<<<<<<< HEAD
-};
-=======
-};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { FooterNewsletter } from '@/components/FooterNewsletter';
-import {
-  Twitter,
-  Linkedin,
-  Facebook,
-  Instagram,
-  Github,
-  ChevronUp,;
-} from 'lucide-react';
-import Link from 'next/link'; // Changed from react-router-dom
-import { FeedbackWidget } from '@/components/feedback/FeedbackWidget';
-
-=======
-import { FooterNewsletter } from "@/components/FooterNewsletter";
-import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
-import Link from "next/link", // Changed from react-router-dom
-import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
     return fallback;
@@ -226,13 +206,4 @@ export function Footer() {
       </div>
     </footer>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

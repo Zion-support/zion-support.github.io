@@ -36,14 +36,6 @@ function fixLinkTags(content) {
         "import React from 'react';\nimport Link from 'next/link';"
       );
     } else {
-<<<<<<< HEAD
-      content = "import Link from 'next/link';\n" + content;
-    }
-=======
-    content = "import Link from 'next/link',
-    \n" + content
-  }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   }
   
   // Replace <a> tags with Link components for internal links

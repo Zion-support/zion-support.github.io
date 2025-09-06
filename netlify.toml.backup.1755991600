@@ -11,13 +11,6 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -43,13 +36,6 @@
   name = "front-enhancer"
   schedule = "*/5 * * * *" # every 5 minutes
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[scheduled.functions]]
   name = "front-index-orchestrator"
   schedule = "*/5 * * * *" # every 5 minutes
@@ -165,66 +151,13 @@
   status = 301
 
 # Section placeholders to existing hubs
-<<<<<<< HEAD
-<<<<<<< HEAD
-[[redirects]]
-=======
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    X-DNS-Prefetch-Control = "on"
-    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
-
-[[redirects]]
-  from = "/og-image.jpg"
-  to = "/og-image.svg"
-  status = 301
-
-[[redirects]]
-  from = "/twitter-image.jpg"
-  to = "/og-image.svg"
-  status = 301
-
-[[redirects]]
-  from = "/api"
-  to = "/api-documentation"
-  status = 301
-
-[[redirects]]
-  from = "/webinars"
-  to = "/news"
-  status = 301
-
-[[redirects]]
-  from = "/events"
-  to = "/news"
-  status = 301
-
-[[redirects]]
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-7272
   from = "/team"
-=======
 [[redirects]]  from = "/team"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 [[redirects]]  from = "/team"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   to = "/about"
   status = 301
 
 [[redirects]]
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
   status = 301
@@ -291,22 +224,6 @@
 
 [[redirects]]
   from = "/quantum-encryption-gateway"
-<<<<<<< HEAD
-<<<<<<< HEAD
-  to = "/quantum-internet-security-platform"
-=======
-  from = "/press"
-  to = "/news"
   status = 301
-
-[[redirects]]
-  from = "/legal"
-  to = "/terms"
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-7272
-  status = 301
-=======
   to = "/quantum-internet-security-platform"  status = 301
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   to = "/quantum-internet-security-platform"  status = 301
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

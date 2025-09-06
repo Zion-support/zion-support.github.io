@@ -1,97 +1,9 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
-import { AlertTriangle, Package, Zap } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface BundleInfo {
-  totalSize: number,
-  gzippedSize: number,
-  chunkCount: number,
-  loadTime: number,
-  cacheHitRate: number
-}
-
-interface ChunkInfo {
-  name: string,
-  size: number,
-  loadTime: number,
-  cached: boolean
-}
-
-export function BundleAnalyzer() {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
-
-  if (!isAllowed) {
-    return null
-  }
-
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null);
-  const [chunks, setChunks] = useState<ChunkInfo[]>([]);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isCollecting, setIsCollecting] = useState(false);
-  const [shouldShow, setShouldShow] = useState(false);
-
-  useEffect(() => {
-    // Only show in development or when explicitly enabled
-    const show =
-      process.env.NODE_ENV === 'development' ||
-      localStorage.getItem('bundle-analyzer') === 'true';
-
-    setShouldShow(show);
-
-    if (!show) return;
-
-    setIsVisible(true);
-    collectBundleInfo()
-  }, []);
-
-  const collectBundleInfo = async () => {
-    if (typeof window === 'undefined') return;
-
-    setIsCollecting(true);
-
-    try {
-      // Get performance entries for script resources
-      const resourceEntries = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
-      const scriptEntries = resourceEntries.filter(entry => 
-        entry.name.includes('/_next/static/') && 
-        (entry.name.endsWith('.js') || entry.name.endsWith('.css'))
-      );
-
-      // Calculate bundle information
-      let totalSize = 0;
-      let totalLoadTime = 0;
-<<<<<<< HEAD
-      const chunkData: ChunkInfo[] = [];
-=======
-
-<<<<<<< HEAD
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
-
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       const chunkData: ChunkInfo[] = [],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
       scriptEntries.forEach(entry => {
         const size = entry.transferSize || entry.encodedBodySize || 0;
         const loadTime = entry.responseEnd - entry.requestStart;
         const cached = entry.transferSize === 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         totalSize += size;
         totalLoadTime += loadTime;
 
@@ -269,12 +181,4 @@ export function BundleAnalyzer() {
       </Card>
     </div>
   );
-<<<<<<< HEAD
-=======
-        
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

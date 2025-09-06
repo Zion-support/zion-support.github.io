@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useState } from 'react';
 import { 
   DropdownMenu;
@@ -28,43 +23,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
   const [newResumeTitle, setNewResumeTitle] = useState('');
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-
-=======
-
-import { useState } from 'react';
-import { 
-  DropdownMenu;
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuSeparator;
-  DropdownMenuTrigger 
-
-} from '@/components/ui/dropdown-menu',
-
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react'
-import { Resume } from '@/types/resume';
-import { useResume } from '@/hooks/useResume';
-interface ResumeVersionSelectorProps {
-  currentResume: Resume,
-  onResumeChange: (resumeId: string) => void
-}
-
-
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) { const { createResume, fetchResume  } = useResume(),
-  const [ saveDialogOpen, setSaveDialogOpen ] = useState(false),
-  const [ newResumeTitle, setNewResumeTitle ] = useState(''),
-  const [ existingResumes, setExistingResumes ] = useState<Resume[]>([]),
-  const [ isLoading, setIsLoading ] = useState(false),
-
   
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {
       setIsLoading(true);
@@ -73,12 +32,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        setNewResumeTitle('');
-=======
-        setNewResumeTitle('')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
       setIsLoading(false)
     }
@@ -99,101 +52,20 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <DropdownMenuItem 
               key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
-<<<<<<< HEAD
-              className='cursor-pointer'
-=======
-        setNewResumeTitle('')
-      }
-      setIsLoading(false)
-    }
-  };
-
-
-  return (
-    <div className="flex items-center gap-2">
-      <span className="text-sm text-muted-foreground">Resume:</span>
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="sm" className="gap-2">
-            {currentResume?.basic_info?.title || 'My Resume'}
-            <ChevronDown className="h-4 w-4" />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          {existingResumes.map((resume) => (
-            <DropdownMenuItem 
-              key={resume.id}
-              onClick={() => onResumeChange(resume.id!)}
               className="cursor-pointer"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              className="cursor-pointer"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
               {resume.basic_info.title}
             </DropdownMenuItem>
           ))}
           <DropdownMenuSeparator />
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <DropdownMenuItem
-=======
-          <DropdownMenuItem 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            onClick={() => setSaveDialogOpen(true)}
-            className="cursor-pointer"
-          >
-<<<<<<< HEAD
-            <Plus className='h-4 w-4 mr-2' />
-=======
-          <DropdownMenuItem 
             onClick={() => setSaveDialogOpen(true)}
             className="cursor-pointer"
           >
             <Plus className="h-4 w-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-            <Plus className="h-4 w-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             Save as new version
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-      <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
-        <DialogContent className="sm:max-w-md">
-          <DialogHeader>
-            <DialogTitle>Save as new resume version</DialogTitle>
-          </DialogHeader>
-          <div className="py-4">
-            <Input
-              value={newResumeTitle}
-              onChange={(e) => setNewResumeTitle(e.target.value)}
-              placeholder="Enter resume title (e.g. DevOps Resume)"
-            />
-          </div>
-          <DialogFooter>
-            <Button 
-              variant="outline" 
-              onClick={() => setSaveDialogOpen(false)}
-            >
-              Cancel
-            </Button>
-            <Button 
-              onClick={handleCreateNewVersion}
-              disabled={!newResumeTitle.trim() || isLoading}
-              className="gap-2"
-            >
-<<<<<<< HEAD
-              {isLoading && <Loader2 className='h-4 w-4 animate-spin' />}
-              <Save className='h-4 w-4' />
-=======
-      
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
@@ -220,11 +92,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
               <Save className="h-4 w-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
-              <Save className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Save
             </Button>
           </DialogFooter>
@@ -232,18 +99,4 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
       </Dialog>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-};
-> {;
-  resume.basic info.title ;
-}</DropdownMenuItem>) ) ;
-}<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>) ;
-}"
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

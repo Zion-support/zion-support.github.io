@@ -1,17 +1,5 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default function AIPredictiveMaintenancePlatform() {
-  
-    />
-  );
-=======
-export default function AIPredictiveMaintenancePlatform() {
-=======
-export default function AIPredictiveMaintenancePlatform() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<ServiceLanding
 			title="AI Predictive Maintenance Platform"
@@ -34,9 +22,4 @@ export default function AIPredictiveMaintenancePlatform() {
 			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform"
 		/>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

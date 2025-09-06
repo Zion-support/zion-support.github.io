@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 </Head> <section className="relative py-24 px-4" > <div className="max-w-6xl mx-auto" > <div className="text-center mb-14" > <h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-400 bg-clip-text text-transparent" > We build practical AI and platform solutions </h1> </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12" > <Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8" > <div className="flex items-center gap-3 mb-4" > <Rocket className="w-6 h-6 text-cyan-400" /> <h2 className="text-2xl font-bold text-white" >Our Mission</h2> </div> <p className="text-gray-300" > Deliver future-grade capabilities with present-day ROI. We productize repeatable outcomes so you start fast and scale predictably. </p> </Card> <Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8" > <div className="flex items-center gap-3 mb-4" > <Sparkles className="w-6 h-6 text-purple-400" /> <h2 className="text-2xl font-bold text-white" >How We Work</h2> </div> <ul className="list-disc list-inside text-gray-300 space-y-2" > <li>Productized service tiers with clear SLAs</li> <li>Security, compliance, and FinOps baked in</li> <li>Build-operate-transfer options for in-house teams</li> <li>Transparent pricing and usage-based add-ons</li> </ul> </Card> </div> </Card>) ) 
 }</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
 }return ({
   /* Mission & Vision */ 
@@ -9,9 +5,6 @@
 }</div> </div> </section> <section className="section-padding bg-gradient-cursor-blue" > <div className="container-cursor" > <div className="text-center mb-20" > <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow" >What We Do</h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Comprehensive solutions that drive innovation and transformation </p> </div> </div> </div> </Card>) ) 
 }</div> </div> </section> </div>) ) 
 }</div> </div> </section> Let's work together to build the next generation of autonomous technology and shape the future of innovation. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <Button href="/contact" size="lg" className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow" >Get in Touch</Button> <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg:white hover:text-cursor-blue shadow-2xl" >Explore Services</Button> </div> </div> Get in touch with our experts today for a free consultation and discover how our 500+ revolutionary micro SaaS services can drive unprecedented growth </p> </div> </div> <p className="text-gray-400 text-lg" > Start your 21-day free trial today and experience the future of technology </p> </div> </div> </section> </section> </>) 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -138,24 +131,10 @@ export default function AboutPage() {
   const services = [
     {
       title: 'AI Development',
-<<<<<<< HEAD
-      description: 'Advanced machine learning models, natural language processing, computer vision systems, and autonomous decision making.',
-    icon: '🧠',
-=======
-      description: 'Advanced machine learning models, natural language processing, computer vision systems, and autonomous decision making.';
-      icon: '🧠',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       color: 'text-cyan-400',
       gradient: 'from-cyan-400 to-blue-500'},
     {
       title: 'Automation Systems',
-<<<<<<< HEAD
-      description: 'Cloud infrastructure automation, CI/CD pipeline optimization, self-healing applications, and performance monitoring.',
-    icon: '⚙️',
-=======
-      description: 'Cloud infrastructure automation, CI/CD pipeline optimization, self-healing applications, and performance monitoring.';
-      icon: '⚙️',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       color: 'text-fuchsia-400',
       gradient: 'from-fuchsia-400 to-purple-500'}],
   const achievements = [
@@ -350,7 +329,3 @@ export default function AboutPage() {
     </>
   );
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

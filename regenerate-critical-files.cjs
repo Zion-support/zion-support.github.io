@@ -5,13 +5,6 @@ const path = require('path');
 
 class CriticalFileRegenerator {
   constructor() {
-<<<<<<< HEAD
-    this.projectRoot = process.cwd(),
-    this.regeneratedFiles = []
-=======
-    this.projectRoot = process.cwd();
-    this.regeneratedFiles = [];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   log(message, type = 'INFO') {
@@ -95,12 +88,6 @@ export default LandingPage;`;
     const buttonTsx = `import React from 'react';
 
 interface ButtonProps {
-<<<<<<< HEAD
-  children: React.ReactNode, onClick?: () => void,
-=======
-  children: React.ReactNode;
-  onClick?: () => void;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   className?: string;
   type?: 'button' | 'submit' | 'reset';
 }

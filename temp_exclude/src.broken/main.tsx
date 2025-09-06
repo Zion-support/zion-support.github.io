@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import './utils/globalFetchInterceptor';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Import i18n configuration //Initialize a React Query client with global error handling const queryClient = new QueryClient ({
   defaultOptions: {
   queries: {
   onError: (error) => showApiError (error) 

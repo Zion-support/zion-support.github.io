@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const os = require('os');
 const path = require('path');
 
@@ -168,13 +161,6 @@ const nextConfig = {
         })
       );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
     
     // Development optimizations to prevent memory leaks with 176+ pages
@@ -759,30 +745,5 @@ const nextConfig = {
   },
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 module.exports = nextConfig;
-=======
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  images: {
-    domains: ['ziontechgroup.com'],
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-}
-
-module.exports = nextConfig
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2750
-=======
 module.exports = nextConfig;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-module.exports = nextConfig;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

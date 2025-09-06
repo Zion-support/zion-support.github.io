@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { ClickableBadge } from '@/components/ui/clickable-badge';
-import { Button } from '@/components/ui/button';
-import { X } from 'lucide-react';
-=======
-
-import React from "react";
-import { ClickableBadge } from "@/components/ui/clickable-badge";
-import { Button } from "@/components/ui/button";
-import { X } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface ActiveFiltersProps {
   selectedSkills: string[],
@@ -120,11 +107,4 @@ export function ActiveFilters({
       </Button>
     </div>
   );
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

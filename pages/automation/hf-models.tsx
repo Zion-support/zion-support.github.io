@@ -1,11 +1,4 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-<<<<<<< HEAD
-// @ts-ignore </li>) ) 
-}</ul> </div> </EnhancedLayout>) 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 // @ts-ignore
 import data from '../../data/hf-models.json';
 export default function HfModelsPage() {
@@ -26,9 +19,4 @@ export default function HfModelsPage() {
       </div>
     </EnhancedLayout>
   )
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

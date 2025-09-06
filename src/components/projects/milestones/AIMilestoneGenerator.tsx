@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -180,16 +175,4 @@ export function AIMilestoneGenerator({
       )}
     </div>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-    setSelectedMilestones(prev => ({
-      ...prev;
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

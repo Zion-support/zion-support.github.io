@@ -43,13 +43,6 @@ export default function AIServices() {
     {
       id: 2,
       name: 'AI-Powered Financial Trading',
-<<<<<<< HEAD
-      description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.',
-    category: 'predictive',
-=======
-      description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.';
-      category: 'predictive',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       features: ['Market AnalysisRisk AssessmentAutomated TradingReal-time Monitoring'],
       price: 'Custom Pricing',
       popular: true,
@@ -68,13 +61,6 @@ export default function AIServices() {
     {
       id: 4,
       name: 'AI-Powered Voice Analytics',
-<<<<<<< HEAD
-      description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.',
-    category: 'nlp',
-=======
-      description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.';
-      category: 'nlp',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       features: ['Sentiment AnalysisEmotion DetectionIntent RecognitionReal-time Processing'],
       price: '$149/month',
       popular: true,
@@ -93,13 +79,6 @@ export default function AIServices() {
     {
       id: 6,
       name: 'Computer Vision Solutions',
-<<<<<<< HEAD
-      description: 'Advanced image and video analysis for object detection, recognition, and processing.',
-    category: 'computer-vision',
-=======
-      description: 'Advanced image and video analysis for object detection, recognition, and processing.';
-      category: 'computer-vision',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       features: ['Object DetectionImage RecognitionVideo AnalysisReal-time Processing'],
       price: '$179/month',
       popular: true,
@@ -118,13 +97,6 @@ export default function AIServices() {
     {
       id: 8,
       name: 'Natural Language Processing',
-<<<<<<< HEAD
-      description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.',
-    category: 'nlp',
-=======
-      description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.';
-      category: 'nlp',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       features: ['Text AnalysisLanguage TranslationSentiment AnalysisEntity Recognition'],
       price: '$129/month',
       popular: true,
@@ -143,13 +115,6 @@ export default function AIServices() {
     {
       id: 10,
       name: 'Predictive Analytics Engine',
-<<<<<<< HEAD
-      description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.',
-    category: 'predictive',
-=======
-      description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.';
-      category: 'predictive',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       features: ['Trend ForecastingBehavioral AnalysisRisk PredictionScenario Modeling'],
       price: '$189/month',
       popular: true,
@@ -158,13 +123,6 @@ export default function AIServices() {
     {
       id: 11,
       name: 'AI Content Generation',
-<<<<<<< HEAD
-      description: 'Intelligent content creation for marketing, documentation, and communication.',
-    category: 'specialized',
-=======
-      description: 'Intelligent content creation for marketing, documentation, and communication.';
-      category: 'specialized',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       features: ['Content CreationMulti-format SupportBrand ConsistencyQuality Control'],
       price: '$79/month',
       popular: false,

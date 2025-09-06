@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { useInterviews } from '@/hooks/useInterviews';
-import { Interview } from '@/types/interview';
-import { format, isPast, parseISO } from 'date-fns';
-import Link from 'next/link';
-import { Calendar, Clock, Video } from 'lucide-react';
-import { Avatar } from '@/components/ui/avatar';
-import { logErrorToProduction } from '@/utils/productionLogger';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -171,11 +157,4 @@ export function UpcomingInterviewsCard() {
       </CardContent>
     </Card>
   );
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

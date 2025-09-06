@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import CodeBlock from './CodeBlock';
-
-=======
-import { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import CodeBlock from "./CodeBlock";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface Param {
   name: string,
   type: string,
@@ -135,45 +120,3 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 }
 
 export default ApiPlayground;
-<<<<<<< HEAD
-  const val = paramValues[p.name];
-if (val) searchParams.append (p.name, val) ;
-});
-const query = searchParams.toString ();
-if (query) url += `?$ {;
-  query ;
-}` ;
-}const options: RequestInit = {;
-  method, headers: {;
-  Authorization: `Bearer $ {;
-  apiKey ;
-}`;
-"Content-Type" : "application/json" ;
-};
-//Add timeout to prevent hanging signal: AbortSignal.timeout (15000) ;
-};
-}setLoading (true);
-setResponse (null);
-let responseText: string;
-if (contentType?.includes ('application/json') ) {;
-  try {;
-  /> {;
-  params.map ( (p) => (<Input key= {;
-  p.name ;
-}</div>) ;
-}export default ApiPlayground;
-'"
-=======
-
-<<<<<<< HEAD
-    let url = `${baseUrl}${path}`;
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-export default ApiPlayground;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

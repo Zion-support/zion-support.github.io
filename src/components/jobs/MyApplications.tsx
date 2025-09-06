@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { useJobApplications } from '@/hooks/useJobApplications';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Loader2, MessageSquare, ExternalLink } from 'lucide-react';
-import { formatDistanceToNow } from 'date-fns';
-import Link from 'next/link';
-import { ApplicationStatus } from '@/types/jobs';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState } from "react";
 import { useJobApplications } from "@/hooks/useJobApplications";
@@ -125,28 +112,4 @@ export function MyApplications() {
       ))}
     </div>
   );
-<<<<<<< HEAD
-
-};
-<p> {;
-  error ;
-}</p> </div>) ";
-}You haven't submitted any applications yet. </p> <Button className="mt-4" asChild> <Link href="/jobs" >Browse Jobs</Link> </Button> </CardContent> </Card> </CardTitle> {;
-  getStatusBadge (application.status) ;
-}</div> {;
-  application.cover letter ;
-}</p>) ";
-}<div className="flex justify-between items-center" > <Button variant="outline" size="sm" className="text-xs" asChild > </Link> </Button> <Button variant="default" size="sm" className="text-xs" asChild > </Link> </Button> </div> </div> </CardContent> </Card>) ) ;
-}</div>) ;
-}'"
-=======
-
-<<<<<<< HEAD
-
-      case "new": return <Badge variant="secondary">New</Badge>;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -37,7 +37,6 @@ benefits: [ "Improved AI model quality", "Faster model deployment",
 website: "https://ziontechgroup.com/ai-evaluation-lab" 
 }];
 ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 </div> <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent" > AI Services & Solutions </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <a href="tel:+13024640950" className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors" > <Phone className="w-5 h-5 mr-2" /> <span>Call Now: +1 302 464 0950</span> </Link> <a href="mailto:kleber@ziontechgroup.com?subject=AI%20Services%20Inquiry" className="inline-flex items-center px-6 py-3 border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white rounded-lg font-semibold transition-colors" > <Mail className="w-5 h-5 mr-2" /> <span>Get AI Consultation</span> </Link> </div> </div> </div> </div> </div>) ) 
 }</div> </div> Our AI Service Portfolio </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive AI solutions designed to drive innovation, efficiency, and competitive advantage across all business functions. </p> </div> <div className="space-y-4" > <div> </li>) ) 
 }</ul> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> <div>) ) 
 }</ul> </div> </div> <div>) ) 

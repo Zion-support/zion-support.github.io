@@ -10,39 +10,6 @@ class EnhancedAutomationSuite {;
 
     this.projectRoot = process.cwd();
     this.startTime = new Date();
-<<<<<<< HEAD
-    this.results = {
-      codeQuality: { success: false, duration: 0, errors: [], warnings: [] },
-      securityAudit: { success: false, duration: 0, errors: [], warnings: [] },
-      performanceOptimization: {
-        success: false,
-        duration: 0,
-        errors: [],
-        warnings: [],
-      },
-      seoOptimization: {
-        success: false,
-        duration: 0,
-        errors: [],
-        warnings: [],
-      },
-      accessibilityImprovements: {
-        success: false,
-        duration: 0,
-        errors: [],
-        warnings: [],
-      },
-      buildOptimization: {
-        success: false,
-        duration: 0,
-        errors: [],
-        warnings: [],
-      },
-      deployment: { success: false, duration: 0, errors: [], warnings: [] },
-    };
-  }
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     this.results = {
 
@@ -69,23 +36,6 @@ class EnhancedAutomationSuite {;
     this.log(`Running: ${description}`),
     try {
       const result = execSync(command, {
-<<<<<<< HEAD
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        encoding: 'utf8',
-        ...options,
-      });
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      return {
-        success: false,
-        error: error.message,
-        output: error.stdout || error.stderr,
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       };
 
     }
@@ -98,98 +48,16 @@ class EnhancedAutomationSuite {;
     try {
       // Remove unused imports
       const unusedImportsResult = await this.runCommand(
-<<<<<<< HEAD
-        'npx eslint . --fix --rule "no-unused-vars: error" --rule "no-unused-imports: error"',
-        'Remove unused imports'
-      );
-
-      // Fix common code issues
-      const codeFixesResult = await this.runCommand(
-        'npx eslint . --fix --rule "prefer-const: error" --rule "no-var: error"',
-        'Apply code quality fixes'
-      );
-
-      this.results.codeQuality = {
-        success: unusedImportsResult.success && codeFixesResult.success,
-        duration: Date.now() - startTime,
-        errors: [
-          ...(unusedImportsResult.success ? [] : [unusedImportsResult.error]),
-          ...(codeFixesResult.success ? [] : [codeFixesResult.error]),
-        ],
-        warnings: [],
-      };
-    } catch (error) {
-      this.results.codeQuality = {
-        success: false,
-        duration: Date.now() - startTime,
-        errors: [error.message],
-        warnings: [],
-      };
-=======
-
-      };
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   }
 ;
   async performSecurityAudit() {;
     const startTime = Date.now();
     this.log('\n🔒 PERFORMING SECURITY AUDIT');
-<<<<<<< HEAD
-
-    try {
-      // Run npm audit
-      const auditResult = await this.runCommand(
-        'npm audit --audit-level moderate',
-        'Security Audit'
-      );
-
-      // Check for security vulnerabilities in dependencies
-      const vulnerabilityCheck = await this.runCommand(
-        'npm audit --json',
-        'Vulnerability Check'
-=======
-;
-    try {;
-      // Run npm audit;
-      const auditResult = await this.runCommand(;
-        'npm audit --audit-level moderate',;
-        'Security Audit';
-      );
-;
-      // Check for security vulnerabilities in dependencies;
-      const vulnerabilityCheck = await this.runCommand(;
-        'npm audit --json',;
-        'Vulnerability Check';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       );
 
       // Scan for common security issues
       const securityScan = await this.runCommand(
-<<<<<<< HEAD
-        'npx eslint . --rule "no-eval: error" --rule "no-implied-eval: error"',
-        'Security Code Scan'
-      );
-
-      this.results.securityAudit = {
-        success: auditResult.success,
-        duration: Date.now() - startTime,
-        errors: [
-          ...(auditResult.success ? [] : [auditResult.error]),
-          ...(securityScan.success ? [] : [securityScan.error]),
-        ],
-        warnings: [],
-      };
-    } catch (error) {
-      this.results.securityAudit = {
-        success: false,
-        duration: Date.now() - startTime,
-        errors: [error.message],
-        warnings: [],
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       };
 
     }
@@ -215,26 +83,6 @@ class EnhancedAutomationSuite {;
 
       // Check for performance issues
       const performanceCheck = await this.runCommand(
-<<<<<<< HEAD
-        'npx lighthouse http://localhost:3000 --output=json',
-        'Performance Check'
-      );
-
-      this.results.performanceOptimization = {
-        success: bundleAnalysis.success,
-        duration: Date.now() - startTime,
-        errors: [...(bundleAnalysis.success ? [] : [bundleAnalysis.error])],
-        warnings: [],
-      };
-    } catch (error) {
-      this.results.performanceOptimization = {
-        success: false,
-        duration: Date.now() - startTime,
-        errors: [error.message],
-        warnings: [],
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       };
 
     }
@@ -247,49 +95,16 @@ class EnhancedAutomationSuite {;
     try {
       // Generate sitemap
       const sitemapResult = await this.runCommand(
-<<<<<<< HEAD
-        'npm run sitemap:generate',
-=======
-        'npm runsitemap:generate',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         'Generate Sitemap'
       );
 
       // Generate search index
       const searchIndexResult = await this.runCommand(
-<<<<<<< HEAD
-        'npm run search:index',
-=======
-        'npm runsearch:index',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         'Generate Search Index'
       );
 
       // Check for SEO issues
       const seoCheck = await this.runCommand(
-<<<<<<< HEAD
-        'npx eslint . --rule "jsx-a11y/alt-text: error" --rule "jsx-a11y/heading-has-content: error"',
-        'SEO Code Check'
-      );
-
-      this.results.seoOptimization = {
-        success: sitemapResult.success && searchIndexResult.success,
-        duration: Date.now() - startTime,
-        errors: [
-          ...(sitemapResult.success ? [] : [sitemapResult.error]),
-          ...(searchIndexResult.success ? [] : [searchIndexResult.error]),
-        ],
-        warnings: [],
-      };
-    } catch (error) {
-      this.results.seoOptimization = {
-        success: false,
-        duration: Date.now() - startTime,
-        errors: [error.message],
-        warnings: [],
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       };
 
     }
@@ -302,37 +117,6 @@ class EnhancedAutomationSuite {;
     try {
       // Run accessibility checks
       const accessibilityCheck = await this.runCommand(
-<<<<<<< HEAD
-        'npx eslint . --rule "jsx-a11y/alt-text: error" --rule "jsx-a11y/aria-role: error"',
-        'Accessibility Check'
-      );
-
-      // Check for keyboard navigation
-      const keyboardCheck = await this.runCommand(
-        'npx eslint . --rule "jsx-a11y/tabindex-no-positive: error"',
-        'Keyboard Navigation Check'
-      );
-
-      this.results.accessibilityImprovements = {
-        success: accessibilityCheck.success,
-        duration: Date.now() - startTime,
-        errors: [
-          ...(accessibilityCheck.success ? [] : [accessibilityCheck.error]),
-        ],
-        warnings: [],
-      };
-    } catch (error) {
-      this.results.accessibilityImprovements = {
-        success: false,
-        duration: Date.now() - startTime,
-        errors: [error.message],
-        warnings: [],
-      };
-=======
-
-      };
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   }
 ;
@@ -346,43 +130,15 @@ class EnhancedAutomationSuite {;
 
       // Production build
       const productionBuild = await this.runCommand(
-<<<<<<< HEAD
-        'npm run build:production',
-=======
-        'npm runbuild:production',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         'Production Build'
       );
 
       // Build analysis
       const buildAnalysis = await this.runCommand(
-<<<<<<< HEAD
-        'npm run build:analyze',
-=======
-        'npm runbuild:analyze',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         'Build Analysis'
       );
 
       this.results.buildOptimization = {
-<<<<<<< HEAD
-        success: cleanBuild.success && productionBuild.success,
-        duration: Date.now() - startTime,
-        errors: [
-          ...(cleanBuild.success ? [] : [cleanBuild.error]),
-          ...(productionBuild.success ? [] : [productionBuild.error]),
-        ],
-        warnings: [],
-      };
-    } catch (error) {
-      this.results.buildOptimization = {
-        success: false,
-        duration: Date.now() - startTime,
-        errors: [error.message],
-        warnings: [],
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       };
 
     }
@@ -397,25 +153,12 @@ class EnhancedAutomationSuite {;
       await this.runCommand('git add .', 'Git Add');
 
       // Commit changes
-<<<<<<< HEAD
-      const commitMessage = `Enhanced automation improvements: ${new Date().toISOString()}`;
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       await this.runCommand(`git commit -m "${commitMessage}"`, 'Git Commit');
 
       // Push changes
       await this.runCommand('git push origin HEAD', 'Git Push');
 
       this.results.deployment = {
-<<<<<<< HEAD
-        success: true,
-        duration: Date.now() - startTime,
-        errors: [],
-        warnings: [],
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       };
 
     } catch (error) {
@@ -451,18 +194,10 @@ class EnhancedAutomationSuite {;
       this.log(`${status} ${task}: ${duration}`);
 
       if (result.errors.length > 0) {
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         result.errors.forEach(error => this.log(`   Error: ${error}`));
       }
       if (result.warnings.length > 0) {
         result.warnings.forEach(warning => this.log(`   Warning: ${warning}`));
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
     });
 
@@ -521,36 +256,10 @@ class EnhancedAutomationSuite {;
       await this.optimizeSEO();
       await this.improveAccessibility();
       await this.optimizeBuild();
-<<<<<<< HEAD
-      await this.deployChanges();
-    } catch (error) {
-      this.log(`Fatal error: ${error.message}`, 'ERROR');
-=======
-
-      this.log(`Fatal: error: ${error.message}`, 'ERROR');
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     } finally {
       this.generateDetailedReport(),
 
     }
   }
 }
-<<<<<<< HEAD
-
-// Run the enhanced automation suite
-if (require.main === module) {
-    const suite = new EnhancedAutomationSuite(),
-    suite.run().catch(console.error)
-  }
-
-=======
-;
-// Run the enhanced automation suite;
-if (require.main === module) {;
-  const suite = new EnhancedAutomationSuite();
-  suite.run().catch(console.error),
-}
-;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 module.exports = EnhancedAutomationSuite;

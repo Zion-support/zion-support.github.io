@@ -85,15 +85,7 @@ jobs:
             exit 0
           fi
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:.github/workflows.backup/agent-factory.yml
-=======
 :.github/workflows.backup/agent-factory.yml
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-:.github/workflows.backup/agent-factory.yml
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -102,24 +94,10 @@ jobs:
       - name: Install linkinator
         run: npm install -g linkinator
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-build-nav-links:.github/workflows/agent-factory.yml
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       - name: Run crawler (linkinator) on shard
         run: |
           set -e

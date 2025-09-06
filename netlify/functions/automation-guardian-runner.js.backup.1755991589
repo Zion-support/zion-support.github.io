@@ -3,28 +3,6 @@ const { spawnSync } = require('child_process');
 
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:netlify/functions/automation-insights-runner.js.backup.1755991529
-=======
-<:netlify/functions/automation-insights-runner.js.backup.1755991529
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-=
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true });
->  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
-}
-
-exports.config = {
-<:netlify/functions/automation-insights-runner.js.backup.1755991529
-  schedule: '*/20 * * * *', // every 20 minutes
-=
-  schedule: '*/10 * * * *',
-<<<<<<< HEAD
->>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3:netlify/functions/automation-guardian-runner.js
-};
-=======
-<:netlify/functions/automation-insights-runner.js.backup.1755991529
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 =
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true });
@@ -37,10 +15,6 @@ exports.config = {
 =
   schedule: '*/10 * * * *',
 >};
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 exports.handler = async () => {
   const logs = [];
@@ -53,25 +27,10 @@ exports.handler = async () => {
     return status;
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:netlify/functions/automation-insights-runner.js.backup.1755991529
-<<<<<<< HEAD:netlify/functions/automation-insights-runner.js
-  logStep('automation:insights', () => runNode('automation/automation-insights-digest.cjs'));
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-=======
-=======
 <:netlify/functions/automation-insights-runner.js.backup.1755991529
 :netlify/functions/automation-insights-runner.js
   logStep('automation:insights', () => runNode('automation/automation-insights-digest.cjs'));
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-<:netlify/functions/automation-insights-runner.js.backup.1755991529
-:netlify/functions/automation-insights-runner.js
-  logStep('automation:insights', () => runNode('automation/automation-insights-digest.cjs'));
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   // Generate sitemap for crawling
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap.js'));
 
@@ -84,30 +43,13 @@ exports.handler = async () => {
 
   // Commit and push
   logStep('git:sync', () => runNode('automation/git-sync.cjs'));
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0:netlify/functions/site-crawler.js
-========
-=======
 =
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 =
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   // Run the automation guardian
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'));
 
   // Attempt to push any changes
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3:netlify/functions/automation-guardian-runner.js
-
-=======
 >
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   return { statusCode: 200, body: logs.join('\n') };
 };

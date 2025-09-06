@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
@@ -167,14 +162,4 @@ export function AIEnhancementPanel({
       )}
     </Card>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-    ...defaultOptions;
-    content: initialContent || defaultOptions.content}),
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -6,7 +6,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
     const entries = Object.values(users as any).map((u: any) => ({
-      userId: u.userId;
+      userId: u.userId,
       name: u.name || u.userId,
       certifications: u.certifications?.length || 0,
       points: (u.certifications?.length || 0) * 100 + Object.values(u.progress || {}).reduce((acc: number, p: any) => acc + (p.percent || 0), 0)

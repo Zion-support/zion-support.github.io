@@ -7,20 +7,10 @@ on:
 
 permissions:
   contents: write
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:.github/workflows/backups/actionlint.yml.backup
-=======
-  pull-requests: write
->>>>>>> origin/cursor/check-and-fix-github-actions-workflows-efb2:.github/workflows/broken_workflows_backup_1755470975/git-health.yml
-=======
 :.github/workflows/backups/actionlint.yml.backup
   pull-requests: write
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 :.github/workflows/backups/actionlint.yml.backup
   pull-requests: write
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   actions: read
 
 jobs:

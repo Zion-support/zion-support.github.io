@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { cn } from '@/lib/utils';
-import { useAuth } from '@/hooks/useAuth';
-import { useWishlist } from '@/hooks/useWishlist';
-=======
-import React from "react";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { useWishlist } from "@/hooks/useWishlist";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useCart } from '@/context/CartContext';
 import { logWarn } from '@/utils/productionLogger';
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
@@ -122,20 +106,4 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       </div>
     </nav>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-  const isAuthenticated = !!user;
-  const { items: wishlistItems } = useWishlist(), // Renamed to avoid conflict
-  const favoritesCount = wishlistItems.length;
-
-
-  const cartContextValue = useCart(), // Call hook at top level
-  let cartCount = 0;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

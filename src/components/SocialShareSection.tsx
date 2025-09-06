@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Button } from './ui/button';
-import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
-import { toast } from './ui/use-toast';
-import { useTranslation } from 'react-i18next';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { Button } from "./ui/button";
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
@@ -103,22 +95,4 @@ export function SocialShareSection() {
       </div>
     </section>
   );
-<<<<<<< HEAD
-
-  navigator.clipboard.writeText (window.location.href) .then ( () => {;
-  toast ({;
-  ;
-}) .catch ( () => {;
-  toast ({;
-  title: t ('errors.failed to copy');
-});
-};
-}</div> </div> </div> </section>) ;
-}'"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

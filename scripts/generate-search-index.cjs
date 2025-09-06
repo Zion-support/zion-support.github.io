@@ -182,14 +182,5 @@ class SearchIndexGenerator {
 
 // Run the search index generator
 if (require.main === module) {
-<<<<<<< HEAD
-    const generator = new SearchIndexGenerator(),
-    generator.generateSearchIndex().catch(console.error)
-  }
-=======
-  const generator = new SearchIndexGenerator();
-  generator.generate().catch(console.error);
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 module.exports = SearchIndexGenerator;

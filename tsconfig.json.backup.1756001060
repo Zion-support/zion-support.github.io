@@ -84,21 +84,7 @@
     "next-env.d.ts"
   ],
   "exclude": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "node_modules"
-=======
-    "node_modules",
-    "zion.app/recovered-content/**",
-    "apps/**",
-    "src/**"
->>>>>>> origin/cursor/website-audit-and-enhancement-e549
   ]
-=======
     "node_modules"  ]
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     "node_modules"  ]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }

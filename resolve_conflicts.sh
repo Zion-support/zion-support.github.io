@@ -32,8 +32,3 @@ echo "Committing merge resolution..."
 git commit -m "Resolve merge conflicts - keep PM2 automation improvements"
 
 echo "Pushing resolved changes..."
-<<<<<<< HEAD
-git push origin HEAD
-=======
-git push origin HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useState, useRef } from 'react';
-import { Mail } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
-=======
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState, useRef } from "react";
-import { Mail } from 'lucide-react'
-import { useToast } from "@/hooks/use-toast";
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export function EnhancedNewsletterForm() {
 
   const [email, setEmail] = useState("");
@@ -125,16 +108,4 @@ export function EnhancedNewsletterForm() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

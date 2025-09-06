@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Star } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { ExternalLink } from 'lucide-react';
-import { TalentProfile } from '@/types/talent';
-import { HireRequestModal } from '@/components/profile/hire-request';
-import { useAuthStatus } from '@/hooks/talent';
-import type { UserProfile } from '@/types/auth';
-=======
-import React, { useState } from "react";
-import { Star } from 'lucide-react'
-import { Button } from "@/components/ui/button";
-import { ExternalLink } from 'lucide-react'
-import { TalentProfile } from "@/types/talent";
-import { HireRequestModal } from "@/components/profile/hire-request";
-import { useAuthStatus } from "@/hooks/talent";
-import type { UserProfile } from "@/types/auth";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 interface TalentCardFooterProps {
   profile: TalentProfile,
@@ -120,37 +100,4 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       />
     </>
   );
-<<<<<<< HEAD
-
-};
-//Handle view profile const handleViewProfile = (e: React.MouseEvent) => {;
-  e.stopPropagation ();';
-profile.id || '' ;
-}`);
-//Also call the onViewProfile callback if provided <div> {;
-  profile.hourly rate ? (<div> <span className="text-zion-slate-light text-xs" >Hourly Rate</span> <div className="text-white font-bold" >$ {;
-  profile.hourly rate ;
-}/hr</div> </div>) : (</div>) ";
-}</div> > Hire </Button> <Button > View <ExternalLink className="h-3 w-3 ml-1" /> </Button> </div> </div> {;
-  /* Hire Request Modal */ ;
-}<HireRequestModal talent= {;
-  profile ;
-}isOpen= {;
-  isHireModalOpen ;
-}onClose= {;
-  () => setIsHireModalOpen (false) ;
-}userDetails= {;
-  userProfile ;
-}/> </>) ;
-}'"
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-    
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

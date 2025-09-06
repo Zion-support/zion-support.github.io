@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
-
-import React from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import {
   Table;
   TableBody;
@@ -257,11 +250,4 @@ export function RoleManagement() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

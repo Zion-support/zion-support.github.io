@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-    this.log(`Total improvements: ${this.improvements.length}`);
-    this.log(`Total errors: ${this.errors.length}`);
-    this.log(`Duration: ${duration}ms`);
-    
-    if (this.improvements.length > 0) {
-      this.log('\\n✅ Improvements created: '),
-      this.improvements.forEach((improvement, index) => {
-        this.log(`  ${index + 1}. ${improvement}`);
-      });
-    }
-    
-    if (this.errors.length > 0) {
-      this.log('\\n❌ Errors encountered: '),
-      this.errors.forEach((error, index) => {
-        this.log(`  ${index + 1}. ${error}`);
-      });
-    }
-
-    this.log('\\n🎉 App improvements completed!');
-  }
-}
-
-// Run the improvements
-const improvements = new SimpleAppImprovements();
-improvements.runAllImprovements().catch(console.error);
-=======
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

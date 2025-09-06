@@ -183,13 +183,6 @@
     "meta:factory": "node automation/autonomous-meta-factory.cjs",
     "meta:orchestrator": "node automation/autonomous-meta-orchestrator.cjs",
     "meta:cron:start": "bash automation/autonomous-meta-cron.sh",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "venture:start": "node automation/venture-orchestrator.cjs continuous",
     "venture:once": "node automation/venture-orchestrator.cjs once",
     "venture:analyze": "node automation/venture-services-analyzer.cjs && node automation/venture-services-factory.cjs && node automation/ads-generator.cjs && node automation/service-sales-agents-factory.cjs",
@@ -223,25 +216,9 @@
     "optimize:economy": "ts-node scripts/economy-optimizer.ts",
     "detect:economy": "ts-node scripts/economy-anomaly-detector.ts",
     "governance:brief": "ts-node scripts/economy-governance-brief.ts",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "postbuild": "mkdir -p public/reports/economy && cp -r data/reports/economy/* public/reports/economy/ || true && mkdir -p public/reports/economy/optimizer && cp -r data/reports/economy/optimizer/* public/reports/economy/optimizer/ || true && mkdir -p public/reports/economy/anomalies && cp -r data/reports/economy/anomalies/* public/reports/economy/anomalies/ || true && mkdir -p public/docs/governance && cp -r docs/governance/* public/docs/governance/ || true"
-=======
-    "admin:dashboard": "node automation/admin-dashboard-updater.cjs",
-    "admin:dashboard:watch": "node automation/admin-dashboard-updater.cjs --watch",
-    "admin:insights": "node automation/admin-insights-researcher.cjs",
-    "admin:insights:watch": "node automation/admin-insights-researcher.cjs --watch",
-    "admin:cron:start": "bash automation/admin-dashboard-cron.sh start",
-    "admin:cron:stop": "bash automation/admin-dashboard-cron.sh stop",
-    "admin:cron:status": "bash automation/admin-dashboard-cron.sh status"
->>>>>>> origin/cursor/develop-self-managing-ai-admin-section-f647
   },
-=======
     "postbuild": "mkdir -p public/reports/economy && cp -r data/reports/economy/* public/reports/economy/ || true && mkdir -p public/reports/economy/optimizer && cp -r data/reports/economy/optimizer/* public/reports/economy/optimizer/ || true && mkdir -p public/reports/economy/anomalies && cp -r data/reports/economy/anomalies/* public/reports/economy/anomalies/ || true && mkdir -p public/docs/governance && cp -r docs/governance/* public/docs/governance/ || true"  },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     "postbuild": "mkdir -p public/reports/economy && cp -r data/reports/economy/* public/reports/economy/ || true && mkdir -p public/reports/economy/optimizer && cp -r data/reports/economy/optimizer/* public/reports/economy/optimizer/ || true && mkdir -p public/reports/economy/anomalies && cp -r data/reports/economy/anomalies/* public/reports/economy/anomalies/ || true && mkdir -p public/docs/governance && cp -r docs/governance/* public/docs/governance/ || true"  },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
@@ -297,13 +274,6 @@
     "@types/mocha": "^10.0.10",
   },
   "type": "module"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "@types/node": "^20.11.30",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",

@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { formatDistanceToNow } from 'date-fns';
-import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,;
-} from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ForumReply } from '@/types/community';
-import { cn } from '@/lib/utils';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { formatDistanceToNow } from "date-fns";
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
@@ -101,12 +84,3 @@ export const ReplyCard = ({
 };
 
 export default ReplyCard;
-<<<<<<< HEAD
-"
-=======
-
-      "transition-shadow";
-      reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

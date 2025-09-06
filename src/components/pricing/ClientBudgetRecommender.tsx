@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { logErrorToProduction } from '@/utils/productionLogger';
-import {
-  getClientBudgetSuggestion,
-  PricingSuggestion,
-  ClientBudgetParams,
-  trackPricingSuggestion,;
-} from '@/services/pricingSuggestionService';
-import { PricingSuggestionBox } from './PricingSuggestionBox';
-import { useAuth } from '@/hooks/useAuth';
-import { Sparkles } from 'lucide-react';
-=======
-
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import {logErrorToProduction} from '@/utils/productionLogger';
-import { 
-  getClientBudgetSuggestion;
-  PricingSuggestion;
-  ClientBudgetParams;
-  trackPricingSuggestion
-} from "@/services/pricingSuggestionService";
-import { PricingSuggestionBox } from "./PricingSuggestionBox";
-import { useAuth } from "@/hooks/useAuth";
-import { Sparkles } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
@@ -56,95 +27,10 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     setIsLoading(true);
     try {
       const params: ClientBudgetParams = {
-<<<<<<< HEAD
-        jobTitle,
-        category,
-      };
-=======
-
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         jobTitle;
         category};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
       if (timeline) params.timeline = timeline;
       if (scope) params.scope = scope;
       if (experienceLevel) params.experienceLevel = experienceLevel;
 
-<<<<<<< HEAD
-      const result = await getClientBudgetSuggestion(params);
-      setSuggestion(result)
-    } catch (error) {
-      logErrorToProduction('Error generating budget suggestion:', { data: error })
-    } finally {
-      setIsLoading(false)
-    }
-  };
-
-  const handleApplySuggestion = () => {
-    if (suggestion) {
-      onSuggestionApplied(suggestion.minRate, suggestion.maxRate);
-      
-      // Track this suggestion application
-      if (user && user.id) {
-        trackPricingSuggestion({
-          userId: user.id,
-          suggestionType: "client",
-          suggestedMin: suggestion.minRate,
-          suggestedMax: suggestion.maxRate,
-          accepted: true
-        })
-      }
-    }
-  };
-
-  return (
-    <div className="space-y-4">
-      <div>
-        {!suggestion && !isLoading ? (
-          <Button
-            type="button"
-            variant="outline"
-            onClick={generateSuggestion}
-            disabled={!jobTitle || !category}
-            className="w-full"
-          >
-            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
-          </Button>
-        ) : (
-          <PricingSuggestionBox
-            suggestion={suggestion}
-            isLoading={isLoading}
-            onApplySuggestion={handleApplySuggestion}
-            rateType="hourly"
-          />
-        )}
-      </div>
-    </div>
-  )
-};
-<<<<<<< HEAD
-if (scope) params.scope = scope;
-if (experienceLevel) params.experienceLevel = experienceLevel;
-//Track this suggestion application if (user && user.id) {;
-  trackPricingSuggestion ({;
-  ;
-
-
-};
-return (<div className="space-y-4" > <div> {";
-  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;
-  generateSuggestion ";
-}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
-}</div> </div>) ;
-};
-'"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

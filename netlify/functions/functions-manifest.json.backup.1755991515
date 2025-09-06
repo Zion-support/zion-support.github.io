@@ -1,18 +1,7 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "generatedAt": "2025-08-12T01:34:18.216Z",
-=======
-  "generatedAt": "2025-08-12T01:33:39.367Z",
->>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-8b8f
   "functions": [
-=======
   "generatedAt": "2025-08-12T01:34:18.216Z",  "functions": [
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   "generatedAt": "2025-08-12T01:34:18.216Z",  "functions": [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "a11y-alt-text-runner",
     "ai-changelog-runner",
     "ai-trends-radar-runner",
@@ -25,21 +14,10 @@
     "autonomous-master-orchestrator",
     "broken-image-scanner",
     "broken-image-scanner-runner",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     "canonical-auditor",
     "cloud-brain-orchestrator",
->>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-8b8f
-=======
     "canonical-auditor",
     "cloud-brain-orchestrator",
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    "canonical-auditor",
-    "cloud-brain-orchestrator",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "cloud_orchestrator",
     "code-smell-audit-runner",
     "component-props-docs-runner",

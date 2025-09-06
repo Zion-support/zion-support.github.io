@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useRef } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from 'lucide-react'
@@ -83,16 +76,3 @@ export const AppScreenshots: React.FC = () => {
     </section>
   )
 };
-<<<<<<< HEAD
-'"
-=======
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -9,38 +9,6 @@ function fixComponentSyntax(filePath) {
     const originalContent = content;
     
     // Fix corrupted property names with colons
-<<<<<<< HEAD
-    content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
-    content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
-    
-    // Fix specific patterns
-    content = content.replace(/nam:\s*e:\s*string/g, 'name: string');
-    content = content.replace(/emai:\s*l:\s*string/g, 'email: string');
-    content = content.replace(/compan:\s*y:\s*string/g, 'company: string');
-    content = content.replace(/phon:\s*e:\s*string/g, 'phone: string');
-    content = content.replace(/childre:\s*n:\s*ReactNode/g, 'children: ReactNode');
-    content = content.replace(/isLoade:\s*d:\s*false/g, 'isLoaded: false');
-    content = content.replace(/hasErro:\s*r:\s*false/g, 'hasError: false');
-    
-    // Fix more general patterns
-    content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
-    content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
-    
-=======
-    content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2'),
-    content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2'),
-    // Fix specific patterns
-    content = content.replace(/nam:\s*e:\s*string/g, 'name: string'),
-    content = content.replace(/emai:\s*l:\s*string/g, 'email: string'),
-    content = content.replace(/compan:\s*y:\s*string/g, 'company: string'),
-    content = content.replace(/phon:\s*e:\s*string/g, 'phone: string'),
-    content = content.replace(/childre:\s*n:\s*ReactNode/g, 'children: ReactNode'),
-    content = content.replace(/isLoade:\s*d:\s*false/g, 'isLoaded: false'),
-    content = content.replace(/hasErro:\s*r:\s*false/g, 'hasError: false'),
-    // Fix more general patterns
-    content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2'),
-    content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2'),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     // Clean up extra whitespace
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
@@ -52,15 +20,7 @@ function fixComponentSyntax(filePath) {
     
     return false;
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.error(`Error processing ${filePath}:`, error.message);
-=======
     console.error(`Error processing ${filePath}: `, error.message);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    console.error(`Error processing ${filePath}: `, error.message);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     return false;
   }
 }
@@ -71,13 +31,6 @@ const filesToFix = [
   '/workspace/components/ErrorBoundary.tsx',
   '/workspace/pages/index.tsx'
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 console.log('🔍 Fixing syntax errors in component files...');
 
 let fixedCount = 0;

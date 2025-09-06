@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-=======
-import { useState, useEffect } from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import { NextSeo } from '@/components/NextSeo';
 import { Badge } from "@/components/ui/badge";
@@ -472,66 +466,3 @@ export default function EquipmentDetail() {
   );
 }
 
-<<<<<<< HEAD
-
-}finally {;
-  setIsAdding (false) ;
-
-};
-const inCart = items.some (item => item.id === equipment?.id);
-return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4" ></div> <p className="text-zion-slate-light" >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error || !equipment) {'";
-  return (<> <NextSeo title="Equipment Not Found" description="The equipment you're looking for doesn't exist or has been removed." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <motion.div </p> <div className="space-x-4" > <Button > <ArrowLeft className="h-4 w-4 mr-2" /> Go Back </Button> <Button ;
-}return (<> <NextSeo title= {;
-  `$ {;
-  equipment.name ;
-}- Zion Marketplace` ;
-}description= {;
-  equipment.description ;
-}openGraph= {;
-  {;
-  title: `$ {;
-  equipment.name ;
-}- Zion Marketplace`, description: equipment.description, images: equipment.images.length > 0 && equipment.images[0] ? [ {;
-  url: equipment.images[0] ;
-}] : undefined ;
-
-}/> key= {;
-  index ;
-}onClick={;
-  () => setSelectedImageIndex (index) ;
-}className= {;
-  `aspect-square rounded-md overflow-hidden border-2 transition-all $ {';
-  selectedImageIndex === index ? 'border-zion-cyan' : 'border-transparent hover:border-zion-slate-light' ;
-}` ;
-}> <ImageWithRetry /> </button>) ) ;
-}</div>) ;
-}</motion.div> {;
-  /* Product Details */ ;
-}<motion.div <Star key= {;
-  i ;
-}className= {;
-  `h-4 w-4 $ {';
-  i < Math.floor (equipment.rating!) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light' ;
-}` ;
-}/>) ) ;
-}</div> </span> </div>) ;
-}</div> </span> </div> </div> </div>) ) ;
-}</div> </div>) ";
-}> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {;
-  equipment.warranty ;
-}</p> </div> </div>) ";
-}<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {;
-  equipment.returnPolicy ;
-}</p> </div> </div>) ;
-}</div> </motion.div> </div> </div> </div> </>) ;
-}'"
-=======
-
-<<<<<<< HEAD
-            const stored = sessionStorage.getItem(`equipment:${id}`);
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

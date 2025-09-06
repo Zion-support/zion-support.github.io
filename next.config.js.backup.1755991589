@@ -1,31 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 /** @type {import('next').NextConfig} */
 const path = require('path');
 
 const isIpfs = process.env.NEXT_PUBLIC_ASSET_PREFIX?.includes('/ipfs/');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = {
-=======
-const nextConfig = {
-  assetPrefix,
-  poweredByHeader: false,
-  trailingSlash: false,
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
   reactStrictMode: true,
-=======
 module.exports = {  reactStrictMode: true,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 module.exports = {  reactStrictMode: true,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   bundlePagesRouterDependencies: true,
 
   // Optimized for fast builds (hanging issue SOLVED)
@@ -181,13 +161,6 @@ module.exports = {  reactStrictMode: true,
         })
       );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
     
     // Development optimizations to prevent memory leaks with 176+ pages
@@ -770,13 +743,6 @@ module.exports = {  reactStrictMode: true,
 
     return config;
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   async rewrites() {
     return [
       { source: '/main', destination: '/', permanent: true },
@@ -853,14 +819,6 @@ module.exports = {  reactStrictMode: true,
     config.resolve.alias['@'] = path.resolve(__dirname);
     return config;
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 module.exports = withSentryConfig(baseConfig);

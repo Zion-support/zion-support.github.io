@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React, { useState } from 'react';
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones';
 import { useAuth } from '@/hooks/useAuth';
@@ -124,14 +119,3 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
     </div>
   )
 };
-<<<<<<< HEAD
-"
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

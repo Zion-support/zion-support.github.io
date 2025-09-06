@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, {
-  createContext,
-  useContext,
-  useState,
-  useCallback,
-  ReactNode,;
-} from 'react';
-=======
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
@@ -208,28 +196,7 @@ export function useErrorHandler() {
   }, [reportError, handleApiError]);
 
   return {
-<<<<<<< HEAD
-    reportError,
-    handleApiError,
-    handleAsyncOperation,
-  };
-=======
-
-<<<<<<< HEAD
-
-    const errorKey = error.message;
-    const currentRetryCount = retryCount[errorKey] || 0;
-
-    reportError(error, { retryCount: currentRetryCount }),
-
-
-<<<<<<< HEAD
-      
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     reportError;
     handleApiError;
     handleAsyncOperation}
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { CheckCircle, Circle, ArrowRight } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
@@ -81,26 +72,4 @@ export function OnboardingTracker({
       </div>
     </div>
   );
-<<<<<<< HEAD
-
-}></div> </div> {;
-  /* Steps list */ ";
-}<div className="space-y-3" > {;
-  steps.map ( (step) => (<div key= {;
-  step.id ";
-}className="flex items-center" > <div className="mr-3" > {";
-  step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>) ;
-}</div> </div> {";
-  !step.completed && step.action && (<Button asChild variant=" ghost"size=" sm"className=" text-zion-purple hover:text-zion-cyan hover:bg-zion-blue" > <Link href= {;
-  step.link ;
-}> </Link> </Button>) ;
-}</div>) ) ;
-}</div> </div>) ;
-}"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

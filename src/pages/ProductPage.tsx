@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useRouter } from 'next/router'; // Changed from useParams
-=======
-import { useRouter } from 'next/router', // Changed from useParams
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -98,40 +92,4 @@ export default function ProductPage() {
       </div>
     </>
   );
-<<<<<<< HEAD
-
-};
-//Only fetch if id is available (from router) ;
-}const inCart = items.some (i => i.id === product.id);
-const handleAdd = () => {;
-  if (inCart) return;
-setAdding (true);
-dispatch ({;
-  type: 'ADD ITEM';
-payload: {;
-  id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 ;
-
-});
-toast.success (`1× $ {;
-  product.title ;
-}added`);
-setTimeout ( () => setAdding (false), 500) ;
-};
-product.title ;
-}description= {;
-  product.description ;
-}ogImage= {;
-  product.images?.[0] ;
-}/> </Button> </div> </>) ;
-}'
-=======
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
