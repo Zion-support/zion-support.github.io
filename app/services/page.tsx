@@ -29,8 +29,8 @@ export default function ServicesOverviewPage() {
           title="Micro SaaS"
           description="End-to-end product development with billing, auth, and analytics"
           bullets={[
-            "Foundational architecture"
-            "Billing + subscriptions"
+            "Foundational architecture",
+            "Billing + subscriptions",
             "Growth analytics"
           ]}
           icon="🚀"
@@ -50,6 +50,27 @@ export default function ServicesOverviewPage() {
           icon="⚙️"
         />
         <ServiceCard
+          href="/services/devops"
+          title="DevOps"
+          description="CI/CD pipelines, infrastructure automation, and SRE services"
+          bullets={["CI/CD setup", "Infrastructure as Code", "Monitoring & SRE"]}
+          icon="🔄"
+        />
+        <ServiceCard
+          href="/services/data-science"
+          title="Data Science"
+          description="Machine learning, predictive analytics, and business intelligence"
+          bullets={["ML models", "Data engineering", "BI dashboards"]}
+          icon="📊"
+        />
+        <ServiceCard
+          href="/services/mobile-development"
+          title="Mobile Development"
+          description="Native and cross-platform mobile app development"
+          bullets={["iOS & Android", "React Native", "Flutter apps"]}
+          icon="📱"
+        />
+        <ServiceCard
           href="/services/blockchain"
           title="Blockchain"
           description="Smart contracts, DeFi protocols, and Web3 applications"
@@ -61,7 +82,7 @@ export default function ServicesOverviewPage() {
           title="Data Analytics"
           description="Business intelligence, predictive modeling, and real-time analytics"
           bullets={["BI dashboards", "Predictive analytics", "Real-time insights"]}
-          icon="📊"
+          icon="📈"
         />
       </div>
       <CTA />{" "}
