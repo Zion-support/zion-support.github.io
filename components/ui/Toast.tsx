@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
-export type ToastType = any;
-=======
+
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
 }, [toast.id, toast.duration, onRemove]);
 const getIcon = () => {
@@ -231,4 +226,4 @@ export const useToast = () => {
     showWarning;
     removeToast}
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

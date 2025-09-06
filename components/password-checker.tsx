@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
-=======
+
 import {
   Lock
   Shield
@@ -17,7 +15,7 @@ import {
   AlertTriangle
   ArrowRight;
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function PasswordCheckerPage() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -25,15 +23,7 @@ export default function PasswordCheckerPage() {
   const [strengthText, setStrengthText] = useState('');
   const [strengthColor, setStrengthColor] = useState('');
   const [checks, setChecks] = useState({
-<<<<<<< HEAD
-    length: false;
-    uppercase: false;
-    lowercase: false;
-    numbers: false;
-    symbols: false;
-    noCommon: false;
-    noSequential: false
-=======
+
     length: false
     uppercase: false
     lowercase: false
@@ -41,7 +31,7 @@ export default function PasswordCheckerPage() {
     symbols: false
     noCommon: false
     noSequential: false,  });    noSequential: false
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   });
   const [suggestions, setSuggestions] = useState<string[]>([]),
   const [generatedPassword, setGeneratedPassword] = useState('');
@@ -54,9 +44,7 @@ export default function PasswordCheckerPage() {
       resetAnalysis()
     }
   }, [password]);
-<<<<<<< HEAD
-  const analyzePassword = null;
-=======
+
   const analyzePassword = (pass: string) => {
     const newChecks = {
       length: pass.length >= 8
@@ -298,7 +286,7 @@ export default function PasswordCheckerPage() {
           </h1>
           <p className="text-xl text-indigo-200 max-w-4xl mx-auto leading-relaxed">
             Analyze your password security with our advanced strength checker. Get detailed feedback
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             suggestions, and generate strong passwords to protect your accounts and data.
           </p>
         </div>

@@ -1,10 +1,6 @@
 import React from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
-import { RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3 } from 'lucide-react';
-export default function AutomationPage() {
-  const features = null;
-=======
+
 import {
   RefreshCw
   Zap
@@ -44,7 +40,7 @@ export default function AutomationPage() {
     '24/7 automated operations'
     'Real-time monitoring'
     'Custom integration support',  ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

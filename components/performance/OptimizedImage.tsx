@@ -11,15 +11,7 @@ interface OptimizedImageProps {
   fill?: boolean;
   style?: React.CSSProperties;
 }
-<<<<<<< HEAD
 
-export const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src;
-  alt;
-  width;
-  height;
-  priority;
-=======
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src
   alt
@@ -31,7 +23,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   quality = 85
   fill = false
   style
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }) => {
   if (fill) {
     return (

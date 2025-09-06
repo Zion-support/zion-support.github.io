@@ -7,35 +7,26 @@ import { SeverityDisplay } from "./SeverityDisplay",
 import { ActionButtons } from "./ActionButtons";
 import { EmptyFraudState } from "./EmptyFraudState";
 interface FraudFlagsTableProps {
-<<<<<<< HEAD
-  flags: FraudFlag[];
-  isLoading: boolean;
-  hasFilters: boolean;
-  resetFilters: () => void;
-=======
+
   flags: FraudFlag[]
   isLoading: boolean
   hasFilters: boolean
   resetFilters: () => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   flags;
   isLoading;
   hasFilters;
-<<<<<<< HEAD
-  resetFilters;
-=======
+
   resetFilters
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onAction
 }) => {
   if (isLoading) {
     return (
-<<<<<<< HEAD
-      <div className;
-=======
+
       <div className="flex justify-center items-center h-64">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
       </div>
@@ -109,4 +100,4 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
     </Table>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

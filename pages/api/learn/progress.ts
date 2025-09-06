@@ -1,10 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-const usersPath = null;
-    return res.status(405).end('Method Not Allowed')
-=======
+
 function writeUsers(data: any) {
   fs.writeFileSync(usersPath, JSON.stringify(data, null, 2));
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -50,7 +47,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     res.setHeader('Allow', 'GET, POST');
     return res.status(405).end('Method Not Allowed');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (e: any) {
     return res
       .status(500)

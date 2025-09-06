@@ -6,14 +6,7 @@ import { CreditCard } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import React from 'react'
 interface PaymentSummaryProps {
-<<<<<<< HEAD
-  milestones: Milestone[];
-  paymentTerms: string | null
-}
 
-export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
-  const totalPayment = null;
-=======
   milestones: Milestone[]
   paymentTerms: string | null
 }
@@ -59,4 +52,4 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
   )
 }
 '"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

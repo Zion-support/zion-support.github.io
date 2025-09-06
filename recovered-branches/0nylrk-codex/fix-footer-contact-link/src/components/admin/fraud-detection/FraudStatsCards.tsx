@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-=======
 import React from "react";
 import {
   Card
@@ -10,7 +6,7 @@ import {
   CardTitle
   CardDescription
 } from "@/components/ui/card";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
 import { FraudStats } from "@/types/fraud";
 interface FraudStatsCardsProps {
@@ -18,9 +14,7 @@ interface FraudStatsCardsProps {
 }
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   return (
-<<<<<<< HEAD
-    <div className;
-=======
+
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
       <Card>
         <CardHeader className="pb-2">
@@ -84,4 +78,4 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

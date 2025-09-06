@@ -1,10 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (req.method !== "POST" && req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
-  const state = null;
-=======
+
   if (req.method !== "POST" && req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   const sinceParam = (req.method === "GET" ? req.query.since : (req.body?.since as any)) as string | string[] | undefined
@@ -17,6 +14,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     instanceId: state.config.instanceId
     lastSyncedAt: state.lastSyncedAt
     events
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     scope: requestedScope})
 }

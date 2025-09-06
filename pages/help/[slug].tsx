@@ -2,10 +2,7 @@ import { GetStaticPaths, GetStaticProps  } from 'next';
 import { useState  } from 'react';
 import { readJson  } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
-<<<<<<< HEAD
-export const getStaticPaths: GetStaticPaths;
-    setVoted(helpful)
-=======
+
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return {
@@ -27,7 +24,7 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
       body: JSON.stringify({ articleId: article.id, helpful })
     });
     setVoted(helpful);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   return (
     <article className='prose dark:prose-invert max-w-none'>

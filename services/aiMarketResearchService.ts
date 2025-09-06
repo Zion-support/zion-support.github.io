@@ -5,11 +5,9 @@ export interface MarketTrend {
   trendDirection: 'rising' | 'falling' | 'stable';
   growthRate: number;
   relatedKeywords: string[];
-<<<<<<< HEAD
-  marketOpportunity: 'high' | 'medium' | 'low';
-=======
+
   marketOpportunity: 'high' | 'medium' | 'low'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   timestamp: Date
 }
 export interface CompetitorAnalysis {
@@ -21,34 +19,24 @@ export interface CompetitorAnalysis {
   weaknesses: string[];
   opportunities: string[];
   threats: string[];
-<<<<<<< HEAD
-  pricingStrategy: string;
-  featureComparison: Record<string, boolean>,
-  socialMediaPresence: Record<string, number>,
-=======
+
   pricingStrategy: string
   featureComparison: Record<string, boolean>;
   socialMediaPresence: Record<string, number>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   lastUpdated: Date
 }
 export interface MarketSegment {
   id: string;
   name: string;
   size: number;
-<<<<<<< HEAD
-  growthRate: number;
-  demographics: Record<string, any>,
-  psychographics: Record<string, any>,
-  buyingBehavior: Record<string, any>,
-  painPoints: string[];
-=======
+
   growthRate: number
   demographics: Record<string, any>;
   psychographics: Record<string, any>;
   buyingBehavior: Record<string, any>;
   painPoints: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   solutions: string[]
 }
 export interface MarketReport {
@@ -61,11 +49,9 @@ export interface MarketReport {
   growthProjection: number;
   recommendations: string[];
   dataSources: string[];
-<<<<<<< HEAD
-  generatedAt: Date;
-=======
+
   generatedAt: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   expiresAt: Date
 }
 export interface MarketResearchRequest {
@@ -73,11 +59,9 @@ export interface MarketResearchRequest {
   targetMarket: string;
   researchType: 'trends' | 'competitors' | 'segments' | 'comprehensive';
   timeframe: '7d' | '30d' | '90d' | '1y';
-<<<<<<< HEAD
-  includeHistoricalData: boolean;
-=======
+
   includeHistoricalData: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   customMetrics?: string[]
 }
 export interface MarketResearchResponse {
@@ -85,29 +69,19 @@ export interface MarketResearchResponse {
   data: {
     trends?: MarketTrend[];
     competitors?: CompetitorAnalysis[];
-<<<<<<< HEAD
-    segments?: MarketSegment[];
-    report?: MarketReport
-  },
-  insights: string[];
-  recommendations: string[];
-  nextSteps: string[];
-=======
+
     segments?: MarketSegment[]
     report?: MarketReport
   }
   insights: string[];
   recommendations: string[];
   nextSteps: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   estimatedROI: number
 }
 export class AIMarketResearchService {
   private apiKey: string;
-<<<<<<< HEAD
-  private baseUrl: string;
-  constructor(apiKey: string, baseUrl: string;
-=======
+
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
     this.apiKey = apiKey
@@ -238,4 +212,4 @@ export class AIMarketResearchService {
   }
 }
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

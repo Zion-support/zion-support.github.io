@@ -5,29 +5,7 @@ import { z } from "zod",
 import { Button } from "@/components/ui/button";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
-<<<<<<< HEAD
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form",
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Select;
-  SelectContent;
-  SelectItem;
-  SelectTrigger;
-  SelectValue} from "@/components/ui/select",
-import { Input } from "@/components/ui/input",
-import { disputeReasonLabels } from "@/types/disputes",
-import { useDisputes } from "@/hooks/useDisputes";
-import { toast } from "sonner";
-import { FileText } from 'lucide-react'
 
-const formSchema = null;
-      toast.error("Failed to submit dispute. Please try again.")
-=======
   Form
   FormControl
   FormField
@@ -115,7 +93,7 @@ export function DisputeForm({
     } catch (error) {
       logErrorToProduction('Error submitting dispute:', { data: error })
       toast.error('Failed to submit dispute. Please try again.')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     } finally {
       setIsSubmitting(false)
     }

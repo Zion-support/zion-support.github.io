@@ -1,9 +1,7 @@
 export interface PasswordStrengthResult {
-<<<<<<< HEAD
-  password: string;
-=======
+
   password: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   score: number, // 0-100
   strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong';
   feedback: string[];
@@ -17,33 +15,24 @@ export interface PasswordStrengthResult {
     hasCommonWords: boolean;
     hasSequentialChars: boolean;
     hasRepeatingChars: boolean;
-<<<<<<< HEAD
-    entropy: number;
-=======
+
     entropy: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     crackTime: string
   }
   warnings: string[]
 }
 export interface CommonPasswordData {
   commonPasswords: Set<string>;
-<<<<<<< HEAD
-  commonWords: Set<string>;
-=======
+
   commonWords: Set<string>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   patterns: RegExp[]
 }
 class PasswordStrengthService {
   private commonPasswords: Set<string>;
   private commonWords: Set<string>;
-<<<<<<< HEAD
-  private patterns: RegExp[];
-  constructor() {
-    // Common weak passwords
-    this.commonPasswords;
-=======
+
   private patterns: RegExp[]
   constructor() {
     // Common weak passwords
@@ -321,4 +310,4 @@ class PasswordStrengthService {
 export const passwordStrengthService = new PasswordStrengthService();
 // Export the class for custom instances
 export { PasswordStrengthService }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

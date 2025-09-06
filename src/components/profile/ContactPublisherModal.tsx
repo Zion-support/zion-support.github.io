@@ -1,37 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import FocusLock from 'react-focus-lock';
-import { Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle } from '@/components/ui/dialog';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Form;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormControl;
-  FormMessage } from '@/components/ui/form';
-import { useForm, type Resolver  } from 'react-hook-form';
-import { yupResolver  } from '@hookform/resolvers/yup';
-import * as yup from 'yup',
-import { SendIcon, Mail } from 'lucide-react'
-import api from '@/services/apiClient';
-import { toast  } from '@/hooks/use-toast';
-import { useAuth  } from '@/hooks/useAuth';
-import { LoginModal } from '@/components/auth/LoginModal';
-interface ContactPublisherModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  publisherName: string;
-  publisherEmail?: string;
-  productId?: string
-}
 
-type FormValues = any;
-=======
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
@@ -147,7 +114,7 @@ export function ContactPublisherModal({  isOpen,  isOpen
       e.stopPropagation()
       onClose()
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Dialog open={isOpen} onOpenChange={onClose}>

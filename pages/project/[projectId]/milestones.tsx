@@ -3,12 +3,7 @@ import { useRouter  } from 'next/router';
 import Head from 'next/head',
 import MilestoneForm from '../../../components/monetization/MilestoneForm',
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
-<<<<<<< HEAD
-import { Milestone  } from '../../../utils/types/milestones';
-import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
-function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
-  if (typeof window;
-=======
+
 import { Milestone } from '../../../utils/types/milestones';
 import {
   createMilestone
@@ -90,7 +85,7 @@ export default function ProjectMilestonesPage() {
     setMilestones(prev =>
       prev.map(m => (m.id === milestoneId ? res.milestone : m))
     );  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div>
       <Head>

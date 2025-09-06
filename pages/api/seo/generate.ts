@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-const openai = null;
-    return res.status(500).json({ error: 'Failed to generate landing page' })
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY |"" });
@@ -80,6 +75,6 @@ Tone: professional, modern, trustworthy`;
   } catch (e) {
     console.error(e);
     return res.status(500).json({ error: "Failed to generate landing page" });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
 }

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
-import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
-export default function AIEvalsPage() {
-	const contactInfo = null;
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
@@ -21,7 +14,7 @@ export default function AIEvalsPage() {
 		{ name: 'Startup', price: '$149/month', items: ['5K eval callsLatency/Cost trackingToxicity/PII checksCSV export'] }
 		{ name: 'Growth', price: '$499/month', items: ['50K eval callsCustom metrics (BLEU/ROUGE/F1)CI evals via APISlack alerts'] }
 		{ name: 'Enterprise', price: 'Custom', items: ['Private cloud/VPCSLA & audit logsSOC2 supportSAML/SSO'] }]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 	return (
 		<QuantumHolographicMatrixBackground intensity={1.5}>
 			<Head>

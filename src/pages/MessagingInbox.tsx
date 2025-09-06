@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react'
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext';
@@ -16,7 +10,7 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
 import { useRouter } from 'next/router'; // Changed from react-router-dom
-=======
+
 
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react'
@@ -30,25 +24,17 @@ import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
 import { useRouter } from 'next/router', // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function MessagingInbox() {
-<<<<<<< HEAD
 
-  const { 
-    conversations;
-    activeConversation;
-    setActiveConversation;
-=======
   const {
     conversations
     activeConversation
     setActiveConversation
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     markAsRead;
     fetchConversations;
     isLoading
   } = useMessaging();
-<<<<<<< HEAD
-  const isMobile = null;
-=======
+
   const isMobile = useIsMobile();
   const router = useRouter(), // Changed from navigate
   const [activeCall, setActiveCall] = useState<string | null>(null);
@@ -78,7 +64,7 @@ export default function MessagingInbox() {
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">

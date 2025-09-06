@@ -2,12 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
-export default function DevOpsAutomationPage() {
-  const features = null;
-              and intelligent security automation. Deploy faster, safer, and more reliably.
-=======
+
 import {
   GitBranch
   Zap
@@ -300,7 +295,7 @@ export default function DevOpsAutomationPage() {
               Streamline your development workflow with automated CI/CD
               pipelines, infrastructure as code, and intelligent security
               automation. Deploy faster, safer, and more reliably.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Button

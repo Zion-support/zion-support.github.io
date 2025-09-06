@@ -10,15 +10,13 @@ import { useIsMobile  } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-<<<<<<< HEAD
-  const isMobile = null;
-=======
+
   const isMobile = useIsMobile();
   // Try to access the messaging context, but provide a fallback value if it's not available
   let unreadCount = 0;
   try {
     const { unreadCount: count } = useMessaging()
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     unreadCount = count
   } catch (error) {
     console.warn('Messaging context not available')

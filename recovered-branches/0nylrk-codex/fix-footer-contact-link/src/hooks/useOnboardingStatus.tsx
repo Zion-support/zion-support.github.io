@@ -3,47 +3,31 @@ import { useState, useEffect } from "react",
 import { useAuth } from "./useAuth";
 import { supabase } from "@/integrations/supabase/client";
 interface OnboardingStatus {
-<<<<<<< HEAD
-  profileCompleted: boolean;
-  skillsAdded: boolean;
-  availabilitySet: boolean;
-  matchReceived: boolean;
-  jobPosted: boolean;
-  inviteSent: boolean;
-=======
+
   profileCompleted: boolean
   skillsAdded: boolean
   availabilitySet: boolean
   matchReceived: boolean
   jobPosted: boolean
   inviteSent: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   responseReceived: boolean
 }
 export function useOnboardingStatus() {
   const { user } = useAuth();
   const [status, setStatus] = useState<OnboardingStatus>({
-<<<<<<< HEAD
-    profileCompleted: false;
-    skillsAdded: false;
-    availabilitySet: false;
-    matchReceived: false;
-    jobPosted: false;
-    inviteSent: false;
-=======
+
     profileCompleted: false
     skillsAdded: false
     availabilitySet: false
     matchReceived: false
     jobPosted: false
     inviteSent: false
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     responseReceived: false
   });
   useEffect(() => {
-<<<<<<< HEAD
-    const fetchOnboardingStatus = null;
-=======
+
     const fetchOnboardingStatus = async () => {
       if (!user) return;
       try {
@@ -74,6 +58,6 @@ export function useOnboardingStatus() {
     }
     fetchOnboardingStatus()
   }, [user]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return status
 }

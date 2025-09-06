@@ -1,14 +1,7 @@
 import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
-  Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
-  Facebook, Twitter, Linkedin, Instagram, Youtube, Github
- } from 'lucide-react';
-const contactInfo = null;
-                and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
-=======
+
 import {
   Phone
   Mail
@@ -315,7 +308,7 @@ export default function UltraFuturisticFooter2026() {
                 Leading provider of revolutionary AI automation, quantum
                 cybersecurity, fintech blockchain, and healthcare biotech
                 solutions. Transforming businesses with cutting-edge technology.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               </p>
               {/* Contact Info */}
               <div className='space-y-3'>

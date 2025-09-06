@@ -9,16 +9,7 @@ interface MilestoneActivitiesProps {
   projectId: string
 }
 interface Activity {
-<<<<<<< HEAD
-  id: string;
-  milestone_id: string;
-  user_id: string;
-  action: string;
-  previous_status: string | null;
-  new_status: string;
-  comment: string | null;
-  created_at: string;
-=======
+
   id: string
   milestone_id: string
   user_id: string
@@ -27,16 +18,14 @@ interface Activity {
   new_status: string
   comment: string | null
   created_at: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   milestone: {
     title: string
   }
   created_by_profile: {
-<<<<<<< HEAD
-    display_name: string;
-=======
+
     display_name: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     avatar_url: string | null
   }
 }
@@ -50,16 +39,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
         const { data, error } = await supabase
           .from('milestone_activities')
           .select(`
-<<<<<<< HEAD
-            *,
-            milestone:milestone_id(title);
-            created_by_profile:profiles!user_id(display_name, avatar_url)
-          `)
-          .eq('project_id', projectId)
-          .order('created_at', { ascending: false });
-        if (error) throw error;
-        setActivities(data || [])
-=======
+
             *;
             milestone: milestone_id(title)
             created_by_profile:profiles!user_id(display_name, avatar_url)
@@ -68,7 +48,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
           .order('created_at', { ascending: false })
         if (error) throw error;
         setActivities(data |[])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       } catch (err) {
         console.error('Error fetching milestone activities:', err)
       } finally {
@@ -82,11 +62,9 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   function getActivityDescription(activity: Activity): string {
     switch (activity.action) {
       case 'created':
-<<<<<<< HEAD
-        return 'created a new milestone';
-=======
+
         return 'created a new milestone'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       case 'status_changed':
         return `changed status from ${activity.previous_status |'none'} to ${activity.new_status}`;
       case 'updated':

@@ -6,9 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
   // Sample endpoint data
-<<<<<<< HEAD
-  const endpoints = null;
-=======
+
   const endpoints = [
     {
       id: "get-jobs"
@@ -300,4 +298,4 @@ export function ApiReference() {
   )
 }
 export default ApiReference;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -7,11 +7,9 @@ import { TalentDashboard } from "../components/dashboard/TalentDashboard";
 import { useAuth } from "@/hooks/useAuth";
 export function MobileHome() {
   const { user } = useAuth();
-<<<<<<< HEAD
-  const isClient = null;
-=======
+
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="min-h-screen">
       <MobileHeader

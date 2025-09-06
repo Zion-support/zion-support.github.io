@@ -37,10 +37,7 @@ import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} f
 import {Zap, Star, Calendar} from 'lucide-react';
 export default function MicroSaasPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
-<<<<<<< HEAD
-  const microSaasServices = null;
-              dedicated support, enterprise-grade reliability, and 14-day free trials. Start with one solution 
-=======
+
   const microSaasServices = [
     {
       name: 'AI Content Generator Pro'
@@ -1445,7 +1442,7 @@ export default function MicroSaasPage() {
             <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed">
               Choose from our portfolio of 20 specialized solutions. All services include comprehensive documentation
               dedicated support, enterprise-grade reliability, and 14-day free trials. Start with one solution
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               and add more as your business grows.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">

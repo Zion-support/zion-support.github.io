@@ -2,13 +2,7 @@ import React, { useState, useEffect } from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Search, Filter, Grid3X3, List;
-  Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings;
-  ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3;
-  Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
- } from 'lucide-react';
-=======
+
 import {
   Search
   Filter
@@ -53,16 +47,14 @@ import {
   Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings;
   ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3;
   Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 // Import service data
 import { innovativeRealMicroSaasServices2025  } from '../data/2025-innovative-real-micro-saas-services';
 import { innovativeAIServicesEnhanced2025  } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025  } from '../data/2025-innovative-it-services-enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
-<<<<<<< HEAD
-interface Service {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+
   id: string;
   name: string;
   tagline: string;
@@ -77,14 +69,7 @@ interface Service {
   growthRate: string;
   launchDate: string;
   badge?: string;
-<<<<<<< HEAD
-  icon?: React.ReactNode
-}
 
-const allServices: Service[] = [
-  ...innovativeRealMicroSaasServices2025.map(service;
-                setSelectedPriceRange('all')
-=======
   icon?: React.ReactNode;
 const allServices: Service[] = [
   ...innovativeRealMicroSaasServices2025.map(service => ({
@@ -782,7 +767,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 setSelectedPriceRange('all');
               }}
               className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200'            >                setSelectedPriceRange('all')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               }}
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200"
             >

@@ -2,14 +2,7 @@ import React from 'react',
 import SEO from '../components/SEO',
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Star, Brain, Atom, Shield, Zap, TrendingUp, Globe;
-  Rocket, Lock, Palette, Factory, Database, Cloud;
-  Cpu, Eye, Target, Users, BarChart3
- } from 'lucide-react';
-import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
-const Comprehensive2025InnovativeServicesShowcase: React.FC;
-=======
+
 import {
   Star
   Brain
@@ -562,4 +555,4 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
 };export default Comprehensive2025InnovativeServicesShowcase;  )
 }
 export default Comprehensive2025InnovativeServicesShowcase;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

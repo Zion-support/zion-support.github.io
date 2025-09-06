@@ -17,10 +17,7 @@ interface HTMLParagraphElement extends HTMLElement {
 interface HTMLHeadingElement extends HTMLElement {
   tagName: 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6';
 }
-<<<<<<< HEAD
 
-const Card = null;
-=======
 const Card = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
@@ -29,20 +26,17 @@ const Card = React.forwardRef<
     ref={ref}
     className={cn(
       "rounded-lg border bg-card text-card-foreground shadow-sm"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       className
     )}
     {...props}
   />;
 ));
 Card.displayName = "Card";
-<<<<<<< HEAD
 
-const CardHeader = null;
-=======
 const CardHeader = React.forwardRef<
   HTMLDivElement
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
@@ -52,10 +46,7 @@ const CardHeader = React.forwardRef<
   />;
 ));
 CardHeader.displayName = "CardHeader";
-<<<<<<< HEAD
 
-const CardTitle = null;
-=======
 const CardTitle = React.forwardRef<
   HTMLParagraphElement
   React.HTMLAttributes<HTMLHeadingElement>
@@ -64,20 +55,17 @@ const CardTitle = React.forwardRef<
     ref={ref}
     className={cn(
       "text-2xl font-semibold leading-none tracking-tight"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       className
     )}
     {...props}
   />;
 ));
 CardTitle.displayName = "CardTitle";
-<<<<<<< HEAD
 
-const CardDescription = null;
-=======
 const CardDescription = React.forwardRef<
   HTMLParagraphElement
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
   <p
@@ -87,25 +75,19 @@ const CardDescription = React.forwardRef<
   />;
 ));
 CardDescription.displayName = "CardDescription";
-<<<<<<< HEAD
 
-const CardContent = null;
-=======
 const CardContent = React.forwardRef<
   HTMLDivElement
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
 ));
 CardContent.displayName = "CardContent";
-<<<<<<< HEAD
 
-const CardFooter = null;
-=======
 const CardFooter = React.forwardRef<
   HTMLDivElement
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
@@ -115,31 +97,25 @@ const CardFooter = React.forwardRef<
   />;
 ));
 CardFooter.displayName = "CardFooter";
-<<<<<<< HEAD
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-=======
 import React from 'react';
 interface CardProps {
   children: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
   onClick?: () => void;
-=======
+
 import React from 'react';
 interface CardProps {
   children: React.ReactNode
   className?: string
   style?: React.CSSProperties
   onClick?: () => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   hover?: boolean
 }
 const Card: React.FC<CardProps> = ({
-<<<<<<< HEAD
-  children;
-  className;
-=======
+
   children
   className = ''
   style
@@ -170,4 +146,4 @@ const Card: React.FC<CardProps> = ({
 }
 export default Card;
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,25 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { Progress  } from '@/components/ui/progress';
-import { Activity, Zap, Package, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, RefreshCw, BarChart3, Clock, Globe } from 'lucide-react'
-import { bundleMonitor  } from '@/utils/bundleMonitor';
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
-interface PerformanceMetrics {
-  bundleSize: number;
-  loadTime: number;
-  performanceScore: number;
-  chunkCount: number;
-  cacheHitRate: number;
-  fcp: number, // First Contentful Paint
-  lcp: number, // Largest Contentful Paint
-  cls: number, // Cumulative Layout Shift
-  fid: number, // First Input Delay
-}
 
-=======
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -50,7 +29,7 @@ interface PerformanceMetrics {
   lcp: number; // Largest Contentful Paint
   cls: number; // Cumulative Layout Shift
   fid: number; // First Input Delay
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface BundleChunk {
   name: string;
   size: number;
@@ -58,14 +37,7 @@ interface BundleChunk {
   cached: boolean;
   type: string
 export function PerformanceDashboard() {
-<<<<<<< HEAD
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
-  const [chunks, setChunks] = useState<BundleChunk[]>([]),
-  const [isLoading, setIsLoading] = useState(false);
-  const [lastUpdated, setLastUpdated] = useState<Date | null>(null),
 
-  const collectMetrics = null;
-=======
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
   const [chunks, setChunks] = useState<BundleChunk[]>([])
   const [isLoading, setIsLoading] = useState(false)
@@ -211,7 +183,7 @@ export function PerformanceDashboard() {
     const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds
     return () => clearInterval(interval)
   }, [])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='space-y-6'>
       {/* Header */}

@@ -6,11 +6,7 @@ import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
-<<<<<<< HEAD
-  const section = null;
-  fs.createReadStream(fullPath).pipe(res)
-}
-=======
+
   const section = String(req.query.section |"General");
   const file = String(req.query.file |"");
   if (!file) return res.status(400).json({ error: "Missing file" });
@@ -37,4 +33,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   appendAuditLog({ type: "file_download", section, name: file });
   fs.createReadStream(fullPath).pipe(res);
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

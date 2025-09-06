@@ -30,24 +30,16 @@ export interface RealMarketService {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-    website: string
-  },
-=======
+
     website: string;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number
-}
 
-const contact = null;
-=======
   reviews: number;
 const contact = {
   mobile: '+1 302 464 0950'
@@ -2628,4 +2620,4 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 36
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

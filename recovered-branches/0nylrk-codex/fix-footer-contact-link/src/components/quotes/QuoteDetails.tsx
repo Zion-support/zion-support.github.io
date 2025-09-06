@@ -1,18 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { 
-  Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle;
-  DialogDescription 
-} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-=======
+
 import {
   Dialog
   DialogContent
@@ -24,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
 import { format } from "date-fns";
@@ -33,10 +21,7 @@ interface QuoteDetailsProps {
   isOpen: boolean;
   onClose: () => void
 }
-<<<<<<< HEAD
 
-export const QuoteDetails = null;
-=======
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
   if (!quote) return null;
   const formatDate = (dateString?: string) => {
@@ -123,4 +108,4 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     </Dialog>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

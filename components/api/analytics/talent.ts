@@ -1,11 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createServerClient } from '../../../utils/supabase/server';
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const supabase = null;
-        { label: 'ai', value: 1 }]})
-=======
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -83,6 +78,6 @@ export default async function handler(
         { label: 'ai', value: 1 }
       ]
     });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
 }

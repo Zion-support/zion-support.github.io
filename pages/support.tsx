@@ -1,16 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { HelpCircle, MessageCircle, Phone, Mail, Clock;
-  BookOpen, Video, FileText, Search, Filter;
-  CheckCircle, ArrowRight, Brain, Atom, Rocket;
-  Shield, Zap, Users, Star, TrendingUp, Code
- } from 'lucide-react';
-export default function Support() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const supportCategories = null;
-=======
+
 import {
   HelpCircle, MessageCircle, Phone, Mail, Clock
   BookOpen, Video, FileText, Search, Filter
@@ -747,4 +737,4 @@ export default Support
   )
 }
 export default SupportPage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -11,9 +11,7 @@ export function useSavedTalents() {
   const [isLoading, setIsLoading] = useState(true);
   // Fetch saved talents
   useEffect(() => {
-<<<<<<< HEAD
-    const fetchSavedTalents = null;
-=======
+
     const fetchSavedTalents = async () => {
       if (!isAuthenticated |!userDetails.id) {
         setIsLoading(false);
@@ -112,7 +110,7 @@ export function useSavedTalents() {
     savedTalentIds;
     isLoading;
     toggleSaveTalent;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     isTalentSaved
   }
 }

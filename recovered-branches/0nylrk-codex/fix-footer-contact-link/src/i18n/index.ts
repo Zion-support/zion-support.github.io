@@ -26,9 +26,7 @@ i18n
       }
     }
     fallbackLng: 'en', // Default language
-<<<<<<< HEAD
-    debug: process.env.NODE_ENV;
-=======
+
     debug: process.env.NODE_ENV === 'development'
     interpolation: {
       escapeValue: false, // React already escapes by default
@@ -49,4 +47,4 @@ i18n.on('languageChanged', (lng) => {
   // This will be implemented in the LanguageContext
 });
 export default i18n;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

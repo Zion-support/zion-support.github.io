@@ -2,9 +2,7 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
-=======
+
 import {
   Search
   TrendingUp
@@ -17,15 +15,12 @@ import {
   Smartphone
   Zap;
 } from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function SEOAnalyzerToolPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [url, setUrl] = useState('');
-<<<<<<< HEAD
-  const features = null;
-            keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
-=======
+
   const features = [
     {
       icon: <Search className='w-8 h-8 text-white' />
@@ -337,7 +332,7 @@ export default function SEOAnalyzerToolPage() {
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
             Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           </p>
           {/* URL Input */}
           <div className="max-w-2xl mx-auto mb-8">

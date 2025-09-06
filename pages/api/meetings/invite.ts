@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { createClient } from '[^']*';
-const url = null;
-    return res.status(200).json({ ok: true, skipped: true })
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL |"";
@@ -32,6 +27,6 @@ export default async function handler(
   } catch (e) {
     console.error(e);
     return res.status(500).json({ ok: false, error: "Failed to send invite" });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
 }

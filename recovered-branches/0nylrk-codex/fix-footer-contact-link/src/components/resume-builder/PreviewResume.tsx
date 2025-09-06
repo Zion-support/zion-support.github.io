@@ -1,14 +1,4 @@
-<<<<<<< HEAD
 
-import { Resume } from '@/types/resume';
-import { PreviewHeader;
-  ResumeBasicInfoSection;
-  WorkExperienceSection;
-  EducationSection;
-  SkillsSection;
-  CertificationsSection
- } from './preview';
-=======
 import { Resume } from "@/types/resume";
 import {
   PreviewHeader
@@ -18,7 +8,7 @@ import {
   SkillsSection
   CertificationsSection
 } from "./preview";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface PreviewResumeProps {
   resume: Resume;
   onBack: () => void

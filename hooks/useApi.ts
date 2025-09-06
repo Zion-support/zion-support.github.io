@@ -9,42 +9,14 @@ interface ApiState<T> {
   loading: boolean;
   error: string | null;
 }
-<<<<<<< HEAD
 
-interface UseApiOptions {
-  immediate?: boolean;
-}
-
-export function useApi<T>(
-  apiCall: () => Promise<T>;
-  options: UseApiOptions = {}
-): ApiState<T> & { refetch: () => void } {
-  const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  const fetchData = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    
-    try {
-      const result = await apiCall();
-      setData(result);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
-    } finally {
-      setLoading(false);
-    }
-  }, [apiCall]);
-
-=======
 export function useApi<T>(url: string, options?: RequestInit) {
   const [state, setState] = useState<ApiState<T>>({
     data: null
     loading: true
     error: null
   });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -62,17 +34,7 @@ export function useApi<T>(url: string, options?: RequestInit) {
           error: error instanceof Error ? error.message : 'An error occurred'
         });
       }
-<<<<<<< HEAD
-    };
 
-  return {
-    data;
-    loading;
-    error;
-    refetch: fetchData;
-  };
-}
-=======
     }
     fetchData();
   }, [url, JSON.stringify(options)]);
@@ -123,4 +85,4 @@ export default function UseApi({ }: UseApiProps) {
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

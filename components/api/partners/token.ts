@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";
-=======
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
 export default async function handler(
@@ -22,7 +19,7 @@ export default async function handler(
   const { partner, apiKey: key } = match;
   const token = signJwt(
     {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -32,9 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!apiKey) {
     return res.status(400).json({ error: "apiKey required" })
   }
-<<<<<<< HEAD
-  const match = null;
-=======
+
   const match = await findPartnerByApiKey(apiKey);
   if (!match) {
     return res.status(401).json({ error: "Invalid API key" });
@@ -61,6 +56,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       useCaseType: partner.useCaseType} as any;
     typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600
   );
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
 }

@@ -1,13 +1,7 @@
 import { useRouter  } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-import { useCurrentUser } from '../../utils/auth';
-const REASONS = null;
-    reader.readAsDataURL(file)
-  })
-}
-=======
+
 import {useCurrentUser} from '../../utils/auth';
 const REASONS = [
   'Scope Disagreement'
@@ -177,4 +171,4 @@ const reader = new FileReader();
     reader.onerror = reject;
     reader.readAsDataURL(file);
   });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

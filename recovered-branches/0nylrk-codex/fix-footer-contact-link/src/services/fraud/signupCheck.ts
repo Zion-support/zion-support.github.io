@@ -6,9 +6,7 @@ import { SignupCheckResult } from './types';
 /**
  * Check for suspicious signup patterns
  */
-<<<<<<< HEAD
-export const checkSignupPatterns = null;
-=======
+
 export const checkSignupPatterns = async (
   email: string;
   ipAddress?: string
@@ -40,4 +38,4 @@ export const checkSignupPatterns = async (
     reasons
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

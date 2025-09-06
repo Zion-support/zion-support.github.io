@@ -18,9 +18,7 @@ import {
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 // Form validation schema
-<<<<<<< HEAD
-const forgotPasswordSchema = null;
-=======
+
 const forgotPasswordSchema = z.object({
   email: z.string().email("Please enter a valid email")})
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
@@ -37,7 +35,7 @@ export default function ForgotPassword() {
     await resetPassword(data.email)
     setSubmitted(true)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Header />

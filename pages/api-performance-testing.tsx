@@ -2,17 +2,7 @@ import React from 'react',
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage() {
-<<<<<<< HEAD
-	const features = null;
-							{ title: 'Reports & Export', desc: 'Beautiful HTML/CSV exports, signed artifacts, and webhook notifications.' }].map((f) => (
-							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
-								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>
-							</div>
-						))}
-					</div>
 
-=======
   const features = [
     'k6/Gatling-compatible test runner'
     'SLO-aware latency reports'
@@ -69,7 +59,7 @@ export default function ApiPerformanceTestingPage() {
               </div>
             ))}
           </div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           <div className='mt-14'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
             <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>

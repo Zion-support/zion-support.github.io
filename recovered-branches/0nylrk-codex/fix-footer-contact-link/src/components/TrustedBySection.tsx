@@ -2,9 +2,7 @@
 import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";
 // Real company logos for trusted partners - with more reliable image URLs
-<<<<<<< HEAD
-const trustedCompanies = null;
-=======
+
 const trustedCompanies = [
   {
     name: "NVIDIA"
@@ -116,7 +114,7 @@ export function TrustedBySection() {
       [companyName]: true
     }))
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -6,29 +6,7 @@ import { Search } from 'lucide-react'
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 interface Conversation {
-<<<<<<< HEAD
-  id: string;
-  name: string;
-  avatar?: string;
-  lastMessage: string;
-  timestamp: string;
-  unreadCount: number;
-  isTyping?: boolean
-}
 
-interface MobileConversationListProps {
-  conversations: Conversation[];
-  activeConversation?: string;
-  onSelectConversation: (id: string) => void
-export function MobileConversationList({
-  conversations;
-  activeConversation;
-  onSelectConversation
-}: MobileConversationListProps) {
-  return (
-    <div className;
-              activeConversation === conversation.id && "bg-primary/5"
-=======
   id: string
 name: string
 avatar?: string
@@ -76,7 +54,7 @@ export function MobileConversationList({
             className={cn(
               'px-4'
               activeConversation === conversation.id && 'bg-primary/5'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             )}
             onClick={() => onSelectConversation(conversation.id)}          >
             <div className='flex items-center gap-3 py-3 cursor-pointer'>

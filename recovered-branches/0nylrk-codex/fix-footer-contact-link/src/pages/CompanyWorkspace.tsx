@@ -16,9 +16,7 @@ export default function CompanyWorkspace() {
   const { isWhitelabel, tenant, brandName } = useWhitelabel();
   if (isLoading) {
     return (
-<<<<<<< HEAD
-      <div className;
-=======
+
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
       </div>
@@ -33,7 +31,7 @@ export default function CompanyWorkspace() {
     backgroundColor: company.theme?.backgroundColor |'var(--background)'
     textColor: company.theme?.textColor |'var(--foreground)'
   } : company.theme;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // Check if user has access to this company workspace
   const hasAccess = true, // For demo purposes, always grant access
   if (!hasAccess) {

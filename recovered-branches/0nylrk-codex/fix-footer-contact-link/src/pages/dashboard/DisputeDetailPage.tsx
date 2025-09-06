@@ -9,10 +9,7 @@ function DisputeDetailPage() {
   return (
     <ProtectedRoute>
       <>
-<<<<<<< HEAD
-        <SEO 
-          title;
-=======
+
         <SEO
           title="Dispute Details | Zion AI Marketplace"
           description="View and manage dispute details"
@@ -25,4 +22,4 @@ function DisputeDetailPage() {
   )
 }
 export default DisputeDetailPage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

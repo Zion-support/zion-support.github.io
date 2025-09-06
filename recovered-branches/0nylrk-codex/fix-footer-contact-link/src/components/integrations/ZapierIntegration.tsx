@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useState } from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-=======
 import React, { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -16,22 +9,20 @@ import {
   CardHeader
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { toast } from "sonner";
 import { Check, Copy, ExternalLink } from "lucide-react";
 export function ZapierIntegration() {
   const [copied, setCopied] = useState(false);
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
-<<<<<<< HEAD
-  const handleCopyApiKey = null;
-=======
+
   const handleCopyApiKey = () => {
     navigator.clipboard.writeText(apiKey);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
     toast.success("API key copied to clipboard");
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <div className="grid md:grid-cols-3 gap-6">

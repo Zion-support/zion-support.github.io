@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import type { NextPage, GetServerSideProps } from 'next';
-import ReviewForm from '../../components/reviews/ReviewForm';
-import { findProjectById } from '../../utils/dataStore';
-type Props = any;
-=======
+
 import React from "react";
 import type { NextPage, GetServerSideProps } from "next";
 import ReviewForm from "../../components/reviews/ReviewForm";
@@ -94,4 +88,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   } as any;
 }
 export default ReviewSubmitPage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,10 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createServerClient } from '../../../utils/supabase/server';
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const supabase = null;
-=======
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -119,7 +115,7 @@ export default async function handler(
       funnel: [
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
         { label: 'Hire', value: 2 }]})
   }
 }

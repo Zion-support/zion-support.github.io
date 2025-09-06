@@ -9,22 +9,15 @@ interface HelpArticleViewProps {
   articleId: string;
 }
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-<<<<<<< HEAD
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-=======
+
   const [feedbackGiven, setFeedbackGiven] = useState<
     "helpful" | "not-helpful" | null
   >(null);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // Find the article in all categories
   let article = null;
   for (const category of HELP_CATEGORIES) {
-<<<<<<< HEAD
-    const found = null;
-    day: "numeric"
-  })
-}
-=======
+
     const found = category.articles.find((a) => a.id === articleId);
     if (found) {
       article = found;
@@ -119,4 +112,4 @@ function formatDate(date: string): string {
     day: "numeric"
   });
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

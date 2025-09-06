@@ -1,21 +1,7 @@
 import React from 'react',
 import SEO from '../components/SEO';
 import Link from 'next/link';
-<<<<<<< HEAD
-export default function SOC2ComplianceAutomationPage() {
-	return (
-		<>
-			<SEO title;
-							{ title: 'Audit Room', desc: 'Share evidence securely with auditors, immutable logs.' }
-						].map((f) => (
-							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
-								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>
-							</div>
-						))}
-					</div>
 
-=======
   return (
     <>
       <SEO
@@ -32,7 +18,7 @@ export default function SOC2ComplianceAutomationPage() {
             pipelines, and prebuilt auditor workflows. Integrates with cloud
             providers and ticketing systems.
           </p>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {[
               {

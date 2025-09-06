@@ -11,9 +11,7 @@ import { X } from "lucide-react",
 import { Button } from "@/components/ui/button";
 import { TalentProfile } from "@/types/talent";
 export default function TalentDirectory() {
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   // Use our custom hook to manage state
   const {
@@ -117,7 +115,7 @@ export default function TalentDirectory() {
                 setPriceRange;
                 experienceRange;
                 setExperienceRange;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 clearFilters}}
             />
             {/* Mobile filter sidebar */}

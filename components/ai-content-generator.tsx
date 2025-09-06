@@ -2,11 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Play, Download, Code, Globe, Lock, Sparkles } from 'lucide-react';
-export default function AIContentGeneratorPage() {
-  const features = null;
-=======
+
 import {
   Brain
   Zap
@@ -212,7 +208,7 @@ import {
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' }
     { name: 'Slack', icon: '💬', description: 'Team collaboration' }
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

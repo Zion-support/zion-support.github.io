@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-interface UltraFuturisticBackground2034Props {
-  intensity?: number;
-  theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic'
-}
 
-=======
 resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
 type ParticleType = 'quantum' | 'neural' | 'holographic';
 // Particle system
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 const UltraFuturisticBackground2034: React.FC<
   UltraFuturisticBackground2034Props
 > = ({ intensity = 1 }) => {
@@ -19,9 +11,7 @@ const UltraFuturisticBackground2034: React.FC<
   const animationRef = useRef<number | undefined>(undefined);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({
-<<<<<<< HEAD
-  intensity;
-=======
+
   intensity = 1
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -539,4 +529,4 @@ export default UltraFuturisticBackground2034;        <motion.div
 export default UltraFuturisticBackground2034;  )
 }
 export default UltraFuturisticBackground2034;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

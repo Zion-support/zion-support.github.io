@@ -5,17 +5,7 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
-<<<<<<< HEAD
-import { RatingStars } from "@/components/RatingStars",
-import { FavoriteButton } from "@/components/FavoriteButton";
-import { useDispatch  } from 'react-redux';
-import type { AppDispatch } from '@/store';
-import { addItem  } from '@/store/cartSlice';
-import { toast } from '@/hooks/use-toast';
-import { useCurrency } from '@/hooks/useCurrency';
-import Image from 'next/image', // Import next/image
 
-=======
 import { RatingStars } from '@/components/RatingStars'
 import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
 import type { AppDispatch } from '@/store'
@@ -23,17 +13,13 @@ import { addItem } from '@/store/cartSlice'
 import { toast } from '@/hooks/use-toast'
 import { useCurrency } from '@/hooks/useCurrency'
 import Image from 'next/image'; // Import next/image
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface ProductListingCardProps {
   listing: ProductListing;
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
   detailBasePath?: string
-<<<<<<< HEAD
-}
 
-const ProductListingCardComponent = null;
-=======
 const ProductListingCardComponent = ({
   listing
   view = 'grid'
@@ -410,4 +396,4 @@ export default ProductListingCard
 '"`
 export const ProductListingCard = React.memo(ProductListingCardComponent)
 ProductListingCard.displayName = 'ProductListingCard'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '[^']*';
-export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
-  const usingPlaceholder = null;
-    return res.status(200).json({ leaders })
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -45,7 +39,7 @@ export default async function handler(
       .sort((a, b) => b.profile_completions - a.profile_completions)
       .slice(0, 10);
     return res.status(200).json({ leaders });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
   }

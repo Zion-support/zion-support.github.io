@@ -8,15 +8,7 @@ import { SkillsForm  } from '../forms/SkillsForm';
 import { CertificationsForm  } from '../forms/CertificationsForm';
 import { PreviewResume } from '../PreviewResume';
 interface ResumeStepContentProps {
-<<<<<<< HEAD
-  activeTab: string;
-  resume: Resume;
-  onNextStep: () => void;
-  onPrevStep: () => void
-}
 
-export const ResumeStepContent = null;
-=======
   activeTab: string
   resume: Resume
   onNextStep: () => void
@@ -82,4 +74,4 @@ export const ResumeStepContent = ({
     </>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

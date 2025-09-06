@@ -23,10 +23,7 @@ export interface AddSkillFormProps {
 }
 export interface BulkAddSkillsProps {
   resumeId: string;
-<<<<<<< HEAD
-  onSuccess: () => Promise<void>
-}
-=======
+
   onSuccess: () => Promise<void>;
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

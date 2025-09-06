@@ -2,9 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
 import AIAssistant from '../../components/ui/AIAssistant';
-<<<<<<< HEAD
-const NewProposal: NextPage;
-=======
+
 const NewProposal: NextPage = () => {
   const [jobBrief, setJobBrief] = useState('')
   const [resumeSummary, setResumeSummary] = useState('')
@@ -46,4 +44,4 @@ const NewProposal: NextPage = () => {
   )
 }
 export default NewProposal;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

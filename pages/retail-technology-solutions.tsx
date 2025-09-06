@@ -3,9 +3,7 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 export default function RetailTechnologySolutions() {
 	return (
 		<ServiceLanding
-<<<<<<< HEAD
-			title;
-=======
+
 			title="Retail Technology Solutions"
 			slug="retail-technology-solutions"
 			description="Optimize merchandising, pricing, demand forecasting, and omni-channel experiences with AI. Personalize at scale while reducing waste and stockouts."
@@ -19,7 +17,7 @@ export default function RetailTechnologySolutions() {
 				"Customer 360 and propensity modeling"
 				"Store ops: labor planning and task automation"
 				"Omni-channel journey orchestration"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 				"Integrations: POS, eCom, WMS, ESP, CDP"
 			]}
 			industries={["Retail", "CPG", "E‑commerce"]}

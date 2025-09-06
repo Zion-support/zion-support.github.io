@@ -1,11 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { computeTrustScore  } from '../../../utils/trust/compute';
-import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust';
-import { supabase } from '../../../utils/supabase/client';
-async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string }> {
-  const apiKey = null;
-=======
+
 import { computeTrustScore } from '../../../utils/trust/compute';
 import type {
   TrustMetricInputs
@@ -179,6 +173,6 @@ export default async function handler(
     }
   }
   res.setHeader('AllowGET, POST');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return res.status(405).json({ error: 'Method not allowed' })
 }

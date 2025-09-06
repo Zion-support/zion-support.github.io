@@ -6,9 +6,7 @@ interface ProfileAvailabilityProps {
   availability: Availability
 }
 export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {
-<<<<<<< HEAD
-  const getStatusColor = null;
-=======
+
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
     switch(status) {
       case 'available': return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
@@ -25,7 +23,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       default: return ''
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>

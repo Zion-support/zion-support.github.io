@@ -1,10 +1,5 @@
 import { ChevronDown, ChevronUp } from 'lucide-react'
-<<<<<<< HEAD
-import { Slider } from "@/components/ui/slider";
-import { PriceFilterProps } from "@/types/filters";
-export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
-  const handleChange = null;
-=======
+
 import { Slider } from '@/components/ui/slider'
 import { PriceFilterProps } from '@/types/filters'
 export function PriceFilter({
@@ -44,7 +39,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
   const handleChange = (values: number[]) => {
     setPriceRange([values[0] |0, values[1] |500])
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button

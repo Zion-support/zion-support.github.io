@@ -1,11 +1,6 @@
 
 import {
-<<<<<<< HEAD
-  Sidebar;
-  SidebarContent;
-  SidebarGroup;
-  SidebarMenuItem;
-=======
+
   Bell
   FileText
   Home
@@ -18,7 +13,7 @@ import {
   SidebarContent
   SidebarGroup
   SidebarMenuItem
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // SidebarMenu, // Removed
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed

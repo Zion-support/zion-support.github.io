@@ -1,10 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const method = null;
-=======
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -36,6 +33,6 @@ export default async function handler(
     `- Responsibilities: ${(responsibilities |[]).join()}\n` +
     `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`;
   const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return res.status(200).json({ jobDescription: text })
 }

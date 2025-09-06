@@ -2,11 +2,7 @@ import { useState  } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
-<<<<<<< HEAD
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
-export default function ApplyGrantPage() {
-  const router = null;
-=======
+
 const categories: GrantCategory[] = [
   'Ecosystem Tools'
   'Talent Development'
@@ -80,7 +76,7 @@ export default function ApplyGrantPage() {
       setLoading(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <EnhancedLayout>
       <h1 className='text-2xl font-semibold mb-4'>

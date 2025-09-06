@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-export default function CaseStudyResourcePage() {
-  const router = null;
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -188,7 +181,7 @@ export default function CaseStudyResourcePage() {
     }
   ]
   const caseStudy = caseStudies.find(study => study.id === id)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (!caseStudy) {
     return (
       <>

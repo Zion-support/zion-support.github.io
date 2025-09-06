@@ -13,54 +13,37 @@ return result;
   statusCode: 500;
 body: JSON.stringify ({
   error: 'Fallback execution failed';
-<<<<<<< HEAD
-message: error.message 
-}) 
 
-exports.handler = async (_event, _context) => {
-    console.log('auto-healer fallback executed locally');
-=======
 message: error.message
 })
 };exports.handler = async (_event, _context) => {
     console.log('auto-healer fallback executed locally')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     try {
         // Basic fallback logic
         const result = {
             statusCode: 200
             body: JSON.stringify({
-<<<<<<< HEAD
-                message: 'auto-healer executed locally as fallback';
-                timestamp: new Date().toISOString();
-=======
+
                 message: 'auto-healer executed locally as fallback'
                 timestamp: new Date().toISOString()
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 fallback: true
             })
         }
         return result
     } catch (error) {
-<<<<<<< HEAD
-        console.error('Fallback execution error:', error);
-        return {
-            statusCode: 500;
-            body: JSON.stringify({
-                error: 'Fallback execution failed';
-=======
+
         console.error('Fallback execution error:', error)
         return {
             statusCode: 500
             body: JSON.stringify({
                 error: 'Fallback execution failed'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 message: error.message
             })
         }
     }
-<<<<<<< HEAD
-};
-=======
+
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

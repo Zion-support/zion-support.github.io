@@ -4,9 +4,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import Link from 'next/link';
 export default function ResourcesPage() {
   return (
-<<<<<<< HEAD
-    <UltraFuturisticBackground intensity;
-=======
+
     <UltraFuturisticBackground intensity='high' variant='quantum'>
       <SEO
         title='Resources | Zion Tech Group'
@@ -83,4 +81,4 @@ export default function ResourcesPage() {
   );  )
 }
 export default ResourcesPage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
-=======
+
 import {
   ArrowRight
   Brain
@@ -30,7 +28,7 @@ import {
   Cloud
   Network;} from 'lucide-react';import {
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
  } from 'lucide-react';
@@ -45,10 +43,7 @@ export default function HomePage() {
   useEffect(() => {
     setIsVisible(true);
     // Auto-rotate features
-<<<<<<< HEAD
-    const interval = null;
-              and digital transformation solutions that drive innovation and growth.
-=======
+
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % 6)
     }, 5000);
@@ -239,7 +234,7 @@ export default function HomePage() {
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10'              >          >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Empowering businesses with cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions that drive innovation and growth.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

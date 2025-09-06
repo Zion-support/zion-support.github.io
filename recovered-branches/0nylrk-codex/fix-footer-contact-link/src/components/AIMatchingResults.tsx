@@ -8,13 +8,10 @@ import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 interface AIMatchingResultsProps {
-<<<<<<< HEAD
-  matches: MatchResultItem[];
-  onSelectMatch?: (match: MatchResultItem) => void;
-=======
+
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string
@@ -22,11 +19,7 @@ interface AIMatchingResultsProps {
 export function AIMatchingResults({
   matches;
   onSelectMatch;
-<<<<<<< HEAD
-  isLoading;
-                        match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
-                        match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
-=======
+
   isLoading = false;
   projectDescription = "";
   serviceType: _serviceType = ""
@@ -110,7 +103,7 @@ export function AIMatchingResults({
                         "w-2"
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" :
                         match.category.toLowerCase().includes("service") ? "bg-zion-purple" :
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                         "bg-green-500"
                       )} />
                       <div className="flex-1 p-4">

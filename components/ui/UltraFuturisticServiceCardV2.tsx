@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
-=======
+
 import { motion } from 'framer-motion';
 import {
   ArrowRight
@@ -14,7 +11,7 @@ import {
   Globe
   Rocket;
 } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface ServiceCardProps {
   service: {
     id: string;
@@ -28,13 +25,10 @@ interface ServiceCardProps {
       currency: string;
       trialDays: number;
       setupTime: string;
-<<<<<<< HEAD
-      enterprise?: number
-    },
-=======
+
       enterprise?: number;
     }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: string[];
     benefits: string[];
     targetAudience: string[];
@@ -57,15 +51,7 @@ interface ServiceCardProps {
     rating: number;
     reviews: number;
     marketSize?: string;
-<<<<<<< HEAD
-    growthRate?: string
-  },
-  index: number
-}
 
-const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, index }) => {
-  const getCategoryIcon = null;
-=======
     growthRate?: string;
   }
   index: number;
@@ -388,4 +374,4 @@ export default UltraFuturisticServiceCardV2;        />
   )
 }
 export default UltraFuturisticServiceCardV2;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useMemo, useState } from "react";
-import Badges from "./Badges";
-type Tx = any;
-      refresh()
-=======
+
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
 type Tx = {
@@ -135,7 +130,7 @@ export default function WalletPanel() {
       refresh();    }
   }
   return (      refresh()
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     }
   }
   return (

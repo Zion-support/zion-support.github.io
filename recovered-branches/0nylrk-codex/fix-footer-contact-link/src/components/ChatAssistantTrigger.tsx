@@ -6,9 +6,7 @@ import { ChatAssistant } from "@/components/ChatAssistant";
 export function ChatAssistantTrigger() {
   const [isOpen, setIsOpen] = useState(false);
   // Handle sending messages to the AI chat assistant
-<<<<<<< HEAD
-  const handleSendMessage = null;
-=======
+
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
@@ -46,7 +44,7 @@ export function ChatAssistantTrigger() {
             id: 'ai-assistant'
             name: 'AI Assistant'
             avatarUrl: 'https://placehold.co/64x64?text=AI'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             role: 'Virtual Assistant'
           }}
           onSendMessage={handleSendMessage}

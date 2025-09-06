@@ -1,10 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { authenticateRequest } from '@/utils/auth';
-<<<<<<< HEAD
-import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const method = null;
-=======
+
 import {
   createTenant
   getTenants
@@ -48,7 +44,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   return res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return res.status(200).json({ tenant: result })
   }
 return res.status(405).json({ error: 'Method not allowed' });

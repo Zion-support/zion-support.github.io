@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import Link from 'next/link',
-import Head from 'next/head';
-import { useState, useEffect  } from 'react';
-import { ContactInfo  } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-=======
+
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -175,14 +169,12 @@ import {
   Home;
 } from 'lucide-react';
 import Layout from '../components/Layout';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function MicroSaaS() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
-<<<<<<< HEAD
-    const timer = null;
-=======
+
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);  }, []);
   const contact: ContactInfo = {
@@ -385,7 +377,7 @@ export default function MicroSaaS() {
       ? products
       : products.filter(product => product.category === selectedCategory);
 export default function MicroSaas() {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Layout>
       <Head>

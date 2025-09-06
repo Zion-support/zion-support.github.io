@@ -1,9 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react";
-export const MobileFeatureShowcase: React.FC;
-=======
+
 import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
@@ -62,4 +59,4 @@ export const MobileFeatureShowcase: React.FC = () => {
     </section>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

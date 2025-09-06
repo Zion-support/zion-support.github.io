@@ -20,9 +20,7 @@ import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer";
 import { cleanupAuthState } from "@/utils/authUtils";
 // Form validation schema
-<<<<<<< HEAD
-const updatePasswordSchema = null;
-=======
+
 const updatePasswordSchema = z
   .object({
     password: z
@@ -103,7 +101,7 @@ export default function UpdatePassword() {
       setIsLoading(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Header />

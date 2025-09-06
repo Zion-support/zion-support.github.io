@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Microscope, DollarSign, Home, Users, Briefcase;
-=======
+
 import {
   Menu
   X
@@ -87,7 +83,7 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -95,15 +91,7 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye;
   Network, Server, HardDrive, Monitor;
-<<<<<<< HEAD
-  Laptop, Watch, Headphones, Speaker, Mic;
-  Keyboard, Mouse, CpuIcon, DatabaseIcon;
-  CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
-  ZapIcon, SparklesIcon, BrainIcon, AtomIcon;
-  MenuIcon, CloseIcon, ChevronRightIcon
- } from 'lucide-react';
-const contactInfo = null;
-=======
+
   Laptop, Watch, Headphones, Speaker, Mic
   Keyboard, Mouse, CpuIcon, DatabaseIcon
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
@@ -366,7 +354,7 @@ export default function UltraFuturisticNavigation2032() {
     return () => window.removeEventListener('scroll', handleScroll)
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       {/* Top Contact Bar */}

@@ -4,20 +4,7 @@ import { Textarea } from "@/components/ui/textarea",
 import { Button } from "@/components/ui/button";
 import CodeBlock from "./CodeBlock";
 interface Param {
-<<<<<<< HEAD
-  name: string;
-  type: string;
-  required?: boolean
-}
 
-interface ApiPlaygroundProps {
-  method: string;
-  path: string;
-  params?: Param[]
-}
-
-export function ApiPlayground({ method, path, params;
-=======
   name: string
 type: string
 required?: boolean
@@ -157,4 +144,4 @@ if (contentType?.includes ('application/json') ) {
 }</div>)
 }export default ApiPlayground
 '"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

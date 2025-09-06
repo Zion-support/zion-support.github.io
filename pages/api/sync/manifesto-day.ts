@@ -1,25 +1,16 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import {
   readState
   writeState
   upsertEvent
 } from "../../../utils/sync/storage";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
-  const state = null;
-  return res.status(200).json({ status: "created", version, eventId: event.eventId })
-}
-=======
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -73,4 +64,4 @@ export default async function handler(
     .status(200)
     .json({ status: "created", version, eventId: event.eventId });
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,16 +1,5 @@
 
-<<<<<<< HEAD
-import { LucideIcon } from "lucide-react";
-import {
-  BadgeCheck, // publishing a listing
-  Award,      // top contributor
-  Star,       // profile complete
-  Trophy,     // featured creator
-  BadgePlus,  // first action
-  BadgeDollarSign // monetization
-} from "lucide-react";
-export type BadgeKey = any;
-=======
+
 import {LucideIcon} from "lucide-react";
 import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";
 export type BadgeKey =
@@ -79,4 +68,4 @@ export const badgeList: BadgeMeta[] = [
   }];
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

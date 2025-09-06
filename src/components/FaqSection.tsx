@@ -1,19 +1,11 @@
-<<<<<<< HEAD
 
-import { GradientHeading } from "./GradientHeading";
-import {
-  Accordion;
-  AccordionContent;
-  AccordionItem;
-  AccordionTrigger} from "@/components/ui/accordion",
-=======
 import { GradientHeading } from './GradientHeading'
   Accordion
   AccordionContent
   AccordionItem
   AccordionTrigger
 } from '@/components/ui/accordion'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { FileText } from 'lucide-react'
 const faqs = [
   {
@@ -68,10 +60,7 @@ export function FaqSection() {
             equipment rentals, and datacenter maintenance services
           </p>
         </div>
-<<<<<<< HEAD
 
-const faqs = null;
-=======
         <div className='max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6'>
           <div className='flex items-center mb-6'>
             <FileText className='h-6 w-6 text-zion-cyan mr-2' />
@@ -127,7 +116,7 @@ const faqs = [
     question: "How do I contact support?"
     answer:
       "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function FaqSection() {
   return (
     <section className="py-20 bg-zion-blue" id="faq">

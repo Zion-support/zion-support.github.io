@@ -8,16 +8,7 @@ interface Talent {
   name: string;
   title: string;
   badges: Array<'Verified' | 'Pro' | 'Top Rated'>;
-<<<<<<< HEAD
-  testimonial?: { quote: string, author: string }
-}
 
-const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
-  id: String(i + 1);
-  name: `Talent ${i + 1}`,
-  title: 'Full-Stack Developer';
-  badges: (i % 3;
-=======
   testimonial?: { quote: string; author: string }
 const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
   id: String(i + 1)
@@ -75,4 +66,4 @@ const TalentDirectory: NextPage = () => {
   );
 }
 export default TalentDirectory;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

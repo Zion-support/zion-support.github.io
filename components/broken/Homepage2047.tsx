@@ -1,9 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
-=======
+
 import {
   ArrowRight
   Play
@@ -59,16 +57,14 @@ import {
   Sparkles
   Target as TargetIcon;} from 'lucide-react';import {
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;
   ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon;
   DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor;
   Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon;
   ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon
-<<<<<<< HEAD
- } from 'lucide-react';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+
 // Import our new innovative services
 import { innovative2025AIAutonomousEcosystemV2  } from '../data/2025-innovative-ai-autonomous-ecosystem-v2';
 import { emergingTechBreakthroughs2025V4  } from '../data/2025-emerging-tech-breakthroughs-v4';
@@ -77,9 +73,7 @@ import { innovative2025ITInfrastructureV2  } from '../data/2025-innovative-it-in
 import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047',
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
-<<<<<<< HEAD
-const Homepage2047: React.FC;
-=======
+
 const Homepage2047: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
@@ -715,4 +709,4 @@ const Homepage2047: React.FC = () => {
 export default Homepage2047;  )
 }
 export default Homepage2047;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

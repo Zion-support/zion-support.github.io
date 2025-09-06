@@ -1,17 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useState } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Accordion;
-  AccordionContent;
-  AccordionItem;
-  AccordionTrigger } from '@/components/ui/accordion';
-import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
-import { format, parseISO  } from 'date-fns';
-import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
-import { Badge } from '@/components/ui/badge';
-=======
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -28,7 +15,7 @@ import { format, parseISO } from 'date-fns'
   useMilestoneGenerator
 } from '@/hooks/useMilestoneGenerator'
 import { Badge } from '@/components/ui/badge'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface AIMilestoneGeneratorProps {
   scope: string;
   startDate: string;
@@ -37,22 +24,7 @@ interface AIMilestoneGeneratorProps {
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
   onAddMilestone: (milestone: GeneratedMilestone) => void
 export function AIMilestoneGenerator({
-<<<<<<< HEAD
-  scope;
-  startDate;
-  endDate;
-  projectType;
-  onAddMilestones;
-  onAddMilestone
-}: AIMilestoneGeneratorProps) {
-  const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
-  const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({}),
 
-  const handleGenerateMilestones = null;
-                        handleAddSingleMilestone(milestone)
-                      }}
-                      className="mr-2"
-=======
   scope
   startDate
   endDate
@@ -183,7 +155,7 @@ export function AIMilestoneGenerator({
                         e.stopPropagation()
                         handleAddSingleMilestone(milestone) }}
                       className='mr-2'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     >
                       <Plus className='h-4 w-4' />
                     </Button>

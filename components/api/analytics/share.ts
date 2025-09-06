@@ -1,9 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-const DATA_DIR = null;
-=======
+
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'analytics');const FILE_PATH = path.resolve(DATA_DIR, 'shares.json');
 function ensure() {
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -34,6 +32,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const list: any[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   list.push(entry);
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   res.status(200).json({ ok: true })
 }

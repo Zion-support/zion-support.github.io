@@ -11,13 +11,10 @@ import { MessageTab } from "./MessageTab",
 import { ResumeTab } from "./ResumeTab";
 import { Job } from "./types";
 interface ApplyFormProps {
-<<<<<<< HEAD
-  job: Job;
-  onClose: () => void;
-=======
+
   job: Job
   onClose: () => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onApplySuccess?: (jobId: string) => Promise<void>
 }
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
@@ -28,13 +25,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   );
   const [proposalLink, setProposalLink] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-  const [activeTab, setActiveTab] = useState<string>("message"),
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),
-  
-  const handleResumeSelected = null;
-=======
+
   const [activeTab, setActiveTab] = useState<string>("message");
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
@@ -108,7 +99,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       setIsSubmitting(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">

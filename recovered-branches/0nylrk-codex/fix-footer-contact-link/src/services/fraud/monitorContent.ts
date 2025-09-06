@@ -6,9 +6,7 @@ import { flagContent } from './flagContent';
 /**
  * Create a monitoring system helper to easily monitor any content
  */
-<<<<<<< HEAD
-export const monitorContent = null;
-=======
+
 export const monitorContent = async (
   userId: string;
   userEmail: string | undefined;
@@ -45,4 +43,4 @@ export const monitorContent = async (
     }
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
-<<<<<<< HEAD
-type RoadmapInputs = any;
-=======
+
 type RoadmapInputs = {
   milestones: string
   keywords: string
@@ -96,7 +94,7 @@ export default function RoadmapPage(): JSX.Element {
       setCopied(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

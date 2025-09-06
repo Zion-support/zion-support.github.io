@@ -1,12 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-const p = null;
-    res.status(200).json(arr)
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to read uptime log' })
-=======
+
 const p = path.join(
   process.cwd()
   'data'
@@ -22,7 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } catch (error) {
       return res.status(500).json({ error: 'Failed to read uptime report' });
     }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
 if (req.method === 'POST') {
     try {

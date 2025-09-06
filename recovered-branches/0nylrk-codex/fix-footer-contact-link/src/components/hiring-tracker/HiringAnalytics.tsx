@@ -9,23 +9,7 @@ interface HiringAnalyticsProps {
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
   const { applications, isLoading } = useJobApplications(jobId);
   const [analyticsData, setAnalyticsData] = useState<{
-<<<<<<< HEAD
-    statusDistribution: any[];
-    timeToHire: number;
-    conversionRate: number;
-    funnelData: any[]
-  }>({
-    statusDistribution: [];
-    timeToHire: 0;
-    conversionRate: 0;
-    funnelData: []}),
-  
-  useEffect(() => {
-    if (applications && applications.length > 0) {
-      // Calculate status distribution
-      const statusCounts: Record<string, number> = {};
-      applications.forEach(app;
-=======
+
     statusDistribution: any[]
     timeToHire: number
     conversionRate: number
@@ -90,7 +74,7 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
     )
   }
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {/* Status Distribution */}

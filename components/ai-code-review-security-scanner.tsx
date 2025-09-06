@@ -1,13 +1,7 @@
 import React from 'react',
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Brain, Shield, Code, CheckCircle, Zap;
-  ArrowRight, Star, TrendingUp, Users;
-  Lock, Eye, BarChart3, Globe, Award
- } from 'lucide-react';
-const AICodeReviewSecurityScanner = null;
-=======
+
 import {
   Brain
   Shield
@@ -721,4 +715,4 @@ const AICodeReviewSecurityScanner = () => {
 export default AICodeReviewSecurityScanner;  )
 }
 export default AICodeReviewSecurityScanner;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

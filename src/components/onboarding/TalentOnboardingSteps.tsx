@@ -5,10 +5,7 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function TalentOnboardingSteps() {
-<<<<<<< HEAD
-  const { user } = useAuth();
-  const onboardingStatus = null;
-=======
+
   const { user } = useAuth()
   const onboardingStatus = useOnboardingStatus()
   const steps: OnboardingStep[] = [
@@ -41,6 +38,6 @@ export function TalentOnboardingSteps() {
       action: 'View Matches'
     }
   ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return <OnboardingTracker steps={steps} />
 }

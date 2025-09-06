@@ -1,33 +1,4 @@
-<<<<<<< HEAD
-import { useState, useEffect, useCallback, useMemo  } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { useRouter  } from 'next/router';
-import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, Clock, Award } from 'lucide-react'
-import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
-import { generateITServices, getServicesMarketStats, getRecommendedServices  } from '@/utils/servicesAutoFeedAlgorithm';
-import { ProductListing  } from '@/types/listings';
-import { SkeletonCard  } from '@/components/ui/skeleton';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import Spinner from '@/components/ui/spinner';
-import { SERVICES  } from '@/data/servicesData';
-import { useCurrency } from '@/hooks/useCurrency';
-// Initial services from existing data
-const INITIAL_SERVICES: ProductListing[] = SERVICES;
-// Market insights component
-const ServicesMarketInsights = null;
-  if (loading && services.length === 0) {
-    return (
-      <div className="container py-8">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-            IT & AI Services
-          </h1>
-          <p className="text-muted-foreground text-lg">Professional services for modern businesses and enterprises</p>
-        </motion.div>
-        <ServicesLoadingGrid />
-=======
+
 
     allServices = [...allServices, ...newServices]
     let filteredServices = allServices
@@ -75,7 +46,7 @@ const ServicesPage: React.FC = () => {
             </a>
           </div>
         </div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       </div>
     )
   }

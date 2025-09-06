@@ -2,9 +2,7 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
-=======
+
 import {
   Link
   Copy
@@ -17,17 +15,13 @@ import {
   Settings
   Trash2;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function URLShortenerPage() {
   const [longUrl, setLongUrl] = useState('');
   const [customAlias, setCustomAlias] = useState('');
   const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
   const [isShortening, setIsShortening] = useState(false);
-<<<<<<< HEAD
-  const [showQR, setShowQR] = useState<string | null>(null),
 
-  const generateShortUrl = null;
-=======
   const [showQR, setShowQR] = useState<string | null>(null);
   const generateShortUrl = async () => {
     if (!longUrl.trim()) return;
@@ -122,7 +116,7 @@ export default function URLShortenerPage() {
   const getTotalUrls = () => {
     return shortenedUrls.length
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

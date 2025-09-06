@@ -16,9 +16,7 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { useTranslationService } from "@/hooks/useTranslationService";
 export default function TranslationManager() {
   const { t, i18n } = useTranslation();
-<<<<<<< HEAD
-  const isMobile = null;
-=======
+
   const isMobile = useIsMobile();
   const { supportedLanguages } = useLanguage();
   const { translateContent, isTranslating } = useTranslationService();
@@ -181,7 +179,7 @@ export default function TranslationManager() {
       .map(lang => lang.code)
       .filter(lang => !translations[lang]?.[key])
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

@@ -26,9 +26,7 @@ import { industryRealServices  } from '../data/industry-real-services';
 import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
 export default function DynamicServicePage() {
-<<<<<<< HEAD
-  const router = null;
-=======
+
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
   const service = useMemo(() => {
@@ -267,4 +265,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
   return { props: {} }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -4,19 +4,13 @@ import { Button } from "@/components/ui/button",
 import { SORT_OPTIONS } from "@/data/sortOptions";
 import { SortDesc, ChevronDown } from "lucide-react";
 import {
-<<<<<<< HEAD
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 
-=======
   DropdownMenu
   DropdownMenuContent
   DropdownMenuItem
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface SortDropdownProps {
   sortOption: string;
   setSortOption: (option: string) => void

@@ -3,9 +3,7 @@ import { incrementMetric } from '@/utils/data/blogStore';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id, metric } = req.query;
   if (req.method !== 'POST') return res.status(405).end();
-<<<<<<< HEAD
-  if (typeof id !== 'string' || typeof metric !== 'string') return res.status(400).json({ error: 'Invalid params' });
-=======
+
   if (typeof id !== 'string' |typeof metric !== 'string')
     return res.status(400).json({ error: 'Invalid params' });
   if (!['views', 'likes', 'shares'].includes(metric))
@@ -16,7 +14,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id, metric } = req.query;
   if (req.method !== 'POST') return res.status(405).end();
   if (typeof id !== 'string' |typeof metric !== 'string') return res.status(400).json({ error: 'Invalid params' });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (!['viewslikesshares'].includes(metric)) return res.status(400).json({ error: 'Invalid metric' });
   const post = null;
   return res.status(200).json({ ok: true, metrics: post.metrics })

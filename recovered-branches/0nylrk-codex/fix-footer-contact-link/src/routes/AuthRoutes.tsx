@@ -9,9 +9,7 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 import Onboarding from "@/pages/Onboarding",
 import TalentOnboarding from "@/pages/TalentOnboarding";
 import ServiceOnboarding from "@/pages/ServiceOnboarding";
-<<<<<<< HEAD
-const AuthRoutes = null;
-=======
+
 const AuthRoutes = () => {
   return (
     <Routes>
@@ -49,4 +47,4 @@ const AuthRoutes = () => {
   )
 }
 export default AuthRoutes;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

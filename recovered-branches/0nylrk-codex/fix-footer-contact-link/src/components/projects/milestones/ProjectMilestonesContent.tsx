@@ -1,28 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { useParams  } from 'react-router-dom';
-import { useProjects  } from '@/hooks/useProjects';
-import { useMilestones  } from '@/hooks/useMilestones';
-import { useJobDetails  } from '@/hooks/useJobDetails';
-import { useAuth  } from '@/hooks/useAuth';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
-import { useDisputeCheck } from '@/hooks/useDisputeCheck';
-import { MilestoneActivities;
-  MilestoneManager;
-  MilestoneCreator;
-  ProjectActions;
-  ProjectHeader
- } from './components';
-export function ProjectMilestonesContent() {
-  const { projectId } = useParams() as { projectId?: string },
-  const { user } = useAuth();
-  const { getProjectById } = useProjects();
-  const { 
-    milestones;
-    activities;
-    isLoading: milestonesLoading;
-=======
+
 import {useParams} from 'react-router-dom';
 import {useProjects} from '@/hooks/useProjects';
 import {useMilestones} from '@/hooks/useMilestones';
@@ -39,7 +17,7 @@ export function ProjectMilestonesContent() {
     milestones
     activities;
     isLoading: milestonesLoading
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     createMilestone;
     updateMilestoneStatus;
     deleteMilestone;
@@ -50,20 +28,16 @@ export function ProjectMilestonesContent() {
   const [project, setProject] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('milestones');
-<<<<<<< HEAD
-  const { job, isLoading: jobLoading } = useJobDetails(project?.job_id);
-=======
+
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
   useEffect(() => {
     async function loadProject() {
       if (!projectId) return;
       setIsLoading(true);
       try {
-<<<<<<< HEAD
-        const projectData = null;
-=======
+
         const projectData = await getProjectById(projectId);
         if (projectData) {
           setProject(projectData)
@@ -109,7 +83,7 @@ export function ProjectMilestonesContent() {
     setActiveTab('milestones');
     await handleMilestoneCreated()
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="container mx-auto py-8 px-4">
       <ProjectHeader title={project.job?.title |"Untitled Project"} />

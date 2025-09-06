@@ -8,13 +8,7 @@ import { convertProfileToTalentProfile } from "@/utils/profileConverter";
 export function useTalentProfile(id: string | undefined) {
   const [profile, setProfile] = useState<TalentProfileType | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
-  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null),
 
-  useEffect(() => {
-    const fetchProfile = null;
-=======
   const [error, setError] = useState<string | null>(null);
   const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
   useEffect(() => {
@@ -56,6 +50,6 @@ export function useTalentProfile(id: string | undefined) {
     }
     fetchProfile()
   }, [id]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return { profile, isLoading, error, mockProfileData }
 }

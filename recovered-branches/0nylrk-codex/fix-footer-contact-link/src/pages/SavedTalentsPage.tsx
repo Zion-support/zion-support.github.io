@@ -13,9 +13,7 @@ export default function SavedTalentsPage() {
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   useEffect(() => {
     const fetchSavedTalents = async () => {
@@ -137,7 +135,7 @@ export default function SavedTalentsPage() {
         variant: "destructive"})
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

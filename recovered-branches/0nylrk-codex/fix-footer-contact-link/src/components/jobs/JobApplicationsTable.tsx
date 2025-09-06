@@ -1,40 +1,15 @@
 
-<<<<<<< HEAD
-import { useState } from "react",
-import { JobApplication, ApplicationStatus } from "@/types/jobs";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import {
-  ApplicationsTable;
-  EmptyState;
-  ErrorState;
-  LoadingState;
-  ScoreDialog
-} from "./applications",
 
-=======
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} from "./applications";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface JobApplicationsTableProps {
   jobId: string
 }
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
-<<<<<<< HEAD
-  const { 
-    applications;
-    isLoading;
-    error;
-    updateApplicationStatus;
-    markApplicationAsViewed;
-    refetch
-  } = useJobApplications(jobId);
-  const [processingId, setProcessingId] = useState<string | null>(null),
-  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
-  const [showScoreDialog, setShowScoreDialog] = useState(false);
-  const handleStatusChange = null;
-=======
+
   const {
     applications
     isLoading
@@ -69,7 +44,7 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   const handleScoreUpdated = (updatedApplication: JobApplication) => {
     refetch()
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (isLoading) {
     return <LoadingState />
   }

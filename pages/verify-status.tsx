@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { useRouter  } from 'next/router';
-import { Input  } from '@/components/ui/input';
-import { Button  } from '@/components/ui/button';
-import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react'
-import { AuthLayout  } from '@/layout';
-=======
+
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Input } from '@/components/ui/input';
@@ -14,15 +6,12 @@ import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
 import { AuthLayout } from '@/layout';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 export default function VerifyStatus() {
-<<<<<<< HEAD
 
-  const router = null;
-=======
   const router = useRouter()
   const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
   const { email: emailParam } = router.query
@@ -129,7 +118,7 @@ export default function VerifyStatus() {
   const handleGoBack = () => {
     router.back()
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <AuthLayout>
       <div className="flex min-h-screen items-center justify-center p-4">

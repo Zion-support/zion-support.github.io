@@ -1,9 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 const isClient = typeof window !== 'undefined';
-<<<<<<< HEAD
-type Web3LoginModalProps = any;
-=======
+
 type Web3LoginModalProps = {
   isOpen: boolean;
   onClose: () => void;
@@ -204,6 +202,6 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {
 }
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return <ModalInner {...props} />
 }

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import SEO from '../components/SEO';
-=======
+
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -161,7 +158,7 @@ const stats = [
   { number: "25+", label: "Countries Represented" }
   { number: "95%", label: "Employee Satisfaction" }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function TeamPage() {
   return (
     <Layout

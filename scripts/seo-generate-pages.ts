@@ -10,9 +10,7 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }];
 async function postJson(url: string, body: any): Promise<any> {
   return new Promise((resolve, reject) => {
-<<<<<<< HEAD
-    const u = null;
-=======
+
     const u = new URL(url);
     const data = JSON.stringify(body);
     const opts: any = {
@@ -49,4 +47,4 @@ main().catch((e) => {
   console.error(e);
   process.exit(1)
 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -8,32 +8,19 @@ import { cn } from "@/lib/utils",
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 interface Message {
-<<<<<<< HEAD
-  id: string;
-  content: string;
-  timestamp: string;
-  isMe: boolean;
-=======
+
   id: string
   content: string
   timestamp: string
   isMe: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   sender?: string;
   avatar?: string;
   status?: 'sent' | 'delivered' | 'read'
 }
 interface MobileChatViewProps {
   contact: {
-<<<<<<< HEAD
-    id: string;
-    name: string;
-    avatar?: string;
-    status?: string
-  },
-  messages: Message[];
-  onBack: () => void;
-=======
+
     id: string
     name: string
     avatar?: string;
@@ -41,14 +28,12 @@ interface MobileChatViewProps {
   }
   messages: Message[]
   onBack: () => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
   const [newMessage, setNewMessage] = useState("");
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   const handleSend = () => {
     if (newMessage.trim() !== "") {
@@ -130,7 +115,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               <p>{message.content}</p>
               <div className={cn(
                 "text-xs mt-1 flex justify-end";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
                 {message.timestamp}

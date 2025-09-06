@@ -1,14 +1,5 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-import { useAuth  } from '@/hooks/useAuth';
-import { usePoints  } from '@/hooks/usePoints';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
-import { ScrollArea  } from '@/components/ui/scroll-area';
-import { formatDistanceToNow  } from 'date-fns';
-=======
+
 import {
   Gift
   Star
@@ -38,7 +29,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { formatDistanceToNow } from 'date-fns';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import Link from 'next/link';
 import { LoginModal } from '@/components/auth/LoginModal';
 export default function PointsPage() {
@@ -46,26 +37,21 @@ export default function PointsPage() {
   const { ledger, balance, loading, fetchLedger } = usePoints();
   const [loginOpen, setLoginOpen] = useState(false);
   const [redeeming, setRedeeming] = useState(false);
-<<<<<<< HEAD
-  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
-=======
+
   async function handleRedeem(reward: {
     id: string;
     cost: number;
     title: string;
   }) {    if (!user?.id) return;  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     if (!user?.id) return;
     setRedeeming(true);
     try {
       await fetch('/api/points/redeem', {
-<<<<<<< HEAD
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' },
-=======
+
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
         body: JSON.stringify({
           userId: user.id
           cost: reward.cost
@@ -80,10 +66,7 @@ export default function PointsPage() {
       setRedeeming(false)
     }
   }
-<<<<<<< HEAD
 
-  const earningOpportunities = null;
-=======
   const earningOpportunities = [
     {
       icon: <Users className='h-5 w-5' />
@@ -139,7 +122,7 @@ export default function PointsPage() {
       category: 'Discount'
     }
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (!isAuthenticated) {
     return (
       <>

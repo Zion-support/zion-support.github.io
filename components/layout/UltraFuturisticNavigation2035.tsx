@@ -1,22 +1,7 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
-  Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
-  Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles;
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb;
-  Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon;
-  User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones;
-  Code, Database, Network, Server, Monitor, Smartphone;
-  Camera, Gamepad2, Palette, Music, Film, BookOpenCheck;
-  Building, MessageCircle
- } from 'lucide-react';
-interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-=======
+
 import {
   Menu
   ChevronDown
@@ -92,17 +77,14 @@ interface NavigationItem {
 interface NavigationItem {
   name: string
   href: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   description?: string;
   children?: NavigationItem[];
   badge?: string;
   title?: string;
   featured?: boolean
 }
-<<<<<<< HEAD
 
-const contactInfo = null;
-=======
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -1388,4 +1370,4 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 export default UltraFuturisticNavigation2035;  )
 }
 export default UltraFuturisticNavigation2035;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

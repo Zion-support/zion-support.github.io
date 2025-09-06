@@ -12,11 +12,7 @@ import { UploadSection  } from './UploadSection';
 import { SelectResumeSection  } from './SelectResumeSection';
 import { ResumeOption, ResumeSelectorProps  } from './types';
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
-<<<<<<< HEAD
-  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
-  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),
-=======
+
   const [selectedOption, setSelectedOption] = useState<
     "recent" | "select" | "upload"
   >("recent");
@@ -24,15 +20,13 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     null
   );
   const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   const [customFile, setCustomFile] = useState<File | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const { resume, fetchResume } = useResume();
   // Fetch resume data when component mounts
   useEffect(() => {
-<<<<<<< HEAD
-    const loadResumes = null;
-=======
+
     const loadResumes = async () => {
       setIsLoading(true);
       try {
@@ -149,7 +143,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const handleGenerateResume = () => {
     window.open("/dashboard/talent/portfolio_blank");
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-4">
       <h3 className="text-lg font-medium text-white">Attach Resume</h3>

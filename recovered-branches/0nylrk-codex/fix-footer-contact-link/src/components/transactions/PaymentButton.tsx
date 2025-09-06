@@ -8,15 +8,11 @@ import { supabase } from "@/integrations/supabase/client",
 import { Loader2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 interface PaymentButtonProps {
-<<<<<<< HEAD
-  amount: number;
-  serviceId: string;
-  providerId: string;
-=======
+
   amount: number
   serviceId: string
   providerId: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   buttonText?: string;
   className?: string;
   onPaymentInitiated?: () => void;
@@ -26,9 +22,7 @@ export function PaymentButton({
   amount;
   serviceId;
   providerId;
-<<<<<<< HEAD
-  buttonText;
-=======
+
   buttonText = "Purchase";
   className;
   onPaymentInitiated;
@@ -88,7 +82,7 @@ export function PaymentButton({
       disabled={isProcessing}
       className={cn(
         "relative min-w-[120px]";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
         className
       )}
     >

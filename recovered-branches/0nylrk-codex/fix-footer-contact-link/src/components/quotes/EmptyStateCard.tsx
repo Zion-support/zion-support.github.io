@@ -2,9 +2,7 @@
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare, ArchiveIcon } from "lucide-react";
-<<<<<<< HEAD
-type EmptyStateCardProps = any;
-=======
+
 type EmptyStateCardProps = {
   type: "active" | "archived";
 }
@@ -32,4 +30,4 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
     </Card>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

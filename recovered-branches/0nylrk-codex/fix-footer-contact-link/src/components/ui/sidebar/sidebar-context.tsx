@@ -4,10 +4,7 @@ import {TooltipProvider} from "@/components/ui/tooltip"
 import {useIsMobile} from "@/hooks/use-mobile"
 import {cn} from "@/lib/utils"
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
-<<<<<<< HEAD
 
-const SIDEBAR_COOKIE_NAME = null;
-=======
 ;
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -106,7 +103,7 @@ export const SidebarProvider = React.forwardRef<
               }
             className={cn(
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               className
             )}
             ref={ref}

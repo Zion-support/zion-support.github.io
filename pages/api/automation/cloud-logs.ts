@@ -3,9 +3,7 @@ import fs from 'fs';
 import path from 'path';
 async function fetchFromGitHub(): Promise<any[]> {
   try {
-<<<<<<< HEAD
-    const repoUrl = null;
-=======
+
     const repoUrl = require('../../../package.json').repository?.url |''
     const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i)
     const owner = process.env.GITHUB_OWNER |(match ? match[1] : '')
@@ -56,6 +54,6 @@ const dir = path.join(process.cwd(), 'automation_logs')
     // fall through to GitHub
   }
 const remote = await fetchFromGitHub()
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return res.status(200).json({ logs: remote })
 }

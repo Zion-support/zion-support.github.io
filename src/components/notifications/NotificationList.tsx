@@ -8,33 +8,17 @@ import { Notification  } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Bell } from 'lucide-react'
 interface NotificationListProps {
-<<<<<<< HEAD
-  loading: boolean;
-  error: string | null;
-  notifications: Notification[];
-  onMarkAsRead: (id: string) => Promise<void>;
-  onDismiss: (id: string) => Promise<void>;
-=======
+
   loading: boolean
   error: string | null
   notifications: Notification[]
   onMarkAsRead: (id: string,) => Promise<void>
   onDismiss: (id: string,) => Promise<void>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
-<<<<<<< HEAD
-  loading;
-  error;
-  notifications;
-  onMarkAsRead;
-  onDismiss;
-  onRetry
-},) => {
-  return (
-    <ScrollArea className;
-=======
+
   loading
   error
   notifications
@@ -86,4 +70,4 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   )
 }
 "
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

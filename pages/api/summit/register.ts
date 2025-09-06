@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { supabase } from '[^']*';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { supabase } from "../../../utils/supabase/client";
 export default async function handler(
@@ -13,31 +7,20 @@ export default async function handler(
 ) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   try {
-<<<<<<< HEAD
-    const { name, email, role, country, source } = req.body || {};
-    if (!name || !email || !role || !country) {
-=======
+
     const { name, email, role, country, source } = req.body |{}
     if (!name |!email |!role |!country) {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       return res.status(400).json({ error: "Missing required fields" });
     }
     const { data, error } = await supabase
       .from("summit_registrations")
       .insert([
         {
-<<<<<<< HEAD
-          name;
-          email;
-          role;
-          country;
-          source: source || 'zion-global-2025';
-          created_at: new Date().toISOString()}])
-      .select('*')
-=======
+
           name
           email
           role
@@ -47,7 +30,7 @@ export default async function handler(
         }
       ])
       .select("*")
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       .single();
     if (error) {
       return res.status(500).json({ error: error.message });

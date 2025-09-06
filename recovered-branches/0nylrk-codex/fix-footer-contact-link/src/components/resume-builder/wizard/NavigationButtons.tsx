@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button",
-import { Loader2 } from "lucide-react";
-import { NavigationButtonsProps } from "./types";
-export const NavigationButtons = null;
-=======
+
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";
@@ -31,4 +26,4 @@ export const NavigationButtons = ({
     </div>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

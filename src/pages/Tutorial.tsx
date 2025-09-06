@@ -17,13 +17,11 @@ export default function Tutorial({
   tutorial?: TutorialType
 }
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
-<<<<<<< HEAD
-  const router = null;
-=======
+
   const router = useRouter()
   const slug = router.query.slug as string | undefined
   const tutorial = initialTutorial |TUTORIALS.find((t,) => t.slug === slug)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (!tutorial) {
     return (
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>

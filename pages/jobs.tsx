@@ -1,9 +1,7 @@
 import type { NextPage } from 'next';
 import Seo from '../components/seo/Seo';
 import { JobPostingJsonLd } from 'next-seo';
-<<<<<<< HEAD
-const Jobs: NextPage;
-=======
+
 const Jobs: NextPage = () => {
   const job = {
     title: 'Senior Full-Stack Engineer (Next.js + AI)'
@@ -42,4 +40,4 @@ const Jobs: NextPage = () => {
   )
 }
 export default Jobs;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

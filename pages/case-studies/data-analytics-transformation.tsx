@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-import React from 'react',
-=======
+
 import React from 'react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import Head from 'next/head';
 import Link from 'next/link';
 export default function CaseStudyPage() {
@@ -10,9 +8,7 @@ export default function CaseStudyPage() {
     <>
       <Head>
         <title>Data Analytics Transformation - Case Study | Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name;
-=======
+
         <meta name="description" content="Discover how a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform. Read our detailed case study." />
         <meta name="keywords" content="data analytics, healthcare analytics, predictive modeling, big data, machine learning" />
       </Head>
@@ -129,7 +125,7 @@ export default function CaseStudyPage() {
                     <h4 className="text-xl font-semibold text-purple-400 mb-3">Predictive Modeling</h4>
                     <p className="text-white/80">
                       Advanced predictive models forecast patient outcomes, readmission risks
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                       and resource requirements.
                     </p>
                   </div>

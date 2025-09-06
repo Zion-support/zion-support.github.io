@@ -3,19 +3,7 @@ import Head from 'next/head',
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
 import Button from '../../components/ui/Button',
 import Card from '../../components/ui/Card';
-<<<<<<< HEAD
-import { Check, Mail, MapPin, Phone, ExternalLink  } from 'lucide-react';
-import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
-import { extraServices  } from '../../data/extra-services';
-import { additionalEnhancedServices  } from '../../data/additional-real-services';
-import { newRealServices  } from '../../data/new-real-services';
-import { marketReadyServices } from '../../data/market-ready-services';
-type Service = any;
-	if (!service) {
-		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
-	}
 
-=======
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
 import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
 import {extraServices} from '../../data/extra-services';
@@ -78,7 +66,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
         toSlug(s.name |'') === incomingSlug
     );
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (!service) {
     return { notFound: true }
   }

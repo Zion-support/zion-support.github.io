@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { provider } = req.query as { provider: string },
-  const callbackUrl = null;
-  res.end()
-}
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { provider } = req.query as { provider: string }
@@ -14,4 +6,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.writeHead(302, { Location: callbackUrl });
   res.end();
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,8 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-<<<<<<< HEAD
-const Index: NextPage;
-=======
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
@@ -289,4 +287,4 @@ export default ProductsIndex;
   )
 }
 export default Index;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

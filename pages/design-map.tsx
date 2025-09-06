@@ -2,12 +2,7 @@ import React, { useMemo, useState } from "react";
 import Head from "next/head";
 import { getZionDesignMap } from "../utils/design-map";
 export default function DesignMapPage() {
-<<<<<<< HEAD
-  const designMap = null;
-        body: JSON.stringify({ screenName, role })})
-      const json = await res.json()
-      setSuggestion(json?.suggestion || 'No suggestion received')
-=======
+
   const designMap = useMemo(() => getZionDesignMap(), []);
   const [screenName, setScreenName] = useState("");
   const [role, setRole] = useState("Talent");
@@ -25,7 +20,7 @@ export default function DesignMapPage() {
       });
       const json = await res.json();
       setSuggestion(json?.suggestion |"No suggestion received");
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     } catch (e: any) {
       setSuggestion(e?.message |"Failed to fetch suggestion");
     } finally {

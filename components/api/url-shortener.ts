@@ -6,30 +6,19 @@ interface ShortUrl {
   shortUrl: string;
   createdAt: string;
   clicks: number;
-<<<<<<< HEAD
-  isActive: boolean
-}
 
-interface UrlShortenerRequest {
-  originalUrl: string;
-  customCode?: string
-}
-
-=======
   isActive: boolean;
 interface UrlShortenerRequest {
   originalUrl: string;
   customCode?: string;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface UrlShortenerResponse {
   success: boolean;
   data?: ShortUrl;
   error?: string
 }
 // In-memory storage (in production, use a database)
-<<<<<<< HEAD
-const urlStorage = null;
-=======
+
 const urlStorage = new Map<string, ShortUrl>();
 // Generate a random short code
 function generateShortCode(length: number = 6): string {
@@ -171,7 +160,7 @@ export async function getServerSideProps({
       permanent: false
     }
   };      destination: shortUrl.originalUrl;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       permanent: false
     }
 }

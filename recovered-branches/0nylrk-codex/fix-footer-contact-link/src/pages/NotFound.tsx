@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
-const NotFound = null;
-=======
+
 import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 const NotFound = () => {
@@ -26,4 +22,4 @@ const NotFound = () => {
   )
 }
 export default NotFound;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

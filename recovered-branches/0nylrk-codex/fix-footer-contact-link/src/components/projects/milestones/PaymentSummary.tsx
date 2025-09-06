@@ -7,11 +7,7 @@ interface PaymentSummaryProps {
   milestones: Milestone[];
   paymentTerms: string | null
 }
-<<<<<<< HEAD
 
-export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
-  const totalPayment = null;
-=======
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
   milestones
   paymentTerms
@@ -51,4 +47,4 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
     </Card>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

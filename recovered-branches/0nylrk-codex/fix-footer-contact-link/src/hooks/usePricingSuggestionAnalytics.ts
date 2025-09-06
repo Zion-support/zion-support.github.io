@@ -3,13 +3,10 @@ import { supabase } from "@/integrations/supabase/client";
 interface PricingSuggestionAnalytics {
   totalSuggestions: number;
   acceptanceRate: number;
-<<<<<<< HEAD
-  averagePriceGap: number;
-  suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[],
-=======
+
   averagePriceGap: number
   suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   recentSuggestions: {
     id: string;
     userId: string;
@@ -17,16 +14,7 @@ interface PricingSuggestionAnalytics {
     suggestedMax: number;
     actualValue?: number;
     accepted: boolean;
-<<<<<<< HEAD
-    createdAt: string;
-    type: 'client' | 'talent'
-  }[],
-  isLoading: boolean;
-  error: string | null
-}
 
-export function usePricingSuggestionAnalytics(days;
-=======
     createdAt: string
     type: 'client' | 'talent'
   }[];
@@ -94,6 +82,6 @@ export function usePricingSuggestionAnalytics(days = 30) {
     }
     fetchAnalytics()
   }, [days]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return analytics
 }

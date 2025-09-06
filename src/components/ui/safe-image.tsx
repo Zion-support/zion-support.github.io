@@ -9,23 +9,7 @@ interface SafeImageProps {
   src: string
   alt: string
 interface SafeImageProps {
-<<<<<<< HEAD
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  fallbackSrc?: string;
-  priority?: boolean;
-  sizes?: string;
-  quality?: number
-export function SafeImage({
-  src;
-  alt;
-  width;
-  height;
-  className;
-=======
+
   src: string
   alt: string
   width?: number
@@ -60,7 +44,7 @@ export function SafeImage({
       setHasError(true)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
         return (

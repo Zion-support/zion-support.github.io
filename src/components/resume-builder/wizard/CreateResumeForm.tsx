@@ -3,10 +3,7 @@ import { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
 import { Loader2 } from 'lucide-react'
-<<<<<<< HEAD
-import { CreateResumeFormProps } from "./types";
-export const CreateResumeForm = null;
-=======
+
 import { CreateResumeFormProps } from './types'
 export const CreateResumeForm = ({
   onCreateResume
@@ -88,4 +85,4 @@ w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text
 '"}
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

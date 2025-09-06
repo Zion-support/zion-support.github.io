@@ -2,13 +2,7 @@
 import { Trophy } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 interface ReputationDisplayProps {
-<<<<<<< HEAD
-  reputation: number;
-  size?: 'sm' | 'md' | 'lg'
-}
 
-export const ReputationDisplay = null;
-=======
   reputation: number
   size?: 'sm' | 'md' | 'lg'
 }
@@ -53,4 +47,4 @@ export const ReputationDisplay = ({
   )
 }
 export default ReputationDisplay;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

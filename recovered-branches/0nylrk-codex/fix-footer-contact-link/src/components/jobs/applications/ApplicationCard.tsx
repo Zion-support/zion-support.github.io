@@ -14,9 +14,7 @@ interface ApplicationCardProps {
 }
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false);
-<<<<<<< HEAD
-  const handleDownloadResume = null;
-=======
+
   const handleDownloadResume = () => {
     // This would typically download the resume file
     toast.info("Resume download functionality will be implemented soon")
@@ -50,7 +48,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         return null
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className="overflow-hidden">
       <CardHeader className="pb-3">

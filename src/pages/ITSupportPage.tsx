@@ -7,10 +7,7 @@ export default function ITSupportPage() {
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
 import React from "react"
 export default function ITSupportPage() {
-<<<<<<< HEAD
-  const benefits = null;
-  return (
-=======
+
   const benefits = [
     {
       title: '24/7 Assistance'
@@ -46,7 +43,7 @@ export default function ITSupportPage() {
     }
   ]
     return (
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     <ServiceLandingTemplate
       title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."

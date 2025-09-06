@@ -1,13 +1,5 @@
 
-<<<<<<< HEAD
-import { useQuery } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Skeleton } from "@/components/ui/skeleton",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useState } from "react";
-type TimeRange = any;
-=======
+
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -83,7 +75,7 @@ export function PageViewsTable() {
           ) : pageViews && pageViews.length > 0 ? (
             pageViews.map((page, index) => {
               const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               return (
                 <div key={index} className="flex items-center justify-between">
                   <div className="text-zion-slate-light font-medium">

@@ -1,9 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-const SolutionsPage: NextPage;
-=======
+
 import { motion } from 'framer-motion';
 import {
   Shield
@@ -282,4 +280,4 @@ export default function SolutionsPage() {
   )
 }
 export default SolutionsPage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

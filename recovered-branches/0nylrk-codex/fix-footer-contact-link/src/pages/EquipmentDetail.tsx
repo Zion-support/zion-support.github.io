@@ -10,31 +10,13 @@ import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 interface EquipmentSpecification {
-<<<<<<< HEAD
-  name: string;
-=======
+
   name: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   value: string
 }
 interface EquipmentDetails {
-<<<<<<< HEAD
-  id: string;
-  name: string;
-  description: string;
-  brand: string;
-  category: string;
-  subcategory?: string;
-  images: string[];
-  price: number;
-  currency: string;
-  rating?: number;
-  reviewCount?: number;
-  inStock: boolean;
-  expectedShipping?: string;
-  specifications: EquipmentSpecification[];
-  features: string[];
-=======
+
   id: string
   name: string
   description: string
@@ -50,23 +32,14 @@ interface EquipmentDetails {
   expectedShipping?: string;
   specifications: EquipmentSpecification[]
   features: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   warranty?: string;
   returnPolicy?: string
 }
 // Sample data - in a real app this would come from an API
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   "pro-camera-x1000": {
-<<<<<<< HEAD
-    id: "pro-camera-x1000";
-    name: "Pro Camera X1000";
-    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",
-    brand: "CineTech";
-    category: "Equipment";
-    subcategory: "Cameras";
-    images: [
-      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto;
-=======
+
     id: "pro-camera-x1000"
     name: "Pro Camera X1000"
     description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.";
@@ -197,7 +170,7 @@ export default function EquipmentDetail() {
         description: `Preparing your order for ${equipment.name}.`})
     }, 800)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Header />

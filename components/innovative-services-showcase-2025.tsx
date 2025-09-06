@@ -1,9 +1,7 @@
 import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Search, Filter, Star, CheckCircle, ArrowRight;
-=======
+
 import {
   Search
   Filter
@@ -35,7 +33,7 @@ import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';import {
   Search, Filter, Star, CheckCircle, ArrowRight
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Phone, Mail, MapPin, TrendingUp, Users, Award;
   Zap, Globe, Cpu, Database, Lock, Cloud;
@@ -53,9 +51,7 @@ import { realMicroSaasServices2025  } from '../data/2025-real-micro-saas-service
 import { innovativeAIServices2025  } from '../data/2025-innovative-ai-services';
 import { innovativeITServices2025  } from '../data/2025-innovative-it-services';
 import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
-<<<<<<< HEAD
-const contactInfo = null;
-=======
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -205,7 +201,7 @@ export default function InnovativeServicesShowcase2025() {
         return 0;    }      default: return 0
     }
   });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Layout>
       <Head>

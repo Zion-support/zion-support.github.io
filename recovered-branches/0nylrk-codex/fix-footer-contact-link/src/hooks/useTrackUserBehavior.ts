@@ -3,9 +3,7 @@ import { useRef, useEffect  } from 'react';
 import { useAnalytics } from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {
   const { trackEvent } = useAnalytics();
-<<<<<<< HEAD
-  const componentRef = null;
-=======
+
   const componentRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const component = componentRef.current;
@@ -42,6 +40,6 @@ export function useTrackUserBehavior(componentName: string) {
       component.removeEventListener('submit', trackFormSubmits, true)
     }
   }, [trackEvent, componentName]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return componentRef
 }

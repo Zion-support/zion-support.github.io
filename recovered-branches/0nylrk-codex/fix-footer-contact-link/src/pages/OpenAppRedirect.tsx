@@ -5,9 +5,7 @@ import { SEO } from "@/components/SEO",
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 // This component handles deep linking to the mobile app
-<<<<<<< HEAD
-const OpenAppRedirect: React.FC;
-=======
+
 const OpenAppRedirect: React.FC = () => {
   const navigate = useNavigate()
   const [status, setStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting');
@@ -93,4 +91,4 @@ const OpenAppRedirect: React.FC = () => {
   )
 }
 export default OpenAppRedirect;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

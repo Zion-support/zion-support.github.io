@@ -1,14 +1,7 @@
 import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { DollarSign, TrendingUp, Shield, Zap, Target, BarChart3;
-  CheckCircle, Star, Globe, Lock, Smartphone, Monitor;
-  Award, MessageCircle, Calculator
- } from 'lucide-react';
-export default function AIFinancialPlanningPlatform() {
-  const features = null;
-=======
+
 import {
   DollarSign
   TrendingUp
@@ -234,7 +227,7 @@ export default function AIFinancialPlanningPlatform() {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Intelligent financial planning and wealth management with AI. Get personalized plans
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 portfolio optimization, and risk management that drives financial success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

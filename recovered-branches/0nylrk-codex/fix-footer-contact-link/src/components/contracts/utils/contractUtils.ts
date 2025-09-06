@@ -6,22 +6,13 @@ import { ContractFormValues } from "../components/ContractForm";
 interface Milestone {
   title: string;
   description: string;
-<<<<<<< HEAD
-  dueDate: string;
-=======
+
   dueDate: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   estimatedHours: number
 }
 export async function generateContract(
-<<<<<<< HEAD
-  values: ContractFormValues;
-  talent: TalentProfile;
-  clientName: string;
-  generatedMilestones: GeneratedMilestone[]
-): Promise<string> {
-  const additionalClauses = null;
-=======
+
   values: ContractFormValues
   talent: TalentProfile
   clientName: string;
@@ -50,7 +41,7 @@ export async function generateContract(
       additionalClauses: additionalClauses
       milestones: milestoneData}
   });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (error) {
     throw error
   }

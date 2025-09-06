@@ -2,14 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Code;
-  GitBranch;
-  Database;
-  Cloud;
-  Shield;
-  Zap;
-=======
+
 import {
   Code
   GitBranch
@@ -29,18 +22,14 @@ import {
   Cloud
   Shield
   Zap
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Star;
   ExternalLink;
   CheckCircle;
   TrendingUp;
   Cpu;
   Globe
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function DeveloperToolsPage() {
-  const developerTools = null;
-=======
+
 export default function DeveloperToolsPage() {
   const developerTools = [
     {
@@ -324,7 +313,7 @@ export default function DeveloperToolsPage() {
       description: 'Deploy and host applications'
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

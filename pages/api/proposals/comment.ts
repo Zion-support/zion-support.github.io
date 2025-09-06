@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-const FILE_PATH = null;
-    return res.status(201).json(comment)
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -40,7 +34,7 @@ export default async function handler(
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   res.status(405).json({ error: "Method not allowed" });
 }

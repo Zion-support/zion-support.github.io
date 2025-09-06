@@ -1,9 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-export interface EmergingTechInnovation {
-=======
+
 export interface EmergingTechInnovationService {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   id: string;
   name: string;
   tagline: string;
@@ -34,13 +32,10 @@ export interface EmergingTechInnovationService {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-    website: string
-  },
-=======
+
     website: string;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -49,12 +44,7 @@ export interface EmergingTechInnovationService {
   reviews: number;
   benefits: string[];
   capabilities: string[];
-<<<<<<< HEAD
-  marketAdvantage: string
-}
 
-const contact = null;
-=======
   marketAdvantage: string;
 const contact = {
   mobile: '+1 302 464 0950'
@@ -734,4 +724,4 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

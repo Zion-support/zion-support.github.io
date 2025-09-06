@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
-<<<<<<< HEAD
-const IOS_APP_URL = null;
-=======
+
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
@@ -47,7 +45,7 @@ const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL |'zion://open';expor
       </div>
     </div>
   );  }, []);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="min-h-[50vh] flex items-center justify-center">
       <div className="text-center">

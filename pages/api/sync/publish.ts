@@ -5,9 +5,7 @@ import { verifySignature } from "../../../utils/sync/signature";
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";
 import { SyncEvent } from "../../../utils/sync/types";
 function isAllowedByScope(stateType: string, scope: string): boolean {
-<<<<<<< HEAD
-  if (scope;
-=======
+
   if (scope === "full") return true;
   if (scope === "dao") return stateType === "proposal" |stateType === "dao_endorsement";
   if (scope === "marketplace") return stateType === "token_transfer" |stateType === "talent_mobility" |stateType === "leaderboard_entry"
@@ -59,7 +57,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         .filter((p) => !p.paused)
         .map(async (peer) => {
           const url = new URL("/api/sync/publish", peer.baseUrl).toString();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           try {
             await axios.post(url, localBody, { headers, timeout: 5000 })
           } catch {

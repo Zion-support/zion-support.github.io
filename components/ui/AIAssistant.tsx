@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
-export type AIAssistantProps = any;
-=======
+
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {
   buttonLabel?: string;
@@ -71,7 +68,7 @@ export default function AIAssistant({
   }, []);
   const onClose = useCallback(() => setIsOpen(false), []);
   const canAccept = useMemo(() => output && output.trim().length > 0, [output]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <button

@@ -3,18 +3,14 @@ import { Referral, ReferralStatus } from "@/types/referrals",
 import { Badge } from "@/components/ui/badge";
 import { formatDate } from "@/utils/referralUtils";
 interface ReferralTableProps {
-<<<<<<< HEAD
-  referrals: Referral[];
-=======
+
   referrals: Referral[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isLoading: boolean
 }
 export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
   // Helper function to render status badges
-<<<<<<< HEAD
-  const renderStatusBadge = null;
-=======
+
   const renderStatusBadge = (status: ReferralStatus) => {
     switch (status) {
       case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>;
@@ -26,7 +22,7 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
         return null
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center p-8">

@@ -10,9 +10,7 @@ import {
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge";
 // Sample data for integration sync logs
-<<<<<<< HEAD
-const syncLogs = null;
-=======
+
 const syncLogs = [
   {
     id: "1"
@@ -67,7 +65,7 @@ export function IntegrationsSyncLog() {
         return <Badge variant="outline">Unknown</Badge>
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card>
       <div className="p-4">

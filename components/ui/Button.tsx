@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-=======
+
 import React from "react";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
@@ -18,10 +15,7 @@ interface ButtonProps {
   style?: React.CSSProperties
 }
 const Button: React.FC<ButtonProps> = ({
-<<<<<<< HEAD
-  children;
-  variant;
-=======
+
   children
   variant = "primary"
   size = "md"
@@ -68,4 +62,4 @@ const Button: React.FC<ButtonProps> = ({
   );
 }
 export { Button }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

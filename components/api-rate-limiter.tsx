@@ -2,9 +2,7 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
-=======
+
 import {
   Shield
   Zap
@@ -16,7 +14,7 @@ import {
   CheckCircle
   AlertTriangle;
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function APIRateLimiterPage() {
   const [endpoint, setEndpoint] = useState('');
   const [rateLimit, setRateLimit] = useState('100');
@@ -24,9 +22,7 @@ export default function APIRateLimiterPage() {
   const [testResults, setTestResults] = useState<any[]>([]),
   const [isTesting, setIsTesting] = useState(false);
   const [apiKey, setApiKey] = useState('');
-<<<<<<< HEAD
-  const timeWindows = null;
-=======
+
   const timeWindows = [
     { value: '1s', label: '1 Second', description: 'Per second rate limiting' }
     { value: '1m', label: '1 Minute', description: 'Per minute rate limiting' }
@@ -720,7 +716,7 @@ print('Response:', response.json())
 print('Rate Limit Info:', {
     'limit': response.headers.get('x-ratelimit-limit')
     'remaining': response.headers.get('x-ratelimit-remaining')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     'reset': response.headers.get('x-ratelimit-reset')
 })`)
                 }

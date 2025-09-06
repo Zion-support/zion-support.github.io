@@ -10,14 +10,7 @@ interface ConversationsListProps {
   setActiveConversation: (conversation: Conversation) => void;
   markAsRead: (conversationId: string) => Promise<void>
 export function ConversationsList({
-<<<<<<< HEAD
-  conversations;
-  activeConversation;
-  setActiveConversation;
-  markAsRead
-}: ConversationsListProps) {
-  const itemSize = null;
-=======
+
   conversations
   activeConversation
   setActiveConversation
@@ -44,7 +37,7 @@ export function ConversationsList({
       </div>
     )
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>
       <div className='p-3 border-b border-zion-purple/20'>

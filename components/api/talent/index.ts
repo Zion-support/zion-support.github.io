@@ -2,12 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
 import type { TalentProfile } from '@/utils/types/talent';
-<<<<<<< HEAD
-import { v4 as uuid } from 'uuid';
-import { translateText, detectLanguageSimple } from '@/utils/api/translate';
-const hasSupabase = null;
-        return res.status(201).json({ slug: item.slug })
-=======
+
 import {v4, as, uuid} from 'uuid';
 import {translateText, detectLanguageSimple} from '@/utils/api/translate';
 const hasSupabase =
@@ -137,7 +132,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         } as any);
         if (error) throw error;
         return res.status(201).json({ slug: item.slug });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       }
       // Fallback: return the slug as if saved
       return res.status(201).json({ slug: item.slug });

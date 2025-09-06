@@ -16,20 +16,7 @@ import {
   Zap
 } from 'lucide-react';
 const Footer: React.FC = () => {
-<<<<<<< HEAD
-  const currentYear = new Date().getFullYear(),
 
-  const services = null;
-  ];
-
-  const company = null;
-  ];
-
-  const resources = null;
-  ];
-
-  const socialLinks = null;
-=======
   const currentYear = new Date().getFullYear()
   const services = [
     { name: 'Web Development', href: '/services/web-development' }
@@ -56,13 +43,10 @@ const Footer: React.FC = () => {
     { name: 'Twitter', href: '#', icon: Twitter }
     { name: 'LinkedIn', href: '#', icon: Linkedin }
     { name: 'Instagram', href: '#', icon: Instagram }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   ];
   return (
-<<<<<<< HEAD
-    <footer className;
-              with cutting-edge AI, cloud architecture, and innovative development services.
-=======
+
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -77,7 +61,7 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 mb-6 max-w-sm">
               Transforming businesses through innovative technology solutions.
               We deliver cutting-edge software, AI, and cloud services.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">

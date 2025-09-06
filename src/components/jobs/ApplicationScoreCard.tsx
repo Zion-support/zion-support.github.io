@@ -8,20 +8,15 @@ import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'
 import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
 interface ApplicationScoreCardProps {
-<<<<<<< HEAD
-  application: JobApplication;
-  onScoreUpdated?: (updatedApplication: JobApplication) => void
-=======
+
   application: JobApplication
   onScoreUpdated?: (updatedApplication: JobApplication,) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
   const [isScoring, setIsScoring] = useState(false);
   // Determine if application has been scored
-<<<<<<< HEAD
-  const hasScore = null;
-=======
+
   const hasScore = typeof application.match_score === 'number'
       let attempts = 0
       const maxAttempts = 10
@@ -82,7 +77,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       toast.error(`Failed to score resume: ${error.message}`)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // Render the score result or button to score
   return (
     <Card className="overflow-hidden">

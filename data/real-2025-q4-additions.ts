@@ -29,24 +29,16 @@ export interface Q4Service {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-    website: string
-  },
-=======
+
     website: string;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   realImplementation: boolean;
   implementationDetails?: string;
   launchDate?: string;
   customers?: number;
   rating?: number;
-<<<<<<< HEAD
-  reviews?: number
-}
 
-const contact = null;
-=======
   reviews?: number;
 const contact = {
   mobile: '+1 302 464 0950'
@@ -771,4 +763,4 @@ export const real2025Q4Additions = [
     reviews: 9
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import type { NextPage, GetServerSideProps } from 'next';
-import fs from 'fs';
-import path from 'path';
-import Link from 'next/link';
-type TalentItem = any;
-=======
+
 import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
 import path from "path";
@@ -55,4 +49,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: { items } }
 }
 export default TopTalentsPage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

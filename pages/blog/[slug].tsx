@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import ReactMarkdown from 'react-markdown';
-import { useRouter  } from 'next/router';
-import AdvancedSEO from '@/components/seo/AdvancedSEO';
-import { BLOG_POSTS  } from '@/data/blog-posts';
-import { AuthorBio  } from '@/components/blog/AuthorBio';
-import { SocialShareButtons  } from '@/components/blog/SocialShareButtons';
-import { CommentsSection  } from '@/components/blog/CommentsSection';
-=======
+
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
@@ -16,7 +7,7 @@ import { BLOG_POSTS } from '@/data/blog-posts';
 import { AuthorBio } from '@/components/blog/AuthorBio';
 import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
 import { CommentsSection } from '@/components/blog/CommentsSection';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import type { BlogPost } from '@/types/blog';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import fs from 'fs';
@@ -25,9 +16,7 @@ function parseMarkdown(filePath: string): BlogPost | null {
   if (!fs.existsSync(filePath)) {
     return null
   }
-<<<<<<< HEAD
-  const raw = null;
-=======
+
   const raw = fs.readFileSync(filePath, 'utf8')
   const match = raw.match(/---\n([\s\S]+?)\n---\n([\s\S]*)/)
   if (!match |!match[1] |!match[2]) return null
@@ -157,4 +146,4 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
   }
   return { props: { initialPost: post }, revalidate: 60 }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

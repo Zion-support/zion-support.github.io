@@ -1,93 +1,7 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
-import { Menu;
-	X;
-	ChevronDown;
-	ChevronRight;
-	Phone;
-	Mail;
-	MapPin;
-	Globe;
-	ArrowRight;
-	Sparkles;
-	Brain;
-	Atom;
-	Shield;
-	DollarSign;
-	FileText;
-	BarChart3;
-	MessageSquare;
-	Truck;
-	Users;
-	Database;
-	Cpu;
-	Cloud;
-	Play;
-	Search;
-	ShieldCheck;
-	TrendingUp;
-	Rocket;
-	Zap;
-	Check;
-	Star;
-	Clock;
-	Target;
-	Building;
-	Award;
-	ChartBar;
-	Lock;
-	Smartphone;
-	Palette;
-	Calendar;
-	CreditCard;
-	Settings;
-	Code;
-	BookOpen;
-	Activity;
-	Bot;
-	ChevronRight as ChevronRightIcon;
-	Eye;
-	FlaskConical;
-	Link as LinkIcon
- } from 'lucide-react';
-import Button from '../ui/Button';
-export default function NeoFuturisticNavigation() {
-	const [isOpen, setIsOpen] = useState(false);
-	const [isScrolled, setIsScrolled] = useState(false);
-	const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-	const router = null;
-	return (
-		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-			isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-gray-700/50' : 'bg-transparent'
-		}`}> 
-			{/* Scroll Progress Bar */}
-			<div className="absolute top-0 left-0 h-1 w-full bg-transparent">
-				<div
-					className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600"
-					style={{ width: `${(typeof window !== 'undefined' && document.body.scrollHeight > 0) ? (Math.min(100, (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)) : 0}%` }}
-				/>
-			</div>
-			<div className="max-w-7xl mx-auto px-4">
-				<div className="flex items-center justify-between h-20">
-					{/* Logo */}
-					<Link href="/" className="flex items-center space-x-3 group">
-						<div className="relative">
-							<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-								<Sparkles className="w-6 h-6 text-white" />
-							</div>
-							<div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-						</div>
-						<div className="hidden sm:block">
-							<div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-								Zion Tech Group
-							</div>
-							<div className="text-xs text-gray-400">Revolutionary Technology</div>
-						</div>
-					</Link>
 
-=======
 import {
   Menu
   X
@@ -520,7 +434,7 @@ export default function NeoFuturisticNavigation() {
               </div>
             </div>
           </Link>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>
             {/* Services Dropdown */}

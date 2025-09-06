@@ -4,9 +4,7 @@ import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Ch
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
 export default function ApiMockContractTestingPage() {
-<<<<<<< HEAD
-  const contactInfo = null;
-=======
+
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -44,7 +42,7 @@ export default function ApiMockContractTestingPage() {
       price: 'Custom'
       items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support']
     },  ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Layout>
       <Head>

@@ -1,9 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-const SEOAudit: NextPage;
-=======
+
 const SEOAudit: NextPage = () => {
   return (
     <div>
@@ -22,4 +20,4 @@ const SEOAudit: NextPage = () => {
   )
 }
 export default SEOAudit;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

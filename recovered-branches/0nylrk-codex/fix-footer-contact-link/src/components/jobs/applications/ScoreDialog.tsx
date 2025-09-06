@@ -8,15 +8,11 @@ import {
 import { JobApplication } from "@/types/jobs";
 import { ApplicationScoreCard } from "../ApplicationScoreCard";
 interface ScoreDialogProps {
-<<<<<<< HEAD
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  application: JobApplication | null;
-=======
+
   open: boolean
   onOpenChange: (open: boolean) => void
   application: JobApplication | null
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onScoreUpdated: (updatedApplication: JobApplication) => void
 }
 export function ScoreDialog({

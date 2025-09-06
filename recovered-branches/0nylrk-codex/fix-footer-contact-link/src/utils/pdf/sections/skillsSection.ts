@@ -8,9 +8,7 @@ export function addSkillsSection(
   colors: PdfThemeColors;
   startY: number
 ): number {
-<<<<<<< HEAD
-  if (skills.length;
-=======
+
   if (skills.length === 0) return startY;
   let yPos = startY;
   doc.setFontSize(16);
@@ -38,7 +36,7 @@ export function addSkillsSection(
     const skillsText = categorySkills.map(skill => skill.name).join(', ');
     const skillLines = doc.splitTextToSize(skillsText, 160);
     doc.text(skillLines, 30, yPos + 5);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     yPos += (skillLines.length * 5) + 10
   }
   return yPos + 5

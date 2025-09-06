@@ -2,12 +2,10 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/github-pulse.json';
 export default function GithubPulsePage() {
-<<<<<<< HEAD
-  const repo = null;
-=======
+
   const repo = data?.repo |{}
   const last24h = data?.last24h |{}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">

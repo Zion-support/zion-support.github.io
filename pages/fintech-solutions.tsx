@@ -3,9 +3,7 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 export default function FintechSolutions() {
 	return (
 		<ServiceLanding
-<<<<<<< HEAD
-			title;
-=======
+
 			title="Fintech AI Solutions"
 			slug="fintech-solutions"
 			description="AI solutions for fraud detection, risk scoring, KYC/AML automation, and real-time decisioning. Improve compliance and customer experience across the lifecycle."
@@ -19,7 +17,7 @@ export default function FintechSolutions() {
 				"KYC/AML case automation and SAR drafts"
 				"Collections optimization and next-best-action"
 				"Realtime rules with feature store integration"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 				"Integrations: Core banking, KYC, payments, CRMs"
 			]}
 			industries={["Fintech", "Banking", "Lending", "Payments"]}

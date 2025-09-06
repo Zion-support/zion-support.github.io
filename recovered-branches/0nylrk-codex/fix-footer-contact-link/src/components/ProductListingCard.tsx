@@ -4,16 +4,7 @@ import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings";
 import { Star, DollarSign } from "lucide-react";
 interface ProductListingCardProps {
-<<<<<<< HEAD
-  listing: ProductListing;
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void
-}
 
-export function ProductListingCard({ 
-  listing;
-  view;
-=======
   listing: ProductListing
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void
@@ -131,7 +122,7 @@ export function ProductListingCard({
               size="sm"
               onClick={(e) => {
                 e.stopPropagation();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 navigate(`/listing/${listing.id}`)
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"

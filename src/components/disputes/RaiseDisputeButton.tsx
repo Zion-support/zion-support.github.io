@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { 
-  Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle;
-  DialogDescription} from "@/components/ui/dialog",
-import { DisputeForm } from "./DisputeForm";
-import { useRouter } from 'next/router';
-=======
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {  Dialog
@@ -20,7 +8,7 @@ import {  Dialog
   DialogDescription
 } from '@/components/ui/dialog'
 import { DisputeForm } from './DisputeForm'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { ShieldAlert } from 'lucide-react'
   DialogDescription} from "@/components/ui/dialog"
 import { DisputeForm } from "./DisputeForm"
@@ -31,14 +19,7 @@ interface RaiseDisputeButtonProps {
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   className?: string
-<<<<<<< HEAD
-}
 
-export function RaiseDisputeButton({ 
-  projectId;
-  milestoneId;
-  variant;
-=======
 export function RaiseDisputeButton({
   projectId
   milestoneId
@@ -52,7 +33,7 @@ export function RaiseDisputeButton({
     setIsDialogOpen(false)
     router.push(`/dashboard/disputes/${disputeId}`)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Button

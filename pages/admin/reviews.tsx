@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import type { Review } from '../../types/reviews';
-<<<<<<< HEAD
-const ADMIN_KEY = null;
-=======
+
 const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') |'dev-admin-key')
 const AdminReviewsPage: NextPage = () => {
   const [pending, setPending] = useState<Review[]>([])
@@ -57,4 +55,4 @@ const AdminReviewsPage: NextPage = () => {
   )
 }
 export default AdminReviewsPage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

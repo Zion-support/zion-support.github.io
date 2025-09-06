@@ -2,15 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Rocket;
-  DollarSign;
-  Users;
-  BarChart3;
-  Mail;
-  Calendar;
-  Shield;
-=======
+
 import {
   Rocket
   DollarSign
@@ -36,7 +28,7 @@ import {
   Mail
   Calendar
   Shield
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Globe;
   ArrowRight;
   Star;
@@ -47,11 +39,7 @@ import {
   Target;
   Lightbulb;
   BookOpen
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function StartupToolsPage() {
-  const startupTools = null;
-=======
+
 export default function StartupToolsPage() {
   const startupTools = [
     {
@@ -394,7 +382,7 @@ export default function StartupToolsPage() {
       : startupTools.filter(tool => tool.category === selectedCategory);  const filteredTools = selectedCategory === 'All'
     ? startupTools
     : startupTools.filter(tool => tool.category === selectedCategory);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

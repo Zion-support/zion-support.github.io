@@ -9,13 +9,10 @@ interface TextAnalysisResult {
     paragraphs: number;
     syllables: number;
     readingTime: number;
-<<<<<<< HEAD
-    speakingTime: number
-  },
-=======
+
     speakingTime: number;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   readability: {
     fleschReadingEase: number;
     fleschKincaidGrade: number;
@@ -23,26 +20,15 @@ interface TextAnalysisResult {
     smog: number;
     colemanLiau: number;
     automatedReadability: number;
-<<<<<<< HEAD
-    averageGrade: number
-  },
-=======
+
     averageGrade: number;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   sentiment: {
     score: number;
     label: 'very-negative' | 'negative' | 'neutral' | 'positive' | 'very-positive';
     positiveWords: string[];
-<<<<<<< HEAD
-    negativeWords: string[]
-  },
-  language: {
-    detectedLanguage: string;
-    confidence: number;
-    isEnglish: boolean
-  },
-=======
+
     negativeWords: string[];
   }
   language: {
@@ -50,7 +36,7 @@ interface TextAnalysisResult {
     confidence: number;
     isEnglish: boolean;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   keywords: {
     topWords: Array<{ word: string; count: number; frequency: number }>;
     bigrams: Array<{ phrase: string; count: number }>;
@@ -61,11 +47,9 @@ interface TextAnalysisResult {
   }
 }
 export default async function handler(
-<<<<<<< HEAD
-  req: NextApiRequest;
-=======
+
   req: NextApiRequest
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   res: NextApiResponse<TextAnalysisResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
@@ -73,11 +57,9 @@ export default async function handler(
   }
   try {
     const { text } = req.body;
-<<<<<<< HEAD
-    if (!text || typeof text !== 'string') {
-=======
+
     if (!text |typeof text !== 'string') {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       return res.status(400).json({ error: 'Text is required' });
     }
     if (text.length > 10000) {
@@ -88,9 +70,7 @@ export default async function handler(
     if (text.length > 10000) {
       return res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
     // Basic statistics
-<<<<<<< HEAD
-    const characters = null;
-=======
+
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
     const words = text
@@ -319,7 +299,7 @@ export default async function handler(
     res.status(200).json(result)
   } catch (error) {
     console.error('Text analysis error:', error);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     res.status(500).json({ error: 'Internal server error' })
   }
 }

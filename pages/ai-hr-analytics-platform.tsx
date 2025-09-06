@@ -2,9 +2,7 @@ import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[s
 export default function AiHrAnalyticsPlatform() {
 	return (
 		<ServiceLanding
-<<<<<<< HEAD
-			title;
-=======
+
 			title="AI HR Analytics Platform"
 			description="Understand attrition, performance, and workforce planning with AI. Combine HRIS, ATS, and engagement data for proactive people decisions."
 			subtitle="People insights that drive outcomes"
@@ -19,7 +17,7 @@ export default function AiHrAnalyticsPlatform() {
 				"Headcount planning and skills inventory"
 				"Integrations: Workday, BambooHR, Greenhouse, Lever"
 				"Compensation benchmarking and ranges"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 				"Engagement drivers and action suggestions"
 			]}
 			industries={["SaaS", "Retail", "Healthcare", "Manufacturing"]}

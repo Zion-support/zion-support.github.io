@@ -1,10 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-const CONTENT_PATH = null;
-    res.status(200).json(JSON.parse(data))
-=======
+
 const CONTENT_PATH = path.join(process.cwd(), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join(process.cwd(), 'datadocscontent.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const token = req.headers['x-admin-token'] as string | undefined
@@ -17,7 +14,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e) {
     res.status(500).json({ error: 'Failed to read content' });
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (e) {
     res.status(500).json({ error: 'Failed to read content' })
   }  } catch (e) {

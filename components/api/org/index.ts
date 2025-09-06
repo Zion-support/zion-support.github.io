@@ -7,11 +7,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
-<<<<<<< HEAD
-  const data = null;
-  return res.status(200).json(filtered)
-}
-=======
+
   const data = readOrgData();
   const parseArray = (v?: string | string[]) => {
     if (!v) return undefined;
@@ -48,4 +44,4 @@ const filters: OrgFilters = {
   const filtered = filterOrgData(data, filters);
   return res.status(200).json(filtered);  return res.status(200).json(filtered)
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,22 +1,4 @@
-<<<<<<< HEAD
 
-import { useState, useMemo } from "react",
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
-import { Input } from "@/components/ui/input",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Globe, Search, ArrowUpDown } from 'lucide-react'
-import { Button } from "@/components/ui/button";
-export function ITServicePricingTable() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [sortConfig, setSortConfig] = useState<{
-    key: keyof CountryPricing;
-    direction: "ascending" | "descending"
-  }>({
-    key: "country";
-    direction: "ascending"}),
-
-  const sortedData = null;
-=======
 import { useState, useMemo } from 'react'
 import {
   onsiteServicePricing
@@ -70,7 +52,7 @@ export function ITServicePricingTable() {
           : 'ascending'
     })
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full'>
       <div className='flex items-center mb-6'>

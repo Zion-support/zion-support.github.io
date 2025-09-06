@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { FileText, Plus, Search, Calendar } from 'lucide-react'
-export function QuickActions() {
-  const actions = null;
-=======
 import React from 'react'
 import {
   Card
@@ -55,7 +47,7 @@ export function QuickActions() {
       color: 'bg-amber-100 dark:bg-amber-900/20'
     }
   ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card>
       <CardHeader>

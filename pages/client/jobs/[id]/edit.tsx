@@ -1,9 +1,6 @@
 import { useRouter  } from 'next/router';
 import useSWR from 'swr';
-<<<<<<< HEAD
-import { useEffect, useState } from 'react';
-const fetcher = null;
-=======
+
 import {useEffect, useState} from 'react';
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function EditJobPage() {
@@ -28,7 +25,7 @@ export default function EditJobPage() {
     });
     router.push('/client/dashboard');  }
   if (!job) return <div>Loading…</div>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='max-w-2xl mx-auto space-y-4'>
       <h1 className='text-2xl font-semibold'>Edit Job</h1>

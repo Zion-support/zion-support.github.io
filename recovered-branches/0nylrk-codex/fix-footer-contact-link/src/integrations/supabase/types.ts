@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export type Json = any;
-=======
+
 export type Json =
   | string
   | number
@@ -2410,6 +2408,6 @@ export const Constants = {
         "responded";
         "closed";
         "archived"]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       referral_status: ["pending", "completed", "expired"]}}} as const
 ;

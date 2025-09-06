@@ -1,24 +1,5 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { MobileHeader } from "@/mobile/components/common/MobileHeader",
-import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { 
-  Select;
-  SelectContent;
-  SelectItem;
-  SelectTrigger;
-  SelectValue 
-} from "@/components/ui/select",
-import { Zap, ChevronLeft, ChevronRight } from 'lucide-react'
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-type JobPostStep = any;
-=======
+
 import React, { useState } from "react"
 import {MobileHeader} from "@/mobile/components/common/MobileHeader"
 import {BottomNavigation} from "@/mobile/components/common/BottomNavigation"
@@ -170,7 +151,7 @@ function RequirementsStep() {
   const removeSkill = (skill: string,) => {
     setSkills(skills.filter(s => s !== skill))
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>

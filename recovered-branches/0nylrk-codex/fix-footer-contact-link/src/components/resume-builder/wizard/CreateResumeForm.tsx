@@ -1,12 +1,5 @@
 
-<<<<<<< HEAD
-import { useState } from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Loader2 } from "lucide-react";
-import { CreateResumeFormProps } from "./types";
-export const CreateResumeForm = null;
-=======
+
 import {useState} from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -56,4 +49,4 @@ export const CreateResumeForm = ({
     </Card>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

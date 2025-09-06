@@ -10,10 +10,7 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
   Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-const contactInfo = null;
-=======
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -155,7 +152,7 @@ const testimonials = [
     rating: 5
     avatar: '👨‍🔒'
   },];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function AdvancedAIAutomationServices() {
   return (
     <Layout>

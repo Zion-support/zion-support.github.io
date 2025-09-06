@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef } from 'react';
-=======
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 // Particle system const particles: Array< {
@@ -18,16 +16,13 @@ animate ();
 export default function UltraFuturisticBackground2028({
   children
 }: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2028Props {
   children: React.ReactNode
 }
 export default function UltraFuturisticBackground2028({ children }: UltraFuturisticBackground2028Props) {
-<<<<<<< HEAD
-  const canvasRef = null;
-              ease: "easeInOut"
-=======
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -404,7 +399,7 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
               repeat: Infinity
               delay: Math.random() * 3
               ease: 'easeInOut',            }}              ease: "easeInOut"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             }}
           />
         ))}

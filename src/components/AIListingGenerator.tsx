@@ -16,24 +16,7 @@ import { supabase } from "@/integrations/supabase/client",
 import { Badge } from "@/components/ui/badge";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface GeneratedContent {
-<<<<<<< HEAD
-  description: string;
-  tags: string[];
-  suggestedPrice: {
-    min: number;
-    max: number
-  },
-  keyPoints: string[]
-}
 
-interface AIListingGeneratorProps {
-  onApplyGenerated?: (content: GeneratedContent) => void;
-  initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string
-=======
   description: string
 tags: string[]
 suggestedPrice: {
@@ -133,7 +116,7 @@ export function AIListingGenerator({
         description: 'The generated content has been applied to your listing.'
       })
     }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
 }
 

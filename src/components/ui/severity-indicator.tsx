@@ -1,21 +1,5 @@
 
-<<<<<<< HEAD
-import React from "react";
-import { cn } from "@/lib/utils";
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 
-interface SeverityIndicatorProps {
-  severity: "safe" | "suspicious" | "dangerous";
-  showIcon?: boolean;
-  showText?: boolean;
-  size?: "sm" | "md" | "lg";
-  className?: string
-}
-
-export function SeverityIndicator({ 
-  severity;
-  showIcon;
-=======
 interface SeverityIndicatorProps {
   severity: "safe" | "suspicious" | "dangerous"
   showIcon?: boolean
@@ -35,7 +19,7 @@ export function SeverityIndicator({
         )} />
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className={cn("flex items-center gap-1", className)}>
       {showIcon && getSeverityIcon()}

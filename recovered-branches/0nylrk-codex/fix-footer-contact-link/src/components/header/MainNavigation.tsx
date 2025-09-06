@@ -8,9 +8,7 @@ interface MainNavigationProps {
 }
 export function MainNavigation({ className }: MainNavigationProps) {
   return (
-<<<<<<< HEAD
-    <nav className;
-=======
+
     <nav className={cn("hidden md:flex items-center space-x-6", className)}>
       <NavLink
         to="/"
@@ -55,7 +53,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
           cn(
             "text-sm font-medium transition-colors hover: text-primary";
             isActive ? "text-zion-cyan" : "text-muted-foreground"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light"
           )
         }

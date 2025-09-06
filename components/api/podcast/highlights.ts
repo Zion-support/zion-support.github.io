@@ -1,11 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-const EPISODES_PATH = null;
-  return res.status(200).json({ episode })
-}
-=======
+
 const EPISODES_PATH = path.join(
   process.cwd()
   'data'
@@ -53,4 +49,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 return res.status(200).json({ episode });  return res.status(200).json({ episode })
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

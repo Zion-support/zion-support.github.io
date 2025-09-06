@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import jwt from 'jsonwebtoken';
-import { ethers } from 'ethers';
-const JWT_SECRET = null;
-    return res.status(200).json({ ok: true })
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
 import { ethers } from "ethers";
@@ -40,7 +34,7 @@ export default async function handler(
       `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`
     );
     return res.status(200).json({ ok: true });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (e: any) {
     return res.status(500).json({ error: e?.message |"Verify failed" });
   }

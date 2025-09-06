@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout';
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react';
-export default function EnterpriseITPage() {
-  const features = null;
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -18,7 +11,7 @@ export default function EnterpriseITPage() {
     { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' }
     { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' }
     { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Layout>
       <Head>

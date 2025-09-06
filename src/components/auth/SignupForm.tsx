@@ -55,76 +55,7 @@ const signupSchema = null;
         )}
       </div>
 
-<<<<<<< HEAD
-      {/* Confirm Password Field */}
-      <div className="space-y-2">
-        <Label htmlFor="confirmPassword" className="text-sm font-medium">
-          Confirm Password <span className="text-red-500">*</span>
-        </Label>
-        <div className="relative">
-          <Input
-            id="confirmPassword"
-            type={showConfirmPassword ? 'text' : 'password'}
-            placeholder="Confirm your password"
-            {...register('confirmPassword')}
-            disabled={isSubmitting}
-            className={cn('pr-20', getFieldClasses('confirmPassword'))}
-            autoComplete="new-password"
-          />
-          <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
-            {getFieldValidationIcon('confirmPassword')}
-            <Button
-              type="button"
-              variant="ghost"
-              size="sm"
-              className="h-7 w-7 p-0"
-              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-              aria-label={showConfirmPassword ? 'Hide confirm password' : 'Show confirm password'}
-            >
-              {showConfirmPassword ? (
-                <EyeOff className="h-4 w-4" />
-              ) : (
-                <Eye className="h-4 w-4" />
-              )}
-            </Button>
-          </div>
-        </div>
-        {errors.confirmPassword && (
-          <p className="text-sm text-red-600 flex items-center gap-1">
-            <AlertCircle className="h-3 w-3" />
-            {errors.confirmPassword.message}
-          </p>
-        )}
-      </div>
 
-      {/* Global Error */}
-      {errors.root && (
-        <div className="p-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md flex items-center gap-2">
-          <AlertCircle className="h-4 w-4 flex-shrink-0" />
-          {errors.root.message}
-        </div>
-      )}
-
-      {/* Submit Button */}
-      <Button 
-        type="submit" 
-        className="w-full py-3" 
-        disabled={isSubmitting || !isValid}
-      >
-        {isSubmitting ? (
-          <>
-            <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-            Creating Account...
-          </>
-        ) : (
-          'Create Account'
-        )}
-      </Button>
-    </form>
-  )
-}
-;
-=======
   path: ["confirmPassword"]})
 type SignupFormData = z.infer<typeof signupSchema>
         setFieldStates(prev => ({
@@ -152,4 +83,4 @@ type SignupFormData = z.infer<typeof signupSchema>
       setError('root', { message: errorMessage })
               <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :}
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

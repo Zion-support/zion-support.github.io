@@ -11,13 +11,7 @@ import { EmptyState } from "@/components/ui/empty-state";
 import { Heart } from 'lucide-react'
 import { logInfo, logWarn } from '@/utils/productionLogger';
 export default function SavedTalentsPage() {
-<<<<<<< HEAD
 
-  const { user } = useAuth();
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-  const router = null;
-=======
   const { user } = useAuth()
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([])
   const [isLoading, setIsLoading] = useState(true)
@@ -172,7 +166,7 @@ export default function SavedTalentsPage() {
       })
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

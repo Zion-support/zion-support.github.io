@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef } from 'react';
-=======
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationId: number;
@@ -8,15 +6,13 @@ let particles: Array< {
 const UltraFuturisticBackground2030: React.FC<
   UltraFuturisticBackground2030Props
 > = ({ children }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2030Props {
   children: React.ReactNode
 }
 const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props> = ({ children }) => {
-<<<<<<< HEAD
-  const canvasRef = null;
-=======
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -362,4 +358,4 @@ export default UltraFuturisticBackground2030;      </div>
   )
 }
 export default UltraFuturisticBackground2030;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

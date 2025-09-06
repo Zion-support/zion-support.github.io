@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-  TableRow,
-=======
+
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import Link from 'next/link'; // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth';
@@ -11,15 +9,10 @@ import {
   TableCell
   TableHead
   TableHeader
-<<<<<<< HEAD
-TableRow;
-=======
-  TableRow
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
-=======
+
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
 import { useAuth  } from '@/hooks/useAuth';
@@ -36,9 +29,7 @@ import { EmptyState } from '@/components/ui/empty-state';
 export default function OrdersPage() {
   const { user } = useAuth();
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
-<<<<<<< HEAD
-  const formatDate = null;
-=======
+
   const formatDate = (date: string) => new Date(date).toLocaleDateString();
   const getStatusBadge = (status: string,) => {
     switch (status) {
@@ -65,7 +56,7 @@ export default function OrdersPage() {
         return status;
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='container max-w-4xl py-10'>
       <h1 className='text-3xl font-bold mb-6'>Order History</h1>

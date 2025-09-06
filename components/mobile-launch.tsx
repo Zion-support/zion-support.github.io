@@ -3,10 +3,7 @@ import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import Link from 'next/link';
 // Simple icons using inline SVG to avoid external assets
-<<<<<<< HEAD
-function StarIcon({ className;
-      setError(err?.message || 'Something went wrong.')
-=======
+
 function StarIcon({
   className = 'w-5 h-5 text-yellow-500'
 }: {
@@ -294,7 +291,7 @@ export default function MobileLaunchPage() {
     } catch (err: any) {
       setStatus('error');
       setError(err?.message |'Something went wrong.')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     }
   }
   return (

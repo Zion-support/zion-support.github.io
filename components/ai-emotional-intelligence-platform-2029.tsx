@@ -2,9 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Brain, Heart, Eye, MessageCircle, Users, Shield;
-=======
+
 import {
   Brain
   Heart
@@ -33,16 +31,14 @@ import {
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';import {
   Brain, Heart, Eye, MessageCircle, Users, Shield
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Zap, TrendingUp, CheckCircle, ArrowRight, Star;
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
   Smartphone, Database, Cloud, Server, ShieldCheck
  } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-<<<<<<< HEAD
-const AIEmotionalIntelligencePlatform2029 = null;
-=======
+
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -834,4 +830,4 @@ const AIEmotionalIntelligencePlatform2029 = null;
 export default AIEmotionalIntelligencePlatform2029;  )
 }
 export default AIEmotionalIntelligencePlatform2029;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

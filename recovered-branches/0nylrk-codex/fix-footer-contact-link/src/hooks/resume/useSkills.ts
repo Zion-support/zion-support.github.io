@@ -7,11 +7,7 @@ import { handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useSkills() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
-  
-  const addSkill = null;
-=======
+
   const [error, setError] = useState<string | null>(null);
   const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {
     if (!user) {
@@ -62,7 +58,7 @@ export function useSkills() {
     isLoading;
     error;
     addSkill;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     deleteSkill
   }
 }

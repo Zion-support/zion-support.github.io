@@ -7,29 +7,20 @@ import { Search } from "lucide-react",
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 interface Conversation {
-<<<<<<< HEAD
-  id: string;
-  name: string;
-  avatar?: string;
-  lastMessage: string;
-  timestamp: string;
-  unreadCount: number;
-=======
+
   id: string
   name: string
   avatar?: string;
   lastMessage: string
   timestamp: string
   unreadCount: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isTyping?: boolean
 }
 interface MobileConversationListProps {
-<<<<<<< HEAD
-  conversations: Conversation[];
-=======
+
   conversations: Conversation[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   activeConversation?: string;
   onSelectConversation: (id: string) => void
 }
@@ -39,9 +30,7 @@ export function MobileConversationList({
   onSelectConversation
 }: MobileConversationListProps) {
   return (
-<<<<<<< HEAD
-    <div className;
-=======
+
     <div className="space-y-4">
       <div className="px-4 mb-2">
         <div className="relative">
@@ -66,7 +55,7 @@ export function MobileConversationList({
             key={conversation.id}
             className={cn(
               "px-4";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}

@@ -45,10 +45,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   private retryTimeouts: NodeJS.Timeout[] = []
   constructor(props: ErrorBoundaryProps) {
     super(props)
-<<<<<<< HEAD
 
-    this.state;
-=======
     this.state = {
       hasError: false
       error: null
@@ -557,7 +554,7 @@ export const useErrorBoundary = () => {
 // Higher-order component for adding error boundaries
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
 ,) => {
   const WrappedComponent = (props: P,) => (

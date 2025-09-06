@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Grid, List, Star, CheckCircle, ArrowRight, Check;
-  Brain, Atom, Shield, Building, Globe;
-  Users, TrendingUp, Award, Phone, Mail, MapPin
- } from 'lucide-react';
-// Import our new service data
-import { advancedEnterpriseServices2025  } from '../data/2025-advanced-enterprise-services-expansion';
-import { innovativeMicroSaasExpansion2025  } from '../data/2025-innovative-micro-saas-expansion';
-import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
-const contactInfo = null;
-=======
+
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
   Search
@@ -626,7 +613,7 @@ const getServiceFeatures = (service: any) => {
       </div>
     </motion.div>
   )
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800'>
       <SEO

@@ -1,14 +1,6 @@
 
 import { UseFormReturn } from "react-hook-form";
-<<<<<<< HEAD
-import { 
-  FormField;
-  FormItem;
-  FormLabel;
-  FormControl;
-  FormDescription 
-} from "@/components/ui/form",
-=======
+
 import {
   FormField
   FormItem
@@ -16,7 +8,7 @@ import {
   FormControl
   FormDescription
 } from "@/components/ui/form";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Checkbox } from "@/components/ui/checkbox";
 import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {
@@ -27,9 +19,7 @@ export function AdditionalClausesFields({
 }: AdditionalClausesFieldsProps) {
   return (
     <FormField
-<<<<<<< HEAD
-      control;
-=======
+
       control={form.control}
       name="additionalClauses"
       render={() => (
@@ -134,7 +124,7 @@ export function AdditionalClausesFields({
                       checked={field.value?.includes("revisions")}
                       onCheckedChange={(checked) => {
                         const currentValues = field.value |[];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                         return checked
                           ? field.onChange([...currentValues, "revisions"])
                           : field.onChange(

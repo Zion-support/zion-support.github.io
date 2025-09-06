@@ -1,19 +1,14 @@
 import { FormEvent, useState } from 'react';
 export default function VendorRegisterPage() {
   const [loading, setLoading] = useState(false);
-<<<<<<< HEAD
-  const [message, setMessage] = useState<string | null>(null),
 
-=======
   const [message, setMessage] = useState<string | null>(null);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
     setMessage(null);
-<<<<<<< HEAD
-    const form = null;
-=======
+
     const form = e.currentTarget;
     const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries())
@@ -58,7 +53,7 @@ export default function VendorRegisterPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Failed to submit');
       setMessage('Application submitted. Await approval.');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       form.reset()
     } catch (err: any) {
       setMessage(err.message)

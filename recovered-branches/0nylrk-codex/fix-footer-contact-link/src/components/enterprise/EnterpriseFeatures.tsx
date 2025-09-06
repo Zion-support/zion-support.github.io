@@ -1,9 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react";
-const features = null;
-=======
+
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
 const features = [
   {
@@ -30,7 +27,7 @@ const features = [
     title: "Global Access"
     description: "Connect with talent across multiple regions with localized interfaces."
     icon: Globe}]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function EnterpriseFeatures() {
   return (
     <section className="py-20 px-4 md:px-6 bg-muted/50">

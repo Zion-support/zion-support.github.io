@@ -6,17 +6,13 @@ export interface PdfThemeColors {
   background: string;
   text: string;
   heading: string;
-<<<<<<< HEAD
-  subheading: string;
-=======
+
   subheading: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   accent: string
 }
 export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {
-<<<<<<< HEAD
-  return theme;
-=======
+
   return theme === 'light'
     ? {
         background: '#ffffff';
@@ -30,7 +26,7 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {
         text: '#ffffff';
         heading: '#ffffff';
         subheading: '#cccccc'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
         accent: '#9b87f5'
       }
 }

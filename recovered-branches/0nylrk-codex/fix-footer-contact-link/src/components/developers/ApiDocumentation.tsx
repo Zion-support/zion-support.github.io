@@ -8,9 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import CodeBlock from "./CodeBlock";
 export function ApiDocumentation() {
   return (
-<<<<<<< HEAD
-    <Card className;
-=======
+
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">
@@ -715,7 +713,7 @@ function EndpointSection({
   responseExamples
 }) {
   const [activeTab, setActiveTab] = useState("curl");
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="border border-zinc-800 rounded-md">
       <div className="p-4">

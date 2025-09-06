@@ -14,13 +14,7 @@ import { ReferralStats as ReferralStatsType } from "@/types/referrals"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Star } from 'lucide-react'
 interface ReferralStatsProps {
-<<<<<<< HEAD
-  stats: ReferralStatsType;
-  isLoading: boolean
-}
-export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
-  const statCards = null;
-=======
+
   stats: ReferralStatsType
   isLoading: boolean
 }
@@ -50,7 +44,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       description: 'Credits earned from referrals'
     }
   ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
       {statCards.map((card, i) => (        <Card key={i}>

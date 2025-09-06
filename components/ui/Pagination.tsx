@@ -1,8 +1,6 @@
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
-<<<<<<< HEAD
-export type PaginationProps = any;
-=======
+
 export type PaginationProps = {
   page: number;
   pageSize: number;
@@ -50,7 +48,7 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
     </div>
   );
 }  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="flex items-center justify-between gap-2 mt-4">
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>

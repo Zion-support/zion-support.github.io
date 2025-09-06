@@ -4,24 +4,18 @@ import { Button } from "@/components/ui/button",
 import { Search, Sliders } from "lucide-react";
 import { Input } from "@/components/ui/input";
 interface MobileFilterBarProps {
-<<<<<<< HEAD
-  searchTerm: string;
-  setSearchTerm: (value: string) => void;
-=======
+
   searchTerm: string
   setSearchTerm: (value: string) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   setIsMobileFilterOpen: (isOpen: boolean) => void
 }
 export function MobileFilterBar({
   searchTerm;
-<<<<<<< HEAD
-  setSearchTerm;
-  setIsMobileFilterOpen 
-=======
+
   setSearchTerm
   setIsMobileFilterOpen
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }: MobileFilterBarProps) {
   return (
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">

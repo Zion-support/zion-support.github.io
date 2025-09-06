@@ -1,23 +1,5 @@
 
-<<<<<<< HEAD
-import { useState } from "react",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { User, Mail, AtSign, GraduationCap } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form",
 
-const profileSchema = null;
-=======
 import {useState} from "react";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -54,7 +36,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
         return "User"
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">

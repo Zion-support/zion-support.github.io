@@ -1,15 +1,7 @@
 import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Handshake, Globe, Rocket, Brain, Atom, Shield;
-  ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
- } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-export default function PartnersPage() {
-  const partners = null;
-=======
+
 import {
   Handshake
   Globe
@@ -153,7 +145,7 @@ export default function PartnersPage() {
     { number: '25+', label: 'Countries', icon: Globe }
     { number: '300%', label: 'Growth Rate', icon: TrendingUp }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>

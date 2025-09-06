@@ -5,11 +5,9 @@ import type { UserProfile } from "@/types/auth";
 // a minimal user shape that includes only the properties we actually use
 // in this file.
 export interface SupabaseUser {
-<<<<<<< HEAD
-  id: string;
-=======
+
   id: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   email?: string | null
 }
 /**
@@ -24,17 +22,12 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
     profileComplete: Boolean(profile.profile_complete);
     createdAt: new Date(profile.created_at).toISOString();
     updatedAt: new Date(profile.updated_at).toISOString();
-<<<<<<< HEAD
-    bio: profile.bio || undefined;
-    headline: profile.headline || undefined;
-    avatar_url: profile.avatar_url || undefined;
-    avatarUrl: profile.avatar_url || undefined, // Add for compatibility
-=======
+
     bio: profile.bio |undefined;
     headline: profile.headline |undefined;
     avatar_url: profile.avatar_url |undefined
     avatarUrl: profile.avatar_url |undefined, // Add for compatibility
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     role: profile.user_type // Map user_type to role for backward compatibility
   }
 }

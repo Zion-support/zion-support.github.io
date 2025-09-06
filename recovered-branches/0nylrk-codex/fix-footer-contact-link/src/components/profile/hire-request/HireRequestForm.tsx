@@ -11,13 +11,10 @@ import { ProjectDetailsField } from "./ProjectDetailsField",
 import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
 export interface HireRequestFormProps {
-<<<<<<< HEAD
-  talent: TalentProfile;
-  onClose: () => void;
-=======
+
   talent: TalentProfile
   onClose: () => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   initialJobTitle?: string;
   userDetails?: {
     name?: string;
@@ -27,15 +24,11 @@ export interface HireRequestFormProps {
   onSubmitSuccess?: () => void
 }
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
-<<<<<<< HEAD
-  const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
-    talent;
-    onClose: onSubmitSuccess || onClose;
-=======
+
   const { form, isSubmitting, onSubmit } = useHireRequestForm({
     talent
     onClose: onSubmitSuccess |onClose
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     initialJobTitle;
     userDetails
   });

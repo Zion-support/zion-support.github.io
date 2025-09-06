@@ -2,8 +2,7 @@ import { defineConfig } from 'cypress';
 export default defineConfig({
   e2e: {
     baseUrl: 'http://localhost:3000', // Standard Next.js port
-<<<<<<< HEAD
-=======
+
     supportFile: 'cypress/support/e2e.ts'
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
@@ -15,14 +14,12 @@ export default defineConfig({
       });export default defineConfig({
   e2e: {
     baseUrl: 'http://localhost:3000', // Standard Next.js port
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     supportFile: 'cypress/support/e2e.ts';
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
-<<<<<<< HEAD
-      on('before:browser:launch', (browser;
-=======
+
       on('before:browser:launch', (browser = {}, launchOptions) => {
         if (browser.family === 'chromium') {
           launchOptions.args.push('--disable-ipv6');        }
@@ -69,4 +66,4 @@ export default defineConfig({
     toConsole: true
   }
 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -5,9 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 export function TalentPool() {
   // Mock talent data
-<<<<<<< HEAD
-  const talents = null;
-=======
+
   const talents = [
     {
       id: "talent-1"
@@ -45,7 +43,7 @@ export function TalentPool() {
         return <Badge variant="outline">{status}</Badge>
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card>
       <CardHeader>

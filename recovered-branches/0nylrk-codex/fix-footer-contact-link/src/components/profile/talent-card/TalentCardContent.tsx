@@ -8,17 +8,14 @@ interface TalentCardContentProps {
   timezone: string | undefined;
   skills: string[] | undefined
 }
-<<<<<<< HEAD
 
-export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {
-=======
 export function TalentCardContent({
   summary
   bio
   timezone
   skills
 }: TalentCardContentProps) {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   const [isHovering, setIsHovering] = useState(false);
   return (
     <div>

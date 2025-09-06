@@ -10,18 +10,7 @@ interface ChatMessageProps {
   isUser: boolean;
   timestamp: Date
 export const ChatMessage: React.FC<ChatMessageProps> = ({
-<<<<<<< HEAD
-  message;
-  isUser;
-  timestamp}: ChatMessageProps) => {
-  const { theme } = useTheme();
-  // Memoise the sanitized + formatted HTML so we don't create a new object on every render –
-  // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.
-  const sanitizedHtml = null;
-  return formattedMessage
-}
-;
-=======
+
   message
   isUser
   timestamp
@@ -111,4 +100,4 @@ function formatMessageWithLinks(message: string): string {
   )
   return formattedMessage; return formattedMessage
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

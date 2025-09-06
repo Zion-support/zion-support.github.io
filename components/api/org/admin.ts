@@ -1,12 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {readOrgData, writeOrgData} from '../../../utils/org-data';
 import type { OrgData, BasePerson } from '../../../types/org';
-<<<<<<< HEAD
 
-const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
-type AdminAction = any;
-    return res.status(200).json({ ok: true })
-=======
 const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';
 type AdminAction =
   | { type: 'invite'; section: keyof OrgData; person: BasePerson }
@@ -71,7 +66,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     data[section] = arr as any;
     writeOrgData(data);
     return res.status(200).json({ ok: true });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
 return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
   }

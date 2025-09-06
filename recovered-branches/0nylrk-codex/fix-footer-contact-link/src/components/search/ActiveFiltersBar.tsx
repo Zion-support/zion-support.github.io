@@ -3,15 +3,7 @@ import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { X } from "lucide-react";
 interface ActiveFiltersBarProps {
-<<<<<<< HEAD
-  selectedProductTypes: string[];
-  selectedLocations: string[];
-  selectedAvailability: string[];
-  selectedRating: number | null;
-  searchQuery: string;
-  onRemoveFilter: (filterType: string, value: string) => void;
-  onRemoveRating: () => void;
-=======
+
   selectedProductTypes: string[]
   selectedLocations: string[]
   selectedAvailability: string[]
@@ -19,7 +11,7 @@ interface ActiveFiltersBarProps {
   searchQuery: string
   onRemoveFilter: (filterType: string, value: string) => void
   onRemoveRating: () => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onClearSearch: () => void
 }
 export function ActiveFiltersBar({
@@ -32,9 +24,7 @@ export function ActiveFiltersBar({
   onRemoveRating;
   onClearSearch
 }: ActiveFiltersBarProps) {
-<<<<<<< HEAD
-  const hasActiveFilters = null;
-=======
+
   const hasActiveFilters =
     selectedProductTypes.length > 0 |
     selectedLocations.length > 0 |
@@ -42,7 +32,7 @@ export function ActiveFiltersBar({
     selectedRating !== null |
     !!searchQuery;
   if (!hasActiveFilters) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="flex flex-wrap gap-2 items-center mb-4">
       <span className="text-sm text-zion-slate-light">Active filters:</span>

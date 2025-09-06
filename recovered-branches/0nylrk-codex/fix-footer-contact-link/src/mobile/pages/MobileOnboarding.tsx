@@ -1,13 +1,5 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",
-import { RolePicker } from "../components/onboarding/RolePicker";
-import { SignUpForm } from "../components/onboarding/SignUpForm";
-type OnboardingStep = any;
-=======
+
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -30,7 +22,7 @@ export function MobileOnboarding() {
   const handleRoleSelect = () => {
     setCurrentStep("signup")
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="min-h-screen flex flex-col">
       <div className="flex-1 py-8">

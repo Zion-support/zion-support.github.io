@@ -9,11 +9,9 @@ declare module '@vitejs/plugin-react-swc' {
 }
 declare module 'path' {
   export function resolve(...paths: string[]): string;
-<<<<<<< HEAD
-  export function join(...paths: string[]): string;
-=======
+
   export function join(...paths: string[]): string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   export function dirname(path: string): string
 }
 declare module 'lovable-tagger' {

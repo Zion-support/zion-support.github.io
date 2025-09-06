@@ -1,13 +1,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { BriefcaseIcon, Clock } from 'lucide-react'
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { useProjects } from "@/hooks/useProjects";
-import { Project } from "@/types/projects";
-=======
+
 import { Button } from '@/components/ui/button'
 import {
   Card
@@ -20,7 +14,7 @@ import {
 import { Badge } from '@/components/ui/badge'
 import { useProjects } from '@/hooks/useProjects'
 import { Project } from '@/types/projects'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),

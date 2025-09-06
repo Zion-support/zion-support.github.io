@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-const CloudArchitectureChat: NextPage;
-=======
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -26,4 +21,4 @@ const CloudArchitectureChat: NextPage = () => {
   );
 }
 export default CloudArchitectureChat;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -3,9 +3,7 @@ import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
 export function ApiGettingStarted() {
-<<<<<<< HEAD
-  const authExample = null;
-=======
+
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY"`
@@ -75,4 +73,4 @@ console.log(response.data),`;
   )
 }
 export default ApiGettingStarted;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

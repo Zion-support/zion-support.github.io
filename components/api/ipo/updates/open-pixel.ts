@@ -1,11 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  const id = null;
-  res.status(200).send(pixel)
-}
-=======
+
   const id = String(req.query.id |"");
   if (id) {
     const updates = readJsonFile("updates.json", [] as any[]);
@@ -31,4 +27,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   );
   res.status(200).send(pixel);
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

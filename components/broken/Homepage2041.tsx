@@ -1,10 +1,7 @@
 import React, { useState } from 'react',
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { ArrowRight;
-  Star;
-=======
+
 import {
   ArrowRight
   Star
@@ -28,7 +25,7 @@ import {
   Clock;} from 'lucide-react';import {
   ArrowRight;
   Star
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Search;
   Shield;
   Globe;
@@ -53,9 +50,7 @@ import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026'
 import { innovative2041MicroSaasServices  } from '../data/innovative-2041-micro-saas-services';
 import { innovative2041ITServices  } from '../data/innovative-2041-it-services';
 import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
-<<<<<<< HEAD
-const Homepage2041: React.FC;
-=======
+
 const Homepage2041: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const handleSearch = (e: React.FormEvent) => {
@@ -554,4 +549,4 @@ top: `$ {
 export default Homepage2041;  )
 }
 export default Homepage2041;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,13 +1,10 @@
 
 import { Helmet } from "react-helmet-async";
 interface SEOProps {
-<<<<<<< HEAD
-  title: string;
-  description: string;
-=======
+
   title: string
   description: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   keywords?: string;
   ogImage?: string;
   ogUrl?: string;
@@ -19,16 +16,14 @@ export function SEO({
   description;
   keywords;
   // Default to the Google Drive image URL
-<<<<<<< HEAD
-  ogImage;
-=======
+
   ogImage = "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
   ogUrl;
   canonical
   noindex}: SEOProps) {
   const siteTitle = "Zion - The Future of Tech & AI Marketplace";
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Helmet>
       <title>{fullTitle}</title>

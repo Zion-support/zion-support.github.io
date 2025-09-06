@@ -2,9 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import UseTokensButton from '../../components/tokens/UseTokensButton';
-<<<<<<< HEAD
-const InstagramContentScheduler: NextPage;
-=======
+
 const InstagramContentScheduler: NextPage = () => {
   return (
     <div>
@@ -22,4 +20,4 @@ const InstagramContentScheduler: NextPage = () => {
   )
 }
 export default InstagramContentScheduler;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

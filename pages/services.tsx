@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-import Link from 'next/link',
-import Head from 'next/head';
-import { useState, useEffect  } from 'react';
-import { ContactInfo  } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
-export default function Services() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => {
-    const timer = null;
-                  return (
-                    <div 
-                      key={category.title}
-                      className={`p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-${category.color}-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                      style={{ transitionDelay: `${index * 200}ms` }}
-=======
+
 import React from 'react';
 import Link from 'next/link';
 type Service = {
@@ -1891,7 +1875,7 @@ export default function Services() {
               <div className='grid lg:grid-cols-3 gap-8'>
                 {serviceCategories.map((category, index) => {
                   const colors = getColorClasses(category.color);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     >
                       <div className='flex items-center justify-between mb-6'>                        <h3 className={`text-2xl font-bold ${colors.text}`}>
                           {category.title}

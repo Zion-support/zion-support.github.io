@@ -1,13 +1,5 @@
 
-<<<<<<< HEAD
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { ShieldAlert } from 'lucide-react'
 
-export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
-  hasFilters,
-  onResetFilters 
-=======
 interface EmptyFraudStateProps {
   hasFilters: boolean
   onResetFilters: () => void
@@ -15,7 +7,7 @@ interface EmptyFraudStateProps {
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters
   onResetFilters
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 },) => {
   return (
     <div className="text-center py-12">
@@ -37,18 +29,7 @@ import React from "react"
 import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
 interface EmptyFraudStateProps {
-<<<<<<< HEAD
-  hasFilters: boolean;
-  onResetFilters: () => void
-}
 
-export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
-  hasFilters;
-  onResetFilters 
-}) => {
-  return (
-    <div className;
-=======
   hasFilters: boolean
   onResetFilters: () => void
 }
@@ -71,4 +52,4 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
     </div>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

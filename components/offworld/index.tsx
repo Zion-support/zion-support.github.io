@@ -9,12 +9,7 @@ export default function OffworldConsole() {
   const [status, setStatus] = useState('');
   async function sendChat() {
     setStatus('Sending chat...');
-<<<<<<< HEAD
-    const res = null;
-    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
-  }
 
-=======
     const res = await fetch('/api/offworld/orbit?action=chat', {
       method: 'POST'
       headers: { 'content-type': 'application/json' }
@@ -59,7 +54,7 @@ export default function OffworldConsole() {
       body: JSON.stringify({ message: 'We build beyond platforms.' })
     });
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='min-h-screen p-8 space-y-8'>
       <Head>

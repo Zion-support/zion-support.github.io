@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Label  } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogFooter;
-  DialogHeader;
-  DialogTitle } from '@/components/ui/dialog';
-=======
+
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -24,25 +12,11 @@ import {
   DialogHeader
   DialogTitle
 } from '@/components/ui/dialog'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
 import { isProdDomain } from '@/utils/getStripe';
 interface GuestCheckoutModalProps {
-<<<<<<< HEAD
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  onSubmit: (details: { email: string, address: string }) => void
-}
 
-export default function GuestCheckoutModal({
-  open;
-  onOpenChange;
-  onSubmit}: GuestCheckoutModalProps) {
-  const [email, setEmail] = useState('');
-  const [address, setAddress] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const handleSubmit = null;
-=======
   open: boolean
   onOpenChange: (open: boolean) => void
   onSubmit: (details: { email: string; address: string }) => void
@@ -67,7 +41,7 @@ export default function GuestCheckoutModal({
       setIsSubmitting(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className='bg-zion-blue border-zion-cyan/20 max-w-md'>

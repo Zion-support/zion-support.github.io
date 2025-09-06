@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { Octokit } from '@octokit/rest';
-<<<<<<< HEAD
-const GITHUB_TOKEN = null;
-=======
+
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN |''
 const REPO = process.env.GITHUB_REPO |'Zion-Holdings/zion.app'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -37,7 +35,7 @@ inputs: { issue_number: String(issue.data.number) }} as any)
 return res.status(200).json({ ok: true, issue: issue.data.number })
   } catch (e) {
     console.error(e)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return res.status(500).json({ error: 'Failed to process webhook' })
   }
 }

@@ -7,9 +7,7 @@ export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
   useEffect(() => {
-<<<<<<< HEAD
-    const handleScroll = null;
-=======
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const threshold = 600; // Show CTA after scrolling 600px
@@ -29,7 +27,7 @@ export function FloatingCTA() {
     setIsVisible(false);
   }
   if (!isVisible) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">

@@ -2,9 +2,7 @@ import React from 'react';
 import { useRouter  } from 'next/router';
 import TalentGrid from '../../components/seo/TalentGrid';
 import FAQ from '../../components/seo/FAQ';
-<<<<<<< HEAD
-export type LandingPayload = any;
-=======
+
 export type LandingPayload = {
   title: string;
   h1: string;
@@ -35,7 +33,7 @@ export default function SEOLandingPage() {
       faq: []
     });  }, [router.isReady, slug]);
   if (!payload) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='max-w-4xl mx-auto'>
       <head>

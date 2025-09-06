@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button";
-import { FilePlus } from 'lucide-react'
-import { EmptyResumeProps } from "./types";
-export const EmptyResumeState = null;
-=======
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { FilePlus } from 'lucide-react'
@@ -38,4 +31,4 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {  retu
 "}
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

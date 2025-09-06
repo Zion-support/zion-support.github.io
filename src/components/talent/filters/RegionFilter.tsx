@@ -1,9 +1,5 @@
 import { ChevronDown, ChevronUp } from 'lucide-react'
-<<<<<<< HEAD
-import { Checkbox } from "@/components/ui/checkbox";
-import { RegionFilterProps } from "@/types/filters";
-const REGION_OPTIONS = null;
-=======
+
 import { Checkbox } from '@/components/ui/checkbox'
 import { RegionFilterProps } from '@/types/filters'
 const REGION_OPTIONS = [
@@ -51,7 +47,7 @@ const REGION_OPTIONS = [
   { id: "Australia", label: "Australia" }
   { id: "Africa", label: "Africa" }
 ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">

@@ -1,24 +1,14 @@
 import React from 'react';
 interface ButtonProps {
-<<<<<<< HEAD
-  children: React.ReactNode;
-=======
+
   children: React.ReactNode;  variant?: 'primary' | 'secondary' | 'outline';interface ButtonProps {
   children: React.ReactNode
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
-<<<<<<< HEAD
-  type?: 'button' | 'submit' | 'reset',
-  disabled?: boolean
-}
 
-export default function Button({ 
-  children;
-  variant;
-=======
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
 export default function Button({
@@ -55,7 +45,7 @@ export default function Button({
   );
 }  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform'
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <button
       type={type}

@@ -8,18 +8,14 @@ export async function createHireRequestNotifications({
   talentId;
   adminId;
   requesterName;
-<<<<<<< HEAD
-  requesterEmail;
-=======
+
   requesterEmail
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   projectType;
   projectSummary;
   hireRequestId
 }: HireRequestNotificationParams) {
-<<<<<<< HEAD
-  const projectInfo = null;
-=======
+
   const projectInfo = projectType
     ? `${projectType} project`
     : "project";
@@ -57,7 +53,7 @@ export async function createHireRequestNotifications({
   }
   return {
     success: talentNotification.success
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     talentNotification
   }
 }

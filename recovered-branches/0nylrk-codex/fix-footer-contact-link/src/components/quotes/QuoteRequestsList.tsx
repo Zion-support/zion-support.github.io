@@ -3,9 +3,7 @@ import React from "react",
 import { QuoteRequestCard } from "./QuoteRequestCard",
 import { EmptyStateCard } from "./EmptyStateCard";
 import type { QuoteRequest } from "@/types/quotes";
-<<<<<<< HEAD
-type QuoteRequestsListProps = any;
-=======
+
 type QuoteRequestsListProps = {
   quotes: QuoteRequest[]
   isLoading: boolean
@@ -46,4 +44,4 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
     </div>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

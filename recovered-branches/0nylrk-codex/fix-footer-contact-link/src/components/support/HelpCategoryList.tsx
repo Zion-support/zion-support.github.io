@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-=======
 import React from "react";
 import {
   Card
@@ -11,7 +7,7 @@ import {
   CardHeader
   CardTitle
 } from "@/components/ui/card";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { HelpCategory } from "./types";
 interface HelpCategoryListProps {
   categories: HelpCategory[];
@@ -24,9 +20,7 @@ export function HelpCategoryList({
   searchQuery
 }: HelpCategoryListProps) {
   // Filter categories based on search query
-<<<<<<< HEAD
-  const filteredCategories = null;
-=======
+
   const filteredCategories = searchQuery
     ? categories.filter(
         (category) =>
@@ -41,7 +35,7 @@ export function HelpCategoryList({
           )
       )
     : categories;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (filteredCategories.length === 0) {
     return (
       <div className="text-center py-8">

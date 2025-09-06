@@ -9,9 +9,7 @@ export default function Payments() {
   return (
     <>
       <Header />
-<<<<<<< HEAD
-      <div className;
-=======
+
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="mb-12 text-center">
@@ -99,4 +97,4 @@ import {Button} from "@/components/ui/button";
 import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
 import {Checkbox} from "@/components/ui/checkbox";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

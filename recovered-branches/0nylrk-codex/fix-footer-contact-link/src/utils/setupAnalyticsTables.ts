@@ -7,9 +7,7 @@ export async function ensureAnalyticsTablesExist() {
       .from('analytics_events')
       .select('id')
       .limit(1);
-<<<<<<< HEAD
-    if (error && error.code;
-=======
+
     if (error && error.code === 'PGRST204') {
       console.log('Creating analytics tables...');
       await createAnalyticsTables()
@@ -81,7 +79,7 @@ async function createAnalyticsTables() {
     console.log('Analytics tables created successfully')
   } catch (error) {
     console.error('Error creating analytics tables:', error);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     // Tables creation failed, but we can still continue
   }
 }

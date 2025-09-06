@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import SEO from '../components/SEO';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-=======
+
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -342,7 +338,7 @@ export default function CookiePolicyPage() {
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>

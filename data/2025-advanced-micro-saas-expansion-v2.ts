@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export const advancedMicroSaasExpansion2025V2 = null;
-=======
+
 export const advancedMicroSaasExpansion2025V2 = [
   {
     name: 'AI Content Factory Pro'
@@ -233,4 +231,4 @@ export const advancedMicroSaasExpansion2025V2 = [
     ]
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

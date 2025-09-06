@@ -1,9 +1,7 @@
 import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-type Props = any;
-=======
+
 type Props = { urlCount: number }
 const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
   return (
@@ -26,4 +24,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: { urlCount } }
 }
 export default SitemapStatus;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

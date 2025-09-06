@@ -1,9 +1,7 @@
 import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Star, TrendingUp, Zap, Brain, Rocket, Shield;
-=======
+
 import {
   Star
   TrendingUp
@@ -21,7 +19,7 @@ import {
   MapPin
   ExternalLink;} from 'lucide-react';import {
   Star, TrendingUp, Zap, Brain, Rocket, Shield
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
   Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -30,9 +28,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { emergingTechServicesEnhanced2025  } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
 export default function InnovativeServicesShowcase() {
-<<<<<<< HEAD
-  const contactInfo = null;
-=======
+
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -174,7 +170,7 @@ export default function InnovativeServicesShowcase() {
       color: 'from-purple-600 to-indigo-700'
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <UltraAdvancedFuturisticBackground>
       <div className='min-h-screen'>

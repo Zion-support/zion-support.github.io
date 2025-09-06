@@ -12,12 +12,7 @@ interface TalentCardAvailabilityProps {
 }
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
   // Format availability status
-<<<<<<< HEAD
-  const getAvailabilityColor = null;
-  return (
-    <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
-      <Clock className="h-3 w-3" />
-=======
+
   const getAvailabilityColor = (status: string) => {    switch (status) {
       case 'full-time':
         return 'bg-green-500/20 text-green-400'
@@ -44,7 +39,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
   }
     >
       <Clock className='h-3 w-3' />
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )

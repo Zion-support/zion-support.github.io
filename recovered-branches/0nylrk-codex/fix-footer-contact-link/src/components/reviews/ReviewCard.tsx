@@ -7,15 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
-<<<<<<< HEAD
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogFooter;
-  DialogHeader;
-  DialogTitle;
-  DialogTrigger} from "@/components/ui/dialog",
-=======
+
   Dialog
   DialogContent
   DialogDescription
@@ -24,7 +16,7 @@ import {
   DialogTitle
   DialogTrigger
 } from "@/components/ui/dialog";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Textarea } from "@/components/ui/textarea";
 interface ReviewCardProps {
   review: Review;
@@ -34,9 +26,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
   const [reportReason, setReportReason] = useState("");
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
-<<<<<<< HEAD
-  const handleReport = null;
-=======
+
   const handleReport = async () => {
     if (!reportReason.trim()) return;
     setIsReporting(true);
@@ -68,7 +58,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       .toUpperCase()
       .substring(0, 2);
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">

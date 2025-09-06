@@ -11,14 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-<<<<<<< HEAD
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),
-  const [customParam, setCustomParam] = useState<string>(""),
-  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
-  
-  // Get the base referral link
-  const baseLink = null;
-=======
+
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
   const [customParam, setCustomParam] = useState<string>("");
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([])
@@ -71,7 +64,7 @@ export function PartnerReferralLinks() {
     link.click();
     document.body.removeChild(link)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">

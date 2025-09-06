@@ -20,9 +20,7 @@ export default function ListingDetail() {
   const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   // Find the listing from our shared data source - now also checking equipment listings
-<<<<<<< HEAD
-  const listing = null;
-=======
+
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
   if (!listing) {
     return (
@@ -225,7 +223,7 @@ export default function ListingDetail() {
                         className="h-12 w-12 rounded-full"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                         }}
                       />

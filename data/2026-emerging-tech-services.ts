@@ -28,24 +28,16 @@ export interface EmergingTechService2026 {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-    website: string
-  },
-=======
+
     website: string;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number
-}
 
-const contact = null;
-=======
   reviews: number;
 const contact = {
   mobile: '+1 302 464 0950'
@@ -586,4 +578,4 @@ export const getEmergingTechServices2026ByPriceRange = (
 };    return price >= minPrice && price <= maxPrice
   })
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

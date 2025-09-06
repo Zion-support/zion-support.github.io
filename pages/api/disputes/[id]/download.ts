@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-import { getDisputeById } from '[^']*';
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '[^']*';
 
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -14,7 +7,7 @@ import {
   parseUserFromRequest
   ensureInvolvedOrAdmin
 } from "../../../../utils/auth";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -28,11 +21,7 @@ export default async function handler(
   ) {
     return res.status(400).json({ error: "Invalid parameters" });
   }
-<<<<<<< HEAD
-  const user = null;
-  stream.pipe(res)
-}
-=======
+
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
   if (!dispute) return res.status($1).json({ $2 });
@@ -53,4 +42,4 @@ export default async function handler(
   const stream = fs.createReadStream(att.path);
   stream.pipe(res);
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

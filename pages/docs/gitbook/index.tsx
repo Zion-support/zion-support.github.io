@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import fs from 'fs',
-import path from 'path';
-import Link from 'next/link';
-function list(dir: string, baseDir: string) {
-  const items = null;
-=======
+
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
@@ -24,7 +18,7 @@ export async function getStaticProps() {
         title: entry.name
         items: entry.isDir ? list(path.join(base, entry.name), base) : []}))
     : []
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return { props: { sections }, revalidate: 600 }
 }
 export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {

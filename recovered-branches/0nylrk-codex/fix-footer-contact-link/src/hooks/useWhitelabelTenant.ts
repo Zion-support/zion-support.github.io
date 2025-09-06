@@ -10,35 +10,24 @@ export interface WhitelabelTenant {
   theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
   landing_page_copy: {
     headline: string;
-<<<<<<< HEAD
-    subtitle: string;
-    cta: string
-  },
-=======
+
     subtitle: string
     cta: string
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   is_active: boolean;
   created_at: string;
   updated_at: string;
   account_manager_id: string | null;
-<<<<<<< HEAD
-  dns_verified: boolean;
-=======
+
   dns_verified: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   email_template_override: Record<string, any> | null
 }
 export function useWhitelabelTenant(externalSubdomain?: string) {
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null),
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
 
-  useEffect(() => {
-    const loadTenant = null;
-=======
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     const loadTenant = async () => {
@@ -135,6 +124,6 @@ export function useTenantAdminStatus(tenantId?: string) {
     }
     checkAdminStatus()
   }, [tenantId]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return { isAdmin, isLoading }
 }

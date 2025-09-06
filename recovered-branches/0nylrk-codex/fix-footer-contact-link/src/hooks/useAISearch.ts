@@ -6,11 +6,9 @@ import { PROJECTS } from "@/data/projectsData";
 export interface SearchResult {
   id: string;
   type: "talent" | "job" | "project";
-<<<<<<< HEAD
-  title: string;
-=======
+
   title: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   description: string
 }
 interface SearchFilters {
@@ -23,9 +21,7 @@ interface SearchFilters {
 export function useAISearch() {
   const [results, setResults] = useState<SearchResult[]>([]),
   const [loading, setLoading] = useState(false);
-<<<<<<< HEAD
-  const search = null;
-=======
+
   const search = async (query: string) => {
     setLoading(true);
     try {
@@ -71,6 +67,6 @@ export function useAISearch() {
       setLoading(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return { results, loading, search }
 }

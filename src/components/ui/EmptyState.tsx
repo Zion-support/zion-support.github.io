@@ -6,12 +6,7 @@ interface EmptyStateProps {
   onRetry?: () => void;
   showRetry?: boolean;
   icon?: React.ReactNode
-<<<<<<< HEAD
-}
 
-export function EmptyState({ 
-  text;
-=======
 export function EmptyState({
   text = 'No items available'
   description
@@ -21,7 +16,7 @@ export function EmptyState({
   description
   onRetry
   showRetry = false
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   icon
 }: EmptyStateProps) {
   return (

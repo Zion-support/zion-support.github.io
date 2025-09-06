@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { AccessToken } from '[^']*';
-const LIVEKIT_API_KEY = null;
-    return res.status(500).json({ error: 'Failed to create token' })
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY |"";
@@ -45,6 +40,6 @@ export default async function handler(
   } catch (err: any) {
     console.error("Token error", err);
     return res.status(500).json({ error: "Failed to create token" });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
 }

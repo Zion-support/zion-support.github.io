@@ -1,11 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-<<<<<<< HEAD
-const openai = null;
-    return res.status(500).json({ error: 'Assistant request failed' })
-  }
-}
-=======
+
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Your job is to:
 - Greet users warmly and concisely
@@ -64,4 +59,4 @@ console.error('Assistant API error:', error?.message |error);
   }    return res.status(500).json({ error: 'Assistant request failed' })
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

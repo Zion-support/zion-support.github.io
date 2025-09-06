@@ -4,9 +4,7 @@ import { ArrowRight, Star, TrendingUp, Users, Shield, Zap  } from 'lucide-react'
 import { revolutionary2025MicroSaasServices  } from '../../data/revolutionary-2025-micro-saas';
 import { emergingTech2025Services  } from '../../data/emerging-tech-2025-services';
 import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services';
-<<<<<<< HEAD
-const RevolutionaryServicesShowcase: React.FC;
-=======
+
 const RevolutionaryServicesShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [visibleServices, setVisibleServices] = useState(12);
@@ -420,4 +418,4 @@ const RevolutionaryServicesShowcase: React.FC = () => {
 export default RevolutionaryServicesShowcase;  )
 }
 export default RevolutionaryServicesShowcase;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

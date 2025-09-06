@@ -19,9 +19,7 @@ export default function ITOnsiteServicesPage() {
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
   const [searchQuery, setSearchQuery] = useState("");
   // Check for success parameter in URL
-<<<<<<< HEAD
-  const success = null;
-=======
+
   const success = searchParams.get("success");
   // Show success toast if redirected from successful payment
   useEffect(() => {
@@ -54,7 +52,7 @@ export default function ITOnsiteServicesPage() {
       document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
     }, 100)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <AppLayout>
       <section className="py-16 bg-zion-blue">

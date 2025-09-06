@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export type InnovativeMicroSaas = any;
-=======
+
 export type InnovativeMicroSaas = {
   id: string;
   name: string;
@@ -172,4 +170,4 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		realService: true
 	}
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

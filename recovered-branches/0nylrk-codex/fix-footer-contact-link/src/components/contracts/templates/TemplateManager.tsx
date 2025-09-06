@@ -9,15 +9,11 @@ import { TemplateSaveForm } from "./TemplateSaveForm",
 import { ContractFormValues } from "@/components/contracts/components/ContractForm";
 import { useToast } from "@/hooks/use-toast";
 interface TemplateManagerProps {
-<<<<<<< HEAD
-  isOpen: boolean;
-  onClose: () => void;
-  onSelectTemplate: (template: ContractFormValues) => void;
-=======
+
   isOpen: boolean
   onClose: () => void
   onSelectTemplate: (template: ContractFormValues) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   currentValues?: ContractFormValues
 }
 export function TemplateManager({
@@ -30,9 +26,7 @@ export function TemplateManager({
   const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null),
   const { templates, isLoading } = useContractTemplates();
   const { toast } = useToast();
-<<<<<<< HEAD
-  const handleSelectTemplate = null;
-=======
+
   const handleSelectTemplate = (template: ContractTemplate) => {
     if (template && template.template_data) {
       onSelectTemplate(template.template_data);
@@ -79,7 +73,7 @@ export function TemplateManager({
           <TemplateSaveForm
             onCancel={() => {
               setMode("list");
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               setSelectedTemplate(null)
             }}
             onComplete={handleSaveComplete}

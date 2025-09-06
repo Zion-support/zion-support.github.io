@@ -1,7 +1,5 @@
 import { ApiDocsSpec } from './types';
-<<<<<<< HEAD
-const baseUrl = null;
-=======
+
 const baseUrl = 'https://api.zion.os';
 const v1: ApiDocsSpec = {
   product: 'Zion OS'
@@ -200,4 +198,4 @@ const v1: ApiDocsSpec = {
   ]
 }
 export default v1;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -9,10 +9,7 @@ import { formatDistanceToNow } from "date-fns",
 import Link from "next/link";
 import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
-<<<<<<< HEAD
-  const { applications, isLoading, error } = useJobApplications();
-  const getStatusBadge = null;
-=======
+
   const { applications, isLoading, error } = useJobApplications()
   const getStatusBadge = (status: ApplicationStatus,) => {
     switch (status) {
@@ -22,7 +19,7 @@ export function MyApplications() {
         return <Badge variant="outline">{status}</Badge>
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">

@@ -1,7 +1,5 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-const features = null;
-=======
+
 const features = [
   { key: 'private_portal', label: 'Private hiring portal' }
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' }
@@ -30,7 +28,7 @@ const tiers = [
     blurb: 'Unlimited users, custom contracts and SLAs'
     highlights: ['Unlimited seatsCustom SLADedicated CSM']
     includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function EnterprisePlans() {
   return (
     <main style={{ padding: '3rem', maxWidth: 1100, margin: '0 auto' }}>

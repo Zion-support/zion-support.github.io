@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import { useRouter  } from 'next/router';
-import { NextSeo  } from '@/components/NextSeo';
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-=======
+
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { NextSeo } from '@/components/NextSeo'
@@ -31,7 +23,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
@@ -44,32 +36,7 @@ import { motion  } from 'framer-motion';
 import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface EquipmentSpecification {
-<<<<<<< HEAD
-  name: string;
-  value: string
-}
 
-interface EquipmentDetails {
-  id: string;
-  name: string;
-  description: string;
-  brand: string;
-  category: string;
-  subcategory?: string;
-  images: string[];
-  price: number;
-  currency: string;
-  rating?: number;
-  reviewCount?: number;
-  inStock: boolean;
-  expectedShipping?: string;
-  specifications: EquipmentSpecification[];
-  features: string[];
-  warranty?: string;
-  returnPolicy?: string
-}
-
-=======
   name: string
 value: string
 }interface EquipmentDetails {
@@ -97,22 +64,13 @@ returnPolicy?: string
 features: item.tags |[];'
 warranty: '1 Year Manufacturer Warranty';'
 returnPolicy: '30-day return policy'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 // Convert ProductListing to EquipmentDetails format
 function convertProductListingToEquipmentDetails(
   item: ProductListing
 ): EquipmentDetails {
   return {
-<<<<<<< HEAD
-    id: item.id;
-    name: item.title;
-    description: item.description;
-    brand: item.brand || 'Unknown';
-    category: item.category;
-    subcategory: item.subcategory;
-    images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto;
-          images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined
-=======
+
     id: item.id
     name: item.title
     description: item.description
@@ -323,7 +281,7 @@ export default function EquipmentDetail() {
             equipment.images.length > 0 && equipment.images[0]
               ? [{ url: equipment.images[0] }]
               : undefined
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
         }}
       />
       <div className='min-h-screen bg-zion-blue py-8 px-4'>

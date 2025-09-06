@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-import React from 'react';
-type Speaker = any;
-=======
+
 const partners: Partner[] = [ {
   name: 'Gov Partner'
 }
@@ -115,7 +111,7 @@ export default function SummitPage() {
     }
       />
     );  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

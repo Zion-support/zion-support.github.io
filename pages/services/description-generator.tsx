@@ -10,10 +10,7 @@ export default function ServiceDescriptionGeneratorPage() {
   const [error, setError] = useState<string | null>(null),
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
-<<<<<<< HEAD
-  const keyFeatures = null;
-    navigator.clipboard.writeText(generated).catch(() => {})
-=======
+
   const keyFeatures = useMemo(() => {
     return featuresInput
       .split('\n')
@@ -52,7 +49,7 @@ export default function ServiceDescriptionGeneratorPage() {
   function handleCopy() {
     if (!generated) return;
     navigator.clipboard.writeText(generated).catch(() => {});
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   return (
     <div className='max-w-3xl mx-auto'>

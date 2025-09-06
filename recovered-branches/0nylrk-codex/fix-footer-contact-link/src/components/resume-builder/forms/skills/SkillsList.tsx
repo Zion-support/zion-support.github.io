@@ -6,10 +6,7 @@ interface SkillsListProps {
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise<void>
 }
-<<<<<<< HEAD
 
-export const SkillsList = null;
-=======
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
   const [skillsByCategory, setSkillsByCategory] = useState<
     Record<string, Skill[]>
@@ -48,4 +45,4 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

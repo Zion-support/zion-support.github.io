@@ -9,9 +9,7 @@ export function addWorkExperienceSection(
   colors: PdfThemeColors;
   startY: number
 ): number {
-<<<<<<< HEAD
-  if (workExperience.length;
-=======
+
   if (workExperience.length === 0) return startY;
   let yPos = startY;
   // Check if we need to add a new page
@@ -58,7 +56,7 @@ export function addWorkExperienceSection(
       doc.setFontSize(10);
       const descriptionLines = doc.splitTextToSize(work.description, 170);
       doc.text(descriptionLines, 20, yPos + 16);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       yPos += (descriptionLines.length * 5) + 20
     } else {
       yPos += 20

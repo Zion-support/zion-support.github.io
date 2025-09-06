@@ -1,12 +1,6 @@
 import React from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale  } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function AILegalContractAnalyzerPage() {
-  const service = null;
-=======
+
 import {
   Phone
   Mail
@@ -22,7 +16,7 @@ export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-legal-contract-analyzer')
   );  if (!service) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Layout>
       <Head>

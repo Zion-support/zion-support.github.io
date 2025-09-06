@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import { completeSitemap, dynamicPaths  } from '@/config/sitemap';
-import { Link  } from 'react-router-dom';
-import { ChevronRight  } from 'lucide-react';
-import { SEO  } from './SEO';
-import { AppLayout } from '@/layout/AppLayout';
-export const SitemapPage: React.FC;
-=======
 import React from "react";
 import { completeSitemap, dynamicPaths } from "@/config/sitemap";
 import { Link } from "react-router-dom";
@@ -179,4 +170,4 @@ export const SitemapPage: React.FC = () => {
     </AppLayout>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

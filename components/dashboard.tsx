@@ -1,8 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 export default function Dashboard() {
-<<<<<<< HEAD
-  const params = null;
-=======
+
   const params =
     typeof window !== 'undefined'
       ? new URLSearchParams(window.location.search)
@@ -33,7 +31,7 @@ export default function Dashboard() {
     fetchBranding()
   }, [tenantId]);
   const accent = branding?.primaryColor |'#111827';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='min-h-screen bg-gray-50'>
       <header className='px-6 py-4 bg-white border-b flex items-center gap-3'>

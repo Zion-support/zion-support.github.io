@@ -5,39 +5,30 @@ import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 export interface OnboardingStep {
-<<<<<<< HEAD
-  id: string;
-  label: string;
-  completed: boolean;
-  link: string;
-=======
+
   id: string
   label: string
   completed: boolean
   link: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   action?: string
 }
 interface OnboardingTrackerProps {
-<<<<<<< HEAD
-  steps: OnboardingStep[];
-=======
+
   steps: OnboardingStep[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   title?: string;
   className?: string
 }
 export function OnboardingTracker({
   steps;
-<<<<<<< HEAD
-  title;
-=======
+
   title = "Complete Your Profile"
   className
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length;
   const progress = Math.round((completedSteps / steps.length) * 100);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
       <div className="flex items-center justify-between mb-4">

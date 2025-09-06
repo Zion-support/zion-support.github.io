@@ -1,9 +1,7 @@
 import React, { useState } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom;
-=======
+
 import {
   ArrowRight
   Star
@@ -25,16 +23,14 @@ import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovat
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Rocket, Shield, Target, CheckCircle, ExternalLink;
   Search, Filter, Grid, List, ChevronDown
  } from 'lucide-react';
 import { cuttingEdge2027Innovations  } from '../../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027  } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
-<<<<<<< HEAD
-const Enhanced2027ServicesShowcase: React.FC;
-=======
+
 const Enhanced2027ServicesShowcase: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -688,4 +684,4 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 export default Enhanced2027ServicesShowcase;  )
 }
 export default Enhanced2027ServicesShowcase;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

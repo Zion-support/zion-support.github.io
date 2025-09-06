@@ -6,15 +6,7 @@ import { useTranslation } from "react-i18next";
 interface BenefitsSectionProps {
   className?: string;
   style?: React.CSSProperties
-<<<<<<< HEAD
-}
 
-const getBenefits = null;
-  return (
-    <section className={cn("py-20 bg-zion-blue-light", className)} style={style}>
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-=======
 const getBenefits = (t: any,) => [
   {
     title: t('benefits.ai_matchmaking')
@@ -43,7 +35,7 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
     >
       <div className='container mx-auto px-4'>
         <div className='text-center mb-16'>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
             {t('home.benefits_subtitle')}

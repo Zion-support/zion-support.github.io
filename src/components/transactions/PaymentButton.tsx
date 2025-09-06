@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client";
-import { Loader2 } from 'lucide-react'
-import { useRouter  } from 'next/router';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface PaymentButtonProps {
-  amount: number;
-  serviceId: string;
-  providerId: string;
-  buttonText?: string;
-  className?: string;
-  onPaymentInitiated?: () => void;
-=======
+
         description: "Please sign in to make a purchase."})
 import { useRouter } from 'next/router'
 import {logErrorToProduction} from '@/utils/productionLogger'
@@ -26,18 +9,11 @@ interface PaymentButtonProps {
   buttonText?: string
   className?: string
   onPaymentInitiated?: () => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   redirectUrl?: string
 }
 export function PaymentButton({
-<<<<<<< HEAD
-  amount;
-  serviceId;
-  providerId;
-  buttonText;
-        className
-      )}
-=======
+
   amount
   serviceId
   providerId
@@ -101,7 +77,7 @@ export function PaymentButton({
       className={cn(
         "relative min-w-[120px]";        className
       ),}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     >
       {isProcessing ? (
         <>

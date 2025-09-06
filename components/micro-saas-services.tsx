@@ -2,15 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Brain;
-  Monitor;
-  Search;
-  Shield;
-  Mail;
-  Share2;
-  Check;
-=======
+
 import {
   Brain
   Monitor
@@ -35,7 +27,7 @@ import {
   Mail
   Share2
   Check
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Star;
   Zap;
   TrendingUp;
@@ -45,12 +37,7 @@ import {
   BarChart3;
   Calendar;
   Target
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function MicroSaasServicesPage() {
-  const microSaasServices = null;
-            we deliver professional solutions with competitive pricing and exceptional value.
-=======
+
 export default function MicroSaasServicesPage() {
   const microSaasServices = [
     {
@@ -561,7 +548,7 @@ export default function MicroSaasServicesPage() {
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
             Discover our comprehensive suite of micro SaaS services designed for modern businesses.
             From AI-powered content generation to enterprise-grade performance monitoring, we deliver professional solutions with competitive pricing and exceptional value.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           </p>
         </div>
       </section>

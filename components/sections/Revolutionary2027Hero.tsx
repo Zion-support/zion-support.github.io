@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom  } from 'lucide-react';
-import Link from 'next/link';
-const Revolutionary2027Hero = null;
-=======
+
 import { motion } from 'framer-motion';
 import {
   ArrowRight
@@ -357,4 +352,4 @@ export default Revolutionary2027Hero;              delay: Math.random() * 2}}
 export default Revolutionary2027Hero;  )
 }
 export default Revolutionary2027Hero;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface UltraAdvancedFuturisticBackgroundV2Props {
-  children: React.ReactNode;
-  className?: string
-}
 
-const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({ 
-  children;
-  className;
-=======
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationFrameId: number;
@@ -398,4 +387,4 @@ export default UltraAdvancedFuturisticBackgroundV2;    </div>
   )
 }
 export default UltraAdvancedFuturisticBackgroundV2;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

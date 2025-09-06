@@ -3,9 +3,7 @@ import React from "react",
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
 export function FeatureHighlights() {
-<<<<<<< HEAD
-  const highlightsData = null;
-=======
+
   const highlightsData = [
     {
       title: "For Talent Seekers"
@@ -41,7 +39,7 @@ export function FeatureHighlights() {
       ]
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">

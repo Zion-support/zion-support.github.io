@@ -14,9 +14,7 @@ import PostCard from "@/components/community/PostCard",
 import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
 // Mock user data
-<<<<<<< HEAD
-const mockUser: CommunityUser;
-=======
+
 const mockUser: CommunityUser = {
   id: "user1"
   name: "Alex Johnson"
@@ -116,7 +114,7 @@ export default function CommunityProfilePage() {
     setPosts(userPosts);
     setIsLoading(false)
   }, [userId]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (isLoading) {
     return (
       <AppLayout>

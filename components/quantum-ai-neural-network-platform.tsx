@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
-import SEO from '../components/SEO';
-const QuantumAINeuralNetworkPlatform: React.FC;
-=======
+
 import { motion } from 'framer-motion';
 import {
   Atom
@@ -320,4 +315,4 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 export default QuantumAINeuralNetworkPlatform;  )
 }
 export default QuantumAINeuralNetworkPlatform;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

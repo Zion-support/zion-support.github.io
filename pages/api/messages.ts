@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { v4 as uuidv4 } from '[^']*';
-import { readJsonFile, writeJsonFile } from '[^']*';
-import type { Conversation, Message } from '../../utils/types';
-import { rateLimit } from '[^']*';
-const FILE = null;
-  res.status(405).end('Method Not Allowed')
-}
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
@@ -62,4 +53,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader("AllowGET, POST");
   res.status(405).end("Method Not Allowed");
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

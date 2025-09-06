@@ -1,22 +1,17 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef } from 'react';
-=======
+
 canvas.width = window.innerWidth * (window.devicePixelRatio |1);
 canvas.height = window.innerHeight * (window.devicePixelRatio |1);
 if (ctx) {
 export default function UltraFuturisticBackground2035({
   children
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode
 }
 export default function UltraFuturisticBackground2035({ children }: UltraFuturisticBackground2035Props) {
-<<<<<<< HEAD
-  const canvasRef = null;
-              ease: 'easeInOut'
-=======
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -525,7 +520,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
               duration: 6
               repeat: Infinity
               ease: 'easeInOut',              ease: 'easeInOut'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             }}
           />
         </div>

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export const real2026Q2Additions = null;
-=======
+
 export const real2026Q2Additions = [
   {
     id: 'ai-governance-compliance-hub'
@@ -332,4 +330,4 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

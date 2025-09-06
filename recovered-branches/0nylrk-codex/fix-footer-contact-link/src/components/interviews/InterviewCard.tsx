@@ -13,11 +13,9 @@ import { Clock, ExternalLink, MessageSquare, Video, X } from "lucide-react",
 import { toast } from "@/components/ui/use-toast";
 import { InterviewResponseForm } from "./InterviewResponseForm";
 interface InterviewCardProps {
-<<<<<<< HEAD
-  interview: Interview;
-=======
+
   interview: Interview
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onRefresh: () => Promise<void>
 }
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
@@ -25,9 +23,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const { respondToInterview, cancelInterview } = useInterviews();
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-  const isClient = null;
-=======
+
   const isClient = user?.id === interview.client_id;
   const isTalent = user?.id === interview.talent_id;
   // Format interview date and time
@@ -116,7 +112,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
       return interview.client_name |'Client'
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2 relative">

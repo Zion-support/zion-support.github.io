@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react',
-=======
+
 import React, { useEffect, useState } from 'react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import Head from 'next/head';
 import type { KycProfile } from '../../../utils/kyc';
 import { ProfileBadges } from '../../../components/ui/ProfileBadges';
 export default function IdentitySettingsPage() {
-<<<<<<< HEAD
-  const [userId, setUserId] = useState('demo-user');
-  const [profile, setProfile] = useState<KycProfile | null>(null),
-  const [error, setError] = useState('');
-  async function load() {
-    try {
-      const res = null;
-=======
+
   const [userId, setUserId] = useState('demo-user')
   const [profile, setProfile] = useState<KycProfile | null>(null)
   const [error, setError] = useState('')
@@ -32,7 +23,7 @@ export default function IdentitySettingsPage() {
     load()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

@@ -3,9 +3,7 @@ import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
 export function ApiErrorCodes() {
-<<<<<<< HEAD
-  const errorExample = null;
-=======
+
   const errorExample = `{
   "error": "validation_error";
   "message": "The request was invalid";
@@ -229,4 +227,4 @@ export function ApiErrorCodes() {
   )
 }
 export default ApiErrorCodes;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

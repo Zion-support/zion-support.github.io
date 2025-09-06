@@ -1,12 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { moduleTitle, moduleContent } = req.body || {},
-  const apiKey = null;
-      return res.status(200).json(json)
-=======
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -98,7 +92,7 @@ export default async function handler(
     try {
       const json = JSON.parse(text);
       return res.status(200).json(json);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     } catch {
       return fallback();
     }

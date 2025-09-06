@@ -8,15 +8,7 @@ interface ProfileContactProps {
   email?: string;
   profileName: string;
   profileType: 'service' | 'talent'
-<<<<<<< HEAD
-}
 
-export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
-  const [message, setMessage] = useState("");
-  const [subject, setSubject] = useState("");
-  const [isSending, setIsSending] = useState(false);
-  const handleSendMessage = null;
-=======
 export function ProfileContact({
   email
   profileName
@@ -38,7 +30,7 @@ export function ProfileContact({
       })
     }, 1000)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
       <h3 className='text-xl font-bold text-white mb-4 flex items-center'>

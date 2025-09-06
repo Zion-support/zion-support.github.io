@@ -1,8 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-export interface Revolutionary2025ITService {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+
   id: string;
   name: string;
   tagline: string;
@@ -32,13 +30,10 @@ export interface Revolutionary2025ITService {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-    website: string
-  },
-=======
+
     website: string;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -49,15 +44,7 @@ export interface Revolutionary2025ITService {
 export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
   // 🔒 Next-Generation Cybersecurity Services
   {
-<<<<<<< HEAD
-    id: 'quantum-cybersecurity-platform';
-    name: 'Quantum Cybersecurity Platform';
-    tagline: 'Unhackable Security with Quantum Encryption & AI Threat Detection';
-    price: '$899';
-    period: '/month';
-    description: 'Revolutionary cybersecurity platform that combines quantum encryption, AI threat detection, and zero-trust architecture to provide unhackable security for enterprises and governments.',
-    features: [
-=======
+
     id: 'quantum-cybersecurity-platform'
     name: 'Quantum Cybersecurity Platform'
     tagline:
@@ -113,7 +100,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     roi: 'Enterprises see 4000%+ ROI through unhackable security and reduced breach risks.'
     competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne']
     marketSize: '$200B cybersecurity market',    features: [
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration'
     ];
     popular: true;
@@ -121,13 +108,10 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     color: 'from-red-600 to-pink-700';
     textColor: 'text-red-400';
     link: 'https://ziontechgroup.com/quantum-cybersecurity-platform';
-<<<<<<< HEAD
-    marketPosition: 'Most advanced cybersecurity platform. Traditional security solutions are vulnerable to quantum attacks and lack AI integration.';
-    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors',
-=======
+
     marketPosition: 'Most advanced cybersecurity platform. Traditional security solutions are vulnerable to quantum attacks and lack AI integration.'
     targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '8 hours';
     category: 'Cybersecurity & Quantum Security';
@@ -142,19 +126,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional quantum cybersecurity platform with quantum encryption, AI threat detection, and zero-trust architecture.',
-    launchDate: '2025-03-05';
-    customers: 180;
-    rating: 4.9;
-    reviews: 145
-  },
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -165,22 +137,17 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9
     reviews: 145
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // ☁️ Quantum Cloud Infrastructure Services
   {
     id: 'quantum-cloud-infrastructure';
     name: 'Quantum Cloud Infrastructure Platform';
-<<<<<<< HEAD
-    tagline: 'Quantum-Enhanced Cloud Computing with Unlimited Processing Power';
-    price: '$1,199',
-    period: '/month';
-    description: 'Revolutionary cloud infrastructure platform that integrates quantum computing with traditional cloud services, providing unlimited processing power and quantum-enhanced applications.',
-=======
+
     tagline: 'Quantum-Enhanced Cloud Computing with Unlimited Processing Power'
     price: '$1,199';
     period: '/month'
     description: 'Revolutionary cloud infrastructure platform that integrates quantum computing with traditional cloud services, providing unlimited processing power and quantum-enhanced applications.';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: [
       'Quantum computing integrationHybrid quantum-classical workloadsQuantum application developmentQuantum database optimizationQuantum machine learningQuantum simulation servicesQuantum API gatewayQuantum security services'
     ];
@@ -189,13 +156,10 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     color: 'from-blue-600 to-cyan-700';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/quantum-cloud-infrastructure';
-<<<<<<< HEAD
-    marketPosition: 'First quantum-enhanced cloud platform. Traditional cloud providers lack quantum computing integration.';
-    targetAudience: 'Enterprises, Research institutions, AI companies, Financial institutions, Healthcare organizations',
-=======
+
     marketPosition: 'First quantum-enhanced cloud platform. Traditional cloud providers lack quantum computing integration.'
     targetAudience: 'Enterprises, Research institutions, AI companies, Financial institutions, Healthcare organizations';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '10 hours';
     category: 'Quantum Cloud & Infrastructure';
@@ -210,19 +174,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional quantum cloud platform with quantum computing integration, hybrid workloads, and quantum application development.',
-    launchDate: '2025-03-10';
-    customers: 95;
-    rating: 4.8;
-    reviews: 78
-  },
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -233,20 +185,17 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.8
     reviews: 78
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // 🚀 Autonomous DevOps & Infrastructure Services
   {
     id: 'autonomous-devops-platform';
     name: 'Autonomous DevOps & Infrastructure Platform';
     tagline: 'Self-Healing Infrastructure with Zero Human Intervention';
     price: '$699';
-<<<<<<< HEAD
-    period: '/month';
-    description: 'Revolutionary DevOps platform that autonomously manages infrastructure, automatically detects and resolves issues, and continuously optimizes performance without human intervention.',
-=======
+
     period: '/month'
     description: 'Revolutionary DevOps platform that autonomously manages infrastructure, automatically detects and resolves issues, and continuously optimizes performance without human intervention.';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: [
       'Self-healing infrastructureAI-powered incident responseAutomated scalingPredictive maintenanceZero-downtime deploymentsPerformance optimizationSecurity automationCompliance management'
     ];
@@ -255,13 +204,10 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     color: 'from-purple-600 to-indigo-700';
     textColor: 'text-purple-400';
     link: 'https://ziontechgroup.com/autonomous-devops-platform';
-<<<<<<< HEAD
-    marketPosition: 'Most autonomous DevOps platform. Traditional DevOps requires constant human intervention and manual management.';
-    targetAudience: 'Enterprises, DevOps teams, Cloud-native companies, SaaS companies, IT operations',
-=======
+
     marketPosition: 'Most autonomous DevOps platform. Traditional DevOps requires constant human intervention and manual management.'
     targetAudience: 'Enterprises, DevOps teams, Cloud-native companies, SaaS companies, IT operations';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '6 hours';
     category: 'Autonomous DevOps & Infrastructure';
@@ -276,19 +222,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional autonomous DevOps platform with self-healing infrastructure, AI incident response, and automated operations.',
-    launchDate: '2025-03-15';
-    customers: 250;
-    rating: 4.9;
-    reviews: 198
-  },
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -299,20 +233,17 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9
     reviews: 198
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // 🧠 AI-Powered Data Management Services
   {
     id: 'ai-data-management-platform';
     name: 'AI-Powered Data Management Platform';
     tagline: 'Intelligent Data Management with 100% Data Quality & Zero Loss';
     price: '$599';
-<<<<<<< HEAD
-    period: '/month';
-    description: 'Revolutionary data management platform that uses AI to ensure 100% data quality, zero data loss, and intelligent data governance across all enterprise systems.',
-=======
+
     period: '/month'
     description: 'Revolutionary data management platform that uses AI to ensure 100% data quality, zero data loss, and intelligent data governance across all enterprise systems.';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: [
       '100% data quality assuranceZero data loss protectionAI-powered data governanceAutomated data cleaningIntelligent data classificationReal-time data validationData lineage trackingCompliance automation'
     ];
@@ -321,13 +252,10 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     color: 'from-green-600 to-emerald-700';
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/ai-data-management-platform';
-<<<<<<< HEAD
-    marketPosition: 'Most intelligent data management platform. Traditional data management has 15-20% data quality issues and data loss.';
-    targetAudience: 'Enterprises, Data teams, Analytics companies, Financial institutions, Healthcare organizations',
-=======
+
     marketPosition: 'Most intelligent data management platform. Traditional data management has 15-20% data quality issues and data loss.'
     targetAudience: 'Enterprises, Data teams, Analytics companies, Financial institutions, Healthcare organizations';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '8 hours';
     category: 'AI Data Management & Governance';
@@ -342,19 +270,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional AI data management platform with data quality assurance, zero data loss, and intelligent governance.',
-    launchDate: '2025-03-20';
-    customers: 180;
-    rating: 4.8;
-    reviews: 145
-  },
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -365,20 +281,17 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.8
     reviews: 145
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // 🌐 Edge Computing & IoT Orchestration Services
   {
     id: 'edge-computing-orchestrator';
     name: 'Edge Computing & IoT Orchestrator';
     tagline: 'Intelligent Edge Computing with Zero Latency & Unlimited Scale';
     price: '$499';
-<<<<<<< HEAD
-    period: '/month';
-    description: 'Revolutionary edge computing platform that orchestrates distributed computing resources, IoT devices, and edge applications with zero latency and unlimited scale.',
-=======
+
     period: '/month'
     description: 'Revolutionary edge computing platform that orchestrates distributed computing resources, IoT devices, and edge applications with zero latency and unlimited scale.';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: [
       'Zero latency edge computingUnlimited IoT device scalingIntelligent edge orchestrationReal-time edge analyticsEdge AI deploymentAutomatic edge optimizationEdge security managementMulti-cloud edge integration'
     ];
@@ -387,13 +300,10 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     color: 'from-orange-600 to-red-700';
     textColor: 'text-orange-400';
     link: 'https://ziontechgroup.com/edge-computing-orchestrator';
-<<<<<<< HEAD
-    marketPosition: 'Most advanced edge computing platform. Traditional edge solutions have latency issues and limited scalability.';
-    targetAudience: 'IoT companies, Edge computing providers, Manufacturing companies, Smart cities, Transportation companies',
-=======
+
     marketPosition: 'Most advanced edge computing platform. Traditional edge solutions have latency issues and limited scalability.'
     targetAudience: 'IoT companies, Edge computing providers, Manufacturing companies, Smart cities, Transportation companies';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '8 hours';
     category: 'Edge Computing & IoT Orchestration';
@@ -408,19 +318,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional edge computing platform with zero latency, unlimited IoT scaling, and intelligent edge orchestration.',
-    launchDate: '2025-03-25';
-    customers: 120;
-    rating: 4.9;
-    reviews: 95
-  },
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -431,20 +329,17 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9
     reviews: 95
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // 🔐 Blockchain & Web3 Infrastructure Services
   {
     id: 'blockchain-web3-infrastructure';
     name: 'Blockchain & Web3 Infrastructure Platform';
     tagline: 'Enterprise Blockchain with Zero Gas Fees & Infinite Scalability';
     price: '$799';
-<<<<<<< HEAD
-    period: '/month';
-    description: 'Revolutionary blockchain infrastructure platform that provides enterprise-grade blockchain solutions with zero gas fees, infinite scalability, and seamless Web3 integration.',
-=======
+
     period: '/month'
     description: 'Revolutionary blockchain infrastructure platform that provides enterprise-grade blockchain solutions with zero gas fees, infinite scalability, and seamless Web3 integration.';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: [
       'Zero gas feesInfinite scalabilityEnterprise blockchainWeb3 integrationSmart contract automationDeFi infrastructureNFT marketplaceCross-chain interoperability'
     ];
@@ -453,13 +348,10 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     color: 'from-yellow-600 to-orange-700';
     textColor: 'text-yellow-400';
     link: 'https://ziontechgroup.com/blockchain-web3-infrastructure';
-<<<<<<< HEAD
-    marketPosition: 'Most advanced blockchain platform. Traditional blockchain has high gas fees and scalability limitations.';
-    targetAudience: 'Enterprises, DeFi companies, NFT platforms, Web3 startups, Financial institutions',
-=======
+
     marketPosition: 'Most advanced blockchain platform. Traditional blockchain has high gas fees and scalability limitations.'
     targetAudience: 'Enterprises, DeFi companies, NFT platforms, Web3 startups, Financial institutions';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '10 hours';
     category: 'Blockchain & Web3 Infrastructure';
@@ -474,19 +366,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional blockchain platform with zero gas fees, infinite scalability, and enterprise Web3 integration.',
-    launchDate: '2025-04-01';
-    customers: 85;
-    rating: 4.8;
-    reviews: 67
-  },
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -497,20 +377,17 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.8
     reviews: 67
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // 🎯 API Management & Integration Services
   {
     id: 'api-management-integration';
     name: 'API Management & Integration Platform';
     tagline: 'Intelligent API Management with Zero Downtime & Auto-Scaling';
     price: '$399';
-<<<<<<< HEAD
-    period: '/month';
-    description: 'Revolutionary API management platform that provides intelligent API governance, zero downtime, auto-scaling, and seamless integration across all enterprise systems.',
-=======
+
     period: '/month'
     description: 'Revolutionary API management platform that provides intelligent API governance, zero downtime, auto-scaling, and seamless integration across all enterprise systems.';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: [
       'Zero downtime API managementAuto-scaling APIsIntelligent API governanceReal-time monitoringAPI security automationIntegration orchestrationAPI analyticsDeveloper portal'
     ];
@@ -519,13 +396,10 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     color: 'from-indigo-600 to-purple-700';
     textColor: 'text-indigo-400';
     link: 'https://ziontechgroup.com/api-management-integration';
-<<<<<<< HEAD
-    marketPosition: 'Most intelligent API management platform. Traditional API management has downtime issues and limited scalability.';
-    targetAudience: 'Enterprises, API providers, Integration companies, SaaS companies, Developer teams',
-=======
+
     marketPosition: 'Most intelligent API management platform. Traditional API management has downtime issues and limited scalability.'
     targetAudience: 'Enterprises, API providers, Integration companies, SaaS companies, Developer teams';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '4 hours';
     category: 'API Management & Integration';
@@ -540,19 +414,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional API management platform with zero downtime, auto-scaling, and intelligent API governance.',
-    launchDate: '2025-04-05';
-    customers: 220;
-    rating: 4.8;
-    reviews: 178
-  },
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -563,20 +425,17 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.8
     reviews: 178
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // 📊 Business Intelligence & Analytics Services
   {
     id: 'business-intelligence-analytics';
     name: 'Business Intelligence & Analytics Platform';
     tagline: 'AI-Powered Analytics with 100% Accuracy & Real-Time Insights';
     price: '$699';
-<<<<<<< HEAD
-    period: '/month';
-    description: 'Revolutionary business intelligence platform that provides AI-powered analytics with 100% accuracy, real-time insights, and predictive modeling for data-driven decision making.',
-=======
+
     period: '/month'
     description: 'Revolutionary business intelligence platform that provides AI-powered analytics with 100% accuracy, real-time insights, and predictive modeling for data-driven decision making.';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: [
       '100% analytics accuracyReal-time insightsAI-powered predictionsAutomated reportingNatural language queriesAdvanced visualizationsData storytellingCollaborative analytics'
     ];
@@ -585,13 +444,10 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     color: 'from-teal-600 to-cyan-700';
     textColor: 'text-teal-400';
     link: 'https://ziontechgroup.com/business-intelligence-analytics';
-<<<<<<< HEAD
-    marketPosition: 'Most accurate analytics platform. Traditional BI tools have accuracy issues and limited real-time capabilities.';
-    targetAudience: 'Enterprises, Analytics teams, Business users, Data scientists, Executives',
-=======
+
     marketPosition: 'Most accurate analytics platform. Traditional BI tools have accuracy issues and limited real-time capabilities.'
     targetAudience: 'Enterprises, Analytics teams, Business users, Data scientists, Executives';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '6 hours';
     category: 'Business Intelligence & Analytics';
@@ -606,19 +462,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional BI platform with 100% analytics accuracy, real-time insights, and AI-powered predictions.',
-    launchDate: '2025-04-10';
-    customers: 280;
-    rating: 4.9;
-    reviews: 234
-  },
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -629,22 +473,17 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9
     reviews: 234
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // 🚀 Digital Transformation & Innovation Services
   {
     id: 'digital-transformation-innovation';
     name: 'Digital Transformation & Innovation Platform';
-<<<<<<< HEAD
-    tagline: 'Complete Digital Transformation with AI-Powered Innovation';
-    price: '$1,299',
-    period: '/month';
-    description: 'Revolutionary digital transformation platform that provides complete enterprise transformation with AI-powered innovation, process automation, and digital workforce enablement.',
-=======
+
     tagline: 'Complete Digital Transformation with AI-Powered Innovation'
     price: '$1,299';
     period: '/month'
     description: 'Revolutionary digital transformation platform that provides complete enterprise transformation with AI-powered innovation, process automation, and digital workforce enablement.';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: [
       'Complete digital transformationAI-powered innovationProcess automationDigital workforceChange managementInnovation labsDigital strategyTransformation roadmap'
     ];
@@ -653,13 +492,10 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     color: 'from-violet-600 to-purple-700';
     textColor: 'text-violet-400';
     link: 'https://ziontechgroup.com/digital-transformation-innovation';
-<<<<<<< HEAD
-    marketPosition: 'Most comprehensive digital transformation platform. Traditional transformation approaches lack AI integration and comprehensive coverage.';
-    targetAudience: 'Enterprises, Government agencies, Non-profits, Educational institutions, Healthcare organizations',
-=======
+
     marketPosition: 'Most comprehensive digital transformation platform. Traditional transformation approaches lack AI integration and comprehensive coverage.'
     targetAudience: 'Enterprises, Government agencies, Non-profits, Educational institutions, Healthcare organizations';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '12 hours';
     category: 'Digital Transformation & Innovation';
@@ -674,21 +510,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional digital transformation platform with AI-powered innovation, process automation, and complete transformation capabilities.',
-    launchDate: '2025-04-15';
-    customers: 65;
-    rating: 4.9;
-    reviews: 52
-  }
-],
 
-export default revolutionary2025ITServices;
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -1287,4 +1109,4 @@ export default revolutionary2025ITServices;
   }
 ];
 export default revolutionary2025ITServices;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

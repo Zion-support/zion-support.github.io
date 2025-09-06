@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Brain, Atom, Target, ArrowRight, CheckCircle, Star;
-  Phone, Mail, MapPin
- } from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-import { aiAutonomousEcosystemServices2029  } from '../data/2029-ai-autonomous-ecosystem';
-import { emergingTechBreakthroughServices2029  } from '../data/2029-emerging-tech-breakthroughs';
-import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
-const contactInfo = null;
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -81,7 +67,7 @@ export default function InnovativeServicesShowcase2029() {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
                 Experience the future of technology with our revolutionary AI autonomous ecosystems
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">

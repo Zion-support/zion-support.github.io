@@ -17,14 +17,9 @@ export default tseslint.config(
     rules: {
       ...reactHooks.configs.recommended.rules
       "react-refresh/only-export-components": [
-<<<<<<< HEAD
-        "warn",
-        { allowConstantExport: true }];
-      "@typescript-eslint/no-unused-vars": "off"}}
-);
-=======
+
         "warn"
         { allowConstantExport: true }]
       "@typescript-eslint/no-unused-vars": "off"}}
 )
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

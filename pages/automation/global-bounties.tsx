@@ -1,11 +1,9 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore - JSON import import data from '../../data/global-bounties.json';
 export default function GlobalBountiesPage() {
-<<<<<<< HEAD
-  const items: any[] = (data?.items || []).slice(0, 100);
-=======
+
   const items: any[] = (data?.items |[]).slice(0, 100)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">

@@ -2,13 +2,7 @@ import { useRouter  } from 'next/router';
 import useSWR from 'swr',
 import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-import { useCurrentUser } from '../../utils/auth';
-const fetcher = null;
-    mutate()
-  }
 
-=======
 import {useCurrentUser} from '../../utils/auth';
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function DisputeDetailPage() {
@@ -39,7 +33,7 @@ export default function DisputeDetailPage() {
     });
     setResolutionSummary('');
     mutate();  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <EnhancedLayout>
       {!dispute ? (

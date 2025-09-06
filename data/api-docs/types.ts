@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export type HttpMethod = any;
-=======
+
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 export interface CodeSample {
   language: 'curl' | 'javascript' | 'python';
@@ -62,6 +60,6 @@ export interface EndpointSpec {
   params?: Record<string, string>;
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   lastUpdatedIso: string
 }

@@ -1,15 +1,6 @@
 import React from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin  } from 'lucide-react';
-import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030',
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030',
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
-import { innovative2030Services } from '../data/2030-innovative-services';
-export default function Revolutionary2030ServicesPage() {
-  const contactInfo = null;
-=======
+
 import { motion } from 'framer-motion';
 import {
   ArrowRight
@@ -131,7 +122,7 @@ export default function Revolutionary2030ServicesPage() {
                 "postalCode": "19709";
                 "addressCountry": "US"
               }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               "sameAs": [
                 "https://github.com/Zion-Holdings"
               ]

@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-import React from "react",
-import { Star } from "lucide-react";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-const testimonials = null;
-=======
+
 import React from "react";
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
@@ -73,4 +68,4 @@ export const AppTestimonials: React.FC = () => {
     </section>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

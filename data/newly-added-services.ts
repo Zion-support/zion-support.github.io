@@ -1,7 +1,5 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-<<<<<<< HEAD
-const contact = null;
-=======
+
 const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -3571,4 +3569,4 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 reviews: 2
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

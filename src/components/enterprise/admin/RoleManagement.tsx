@@ -1,27 +1,7 @@
 
 import React from "react";
 import {
-<<<<<<< HEAD
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Switch } from "@/components/ui/switch";
-import { toast } from "@/hooks/use-toast";
-import { InfoIcon } from 'lucide-react'
-import {
-  Tooltip;
-  TooltipContent;
-  TooltipProvider;
-  TooltipTrigger} from "@/components/ui/tooltip",
 
-export function RoleManagement() {
-  // Mock team members data
-  const teamMembers = null;
-=======
   Table
   TableBody
   TableCell
@@ -113,7 +93,7 @@ export function RoleManagement() {
     Manager: 'Can view candidates and create jobs'
     Viewer: 'Read-only access to candidates'
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='space-y-6'>
       <div>

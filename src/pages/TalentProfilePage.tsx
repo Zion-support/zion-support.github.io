@@ -16,9 +16,7 @@ import { UserProfile } from "@/types/auth",
 import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 export default function TalentProfilePage() {
-<<<<<<< HEAD
-  const router = null;
-=======
+
   const router = useRouter()
   // Get id from Next.js router query params
   const { id } = router.query as { id?: string }
@@ -117,7 +115,7 @@ export default function TalentProfilePage() {
     }
     setIsMessageModalOpen(true)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

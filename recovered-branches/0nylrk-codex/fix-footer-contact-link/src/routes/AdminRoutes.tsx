@@ -12,9 +12,7 @@ import SupportRequests from "@/pages/admin/SupportRequests",
 import FraudDetection from "@/pages/admin/FraudDetection",
 import TokenManager from "@/pages/admin/TokenManager";
 import IntegrationsPage from "@/pages/admin/IntegrationsPage";
-<<<<<<< HEAD
-const AdminRoutes = null;
-=======
+
 const AdminRoutes = () => {
   return (
     <Routes>
@@ -94,4 +92,4 @@ const AdminRoutes = () => {
   )
 }
 export default AdminRoutes;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

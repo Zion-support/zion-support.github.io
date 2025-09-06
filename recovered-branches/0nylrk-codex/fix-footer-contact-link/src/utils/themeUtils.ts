@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
-export type ThemePreset = any;
-=======
+
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 export interface ThemeColors {
   primaryColor: string;
@@ -67,6 +65,6 @@ export function applyThemeColors(colors: ThemeColors) {
   root.style.setProperty('--card-background', colors.cardBackground);
   // Set background and text colors on body
   document.body.style.backgroundColor = colors.backgroundColor;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   document.body.style.color = colors.textColor
 }

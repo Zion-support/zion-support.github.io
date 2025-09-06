@@ -1,28 +1,5 @@
 
-<<<<<<< HEAD
-import React from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import { 
-  ArrowRight;
-  Users;
-  Zap;
-  Settings;
-  Search;
-  MessageSquare;
-  Smartphone;
-  Calendar;
-  BookOpen;
-  Code;
-  Building;
-  Clock
-} from "lucide-react",
 
-export function FeatureCTAs() {
-  const features = null;
-=======
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -113,7 +90,7 @@ export function FeatureCTAs() {
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section className="py-16 bg-gradient-to-b from-background to-background/90">
       <div className="container mx-auto px-4">

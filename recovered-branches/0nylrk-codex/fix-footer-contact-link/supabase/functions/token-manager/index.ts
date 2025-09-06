@@ -1,15 +1,5 @@
 
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0";
-interface TokenRequest {
-  userId: string;
-  amount: number;
-  reason?: string
-}
 
-const supabaseUrl = null;
-=======
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.0";
 interface TokenRequest {
@@ -69,6 +59,6 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
     transaction_type: type
     reason});
   if (txError) return new Response(JSON.stringify({ error: txError.message }), { status: 500 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 })
 }

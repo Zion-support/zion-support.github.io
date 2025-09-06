@@ -12,14 +12,7 @@ import { ForumPost } from "@/types/community";
 // Mock data for featured posts
 const featuredPosts: ForumPost[] = [
   {
-<<<<<<< HEAD
-    id: "1";
-    title: "Best practices for AI model fine-tuning";
-    content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...";
-    authorId: "user1";
-    authorName: "Alex Johnson";
-    authorAvatar: "https://i.pravatar.cc/150?img;
-=======
+
     id: "1"
     title: "Best practices for AI model fine-tuning"
     content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me..."
@@ -104,7 +97,7 @@ const recentPosts: ForumPost[] = [
 export default function CommunityPage() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("categories");
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <AppLayout>
       <SEO

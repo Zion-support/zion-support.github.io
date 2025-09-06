@@ -7,12 +7,7 @@ import { toast } from '@/hooks/use-toast';
 export function usePortfolio() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
-  const [projects, setProjects] = useState<PortfolioProject[]>([]),
-  
-  const fetchProjects = null;
-=======
+
   const [error, setError] = useState<string | null>(null);
   const [projects, setProjects] = useState<PortfolioProject[]>([]);
   const fetchProjects = useCallback(async () => {
@@ -162,7 +157,7 @@ export function usePortfolio() {
     fetchProjects;
     addProject;
     updateProject;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     deleteProject
   }
 }

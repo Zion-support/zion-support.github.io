@@ -4,9 +4,7 @@ import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { MobileProjectView } from "../components/projects/MobileProjectView";
 // Mock data
-<<<<<<< HEAD
-const projectData = null;
-=======
+
 const projectData = {
   id: "project-123"
   title: "Website Redesign"
@@ -47,7 +45,7 @@ const milestonesData = [
     amount: "$5,000"
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function MobileProjects() {
   return (
     <div className="min-h-screen">

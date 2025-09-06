@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
 
-const SAMPLE_QUERIES = null;
-  for (const s of SAMPLE_QUERIES) {
-    if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
-  }
-  for (const s of SKILLS) {
-    if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
   "React developers under $50/hr"
@@ -25,7 +16,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") {
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   const { q = "" } = req.query;
   const query = String(q).toLowerCase();

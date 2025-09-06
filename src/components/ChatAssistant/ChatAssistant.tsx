@@ -2,26 +2,7 @@
   const handleSendMessage = async (messageContent: string) => {
     if (!messageContent.trim()) return
 import React, {
-<<<<<<< HEAD
-  useState;
-  useEffect;
-  useRef;
-  ReactNode;
-  useContext} from 'react',
-import { AuthContext  } from '../../context/auth/AuthContext';
-import { useDebounce  } from '../../hooks/useDebounce';
-import { useLocalStorage  } from '../../hooks/useLocalStorage';
-import { ChatMessage  } from './ChatMessage';
-import { ChatInput  } from './ChatInput';
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import { X } from 'lucide-react'
-export interface Message {
-  id: string;
-  role: 'user' | 'assistant';
-  message: string;
-  timestamp: Date;
-=======
+
   useState
   useEffect
   useRef
@@ -40,24 +21,11 @@ export interface Message {
   role: 'user' | 'assistant'
   message: string
   timestamp: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   read?: boolean
 }
 export interface ChatAssistantProps {
-<<<<<<< HEAD
-  isOpen: boolean;
-  onClose: () => void;
-  recipient: {
-    id: string;
-    name: string;
-    avatarUrl?: string;
-    role?: string
-  },
-  conversationId?: string;
-  initialMessages?: Message[],
-  onSendMessage: (message: string, conversationId?: string) => Promise<void>,
-  contextHeader?: ReactNode;
-=======
+
   isOpen: boolean
   onClose: () => void
   recipient: {
@@ -70,18 +38,12 @@ export interface ChatAssistantProps {
   initialMessages?: Message[]
   onSendMessage: (message: string, conversationId?: string,) => Promise<void>
   contextHeader?: ReactNode
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   /** Optional canned questions shown when the chat is empty */
   starterQuestions?: string[]
 }
 export function ChatAssistant({
-<<<<<<< HEAD
-  isOpen;
-  onClose;
-  recipient;
-  conversationId;
-  initialMessages;
-=======
+
   isOpen
   onClose
   recipient
@@ -208,7 +170,7 @@ export function ChatAssistant({
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose])
   if (!isOpen) return null
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"

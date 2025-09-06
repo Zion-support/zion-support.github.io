@@ -2,9 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
 import { getGitStatus, requireRoles } from "../../../utils/devAccess";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  const identity = null;
-=======
+
   const identity = requireRoles(req, res, ["admin", "maintainer"])
   if (!identity) return
   if (req.method === "GET") {
@@ -24,6 +22,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
   res.setHeader("Allow", "GET, POST")
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   res.status(405).end("Method Not Allowed")
 }

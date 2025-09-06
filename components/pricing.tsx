@@ -2,9 +2,7 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Check, Star, Users, TrendingUp, DollarSign, Clock;
-=======
+
 import {
   Check
   Star
@@ -28,7 +26,7 @@ import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturi
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
   Check, Star, Users, TrendingUp, DollarSign, Clock
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Shield, Zap, Rocket, Brain, Atom, Globe, Target;
   ArrowRight, Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -45,9 +43,7 @@ export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All');
   // Combine all services
-<<<<<<< HEAD
-  const allServices = null;
-=======
+
   const allServices = [
     ...enhancedRealMicroSaasServices
     ...innovativeAIServices2029
@@ -220,7 +216,7 @@ export default function PricingPage() {
   const filteredServices = selectedCategory === 'All'
     ? microSaasServices
     : microSaasServices.filter(service => service.category === selectedCategory);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   const yearlyDiscount = 0.2, // 20% discount for yearly billing
   return (
     <UltraFuturisticBackground2029>

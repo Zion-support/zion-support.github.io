@@ -9,13 +9,7 @@ import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
-<<<<<<< HEAD
-  const [activeProjects, setActiveProjects] = useState<Project[]>([]),
-  
-  useEffect(() => {
-    if (projects && !isLoading) {
-      const active = null;
-=======
+
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
   useEffect(() => {
     if (projects && !isLoading) {
@@ -25,7 +19,7 @@ export function ActiveProjectsCard() {
       setActiveProjects(active)
     }
   }, [projects, isLoading]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (isLoading) {
     return (
       <Card>

@@ -21,10 +21,7 @@ export default function APITestingSuitePage() {
   const [testResults, setTestResults] = useState(null);
   const [apiEndpoint, setApiEndpoint] = useState('');
   const [apiKey, setApiKey] = useState('');
-<<<<<<< HEAD
-  const features = null;
-            and security testing for REST, GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and secure.
-=======
+
   const features = [
     {
       icon: <Code className='w-8 h-8 text-white' />
@@ -260,7 +257,7 @@ export default function APITestingSuitePage() {
             suite. Functional, performance, and security testing for REST
             GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and
             secure.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           </p>
           {/* API Testing Form */}
           <div className='max-w-3xl mx-auto mb-8'>

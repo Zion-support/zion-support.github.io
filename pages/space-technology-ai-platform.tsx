@@ -9,18 +9,7 @@ import { Satellite, ArrowRight, CheckCircle, Star, TrendingUp;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
 export default function SpaceTechnologyAIPlatform() {
-<<<<<<< HEAD
-  const contactInfo = null;
-  return (
-    <UltraAdvancedFuturisticBackground 
-      intensity="extreme" 
-      colorScheme="neural-network"
-      particleCount={500}
-      animationSpeed={2.5}
-      enableHolographic={true}
-      enableQuantumEffects={true}
-      enableNeuralNetwork={true}
-=======
+
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -64,7 +53,7 @@ export default function SpaceTechnologyAIPlatform() {
     'Boeing'
     'Northrop Grumman'
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     >
       <div className='min-h-screen'>
         <Head>

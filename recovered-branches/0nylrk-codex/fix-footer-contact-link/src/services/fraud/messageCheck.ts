@@ -6,9 +6,7 @@ import { MessageAnalysisResult } from './types';
 /**
  * Check message for suspicious content
  */
-<<<<<<< HEAD
-export const checkMessage = null;
-=======
+
 export const checkMessage = (messageContent: string): MessageAnalysisResult => {
   const analysis = analyzeContent(messageContent);
   // Determine severity based on number and type of issues
@@ -24,4 +22,4 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
     severity
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,14 +1,7 @@
 import * as React from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { ChevronRight } from 'lucide-react'
-<<<<<<< HEAD
- 
-import { cn } from "@/lib/utils"
- 
-const Breadcrumb = null;
-  BreadcrumbEllipsis}
-;
-=======
+
 import { cn } from '@/lib/utils'
 const Breadcrumb = React.forwardRef<
   HTMLElement
@@ -133,4 +126,4 @@ export {
   BreadcrumbLink
   BreadcrumbSeparator
   BreadcrumbEllipsis}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

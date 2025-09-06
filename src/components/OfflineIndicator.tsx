@@ -1,9 +1,6 @@
 import { useState, useEffect  } from 'react';
 import { WifiOff, Wifi } from 'lucide-react'
-<<<<<<< HEAD
-import { Alert, AlertDescription } from '@/components/ui/alert';
-export const OfflineIndicator = null;
-=======
+
 import { Alert, AlertDescription } from '@/components/ui/alert'
 export const OfflineIndicator = () => {
   const [isOnline, setIsOnline] = useState(true)
@@ -53,4 +50,4 @@ export const OfflineIndicator = () => {
     </div>
   )
 } }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

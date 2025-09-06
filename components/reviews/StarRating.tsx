@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-type Props = any;
-=======
+
 > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>)
 })
 }</div>)
@@ -72,4 +69,4 @@ export default StarRating;              width={size}
   )
 }
 export default StarRating;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

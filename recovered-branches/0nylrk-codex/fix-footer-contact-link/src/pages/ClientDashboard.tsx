@@ -19,11 +19,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
-<<<<<<< HEAD
-  const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
-  const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
-  const isMobile = null;
-=======
+
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
@@ -38,7 +34,7 @@ function ClientDashboardContent() {
     setSelectedJobId(jobId)
     setSelectedJobTitle(jobTitle)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

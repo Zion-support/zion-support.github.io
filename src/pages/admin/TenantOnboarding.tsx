@@ -19,16 +19,7 @@ export default function TenantOnboarding() {
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-<<<<<<< HEAD
-    brand_name: "";
-    subdomain: "";
-    logo_url: "";
-    primary_color: "#9b87f5";
-    theme_preset: "light";
-    company_size: "";
-    industry: "";
-    custom_domain: "";
-=======
+
     brand_name: ""
     subdomain: ""
     logo_url: ""
@@ -37,7 +28,7 @@ export default function TenantOnboarding() {
     company_size: ""
     industry: ""
     custom_domain: ""
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     is_co_branded: true
   });
   // Check if user has admin role

@@ -9,21 +9,7 @@ interface Service {
   price: string;
   description: string;
   features: string[];
-<<<<<<< HEAD
-  link: string
-}
 
-interface UltraFuturisticServiceShowcase2029Props {
-  services: Service[];
-  title?: string;
-  subtitle?: string
-}
-
-export default function UltraFuturisticServiceShowcase2029({ 
-  services;
-  title;
-  subtitle = "Experience the future of technology with our revolutionary solutions" 
-=======
   link: string;
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[];
@@ -48,7 +34,7 @@ interface UltraFuturisticServiceShowcase2029Props {
 }
 export default function UltraFuturisticServiceShowcase2029({
   services, title = "2029 Cutting-Edge Services", subtitle = "Experience the future of technology with our revolutionary solutions"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }: UltraFuturisticServiceShowcase2029Props) {
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">

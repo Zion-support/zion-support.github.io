@@ -10,17 +10,12 @@ import { ContractPreview } from "./components/ContractPreview",
 import { TemplateManager } from "./templates/TemplateManager";
 import { SmartContractBuilder } from "./SmartContractBuilder";
 interface ContractBuilderProps {
-<<<<<<< HEAD
-  isOpen: boolean;
-  onClose: () => void;
-  talent: TalentProfile;
-  clientName: string;
-=======
+
   isOpen: boolean
   onClose: () => void
   talent: TalentProfile
   clientName: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onContractGenerated?: (contractContent: string) => void
 }
 export function ContractBuilder({
@@ -37,9 +32,7 @@ export function ContractBuilder({
   ),
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
-<<<<<<< HEAD
-  const handleLoadTemplate = null;
-=======
+
   const handleLoadTemplate = (templateData: ContractFormValues) => {
     setFormValues(templateData)
   }
@@ -56,7 +49,7 @@ export function ContractBuilder({
         isOpen={isOpen}
         onClose={() => {
           setShowSmartContractBuilder(false);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           onClose()
         }}
         talent={talent}

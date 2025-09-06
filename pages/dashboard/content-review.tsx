@@ -3,12 +3,7 @@ import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components/admin/ModerationModal';
-<<<<<<< HEAD
-const fetcher = null;
-    mutate()
-  }
 
-=======
 const fetcher = (url: string) => fetch(url).then(r => r.json())
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const cookies = (req.headers.cookie |'').split(';').reduce(
@@ -61,7 +56,7 @@ export default function ContentReviewPage() {
     );
     setSelected(null);
     mutate();  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <EnhancedLayout>
       <div className='max-w-7xl mx-auto'>

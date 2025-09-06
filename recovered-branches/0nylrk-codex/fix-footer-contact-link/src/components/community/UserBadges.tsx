@@ -5,10 +5,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 interface UserBadgesProps {
   badges: Badge[]
 }
-<<<<<<< HEAD
 
-const iconMap = null;
-=======
 const iconMap = {
   Trophy;
   Award;
@@ -51,4 +48,4 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
   )
 }
 export default UserBadges;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

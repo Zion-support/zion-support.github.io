@@ -5,9 +5,7 @@ interface SkillsSectionProps {
 }
 export function SkillsSection({ skills }: SkillsSectionProps) {
   // Group skills by category
-<<<<<<< HEAD
-  const skillsByCategory = null;
-=======
+
   const skillsByCategory = skills.reduce(
     (acc, skill) => {
       const category = skill.category |"Other";
@@ -20,7 +18,7 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
     {} as Record<string, Skill[]>
   );
   if (skills.length === 0) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Skills</h2>

@@ -5,9 +5,7 @@ import { AnalysisResult } from './types';
 /**
  * Analyzes text content for suspicious patterns
  */
-<<<<<<< HEAD
-export const analyzeContent = null;
-=======
+
 export const analyzeContent = (content: string): AnalysisResult => {
   const contentLower = content.toLowerCase();
   const reasons: string[] = []
@@ -40,4 +38,4 @@ export const analyzeContent = (content: string): AnalysisResult => {
     reasons
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

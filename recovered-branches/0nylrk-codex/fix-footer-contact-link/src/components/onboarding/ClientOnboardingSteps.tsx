@@ -4,11 +4,7 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
 import { PlusCircle, SendIcon, InboxIcon } from "lucide-react";
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function ClientOnboardingSteps() {
-<<<<<<< HEAD
-  const onboardingStatus = null;
-  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
-}
-=======
+
   const onboardingStatus = useOnboardingStatus();
   const steps: OnboardingStep[] = [
     {
@@ -35,4 +31,4 @@ export function ClientOnboardingSteps() {
   ];
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

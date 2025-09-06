@@ -5,9 +5,7 @@ import EnterpriseAdmin from "../pages/EnterpriseAdmin",
 import CompanyWorkspace from "../pages/CompanyWorkspace",
 import EnterpriseBilling from "../pages/EnterpriseBilling";
 import ZionHireAI from "../pages/ZionHireAI";
-<<<<<<< HEAD
-const EnterpriseRoutes = null;
-=======
+
 const EnterpriseRoutes = () => {
   return (
     <Routes>
@@ -24,4 +22,4 @@ const EnterpriseRoutes = () => {
   )
 }
 export default EnterpriseRoutes;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

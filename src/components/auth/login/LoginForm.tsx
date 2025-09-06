@@ -10,19 +10,7 @@ import { useAuth } from "@/context/auth/AuthProvider",
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
-<<<<<<< HEAD
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import Link from "next/link";
-import { Checkbox } from "@/components/ui/checkbox";
-// Form validation schema
-const loginSchema = null;
-=======
+
   Form
   FormControl
   FormField
@@ -133,7 +121,7 @@ export function LoginForm() {
       <form
         onSubmit={form.handleSubmit(onSubmit, errors => {
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           if (firstError) {
             form.setFocus(firstError)
           }        })}

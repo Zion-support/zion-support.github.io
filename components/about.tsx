@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-import Card from '../components/ui/Card',
-=======
+
 ];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>)
 }return ({
   /* Mission & Vision */
@@ -106,13 +101,11 @@ export default function AboutPage() {
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import Button from '../components/ui/Button';
 import { Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain } from 'lucide-react';
 export default function AboutPage() {
-<<<<<<< HEAD
-	const contactInfo = null;
-=======
+
   const values = [
     {
       icon: '🚀'
@@ -154,7 +147,7 @@ export default function AboutPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
       {/* Mission & Vision */}
     <>

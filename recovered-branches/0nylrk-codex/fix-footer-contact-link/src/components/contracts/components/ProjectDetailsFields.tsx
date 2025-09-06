@@ -2,20 +2,7 @@
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
-<<<<<<< HEAD
-import { 
-  FormField;
-  FormItem;
-  FormLabel;
-  FormControl;
-  FormDescription;
-  FormMessage 
-} from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Button } from "@/components/ui/button",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-=======
+
 import {
   FormField
   FormItem
@@ -32,7 +19,7 @@ import {
   PopoverContent
   PopoverTrigger
 } from "@/components/ui/popover";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {

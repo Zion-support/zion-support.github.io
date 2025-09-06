@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 
-import { useState } from 'react';
-import { DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuSeparator;
-  DropdownMenuTrigger 
- } from '@/components/ui/dropdown-menu';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle  } from '@/components/ui/dialog';
-=======
 import { useState } from 'react'
 import {import { useState } from 'react'
 import {
@@ -28,24 +16,14 @@ import { Input } from '@/components/ui/input'
   DialogHeader
   DialogTitle
 } from '@/components/ui/dialog'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react'
 import { Resume  } from '@/types/resume';
 import { useResume } from '@/hooks/useResume';
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void
-<<<<<<< HEAD
-}
 
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {
-  const { createResume, fetchResume } = useResume();
-  const [saveDialogOpen, setSaveDialogOpen] = useState(false);
-  const [newResumeTitle, setNewResumeTitle] = useState('');
-  const [existingResumes, setExistingResumes] = useState<Resume[]>([]),
-  const [isLoading, setIsLoading] = useState(false);
-  const handleCreateNewVersion = null;
-=======
 export function ResumeVersionSelector({
   currentResume
   onResumeChange
@@ -67,7 +45,7 @@ export function ResumeVersionSelector({
       setIsLoading(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='flex items-center gap-2'>
       <span className='text-sm text-muted-foreground'>Resume:</span>

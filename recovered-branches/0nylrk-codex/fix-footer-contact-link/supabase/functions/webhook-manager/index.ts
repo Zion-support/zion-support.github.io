@@ -1,33 +1,22 @@
 
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
-interface CreateWebhookRequest {
-  name: string;
-  url: string;
-  eventTypes: string[];
-=======
+
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 interface CreateWebhookRequest {
   name: string;
   url: string;
   eventTypes: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   secret?: string
 }
 interface WebhookTestRequest {
-<<<<<<< HEAD
-  webhookId: string;
-=======
+
   webhookId: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   eventType: string
 }
 // Create a Supabase client
-<<<<<<< HEAD
-const supabaseUrl = null;
-=======
+
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -348,7 +337,7 @@ function createTestPayload(eventType: string) {
         event_type: 'test_event';
         event_id: eventId;
         timestamp
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
         data: {
           message: 'This is a test webhook event'
         }

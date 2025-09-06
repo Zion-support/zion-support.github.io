@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
-import { Badge } from "@/components/ui/badge";
-=======
 import {
   Card
   CardContent
@@ -14,15 +8,11 @@ import {
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
 import { CountryPricing } from "@/data/onsiteServicePricing";
 interface CountryServiceCardProps {
-<<<<<<< HEAD
-  country: CountryPricing;
-  onSelect: (country: CountryPricing) => void;
-  onQuote?: (country: CountryPricing) => void;
-=======
+
   country: CountryPricing
   onSelect: (country: CountryPricing) => void
   onQuote?: (country: CountryPricing) => void
@@ -33,7 +23,7 @@ interface CountryServiceCardProps {
   country: CountryPricing
   onSelect: (country: CountryPricing,) => void
   onQuote?: (country: CountryPricing,) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isPopular?: boolean
 }
 export function CountryServiceCard({
@@ -43,20 +33,7 @@ export function CountryServiceCard({
   isPopular
 }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
-<<<<<<< HEAD
-  const getRegionEmoji = null;
-  return (
-    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
-      isPopular 
-        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" 
-        : "bg-zion-blue-dark border-zion-blue-light"
-    }`}>
-      <CardHeader className="pb-2">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
-            <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
-=======
+
   const getRegionEmoji = (countryName: string | undefined): string => {
     if (!countryName) return '🌐'
     const emojiMap: Record<string, string> = {
@@ -118,7 +95,7 @@ export function CountryServiceCard({
             <h3 className='text-lg font-semibold text-white truncate'>
               {country.country |'Unknown Country'}
             </h3>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           </div>
           {isPopular && (
             <Badge className='bg-zion-purple text-white border-none'>

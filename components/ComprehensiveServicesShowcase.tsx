@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink;
-=======
+
 import {
   Star
   Clock
@@ -28,7 +26,7 @@ import {
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import {
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
   Search, Filter, Grid, List, ArrowRight, Award, Target
  } from 'lucide-react';
@@ -42,9 +40,7 @@ export default function ComprehensiveServicesShowcase() {
   const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
 
   // Combine all services
-<<<<<<< HEAD
-  const allServices = null;
-=======
+
   const allServices = [
     ...comprehensiveMicroSaasServices
     ...specializedEmergingTechServices
@@ -216,7 +212,7 @@ export default function ComprehensiveServicesShowcase() {
   const formatPrice = (price: string) => {
     return price.replace('$', '').replace(, '')
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section className="py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <div className="max-w-7xl mx-auto">

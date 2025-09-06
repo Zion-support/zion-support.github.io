@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import { format  } from 'date-fns';
-import { Label } from "@/components/ui/label",
-import { Button } from "@/components/ui/button",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { Calendar } from "@/components/ui/calendar",
-=======
 import React from "react";
 import { format } from "date-fns";
 import { Label } from "@/components/ui/label";
@@ -17,7 +9,7 @@ import {
   PopoverTrigger
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
 interface DateFieldsProps {
@@ -33,9 +25,7 @@ export function DateFields({
   setEndDate
 }: DateFieldsProps) {
   return (
-<<<<<<< HEAD
-    <div className;
-=======
+
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
         <Label htmlFor="publishedDate">Published Date (Optional)</Label>
@@ -77,7 +67,7 @@ export function DateFields({
                 variant={"outline"}
                 className={cn(
                   "w-full md: w-[240px] pl-3 text-left font-normal"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   !endDate && "text-muted-foreground"
                 )}
               >

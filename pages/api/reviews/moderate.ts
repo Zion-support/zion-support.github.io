@@ -1,10 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { readReviews, writeReviews } from '[^']*';
 
-const ADMIN_KEY = null;
-    return res.status(200).json({ message: 'OK' })
-=======
 import {readReviews, writeReviews} from '../../../utils/dataStore';
 const ADMIN_KEY = process.env.ADMIN_KEY |'dev-admin-key';
 type Action = 'approve' | 'remove' | 'edit';
@@ -45,7 +40,7 @@ export default async function handler(
     }
     await writeReviews(reviews);
     return res.status(200).json({ message: 'OK' });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (error: any) {
     return res
       .status(500)

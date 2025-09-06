@@ -13,11 +13,9 @@ import { DisputeForm } from "./DisputeForm",
 import { useNavigate } from "react-router-dom";
 import { ShieldAlert } from "lucide-react";
 interface RaiseDisputeButtonProps {
-<<<<<<< HEAD
-  projectId: string;
-=======
+
   projectId: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   milestoneId?: string;
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
@@ -25,10 +23,7 @@ interface RaiseDisputeButtonProps {
 }
 export function RaiseDisputeButton({
   projectId;
-<<<<<<< HEAD
-  milestoneId;
-  variant;
-=======
+
   milestoneId
   variant = "outline"
   size;
@@ -40,7 +35,7 @@ export function RaiseDisputeButton({
     setIsDialogOpen(false)
     navigate(`/dashboard/disputes/${disputeId}`)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Button

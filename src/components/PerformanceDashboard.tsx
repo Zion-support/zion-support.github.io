@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
 
-=======
 import React, { useState } from 'react'
 import {
   Card
@@ -23,7 +16,7 @@ import { Button } from '@/components/ui/button'
   Shield
   Search
 } from 'lucide-react'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface PerformanceMetrics {
   buildSize: string;
   pageCount: number;
@@ -36,11 +29,7 @@ interface Improvement {
   status: 'completed' | 'in-progress' | 'planned';
   impact: 'high' | 'medium' | 'low';
   category: 'performance' | 'security' | 'ux' | 'build'
-<<<<<<< HEAD
-}
 
-const PerformanceDashboard: React.FC;
-=======
 const PerformanceDashboard: React.FC = () => {
   const [metrics] = useState<PerformanceMetrics>({
     buildSize: '959 MB'
@@ -273,4 +262,4 @@ const PerformanceDashboard: React.FC = () => {
 export default PerformanceDashboard
 export default PerformanceDashboard
 export default PerformanceDashboard
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

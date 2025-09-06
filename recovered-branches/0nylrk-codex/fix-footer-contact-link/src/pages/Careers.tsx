@@ -6,9 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AppLayout } from "@/layout/AppLayout";
 export default function Careers() {
   // Sample job listings
-<<<<<<< HEAD
-  const jobs = null;
-=======
+
   const jobs = {
     engineering: [
       {
@@ -151,7 +149,7 @@ export default function Careers() {
               </p>
               <p className="text-zion-slate-light text-lg">
                 If you're excited about shaping the future of AI and technology while working in a dynamic
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 remote-first environment with a mission-driven team, we'd love to meet you.
               </p>
             </div>

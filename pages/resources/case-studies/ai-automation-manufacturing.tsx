@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-import Link from 'next/link';
-export default function ResourceCaseStudyPage() {
-  const caseStudy = null;
-                    quality control, and production optimization. Each system was designed to work independently while 
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -61,7 +54,7 @@ export default function ResourceCaseStudyPage() {
                   <p className="text-white/90">
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance
                     quality control, and production optimization. Each system was designed to work independently while
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     sharing data for comprehensive insights.
                   </p>
                 </div>

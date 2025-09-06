@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
-export type ServiceType = any;
-=======
+
 export type ServiceType = "service" | "talent" | "equipment" | "";
 export type ServiceCategory = string;
 export type TimelineType = "fixed" | "flexible";
@@ -56,6 +54,6 @@ export interface QuoteRequest {
   viewed_at?: string;
   replied_at?: string;
   created_at: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   updated_at: string
 }

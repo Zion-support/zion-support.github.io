@@ -7,9 +7,7 @@ import { TrendingUp, TrendingDown, DollarSign, Target;
 import Link from 'next/link';
 export default function MarketPricing() {
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
-<<<<<<< HEAD
-  const markets = null;
-=======
+
   const markets = [
     { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> }
     { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> }
@@ -834,4 +832,4 @@ pricingAnalysis: {
 }
 }
 export default MarketPricing;export default MarketPricing;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

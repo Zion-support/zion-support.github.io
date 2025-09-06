@@ -4,9 +4,7 @@ import { useRouter  } from 'next/router';
 import Link from 'next/link';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
 import equipment from '@/data/equipment.json';
-<<<<<<< HEAD
-const EquipmentDetail: NextPage;
-=======
+
 const EquipmentDetail: NextPage = () => {
   const router = useRouter()
   const { slug } = router.query as { slug?: string }
@@ -95,4 +93,4 @@ const EquipmentDetail: NextPage = () => {
   )
 }
 export default EquipmentDetail;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

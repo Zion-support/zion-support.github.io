@@ -4,22 +4,7 @@ import './App.css',
 import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster";
-<<<<<<< HEAD
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import { AuthRoutes;
-  DashboardRoutes;
-  MarketplaceRoutes;
-  TalentRoutes;
-  AdminRoutes;
-  MobileAppRoutes;
-  ContentRoutes;
-  ErrorRoutes;
-  EnterpriseRoutes;
-  CommunityRoutes;
-  DeveloperRoutes
- } from './routes';
-const Home = null;
-=======
+
 import { Toaster, as, SonnerToaster } from "./components/ui/sonner";
 import {
   AuthRoutes
@@ -97,4 +82,4 @@ const App = () => {
   );
 }
 export default App;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

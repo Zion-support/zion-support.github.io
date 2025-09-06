@@ -2,10 +2,7 @@
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Checkbox } from "@/components/ui/checkbox";
 import { RegionFilterProps } from "@/types/filters";
-<<<<<<< HEAD
-const REGION_OPTIONS = null;
-export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {
-=======
+
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" }
   { id: "Europe", label: "Europe" }
@@ -21,7 +18,7 @@ export function RegionFilter({
   toggleSection
   isMobileFilterOpen
 }: RegionFilterProps) {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button

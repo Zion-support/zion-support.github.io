@@ -7,10 +7,7 @@ export default function CoachWidget() {
     if (!input.trim()) return;
     setLoading(true);
     try {
-<<<<<<< HEAD
-      const resp = null;
-      setReply(data.text || '')
-=======
+
       const resp = await fetch('/api/learn/coach', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
@@ -24,7 +21,7 @@ export default function CoachWidget() {
   return (      });
       const data = await resp.json();
       setReply(data.text |'')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     } finally {
       setLoading(false)
     }

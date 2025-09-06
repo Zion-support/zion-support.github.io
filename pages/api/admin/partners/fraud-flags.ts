@@ -1,13 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  try {
-    const code = req.query.code as string;
-    const supabase = getServerSupabase();
-    const { data: flags } = await supabase.from('fraud_flags').select().eq('partner_code', code);
-    return res.status(200).json({ flags });
-=======
+
   const code = (req.query.code as string)?.toLowerCase()
   if (!code) return res.status(400).json({ error: 'Missing code' })
   const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL |'').includes('placeholder') |(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key') === 'placeholder-key'
@@ -35,7 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     })
     return res.status(200).json({ flags })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
   }

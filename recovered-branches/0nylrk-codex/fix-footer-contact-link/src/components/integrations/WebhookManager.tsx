@@ -12,11 +12,9 @@ import { toast } from "sonner";
 export function WebhookManager() {
   const {
     webhooks;
-<<<<<<< HEAD
-    loading;
-=======
+
     loading
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     error;
     testResult;
     fetchWebhooks;
@@ -26,17 +24,12 @@ export function WebhookManager() {
     testWebhook
   } = useWebhooks();
   const [newWebhook, setNewWebhook] = useState({
-<<<<<<< HEAD
-    name: "";
-    url: "";
-    selectedEvent: "" as WebhookEventType;
-    eventTypes: [] as WebhookEventType[];
-=======
+
     name: ""
     url: ""
     selectedEvent: "" as WebhookEventType
     eventTypes: [] as WebhookEventType[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     secret: ""
   });
   const eventOptions: { value: WebhookEventType, label: string }[] = [
@@ -48,10 +41,7 @@ export function WebhookManager() {
   useEffect(() => {
     fetchWebhooks()
   }, []);
-<<<<<<< HEAD
-  
-  const handleAddEvent = null;
-=======
+
   const handleAddEvent = () => {
     if (!newWebhook.selectedEvent) return;
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
@@ -93,7 +83,7 @@ export function WebhookManager() {
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-8">
       <Card>

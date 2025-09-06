@@ -3,9 +3,7 @@ import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../../components/layout/EnhancedLayout',
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
-<<<<<<< HEAD
-const fetcher = null;
-=======
+
 const fetcher = (url: string) => fetch(url).then(r => r.json())
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const cookies = (req.headers.cookie |'').split(';').reduce(
@@ -34,7 +32,7 @@ export default function AdminDisputesDashboard() {
     const list = data?.disputes |[];
     if (statusFilter === 'All') return list;
     return list.filter((d: any) => d.status === statusFilter);  }, [data, statusFilter]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <EnhancedLayout>
       <div className='max-w-6xl mx-auto'>

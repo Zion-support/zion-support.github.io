@@ -3,12 +3,7 @@ import { BlogPost } from "@/types/blog";
 // Sample blog data - in a real app this would come from an API or CMS
 export const BLOG_POSTS: BlogPost[] = [
   {
-<<<<<<< HEAD
-    id: "ai-trends-2025";
-    title: "10 Emerging AI Trends to Watch in 2025";
-    slug: "ai-trends-2025";
-    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
-=======
+
     id: 'ai-trends-2025'
     title: '10 Emerging AI Trends to Watch in 2025'
     slug: 'ai-trends-2025'
@@ -17,7 +12,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "10 Emerging AI Trends to Watch in 2025";
     slug: "ai-trends-2025"
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
 <h2>1. Multimodal AI Systems</h2>
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
@@ -28,13 +23,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>4. Quantum AI</h2>
 <p>The convergence of quantum computing and AI is beginning to yield practical applications. While still in early stages, quantum-enhanced machine learning algorithms are demonstrating superior performance for specific optimization and pattern recognition problems.</p>
 <h2>5. AI for Climate Solutions</h2>
-<<<<<<< HEAD
-<p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`,
-    author: {
-      name: "Dr. Alicia Zhang";
-      title: "AI Research Director";
-      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto;
-=======
+
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`
       name: 'Dr. Alicia Zhang'
       title: 'AI Research Director'
@@ -229,4 +218,4 @@ export const BLOG_POSTS: BlogPost[] = [
   }
 ];
 }];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

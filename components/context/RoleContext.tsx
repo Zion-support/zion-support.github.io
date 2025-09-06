@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-export type UserRole = any;
-  return ctx
-}
-=======
+
 import React, {
   createContext
   useContext
@@ -60,4 +55,4 @@ const ctx = useContext(RoleContext);
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
   return ctx;  return ctx
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

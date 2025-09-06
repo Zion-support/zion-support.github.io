@@ -1,12 +1,6 @@
 import React, { useMemo, useState } from 'react',
 import Link from 'next/link';
-<<<<<<< HEAD
-import { getWhitepaperSections, OPERATOR_PROMPT  } from '../utils/whitepaper/zionWhitepaper';
-import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
-export default function WhitepaperBuilderPage() {
-  const [edition, setEdition] = useState<WhitepaperEdition>('full');
-  const sections = null;
-=======
+
 import {
   getWhitepaperSections
   OPERATOR_PROMPT;
@@ -41,7 +35,7 @@ export default function WhitepaperBuilderPage() {
         </select>
         <Link href={downloadHref} legacyBehavior>
           <a className='ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90'>            Download PDF  }, [edition]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col gap-2">

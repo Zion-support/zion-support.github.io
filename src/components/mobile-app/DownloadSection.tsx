@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { QrCodeIcon } from 'lucide-react'
-import { AppStoreButtons } from "./AppStoreButtons";
-import { logInfo } from '@/utils/productionLogger';
-export const DownloadSection: React.FC;
-=======
 }
 import React from "react"
 import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
@@ -50,4 +43,4 @@ export const DownloadSection: React.FC = () => {
   )
 }
 "
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

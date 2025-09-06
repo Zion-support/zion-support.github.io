@@ -9,11 +9,9 @@ export interface Message {
   read: boolean;
   sender_name?: string;
   sender_avatar?: string;
-<<<<<<< HEAD
-  attachment_url?: string;
-=======
+
   attachment_url?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   attachment_name?: string
 }
 // Define the shape of a conversation
@@ -23,21 +21,7 @@ export interface Conversation {
   other_user: {
     id: string;
     name: string;
-<<<<<<< HEAD
-    avatar_url?: string;
-    user_type?: string
-  },
-  name: string;
-  avatar_url?: string;
-  last_message?: {
-    content: string;
-    created_at: string
-  },
-  updated_at: string;
-  unread_count: number;
-  context_type?: 'job' | 'talent' | 'general';
-  context_id?: string;
-=======
+
     avatar_url?: string
     user_type?: string
   }
@@ -51,7 +35,7 @@ export interface Conversation {
   unread_count: number;
   context_type?: 'job' | 'talent' | 'general';
   context_id?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   context_data?: ConversationContextData
 }
 // Context data for creating a conversation
@@ -67,19 +51,13 @@ export interface MessagingContextType {
   unreadCount: number;
   activeConversation: Conversation | null;
   activeMessages: Message[];
-<<<<<<< HEAD
-  isLoading: boolean;
-  sendMessage: (conversationId: string, content: string) => Promise<void>;
-  createConversation: (
-    recipientId: string;
-    initialMessage: string;
-=======
+
   isLoading: boolean
   sendMessage: (conversationId: string, content: string) => Promise<void>
   createConversation: (
     recipientId: string
     initialMessage: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     contextType?: 'job' | 'talent' | 'general';
     contextId?: string;
     contextData?: ConversationContextData
@@ -90,10 +68,8 @@ export interface MessagingContextType {
    * selection.
    */
   setActiveConversation: (value: Conversation | null) => void;
-<<<<<<< HEAD
-  fetchConversations: () => Promise<void>;
-=======
+
   fetchConversations: () => Promise<void>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   loadMessages: (conversationId: string) => Promise<void>
 }

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useMemo, useState } from 'react',
-import DatePicker from 'react-datepicker';
-import { useRouter } from 'next/router';
-type PaymentType = any;
-=======
+
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -106,7 +101,7 @@ export default function ContractBuilderPage() {
     a.href = url
     a.download = `contract-${projectName.replace(/\s+/g, '-').toLowerCase()}.txt`
     a.click()
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     URL.revokeObjectURL(url)
   }
   return (

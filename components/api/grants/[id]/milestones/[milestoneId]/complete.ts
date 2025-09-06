@@ -10,11 +10,7 @@ function grantPath(id: string) {
 }
 function readGrant(id: string): GrantApplication | null {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
-<<<<<<< HEAD
-  const p = null;
-  res.status(200).json({ record: existing })
-}
-=======
+
   const p = grantPath(id);
   if (!fs.existsSync(p)) return null;
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
@@ -85,4 +81,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 writeGrant(existing);
   res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

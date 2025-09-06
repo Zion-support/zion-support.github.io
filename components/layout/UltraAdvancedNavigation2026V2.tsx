@@ -1,16 +1,6 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
-<<<<<<< HEAD
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
-export default function UltraAdvancedNavigation2026V2() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
-  useEffect(() => {
-    const handleScroll = null;
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Menu
@@ -170,7 +160,7 @@ export default function UltraAdvancedNavigation2026V2() {
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       {/* Top Contact Bar */}

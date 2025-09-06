@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { Trash2  } from 'lucide-react';
-import { SkillItemProps } from './types';
-export const SkillItem = null;
-=======
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Trash2 } from "lucide-react";
@@ -32,4 +25,4 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
     </Badge>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

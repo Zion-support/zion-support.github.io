@@ -19,19 +19,7 @@ import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmat
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 interface ApplicationsTableProps {
-<<<<<<< HEAD
-  applications: JobApplication[];
-  processingId: string | null;
-  onViewApplication: (applicationId: string) => Promise<void>;
-  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
-  onViewScore: (application: JobApplication) => void
-}
 
-export function ApplicationsTable({ 
-  applications;
-  processingId;
-  onViewApplication;
-=======
   applications: JobApplication[]
   processingId: string | null
   onViewApplication: (applicationId: string) => Promise<void>
@@ -42,16 +30,12 @@ export function ApplicationsTable({
   applications
   processingId
   onViewApplication
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onStatusChange;
   onViewScore
 }: ApplicationsTableProps) {
   const [hireModalOpen, setHireModalOpen] = useState(false);
-<<<<<<< HEAD
-  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
-  
-  const handleHireClick = null;
-=======
+
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application)
@@ -64,7 +48,7 @@ export function ApplicationsTable({
       description: "Offer has been sent to the talent."
     })
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <div className="rounded-md border">

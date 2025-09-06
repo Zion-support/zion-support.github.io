@@ -2,18 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Check, X } from 'lucide-react'
-<<<<<<< HEAD
-import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge";
-export function EnterprisePricingTable() {
-  const plans = null;
-=======
+
 import {  Table,  Table
   TableBody
   TableCell
@@ -84,7 +73,7 @@ export function EnterprisePricingTable() {
       ]
     }
   ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section id='pricing' className='py-20 px-4 md:px-6'>
       <div className='container mx-auto max-w-7xl'>

@@ -5,20 +5,16 @@ import { useAuth  } from '@/hooks/useAuth';
 import { useTenantAdminStatus  } from '@/hooks/useWhitelabelTenant';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 export interface ProtectedRouteProps {
-<<<<<<< HEAD
-  children: React.ReactNode;
-=======
+
   children: React.ReactNode
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   adminOnly?: boolean;
   tenantAdminAllowed?: boolean;
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
 }
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   children;
-<<<<<<< HEAD
-  adminOnly;
-=======
+
   adminOnly = false;
   tenantAdminAllowed = false
   requiredUserType
@@ -51,4 +47,4 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   return <>{children}</>
 }
 export default ProtectedRoute;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

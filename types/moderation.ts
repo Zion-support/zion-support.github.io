@@ -5,11 +5,8 @@ export interface ModerationAction {
   action: ModerationStatus;
   adminNotes?: string;
   adminId: string;
-<<<<<<< HEAD
-  createdAt: string;
-=======
   reason?: string;
-  createdAt: string
+  createdAt: string;
 }
 export interface ModerationFlag {
   id: string;

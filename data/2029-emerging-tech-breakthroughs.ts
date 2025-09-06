@@ -11,20 +11,7 @@ export interface EmergingTechBreakthrough2029 {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string
-  }
-}
 
-export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
-  {
-    id: "2029-emerging-tech-breakthrough";
-    name: "2029 Emerging Tech Breakthrough Platform";
-    tagline: "Emerging tech breakthroughs for 2029";
-    price: "$899/month";
-    description: "Advanced platform showcasing emerging technology breakthroughs and innovations for 2029.";
-    features: [
-=======
     address: string;
   }
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =
@@ -53,22 +40,17 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       }
     }
   ];    features: [
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       "Emerging tech breakthroughs";
       "Innovation platform";
       "Future capabilities";
       "Advanced features",
       "Expert insights"
-<<<<<<< HEAD
-    ],
-    link: "/services/2029-emerging-tech-breakthrough";
-    category: "Emerging Tech Breakthroughs 2029";
-    realImplementation: true;
-=======
+
     ];
     link: "/services/2029-emerging-tech-breakthrough", category: "Emerging Tech Breakthroughs 2029"
     realImplementation: true
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     contactInfo: {
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";

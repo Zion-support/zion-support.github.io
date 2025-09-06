@@ -7,10 +7,7 @@ import Link from 'next/link',
 import { useFeatureUsage } from "@/hooks/useFeatureUsage";
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function AIPoweredContent() {
-<<<<<<< HEAD
-  useFeatureUsage('ZionGPT');
-  const schema = null;
-=======
+
   useFeatureUsage('ZionGPT')
   const schema = {
     "@context": "https://schema.org"
@@ -33,7 +30,7 @@ export default function AIPoweredContent() {
   useEffect(() => {
     markAiExplored()
   }, [markAiExplored])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

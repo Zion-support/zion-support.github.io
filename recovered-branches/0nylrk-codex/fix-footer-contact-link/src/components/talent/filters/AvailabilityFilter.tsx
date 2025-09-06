@@ -2,10 +2,7 @@
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Checkbox } from "@/components/ui/checkbox";
 import { AvailabilityFilterProps } from "@/types/filters";
-<<<<<<< HEAD
-const AVAILABILITY_OPTIONS = null;
-export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
-=======
+
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
@@ -18,7 +15,7 @@ export function AvailabilityFilter({
   toggleSection
   isMobileFilterOpen
 }: AvailabilityFilterProps) {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button

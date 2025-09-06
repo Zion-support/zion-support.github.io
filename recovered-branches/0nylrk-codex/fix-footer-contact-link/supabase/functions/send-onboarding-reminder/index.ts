@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1";
-import { Resend } from "npm: resend@1.0.0";
-const resend = null;
-=======
+
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1"
 import {Resend} from "npm: resend@1.0.0";
@@ -127,4 +122,4 @@ serve(async (req: Request) => {
     )
   }
 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

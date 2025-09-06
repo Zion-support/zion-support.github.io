@@ -12,31 +12,18 @@ import { ResumeTab } from "./ResumeTab",
 import { Job } from "./types";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface ApplyFormProps {
-<<<<<<< HEAD
-  job: Job;
-  onClose: () => void;
-  onApplySuccess?: (jobId: string) => Promise<void>
-=======
+
   job: Job
   onClose: () => void
   onApplySuccess?: (jobId: string,) => Promise<void>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging();
   const { applyToJob } = useJobApplications();
   const [message, setMessage] = useState(
     `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
-<<<<<<< HEAD
-  );
-  const [proposalLink, setProposalLink] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [activeTab, setActiveTab] = useState<string>("message"),
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),
-  
-  const handleResumeSelected = null;
-=======
+
   )
   const [proposalLink, setProposalLink] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -117,7 +104,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       setIsSubmitting(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-=======
 import React from "react";
 import {
   Card
@@ -12,14 +8,12 @@ import {
   CardHeader
   CardTitle
 } from "@/components/ui/card";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
 export function PaymentMethods() {
   // Mock payment methods
-<<<<<<< HEAD
-  const paymentMethods = null;
-=======
+
   const paymentMethods = [
     {
       id: "pm-1"
@@ -40,7 +34,7 @@ export function PaymentMethods() {
       isDefault: false
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card>
       <CardHeader>

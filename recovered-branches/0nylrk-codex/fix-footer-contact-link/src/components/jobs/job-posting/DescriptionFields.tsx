@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import { Control  } from 'react-hook-form';
-import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
-=======
 import React from "react";
 import { Control } from "react-hook-form";
 import {
@@ -14,7 +9,7 @@ import {
   FormDescription
   FormMessage
 } from "@/components/ui/form";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Textarea } from "@/components/ui/textarea";
 import { JobSchemaType } from './validation';
 interface DescriptionFieldsProps {

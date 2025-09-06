@@ -21,9 +21,7 @@ function grantPath(id: string) {
 }
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
-<<<<<<< HEAD
-  const file = null;
-=======
+
   const file = grantPath(id);
   if (!fs.existsSync(file)) return null;
   return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication;
@@ -87,6 +85,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.setHeader('Allow', 'GET, PUT');
   res.status(405).end('Method Not Allowed');  res.setHeader('AllowGET, PUT');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   res.status(405).end('Method Not Allowed')
 }

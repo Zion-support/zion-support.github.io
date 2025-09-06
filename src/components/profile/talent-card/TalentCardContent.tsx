@@ -7,12 +7,7 @@ interface TalentCardContentProps {
   bio: string;
   timezone: string | undefined;
   skills: string[] | undefined
-<<<<<<< HEAD
-}
 
-export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {
-  const [isHovering, setIsHovering] = useState(false);
-=======
 export function TalentCardContent({
   summary
   bio
@@ -20,7 +15,7 @@ export function TalentCardContent({
   skills
 }: TalentCardContentProps) {
   const [isHovering, setIsHovering] = useState(false)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div>
       {/* Location */}

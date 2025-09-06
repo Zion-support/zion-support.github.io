@@ -7,11 +7,7 @@ import { formatDateForDB, handleResumeError, showSuccessToast } from './useResum
 export function useWorkExperience() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
-  
-  const addWorkExperience = null;
-=======
+
   const [error, setError] = useState<string | null>(null);
   const addWorkExperience = async (resumeId: string, work: WorkExperience): Promise<boolean> => {
     if (!user) {
@@ -96,7 +92,7 @@ export function useWorkExperience() {
     error;
     addWorkExperience;
     updateWorkExperience;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     deleteWorkExperience
   }
 }

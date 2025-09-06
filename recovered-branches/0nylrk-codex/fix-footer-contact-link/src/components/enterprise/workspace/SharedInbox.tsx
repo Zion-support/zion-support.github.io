@@ -4,9 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 export function SharedInbox() {
   // Mock messages
-<<<<<<< HEAD
-  const messages = null;
-=======
+
   const messages = [
     {
       id: "msg-1"
@@ -33,7 +31,7 @@ export function SharedInbox() {
       unread: false
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card>
       <CardHeader>

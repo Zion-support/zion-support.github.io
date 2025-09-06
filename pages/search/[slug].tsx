@@ -23,26 +23,7 @@ interface BaseSearchResult {
   image?: string;
   author?: {
     name: string;
-<<<<<<< HEAD
-    avatar?: string
-  },
-  tags?: string[],
-  category?: string;
-  date?: string
-}
 
-interface ProductSearchResult extends BaseSearchResult {
-  type: 'product' | 'equipment';
-  price?: number;
-  rating?: number
-}
-
-interface TalentSearchResult extends BaseSearchResult {
-  type: 'talent';
-  rating?: number
-}
-
-=======
     avatar?: string;
   }
   tags?: string[];
@@ -55,15 +36,12 @@ interface ProductSearchResult extends BaseSearchResult {
 interface TalentSearchResult extends BaseSearchResult {
   type: 'talent';
   rating?: number;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface BlogSearchResult extends BaseSearchResult {
   type: 'blog';
 interface CategorySearchResult extends BaseSearchResult {
   type: 'category';
-<<<<<<< HEAD
 
-type SearchResult = any;
-=======
 type SearchResult =
   | ProductSearchResult
   | TalentSearchResult
@@ -613,4 +591,4 @@ totalCount: offline.totalCount
       }
     };  }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -11,17 +11,7 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 interface Transaction {
-<<<<<<< HEAD
-  id: string;
-  user_id: string;
-  provider_id: string;
-  service_id: string;
-  amount: number;
-  currency: string;
-  status: 'pending' | 'completed' | 'refunded' | 'cancelled';
-  in_escrow: boolean;
-  created_at: string;
-=======
+
   id: string
   user_id: string
   provider_id: string
@@ -31,7 +21,7 @@ interface Transaction {
   status: 'pending' | 'completed' | 'refunded' | 'cancelled'
   in_escrow: boolean
   created_at: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   completed_at?: string;
   refunded_at?: string;
   cancelled_at?: string;
@@ -45,20 +35,15 @@ interface Transaction {
 export function TransactionHistory() {
   const { user } = useAuth();
   const { toast } = useToast();
-<<<<<<< HEAD
-  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all'),
-  
-=======
+
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   const { data: transactions, isLoading, error, refetch } = useQuery({
     queryKey: ['transactions', user?.id, filter];
     queryFn: async () => {
       if (!user) return [];
       // Build the query based on filters
-<<<<<<< HEAD
-      let query = null;
-=======
+
       let query = supabase
         .from('transactions')
         .select(`
@@ -230,7 +215,7 @@ export function TransactionHistory() {
               const counterpartyName = isClient
                 ? transaction.provider?.display_name |'Service Provider'
                 : 'Client';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               return (
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
                   <CardHeader className="pb-3">

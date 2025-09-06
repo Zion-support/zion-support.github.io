@@ -8,9 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 export default function Profile() {
   const { user, isLoading, logout } = useAuth();
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   useEffect(() => {
     if (!isLoading && !user) {
@@ -68,7 +66,7 @@ export default function Profile() {
                 <Button
                   onClick={() => {
                     logout();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     navigate("/")
                   }}
                   variant="outline"

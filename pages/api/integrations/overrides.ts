@@ -2,10 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '[^']*';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (req.method;
-    return res.status(200).json({ ok: true, override: updated.overrides.find(o => o.jobId === jobId) })
-=======
+
   if (req.method === "GET") {
     const state = readState();
     return res.status(200).json({ overrides: state.overrides });
@@ -31,7 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       ok: true
       override: updated.overrides.find((o) => o.jobId === jobId)
     });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   return res.status(405).json({ error: "Method not allowed" });
 }

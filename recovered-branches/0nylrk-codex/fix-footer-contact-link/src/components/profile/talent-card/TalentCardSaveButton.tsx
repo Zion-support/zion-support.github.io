@@ -4,19 +4,7 @@ import { Heart } from "lucide-react",
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 interface TalentCardSaveButtonProps {
-<<<<<<< HEAD
-  profileId: string;
-  profileName: string;
-  isSaved: boolean;
-  onToggleSave?: (id: string, isSaved: boolean) => void;
-  isAuthenticated: boolean
-}
 
-export function TalentCardSaveButton({ 
-  profileId;
-  profileName;
-  isSaved;
-=======
   profileId: string
   profileName: string
   isSaved: boolean
@@ -27,16 +15,14 @@ export function TalentCardSaveButton({
   profileId
   profileName;
   isSaved
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onToggleSave;
   isAuthenticated
 }: TalentCardSaveButtonProps) {
   const { toast } = useToast();
   const [localIsSaved, setLocalIsSaved] = React.useState(isSaved);
   // Handle save toggle
-<<<<<<< HEAD
-  const handleSaveToggle = null;
-=======
+
   const handleSaveToggle = (e: React.MouseEvent) => {
     e.stopPropagation()
     if (!isAuthenticated) {
@@ -68,7 +54,7 @@ export function TalentCardSaveButton({
       <Heart
         className={cn(
           "h-4 w-4 transition-colors"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
         )}
       />

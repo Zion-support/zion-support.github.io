@@ -1,19 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-<<<<<<< HEAD
-import Link from "next/link";
-import { TalentProfile } from "@/types/talent";
-import Image from 'next/image', // Import next/image
-import React, { useState } from 'react', // Import React and useState
 
-export interface TalentCardProps {
-  talent: TalentProfile;
-  onViewProfile: (id: string) => void;
-  onRequestHire: (talent: TalentProfile) => void;
-  isSaved: boolean;
-  onToggleSave: (id: string, isSaved: boolean) => void;
-=======
 import Link from 'next/link'
 import { TalentProfile } from '@/types/talent'
 import Image from 'next/image'; // Import next/image
@@ -31,27 +19,11 @@ export interface TalentCardProps {
   onRequestHire: (talent: TalentProfile,) => void
   isSaved: boolean
   onToggleSave: (id: string, isSaved: boolean,) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isAuthenticated: boolean
 }
 export function TalentCard({
-<<<<<<< HEAD
-  talent;
-  onViewProfile;
-  onRequestHire;
-  isSaved;
-  onToggleSave;
-  isAuthenticated
-}: TalentCardProps) {
-  const [avatarError, setAvatarError] = useState(false);
-  const handleViewProfile = null;
-  return (
-    <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
-      <div className="p-6">
-        <div className="flex items-start">
-          <div className="relative mr-4">
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative"> {/* Added relative for Image */}
-=======
+
   talent
   onViewProfile
   onRequestHire
@@ -92,7 +64,7 @@ export function TalentCard({
             <div className='w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative'>
               {' '}
               {/* Added relative for Image */}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               {talent.profile_picture_url && !avatarError ? (
                 <Image
                   src={talent.profile_picture_url}

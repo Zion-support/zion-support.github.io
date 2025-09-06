@@ -1,47 +1,4 @@
-<<<<<<< HEAD
-export default function Page(){return null}
-import React from 'react';
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Globe, Clock, Users;
-  MessageSquare, Send, CheckCircle, Star;
-  Rocket, Brain, Atom, Shield, Zap
- } from 'lucide-react';
-import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-// Import service data for showcase
-import { innovativeAIServices2029  } from '../data/2029-innovative-ai-services';
-import { quantumSpaceInnovations2029  } from '../data/2029-quantum-space-innovations';
-import { enterpriseITInnovations2029  } from '../data/2029-enterprise-it-innovations';
-import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
-export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '';
-    email: '';
-    company: '';
-    phone: '';
-    service: '';
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-  const contactInfo = null;
-  return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
-      <Head>
-        <title>Contact Us - Zion Tech Group | Get Started with Revolutionary Micro SaaS Services</title>
-        <meta name="description" content="Contact Zion Tech Group to get started with our revolutionary micro SaaS services. Get a free consultation and discover how our AI and quantum computing solutions can transform your business." />
-        <meta name="keywords" content="contact Zion Tech Group, micro SaaS consultation, AI services consultation, quantum computing services, business transformation" />
-        <meta property="og:title" content="Contact Us - Zion Tech Group" />
-        <meta property="og:description" content="Get started with our revolutionary micro SaaS services. Free consultation available." />
-        <meta property="og:url" content="https://ziontechgroup.com/contact" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/contact" />
-      </Head>
 
-=======
 const [isSubmitting, setIsSubmitting] = useState (false);
 const [submitSuccess, setSubmitSuccess] = useState (false);
 //Get popular services for showcase const popularServices = [ ...innovativeAIServices2029.filter (s => s.popular);
@@ -96,7 +53,7 @@ setSubmitSuccess (true);
 }viewport= {
   {
   once: true
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }className="text-center mb-12"> <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"> Popular Revolutionary Services </h2> <p className="text-xl text-gray-300"> Explore some of our most sought-after 2029 technology solutions </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {
   popularServices.map ( (service, index) => (<motion.div key= {
   service.id

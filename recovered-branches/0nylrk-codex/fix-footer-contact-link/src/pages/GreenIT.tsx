@@ -6,9 +6,7 @@ import { Leaf, Server, Cloud } from "lucide-react",
 import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 export default function GreenIT() {
-<<<<<<< HEAD
-  const greenITSolutions = null;
-=======
+
   const greenITSolutions = [
     {
       title: "Energy-Efficient Hardware"
@@ -23,7 +21,7 @@ export default function GreenIT() {
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint."
       icon: Leaf}
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <AppLayout>
       <SEO

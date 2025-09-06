@@ -4,20 +4,7 @@ import { useAuth } from "@/hooks/useAuth",
 import { useToast } from "@/hooks/use-toast",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { 
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuSeparator;
-  DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu",
 
-export function UserMenu() {
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-  const handleSignOut = null;
-=======
 import {
   DropdownMenu
   DropdownMenuContent
@@ -39,7 +26,7 @@ export function UserMenu() {
       });
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (!user) {
     return (
       <div className="hidden md: flex items-center space-x-4">

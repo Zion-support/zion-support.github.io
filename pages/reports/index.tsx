@@ -8,18 +8,7 @@ export default function Reports() {
   const [pagespeed, setPagespeed] = useState<any>({});
   useEffect(() => {
     Promise.all([
-<<<<<<< HEAD
-      fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime);
-      fetch('/api/reports/seo').then((r) => r.json()).then(setSeo);
-      fetch('/api/reports/links').then((r) => r.json()).then(setLinks);
-      fetch('/api/reports/deps').then((r) => r.json()).then(setDeps);
-      fetch('/api/reports/changelog').then((r) => r.json()).then(setChangelog);
-      fetch('/api/reports/pagespeed').then((r) => r.json()).then(setPagespeed)
-    ]).catch(() => {})
-  }, []),
 
-  const lastUptime = null;
-=======
       fetch('/api/reports/uptime')
         .then(r => r.json())
         .then(setUptime)
@@ -40,7 +29,7 @@ export default function Reports() {
         .then(setPagespeed)
     ]).catch(() => {});  }, []);
   const lastUptime = uptime[uptime.length - 1];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='space-y-6'>
       <div>

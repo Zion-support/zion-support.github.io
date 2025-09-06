@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Star, CheckCircle, ArrowRight, TrendingUp, Users;
-=======
+
 import {
   Star
   CheckCircle
@@ -33,16 +31,14 @@ import {
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
   Star, CheckCircle, ArrowRight, TrendingUp, Users
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
  } from 'lucide-react';
 import { realMarketServices  } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
-<<<<<<< HEAD
-const contactInfo = null;
-=======
+
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -238,7 +234,7 @@ export default function UltraFuturisticServiceShowcase2034() {
               { label: 'Total Services', value: allServices.length.toString(), icon: Rocket }
               { label: 'Happy Customers', value: '50K+', icon: Users }
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }
             ].map((stat, index) => (
               <motion.div

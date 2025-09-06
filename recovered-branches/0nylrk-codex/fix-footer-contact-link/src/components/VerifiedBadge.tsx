@@ -3,13 +3,7 @@ import React from 'react';
 import { CheckCircle  } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 interface VerifiedBadgeProps {
-<<<<<<< HEAD
-  verified: boolean;
-  size?: 'sm' | 'md' | 'lg'
-}
 
-export function VerifiedBadge({ verified, size;
-=======
   verified: boolean
   size?: 'sm' | 'md' | 'lg'
 }
@@ -20,7 +14,7 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
     md: 'h-4 w-4'
     lg: 'h-5 w-5'
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <TooltipProvider>
       <Tooltip>

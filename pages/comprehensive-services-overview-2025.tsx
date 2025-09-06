@@ -1,22 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom;
-  ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown, Search;
-  Filter, Grid, List, BarChart3, DollarSign, Target as TargetIcon
- } from 'lucide-react';
-import { comprehensiveMicroSaasServices  } from '../data/comprehensive-2025-micro-saas-expansion';
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
-export default function ComprehensiveServicesOverviewPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
 
-  // Combine all services
-  const allServices = null;
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -89,7 +71,7 @@ export default function ComprehensiveServicesOverviewPage() {
     return sum + (roi ? parseInt(roi[1]) : 0)
   }, 0) / allServices.length
   const totalCustomers = allServices.reduce((sum, service) => sum + service.customers, 0)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

@@ -1,15 +1,6 @@
 const { upsertFile } = require('./_lib/github');
-<<<<<<< HEAD
-async function fetchJson(url, token) {
-  const resp = await fetch(url, {
-    headers: token ? { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github+json' } : {}
-  });
-  if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-  return resp.json()
-}
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   const resp = await fetch(url, {
     headers: token
       ? {
@@ -34,19 +25,7 @@ exports.handler = async function () {
     const since = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
     const commitsUrl = `https://api.github.com/repos/${owner}/${repo}/commits?since=${encodeURIComponent(since)}`;
     const commits = await fetchJson(commitsUrl, token);
-<<<<<<< HEAD
-    const byAuthor = {},
-    const messages = [],
-    for (const c of commits) {
-      const author = c.commit?.author?.name || c.author?.login || 'unknown',
-      byAuthor[author] = (byAuthor[author] || 0) + 1;
-      messages.push({ sha: c.sha, message: c.commit?.message || '' })
 
-    const summary = {
-      updatedAt: Date.now();
-      since,
-      totalCommits: commits.length,
-=======
     const byAuthor = {}
     const messages = [];
     );    }    const byAuthor = {}
@@ -59,7 +38,7 @@ exports.handler = async function () {
       updatedAt: Date.now()
       since
       totalCommits: commits.length
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       authors: Object.entries(byAuthor)
         .map(([name, count]) => ({ name, count }))
         .sort((a, b) => b.count - a.count)
@@ -86,8 +65,6 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
-};
-=======
+
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

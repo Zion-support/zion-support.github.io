@@ -9,9 +9,7 @@ import {
   SelectValue 
 } from "@/components/ui/select",
 import type { QuoteStatus } from "@/types/quotes";
-<<<<<<< HEAD
-type RequestsHeaderProps = any;
-=======
+
 type RequestsHeaderProps = {
   unreadCount: number
   statusFilter: QuoteStatus | 'all'
@@ -75,4 +73,4 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
     </div>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

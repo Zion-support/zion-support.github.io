@@ -1,16 +1,10 @@
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
-<<<<<<< HEAD
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { type Company } from "./CompanyDashboard";
-import { Bell, Users, Settings } from "lucide-react";
-=======
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {type, Company} from "./CompanyDashboard";
 import {Bell, Users, Settings} from "lucide-react";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface WorkspaceHeaderProps {
   company: Company
 }

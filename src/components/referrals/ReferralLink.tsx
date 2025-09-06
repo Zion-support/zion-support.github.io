@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-=======
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -16,7 +10,7 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 interface ReferralLinkProps {
   referralLink: string;
@@ -63,12 +57,7 @@ export function ReferralLink({
               <span className='sr-only'>Copy</span>
             </Button>
           </div>
-<<<<<<< HEAD
 
-export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
-  const [copied, setCopied] = useState(false);
-  const handleCopy = null;
-=======
           {copied && (
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
             <p className="text-sm text-green-600 dark:text-green-500">
@@ -77,7 +66,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className="mt-6">
       <CardHeader>

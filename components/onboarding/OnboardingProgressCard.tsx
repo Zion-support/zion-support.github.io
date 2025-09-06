@@ -1,9 +1,6 @@
 import React from 'react',
 import Link from 'next/link';
-<<<<<<< HEAD
-import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
-export type OnboardingStep = any;
-=======
+
 import {CheckCircle2, Circle, PartyPopper} from 'lucide-react';
 export type OnboardingStep = {
   id: string;
@@ -55,7 +52,7 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
   const firstIncomplete = steps.find((s) => !s.completed && s.ctaHref && s.ctaLabel);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
       <div className="flex items-center justify-between">

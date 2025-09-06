@@ -1,23 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react',
-import Head from 'next/head',
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Search, Star, DollarSign, CheckCircle;
-  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List;
-  ChevronDown, Sparkles
- } from 'lucide-react';
-import { ultimate2026Services  } from '../data/ultimate-2026-services';
-import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
-export default function Ultimate2026ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<string>('name'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
-  const contactInfo = null;
-=======
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -472,7 +453,7 @@ export default function Ultimate2026ServicesShowcase() {
             </h2>
             <p className="text-xl text-white/90 mb-8">
               Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               and emerging technology solutions to gain competitive advantages and drive unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

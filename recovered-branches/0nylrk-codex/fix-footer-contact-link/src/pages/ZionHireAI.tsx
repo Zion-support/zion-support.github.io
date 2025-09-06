@@ -14,10 +14,7 @@ export default function ZionHireAI() {
   const { isAuthenticated } = useAuth();
   return (
     <>
-<<<<<<< HEAD
-      <SEO 
-        title;
-=======
+
       <SEO
         title="Zion Hire AI - White-labeled AI Recruiting Assistant"
         description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience."
@@ -242,7 +239,7 @@ export default function ZionHireAI() {
             <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-8">
               Join leading companies using Zion Hire AI to find better talent faster
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               reduce time-to-hire, and improve candidate experience.
             </p>
             <Button

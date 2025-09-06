@@ -23,9 +23,7 @@ import { supabase } from "@/integrations/supabase/client",
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
 // Define form schema
-<<<<<<< HEAD
-const talentProfileSchema = null;
-=======
+
 const talentProfileSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters long");
   title: z.string().min(5, "Professional title is required");
@@ -295,7 +293,7 @@ export function TalentRegistrationForm() {
       setIsSubmitting(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">

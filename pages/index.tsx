@@ -7,13 +7,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 // import PerformanceMonitor from '../components/PerformanceMonitor';
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
-<<<<<<< HEAD
-    isLoaded: false;
-    hasError: false
-  });
-  useEffect(() => {
-    const timer = null;
-=======
+
     isLoaded: false
     hasError: false
   });
@@ -251,7 +245,7 @@ export default function Home() {
   );}
 import React from 'react';
 import { Button } from '@/components/ui/button';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">

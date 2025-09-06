@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-=======
 import {
   FormField
   FormItem
@@ -17,16 +13,14 @@ import {
   SelectTrigger
   SelectValue
 } from "@/components/ui/select";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
 interface TimelineFieldProps {
   form: UseFormReturn<FormValues>;
 }
 export function TimelineField({ form }: TimelineFieldProps) {
-<<<<<<< HEAD
-  const timelineOptions = null;
-=======
+
   const timelineOptions = [
     { value: "Less than 1 week", label: "Less than 1 week" }
     { value: "1-2 weeks", label: "1-2 weeks" }
@@ -36,7 +30,7 @@ export function TimelineField({ form }: TimelineFieldProps) {
     { value: "6+ months", label: "6+ months" }
     { value: "Ongoing", label: "Ongoing" }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <FormField
       control={form.control}

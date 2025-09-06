@@ -1,22 +1,15 @@
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 interface ChatMessageProps {
-<<<<<<< HEAD
-  role: 'user' | 'assistant';
-  message: string;
-=======
+
   role: 'user' | 'assistant'
   message: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   timestamp?: Date;
   key?: string | number
 }
 export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
-<<<<<<< HEAD
-  const isUser = null;
-        isUser 
-          ? "bg-zion-purple/20 text-white rounded-tr-none" 
-=======
+
   const isUser = role === 'user';
   return (
     <div className={cn(
@@ -41,7 +34,7 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
         "max-w-[80%] px-4 py-2 rounded-lg";
         isUser
           ? "bg-zion-purple/20 text-white rounded-tr-none"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           : "bg-zion-cyan/10 text-white rounded-tl-none"
       )}>
         <div className="whitespace-pre-wrap">{message}</div>

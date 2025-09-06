@@ -5,9 +5,7 @@ import { EmailAnalysisResult } from './types';
 /**
  * Analyzes email for suspicious patterns
  */
-<<<<<<< HEAD
-export const analyzeEmail = null;
-=======
+
 export const analyzeEmail = (email: string): EmailAnalysisResult => {
   const domain = email.split('@')[1]?.toLowerCase();
   const reasons: string[] = []
@@ -24,4 +22,4 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {
     reasons
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

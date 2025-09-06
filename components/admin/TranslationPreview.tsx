@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { useAutoTranslate } from '../../hooks/useAutoTranslate';
-<<<<<<< HEAD
-const defaultTargets = null;
-=======
+
 const defaultTargets = ['enptesar']
 export default function TranslationPreview() {
   const [text, setText] = useState('')
   const [targets, setTargets] = useState<string[]>(defaultTargets)
   const { translations, loading, error } = useAutoTranslate(text, targets)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-semibold">Translation Preview</h2>

@@ -5,9 +5,7 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function SearchFeature() {
-<<<<<<< HEAD
-  const schema = null;
-=======
+
   const schema = {
     '@context': 'https://schema.org'
     '@type': 'WebPage'
@@ -20,7 +18,7 @@ export default function SearchFeature() {
     "description": "Quickly locate products, services and talent using intelligent search filters."
     "url": "https://app.ziontechgroup.com/features/search"
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

@@ -7,11 +7,7 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   icon?: React.ReactNode;
   defaultExpanded?: boolean;
   showChevron?: boolean
-<<<<<<< HEAD
-}
 
-const SidebarGroup = null;
-=======
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
   (
     {
@@ -54,4 +50,4 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
 )
 SidebarGroup.displayName = 'SidebarGroup'
 export { SidebarGroup }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

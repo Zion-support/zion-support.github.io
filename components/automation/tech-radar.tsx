@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import fs from 'fs',
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Item = any;
-=======
+
 
 }
 type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } }
@@ -24,7 +19,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 }
 export default function TechRadar({ pypi, crates, github }: Props) {
   const langs = Object.keys(github);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-8">
       <header className="space-y-2">

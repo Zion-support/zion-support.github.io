@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-export function rateLimit(options: { windowMs: number; max: number }) {
-  return (req: any, res: any, next: any) => {
-    // Mock rate limiting implementation
-    next();
-  };
-}
-=======
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
@@ -33,4 +26,4 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   rateLimitMap.set(key, current);
   return true;
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

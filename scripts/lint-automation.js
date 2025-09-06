@@ -25,17 +25,12 @@ class LintAutomation {
     try {
       this.log('Starting lint fix automation...');
       // Run ESLint with auto-fix
-<<<<<<< HEAD
-      const result = execSync('npm run lint:fix', { 
-        encoding: 'utf8';
-        cwd: process.cwd();
-        stdio: 'pipe'
-=======
+
       const result = execSync('npm run lint:fix', {
         encoding: 'utf8'
         cwd: process.cwd()
         stdio: 'pipe';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       });
       this.fixedCount++;
       this.log(`Lint fix completed successfully. Fixed ${this.fixedCount} issues.`);

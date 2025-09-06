@@ -2,9 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
 import EnhancedButton from '../../components/ui/EnhancedButton';
-<<<<<<< HEAD
-const PostJob: NextPage;
-=======
+
       <Head>
         <title>Post a Job - Zion</title>
       </Head>
@@ -86,4 +84,4 @@ const PostJob: NextPage;
   );
 }
 export default PostJob;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

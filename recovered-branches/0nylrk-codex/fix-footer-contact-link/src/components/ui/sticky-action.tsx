@@ -4,20 +4,16 @@ import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 interface StickyActionProps {
   className?: string;
-<<<<<<< HEAD
-  children: React.ReactNode;
-=======
+
   children: React.ReactNode
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   showAfterScroll?: number;
   position?: "bottom" | "top"
 }
 export function StickyAction({
   className;
   children;
-<<<<<<< HEAD
-  showAfterScroll;
-=======
+
   showAfterScroll = 300;
   position = "bottom"
 }: StickyActionProps) {
@@ -50,7 +46,7 @@ export function StickyAction({
           className={cn(
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4";
             positionClasses[position];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             className
           )}
         >

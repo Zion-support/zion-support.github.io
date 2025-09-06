@@ -6,17 +6,7 @@ interface HeroProps {
   subtitle: string;
   primaryAction?: {
     text: string;
-<<<<<<< HEAD
-    href: string
-  };
-  secondaryAction?: {
-    text: string;
-    href: string
-  };
-  stats?: Array<{
-    value: string;
-    label: string;
-=======
+
     href: string;
   }
   secondaryAction?: {
@@ -78,7 +68,7 @@ const Hero: React.FC<HeroProps> = ({
   stats?: Array<{
     value: string
     label: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     color: string
   }>
 }
@@ -89,9 +79,7 @@ const Hero: React.FC<HeroProps> = ({
   secondaryAction;
   stats}) => {
   return (
-<<<<<<< HEAD
-    <section className;
-=======
+
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Elements */}
       <div className="absolute inset-0">
@@ -242,4 +230,4 @@ const Hero: React.FC<HeroProps> = ({
   );
 }
 export default Hero;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

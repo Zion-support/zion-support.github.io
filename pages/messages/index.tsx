@@ -1,9 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import EmptyState from '../../components/ui/EmptyState';
-<<<<<<< HEAD
-const Messages: NextPage;
-=======
+
 const Messages: NextPage = () => {
   return (
     <div className="space-y-6 pb-16">
@@ -22,4 +20,4 @@ const Messages: NextPage = () => {
   )
 }
 export default Messages;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -3,15 +3,11 @@ import { cn } from "@/lib/utils",
 import { slugify } from "@/lib/slugify";
 import { Link } from "react-router-dom";
 interface CategoryCardProps {
-<<<<<<< HEAD
-  title: string;
-  description: string;
-  icon: ReactNode | string;
-=======
+
   title: string
   description: string
   icon: ReactNode | string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   /**
    * Optional color to use for the icon. If not provided the default cyan
    * accent colour is used. Previously this prop was ignored which meant
@@ -23,9 +19,7 @@ interface CategoryCardProps {
 }
 export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
   // Create a URL-friendly slug from the category title
-<<<<<<< HEAD
-  const slug = null;
-=======
+
   const slug = slugify(title);
   return (
     <Link
@@ -38,7 +32,7 @@ export function CategoryCard({ title, description, icon, color, count, className
       <div
         className={cn(
           "mb-4 p-3 bg-zion-blue-dark rounded-full";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           !color && "text-zion-cyan"
         )}
         style={color ? { color } : undefined}

@@ -7,11 +7,7 @@ import { Zap, Brain, Code, Shield, Users, TrendingUp;
   Cpu, Rocket, Globe, BarChart3, Settings
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-const contactInfo = null;
-              automate everything with intelligent AI that learns and adapts to your needs.
-=======
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -200,7 +196,7 @@ export default function AIAutomationServices() {
               automation. From code generation to customer support, automate
               everything with intelligent AI that learns and adapts to your
               needs.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='#services' className='group'>

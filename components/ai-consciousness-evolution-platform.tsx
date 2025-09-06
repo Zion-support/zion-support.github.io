@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Layout from '../components/layout/Layout',
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Brain;
-  Sparkles;
-  Zap;
-  Target;
-  Shield;
-  Globe;
-  CheckCircle;
-  Star
- } from 'lucide-react';
-const AIConsciousnessEvolutionPlatform: React.FC;
-=======
+
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {
@@ -81,4 +66,4 @@ visible: {
 }
 }
 };export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,10 +1,6 @@
 import React from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
-import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react';
-export default function CloudPlatformPage() {
-  const features = null;
-=======
+
 import {
   Cloud
   Shield
@@ -44,7 +40,7 @@ export default function CloudPlatformPage() {
     'Automated scaling'
     'Pay-as-you-go pricing'
     '24/7 expert support',  ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

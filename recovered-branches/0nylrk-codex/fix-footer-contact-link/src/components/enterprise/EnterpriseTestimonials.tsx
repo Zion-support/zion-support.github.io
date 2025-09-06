@@ -2,15 +2,7 @@
 import React from "react";
 import { Quote } from "lucide-react";
 import {
-<<<<<<< HEAD
-  Carousel;
-  CarouselContent;
-  CarouselItem;
-  CarouselNext;
-  CarouselPrevious} from "@/components/ui/carousel",
 
-const testimonials = null;
-=======
   Carousel
   CarouselContent
   CarouselItem
@@ -43,7 +35,7 @@ const testimonials = [
     image: "/placeholder.svg"
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function EnterpriseTestimonials() {
   return (
     <section className="py-20 px-4 md:px-6">

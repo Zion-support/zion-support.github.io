@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Newspaper;
-  Calendar;
-  User;
-  Tag;
-  ArrowRight;
-  ExternalLink;
-  TrendingUp;
-  Award;
-  Rocket;
-  Globe;
-  Brain;
-  Atom;
-  Zap
- } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-const NewsPage: React.FC;
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -762,7 +742,7 @@ export default function NewsPage() {
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 For press inquiries, media interviews, or additional information
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 please contact our communications team.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

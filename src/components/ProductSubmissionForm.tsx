@@ -9,25 +9,7 @@ import { useRouter } from "next/router";
 import Image from 'next/image', // Import next/image
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
-<<<<<<< HEAD
-  Form;
-  FormControl;
-  FormDescription;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
-import { Sparkles } from 'lucide-react'
-// Define the form schema with zod
-const productSchema = null;
-            category: form.getValues("category")
-=======
+
   Form
   FormControl
   FormDescription
@@ -493,7 +475,7 @@ export function ProductSubmissionForm() {
           onApplyGenerated={handleApplyGenerated}          initialValues={{
             title: form.getValues('title')
             category: form.getValues('category')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           }}
         />
       </TabsContent>

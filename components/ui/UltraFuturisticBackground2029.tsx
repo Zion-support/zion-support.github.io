@@ -10,21 +10,16 @@ interface Particle {
   color: string;
   type: 'energy' | 'data' | 'quantum' | 'neon';
   life: number;
-<<<<<<< HEAD
-  maxLife: number
-}
 
-=======
   maxLife: number;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface EnergyField {
   x: number;
   y: number;
   radius: number;
   intensity: number;
   color: string;
-<<<<<<< HEAD
-=======
+
   pulse: number;
 export default function UltraFuturisticBackground2029({
   children
@@ -52,14 +47,11 @@ interface EnergyField {
   radius: number
   intensity: number
   color: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   pulse: number
 }
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {
-<<<<<<< HEAD
-  const canvasRef = null;
-            ease: "easeInOut"
-=======
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -484,7 +476,7 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
             duration: 10
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           }}
         />
       </div>

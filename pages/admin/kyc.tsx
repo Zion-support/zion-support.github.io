@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react',
-import Head from 'next/head',
-import type { KycProfile } from '../../utils/kyc';
-export default function AdminKycPage() {
-  const [queue, setQueue] = useState<KycProfile[]>([]);
-  const [reason, setReason] = useState<string>('');
-  async function load() {
-    const res = null;
-=======
+
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
@@ -28,7 +19,7 @@ export default function AdminKycPage() {
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId, action, reason: reason |undefined })})
     const data = await res.json()
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     if (data.ok) load()
   }
   return (

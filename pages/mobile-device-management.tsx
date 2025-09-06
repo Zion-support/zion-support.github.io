@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout';
-import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react';
-export default function MDMPage() {
-  const features = null;
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -21,7 +14,7 @@ export default function MDMPage() {
     { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' }
     { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' }
     { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Layout>
       <Head>

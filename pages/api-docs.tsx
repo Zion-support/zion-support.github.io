@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
+
 import Link from 'next/link';
 import {
   ArrowRight
@@ -155,7 +154,7 @@ export default function APIDocsPage() {
 }
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function ApiDocsPage() {
   return (
     <>

@@ -17,10 +17,7 @@ interface ContractPreviewProps {
 }
 export function ContractPreview({
   contractContent;
-<<<<<<< HEAD
-  generatedContract;
-  status;
-=======
+
   generatedContract
   status = 'ready'
   onDeploy
@@ -31,7 +28,7 @@ export function ContractPreview({
 }: ContractPreviewProps) {
   // Use either contractContent or generatedContract, whichever is provided
   const displayContent = contractContent |generatedContract |"";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center mb-4">

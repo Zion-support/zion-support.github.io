@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-=======
+
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -84,7 +80,7 @@ const stats = [
   { number: "99.9%", label: "Success Rate" }
   { number: "24/7", label: "Support Available" }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function CaseStudiesPage() {
   return (
     <MainLayout

@@ -2,13 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Search;
-  Filter;
-  TrendingUp;
-  DollarSign;
-  Users;
-=======
+
 import {
   Search
   Filter
@@ -29,7 +23,7 @@ import {
   TrendingUp
   DollarSign
   Users
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Star;
   Check;
   X;
@@ -39,17 +33,13 @@ import {
   Brain;
   Globe;
   Rocket
-<<<<<<< HEAD
- } from 'lucide-react';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+
 export default function ToolComparisonPage() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
-<<<<<<< HEAD
-  const allTools = null;
-=======
+
   const allTools = [
     // AI Tools
     {
@@ -316,7 +306,7 @@ export default function ToolComparisonPage() {
     if (pricing.includes('$')) return 'text-blue-400';
     return 'text-gray-400';  };    return 'text-gray-400'
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

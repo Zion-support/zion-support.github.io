@@ -11,11 +11,7 @@ import { QuickReplyButton } from "./QuickReplyButton",
 import { Send, Loader2 } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 // Define suggested quick replies
-<<<<<<< HEAD
-const QUICK_REPLIES = null;
-              theme === "dark" 
-                ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" 
-=======
+
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" }
   { id: "match", text: "How do I get matched?" }
@@ -267,7 +263,7 @@ export function ChatBotPanel() {
               "flex-1";
               theme === "dark"
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 : "bg-white border-gray-200"
             )}
           />

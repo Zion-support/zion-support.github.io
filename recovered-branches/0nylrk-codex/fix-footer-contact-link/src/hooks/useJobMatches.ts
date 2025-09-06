@@ -7,9 +7,7 @@ export function useJobMatches(jobId: string) {
   const [matches, setMatches] = useState<JobMatch[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
-<<<<<<< HEAD
-  const fetchMatches = null;
-=======
+
   const fetchMatches = async () => {
     setIsLoading(true);
     try {
@@ -72,7 +70,7 @@ export function useJobMatches(jobId: string) {
     matches;
     isLoading;
     isProcessing;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     triggerAIMatching
   }
 }

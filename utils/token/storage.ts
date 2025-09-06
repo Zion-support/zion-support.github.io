@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-class TokenStore {
-  private config: any = {};
 
-  setConfig(config: any) {
-    this.config = config;
-  }
-
-  getConfig() {
-    return this.config;
-  }
-}
-
-export const tokenStore = new TokenStore();
-=======
 export interface TokenConfig {
   tokenName: string;
   tokenSymbol: string;
@@ -54,4 +40,4 @@ function readFromDisk(): TokenStoreData | null {
   }
 }
 export const tokenStore = new TokenStore();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

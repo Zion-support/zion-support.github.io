@@ -1,15 +1,5 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { useRouter } from 'next/router', // Changed from useParams, useNavigate
-import { Header  } from '@/components/Header';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from 'lucide-react'
-import { formatDistanceToNow  } from 'date-fns';
-import { toast  } from 'sonner';
-import { useAuth  } from '@/hooks/useAuth';
-=======
+
 import { useRouter } from 'next/router'; // Changed from useParams, useNavigate
 import { Header } from '@/components/Header';
 import { Button } from '@/components/ui/button';
@@ -25,7 +15,7 @@ import {
 } from 'lucide-react';import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
 import { useAuth } from '@/hooks/useAuth';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import useJobDetails from '@/hooks/useJobDetails';
 import { ApplyToJobModal  } from '@/components/messaging/job-application';
 import { SEO  } from '@/components/SEO';
@@ -36,23 +26,14 @@ interface Job {
   title: string;
   description: string;
   company_name?: string;
-<<<<<<< HEAD
-  budget: { min: number, max: number },
-=======
+
   budget: { min: number; max: number }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   client_id: string;
   skills?: string[];
   created_at: string;
   category: string;
-<<<<<<< HEAD
-  deadline?: string
-}
 
-export default function JobDetails() {
-  const router = null;
-            client_id: job.client_id}}
-=======
   deadline?: string;
 export default function JobDetails() {
   const router = useRouter(); // Init router
@@ -226,7 +207,7 @@ export default function JobDetails() {
             budget: formatBudget(job.budget)
             client_id: job.client_id
           }}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}        />
       )}

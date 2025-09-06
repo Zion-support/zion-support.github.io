@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile, writeJsonFile } from '[^']*';
-import type { Job } from '../../../utils/types';
-import { rateLimit } from '[^']*';
-import { getRequestUserEmail, isAdminEmail } from '[^']*';
 
-const FILE = null;
-  res.status(405).end('Method Not Allowed')
-}
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
@@ -67,4 +57,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

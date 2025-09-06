@@ -1,12 +1,9 @@
 import React from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
-import Button from '../components/ui/Button';
-export default function AIEvaluationOrchestratorPage() {
-=======
+
 import Layout from '../components/layout/Layout';
 const AIEvaluationOrchestrator: React.FC = () => {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Layout>
       <Head>
