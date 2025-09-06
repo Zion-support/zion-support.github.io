@@ -1,7 +1,22 @@
+import React, { useEffect } from 'react';
 
-import React from 'react';
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Basic performance monitoring
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'navigation') {
+          console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart);
+        }
+      }
+    });
+    
+    observer.observe({ entryTypes: ['navigation'] });
+    
+    return () => observer.disconnect();
+  }, []);
 
-=======
-import React from 'react';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  return null; // This component doesn't render anything
+};
+
+export default PerformanceMonitor;
