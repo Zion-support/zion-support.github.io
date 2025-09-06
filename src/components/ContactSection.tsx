@@ -1,3 +1,6 @@
+
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
@@ -22,6 +25,46 @@ const ContactSection: React.FC = () => {
     console.log('Form submitted:', formData);
   };
 
+fetch("/api/contact", {
+      method: "POST"
+      headers: { "Content-Type": "application/json" }
+      body: JSON.stringify(formData)})
+      .then(async (res) => {
+
+          const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
+
+        }
+        toast({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
+
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
+        }
+        toast({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
+
+        setSubmitted(true),
+        setTimeout(() => setSubmitted(false), 2000),
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      })
+      .catch((err) => {
+        setIsSubmitting(false),
+        toast({
+
+          title: "Submission Error",
+          description: err.message,
+          variant: "destructive"})
+      })
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <section className="py-16 px-4 bg-gray-50">
       <div className="container mx-auto max-w-6xl">
@@ -108,19 +151,8 @@ const ContactSection: React.FC = () => {
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address
                   </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-              </div>
-              
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   Company
@@ -135,7 +167,8 @@ const ContactSection: React.FC = () => {
                   placeholder="Your company name"
                 />
               </div>
-              
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message
@@ -167,4 +200,42 @@ const ContactSection: React.FC = () => {
   );
 };
 
-export default ContactSection;
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                  </Button>
+                  {submitted && (
+                    <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
+                  )}
+
+                </div>;
+              </form>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+    </section>);
+}set_errors (field_errors);
+toast ({
+  return;
+}set_errors ({
+});
+setIsSubmitting (true);
+}) .catch ( (err) => {
+  setIsSubmitting (false);
+toast ({
+  title: "Submission Error";
+description: err.message;
+});
+}";
+}</div> <div> <label html_for="email" className="block text - sm font - medium text - zion - slate - light mb - 1" > Email </label> <Input) ";
+}</div> </div> <div> <label html_for="subject" className="block text - sm font - medium text - zion - slate - light mb - 1" > Subject </label> <Input) ";
+}</div> <div> <label html_for="message" className="block text - sm font - medium text - zion - slate - light mb - 1" > Message </label> <Textarea);
+}</div> <div> <Button > {';
+  is_submitting ? 'Sending...' : 'Send Message';
+}</Button>);
+}</div> </form> </div> </div> </div> </div> </section>);
+}'"}
+}
+;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -2,36 +2,18 @@ import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { StarIcon } from 'lucide-react';
-import Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import useState
-import { Star } from 'lucide-react'interface ListingScoreCardProps {
-  title: string,
+
+interface ListingScoreCardProps {
+  title: string;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   description: string;
   image?: string;
   category: string;
   tags?: string[];
   author?: string;
 
-interface ListingScoreCardProps {
-  title: string,
-  description: string,
-  image?: string,
-  category: string,
-  tags?: string[],
-  author?: string,
-  authorImage?: string,
-  aiScore?: number,
-  rating?: number,
-  reviewCount?: number,
-  className?: string
-}
-
-export function ListingScoreCard({ 
-  title, 
-  description, 
-  image, 
-  category,   tags,
+  tags,
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   author,
   authorImage,
   aiScore,
@@ -39,17 +21,9 @@ export function ListingScoreCard({
   reviewCount = 0,
   className
 }: ListingScoreCardProps) {
-  const [mainImageError, setMainImageError] = useState(false),
-  const [authorImageError, setAuthorImageError] = useState(false),
 
-  return (
-    <div className={cn(
-      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
-      className
-    )}>
-      {image && !mainImageError && (
-        <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
-          <Image            src={image} 
+            src={image} 
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             alt={title} 
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             onError={() => setMainImageError(true)}
@@ -82,6 +56,8 @@ export function ListingScoreCard({
           )}
         </div>
 
+        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
         
         {rating > 0 && (
@@ -116,7 +92,20 @@ interface ListingScoreCardProps {;
 }
 ;
 export function ListingScoreCard({;
-export function ListingScoreCard(): any ({;  author_image?: string;
+
+  title,;
+  description,;
+  image,;
+  category,;
+  tags,;
+  author,;
+  authorImage,;
+  aiScore,;
+  rating = 0,;
+  reviewCount = 0,;
+
+  author_image?: string;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ai_score?: number;
   rating?: number;
   review_count?: number;
@@ -214,39 +203,13 @@ function ListingScoreCard() {
 
         </p>;
 
-              ))}
-            </div>
-            <span className="text-sm text-zion-slate-light ml-1">
-              ({reviewCount})
-            </span>
-          </div>
-        )}
-          <div className='flex flex-wrap gap-2 mb-4'>
-            {tags.map((tag, i) => (
-              <Badge
-                key={i}
-                variant='outline'
-                className='border-zion-slate-dark text-zion-slate-light'
-              >                {tag}
-              </Badge>
-            ))}
-          </div>
-        )}
-        <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>
-          Request Quote
-        </Button>
-          <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag, i) => (
-              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
-                {tag}              </Badge>;
+              </Badge>;
             ))}
           </div>;
         )}
-        
-        <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-          Request Quote
-        </Button>
-                {author && (
+
+        {author && (
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
             {authorImage && !authorImageError ? (
               <div className='relative h-8 w-8 rounded-full mr-2 overflow-hidden'>
@@ -322,6 +285,10 @@ function ListingScoreCard() {
               </div>
             )}
 
-                {author.charAt(0)}
-              </div>
-            )}
+            <span className="text-sm text-zion-slate-light">{author}</span>
+          </div>
+        )}
+      </div>;
+    </div>;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

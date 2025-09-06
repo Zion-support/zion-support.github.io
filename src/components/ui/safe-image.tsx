@@ -1,7 +1,6 @@
-import { ImageIcon } from 'lucide-react'
-interface SafeImageProps {;
-import { ImageIcon } from 'lucide-react'
-interface SafeImageProps {;  src: string;
+
+  src: string;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   alt: string;  width?: number;interface SafeImageProps {
 
     }
@@ -59,45 +58,14 @@ interface SafeImageProps {
   // If we have an error and no fallback, show a placeholder;
   if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {;
 
-  src: string
-  alt: string
-interface SafeImageProps {
+        return (
+      <div
+        className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
+        style={{ width, height }}
+        role="img"
 
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  fallbackSrc?: string
-  priority?: boolean
-  sizes?: string
-  quality?: number
-export function SafeImage({
-  src
-  alt
-  width
-  height
-  className = ''
-  fallbackSrc
-  priority = false
-  sizes
-  quality = 75
-}: SafeImageProps) {
-  const [hasError, setHasError] = useState(false)
-  const [currentSrc, setCurrentSrc] = useState(src)
-  const handleError = () => {
-    if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {
-      setCurrentSrc(fallbackSrc)
-      setHasError(true)
-      // Try serving the image directly through our custom API route
-      const fallbackUrl = `/api/image${src}`
-      setCurrentSrc(fallbackUrl)
-      setHasError(true)
-    } else if (!hasError) {
-      setHasError(true)
-
-  // If we have an error and no fallback, show a placeholder
-  if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {        className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
+        className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         style={{ width, height }}
         role="img"
         aria-label={alt}
@@ -108,8 +76,8 @@ export function SafeImage({
     )
   }
 
-    />
-  ); return (    <Image
+    <Image
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       src = {currentSrc,}
       alt = {alt,}
       width = {width,}
@@ -119,9 +87,9 @@ export function SafeImage({
       priority = {priority,}
       // Add unoptimized as fallback for problematic images
       unoptimized = {hasError,}
-}
-    />;
-  );    <Image;
+
+    <Image;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       src={currentSrc}
       alt={alt}
       width={width}
@@ -130,7 +98,5 @@ export function SafeImage({
       onError={handleError}
       priority={priority}
       // Add unoptimized as fallback for problematic images;
-      unoptimized={hasError}
-    />;
-  );
-} ;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

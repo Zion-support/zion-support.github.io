@@ -24,7 +24,6 @@ import {
   DialogHeader,
   DialogTitle,
 
-
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { Star, Flag, User } from 'lucide-react'
@@ -41,7 +40,6 @@ import {
   DialogTitle,
           />
         ))}
-
 
               <AvatarFallback className="bg-muted">
                 <User className="h-4 w-4" />
@@ -164,7 +162,6 @@ if (return null) {
 
   return (
 
-
               )}
             </Avatar>;
           )}
@@ -196,14 +193,10 @@ if (return null) {
             </Avatar>
           )}
 
-
         review.would_work_again !== undefined) && (
         <div className='border-t pt-3 mt-3'>
           <div className='flex flex-wrap gap-2'>
             {review.communication_rating && (
-
-
-      
 
               </Badge>
             )}
@@ -246,24 +239,8 @@ if (return null) {
                 </span>;
               </Badge>)}
             {review.would_work_again !== undefined && (
-<<<<<<< HEAD
-              <Badge;
-                variant={review.would_work_again ? 'default' : 'secondary'}
-                className={`${review.would_work_again ? 'bg - green - 100 text - green - 800 hover:bg - green - 200' : 'bg - gray - 100 text - gray - 800 hover:bg - gray - 200'}`}              >;
-                {review.would_work_again;
-                  ? 'Would work again';
-                  : 'Would not work again'}              </Badge>;
-=======
-              <Badge
-                variant={review.would_work_again ? 'default' : 'secondary'}
-                className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}              >
-                {review.would_work_again
-                  ? 'Would work again'
-                  : 'Would not work again'}              </Badge>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                {review.would_work_again ? "Would work again" : "Would not work again"}
 
-          
+                {review.would_work_again ? "Would work again" : "Would not work again"}
 
             </div>
             <div className="text-sm text-muted-foreground">
@@ -278,7 +255,6 @@ if (return null) {
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
-
 
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
         <div className="border-t pt-3 mt-3">
@@ -351,8 +327,6 @@ if (return null) {
                 className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
               >
                 {review.would_work_again ? "Would work again" : "Would not work again"}
-
-
 
           <div>;
             <div className='font-medium'>;
@@ -470,10 +444,6 @@ if (return null) {
         </div>;
       )}
 
-
-
-
-
       <div className='mt-3 flex justify-end'>
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -490,7 +460,6 @@ if (return null) {
 
               Report
 
-
             </Button>
           </DialogTrigger>
           <DialogContent>
@@ -498,9 +467,7 @@ if (return null) {
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
 
-
                 If you believe this review violates our community guidelines,
-
 
                 please provide details below.
               </DialogDescription>
@@ -551,8 +518,6 @@ if (return null) {
 
               onChange = {(e,) => setReportReason(e.target.value),}
 
-
-
                 If you believe this review violates our community guidelines, please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -562,9 +527,6 @@ if (return null) {
               value={reportReason}
               onChange={(e) => setReportReason(e.target.value)}
 
-
-
-
               className="min-h-[100px]"
             />
             
@@ -573,15 +535,11 @@ if (return null) {
                 Cancel
               </Button>
 
-
-
               <Button 
                 onClick={handleReport} 
                 disabled={!reportReason.trim() || isReporting}
               >
                 {isReporting ? "Submitting..." : "Submit Report"}
-
-
 
               </Button>
             </DialogFooter>

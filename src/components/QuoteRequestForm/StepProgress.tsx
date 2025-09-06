@@ -23,6 +23,9 @@ interface StepProgressProps {
 
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
+
+    { id: "service", label: "Service" },
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
@@ -49,6 +52,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
           }}
         />
       </div>
+
+          return (
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div key={step && step.id} className='flex flex-col items-center relative'>;
               <div
                 className={cn(
@@ -58,15 +64,8 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     : status === 'current'
                       ? 'bg-zion-cyan border-2 border-zion-purple'
                       : 'bg-zion-blue-light text-zion-slate-light'
-                )}>;
-                {status === 'complete' ? (;
-                  <CheckIcon className='h-4 w-4' />;
-                ) : (;
-                  <span className='text-xs'>;
-                    {steps && steps.findIndex(s => s && s.id === step && step.id) + 1}
-                  </span>;
-                )}
-              </div>;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <span
                 className={cn(
                   'text-xs mt-2 font-medium'
@@ -76,6 +75,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                       ? 'text-white'
                       : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium"
 
+                  "text-zion-slate-light"
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
                 )}
               <span
                 className = {cn(
@@ -83,10 +85,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
                   "text-zion-slate-light"
-                ) : (
-                  <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
-                )}
-              </div>}/> </div>
+
+}/> </div>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
   steps.findIndex (s => s.id === step.id) + 1
 }</span>)
@@ -181,4 +182,5 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
       </div>;
     </div>;
   );
-}
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

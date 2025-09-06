@@ -9,9 +9,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert",
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
 
-import { Job } from "@/types/jobs",
-import { toast } from "sonner",
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ApplyToJobFormProps {
 
   job: Job
@@ -42,7 +40,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       setError("Please provide a cover letter")
       return;
     }
-    
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     setIsSubmitting(true)
     setError(null)
@@ -104,7 +102,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       setError(err.message |"Failed to submit application")
       toast.error("Failed to submit application")
 
-      
+  return (
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       {error && (
         <Alert variant="destructive">
@@ -113,8 +112,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         </Alert>
       )}
 
-      
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="space-y-4">
         <div>
           <Label htmlFor="coverLetter">Cover Letter</Label>
@@ -211,6 +209,8 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
             onChange = {(e,) => setCoverLetter(e && e.target.value),}
             rows = {6,}
 
+        <div>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
             <div className="flex items-center gap-2 mt-2">
@@ -434,16 +434,12 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
       </div>
 
       <div className="flex justify-end gap-2">
+
+        <Button
           type="button"
           variant="outline"
 
-          onClick={() => {;
-            if (onSuccess) onSuccess();
-
-          disabled={isSubmitting}
-          onClick={() => {;
-            if (onSuccess) onSuccess();
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }}
         >;
           Cancel;
@@ -472,4 +468,5 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 if ( {) {
   $2
 }
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

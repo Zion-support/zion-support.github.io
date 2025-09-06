@@ -86,7 +86,7 @@ export function MobileResumeBuilder() {;
       </div>
       {renderStepContent()}
 
-      
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
@@ -129,11 +129,7 @@ function BasicsStep() {
         </Button>;
       </div>;
 
-      {renderStepContent()}
-
-      <Button className="w-full flex gap-2" size="lg">;
-        <Zap className="h-5 w-5" /> Enhance with AI;
-      </Button>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Button variant="default" className="w-full" size="lg">;
         Save & Preview;
       </Button>;
@@ -141,19 +137,22 @@ function BasicsStep() {
   );
 }
 
-function BasicsStep() {;
-  return (    <Card>;
+    <Card>;
       <CardContent className="p-4 space-y-4">;
         <div className="space-y-2">;
           <Label htmlFor="title">Resume Title</Label>;
-          <Input id="title" name="title" placeholder="e && e.g. Senior Frontend Developer" />;        </div>;
+
+        </div>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="space-y-2">;
           <Label htmlFor="fullName">Full Name</Label>;
           <Input id="fullName" name="fullName" placeholder="Your full name" autoComplete="name" />;
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="email">Email Address</Label>;
-          <Input id="email" name="email" type="email" placeholder="you@example && example.com" autoComplete="email" />;        </div>;
+
+        </div>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="space-y-2">;
           <Label htmlFor="phone">Phone Number</Label>;
           <Input id="phone" name="phone" placeholder="Your phone number" autoComplete="tel" />;
@@ -189,7 +188,8 @@ function ExperienceStep() {
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
 
-  }
+  };
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
   )
 };
@@ -341,12 +341,13 @@ function ExperienceStep() {;
   },;
 
   const removeExperience = (id: string,) => {;
-    setExperiences(experiences && experiences.filter(exp => exp && exp.id !== id))
-};
+    setExperiences(experiences && experiences.filter(exp => exp && exp.id !== id));
+  };
 
   const removeEducation = (id: string,) => {;
-    setEducations(educations && educations.filter(edu => edu && edu.id !== id))
-};
+    setEducations(educations && educations.filter(edu => edu && edu.id !== id));
+  };
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const removeSkill = (id: string,) => {;
     setSkills(skills && skills.filter(skill => skill && skill.id !== id))

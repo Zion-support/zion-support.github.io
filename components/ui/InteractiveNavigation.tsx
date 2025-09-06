@@ -1,9 +1,4 @@
 <<<<<<< HEAD
-import React, { useState } from "react";
-import Link from "next/link";
-import { ChevronDown, Menu, X } from "lucide-react";
-=======
-<<<<<<< HEAD
 ;
 
 
@@ -16,13 +11,16 @@ interface NavigationItem {
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+ f6b849a806966ab0803a1eba10ab812addf04f56
 
 interface NavItem {
   label: string;
   href: string;
   children?: NavItem[];
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 interface InteractiveNavigationProps {
@@ -30,12 +28,6 @@ interface InteractiveNavigationProps {
   className?: string;
 }
 
-<<<<<<< HEAD
-const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
-  items,
-  className = "",
-}) => {
-=======
 <<<<<<< HEAD
 interface NavigationItem {;
   name: string, href: string,;
@@ -166,7 +158,7 @@ export default Component}
 export default Component}
 =======
 const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, className = '' }) => {
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+ f6b849a806966ab0803a1eba10ab812addf04f56
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -276,7 +268,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
 };
 
 export default InteractiveNavigation;
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,33 +1,12 @@
 } from 'lucide-react'; import {
-  Sidebar
-  SidebarContent
-  SidebarGroup
-  SidebarMenuItem
 
-  // SidebarMenu, // Removed
-  // SidebarMenuButton, // Removed
-  // SidebarGroupLabel, // Not needed
-  // SidebarGroupContent, // Not needed
-} from '@/components/ui/sidebar'
-  // SidebarGroupContent, // Not needed
-} from "@/components/ui/sidebar"
-  Sidebar
-  SidebarContent
-  SidebarGroup
-  SidebarMenuItem
-  // SidebarMenu, // Removed
-  // SidebarMenuButton, // Removed
-  // SidebarGroupLabel, // Not needed
-  // SidebarGroupContent, // Not needed
-} from "@/components/ui/sidebar"export function AppSidebar() {
+export function AppSidebar() {
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Sidebar>
       <SidebarContent>
 
-        <SidebarGroup title="Dashboard">
-          <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
-            <span>Home</span>
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </SidebarMenuItem>
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
             <span>Messages</span>
@@ -227,4 +206,5 @@ function AppSidebar() {
         </SidebarGroup>;
       </SidebarContent>;
     </Sidebar>);
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

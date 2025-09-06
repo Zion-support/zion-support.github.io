@@ -1,43 +1,27 @@
-import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-<<<<<<< HEAD
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import nextPlugin from '@next/eslint-plugin-next';
-import globals from 'globals';
-
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
-=======
 <<<<<<< HEAD
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import typescript from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import globals from 'globals';
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+ f6b849a806966ab0803a1eba10ab812addf04f56
+=======
+import globals from 'globals';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export default [
   ...compat.extends('next/core-web-vitals'),
   {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
     files: ['**/*.{js,jsx,ts,tsx}'],
 =======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     ignores: [
       'node_modules/**',
       'dist/**',
       'build/**',
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
       '.next/**',
       'out/**',
@@ -47,16 +31,14 @@ export default [
       'src.disabled/**',
       'src.pages.disabled/**',
 =======
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+ f6b849a806966ab0803a1eba10ab812addf04f56
       'coverage/**',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
       'scripts/**',
       'automation/**',
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       'backup-problematic-files/**',
       'src.disabled/**',
@@ -208,53 +190,21 @@ export default [
   },
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
+=======
+    files: ['**/*.{js,jsx,ts,tsx}'],
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
         ...globals.browser,
-        ...globals.node,
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-<<<<<<< HEAD
-=======
         afterAll: 'readonly',
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ a252feedad80e14c11ed30f5695974c343534e8d
       },
       parser: typescriptParser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-<<<<<<< HEAD
-          jsx: true
-        }
-      }
-    },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      '@typescript-eslint': tseslint,
-      'jsx-a11y': jsxA11y
-    },
-    rules: {
-      ...js.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...react.configs['jsx-runtime'].rules,
-      ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
-      ...tseslint.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true }
-      ],
-=======
           jsx: true,
         },
       },
@@ -269,7 +219,7 @@ export default [
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ a252feedad80e14c11ed30f5695974c343534e8d
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/display-name': 'off',
@@ -280,10 +230,6 @@ export default [
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'prefer-const': 'error',
       'no-debugger': 'warn',
-<<<<<<< HEAD
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-=======
 <<<<<<< HEAD
       'no-trailing-spaces': 'error',
       'indent': 'off',
@@ -405,7 +351,7 @@ export default [
       'jsx-a11y/img-redundant-alt': 'warn',
       'jsx-a11y/no-access-key': 'warn',
 =======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     },
     settings: {
@@ -416,9 +362,7 @@ export default [
   },
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+ f6b849a806966ab0803a1eba10ab812addf04f56
   {
     files: ['**/*.js'],
     languageOptions: {
@@ -438,8 +382,6 @@ export default [
       'no-console': 'off',
     },
   },
-<<<<<<< HEAD
-=======
 =======
       react,
       'react-hooks': reactHooks,
@@ -454,7 +396,18 @@ export default [
       'react-hooks/exhaustive-deps': 'warn',
     },
   },
->>>>>>> main
+ main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+=======
+        ...globals.node
+      }
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'error'
+    }
+  }
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ];

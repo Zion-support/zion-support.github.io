@@ -29,11 +29,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
         { label: 'ai', value: 1 }
       ]
 
+    });
+
+  }
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
 }
 
-}import { createServerClient } from '../../../utils / supabase / server';
+}
+
+import { createServerClient } from '../../../utils / supabase / server';
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export default async /**
  * handler - Function description
@@ -120,5 +128,5 @@ function handler() {
   }
 }
 }
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

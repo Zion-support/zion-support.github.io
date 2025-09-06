@@ -1,8 +1,5 @@
-return (
-      <Link href="/" className="flex items-center">;
-        <img src={logoToUse} alt={`${brand_name} Logo`} className="h-8" width={32} height={32} />;
-      </Link>);
-  }
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   if (logoToUse) {
     return (
@@ -11,8 +8,6 @@ return (
       </Link>
     )
   }
-
-  
 
   return (
 
@@ -92,4 +87,5 @@ if ( {) {
       />;
     </Link>);
 }
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

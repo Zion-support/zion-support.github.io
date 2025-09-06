@@ -1,4 +1,5 @@
-Table;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   TableBody;
   TableCell;
   TableHead;
@@ -25,13 +26,14 @@ import {
   TableCell,
   TableHead,
   TableHeader,
+
+  TableRow} from "@/components/ui/table",
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Download, FileText, Search } from 'lucide-react'
 
-import { Input } from "@/components/ui/input",
-import { toast } from "@/hooks/use-toast",
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function InvoiceHistory() {
   // Mock invoice data
 
@@ -300,4 +302,5 @@ export function InvoiceHistory() {;
         return <Badge variant="destructive">Overdue</Badge>;
       default:;
         return <Badge variant="outline">{status}</Badge>;
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

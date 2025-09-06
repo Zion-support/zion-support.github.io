@@ -1,7 +1,6 @@
 }
 
-  
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -19,7 +18,6 @@
           Add Project
         </Button>
       </div>
-      
 
           Add Project
         </Button>
@@ -98,7 +96,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
   const [ showAddProject, setShowAddProject ] = useState(false),
   const [ editingProject, setEditingProject ] = useState<PortfolioProject | null>(null),
 
-  
   useEffect(() => {
     fetchProjects()
   }, [fetchProjects]);
@@ -156,21 +153,17 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
-            </h2>
-            
-            <ProjectForm 
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {                setShowAddProject(false);
+
+                setShowAddProject(false);
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                 setEditingProject(null)
 
               }}
-            />
-          </CardContent>
-        </Card>      )}
 
-      
+      )}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
       {/* Projects List */}
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

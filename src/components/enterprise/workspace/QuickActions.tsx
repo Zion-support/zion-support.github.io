@@ -1,20 +1,5 @@
-import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { FileText, Plus, Search, Calendar } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Calendar } from 'lucide-react';
 
-  return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle>Quick Actions</CardTitle>;
-        <CardDescription>Fast access to common tasks</CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>;
-          {actions && actions.map(action => (;
-            <Button
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       id: 'post - job',
       label: 'Post New Job',
@@ -213,4 +198,5 @@ export function QuickActions() {;
       </CardContent>;
     </Card>);
 }
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

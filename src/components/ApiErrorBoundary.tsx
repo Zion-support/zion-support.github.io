@@ -1,6 +1,6 @@
-      }
 
-      return (        <div className="flex min-h-screen items-center justify-center p-4">
+        <div className="flex min-h-screen items-center justify-center p-4">
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="w-full max-w-md space-y-4">
             <Alert variant="destructive">
               <div className="flex items-center gap-2">
@@ -8,11 +8,7 @@
                   <WifiOff className="h-4 w-4" />
                 ) : (
 
-                  <RefreshCw className="h-4 w-4" />
-                )}
-                <AlertTitle>;
-                  {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -27,6 +23,9 @@
                 )}
               </AlertDescription>
             </Alert>
+
+                onClick={this.handleRetry}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 disabled={this.state.isRetrying}
                 className="w-full"
               >
@@ -43,6 +42,8 @@
                   </>
                 )}
 
+                Reload Page
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </Button>
             </div>
             {!this.state.isOnline && (
@@ -51,13 +52,14 @@
                 <span>Offline</span>
               </div>
             )}
-            {process.env.NODE_ENV === 'development' && this.state.error && (              <details className="mt-4 rounded border p-2 text-xs">
+
+              <details className="mt-4 rounded border p-2 text-xs">
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
 
-                <pre className="mt-2 whitespace-pre-wrap break-all">
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
@@ -84,6 +86,5 @@ export const useApiErrorHandler = () => {;
       Sentry && Sentry.captureException(error);
     })
 };
-  return { handleApiError }
-};
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

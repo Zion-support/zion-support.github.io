@@ -117,57 +117,16 @@ if ( {) {
 }
       return;
     }
-    set_saving (true);
-    try {
-      // Check condition
-if ( {) {
-  $2
-}
-        await update_template.mutate_async ({
-          template_id: edit_template.id,
-          title: values.title,
-          template_data: edit_template.template_data,
-          is_default: values.is_default,
-        });
-      } else // Check condition
-if ( {) {
-  $2
-}
-        await create_template.mutate_async ({
-          title: values.title,
-          template_data: current_values,
-          is_default: values.is_default,
-        });
-      }
-      on_complete ();
-    } finally {
-      set_saving (false);
 
-    }
-  }
-
-  return (
-    <Form {...form}>;
-
-      <form on_submit={form.handle_submit (on_submit)} className='space - y-4'>;
-        <FormField;
-          control={form.control}
-          name='title';
-
-          render={({
-            field
-          }: {
-
-    }
-  },
-  
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
 
+              <FormLabel>Template Name</FormLabel>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <FormControl>
                 <Input {...field} placeholder='Enter template name' />
               </FormControl>
@@ -207,19 +166,9 @@ if ( {) {
                 <Switch
                   aria-label='Default template'
                   checked={field && field.value}
-                  onCheckedChange={field && field.onChange}                />
-};
-  return (;
-    <Form {...form}>;
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
-        <FormField;
-          control={form.control}
-          name="title";
-          render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (;
-            <FormItem>;
-              <FormLabel>Template Name</FormLabel>;
-              <FormControl>;
-                <Input {...field} placeholder="Enter template name" />;
+                  onCheckedChange={field && field.onChange}                />;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </FormControl>;
               <FormMessage />;
             </FormItem>;
@@ -227,9 +176,23 @@ if ( {) {
 
             Cancel
           </Button>
-          <Button type="submit" disabled={saving}>
-            {saving ? (              <>
+
+              <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
               </>
             ) : (
+
+  editTemplate ? "Update" : "Save" 
+}Template`) ;
+}</Button> </div> </form> </Form>) ;
+}"};
+
+              `${editTemplate ? "Update" : "Save"} Template`
+
+            )}
+          </Button>;
+        </div>;
+      </form>;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

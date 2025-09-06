@@ -65,31 +65,9 @@ import { Button } from "@/components/ui/button",;
 import { X } from 'lucide-react';
 
 interface ActiveFiltersProps {;
-  selectedSkills: string[];
-  toggleSkill: (skill: string) => void;
-  selectedAvailability: string[];
-  toggleAvailability: (status: string) => void;
-  selectedRegions: string[];
-  toggleRegion: (region: string) => void;
-  priceRange: [number, number];
-  setPriceRange: (range: [number, number]) => void;
-  experienceRange: [number, number];
-  setExperienceRange: (range: [number, number]) => void;
-  clearFilters: () => void;interface ActiveFiltersProps {;
-  selectedSkills: string[],;
-  toggleSkill: (skill: string,) => void,;
-  selectedAvailability: string[],;
-  toggleAvailability: (status: string,) => void,;
-  selectedRegions: string[],;
-  toggleRegion: (region: string,) => void,;
-  priceRange: [number, number],;
-  setPriceRange: (range: [number, number],) => void,;
-  experienceRange: [number, number],;
-  setExperienceRange: (range: [number, number],) => void,;
-  clearFilters: () => void;
-}
 
-export function ActiveFilters(): any ({;  selectedSkills,;
+  selectedSkills,;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   toggleSkill,;
   selectedAvailability,;
   toggleAvailability,;
@@ -99,38 +77,40 @@ export function ActiveFilters(): any ({;  selectedSkills,;
   setPriceRange,;
   experienceRange,;
   setExperienceRange,;
-  clearFilters,;
-}: ActiveFiltersProps) {;
-  // Check if any filters are active;
-  const hasActiveFilters =;
-    selectedSkills && selectedSkills.length > 0 ||;
-    selectedAvailability && selectedAvailability.length > 0 ||;
-    selectedRegions && selectedRegions.length > 0 ||;    experienceRange[0] !== 0 ||;
+
+    experienceRange[0] !== 0 ||;
     experienceRange[1] !== 15 ||;
     priceRange[0] !== 50 ||;
     priceRange[1] !== 200;
+
+  if (!hasActiveFilters) return null;
+
+  return (
+    <div className='mb-6 flex flex-wrap gap-2 items-center'>;
+      <span className='text-zion-slate-light text-sm'>Active filters:</span>;
+
+      {selectedSkills && selectedSkills.map(skill => (;
+        <ClickableBadge
+          key={skill}
+
       ))}
 
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {selectedAvailability && selectedAvailability.map(status => (;
 
         <ClickableBadge
           key={status}
-          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
-          onClick={() => toggleAvailability(status)}        >;
-          {status === 'full-time';
-            ? 'Full-time';
-            : status === 'part-time';
-              ? 'Part-time';
-              : 'Project-based'}
-          <X className='h-3 w-3' />;
-        </ClickableBadge>;      ))}
+
+      ))}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       {selectedRegions && selectedRegions.map(region => (;
 
         <ClickableBadge
           key={region}
-          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
-          onClick={() => toggleRegion(region)}        >;          {region}
+
+          {region}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;
 
@@ -171,7 +151,6 @@ export function ActiveFilters(): any ({;  selectedSkills,;
         </ClickableBadge>
       )}
 
-      
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
 
           {experienceRange[0]}-{experienceRange[1]} years
@@ -191,7 +170,6 @@ export function ActiveFilters(): any ({;  selectedSkills,;
 };
 }
 
-      
       <Button 
         variant="ghost" 
         size="sm" 

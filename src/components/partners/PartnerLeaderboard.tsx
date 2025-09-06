@@ -1,6 +1,6 @@
-  referrals: number,
-  earnings: number,
-  badges: string[]}
+
+}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
   const leaderboard: LeaderboardEntry[] = [
@@ -14,8 +14,7 @@ export function PartnerLeaderboard() {
       earnings: 4500
       badges: ["gold", "trending"]
 
-    },
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       id: "2"
       rank: 2
@@ -25,6 +24,8 @@ export function PartnerLeaderboard() {
       earnings: 3625
       badges: ["silver"]
 
+    {
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       id: "3"
       rank: 3
       name: "Neural Networks Pro"
@@ -33,8 +34,7 @@ export function PartnerLeaderboard() {
       earnings: 3100
       badges: ["bronze"]
 
-    },
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       id: "4"
       rank: 4
@@ -43,18 +43,9 @@ export function PartnerLeaderboard() {
       referrals: 98
       earnings: 2450
       badges: []
-    {
-      id: "5",
-      rank: 5,
-      name: "Deep Learning Daily",
-      avatar: "",
-      referrals: 87,
-      earnings: 2175,
-      badges: ["newcomer"]
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Badge } from "@/components/ui/badge",;
-import { Crown, Medal, Trophy } from 'lucide-react';interface LeaderboardEntry {;
+
+interface LeaderboardEntry {;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string,;
   rank: number,;
   name: string,;
@@ -123,4 +114,5 @@ export function PartnerLeaderboard() {;
       case 3:;
         return <Medal className="h-5 w-5 text-amber-700" />;
       default:;
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

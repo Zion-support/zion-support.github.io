@@ -77,7 +77,9 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       case 'full-time':;
         return 'bg-green-500/20 text-green-400',;
       case 'part-time':;
-        return 'bg-yellow-500/20 text-yellow-400';      case 'project-based':;
+
+      case 'project-based':;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         return 'bg-blue-500/20 text-blue-400',;
       default:;
         return 'bg-gray-500/20 text-gray-400';
@@ -96,8 +98,8 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       case 'project-based':;
         return 'Project';
       default:;
-        return status
-};
+        return status;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const getAvailabilityLabel = (status: string, ) =>: any {
     switch (status) {

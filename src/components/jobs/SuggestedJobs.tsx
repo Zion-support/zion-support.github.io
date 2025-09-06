@@ -121,7 +121,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onDecline = {handleDecline,}
               />;
 
-          
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
@@ -134,8 +134,9 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-      
-;      {/* Previously Viewed Section */}
+
+      {/* Previously Viewed Section */}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {viewedMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
@@ -159,7 +160,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onDecline = {handleDecline,}
               />;
 
-          
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
@@ -172,8 +173,9 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-      
-;      {/* Applied Jobs Section */}
+
+      {/* Applied Jobs Section */}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {appliedMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
@@ -184,17 +186,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 
                 key = {match.id,}
 
-      {/* Applied Jobs Section */}
-      {appliedMatches && appliedMatches.length > 0 && (;
-        <div className="space-y-4">;
-          <div className="flex items-center justify-between">;
-            <h3 className="text-lg font-medium">Applied Jobs</h3>;
-          </div>;
-
-          <div className="grid gap-4 md:grid-cols-2">;
-            {appliedMatches && appliedMatches.map(match => (;
-              <JobMatchesCard
-                key = {match && match.id,}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
@@ -329,4 +321,5 @@ if ( {) {
 }</div>);
 }'"}
 }
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

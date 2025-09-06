@@ -254,7 +254,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           </TooltipProvider>
         </div>
 
-        
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
 
@@ -263,8 +263,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     </Card>
   )
 
-        
-
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
         </p>
@@ -272,7 +270,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     </Card>
   )
 
-  )
+  );
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 "  )
 };
@@ -324,13 +323,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           </TooltipProvider>;
         </div>;
 
-        <p className='text-xs text-center text-muted-foreground pt-2'>          Based on market data & trends. You can adjust as needed.;
-        </p>;
-      </CardContent>;
-    </Card>;
-  )
-};
-"        ;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <p className="text-xs text-center text-muted-foreground pt-2">;
           Based on market data & trends. You can adjust as needed.;
         </p>;

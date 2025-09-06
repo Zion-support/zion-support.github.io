@@ -17,8 +17,7 @@ export default function ReportsIndex() {
       <main className="container mx-auto px-4 py-12 max-w-7xl">;
         {/* Header */}
 
-        {/* Back to Home */}
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {/* Back to Home */}
         <div className='mt-12 text-center'>;
           <Link
@@ -64,13 +63,39 @@ function ReportsIndex() {
           <Link;
             href='/';
             className='inline - flex items - center gap - 2 text - cyan - 300 hover:text - cyan - 200 transition - colors duration - 200';
-          >            ← Back to home        <div className="mt-12 text-center">;
-          <Link href="/" className="inline - flex items - center gap - 2 text - cyan - 300 hover: text - cyan - 200 transition-colors duration-200">;
+          >            ← Back to home        <div className="mt - 12 text - center">;
+          <Link href="/" className="inline - flex items - center gap - 2 text - cyan - 300 hover: text - cyan - 200 transition - colors duration - 200">;
 
-    </div>
-    </div>
-  );
-}    </div>;
+            ← Back to home;
+          </Link>;
+        </div>;
+      </main>;
+
+        <div className="mt-12 text-center">
+
+          <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
+
+        {/* Content Categorizer Component */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <ContentCategorizer />;
+        {/* Back to Home */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="mt-12 text-center">
+          <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
+
+            ← Back to home
+          </Link>
+        </div>
+      </main>
+
+    </div>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 }
 
@@ -89,3 +114,11 @@ function ReportsIndex() {
   }
 }
 ;
+
+    </div>);
+}
+
+    </div>);
+}
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

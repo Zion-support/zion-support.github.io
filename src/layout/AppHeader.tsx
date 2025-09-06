@@ -1204,11 +1204,9 @@ import React from 'react';
               </div>;
 
               {/* Mobile Services */}
-              <div className="space-y-2">;
-                <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">;
-                  Services;
-                </div>;
-                {services && services.map((service) => (;                  <Link
+
+                  <Link
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     key={service.name}
                     to={service.href}
                     onClick={closeMobileMenu}

@@ -47,7 +47,9 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";
 
         />;
-        <p id='talent-search-help' className='sr-only'>          Type a name or skill to filter results        <p id="talent-search-help" className="sr-only">;          Type a name or skill to filter results;
+
+          Type a name or skill to filter results;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </p>;
       </div>;
     </div>;

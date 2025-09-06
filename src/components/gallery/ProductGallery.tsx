@@ -1,5 +1,5 @@
-}
-});
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ProductGalleryProps {
 
 const ReactPlayer = React && React.lazy(() => import('react-player'));
@@ -109,10 +109,8 @@ export function ProductGallery(): any ({;
                   src={modelUrl}
                   alt='3d model'
                   camera-controls
-          <div
-            className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
-            onClick={() => setZoomed(!zoomed)}
-          >
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <img
               src={images[selected] |images[0] |''}
               alt='Zoomed view'
@@ -147,7 +145,10 @@ const ModelViewer = React.lazy(async () => {;
 interface ProductGalleryProps {;
   images: string[],;
   videoUrl?: string,;
-  modelUrl?: string;          </TabsContent>)}
+  modelUrl?: string;
+
+          </TabsContent>)}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </Tabs>;
       {images.length > 0 && (
         <DialogContent className='max - w-3xl p - 0'>;
@@ -163,4 +164,5 @@ interface ProductGalleryProps {;
         </DialogContent>)}
     </Dialog>);
 }
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

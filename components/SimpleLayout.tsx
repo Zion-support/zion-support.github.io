@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React, { ReactNode } from "react";
-=======
-<<<<<<< HEAD
 }
 export default /**
  * SimpleLayout - Function description
@@ -15,7 +12,7 @@ function SimpleLayout() {,
       </Head>,
 =======
 import React, { ReactNode } from 'react';
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+ f6b849a806966ab0803a1eba10ab812addf04f56
 
 interface SimpleLayoutProps {
   children: ReactNode;
@@ -36,7 +33,8 @@ const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
 };
 
 export default SimpleLayout;
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

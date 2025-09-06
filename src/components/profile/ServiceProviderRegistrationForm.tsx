@@ -811,12 +811,9 @@ export function ServiceProviderRegistrationForm() {;
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;
             <CardContent className='space-y-8'>;
               {/* Basic Information */}
-              <div className='space-y-4'>;
-                <h3 className='text-lg font-medium text-white'>;
-                  Basic Information;
-                </h3>;
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
-                  <div className='col-span-1'>;                    <FormField
+
+                    <FormField
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       control={form.control}
                 />;
                 {/* AI Enhancement Option */}
@@ -942,7 +939,6 @@ export function ServiceProviderRegistrationForm() {;
                             </div>                          </div>
                         )}
 
-                      
                       {generatedContent.services && generatedContent.services.length > 0 && (
                         <div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Suggested Services</h5>
@@ -990,9 +986,9 @@ export function ServiceProviderRegistrationForm() {;
                               className='flex-1 bg-zion-blue border-zion-blue-light text-white'
                               placeholder='Add a service...'
                               {...field}
-                              onKeyDown = {handleServiceKeyPress,}
-                            />;
-                          </FormControl>;                          <Button
+
+                          <Button
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                   />;
 
@@ -1400,15 +1396,9 @@ export function ServiceProviderRegistrationForm() {;
   setServiceTags (service_tags.filter ( (s) => s !== service) );
 
 }
-//Handle key press in services input (add on enter) const handleServiceKeyPress = (e: React.KeyboardEvent) =>: any {
-}
-//Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-  const file = e.target.files?.[0];
-// Check condition
-if ( {) {
-  $2
-}
-  const reader = new FileReader ();reader.onloadend = () => {
+
+reader.onloadend = () => {
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   setUploadedAvatar (reader.result as string);
 }
@@ -1447,7 +1437,9 @@ if (newServices.length > 0) {
   if (serviceTags.length === 0) {
   toast ({
   return;
-}setIsSubmitting (true);try {
+
+try {
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   //For actual implementation with Supabase if (!user?.id) {
 }//Enhance profile if not already done let finalSummary = values.bio
 let finalServices = serviceTags

@@ -25,6 +25,23 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
+
+export default function SecretsRotationAutomationPage() {
+
+  const features = [
+    "Automated key and secret rotation"
+    "JIT credentials with expirations"
+    "Policy approvals and audit trails"
+    "CI/CD integration (GitHub Actions, CircleCI)"
+    "Cloud KMS and Vault support"
+  ];
+  return (
+
+export default function SecretsRotationAutomationPage() {
+  const features = [
+
+    "Automated key and secret rotation",
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
     "CI / CD integration (GitHub Actions, CircleCI)",
@@ -83,14 +100,9 @@ import { Check, ExternalLink } from "lucide-react";
               rel="noreferrer";
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text-cyan-300";
             >;
-              <ExternalLink className="w-4 h-4" /> Google Cloud KMS;
+              <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
 
-            </a>;
-          </div>;
-        </section>;
-      </main>;
-
-    </>);
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <>;
       <SEO;
@@ -108,7 +120,10 @@ import { Check, ExternalLink } from "lucide-react";
           </p>;
           <div className="mt - 8 grid sm:grid - cols-2 gap-6">;
             {features.map ((f) => (
-              <div;  return (
+              <div;
+
+    <>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <SEO
         title="Secrets Rotation Automation"
         description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs."
@@ -164,7 +179,11 @@ import { Check, ExternalLink } from "lucide-react";
             </a>;
           </div>;
         </section>;
-      </main>;            </a>;
+      </main>;
+
+            </a>;
           </div>;
         </section>;
       </main>;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

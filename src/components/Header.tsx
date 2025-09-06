@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,9 +13,11 @@ const Header: React.FC = () => {
     { name: 'Contact', href: '/contact' }
   ];
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+import Button from './Button';
+
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
     <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50">
@@ -75,4 +77,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

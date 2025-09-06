@@ -1,28 +1,11 @@
-interface ProfileSetupProps {
-  onComplete: (data: ProfileFormValues) => void,
-  userType: string}
+
+}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema)
     defaultValues: {
-      case "serviceProvider": return "Service Provider"
-      case "talent":
-        return "Talent"
-      case "client":
-        return "Client"
-      default:
-        return "User"
-    }
-  }
-      case "serviceProvider": return "Service Provider",
-      case "talent":
-        return "Talent",
-      case "client":
-        return "Client",
-      default:
-        return "User"
-    }
-  },
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
     <div className="space-y-6">
@@ -33,8 +16,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
         </p>
       </div>
 
-      
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
           <FormField
@@ -55,6 +37,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
+
+          />;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <FormField;
             control={form.control}
             name="headline"
@@ -69,7 +54,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
-                      }`}              <FormItem>
+
+              <FormItem>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>
                 <FormControl>
                   <Textarea
@@ -87,14 +74,16 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
             )}
           />
 
-          
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button
             type="submit"
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
           >
             Complete Profile
           </Button>
+
+        </form>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </Form>
     </div>
   )
@@ -110,6 +99,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       </Form>;
     </div>;
   );
+
+  ...field "
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }/> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
 }/> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel> <FormControl> <div className="relative" > <InputclassName="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
   ...field "
@@ -147,6 +139,5 @@ getTypeLabel () ";
   ...field ";
 }/> </FormControl> <FormMessage className="text - red-400" /> </FormItem>);
 }/> <Button > Complete Profile </Button> </form> </Form> </div>);
-}"}
-}
-;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

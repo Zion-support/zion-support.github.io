@@ -1,7 +1,6 @@
-import * as React from "react"
-import * as ContextMenuPrimitive from "@radix-ui/react-context-menu"
-import { Check, ChevronRight, Circle } from 'lucide-react'
 
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const ContextMenu = ContextMenuPrimitive.Root
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger
 const ContextMenuGroup = ContextMenuPrimitive.Group
@@ -32,13 +31,14 @@ const ContextMenuSubTrigger = React.forward_ref<;
   <ContextMenuPrimitive.SubTrigger;
     ref={ref}
 
+      className
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )}
     {...props}
   >;
     {children}
 
-    <ChevronRight className="ml-auto h-4 w-4" />
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   </ContextMenuPrimitive.SubTrigger>
 ))
 ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName
@@ -50,6 +50,8 @@ const ContextMenuSubContent = React.forwardRef<
     ref={ref}
     className={cn(
 
+      className
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )}
     {...props}
   />;
@@ -57,14 +59,15 @@ const ContextMenuSubContent = React.forwardRef<
 ContextMenuSubContent.displayName = ContextMenuPrimitive.SubContent.displayName;
 const ContextMenuContent = React.forwardRef<;
 
-  React.ElementRef<typeof ContextMenuPrimitive.Content>,;
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Content>;
 >(({ className, ...props }, ref) => (;
   <ContextMenuPrimitive.Portal>;
     <ContextMenuPrimitive.Content;
       ref={ref}
 
+        className
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       )}
       {...props}
     />;
@@ -114,17 +117,16 @@ const ContextMenuItem = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.Item> & {
 
   React.ElementRef<typeof ContextMenuPrimitive.Item>,;
-  React.ElementRef<typeof ContextMenuPrimitive.Item>,;  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {;
+
+  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     inset?: boolean;
   }
 >(({ className, inset, ...props }, ref) => (;
   <ContextMenuPrimitive.Item;
     ref={ref}
 
-    className={cn(
-      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-      inset && "pl-8",
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -133,13 +135,13 @@ const ContextMenuItem = React.forward_ref<;
 ContextMenuItem.displayName = ContextMenuPrimitive.Item.displayName;
 const ContextMenuCheckboxItem = React.forwardRef<;
 
+  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.CheckboxItem>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >(({ className, children, checked, ...props }, ref) => (;
   <ContextMenuPrimitive.CheckboxItem;
     ref={ref}
 
-    className={cn(
-      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
 className={cn (
@@ -168,13 +170,13 @@ className={cn (
     </span>
     {children}
 
+  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.RadioItem>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >(({ className, children, ...props }, ref) => (;
   <ContextMenuPrimitive.RadioItem;
     ref={ref}
 
-    className={cn(
-      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
   </ContextMenuPrimitive.CheckboxItem>));
@@ -197,16 +199,16 @@ className={cn (
       </ContextMenuPrimitive.ItemIndicator>
     </span>
     {children}
+
+  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     inset?: boolean;
   }
 >(({ className, inset, ...props }, ref) => (;
   <ContextMenuPrimitive.Label;
     ref={ref}
 
-    className={cn(
-      "px-2 py-1.5 text-sm font-semibold text-foreground",
-      inset && "pl-8",
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -215,6 +217,8 @@ className={cn (
 ContextMenuLabel.displayName = ContextMenuPrimitive.Label.displayName;
 const ContextMenuSeparator = React.forwardRef<;
 
+  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >(({ className, ...props }, ref) => (;
 className={cn (
       &quot;px - 2 py - 1.5 text - sm font - semibold text - foreground & quot;,
@@ -229,17 +233,7 @@ const ContextMenuSeparator = React.forward_ref<;
 >(({ class_name, ...props }, ref) => (
   <ContextMenuPrimitive.Separator;
     ref={ref}
-    {...props}
-/>
-))
-ContextMenuSeparator.displayName = ContextMenuPrimitive.Separator.displayName
-const ContextMenuShortcut = ({
-  className
-  ...props
-}: React.HTMLAttributes<HTMLSpanElement>) => {
-  return (
-    <span
-      className={cn(
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         className
       )}
@@ -259,22 +253,4 @@ const ContextMenuShortcut = ({
   );
 }
 
-ContextMenuShortcut.display_name = &quot;ContextMenuShortcut & quot;
-;
-
-ContextMenuShortcut.displayName = "ContextMenuShortcut"
-
-export {
-  ContextMenu,
-  ContextMenuTrigger,
-  ContextMenuContent,
-  ContextMenuItem,
-  ContextMenuCheckboxItem,
-  ContextMenuRadioItem,
-  ContextMenuLabel,
-  ContextMenuSeparator,
-  ContextMenuShortcut,
-  ContextMenuGroup,
-  ContextMenuPortal,
-  ContextMenuSub,
-  ContextMenuSubContent,
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

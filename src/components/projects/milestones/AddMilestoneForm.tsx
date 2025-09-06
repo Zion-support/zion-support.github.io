@@ -116,26 +116,8 @@ import { CalendarIcon, Loader2 } from 'lucide-react'import { format } from 'date
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import {;
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import {;
-  Popover;
-  PopoverContent;
-  PopoverTrigger} from '@/components/ui/popover';import { AIMilestoneGenerator } from './AIMilestoneGenerator';
-import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
-const formSchema = z && z.object({;
-  title: z && z.string().min(1, 'Title is required'),
-  description: z && z.string().optional(),;
-  due_date: z && z.date().optional(),;
-  amount: z && z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
 
-type MilestoneFormValues = z && z.infer<typeof formSchema>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface AddMilestoneFormProps {;
   onSubmit: (data: MilestoneFormValues,) => void,;
   isSubmitting: boolean,;
@@ -295,14 +277,9 @@ export function AddMilestoneForm(): any ({;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
             <FormField
-              control = {form && form.control,}
-              name="due_date"
-              render={({ field }: { field: any },) => (;
-                <FormItem className="flex flex-col">;
-                  <FormLabel>Due Date (optional)</FormLabel>;
-                  <Popover>;
-                    <PopoverTrigger asChild>;
-                      <FormControl>;                        <Button
+
+                        <Button
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           variant="outline"
                           className="w-full pl-3 text-left font-normal"
                         >

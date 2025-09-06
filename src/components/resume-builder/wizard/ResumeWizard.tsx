@@ -6,8 +6,7 @@ if (isLoading) {
     );
   }
 
-  
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (error) {
 
   if (error) {;
@@ -18,8 +17,7 @@ if (isLoading) {
     )
   }
 
-  
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
   }
@@ -40,8 +38,7 @@ if (isLoading) {
     );
   }
 
-  
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
@@ -56,13 +53,11 @@ if (isLoading) {
       />;
     );
   }
-  
 
   return (
-    <div className="space-y-6">;
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
-        <h1 className="text-2xl font-bold">Resume Builder</h1>;
-        <div className="flex gap-4 flex-wrap items-center">;          {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
+
+          {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           <Button;
             onClick={() => setShowNewResumeForm(true)}
@@ -77,8 +72,7 @@ if (isLoading) {
         </div>
       </div>
 
-      
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
         <CardContent className="pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -86,8 +80,7 @@ if (isLoading) {
             <ResumeProgress resume={resume} progress={progress} />
           </div>
 
-          
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             variant="outline";
             size="sm";

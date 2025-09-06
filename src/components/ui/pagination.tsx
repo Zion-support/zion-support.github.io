@@ -1,27 +1,13 @@
 
-
-const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
-  <nav
-    {...props}
-  />
-)
->(({ className, ...props }, ref) => (
-  <ul
-    ref={ref}
-    {...props}
-/>
-))
->(({ className, ...props }, ref) => (
-))interface PaginationButtonProps
+interface PaginationButtonProps
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number
   isActive?: boolean
 }
 const PaginationLink = ({
 
-  className,
-  isActive,
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ...props
 }: PaginationLinkProps) => (
   <a
@@ -37,6 +23,9 @@ const PaginationLink = ({
     {...props}
   />
 )
+
+const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ({ page, isActive, className, ...props }, ref) => (
     <button
       ref={ref}
@@ -45,9 +34,7 @@ const PaginationLink = ({
       aria-current={isActive ? 'page' : undefined}
       className={cn(;
 
-        buttonVariants({ variant: 'ghost', size: 'icon' }),;
-        isActive && 'bg-green-600 text-white',;
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className;
       )}
       {...props}
@@ -71,6 +58,9 @@ const PaginationPrevious = ({
     <span>Previous</span>
   </PaginationLink>
 )
+
+const PaginationNext = ({
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   className
   ...props
 }: Omit<PaginationLinkProps 'size'>) => (
@@ -85,8 +75,7 @@ const PaginationPrevious = ({
   </PaginationLink>
 )
 
-PaginationNext.displayName = "PaginationNext"
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const PaginationEllipsis = ({
   className
   ...props
@@ -100,4 +89,5 @@ const PaginationEllipsis = ({
     <span className="sr-only">More pages</span>
   </span>
 )
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

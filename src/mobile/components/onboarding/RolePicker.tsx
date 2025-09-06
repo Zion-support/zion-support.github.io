@@ -46,21 +46,9 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
-          onClick = {(,) => handleSelect('talent'),}
-        >;
-          <CardContent className='p-5'>;
-            <div className='flex items-center'>;
-              <div className='w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4'>;
-                <Briefcase className='h-6 w-6 text-primary' />;
-              </div>;
-              <div className='flex-1'>;
-                <h3 className='font-medium'>I'm offering services</h3>;
-                <p className='text-sm text-muted-foreground'>;
-                  Find work and showcase your skills;
-                </p>;
-              </div>;
-              {selectedRole === 'talent' && (;
-                <Check className='h-5 w-5 text-primary' />;              )}
+
+              )}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             </div>;
           </CardContent>;
@@ -72,7 +60,9 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
-          onClick = {() => handleSelect('client'),}        >;
+
+        >;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <CardContent className='p-5'>;
             <div className='flex items-center'>;
               <div className='w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4'>;

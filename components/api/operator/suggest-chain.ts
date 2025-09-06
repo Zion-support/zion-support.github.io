@@ -2,9 +2,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   const stake = Number(stakeUsd || 0);
 
+export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body |{};export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
@@ -12,15 +15,21 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { region, stakeUsd } = req.body |{}
   const stake = Number(stakeUsd |0);
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
   // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum
   // - Region hints (very rough):
   //   APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const ranked = candidates && candidates.map(k => ({ key: k, chain: (CHAINS as any)[k] }));
   res
     .status(200)
     .json({ recommendation: ranked[0], alternatives: ranked && ranked.slice(1) });
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const regionLc = (region || '').toString().toLowerCase();
   if (regionLc && regionLc.includes('apac') || regionLc && regionLc.includes('asia')) {
     candidates = stake > 5000 ? ['arbitrumoptimismavalanche'] : ['bnbavalanchepolygon']
@@ -109,4 +118,5 @@ if (||) {
   const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k] }));
   res.status (200).json ({ recommendation: ranked[0], alternatives: ranked.slice (1) });
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

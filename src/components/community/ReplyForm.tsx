@@ -1,28 +1,31 @@
-interface ReplyFormProps {;
-  onSubmit: (content: string) => Promise<void>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { useState } from 'react'
 import { useForm, ControllerRenderProps } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
+
+import {
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Form,
   FormControl,
   FormField,
   FormItem,
 
-interface ReplyFormProps {
-  onSubmit: (content: string) => Promise<void>;
-  parentId?: string
-interface ReplyFormValues {
-  content: string
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       content: '',;
     },;
   });
   const handleSubmit = async (values: ReplyFormValues) => {;
 
-interface ReplyFormProps {
-  onSubmit: (content: string) => Promise<void>;
-  parentId?: string  return (
+    setIsSubmitting(true);    try {
+      await onSubmit(values.content)
+      form.reset()
+    } finally {
+      setIsSubmitting(false)
+
+  return (
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Card>
       <CardContent className="pt-6">
         <Form {...form}>
@@ -85,18 +88,5 @@ interface ReplyFormProps {
         </Form>;
       </CardContent>;
     </Card>);
-              )}
-            />
-            <div className="mt-4 flex justify-end">
-              <Button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Post Reply"}
-              </Button>
-            </div>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
-  )
-}
-}
-export default ReplyForm;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

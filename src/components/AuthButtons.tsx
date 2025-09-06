@@ -1,12 +1,9 @@
-  const handleSignIn = async (provider: Provider) => {
-    setLoadingProvider(provider)
-    await signIn(provider)
-  }
+
 
   return (
-    <div className={`mt-6 grid ${gridCols} gap-3`}>
-      {providers.includes('google') && (
-        <Button          disabled={loadingProvider !== null}
+
+          disabled={loadingProvider !== null}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         >
           <span className="sr-only">Sign in with Google</span>
           {loadingProvider === 'google' ? (
@@ -24,6 +21,9 @@
       )}
       {providers && providers.includes('github') && (;
         <Button
+
+          disabled={loadingProvider !== null}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         >
           <span className="sr-only">Sign in with GitHub</span>
           {loadingProvider === 'github' ? (
@@ -38,16 +38,9 @@
       )}
       {providers && providers.includes('facebook') && (;
         <Button
-          type='button'
-          variant='outline'
-          className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
-          onClick={() => handleSignIn('facebook')}
-          disabled={loadingProvider !== null}        >
-          <span className='sr-only'>Sign in with Facebook</span>
-          {loadingProvider === 'facebook' ? (
-            <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />
-          ) : (
-            <Facebook className='h-5 w-5' />          type="button"
+
+          type="button"
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => handleSignIn('facebook')}
@@ -148,7 +141,10 @@
             <>Email Login</>)}
         </Button>)}
     </div>);
-}          ) : (
+}
+
+          ) : (
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <>Email Login</>
           )}
         </Button>
@@ -158,23 +154,17 @@
 };
 }
 
-            </svg>
-          )}
-        </Button>
-      )}
-      {providers.includes('github') && (
-        <Button
-            </svg>
-          )}
-        </Button>
-      )}
-      {providers.includes('facebook') && (
-        <Button
-          )}
-        </Button>
-      )}
-      {providers.includes('credentials') && (
-        <Button          ) : (
+          type="button"
+          variant="outline"
+          className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          onClick={() => handleSignIn('credentials')}
+          disabled={loadingProvider !== null}
+        >
+          {loadingProvider === 'credentials' ? (
+            <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
+
+          ) : (
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <>Email Login</>
           )}
         </Button>;
@@ -183,4 +173,5 @@
     </div>;
   );
 }
-;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,27 +1,6 @@
-import * as React from 'react'
-import * as React from 'react'
-import {
-  RefreshCw
-  Wifi
-  Server
-  ShoppingCart
-  Users
-  Wrench
-  Lightbulb
-} from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-import { useTranslation } from 'react-i18next'
 
-export interface EmptyStateProps {
-  type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
-  title?: string;
-  description?: string;
-  action?: {
-    label: string;
-    onClick: () => void
-  }
-  icon?: React.ReactNodeimport * as React from 'react',;
+import * as React from 'react',;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import Link from 'next/link',;
@@ -71,31 +50,104 @@ const defaultContent = {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
 
-      
-      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-        {displayTitle}
-      </h3>
-      
-      <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">
-        {displayDescription}
-      </p>;
-      {action && (;
-        <Button;
-          onClick={action.onClick}
-          variant="outline"
-          className="flex items-center gap-2"
-        >
-          <RefreshCw className="w-4 h-4" />
-          {action.label}
-        </Button>
-      )}
-      
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {type === 'error' && (
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
 
+}: {
+  onRetry?: () => void
+  onAddProduct?: () => void
+  isAuthenticated?: boolean }) {
+  const action = onAddProduct
+    ? {
+
+      {type === 'error' && (;
+        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
+          <p>If this issue continues, please contact our support team.</p>;
+        </div>;
+      )}
+
+      {type === 'network' && (;
+        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
+          <p>;
+            {t('general && general.check_status_page')}{' '}
+            <Link href='https://status && status.zion.ai' className='underline'>;
+              {t('general && general.status_page')}
+
+  )
+export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
+      />
+  )
+export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
+      />
+  )
+export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
+      />
+  )
+export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
+      />
+  )
+export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
+      />
+  )
+export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
+      />
+  )
+} 
+};
+;
+}
+}
+}
+}
+}
+}
+}
+
+            {t('general.check_status_page')}
+            {" "}
+            <Link href="https://status.zion.ai" className="underline">
+              {t('general.status_page')}
+
+            </Link>;
+            .;
+          </p>;
+        </div>;
+      )}
+    </div>;
+  );
+}
+;
+// Specific empty state variants for quick use;
+export function ProductsEmptyState({;
+  onRetry,;
+  onAddProduct,;
+  isAuthenticated = false;
+}: {;
+  onRetry?: () => void,;
+  onAddProduct?: () => void,;
+  isAuthenticated?: boolean;
+}) {;
+  const action = onAddProduct;
+    ? {;
+        label: isAuthenticated ? 'Add Product' : 'Login to Add Product',;
+
+  return (
+    <EmptyState
+      type="categories"
+      action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
+    />;
+  );
+}
+
+    />;
+  );
+}
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         label: is_authenticated ? 'Add Product' : 'Login to Add Product',
         on_click: onAddProduct,
       }
@@ -119,4 +171,5 @@ export function NetworkErrorState ({ on_retry }: { on_retry?: () => void }) {
 export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 }
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

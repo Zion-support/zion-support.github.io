@@ -59,8 +59,9 @@ export function EnhancedSearchInput({
 }: EnhancedSearchInputProps) {
 
   const debouncedFetchSuggestions = useMemo(
-    (,) =>
-      debounce(async (query: string,) => {        if (!query.trim()) {
+
+        if (!query.trim()) {
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 ;
 import { log_info, log_warn } from '@/utils / production_logger';
@@ -68,47 +69,9 @@ interface EnhancedSearchInputProps {
   value: string,
   on_change: (value: string, ) => void,
   /**;
-  * Optional callback when a suggestion is selected. This allows parent;
-  * components to perform actions such as navigation.;
-  */;
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
-  placeholder?: string;  /**;
-  * Optional list of fallback suggestions (e.g. recent searches).;
-  * If provided, these will be shown when the input is empty.;
-  */;
-  search_suggestions?: SearchSuggestion[];
-}
-export /**
- * EnhancedSearchInput - Function description
- */
-function EnhancedSearchInput() {
-import React, { useState, useEffect, useRef, useCallback, useMemo } from './react'; // Added useMemo;
-import { Search, X  } from 'lucide-react';
-import { Input } from '@/components / ui / input';
-import { AutocompleteSuggestions } from '@/components / search / AutocompleteSuggestions';
-import { SearchSuggestion } from '@/types / search';
-export /**
- * EnhancedSearchInput - Function description
- */
-function EnhancedSearchInput() {
-  const [is_focused, setIsFocused] = useState (false);
-  const [filtered_suggestions, setFilteredSuggestions] = useState < SearchSuggestion[]>([]);
-  const [highlighted_index, setHighlightedIndex] = useState < number>(-1);
-  const input_ref = useRef < HTMLInputElement>(null);
-  const container_ref = useRef < HTMLDivElement>(null);
-  const [valueOnFocus, setValueOnFocus] = useState < string | null>(null);
-  const [enterHandledPostFocus, setEnterHandledPostFocus] = useState (false);
-  const { t } = use_translation ();
-  const [api_suggestions, setApiSuggestions] = useState < SearchSuggestion[]>([]);
-  const [loading, set_loading] = useState (false);
-  const debounced = use_debounce (value, 200);
-  const debouncedFetchSuggestions = useMemo (
-    (, ) =>;
-      debounce (async (query: string, ) => {
-        if () {) {
-  $2
-}
-          setApiSuggestions ([]),          return;
+
+          return;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
         set_loading (true);
 
@@ -311,10 +274,9 @@ if ( {) {
 
   return () => {
     // Cleanup function;
-}
-}, []); []);
-    debouncedFilterSuggestions (value, search_suggestions);
-    setHighlightedIndex (-1);    return () => {
+
+    return () => {
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       debouncedFilterSuggestions.cancel()
 }
 }, [value, searchSuggestions, debouncedFilterSuggestions])
@@ -706,72 +668,71 @@ if ( {) {
         setEnterHandledPostFocus(false),;
         break;
     }
-  }
 
-    switch(e && e.key) {;
-      case 'ArrowDown':;
-        e && e.preventDefault();
-        setHighlightedIndex(prev => (prev + 1) % filteredSuggestions && filteredSuggestions.length);
-        break;
-      case 'ArrowUp':;
-        e && e.preventDefault();
-        setHighlightedIndex(prev => (prev - 1 + filteredSuggestions && filteredSuggestions.length) % filteredSuggestions && filteredSuggestions.length);
-        break;
-      case 'Enter':;
-        if(highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {;
-          e && e.preventDefault();
-          handleSelectSuggestion(filteredSuggestions[highlightedIndex].text);
-}
-        break;
-      case 'ArrowUp':;
-        if (isFocused && filteredSuggestions && filteredSuggestions.length > 0) {;
-          e && e.preventDefault();
-          setHighlightedIndex(prev => (prev - 1 + filteredSuggestions && filteredSuggestions.length) % filteredSuggestions && filteredSuggestions.length);
-        }
-        break;
-      case 'Enter':;
-        if (isFocused && highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {;
-          e && e.preventDefault(), // Prevent form submission;
-          handleSelectSuggestion(filteredSuggestions[highlightedIndex]);
-        } else if (value && value.trim()) {;
-          // Manually trigger search navigation to ensure consistent behavior;
-          e && e.preventDefault();
-          logInfo('EnhancedSearchInput manual submit:', { data: value }),;
-          router && router.push(`/search?q=${encodeURIComponent(value)}`);
-          setIsFocused(false);
-          setHighlightedIndex(-1);
-          inputRef && inputRef.current?.blur();
-        } else {;
-          // Prevent empty form submission;
-          e && e.preventDefault();
-        }
-        break;
-      case 'Escape':;
-        e && e.preventDefault();
-        setIsFocused(false);
-        setHighlightedIndex(-1);
-        setValueOnFocus(null);
-        inputRef && inputRef.current?.blur();
-        break;
-      default:;
-        // For other keys (character input), reset enterHandledPostFocus;
-        setEnterHandledPostFocus(false);
-        break;
-    }
+  };
+
+      // Provide a sensible default navigation if the parent did not supply a handler
+
+      logWarn('onSelectSuggestion callback not provided'),
+
+      if (suggestionObj.id) {
+        router.push(`/marketplace/listing/${suggestionObj.id}`)
+      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
+        router.push(suggestionObj.slug)
+      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
+        router.push(`/blog/${suggestionObj.slug}`)
+      } else {
+
+        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
+
+  return (
+
+      aria-expanded = {isFocused && filteredSuggestions && filteredSuggestions.length> 0,}
+      aria-haspopup="listbox";
+      aria-controls="autocomplete-suggestions-list" // Added aria-controls;
+      onClick = {(,) => inputRef && inputRef.current?.focus(),}
+    >;
+      <div className="relative flex items-center w-full">;
+        <Search
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
+        />;
+
+        <Input
+
+          ref={inputRef}
+
+          type="text"
+          id="enhanced-search-input"
+          name="search"
+          value={value}
+
+    <div;
+      className="relative w - full";
+      ref = {container_ref, }
+      role="combobox";
+      aria - expanded = {is_focused && filtered_suggestions.length > 0, }
+      aria - haspopup="listbox";
+      aria - controls="autocomplete - suggestions - list" // Added aria - controls;
+      on_click = {(, ) => input_ref.current?.focus (), }
+    >;
+      <div className="relative flex items - center w - full">;
+        <Search;
+          className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate";
+        />;
+        <Input;
+          ref = {input_ref, }
+          type="text";
+          id="enhanced - search - input";
+          name="search";
+          value={value}
+          on_change={(e) => {
+            on_change (e.target.value);
+            setEnterHandledPostFocus (false);
 
           onChange={(e) => {;
-            onChange(e && e.target.value);
-            setEnterHandledPostFocus(false);
-          }}
-          onFocus={(e) => {;
-            setIsFocused(true);            setHighlightedIndex(-1), // Explicitly reset on focus;
-            const currentVal = e && e.target.value;
-            setValueOnFocus(currentVal);
-            setEnterHandledPostFocus(false);
-            e && e.target.setSelectionRange(currentVal && currentVal.length, currentVal && currentVal.length);
-          }}
-          onBlur={(e) => {;
-            const relatedTarget = e && e.relatedTarget as HTMLElement;            if (!containerRef && containerRef.current || !containerRef && containerRef.current.contains(relatedTarget as Node)) {;              setIsFocused(false);
+
+              setIsFocused(false);
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               setHighlightedIndex(-1);
             ,}
             setValueOnFocus(null);
@@ -788,11 +749,9 @@ if ( {) {
         {value && (
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick = {(,) => onChange(''),}
-            aria-label="Clear search";
-          >;
-            <X className="h-4 w-4" />;
-          </button>;        )}
+
+        )}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       </div>;
 

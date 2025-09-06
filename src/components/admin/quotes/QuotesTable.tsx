@@ -1,12 +1,6 @@
-  isLoading: boolean,
-  updateStatus: (id: string, status: QuoteStatus) => void,
-  toggleArchive: (id: string, isArchived: boolean) => void,
-  deleteQuote: (id: string) => void,
-  onViewDetails: (quote: QuoteRequest) => void
-}
 
-}
-export const QuotesTable: React.FC<QuotesTableProps> = ({  quotes
+  quotes
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   isArchived = false
   isLoading
   updateStatus
@@ -52,102 +46,23 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({  quotes
             </TableRow>
           ) : (
             quotes.map(quote => (
+
+                className="border-zion-blue-light hover:bg-zion-blue"
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               >
                 <TableCell className="text-white">
                   {quote.talent_name |'Unknown Talent'}
                 </TableCell>
                 <TableCell className="text-white">
-  quotes;
-  is_archived = false;
-import React from './react';
-import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import {
-  Table;
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow;
-} from '@/components / ui / table'; import { Button  } from '@/components / ui / button';
-import {
-  DropdownMenu;
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger;
-} from '@/components / ui / dropdown - menu'; import { QuoteStatusBadge  } from '@/components / quotes / QuoteStatusBadge';
-import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
-import { format_date } from '@/utils / date_utils';
-interface QuotesTableProps {
-  quotes: QuoteRequest[],
-  is_archived?: boolean;
-  is_loading: boolean,
-  update_status: (id: string, status: QuoteStatus, ) => void,
-  toggle_archive: (id: string, is_archived: boolean, ) => void,
-  delete_quote: (id: string, ) => void,
-  onViewDetails: (quote: QuoteRequest, ) => void;
-}
-export const QuotesTable: React.FC < QuotesTableProps> = ({
-  quotes;
-  is_archived = false;
-  is_loading;
-  update_status;
-  toggle_archive;
-  delete_quote,
-  onViewDetails;
-}, ) => {
-  return (
-    <div className="overflow-x-auto">;
-      <Table>;
-        <TableHeader>;
-          <TableRow className="border - zion - blue - light hover:bg - zion-blue">;
-            <TableHead className="text - zion - slate-light">Talent</TableHead>;
-            <TableHead className="text - zion - slate-light">Requester</TableHead>;
-            <TableHead className="text - zion - slate-light">Project</TableHead>;
-            <TableHead className="text - zion - slate-light">Budget</TableHead>;
-            <TableHead className="text - zion - slate-light">Date</TableHead>;
-            <TableHead className="text - zion - slate-light">Status</TableHead>;
-            <TableHead className="text - zion - slate-light">Actions</TableHead>;
-          </TableRow>;
-        </TableHeader>;
-        <TableBody>;
-          {is_loading ? (
-            <TableRow>;
-              <TableCell col_span={7} className="text - center py - 10 text - zion - slate-light">;
-                Loading quote requests...;
-              </TableCell>;
-            </TableRow>) : quotes.length === 0 ? (
-            <TableRow>;
-              <TableCell col_span={7} className="text - center py - 10 text - zion - slate-light">;
-                {is_archived;
-                  ? "No archived quote requests found.";
-                  : "No quote requests found."}
-              </TableCell>;
-            </TableRow>) : (
-            quotes.map (quote => (
-              <TableRow;
-                key = {quote.id, }
-                className="border - zion - blue - light hover:bg - zion-blue";
-              >;
-                <TableCell className="text-white">;
-                  {quote.talent_name || 'Unknown Talent'}
-                </TableCell>;
-                <TableCell className="text-white">;
-                  {quote.requester_name}
-                </TableCell>;
-                <TableCell className="text-white">;
-                  <div className="font-medium">{quote.project_name}</div>;
-                  <div className="text - sm text - zion - slate - light truncate max-w-[200px]">;
-                    {quote.project_summary}
 
-                    <Button 
-                      variant="ghost" 
-                      size="icon" 
-                      onClick={() => onViewDetails(quote)}
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     >
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
 
+                    {isArchived ? (
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <>
                         <Button
                           variant="ghost"
@@ -160,25 +75,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                         <Button
                           variant="ghost"
 
-  quotes;
-  isArchived = false;
-import React from "react";
-import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import { ;
-  Table;
-  TableBody, ;
-  TableCell, ;
-  TableHead, ;
-  TableHeader, ;
-  TableRow ;
-} from "@/components/ui/table";import { Button } from "@/components/ui/button";
-import { ;
-  DropdownMenu;
-  DropdownMenuContent, ;
-  DropdownMenuItem, ;
-  DropdownMenuTrigger ;
-} from "@/components/ui/dropdown-menu";import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-import {formatDate} from "@/utils/dateUtils";
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           size="icon"
                           className="text-red-500"
                           onClick={() => {
@@ -219,6 +116,9 @@ import {formatDate} from "@/utils/dateUtils";
                             <Archive className="h-4 w-4 mr-2" />
                             Archive
                           </DropdownMenuItem>
+
+                          <DropdownMenuItem 
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
@@ -230,6 +130,9 @@ import {formatDate} from "@/utils/dateUtils";
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
+
+import React from "react",;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
 import {;
   Table,;
@@ -339,23 +242,22 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                       <span className="sr-only">View Details</span>;
                     </Button>;
 
-                    {isArchived ? (;
-                      <>;
-                        <Button
-                          variant="ghost" 
-                          size="icon"
-                          onClick = {(,) => toggleArchive(quote && quote.id, false),}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         >;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
                         </Button>;
+
+                    )}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </div>;
                 </TableCell>;
               </TableRow>;
             ));
           )}
 
-  )
+  );
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 '";
 
@@ -467,4 +369,5 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
       </Table>;
     </div>);
 }
-'";
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

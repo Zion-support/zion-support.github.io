@@ -57,8 +57,11 @@ export default function Placeholder() {
         <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></Link>;
       </div>;
     </main>;
-  );import Head from 'next / head';
-import Link from 'next/link';
+  );
+
+import Head from 'next / head';
+import Link from 'next / link';
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default /**
  * Placeholder - Function description
  */
@@ -102,6 +105,8 @@ function Placeholder() {
 export default function Placeholder() {
   return (
 
+    <main className="min-h-screen p-8">
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Head>
         <title>Reports • Seo • Latest.json - Placeholder</title>
         <meta name="robots" content="noindex" />
@@ -111,3 +116,5 @@ export default function Placeholder() {
         <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/reports/seo/latest.json</code>.</p>
         <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></a>
       </div>
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

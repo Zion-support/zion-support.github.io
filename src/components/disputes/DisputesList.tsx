@@ -46,68 +46,80 @@ import {  Table,  Table,;
   TableCell,;
   TableHead,;
   TableHeader,;
-  TableRow,;
-} from '@/components/ui/table';
-import Skeleton from '@/components/ui/skeleton';
-import { formatDistanceToNow } from 'date-fns';
-import { ShieldAlert } from 'lucide-react';
-import Link from 'next/link';
-type DisputesListProps = {;
-  disputes: Dispute[];
-isLoading: boolean 
-};
 
-export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {;
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | 'all'>(;
-    'all';
-  );
-
-  const filteredDisputes =;
-    statusFilter === 'all';
-      ? disputes;
-      : disputes && disputes.filter(dispute => dispute && dispute.status === statusFilter);
-
-  const getStatusBadgeVariant = (status: DisputeStatus,) => {;
-    switch (status) {;
-      case 'open':;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         return 'default';
       case 'under_review':;
         return 'secondary';
       case 'resolved':;
-        return 'outline'; // Changed from "success" to "outline"
-      case 'closed':
-        return 'outline'
-      default:
-        return 'default'
-import React, { useState } from "react"
-import { Dispute, DisputeStatus } from "@/types/disputes"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import {
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow} from "@/components/ui/table"
-import Skeleton from "@/components/ui/skeleton"
-import { formatDistanceToNow } from "date-fns"
-import Link from "next/link"
-TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
 
-import React, { useState } from "react",
-import { Dispute, DisputeStatus } from "@/types/disputes",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import {  Table,
+  Table,
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow} from "@/components/ui/table",              </TableRow>
+  TableRow} from "@/components/ui/table",
+
+import React, { useState } from "react";
+import { Dispute, DisputeStatus } from "@/types/disputes";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {;
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table";
+import Skeleton from "@/components/ui/skeleton";
+import { formatDistanceToNow } from "date-fns";
+import { ShieldAlert } from 'lucide-react';
+import Link from "next/link";
+type DisputesListProps = {;
+  disputes: Dispute[],;
+  isLoading: boolean;
+};
+
+export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {;
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+
+  const filteredDisputes = statusFilter === "all" ;
+    ? disputes ;
+    : disputes && disputes.filter(dispute => dispute && dispute.status === statusFilter);
+
+  const getStatusBadgeVariant = (status: DisputeStatus) => {;
+    switch (status) {;
+  disputes: Dispute[],
+  is_loading: boolean;
+}
+export /**
+ * DisputesList - Function description
+ */
+function DisputesList() {
+  const [status_filter, setStatusFilter] = useState < DisputeStatus | "all">("all");
+  const filtered_disputes = status_filter === "all";
+    ? disputes;
+    : disputes.filter (dispute => dispute.status === status_filter);
+  const getStatusBadgeVariant = (status: DisputeStatus) =>: any {
+    switch (status) {
+      case "open": return "default";
+      case "under_review":;
+        return "secondary";
+      case "resolved":;
+
+        <div className="border rounded-md">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Case ID</TableHead>
+                <TableHead>Project</TableHead>
+                <TableHead>Parties</TableHead>
+                <TableHead>Created</TableHead>
+                <TableHead>Status</TableHead>
+
+              </TableRow>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </TableHeader>
             <TableBody>
               {[...Array(5)].map((_, i) => (
@@ -188,7 +200,14 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
                 </TableRow>;
               ))}
-              ))}    return (
+
+            </TableBody>;
+          </Table>;
+        </div>;
+      </div>;
+
+    return (
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className='text-center py-12 border rounded-md bg-muted/20'>;
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
         <h3 className='text-xl font-medium'>No disputes found</h3>;
@@ -198,14 +217,9 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
   if (disputes && disputes.length === 0) {;
     return (
-  }
 
-  if (disputes.length === 0) {
-    return (
-  }
-
-  if (disputes.length === 0) {
-    return (      <div className="text-center py-12 border rounded-md bg-muted/20">
+      <div className="text-center py-12 border rounded-md bg-muted/20">
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
         <h3 className="text-xl font-medium">No disputes found</h3>
         <p className="text-muted-foreground mt-2">
@@ -214,39 +228,9 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
         </p>
       </div>
     )
-  }
-    <div className='space-y-4'>
-      <div className='flex gap-2 mb-4 overflow-x-auto pb-2'>
-        <Button
-          variant={statusFilter === 'all' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('all')}
-          size='sm'        >
-          All
-        </Button>
-        <Button
-          variant={statusFilter === 'open' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('open')}
-          size='sm'        >
-          Open
-        </Button>
-        <Button
-          variant={statusFilter === 'under_review' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('under_review')}
-          size='sm'        >
-          Under Review
-        </Button>
-        <Button
-          variant={statusFilter === 'resolved' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('resolved')}
-          size='sm'        >
-          Resolved
-        </Button>
-        <Button
-          variant={statusFilter === 'closed' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('closed')}
-          size='sm'        >    <div className="space-y-4">
-    <div className="space-y-4">
-    <div className="space-y-4">      <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
+
+      <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Button
           variant={statusFilter === "all" ? "default" : "outline"}
           onClick={() => setStatusFilter("all")}
@@ -286,7 +270,26 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
         >
           Closed
         </Button>
-      </div>                </TableCell>
+      </div>
+
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Case ID</TableHead>
+              <TableHead>Project</TableHead>
+              <TableHead>Parties</TableHead>
+              <TableHead>Created</TableHead>
+              <TableHead>Status</TableHead>
+
+            {filteredDisputes.map((dispute) => (
+              <TableRow key={dispute.id}>
+                <TableCell className='font-mono text-xs'>
+                  {dispute.id.split('-')[0]}
+                </TableCell>
+                <TableCell>
+
+                </TableCell>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <TableCell>
                   <div className='flex flex-col text-sm'>
                     <span>
@@ -329,6 +332,9 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                   </div>
                 </TableCell>
                 <TableCell>
+
+                    </span>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <span>;
                       Talent:{' '}
                       {dispute && dispute.talent_profile?.display_name || 'Unknown Talent'}                    </span>;
@@ -406,6 +412,9 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                 </TableCell>
               </TableRow>
             ))}
+
+}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Check condition
 if ( {") {
   $2
@@ -427,4 +436,5 @@ if ( {") {
       </div>;
     </div>;
   );
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

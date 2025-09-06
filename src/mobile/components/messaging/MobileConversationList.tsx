@@ -111,9 +111,9 @@ function MobileConversationList() {
               activeConversation === conversation && conversation.id && 'bg-primary/5'
 
             )}
-            onClick={() => onSelectConversation(conversation && conversation.id)}          >;
-            <div className='flex items-center gap-3 py-3 cursor-pointer'>;
-              <Avatar>;                <AvatarImage
+
+                <AvatarImage
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
@@ -159,7 +159,7 @@ function MobileConversationList() {
             <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>;
           </div>;
 
-              
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="flex-1 min-w-0">
                 <div className="flex justify-between items-baseline">
                   <h3 className="font-medium truncate">{conversation.name}</h3>

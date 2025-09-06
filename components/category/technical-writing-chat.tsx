@@ -20,6 +20,17 @@ const TechnicalWritingChat: NextPage = () => {;
     </div>
       </Head>;
 
+      <main>;
+        <h1>TechnicalWritingChat</h1>;
+        <p>Blog content coming soon...</p>;
+        <a href="/blog">Back to Blog</a>;
+      </main>;
+    </div>;
+  );
+}
+export default TechnicalWritingChat;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -61,3 +72,5 @@ const TechnicalWritingChat: NextPage = () => {
 ;
 export default TechnicalWritingChat;
 ;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

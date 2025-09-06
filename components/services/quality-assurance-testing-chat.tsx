@@ -20,6 +20,17 @@ const QualityAssuranceTestingChat: NextPage = () => {;
     </div>
       </Head>;
 
+      <main>;
+        <h1>QualityAssuranceTestingChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  );
+}
+export default QualityAssuranceTestingChat;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -61,3 +72,5 @@ const QualityAssuranceTestingChat: NextPage = () => {
 ;
 export default QualityAssuranceTestingChat;
 ;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

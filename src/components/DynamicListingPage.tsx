@@ -1,4 +1,4 @@
-export function DynamicListingPage({
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   title,
   description,
@@ -11,63 +11,9 @@ export function DynamicListingPage({
         ? prev.filter(c => c !== category)
         : [...prev, category]
     )
-import {
-  Select,
-  SelectValue,
-  SelectTrigger,
-  SelectContent,
-  min: number,
-  max: number
-import { useState, useEffect } from "react",;
-import { useRouter } from 'next/router',;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { ProductListingCard } from "@/components/ProductListingCard",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
-import {;
-  Select,;
-  SelectValue,;
-  SelectTrigger,;
-  SelectContent,;
-  SelectItem} from "@/components/ui/select",;
-import { Checkbox } from "@/components/ui/checkbox",;
-import Skeleton from "react-loading-skeleton",;
-import "react-loading-skeleton/dist/skeleton.css",;
-import { Slider } from "@/components/ui/slider",;
-import { ProductListing, ListingView } from "@/types/listings",;
-import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react';
-import { toast } from "@/hooks/use-toast",;
-import { captureException } from "@/utils/sentry",;
-interface PriceRange {;
-  min: number,;
-  max: number;
-}
-;
-interface DynamicListingPageProps {;
-  title: string,,
-  description: string,;
-  categorySlug: string,;
-  listings: ProductListing[],;
-  categoryFilters: { label: string, value: string }[],;
-  initialPrice?: PriceRange,;
-  /**;
-   * Base path for listing detail pages. Defaults to `/marketplace/listing`.;
-   */;
-  detailBasePath?: string;
-}
 
-export function DynamicListingPage({
-  detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {
-  const router = useRouter(),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]),
-  const toggleCategory = (category: string) => {
-    setSelectedCategories(prev =>
-      prev.includes(category)
-        ? prev.filter(c => c !== category)
-        : [...prev, category]
-    )  // Swap icons to match action
+  // Swap icons to match action
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const ToggleViewIcon = isGrid ? (
     <List className='h-4 w-4' />
   ) : (
@@ -75,20 +21,9 @@ export function DynamicListingPage({
     if (min == null || max == null || isNaN(min) || isNaN(max)) return;
 
     setCurrentPriceFilter([min, max])
-  }
-  },
-  const clearCategories = () => setSelectedCategories([]),
-  const [view, setView] = useState<ListingView>("grid"),
-  const isGrid = view === "grid",
-  // Swap icons to match action
-  const ToggleViewIcon = isGrid ? (
-    <List className='h-4 w-4' />
-  ) : (
-    setCurrentPriceFilter([min, max])
-  }
-  let filteredListings: ProductListing[] = []
-  try {
-    filteredListings = allListings.filter(listing => {      const matchesSearch = null;    <LayoutGrid className="h-4 w-4" />
+
+    <LayoutGrid className="h-4 w-4" />
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),
   const [isLoading, setIsLoading] = useState(false),
   const [priceRange, setPriceRange] = useState<PriceRange>({
@@ -128,7 +63,33 @@ export function DynamicListingPage({
   let filteredListings: ProductListing[] = [],
   try {
     filteredListings = allListings.filter((listing) => {
-      const matchesSearch =          return (
+      const matchesSearch =
+
+        !searchQuery ||
+        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (listing.tags &&
+          listing.tags.some((tag: string) =>
+
+      const matchesSpecs =
+        !specQuery |
+        (listing.specifications &&
+
+        selectedRating === null ||
+        (listing.rating !== undefined && listing.rating >= selectedRating),
+
+      return (
+        matchesSearch &&
+        matchesCategory &&
+        matchesPrice &&
+        matchesRating &&
+        matchesBrand &&
+        matchesSpecs &&
+        matchesAvailability
+      )
+
+          return (
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             new Date (b.created_at).get_time () - new Date (a.created_at).get_time ());
       }
     });
@@ -137,6 +98,8 @@ export function DynamicListingPage({
     logErrorToProduction ('Listing filter error:', { data: error });
   }
 
+  const handleRequestQuote = (listingId: string) => {;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     setIsLoading(true);
     const listing = allListings.find(item => item.id === listingId);
     setTimeout(() => {;
@@ -146,50 +109,21 @@ export function DynamicListingPage({
           title: 'Quote Requested'
           description: `Your quote request for ${listing.title} has been sent.`
         })
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         router.push ('/request - quote');
 
       }
     }, 500);
   }
-    const listing = allListings.find((item) => item.id === listingId),
 
-    setTimeout(() => {
-      setIsLoading(false),
-      if (listing) {
-        toast({
-          title: "Quote Requested",
-          description: `Your quote request for ${listing.title} has been sent.`}),
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         // Store quote data in sessionStorage for the request-quote page
         const quoteData = {
           serviceType: categorySlug
           specificItem: {
-            id: listing.id
-            title: listing.title
-            category: listing.category
-            image: listing.images?.[0]
-          }
-        if (typeof window !== 'undefined') {
-          sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
-        }
 
-        router.push('/request-quote')
-      }
-    }, 500)
-  }
-        router.push("/request-quote")
-      }
-    }, 500)
-  },
-
-  return (
-    <div className="min-h-screen bg-zion-blue py-12 px-4">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <GradientHeading>{title}</GradientHeading>
-          <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-            {description}
-          </p>
-        </div>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <div className="lg:col-span-1">
             <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">
@@ -203,7 +137,21 @@ export function DynamicListingPage({
                   Categories
                 </label>
                 <div className='space-y-2'>
-                  {categoryFilters.map(filter => (;
+                  {categoryFilters.map(filter => (
+
+                    <div key={filter.value} className="flex items-center">
+                      <Checkbox
+                        id={`cat-${filter.value}`}
+                        checked={selectedCategories.includes(filter.value)}
+                        onCheckedChange={() => toggleCategory(filter.value)}
+
+                      <label
+                        htmlFor={`cat-${filter.value}`}
+                        className="ml-2 text-sm text-zion-slate-light cursor-pointer"
+                      >
+
+;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleRequestQuote = (listingId: string) => {;
     setIsLoading(true),;
     const listing = allListings.find((item) => item.id === listingId),;
@@ -264,6 +212,9 @@ export function DynamicListingPage({
                         htmlFor={`cat-${filter.value}`}
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer";
                       >;
+
+                        {filter.label}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       </label>
                     </div>
                   ))}
@@ -305,22 +256,21 @@ export function DynamicListingPage({
                 </div>;
               )}
 
-              <div className='mb-6'>;
-                <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
-                  Specifications;
-                </label>;
-                <Input
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   value={specQuery}
                   onChange={(e: React && React.ChangeEvent<HTMLInputElement>) =>;
                     setSpecQuery(e && e.target.value);
                   }
 
+              </div>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {availabilityOptions.length > 0 && (
                 <div className='mb-6'>
                   <label className='text-sm font-medium text-zion-slate-light block mb-2'>
                     Availability
                   </label>
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   >
                     <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                       <SelectValue placeholder="Select Availability" />
@@ -336,20 +286,22 @@ export function DynamicListingPage({
                         </SelectItem>;
 
                       ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-              )}
-                  Price Range
-                </label>
-                <div className="mt-6 px-2">
-                  <Slider
-                    defaultValue={[0, priceRange.max]}
-                    min={0}
-                    max={priceRange.max}
-                    step={priceRange.max / 100}                    value={currentPriceFilter}
+
+                    value={currentPriceFilter}
                     onValueChange={handleSliderChange}
 
+                    <span>${currentPriceFilter[0].toLocaleString()}</span>
+                    <span>${currentPriceFilter[1].toLocaleString()}</span>
+                  </div>
+                </div>
+              </div>
+
+                    <Button
+                      key={rating === null ? 'any' : rating}
+                      variant='outline'
+                      size='sm'
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       aria-pressed = {selectedRating === rating,}
                       className={`{;
                         selectedRating === rating;
@@ -366,6 +318,8 @@ export function DynamicListingPage({
                               key={i}
                               className='h-3 w-3 fill-zion-cyan text-zion-cyan'                            />;
 
+                      className={`{
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         selectedRating === rating
                           ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
                           : "border-zion-blue-light text-zion-slate-light"
@@ -383,17 +337,9 @@ export function DynamicListingPage({
                             />
 
                           ))}
-                          <span className="ml-1">& Up</span>
-                        </div>
-                      )}
-                    </Button>
-                  ))}
-                </div>
-              </div>
-              <Button
-                variant="outline"
-                className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
-                onClick={() => {                  logInfo("Clearing filters"),
+
+                  logInfo("Clearing filters"),
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   setSearchQuery(""),
                   clearCategories(),
                   setCurrentPriceFilter([0, priceRange.max]),
@@ -407,7 +353,36 @@ export function DynamicListingPage({
                 Clear All
               </Button>
             </div>
-          </div>                    variant="outline"
+          </div>
+
+              >;
+                Clear All;
+              </Button>;
+            </div>;
+          </div>;
+
+                  <Select value={sortOption} onValueChange={setSortOption}>
+                    <SelectTrigger className='w-[150px] bg-zion-blue border border-zion-blue-light text-white'>
+                      <SelectValue placeholder='Sort' />
+                    </SelectTrigger>
+                    <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
+                      <SelectItem value='newest' className='text-white'>
+                        Newest
+                      </SelectItem>
+                      <SelectItem value='price-asc' className='text-white'>
+                        Price: Low to High
+                      </SelectItem>
+                      <SelectItem value='price-desc' className='text-white'>
+                        Price: High to Low
+                      </SelectItem>
+                      <SelectItem value='rating' className='text-white'>
+                        Highest Rating
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+
+                    variant="outline"
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     size="icon"
                     onClick={() => setView(isGrid ? "list" : "grid")}
                     aria-label={isGrid ? "List view" : "Grid view"}
@@ -416,13 +391,7 @@ export function DynamicListingPage({
                   >
 
                     {ToggleViewIcon}
-                    <span className="sr-only">
-                      {isGrid ? "List view" : "Grid view"}
-                    </span>
-                  </Button>
-                </div>
-              </div>
-            </div>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                 Showing {filteredListings.length} results
                 {selectedCategories.length > 0 &&
@@ -430,11 +399,56 @@ export function DynamicListingPage({
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
-            {isLoading ? (            )}
+            {isLoading ? (
+
+                }
+              >
+                {[1, 2, 3, 4].map(i => (
+                  <div
+                    key={i}
+
+                    className="rounded-lg overflow-hidden border border-zion-blue-light"
+                  >
+                    <Skeleton height={192} width="100%" />
+                    <div className="p-4">
+                      <Skeleton height={24} width="33%" className="mb-2" />
+                      <Skeleton height={32} width="83%" className="mb-4" />
+                      <Skeleton height={16} width="100%" className="mb-2" />
+                      <Skeleton height={16} width="80%" className="mb-4" />
+                      <div className="flex justify-between items-center pt-4">
+                        <Skeleton height={24} width="25%" />
+                        <Skeleton height={32} width="25%" />
+
+                      </div>
+                    </div>
+                  </div>
+                ))}
+
+                <Button
+
+                  variant="outline"
+                  onClick={() => {
+                    setSearchQuery(""),
+                    clearCategories(),
+                    setCurrentPriceFilter([0, priceRange.max]),
+                    setSelectedRating(null),
+                    setSelectedBrand("all"),
+                    setSpecQuery(""),
+                    setSelectedAvailability("all")
+                  }}
+                  className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+
+                >
+                  Clear All
+                </Button>
+              </div>
+
+            )}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
         </div>;
       </div>;
     </div>;
   );
-}
-;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

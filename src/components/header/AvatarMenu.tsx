@@ -1,11 +1,2 @@
-import React from 'react';
 
-const AvatarMenu = () => {
-  return (
-    <div>
-      {/* AvatarMenu component */}
-    </div>
-  )
-};
-
-export default AvatarMenu;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

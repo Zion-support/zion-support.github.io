@@ -98,9 +98,8 @@ const TalentCardComponent = ({;
     }
   },;
 
-  const handleRequestHire = (e: React && React.MouseEvent,) => {;
-    e && e.preventDefault(),;
-    e && e.stopPropagation(),;    if (onRequestHire) {;
+    if (onRequestHire) {;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       onRequestHire(talent);
     }
   },
@@ -124,9 +123,9 @@ const TalentCardComponent = ({;
       <div className="p-6">
         <div className="flex items-start">
           {/* Avatar */}
-          <div className="relative mr-4">;
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
-              {talent && talent.profile_picture_url ? (;                <img
+
+                <img
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
@@ -160,22 +159,8 @@ const TalentCardComponent = ({;
             </div>;
             <p className="text-white font-medium">{talent && talent.professional_title}</p>;
 
-            
-
             {/* Location & Availability */}
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">;
-              {talent && talent.location && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <MapPin className="h-4 w-4 mr-1" />;
-                  <span>{talent && talent.location}</span>;
-                </div>;
-              )}
-              {talent && talent.availability_type && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <Clock className="h-4 w-4 mr-1" />;
-                  <span>{talent && talent.availability_type}</span>;
-                </div>;
-              )}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             </div>;
           </div>;
@@ -215,8 +200,9 @@ const TalentCardComponent = ({;
                 </span>;
 
               )}
-            </div>;
-          </div>;        )}
+
+        )}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         {/* Hourly Rate & Actions */}
         <div className="mt-5 flex items-center justify-between">;
@@ -230,8 +216,7 @@ const TalentCardComponent = ({;
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}
 
-          
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="flex items-center gap-2">
             {isAuthenticated && (
           </div>;

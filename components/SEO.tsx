@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
 
+import React from './react';
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Head from './next / head';
 ;
 interface SEOProps {
@@ -35,3 +35,5 @@ export default function SEO({
 export default SEO;
 }
 export default SEO;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -78,47 +78,4 @@ export function AchievementBadges(): any ({ achievements }: AchievementBadgesPro
           </div>
         ))}
 
-      </CardContent>;
-    </Card>;
-  );
-}
-
-  );
-}
-
-  achieved: boolean;
-}
-interface AchievementBadgesProps {
-  achievements: Achievement[];
-}
-export /**
- * AchievementBadges - Function description
- */
-function AchievementBadges() {
-  return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle > Achievements</CardTitle>;
-      </CardHeader>;
-      <CardContent className='space - y-3'>;
-        {achievements.map (array => (
-          <div key={a.id} className='flex items - start gap - 3'>;
-              className={`h - 5 w - 5 mt - 1 ${a.achieved ? 'text - green - 600' : 'text - muted - foreground'}`}
-            />;
-            <div>;
-              <p className='font - medium'>{a.title}</p>;
-              <p className='text - sm text - muted - foreground'>{a.description}</p>            </div>;
-              <p className="font-medium">{a.title}</p>;
-              <p className="text - sm text - muted-foreground">{a.description}</p>;
-            <BadgeCheck;
-              className={`h - 5 w - 5 mt - 1 ${a.achieved ? "text - green - 600" : "text - muted - foreground"}`}
-            />;
-            <div>;
-              <p className="font-medium">{a.title}</p>;
-              <p className="text - sm text - muted-foreground">{a.description}</p>;
-            </div>;
-          </div>))}
-      </CardContent>;
-    </Card>);
-}
-;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

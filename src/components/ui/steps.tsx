@@ -1,20 +1,20 @@
-  className?: string
-}
-export function Step({  className}: StepProps) {
+
+  className}: StepProps) {
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <li
 
       className={cn(
 
-        "relative flex items-center",
-        {
-          "opacity-60": status === "incomplete"},
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className
       )}
     >
       <div
         className={cn(
+
+            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               status === "incomplete"
             "bg-zion-blue border-zion-cyan text-white":
               status === "current"
@@ -25,6 +25,8 @@ export function Step({  className}: StepProps) {
             "bg-zion-blue border-zion-cyan text-white":
               status === "current",
             "bg-zion-purple border-zion-purple text-white":
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
         )}
@@ -72,10 +74,31 @@ export function Step({;
       >;
 
             {/* Step number would go here */}
-          </span>        )}
+
+        )}
 
             "text-zion-slate-light": status === "incomplete",
             "text-zion-slate-light": status === "incomplete",
+
+            "text-white": status === "current" || status === "complete"})}
+        >
+      </div>;
+
+      <div className="ml-4 min-w-0">;
+        <h3
+          className={cn("text-sm font-medium", {
+            "text-zion-slate-light": status === "incomplete"
+            "text-white": status === "current" || status === "complete"})}>;
+          {label}
+
+interface StepsProps {
+  currentStep: number
+  className?: string
+  children: React.ReactNode
+}
+export function Steps({ currentStep, className, children }: StepsProps) {
+  const childrenArray = React.Children.toArray(children)
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
     <div className={cn("w-full", className)}>
@@ -87,7 +110,9 @@ export function Step({;
           let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
-          
+
+          if (!React.isValidElement(child)) return null,
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           
           let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = "complete",
@@ -98,8 +123,7 @@ export function Step({;
         })}
       </ol>
 
-      
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="hidden md:flex md:mt-4">
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
@@ -120,6 +144,9 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
 }/> </div> </div> </div>) 
 }"};
 ;
+
+;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
   return (;
@@ -146,5 +173,5 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
       </div>;
     </div>;
   );
-}
-;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

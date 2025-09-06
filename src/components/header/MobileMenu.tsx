@@ -1,4 +1,6 @@
-              }              onClose(), // Close mobile menu on any click
+
+              onClose(), // Close mobile menu on any click
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             }}
           >
             <div className="relative mr-4">
@@ -30,4 +32,5 @@ name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),
 }
 
 }
-;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

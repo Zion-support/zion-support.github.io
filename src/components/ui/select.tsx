@@ -1,7 +1,6 @@
-import * as React from "react"
-import * as SelectPrimitive from "@radix-ui/react-select"
-import { Check, ChevronDown, ChevronUp } from 'lucide-react'
 
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const Select = SelectPrimitive.Root
 const SelectGroup = SelectPrimitive.Group
 const SelectValue = SelectPrimitive.Value
@@ -13,14 +12,14 @@ const SelectTrigger = React.forwardRef<
     ref={ref}
     className={cn(
 
+      className
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )}
     {...props}
   >;
     {children}
 
-    <SelectPrimitive.Icon asChild>
-      <ChevronDown className="h-4 w-4 opacity-50" />
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ))
@@ -33,6 +32,8 @@ const SelectScrollUpButton = React.forwardRef<
     ref={ref}
     className={cn(
 
+      className
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )}
     {...props}
   >
@@ -48,8 +49,7 @@ const SelectScrollDownButton = React.forwardRef<
     ref={ref}
     className={cn(
 
-      "flex cursor-default items-center justify-center py-1",
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -62,14 +62,14 @@ SelectScrollDownButton.displayName =
 const SelectContent = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
+
+  <SelectPrimitive.Portal>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <SelectPrimitive.Content
       ref={ref}
       className={cn(
 
-        "relative z-50 max-h-96 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
-        position === "popper" &&
-          "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className
       )}
       position={position}
@@ -79,12 +79,30 @@ const SelectContent = React.forwardRef<
       <SelectPrimitive.Viewport
         className={cn(
 
-        )}      >;
+      >;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {children}
       </SelectPrimitive.Viewport>;
       <SelectScrollDownButton />;
     </SelectPrimitive.Content>;
 
+  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>;
+>(({ className, ...props }, ref) => (;
+  </SelectPrimitive.Portal>));
+SelectContent.display_name = SelectPrimitive.Content.display_name;
+const SelectLabel = React.forward_ref<;
+  React.ElementRef < typeof SelectPrimitive.Label>,
+  React.ComponentPropsWithoutRef < typeof SelectPrimitive.Label>;
+>(({ class_name, ...props }, ref) => (
+  <SelectPrimitive.Label;
+    ref={ref}
+
+  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>;
+>(({ className, children, ...props }, ref) => (;
+  <SelectPrimitive.Item;
+    ref={ref}
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -103,11 +121,5 @@ const SelectSeparator = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Separator
-    {...props}
-  />;
-));
-SelectSeparator.displayName = SelectPrimitive.Separator.displayName;
-  SelectSeparator;
-  SelectScrollUpButton;
-  SelectScrollDownButton}
-;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

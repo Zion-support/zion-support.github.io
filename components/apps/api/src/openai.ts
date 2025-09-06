@@ -12,6 +12,13 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
 
   return new OpenAI({ apiKey });
 
+Add responsibilities, requirements, and benefits in bullet points.`;
+  const completion = await openai && openai.responses.create({
+    model: 'gpt-4o-mini';
+    input: prompt
+  });
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 type OpenAIClient = OpenAI;
 ;
 export function createOpenAIClient (api_key: string): OpenAIClient {
@@ -37,4 +44,5 @@ Add responsibilities, requirements, and benefits in bullet points.`;
   });
   return completion.output_text;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

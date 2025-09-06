@@ -59,8 +59,8 @@ interface ProfileErrorStateProps {;
   error: string | null;
 }
 
-export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
-  return (    <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">;
+    <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>;
       <Button asChild>;
         <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">;

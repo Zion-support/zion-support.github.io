@@ -1,15 +1,6 @@
-interface FraudFiltersProps {
-  searchQuery: string,
-  setSearchQuery: (value: string) => void,
-  statusFilter: string | null,
-  setStatusFilter: (value: string | null) => void,
-  severityFilter: string | null,
-  setSeverityFilter: (value: string | null) => void,
-  contentTypeFilter: string | null,
-  setContentTypeFilter: (value: string | null) => void,
-  resetFilters: () => void
-}
-export const FraudFilters: React.FC<FraudFiltersProps> = ({  searchQuery
+
+  searchQuery
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   setSearchQuery
   statusFilter
   setStatusFilter
@@ -17,58 +8,16 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({  searchQuery
   setSeverityFilter
   contentTypeFilter
   setContentTypeFilter
-import React from 'react'
-};
 
-interface FraudFiltersProps {;
-  searchQuery: string,;
-  setSearchQuery: (value: string,) => void,;
-  statusFilter: string | null,;
-  setStatusFilter: (value: string | null,) => void,;
-  severityFilter: string | null,;
-  setSeverityFilter: (value: string | null,) => void,;
-  contentTypeFilter: string | null,;
-  setContentTypeFilter: (value: string | null,) => void,;
-  resetFilters: () => void;
-}
-
-export const FraudFilters: React.FC<FraudFiltersProps> = ({;
-  searchQuery;
-  setSearchQuery;
-  statusFilter;
-  setStatusFilter;
-  severityFilter;
-  setSeverityFilter;
-  contentTypeFilter;
-  setContentTypeFilter;
-  resetFilters}) => {  return (
-
-    <div className="flex flex-col md: flex-row gap-4 mb-6">
-  searchQuery,
-  setSearchQuery,
-  statusFilter,
-  setStatusFilter,
-  severityFilter,
-  setSeverityFilter,
-  contentTypeFilter,
-  setContentTypeFilter,
-  resetFilters}) => {
-  return (
-    <div className="flex flex-col md:flex-row gap-4 mb-6">
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         <Input
           placeholder="Search by user or content..."
           value = {searchQuery,}
 
-      
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className="pl-10"
-        />
-      </div>
-            <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+      <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Status" />
         </SelectTrigger>
@@ -81,8 +30,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         </SelectContent>
       </Select>
 
-      
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Severity" />
@@ -95,8 +43,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         </SelectContent>
       </Select>
 
-      
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Content Type" />
@@ -111,6 +58,54 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         </SelectContent>
       </Select>
 
+      <Button variant="outline" onClick={resetFilters} className="md: w-auto">
+        <Filter className="h-4 w-4 mr-2" /> Reset Filters
+      </Button>
+    </div>
+  )
+
+          onChange = {(e,) => setSearchQuery(e && e.target.value),}
+
+},
+import React from "react",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { Search, Filter } from 'lucide-react';
+interface FraudFiltersProps {;
+  searchQuery: string,;
+  setSearchQuery: (value: string) => void,;
+  statusFilter: string | null,;
+  setStatusFilter: (value: string | null) => void,;
+  severityFilter: string | null,;
+  setSeverityFilter: (value: string | null) => void,;
+  contentTypeFilter: string | null,;
+  setContentTypeFilter: (value: string | null) => void,;
+  resetFilters: () => void;
+
+export const FraudFilters: React.FC<FraudFiltersProps> = ({;
+  searchQuery,;
+  setSearchQuery,;
+  statusFilter,;
+  setStatusFilter,;
+  severityFilter,;
+  setSeverityFilter,;
+  contentTypeFilter,;
+  setContentTypeFilter;
+  resetFilters}) => {;
+  return (;
+    <div className="flex flex-col md:flex-row gap-4 mb-6">;
+      <div className="relative flex-1">;
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
+        <Input;
+          placeholder="Search by user or content...";
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="pl-10";
+        />;
+      </div>;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Status" />;
@@ -123,6 +118,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="actioned">Actioned</SelectItem>;
         </SelectContent>;
       </Select>;
+
+      <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Severity" />;
         </SelectTrigger>;
@@ -147,6 +145,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="review">Reviews</SelectItem>;
         </SelectContent>;
       </Select>;
+
+      <Button variant="outline" onClick={resetFilters} className="md: w-auto">;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Filter className="h-4 w-4 mr-2" /> Reset Filters;
       </Button>;
     </div>;
@@ -225,6 +226,5 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
     </div>);
 }
 '"},
-}
-'"},
-;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

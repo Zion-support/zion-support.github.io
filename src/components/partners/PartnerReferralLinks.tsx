@@ -124,41 +124,39 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Label } from "@/components/ui/label",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
-import { Copy, Download, Link, Plus } from 'lucide-react'      }
+export function PartnerReferralLinks() {
+  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
+  const [isDialogOpen, setIsDialogOpen] = useState(false),
+  const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),
+  const [customParam, setCustomParam] = useState<string>(""),
+  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
+  
+  // Get the base referral link
+  const baseLink = getReferralLink(),
+  
+  const handleCopyLink = (link: string) => {
+    navigator.clipboard.writeText(link),
+    toast({
+      title: "Link copied!",
+      description: "The referral link has been copied to your clipboard",
+      variant: "default"
+    })
+  },
+  
+  const handleGenerateLink = () => {
+    if (baseLink) {
+      const url = new URL(baseLink),
+      
+      // Add custom campaign parameter if selected
+      if (selectedCampaign !== "default") {
+        url.searchParams.append("campaign", selectedCampaign)
+
+      }
       
       // Add custom parameter if provided
       if (customParam) {
-        name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
-        link: url.toString()
-      },
-      
-      setGeneratedLinks(prev => [...prev, newLink]),
-      setIsDialogOpen(false),
-      setCustomParam("")
-    }
-  },
-  
-  const handleDownloadLinks = () => {
-    const allLinks = [
-      { name: "Default", link: baseLink },
-      ...generatedLinks
-    ],
-    
-    const csvContent = [
-      "Name,Link",
-      ...allLinks.map(l => `${l.name},${l.link}`)
-    ].join("\n"),
-    
-    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),
-    const url = URL.createObjectURL(blob),
-    const link = document.createElement("a"),
-    link.setAttribute("href", url),
-    link.setAttribute("download", "zion_referral_links.csv"),
-    link.style.visibility = 'hidden',
-    document.body.appendChild(link),
-    link.click(),
-    document.body.removeChild(link)
-  },
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -240,17 +238,16 @@ export function PartnerReferralLinks() {;
     <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
+
+              Export Links;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </Button>;
           </CardTitle>;
           <CardDescription>Share this link with your audience to earn rewards</CardDescription>;
         </CardHeader>;
         <CardContent>;
 
-          <div className='flex space - x-2'>;
-            <Input value={base_link} read_only className='font - mono text - sm' />;
-            <Button variant='outline' on_click={() => handleCopyLink (base_link)}>;
-              <Copy className='h - 4 w - 4' />;
-              <span className='sr - only'>Copy</span>            </Button>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
         </CardContent>;
       </Card>;
@@ -273,6 +270,8 @@ export function PartnerReferralLinks() {;
             <DialogHeader>;
               <DialogTitle > Create Custom Campaign Link</DialogTitle>;
 
+        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <DialogTrigger asChild>
             <Button variant="outline" size="sm" className="flex items-center gap-2">
               <Plus className="h-4 w-4" />
@@ -308,25 +307,20 @@ export function PartnerReferralLinks() {;
                   </SelectContent>
                 </Select>
               </div>
+
+              <div className="grid gap-2">
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Label htmlFor="custom">Custom Parameter (Optional)</Label>
                 <Input 
                   id="custom" 
                   placeholder="spring_campaign, video_123, etc." 
                   value={customParam}
-                  onChange={e => setCustomParam(e && e.target.value)}                />;
-              </div>;
-            </div>;
-            <DialogFooter>;
-              <Button
-                type='button'
-                variant='secondary'                onClick={() => setIsDialogOpen(false)}
+
+                onClick={() => setIsDialogOpen(false)}
               >
                 Cancel
               </Button>
-              <Button 
-                type="button" 
-                onClick={handleGenerateLink}
-                className="bg-zion-purple hover:bg-zion-purple-dark"
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               >
                 Cancel
@@ -334,13 +328,9 @@ export function PartnerReferralLinks() {;
               <Button
                 type='button'
                 onClick={handleGenerateLink}
-                className='bg-zion-purple hover:bg-zion-purple-dark'              >
-                Generate Link
-              </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-      </div>                    <span>{item.name || 'Campaign Link'}</span>                  </div>
+
+                    <span>{item.name || 'Campaign Link'}</span>                  </div>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
@@ -355,13 +345,9 @@ export function PartnerReferralLinks() {;
 
                 </CardTitle>
               </CardHeader>
-              <CardContent className="pb-4">
-                <div className="flex space-x-2">
-                  <Input
-                    value={item.link}
-                    readOnly
-                    className="font-mono text-xs"
-                  />                  </Button>
+
+                  </Button>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </div>
               </CardContent>
             </Card>
@@ -371,7 +357,10 @@ export function PartnerReferralLinks() {;
             <CardContent className="flex flex-col items-center justify-center p-6">
               <p className="text-zion-slate-light text-center mb-4">
                 Create custom campaign links to track different marketing efforts
-              </p>                Create First Link;
+              </p>
+
+                Create First Link;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </Button>;
             </CardContent>;
           </Card>;
@@ -428,7 +417,17 @@ document && document.body.removeChild (link)
                 type='button';
                 variant='secondary';
                 on_click={() => setIsDialogOpen (false)}
-              <Button 
-                variant="outline"
-                onClick={() => setIsDialogOpen(true)}
-                className="flex items-center gap-2";
+
+              >;
+                <Plus className="h-4 w-4" />;
+                Create First Link;
+              </Button>;
+            </CardContent>;
+          </Card>;
+        )}
+      </div>;
+    </div>;
+  );
+}
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

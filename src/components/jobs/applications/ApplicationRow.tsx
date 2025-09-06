@@ -1,9 +1,5 @@
 
-interface ApplicationRowProps {
-  application: JobApplication
-  processingId: string | null
-  onViewApplication: (applicationId: string) => Promise<void>
-  onStatusChange: (
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function ApplicationRow({
 
   application
@@ -53,22 +49,36 @@ export function ApplicationRow(): any ({;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
 
-  const talentName = application.talent_profile?.full_name || 'Unknown'
-
-  return (
-  const talentName = application.talent_profile?.full_name |'Unknown'
-
-  const talentName = application.talent_profile?.full_name || 'Unknown'    <TableRow key={application.id}>
+    <TableRow key={application.id}>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <TableCell>
         <div className="flex items-center gap-3">
           <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
             {application.talent_profile?.profile_picture_url && !avatarError ? (
-              <Image        </div>
+              <Image
+
+                alt={talentName}
+                width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
+                height={36} // Corresponds to h-9 w-9
+                className="rounded-full object-cover" // Ensure rounded and object-cover
+                onError={() => setAvatarError(true)}
+
+            </div>
+          </div>
+        </div>
+      </TableCell>
+      <TableCell>
+
+        </div>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </TableCell>
       <TableCell>
         <StatusBadge status={application.status} />
       </TableCell>
       <TableCell>
+
+        <Button 
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           variant="ghost" 
           size="sm" 
           onClick={() => onViewScore(application)}
@@ -213,70 +223,18 @@ export function ApplicationRow({;
       </TableCell>;
       <TableCell>;
 
-        <div className='flex items - center gap - 1'>;
-          <Calendar className='h - 4 w - 4 text - muted - foreground' />;
-          <span>;
-            {formatDistanceToNow (new Date (application.created_at), {
-              add_suffix: true,
-
-            })}
-          </span>;
-        </div>;
-      </TableCell>;
-      <TableCell>;
-
-        <StatusBadge status={application.status} />;
-      </TableCell>;
-      <TableCell>;
-        <Button;
-          variant='ghost';
-          size='sm';
-          on_click={() => onViewScore (application)}
-          className='flex items - center gap - 1'        >;
-          <BarChart className='h - 4 w - 4 mr - 1' />;
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <ScoreBadge application={application} />;
         </Button>;
       </TableCell>;
       <TableCell>;
+
+            </a>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </Button>;
         ) : (;
           <span className="text-muted-foreground text-sm">No resume</span>;
         )}
       </TableCell>;
-      <TableCell className='text-right'>;
-        <ApplicationActions
-          application = {application,}
-          processingId = {processingId,}
-          onViewApplication = {onViewApplication,}
-          onStatusChange = {onStatusChange,}
 
-        />;
-      </TableCell>;
-    </TableRow>;
-  );
-}
-
-        {application.resume ? (
-          <Button variant='ghost' size='sm' as_child>;
-            <a;
-              href={application.resume.file_url || '#'}
-              target='_blank';
-              rel='noopener noreferrer';
-            >;
-              <FileText className='h - 4 w - 4 mr - 1' /> View;
-            </a>;
-          </Button>) : (
-          <span className='text - muted - foreground text - sm'>No resume</span>)}
-      </TableCell>;
-      <TableCell className='text - right'>;
-        <ApplicationActions;
-          application = {application, }
-          processing_id = {processing_id, }
-          onViewApplication = {onViewApplication, }
-          onStatusChange = {onStatusChange, }
-        />;
-      </TableCell>;
-    </TableRow>);
-}
-;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,9 +1,6 @@
-interface FraudStatsCardsProps {
-  stats: FraudStats
-}
 
-export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
-  return (
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
       <Card>
         <CardHeader className="pb-2">
@@ -12,8 +9,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </CardHeader>
       </Card>
 
-      
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -24,6 +20,8 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </CardHeader>
       </Card>
 
+      <Card>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
             <CardTitle className="text-2xl font-bold text-amber-500">{stats.suspicious_count}</CardTitle>
@@ -33,8 +31,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </CardHeader>
       </Card>
 
-      
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -45,14 +42,15 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </CardHeader>
       </Card>
 
+      <Card>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
 
-      
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>
@@ -60,32 +58,8 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </CardHeader>
       </Card>
     </div>
-},
-import React from "react",;
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
-import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react';
-import { FraudStats } from "@/types/fraud",;
-interface FraudStatsCardsProps {;
-  stats: FraudStats;
-}
-;
-export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
-  return (;
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;
-      <Card>;
-        <CardHeader className="pb-2">;
-          <CardTitle className="text-2xl font-bold">{stats.total_flags}</CardTitle>;
-          <CardDescription>Total Flags</CardDescription>;
-        </CardHeader>;
-      </Card>;
-      <Card>;
-        <CardHeader className="pb-2 flex flex-row items-center justify-between">;
-          <div>;
-        </CardHeader>;
-      </Card>;
-      <Card>;
-        <CardHeader className="pb-2 flex flex-row items-center justify-between">;
-          <div>;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) => {
   return (
     <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 4 mb-8">;
@@ -137,4 +111,5 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
     </div>);
 }
 ";
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

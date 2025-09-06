@@ -10,7 +10,7 @@ import { AlertCircle } from 'lucide-react';
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
-export function SignUpForm() {;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 ;
 import { use_router } from 'next / router';
@@ -65,8 +65,9 @@ function SignUpForm() {
     try {;
       setShowVerificationMessage(false), // Reset verification message;
       if (signupMode) {;
-        const result = await signUp(formData && formData.email, formData && formData.password, {;
-          name: formData && formData.name}),;        if (result?.error) {;
+
+        if (result?.error) {;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           throw new Error(result.error as any), // Cast to any if type is AuthError;
         }
 
@@ -80,10 +81,8 @@ function SignUpForm() {
           setShowVerificationMessage(true);
         } else {;
           // Only navigate if email verification is not required;
-          router && router.push("/mobile")
-};
-      } else {;
-        const { error } = await login(formData && formData.email, formData && formData.password);
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         if (error) {;
           throw new Error(error);
         }
@@ -99,15 +98,19 @@ function SignUpForm() {
       setIsLoading(false)
     }
   };
+
+  const handleGoogleLogin = async () => {;
+    try {;
+      await loginWithGoogle();
+    } catch (err: any) {;
+
     }
 
   },
-  
 
   return (
 
-      
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="space-y-2">
         <Button
           variant="outline"
@@ -191,8 +194,7 @@ function SignUpForm() {
         </Button>;
       </div>;
 
-      
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -202,8 +204,6 @@ function SignUpForm() {
       )}
 
       )}
-
-      
 
       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
@@ -276,8 +276,7 @@ function SignUpForm() {
 
         </div>;
 
-        
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Button
           type="submit"
           className="w-full py-6"
@@ -291,8 +290,7 @@ function SignUpForm() {
             signupMode ? "Create Account" : "Sign In";
           )}
 
-      
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "

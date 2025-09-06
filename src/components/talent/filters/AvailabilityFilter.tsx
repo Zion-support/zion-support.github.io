@@ -36,8 +36,7 @@ function AvailabilityFilter() {
           <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
       </button>;
 
-      
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {expanded && (
         <div className='mt - 4 space - y-2'>;
           {AVAILABILITY_OPTIONS.map (option => (
@@ -65,7 +64,8 @@ const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
   { id: "project", label: "Project-based" }
-]
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">

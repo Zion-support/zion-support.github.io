@@ -20,6 +20,17 @@ const MobileDevelopmentChat: NextPage = () => {;
     </div>
       </Head>;
 
+      <main>;
+        <h1>MobileDevelopmentChat</h1>;
+        <p>Blog content coming soon...</p>;
+        <a href="/blog">Back to Blog</a>;
+      </main>;
+    </div>;
+  );
+}
+export default MobileDevelopmentChat;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -61,3 +72,5 @@ const MobileDevelopmentChat: NextPage = () => {
 ;
 export default MobileDevelopmentChat;
 ;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

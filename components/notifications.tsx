@@ -1,3 +1,6 @@
+
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +23,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';  {
+import React from 'react';
+
+  {
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ssr: false
   }
 );
@@ -37,18 +43,5 @@ export default function NotificationsPage() {;
 export default function NotificationsPage() {;
   return <NotificationCenter />;
 }
-;
-export default /**
- * NotificationsPage - Function description
- */
-function NotificationsPage() {
-  return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {
-  ssr: false}),
-export default /**
- * NotificationsPage - Function description
- */
-function NotificationsPage() {
-  return <NotificationCenter />;
-}
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

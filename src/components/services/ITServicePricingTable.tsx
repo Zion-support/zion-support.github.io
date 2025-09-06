@@ -38,11 +38,8 @@ export function ITServicePricingTable() {;
       if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {;
         return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
       }
-      if (a[sortConfig && sortConfig.key] > b[sortConfig && sortConfig.key]) {;
-        return sortConfig && sortConfig.direction === 'ascending' ? 1 : -1;
-      }
-      return 0;
-    });
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
       key,

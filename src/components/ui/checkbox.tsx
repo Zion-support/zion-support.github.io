@@ -11,17 +11,5 @@ const Checkbox = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
 >(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root
-      className
-    )}
-    {...props}
-  >
-    <CheckboxPrimitive.Indicator
-      className={cn("flex items-center justify-center text-current")}
-    >
-      <Check className="h-3 w-3" />
-    </CheckboxPrimitive.Indicator>
-  </CheckboxPrimitive.Root>
-))
 
-export { Checkbox }
-;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

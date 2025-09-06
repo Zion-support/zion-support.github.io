@@ -1,18 +1,6 @@
-import {
 
-export function UsageStats() {
-
-  const handleSaveChanges = () => {
-    toast({
-
-  return (
-    <div className="space-y-8">
-      <div>
-        <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>
-        <p className="text-muted-foreground mb-6">
-          Configure usage limits for your team to manage your subscription resources.
-        </p>
-      </div>        <Card>
+        <Card>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
             <CardDescription>
@@ -45,8 +33,7 @@ export function UsageStats() {
           </CardFooter>
         </Card>
 
-        
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -80,6 +67,8 @@ export function UsageStats() {
           </CardFooter>
         </Card>
 
+        <Card>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
             <CardDescription>
@@ -110,8 +99,7 @@ export function UsageStats() {
           </CardFooter>
         </Card>
 
-        
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -155,6 +143,8 @@ export function UsageStats() {
         </Card>
       </div>
 
+          </div>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div>
             <h3 className='font-medium'>Need higher limits?</h3>
             <p className='text-sm text-muted-foreground'>
@@ -363,7 +353,5 @@ export function UsageStats() {;
           </CardFooter>;
         </Card>;
       </div>;
-    </div>;
-  );
-}
-;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

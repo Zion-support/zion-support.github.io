@@ -1510,11 +1510,7 @@ export const ZoomOut = LucideZoomOut
 // Define the props for your Icon component
 export type IconProps = SVGProps<SVGSVGElement> & {
 
-  name: keyof typeof iconMap,
-  size?: number | string,
-  className?: string
-},
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Create a map of icon names to component references
 const iconMap = {
   home: LucideHome
@@ -1817,10 +1813,9 @@ export const Icon: React.FC<IconProps> = ({
   className
   ...props
 }) => {
-  }
-  // Render the dynamically selected Lucide icon component
-  return <LucideIconComponent size={size} className={className} {...props} />
-}  const LucideIconComponent = iconMap[name],
+
+  const LucideIconComponent = iconMap[name],
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -2762,4 +2757,5 @@ export const Icon: React.FC<IconProps> = ({;
   // Render the dynamically selected Lucide icon component;
   return <LucideIconComponent size={size} className={className} {...props} />
 };
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

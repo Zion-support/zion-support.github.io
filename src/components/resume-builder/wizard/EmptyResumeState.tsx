@@ -45,17 +45,17 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {;
         <div className="text-center">;
           <h2 className="text-2xl font-bold mb-2">Create Your Resume</h2>;
           <p className="text-muted-foreground mb-6">Create a professional resume to showcase your skills and experience</p>;
-          <Button
-            onClick = {onCreateClick,}
-            className="gap-2">;
-            <FilePlus className="h-4 w-4" />;          </Button>;
+
+          </Button>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
       </CardContent>;
     </Card>;
   )
 };
 
-  )
+  );
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 
 import { Card, CardContent } from '@/components / ui / card';

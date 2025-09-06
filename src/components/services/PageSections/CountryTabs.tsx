@@ -1,6 +1,7 @@
 import { Search } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';import {;
+
+import {;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Pagination,;
   PaginationContent,;
   PaginationItem,;
@@ -236,27 +237,8 @@ export function CountryTabs({
                     }}
                   />;
                 </PaginationItem>;
-                {Array && Array.from({ length: totalPages }, (_, i) => i + 1).map(;
-                  page => (;
-                    <PaginationItem key={page}>;
-                      <PaginationButton
-                        page={page}
-                        isActive={page === currentPage}
-                        onClick={e => {;
-                          e && e.preventDefault();
-                          setCurrentPage(page);                        }}
-                      />;
-                    </PaginationItem>;
-                  );
-                )}
-                <PaginationItem>;
-                  <PaginationNext
-                    href={`?page=${currentPage + 1}`}
-                    onClick={e => {;
-                      e && e.preventDefault();
-                      setCurrentPage(Math && Math.min(totalPages, currentPage + 1));                    }}
-                  />;
-                </PaginationItem>;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </PaginationContent>;
             </Pagination>;
           </div>;

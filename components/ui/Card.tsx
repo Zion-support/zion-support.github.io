@@ -1,17 +1,6 @@
-import React from 'react';
 
-interface CardProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export default function Card({ children, className = '' }: CardProps) {
-  return (
-    <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
-      {children}
-    </div>
-  );
-}  />));
+  />));
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 CardDescription.display_name = "CardDescription";
 ;
 const CardContent = React.forward_ref<;
@@ -86,4 +75,5 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 
         <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer-events-none" />)}
     </div>);
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

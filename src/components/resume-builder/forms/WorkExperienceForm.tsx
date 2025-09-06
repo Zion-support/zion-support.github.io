@@ -8,8 +8,9 @@ if ( {) {
         success = await addWorkExperience(resumeId, experienceData)
       }
 
-      setError(err.message || 'An error occurred')
-};
+      setError(err.message || 'An error occurred');
+    };
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
   const handleEdit = (work: WorkExperience) => {;
 
@@ -296,8 +297,9 @@ export function WorkExperienceForm(): any ({;
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
-                  </div>;
-                  <div className='flex gap-2'>;                    <Button
+
+                    <Button
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     setEditingId(null),
                     setEditingId(null),
                     form.reset({

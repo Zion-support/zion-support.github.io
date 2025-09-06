@@ -37,10 +37,7 @@ export function TalentDashboard() {
             </CardContent>
           </Card>
 
-          
-
-          
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between items-start">
@@ -70,8 +67,7 @@ export function TalentDashboard() {
         </div>
       </section>
 
-      
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <section>
         <h2 className="text-lg font-medium mb-4">Application Tracker</h2>
         <Card>
@@ -312,7 +308,6 @@ function TalentDashboard() {
         </Card>;
       </section>;
 
-      
       <section>
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
         <div className="grid grid-cols-2 gap-4">
@@ -324,10 +319,9 @@ function TalentDashboard() {
             <FileText className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Update Resume</span>;
           </Button>;
-          <Button
-            variant="outline"
-            className="h-auto py-4 flex flex-col gap-1"
-            aria-label="View Portfolio">;            <Image className="h-5 w-5 mb-1" aria-hidden="true" />;
+
+            <Image className="h-5 w-5 mb-1" aria-hidden="true" />;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <span>Portfolio</span>;
           </Button>;
           <Button
@@ -347,9 +341,7 @@ function TalentDashboard() {
         </div>
       </section>
 
-      
-
-      
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Learning Hub</h2>

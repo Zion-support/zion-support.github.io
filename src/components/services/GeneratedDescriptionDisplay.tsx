@@ -145,7 +145,9 @@ export function GeneratedDescriptionDisplay({;
       </CardContent>;
       {isEditing && (;
         <CardFooter>;
-          <Button            onClick={handleSave}
+
+            onClick={handleSave}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
           >

@@ -248,7 +248,6 @@ export function TalentRegistrationForm() {;
       // Extract all skills from categorized skills and properly type cast them
       const allCategorizedSkills = generatedContent.categorizedSkills,
       const newSkills: string[] = [],
-      
 
       // Safely extract and flatten skills from each category
       Object.values(allCategorizedSkills).forEach(categorySkills => {
@@ -659,29 +658,9 @@ if ( {) {
                 location: values.location
   },;
   // Handle form submission;
-  const onSubmit = async (values: TalentFormValues,) => {;
-    if (skillTags && skillTags.length === 0) {;
-      toast({;
-        title: 'Skills required',,
-  description: 'Please add at least one skill to your profile.',;
-        variant: 'destructive',;
-      });
-      return;
-    }
 
-    setIsSubmitting(true);
-
-    try {;
-      // For actual implementation with Supabase;
-      if (!user?.id) {;
-        throw new Error('User not authenticated');
-      }
-
-      // Enhance profile if not already done;
-      let finalSummary = '';
-      let finalSkills = skillTags;
-
-      if (values && values.enhancedProfile && !generatedContent) {;        try {;
+        try {;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           const { data: aiData } = await supabase && supabase.functions.invoke(;
             'talent-profile-enhancer',;
             {;
@@ -805,7 +784,7 @@ if ( {) {
         })
           title: "Profile Created Successfully",
           description: "Your talent profile has been published and is now visible in the directory."}),
-        
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         // Send notification email if we have user email
         if (userEmail && values.enhancedProfile && user?.id) {
@@ -1578,13 +1557,9 @@ if (throw error) {
                   </div>
                 )}
                 {/* Generated Content Display */}
-                {generatedContent && (;
-                  <div className='bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4'>;
-                    <div className='flex items-center justify-between mb-3'>;
-                      <h4 className='text-white font-medium flex items-center'>;
-                        <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />;
-                        AI-Generated Content;
-                      </h4>;                      <Button
+
+                      <Button
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                         onClick={applyGeneratedContent}>;
                         <Check className='mr-1 h-3 w-3' /> Apply;
@@ -1648,12 +1623,9 @@ if (throw error) {
               <Separator className='bg-zion-blue-light/50' />;
 
               {/* Skills and Availability */}
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
-                {/* Skills Section */}
-                <div className='space-y-4'>;
-                  <h3 className='text-lg font-medium text-white'>;
-                    Skills & Expertise;
-                  </h3>;                  <FormField
+
+                  <FormField
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                     control={form.control}
                     name="skills"
@@ -1667,9 +1639,9 @@ if (throw error) {
                               className='flex-1 bg-zion-blue border-zion-blue-light text-white'
                               placeholder='Add a skill...'
                               {...field}
-                              onKeyDown = {handleSkillKeyPress,}
-                            />;
-                          </FormControl>;                          <Button
+
+                          <Button
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                   />;
 
@@ -2104,13 +2076,7 @@ toast ({
 }finally {
   setIsGenerating (false);
 
-}
-//Apply generated content to form const applyGeneratedContent = () =>: any {
-  // Check condition
-if ( {) {
-  $2
-}
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   new Date () .getFullYear () 
 
 }Zion Marketplace</p>
@@ -2142,7 +2108,9 @@ if ( {) {
   if (skillTags.length === 0) {
   toast ({
   return;
-}setIsSubmitting (true);try {
+
+try {
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   //For actual implementation with Supabase if (!user?.id) {
   try {
   const {
@@ -2289,7 +2257,9 @@ if (Array && Array.isArray (categorySkills) ) {;
   categorySkills && categorySkills.forEach (skill => {';
   if (typeof skill === 'string' && skill && !skillTags && skillTags.includes (skill) ) {;
 
-})
+});
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 //Get category color //Send notification email const sendEnhancementNotification = async (userId: string, email: string) => {;
   try {';

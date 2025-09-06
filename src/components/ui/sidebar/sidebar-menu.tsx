@@ -1,10 +1,5 @@
-return (<a;
-          href={href}
-    return(<button
-        ref={ref}
 
-SidebarMenuItem.display_name = "SidebarMenuItem";
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export { SidebarMenuItem, SidebarMenuGroup }
 export { SidebarMenuItem, SidebarMenuGroup }
 }
@@ -30,6 +25,9 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   href?: string,
   target?: string,
   badge?: React.ReactNode
+
+import React, { forwardRef } from "react",;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 import { SafeRef } from "@/types/ref-types",;
@@ -131,4 +129,5 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
     </div>;
   );
 },;
-export { SidebarMenuItem, SidebarMenuGroup };
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

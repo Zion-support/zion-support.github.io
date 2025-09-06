@@ -191,21 +191,17 @@ function EducationFormFields() {
               </FormItem>;
 
             )}
-          />;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className='space-y-4'>;
             <FormField
 
               control={form.control}
 
                     <Checkbox
-                      checked = {field && field.value,}
-                      onCheckedChange = {field && field.onChange,}
-                    />;
-                  </FormControl>;
-                  <div className='space-y-1 leading-none'>;
-                    <FormLabel>I am currently studying here</FormLabel>;
-                  </div>;
-                </FormItem>;              )}
+
+              )}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             />;
 
@@ -306,7 +302,9 @@ function EducationFormFields() {
         />;
 
         <FormField
-          control={form && form.control}          name='description'
+
+          name='description'
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Description (Optional)</FormLabel>
               <FormControl>

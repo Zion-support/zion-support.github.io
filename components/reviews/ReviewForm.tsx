@@ -1,4 +1,9 @@
 
+  categories?: {
+    communication?: number;
+    qualityOfWork?: number;
+    timeliness?: number;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -60,42 +65,16 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
 
-    wouldWorkWithAgain?: boolean;
-  }
-  anonymous?: boolean;
-}
-;
-type Props = {
-  initial: Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;
-const ReviewForm: React.FC < Props> = ({ initial }) => {
-  const [rating, set_rating] = useState (0);
-  const [text, set_text] = useState ('');
-  const [anonymous, set_anonymous] = useState (false);
-  const [communication, set_communication] = useState < number | undefined>();
-  const [qualityOfWork, setQualityOfWork] = useState < number | undefined>();
-  const [timeliness, set_timeliness] = useState < number | undefined>();
-  const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState < boolean>(false);
-  const [submitting, set_submitting] = useState (false);
-  const [message, set_message] = useState < string | null>(null);
-;
-  async /**
- * handle_submit - Function description
- */
-function handle_submit() {
-    e.prevent_default ();
-    set_submitting (true);
-    set_message (null),
-    try {
-      const res = await fetch ('/api / reviews / submit', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({
-          project_id: initial.project_id,
-          from_role: initial.from_role,
-          from_id: initial.from_id,
-          rating,
-          text,
-          anonymous,
+          categories: {
+            communication
+            qualityOfWork
+            timeliness
+            wouldWorkWithAgain
+          }
+        })
+      });
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setMessage('Review submitted! Pending admin approval.');
     } catch (err: any) {;
       setMessage(err && err.message);
@@ -104,13 +83,7 @@ function handle_submit() {
   }
   return (
 
-    <form onSubmit={handleSubmit} className='space-y-6'>;
-      <div>;
-        <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />;
-      </div>;
-
-      <div>;
-        <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
   $2
@@ -128,27 +101,13 @@ function handle_submit() {
       </div>;
       <div>;
         <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
-  }
-  return (
 
-    }
-  }
-  return (
-      <div>
-        <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>
-        <StarRating value={rating} onChange={setRating} />
-      </div>
-      <div>
-    <form onSubmit={handleSubmit} className='space-y-6'>;
-      <div>;
-        <label className='block text-sm font-medium mb-2'>Overall Rating</label>    <form onSubmit={handleSubmit} className="space-y-6">;
-      <div>;
-        <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>;
-        <StarRating value={rating} onChange={setRating} />;
-      </div>;
+            communication;
+            qualityOfWork;
+            timeliness;
+            wouldWorkWithAgain}})});
 
-      <div>;
-        <label className='block text-sm font-medium mb-2'>Your Review</label>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
           rows={5}
@@ -156,11 +115,19 @@ function handle_submit() {
           onChange={e => setText(e && e.target.value)}          required;
         />;
       </div>;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
           value={text}
 
+        <input
+          id='anonymous'
+          type='checkbox'
+          checked={anonymous}
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       set_submitting (false);
     }
   }
@@ -209,36 +176,25 @@ function handle_submit() {
           <span className='pill'>Optional</span>;
         </div>;
 
-        <div className='enhanced - card'>;
-          <div className='flex items - center justify - between mb - 2'>;
-            <span className='text - sm'>Quality of Work</span>;
-            <StarRating;
-              value={qualityOfWork || 0}
-              on_change={v => setQualityOfWork (v)}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
 
-              onChange={e => setWouldWorkWithAgain(e && e.target.checked)}            />;
+            />;
+          </div>;
+          <span className='pill'>Optional</span>;
+        </div>;
+
+            />;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
           <span className='pill'>Optional</span>        </div>;
       </div>;
 
       </button>;
-
-      {message && <p className='text-sm'>{message}</p>}
-    </form>;
-  )
-};
-
-export default ReviewForm;    </form>;
-  );
-
-        disabled={submitting}
-      >;
-        {submitting ? 'Submitting...' : 'Submit Review'}
-      </button>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {message && <p className='text - sm'>{message}</p>}
     </form>);
 }

@@ -39,8 +39,7 @@ function RegionFilter() {
           <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
       </button>;
 
-      
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {expanded && (
         <div className='mt - 4 space - y-2'>;
           {REGION_OPTIONS.map (region => (
@@ -65,8 +64,9 @@ function RegionFilter() {
             <div key={region && region.id} className="flex items-center">;
 
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from "@/components/ui/checkbox";
-import { RegionFilterProps } from "@/types/filters";const REGION_OPTIONS = [;
+
+const REGION_OPTIONS = [;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   { id: "North America", label: "North America" },;
   { id: "Europe", label: "Europe" },;
   { id: "Asia", label: "Asia" },;
@@ -76,17 +76,8 @@ import { RegionFilterProps } from "@/types/filters";const REGION_OPTIONS = [;
   { id: "Africa", label: "Africa" }
 ]
 
-export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
-  return (
-    <div className="mb-6 border-b border-zion-blue-light pb-6">;
-      <button
-        onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium">;
-        <span>Region</span>;
-        {expanded ? (;
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
-        ) : (;
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;        )}
+        )}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               <Checkbox
                 id={`region-${region && region.id}`}
@@ -106,8 +97,9 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
                 id={`region-${region.id}`}
                 checked={selectedRegions.includes(region.id)}
                 onCheckedChange={() => toggleRegion(region.id)}
-                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
-              />              <label
+
+              <label
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 htmlFor={`region-${region.id}`}
 
           ))}

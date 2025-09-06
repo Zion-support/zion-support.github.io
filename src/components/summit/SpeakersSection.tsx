@@ -1,10 +1,7 @@
 interface Speaker {
-  name: string;
-  title: string;
-  avatar: string;
-  twitter?: string;
-  linkedin?: string;
-  linkedin?: string;}
+
+}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface Speaker {
   name: string,
   title: string,

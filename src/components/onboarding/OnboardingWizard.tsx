@@ -21,52 +21,8 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 import { cn } from '@/lib/utils';
-interface WizardStep {;
-  title: string,
-  description: string;
-  icon: React && React.ReactNode;
-  action: {;
-    text: string;
 
-import { useState, useEffect } from 'react';
-import { use_router } from 'next / router';
-import { use_auth } from '@/hooks / use_auth';
-import { Button } from '@/components / ui / button';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-  Rocket,
-  FileText,
-  Users,
-  Calendar,
-  Eye,
-  MessageSquare,
-} from 'lucide-react';
-import { cn } from '@/lib / utils';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
-import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
-interface WizardStep {
-  title: string,
-  description: string;
-  icon: React.ReactNode;
-  action: {
-    text: string;
-    url: string;
-
-  }
-  skipText?: string
-interface OnboardingWizardProps {
-
-    url: string
-};
-  skipText?: string;
-
-interface OnboardingWizardProps {;
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   type: 'client' | 'talent';
   onComplete: () => void;
   onSkip: () => void;
@@ -121,7 +77,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const [currentStep, setCurrentStep] = useState(0),
   const router = useRouter(), // Changed from useNavigate to useRouter
   const { user } = useAuth(),
-  
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
@@ -187,60 +143,25 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Let our AI find the perfect opportunities for you",
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
       action: {
-        text: "Enable Matchmaking",
-        url: "/talent-dashboard"
-      }
-    }
-  ],;
-  const steps = type === 'client' ? clientSteps : talentSteps,;
-  // Navigate to the specified URL;
-  const handleAction = () => {;
-    const currentStepData = steps[currentStep],;
-    if (!currentStepData) return,;
-    if (currentStep < steps.length - 1) {;
-      router.push(currentStepData.action.url), // Changed to router.push;
-      setCurrentStep(currentStep + 1);
-    } else {;
-      // Last step;
-      router.push(currentStepData.action.url), // Changed to router.push;
-      onComplete();
-    }
-  },;
-  // Skip the current step;
-  const handleSkip = () => {;
-    if (currentStep < steps.length - 1) {;
-      setCurrentStep(currentStep + 1);
-    } else {;
-      // Last step;
-      onSkip();
-    }
-  },
-  
-  return (
-    <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
-      <CardHeader>
-        <CardTitle className='text-center text-white'>
-          {type === 'client'
-            ? 'Ready to find top IT talent?'
-            : "Let's build your professional profile"}
-        </CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <div className='flex items-center mb-6'>;
-          {/* Step dots */}
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {steps.map((_, index) => (
               <div
                 key={index}
                 className={cn(
 
-            {steps[currentStep]?.icon}
-          </div>
-          <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep]?.title}</h3>
-          <p className="text-zion-slate-light mb-6">{steps[currentStep]?.description}</p>
-        </div>
-      </CardContent>
-      <CardFooter className="flex flex-col space-y-2">
-        <Button          <Button
+          <Button
             variant='ghost'
             className='text-zion-slate-light hover:text-white'
             onClick={handleSkip}>;
+
+            {steps[currentStep]?.skipText}
+          </Button>
+        )}
+
+      </CardFooter>;
+    </Card>;
+  );
+}
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

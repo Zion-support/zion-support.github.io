@@ -13,10 +13,7 @@ export function RatingStars({ value;
           )
         }
 
-        if (i === filled && half) {;
-          return (;
-            <StarHalf;
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               key={i}
               className="h-4 w-4 fill-zion-cyan text-zion-cyan"
             />
@@ -26,7 +23,5 @@ export function RatingStars({ value;
       })}
       {typeof count === 'number' && (
         <span className="text-xs ml-1">({count})</span>
-      )}
-    </div>
-  )
-}
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

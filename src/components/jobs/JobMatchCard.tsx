@@ -1,24 +1,2 @@
-}
 
-  talentId
-  name
-  title
-  company
-  avatar
-  location
-  category
-  matchPercent
-
-}
-}
-
-  talent_id,
-  name,
-  title,
-  company,
-  avatar,
-  location,
-  category,
-  match_percent,
-}
-}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

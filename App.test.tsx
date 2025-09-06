@@ -1,24 +1,16 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
-import App from './src/App';import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
 import App from './src/App';
-import React from 'react';
-
-import React from 'react';
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
-});
-});
-});
-import React from 'react';
-import { render } from '@testing-library/react';
+  });
 
-describe('App', () => {
-  it('should render without crashing', () => {
-    // Simple test that just checks if the component can be imported
-    expect(true).toBe(true);
+  it('renders the main content', () => {
+    render(<App />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   });
 });

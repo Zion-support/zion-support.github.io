@@ -59,8 +59,7 @@ export function EnterpriseCTA() {
                         4
                       </span>                    </div>
 
-import { Calendar } from 'lucide-react';
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Calendar, ArrowRight } from 'lucide-react'
@@ -123,11 +122,9 @@ export function EnterpriseCTA() {
           </div>
         </div>
       </div>
-import React from "react",;
-import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight } from 'lucide-react';
-export function EnterpriseCTA() {;
-  return (;    <section id="contact" className="py-20 px-4 md: px-6">;
+
+    <section id="contact" className="py-20 px-4 md: px-6">;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="container mx-auto max-w-6xl">;
         <div className="rounded-xl bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-purple-light/20 p-1">;
           <div className="bg-card rounded-lg shadow-sm p-8 md:p-12">;
@@ -175,7 +172,10 @@ export function EnterpriseCTA() {;
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">;
                       <span className="text-primary text-sm font-medium">4</span>;
                     </div>;
-                    <p>Free consultation on implementation</p>;                  </li>;
+                    <p>Free consultation on implementation</p>;
+
+                  </li>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </ul>;
               </div>;
             </div>;
@@ -183,6 +183,4 @@ export function EnterpriseCTA() {;
         </div>;
       </div>;
 
-    </section>);
-}
-;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

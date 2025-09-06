@@ -1,25 +1,19 @@
-// If activating, deactivate all other models with the same purpose;
-      // Check condition
-if ( {) {
-  $2
-}
-        await supabase;
 
-          .from('model_versions');
-          .update({ active: false });
-          .eq('purpose', purpose);
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       }
 
       // Update this model;
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
-import { supabase  } from '@/integrations/supabase/client';
-import { ModelConfig  } from '@/utils/zion-gpt';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-  errorMessage?: string
-}        .order('createdAt', { ascending: false }),;
+
+      await supabase;
+        .from ('model_versions');
+        .update ({ active: !current_active });
+        .eq ('id', model_id),
+      // Refresh the model list;
+      fetch_models ();
+
+        .order('createdAt', { ascending: false }),;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {;
     try {;
@@ -43,6 +37,81 @@ interface ModelVersionData extends ModelConfig {
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
   },;
+
+  return (
+    <Card className="w-full">;
+      <CardHeader className="flex flex-row items-center justify-between">;
+        <div>;
+          <CardTitle>ZionGPT Models</CardTitle>;
+          <CardDescription>;
+            Manage fine-tuned AI models for different platform features;
+          </CardDescription>;
+        </div>;
+        <Button onClick={fetchModels} variant="outline" size="sm">;
+          <RefreshCw className="h-4 w-4 mr-2" /> Refresh;
+        </Button>;
+      </CardHeader>;
+      <CardContent>;
+        {isLoading ? (;
+          <div className="flex items-center justify-center h-24">;
+            <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+          </div>;
+        ) : (;
+          <Table>;
+            <TableHeader>;
+              <TableRow>;
+                <TableHead>Model ID</TableHead>;
+                <TableHead>Version</TableHead>;
+                <TableHead>Purpose</TableHead>;
+                <TableHead>Base Model</TableHead>;
+                <TableHead>Status</TableHead>;
+                <TableHead>Created</TableHead>;
+                <TableHead className="text-right">Actions</TableHead>;
+              </TableRow>;
+            </TableHeader>;
+            <TableBody>;
+              {models && models.map((model,) => (;
+                <TableRow key={model && model.id}>;
+                  <TableCell className="font-medium">{model && model.id}</TableCell>;
+                  <TableCell>v{model && model.version}</TableCell>;
+                  <TableCell>{model && model.purpose}</TableCell>;
+                  <TableCell>{model && model.baseModel}</TableCell>;
+                  <TableCell>;
+                    {model && model.trainingStatus === 'succeeded' ? (;
+                      <Badge className="bg-green-500">Ready</Badge>;
+                    ) : model && model.trainingStatus === 'failed' ? (;
+                      <Badge className="bg-red-500">Failed</Badge>;
+                    ) : model && model.trainingStatus === 'running' ? (;
+                      <Badge className="bg-blue-500">Training</Badge>;
+                    ) : (;
+                      <Badge className="bg-yellow-500">Queued</Badge>;
+                    )}
+
+                    {model && model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
+                  </TableCell>;
+                  <TableCell>{new Date(model && model.createdAt).toLocaleDateString()}</TableCell>;
+                  <TableCell className="text-right">;
+                    {model && model.trainingStatus === 'queued' || model && model.trainingStatus === 'running' ? (;
+
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick = {(,) => checkTrainingStatus(model && model.id),}
+                        disabled = {activeJobs[model && model.id],}
+                      >;
+                        {activeJobs[model && model.id] ? (;
+                          <Loader2 className="h-4 w-4 animate-spin" />;
+                        ) : (;
+                          <RefreshCw className="h-4 w-4" />;
+
+                      >
+                        {activeJobs[model.id] ? (
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                        ) : (
+                          <RefreshCw className="h-4 w-4" />
+                        )}
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       >
                         {model.active ? (
                           <>
@@ -53,8 +122,9 @@ interface ModelVersionData extends ModelConfig {
                             <Play className="h-4 w-4 mr-1" /> Activate
                           </>
                         )}
-                      </Button>
-                    ) : (                      <Button
+
+                      <Button
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
@@ -75,6 +145,8 @@ interface ModelVersionData extends ModelConfig {
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               ))}
             </TableBody>;
           </Table>;
@@ -174,4 +246,5 @@ interface ModelVersionData extends ModelConfig {
       </CardContent>;
     </Card>);
 }
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

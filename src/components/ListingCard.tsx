@@ -1,5 +1,6 @@
-id?: string,;
-  title: string,,
+
+  title: string,;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   description: string,;
   images?: string[],;
   category: string,;
@@ -8,6 +9,9 @@ id?: string,;
   className?: string,;
   profileType?: 'service' | 'talent';
 }
+
+  id,;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   title,;
   description,;
   images,;
@@ -15,68 +19,16 @@ id?: string,;
   tags,;
   author,;
   className,;
-  profileType = 'service',;
-}: ListingCardProps) {;
-  // Generate a profile ID based on the listing data;
-  // In a real app, this would be a proper ID from the database;
-  const profileId =;
-    id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
 
-      >;
-      {images && images.length > 0 && images[0] && (;
-        <div className='h-48 w-full overflow-hidden relative'>;
-          <Image
-            src={images[0]}
-            alt={title}
-            className='object-cover transition-transform duration-300 group-hover:scale-105'
-            loading='lazy'          />;
-        </div>;
-      )}
-      <div className='flex flex-col p-4 flex-grow'>;
-        <div className='mb-2'>;
-          <Badge
-            variant='secondary'
-            className='bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30'>;
-            {category}
-          </Badge>;
-        </div>;
-        <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>;
-          {title}
-
-        </h3>;
-        <p className='text-zion-slate mb-4 flex-grow'>{description}</p>;
-
-        {tags && tags.length > 0 && (;
-          <div className='flex flex-wrap gap-2 mb-4'>;
-            {tags && tags.map((tag, i) => (;
-
-              <Badge
-                key={i}
-                variant='outline'
-                className='border-zion-slate-dark text-zion-slate-light'>                {tag}              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
-          <div className="flex flex-wrap gap-2 mb-4">;
-            {tags && tags.map((tag, i) => (;
-              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
-
-  const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
-
-  return (
-    <Link
-      href = {`/profile/${profileId}`}
-      tabIndex={0}
-      className={cn(
-
-        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
-        className
-      )}
-    >
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
             src={images[0]}
             alt={title}
 
+        </div>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       )}
       <div className="flex flex-col p-4 flex-grow">
         <div className="mb-2">
@@ -85,20 +37,13 @@ id?: string,;
           </Badge>
         </div>
 
-        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
-        <p className="text-zion-slate mb-4 flex-grow">{description}</p>
-        
-        {tags && tags.length > 0 && (
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
 
-            ))}
-          </div>
-        )}
-        
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {author.avatarUrl ? (
@@ -109,8 +54,11 @@ id?: string,;
 
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
-        )}      </div>;
+        )}
+
+      </div>;
     </Link>;
   );
 }
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

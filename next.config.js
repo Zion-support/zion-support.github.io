@@ -3,82 +3,43 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
-  reactStrictMode: true,
-  trailingSlash: true,
-  output: 'export',
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   images: {
     unoptimized: true,
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    domains: ['images.unsplash.com', 'via.placeholder.com']
+    domains: ['images.unsplash.com', 'via.placeholder.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['@radix-ui/react-icons'],
-  },
-  eslint: {
-    ignoreDuringBuilds: true
-  },
-  typescript: {
-    ignoreBuildErrors: true
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  async redirects() {
-    return [
-      { source: '/api-documentation', destination: '/api-docs', permanent: true },
-      { source: '/ai-consciousness-evolution-2025', destination: '/ai-consciousness-evolution-2029', permanent: false }
-    ];
-  },
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
-  },
-  webpack: (config, { isServer }) => {
-    // Handle problematic files
-    config.module.rules.push({
-      test: /\.(js|jsx|ts|tsx)$/,
-      include: [
-        /corrupted_backup/,
-        /backup/,
-        /disabled/
-      ],
-      use: 'ignore-loader'
-    });
-
-    // Optimize for production
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        net: false,
-        tls: false,
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      config.optimization.splitChunks.cacheGroups = {
+        ...config.optimization.splitChunks.cacheGroups,
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
       };
     }
-
     return config;
   },
-  serverExternalPackages: ['sharp'],
 };
 
 export default nextConfig;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

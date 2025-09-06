@@ -11,7 +11,7 @@ export function ActiveProjectsCard() {
       setActiveProjects(active)
     }
   }, [projects, isLoading]),
-  
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   if (isLoading) {
 import { useEffect, useState } from 'react';
@@ -171,18 +171,9 @@ export function ActiveProjectsCard() {;
       <CardContent className='space-y-4'>  ;
 
   return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle className="flex items-center gap-2">;
-          <BriefcaseIcon className="h-5 w-5 text-primary" />;
-        </CardTitle>;
-        <CardDescription>Your ongoing work</CardDescription>;
-      </CardHeader>;
-      <CardContent className='space-y-4'>;
-        {activeProjects && activeProjects.map(project => (;
-          <div key={project && project.id} className='border rounded-md p-3'>;
-            <div className='flex justify-between items-start mb-2'>;
-              <h3 className='font-medium text-sm'>{project && project.job?.title}</h3>;              <Badge
+
+              <Badge
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 variant={
                   project.status === 'in_progress' ? 'default' : 'outline'
                 }

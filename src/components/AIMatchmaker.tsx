@@ -11,21 +11,8 @@ import { Sparkles, Search } from 'lucide-react';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {
 
-  serviceType?: string
-onMatchSelect?: (match: any) => void
-className?: string
-}if (!query.trim () ) {
-  toast ({
-  return;
-}setIsMatchmaking (true)
-setHasSearched (true)
-serviceType
-3)
-}catch (error) {'
-  logErrorToProduction ('Error during AI matching:', {
-  data: error
-})
-toast ({  setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+  setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface AIMatchmakerProps {
   serviceType?: string
   onMatchSelect?: (match: any,) => void
@@ -44,101 +31,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
 
-  const handleSearch = async () => {
-    if (!query.trim()) {
-      toast({
-        title: "Please enter a description",
-        description: "Tell us what you're looking for so we can find matches.",
-      })
-      return;
-    }
-    setIsMatchmaking(true)
-    setHasSearched(true)
-    try {
-      logInfo('Starting AI matching', { data: { query, serviceType } })
-      // Get AI matches
-      const results = await findMatches(query, serviceType, 3)
-      logInfo('AI matching results:', { data: results })
-      setMatches(results)
-      toast({
-        title: 'Matches Found'
-        description: `Found ${results.length} matches based on your description.`
-      })
-    } catch (error) {
-      logErrorToProduction('Error during AI matching:', { data: error })
-      toast({
-        title: 'Matching Error'
-        description:
-          "We couldn't find matches for your request. Please try again."
-        variant: 'destructive'
-      })
-        variant: "destructive"}),
-      return
-    }
-
-    setIsMatchmaking(true),
-    setHasSearched(true),
-    
-    try {
-      logInfo("Starting AI matching", { data: { query, serviceType } }),
-      
-      // Get AI matches
-      const results = await findMatches(
-        query,
-        serviceType,
-        3
-      ),
-      
-      logInfo('AI matching results:', { data: results }),
-      setMatches(results),
-      
-      toast({
-        title: "Matches Found",
-        description: `Found ${results.length} matches based on your description.`})
-    } catch (error) {
-      logErrorToProduction('Error during AI matching:', { data: error }),
-      toast({
-        title: "Matching Error",
-        description: "We couldn't find matches for your request. Please try again.",
-        variant: "destructive"}),
-      // Set empty matches to show no results found UI
-      setMatches([])
-    } finally {
-      setIsMatchmaking(false)
-        variant: "destructive"}),
-      return
-    }
-
-    setIsMatchmaking(true),
-    setHasSearched(true),
-    
-    try {
-      logInfo("Starting AI matching", { data: { query, serviceType } }),
-      
-      // Get AI matches
-      const results = await findMatches(
-        query,
-        serviceType,
-        3
-      ),
-      
-      logInfo('AI matching results:', { data: results }),
-      setMatches(results),
-      
-      toast({
-        title: "Matches Found",
-        description: `Found ${results.length} matches based on your description.`})
-    } catch (error) {
-      logErrorToProduction('Error during AI matching:', { data: error }),
-      toast({
-        title: "Matching Error",
-        description: "We couldn't find matches for your request. Please try again.",
-        variant: "destructive"}),
-      // Set empty matches to show no results found UI
-      setMatches([])
-    } finally {
-      setIsMatchmaking(false)
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
           AI Matchmaker;
         </CardTitle>;
@@ -167,57 +60,37 @@ toast ({;
   setIsMatchmaking (false) ;import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {;
   serviceType?: string,;
-  onMatchSelect?: (match: any) => void,;
-  className?: string;
-}
-;
-export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
-  const [query, setQuery] = useState(""),;
-  const [isMatchmaking, setIsMatchmaking] = useState(false),;
-  const [matches, setMatches] = useState([] as MatchResult[]),;
-  const [hasSearched, setHasSearched] = useState(false),;
-  const handleSearch = async () => {;
-    if (!query.trim()) {;
-      toast({;
-        title: "Please enter a description",,
-  description: "Tell us what you're looking for so we can find matches.",;
-        variant: "destructive"}),;
-      return;
-    }
-;
-    setIsMatchmaking(true),;
-    setHasSearched(true),;
-    try {;
-      logInfo("Starting AI matching", { data: { query, serviceType } }),;
-      // Get AI matches;
-      const results = await findMatches(;
-        query,;
-        serviceType,;
-        3;
-      ),;
-      logInfo('AI matching results:', { data: results }),;
-      setMatches(results),;
-      toast({;
-        title: "Matches Found",,
-  description: `Found ${results.length} matches based on your description.`});
-    } catch (error) {;
-      logErrorToProduction('Error during AI matching:', { data: error }),;
-      toast({;
-        title: "Matching Error",,
-  description: "We couldn't find matches for your request. Please try again.",;
-        variant: "destructive"}),;      // Set empty matches to show no results found UI;
+
+      // Set empty matches to show no results found UI;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setMatches([]);
     } finally {;
       setIsMatchmaking(false);
     }
-  },;
-  const handleItemSelect = (item: any) => {;
-    if (onMatchSelect) {;
-      // Find the original MatchResult that contains this item;
-      const matchResult = matches.find(match => match.item.id === item.id),;      if (matchResult) {;
+
+      if (matchResult) {;
         onMatchSelect(matchResult);
       }
-    }        </p>
+    }
+
+  },
+  
+  // Extract just the items from each MatchResult
+  const matchItems = matches.map(match => match.item),
+  
+  return (
+    <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>
+      <CardHeader className="pb-2">
+        <CardTitle className="flex items-center text-white">
+          <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
+
+          AI Matchmaker
+        </CardTitle>
+        <p className="text-sm text-zion-slate-light">
+          Describe what you're looking for and our AI will find the best matches
+
+        </p>
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
@@ -233,9 +106,13 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
             <Button
               onClick={handleSearch}
               disabled={isMatchmaking}
+
+              {isMatchmaking ? (;
                 <>Analyzing your needs...</>;
               ) : (;
                 <>;
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
@@ -243,9 +120,9 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 
 }
 }
-              projectDescription={query}
-            />;
-          )}        </div>;
+
+        </div>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </CardContent>;
     </Card>;
   );
@@ -283,4 +160,5 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         </div>;
       </CardContent>;
     </Card>);
-}
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

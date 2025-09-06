@@ -1,5 +1,6 @@
 
-      const redirectTo = options?.redirectTo |'/login'      const returnUrl = options?.returnUrl |router.asPath
+      const returnUrl = options?.returnUrl |router.asPath
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           if (!requireAuth({ showToast: false })) return false
     const userRoles = user?.role ? [user.role] : []
     requireAuth
@@ -8,14 +9,7 @@
     isAuthenticated
     user
 
-      const redirectTo = options?.redirectTo || '/login';
-      const returnUrl = options?.returnUrl || router && router.asPath;
-          if (!requireAuth({ showToast: false })) return false,;
-
-  useEffect(() => {
-    // Don't redirect while auth is still loading
-    if (isLoading) return,
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const userRoles = user?.role ? [user && user.role] : [];
 
     requireAuth;
@@ -25,4 +19,5 @@
     user;
     isLoading}
 }
-<<<<<<< HEAD
+
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5

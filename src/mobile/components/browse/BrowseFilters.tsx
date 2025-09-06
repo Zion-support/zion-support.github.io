@@ -220,7 +220,6 @@ interface BrowseFiltersProps {
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
 
-              
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
 
@@ -235,7 +234,6 @@ interface BrowseFiltersProps {
                       </div>
                     </div>
 
-                    
                     <div className="space-y-2">
 
                       <Label>Experience Level</Label>
@@ -258,7 +256,6 @@ interface BrowseFiltersProps {
                       </div>
                     </div>
 
-                    
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
                       <Slider
@@ -277,7 +274,6 @@ interface BrowseFiltersProps {
                   </>
                 )}
 
-                
                 <div className="space-y-2">
 
                   <Label>Location</Label>
@@ -294,17 +290,14 @@ interface BrowseFiltersProps {
                   </Select>
                 </div>
 
-                
                 <div className="space-y-2">
 
                   <Label>Salary Range</Label>
-                  <div className='flex gap-4 items-center'>
-                    <Input placeholder='Min' type='number' className='w-full' />
-                    <span>to</span>
-                    <Input placeholder='Max' type='number' className='w-full' />                  </div>
+
+                  </div>
                 </div>
 
-                
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <div className="space-y-2">
 
                   <Label>Skills</Label>
@@ -341,7 +334,7 @@ interface BrowseFiltersProps {
                   </Select>;
                 </div>;
 
-                
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <div className="flex items-center justify-between">
 
                   <Label>Only show verified profiles</Label>
@@ -349,8 +342,7 @@ interface BrowseFiltersProps {
                 </div>
               </div>
 
-              
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <SheetFooter>
                 <Button variant='outline' className='w-full'>
                   Reset
@@ -365,8 +357,7 @@ interface BrowseFiltersProps {
             </SheetContent>
           </Sheet>
 
-          
-
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Select>
             <SelectTrigger className='w-[120px] h-8'>
               <SelectValue placeholder='Sort By' />
@@ -483,7 +474,6 @@ interface BrowseFiltersProps {
   )
 };
 
-          
           {activeFilters.map((filter) => (
             <Badge 
               key={filter} 

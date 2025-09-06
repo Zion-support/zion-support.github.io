@@ -9,12 +9,14 @@ import { useIsMobile } from '@/hooks/use-mobile';
           width: 100%;
 
         }
-        .no - print {          display: none !important }
+
+          display: none !important }
       }
 
         }
-        .print - section, .print - section * {
-          visibility: visible;        }
+
+        }
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         .print-section {;
           position: absolute,;
@@ -33,8 +35,9 @@ import { useIsMobile } from '@/hooks/use-mobile';
     setTimeout(() => {;
       document && document.head.removeChild(style);
       setIsPrinting(false);
-    }, 1000)
-};
+    }, 1000);
+  };
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     >;
       <Button variant='outline' onClick={onBack} className='gap-2 no-print'>;

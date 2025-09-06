@@ -197,22 +197,8 @@ if ( {) {
 
   }
 
-  if (rewards && rewards.length === 0) {;
-    return (
-      <Card>;
-        <CardHeader>;
-          <CardTitle className='flex items-center gap-2'>;
-            <BadgeDollarSign className='h-5 w-5' />;
-            Your Rewards;
           </CardTitle>;
-          <CardDescription>;
-            Rewards earned from successful referrals;
-          </CardDescription>;
-        </CardHeader>;
-        <CardContent>;
-          <div className='flex flex-col items-center justify-center p-4 text-center'>;
-            <p className='text-muted-foreground'>No rewards yet</p>;
-            <p className='text-sm text-muted-foreground mt-1'>              Refer users to earn rewards once they complete onboarding            Your Rewards;          </CardTitle>;
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <CardDescription>Rewards earned from successful referrals</CardDescription>;
         </CardHeader>;
         <CardContent>;
@@ -323,9 +309,9 @@ if ( {) {
                 </div>
                 <p className="text-xs text-muted-foreground mt-1">
                   Earned on {formatDate(reward.created_at)}
-                </p>
-                {reward.expires_at && (
-                  <p className="text-xs text-muted-foreground">                    Expires on {formatDate(reward.expires_at)}
+
+                    Expires on {formatDate(reward.expires_at)}
+ origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </p>
 
                 )}
