@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import {
   LightBulbIcon,
@@ -11,6 +10,13 @@ import {
   CheckCircleIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions',
+  description: 'Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech innovations, and EdTech solutions. Transform your business with cutting-edge technology.',
+  keywords: 'AI services, micro SaaS, FinTech, HealthTech, EdTech, technology solutions, software development, digital transformation'
+};
 
 const services = [
   {
@@ -18,381 +24,267 @@ const services = [
     description: 'Custom AI models, automation, and intelligent systems that transform your business operations. From machine learning to natural language processing, we build AI that delivers real value.',
     icon: LightBulbIcon,
     color: 'blue',
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Automation', 'Data Science'],
-    link: '/services/ai-solutions',
+    href: '/services/ai-services',
+    features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
   },
   {
-    name: 'Micro SaaS Development',
-    description: 'Scalable, secure micro SaaS products that solve specific business challenges. We handle everything from concept to deployment, ensuring a robust and user-friendly application.',
+    name: 'Micro SaaS',
+    description: 'Scalable, focused software solutions that solve specific business problems. Our micro SaaS products are designed for rapid deployment and maximum impact.',
     icon: CpuChipIcon,
-    color: 'purple',
-    features: ['Custom Web Applications', 'API Development', 'Database Design', 'User Management', 'Payment Integrations', 'Cloud Deployment'],
-    link: '/services/micro-saas',
-  },
-  {
-    name: 'Enterprise IT Services',
-    description: 'Cloud migration, DevOps, SRE, and infrastructure management for enterprise scale. Our experts ensure your IT infrastructure is robust, secure, and optimized for performance.',
-    icon: GlobeAltIcon,
     color: 'green',
-    features: ['Cloud Migration (AWS, Azure, GCP)', 'DevOps & SRE', 'Infrastructure as Code', 'Security Consulting', 'Network Management', '24/7 Support'],
-    link: '/services/it-services',
+    href: '/services/micro-saas',
+    features: ['Rapid Development', 'Scalable Architecture', 'User-Centric Design', 'Cost-Effective Solutions']
   },
   {
-    name: 'Cybersecurity Solutions',
-    description: 'Advanced cybersecurity and data protection for enterprise-grade applications. Protect your assets with our comprehensive security strategies and incident response plans.',
+    name: 'FinTech Solutions',
+    description: 'Secure, compliant financial technology solutions that power modern banking, payments, and investment platforms. Built with enterprise-grade security and regulatory compliance.',
+    icon: ChartBarIcon,
+    color: 'purple',
+    href: '/services/fintech',
+    features: ['Payment Processing', 'Risk Management', 'Regulatory Compliance', 'Real-time Analytics']
+  },
+  {
+    name: 'HealthTech Innovation',
+    description: 'Healthcare technology solutions that improve patient outcomes and streamline medical operations. From telemedicine to health data analytics.',
     icon: ShieldCheckIcon,
     color: 'red',
-    features: ['Threat Detection & Prevention', 'Compliance Management', 'Security Auditing', 'Incident Response', 'Vulnerability Assessments', 'Data Encryption'],
-    link: '/services/cybersecurity',
+    href: '/services/healthtech',
+    features: ['Telemedicine Platforms', 'Health Data Analytics', 'Patient Management', 'HIPAA Compliance']
   },
   {
-    name: 'Data Analytics & BI',
-    description: 'Real-time data analysis and predictive modeling for informed decision making. Turn raw data into actionable insights with our powerful analytics solutions.',
-    icon: ChartBarIcon,
-    color: 'indigo',
-    features: ['Business Intelligence Dashboards', 'Predictive Analytics', 'Data Warehousing', 'ETL Pipelines', 'Custom Reporting', 'Data Visualization'],
-    link: '/services/data-analytics',
-  },
-  {
-    name: 'Team Augmentation',
-    description: 'Seamless integration of expert talent to augment your existing teams. Get access to top-tier developers, engineers, and project managers on demand.',
+    name: 'EdTech Platforms',
+    description: 'Educational technology solutions that enhance learning experiences and streamline educational administration. From LMS to interactive learning tools.',
     icon: UserGroupIcon,
-    color: 'orange',
-    features: ['Staff Augmentation', 'Dedicated Teams', 'Project Management', 'Technical Consulting', 'Skill Gap Analysis', 'Flexible Engagement Models'],
-    link: '/services/team-augmentation',
+    color: 'indigo',
+    href: '/services/edtech',
+    features: ['Learning Management Systems', 'Interactive Content', 'Student Analytics', 'Assessment Tools']
   },
+  {
+    name: 'IT Services',
+    description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, and infrastructure management. We keep your technology running smoothly.',
+    icon: GlobeAltIcon,
+    color: 'teal',
+    href: '/services/it-services',
+    features: ['Cloud Migration', 'DevOps & SRE', 'Cybersecurity', 'Infrastructure Management']
+  }
 ];
 
-export default function ServicesPage() {
+const stats = [
+  { label: 'Projects Completed', value: '500+' },
+  { label: 'Happy Clients', value: '200+' },
+  { label: 'Years Experience', value: '10+' },
+  { label: 'Team Members', value: '50+' }
+];
+
+const testimonials = [
+  {
+    name: 'Sarah Johnson',
+    role: 'CTO, TechCorp',
+    content: 'Zion Tech Group transformed our entire technology stack. Their AI solutions increased our efficiency by 300%.',
+    avatar: 'SJ'
+  },
+  {
+    name: 'Michael Chen',
+    role: 'Founder, StartupXYZ',
+    content: 'The micro SaaS platform they built for us was exactly what we needed. Fast, reliable, and perfectly tailored to our business.',
+    avatar: 'MC'
+  },
+  {
+    name: 'Dr. Emily Rodriguez',
+    role: 'Medical Director, HealthPlus',
+    content: 'Their HealthTech solutions revolutionized our patient care. The telemedicine platform is intuitive and secure.',
+    avatar: 'ER'
+  }
+];
+
+function ServiceCard({ service }: { service: typeof services[0] }) {
+  const colorClasses = {
+    blue: 'from-blue-500 to-blue-600',
+    green: 'from-green-500 to-green-600',
+    purple: 'from-purple-500 to-purple-600',
+    red: 'from-red-500 to-red-600',
+    indigo: 'from-indigo-500 to-indigo-600',
+    teal: 'from-teal-500 to-teal-600'
+  };
+
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Our Comprehensive{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-              Services
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-            We offer a full spectrum of technology solutions, from cutting-edge AI to robust IT infrastructure,
-            designed to empower your business and drive innovation.
-          </p>
-          <Link
-            href="/contact"
-            className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center"
-          >
-            Get a Free Consultation
-            <ArrowRightIcon className="inline-block h-5 w-5 ml-2" />
-          </Link>
+    <div className="group relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+      <div className="p-8">
+        <div className={`w-16 h-16 bg-gradient-to-r ${colorClasses[service.color]} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+          <service.icon className="w-8 h-8 text-white" />
+        </div>
+        
+        <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+          {service.name}
+        </h3>
+        
+        <p className="text-gray-600 mb-6 leading-relaxed">
+          {service.description}
+        </p>
+        
+        <div className="space-y-2 mb-6">
+          {service.features.map((feature, index) => (
+            <div key={index} className="flex items-center text-sm text-gray-600">
+              <CheckCircleIcon className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+              {feature}
+            </div>
+          ))}
+        </div>
+        
+        <Link 
+          href={service.href}
+          className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:translate-x-1 transform duration-300"
+        >
+          Learn More
+          <ArrowRightIcon className="w-4 h-4 ml-2" />
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+function StatCard({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="text-center">
+      <div className="text-4xl font-bold text-blue-600 mb-2">{value}</div>
+      <div className="text-gray-600">{label}</div>
+    </div>
+  );
+}
+
+function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] }) {
+  return (
+    <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+      <div className="flex items-center mb-4">
+        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+          <span className="text-blue-600 font-semibold">{testimonial.avatar}</span>
+        </div>
+        <div>
+          <div className="font-semibold text-gray-900">{testimonial.name}</div>
+          <div className="text-sm text-gray-600">{testimonial.role}</div>
         </div>
       </div>
+      <p className="text-gray-700 italic">"{testimonial.content}"</p>
+    </div>
+  );
+}
+
+export default function ServicesOverviewPage() {
+  return (
+    <div className="animate-fade-in">
+      {/* Hero Section */}
+      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Transform your business with cutting-edge technology solutions. From AI-powered micro SaaS to enterprise FinTech platforms, we deliver innovation that drives results.
+          </p>
+          <div className="flex flex-wrap justify-center gap-8">
+            {stats.map((stat, index) => (
+              <StatCard key={index} {...stat} />
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Services Grid */}
-      <div className="py-20 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Comprehensive Technology Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We specialize in delivering end-to-end technology solutions across multiple industries and use cases.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className={`inline-flex p-4 rounded-xl bg-${service.color}-100 mb-6`}>
-                  <service.icon className={`h-9 w-9 text-${service.color}-600`} />
+              <ServiceCard key={index} service={service} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Process
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We follow a proven methodology to ensure your project's success from concept to deployment.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              { step: '01', title: 'Discovery', description: 'We understand your business needs and technical requirements' },
+              { step: '02', title: 'Strategy', description: 'We develop a comprehensive plan tailored to your goals' },
+              { step: '03', title: 'Development', description: 'We build your solution using cutting-edge technologies' },
+              { step: '04', title: 'Deployment', description: 'We launch and maintain your solution for optimal performance' }
+            ].map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                  {item.step}
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.name}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                <ul className="space-y-2 mb-6 text-gray-700">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm">
-                      <CheckCircleIcon className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href={service.link}
-                  className={`inline-flex items-center text-${service.color}-600 font-semibold hover:text-${service.color}-700 transition-colors`}
-                >
-                  Explore {service.name}
-                  <ArrowRightIcon className="h-4 w-4 ml-2" />
-                </Link>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Don't just take our word for it. Here's what our clients have to say about working with us.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard key={index} testimonial={testimonial} />
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-700 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Start Your Project?
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-700">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Our team of experts is ready to help you build innovative solutions that drive real business value.
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our technology solutions can help you achieve your goals.
           </p>
-          <Link
-            href="/contact"
-            className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center"
-          >
-            Contact Us Today
-            <ArrowRightIcon className="inline-block h-5 w-5 ml-2" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Get Started
+            </Link>
+            <Link
+              href="/pricing"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+            >
+              View Pricing
+            </Link>
+          </div>
         </div>
-=======
-import Link from "next/link";
-  title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
-  description:
-
-};
-export default function ServicesOverviewPage() {
-  return (
-    <div className="animate - fade - in">;
-      {" "}
-      <div className="text - center mb - 16">;
-        {" "}
-        <h1 className="text - 4xl font - bold text - gray - 900 mb - 6">;
-          Our Services;
-        </h1>{" "}
-        <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-          {" "}
-          Transform your business with cutting-edge technology solutions. From AI-powered micro SaaS to enterprise FinTech platforms, 
-          we deliver measurable outcomes with 99.9% uptime, bank-grade security, and 24/7 expert support.{" "}
-        </p>{" "}
-      </div>{" "}
-      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 16">;
-        {" "}
-        <ServiceCard;
-          href="/services / micro - saas";
-          title="Micro SaaS";
-          description="End - to - end product development with billing, auth, and analytics";
-          bullets={[;
-            "Foundational architecture",
-            "Billing + subscriptions",
-            "Growth analytics",
-          ]}
-  title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
-  description:
-    "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
-};
-
-export default function ServicesOverviewPage() {
-  return (
-    <div className="animate-fade-in">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Our Services
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform your business with cutting-edge technology solutions. From AI-powered micro SaaS to enterprise FinTech platforms, 
-          we deliver measurable outcomes with 99.9% uptime, bank-grade security, and 24/7 expert support.
-        </p>
-      </div>
-
-      {/* Statistics Section */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <StatCard 
-            number="500+" 
-            label="Successful Projects" 
-            description="Delivered worldwide" 
-          />
-          <StatCard 
-            number="$2B+" 
-            label="Combined Market Value" 
-            description="Generated for clients" 
-          />
-          <StatCard 
-            number="99.9%" 
-            label="Uptime Guarantee" 
-            description="Enterprise reliability" 
-          />
-          <StatCard 
-            number="300%" 
-            label="Average ROI" 
-            description="Client return on investment" 
-          />
-        </div>
-      </div>
-
-export const metadata = {
-  title: "Services | Zion Tech Group",
-  description:
-    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
-};
-export default function ServicesOverviewPage() {
-  return (
-    <div className="animate-fade-in">
-      {" "}
-      <div className="text-center mb-16">
-        {" "}
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Our Services
-        </h1>{" "}
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          {" "}
-          Product engineering and AI-first consulting to deliver measurable
-          outcomes for your business.{" "}
-        </p>{" "}
-      </div>{" "}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        <ServiceCard
-          href="/services/micro-saas"
-          title="Micro SaaS Solutions"
-          description="Complete micro SaaS development from MVP to scale with billing, analytics, and growth optimization"
-          bullets={[
-            "Foundational architecture",
-            "Billing + subscriptions", 
-            "Growth analytics"
-          ]}
-          icon="🚀"
-          pricing="From $2,999/month"
-        />
-        <ServiceCard
-          href="/services/ai-services"
-          title="AI Services"
-          description="LLM applications, RAG systems, and MLOps pipelines"
-          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
-          icon="🤖"
-          pricing="From $5,000/project"
-        />
-        <ServiceCard
-          href="/services/it-services"
-          title="IT Services"
-          description="Cloud migration, DevOps, and security solutions"
-          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
-          icon="⚙️"
-        />
-        <ServiceCard
-          href="/services/blockchain-solutions"
-          title="Blockchain Solutions"
-          description="DeFi, NFTs, smart contracts, and Web3 applications with enterprise-grade security"
-          bullets={["Smart contracts", "DeFi protocols", "Web3 apps"]}
-          icon="⛓️"
-          pricing="From $15,000/project"
-        />
-        <ServiceCard
-          href="/services/automation-solutions"
-          title="Automation Solutions"
-          description="RPA, workflow automation, and AI-powered automation for maximum efficiency"
-          bullets={["Process automation", "Workflow optimization", "AI automation"]}
-          icon="⚡"
-        />
-        <ServiceCard
-          href="/services/data-analytics"
-          title="Data Analytics"
-      <CTA />
-          description="Business intelligence, predictive analytics, and data engineering"
-          bullets={["BI dashboards", "Predictive analytics", "Data engineering"]}
-          icon="📊"
-        />
-        <ServiceCard
-          href="/services/digital-transformation"
-          title="Digital Transformation"
-          description="Complete digital transformation solutions and legacy modernization"
-          bullets={["Process automation", "Legacy modernization", "Digital strategy"]}
-          icon="🔄"
-        />
-        <ServiceCard
-          href="/services/cybersecurity"
-          title="Cybersecurity"
-          description="Comprehensive security solutions and compliance management"
-          bullets={["Security assessment", "Threat detection", "Compliance"]}
-          icon="🔒"
-        />
-        <ServiceCard
-          href="/services/cloud-services"
-          title="Cloud Services"
-          description="Cloud migration, architecture, and optimization solutions"
-          bullets={["Cloud migration", "Multi-cloud", "Cost optimization"]}
-          icon="☁️"
-        />
-      </div>
-      <CTA />{" "}
-    </div>
-  );
-}
-
-function ServiceCard({
-  href,
-  title,
-  description,
-  bullets,
-  icon
-}: {
-  href: string;
-  title: string;
-  description: string;
-  bullets: string[];
-  icon: string;
-  pricing: string;
-}) {
-  return (
-    <Link
-      href={href}
-      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
-    >
-
-function StatCard({ 
-  number, 
-  label, 
-  description 
-}: { 
-  number: string; 
-  label: string; 
-  description: string; 
-}) {
-  return (
-    <div className="text-center">
-      <div className="text-4xl font-bold text-blue-600 mb-2">{number}</div>
-      <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>
-      <div className="text-sm text-gray-600">{description}</div>
-    </div>
-      {" "}
-      <div className="text-4xl mb-4">{icon}</div>{" "}
-      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-        {title}
-      </h3>{" "}
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>{" "}
-      <ul className="text-gray-600 space-y-2">
-        {" "}
-        {bullets.map((bullet) => (
-          <li key={bullet} className="flex items-center">
-            {" "}
-            <span className="text-blue-500 mr-2">•</span> {bullet}{" "}
-          </li>
-        ))}{" "}
-      </ul>{" "}
-    </Link>
-  );
-}
-
-function CTA() {
-  return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Get Started?
-      </h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        {" "}
-        Talk to our experts about your project. We&apos;ll help you choose the right
-        service and create a custom solution for your business needs.{" "}
-      </p>{" "}
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-        >
-          Email Us
-        </a>
->>>>>>> 355bac566df5c1191ae52cec576115f2a20764fc
-      </div>
+      </section>
     </div>
   );
 }
