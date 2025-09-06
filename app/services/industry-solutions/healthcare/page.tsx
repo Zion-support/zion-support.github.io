@@ -1,4 +1,5 @@
 export const metadata = {
+
   title: 'Healthcare | Zion Tech Group',
   description: 'Professional healthcare services for your business needs.',
   keywords: 'healthcare, services, business, technology'
@@ -52,3 +53,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

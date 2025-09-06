@@ -1,4 +1,5 @@
 
+
 const fs = require ('fs'),
 console.log ('🔧 Fixing site loading issues...'),
 // Fix Next.js configuration;
@@ -54,6 +55,8 @@ console.log('🔧 Fixing site loading issues...'),;
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
 const nextConfig = {;
+
+
   reactStrictMode: true,;
   reactStrictMode: true;
 
@@ -63,6 +66,8 @@ const nextConfig = {;
   typescript: { ignoreBuildErrors: true },;
   pageExtensions: ['tsxtsjsxjs'],;
   images: {;
+
+    domains: ["localhost", "ziontechgroup.com"];
   },
   output: 'standalone',
   trailing_slash: false,

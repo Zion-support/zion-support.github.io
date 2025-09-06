@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -12,5 +14,4 @@ console.log('====')
       { "cmd": 'npm run type-check', "desc"}
       "recommendations"
     this.log(`Report saved "to"`)
-      this.log(` Automation suite "failed"`)
       this.log(` Automation suite "failed"`)

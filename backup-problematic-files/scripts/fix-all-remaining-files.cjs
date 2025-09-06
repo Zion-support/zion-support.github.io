@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -17,5 +19,4 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
     "password"
     "confirmPassword"
     console.log('Signup "attempt")
-        <meta name="description" content="
         <meta name="description" content="

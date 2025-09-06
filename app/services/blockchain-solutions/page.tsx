@@ -1,257 +1,181 @@
-import React from "react";
+import Link from "next/link";
 
 export const metadata = {
   title: "Blockchain Solutions | Zion Tech Group",
-  description:
-    "DeFi, NFTs, smart contracts, and Web3 applications with enterprise-grade security. Build the future of finance with our blockchain expertise.",
-  keywords:
-    "blockchain development, DeFi, NFTs, smart contracts, Web3, cryptocurrency, dApps, tokenization",
+  description: "Comprehensive blockchain development, DeFi solutions, NFT platforms, and Web3 integration for secure and decentralized applications.",
 };
-
-interface BlockchainServiceProps {
-  title: string;
-  description: string;
-  price: string;
-  features: string[];
-  benefits: string[];
-  icon: string;
-  href: string;
-}
-
-function BlockchainService({
-  title,
-  description,
-  price,
-  features,
-  benefits,
-  icon,
-  href,
-}: BlockchainServiceProps) {
-  return (
-    <a
-      href={href}
-      className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 hover:border-blue-300"
-    >
-      <div className="flex items-center mb-4">
-        <span className="text-3xl mr-4">{icon}</span>
-        <div>
-          <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
-          <div className="text-lg font-bold text-blue-600">{price}</div>
-        </div>
-      </div>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="mb-4">
-        <h4 className="text-sm font-semibold text-gray-900 mb-2">
-          Key Features:
-        </h4>
-        <ul className="space-y-1">
-          {features.map((feature, index) => (
-            <li key={index} className="text-sm text-gray-600 flex items-center">
-              <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-              {feature}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <h4 className="text-sm font-semibold text-gray-900 mb-2">Benefits:</h4>
-        <div className="flex flex-wrap gap-1">
-          {benefits.map((benefit, index) => (
-            <span
-              key={index}
-              className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded"
-            >
-              {benefit}
-            </span>
-          ))}
-        </div>
-      </div>
-    </a>
-  );
-}
 
 export default function BlockchainSolutionsPage() {
   return (
-    <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+    <div className="animate-fade-in">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
           Blockchain Solutions
         </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          DeFi, NFTs, smart contracts, and Web3 applications with
-          enterprise-grade security. Build the future of finance with our
-          blockchain expertise.
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Unlock the power of decentralization with our expert blockchain development services. From secure smart contracts to innovative Web3 applications, we build the future of digital trust.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=Blockchain Solutions Consultation"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Get Free Consultation
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-        </div>
-      </section>
+      </div>
 
-      {/* Blockchain Services Grid */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Our Blockchain Services
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive blockchain solutions for modern businesses and
-            innovative projects.
-          </p>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Offerings</h2>
+          <div className="space-y-4">
+            <FeatureItem
+              icon="✍️"
+              title="Smart Contract Development"
+              description="Design, develop, and audit secure and efficient smart contracts for various blockchain platforms (Ethereum, Solana, Polygon, etc.)."
+              benefits={["Automated agreements", "Enhanced security", "Reduced intermediaries", "Customizable logic"]}
+            />
+            <FeatureItem
+              icon="💰"
+              title="Decentralized Finance (DeFi)"
+              description="Build and deploy DeFi protocols including lending platforms, decentralized exchanges (DEX), yield farming, and liquidity pools."
+              benefits={["Financial inclusivity", "Transparency", "High liquidity", "Permissionless access"]}
+            />
+            <FeatureItem
+              icon="🖼️"
+              title="NFT Marketplaces & Solutions"
+              description="Create custom NFT marketplaces, generative art platforms, and tokenization solutions for digital assets."
+              benefits={["Unique digital ownership", "Creator monetization", "Immutable records", "New revenue streams"]}
+            />
+            <FeatureItem
+              icon="🌐"
+              title="Web3 Application Development"
+              description="Develop dApps (decentralized applications) that leverage blockchain technology for enhanced user control and data privacy."
+              benefits={["User-centric design", "Data privacy", "Censorship resistance", "Community governance"]}
+            />
+            <FeatureItem
+              icon="🔗"
+              title="Cross-Chain Interoperability"
+              description="Implement solutions that enable seamless asset and data transfer between different blockchain networks."
+              benefits={["Increased liquidity", "Wider reach", "Enhanced functionality", "Future-proof architecture"]}
+            />
+          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <BlockchainService
-            title="DeFi Protocol Development"
-            description="Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions"
-            price="Starting at $50,000"
-            features={[
-              "DEX development",
-              "Lending protocols",
-              "Yield farming",
-              "Liquidity pools",
-              "Governance tokens",
-            ]}
-            benefits={[
-              "Decentralization",
-              "Transparency",
-              "Accessibility",
-              "Innovation",
-            ]}
-            icon="🏦"
-            href="/services/defi-protocols"
-          />
-          <BlockchainService
-            title="NFT Marketplace"
-            description="Complete NFT marketplace development with minting, trading, and auction capabilities"
-            price="Starting at $25,000"
-            features={[
-              "NFT minting",
-              "Marketplace trading",
-              "Auction system",
-              "Royalty management",
-              "Multi-chain support",
-            ]}
-            benefits={[
-              "Digital Ownership",
-              "Creator Economy",
-              "New Revenue",
-              "Community Building",
-            ]}
-            icon="🎨"
-            href="/services/nft-marketplace"
-          />
-          <BlockchainService
-            title="Smart Contract Development"
-            description="Secure smart contracts for various use cases including tokens, governance, and automation"
-            price="Starting at $15,000"
-            features={[
-              "Token contracts",
-              "Governance systems",
-              "Automation protocols",
-              "Security audits",
-              "Gas optimization",
-            ]}
-            benefits={["Automation", "Trust", "Efficiency", "Cost Reduction"]}
-            icon="📜"
-            href="/services/smart-contracts"
-          />
-          <BlockchainService
-            title="Web3 Applications"
-            description="Decentralized applications (dApps) with wallet integration and blockchain connectivity"
-            price="Starting at $30,000"
-            features={[
-              "Wallet integration",
-              "Blockchain connectivity",
-              "User authentication",
-              "Transaction management",
-              "Real-time updates",
-            ]}
-            benefits={[
-              "User Control",
-              "Interoperability",
-              "Innovation",
-              "Future-Proof",
-            ]}
-            icon="🌐"
-            href="/services/web3-applications"
-          />
-          <BlockchainService
-            title="Token Development"
-            description="Custom token creation including utility tokens, security tokens, and stablecoins"
-            price="Starting at $10,000"
-            features={[
-              "ERC-20/721/1155 tokens",
-              "Security tokens",
-              "Stablecoins",
-              "Token economics",
-              "Compliance features",
-            ]}
-            benefits={["Digital Assets", "Liquidity", "Utility", "Investment"]}
-            icon="🪙"
-            href="/services/token-development"
-          />
-          <BlockchainService
-            title="Blockchain Consulting"
-            description="Strategic blockchain consulting and implementation guidance for enterprise adoption"
-            price="Starting at $5,000"
-            features={[
-              "Strategy development",
-              "Technology selection",
-              "Implementation planning",
-              "Compliance guidance",
-              "Training & support",
-            ]}
-            benefits={[
-              "Expert Guidance",
-              "Risk Mitigation",
-              "Cost Optimization",
-              "Innovation",
-            ]}
-            icon="💼"
-            href="/services/blockchain-consulting"
-          />
-        </div>
-      </section>
 
-      {/* Contact CTA */}
-      <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">
-          Ready to Build the Future with Blockchain?
-        </h2>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Let's discuss how blockchain technology can transform your business
-          and create new opportunities.
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Zion for Blockchain?</h2>
+          <div className="space-y-6">
+            <BenefitCard
+              icon="🔒"
+              title="Bank-Grade Security"
+              description="Our solutions are built with the highest security standards, including rigorous smart contract audits and penetration testing."
+            />
+            <BenefitCard
+              icon="⚡"
+              title="Scalable & Efficient"
+              description="We design blockchain solutions that are highly scalable, ensuring fast transaction processing and low costs."
+            />
+            <BenefitCard
+              icon="💡"
+              title="Innovation & Expertise"
+              description="Leverage our deep expertise in blockchain technology to build innovative and future-proof decentralized applications."
+            />
+            <BenefitCard
+              icon="🤝"
+              title="End-to-End Support"
+              description="From concept to deployment and ongoing maintenance, we provide comprehensive support for your blockchain journey."
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="text-center mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Blockchain Development Process</h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+          We follow a structured approach to ensure successful delivery of your blockchain project.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=Blockchain Project Inquiry"
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Start Your Blockchain Journey
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ProcessStep
+            step="1"
+            title="Discovery & Strategy"
+            description="Define project scope, blockchain platform, and tokenomics (if applicable)."
+          />
+          <ProcessStep
+            step="2"
+            title="Development & Audit"
+            description="Build smart contracts and dApps, followed by thorough security audits."
+          />
+          <ProcessStep
+            step="3"
+            title="Deployment & Support"
+            description="Launch your solution and provide ongoing monitoring and maintenance."
+          />
         </div>
-        <div className="mt-8 text-sm">
-          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-          <p>Email: kleber@ziontechgroup.com</p>
-        </div>
-      </section>
+      </div>
+
+      <CTA />
+    </div>
+  );
+}
+
+function FeatureItem({ icon, title, description, benefits }: { icon: string; title: string; description: string; benefits: string[] }) {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="space-y-2">
+        {benefits.map((benefit, index) => (
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+            {benefit}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function BenefitCard({ icon, title, description }: { icon: string; title: string; description: string }) {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+      <div className="text-4xl mb-4 text-blue-600">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function ProcessStep({ step, title, description }: { step: string; title: string; description: string }) {
+  return (
+    <div className="text-center p-6 bg-white rounded-lg shadow-md border border-gray-200">
+      <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+        {step}
+      </div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function CTA() {
+  return (
+    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
+      <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        Ready to Build Your Decentralized Future?
+      </h3>
+      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+        Contact us today for a free consultation and let's explore how blockchain can transform your business.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="tel:+13024640950"
+          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Call +1 302 464 0950
+        </a>
+        <a
+          href="mailto:kleber@ziontechgroup.com"
+          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+        >
+          Email Us
+        </a>
+      </div>
+      <div className="mt-6 text-sm text-gray-600">
+        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+      </div>
     </div>
   );
 }

@@ -8,21 +8,12 @@ import {
   CertificationsSection,
 } from "./preview";
 
-import {Resume} from '@/types/resume';
-import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
-
-import { Resume } from '@/types/resume',;
-import {;
-  PreviewHeader,;
-  ResumeBasicInfoSection,;
-  WorkExperienceSection,;
-  EducationSection,;
-  SkillsSection,;
-  CertificationsSection;
-} from './preview',;
-interface PreviewResumeProps {;
+interface PreviewResumeProps {
   resume: Resume;
-  onBack: () => void;import { Resume } from "@/types/resume";
+  onBack: () => void;
+}
+
+import { Resume } from "@/types/resume";
 import {
   PreviewHeader,
   ResumeBasicInfoSection,
@@ -39,6 +30,7 @@ interface PreviewResumeProps {
 
 }
 
+export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   return (
     <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />
@@ -52,7 +44,10 @@ interface PreviewResumeProps {
         <CertificationsSection certifications={resume.certifications} />
       </div>
     </div>
-}  );
+  );
+}
+
+  );
 }
 
     </div>;
@@ -70,3 +65,4 @@ interface PreviewResumeProps {
 }
 ;
 ;
+}

@@ -9,5 +9,4 @@ const { execSync } = require('child_process')
       { "name": 'Lint Check', "cmd"}
         execSync(step.cmd, { "stdio"})
           "status"
-          "status"
-          "status"
+

@@ -8,17 +8,35 @@ export interface TenantInfo {
   theme_preset: string;
   landing_page_copy: {
     headline: string;
-}
-
-export interface TenantResponse {
-  tenant: TenantInfo | null,
-  error?: string;
-export interface TenantResponse {;
-  tenant: TenantInfo | null;
-    subtitle: string,    cta: string
-};
+    subtitle: string;
+    cta: string;
+  };
   is_active: boolean;
 }
 export interface TenantResponse {
   tenant: TenantInfo | null;
   error?: string;
+}
+}
+
+
+export interface TenantInfo {;
+
+    cta: string;
+  },;
+  is_active: boolean;
+}
+;
+export interface TenantResponse {;
+  tenant: TenantInfo | null;
+  error?: string;
+}
+;
+}
+
+export interface TenantResponse {
+  tenant: TenantInfo | null,
+  error?: string
+}
+;
+}

@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -17,5 +19,4 @@ console.log('=====')
       execSync('git push origin main', { "stdio"})
 // console.log('\n Final Automation "Summary")
       console.log('\n "Recommendations")
-    console.error(' Final automation orchestrator "failed")
     console.error(' Final automation orchestrator "failed")

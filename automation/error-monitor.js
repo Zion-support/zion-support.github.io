@@ -36,7 +36,7 @@ class ErrorMonitor {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-=
+
 
 
 
@@ -78,7 +78,6 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
         timestamp: new Date().toISOString()
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString(),
       });
@@ -197,7 +196,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       }
     }
 
-=
+
             timestamp: new Date().toISOString(),
           });
         }
@@ -220,11 +219,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
->          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString()
         });
       }
     }
-<
+
 
 
     );
@@ -234,7 +233,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         });
       }
     }
-=
+
 
 
 
@@ -258,20 +257,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
->    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
-    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
-    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
-<    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
-    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
-    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
+    console.log(`📊 Health Status: ${status.toUpperCase()}`);
+    console.log(`📈 Total Errors: ${totalErrors}`);
+    console.log(`⚠️  Total Warnings: ${totalWarnings}`);
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
-    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
-    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=
->    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
@@ -283,6 +272,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -300,7 +292,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       const automation = new ErrorFixerAutomation();
       await automation.run();
       console.log('✅ Error fixer completed');
-=
       console.log('✅ Error fixer completed');
 
 
@@ -317,7 +308,6 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
         timestamp: new Date().toISOString()
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString(),
       });
@@ -344,7 +334,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
-=
+
 
 
 
@@ -387,9 +377,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     process.exit(0);
   }
 }
+}
 // Run the monitor
 if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
+}
+module.exports = ErrorMonitor;
 }
 module.exports = ErrorMonitor;

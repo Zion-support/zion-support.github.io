@@ -12,7 +12,20 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 import OpenAI from 'openai',;
 type OpenAIClient = OpenAI,;
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
-  return new OpenAI({ apiKey });}
+  return new OpenAI({ apiKey });
+
+
+}
+;
+export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {;
+  const prompt = `Create a concise, compelling job post for a ${role}.;
+Company: ${opts.company || 'Confidential'}
+Location: ${opts.location || 'Remote'}
+import OpenAI from 'openai',;
+type OpenAIClient = OpenAI,;
+export function createOpenAIClient(apiKey: string): OpenAIClient {;
+  return new OpenAI({ apiKey });
+}
 ;
 export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {;
   const prompt = `Create a concise, compelling job post for a ${role}.;
@@ -30,6 +43,7 @@ Add responsibilities, requirements, and benefits in bullet points.`,;
     model: 'gpt-4o-mini';
     input: prompt;
   });
+  return completion.output_text;
 }
 
 type OpenAIClient = OpenAI;
@@ -51,6 +65,7 @@ Add responsibilities, requirements, and benefits in bullet points.`,;
     model: 'gpt-4o-mini';
     input: prompt;
   });
+
 
   return completion.output_text;
 }

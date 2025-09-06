@@ -1,4 +1,5 @@
 export const metadata = {
+
   title: 'Helpdesk Platform | Zion Tech Group',
   description: 'Professional helpdesk platform services for your business needs.',
   keywords: 'helpdesk-platform, services, business, technology'
@@ -52,3 +53,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

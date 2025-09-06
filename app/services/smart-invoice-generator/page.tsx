@@ -94,6 +94,7 @@ export default function SmartInvoiceGeneratorPage() {
   );
 }
 
+/*
 function FeatureCard({
   icon,
   title,
@@ -121,7 +122,9 @@ function FeatureCard({
     </div>
   );
 }
+*/
 
+/*
 function PricingCard({
   name,
   price,
@@ -189,7 +192,9 @@ function PricingCard({
     </div>
   );
 }
+*/
 
+/*
 function MetricCard({
   number,
   label,
@@ -207,7 +212,9 @@ function MetricCard({
     </div>
   );
 }
+*/
 
+/*
 function UseCaseCard({
   icon,
   title,
@@ -235,7 +242,9 @@ function UseCaseCard({
     </div>
   );
 }
+*/
 
+/*
 function TestimonialCard({
   quote,
   author,
@@ -258,3 +267,4 @@ function TestimonialCard({
     </div>
   );
 }
+*/

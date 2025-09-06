@@ -5,7 +5,7 @@ export interface RealMarketService {
   name: string;
   tagline: string;
   price: string;
-  period: string,
+  period: string;
   description: string;
   features: string[];
   popular: boolean;
@@ -31,8 +31,8 @@ export interface RealMarketService {
     mobile: string;
     email: string;
     address: string;
-    website: string
-};
+    website: string;
+  };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;

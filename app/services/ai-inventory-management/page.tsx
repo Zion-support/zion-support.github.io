@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: 'Ai Inventory Management | Zion Tech Group',
   description: 'Professional ai inventory management services for your business needs.',
@@ -52,3 +53,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

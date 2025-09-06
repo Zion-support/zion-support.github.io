@@ -4,6 +4,9 @@ import React from 'react';
 interface HelpProps {
   // Add props here as needed
 
+
+
+import React from 'react';
 import React from 'react';
 import * as React from 'react';
 
@@ -17,7 +20,10 @@ export default function Help({ }: HelpProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+}
+}
+}
+export default function Help({ }: HelpProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -59,3 +65,6 @@ export default function Help(): any ({ }: HelpProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
+}
+}
+}

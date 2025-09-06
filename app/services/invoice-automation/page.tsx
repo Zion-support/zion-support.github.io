@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: 'Invoice Automation | Zion Tech Group',
   description: 'Professional invoice automation services for your business needs.',
@@ -52,3 +53,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

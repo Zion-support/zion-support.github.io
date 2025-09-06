@@ -1,4 +1,5 @@
 export const metadata = {
+
   title: 'Crm Platform | Zion Tech Group',
   description: 'Professional crm platform services for your business needs.',
   keywords: 'crm-platform, services, business, technology'
@@ -52,3 +53,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

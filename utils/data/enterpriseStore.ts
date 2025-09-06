@@ -10,8 +10,8 @@ export interface CompanyRecord {
     seatsUsed: number;
     usageLimits: {
       monthlyJobPosts: number;
-      budgetCapUsd: number
-};
+      budgetCapUsd: number;
+    };
   };
   members: Array<{
     id: string;
@@ -75,12 +75,14 @@ export function updateCompany(id: string, updates: Partial<CompanyRecord>): Comp
   
   return updated;
 }
+
 import {
   CompanyRecord,
   CompanyMember,
   EnterpriseRole,
   InvoiceRecord,
 } from '../types/enterprise';
+
 
 const generateId = () => Math.random().toString(36).slice(2, 10);
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
@@ -180,6 +182,7 @@ const seed_company: CompanyRecord = {
     usage_limits: {
       monthlyJobPosts: 50,
       budgetCapUsd: 10000}},
+  slug: 'acme',;
   logoUrl: '/logo-acme.svg',;
   brandColor: '#4F46E5',;
   plan: {;
@@ -201,6 +204,7 @@ const seed_company: CompanyRecord = {
     { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },;
     { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},;
 
+
       brandColor: input.brandColor || '#111827',;
       plan: input.plan || {;
         tier: 'teams',;
@@ -216,15 +220,18 @@ const seed_company: CompanyRecord = {
   },;
   addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {;
 
+
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' }),;
     return member;
   },;
   removeMember(companyId: string, memberId: string): boolean {;
 
+
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } }),;
     return true;
   },;
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {;
+
 
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },;
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),;
@@ -234,15 +241,16 @@ const seed_company: CompanyRecord = {
   list_invoices (company_id: string): InvoiceRecord[] {
     const company = companiesById[company_id];
     return company ? company.invoices : [];
-  }}const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
+  }}
+const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
 const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany };
 export const store = {;
   getCompanyBySlug(slug: string) {;
-    return companiesBySlug[slug] || null
-};
+    return companiesBySlug[slug] || null;
+  };
   getCompanyById(id: string) {;
-    return companiesById[id] || null
-};
+    return companiesById[id] || null;
+  };
   createCompany(input: Partial<CompanyRecord>): CompanyRecord {;
     const id = `cmp_${generateId()}`;
     const slug = input.slug || `co-${generateId()}`;
@@ -298,6 +306,7 @@ export const store = {;
     const company = companiesById[companyId];
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
+
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },;
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),;
 
@@ -306,3 +315,5 @@ export const store = {;
   list_invoices (company_id: string): InvoiceRecord[] {
     const company = companiesById[company_id];
     return company ? company.invoices : [];
+  }};
+  }}
