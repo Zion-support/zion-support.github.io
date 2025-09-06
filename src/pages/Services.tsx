@@ -15,7 +15,6 @@ const Services: React.FC = () => {
             and drive innovation across all sectors.
           </p>
         </div>
-<<<<<<< HEAD
 
         {/* Main Services */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -51,119 +50,51 @@ const Services: React.FC = () => {
           />
         </div>
 
-        {/* Service Categories */}
+        {/* Additional Services */}
         <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
-=======
-      </div>
-      {/* Services Grid */}
-      <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card
-              title="Consulting Services"
-              description="Strategic technology consulting to help you make informed decisions about your digital future."
-            />
-            <Card
-              title="Implementation"
-              description="End-to-end implementation of technology solutions tailored to your specific business needs."
-            />
-            <Card
-              title="Support & Maintenance"
-              description="Ongoing support and maintenance to ensure your systems run smoothly and efficiently."
-            />
-            <Card
-              title="Training & Education"
-              description="Comprehensive training programs to help your team master new technologies and processes."
-            />
-            <Card
-              title="Custom Development"
-              description="Bespoke software development solutions designed specifically for your unique requirements."
-            />
-            <Card
-              title="Integration Services"
-              description="Seamless integration of new technologies with your existing systems and workflows."
-            />
+          <h2 className="text-3xl font-bold text-center mb-8">Specialized Solutions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="p-6 bg-slate-800/50 border-slate-700">
+              <h3 className="text-xl font-semibold mb-4 text-blue-400">Custom Development</h3>
+              <p className="text-gray-300 mb-4">
+                Tailored software solutions built specifically for your business needs and requirements.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• Web Applications</li>
+                <li>• Mobile Apps</li>
+                <li>• API Development</li>
+                <li>• System Integration</li>
+              </ul>
+            </Card>
+            
+            <Card className="p-6 bg-slate-800/50 border-slate-700">
+              <h3 className="text-xl font-semibold mb-4 text-blue-400">Consulting Services</h3>
+              <p className="text-gray-300 mb-4">
+                Expert guidance to help you make informed technology decisions and strategic planning.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• Technology Assessment</li>
+                <li>• Architecture Design</li>
+                <li>• Process Optimization</li>
+                <li>• Training & Support</li>
+              </ul>
+            </Card>
           </div>
         </div>
-<<<<<<< HEAD
 
-        {/* Industry Solutions */}
+        {/* CTA Section */}
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-=======
-      </div>
-      {/* Process Section */}
-      <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
-            <p className="text-xl text-gray-600">How we deliver exceptional results for your business</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏥</span>
-              </div>
-              <h3 className="text-lg font-semibold">Healthcare</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏦</span>
-              </div>
-              <h3 className="text-lg font-semibold">Finance</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏭</span>
-              </div>
-              <h3 className="text-lg font-semibold">Manufacturing</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🛒</span>
-              </div>
-              <h3 className="text-lg font-semibold">Retail</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎓</span>
-              </div>
-              <h3 className="text-lg font-semibold">Education</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏛️</span>
-              </div>
-              <h3 className="text-lg font-semibold">Government</h3>
-            </div>
-<<<<<<< HEAD
-=======
-          </div>
-        </div>
-      </div>
-      {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-blue-100 mb-8">Let's discuss how our services can help transform your business.</p>
+          <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let's discuss how our services can help transform your business and drive growth.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
-            >
-              Get Free Consultation
-            </Link>
-            <Link 
-              to="/pricing" 
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
-            >
-              View Pricing
-            </Link>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+              Get a Quote
+            </button>
+            <button className="border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+              Learn More
+            </button>
           </div>
         </div>
       </div>
