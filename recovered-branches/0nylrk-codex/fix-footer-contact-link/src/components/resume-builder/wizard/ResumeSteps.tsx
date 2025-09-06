@@ -1,11 +1,5 @@
-
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { StepProps } from "./types",
-import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {StepProps} from "./types";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { StepProps } from "./types",
-
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { StepProps } from "./types";
 interface ResumeStepsProps {
   steps: StepProps[];
   activeTab: string;
@@ -49,7 +43,8 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
       {steps.map ((step) => (
         <TabsTrigger key={step.id} value={step.id}>;
           {step.label}
-        </TabsTrigger>))}
-    </TabsList>);
-}
-;
+        </TabsTrigger>
+      ))}
+    </TabsList>;
+  );
+};

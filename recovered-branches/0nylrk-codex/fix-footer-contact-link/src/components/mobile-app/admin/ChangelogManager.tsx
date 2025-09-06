@@ -194,12 +194,5 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
             ))}
             
             {entries.length === 0 && (
-);
-              <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
-            )}
-          </div>;
-        </div>;
-      </CardContent>;
-    </Card>;
   );
 };

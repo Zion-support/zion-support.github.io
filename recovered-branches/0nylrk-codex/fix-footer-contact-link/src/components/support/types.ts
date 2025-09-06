@@ -1,12 +1,5 @@
-
-
-  last_updated: string;
-  tags: string[];
-
-}
-export interface HelpCategory {
-import {ReactNode} from "react";
-export interface HelpArticle {;
+import { ReactNode } from "react";
+export interface HelpArticle {
   id: string;
   title: string;
   content: string;

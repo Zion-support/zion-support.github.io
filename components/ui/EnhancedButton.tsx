@@ -70,9 +70,8 @@ export default function EnhancedButton({
         className
       )}
       {...props}
-}
-    />;
-);
+    />
+  );
 }
 
 }

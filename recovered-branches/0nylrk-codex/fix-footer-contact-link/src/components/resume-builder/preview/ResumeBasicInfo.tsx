@@ -1,8 +1,5 @@
-
-import { ResumeBasicInfo } from '@/types/resume';
-
-import {ResumeBasicInfo} from '@/types/resume';
-interface ResumeBasicInfoSectionProps {;
+import { ResumeBasicInfo } from "@/types/resume";
+interface ResumeBasicInfoSectionProps {
   basicInfo: ResumeBasicInfo;
 }
 

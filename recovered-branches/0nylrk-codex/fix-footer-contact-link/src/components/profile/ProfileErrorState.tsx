@@ -1,8 +1,7 @@
-
-import React from 'react',
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
-import { ArrowLeft } from "lucide-react",
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 interface ProfileErrorStateProps {
   error: string | null;
 }
@@ -22,14 +21,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         </Link>
       </Button>
     </div>
-  )
-  )
-import React from 'react',;
-import { Button } from "@/components/ui/button",;
-import { Link } from "react-router-dom",;
-import { ArrowLeft } from "lucide-react";
-interface ProfileErrorStateProps {;
-  error: string | null;
+  );
 }
 
 export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;

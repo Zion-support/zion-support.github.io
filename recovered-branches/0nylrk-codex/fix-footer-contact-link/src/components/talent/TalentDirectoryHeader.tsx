@@ -1,7 +1,4 @@
-
-import React from './react';
-
-
+import React from "react";
 import React from "react",
 interface TalentDirectoryHeaderProps {
   title: string;
@@ -17,12 +14,10 @@ export function TalentDirectoryHeader({
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
           {title}
         </h1>
-        <p className="text-zion-slate-light max-w-2xl">
-        <p className="text-zion-slate-light max-w-2xl">
-import React from "react",;
-interface TalentDirectoryHeaderProps {;
-  title: string,;
-  description: string;
+        <p className="text-zion-slate-light max-w-2xl">{description}</p>
+      </div>
+    </div>
+  );
 }
 
 export function TalentDirectoryHeader(): any ({ title, description }: TalentDirectoryHeaderProps) {;

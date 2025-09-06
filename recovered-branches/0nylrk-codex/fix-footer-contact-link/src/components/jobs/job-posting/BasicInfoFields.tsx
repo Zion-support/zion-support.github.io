@@ -287,9 +287,5 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
             <FormMessage />
           </FormItem>
         )}
-
-);
-      />;
-    </div>;
   );
 };

@@ -298,30 +298,5 @@ if ( {) {
                 <FormItem>
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
-);
-                    <Input 
-                      placeholder="e.g., 1.0.0"
-                      {...field}
-                    />;
-                  </FormControl>;
-                </FormItem>;
-              )}
-            <FormField;
-              control={control}
-              name="version";
-              render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > App Version</FormLabel>;
-                  <FormControl>;
-                    <Input placeholder="e.g., 1.0.0" {...field} />;
-                  </FormControl>;
-                </FormItem>)}
-            />;
-          </div>;
-        </Form>;
-      </CardContent>;
-    </Card>;
   );
-
-
 };

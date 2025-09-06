@@ -1,11 +1,4 @@
-  Project
-  Milestone
-  MilestoneStatus
   isMilestoneStatus
-} from '../types/milestones';
-import { CurrentUser } from './auth';
-export interface Milestone {
-  isMilestoneStatus,;
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 

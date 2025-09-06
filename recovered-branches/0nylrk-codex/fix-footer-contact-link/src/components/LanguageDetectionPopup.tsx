@@ -13,7 +13,7 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-AlertDialogTitle,;
+  AlertDialogTitle,
 } from "../components/ui/alert-dialog";
 import {
   useLanguage,
@@ -114,19 +114,6 @@ export function LanguageDetectionPopup() {;
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-
-);
-            {t('general.no')}
-          </AlertDialogCancel>;
-          <AlertDialogAction;
-            onClick={handleAccept}
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-          >
-            {t('general.yes')}
-          </AlertDialogAction>;
-        </AlertDialogFooter>;
-      </AlertDialogContent>;
-    </AlertDialog>;
   );
 }
     // Mark as visited;

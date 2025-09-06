@@ -79,6 +79,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       { stage: "Conversions", value: 1650 },
     ],
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const isAdmin = req.headers['x-admin'] === 'true';
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
     if (req.method === 'GET') {
       // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)
@@ -99,4 +105,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+  res.status(200).json(data);
 }

@@ -1,5 +1,10 @@
-import React from 'react';
-
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { GradientHeading } from "./GradientHeading";
+import { useState } from "react";
+export function QuoteFormSection() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 import { Button } from "./ui/button",
 import { Input } from "./ui/input",
 import { GradientHeading } from "./GradientHeading",
@@ -10,15 +15,18 @@ export function QuoteFormSection() {
 
 
   const handleSubmit = (e: React.FormEvent) => {
+      setIsSubmitting(false),
+      setIsSubmitted(true)
+    }, 1000)
+  },
+    e.preventDefault();
+    setIsSubmitting(true);
 
-    e.preventDefault(),
-    setIsSubmitting(true),
-    
     // Simulate form submission
     setTimeout(() => {
       (setIsSubmitting(false), setIsSubmitted(true));
     }, 1000);
-  }
+  };
 
   return (
     <section className="py-20 bg-zion-blue">
@@ -123,6 +131,7 @@ export function QuoteFormSection() {
                   />
                 </div>
               </div>
+
               <div className="mt-6">
                 <label
                   htmlFor="interest"
@@ -256,12 +265,17 @@ export function QuoteFormSection() {;
 
 
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
+                      <label
+                        htmlFor={`interest-${index}`}
+                        className="ml-2 text-sm text-zion-slate-light"
+                      >
                         {item}
                       </label>;
                     </div>;
                   ))}
                 </div>
               </div>
+
               <div className="mt-6">
                 <label
                   htmlFor="message"
@@ -275,6 +289,7 @@ export function QuoteFormSection() {;
                   className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                 ></textarea>
               </div>
+
               <div className="mt-6">
                 <Button
                   type="submit"

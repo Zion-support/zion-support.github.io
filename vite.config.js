@@ -10,9 +10,9 @@ export default defineConfig({
     host: true
   },
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     sourcemap: true,
-    minify: 'terser',
+    minify: "terser",
     rollupOptions: {
       output: {
         manualChunks: {

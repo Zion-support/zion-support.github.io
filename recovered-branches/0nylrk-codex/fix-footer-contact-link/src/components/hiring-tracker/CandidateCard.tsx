@@ -53,6 +53,11 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
 import { toast } from "@/hooks/use-toast",

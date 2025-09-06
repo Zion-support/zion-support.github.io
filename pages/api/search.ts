@@ -1,16 +1,16 @@
-    res.status(500).json({ ok: false, error: e?.message |"Search failed" });
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from "next";
+import type { AccessLevel } from "../../utils/search/filter";
+import { parseQueryToFilters } from "../../utils/search/parser";
+import { searchAll, suggestDidYouMean } from "../../utils/search/filter";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { AccessLevel } from '../../utils/search/filter';
-import { parseQueryToFilters } from '../../utils/search/parser';
-import { searchAll, suggestDidYouMean } from '../../utils/search/filter';
-export default async function handler(req, res) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
   try {
-    const q = (req.query.q as string) || '';
-    const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
+    const q = (req.query.q as string) || "";
+    const access = ((req.headers["x-access-level"] as string) ||
+      "public") as AccessLevel;
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
     const keywords = Array.from(new Set([...(parsed.skills || []), ...(parsed.keywords || [])])),;
@@ -53,5 +53,6 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ ok: false, error: e?.message || "Search failed" });
   }
 }

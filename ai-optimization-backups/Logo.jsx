@@ -5,7 +5,7 @@
 ;,
 import _React from 'react';';,
 import { Link } from 'react-router-dom';,
-export function Logo({ customLogo, customColor }) {}
+export function Logo({ customLogo, customColor }) {};
   const logoColor = customColor || '#22D3EE';',
   return (
     <Link to="/" className="flex items-center space-x-3 group">";
@@ -39,7 +39,7 @@ export function Logo({ customLogo, customColor }) {}
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export function Logo({ customLogo, customColor }) {
+export function Logo({ customLogo, customColor }) {;
   const logoColor = customColor || '#22D3EE';
   
   

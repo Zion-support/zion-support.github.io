@@ -1,21 +1,32 @@
-
-
-
-
-import {useState} from 'react';
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
-import {Button} from '@/components/ui/button';
-import {Input} from '@/components/ui/input';
-import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/components/ui/dialog';
-import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
-import {Resume} from '@/types/resume';
-import {useResume} from '@/hooks/useResume';
+import { useState } from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
+import { Resume } from "@/types/resume";
+import { useResume } from "@/hooks/useResume";
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void
 }
 
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
+export function ResumeVersionSelector({
+  currentResume,
+  onResumeChange,
+}: ResumeVersionSelectorProps) {
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState('');
@@ -30,42 +41,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
-
-        setNewResumeTitle('')
-import { useState } from 'react',;
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuSeparator,;
-  DropdownMenuTrigger;
-} from '@/components/ui/dropdown-menu',;
-import { Button } from '@/components/ui/button',;
-import { Input } from '@/components/ui/input',;
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog',;
-import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react',;
-import { Resume } from '@/types/resume',;
-import { useResume } from '@/hooks/useResume',;
-interface ResumeVersionSelectorProps {;
-  currentResume: Resume,;
-  onResumeChange: (resumeId: string) => void;
-}
-;
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
-  const { createResume, fetchResume } = useResume(),;
-  const [saveDialogOpen, setSaveDialogOpen] = useState(false),;
-  const [newResumeTitle, setNewResumeTitle] = useState(''),;
-  const [existingResumes, setExistingResumes] = useState<Resume[]>([]),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const handleCreateNewVersion = async () => {;
-    if (newResumeTitle.trim()) {;
-      setIsLoading(true),;
-      const resumeId = await createResume({ title: newResumeTitle.trim() }),;
-      if (resumeId) {;
-        await fetchResume(resumeId),;
-        onResumeChange(resumeId),;
-        setSaveDialogOpen(false);
-        setNewResumeTitle('');
+        setNewResumeTitle("");
       }
       setIsLoading(false);
     }
@@ -101,6 +77,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>

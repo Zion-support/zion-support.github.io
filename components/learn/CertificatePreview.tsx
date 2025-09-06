@@ -30,6 +30,7 @@ export default function CertificatePreview({ courseId, userId = 'demo-user' }: {
       </a>
     </div>
   );
+  );
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">;

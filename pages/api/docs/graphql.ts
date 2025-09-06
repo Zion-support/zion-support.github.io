@@ -1,7 +1,6 @@
 
-
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
-res.setHeader("Content-Type", "text/plain");
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader("Content-Type", "text/plain");
   res.status(200).send(toSDL());
 }
 import type { NextApiRequest, NextApiResponse } from 'next';

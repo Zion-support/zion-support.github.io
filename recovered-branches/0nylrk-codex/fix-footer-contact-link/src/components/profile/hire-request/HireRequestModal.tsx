@@ -1,44 +1,13 @@
-
-import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {HireRequestForm} from "./HireRequestForm";
-import {TalentProfile} from "@/types/talent";
-import {UserProfile} from "@/types/auth";
-import React from "react",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { HireRequestForm } from "./HireRequestForm",
-import { TalentProfile } from "@/types/talent",
-import { UserProfile } from "@/types/auth",
-interface HireRequestModalProps {
-  talent: TalentProfile | null;
-  isOpen: boolean;
-  onClose: () => void;
-  userDetails?: UserProfile
-}
-
-export function HireRequestModal({
-  talent
-  isOpen
-  onClose
-  userDetails
-}: HireRequestModalProps) {
-  const handleClose = () => {
-  };
-    onClose()
-  },
-
-
-  if (!talent) return null,
-
-import React from './react';
+import React from "react";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from '@/components / ui / dialog';
-import { HireRequestForm  } from './HireRequestForm';
-import { TalentProfile  } from '@/types / talent';
-import { UserProfile  } from '@/types / auth';
+} from "@/components/ui/dialog";
+import { HireRequestForm } from "./HireRequestForm";
+import { TalentProfile } from "@/types/talent";
+import { UserProfile } from "@/types/auth";
 interface HireRequestModalProps {
   talent: TalentProfile | null;
   is_open: boolean;
@@ -57,6 +26,21 @@ function HireRequestModal() {
 if (return null) {
   $2
 }
+
+export function HireRequestModal({
+  talent,
+  isOpen,
+  onClose,
+  userDetails,
+}: HireRequestModalProps) {
+  const handleClose = () => {
+    onClose();
+  };
+    onClose()
+  },
+
+  if (!talent) return null,
+
   return (
 
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
@@ -95,7 +79,8 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
             Hire {talent.full_name}
           </DialogTitle>
         </DialogHeader>
-        <HireRequestForm 
+
+        <HireRequestForm
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}

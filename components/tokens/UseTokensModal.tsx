@@ -318,6 +318,5 @@ if (return null) {
       </div>
     </div>
   );
-}
-    </div>);
+  );
 }

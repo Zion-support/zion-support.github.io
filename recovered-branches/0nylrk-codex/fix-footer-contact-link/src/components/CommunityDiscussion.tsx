@@ -317,35 +317,5 @@ export const CommunityDiscussion: React.FC = () => {
                     .join("")
                     .toUpperCase()
                     .slice(0, 2)}
-);
-                </AvatarFallback>;
-              </Avatar>;
-              <div>;
-                <div className="flex gap-2 items-center">;
-                  <span className="font-semibold text-white">;
-                    {post && post.author}
-                  </span>;
-                  <span className="text-xs text-zion-slate-light">;
-                    {post && post.time}
-                  </span>;
-                </div>;
-                <h3 className="text-lg font-bold text-zion-cyan mt-1">;
-                  {post && post.title}
-                </h3>;
-                <p className="text-zion-slate-light mt-1 whitespace-pre-line">;
-                  {post && post.body}
-                </p>;
-              </div>;
-            </CardContent>;
-          </Card>;
-        ))}
-      </div>;
-      <div className="mt-8 text-xs text-zion-slate-dark text-center">;
-         Stay engaged! Top contributors are regularly featured on the;
-        homepage.;
-      </div>;
-    </div>;
   );
-
-
 };

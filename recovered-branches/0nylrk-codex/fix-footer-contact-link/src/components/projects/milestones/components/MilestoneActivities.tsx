@@ -1,14 +1,9 @@
-
-import React from 'react';
-import React from './react';
+  projectId: string
+interface MilestoneActivitiesProps {;
+  projectId: string;
+import React from "react";
 interface MilestoneActivitiesProps {
-  project_id: string;
-}
-export /**
- * MilestoneActivities - Function description
- */
-function MilestoneActivities() {
-  return <div > Activity will be shown here</div>;
+  projectId: string;
 }
 
   projectId: string

@@ -25,6 +25,21 @@ export interface ServiceCategory {;
   href: string;
   color: string;
 }
+
+export interface SEOProps {;
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+export interface LoadingState {;
+  isLoading: boolean;
+  error?: string;
+}
+
 export interface SEOProps {
   title?: string;
   description?: string;
@@ -68,11 +83,6 @@ export interface LoadingState {
   progress?: number;
 }
 export interface AnimationState {
-  isLoaded: boolean;
-  hasError: boolean;
-}
-export interface FormData {
-export interface AnimationState {;
   isLoaded: boolean;
   hasError: boolean;
 }
@@ -446,127 +456,149 @@ export interface FAQ {;
   category?: string;
 }
 
-export interface PricingPlan {;
-  id: string;
-
-  name: string;
-  price: number;
-  period: string;
-  features: string[];
-  popular?: boolean;
-  cta: string;
-  href: string;
-
-export interface FAQ {
-  question: string;
-  answer: string;
-  category?: string;
-
-}
 export interface PricingPlan {
-
-
+export interface User {
+  id: string;
+  email: string;
   name: string;
-  price: number;
-  period: string;
-  features: string[];
-  popular?: boolean;
-  cta: string;
-  description: string;
+  role: 'admin' | 'manager' | 'developer' | 'client' | 'guest';
+  permissions: string[];
+  profile: {
+    avatar?: string;
+    bio?: string;
+    skills: string[];
+    experience: number;
+    location: string;
+    timezone: string;
+  };
+  preferences: {
+    theme: 'light' | 'dark' | 'auto';
+    language: string;
+    notifications: {
+      email: boolean;
+      push: boolean;
+      sms: boolean;
+    };
+  };
+  activity: {
+    lastLogin: Date;
+    loginCount: number;
+    projects: string[];
+    tasks: string[];
+  };
+  subscription: {
+    plan: 'free' | 'basic' | 'premium' | 'enterprise';
+    status: 'active' | 'inactive' | 'cancelled' | 'expired';
+    startDate: Date;
+    endDate: Date;
+    features: string[];
+  };
 }
 
-export interface NavigationItem {;
-  name: string;
-  href: string;
-  children?: NavigationItem[];
-  submenu?: NavigationItem[];
-  external?: boolean;
+export interface Notification {
+  id: string;
+  type: 'info' | 'success' | 'warning' | 'error';
+  title: string;
+  message: string;
+  timestamp: Date;
+  read: boolean;
+  action?: {
+    label: string;
+    url: string;
+  };
+  category: 'system' | 'project' | 'team' | 'client' | 'billing';
+  priority: 'low' | 'medium' | 'high';
+  expires?: Date;
 }
 
+export interface BaseComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  id?: string;
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+}
 
-export interface SocialLink {;
-  name: string;
-  href: string;
-  icon: string;
+export interface InputProps {
+  className?: string;
+  children?: React.ReactNode;
+  id?: string;
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: () => void;
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
+  placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;
+  error?: string;
+  required?: boolean;
+}
 
-  platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
+export interface ApiRequest {
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   url: string;
-  label: string;
-
-;
-
+  data?: any;
+  params?: Record<string, any>;
+  headers?: Record<string, string>;
 }
 
-export interface FooterLink {;
+export interface ApiResponse<T> {
+  success: boolean;
+  data?: T;
+  error?: string;
+  message?: string;
+}
+
+export interface PaginationParams {
+  page: number;
+  limit: number;
+  sort?: string;
+  order?: 'asc' | 'desc';
+}
+
+export interface PaginatedResponse<T> {
+  data: T[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    pages: number;
+    hasNext: boolean;
+    hasPrev: boolean;
+  };
+}
+
+export interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+}
+
+export interface AccessibilitySettings {
+  highContrast: boolean;
+  fontSize: number;
+  reducedMotion: boolean;
+  screenReader: boolean;
+}
+
+export interface UserPreferences {
+  theme: 'light' | 'dark' | 'system';
+  language: string;
+  accessibility: AccessibilitySettings;
+  notifications: {
+    email: boolean;
+    browser: boolean;
+    marketing: boolean;
+  };
+}
+
+export interface CompanyInfo {
   name: string;
-  href: string;
-}
-
-export interface FooterSection {;
-  title: string;
-  links: FooterLink[];
-}
-
-export interface HeroSection {;
-  title: string;
-  subtitle: string;
-  cta: {
-    primary: {
-      text: string;
-      href: string;
-
-    }
-    secondary: {
-      text: string;
-      href: string;
-    }
-  }
-
-    }
-    secondary: {
-      text: string;
-      href: string;
-    }
-  }
-  image?: string;
-}
-
-export interface Feature {;
-  title: string;
-  description: string;
-  icon: string;
-  color: string;
-}
-
-export interface Stats {;
-  label: string;
-  value: string;
-  description?: string;
-}
-
-
-export interface CaseStudy {;
-  id: string;
-  title: string;
-  client: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: string[];
-  image: string;
-  technologies: string[];
-  duration: string;
-  teamSize: number;
-  featured?: boolean;
-}
-
-export interface JobOpening {;
-  id: string;
-  title: string;
-  department: string;
-  location: string;
-  type: 'full-time' | 'part-time' | 'contract';
-  experience: string;
+  tagline: string;
   description: string;
   address: {
     street: string;
@@ -583,25 +615,38 @@ export interface JobOpening {;
   certifications: string[];
 }
 
-export interface NewsItem {;
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  category: string;
-  image?: string;
-  featured: boolean;
+export interface ErrorInfo {
+  message: string;
+  code?: string;
+  details?: any;
+  timestamp: string;
+  userAgent?: string;
+  url?: string;
 }
 
-export interface Event {;
-  id: string;
-  title: string;
-  description: string;
-  image?: string;
+export interface FormField {
+  name: string;
+  label: string;
+  type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio';
+  required: boolean;
+  placeholder?: string;
+  options?: { value: string; label: string }[];
+  validation?: {
+    min?: number;
+    max?: number;
+    pattern?: string;
+    message?: string;
+  };
 }
 
+// Environment
+export interface Environment {;
+  NODE_ENV: 'development' | 'production' | 'test';
+  NEXT_PUBLIC_API_URL?: string;
+  NEXT_PUBLIC_APP_URL?: string;
+  NEXT_PUBLIC_GA_ID?: string;
+  NEXT_PUBLIC_SENTRY_DSN?: string;
+}
 
 export interface Partner {
   name: string;
@@ -978,6 +1023,3 @@ export interface SuccessResponse<T> {
   message?: string;
 }
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
-export type Response<T> = SuccessResponse<T> | ErrorResponse;
-export interface ContactInfo {
-

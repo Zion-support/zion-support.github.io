@@ -1,6 +1,5 @@
-
-import {Education} from '@/types/resume';
-export interface EducationFormProps {;
+import { Education } from "@/types/resume";
+export interface EducationFormProps {
   resumeId: string;
   educationEntries: Education[];
   onComplete: () => void;

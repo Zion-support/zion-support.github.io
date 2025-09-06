@@ -4,6 +4,12 @@ import { Input } from "@/components/ui/input",
 import { Card } from "@/components/ui/card",
 import { Search } from "lucide-react",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
+import { useState } from "react";
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
+import { Input } from "@/components/ui/input";
+import { Card } from "@/components/ui/card";
+import { Search } from "lucide-react";
+import { ListingScoreCard } from "@/components/ListingScoreCard";
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -11,7 +17,19 @@ interface ServiceTypeStepProps {
 // Sample data - would come from an API in a real application
 const SAMPLE_LISTINGS: ListingItem[] = [
 
+export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
+  const [searchQuery, setSearchQuery] = useState(""),
+  
+  const handleTypeSelect = (type: ServiceType) => {
+    updateFormData({ serviceType: type })
+  },
+  
+export function ServiceTypeStep({
+  formData,
+  updateFormData,
+}: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
+
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type });
   }
@@ -20,15 +38,11 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
 
-  
-  const handleTypeSelect = (type: ServiceType) => {
-    updateFormData({ serviceType: type });
-  }
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({
-      specificItem: item
-      serviceCategory: item.category
-      serviceType: item.category.toLowerCase() as ServiceType
+      specificItem: item,
+      serviceCategory: item.category,
+      serviceType: item.category.toLowerCase() as ServiceType,
     });
   }
   const filteredListings = SAMPLE_LISTINGS.filter((item) => {
@@ -44,7 +58,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       item.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
   });
-;
+
   return (
     <div className="space - y-6">;
       <div>;
@@ -65,7 +79,8 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
               AI solutions, consulting, development
             </p>
           </Card>
-          <Card 
+
+          <Card
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -78,7 +93,8 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
               AI specialists, developers, consultants
             </p>
           </Card>
-          <Card 
+
+          <Card
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -93,10 +109,13 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           </Card>
         </div>
       </div>
+
       {formData.serviceType && (
         <div className="space-y-4">
+          <h3 className="text-xl font-semibold text-white">
+            Select a specific {formData.serviceType}
+          </h3>
 
-          <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
@@ -206,6 +225,7 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"
             />
           </div>
+
           <div className="grid grid-cols-1 gap-4 mt-4">
             {filteredListings.length > 0 ? (
               filteredListings.map((item) => (

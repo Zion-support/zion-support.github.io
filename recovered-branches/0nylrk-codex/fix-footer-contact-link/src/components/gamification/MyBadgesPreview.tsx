@@ -55,8 +55,8 @@ import { badge_list, BadgeKey  } from './badge_config';
       <div className="flex flex-wrap gap-2">
         {earnedBadges.map(({ badge, date }) => (
           <BadgeEarned key={badge} badge={badge} earnedDate={date} />
-    </div>;
-);
+    </div>
+  );
 };
 import React from "react",;
 import { BadgeEarned } from "./BadgeEarned",;

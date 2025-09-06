@@ -11,7 +11,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-CardTitle,;
+  CardTitle,
 } from "@/components/ui/card";
 import { Sparkles } from "lucide-react";
 import { Progress } from "@/components/ui/progress";

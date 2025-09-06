@@ -1,26 +1,39 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true
-  compress: true
-  poweredByHeader: false
-  eslint: { ignoreDuringBuilds: true }
-  typescript: { ignoreBuildErrors: true }
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js']
+  reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ["tsx", "ts", "jsx", "js"],
+
   // Image optimization
   images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"]
-    formats: ['image/webp', 'image/avif']
-  }
+    domains: [
+      "localhost",
+      "ziontechgroup.com",
+      "images.unsplash.com",
+      "via.placeholder.com",
+    ],
+    formats: ["image/webp", "image/avif"],
+  },
+  generateEtags: true,
+
   // Output configuration
-  output: 'standalone'
+  output: "standalone",
+
   // Trailing slash
-  trailingSlash: false
+  trailingSlash: false,
+
   // Base path
-  basePath: ''
+  basePath: "",
+
   // Asset prefix
-  assetPrefix: ''
+  assetPrefix: "",
+
   // Generate ETags
-  generateEtags: true
+  generateEtags: true,
+
   // Dist directory
   distDir: '.next',
 };
