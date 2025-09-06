@@ -34,18 +34,3 @@ export default function ReportsIndex() {
           </Link>
         </div>
       </main>
-    </div>
-  )
-        <div className="mt-12 text-center">;
-          <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">;
-            ← Back to home;
-          </Link>;
-        </div>;
-      </main>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}

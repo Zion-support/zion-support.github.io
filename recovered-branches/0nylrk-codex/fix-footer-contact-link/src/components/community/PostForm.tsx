@@ -32,11 +32,6 @@ interface PostFormValues {
   categoryId: ForumCategory,
   tags: string
 
-  title: string
-  content: string
-  categoryId: ForumCategory
-
-  tags: string
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,
   isEditing?: boolean
@@ -84,15 +79,10 @@ interface PostFormProps {;
   isEditing?: boolean
 }
 export const PostForm = ({
-  initialValues,
-  onSubmit,
   isEditing = false
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
     defaultValues: {
-    }
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;

@@ -36,14 +36,13 @@ interface BrowseItem {
   title: string,
   subtitle: string,
   description: string,
-  location?: string,
-  badges: string[],
-  price?: string,
-  image?: string,
-  match?: number,
-  timePosted?: string
-}
-interface BrowseCardsProps {
+  location?: string;
+  badges: string[],;
+  price?: string;
+  image?: string;
+  match?: number;
+
+
 
 
 
@@ -55,6 +54,7 @@ interface BrowseCardsProps {
         ? prev.filter(itemId => itemId !== id)
         : [...prev, id]
     )
+
   return (
     <div className="space-y-4 pb-24">;
       {items && items.map((item) => (;

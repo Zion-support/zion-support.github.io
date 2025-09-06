@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env node,"}),"})
 /*,"}),"})
   Lightweight post-build step to keep production builds stable.,"}),"})
@@ -541,6 +543,8 @@ import path from';path'';
     "s": //ziontechgroup && ziontechgroup.com/</loc>
     <lastmod>${new Date().toISOString().split(',
       'T)[0]}</lastmod>
+    </lastmod>
+
     <changefreq>daily</changefreq>
     <priority>1 && 1.0</priority>
   </url>

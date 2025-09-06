@@ -95,22 +95,6 @@ interface QuoteDetailsProps {;
                 <p>{quote.project_description}</p>
               </>
             )}
-              <DollarSign className="h-4 w-4 text-gray-500" />
-              <span className="font-medium">Budget: </span>
-              {quote.budget_display |
-                (quote.budget_min && quote.budget_max
-                  ? `$${quote.budget_min} - $${quote.budget_max}`
-                  : quote.budget_min
-                    ? `$${quote.budget_min}`
-                    : "Not specified")}
-            </div>
-          </CardContent>
-        </Card>
-        <div className="mt-6 flex justify-end">
-          <Button onClick={onClose}>Close</Button>
-        </div>
-      </DialogContent>
-    </Dialog>
       return date_string;
     }
   }

@@ -1,7 +1,3 @@
-import * as React from &quot;react&quot;
-import * as SelectPrimitive from &quot;@radix-ui/react-select&quot;
-import { Check, ChevronDown, ChevronUp } from &quot;lucide-react&quot;
-import { cn } from &quot;@/lib/utils&quot;
 const Select = SelectPrimitive.Root
 const SelectGroup = SelectPrimitive.Group
 const SelectValue = SelectPrimitive.Value
@@ -182,3 +178,35 @@ const SelectSeparator = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Separator
+    ref={ref}
+    className={cn (&quot;-mx - 1 my - 1 h - px bg - muted & quot;, class_name)}
+    {...props}
+
+  />));
+SelectSeparator.display_name = SelectPrimitive.Separator.display_name;
+export {
+  Select,
+  SelectGroup,
+  SelectValue,
+  SelectTrigger,
+  SelectContent,
+  SelectLabel,
+  SelectItem,
+
+  SelectSeparator;
+  SelectScrollUpButton;
+  SelectScrollDownButton}
+
+export {;
+  Select,;
+  SelectGroup,;
+  SelectValue,;
+  SelectTrigger,;
+  SelectContent,;
+  SelectLabel,;
+  SelectItem,;
+  SelectSeparator;
+  SelectScrollUpButton;
+  SelectScrollDownButton}
+;
+

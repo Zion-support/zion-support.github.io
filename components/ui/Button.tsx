@@ -100,3 +100,6 @@ if ( {) {
       on_click={on_click}
       disabled={disabled}
       type={type}
+
+export { Button };
+

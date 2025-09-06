@@ -152,6 +152,17 @@ if ( {) {
   return (
     <Head>;
                       });
+          __html: `
+            // Performance monitoring
+            if ('performance' in window) {
+              window.addEventListener('load', function() {
+                setTimeout(function() {
+                  const perfData = performance.getEntriesByType('navigation')[0];
+                  if (perfData) {
+                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+                    if (window.gtag) {
+                      window.gtag('event', 'timing_complete', {
+                      });
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
                     if (window && window.gtag) {
                       window && window.gtag('event', 'timing_complete', {
@@ -159,3 +170,4 @@ if ( {) {
                         value: Math && Math.round(loadTime),
                       })
                     }
+export default Analytics;

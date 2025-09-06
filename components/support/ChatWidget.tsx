@@ -16,9 +16,6 @@ function generateSessionId(): string {
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
-    } catch {}
-  }
-
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
@@ -26,20 +23,6 @@ function generateSessionId(): string {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
-
-      setShowEscalation(true)
-    } catch {}
-  }
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          sessionId: sessionIdRef.current
-          reason
-          tag: 'escalate'
-        })
-      });
-
-      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
     } catch {}
   }
 
@@ -203,9 +186,6 @@ function generateSessionId(): string {
                     if (e.key === 'Enter' && !e.shiftKey) {
                       e.preventDefault();
 
-                      onSend()
-                    }
-                  }}
                 />
                 <button
                   onClick={() => onSend()}

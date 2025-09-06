@@ -1,5 +1,7 @@
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-testing-automation.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -430,6 +432,9 @@ const { execSync } = require('child_process')
       { "component": 'ContactForm', "status"}
       { "component": 'ErrorBoundary', "status"}
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-testing-automation.cjs
+<<<<<<< HEAD
+      { "component": 'PerformanceMonitor', "status"}
+=======
 <<<<<<< HEAD
       { "component": 'PerformanceMonitor', "status"}
 =======

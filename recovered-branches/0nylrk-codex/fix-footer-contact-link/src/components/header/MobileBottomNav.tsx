@@ -13,10 +13,6 @@ interface MobileBottomNavProps {
   unreadCount?: number
 }
 
-export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
-  const location = useLocation();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const location = useLocation();
   const { user } = useAuth();
@@ -31,7 +27,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       href: "/"
       icon: Home
       matches: (path: string) => path === "/"
-    }
     {
       name: "Browse"
       href: "/talent"
@@ -39,11 +34,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/talent") |path.startsWith("/categories") |path.startsWith("/marketplace")
     }
     {
-      name: "Community"
-      href: "/community"
-      icon: MessageCircle
-      matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
-    }
     {
       name: "Messages"
       href: "/messages"

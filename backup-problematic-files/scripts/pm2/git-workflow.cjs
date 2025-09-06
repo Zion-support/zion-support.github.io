@@ -1,6 +1,15 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -398,6 +407,12 @@ class GitWorkflow {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );
 =======
@@ -546,6 +561,12 @@ class GitWorkflow {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
           // Remove conflict markers and keep both versions (simplified)
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -692,6 +713,9 @@ if (require.main === module) {}
   gitWorkflow.start().catch(console.error);
 };
 module.exports = GitWorkflow;
+<<<<<<< HEAD
+cursor/website-audit-and-update-with-deployment-76dc;
+=======
 cursor/website-audit-and-update-with-deployment-76dc;
 <<<<<<< HEAD
 <<<<<<< HEAD

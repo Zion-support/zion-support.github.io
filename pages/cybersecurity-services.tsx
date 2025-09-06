@@ -254,10 +254,6 @@ const benefits = [;
               <br />
               <span className='text-white'>Cybersecurity</span>
             </h1>
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
-              Protect your business with cutting-edge cybersecurity solutions.
-              From zero trust security to AI threat intelligence, we provide
-              comprehensive protection that adapts to evolving threats.
 
 
 
@@ -284,6 +280,19 @@ const benefits = [;
             </div>
           </motion.div>
         </div>
+        {/* Floating Elements */}
+        <div className='absolute top-20 left-10 opacity-20 animate-float'>;
+          <div className='w-4 h-4 bg-red-400 rounded-full'></div>;
+        </div>;
+        <div
+          className='absolute top-40 right-20 opacity-30 animate-float'
+          style={{ animationDelay: '1s' }}>;
+          <div className='w-6 h-6 bg-pink-400 rounded-full'></div>;
+        </div>;
+        <div
+          className='absolute bottom-40 left-20 opacity-25 animate-float'
+
+
         </div>
         <div className="absolute top-40 right-20 opacity-30 animate-float" style={{ animationDelay: '1s' }}>
           <div className="w-6 h-6 bg-pink-400 rounded-full"></div>
@@ -327,13 +336,6 @@ const benefits = [;
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-full h-full text-white" />
                 </div>
-                <h3 className='text-2xl font-bold text-white mb-4'>
-                  {service.title}
-                </h3>
-                <p className='text-gray-300 mb-6 leading-relaxed'>
-                  {service.description}
-                </p>
-                <ul className='space-y-2'>
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                 
@@ -343,21 +345,6 @@ const benefits = [;
                       <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Detailed Services */}
-      <section className='py-20 bg-black'>
-        <div className='container mx-auto px-4'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text-center mb-16'
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -422,30 +409,33 @@ const benefits = [;
   }
 }
                   </div>
-                      <span>Learn More</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                    <Link
-                      href='/contact'
-                      className='bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
-                    >                      Get Protected
-                    <Link href="/contact" className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
-                      Get Protected
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-2xl font-bold text-red-400">
+                      {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className={`w-4 h-4 ${i < service.rating ? 'text-yellow-400 fill-current' : 'text-gray-600'}`} />
+                      <span className="text-gray-400 text-sm ml-2">({service.reviews})</span>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="text-center p-3 bg-gray-800/50 rounded-lg">
+                      <div className="text-red-400 font-bold">{service.customers}+</div>
+                      <div className="text-gray-400 text-sm">Customers</div>
+                    </div>
+                    <div className="text-center p-3 bg-gray-800/50 rounded-lg">
+                      <div className="text-red-400 font-bold">{service.trialDays}</div>
+                      <div className="text-gray-400 text-sm">Trial Days</div>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                      <span key={featureIndex} className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm">
                     </Link>
                   </div>
                 </div>
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
-        <div className='container mx-auto px-4'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -465,27 +455,6 @@ const benefits = [;
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Our Security</span>
@@ -532,12 +501,6 @@ const benefits = [;
               Don't wait for a breach to happen. Protect your business today with our advanced cybersecurity solutions 
               and stay one step ahead of evolving threats.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-              <Link href='/contact' className='group'>
-                <button className='bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/contact" className="group">
-                <button className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
                   <span>Start Your Security Journey</span>
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
                 </button>
@@ -624,5 +587,47 @@ const benefits = [;
               <div>;
                 <div className='text - 3xl font - bold text - red - 400 mb - 2'>450%</div>;
                 <div className='text - gray - 300'>ROI Improvement</div>              </div>;
+
+  )
+            className="max-w-4xl mx-auto";
+          >;
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
+              Ready to <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Secure</span> Your Business?;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+              Don't wait for a breach to happen. Protect your business today with our advanced cybersecurity solutions;
+              and stay one step ahead of evolving threats.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
+              <Link href="/contact" className="group">;
+                <button className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">;
+                  <span>Start Your Security Journey</span>;
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+                </button>;
+              </Link>;
+              <Link href="/comprehensive-services-showcase-2025" className="group">;
+                <button className="border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2">;
+                  <span>View All Services</span>;
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+                </button>;
+              </Link>;
+            </div>;
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">;
+              <div>;
+                <div className="text-3xl font-bold text-red-400 mb-2">24/7</div>;
+                <div className="text-gray-300">Security Monitoring</div>;
+              </div>;
+              <div>;
+                <div className="text-3xl font-bold text-red-400 mb-2">99.99%</div>;
+                <div className="text-gray-300">Threat Detection</div>;
+              </div>;
+              <div>;
+                <div className="text-3xl font-bold text-red-400 mb-2">450%</div>;
+                <div className="text-gray-300">ROI Improvement</div>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
 
 

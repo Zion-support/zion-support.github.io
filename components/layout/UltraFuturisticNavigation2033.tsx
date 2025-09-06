@@ -20,13 +20,6 @@ import {
   Briefcase,
   DollarSign,
   BookOpen,
-  Users,;
-  MessageCircle,;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, ;
-  Cpu, Target, Microscope, Shield, Zap, Sparkles;
-  Menu, X, Search, ChevronDown, Home, Briefcase, 
-  DollarSign, BookOpen, Users, MessageCircle
-
 
 import {
   Phone,
@@ -56,6 +49,8 @@ import {
   Cpu, Target, Microscope, Shield, Zap, Sparkles;
   Menu, X, Search, ChevronDown, Home, Briefcase, 
   DollarSign, BookOpen, Users, MessageCircle
+
+
 
 import {
   Phone
@@ -167,323 +162,6 @@ const serviceCategories = [
     color: 'from-violet-500 to-purple-600',
     services: [
 
-const serviceCategories = [
-    title: ' Revolutionary AI'
-    icon: Brain
-    color: 'from-violet-500 to-purple-600'
-    services: [
-      {
-        name: 'AI Consciousness Evolution'
-        href: '/ai-consciousness-evolution-platform'
-        description: 'Advanced AI consciousness'
-        price: '$2,999/month'
-      }
-      {
-        name: 'AI Emotional Intelligence'
-        href: '/ai-emotional-intelligence-platform'
-        description: 'Emotional AI platform'
-        price: '$1,999/month'
-      }
-      {
-        name: 'AI Creativity Orchestrator'
-        href: '/ai-creativity-orchestrator'
-        description: 'Creative AI solutions'
-        price: '$1,499/month'
-      }
-      {
-        name: 'AI Consciousness Evolution',
-        href: '/ai - consciousness - evolution - platform',
-        description: 'Advanced AI consciousness',
-        price: '$2, 999 / month',
-      },
-      {
-        name: 'AI Emotional Intelligence',
-        href: '/ai - emotional - intelligence - platform',
-        description: 'Emotional AI platform',
-        price: '$1, 999 / month',
-      },
-      {
-        name: 'AI Creativity Orchestrator',
-        href: '/ai - creativity - orchestrator',
-        description: 'Creative AI solutions',
-        price: '$1, 499 / month',
-      },
-      {
-        name: 'AI Autonomous Business Manager'
-        href: '/ai-autonomous-business-manager'
-        description: 'Autonomous business AI'
-        price: '$3,999/month'
-      }
-    ]
-  },  {      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Advanced AI consciousness', price: '$2,999/month' }
-      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Emotional AI platform', price: '$1,999/month' }
-      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Creative AI solutions', price: '$1,499/month' }
-      { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Autonomous business AI', price: '$3,999/month' }
-    ]
-  }
-    title: ' Quantum & Emerging Tech'
-    icon: Atom
-    color: 'from-indigo-500 to-blue-600'
-    title: ' Quantum & Emerging Tech',
-    icon: Atom,
-    color: 'from-indigo-500 to-blue-600',
-    services: [
-      {
-        name: 'Quantum Internet Security'
-        href: '/quantum-internet-security-gateway'
-        description: 'Quantum security'
-        price: '$4,999/month'
-      }
-      {
-        name: 'Biotech DNA Computing'
-        href: '/biotech-dna-computing-platform'
-        description: 'DNA computing platform'
-        price: '$3,999/month'
-      }
-      {
-        name: 'Quantum Financial Trading'
-        href: '/quantum-financial-trading-platform'
-        description: 'Quantum trading'
-        price: '$5,999/month'
-      }
-      {
-        name: 'DNA Computing Platform'
-        href: '/dna-computing-platform'
-        description: 'Molecular computing'
-        price: '$1,299/month'
-      }
-      {
-        name: 'Photonic Computing Infrastructure'
-        href: '/photonic-computing-infrastructure'
-        description: 'Light-speed computing'
-        price: '$699/month'
-      }
-      {
-        name: 'Quantum Internet Security',
-        href: '/quantum - internet - security - gateway',
-        description: 'Quantum security',
-        price: '$4, 999 / month',
-      },
-      {
-        name: 'Biotech DNA Computing',
-        href: '/biotech - dna - computing - platform',
-        description: 'DNA computing platform',
-        price: '$3, 999 / month',
-      },
-      {
-        name: 'Quantum Financial Trading',
-        href: '/quantum - financial - trading - platform',
-        description: 'Quantum trading',
-        price: '$5, 999 / month',
-      },
-      {
-        name: 'DNA Computing Platform',
-        href: '/dna - computing - platform',
-        description: 'Molecular computing',
-        price: '$1, 299 / month',
-      },
-      {
-        name: 'Photonic Computing Infrastructure',
-        href: '/photonic - computing - infrastructure',
-        description: 'Light - speed computing',
-        price: '$699 / month',
-      },
-      {
-        name: 'Swarm Robotics Platform'
-        href: '/swarm-robotics-platform'
-        description: 'Collective robot intelligence'
-        price: '$1,199/month'
-      }
-    ]
-  },  {      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Quantum security', price: '$4,999/month' }
-      { name: 'Biotech DNA Computing', href: '/biotech-dna-computing-platform', description: 'DNA computing platform', price: '$3,999/month' }
-      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum trading', price: '$5,999/month' }
-      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1,299/month' }
-      { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' }
-      { name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Collective robot intelligence', price: '$1,199/month' }
-    ]
-  }
-    title: ' Enterprise IT Solutions'
-    icon: Cpu
-    color: 'from-blue-500 to-cyan-600'
-    title: ' Enterprise IT Solutions',
-    icon: Cpu,
-    color: 'from-blue-500 to-cyan-600',
-    services: [
-      {
-      {
-        name: 'Zero Trust Network Architecture'
-        href: '/zero-trust-network-architecture'
-        description: 'Zero trust security'
-        price: '$1,999/month'
-      }
-      {
-        name: 'Edge Computing Orchestration'
-        href: '/edge-computing-orchestration'
-        description: 'Edge computing platform'
-        price: '$1,799/month'
-      }
-      {
-        name: 'Autonomous DevOps Platform',
-        href: '/autonomous - devops - platform',
-        description: 'Self - managing DevOps',
-        price: '$2, 499 / month',
-      },
-      {
-        name: 'Zero Trust Network Architecture',
-        href: '/zero - trust - network - architecture',
-        description: 'Zero trust security',
-        price: '$1, 999 / month',
-      },
-      {
-        name: 'Edge Computing Orchestration',
-        href: '/edge - computing - orchestration',
-        description: 'Edge computing platform',
-        price: '$1, 799 / month',
-      },
-      {
-        name: 'AI IT Operations Center'
-        href: '/ai-it-operations-center'
-        description: 'AI-powered IT ops'
-        price: '$2,999/month'
-      }
-    ]
-  },  {      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Self-managing DevOps', price: '$2,499/month' }
-      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Zero trust security', price: '$1,999/month' }
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Edge computing platform', price: '$1,799/month' }
-      { name: 'AI IT Operations Center', href: '/ai-it-operations-center', description: 'AI-powered IT ops', price: '$2,999/month' }
-    ]
-  }
-    title: ' Space & Metaverse Tech'
-    icon: Rocket
-    color: 'from-teal-500 to-emerald-600'
-    title: ' Space & Metaverse Tech',
-    icon: Rocket,
-    color: 'from-teal-500 to-emerald-600',
-    services: [
-      {
-        name: 'Space Mining Automation'
-        href: '/space-mining-automation-platform'
-        description: 'Space mining platform'
-        price: '$9,999/month'
-      }
-      {
-        name: 'Metaverse Development'
-        href: '/metaverse-development-platform'
-        description: 'Metaverse platform'
-        price: '$3,999/month'
-      }
-      {
-        name: 'Space Mining Automation',
-        href: '/space - mining - automation - platform',
-        description: 'Space mining platform',
-        price: '$9, 999 / month',
-      },
-      {
-        name: 'Metaverse Development',
-        href: '/metaverse - development - platform',
-        description: 'Metaverse platform',
-        price: '$3, 999 / month',
-      },
-      {
-        name: 'Virtual Event Holograms'
-        href: '/virtual-event-hologram-platform'
-        description: 'Holographic events'
-        price: '$2,499/month'
-      }
-    ]
-  }
-];
-]
-
-const quickLinks = [
-  {
-    name: 'Services Overview'
-    href: '/enhanced-services-overview'
-    icon: Globe
-    color: 'from-cyan-500 to-blue-600'
-  }
-  {
-    name: 'AI Services'
-    href: '/ai-services'
-    icon: Brain
-    color: 'from-violet-500 to-purple-600'
-  }
-  {
-    name: 'Quantum Tech'
-    href: '/quantum-services'
-    icon: Atom
-    color: 'from-indigo-500 to-blue-600'
-  }
-  {
-    name: 'Space Tech'
-    href: '/space-technology'
-    icon: Rocket
-    color: 'from-teal-500 to-emerald-600'
-  }
-  {
-    name: 'Enterprise IT'
-    href: '/enterprise-it'
-    icon: Cpu
-    color: 'from-blue-500 to-cyan-600'
-  }
-];
-;
-const quick_links = [;
-  {
-    name: 'Services Overview',
-    href: '/enhanced - services - overview',
-    icon: Globe,
-    color: 'from - cyan - 500 to - blue - 600',
-  },
-  {
-    name: 'AI Services',
-    href: '/ai - services',
-    icon: Brain,
-    color: 'from - violet - 500 to - purple - 600',
-  },
-  {
-    name: 'Quantum Tech',
-    href: '/quantum - services',
-    icon: Atom,
-    color: 'from - indigo - 500 to - blue - 600',
-  },
-  {
-    name: 'Space Tech',
-    href: '/space - technology',
-    icon: Rocket,
-    color: 'from - teal - 500 to - emerald - 600',
-  },
-  {
-    name: 'Enterprise IT',
-    href: '/enterprise - it',
-    icon: Cpu,
-    color: 'from - blue - 500 to - cyan - 600',
-  },
-  {
-    name: 'Micro SAAS'
-    href: '/enhanced-micro-saas-showcase'
-    icon: Target
-    color: 'from-green-500 to-yellow-600'
-  },];  { name: 'Services Overview', href: '/enhanced-services-overview', icon: Globe, color: 'from-cyan-500 to-blue-600' }
-  { name: 'AI Services', href: '/ai-services', icon: Brain, color: 'from-violet-500 to-purple-600' }
-  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom, color: 'from-indigo-500 to-blue-600' }
-  { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' }
-  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' }
-      {
-
-        name: 'AI Autonomous Business Manager',
-        href: '/ai - autonomous - business - manager',
-        description: 'Autonomous business AI',
-        price: '$3, 999 / month',
-      },
-    ],
-
-    title: '⚛️ Quantum & Emerging Tech',
-    icon: Atom,
-    color: 'from-indigo-500 to-blue-600',
-    services: [
-
 
       {
 
@@ -540,9 +218,6 @@ const quick_links = [;
 
 export default function UltraFuturisticNavigation2033() {
   const [isOpen, setIsOpen] = useState(false)
-
-
-export default function UltraFuturisticNavigation2033() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -589,16 +264,6 @@ export default function UltraFuturisticNavigation2033() {;
                   className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
                 >
                   <span>Services</span>
-                  <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>              {/* Services Mega Menu */}
-              <div className="relative group">
-                <button
-                  onMouseEnter={() => setActiveCategory('services')}
-                  onMouseLeave={() => setActiveCategory(null)}
-                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
-                >
-                  <span>Services</span>
-                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
-                </button>
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>
 
                 </button>
@@ -674,16 +339,6 @@ export default function UltraFuturisticNavigation2033() {;
                 <Link
 
 
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
               {/* Quick Links */}
               {quickLinks.map(link => (
                 <Link
@@ -728,11 +383,6 @@ export default function UltraFuturisticNavigation2033() {;
                 className="text-gray-300 hover:text-white transition-colors duration-200 p-2"
               >
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
-            </div>
-          </div>
-        </div>
-
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;

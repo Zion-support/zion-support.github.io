@@ -1,5 +1,3 @@
-
-export default function ProfileDetail() {
 export default function ProfileDetail() {;
   // useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
@@ -34,7 +32,6 @@ export default function ProfileDetail() {;
       <div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
       </div>
-        description = {profileData.bio || "Check out this talent's profile on Zion!",}
       />
       <Header />
       <div className="container mx-auto px-4 py-8">

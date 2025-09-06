@@ -49,14 +49,6 @@ export default function ProjectPage() {
   }
 }
     load()
-  }, [projectId])
-  const [showFeedback, setShowFeedback] = useState(false)
-  async function addNote() {
-    const res = await fetch(`/api/marketplace/projects`, {
-      method: "PATCH"
-      headers: { "Content-Type": "application/json", ...headers }
-      body: JSON.stringify({ id: projectId, action: "add_note", content: note })})
-    const json = await res.json()
   }, [projectId]),
   const [showFeedback, setShowFeedback] = useState(false),
   async function addNote() {
@@ -189,17 +181,11 @@ export default function ProjectPage() {
           <div className="flex justify-end">
             {project.status !== "COMPLETED" && (
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
-            )}
-          </div>
-        </div>
-      )}
-      <FeedbackModal
-        isOpen={showFeedback}
-        onClose={() => setShowFeedback(false)}
-        defaultContext={{ actionType: 'chatbot_use', metadata: { projectId } }}
-        userHeaders={headers}
-      />
-    </div>
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
       )  } catch (error) {
@@ -207,9 +193,6 @@ export default function ProjectPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-  );
-};
 
   );
 };

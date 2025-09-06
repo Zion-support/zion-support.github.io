@@ -4,8 +4,6 @@ import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
-
-
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
@@ -30,7 +28,6 @@ import RiskIndicator from '../components/ui/RiskIndicator';
   }, [userId]);
     <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
     alert('Appeal submitted');
-
 
     form && form.reset();
 
@@ -81,15 +78,14 @@ import RiskIndicator from '../components/ui/RiskIndicator';
                 </div>;
               )}
 
+
+                      </li>
+
                     ))}
                   </ul>
                 </div>
               )}
               {data.reasonSummary && (
-                <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>                  <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
-                </div>
-              )}
-            </div>                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">
                   <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>
               )}

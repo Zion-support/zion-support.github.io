@@ -38,3 +38,4 @@ export default function Quantumcomputing(): any ({ }: QuantumcomputingProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
+

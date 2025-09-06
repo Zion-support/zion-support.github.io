@@ -93,7 +93,6 @@ export function CountrySelector(): any ({;
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
-}
           </div>;
         </SelectContent>;
       </Select>;

@@ -13,8 +13,9 @@ if ( {) {
     res.set_header ("AllowPOST");
     return res.status (405).json ({ error: "Method not allowed" });
   }
-  const { prompt, region, service } = req.body || {};
-  if (!prompt) return res.status(400).json({ error: 'Prompt required' });
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
   try {
     const system = `You generate conversion - focused, SEO - optimized landing pages in HTML. Include:;
 - A compelling H1;
@@ -39,8 +40,6 @@ Do not include <html>, <body>, or scripts.`;
 
     console.error (e);
     return res.status (500).json ({ error: "Failed to generate landing page" });
-  }
-}
 
 
     // FAQ generation

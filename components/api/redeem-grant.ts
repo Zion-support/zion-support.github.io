@@ -3,9 +3,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
-} from '../../utils/api/partnerAuth';
-import { v4 as uuidv4 } from 'uuid';
-
 const REDEMPTIONS_FILE = path.join(
   process.cwd()
   'data'
@@ -28,14 +25,6 @@ const REDEMPTIONS_FILE = path.join(
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
     return res && res.status(400).json({ error: 'Missing required fields' });
 
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
-    return res.status(405).json({ error: 'Method Not Allowed' });  }
-  const { studentEmail, grantCode, courseId } = req.body |{}
-  if (!studentEmail |!grantCode |!courseId) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-    return res.status(400).json({ error: 'Missing required fields' });
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -52,12 +41,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);
     return res && res.status(429).json({ error: "Rate limit exceeded" })
   }
-  if (!studentEmail || !grantCode || !courseId) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-    return res.status(400).json({ error: 'Missing required fields' });
-  await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
-  const records = (await fs.pathExists(REDEMPTIONS_FILE))
-    ? await fs.readJSON(REDEMPTIONS_FILE)
     : [];
   const now = new Date().toISOString();
   const record = {

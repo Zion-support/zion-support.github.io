@@ -123,7 +123,6 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  },
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -135,7 +134,6 @@ export default function Pricing2025(req, res) {
         <link rel="canonical" href="https://ziontechgroup.com/pricing-2025" />
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"2025 Pricing & Services  Zion Tech Group","url":"https://ziontechgroup.com/pricing-2025","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
       <EnhancedNavigation />
-      {/* Hero Section */}
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -159,9 +157,6 @@ export default function Pricing2025(req, res) {
               2025 Pricing & Services
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
-              AI solutions, quantum technologies, and revolutionary IT services.
-            </p>
-            {/* Billing Toggle */}
               Transparent pricing for our comprehensive collection of innovative micro SAAS services,
 
               AI solutions, quantum technologies, and revolutionary IT services.
@@ -303,14 +298,6 @@ export default function Pricing2025(req, res) {
                   <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                   <p className="text-white/70 text-sm leading-relaxed">{service.tagline}</p>
                 </div>
-                {/* Pricing */}
-                <div className="text-center mb-8">
-                  <div className="mb-2">
-                    <span className="text-4xl font-bold text-cyan-400">
-                      {billingCycle === 'monthly' ? service.price : getAnnualPrice(service.price)}
-                    </span>
-                    <span className="text-white/60 ml-2">
-                      {billingCycle === 'monthly' ? service.period : '/year'}
                 {/* Pricing */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -413,9 +400,6 @@ export default function Pricing2025(req, res) {
                   >
                     Get Started
                     <ExternalLink className="w-4 h-4" />
-                  </a>
-                  <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}&body=Hi, I'm interested in learning more about your ${service.name} service. Please provide more information about pricing, features, and implementation.`}
                   </Link>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}&body=Hi, I'm interested in learning more about your ${service.name} service. Please provide more information about pricing, features, and implementation.`  } catch (error) {
@@ -538,49 +522,11 @@ export default function Pricing2025(req, res) {
           <div className="space-y-6">
             {[
               {
-                } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            ].map((faq, index) => (;
-              <motion.div;
-                key={index  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                 className="p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl"
               >
                 <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
                 <p className="text-white/70 leading-relaxed">{faq.answer}</p>
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      <EnhancedFooter />
-    </div>
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

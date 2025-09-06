@@ -1,4 +1,3 @@
-export interface UserDetails {;
   id?: string;
   name?: string;
   email?: string;
@@ -8,13 +7,6 @@ export interface UserDetails {;
   headline?: string;
   profileComplete?: boolean;
   role?: string;
-  role?: string;
-  permissions?: string[],
-  companyId?: string;
-  bio?: string;
-  createdAt?: string;
-}
-export interface AuthContextType {
 }
 ;
 export interface AuthContextType {;
@@ -112,9 +104,6 @@ export interface AuthContextType {;
       setUser({ ...user, ...data })
     }
     return { error: null }
-  }
-  },
-
   const loginWithGoogle = async () => {
     // // // console.log("Google login requested"),
     // Mock implementation
@@ -125,9 +114,6 @@ export interface AuthContextType {;
       name: "Google User"
       profileComplete: true
     })
-  }
-  },
-
   const loginWithFacebook = async () => {
     // // // console.log("Facebook login requested"),
     // Mock implementation
@@ -138,9 +124,6 @@ export interface AuthContextType {;
       name: "Facebook User"
       profileComplete: true
     })
-  }
-  },
-
   const loginWithTwitter = async () => {
     // // // console.log("Twitter login requested"),
     // Mock implementation
@@ -420,4 +403,14 @@ export function useAuth(): any (): AuthContextType {;
   }
   return context;
 }
-;
+// Custom hook to use the auth context;
+export function use_auth (): AuthContextType {
+  const context = useContext (AuthContext);
+  // Check condition
+if ( {) {
+  $2
+}
+    throw new Error ("use_auth must be used within an AuthProvider");
+  }
+  return context;
+}

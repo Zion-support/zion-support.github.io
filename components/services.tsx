@@ -288,6 +288,8 @@ export default function ServicesPage() {
   const matches_search = service.name.toLowerCase () .includes (search_term.toLowerCase () ) || service.description.toLowerCase () .includes (search_term.toLowerCase () ) || case 'name': return a.name.locale_compare (b.name);
 ...realMicroSaasServices2025;
  ...realMicroSaasServices2025;
+...realMicroSaasServices2025;
+ ...realMicroSaasServices2025;
 ...innovativeAIServices2025;
 ...innovativeITServices2025;
 ...emergingTechServices2025;
@@ -367,39 +369,6 @@ and micro SAAS services designed to transform your business and drive innovation
     ...serviceExpansions2025;
     ...realVerifiedServices;
   ];
-  // Get unique services by ID
-  const uniqueServices = allServices.filter((service, index, self) =>
-    index === self.findIndex(s => s.id === service.id)
-  );
-  // Get all categories
-  const categories = ['All', ...Array.from(new Set(uniqueServices.map(s =>
-    Array.isArray(s.category) ? s.category[0] : s.category
-  )))];
-  // Filter and sort services
-  const filteredServices = uniqueServices
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'All' |
-                             (Array.isArray(service.category) ?
-                               service.category.includes(selectedCategory) :
-                               service.category === selectedCategory);
-      return matchesSearch && matchesCategory
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'name':
-          return a.name.localeCompare(b.name);
-        case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-        case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-        case 'rating':
-          return (b.rating |0) - (a.rating |0);
-        default: return 0
-      }
-    });
 
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -647,16 +616,6 @@ and micro SAAS services designed to transform your business and drive innovation
                 <button
                   onClick={() => {;
                     setSearchTerm('');
-                  }}
-                  className="mt-4 px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
-                >
-                  Clear Filters
-                </button>
-              </motion.div>
-            )}
-          </div>
-        </section>
-
                       {/* Enhanced Price */}
                       <div className="mb-6 relative z-10">
                         <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-2xl p-4">
@@ -685,9 +644,6 @@ and micro SAAS services designed to transform your business and drive innovation
                               {feature}
                             </li>
                           ))}
-                        </ul>
-                      </div>
-
                       {/* Enhanced Stats */}
                       <div className="grid grid-cols-3 gap-3 mb-6 text-center relative z-10">
                         <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50 group-hover:border-cyan-500/30 transition-colors duration-300">
@@ -758,11 +714,6 @@ and micro SAAS services designed to transform your business and drive innovation
                               <span key={idx} className="px-2 py-1 bg-gray-800/50 text-xs text-gray-300 rounded-lg">;
 
                                 {feature}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-
                         {/* Pricing & Stats */}
                         <div className="lg:w-48 space-y-4">
                           <div className="text-center">
@@ -1105,4 +1056,7 @@ and micro SAAS services designed to transform your business and drive innovation
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 1.4 }}
+
+  ),
 }
+

@@ -9,7 +9,6 @@
 }
 // Default static categories with translation keys
 
-const getDefaultCategories = (t: any,) => [
   {
     id: "services"
     name: t('categories.services')
@@ -32,12 +31,6 @@ const getDefaultCategories = (t: any,) => [
     link: "/equipment"
     color: "from-amber-500 to-orange-600"}
   {
-    id: "innovation"
-    name: t('categories.innovation')
-    description: t('categories.innovation_desc')
-    iconName: "Lightbulb"
-    link: "/innovation"
-    color: "from-emerald-500 to-green-600"}]
 // Helper to get icon component from name
 const getIcon = (iconName?: string) => {
   switch (iconName) {
@@ -130,10 +123,6 @@ export function CategoriesSection({;
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {getSpecialServices(t).map((service,) => (
-              <Link
-                key = {service.title,}
-                href = {service.link,}
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
                 {service.title}

@@ -1,6 +1,3 @@
-    ? {
-  return theme === 'light' 
-    ? { ;
 export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {
   return theme === 'light';
 

@@ -39,9 +39,6 @@ const partnerFormSchema = z.object({
 
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
 
-export function PartnerRegistrationForm() {;
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { user } = useAuth();
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { user } = useAuth(),

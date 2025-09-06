@@ -25,6 +25,22 @@ export default function QuantumSecureCommunication() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
     website: 'https://ziontechgroup.com'
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
+  DollarSign, Shield, Mail, MapPin, Rocket, Lock,
+  Brain, Database, TrendingUp as TrendingUpIcon, Users,
+
+  Target, BarChart, PieChart, Activity, Eye, Key
+export default function QuantumSecureCommunication() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
   }
   },
   const features = [
@@ -46,26 +62,6 @@ export default function QuantumSecureCommunication() {
       animationSpeed={2.0}
       enableHolographic={true}
       enableQuantumEffects={true}
-      particleCount={500  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      animationSpeed={2.0  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      enableHolographic={true  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      enableQuantumEffects={true  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
     >
       <div className="min-h-screen">
         <Head>
@@ -89,79 +85,18 @@ export default function QuantumSecureCommunication() {
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-500 rounded-3xl opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </motion.div>
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: 0.3 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-6"
               >
                 Quantum-Secure Communication
               </motion.h1>
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                 className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium"
               >
                 Unbreakable encryption for the <span className="text-purple-400 font-bold">quantum era</span>
               </motion.p>
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: 0.5 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                 className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
               >
                 Next-generation communication platform that uses quantum cryptography to provide unbreakable encryption for sensitive communications, ensuring your data remains secure even against quantum computers.
               </motion.p>
-                <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.2, delay: 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                   className="bg-gradient-to-r from-purple-500 to-pink-600 p-1 rounded-2xl shadow-2xl"
                 >
                   <div className="bg-gray-900 rounded-2xl px-8 py-6">
@@ -353,6 +288,25 @@ export default function QuantumSecureCommunication() {
                       <Shield className="w-5 h-5 text-white" />
                     </div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+                  Use Cases
+                </span>
+              </h2>
+              <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
+                Discover how quantum-secure communication protects your most sensitive communications
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {useCases.map((useCase, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
         {/* Technology & Integrations */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
           <div className="max - w-7xl mx - auto">;
@@ -619,9 +573,5 @@ export default function QuantumSecureCommunication() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
 

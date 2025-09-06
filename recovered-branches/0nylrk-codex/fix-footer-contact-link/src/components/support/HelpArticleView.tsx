@@ -1,8 +1,3 @@
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
-import { ThumbsUp, ThumbsDown } from "lucide-react",
-import { toast } from "@/components/ui/use-toast",
 interface HelpArticleViewProps {
   articleId: string
 }
@@ -15,13 +10,6 @@ interface HelpArticleViewProps {
     if (found) {
       article = found,
       break
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card } from "@/components/ui/card",;
-import { ThumbsUp, ThumbsDown } from "lucide-react",;
-import { toast } from "@/components/ui/use-toast",;
-import { HELP_CATEGORIES } from "./help-content",;
-interface HelpArticleViewProps {;
   articleId: string;
 }
 
@@ -58,16 +46,6 @@ if ( {) {
     }
   }
   const handleFeedback = (type: "helpful" | "not-helpful") => {
-    (setFeedbackGiven(type)
-      // In a real implementation, this would send feedback to the server
-      toast({
-        title: "Thank you for your feedback!"
-        description:
-          type === "helpful"
-            ? "We're glad this article was helpful."
-            : "We'll work on improving this article."
-      }));
-  }
   return (
     <div>
       <Card className="p-6">
@@ -124,13 +102,3 @@ function formatDate(date: string): string {
 
   })
   })
-}
-;
-function formatDate(date: string): string {;
-  return new Date(date).toLocaleDateString("en-US", {;
-    year: "numeric";
-    month: "long";
-    day: "numeric";
-  });
-}
-;

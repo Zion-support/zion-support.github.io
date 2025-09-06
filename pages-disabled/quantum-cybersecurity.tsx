@@ -7,11 +7,6 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function QuantumCybersecurityPage() {
 
-      icon: Shield
-      title: "Quantum-Resistant Encryption"
-      description: "Advanced cryptographic algorithms that remain secure even against quantum computers."
-      color: "from-blue-500 to-cyan-500"
-    }
       icon: Shield,
       title: "Quantum-Resistant Encryption",
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
@@ -447,15 +442,6 @@ function QuantumCybersecurityPage() {
         </div>
       </section>
 
-          </div>;
-        </div>;
-      </section>;
-          </div>
-        </div>
-      </section>
-
-
-
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">;
         <div className="max-w-4xl mx-auto px-6 text-center">;
@@ -494,3 +480,5 @@ function QuantumCybersecurityPage() {
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
 }
+
+

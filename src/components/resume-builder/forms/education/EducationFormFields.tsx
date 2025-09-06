@@ -132,9 +132,6 @@ function EducationFormFields() {
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
 
-                  <Input type='date' {...field} value={field.value || ''} />                </FormControl>
-                <FormMessage />
-              </FormItem>
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}

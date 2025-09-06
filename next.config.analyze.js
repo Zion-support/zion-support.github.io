@@ -1,7 +1,3 @@
-// Next.config.analyze utility
-export const Next.config.analyze = () => {
-  // Implementation here
-  return null;
 };
 
 ,;
@@ -19,7 +15,10 @@ export const Next.config.analyze = () => {
 }
 ;}
 }
-origin/main
+
+
+
+
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 module && module.exports = {
   "webpack": (config, { isServer }) => {

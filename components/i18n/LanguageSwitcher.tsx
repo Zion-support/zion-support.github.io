@@ -1,5 +1,4 @@
 
-
 const localeToFlag: Record<string, string> = {
 
   en: 'us',
@@ -7,11 +6,6 @@ const localeToFlag: Record<string, string> = {
   es: 'es',
   ar: 'sa'},
 const localeLabelKey: Record<string, string> = {
-  en: 'lang.english'
-  pt: 'lang.portuguese'
-  es: 'lang.spanish'
-  ar: 'lang.arabic'
-};  ar: 'lang.arabic'}
 export default function LanguageSwitcher() {
   en: 'lang.english',
   pt: 'lang.portuguese',

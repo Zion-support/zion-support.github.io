@@ -1,11 +1,3 @@
-  const designMap = useMemo(() => getZionDesignMap(), []);
-  const [screenName, setScreenName] = useState("");
-  const [role, setRole] = useState("Talent");
-  const [suggestion, setSuggestion] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-    if (!screenName) return;
-    setIsLoading(true);
-    setSuggestion(null);
     try {
       const res = await fetch("/api/figma/wireframe-suggest", {
         method: "POST"
@@ -46,52 +38,6 @@
       <Head>
         <title>Zion OS Design Map</title>
       </Head>
-            <a
-              href="/api/design-map"
-              className="px-3 py-2 rounded bg-gray-900 text-white text-sm"
-            >
-              JSON
-            </a>
-            <a
-              href="/api/figma/export?kit=tailwind"
-              className="px-3 py-2 rounded bg-neon-blue text-black text-sm"
-            >
-              Export Tailwind
-            </a>
-            <a
-              href="/api/figma/export?kit=chakra"
-              className="px-3 py-2 rounded bg-neon-purple text-white text-sm"
-            >
-              Export Chakra
-            </a>
-            <a
-              href="/api/figma/export?kit=react"
-              className="px-3 py-2 rounded bg-neon-green text-black text-sm"
-            >
-              Export React
-            </a>
-          </div>
-        </div>
-        <div className="grid md:grid-cols-2 gap-6">
-          <MapColumn
-            title="Foundations"
-            sections={designMap.products.foundations}
-          />
-          <MapColumn title="Talent UI" sections={designMap.products.talent} />
-          <MapColumn title="Client UI" sections={designMap.products.client} />
-          <MapColumn
-            title="AI Tools UI"
-            sections={designMap.products.aiTools}
-          />
-          <MapColumn title="DAO & Token UI" sections={designMap.products.dao} />
-          <MapColumn
-            title="Admin Console"
-            sections={designMap.products.admin}
-          />
-          <MapColumn
-            title="Mobile Layouts"
-            sections={designMap.products.mobile}
-          />
             <a href="/api/design-map" className="px-3 py-2 rounded bg-gray-900 text-white text-sm">JSON</a>
             <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</a>
             <a href="/api/figma/export?kit=chakra" className="px-3 py-2 rounded bg-neon-purple text-white text-sm">Export Chakra</a>
@@ -122,31 +68,19 @@
                 <option>Mobile</option>
               </select>
             </div>
-            <button
-              onClick={requestWireframe}
-              className="px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60"
-              disabled={isLoading |!screenName}
-            >
           )}
         </div>
       </section>
     </>
-              {isLoading ? 'Generating…' : 'GPT Wireframe Suggestion'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
+/**
+ * MapColumn - Function description
+ */
+function MapColumn() {
   return (
-            key={s.id}
-            className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40"
-          >
-            <div className="font-medium mb-2">{s.title}</div>
-            <div className="flex flex-wrap gap-2">
-              {s.items.map((i) => (
-                <span
-                  key={i.id}
-                  className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800"
-                >
+
+                <span key={i.id} className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800">
+
                   {i.title}
                 </span>
               ))}
@@ -155,20 +89,6 @@
         ))}
       </div>
     </div>
-            </div>;
-          </div>;
-        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
     <div className="space-y-3">
       <h3 className="text-lg font-semibold">{title}</h3>
       <div className="grid gap-3">

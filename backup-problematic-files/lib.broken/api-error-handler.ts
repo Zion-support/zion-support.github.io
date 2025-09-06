@@ -6,7 +6,6 @@ interface RetryConfig {
   "maxRetries": number;
   baseDelay: number;
   maxDelay: number;'
-
 class ApiErrorHandler {
   private static "instance": ApiErrorHandler;
   private retryConfig: RetryConfig = {

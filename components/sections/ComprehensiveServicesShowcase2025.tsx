@@ -1,20 +1,3 @@
-  CheckCircle
-  ArrowRight
-  Star
-  TrendingUp
-  Zap
-  Shield
-  Globe
-  Brain
-  Database
-  Cloud
-  Lock
-  Rocket
-  Users
-  DollarSign
-  Target
-  Award
-  Phone;
   CheckCircle,
   ArrowRight,
   Star,
@@ -41,6 +24,10 @@ import { healthcareBiotech2025 } from '../../data/healthcare-biotech-2025';
 import { fintechFinancial2025 } from '../../data/fintech-financial-2025';
 import { educationElearning2025 } from '../../data/education-elearning-2025';
 
+  return (
+    <section className='relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>;
+      {/* Animated Background Elements */}
+
       <div className='absolute inset-0 overflow-hidden'>;
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob'></div>;
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000'></div>;
@@ -60,20 +47,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
         <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>;
       </div>;
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-
-        {/* Header */}
-
-  return (
-    <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
-      </div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
 
         {/* Header */}
 
@@ -246,8 +219,10 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                             +{service.features.length - 3} more features
                           </li>
                         )}
-                      </ul>
-                    </div>
+
+
+
+
 
                     {/* Pricing */}
                     <div className='mb-4'>
@@ -335,10 +310,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                             {useCase}
                           </span>;
                         ))}
-                    </div>
-                    {/* Hover Effect Overlay */}
-                    <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                  </motion.div>
                 ))}
               </div>;
             </motion && motion.div>;
@@ -572,7 +543,3 @@ export default ComprehensiveServicesShowcase2025);
 export default ComprehensiveServicesShowcase2025;
 ;
   );
-export default ComprehensiveServicesShowcase2025;  )
-}
-export default ComprehensiveServicesShowcase2025;
-

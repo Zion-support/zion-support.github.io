@@ -1,38 +1,3 @@
-  ArrowRight
-  Play
-  Users
-  TrendingUp
-  Brain
-  Shield
-  Rocket
-  Globe
-  Lock
-  Cpu
-  Database
-  Cloud
-  BarChart3
-  Atom
-  Target
-  Zap
-  Infinity
-  Sparkles
-  Star
-  Eye
-  Heart
-  Code
-  Palette
-  Layers
-  ChevronRight
-  ChevronLeft
-  Phone
-  Mail
-  MapPin
-  Clock
-  Award
-  CheckCircle
-  Zap as ZapIcon
-  Brain as BrainIcon
-  Atom as AtomIcon;} from 'lucide-react';import {
 
 
 // Import our new revolutionary services;
@@ -253,60 +218,6 @@ const Homepage2043: React.FC = () => {
     };
     { 
       icon: AtomIcon,
-    }
-  ];
-  const stats = [
-    {
-      number: '2000+'
-      label: 'Revolutionary Services'
-      icon: Star
-      color: 'from-yellow-400 to-orange-500'
-    }
-    {
-      number: '99.99%'
-      label: 'Uptime Guarantee'
-      icon: TrendingUp
-      color: 'from-green-400 to-emerald-500'
-    }
-    {
-      number: '24/7'
-      label: 'AI Support Available'
-      icon: Brain
-      color: 'from-purple-400 to-pink-500'
-    }
-    {
-      number: '150+'
-      label: 'Countries Served'
-      icon: Globe
-      color: 'from-blue-400 to-cyan-500'
-    },  ];
-  const testimonials = [
-    {    { number: "2000+", label: "Revolutionary Services", icon: Star, color: "from-yellow-400 to-orange-500" }
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, color: "from-green-400 to-emerald-500" }
-    { number: "24/7", label: "AI Support Available", icon: Brain, color: "from-purple-400 to-pink-500" }
-    { number: "150+", label: "Countries Served", icon: Globe, color: "from-blue-400 to-cyan-500" }
-  const testimonials = [
-    {
-      content:
-        "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods."
-      rating: 5
-      avatar: '👩‍🔬'
-    }
-    {
-      name: 'Marcus Rodriguez'
-      role: 'CTO'
-      company: 'SpaceMining Corp'
-      content:
-        "The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks."
-      rating: 5
-    }
-    {
-      name: 'Dr. Emily Watson'
-      role: 'Research Director'
-      company: 'Consciousness Research Institute'
-      content:
-        "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless."
-      rating: 5
 
   const handleGetStarted = useCallback(() => {
     window.location.href = '/revolutionary-2040-2041-pricing-showcase';
@@ -943,8 +854,6 @@ const Homepage2043: React.FC = () => {
                 {/* Navigation Controls */}
                 <button
                   onClick={prevService}
-                  className='absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm'
-
                 >
                   <ChevronLeft className='w-6 h-6' />
                 </button>

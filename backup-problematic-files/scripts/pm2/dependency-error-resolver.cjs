@@ -1,6 +1,15 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -166,6 +175,9 @@ import { execSync, spawn } from;
   'npm: ls', { "stdio": 'pipe})} "catch"
   'UNMET DEPENDENCY') || line.includes('';"missing")
   'npm outdated --json', { "stdio"}
+<<<<<<< HEAD
+        "type": ';outdated, '}))    } "catch"
+=======
         "type": ';outdated, '}))    } "catch"
 <<<<<<< HEAD
 <<<<<<< HEAD

@@ -166,30 +166,22 @@ if (
   $2
 }
               new_skills.push (skill);
-  },
-
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
     try {
       await supabase.functions.invoke ('send - email', {
         body: {
-          to: email
-          subject: 'Your Zion Talent Profile Has Been Enhanced'
           html: `
           <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">
             <h2 style="color: #6D28D9,">Profile Enhancement Complete</h2>
             <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>
             <p>We've added a professional summary and categorized your skills to help you stand out.</p>
             <p>You can review and edit these enhancements in your profile dashboard.</p>
-
   // Handle form submission
   const onSubmit = async (values: TalentFormValues) => {
     if (skillTags.length === 0) {
       toast({
 
-        title: 'Skills required',
-        description: 'Please add at least one skill to your profile.',
-        variant: 'destructive',
       })
 
         title: 'Skills required',
@@ -232,9 +224,6 @@ if (
       let finalSkills = skillTags,;
       if (values.enhancedProfile && !generatedContent) {;
         try {;
-            })
-            // Create a unique set of skills
-            finalSkills = [...new Set([...skillTags, ...aiSkills])]
           }
         } catch (error) {
           // Continue with submission even if enhancement fails;
@@ -586,9 +575,6 @@ if (throw error) {
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
-                    </div>
-                    <label className='flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors'>
-                      <Upload className='mr-2 h-4 w-4' />
                       <span>Upload Photo</span>
                       <input
                         type="file"
@@ -702,9 +688,6 @@ if (throw error) {
                             {Object.entries(generatedContent.categorizedSkills).map(([category, skills]) => (;
                               <div key={category} className="flex items-center gap-2">;
                                 <Badge;
-                                  className={`w-fit ${getCategoryColor(category as CategoryType)}`}
-                                >
-                                  {category}
                                       {skill}
                                     </Badge>;
                                   ))}
@@ -750,15 +733,6 @@ if (throw error) {
                 </div>;
 
 
-                  <FormField
-                    control={form && form.control}
-                    name='availability'
-                    render={({ field }: { field: any }) => (;
-                      <FormItem className='space-y-4'>;
-                        <FormLabel className='text-zion-slate-light'>;
-                          Current Status;
-                        </FormLabel>                        <FormControl>;
-                          <div className='space-y-2'>;
                             <div className='flex items-center space-x-2'>;
                               <input
                                 type='radio'

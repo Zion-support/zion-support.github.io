@@ -14,13 +14,6 @@ export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
 
-  const [ isVisible, setIsVisible ] = useState(false),
-  const [ isClosed, setIsClosed ] = useState(false),
-;
-  useEffect((,) => {;
-    const handleScroll = () => {;
-      const scrollPosition = window.scrollY;
-      const threshold = 600; // Show CTA after scrolling 600px
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY,
@@ -52,12 +45,6 @@ if ( {) {
           >
             <Link href="/signup">Register Now</Link>
           </Button>
-          <button
-            onClick={handleClose}
-            className='text-zion-slate hover:text-white p-1'
-            aria-label='Close'          >
-            <X className='w-5 h-5' />          </button>
-            <X className="w-5 h-5" />
           <button 
             onClick={handleClose}
             className="text-zion-slate hover: text-white p-1"

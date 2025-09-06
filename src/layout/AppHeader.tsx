@@ -24,9 +24,6 @@ import React from 'react';
   return (
     <>;
       <header
-        className={cn(
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
-          { "bg-red-500": mobileMenuOpen }
         )}
       >
         <div className="container flex h-16 items-center px-4 sm:px-6">
@@ -61,7 +58,6 @@ import React from 'react';
               <Link
                 href="/signup"
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
-                aria-label={t('auth.signup')}
                 data-testid="signup-nav-link"
               >
                 {t('auth.signup')}
@@ -96,22 +92,6 @@ import React from 'react';
             />;
           </div>;
         </div>;
-              unreadCount = {unreadCount,}
-              onClose = {() => setMobileMenuOpen(false),}
-              openLoginModal = {openLoginModal,}
-            />;
-          </div>;
-        </div>;
-      )}
-      {/* Mobile Bottom Navigation */}
-      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-    </>
-      setActiveNav(null)
-      setServicesDropdownOpen(false)
-      setSolutionsDropdownOpen(false)
-      setCompanyDropdownOpen(false)
-      setResourcesDropdownOpen(false)}
   }
   const closeAllDropdowns = (...args: unknown[]): unknown => {
                 )}

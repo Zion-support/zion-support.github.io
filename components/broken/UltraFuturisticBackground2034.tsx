@@ -537,38 +537,6 @@ if ( {) {
           animate={{
           }}
           transition={{
-            duration: 6,
-            repeat: -1,
-
-          }}
-          transition={{
-            duration: 12,
-            repeat: -1,
-
-
-        <motion&& motion.div
-          className="absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30"
-          style={{ clipPath: 'polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
-        />;
-        <motion.div;
-          className='absolute bottom - 32 left - 1/3 w - 40 h - 20 border border - green - 400 / 30';
-          style={{ clip_path: 'polygon (0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
-          animate={{
-            rotate: [0, 180, 360],
-            opacity: [0.2, 0.5, 0.2],          }}
-          transition={{
-            duration: 12,
-            repeat: -1,
-            ease: 'linear',          }}          }}
-        />;
-        <motion.div;
-          className="absolute bottom - 32 left - 1/3 w - 40 h - 20 border border - green - 400 / 30";
-          style={{ clip_path: 'polygon (0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
-          animate={{
-          }}
-          transition={{
-            duration: 12,
-            repeat: -1,
           }}
         />
       </div>
@@ -614,6 +582,11 @@ if ( {) {
             repeat: -1,
             ease: "linear"
           }}
+          animate={{
+            coordinate_y: ['-100%100%'];
+          }}
+          transition={{
+
             duration: 20,
             repeat: -1,
 
@@ -736,7 +709,6 @@ export default UltraFuturisticBackground2034;        <motion.div;
             backgroundSize: '50px 50px'
           }}
           animate={{
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
           }}
           transition={{
 
@@ -752,12 +724,3 @@ export default UltraFuturisticBackground2034;        <motion.div;
 
 };
 
-          }}
-          transition={{
-            duration: 4,
-            repeat: -1,
-
-          }}
-        />
-      </div>
-    </div>

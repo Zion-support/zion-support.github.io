@@ -69,4 +69,3 @@ function Stat() {
       </div>
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
-  );

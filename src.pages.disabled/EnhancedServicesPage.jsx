@@ -31,7 +31,3 @@ export default function EnhancedServicesPage({ }: EnhancedServicesPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}
-}

@@ -3,11 +3,6 @@
 }</pre>)
 }</section> </div>) import { useEffect, useState } from 'react';
 import Head from 'next/head';
-
-
-
-export default function AutomationInsightsPage() {;
-
 export default function AutomationInsightsPage() {
   const [intel, setIntel] = useState<any>(null);
   const [talentMd, setTalentMd] = useState<string>('');

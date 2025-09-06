@@ -18,6 +18,10 @@
         body: JSON.stringify({
   const [form, setForm] = useState({;
     title: 'Zion DAO x Digital Labor Initiative',;
+export default function UNBridge(req, res) {
+  try {
+  const [form, setForm] = useState({;
+    title: 'Zion DAO x Digital Labor Initiative';
     targetInstitution: 'UN Development Programme',;
     type: 'Workforce Dev',;
     regionalScope: 'Global South',;
@@ -123,30 +127,24 @@
             <button onClick={() => translate('ar')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate AR</button>
           </div>
           {translated && (
-            <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
-              {translated  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            </div>;
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+          </div>
           <div className="flex items-center gap-2">
-            <button onClick={exportArtifacts} disabled={loading || !result} className="px-3 py-2 border rounded">Export PDF + Sign + IPFS</button>
-            <button onClick={() => submit(['email'])} disabled={loading || !result} className="px-3 py-2 border rounded">Submit (Email)</button>
+            <button onClick={() => translate('fr')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate FR</button>
+            <button onClick={() => translate('es')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate ES</button>
+            <button onClick={() => translate('ar')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate AR</button>
+          </div>
+          {translated && (
+
+
+
           </div>
           {result?.meta && (
             <div className="text-sm space-y-1">
               <div><span className="font-medium">Status:</span> {result.meta.status}</div>
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
               )  } catch (error) {
     console.error("Error:", error);

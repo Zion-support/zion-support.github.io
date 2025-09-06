@@ -7,8 +7,6 @@ interface MobileFilterBarProps {
   setIsMobileFilterOpen: (isOpen: boolean) => void
 }
 
-  setSearchTerm
-  setIsMobileFilterOpen
 
 }: MobileFilterBarProps) {
   return (

@@ -1,18 +1,3 @@
-  Users
-  MapPin
-  Clock
-  DollarSign
-  ArrowRight
-  Heart
-  Star
-  Award
-  Coffee
-  Zap
-  Shield
-  Briefcase
-  GraduationCap
-  Globe
-  CheckCircle
   Users,
   MapPin,
   Clock,
@@ -148,7 +133,6 @@ const values = [
     title: "Integrity"
     description:
 ];
-export default function CareersPage() {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -247,6 +231,8 @@ export default function CareersPage() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
             <div className="text-center text-white">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
@@ -562,4 +548,6 @@ function CareersPage() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+    </MainLayout>;
+  );
 }

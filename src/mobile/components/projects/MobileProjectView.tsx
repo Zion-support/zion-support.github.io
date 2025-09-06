@@ -64,8 +64,6 @@ interface ProjectViewProps {;
                 <p className="font-medium">{project.startDate}</p>
               </div>
               <div>
-                <p className='text-muted-foreground'>End Date</p>
-                <p className='font-medium'>{project.endDate |'Not set'}</p>
                 <p className="text-muted-foreground">Status</p>
                 <p className="font-medium capitalize">{project.status}</p>
               </div>
@@ -107,7 +105,6 @@ interface ProjectViewProps {;
           </div>
         </CardContent>
       </Card>
-      <section>
                   <Button
                     size='sm'
                     variant='outline'

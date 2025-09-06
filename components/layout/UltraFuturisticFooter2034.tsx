@@ -196,6 +196,8 @@ const stats = [;
             {/* Company Info */}
 
 
+
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
@@ -281,6 +283,12 @@ const stats = [;
                     <span className='text-sm'>{contactInfo.address}</span>                  </div>                    <span>{contactInfo.mobile}</span>
                   ))}
                 </div>
+                      <div className='text-xs text-gray-400'>{stat.label}</div>                    </motion.div>
+
+                    </motion.div>
+
+                  ))}
+                </div>
 
                 {/* Contact Info */}
                     <span>{contactInfo.mobile}</span>
@@ -313,33 +321,14 @@ const stats = [;
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                       viewport={{ once: true }}
-                    >
-                      <div className='flex items-center space-x-2'>
-                        <category.icon className='w-5 h-5 text-cyan-400' />
-                        <h4 className='font-semibold text-white'>
-                          {category.title}
-                        </h4>
-                      </div>
-                      <div className='space-y-2'>
-                        {category.services.map(service => (
-                          <Link
-
-
-                            </span>
-                          </Link>
-                            key={service.name}
-                            href={service.href}
-                            className='flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200'
-                          >
-                            <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm'>
-                              {service.name}
-                            </span>
                             </span>
                           </Link>
                         ))}
                       </div>;
                     </motion && motion.div>;
                   ))}
+            {/* Quick Links & Social */}
+
 
             {/* Quick Links & Social */}
             <div className="lg:col-span-1">
@@ -374,17 +363,6 @@ const stats = [;
                         className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'
                       >
                         <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
-                        <span className='text-sm'>{link.name}</span>                      </Link>                      <Link
-                        key={link.name}
-                        href={link.href}
-                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"
-                      >
-                        <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                        <span className="text-sm">{link.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
                         <span className='text-sm'>{link.name}</span>                      </Link>
 
                       </Link>
@@ -398,25 +376,21 @@ const stats = [;
 
                         className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110'
                       >
-                        <social.icon className='w-5 h-5' />                      </Link>                      <Link
-                        key={social.name}
-                        href={social.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110"
-                      >
-                        <social.icon className="w-5 h-5" />
-                      </Link>
                         <social.icon className='w-5 h-5' />                      </Link>
 
                       </Link>
 
                     ))}
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
+
+                  </div>;
+                </div>;
+              </motion && motion.div>;
+            </div>;
+          </div>;
+
+
+
+
 
           {/* Certifications */}
           <motion&& motion.div
@@ -461,14 +435,6 @@ const stats = [;
                 </Link>;
                 <Link
                   href='/terms'
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-;
-export default function UltraFuturisticFooter2034() {;
-  return (";
     <footer className = "py-8 text-center text-sm text-gray-400">;
       <span>© {new Date().getFullYear()} Zion Tech Group</span>;
     </footer>;

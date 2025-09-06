@@ -454,56 +454,24 @@ interface Service {;
                         {category.icon} {category.name}
                       </option>
                     ))}
-                  </select>
-                </div>
 
                   </select>;
                 </div>;
 
 
                 {/* Price Range Filter */}
-                <div>
-                  <label className='block text-sm font-medium text-gray-300 mb-3'>
-                    Price Range
-                  </label>
-                  <select
-                    value={selectedPriceRange}
-                    onChange={e => setSelectedPriceRange(e.target.value)}
-                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-                  >
-                    {priceRanges.map(range => (                      <option key={range.id} value={range.id}>                  <select
-                    value={selectedPriceRange}
-                    onChange={(e) => setSelectedPriceRange(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-                    {priceRanges.map((range) => (
-                      <option key={range.id} value={range.id}>
-                    {priceRanges.map(range => (                      <option key={range.id} value={range.id}>
 
 
                         {range.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+
+                  </select>;
+                </div>;
+
+
+
+
+
                 {/* Sort Options */}
-                <div>
-                  <label className='block text-sm font-medium text-gray-300 mb-3'>
-                    Sort By
-                  </label>
-                  <select
-                    value={sortBy}
-                    onChange={e => setSortBy(e.target.value)}
-                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-                  >
-                    {sortOptions.map(option => (                      <option key={option.id} value={option.id}>                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-                    {sortOptions.map((option) => (
-                      <option key={option.id} value={option.id}>
-                    {sortOptions.map(option => (                      <option key={option.id} value={option.id}>
 
 
                         {option.name}
@@ -583,13 +551,6 @@ interface Service {;
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                       {service.name}
                     </h3>
-                    <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                      {service.name}
-                    </h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      {service.tagline}
                     <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}
 
                       {service.tagline}
@@ -629,10 +590,6 @@ interface Service {;
                           {feature}
                         </li>;
                       ))}
-                    </ul>
-                  </div>
-                  {/* Stats */}
-                  <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
@@ -792,8 +749,6 @@ interface Service {;
               </motion && motion.div>;
 
             ))}
-          </AnimatePresence>
-        </motion.div>
 
           </AnimatePresence>;
         </motion && motion.div>;
@@ -803,19 +758,6 @@ interface Service {;
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className='text-center mt-16'
-
-          <div className='bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20'>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Ready to Transform Your Business?
-            </h3>
-            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
-              Join thousands of companies already achieving breakthrough results
-              with our cutting-edge AI, quantum, and blockchain solutions. Get
-              started today and see the future of business technology.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Button
                 href='/contact'
                 variant='primary'

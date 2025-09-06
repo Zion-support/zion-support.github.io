@@ -1,21 +1,31 @@
 
-export default function SEOAnalyzerToolPage() {
+
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+
+import Button from '../components/ui/Button';
+
+import {
+
+  Search,
+  TrendingUp,
+  CheckCircle,
+  AlertTriangle,
+  ArrowRight,
+  Target,
+  BarChart3,
+  Globe,
+  Smartphone,;
+  Zap,;
+
+
+export default function SEOAnalyzerToolPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [url, setUrl] = useState('');
 
     {
-      category: 'Technical SEO'
-      factors: [
-        'Page load speed'
-        'Mobile responsiveness'
-        'XML sitemap'
-        'Robots.txt configuration'
-        'SSL certificate'
-        'Core Web Vitals'
-      ]
-      icon: ''
-      color: 'text-blue-400'
     }
     {
       category: 'Content SEO'
@@ -285,28 +295,6 @@ export default function SEOAnalyzerToolPage() {
 
   };
 
-  return (
-    <>
-      <Head>
-        <title>
-          SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis &
-          Optimization
-        </title>
-        <meta
-          name='description'
-          content="Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve search rankings."
-        />
-        <meta
-          property='og:title'
-          content='SEO Analyzer Tool - Zion Tech Group'
-        />;
-        <meta
-          property='og:description'
-          content='Professional SEO analysis tool with comprehensive insights and optimization recommendations.'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-      </Head>
-      {/* Hero Section */}
   return (
 
       setIsAnalyzing (false);
@@ -587,6 +575,68 @@ export default function SEOAnalyzerToolPage() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-green"
+            ))}
+
+
+
+
+
+      {/* SEO Factors Section */}
+
+
+
+
+
+              Comprehensive SEO Analysis
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              We analyze every aspect of your website's SEO to provide
+              actionable insights and recommendations.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            {seoFactors.map((category, index) => (
+          </div>;
+        </div>;
+      </section>;
+      {/* SEO Factors Section */}
+      <section className='section-padding bg-gradient-cursor'>;
+        <div className='container-cursor'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+              Comprehensive SEO Analysis;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+                    </p>;
+                  </div>;
+                </div>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* SEO Factors Section */}
+      <section className='section - padding bg - gradient - cursor'>;
+        <div className='container - cursor'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+              Comprehensive SEO Analysis;
+            </h2>;
+            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+              We analyze every aspect of your website's SEO to provide;
+              actionable insights and recommendations.;
+            </p>;
+          </div>;
+
+      <section className="section-padding bg-gradient-cursor">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {feature.description}
+
+                      {feature.description}
+
                     </p>
                   </div>
                 </div>
@@ -1033,18 +1083,6 @@ export default function SEOAnalyzerToolPage() {
                 </ul>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-              </Card>
-            ))}
 
           </div>;
         </div>;
@@ -1072,16 +1110,6 @@ export default function SEOAnalyzerToolPage() {
               href='/contact'
               variant='outline'
               size='lg'
-              className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'            >              href="/contact"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
-              Schedule Demo
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
               Schedule Demo;
             </Button>;
           </div>;
@@ -1089,7 +1117,5 @@ export default function SEOAnalyzerToolPage() {
       </section>;
 
 
-  );
-}
     </>);
 }

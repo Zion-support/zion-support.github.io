@@ -2,6 +2,11 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import {
+
   Code,
   GitBranch,
   Database,
@@ -43,6 +48,198 @@ export default function DeveloperToolsPage() {
       text_color: 'text - orange - 400',
       gradient: 'from - orange - 400 to - red - 500',
       popular: false,
+  ];
+
+;
+  const devMarketStats = [;
+
+    {
+
+      title: 'Dev Tools Market',
+      value: '$8.2B',
+      growth: '+24% YoY',
+      description: 'Global developer tools market size'
+    };
+    {
+      title: 'AI Code Tools',
+      value: '$2.1B',
+      growth: '+45% YoY',
+
+    {
+
+      name: 'Code Generation',
+      description: 'AI - powered coding assistants and code completion tools',
+      tools: 1,
+
+  ];
+  const devWorkflow = [
+    {
+
+      phase: 'Development',
+      tools: ['GitHub CopilotVS CodeGit'],
+
+      description: 'Write and manage code with AI assistance'
+    }
+
+export default function DeveloperToolsPage() {;
+  const developerTools = [;
+    {;
+      icon: <Code className='w-8 h-8 text-white' />,;
+      title: 'GitHub Copilot',;
+      description:;
+        'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',;
+      features: [;
+        'Intelligent code completion',;
+        'Multi-language support',;
+        'IDE integration',;
+        'Code explanation',;
+        'Security vulnerability detection',;
+      ],      pricing: '$10/month',      title: 'GitHub Copilot',;
+      description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',;
+      features: [;
+        'Intelligent code completionMulti-language supportIDE integrationCode explanationSecurity vulnerability detection';
+      ];
+      pricing: '$10/month',;
+      marketPrice: '$10-20/month',;
+      website: 'https://github && github.com/features/copilot',;
+      color: 'bg-gradient-to-br from-gray-500 to-black',;
+      textColor: 'text-gray-400',;
+      gradient: 'from-gray-400 to-black',;
+      popular: true,;
+      category: 'Code Generation',;
+    },;
+      icon: <GitBranch className='w-8 h-8 text-white' />,;
+      title: 'GitHub Pro',;
+      description:;
+        'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.',;
+      features: [;
+        'Unlimited private repositories',;
+        'Advanced code review tools',;
+        'Priority support',;
+        'Advanced insights',;
+        'Team management features',;
+      ],      pricing: '$4/month',        'Unlimited private repositoriesAdvanced code review toolsPriority supportAdvanced insightsTeam management features';
+      ];
+      pricing: '$4/month',;
+      marketPrice: '$4/month',;
+      website: 'https://github && github.com/pricing',;
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',;
+      textColor: 'text-green-400',;
+      gradient: 'from-green-400 to-emerald-500',;
+      popular: true,;
+      category: 'Version Control',;
+    },;
+      icon: <Database className='w-8 h-8 text-white' />,;
+      title: 'MongoDB Atlas',;
+      description:;
+        'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.',;
+      features: [;
+        'Fully managed MongoDB',;
+        'Auto-scaling & optimization',;
+        'Global distribution',;
+        'Advanced security',;
+        'Real-time analytics',;
+      ],      pricing: '$9/month',        'Fully managed MongoDBAuto-scaling & optimizationGlobal distributionAdvanced securityReal-time analytics';
+      ];
+      pricing: '$9/month',;
+      marketPrice: '$9-57/month',;
+      website: 'https://www && www.mongodb.com/atlas',;
+      color: 'bg-gradient-to-br from-green-500 to-blue-600',;
+      textColor: 'text-green-400',;
+      gradient: 'from-green-400 to-blue-500',;
+      popular: false,;
+      category: 'Database',;
+    },;
+      icon: <Cloud className='w-8 h-8 text-white' />,;
+      title: 'Vercel Pro',;
+      description:;
+        'Next && Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.',;
+      features: [;
+        'Zero-config deployments',;
+        'Preview deployments',;
+        'Advanced analytics',;
+        'Team collaboration',;
+        'Custom domains',;
+      ],      pricing: '$20/month',        'Zero-config deploymentsPreview deploymentsAdvanced analyticsTeam collaborationCustom domains';
+      ];
+      pricing: '$20/month',;
+      marketPrice: '$20/month',;
+      website: 'https://vercel && vercel.com/pricing',;
+      color: 'bg-gradient-to-br from-black to-gray-600',;
+      textColor: 'text-gray-400',;
+      gradient: 'from-black to-gray-500',;
+      popular: false,;
+      category: 'Deployment',;
+    },;
+      icon: <Shield className='w-8 h-8 text-white' />,;
+      title: 'Snyk',;
+      description:;
+        'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.',;
+      features: [;
+        'Vulnerability scanning',;
+        'Dependency monitoring',;
+        'Container security',;
+        'Infrastructure as Code',;
+        'CI/CD integration',;
+      ],      pricing: '$25/month',        'Vulnerability scanningDependency monitoringContainer securityInfrastructure as CodeCI/CD integration';
+      ];
+      pricing: '$25/month',;
+      marketPrice: '$25-100/month',;
+      website: 'https://snyk && snyk.io/pricing',;
+      color: 'bg-gradient-to-br from-red-500 to-pink-600',;
+      textColor: 'text-red-400',;
+      gradient: 'from-red-400 to-pink-500',;
+      popular: false,;
+      category: 'Security',;
+    },;
+      icon: <Zap className='w-8 h-8 text-white' />,;
+      title: 'Postman',;
+      description:;
+        'Complete API development platform for building, testing, and documenting APIs with team collaboration.',;
+      features: [;
+        'API design & testing',;
+        'Team collaboration',;
+        'API documentation',;
+        'Mock servers',;
+        'Monitoring & analytics',;
+      ],      pricing: '$12/month',        'API design & testingTeam collaborationAPI documentationMock serversMonitoring & analytics';
+      ];
+      pricing: '$12/month',;
+      marketPrice: '$12-99/month',;
+      website: 'https://www && www.postman.com/pricing',;
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',;
+      textColor: 'text-orange-400',;
+      gradient: 'from-orange-400 to-red-500',;
+      popular: false,;
+      category: 'API Development',;
+    },  ];      category: 'API Development';
+    }
+  ];
+
+    }
+  ];
+;
+  return (
+    <>;
+      <Head>;
+        <title>;
+          Developer Tools & Services | Zion Tech Group - Real Dev Tools with;
+          Pricing;
+        </title>;
+
+  ];
+
+  return (
+    <>
+      <Head>
+        <title>Developer Tools & Services | Zion Tech Group - Real Dev Tools with Pricing</title>
+        <meta name="description" content="Discover real developer tools and services including GitHub Copilot, MongoDB Atlas, Vercel, and more. All tools include pricing, features, and direct links." />
+        <meta property="og:title" content="Developer Tools & Services | Zion Tech Group" />
+        <meta property="og:description" content="Real developer tools with pricing and direct links to boost your development workflow." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+
+
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
@@ -93,15 +290,11 @@ export default function DeveloperToolsPage() {
               </Card>
 
             ))}
-          </div>
-        </div>
-      </section>
-
       {/* Developer Tools Grid */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
+
+
+
 
               Curated Developer Tools & Services
             </h2>
@@ -194,15 +387,11 @@ export default function DeveloperToolsPage() {
               </Card>
 
             ))}
-          </div>
-        </div>
-      </section>
-
       {/* Developer Workflow */}
-      <section className='section-padding bg-gradient-cursor-accent'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
+
+
+
 
               Complete Developer Workflow
             </h2>

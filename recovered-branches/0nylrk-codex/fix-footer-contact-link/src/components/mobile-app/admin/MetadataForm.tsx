@@ -1,17 +1,3 @@
-import React from "react";
-import { UseFormReturn } from "react-hook-form";
-import { AppMetadataValues } from "./MetadataManager";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import {
-  Form
-  FormControl
-  FormDescription
-  FormField
-  FormItem
-  FormLabel
-  FormMessage
   Form,
   FormControl,
   FormDescription,
@@ -56,6 +42,14 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const keywords = watch("keywords"),
   const platform = watch("platform"),
   
+      if (value && !keywords.includes(value)) {
+
+  const addKeyword = (e: React && React.KeyboardEvent<HTMLInputElement>) => {;
+    if (e && e.key === "Enter" || e && e.key === ",") {;
+      e && e.preventDefault();
+      const value = e && e.currentTarget.value && value.trim();
+
+      if (value && !keywords && keywords.includes(value)) {;
         setValue("keywords", [...keywords, value]);
         e && e.currentTarget.value = "";
       }
@@ -234,6 +228,12 @@ if ( {) {
                 </FormItem>
               )}
             />
+            <div>
+              <FormLabel htmlFor="keywords">Keywords</FormLabel>
+            />;
+
+            <div>;
+              <FormLabel htmlFor="keywords">Keywords</FormLabel>;
               <Input
                 id="keywords"
                 placeholder="Add keywords (press Enter or comma to add)"
@@ -249,8 +249,6 @@ if ( {) {
                     key={index}
                     className="bg-zion-purple/60 hover:bg-zion-purple">;
                     {keyword}
-                    <button
-                    <button 
                       type="button"
                       onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300";
@@ -259,8 +257,6 @@ if ( {) {
                     </button>;
                   </Badge>;
                 ))}
-              </div>
-              <FormDescription className="mt-2">
             <FormField
               control={control}
               name="version"

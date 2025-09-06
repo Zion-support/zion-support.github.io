@@ -117,30 +117,6 @@ import { RefreshCcw, AlertCircle } from 'lucide-react';
             on_click={() => window.location.reload ()}
             variant="outline";
             className="w - full";
-import React from 'react',;
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary',;
-import * as Sentry from '@sentry/nextjs',;
-import { mutate } from 'swr',;
-import { Button } from '@/components/ui/button',;
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',;
-import { RefreshCcw, AlertCircle } from 'lucide-react';
-import {logErrorToProduction} from '@/utils/productionLogger',;
-interface MarketplaceErrorFallbackProps extends FallbackProps {;
-  // Additional props if needed;
-}
-;
-function MarketplaceErrorFallback({ error, resetErrorBoundary } MarketplaceErrorFallbackProps) {;
-  const handleRetry = async () => {;
-    try {;
-      // Re-call SWR mutate('*') to refresh all cached data;
-      await mutate(() => true, undefined, { revalidate:true }),;
-      resetErrorBoundary(),;
-    } catch (retryError) {;
-      logErrorToProduction('Error during retry:', { data:retryError }),;
-      Sentry.captureException(retryError),;
-    }
-  },;
-;
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode
 export function MarketplaceErrorBoundary({

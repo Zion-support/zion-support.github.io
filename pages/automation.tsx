@@ -65,6 +65,22 @@ export default function AutomationPage() {
   }
 }
   ],
+        <section className="pt-32 pb-20 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
+          </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div className="mb-8">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Intelligent Automation
+              </div>
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+
+
+
               Automation Hub
             </h1>
             <p className='text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>
@@ -83,7 +99,6 @@ export default function AutomationPage() {
             </div>
           </div>
         </section>
-        {/* Features Section */}
                 Automation Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -144,6 +159,11 @@ export default function AutomationPage() {
                       </div>
                       <span className="text-gray-300 text-lg">{benefit}</span>
                     </div>
+                  ))}
+
+              
+
+
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
                   <div className="text-center">
@@ -162,10 +182,6 @@ export default function AutomationPage() {
             </div>
           </div>
         </section>
-        {/* CTA Section */}
-        <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700'>
-          <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

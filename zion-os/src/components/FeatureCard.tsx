@@ -27,6 +27,8 @@ function FeatureCard() {
   }
   return (
     <div;
+          e.preventDefault();
+          onClick();
         }
       }}
       tab_index={0}

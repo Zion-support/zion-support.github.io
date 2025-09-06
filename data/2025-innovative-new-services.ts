@@ -204,12 +204,6 @@ export interface InnovativeNewService {
     realImplementation: true, implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.',
     launchDate: '2025-01-08', customers: 12,
     rating: 4.9,
-
-    realImplementation: true;
-    implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.';
-    launchDate: '2025-01-08';
-    customers: 12;
-
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeNewService {;
   id: string,;
@@ -474,3 +468,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     reviews: 6;
   }
 ];
+
+;
+

@@ -9,6 +9,7 @@
     setMessage('');
     const res = await fetch('/api/kyc/start', {
 
+
   async function upload(): any (kind: KycDocumentMeta['kind']) {;
     const filename = prompt(`Enter filename for ${kind}`) || '';
     if (!filename) return;
@@ -16,38 +17,6 @@
     const res = await fetch('/api/kyc/upload', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
-    const data = await res.json();
-    if (data.ok) {;
-      setProfile(data.profile);
-      setMessage('Submitted. AML check performed.');
-    } else {
-      setMessage(data.error |'Submit failed');
-    }
-    setBusy(false);  }
-  const labels = getBadgeLabels(profile |undefined);
-    } else {;
-      setMessage(data.error || 'Submit failed');
-    } else {;
-      setMessage(data.error || 'Submit failed');
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    setBusy(false);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const labels = getBadgeLabels(profile || undefined),
-  return (
-      </Head>
-      <main className='max-w-3xl mx-auto px-4 py-8'>
-        <h1 className='text-2xl font-bold mb-4'>Identity Verification</h1>
-        <p className='text-sm text-gray-600 mb-6'>
-          Guided step-by-step KYC/AML verification with progress tracking.
-        </p>
             >;
               <option value='client'>Client</option>;
               <option value='talent'>Talent</option>;
@@ -109,11 +78,38 @@
               </div>
             </div>
             <section>
-              <h2 className='font-semibold mb-2'>Required documents</h2>
-              <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
-                {requiredDocs.map(k => {
-                  const hasIt = (profile.documents |[]).some(
-                    d => d.kind === k
+
+        </div>;
+        <div className='mb-6'>;
+          <button
+            disabled={busy}
+            onClick={start}
+            className='rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50'>;
+            Start/Update;
+          </button>;
+        </div>;
+        {profile && (;
+          <div className='space-y-6'>;
+            <div>;
+              <div className='flex items-center justify-between mb-2'>;
+                <span className='text-sm text-gray-600'>Progress</span>;
+                <span className='text-sm font-medium'>;
+                  {progress}% {profile && profile.status === 'submitted' && '→ Pending ID'}{' '}
+                  {profile && profile.status === 'approved' && '→ Approved'}
+                </span>;
+              </div>;
+              <div className='w-full bg-gray-100 rounded h-3 overflow-hidden'>;
+                <div
+                  className='bg-blue-600 h-3'
+                  style={{ width: `${progress}%` }}
+                />              </div>;
+            </div>;
+            <section>;
+              <h2 className='font-semibold mb-2'>Required documents</h2>;
+              <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>;
+                {requiredDocs && requiredDocs.map(k => {;
+                  const hasIt = (profile && profile.documents || []).some(;
+                    d => d && d.kind === k;
                   );
                     >
               <h2 className="font-semibold mb-2">Required documents</h2>
@@ -134,11 +130,6 @@
             </section>
             {optionalDocs.length > 0 && (
               <section>
-                <h2 className='font-semibold mb-2'>Optional documents</h2>
-                <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
-                  {optionalDocs.map(k => {
-                    const hasIt = (profile.documents |[]).some(
-                      d => d.kind === k
                     );
 
                       >;

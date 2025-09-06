@@ -1,10 +1,3 @@
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Sparkles
-  Star;
   Phone,
   Mail,
   MapPin,
@@ -41,4 +34,3 @@ export default function MetaverseAIPlatformPage() {;
     </UltraAdvancedFuturisticBackground>
 
   );
-}

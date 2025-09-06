@@ -27,23 +27,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
                     currentPath === item.path
                       ? "bg-zion-purple/20 text-zion-cyan"
                       : "text-zinc-400 hover:text-white hover:bg-zinc-900"
-                  )}
-                >
-                  {item.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-      {/* Main content */}
-      <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">
-        {children}
-      </div>
-    </div>
-  )
-}
-export default ApiDocsLayout;
 
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;

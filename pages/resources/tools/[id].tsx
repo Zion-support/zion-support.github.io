@@ -339,7 +339,6 @@ export default function ToolResourcePage(req, res) {
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
-                  {tool.type}
                   {tool.type  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

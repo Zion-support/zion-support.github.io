@@ -126,25 +126,3 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
               id="title";
               value={title}
               onChange={(e) => handleInputChange(e, 'title')}
-              placeholder="Enter your product or service title";
-              className="bg-zion-blue border border-zion-blue-light text-white";
-              disabled={isLoading}
-            />;
-          </div>;
-          <div className="space-y-2">;
-            <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>;
-            <Input;
-              id="category";
-              value={category}
-              onChange={(e) => handleInputChange(e, 'category')}
-              placeholder="e.g. AI Tool, Digital Product, Service";
-              className="bg-zion-blue border border-zion-blue-light text-white";
-              disabled={isLoading}
-            />;
-          </div>;
-          <div className="space-y-2">;
-            <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;
-            <Textarea;
-              id="keyFeatures";
-              value={keyFeatures}
-              onChange={(e) => handleInputChange(e, 'keyFeatures')}

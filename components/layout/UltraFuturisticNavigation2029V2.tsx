@@ -1,61 +1,3 @@
-  Menu
-  X
-  Search
-  ChevronDown
-  ChevronRight
-  Home
-  Users
-  Settings
-  HelpCircle
-  Mail
-  Phone
-  MapPin
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  Shield
-  Globe
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Eye
-  Globe2
-  Zap
-  Rocket
-  Brain
-  Sparkles
-  ShieldCheck
-  Target
-  Users2
-  Briefcase
-  Lightbulb
-  Award
-  Clock
-  CheckCircle;} from 'lucide-react';import {
   Menu,
   X,
   Search,
@@ -150,6 +92,19 @@ const main_navigation = [;
 const quickLinks = [
   { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: 'Case Studies', href: '/case - studies', icon: BookOpen },
+  { name: 'Blog', href: '/blog', icon: BookOpen },
+  { name: 'News', href: '/news', icon: TrendingUp },
+  { name: 'Careers', href: '/careers', icon: GraduationCap },
+
+
+
+export default function UltraFuturisticNavigation2029V2() {
+  const [isOpen, setIsOpen] = useState(false)
+
+
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -285,35 +240,7 @@ const quickLinks = [
                     href={item && item.href}
                     onClick={closeMenu}
               {/* Quick Links */}
-              <div className='pt-4 border-t border-gray-700'>
-                <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
-                  Quick Links
-                </h3>
-                <div className='space-y-2'>
-                  {quickLinks.map(item => (                    <Link
-                      key={item.name}
-                      href={item.href}
-                      onClick={closeMenu}
-                      className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
-                    >
-                      <item.icon className='w-4 h-4' />
-                      <span className='text-sm'>{item.name}</span>                    </Link>              <div className="pt-4 border-t border-gray-700">
-                <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Quick Links</h3>
-                <div className="space-y-2">
-                  {quickLinks.map((item) => (
-                      key={item.name}
-                      href={item.href}
-                      onClick={closeMenu}
-                      className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
-                    >
-                      <item.icon className='w-4 h-4' />
-                      <span className='text-sm'>{item.name}</span>                      className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
-                    >
-                      <item.icon className="w-4 h-4" />
-                      <span className="text-sm">{item.name}</span>
-                  ))}
-                </div>
-              </div>
+
 
                   ))}
                 </div>
@@ -354,8 +281,6 @@ const quickLinks = [
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40'
 
 
           >

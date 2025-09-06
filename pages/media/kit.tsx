@@ -1,27 +1,3 @@
-import DatePicker from 'react-datepicker';
-
-import type {
-  MediaBundle
-  MediaAsset
-  PressReleaseType;
-} from '../../utils/mediaKit';
-import {
-  getDefaultAssets
-  buildPressRelease
-  buildTimeline;
-  MediaAsset,;
-  PressReleaseType,;
-} from '../../utils/mediaKit';
-import {
-  getDefaultAssets,
-  buildPressRelease,;
-  buildTimeline,;
-import { useCallback, useMemo, useState } from 'react';
-import Head from 'next/head';
-import DatePicker from 'react-datepicker';
-import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
-import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
-const KitPage = () => {;
 
 
   const [bundle, setBundle] = useState<MediaBundle>('general');
@@ -29,44 +5,6 @@ const KitPage = () => {;
   const [companyName, setCompanyName] = useState('Zion');
   const [raiseAmount, setRaiseAmount] = useState('$5M');
   const [tokenName, setTokenName] = useState('ZION');
-  );
-  const assets: MediaAsset[] = useMemo(
-    () => getDefaultAssets(bundle)
-    [bundle]
-  );
-  const onGenerateTimeline = useCallback(() => {
-    setTimeline(buildTimeline(startDate));  }, [startDate]);
-  const onDownloadZip = useCallback(async () => {
-    const JSZip = (await import('jszip')).default;
-    const zip = new JSZip();
-    // Add static/dynamic assets
-     else if (asset.type === 'binary' && asset.path) {
-        const res = await fetch(asset.path);
-        const blob = await res.blob();
-        zip.file(asset.filename, blob);      }
-    }
-    // Add press releases
-    const nowStr = new Date().toISOString().substring(0, 10);
-    const prSeed = buildPressRelease('seed-round', {
-      companyName
-      date: nowStr
-      raiseAmount
-    });
-    const prLaunch = buildPressRelease('launch', { companyName, date: nowStr });
-    const prToken = buildPressRelease('token-sale', {
-      companyName
-      date: nowStr
-      tokenName
-    });    zip.file('press-releases/seed-round.md', prSeed);
-    zip.file('press-releases/launch.md', prLaunch);
-    if (bundle === 'web3') zip.file('press-releases/token-sale.md', prToken);
-    // Add timeline if generated
-    if (timeline.length > 0) {
-      const tl = timeline.map(t => `${t.label}: ${t.date}`).join('\n');
-      zip.file('rollout-timeline.txt', tl);
-    }
-    const blob = await zip.generateAsync({ type: 'blob' });
-    const { saveAs } = await import('file-saver');
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
@@ -184,31 +122,6 @@ if ( {) {
   }: {;
     type: PressReleaseType;
     title: string;
-    return (
-      <div className="p-4 border rounded-lg space-y-2">
-        <div className="flex items-center justify-between">
-          <h4 className="font-semibold">{title}</h4>
-          <button className="text-sm px-3 py-1 rounded bg-gray-100 hover:bg-gray-200" onClick={onCopy}>Copy</button>
-        </div>
-        <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
-      </div>
-    );  }
-
-  return (
-
-  return (
-    <div>;
-      <Head>;
-        <title>Media Kit - Zion</title>;
-        <meta
-          name='description'
-          content='Zion media kit: brand, assets, legal, and rollout playbooks.'
-        />
-      </Head>
-      <div className='space-y-8'>
-        <header className='flex items-center justify-between'>
-          <h1 className='text-2xl font-bold'>Media Kit</h1>
-          <div className='flex gap-2'>
             <button
               onClick={onDownloadZip}
               className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700'>;
@@ -216,7 +129,6 @@ if ( {) {
             </button>;
             <button
               onClick={onGeneratePdf}
-              className='px-4 py-2 rounded bg-gray-900 text-white hover:bg-black'>;
               Generate PDF;
             </button>;
           </div>;
@@ -298,6 +210,22 @@ if ( {) {
         </section>;
       </div>;
     </div>;
+            {assets.map(a => (
+              <li key={a.filename} className="flex items-center justify-between border rounded p-2">
+                <span className="text-sm">{a.filename}</span>
+                {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</Link> : <span className="text-gray-400 text-xs">generated</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </li>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </ul>
+        </section>
   );
 
 },;

@@ -20,16 +20,6 @@ export default function EmptyState(): any ({;
   secondaryAction?: { label: string; href: string };
 };
 
-  primaryAction?: { label: string; href: string }
-  secondaryAction?: { label: string; href: string }
-}
-export default function EmptyState({
-  title
-  description
-  icon
-  primaryAction
-  secondaryAction
-}: EmptyStateProps) {
 import React from 'react';
 
 interface EmptyStateProps {
@@ -115,3 +105,7 @@ export default function EmptyState({ title, description, icon, primaryAction, se
           )}
         </div>;
       )}
+
+    </div>
+  );
+

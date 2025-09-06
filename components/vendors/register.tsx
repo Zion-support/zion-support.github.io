@@ -79,6 +79,7 @@ function on_submit() {
       set_message ('Application submitted. Await approval.');
       form.reset ();
 
+
   return (            .map(s => s.trim())
             .filter(Boolean);
           teamSize: Number(payload.teamSize |0)

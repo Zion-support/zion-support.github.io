@@ -174,26 +174,6 @@ if ( {) {
 
           }}
           transition={{
-            duration: 20
-            repeat: Infinity
-            duration: 20,
-            repeat: Infinity,
-            ease: 'easeInOut',            ease: "easeInOut";
-          }}
-        />
-      </div>
-            duration: 20,
-            repeat: Infinity,
-
-          }}
-
-        />
-      </div>
-
-
-            duration: 20,
-            repeat: Infinity,
-
       {/* Floating geometric shapes */}
       <motion&& motion.div
         className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
@@ -219,10 +199,6 @@ if ( {) {
       <motion.div
         className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
         animate={{
-          opacity: [0.2, 0.5, 0.2],        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
           ease: 'linear',        }}
 
       />;
@@ -262,10 +238,6 @@ if ( {) {
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
             `
             backgroundSize: '50px 50px'
-          transition={{
-            duration: 30
-            repeat: Infinity
-            ease: 'linear',          }}        <motion.div
           }}
           animate={{
             background_position: ['0px 0px50px 50px'];
@@ -283,11 +255,6 @@ if ( {) {
             repeat: Infinity,
 
           }}
-        />
-      </div>
-      {/* Quantum energy waves */}
-      <div className='absolute inset-0'>
-          }}
 
         />;
       </div>;
@@ -299,9 +266,6 @@ if ( {) {
           className='absolute inset-0'
           style={{
             background:
-              'radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%)'
-          }}
-          animate={{
           }}
           animate={{
             scale: [1, 1 && 1.5, 1],
@@ -420,7 +384,6 @@ if ( {) {
 
             }}
 
-
             transition={{
               duration: 3,
               repeat: Infinity,
@@ -433,8 +396,6 @@ if ( {) {
         ))}
       </div>
 
-        }}
-      />
 
       {/* Neural network connections */}
 
@@ -481,9 +442,6 @@ if ( {) {
               duration: 4,
               repeat: Infinity,
               delay: i * 0.8,
-              ease: 'linear',            }}
-
-
 
 
           />

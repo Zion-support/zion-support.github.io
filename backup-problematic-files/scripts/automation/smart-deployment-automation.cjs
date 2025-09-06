@@ -40,9 +40,13 @@ class SmartDeploymentAutomation {}
 =======
         
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
         // Health check after each instance
         const healthCheck = await this.performHealthCheck(environment);
         if (!healthCheck.healthy) {
@@ -50,12 +54,18 @@ class SmartDeploymentAutomation {}
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
         
 >>>>>>> origin/main
+=======
+=======
+        
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
@@ -187,8 +197,14 @@ if ( {})
 <<<<<<< HEAD
 module.exports = SmartDeploymentAutomation;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = SmartDeploymentAutomation;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+module.exports = SmartDeploymentAutomation;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

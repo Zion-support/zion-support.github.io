@@ -3,13 +3,6 @@
 			slug="retail-technology-solutions"
 			description="Optimize merchandising, pricing, demand forecasting, and omni-channel experiences with AI. Personalize at scale while reducing waste and stockouts."
 			subtitle="Higher margins and better experiences powered by AI."
-			features={[
-				"Demand forecasting and dynamic pricing"
-				"Assortment optimization and store clustering"
-				"Customer 360 and propensity modeling"
-				"Store ops: labor planning and task automation"
-				"Omni-channel journey orchestration"
-
 
 
 			pricePerMonthUSD={1999  } catch (error) {
@@ -26,19 +19,3 @@
 				"Store ops: labor planning and task automation",
 				"Omni-channel journey orchestration",
 				"Integrations: POS, eCom, WMS, ESP, CDP"
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			canonical="https: //ziontechgroup.com/retail-technology-solutions"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/retail-technology-solutions";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}

@@ -161,3 +161,9 @@ if ( {) {
     }
   }
 ;
+  return {
+    enhance_content;
+    is_enhancing;
+    error;
+  }
+}

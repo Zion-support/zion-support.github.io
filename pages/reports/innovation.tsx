@@ -2,14 +2,15 @@ import React from 'react';
 const InnovationPage: React.FC = () => {
   const innovation_areas = [;
     {
-      category: 'AI Automation'
-      innovations: [
-        { name: 'Content Generation', status: 'active', impact: 'high', description: 'Automated content creation and optimization' }
-        { name: 'SEO Automation', status: 'active', impact: 'high', description: 'Intelligent search engine optimization' }
-        { name: 'Performance Monitoring', status: 'active', impact: 'medium', description: 'Real-time system health tracking' }
-        { name: 'Deployment Automation', status: 'active', impact: 'high', description: 'Zero-downtime deployments' }
-      ]
-    }
+
+      category: 'AI Automation',
+      innovations: [;
+        { name: 'Content Generation', status: 'active', impact: 'high', description: 'Automated content creation and optimization' },
+        { name: 'SEO Automation', status: 'active', impact: 'high', description: 'Intelligent search engine optimization' },
+        { name: 'Performance Monitoring', status: 'active', impact: 'medium', description: 'Real - time system health tracking' },
+        { name: 'Deployment Automation', status: 'active', impact: 'high', description: 'Zero - downtime deployments' }
+      ];
+    },
     {
       category: 'Cloud Infrastructure'
       innovations: [
@@ -34,11 +35,6 @@ const InnovationPage: React.FC = () => {
         { name: 'Content Generation', status: 'active', impact: 'high', description: 'Automated content creation and optimization' },
         { name: 'SEO Automation', status: 'active', impact: 'high', description: 'Intelligent search engine optimization' },
         { name: 'Performance Monitoring', status: 'active', impact: 'medium', description: 'Real-time system health tracking' },
-        { name: 'Deployment Automation', status: 'active', impact: 'high', description: 'Zero-downtime deployments'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
       ]
     },
     {
@@ -47,11 +43,6 @@ const InnovationPage: React.FC = () => {
         { name: 'Multi-Region Redundancy', status: 'active', impact: 'high', description: 'Geographic failover systems' },
         { name: 'Auto-Scaling', status: 'active', impact: 'medium', description: 'Dynamic resource allocation' },
         { name: 'Load Balancing', status: 'active', impact: 'high', description: 'Intelligent traffic distribution' },
-        { name: 'Disaster Recovery', status: 'active', impact: 'critical', description: 'Automated backup and recovery'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
       ]
     },
     {
@@ -60,42 +51,23 @@ const InnovationPage: React.FC = () => {
         { name: 'Continuous Integration', status: 'active', impact: 'high', description: 'Automated testing and deployment' },
         { name: 'Code Quality Gates', status: 'active', impact: 'medium', description: 'Automated code review and standards' },
         { name: 'Performance Budgets', status: 'active', impact: 'high', description: 'Automated performance monitoring' },
-        { name: 'Security Scanning', status: 'active', impact: 'critical', description: 'Automated vulnerability detection'   } catch (error) {
+        { name: 'Disaster Recovery', status: 'active', impact: 'critical', description: 'Automated backup and recovery'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
       ]
-  const recentInnovations = [
-    {
-      id: 'ai-content-factory-2025-01-17',
-      title: 'AI Content Factory Launch',
-      date: '2025-01-17',
-      summary: 'Automated content generation system with AI-powered optimization',
-      status: 'launched',
-      impact: 'high'
     },
     {
-      id: 'comprehensive-redundancy-2025-01-16',
-      title: 'Comprehensive Redundancy System',
-      date: '2025-01-16',
-      summary: 'Multi-layer redundancy architecture for maximum uptime',
-      status: 'deployed',
-      impact: 'critical'
-    },
-    {
-      id: 'github-actions-automation-2025-01-15',
+      id: 'github - actions - automation - 2025 - 01 - 15',
       title: 'GitHub Actions Automation Suite',
-      date: '2025-01-15',
-      summary: 'Complete CI/CD automation with self-healing capabilities',
+      date: '2025 - 01 - 15',
+      summary: 'Complete CI / CD automation with self - healing capabilities',
       status: 'operational',
+
       impact: 'high'
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
+
+
   const upcomingInnovations = [
 
     {
@@ -116,14 +88,6 @@ const InnovationPage: React.FC = () => {
       timeline: 'Q4 2025',
 
       status: 'development'
-    }
-    {
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
@@ -192,7 +156,6 @@ const InnovationPage: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Quantum integration</p>
           </div>
         </div>
-        {/* Innovation Areas */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Innovation Areas</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -205,7 +168,6 @@ const InnovationPage: React.FC = () => {
                       <div className="flex justify-between items-start mb-2">
                         <span className="text-white font-medium">{innovation.name}</span>
                         <span className={`px-2 py-1 text-xs rounded-full ${getImpactColor(innovation.impact)}`}>
-                          {innovation.impact}
                           {innovation.impact  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

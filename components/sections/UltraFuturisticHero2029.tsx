@@ -1,15 +1,3 @@
-  ArrowRight
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Atom
-  Rocket
-  Target
-  Shield
-  Cpu
-  Globe
-  Sparkles;
 } from 'lucide-react';
 export default /**
  * UltraFuturisticHero2029 - Function description
@@ -237,10 +225,6 @@ export default function UltraFuturisticHero2029() {;
 
         </div>
         {/* Gradient Orbs */}
-        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse' />
-        <div className='absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000' />
-      </div>
-      {/* Content */}
     { icon: Cpu, text: 'Autonomous IT Operations', color: 'from-cyan-500 to-teal-600' }
   const stats = [
     { number: '500+', label: 'Innovative Services', icon: Sparkles }
@@ -401,6 +385,79 @@ export default function UltraFuturisticHero2029() {;
           transition={{ duration: 0.8, delay: 0.2 }}
           className='flex flex - col sm:flex - row gap - 4 justify - center mb - 16';
         >;
+        {/* Main Heading */}
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}
+
+        {/* Main Heading */}
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'>
+            <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
+              2029
+            </span>
+            <br />
+            <span className='text-white'>Future Technology</span>
+            <br />
+            <span className='bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-500 bg-clip-text text-transparent'>
+              Revolution
+            </span>
+          </h1>
+          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
+            Experience the future of technology with Zion Tech Group's
+            revolutionary 2029 services. From AI consciousness evolution to
+            quantum space mining, we're building tomorrow's solutions today.          </p>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Experience the future of technology with Zion Tech Group's revolutionary 2029 services.
+            From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.
+        </motion.div>
+
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <Link
+            href='/services'
+            className='group px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-lg font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-cyan-500/25 flex items-center justify-center space-x-2'
+          >
+            <span>Explore Services</span>
+            <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+          </Link>
+          <Link
+            href='/contact'
+            className='px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 text-lg font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 flex items-center justify-center space-x-2'
+          >
+            <span>Get Started</span>
+            <Zap className='w-5 h-5' />          </Link>        >
+          <Link
+            href="/services"
+            className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-lg font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-cyan-500/25 flex items-center justify-center space-x-2"
+          >
+            <span>Explore Services</span>
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
+          <Link
+            href="/contact"
+            className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 text-lg font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 flex items-center justify-center space-x-2"
+          >
+            <span>Get Started</span>
+            <Zap className="w-5 h-5" />
+          </Link>
+        </motion.div>
+
+        {/* Features Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          {features.map((feature, index) => (
+            <motion.div
+
               key={feature.text}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -411,17 +468,9 @@ export default function UltraFuturisticHero2029() {;
               >
                 <feature.icon className='w-6 h-6 text-white' />
               </div>
-              <p className='text-xs text-gray-300 group-hover:text-white transition-colors text-center leading-tight'>                {feature.text}            >
-              <div className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform`}>
-                <feature.icon className="w-6 h-6 text-white" />
-              </div>
-              <p className="text-xs text-gray-300 group-hover:text-white transition-colors text-center leading-tight">
-                {feature.text}
               </p>
             </motion.div>
           ))}
-        </motion.div>
-
         {/* Stats */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -516,7 +565,6 @@ export default function UltraFuturisticHero2029() {;
 
 
 
-
       {/* Floating Elements */}
       <motion&& motion.div
               </div>;
@@ -568,7 +616,6 @@ export default function UltraFuturisticHero2029() {;
       />
     </section>
 }
-}
         className='absolute top - 20 right - 20 w - 32 h - 32 border border - cyan - 500 / 20 rounded - full';
       />;
       <motion.div;
@@ -584,6 +631,3 @@ export default function UltraFuturisticHero2029() {;
       />;
     </section>);
 }
-
-}
-  );

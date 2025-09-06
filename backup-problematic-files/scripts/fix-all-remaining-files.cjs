@@ -2,6 +2,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -710,6 +712,9 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
     "confirmPassword"
     console.log('Signup "attempt")
 <<<<<<< HEAD:backup-problematic-files/scripts/fix-all-remaining-files.cjs
+<<<<<<< HEAD
+        <meta name="description" content="
+=======
 <<<<<<< HEAD
         <meta name="description" content="
 =======

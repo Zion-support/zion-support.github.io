@@ -13,8 +13,6 @@ import {
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
-import { useAuth } from "@/hooks/useAuth";
-import { Sparkles } from "lucide-react";
 interface TalentRateRecommenderProps {
 
     }
@@ -31,23 +29,6 @@ interface TalentRateRecommenderProps {
   location?: string,
   onSuggestionApplied: (value: number) => void,
   rateType: "hourly" | "fixed"
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import {;
-  getTalentRateSuggestion,;
-  PricingSuggestion,;
-  TalentRateParams,;
-  trackPricingSuggestion;
-} from "@/services/pricingSuggestionService",;
-import { PricingSuggestionBox } from "./PricingSuggestionBox",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Sparkles } from "lucide-react",;
-interface TalentRateRecommenderProps {;
-  skills: string[],;
-  yearsExperience: number,;
-  location?: string,;
-  onSuggestionApplied: (value: number) => void,;
-  rateType: "hourly" | "fixed";
 
 
 }
@@ -80,11 +61,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       console.error("Error generating rate suggestion:", error)
     } finally {
       setIsLoading(false)
-  }
-  const handleApplySuggestion = () => {
-    if (suggestion) {
-      // We'll use the middle of the range as the suggested rate
-      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2);
 ;
     setIsLoading(true),;
     try {;
@@ -118,6 +94,23 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
             variant="outline"
             onClick={generateSuggestion}
             suggestion={suggestion}
-            isLoading={isLoading}
+            is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
+
+
+
+
+      </div>;
+    </div>;
+  );
+
+
+
+
 };
+            rate_type={rate_type}
+          />)}
+      </div>;
+    </div>);
+}
+;

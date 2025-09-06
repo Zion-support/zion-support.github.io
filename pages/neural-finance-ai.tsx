@@ -169,36 +169,10 @@ const integrations = [;
   { name: 'TradingView', logo: '📊', category: 'Charting' },;
   { name: 'MetaTrader', logo: '📈', category: 'Trading Platform' },;
   { name: 'Interactive Brokers', logo: '🏦', category: 'Broker' },;
-  { name: 'TD Ameritrade', logo: '💼', category: 'Broker'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-],
-const NeuralFinanceAI: React.FC = () => {
   { name: 'TD Ameritrade', logo: '💼', category: 'Broker' },];
 
 const NeuralFinanceAI: React.FC = () => {;
   return (
-        <meta
-          name='description'
-          content='Transform your financial trading with Neural Finance AI. Advanced AI-powered market prediction, risk assessment, and automated portfolio optimization using neural networks.'
-        />;
-        <meta
-          name='keywords'
-          content='AI trading, financial analysis, neural networks, portfolio optimization, risk management, automated trading, Zion Tech Group'
-        />;
-        <link
-          rel='canonical'
-      {/* Hero Section */}
-      <section className='relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>
-        <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black'></div>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]'></div>
-        <div className='relative z-10 max-w-7xl mx-auto'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
             >
 
 
@@ -422,23 +396,6 @@ const NeuralFinanceAI: React.FC = () => {;
                     plan.popular
                       ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700'
                       : 'bg-gray-800/50 text-white border border-gray-600 hover:bg-gray-700/50'
-                  }`}
-                >
-                  Get Started
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Integrations Section */}
-      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text-center mb-16'
                   }`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -546,8 +503,6 @@ const NeuralFinanceAI: React.FC = () => {;
               Join leading investment firms using Neural Finance AI to gain competitive advantages 
               in today's dynamic financial markets.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link
                 href="/contact"
                 className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
@@ -597,4 +552,10 @@ const NeuralFinanceAI: React.FC = () => {;
 
 
 
+export default NeuralFinanceAI;
+
+
+    </Layout>),
+}
+;
 export default NeuralFinanceAI;

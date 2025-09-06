@@ -1,14 +1,3 @@
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
-    setupTime: string;
 
     enterprise: string;
   }
@@ -545,8 +534,6 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     launchDate: '2024-01-20',;
     customers: 1800,;
     rating: 4.7,;
-    reviews: 1400;
-    rating: 4.7,
     reviews: 1400;
   }
 ];

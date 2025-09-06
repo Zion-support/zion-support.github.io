@@ -72,106 +72,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
       icon: '🎭',
       count: holographic_count,
     },  ];
-  const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' }
-    { id: 'under-500', name: 'Under $500', range: 'Under $500' }
-    { id: '500-2000', name: '$500 - $2,000', range: '$500 - $2,000' }
-    { id: '2000-10000', name: '$2,000 - $10,000', range: '$2,000 - $10,000' }
-    { id: 'over-10000', name: 'Over $10,000', range: 'Over $10,000' },  ];
-  const sortOptions = [
-    { id: 'name', name: 'Name' }
-    { id: 'price', name: 'Price' }
-    { id: 'rating', name: 'Rating' }
-    { id: 'customers', name: 'Customers' }
-    { id: 'launchDate', name: 'Launch Date' },  ];
-  const filteredServices = useMemo(() => {
-    let filtered = allServices;
-    // Category filter
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => {
-        if (selectedCategory === 'ai') return service.category.includes('AI');
-        if (selectedCategory === 'quantum')
-          return service.category.includes('Quantum');
-        if (selectedCategory === 'it')
-          return (
-            service.category.includes('IT') |
-            service.category.includes('Infrastructure')
-          );
-        if (selectedCategory === 'micro-saas')
-          return (
-            service.category.includes('Micro SaaS') |
-            service.category.includes('Marketing') |
-            service.category.includes('Legal') |
-            service.category.includes('Health')
-          );
-        if (selectedCategory === 'holographic')
-          return service.category.includes('Holographic');
-        return true;
-      });    }
-    // Price range filter
-    if (selectedPriceRange !== 'all') {
-      filtered = filtered.filter(service => {
-        const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-        if (selectedPriceRange === 'under-500') return price < 500;
-        if (selectedPriceRange === '500-2000')
-          return price >= 500 && price < 2000;
-        if (selectedPriceRange === '2000-10000')
-          return price >= 2000 && price < 10000;
-        if (selectedPriceRange === 'over-10000') return price >= 10000;
-        return true;
-      });    }
-    // Search filter
-    if (searchTerm) {
-      filtered = filtered.filter(
-        service =>
-          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-          service.description
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase()) |
-          service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );    }
-    // Sort
-    filtered.sort((a, b) => {
-      switch (sortBy) {
-        case 'price':
-          return (
-            parseInt(a.price.replace(/[^0-9]/g, '')) -
-            parseInt(b.price.replace(/[^0-9]/g, ''))
-          );        case 'rating':
-          return b.rating - a.rating;
-        case 'customers':
-          return b.customers - a.customers;
-        case 'launchDate':
-          return (
-            new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
-          );
-        default: return a.name.localeCompare(b.name)
-      }
-    });
-    return filtered;  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe } from 'lucide-react';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services';
-import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services';
-import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
-export default function Revolutionary2027ServicesShowcase(req, res) {
-  try {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
-  const allServices = [;
-    ...revolutionary2027AIServices;
-    ...revolutionary2027ITServices;
-    ...revolutionary2027MicroSaasServices;
-  ];
-  // Dynamic category counts;
-  const aiCount = allServices.filter(service => service.category.includes('AI')).length;
-  const quantumCount = allServices.filter(service => service.category.includes('Quantum')).length;
-  const itCount = allServices.filter(service => service.category.includes('IT') || service.category.includes('Infrastructure')).length;
-  const microSaasCount = allServices.filter(service => service.category.includes('Micro SaaS') || service.category.includes('Marketing') || service.category.includes('Legal') || service.category.includes('Health')).length;
-  const holographicCount = allServices.filter(service => service.category.includes('Holographic')).length;
   const categories = [;
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },;
     { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },;
@@ -213,34 +113,45 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
         if (selectedCategory === 'holographic');
           return service && service.category.includes('Holographic');
         return true;
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  },
-  return (
-    <UltraQuantumHolographicBackground intensity={2.0}>
-      <Head>
-        <title>Revolutionary 2027 Services Showcase - Zion Tech Group | Next-Generation AI, Quantum & Technology Solutions</title>
-        <meta name="description" content="Discover the most revolutionary AI, Quantum, and Technology services of 2027. Cutting-edge solutions with proven ROI and real-world implementation." />
-        <meta property="og:title" content="Revolutionary 2027 Services Showcase - Zion Tech Group" />
-        <meta property="og:description" content="Explore the future of technology with our revolutionary 2027 services showcase." />
-        <meta property="og:url" content="https://ziontechgroup.com/revolutionary-2027-services-showcase" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2027-services-showcase" />
-      </Head>
-          >
-            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8">
-              Revolutionary 2027
-            </h1>
-            <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-              Services Showcase
-            </h2>
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Experience the future of technology with our revolutionary AI
-              Quantum Computing, and Next-Generation IT services. Each solution
-              delivers measurable ROI and transforms industries.
+            {/* Contact Information */}
+            <div className='flex flex-wrap items-center justify-center gap-6 text-center mb-8'>;
+              <motion&& motion.div
+                className='flex items-center gap-2 text-cyan-400'
+                whileHover={{ scale: 1 && 1.05 }}
+                transition={{ type: 'spring', stiffness: 300 }}>;
+                <Phone className='w-5 h-5' />;
+                <span className='font-semibold'>{contactInfo && contactInfo.mobile}</span>;
+              </motion && motion.div>;
+              <motion&& motion.div
+                className='flex items-center gap-2 text-purple-400'
+                whileHover={{ scale: 1 && 1.05 }}
+                transition={{ type: 'spring', stiffness: 300 }}>;
+                <Mail className='w-5 h-5' />;
+                <span className='font-semibold'>{contactInfo && contactInfo.email}</span>;
+              </motion && motion.div>;
+              <motion&& motion.div
+                className='flex items-center gap-2 text-green-400'
+
+
+              >
+                <Phone className="w-5 h-5" />
+                <span className="font-semibold">{contactInfo.mobile}</span>
+              </motion.div>
+              <motion.div className="flex items-center gap-2 text-purple-400"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <Mail className="w-5 h-5" />
+                <span className="font-semibold">{contactInfo.email}</span>
+              </motion.div>
+              <motion.div className="flex items-center gap-2 text-green-400"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                transition={{ type: 'spring', stiffness: 300 }}
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Experience the future of technology with our revolutionary AI, Quantum Computing, and Next-Generation IT services.
+              Each solution delivers measurable ROI and transforms industries.
             </p>
               >
                 <Phone className="w-5 h-5" />
@@ -261,7 +172,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                 <span className="text-sm font-semibold">{contactInfo.address}</span>
               </motion.div>
             </div>
-            {/* CTA Buttons */}
                 Get Started Today
               </a>
               <a href="/services" className="border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300">
@@ -296,6 +206,25 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                 <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
                 <select
                   value={selectedCategory}
+              <input
+                type="text"
+                placeholder="Search revolutionary services..."
+                value={searchTerm  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-12 pr-4 py-4 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              />
+            </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
+                <select
+                  value={selectedCategory  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
@@ -318,31 +247,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
-                <select
-                  value={sortBy}
-                  onChange={e => setSortBy(e.target.value)}
-                  className='w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'
-                >
-                  {sortOptions.map(option => (                    <option key={option.id} value={option.id}>
-                      {option.name}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              {/* Results Count */}
-              <div className='flex items-end'>
-                <div className='text-gray-300'>
-                  <span className='text-sm'>Showing </span>
-                  <span className='font-semibold text-cyan-400'>
-                    {filteredServices.length}
-                  </span>
-                  <span className='text-sm'> of </span>
-                  <span className='font-semibold text-purple-400'>
-                    {allServices.length}
-                  </span>
-                  <span className='text-sm'> services</span>                </div>
                   value={sortBy  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -552,41 +456,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
           </AnimatePresence>;
         </div>;
       </section>;
-      {/* Contact CTA Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }} className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-lg rounded-3xl p-12 border border-cyan-500/30">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join the future of technology with our revolutionary 2027 services.
-              Each solution is designed to deliver measurable ROI and competitive advantage.
-            </p>
-            <div className='flex flex-wrap items-center justify-center gap-6 mb-8'>
-              <div className='flex items-center gap-2 text-cyan-400'>
-                <Phone className='w-5 h-5' />
-                <span className='font-semibold'>{contactInfo.mobile}</span>
               </div>
               <div className="flex items-center gap-2 text-purple-400">
                 <Mail className="w-5 h-5" />

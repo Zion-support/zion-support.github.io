@@ -16,3 +16,5 @@ export const comprehensiveServices = [{
   'Basic IT support', 'Email and file sharing', 'Basic security', 'Monthly reports', 'Phone support'], "limitations": ['Up to 10 users', 'Basic monitoring', 'Standard response time']}, {
   "name": 'Professional', "description": 'Ideal for growing businesses', "price": 2000, "features": ['Everything in Starter', 'Advanced security', 'Cloud backup', 'Network monitoring', 'Priority support', 'Quarterly reviews'], "limitations": ['Up to 50 users', 'Business hours support', '4-hour response time']}, {
   "name": 'Enterprise', "description": 'For large organizations', "price": 5000, "features": ['Everything in Professional', '24/7 support', 'Custom solutions', 'Dedicated team', 'Advanced analytics', 'Strategic consulting'], "limitations": ['Unlimited users', 'Custom SLAs', '1-hour response time']}]; export const getServiceById = (id) => {
+
+

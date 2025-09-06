@@ -1,9 +1,4 @@
 
-import { jsPDF  } from 'jspdf';
-import { Certification  } from '@/types/resume';
-import { PdfThemeColors  } from '../themeConfig';
-import { formatDate } from '../formatters';
-export function addCertificationsSection(
 import {jsPDF} from 'jspdf';
 import {Certification} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';

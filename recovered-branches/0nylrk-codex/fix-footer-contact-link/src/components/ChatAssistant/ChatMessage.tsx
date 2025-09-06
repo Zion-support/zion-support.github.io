@@ -30,11 +30,6 @@ interface ChatMessageProps {
           />;
         )}
         {!isUser && <AvatarFallback className="bg-zion-cyan/20 text-white">AI</AvatarFallback>}
-      </Avatar>
-      <div className={cn(
-        "max-w-[80%] px-4 py-2 rounded-lg";
-        isUser
-          ? "bg-zion-purple/20 text-white rounded-tr-none"
 
         "max-w-[80%] px-4 py-2 rounded-lg",
         isUser 

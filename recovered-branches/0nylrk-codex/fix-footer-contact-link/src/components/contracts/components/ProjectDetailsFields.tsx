@@ -22,6 +22,20 @@ import { ContractFormValues } from "./ContractForm";
 }
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
   return (
+            <FormControl>;
+              <Input placeholder="AI Website Development" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+
+      />;
+
+
+      <FormField
+        control={form && form.control}
+
+      />;
+      <FormField;
+
         control={form.control}
         name="scopeSummary"
         render={({ field }) => (;

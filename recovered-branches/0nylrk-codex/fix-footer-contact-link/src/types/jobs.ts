@@ -36,12 +36,6 @@ export interface JobBudget {;
   budget: JobBudget;
   deadline: string;
   status: JobStatus;
-  created_at: string
-  updated_at: string
-}
-export interface JobFormData {
-
-export interface JobFormData {;
   title: string;
   description: string;
   category: JobCategory;
@@ -204,5 +198,3 @@ export interface JobApplication {;
       score: number,;
       matching: string[],;
 
-}
-;

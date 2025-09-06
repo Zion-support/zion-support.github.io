@@ -8,12 +8,6 @@ function CopyButton({ text, label }: { text: string, label: string }) {
         await navigator.clipboard.writeText(text)
         setCopied(true)
         setTimeout(() => setCopied(false), 1500)
-}
-
-export default function WikiPage() {
-  const wiki = useMemo(() => generateZionWiki(), []),
-  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),
-  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]),
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
       <aside className="sticky top-20 self-start hidden lg:block">
@@ -22,6 +16,9 @@ export default function WikiPage() {
           {wiki.sections.map((s) => (
             <li key={s.id}>
               <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
+                {s.title}
+
+
                 {s.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -31,8 +28,11 @@ export default function WikiPage() {
             </li>
           ))}
           <li>
-            <a href="#references" className="opacity-80 hover:opacity-100">References</a>
+
+
             <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
+
+
           </li>
         </ul>
       </aside>
@@ -83,6 +83,7 @@ export default function WikiPage() {
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="font-semibold mb-2">Operator Prompt</div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
+
     </div>
   )
   } catch (error) {

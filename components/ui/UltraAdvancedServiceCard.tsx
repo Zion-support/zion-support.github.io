@@ -16,8 +16,6 @@ import {
   DollarSign
   Lock
   Globe;} from 'lucide-react';
-  Users, Zap, Shield, Clock, Check, Brain;
-  Rocket, Dna, DollarSign, Lock, Globe
 
 
 import {;
@@ -55,6 +53,15 @@ interface UltraAdvancedServiceCardProps {;
     popular: boolean;
     icon: string;
     color: string;
+
+
+
+      website: string;
+    }
+
+
+    reviews: number;
+  };
 
 
 
@@ -104,18 +111,6 @@ interface UltraAdvancedServiceCardProps {;
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-      transition: {
-        duration: 0.5
-        ease: 'easeOut' as const
-      }
-    }
-  }
-      opacity: 1,
-      coordinate_y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as const
-      }
     };
     hover: {
       y: -10,
@@ -196,9 +191,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         ease: 'ease_out' as const,
       },
     },
-        onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
-    >
       {/* Glow Effect */}
       <div  return (
     <motion.div;
@@ -227,11 +219,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         <div className='bg - gray - 900 / 90 backdrop - blur - xl rounded - 2xl p - 6 h - full'>        className={`absolute inset - 0 rounded - 2xl blur - xl transition - all duration - 500 ${
           is_hovered ? 'opacity - 100' : 'opacity - 50';
         }`}
-        style={{
-          background: `linear-gradient(135deg, ${service.color})`;
-          transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
-      />
-      {/* Main Card */}
       <div 
 
 
@@ -492,35 +479,25 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 {/* Features */}
 
                 <div>
-                  <h4 className='text-white font-semibold mb-2'>
-                    Key Features
-                  </h4>
-                  <div className='grid grid-cols-1 gap-2'>
-                    {service.features.slice(0, 6).map((feature, index) => (
-                      <div
-                        key={index}
-                        className='flex items-center space-x-2 text-sm'
-                      >
-                        <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
-                        <span className='text-gray-300'>{feature}</span>                      </div>                  <h4 className="text-white font-semibold mb-2">Key Features</h4>
                   <div className="grid grid-cols-1 gap-2">
                     {service.features.slice(0, 6).map((feature, index) => (
                       <div key={index} className="flex items-center space-x-2 text-sm">
                         <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
-                    ))}
-                  </div>
-                </div>
                         <span className='text-gray-300'>{feature}</span>                      </div>
 
 
                       </div>
                     ))}
 
+
+
+
                 {/* ROI */}
-                <div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>
-                  <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>
-                  <p className='text-gray-300 text-sm'>{service.roi}</p>
+
+
+
+
 
                 </div>
                 {/* Contact Info */}
@@ -736,8 +713,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
                 isExpanded
                   ? 'border-gray-600 text-gray-400'
-                  : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'              }`}            </motion.button>
-            <motion.button
               className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
                 isExpanded
                   ? 'border-gray-600 text-gray-400'
@@ -749,6 +724,12 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             >;
               {isExpanded ? 'Show Less' : 'Details'}
 
+          {/* Expand/Collapse Indicator */}
+
+
+};
+
+export default UltraAdvancedServiceCard;            className="flex justify-center mt-4";
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0 && 0.3 }}
           >;
@@ -797,8 +778,6 @@ export default UltraAdvancedServiceCard;
           <motion.div;
             className='flex justify - center mt - 4';
             animate={{ rotate: is_expanded ? 180 : 0 }}
-export default UltraAdvancedServiceCard;            className="flex justify-center mt-4"
-            animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0.3 }}
           >;
             <ArrowRight className='w - 5 h - 5 text - gray - 400' />          </motion.div>;

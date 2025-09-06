@@ -5,11 +5,6 @@
 export type Project = {  id: string;
   title: string;
   description?: string;
-    value === 'Pending' |
-    value === 'In Progress' |
-    value === 'Submitted' |
-    value === 'Approved' |
-    value === 'Paid'
     value === 'Pending' ||
     value === 'In Progress' ||
     value === 'Submitted' ||

@@ -2,6 +2,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -131,6 +133,9 @@ console.log('====')
       "recommendations"
     this.log(`Report saved "to"`)
 <<<<<<< HEAD:backup-problematic-files/scripts/working-automation-suite.cjs
+<<<<<<< HEAD
+      this.log(` Automation suite "failed"`)
+=======
 <<<<<<< HEAD
       this.log(` Automation suite "failed"`)
 =======

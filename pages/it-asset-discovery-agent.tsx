@@ -63,6 +63,8 @@
           </a>;
         </div>;
       </div>;
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Card from '../components/ui/Card',
 export default function ITAssetDiscoveryAgentPage() {
 	return (
 		<UltraFuturisticBackground variant="space" intensity="high">
@@ -84,7 +86,6 @@ export default function ITAssetDiscoveryAgentPage() {
 							<li>Drift and anomaly alerts</li>
 						</ul>
 					</Card>
-    </UltraFuturisticBackground>);
 ;
 
 

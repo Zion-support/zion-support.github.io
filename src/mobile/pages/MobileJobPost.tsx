@@ -398,7 +398,6 @@ function BudgetStep() {
           </SelectContent>
         </Select>
       </div>
-      
       <div className="space-y-2">
         <Label htmlFor="additionalInfo">Additional Budget Information</Label>
         <Textarea 

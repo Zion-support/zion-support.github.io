@@ -43,6 +43,35 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       bio: ""
       headline: ""}})
   const getTypeLabel = () => {
+      case "talent":;
+        return "Talent";
+      case "client":;
+        return "Client";
+      default:;
+        return "User";
+    }
+  }
+
+
+    switch (userType) {
+      case "serviceProvider": return "Service Provider",
+
+      case "talent":
+        return "Talent",
+      case "client":
+        return "Client",
+      default:
+        return "User"
+    }
+
+  },
+
+
+
+  return (
+
+          <FormField
+            control={form.control}
             name="displayName"
             render={({ field }) => (
               <FormItem>
@@ -155,25 +184,10 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                     }`}
                     className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]";
                     {...field}
-                  />
-                </FormControl>
-                <FormMessage className="text-red-400" />
-              </FormItem>
-            )}
-          />
-          <Button
-            type="submit"
-            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
-          >
-            Complete Profile
-          </Button>
-        </form>
-      </Form>
-    </div>
-  )
             Complete Profile;
           </Button>;
         </form>;
       </Form>;
 }
-;
+    </div>);
+}

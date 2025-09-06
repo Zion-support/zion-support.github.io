@@ -1,19 +1,3 @@
-  Search
-  Filter
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Cpu
-  Shield
-  Rocket
-  Globe
-  Database
-  Lock
-  Cloud
-  Atom
-  Sparkles
-  Target;
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
 
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -100,6 +84,11 @@ export default function ServicesShowcase2026() {;
             Zion Tech Group - 2026 Revolutionary Services Showcase | 1500+;
             Solutions;
           </title>;
+        {/* Hero Section */}
+        <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-7xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-7xl mx-auto text-center">;
+            <motion&& motion.div
         </Head>
           <meta property="og:description" content="1500+ cutting - edge services with 1000% ROI guarantee. Contact: +1 302 464 0950" />;
           <meta property="og:url" content="https://ziontechgroup.com / 2026 - services - showcase" />;
@@ -203,32 +192,6 @@ export default function ServicesShowcase2026() {;
                         {category && category.name} ({category && category.count});
                       </option>;
                     ))}
-                  </select>
-                </div>
-
-                {/* Sort By */}
-                <div className='relative'>
-                  <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
-                    value={sortBy}
-                    onChange={e => setSortBy(e.target.value)}
-                    className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none'
-                  >
-                    <option value='name'>Sort by Name</option>
-                    <option value='price'>Sort by Price</option>
-                    <option value='rating'>Sort by Rating</option>
-                    <option value='customers'>Sort by Customers</option>                  </select>                    <option value="name">Sort by Name</option>
-                    <option value="price">Sort by Price</option>
-                    <option value="rating">Sort by Rating</option>
-                    <option value="customers">Sort by Customers</option>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
-
-
                 {/* Sort By */}
 
 
@@ -390,13 +353,17 @@ export default function ServicesShowcase2026() {;
                   </div>
                 </motion.div>
               ))}
-            </div>
-
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+            )}
+
+          </div>;
+        </section>;
+
+
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
@@ -528,19 +495,6 @@ export default function ServicesShowcase2026() {;
               <div className="flex flex-col sm: flex-row gap-4 justify-center">;
                 <a
                   href="/contact"
-                <a
-                  href='/pricing'
-                  className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'                  href="/pricing"
-                  className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
-                >
-                  View Pricing
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </UltraAdvancedFuturisticBackground>
 
   );
 

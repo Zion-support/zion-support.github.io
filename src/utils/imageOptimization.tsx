@@ -72,12 +72,6 @@ if (return blurDataURL) {
         />;
       )}
       {/* Loading placeholder */}
-            <img
-              src={fallbackSrc}
-              alt={alt}
-              className='max-w-full max-h-full object-contain'
-          ) : (
-            <div className='text-gray-400 text-center'>
               <svg
                 className='w-8 h-8 mx-auto mb-2'
                 fill='currentColor'

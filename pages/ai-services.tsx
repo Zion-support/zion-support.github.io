@@ -501,6 +501,11 @@ className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold tra
         </main>
       </ErrorBoundary>
     </>
+}
+}
+    </Layout>);
+}
+
           <section className="py-16 px-4 bg-slate-900/40">;
             <div className="max-w-6xl mx-auto">;
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;

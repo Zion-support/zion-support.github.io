@@ -304,8 +304,14 @@ if ( {})
 <<<<<<< HEAD
 module.exports = ComprehensiveTestAutomation;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = ComprehensiveTestAutomation;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+module.exports = ComprehensiveTestAutomation;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

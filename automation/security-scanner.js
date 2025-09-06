@@ -130,6 +130,7 @@ class SecurityScanner {}
   async autoFixSecurityIssues() {}
     try {}
 
+
       this.log('Attempting to auto-fix security issues...');',
       // Run npm audit fix;
       const fixOutput = execSync('npm audit fix', { ',
@@ -139,6 +140,7 @@ class SecurityScanner {}
   }
   async reportSecurityIssues (vulnerabilities) {}
     const report = {
+
 
       "timestamp": new Date().toISOString()";
 ;      vulnerabilities: vulnerabilities;,}
@@ -221,6 +223,7 @@ if ( {) {
     {
         // npm outdated returns 1 when there are outdated packages}
 
+
         this.log('Outdated dependencies found');',
         await this.updateDependencies()} else {}
         this.log(`Dependency check "failed": ${error.message}`)}",
@@ -289,8 +292,8 @@ scanner.start().catch(error => {}),
 ; this.log(" = " * 50); this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`); this.vulnerabilities.forEach(vuln = > this.log(` ⚠️ ${vuln}`));
 } catch (error) {; this.log(`❌ Security Scanner failed: ${error.message}`, "ERROR")}}};
 ;
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
+
+
 #!/usr/bin/env node;
 /**
  * Security Scanner - PM2 Automation Script;
@@ -319,15 +322,6 @@ class SecurityScanner {
     const logMessage = `[${timestamp}] ${message}\n`;
     fs.appendFileSync(this.logFile, logMessage);
   }
-ursor/fix-syntax-push-and-merge-to-main-40de
-  log(message) {
-    const timestamp = new Date().toISOString(;
-  });
-    const logMessage = `[${timestamp}] ${message}\;n;`;
-    );
-    fs.appendFileSync(this.logFile, logMessage)}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   async runSecurityAudit() {
     try {
@@ -335,17 +329,6 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       const startTime = Date.now();
       // Run npm audit;
       const auditOutput = execSync('npm audit --audit-level=moderate', { 
-ursor/fix-syntax-push-and-merge-to-main-40de
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 120000
-      ;};);
-        "cwd": this.projectRoot;
-        encoding: 'utf8'
-        timeout: 120000;
-      };);
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
 "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 120000
@@ -368,14 +351,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       await this.saveSecurityReport();
     } catch (error) {
       this.log(`Security audit "failed": ${error.message}`);
-      // Parse audit output for vulnerability counts;
-      const output = error.stdout || error.stderr || ;';';
-      const vulnerabilities = this.parseVulnerabilities(output;);
-      // Parse audit output for vulnerability counts;
-      const output = error.stdout || error.stderr || ;';';
-      const vulnerabilities = this.parseVulnerabilities(output;);
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
 // Parse audit output for vulnerability counts
       const output = error.stdout || error.stderr || '';
       const vulnerabilities = this.parseVulnerabilities(output);ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -391,55 +366,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   }
   parseVulnerabilities(output) {
     const vulnerabilities = {
-ursor/fix-syntax-push-and-merge-to-main-40de
-      critical: 0,
-      high: 0,
-      moderate: 0,
-      low: 0
-   ; ;};
-      "critical": 0;
-      high: 0;
-      moderate: 0;
-      low: 0;
-   };
-    try {
-      // Parse npm audit output for vulnerability counts;
-      const criticalMatch = output.match(/(\d+) critical;/;);
-      const highMatch = output.match(/(\d+) high;/;);
-      const moderateMatch = output.match(/(\d+) moderate;/;);
-      const lowMatch = output.match(/(\d+) low;/;);
-      if (vulnerabilities.critical = parseInt(criticalMatch[1])) {
-    vulnerabilities.critical = parseInt(criticalMatch[1]);
-  }
-      if (vulnerabilities.high = parseInt(highMatch[1])) {
-    vulnerabilities.high = parseInt(highMatch[1]);
-  }
-      if (vulnerabilities.moderate = parseInt(moderateMatch[1])) {
-    vulnerabilities.moderate = parseInt(moderateMatch[1]);
-  }
-      if (vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {
-      this.log(`Failed to parse "vulnerabilities": ${error.message}`)}
-    return vulnerabilities) {
-    vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {
-      this.log(`Failed to parse "vulnerabilities": ${error.message}`)}
-    return vulnerabilities;
-  }}
-  async handleSecurityIssues(vulnerabilities) {
-    const totalIssues = vulnerabilities.critical + vulnerabilities.high + vulnerabilities.moderate + vulnerabilities.low;
-    if ( {
-      this.log(`Found ${totalIssues} security vulnerabilities`)) {
-     {
-      this.log(`Found ${totalIssues} security vulnerabilities`);
-  }
-      // Auto-fix if possible;
-      if ( {
-        this.log('Critical or high severity vulnerabilities found, attempting auto-fix...')) {
-     {
-        this.log('Critical or high severity vulnerabilities found, attempting auto-fix...');
-  }
-        await this.autoFixSecurityIssues()} else {
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
 "critical": 0,
       "high": 0,
       "moderate": 0,
@@ -540,16 +466,6 @@ if (vulnerabilities.critical > 0) {
   }
   async saveSecurityReport() {}
     const report = {
-      lastScan: this.lastScan,
-      projectRoot: this.projectRoot,
-      nodeVersion: process.version,
-      platform: process.platform
-   ; ;};
-      "lastScan": this.lastScan;
-      projectRoot: this.projectRoot;
-      nodeVersion: process.version;
-      platform: process.platform;
-   };
 "lastScan": this.lastScan,
       "projectRoot": this.projectRoot,
       "nodeVersion": process.version,
@@ -560,16 +476,6 @@ if (vulnerabilities.critical > 0) {
   }
   async reportSecurityFailure(error) {}
     const failureReport = {
-      timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
-      projectRoot: this.projectRoot
-   ; ;};
-      "timestamp": new Date().toISOString()
-      error: error.message;
-      stack: error.stack;
-      projectRoot: this.projectRoot;
-   };
 "timestamp": new Date().toISOString(),
       "error": error.message,
       "stack": error.stack,
@@ -657,126 +563,6 @@ if (vulnerabilities.critical > 0) {
 if (import && import.meta.url = = = `file: //${process ; const scanner = new SecurityScanner(); scanner && scanner.run().catch(console && console.error)};
 
 export default SecurityScanner;
-};
-};
-;
-  log(message, level = "INFO") {;
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    console.log(`[${level}] ${message}`);
-    fs.appendFileSync(this.logFile, logMessage);
-};
-;
-  async runSecurityAudit() {;
-    try {;
-      this.log("Running security audit...");
-      const output = execSync("npm audit --json", { stdio: 'pipe' });
-      const auditResult = JSON.parse(output.toString());
-;
-      if (auditResult.vulnerabilities) {;
-        const vulnCount = Object.keys(auditResult.vulnerabilities).length;
-        this.vulnerabilities.push(`${vulnCount} vulnerabilities found`);
-        this.log(`Found ${vulnCount} vulnerabilities`, "WARN");
-      } else {;
-      };
-    } catch (error) {;
-      this.log(`Security audit failed: ${error.message}`, "ERROR");
-};
-};
-;
-  async checkSecrets() {;
-    try {;
-      this.log("Checking for exposed secrets...");
-      const files = this.getSourceFiles();
-      let secretCount = 0;
-;
-      files.forEach(file => {;
-        const content = fs.readFileSync(file, "utf8");
-        const secretPatterns = [;
-          /api[_-]?key\s*[:=]\s*["'][^"']+["']/gi;
-          /secret\s*[:=]\s*["'][^"']+["']/gi;
-          /password\s*[:=]\s*["'][^"']+["']/gi;
-          /token\s*[:=]\s*["'][^"']+["']/gi;
-        ];
-;
-        secretPatterns.forEach(pattern => {;
-          if (pattern.test(content)) {;
-            secretCount++;
-          };
-        });
-      });
-;
-      if (secretCount > 0) {;
-        this.vulnerabilities.push(`${secretCount} potential secrets found`);
-        this.log(`Found ${secretCount} potential secrets`, "WARN");
-      } else {;
-      };
-    } catch (error) {;
-      this.log(`Secret check failed: ${error.message}`, "ERROR");
-};
-};
-;
-  getSourceFiles() {;
-    const files = [];
-    const srcDir = path.join(process.cwd(), "src");
-;
-    if (fs.existsSync(srcDir)) {;
-      const walkDir = (dir) => {;
-        const items = fs.readdirSync(dir);
-        items.forEach(item => {;
-          const fullPath = path.join(dir, item);
-          const stat = fs.statSync(fullPath);
-;
-          if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {;
-            walkDir(fullPath);
-          } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {;
-            files.push(fullPath);
-          };
-        });
-      };
-;
-      walkDir(srcDir);
-};
-;
-    return files;
-};
-;
-  async generateReport() {;
-    const report = {;
-      timestamp: new Date().toISOString(), vulnerabilities: this.vulnerabilities,
-      recommendations: [
-    , "Run npm audit fix to address vulnerabilities",
-        "Review and remove any hardcoded secrets";
-        "Use environment variables for sensitive data";
-        "Implement proper authentication and authorization",
-    "Regularly update dependencies"
-  ];
-};
-;
-    const reportFile = path.join(__dirname, "reports", "security-report.json");
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`Security report saved to: ${reportFile}`);
-};
-;
-  async run() {;
-;
-    try {;
-      await this.runSecurityAudit();
-      await this.checkSecrets();
-      await this.generateReport();
-;
-      this.log("=" * 50);
-};
-};
-};
-;
-// Main execution;
-if (import.meta.url === `file: //${process.argv[1]}`) {;
-  const scanner = new SecurityScanner();
-  scanner.run().catch(console.error);
-};
-;
-export default SecurityScanner;
     };
   };
 ,
@@ -796,14 +582,6 @@ export default SecurityScanner;
       if (auditResult.vulnerabilities) {,
         const vulnCount = Object.keys(auditResult.vulnerabilities).length,
         this.vulnerabilities.push(`${vulnCount} vulnerabilities found`),
-        this.log(`Found ${vulnCount} vulnerabilities`, "WARN"),
-      } else {,
-        this.log(" No vulnerabilities found"),
-      };
-    } catch (error) {,
-      this.log(`Security audit failed: ${error.message}`, "ERROR"),
-    };
-  };
 ,
   async checkSecrets() {,
     try {,
@@ -828,14 +606,6 @@ export default SecurityScanner;
 ,
       if (secretCount > 0) {,
         this.vulnerabilities.push(`${secretCount} potential secrets found`),
-        this.log(`Found ${secretCount} potential secrets`, "WARN"),
-      } else {,
-        this.log(" No exposed secrets found"),
-      };
-    } catch (error) {,
-      this.log(`Secret check failed: ${error.message}`, "ERROR"),
-    };
-  };
 ,
   getSourceFiles() {,
     const files = [],
@@ -849,12 +619,6 @@ export default SecurityScanner;
           const stat = fs.statSync(fullPath),
 ,
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
-            walkDir(fullPath),
-          } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
-            files.push(fullPath),
-          };
-        }),
-      };
 ,
       walkDir(srcDir),
     };
@@ -883,12 +647,6 @@ export default SecurityScanner;
       await this.generateReport(),
 ,
       this.log("=" * 50),
-,
-    } catch (error) {,
-      this.log(` Security Scanner failed: ${error.message}`, "ERROR"),
-    };
-  };
-};
 ,
 // Main execution,
 if (import.meta.url === `file: //${process.argv[1]}`) {,

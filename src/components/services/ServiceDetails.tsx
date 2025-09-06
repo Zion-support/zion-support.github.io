@@ -77,10 +77,6 @@ import { Server, Clock, MapPin } from 'lucide-react';
           </div>
         </div>
       </CardContent>
-      <CardFooter className='border-t border-zion-blue-light pt-4'>
-        <p className='text-sm text-zion-slate-light'>
-          For custom enterprise needs or multi-site services in {country}
-          please contact our enterprise team for tailored pricing.
         </p>
       </CardFooter>
     </Card>

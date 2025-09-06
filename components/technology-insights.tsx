@@ -7,10 +7,6 @@ export default function TechnologyInsightsPage() {
       id: 'quantum-computing'
       title: 'Quantum Computing in 2025'
       description:
-        'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech'
-      readTime: '15 min read'
-      featured: true
-    }
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
       readTime: '15 min read',
       featured: true;
@@ -182,13 +178,11 @@ export default function TechnologyInsightsPage() {
                         <li
                           key={focusIndex}
                           {focus}
-                        </li>
+                        </li>;
                       ))}
-                    </ul>
-                  </div>
+                    </ul>;
+                  </div>;
                 ))}
-              </div>
-            </div>
 
               </div>;
             </div>;
@@ -244,12 +238,10 @@ export default function TechnologyInsightsPage() {
             </div>
 
             {/* Innovation Lab */}
-            <div className='mb-16'>
-              <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
-                Innovation Lab
-              </h2>
-              <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
+
+
+
+
 
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>

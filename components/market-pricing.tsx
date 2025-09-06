@@ -279,9 +279,6 @@ import Link from 'next/link';
 
       }
     }
-  }
-  };
-
   const currentMarket = marketData[selectedMarket as keyof typeof marketData];
 
 
@@ -308,9 +305,6 @@ import Link from 'next/link';
 
 
       {/* Competitive Analysis Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -489,9 +483,6 @@ import Link from 'next/link';
 
 
       {/* Market Trends Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}

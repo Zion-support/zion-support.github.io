@@ -10,53 +10,106 @@ import {
   Settings, 
   Globe, 
 
-import {
-  Home
-  Brain
-  Network
-  Target
-  Users
-  Shield
-  Cloud
-  BarChart3
-  Settings
-  Globe
-  ArrowRight
-} from 'lucide-react';
-const sitemapData = [
-  {
-    category: 'Main Pages'
-    pages: [
-      { name: 'Home', url: '/', icon: Home }
-      { name: 'About', url: '/about', icon: Users }
-      { name: 'Contact', url: '/contact', icon: Globe }
+
+
+
+const sitemapData = [;
+  {;
+    category: 'Main Pages',;
+    pages: [;
+      { name: 'Home', url: '/', icon: Home },;
+      { name: 'About', url: '/about', icon: Users },;
+      { name: 'Contact', url: '/contact', icon: Globe },;
       { name: 'Services', url: '/services', icon: Settings }
-    ]
-  }
-  {
-    category: 'Services'
-    pages: [
-      { name: 'AI Services', url: '/ai-services', icon: Brain }
-      { name: 'IT Services', url: '/it-services', icon: Network }
-      { name: 'Micro SaaS', url: '/micro-saas', icon: Target }
-      { name: 'Cloud Services', url: '/services/cloud', icon: Cloud }
-      { name: 'Cybersecurity', url: '/services/cybersecurity', icon: Shield }
+    ];
+  },;
+  {;
+    category: 'Services',;
+    pages: [;
+      { name: 'AI Services', url: '/ai-services', icon: Brain },;
+      { name: 'IT Services', url: '/it-services', icon: Network },;
+      { name: 'Micro SaaS', url: '/micro-saas', icon: Target },;
+      { name: 'Cloud Services', url: '/services/cloud', icon: Cloud },;
+      { name: 'Cybersecurity', url: '/services/cybersecurity', icon: Shield },;
       { name: 'Data Analytics', url: '/services/data-analytics', icon: BarChart3 }
-    ]
-  }
-  {
-    category: 'Solutions'
-    pages: [
-      { name: 'Cloud Migration', url: '/solutions/cloud-migration', icon: Cloud }
-      { name: 'Digital Transformation', url: '/solutions/digital-transformation', icon: Settings }
+    ];
+  },;
+  {;
+    category: 'Solutions',;
+    pages: [;
+      { name: 'Cloud Migration', url: '/solutions/cloud-migration', icon: Cloud },;
+      { name: 'Digital Transformation', url: '/solutions/digital-transformation', icon: Settings },;
       { name: 'Custom Solutions', url: '/solutions/custom', icon: Target }
-    ]
-  }
+    ];
+  },;
+  {;
+    category: 'Resources',;
+    pages: [;
+      { name: 'Documentation', url: '/docs', icon: Globe },;
+      { name: 'API Documentation', url: '/api-docs', icon: Settings },;
+      { name: 'Guides', url: '/guides', icon: Globe },;
+
+import React from 'react';
+import Head from 'next / head';
+import Link from 'next / link';
+import { motion } from 'framer-motion';
+import {
+  Home,
+  Brain,
+  Network,
+  Target,
+  Users,
+  Shield,
+  Cloud,
+  BarChart3,
+  Settings,
+  Globe,
+  ArrowRight;
+} from 'lucide-react';
+;
+const sitemap_data = [;
   {
+    category: 'Main Pages',
+    pages: [;
+      { name: 'Home', url: '/', icon: Home },
+      { name: 'About', url: '/about', icon: Users },
+      { name: 'Contact', url: '/contact', icon: Globe },
+      { name: 'Services', url: '/services', icon: Settings }
+    ];
+  },
+  {
+    category: 'Services',
+    pages: [;
+      { name: 'AI Services', url: '/ai - services', icon: Brain },
+      { name: 'IT Services', url: '/it - services', icon: Network },
+      { name: 'Micro SaaS', url: '/micro - saas', icon: Target },
+      { name: 'Cloud Services', url: '/services / cloud', icon: Cloud },
+      { name: 'Cybersecurity', url: '/services / cybersecurity', icon: Shield },
+      { name: 'Data Analytics', url: '/services / data - analytics', icon: BarChart3 }
+    ];
+  },
+  {
+    category: 'Solutions',
+    pages: [;
+      { name: 'Cloud Migration', url: '/solutions / cloud - migration', icon: Cloud },
+      { name: 'Digital Transformation', url: '/solutions / digital - transformation', icon: Settings },
+      { name: 'Custom Solutions', url: '/solutions / custom', icon: Target }
+    ];
+  },
+  {
+    category: 'Resources',
+    pages: [;
+      { name: 'Documentation', url: '/docs', icon: Globe },
+      { name: 'API Documentation', url: '/api - docs', icon: Settings },
+      { name: 'Guides', url: '/guides', icon: Globe },
       { name: 'FAQ', url: '/faq', icon: Users }
-    ]
+    ];
   }
 ];
+
+
+
+
 
 export default function SitemapPage() {
   return (
@@ -588,22 +641,10 @@ export default function SitemapPage() {;
     { type: 'Phone', value: '+1 (302) 464-0950', action: 'tel:+13024640950' },
     { type: 'Email', value: 'kleber@ziontechgroup.com', action: 'mailto:kleber@ziontechgroup.com' },
     { type: 'Address', value: 'Middletown, DE', action: 'https://maps.google.com/?q=Middletown,DE' }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Sitemap | Zion Tech Group</title>
-        <meta
-          name='description'
-          content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category."
-        />
-        <meta property='og:title' content='Sitemap | Zion Tech Group' />
-        <meta
-          property='og:description'
-          content='Complete website sitemap and navigation guide.'
-        />
-        <link rel='canonical' href='https://ziontechgroup.com/sitemap' />      </Head>
         <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category." />
         <meta property="og:title" content="Sitemap | Zion Tech Group" />
         <meta property="og:description" content="Complete website sitemap and navigation guide." />
@@ -616,22 +657,6 @@ export default function SitemapPage() {;
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-          >
-            <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
-              Site Map
-            </h1>
-            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>
-              Navigate our comprehensive website and discover all the AI-powered
-              technology solutions, resources, and information available at Zion
-              Tech Group.
-          >
-            <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
-              Site Map
-            </h1>
-            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>
-              Navigate our comprehensive website and discover all the AI-powered
-              technology solutions, resources, and information available at Zion
-              Tech Group.
 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -672,15 +697,6 @@ export default function SitemapPage() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
-          >
-            <h2 className='text-3xl font-bold text-white mb-4 text-center'>
-              Main Pages
-            </h2>
-            <p className='text-white/60 text-center max-w-2xl mx-auto'>
-              Core pages that provide essential information about our company
-              and services
-            </p>
-          </motion.div>
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
               Main Pages;
@@ -690,40 +706,21 @@ export default function SitemapPage() {;
               and services;
             </p>;
           </motion && motion.div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages && mainPages.map((page, index) => (;
-              <motion&& motion.div
-                key={page && page.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-              >
-                <Link
-                  href={page.href}
-                  className='block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-                >
-                  <div className='flex items-center justify-between mb-4'>
-                    <h3 className='text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300'>
-                      {page.label}
-                    </h3>
-                    <ChevronRight className='w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300' />
-                  </div>
-                  <p className='text-white/70 text-sm leading-relaxed'>
-                    {page.description}
-                  </p>                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* Service Categories */}
-      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
+
+
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Service Categories
@@ -737,32 +734,64 @@ export default function SitemapPage() {;
             {serviceCategories.map((category, index) => (
 
               <motion.div
-              >
-                <Link
-                  href={category.href}
-                  className='block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-                >
-                  <div className='flex items-center justify-between mb-4'>
-                    <h3 className='text-lg font-bold text-white group-hover:text-cyan-300 transition-colors duration-300'>
-                      {category.label}
-                    </h3>
-                    <ChevronRight className='w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300' />
-                  </div>
-                  <p className='text-white/70 text-sm leading-relaxed'>
-                    {category.description}
-                  </p>                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+            className='mb-16'>;
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              Service Categories;
+            </h2>;
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>;
+              Browse our comprehensive range of technology solutions organized;
+              by category;
+            </p>;
+          </motion && motion.div>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories && serviceCategories.map((category, index) => (;
+              <motion&& motion.div
+                key={category && category.href}
+
+
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+
       {/* Featured Services */}
-      <section className='py-20 px-6'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
+      <section className='py-20 px-6'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+
+      {/* Featured Services */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
+
+
+          >
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>
+              Featured Services
+            </h2>
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Our most popular and innovative technology solutions
+            </p>
+          </motion.div>
+
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              Featured Services
+            </h2>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Our most popular and innovative technology solutions
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredServices.map((service, index) => (
+
+              <motion.div
+                key={service.href}
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
               Service Categories;
@@ -802,39 +831,6 @@ export default function SitemapPage() {;
 
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
-              Featured Services
-            </h2>
-            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Our most popular and innovative technology solutions
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredServices.map((service, index) => (
-
-              <motion.div
-              >
-                <Link
-                  href={service.href}
-                  className='block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105'
-                >
-                  <div className='flex items-center justify-between mb-3'>
-                    <h3 className='text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300 truncate'>
-                      {service.label}
-                    </h3>
-                    <ChevronRight className='w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0' />
-                  </div>
-                  <p className='text-white/60 text-xs'>{service.category}</p>                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Resources & Tools */}
-      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
               Featured Services;
@@ -872,78 +868,6 @@ export default function SitemapPage() {;
 
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
-              Resources & Tools
-            </h2>
-            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources, tools, and information to help you succeed
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {resources.map((resource, index) => (
-
-              <motion.div
-              >
-                <Link
-                  href={resource.href}
-                  className='block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105'
-                >
-                  <div className='flex items-center justify-between mb-3'>
-                    <h3 className='text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300'>
-                      {resource.label}
-                    </h3>
-                    <ChevronRight className='w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300' />
-                  </div>
-                  <p className='text-white/60 text-xs leading-relaxed'>
-                    {resource.description}
-                  </p>                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* External Resources */}
-      <section className='py-20 px-6'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className='mb-16'>;
-            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
-              Resources & Tools;
-            </h2>;
-            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources, tools, and information to help you succeed;
-            </p>;
-          </motion && motion.div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources && resources.map((resource, index) => (;
-              <motion&& motion.div
-                key={resource && resource.href}
-
-
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
-
-
-      {/* External Resources */}
-      <section className='py-20 px-6'>;
-        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-
-
-      {/* External Resources */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.6 }}
-            viewport={{ once: true }}
-
-
-          >
-            <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               External Resources
             </h2>
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources and tools hosted on external platforms
@@ -953,34 +877,6 @@ export default function SitemapPage() {;
             {externalLinks.map((link, index) => (
 
               <motion.div
-              >
-                <a
-                  href={link.href}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-                >
-                  <div className='flex items-center justify-between mb-4'>
-                    <h3 className='text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300'>
-                      {link.label}
-                    </h3>
-                    <ExternalLink className='w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300' />
-                  </div>
-                  <p className='text-white/70 text-sm leading-relaxed'>
-                    {link.description}
-                  </p>                </a>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Contact Information */}
-      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
-        <div className='max-w-4xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
               External Resources;
@@ -988,7 +884,6 @@ export default function SitemapPage() {;
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources and tools hosted on external platforms;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks && externalLinks.map((link, index) => (;
               <motion&& motion.div
                 key={link && link.href}
@@ -1003,7 +898,6 @@ export default function SitemapPage() {;
       {/* Contact Information */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-4xl mx-auto'>          <motion&& motion.div
-
 
       {/* Contact Information */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">

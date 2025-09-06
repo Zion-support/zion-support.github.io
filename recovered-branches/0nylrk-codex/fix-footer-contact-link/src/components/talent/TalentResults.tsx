@@ -19,14 +19,6 @@ interface TalentResultsProps {
     setPriceRange: (range: [number, number]) => void,
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void,
-export function TalentResults({
-  filteredTalents,
-  isLoading,
-  viewProfile,
-  handleRequestHire,
-  savedTalents,
-  handleToggleSave,
-  isAuthenticated,
   activeFiltersProps
 }: TalentResultsProps) {
   return (

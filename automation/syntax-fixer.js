@@ -172,6 +172,32 @@ if ( {) {
 ;
     return files;
 }
+      }
+    })
+  },
+,
+  getSourceFiles() {,
+
+,
+    if (fs.existsSync(srcDir)) {,
+      const walkDir = (dir) => {,
+        const items = fs.readdirSync(dir),
+        items.forEach(item => {,
+          const fullPath = path.join(dir, item),
+          const stat = fs.statSync(fullPath),
+,
+          if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
+            walkDir(fullPath)
+          } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
+
+            files.push(fullPath)
+          }
+        })
+      }
+      walkDir(srcDir)
+    }
+    return files
+      this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
     } catch (error) {
       this.log (` Syntax Fixer failed: ${error.message}`, "ERROR");
 }

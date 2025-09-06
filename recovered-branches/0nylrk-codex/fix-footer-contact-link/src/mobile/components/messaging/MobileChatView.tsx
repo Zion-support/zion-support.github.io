@@ -27,43 +27,10 @@ interface MobileChatViewProps {
     id: string
     name: string
     avatar?: string;
-interface Message {
-  id: string,
-  content: string,
-  timestamp: string,
   isMe: boolean,
   sender?: string,
   avatar?: string,
   status?: 'sent' | 'delivered' | 'read'
-import React, { useState } from "react",;
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { useNavigate } from "react-router-dom",;
-import { toast } from "sonner",;
-interface Message {;
-  id: string,;
-  content: string,;
-  timestamp: string,;
-  isMe: boolean,;
-  sender?: string,;
-  avatar?: string,;
-  status?: 'sent' | 'delivered' | 'read';
-}
-;
-interface MobileChatViewProps {;
-  contact: {;
-    id: string,;
-    name: string,;
-    avatar?: string,;
-    status?: string;
-  },;
-  messages: Message[],;
-  onBack: () => void,;
-  onSendMessage: (content: string) => void;
-}
 
   onSendMessage: (content: string) => void
 }
@@ -80,18 +47,10 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     const roomId = `mobile-${contact.id}`,
     toast.success("Starting video call", {
       description: `Connecting with ${contact.name}...`
-    });
-    // Navigate to video call page
-    navigate(`/call/${roomId}`)
-  }
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`,
     toast.success("Starting audio call", {
       description: `Connecting with ${contact.name}...`
-    });
-    // Navigate to video call page with audio-only flag
-    navigate(`/call/${roomId}?audioOnly=true`)
-  }
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -142,10 +101,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               <div className={cn(
                 "text-xs mt-1 flex justify-end";
 
-  },;
-  const startVideoCall = () => {;
-    const roomId = `mobile-${contact.id}`,;
-    toast.success("Starting video call", {;
       description: `Connecting with ${contact.name}...`;
     });
 ;
@@ -377,3 +332,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
             value={newMessage}
             onChange={(e) => setNewMessage(e && e.target.value)}
             onKeyDown={handleKeyDown}
+
+}
+;
+

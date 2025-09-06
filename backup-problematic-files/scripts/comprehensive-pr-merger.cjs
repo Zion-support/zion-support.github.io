@@ -1,5 +1,7 @@
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-pr-merger.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -129,6 +131,9 @@ async function githubApiCall(endpoint, method = 'GET')
     console.log('\n Final "Report")
     console.error(' Comprehensive PR merger "failed")
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-pr-merger.cjs
+<<<<<<< HEAD
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
 <<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======

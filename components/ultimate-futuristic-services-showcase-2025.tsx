@@ -166,31 +166,6 @@ export default function UltimateFuturisticServicesShowcase2025() {;
       }
     }
   }
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 }
-    visible: {
-      y: 0
-      opacity: 1
-      transition: {
-        duration: 0.5
-      }
-    },  };        duration: 0.5
-        return b.rating - a.rating;
-      case 'customers':;
-        return b.customers - a.customers;
-      default: return b.popular ? 1 : -1
-    }
-  });
-;
-  const container_variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  }
   return (
     <Layout>;
       <Head>;
@@ -332,6 +307,19 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                 <option value='rating'>Highest Rated</option>
                 <option value='customers'>Most Customers</option>
               </select>
+              {/* Sort Options */}
+              <select
+                value={sortBy}
+                onChange={e => setSortBy(e.target.value)}
+                className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+
+              >
+                <option value='popular'>Most Popular</option>
+                <option value='price-low'>Price: Low to High</option>
+                <option value='price-high'>Price: High to Low</option>
+                <option value='rating'>Highest Rated</option>
+                <option value='customers'>Most Customers</option>
+              </select>
               {/* View Mode Toggle */}
               <div className='flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1'>                <button
                   onClick={() => setViewMode('grid')}
@@ -349,6 +337,14 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                 <option value="rating">Highest Rated</option>;
                 <option value="customers">Most Customers</option>;
               </select>;
+                </button>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+
+
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -439,6 +435,25 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                         <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                        {feature}
                       </div>;
                     ))}
+                      {service.icon}
+                    </div>
+                  </div>
+                  <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors'>
+                      {service.name}
+                    </h3>;
+                    <p className="text - gray - 300 text - sm mb - 3">{service.tagline}</p>;
+                    {/* Price */}
+                    <div className="flex items - center justify - center space - x-2 mb - 4">;
+                      <span className="text - 3xl font - bold text - white">{service.price}</span>;
+                      <span className="text - gray - 400">{service.period}</span>;
+                    </div>;
+                  </div>;
+                </div>;
+                {/* Description */}
+                <p className='text - gray - 300 mb - 6 leading - relaxed'>;
+                  {service.description}
+                </p>;
                 {/* Features */}
                 <div className="mb-6">;
                   <h4 className="text-white font-semibold mb-3 flex items-center">;
@@ -472,12 +487,10 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                   </div>
                 </div>
                 {/* Service Details */}
-                <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
-                  <div className='text-gray-400'>
-                    <span className='block'>Setup Time</span>
-                    <span className='text-white font-medium'>
-                      {service.setupTime}
-                    </span>
+
+
+
+
 
                   </div>
                   <div className='text-gray-400'>
@@ -578,10 +591,30 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                   setSelectedCategory('all');
                 }}
       {/* CTA Section */}
-      <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>
-        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
+      <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>;
+        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">;
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
+              Ready to Experience the Future?;
+            </h2>;
+            <p className='text-xl text-gray-300 mb-8'>;
+              Transform your business with our revolutionary futuristic;
+              services. Get in touch with our experts to discuss your specific;
+              needs and implementation strategy.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <Link
+                href='/contact'
+                className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105'>;
+                Contact Our Experts;
+              </Link>;
+              <Link
+                href='/pricing'
 
 
             initial={{ opacity: 0, y: 30 }}
@@ -603,20 +636,6 @@ export default function UltimateFuturisticServicesShowcase2025() {;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link
                 href="/contact"
-              <Link
-                href='/pricing'
-                className='border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors'                href="/pricing"
-                className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors"
-              >
-                View Pricing
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </Layout>
-  );
-}
 }
   );
 }

@@ -23,20 +23,6 @@ import { PaymentMethods } from "./PaymentMethods",
           <UsageOverview />
         </TabsContent>
       </Tabs>
-  )
-import React from "react",;
-import { BillingHeader } from "./BillingHeader",;
-import { CurrentSubscription } from "./CurrentSubscription",;
-import { PaymentMethods } from "./PaymentMethods",;
-import { InvoiceHistory } from "./InvoiceHistory",;
-import { UsageOverview } from "./UsageOverview",;
-import {;
-  Tabs,;
-  TabsContent,;
-  TabsList,;
-  TabsTrigger} from "@/components/ui/tabs";
-export function BillingDashboard() {;
-  return (;
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;
           <TabsTrigger value="subscription">Subscription</TabsTrigger>;
           <TabsTrigger value="payment">Payment Methods</TabsTrigger>;

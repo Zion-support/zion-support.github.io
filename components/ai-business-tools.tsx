@@ -2,6 +2,11 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import {
+
   Brain,
   MessageSquare,
   Image,
@@ -600,8 +605,8 @@ export default function AIBusinessToolsPage() {;
                 }`}
               >;
                 {category}
-
       {/* Tools Grid */}
+
 
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
@@ -611,32 +616,6 @@ export default function AIBusinessToolsPage() {;
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
-                      {tool.icon}
-                    </div>
-                  </div>
-                  <div className='flex-1'>
-                    <div className='flex items-center justify-between mb-2'>
-                      <h3 className='text-2xl font-bold text-white group-hover:text-green-400 transition-colors duration-300'>
-                        {tool.name}
-                      </h3>
-                      <div className='flex items-center space-x-2'>
-                        <Star className='w-4 h-4 text-yellow-400 fill-current' />
-                        <span className='text-sm text-gray-300'>
-                          {tool.rating}
-                        </span>
-                      </div>
-                    </div>
-                    <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>
-                      <span className='px-2 py-1 bg-gray-800 rounded-full'>
-                        {tool.category}
-                      </span>
-                      <span>{tool.users} users</span>
-                      <span className='text-green-400'>{tool.pricing}</span>
-                    </div>
-                    <p className='text-gray-400 leading-relaxed mb-4'>
-                      {tool.description}
-                    </p>
-
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -690,12 +669,6 @@ export default function AIBusinessToolsPage() {;
                         href={tool && tool.website}
                         variant='outline'
                         size='sm'
-
-      {/* AI Benefits Section */}
-      <section className='py-24 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
               Why Choose AI Tools?
             </h2>

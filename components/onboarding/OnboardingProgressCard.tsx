@@ -228,8 +228,32 @@ function computePercentage(steps: OnboardingStep[]): number {
               {first_incomplete.cta_label}
             </a>;
           </Link>;
-        </div>;
-    </div>
+      <ul className='mt-4 space-y-2'>
+        {steps.map(step => (
+          <li key={step.id} className='flex items-center justify-between'>
+            <div className='flex items-center gap-2'>
+                <CheckCircle2
+                  className='text-green-600 dark:text-green-400'
+                  size={18}
+                />
+              ) : (
+                <Circle className='text-gray-400' size={18} />
+              )}
+              <span className={step.completed ? 'line-through opacity-70' : ''}>
+                {step.label}
+              </span>
+            </div>
+            {!step.completed && step.ctaHref && step.ctaLabel ? (
+              <Link href={step.ctaHref}>
+                <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+
+                  {step.ctaLabel}
+                </a>
+              </Link>
+            ) : null}
+          </li>
+        ))}
+      </ul>
       {!allDone && firstIncomplete ? (
         <div className="mt-5">
           <Link href={firstIncomplete.ctaHref!}>

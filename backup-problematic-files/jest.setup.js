@@ -24,17 +24,6 @@ jest.mock("next/image", () => {
   };
 });
 
-}));
-// Mock Next.js Link component
-jest.mock("next/link", () => {
-  return function MockedLink({ children, href, ...props }) {
-    return (
-      <a href={href} {...props}>
-        {children}
-      </a>
-    );
-  };
-});
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -65,4 +54,3 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-};

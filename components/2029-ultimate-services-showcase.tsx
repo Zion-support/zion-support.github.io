@@ -465,21 +465,6 @@ import {
                   {range && range.name}
                 </button>;
               ))}
-                  key={range.id}
-                  onClick={() => setSelectedPriceRange(range.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-                    selectedPriceRange === range.id
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'                  }`}                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
-                  }`}
-                >
-                  {range.name}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
             </div>;
           </div>;
@@ -525,8 +510,12 @@ import {
                         </span>
 
                       )}
-                    </ul>
-                  </div>
+
+                    </div>;
+                  </div>;
+
+
+
 
                   {/* Features Preview */}
 
@@ -594,15 +583,6 @@ import {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
-
-          </motion && motion.div>;
-                  <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-
-
-
-
-
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;
             <div className='text-center py-20'>;
@@ -677,3 +657,6 @@ import {
               Contact us today to discuss how we can help you achieve your;
               goals.;
             </p>;
+
+  );
+

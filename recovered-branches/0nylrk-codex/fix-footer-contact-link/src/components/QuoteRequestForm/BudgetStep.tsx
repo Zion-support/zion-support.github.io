@@ -14,10 +14,6 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
     } else {
       updateFormData ({
         budget: {
-        }
-      })
-    } else {
-      updateFormData({
         budget: {
 
 
@@ -31,7 +27,6 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
         }
       });
     }
-  },
 
 
   },
@@ -161,19 +156,14 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                       }
                     });
                   }}
-                  className="py-4"
-                />
-                <div className="flex justify-between text-sm text-zion-slate-light mt-2">
-                  <span>$0</span>
-                  <span>$50,000</span>
-                </div>
-              </div>
-              <div>
-                <Label className="text-zion-slate-light mb-4 block">
-                  Maximum Budget: {formatCurrency(formData.budget.maxAmount |0)}
-                </Label>
-                <Slider
-                  defaultValue={[formData.budget.maxAmount |formData.budget.amount + 5000]}
+
+
+                  Maximum Budget: {formatCurrency(formData.budget.maxAmount || 0)}
+                </Label>;
+                <Slider;
+                  defaultValue={[formData.budget.maxAmount || formData.budget.amount + 5000]}
+
+
                   min={formData.budget.amount}
                   className="py-4";
                 />;

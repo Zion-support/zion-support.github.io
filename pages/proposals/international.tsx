@@ -6,6 +6,32 @@ type ProposalListItem = {
   type: string
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
   createdAt: string
+type ProposalListItem = {
+  id: string,
+  title: string,
+  target_institution: string,
+  regional_scope: string,
+  type: string,
+  status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
+
+
+},
+export default function InternationalProposalsPage() {
+  const [items, setItems] = useState<ProposalListItem[]>([]),
+  const [filter, setFilter] = useState('All'),
+
+  useEffect__(() => {
+
+    fetch('/api/proposals')
+      .then((r) => r.json())
+      .then((d) => setItems(d.items |[]))
+      .catch(() => setItems([]))
+
+
+  }, []),
+  const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
+
+
   return (
     <EnhancedLayout>
       <div className="space-y-4">
@@ -31,11 +57,6 @@ type ProposalListItem = {
               </div>
               <div className="flex items-center gap-4 text-sm">
                 <span className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800">{i.status}</span>
-                <a className="text-blue-600 underline" href={`/api/proposals?id=${i.id}`} target="_blank" rel="noreferrer">JSON</a>
-                <a className="text-blue-600 underline" href={`/proposals/${i.id}.md`} target="_blank" rel="noreferrer">Markdown</a>
-                <a className="text-blue-600 underline" href={`/proposals/${i.id}.pdf`} target="_blank" rel="noreferrer">PDF</a>
-              </div>
-            </div>
         </div>
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
@@ -90,5 +111,19 @@ function InternationalProposalsPage() {
         <div className="text - sm text - gray - 600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>;
       </div>;
     </EnhancedLayout>);
+
+
+import React, { useEffect, useState } from 'react',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+import React, { useEffect, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout'
+type ProposalListItem = {
+  id: string
+  title: string
+  targetInstitution: string
+  regionalScope: string
+  type: string
+  status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
+  createdAt: string
 
 

@@ -1,22 +1,30 @@
 import type { GetServerSideProps } from 'next';
 
 export default function AgencyDashboardPage({ vendor }: Props) {
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
+export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
+
+
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
+    } as Vendor;
+    // For MVP, update via direct API not implemented; keep local preview only;
+    setActiveVendor(updated);  }
+
+
+  function addPackage() {;
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;      name: String(formData && formData.get('name') || activeVendor && activeVendor.name),;
+      about: String(formData && formData.get('about') || activeVendor && activeVendor.about || ''),;
+      servicesOffered: String(formData && formData.get('servicesOffered') || activeVendor && activeVendor.servicesOffered?.join() || '');
+        .split();
+        .map(s => s && s.trim());
+
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only;
     setActiveVendor(updated);
   }
-    const packages = [
-      ...(activeVendor.packages |[])
-      {
-        id: `pkg_${Date.now()}`
-        title: pkgTitle
-        description: pkgDesc
-        priceUsd: Number(pkgPrice)
-      }
     ];
     setActiveVendor({ ...activeVendor, packages });
     setPkgTitle('');
@@ -87,9 +95,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
               placeholder='Price (USD)'
               type='number'
               value={pkgPrice}
-
-
-
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
@@ -446,38 +451,6 @@ function change_status() {
             <option value="lost">Lost</option>;
 
 
-
-export const getServerSideProps: GetServerSideProps<Props> = async () => {;
-  const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] |null; // tie to auth later
-  return { props: { vendor } }
-};  )
-}
-  const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] || null; // tie to auth later;
-  return { props: { vendor } };
-};  );
-            defaultValue={item.status}
-            onChange={e => changeStatus(item.id, e.target.value)}
-            className='border rounded px-2 py-1 bg-transparent text-sm'
-          >
-            <option value='lead'>Lead</option>
-            <option value='qualified'>Qualified</option>
-            <option value='proposal'>Proposal</option>
-            <option value='in_progress'>In Progress</option>
-            <option value='complete'>Complete</option>
-            <option value='lost'>Lost</option>          </select>
-        </div>
-      ))}
-    </div>          <select defaultValue={item.status} onChange={e => changeStatus(item.id, e.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">
-            <option value="lead">Lead</option>
-            <option value="qualified">Qualified</option>
-            <option value="proposal">Proposal</option>
-            <option value="in_progress">In Progress</option>
-            <option value="complete">Complete</option>
-            <option value="lost">Lost</option>
-        </div>
-      ))}
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../utils/vendor-store');

@@ -15,17 +15,19 @@ interface CreateKeyRequest {
   name: string,
   scopes: string[],
   expiresAt?: string | null
-import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
-interface CreateKeyRequest {;
-  name: string,;
-  scopes: string[],;
-  expiresAt?: string | null;
 }
 ;
 interface RegenerateKeyRequest {;
   keyId: string;
 }
+
+  expiresAt?: string | null
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,
+import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.38.0';
+interface CreateKeyRequest {
+  name: string;
+  scopes: string[],
+  expires_at?: string | null;
 }
 interface RegenerateKeyRequest {
   key_id: string;
@@ -476,3 +478,5 @@ function getApiLogs() {
       .select ('id');
       .eq ('user_id', user_id);
 ;
+  }
+}

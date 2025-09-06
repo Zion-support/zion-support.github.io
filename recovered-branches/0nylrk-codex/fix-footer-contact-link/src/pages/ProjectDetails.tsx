@@ -20,10 +20,6 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewSection";
 import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
-function ProjectDetailsContent() {
-  // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
-  const { projectId } = useParams() as { projectId?: string }
   const { user } = useAuth();
   const navigate = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects();
@@ -248,18 +244,17 @@ if (throw error) {
     )
   }
   // Check if user is either the client or the talent
-  const isClient = user?.id === project.client_id;
-  const isTalent = user?.id === project.talent_id;
-  const isClient = user?.id === project.client_id,
-  const isTalent = user?.id === project.talent_id,
-  
-  if (!isClient && !isTalent) {
-    navigate("/unauthorized"),
-    return null
+    navigate("/unauthorized");
+    return null;
   }
-  const isOfferPending = project.status === "offer_sent";
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
+
+
+  
+  const isOfferPending = project.status === "offer_sent",
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
+  
+
 
   return (
     <>
@@ -815,40 +810,8 @@ if ( {) {
                   </p>;
                 </CardFooter>;
               )}
-              {project.status === "completed" && (
-                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
-                  <p className="text-sm text-green-600 flex items-center gap-1">
-                    <CheckCircle2 className="h-4 w-4" /> This project has been completed.
-                  </p>
-                </CardFooter>
-              )}
-              {project.status === "canceled" && (
-                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
-                  <p className="text-sm text-red-600 flex items-center gap-1">
-                    <XCircle className="h-4 w-4" /> This project has been canceled.
-                  </p>
-                </CardFooter>
-              )}
-            </Card>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
-  )
-}
-export default function ProjectDetails() {
-  return (
-    <ProtectedRoute>
-      <ProjectDetailsContent />
-    </ProtectedRoute>
-  )
-};
-;
             </Card>;
           </div>;
         </div>;
       </main>;
       <Footer />;
-}
-;

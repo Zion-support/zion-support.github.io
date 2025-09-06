@@ -21,16 +21,12 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
-  
-  const clientId = userId || user?.id,
-
   const fetchJobs = async () => {
     if (!clientId) {
       setIsLoading(false),
       return
     }
     try {
-      setIsLoading(true);
       let query = supabase
         .from("jobs")
         .select("*")
@@ -166,4 +162,5 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     updateJob;
     getJobById;
   }
-};
+}
+;

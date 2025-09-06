@@ -240,6 +240,14 @@ const path = require('path')
       console.error('Fatal "error")
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      console.error('Fatal "error")
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
       console.error('Fatal "error")
 =======
       console.error('Fatal "error")
@@ -252,6 +260,21 @@ const path = require('path')
       console.error('Fatal "error")
 =======
       console.error('Fatal "error")
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+      console.error('Fatal "error")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+      console.error('Fatal "error")
+=======
+      console.error('Fatal "error")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+      console.error('Fatal "error")
+>>>>>>> origin/main
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======

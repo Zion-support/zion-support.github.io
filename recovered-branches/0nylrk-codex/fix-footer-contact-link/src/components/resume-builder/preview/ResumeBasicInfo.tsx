@@ -17,6 +17,7 @@ interface ResumeBasicInfoSectionProps {;
   basicInfo: ResumeBasicInfo;
 
 
+
 }
 
 export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProps) {

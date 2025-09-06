@@ -1,10 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const logMessage = `[${timestamp}] ${message}\n`;
 =======
 =======
 >>>>>>> origin/main
+=======
+const logMessage = `[${timestamp}] ${message}\n`;
+=======
+>>>>>>> pr-12166
     const logMessage = `[${timestamp}] ${message}\n`;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   }
@@ -149,8 +155,14 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
         "impact"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         "impact"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+        "impact"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

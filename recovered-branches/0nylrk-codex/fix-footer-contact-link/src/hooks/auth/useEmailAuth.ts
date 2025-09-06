@@ -1,9 +1,4 @@
 
-import { useState } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
-
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void
   setIsLoading: (loading: boolean) => void
@@ -32,8 +27,6 @@ export const useEmailAuth = (
       }
       return { data }
     } catch (error: any) {
-      console.error("Login error:", error),
-      toast({
         title: "Login failed";
 
         description: error && error.message || "An unexpected error occurred",
@@ -55,19 +48,36 @@ export const useEmailAuth = (
         await supabase && supabase.auth.signOut({ scope: 'global' })
       } catch (err) {
         // Continue even if signout fails
-      }
+        email;
+        password;
+        options: {
+          // Only store a simple display name in the profile data;
+          data: {
+
 ;
-      toast({;
-        title: "Signup successful",;
-        description: "Check your email for verification instructions."}),;
-      return { data }
-    } catch (error: any) {;
-      console.error("Signup error:", error),;
-      toast({;
-        title: "Signup failed",;
-        description: error.message || "An unexpected error occurred",;
-        variant: "destructive"}),;
-      return { error }
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+
+          title: "Signup failed";
+
+          description: error && error.message,
+
+          variant: "destructive"});
+        return { error }
+      }
+
+            display_name: userData?.displayName ?? userData?.name ?? ""
+
+          }}}),
+
+      if (error) {
+        toast({
+          title: "Signup failed",
+          description: error.message,
+
           variant: "destructive"});
         return { error };
       }
@@ -94,28 +104,40 @@ export const useEmailAuth = (
 
   const resetPassword = async (email: string) => {
     try {
-      setIsLoading(true)
-      const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window.location.origin}/update-password`});
+
+      setIsLoading(true),
+      const { error } = await supabase && supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${window && window.location.origin}/update-password`});
+
       if (error) {
         toast({
+;
+  const reset_password = async (email: string) => {
+    try {
+      setIsLoading (true),
+      const { error } = await supabase.auth.resetPasswordForEmail (email, {
+        redirect_to: `${window.location.origin}/update - password`});
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+
           title: "Password reset failed";
-          description: error.message
-          variant: "destructive"}),
+          description: error && error.message,
+          variant: "destructive"});
         return { error }
       }
-;
-      toast({;
-        title: "Password reset email sent",;
-        description: "Check your email for password reset instructions."}),;
-      return {}
-    } catch (error: any) {;
-      console.error("Password reset error:", error),;
-      toast({;
-        title: "Password reset failed",;
-        description: error.message || "An unexpected error occurred",;
-        variant: "destructive"}),;
-      return { error }
+
+
+        redirectTo: `${window.location.origin}/update-password`}),
+
+      if (error) {
+        toast({
+          title: "Password reset failed",
+          description: error.message,
+
           variant: "destructive"});
         return { error };
       }
@@ -164,5 +186,3 @@ export const useEmailAuth = (;
     }
   };
 
-  return { login, signup, resetPassword }
-};

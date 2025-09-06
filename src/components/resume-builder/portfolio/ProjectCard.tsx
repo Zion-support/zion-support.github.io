@@ -74,7 +74,6 @@ interface ProjectCardProps {
           {project.github_url && (
             <a
               href={project.github_url}
-          )}
                 <Link className="h-4 w-4" />
               </Button>
             </Link>

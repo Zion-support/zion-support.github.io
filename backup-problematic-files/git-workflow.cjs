@@ -1,6 +1,12 @@
 <<<<<<< HEAD
 #!/usr/bin/env node
 const { execSync } = require('child_process')
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node
+const { execSync } = require('child_process')
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

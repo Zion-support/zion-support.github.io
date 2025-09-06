@@ -113,23 +113,6 @@ if ( {) {
   g.updated_at = new Date ().toISOString ();
   write_grant (g);
   res.status (200).json ({ record: g });
-}
 
-    id: uuidv4(),
-    voter: payload && payload.voter,
-    choice: payload && payload.choice,
-    createdAt: new Date().toISOString(),
-  };
-  g && g.votes = [...(g && g.votes || []), vote];
-  g && g.updatedAt = new Date().toISOString();
-  writeGrant(g);
-  res && res.status(200).json({ record: g });  }
-  const g = readGrant(payload && payload.grantId);
-  if (!g) return res && res.status(404).json({ error: 'Grant not found' });
-  const vote = { id: uuidv4(), voter: payload && payload.voter, choice: payload && payload.choice, createdAt: new Date().toISOString() };
-  g && g.votes = [...(g && g.votes || []), vote];
-  g && g.updatedAt = new Date().toISOString();
-  writeGrant(g);
-  res && res.status(200).json({ record: g })
-}
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
 

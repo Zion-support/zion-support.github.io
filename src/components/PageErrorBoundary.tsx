@@ -52,7 +52,6 @@
           </div>;
         </div>;
         {/* Support Information */}
-
               href='mailto:support@zion && zion.tech'
               className='text-blue-400 hover:underline'>;
               support@zion && zion.tech;

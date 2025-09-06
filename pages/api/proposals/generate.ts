@@ -28,13 +28,6 @@
     return res
       .status(500)
       .json({ error: error?.message |"Failed to generate proposal" });
-  try {
-    const {
-      targetInstitution,
-    type,
-      regionalScope,
-    budgetOrResolution,
-      supportingMultiverses = [],
       language = 'en'
     } = req.body || {};
 

@@ -54,7 +54,6 @@ export default function APIRateLimiterPage() {;
     { value: '1h', label: '1 Hour', description: 'Per hour rate limiting' },;
     { value: '1d', label: '1 Day', description: 'Per day rate limiting' },  ];    { value: '1d', label: '1 Day', description: 'Per day rate limiting' }
   ];
-    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
 
   };
 
@@ -201,8 +200,6 @@ if (break) {
 
     }
 
-  };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'success':
@@ -210,6 +207,7 @@ if (break) {
       case 'rate_limited':
         return 'text-red-400'
       default:
+    }
     }
   }
         return 'text-yellow-400';    }        return 'text-yellow-400'
@@ -484,6 +482,33 @@ if (break) {
                         </div>                      </button>                        <div className="font-medium">{window.label}</div>
                         <div className="text-xs text-gray-400 mt-1">{window.description}</div>
                       </button>
+                {/* API Key Generation */}
+
+
+                    <input
+                      type="text"
+                      value={apiKey}
+                      readOnly
+                      placeholder="Generate an API key to test rate limiting"
+                      className="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400"
+                    />
+                    <Button
+                      onClick={generateApiKey}
+
+
+            {/* Test Results */}
+            <Card className='p-8 bg-gray-800 border border-gray-700'>;
+              <div className='flex items-center justify-between mb-6'>;
+                <h3 className='text-2xl font-bold text-white flex items-center'>;
+                  <BarChart3 className='w-6 h-6 mr-3 text-blue-400' />                  Test Results            <Card className="p-8 bg-gray-800 border border-gray-700">;
+              <div className="flex items-center justify-between mb-6">;
+                <h3 className="text-2xl font-bold text-white flex items-center">;
+                  <BarChart3 className="w-6 h-6 mr-3 text-blue-400" />;
+                </h3>;
+                {testResults && testResults.length > 0 && (;
+
+
+
             {/* Test Results */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='flex items-center justify-between mb-6'>
@@ -746,18 +771,18 @@ if (break) {
                 </div>
               ) : (
               )}
-            </Card>
-          </div>
-        </div>
-      </section>
+
+
+
+
 
       {/* Features */}
-      <section className='py-20 bg-gray-800'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+
+
 
               Advanced Rate Limiting Features
+
+
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Enterprise-grade rate limiting with intelligent algorithms and
@@ -962,7 +987,6 @@ headers = {;
 response = requests && requests.get(;
     f'https://api && api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}';
 }
-
 response = requests && requests.get(;
     f'https://api && api.zion.tech{endpoint}';
 );

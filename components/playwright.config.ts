@@ -1,4 +1,3 @@
-};
 reporter: [ ['list'], ['json', {
   outputFile: playwright-logs/test-results.json'
 }], ['html', {
@@ -26,4 +25,6 @@ reporter: [ ['list'], ['json', {
   //   {
   //     name: firefox',  //     use: { ...devices['Desktop Firefox'] },  //   }
   //   {
+
+
 

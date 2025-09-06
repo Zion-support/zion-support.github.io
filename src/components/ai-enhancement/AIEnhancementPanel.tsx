@@ -123,8 +123,6 @@ interface AIEnhancementPanelProps {;
             </>
           )}
         </Button>
-                className="h-8"
-              >
                 {copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (

@@ -3,10 +3,6 @@ interface ResumeVersionSelectorProps {;
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void
 
-      }
-      setIsLoading(false)
-    }
-  },
 
 
   return (
@@ -19,8 +15,6 @@ interface ResumeVersionSelectorProps {;
             <ChevronDown className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          {existingResumes.map((resume) => (
               className="cursor-pointer"
             >
               {resume.basic_info.title}
@@ -129,4 +123,3 @@ interface ResumeVersionSelectorProps {;
   );
 
 }
-> {

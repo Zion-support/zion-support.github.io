@@ -10,16 +10,6 @@ interface NotificationSystemProps {
 export function NotificationProvider({ children }: { children: ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([]),
 
-  const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
-    const id = Math.random().toString(36).slice(2),
-    setToasts((prev) => [...prev, { id, message, tone }]),
-    setTimeout(() => {
-      setToasts((prev) => prev.filter((t) => t.id !== id))
-    }, 3000)
-  }, []),
-
-}: NotificationSystemProps) {;
-}: NotificationSystemProps) {
   if (notifications.length === 0) return null;
 
 

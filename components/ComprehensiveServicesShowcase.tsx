@@ -1,32 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-  Star
-  Clock
-  Users
-  TrendingUp
-  CheckCircle
-  ExternalLink
-  ChevronRight
-  Shield
-  Zap
-  Globe
-  Rocket
-  Brain
-  Atom
-  Search
-  Filter
-  Grid
-  List
-  ArrowRight
-  Award
-  Target;
-} from 'lucide-react';
-import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import { ;
-  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, ;
-import { 
-  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
 
   Award,;
   Target,;
@@ -46,11 +20,24 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
           return b.popular ? 1 : -1;
         case 'price':
 
+
+  return (
+
+
+        {/* Header */}
+        <motion&& motion.div
+
+    <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
+      <div className='max-w-7xl mx-auto'>        {/* Header */}
+
+        {/* Header */}
+
+
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className='text-center mb-16'
 
 
         >
@@ -293,6 +280,13 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
               {filteredServices && filteredServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
+        {/* Services Display */}
+        {viewMode === 'grid' ? (
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <AnimatePresence>
+              {filteredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
@@ -328,19 +322,14 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 
                     </div>
                   )}
-
-                  {/* Service Content */}
-                  <div className='p-6'>
-                    <div className='flex items-start justify-between mb-4'>
-                      <div className='text-4xl'>{service.icon}</div>
-                      <div className='text-right'>
-                        <div className='text-2xl font-bold text-white'>
-                          {service.price}
+                      </div>
+                    </div>
+                    <h3 className='text-xl font-bold text-white mb-2'>
+                        </div>;
+                      </div>;
+                    </div>;
+                    <h3 className='text - xl font - bold text - white mb - 2'>;
                         </div>
-                        <div className='text-xs text-white/60'>
-                          {service.period}
-                        </div>
-
                       </div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2'>
@@ -426,34 +415,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 
                     {/* CTA */}
                     <a
-                      href={service.link}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'
-                    >
-                      Learn More
-                      <ExternalLink className='w-4 h-4' />                    </a>                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
-                    >
-                      Learn More
-                      <ExternalLink className="w-4 h-4" />
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </div>
-        ) : (
-          <div className='space-y-6'>            <AnimatePresence>          <div className="space-y-6">
-            <AnimatePresence>
-              {filteredServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 30 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
 
                       )}
 
@@ -463,17 +424,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                     <div className='flex-shrink-0'>
                       <div className='text-6xl mb-4'>{service.icon}</div>
                       {service.popular && (
-                        <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>                          Popular                >
-                  <div className="flex flex-col lg:flex-row gap-6">
-                    {/* Left Side - Icon and Basic Info */}
-                    <div className="flex-shrink-0">;
-                      <div className="text-6xl mb-4">{service && service.icon}</div>;
-                      {service && service.popular && (;
-                        <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center">;
-                          Popular;
-                        </div>;
-                    </div>
-                    {/* Center - Service Details */}
                       )}
                     </div>
                         <div>
@@ -646,11 +596,10 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 
 
 
+        )}
             </p>          </motion.div>
 
           </motion.div>
-
-
 
         )}
 
@@ -731,5 +680,4 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
         </motion.div>
       </div>
     </section>
-}
 }

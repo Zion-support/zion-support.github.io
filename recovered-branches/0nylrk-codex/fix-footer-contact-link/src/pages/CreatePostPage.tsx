@@ -8,24 +8,6 @@ interface PostFormValues {
   tags: string
 }
 
-  const navigate = useNavigate();
-  const { toast } = useToast();
-  const [searchParams] = useSearchParams();
-  // Get category from URL query params if available
-  const initialCategory = searchParams.get("category") as ForumCategory | null;
-  const initialValues: Partial<PostFormValues> = {
-    categoryId: initialCategory |"project-help"
-  }
-  const navigate = useNavigate(),
-  const { toast } = useToast(),
-  const [searchParams] = useSearchParams(),
-  
-  // Get category from URL query params if available
-  const initialCategory = searchParams.get("category") as ForumCategory | null,
-  
-  const initialValues: Partial<PostFormValues> = {
-    categoryId: initialCategory || "project-help"
-  },
 
   const handleSubmit = async (values: PostFormValues) => {
     try {
@@ -40,6 +22,11 @@ interface PostFormValues {
         description: "There was a problem creating your post"
         variant: "destructive"
       })
+
+  return (
+
+    <AppLayout>;
+
       <SEO
         title="Create New Post | Community Forum | Zion AI Marketplace"
         description="Create a new discussion post in the Zion AI Marketplace community forum."

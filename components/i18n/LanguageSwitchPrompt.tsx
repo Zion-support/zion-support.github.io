@@ -1,12 +1,3 @@
-}
-export default function LanguageSwitchPrompt() {
-const localeLabelKey: Record<string, string> = {
-  en: "lang.english",
-  pt: "lang.portuguese",
-  es: "lang.spanish",
-  ar: "lang.arabic",
-};
-export default function LanguageSwitchPrompt() {;
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
   useEffect(() => {
@@ -37,6 +28,14 @@ export default function LanguageSwitchPrompt() {;
   );
 }
 }
+import React, { useEffect, useState } from './react';
+import { use_translation  } from './react - i18next';
+import i18n, { supported_locales, is_rtl } from "../../utils / i18n";
+const localeLabelKey: Record < string, string> = {
+  en: "lang.english",
+  pt: "lang.portuguese",
+  es: "lang.spanish",
+  ar: "lang.arabic",
 }
 export default /**
  * LanguageSwitchPrompt - Function description

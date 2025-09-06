@@ -14,37 +14,6 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@/components/ui/dialog'
-import { Textarea } from '@/components/ui/textarea'
-interface ReviewCardProps {
-  review: Review
-onReport: (reviewId: string, reason: string) => Promise<boolean>
-}export function ReviewCard ({
-  review, onReport
-}: ReviewCardProps) {
-  const handleReport = async () => {
-setIsReporting (true)
-const success = await onReport (review.id, reportReason)
-setIsReporting (false)
-if (success) {
-export function ReviewCard({ review, onReport }: ReviewCardProps) {
-  const [reportReason, setReportReason] = useState(""),
-  const [isReporting, setIsReporting] = useState(false),
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false),
-  
-  const handleReport = async () => {
-    setIsReporting(true)
-    const success = await onReport(review.id, reportReason)
-    setIsReporting(false)
-    if (success) {
-      setReportReason(""),
-      setIsReportDialogOpen(false)
-    }
-  },
-  
-  const renderStars = (rating?: number) => {
-        ))}
-    if (!rating) return null
 
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
@@ -257,10 +226,6 @@ import {
               <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>
                 Cancel
               </Button>
-              <Button
-                onClick={handleReport}
-                disabled={!reportReason.trim() |isReporting}              >
-                {isReporting ? 'Submitting...' : 'Submit Report'}              </Button>                {isReporting ? "Submitting..." : "Submit Report"}
               <Button 
                 onClick={handleReport} 
                 disabled={!reportReason.trim() || isReporting}
@@ -270,9 +235,6 @@ import {
             </DialogFooter>
           </DialogContent>
         </Dialog>
-      </div>;
-    </div>;
-  );
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
   review.reviewer profile.avatar url;
 }alt= {
@@ -308,4 +270,3 @@ import {
 }disabled= {
   !report_reason.trim () || is_reporting;
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>);
-}"}

@@ -12,8 +12,11 @@ console.log('🔧 Ultimate Syntax Fix');
 console.log('=');
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> pr-12166
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
   return content
@@ -146,6 +149,10 @@ console.log('\n🎉 Ultimate syntax fix completed!');
 
 console.log('\n🎉 Ultimate syntax fix completed!');
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

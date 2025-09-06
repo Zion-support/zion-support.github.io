@@ -110,11 +110,6 @@ interface ProfileAvailabilityProps {
   );
 };
 }
-      )};
-    </div>;
-  );
-};
-}
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
       <h3 className='text - xl font - bold text - white mb - 4'>Availability</h3>;
       <div className='flex flex - col md:flex - row md:items - center md:gap - 6 mb - 4'>;

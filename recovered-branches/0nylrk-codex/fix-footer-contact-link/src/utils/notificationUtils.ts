@@ -3,17 +3,6 @@ import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 import { supabase } from "@/integrations/supabase/client",
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',
-/**
- * Creates a notification for a user and optionally sends an email notification
- */
-export async function createNotification({;
-  userId;
-  title;
-  message;
-  type;
-  relatedId = null;
-  sendEmail = false;
-  actionUrl = null;
 export async function createNotification({
   userId,
   title,
@@ -55,11 +44,6 @@ export async function createNotification({
 /**
  * Creates a hire request notification for admin and talent
  */
-export async function createHireRequestNotifications({;
-  talentId;
-  adminId;
-  requesterName;
-export async function createHireRequestNotifications({
     }
   }
   return {
@@ -196,5 +180,3 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
-}
-;

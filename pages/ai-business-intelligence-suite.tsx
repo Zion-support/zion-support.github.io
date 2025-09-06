@@ -25,6 +25,22 @@ export default function AIBusinessIntelligenceSuite() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
     website: 'https://ziontechgroup.com'
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
+  DollarSign, Shield, Mail, MapPin, Rocket, BarChart3,
+  Brain, Database, TrendingUp as TrendingUpIcon, Users,
+
+  Target, BarChart, PieChart, Activity, Eye, Lock
+export default function AIBusinessIntelligenceSuite() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
   }
   },
   const features = [
@@ -46,26 +62,6 @@ export default function AIBusinessIntelligenceSuite() {
       animationSpeed={2.0}
       enableHolographic={true}
       enableQuantumEffects={true}
-      particleCount={500  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      animationSpeed={2.0  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      enableHolographic={true  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      enableQuantumEffects={true  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
     >
       <div className="min-h-screen">
         <Head>
@@ -89,79 +85,18 @@ export default function AIBusinessIntelligenceSuite() {
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-3xl opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </motion.div>
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: 0.3 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent mb-6"
               >
                 AI Business Intelligence Suite
               </motion.h1>
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                 className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium"
               >
                 Transform data into actionable insights with <span className="text-blue-400 font-bold">AI-powered analytics</span>
               </motion.p>
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: 0.5 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                 className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
               >
                 Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.
               </motion.p>
-                <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.2, delay: 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                   className="bg-gradient-to-r from-blue-500 to-indigo-600 p-1 rounded-2xl shadow-2xl"
                 >
                   <div className="bg-gray-900 rounded-2xl px-8 py-6">
@@ -297,14 +232,6 @@ export default function AIBusinessIntelligenceSuite() {
                       <Target className="w-5 h-5 text-white" />
                     </div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
-                      {useCase}
-                    </h3>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
         {/* Technology & Integrations */}
 
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
@@ -582,9 +509,5 @@ export default function AIBusinessIntelligenceSuite() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
 

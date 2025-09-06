@@ -1,16 +1,5 @@
 
 
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',;
-;
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout',
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
-
-
 export default function CybersecurityPage() {
   const features = [
     'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR']
@@ -70,13 +59,6 @@ export default function CybersecurityPage() {
         </div>
       </div>
     </Layout>
-  )
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react';
-export default function CybersecurityPage(req, res) {
-  try {
   const features = [;
     'Zero Trust architectures and identity - first segmentation_cloud posture hardening, secrets management, and key rotation_threat detection, incident response playbooks, and tabletop exercises_compliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
   const solutions = [;

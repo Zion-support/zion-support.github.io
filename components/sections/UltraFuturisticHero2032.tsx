@@ -272,18 +272,16 @@ function UltraFuturisticHero2032() {
         <motion&& motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-        </motion.p>
 
 
 
         </motion.p>
+
 
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'
 
 
         >
@@ -384,14 +382,6 @@ function UltraFuturisticHero2032() {
               <div className='text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2'>
                 {stat.number}
               </div>
-              <div className='text-gray-400 text-sm'>{stat.label}</div>            </motion.div>            >
-              <div className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}>
-                <stat.icon className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">
-                {stat.number}
-              </div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
@@ -421,65 +411,10 @@ function UltraFuturisticHero2032() {
                   href={service && service.href}
                   className='block relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full transform transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50'>;
                   <div
-                    className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}
-                  >
-                    <service.icon className='w-8 h-8 text-white' />
-                  </div>
-                  <h3 className='text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300'>                    {service.name}
-                  </h3>
-                  <p className='text-gray-400 text-sm mb-4 leading-relaxed'>
-                    {service.description}
-                  </p>
-                  <div className='flex items-center justify-between'>
-                    <div className='text-2xl font-bold text-cyan-400'>
-                      {service.price}
-                    </div>
-                    <div className='text-purple-400 group-hover:text-cyan-400 transition-colors'>
-                      <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
-                    </div>
-                  </div>
-                  <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                </Link>
-                key={service.name}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
-                className="group"
-              >
-                <Link
-                  href={service.href}
-                  className="block relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full transform transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}>
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
-                    {service.name}
-                  </h3>
-                  
-                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                    <div className="text-purple-400 group-hover:text-cyan-400 transition-colors">
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                  
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
         {/* Contact Information */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.6 }}
-          className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'
 
 
         >
@@ -740,16 +675,3 @@ function UltraFuturisticHero2032() {
           <Phone className='w-7 h-7 text-white group-hover:rotate-12 transition-transform' />
         </Link>
       </motion.div>
-  );      >
-        <Link
-          href={`tel:${contactInfo.mobile}`}
-          className="group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover: shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40"
-        >
-          <Phone className="w-7 h-7 text-white group-hover:rotate-12 transition-transform" />
-        </Link>
-      </motion.div>
-    </section>
-  )
-}
-    </section>
-  );

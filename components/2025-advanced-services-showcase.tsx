@@ -767,11 +767,6 @@ if ( {) {
                 >;
                   {category.icon}
                   {category.name}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
         {/* Results Summary */}
         <div className='mb-8'>;
           <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>;
@@ -911,6 +906,12 @@ if ( {) {
                 <ArrowRight className='w-5 h-5' />;
               </a>;
               <a
+        {/* Call to Action */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Business?
+
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions.

@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
@@ -205,32 +204,27 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 =======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 class ComprehensiveSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = 0;
     this.totalErrors = 0;
   }
-
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
-
   async fixAllSyntaxErrors() {
     this.log('🔧 Starting comprehensive syntax error fixing...');
-    
     try {
       // Get all TypeScript and JavaScript files
       const files = this.getAllCodeFiles();
       this.log(`Found ${files.length} files to check`);
-      
       for (const file of files) {
         await this.fixFileSyntax(file);
       }
-      
       this.log(`✅ Fixed syntax errors in ${this.fixedFiles} files`);
       this.log(`📊 Total errors fixed: ${this.totalErrors}`);
-      
     } catch (error) {
       this.log(`❌ Error during syntax fixing: ${error.message}`);
       throw error;

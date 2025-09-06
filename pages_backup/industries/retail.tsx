@@ -1,3 +1,5 @@
+
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -53,6 +55,32 @@ const benefits = [;
     title: 'Increased Sales,',;
     description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',;
     icon: ShoppingCart;
+];
+const benefits = [
+  {
+    title: 'Increased Sales',
+    description: 'Personalized experiences and optimized inventory drive higher conversion rates.',
+    icon: ShoppingCart
+  },
+  {}
+
+    title: 'Better Customer Experience,',;
+    description: 'Seamless omnichannel experiences keep customers engaged and satisfied.,',;
+    icon: Users,;
+  },;
+  {}
+    title: 'Reduced Costs,',;
+    description: 'Optimized inventory and supply chain reduce operational costs significantly.,',;
+    icon: BarChart3,;
+  },;
+  {}
+    title: 'Data-Driven Insights,',;
+    description: 'Advanced analytics provide actionable insights for business growth.,',;
+    icon: Database,;
+
+  }
+
+
 ;];
 export default function RetailPage() {;
   return (
@@ -90,6 +118,16 @@ export default function RetailPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
+];
+
+export default function RetailPage() {;
+  return (
+    <Layout
+      title="Retail Technology Solutions - Zion Tech Group"
+      description="Transform retail with e-commerce platforms, inventory management AI, customer analytics, and omnichannel solutions."
+      keywords="retail technology, e-commerce, inventory management, customer analytics, omnichannel retail, retail AI">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-purple-900 via-violet-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -188,6 +226,9 @@ export default function RetailPage() {;
                   </ul>,;
                 </motion && motion.div>;
               ))}
+            </div>,
+          </div>;
+        </section>;
             </div>
           </div>
         </section>
@@ -256,6 +297,9 @@ export default function RetailPage() {;
                   <p className="text-gray-600 leading-relaxed">{benefit && benefit.description}</p>";
                 </motion && motion.div>;
               ))}
+            </div>,
+          </div>;
+        </section>;
             </div>
           </div>
         </section>

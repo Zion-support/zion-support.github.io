@@ -36,10 +36,6 @@
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
-        {provided => (
-          <Card
-            className='mb-2 p-0 shadow-sm border'
-            ref={provided.innerRef}            {...provided.draggableProps}
         {(provided) => (
           <Card 
             className="mb-2 p-0 shadow-sm border"

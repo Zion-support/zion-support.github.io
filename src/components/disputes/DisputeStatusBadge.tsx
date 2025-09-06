@@ -3,7 +3,6 @@ export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) 
   let variant: 'default' | 'destructive' | 'secondary' | 'outline' =;
     'destructive';
   let message = 'This item has an open dispute';
-  switch (status) {;
 import { Badge } from '@/components / ui / badge';
 import { ShieldAlert } from 'lucide-react';
 import {

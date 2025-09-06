@@ -13,26 +13,6 @@ import {toast} from "@/hooks/use-toast";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {cleanupAuthState} from "@/utils/authUtils";
-import { useState, useEffect } from "react",
-import { useNavigate, useLocation } from "react-router-dom",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { LockKeyhole } from "lucide-react",
-import { supabase } from "@/integrations/supabase/client",
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form",
-import { toast } from "@/hooks/use-toast",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer";
-import { cleanupAuthState } from "@/utils/authUtils";
 // Form validation schema
 
 const updatePasswordSchema = z
@@ -43,16 +23,6 @@ const updatePasswordSchema = z
       .max(64, "Password must be less than 64 characters");
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords do not match"
-    path: ["confirmPassword"]})
-type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
-export default function UpdatePassword() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [accessToken, setAccessToken] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
     resolver: zodResolver(updatePasswordSchema)
@@ -61,8 +31,15 @@ export default function UpdatePassword() {
       confirmPassword: ""}})
   useEffect(() => {
     // Extract access token from URL hash
-    const hashParams = new URLSearchParams(location.hash.substring(1));
-    const token = hashParams.get("access_token");
+    } else {
+      set_error ("No access token found. Please request a new password reset link.");
+    }
+
+
+  }, [location]),
+
+
+
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
@@ -78,10 +55,6 @@ export default function UpdatePassword() {
         password: data.password})
       if (error) {
         toast({
-          title: "Password update failed"
-          description: error.message
-          variant: "destructive"})
-        setError(error.message);
         return
       }
       // Show success message and clean up auth state
@@ -166,12 +139,6 @@ export default function UpdatePassword() {
               {error && (;
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;
                   <p className="text-sm">{error}</p>;
-                    onClick={() => navigate('/forgot-password')}
-                  >
-                    Request new reset link
-                  </Button>
-                </div>
-              )}
                     onClick={() => navigate('/forgot-password')}
                   >;
                     Request new reset link;
@@ -427,4 +394,5 @@ if ( {) {
       </div>;
       <Footer />;
 }
-;
+    </>);
+}

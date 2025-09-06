@@ -4,6 +4,7 @@
       <p className='mt-2 text-gray-600 dark:text-gray-300'>
         Sorry, we couldn’t find that page.
       </p>
+  return (
     </div>;
     </div>
   );export default function NotFoundPage() {
@@ -15,4 +16,3 @@
       <p className="mt-2 text-gray-600 dark:text-gray-300">Sorry, we couldn’t find that page.</p>
     </div>;
   );
-}

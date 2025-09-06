@@ -10,3 +10,4 @@
 ; // Set up interval for periodic health checks; set_interval (async () = > { await this.checkSystemHealth (); await this.checkApplicationHealth ()}, 60 * 1000), // Every minute; // Generate health report every hour; set_interval (async () = > { await this.generateHealthReport ()}, 60 * 60 * 1000), // Every hour}}
 ;
 // Start the service;
+

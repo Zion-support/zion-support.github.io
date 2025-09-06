@@ -1,16 +1,3 @@
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-    mobile: string;
-    email: string;
-    address: string;
 
 
 };
@@ -88,11 +75,6 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     rating: 4.4
     reviews: 29
   }
-];
-export const getEmergingTechServices2026ByCategory = (category: string) => {
-  return emergingTechServices2026.filter(
-    service => service.category === category;
-  );
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(
@@ -306,43 +288,6 @@ export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPri
 export const getEmergingTechServices2026ByCategory = (category: string) =>: any {
   return emergingTechServices2026.filter (
     service => service.category === category);
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
 }
 ;
 export const getPopularEmergingTechServices2026 = () =>: any {

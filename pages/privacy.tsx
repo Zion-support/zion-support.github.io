@@ -50,56 +50,8 @@ import {
 } from 'lucide-react';
 
 
-  const privacySections = [
-    {
-      title: 'Information We Collect',
-      icon: <Database className='w-8 h-8' />,
-      color: 'from-cyan-500 to-blue-500',
-      content: [
-        'Personal information (name, email, phone number, company)',
-        'Business information (company size, industry, project requirements)',
-        'Technical information (IP address, browser type, device information)',
-        'Usage data (website interactions, service usage patterns)',
-        'Communication records (emails, phone calls, support tickets)',
-      ],
-    },
-    {
-      title: 'How We Use Your Information',
-      icon: <Settings className='w-8 h-8' />,
-      color: 'from-purple-500 to-pink-500',
-      content: [
-        'Provide and improve our services',
-        'Communicate with you about our services',
-        'Process payments and manage accounts',
-        'Send marketing communications (with consent)',
-        'Analyze usage patterns and improve user experience',
-        'Comply with legal obligations',
-      ],
-    },
-    {
-      title: 'Information Sharing',
-      icon: <Globe className='w-8 h-8' />,
-      color: 'from-green-500 to-emerald-500',
-      content: [
-        'We do not sell, trade, or rent your personal information',
-        'Share with trusted service providers under strict confidentiality',
-        'Comply with legal requirements and court orders',
-        'Protect our rights, property, and safety',
-        'Business transfers (with notice and choice)',
-      ],
-    },
-    {
-      title: 'Data Security',
-      icon: <Lock className='w-8 h-8' />,
-      color: 'from-orange-500 to-red-500',
-      content: [
-        'Industry-standard encryption for data in transit and at rest',
-        'Regular security audits and vulnerability assessments',
-        'Access controls and authentication measures',
-        'Employee training on data protection',
-        'Incident response and breach notification procedures',
-      ],
-    },
+
+
       icon: <Database className="w-8 h-8" />,
       color: 'from-cyan-500 to-blue-500',
       content: [
@@ -195,19 +147,6 @@ export default function PrivacyPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Privacy Policy
-              </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Your privacy is important to us. Learn how we collect, use, and
-                protect your information.
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Privacy Policy</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Your privacy is important to us. Learn how we collect, use, and protect your information.
-              </p>
-            </motion.div>
-          </div>
-        </section>
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -789,10 +728,6 @@ const PrivacyPage: React.FC = () => {
                   <li>Operating system</li>
                 </ul>
 
-
-
-
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
                 </h2>
@@ -815,10 +750,6 @@ const PrivacyPage: React.FC = () => {
                   <li>Improve our services and develop new features</li>
                   <li>Monitor and analyze usage and trends</li>
                 </ul>
-
-
-
-
 
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
@@ -903,27 +834,6 @@ function PrivacyPage() {
                   information. You may also opt out of certain communications;
                   from us.;
                 </p>;
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  Privacy Policy
-                </h1>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                  Your privacy is our priority. Learn how we protect and handle your personal information.
-                </p>
-                <div className="flex items-center justify-center gap-4 text-gray-400">
-                  <Shield className="w-6 h-6" />
-} from "lucide-react";
-import MainLayout from "../components/layout/MainLayout";
-
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </section>
                 </div>
               </motion.div>
             </div>

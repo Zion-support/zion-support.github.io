@@ -31,7 +31,3 @@ export default function CloudDevOps({ }: CloudDevOpsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}
-}

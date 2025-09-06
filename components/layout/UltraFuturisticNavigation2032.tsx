@@ -187,13 +187,19 @@ const mainNavigation = [
   { name: 'Resources', href: '/resources', icon: BookOpen }
   { name: 'Case Studies', href: '/case-studies', icon: TrendingUp }
   { name: 'Blog', href: '/blog', icon: MessageCircle }
-const companyLinks = [
-  { name: 'About Us', href: '/about' }
-  { name: 'Careers', href: '/careers' }
-  { name: 'News', href: '/news' }
-  { name: 'Partners', href: '/partners' }
-  { name: 'Support', href: '/support' }
-  { name: 'Status', href: '/status' },];  { name: 'Status', href: '/status' }
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Layers },
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'Case Studies', href: '/case - studies', icon: TrendingUp },
+  { name: 'Blog', href: '/blog', icon: MessageCircle },
+
+  { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+];
+;
+const company_links = [;
+
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
   { name: 'News', href: '/news' },
@@ -315,6 +321,41 @@ const companyLinks = [;
             <div className="hidden lg:flex items-center space-x-8">
               {mainNavigation.map((item) => (
                 <Link
+                  key={item.name}
+                  href={item.href}
+              {/* Services Dropdown */}
+              <div className='relative group'>
+                <button className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group'>
+                  <Briefcase className='w-4 h-4 group-hover:scale-110 transition-transform' />
+                  <span>Services</span>
+                  <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform' />
+                </button>
+                {/* Mega Menu */}
+                <div className='absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4'>
+                  <div className='bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20'>
+                    <div className='grid grid-cols-2 gap-8'>
+                      {serviceCategories.map((category, index) => (
+                        <div key={index} className='space-y-4'>
+                          <div className='flex items-center space-x-3'>
+                            <div
+                              className={`w-10 h-10 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}
+                            >
+                              <category.icon className='w-5 h-5 text-white' />
+                            </div>
+                            <div>
+                              <h3 className='text-lg font-semibold text-white'>
+                                {category.title}
+                              </h3>
+                              <p className='text-sm text-gray-400'>
+                                {category.description}
+                              </p>
+                            </div>
+                          </div>
+                          <div className='space-y-2'>                            {category.services.map((service, serviceIndex) => (
+                              <Link
+                                key={serviceIndex}
+                                href={service.href}
+                                className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'                <Link
                   key={item.name}
                   href={item.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group"
@@ -518,19 +559,17 @@ const companyLinks = [;
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors'
-            >
-              {isOpen ? (
-                <X className='w-6 h-6' />
-              ) : (
-                <Menu className='w-6 h-6' />
-              )}            </button>              className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-      </nav>
+
+
+            </button>;
+          </div>;
+        </div>;
+      </nav>;
+
+
+
+
+
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -667,17 +706,11 @@ const companyLinks = [;
 
 
                       ))}
-                    </div>
-                  </div>
-
                   {/* Contact Info */}
-                  <div className='pt-4 border-t border-gray-700/50'>
-                    <div className='text-sm font-medium text-gray-400 mb-3'>
-                      Contact
-                    </div>
-                    <div className='space-y-2 text-sm text-gray-400'>
-                      <div className='flex items-center space-x-2'>
-                        <Phone className='w-4 h-4 text-cyan-400' />
+
+
+
+
 
                         <span>{contactInfo.mobile}</span>
                       </div>

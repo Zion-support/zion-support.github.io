@@ -1,11 +1,4 @@
 
-import Document, {
-  Html
-  Head
-  Main
-  NextScript
-  DocumentContext;
-} from 'next/document';
 
   return (
     <Html lang='en'>;

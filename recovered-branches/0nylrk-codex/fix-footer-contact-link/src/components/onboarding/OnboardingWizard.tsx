@@ -1,9 +1,4 @@
 
-import { useState, useEffect  } from 'react';
-import { useNavigate  } from 'react-router-dom';
-import { useAuth  } from '@/hooks/useAuth';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
@@ -69,8 +64,6 @@ interface OnboardingWizardProps {;
   onSkip: () => void,;
   className?: string;
 
-  className?: string
-
 
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
@@ -105,10 +98,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         url: "/talent"
       }
     }
-      action: {
-        text: "Edit Profile"
-        url: "/profile"
-      }
     {
       title: "Define skills & availability"
       description: "Let clients know when you're available and what you can do"
@@ -123,62 +112,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "Preview Profile"
         url: `/talent/${user?.id}`
-      }
-      skipText: "Skip for now"
-    }
     {
       title: "Enable AI matchmaking"
       description: "Let our AI find the perfect opportunities for you"
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />
       action: {
-        text: "Enable Matchmaking"
-        url: "/talent-dashboard"
-      }
-    }
-  ];
-  const steps = type === 'client' ? clientSteps : talentSteps;
-  // Navigate to the specified URL
-  const handleAction = () => {
-    if (currentStep < steps.length - 1) {
-      navigate(steps[currentStep].action.url);
-      setCurrentStep(currentStep + 1)
-    } else {
-      // Last step
-      navigate(steps[currentStep].action.url);
-      onComplete()
-    }
-  }
-  // Skip the current step
-  const handleSkip = () => {
-    if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1)
-    } else {
-      // Last step
-      onSkip()
-    }
-  ],;
-  const steps = type === 'client' ? clientSteps : talentSteps,;
-  // Navigate to the specified URL;
-  const handleAction = () => {;
-    if (currentStep < steps.length - 1) {;
-      navigate(steps[currentStep].action.url),;
-      setCurrentStep(currentStep + 1);
-    } else {;
-      // Last step;
-      navigate(steps[currentStep].action.url),;
-      onComplete();
-    }
-  },;
-  // Skip the current step;
-  const handleSkip = () => {;
-    if (currentStep < steps.length - 1) {;
-      setCurrentStep(currentStep + 1);
-    } else {;
-      // Last step;
-      onSkip();
-    }
-  },
-  
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
@@ -294,8 +232,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
               <div
                 key={index}
                 className={cn(
-                  "h-2 w-2 rounded-full mx-1";
-
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep

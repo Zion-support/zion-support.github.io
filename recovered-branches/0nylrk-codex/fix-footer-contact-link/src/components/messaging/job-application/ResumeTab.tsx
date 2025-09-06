@@ -1,29 +1,3 @@
-  selectedResumeId?: string | null;
-  onSelectResume?: (resume_id: string) => void;
-  onResumeSelected?: (resume: ResumeOption) => void;
-  onApply?: () => Promise<void>;
-  isSubmitting?: boolean
-}
-
-export function ResumeTab({
-  selectedResumeId
-  onSelectResume
-  onResumeSelected
-  onApply
-  isSubmitting = false
-}: ResumeTabProps) {
-  const handleResumeSelected = (resume: ResumeOption) => {
-    if (onResumeSelected) {
-      onResumeSelected(resume);
-    }
-    if (onSelectResume) {
-      onSelectResume(resume.id);
-    }
-  }
-
-  return (
-    <div className="space-y-4">
-      <ResumeSelector onResumeSelected={handleResumeSelected} />
 export interface ResumeTabProps {
 
   selectedResumeId?: string | null;
@@ -49,9 +23,6 @@ export function ResumeTab(): any ({;
   }
 
   return (
-    <div className="space-y-4">
-      <ResumeSelector onResumeSelected={handleResumeSelected} />
-      
       {onApply && (
         <div className="mt-6">
           <Button 
@@ -68,8 +39,6 @@ export function ResumeTab(): any ({;
           )}
         </div>;
       )}
-    </div>
-    </div>;
   );
   on_apply?: () => Promise < void>;
   is_submitting?: boolean;

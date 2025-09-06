@@ -99,37 +99,9 @@ declare module "*.css" {
   export default content;
 }
 
-declare module "*.scss" {
-  const content: { [className: string]: string };
-  export default content;
-}
-
-declare module "*.module.css" {
-  const content: { [className: string]: string };
-  export default content;
-}
-
-declare module "*.module.scss" {
-  const content: { [className: string]: string };
-  export default content;
-}
-
-// Environment variables
-declare namespace NodeJS {
-  interface ProcessEnv {
-    NODE_ENV: "development" | "production" | "test";
-    NEXT_PUBLIC_SUPABASE_URL?: string;
-    NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
-    SUPABASE_SERVICE_ROLE_KEY?: string;
-    NEXT_PUBLIC_GA_TRACKING_ID?: string;
-  }
-}
-
-export {};
-
-export {};
-// Re-export DOM types that might not be available;
-
-export {};
+// Re-export DOM types that might not be available
+export {}
+// Re-export DOM types that might not be available
+export {}
 // Re - export DOM types that might not be available;
 export {}

@@ -41,9 +41,6 @@ import { motion, AnimatePresence } from 'framer-motion';
             {loc}
           </option>;
         ))}
-      </select>
-    </div>
-    <Button
                   } catch (error) {
                     logErrorToProduction('Failed to navigate to checkout:', { data: error }),
                     toast({
@@ -65,9 +62,6 @@ import { motion, AnimatePresence } from 'framer-motion';
                   <Star className="h-3 w-3 mr-1" />;
                   Featured;
                 </Badge>;
-              )}
-            </motion && motion.div>;
-          ))}
         <motion.div
         </AnimatePresence>;
       </motion && motion.div>;

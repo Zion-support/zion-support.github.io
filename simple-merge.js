@@ -35,11 +35,6 @@ try {;
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }),;
     if (conflictFiles.trim()) {;
       console.log('Found merge conflicts in:', conflictFiles.trim()),;
-      for (const file of files) {;
-        if (file.trim()) {;
-          console.log(`Resolving conflicts in: ${file}`);
-          try {execSync(`git checkout --ours "${file}"`);
-          } catch (e) {execSync(`git checkout --theirs "${file}"`);
           }
           exec_sync (`git add "${file}"`);
         }

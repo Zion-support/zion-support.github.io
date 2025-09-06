@@ -5,10 +5,6 @@
       toastOptions={{
         classNames: {
           toast:
-            &quot;group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg&quot;
-          description: &quot;group-[.toast]:text-muted-foreground&quot;
-          actionButton:
-            &quot;group-[.toast]:bg-primary group-[.toast]:text-primary-foreground&quot;
           cancelButton:
             "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}
       {...props}

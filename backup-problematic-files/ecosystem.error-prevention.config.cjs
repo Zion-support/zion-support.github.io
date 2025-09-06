@@ -193,6 +193,8 @@ module.exports = {}
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-prevention.config.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 };
 =======
 <<<<<<< HEAD

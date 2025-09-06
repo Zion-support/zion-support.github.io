@@ -22,7 +22,6 @@ type TimeRange = '7d' | '30d' | '90d' | '365d';
         const { data: manualData, error: manualError } = await supabase
           .from('analytics_events')
           .select('event_type, created_at')
-          .gte('created_at', startDate.toISOString());
         if (manualError) throw manualError;
         // Process data to count events by type and date
         const eventsByDate: Record<string, Record<string, number>> = {}
@@ -122,12 +121,6 @@ if (eventsByDate[date][event.event_type] = 0) {
       .split('_')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ')
-  }
-  return (
-    <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <EventTypeCard
-          title="Click Events"
           description="Button and link interactions"
           isLoading={isLoading}
           count={
@@ -148,17 +141,12 @@ if (eventsByDate[date][event.event_type] = 0) {
           title="Form Submissions" 
           description="Completed forms and sign-ups"
           isLoading={isLoading}
-          count={;
-            behaviorData?.reduce((sum, day) => sum + (day.form_submit || 0), 0) || 0;
-          count={
-            behaviorData?.reduce((sum, day) => sum + (day.form_submit || 0), 0) || 0
-          count={;
-            behaviorData?.reduce((sum, day) => sum + (day.form_submit || 0), 0) || 0;
           }
-          icon={
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17H7"/><path d="M17 17h-5"/><path d="M7 12h10"/><path d="M7 7h2"/><path d="M17 7h-5"/></svg>
+          icon={;
+            <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17H7"/><path d="M17 17h-5"/><path d="M7 12h10"/><path d="M7 7h2"/><path d="M17 7h-5"/></svg>;
           }
-        />
+
+        />;
         <EventTypeCard
           title="Conversions"
           description="Goal completions"
@@ -176,17 +164,11 @@ if (eventsByDate[date][event.event_type] = 0) {
       <AnalyticsChart
         title="User Behavior Over Time"
         description="Track different types of user interactions"
-        data={behaviorData |[]}
         type="line"
         dataKeys={getEventTypes()}
         timeRange={timeRange}
         onTimeRangeChange={(range: TimeRange) => setTimeRange(range)}
 }
-interface EventTypeCardProps {
-  title: string
-  description: string
-  count: number
-  icon: React.ReactNode
 
   isLoading: boolean
 }

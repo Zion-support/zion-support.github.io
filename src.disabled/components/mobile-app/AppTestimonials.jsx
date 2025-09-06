@@ -32,3 +32,4 @@ export default function AppTestimonials({ }: AppTestimonialsProps) {
     </div>
   );
 }
+}

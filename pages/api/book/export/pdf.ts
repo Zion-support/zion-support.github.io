@@ -1,27 +1,3 @@
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '10mb'}}}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' })
-    return
-  }
-  const { html, pageSize } = req.body as { html: string, pageSize?: 'A4' | 'LETTER' }
-  if (!html) {
-    res.status(400).json({ error: 'Missing html' })
-    return
-  }
-  const browser = await puppeteer.launch({
-    headless: true
-    args: ['--no-sandbox--disable-setuid-sandbox']})
-  try {
-  if (req.method !== '$1') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
     args: ['--no-sandbox--disable-setuid-sandbox']});
 
   try {
@@ -32,4 +8,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     res.setHeader('Content-Typeapplication/pdf');
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"');
+
+export const config = {;
+  api: {;
+    bodyParser: {;
+      sizeLimit: '10mb'}}};
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
 

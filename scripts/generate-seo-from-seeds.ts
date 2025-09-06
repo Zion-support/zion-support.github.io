@@ -43,23 +43,6 @@ function main() {
     process.exit (0);
   }
 }
-      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),
-      // // // console.log('Generated', gen.slug)
-;
-async function main() {;
-  const seedsPath = path.join(process.cwd(), 'datapage-metadataseo-seeds.json'),;
-  if (!fs.existsSync(seedsPath)) {;
-    // // // console.log('No seeds file found at', seedsPath),;
-    process.exit(0);
-  }
-  const seeds = JSON.parse(fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt: string, region?: string, service?: string }>,;
-  const outDir = path.join(process.cwd(), 'datapage-metadataseo'),;
-  fs.mkdirSync(outDir, { recursive: true }),;
-  for (const s of seeds) {;
-    const gen = await post(`${HOST}/api/seo/generate`, s),;
-    if (gen?.slug && gen?.payload) {;
-      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),;
-      // // // console.log('Generated', gen.slug);
     }
   }
 }

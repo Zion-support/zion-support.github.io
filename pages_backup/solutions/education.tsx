@@ -1,7 +1,3 @@
-    icon: Users,
-    title: 'Student Information Systems,',
-    description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',
-  {}
   }
 ;];
 const solutions = [;
@@ -86,6 +82,8 @@ export default function EducationSolutions() {;
 ];
 
 export default function EducationSolutionsPage() {;
+
+
   return (
     <Layout
       title="Education Solutions - Zion Tech Group"

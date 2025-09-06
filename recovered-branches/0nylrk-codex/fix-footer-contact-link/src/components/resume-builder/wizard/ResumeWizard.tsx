@@ -1,23 +1,4 @@
 
-import { useState, useEffect  } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { useResume  } from '@/hooks/useResume';
-import { Tabs  } from '@/components/ui/tabs';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
-import { AlertCircle, FilePlus, Loader2  } from 'lucide-react';
-import { Button  } from '@/components/ui/button';
-import { Resume  } from '@/types/resume';
-// Import components
-import { ResumeProgress  } from './ResumeProgress';
-import { EmptyResumeState  } from './EmptyResumeState';
-import { CreateResumeForm  } from './CreateResumeForm';
-import { ResumeSteps  } from './ResumeSteps';
-import { ResumeStepContent  } from './ResumeStepContent';
-import { useResumeProgress  } from './useResumeProgress';
-import { ResumeVersionSelector  } from './ResumeVersionSelector';
-import { RESUME_STEPS } from './constants';
-export function ResumeWizard() {
 import {useState, useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {use_resume} from '@/hooks / use_resume';
@@ -76,11 +57,12 @@ export function ResumeWizard() {;
   } = useResume(),;
   const [activeTab, setActiveTab] = useState('basic-info'),;
   const [showNewResumeForm, setShowNewResumeForm] = useState(false),;
-  },
 
-  },
-  
-  if (isLoading) {
+  const handleResumeChange = (resumeId: string) => {;
+    fetchResume(resumeId);
+  };
+
+  if (isLoading) {;
     return (
       <div className="flex justify-center items-center h-64">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
@@ -122,11 +104,6 @@ export function ResumeWizard() {;
                 onPrevStep={prevStep}
               />;
             )}
-          </Tabs>
-        </CardContent>
-      </Card>
-    </div>
-  )
 }
 export /**
  * ResumeWizard - Function description

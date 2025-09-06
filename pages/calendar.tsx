@@ -3,17 +3,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  Calendar
-  Clock
-  Users
-  CheckCircle
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  Video
-  MessageSquare
-  Building
   Calendar,
   Clock,
   Users,

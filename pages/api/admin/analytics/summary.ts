@@ -1,10 +1,4 @@
 
-  name: string;
-  page?: string;
-  userType?: string;
-  properties?: Record<string, any>;
-  at: string;
-};
 
 
 function parseLines(startIso?: string, endIso?: string): EventRow[] {
@@ -25,10 +19,6 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         rows.push(obj);
     }
     return rows;
-    }
-    return rows;
-
-
   } catch {
     return [];
   }

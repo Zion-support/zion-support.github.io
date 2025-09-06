@@ -28,28 +28,6 @@ export function AppSidebar() {;
   return (
 
 
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <a href="/messaging">
-                    <Mail size={16} />
-                    <span>Messages</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <a href="/notifications">
-                    <Bell size={16} />
-                    <span>Notifications</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-        
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -97,19 +75,6 @@ export function AppSidebar() {;
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-  )
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
-import {;
-  Sidebar,;
-  SidebarContent,;
-  SidebarGroup,;
-  SidebarMenu,;
-  SidebarMenuItem,;
-  SidebarMenuButton,;
-  SidebarGroupLabel,;
-  SidebarGroupContent} from "@/components/ui/sidebar";
-export function AppSidebar() {;
-  return (;
     <Sidebar>;
       <SidebarContent>;
         <SidebarGroup>;
@@ -140,5 +105,5 @@ export function AppSidebar() {;
         </SidebarGroup>;
       </SidebarContent>;
   );
+    </Sidebar>);
 }
-;

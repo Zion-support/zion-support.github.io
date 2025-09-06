@@ -54,6 +54,3 @@ function SocialLogin() {
         <Button;
           type="button";
           variant="outline";
-  );
-}
-;

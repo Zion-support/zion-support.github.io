@@ -120,19 +120,6 @@ if (return) {
 
         }
       }
-
-      draw() {
-        if (!ctx) return;
-        ctx && ctx.save();
-        ctx && ctx.globalAlpha = this && this.life / this && this.maxLife;
-        ctx && ctx.fillStyle = this && this.color;
-        ctx && ctx.beginPath();
-        ctx && ctx.arc(this && this.x, this && this.y, this && this.size, 0, Math && Math.PI * 2);
-        ctx && ctx.fill();
-        ctx && ctx.restore();      }
-    }
-    class QuantumField {        ctx.restore()
-      }
     }
     class QuantumField {
       x: number;
@@ -361,11 +348,6 @@ if (return) {
 
 
       {/* Content Layer */}
-      {/* Quantum Energy Waves */}
-      <div className='absolute bottom - 0 left - 0 right - 0 h - 32 overflow - hidden'>;
-        <motion.div;
-          className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - cyan - 500 / 20 to - transparent';
-          animate={{
           }}
           transition={{
             duration: 8
@@ -433,9 +415,5 @@ export default UltraAdvancedQuantumBackground;            ease: "linear",
 export default UltraAdvancedQuantumBackground);
 }
 ;
-        />
-      </div>
-    </div>
 
-      {/* Content Layer */}
 

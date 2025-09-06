@@ -397,6 +397,25 @@ if ( {) {
       <div className='fixed inset - 0 pointer - events - none z - 20'>;
         <motion.div;
           className='absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 5 to - transparent';
+            duration: 10,
+            repeat: Infinity,
+        />
+      </div>
+      {/* Energy Field Effects */}
+      <div className='fixed inset-0 pointer-events-none z-20'>
+
+        <motion.div
+          className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent'
+          animate={{
+            coordinate_x: ['-100%', '100%'],          }}
+          transition={{
+
+            duration: 15,
+            repeat: Infinity,
+
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent"
+            ease: 'linear',        <motion.div;
+          className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 5 to - transparent";
           animate={{
             coordinate_x: ['-100%100%'];
           }}
@@ -453,6 +472,27 @@ if ( {) {
 ;
 export default UltraFuturisticBackground2026;
       {/* Holographic Overlay */}
+
+      <div className="fixed inset-0 pointer-events-none z-40">;
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent" />;
+        <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent" />;
+      </div>;
+    </div>;
+  );
+};
+
+
+export default UltraFuturisticBackground2026;
+
+
+
+          }}
+
+        />
+      </div>
+      {/* Content */}
+      <div className='relative z-30'>{children}</div>
+      {/* Holographic Overlay */}
       <div className='fixed inset-0 pointer-events-none z-40'>
         <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />
         <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent' />
@@ -475,15 +515,3 @@ export default UltraFuturisticBackground2026;
       </div>
     </div>
   );
-export default UltraFuturisticBackground2026;
-      {/* Holographic Overlay */}
-      <div className="fixed inset-0 pointer-events-none z-40">
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent" />
-      </div>
-    </div>
-  )
-}
-export default UltraFuturisticBackground2026;
-
-export default UltraFuturisticBackground2026;

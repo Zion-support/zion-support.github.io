@@ -112,6 +112,7 @@ class ClassNameSyntaxFixer {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/fix-classname-syntax.cjs
     this.log(`Fixes Applied: ${this.fixes.length}`);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     this.log(`Errors Found: ${this.errors.length}`);
     if (this.fixes.length > 0) {
       this.log('\n✅ Fixes Applied:');
@@ -179,6 +180,9 @@ fixer.run().catch(console.error);
 const fs = require('fs')
 const path = require('path')
 const glob = require('glob')
+<<<<<<< HEAD
+  log(message, type = 'INFO')
+=======
   log(message, type = 'INFO')
 <<<<<<< HEAD:backup-problematic-files/scripts/fix-classname-syntax.cjs
 <<<<<<< HEAD

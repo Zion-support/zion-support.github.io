@@ -36,10 +36,6 @@ import {EducationFormFields} from './EducationFormFields';
     } else {;
       success = await addEducation(resumeId, educationData);
     }
-    if (success) {
-      setEditingId(null)
-    }
-    }
 
 
   };
@@ -85,16 +81,6 @@ import {EducationFormFields} from './EducationFormFields';
 
   },
 
-  return (
-    <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold mb-2">Education</h2>
-        <p className="text-muted-foreground">
-          Add your educational background and academic achievements.
-        </p>
-      </div>
-      <EducationList 
-        educationEntries={educationEntries} 
 
   return (
 

@@ -1,22 +1,4 @@
 
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate  } from 'react-router-dom';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Calendar, Clock, DollarSign, Tag, Users, Briefcase  } from '@/components/icons';
-import { formatDistanceToNow  } from 'date-fns';
-import { toast  } from 'sonner';
-import { useAuth  } from '@/hooks/useAuth';
-import useJobDetails from '@/hooks/useJobDetails';
-import { ApplyToJobModal  } from '@/components/messaging/job-application';
-import { SEO  } from '@/components/SEO';
-import { useWhitelabel  } from '@/context/WhitelabelContext';
-export default function JobDetails() {
-  // Cast to specify the expected route param type since useParams may be untyped
-  const { jobId } = useParams() as { jobId?: string }
 
 
 
@@ -70,8 +52,6 @@ export default function JobDetails() {
   const formatBudget = (budget: any) => {
     if (!budget) return "Not specified"
     return `$${budget.min} - $${budget.max}`
-  }
-  const isOwnJob = user?.id === job.client_id;
   return (
     <>
       <SEO
@@ -219,38 +199,50 @@ export default function JobDetails() {;
                         {skill}
                       </Badge>;
                     ))}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-          <div>
-            <Card>
-              <CardContent className="pt-6 space-y-4">
-                <div className="flex items-start">
-                  <DollarSign className="mt-1 h-5 w-5 text-muted-foreground" />
-                  <div className="ml-3">
-                    <p className="text-sm text-muted-foreground">Budget</p>
-                    <p className="font-medium">{formatBudget(job.budget)}</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Clock className="mt-1 h-5 w-5 text-muted-foreground" />
-                  <div className="ml-3">
-                    <p className="text-sm text-muted-foreground">Deadline</p>
-                    <p className="font-medium">
-                      {job.deadline ? new Date(job.deadline).toLocaleDateString() : "Flexible"}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />
-                  <div className="ml-3">
-                    <p className="text-sm text-muted-foreground">Job Type</p>
-                    <p className="font-medium">Freelance / Remote</p>
-                  </div>
-                </div>
-                {!isOwnJob && (
+
+                  </div>;
+                </div>;
+              </CardContent>;
+            </Card>;
+          </div>;
+
+          <div>;
+            <Card>;
+              <CardContent className="pt-6 space-y-4">;
+                <div className="flex items-start">;
+                  <DollarSign className="mt-1 h-5 w-5 text-muted-foreground" />;
+                  <div className="ml-3">;
+                    <p className="text-sm text-muted-foreground">Budget</p>;
+                    <p className="font-medium">{formatBudget(job && job.budget)}</p>;
+                  </div>;
+                </div>;
+
+                <div className="flex items-start">;
+                  <Clock className="mt-1 h-5 w-5 text-muted-foreground" />;
+                  <div className="ml-3">;
+                    <p className="text-sm text-muted-foreground">Deadline</p>;
+                    <p className="font-medium">;
+                      {job && job.deadline ? new Date(job && job.deadline).toLocaleDateString() : "Flexible"}
+                    </p>;
+                  </div>;
+                </div>;
+
+                <div className="flex items-start">;
+                  <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />;
+                  <div className="ml-3">;
+                    <p className="text-sm text-muted-foreground">Job Type</p>;
+                    <p className="font-medium">Freelance / Remote</p>;
+                  </div>;
+                </div>;
+
+                {!isOwnJob && (;
+                  <Button
+                    className="w-full mt-4" 
+
+
+                  <Button 
+                    className="w-full mt-4" 
+
                     onClick={handleApply}
                     disabled={isOwnJob}>;
                     Apply Now;

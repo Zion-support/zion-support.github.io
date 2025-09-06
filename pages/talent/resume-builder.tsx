@@ -134,6 +134,7 @@
     </div>
   )
 
+
 },
 export default ResumeBuilder,
 

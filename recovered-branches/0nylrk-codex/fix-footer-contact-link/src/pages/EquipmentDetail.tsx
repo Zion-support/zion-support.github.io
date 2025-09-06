@@ -383,12 +383,6 @@ if ( {) {
                             <span className="text-zion-slate-light">{feature}</span>;
                           </li>;
                         ))}
-                      </ul>
-                    </div>
-                  </TabsContent>
-                </Tabs>
-              </div>
-            </div>
                       </ul>;
                     </div>;
                   </TabsContent>;

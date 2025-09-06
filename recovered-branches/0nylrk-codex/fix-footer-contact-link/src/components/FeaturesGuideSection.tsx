@@ -87,6 +87,15 @@ export function FeaturesGuideSection() {;
       description: "Rent or buy specialized hardware and tech equipment for AI development and research."
       icon: <Settings className="h-10 w-10 text-zion-purple" />
       instructions: [
+        "Search the equipment catalog by category or specifications";
+        "Check availability and rental / purchase options";
+        "Request quotes for bulk orders or specialized equipment";
+
+        "Schedule delivery or pickup through the platform";
+      ],
+      link: "/equipment",
+      button_text: "Browse Equipment";
+
     }
     {
       id: "analytics"
@@ -100,12 +109,6 @@ export function FeaturesGuideSection() {;
       ]
       link: "/analytics"
       buttonText: "View Analytics"
-    }
-    {
-      id: "ai-assistant"
-      title: "Zion AI Assistant"
-      description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.";
-      icon: <MessageSquare className="h-10 w-10 text-zion-purple" />
       instructions: [
         "Click on the chat icon in the bottom right corner",
         "Ask questions about available services or talents",
@@ -330,16 +333,6 @@ export function FeaturesGuideSection() {;
             the world of AI and tech services;
           </p>;
         </div>;
-                value={feature.id}
-                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
-              >
-                {feature.title}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
-            {features.slice(4).map(feature => (
-              <TabsTrigger
                 key={feature.id}
                 value={feature.id}
 

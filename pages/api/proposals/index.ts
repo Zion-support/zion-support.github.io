@@ -10,33 +10,6 @@ async function ensureStore() {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  await ensureStore();
-  if (req.method === "GET") {
-    const data = await fs.readJson(FILE_PATH);
-    return res.status(200).json(data);
-  }
     const item = {
       id: body && body.id,
       title: body && body.title,
@@ -98,21 +71,6 @@ if ( {) {
     data.items.unshift (item);
     await fs.write_json (FILE_PATH, data, { spaces: 2 });
     return res.status (201).json (item);
-  }
-}
-;
-export default async function handler(req, res) {
-  try {
-  await ensureStore(),;
-  if (req.method === 'GET') {
-    const data = await fs.readJson(FILE_PATH);
-    return res.status(200).json(data);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
   res.status (405).json ({ error: "Method not allowed" });
 }

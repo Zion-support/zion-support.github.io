@@ -1,5 +1,4 @@
 
-import Head from 'next / head';
 import { motion } from 'framer-motion';
   Rocket,
   Brain,
@@ -20,11 +19,6 @@ import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFoote
 import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFuturistic2029ServiceShowcase';
 import { cuttingEdge2029Services  } from '../data/2029-cutting-edge-innovations';
 import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services';
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com'
-  }
 
   const all2029Services = [
     ...cuttingEdgeInnovations2029
@@ -44,6 +38,7 @@ export default function UltraFuturistic2029InnovationsPage() {;
         <meta property="og:url" content="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
+
 
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />;

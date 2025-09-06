@@ -71,9 +71,6 @@ export function IntegrationCard({
           ) : (
             <Badge variant="outline">Not Connected</Badge>
           )}
-            <span>Connect</span>
-            <ArrowRight className='ml-1.5 h-3.5 w-3.5' />          </Button>
-            <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
 interface IntegrationCardProps {
   title: string
   description: string
@@ -175,12 +172,6 @@ export function IntegrationCards() {
         description="Receive updates through Microsoft Teams."
         icon={<Users className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Teams clicked')}
-        icon = {<Users className="h-5 w-5" />,}
-        onConnect = {() => logDebug('Connect Teams clicked'),}
-      />
-    </div>
-  )
-}
       />;
     </div>;
   );

@@ -1,14 +1,3 @@
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import {motion} from 'framer-motion';
-import {Stethoscope, Brain, Eye, Heart, Microscope, Shield, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Cpu, Network, Database, Lock, Clock, DollarSign, PieChart, Activity, Zap, Pill, Syringe, Hospital, Ambulance,} from 'lucide-react';
-import { Stethoscope, Brain, Eye, Heart;
-  Microscope, Shield, BarChart3;
-  TrendingUp, Target, Users, CheckCircle;
-  ArrowRight, Cpu, Network, Database;
-  Lock, Clock, DollarSign, PieChart;
-  Activity, Zap, Pill, Syringe, Hospital, Ambulance
- } from 'lucide-react';
 import Link from 'next/link';
 
 const AIHealthcareDiagnosticsPro: React.FC = () => {;
@@ -161,6 +150,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 <div className='text-gray-300'>Faster Diagnosis</div>              </motion && motion.div>;
               <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
+        <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse"></div>
+        <div className="absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           >
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4" />
@@ -173,6 +166,17 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               <br />
               <span className="text-white">Diagnostics Pro</span>
             </h1>
+                className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
+              >
+                <div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>
+                <div className="text-gray-300">Diagnostic Accuracy</div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
+              >
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
@@ -205,6 +209,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             {/* CTA Buttons */}
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                Schedule Demo
+              </motion.button>
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -244,6 +251,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             </div>
           </motion.div>
         </div>
+
 
       {/* Features Section */}
 
@@ -285,6 +293,19 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               specialized models trained on millions of cases for maximum
               accuracy.
             </p>
+              Our AI platform covers all major medical specialties with;
+              specialized models trained on millions of cases for maximum;
+              accuracy.;
+            </p>;
+
+
+              <li>• CT scan interpretation</li>;
+              <li>• MRI diagnostics</li>;
+              <li>• Ultrasound imaging</li>;
+            </ul>;
+          </div>;
+
+
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -322,8 +343,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               specific medical specialty and workflow requirements.
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
-              <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -395,6 +414,19 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               platform integrates with all major EHR, PACS, and medical device
               platforms.
             </p>
+              Connect with your existing healthcare systems and workflows. Our;
+              platform integrates with all major EHR, PACS, and medical device;
+              platforms.;
+            </p>;
+
+
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+
+
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                   <integration.icon className="w-8 h-8 text-white" />
@@ -407,38 +439,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
           </div>;
         </div>;
       </section>;
-      {/* CTA Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-cyan-900/20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          >
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-              Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
               Join leading healthcare institutions worldwide who have already
@@ -450,8 +450,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 Contact Sales
               </button>
             </div>
-            <div className='mt-8 text-sm text-gray-400'>
-              <p>
                 Questions? Call us at{' '}
                 <a
                   href='tel:+13024640950'
@@ -460,12 +458,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 </a>{' '}
                 or email{' '}
                 <a
-                  href='mailto: kleber@ziontechgroup.com'
-                  className='text-green-400 hover:text-green-300'
-                >
-                  kleber@ziontechgroup.com
-                </a>
-              </p>            </div>
           </motion.div>
         </div>
       </section>

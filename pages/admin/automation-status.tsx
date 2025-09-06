@@ -11,6 +11,7 @@ const AutomationStatus: NextPage = () => {
       </main>
     </div>
 
+
 export default AutomationStatus,;
 
   );

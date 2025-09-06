@@ -15,8 +15,6 @@
 
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
-export function PaymentMethods() {
-  // Mock payment methods
 
       id: "pm-1",
       type: "credit_card",

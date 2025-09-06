@@ -1,19 +1,6 @@
   email: string;
   role: 'admin' | 'user' | 'guest';
 }
-export function getSessionFromReq(req: NextApiRequest): Session | null {
-  const authHeader = req.headers.authorization;
-  if (!authHeader) {
-    return null;
-  }
-  
-  // Simple mock for admin users
-  if (authHeader.includes('admin')) {
-    return { userId: 'admin-1', email: 'admin@zion.os', role: 'admin' };
-  }
-  
-  return { userId: 'user-1', email: 'user@zion.os', role: 'user' };
-}
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
   
   return internalAgents.some(agent => userAgentString.toLowerCase().includes(agent));

@@ -9,10 +9,6 @@ const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
 ></typeof>(({ className, ...props }, ref) => (
-  />
-))
-Command.displayName = CommandPrimitive.displayName
-interface CommandDialogProps
   />;
 ));
 Command.displayName = CommandPrimitive.displayName;
@@ -37,21 +33,11 @@ const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {
   );
 }
 
-const CommandInput = React.forwardRef<
-  React.ElementRef<typeof CommandPrimitive.Input>,
-  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
-const CommandInput = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div className='flex items-center border-b px-3' cmdk-input-wrapper=''>
     <Search className='mr-2 h-4 w-4 shrink-0 opacity-50' />
     <CommandPrimitive.Input
       ref={ref}
-  />
-))
-CommandList.displayName = CommandPrimitive.List.displayName
-const CommandEmpty = React.forwardRef<
-  React.ElementRef<typeof CommandPrimitive.Empty>
-  React.ComponentPropsWithout</typeof>Ref<typeof CommandPrimitive.Empty>
 >((props, ref) => (
   <CommandPrimitive.Empty
   />;

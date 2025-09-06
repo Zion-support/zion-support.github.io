@@ -111,8 +111,14 @@ this.log("� Report "generated": ${reportFile}")
 <<<<<<< HEAD
       this.log("� Build Error Detector completed!")
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log("� Build Error Detector completed!")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+      this.log("� Build Error Detector completed!")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

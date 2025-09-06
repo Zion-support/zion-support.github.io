@@ -215,34 +215,88 @@ export default function InnovationsPage() {
                         <category.icon className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                        {category.title}
-                      </h3>
-                      <p className="text-gray-300 mb-6 leading-relaxed">
                       </p>
                     </div>
-                    <div className="space-y-3">
-                      {category.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-3 text-sm text-gray-300">
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                    
+                  className="group";
+                >;
+                  <div className={`p - 8 rounded - 2xl bg - gradient - to - br ${category.color} bg - opacity - 10 border border - cyan - 500 / 20 hover:border - cyan - 500 / 40 transition - all duration - 500 h - full hover:transform hover:scale - 105 backdrop - blur - sm`}>;
+                    <div className="text - center mb - 6">;
+                      <div className={`inline - flex items - center justify - center w - 16 h - 16 bg - gradient - to - r ${category.color} rounded - full mb - 4 group - hover:scale - 110 transition - transform duration - 300`}>;
+                        <category.icon className="w - 8 h - 8 text - white" />;
+                      </div>;
+                      <h3 className="text - 2xl font - bold text - white mb - 4 group - hover:text - cyan - 400 transition - colors duration - 300">;
+                        {category.title}
+                      </h3>;
+                      <p className="text - gray - 300 mb - 6 leading - relaxed">;
+                        {category.description}
+
+                      </p>;
+                    </div>;
+                    <div className="space - y-3">;
+                      {category.features.map ((feature, idx) => (
+                        <div key={idx} className="flex items - center gap - 3 text - sm text - gray - 300">;
+                          <div className="w - 2 h - 2 bg - cyan - 400 rounded - full"></div>;
                           {feature}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Comprehensive Services Showcase */}
+                        </div>))}
+
+                          {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </div>;
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                    </div>;
+                  </div>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+
+        {/* Comprehensive Services Showcase */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section id="innovations" className="py-20">
           <ComprehensiveServicesShowcase2029 />
         </section>
-
-        {/* Innovation Impact Section */}
+        {/* Innovation Impact Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -256,7 +310,6 @@ export default function InnovationsPage() {
               {[
                 {
 
-                  stats: '2029+ Future-ready'
                 }
                 {
                   icon: Shield
@@ -326,10 +379,6 @@ export default function InnovationsPage() {
             </motion.div>
           </div>
         </section>
-        {/* Enhanced Footer */}
-        <UltraFuturisticFooter2029V2 />
-      </div>
-    </UltraFuturisticBackground2029>
         {/* Enhanced Footer */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

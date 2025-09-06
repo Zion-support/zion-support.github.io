@@ -23,51 +23,6 @@ export default function DisputeDetailPage() {;
   const user = useCurrentUser();
 
 
-  async function sendMessage() {
-    if (!message.trim() || !id) return;
-    await fetch(`/api/disputes/${id}/message`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ body: message }),
-    });
-    setMessage('');
-    mutate();  }
-
-  async function resolve(status?: 'Resolved' | 'Under Review' | 'Open') {
-    if (!id) return;
-    await fetch(`/api/disputes/${id}/resolve`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ resolutionSummary, status }),
-    });
-    setResolutionSummary('');
-    mutate();  }
-
-  const dispute = data?.dispute;
-  const [activeTab, setActiveTab] = useState<'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'>('Overview');
-  const [message, setMessage] = useState('');
-  const [resolutionSummary, setResolutionSummary] = useState('');
-  async function sendMessage() {;
-    if (!message.trim() || !id) return,;
-    await fetch(`/api/disputes/${id}/message`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ body: message }) }),;
-    setMessage('');
-    mutate();
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  async function resolve(status?: 'Resolved' | 'Under Review' | 'Open') {;
-    if (!id) return,;
-    await fetch(`/api/disputes/${id}/resolve`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ resolutionSummary, status }) });
-    setResolutionSummary('');
-    mutate();
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
   return (
     <EnhancedLayout>
       {!dispute ? (
@@ -132,14 +87,6 @@ export default function DisputeDetailPage() {;
                 ) : (
                   <ul className="space-y-3">
                     {dispute.messages.map((m: any) => (
-                  <input
-                    value={message}
-                    onChange={e => setMessage(e && e.target.value)}
-                    placeholder='Write a message';
-                    className='flex-1 border rounded px-3 py-2 bg-white dark:bg-black';
-                  />;
-                  <button
-                    onClick={sendMessage}
 
                       <li key={m.id} className="text-sm">
                         <div className="text-gray-500 text-xs">{m.authorRole} • {new Date(m.createdAt).toLocaleString()}</div>
@@ -149,6 +96,23 @@ export default function DisputeDetailPage() {;
                   </ul>;
                 )}
 
+              </div>
+              {user.role !== 'guest' && (
+                      <li key={m.id} className="text-sm">
+                        <div className="text-gray-500 text-xs">{m.authorRole} • {new Date(m.createdAt).toLocaleString()}</div>
+                        <div className="whitespace-pre-wrap">{m.body}</div>
+                      </li>
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </ul>;
+                )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </div>
               {user.role !== 'guest' && (
                 <div className="flex gap-2">

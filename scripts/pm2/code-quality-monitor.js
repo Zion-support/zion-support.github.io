@@ -5,36 +5,6 @@
 ; return analyses};
 ; generateReport(analyses) {; const totalFiles = analyses && analyses.length; const totalIssues = analyses && analyses.reduce((sum, analysis) = > sum + analysis && analysis.issues.length, 0);
 ; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
-monitor.run().catch(error = > {; process.exit(1)});
-};
-};
-;
-  async analyzeFile(filePath) {;
-    try {;
-      const content = fs.readFileSync(filePath, 'utf8');
-      const stats = fs.statSync(filePath);
-;
-      const analysis = {;
-        file: filePath;
-        size: stats.size;
-        lines: content.split('\n').length;
-        issues: [];
-      ;
-;
-      // Check for common code quality issues;
-      const lines = content.split('\n');
-;
-      lines.forEach((line, index) => {;
-        const lineNum = index + 1;
-;
-        // Trailing spaces;
-        if (line.match(/[ \t]+$/)) {;
-          analysis.issues.push({;
-            line: lineNum;
-            type: 'trailing-spaces';
-            message: 'Trailing spaces found';
-            severity: 'low';
-          });
         };
 ,
         // Long lines (over 120 characters),

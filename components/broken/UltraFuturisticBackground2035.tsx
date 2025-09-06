@@ -565,10 +565,6 @@ if ( {) {
           className='absolute top - 1/4 left - 1/4 w - 32 h - 32 rounded - full bg - gradient - to - r from - cyan - 400 to - blue - 500 opacity - 20';
 
           animate={{
-            scale: [1, 1.2, 1]
-            opacity: [0.2, 0.4, 0.2]
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.4, 0.2],
             rotate: [0, 180, 360],          }}
           transition={{
 
@@ -588,10 +584,6 @@ if ( {) {
         />;
 
         <motion&& motion.div
-            duration: 8
-            repeat: Infinity
-            duration: 8,
-            repeat: Infinity,
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
         {/* Quantum energy waves */}
@@ -633,3 +625,6 @@ if ( {) {
       {children}
     </>);
 }
+
+      </div>
+

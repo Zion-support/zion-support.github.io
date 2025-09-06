@@ -9,6 +9,10 @@
             <li key={s}><a className="text - cyan - 600" href={`/seo/${s}`}>{s}</a></li>))}
         </ul>)}
     </div>);
+          ))}
+        </ul>
+      )}
+    </div>
 
   );
 };

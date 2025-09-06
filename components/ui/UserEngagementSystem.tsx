@@ -1,6 +1,9 @@
+export type EmptyStateProps = {
 
 import React from "react";
+
 export type EmptyStateProps = {
+
   emoji?: string;
   title: string;
   message: string;
@@ -22,8 +25,6 @@ export default function EmptyState(): any ({;
       <h2 className="mt-4 text-lg font-semibold">{title}</h2>;
       <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{message}</p>;
       {action && <div className="mt-3">{action}</div>}
-    </div>;
     </div>
   );
-}
 }

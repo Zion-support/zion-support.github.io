@@ -199,13 +199,6 @@ export function ApplicationsTable({
                 <TableCell className="hidden md:table-cell">
                   <StatusBadge status={application.status} />
                 </TableCell>
-                <TableCell className='hidden lg:table-cell'>
-                  {application.match_score !== undefined &&
-                  application.match_score !== null ? (
-                    <ClickableBadge
-                      variant='outline'
-                      className='cursor-pointer'
-                      onClick={() => onViewScore(application)}                    >
                 <TableCell className="hidden lg:table-cell">
                   {application.match_score !== undefined && application.match_score !== null ? (
                     <ClickableBadge 

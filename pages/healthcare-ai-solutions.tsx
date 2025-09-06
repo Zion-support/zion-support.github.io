@@ -3,13 +3,6 @@
 			slug="healthcare-ai-solutions"
 			description="Deploy AI for diagnostics assistance, care management, operational optimization, and compliance workflows. Improve outcomes while protecting patient privacy."
 			subtitle="Clinically aware AI that augments providers and reduces administrative burden."
-			features={[
-				"Clinical note summarization and coding (CPT/ICD)"
-				"Diagnostic support with literature grounding"
-				"Prior auth automation and appeals drafts"
-				"Capacity forecasting and staffing optimization"
-				"HIPAA-compliant data pipelines and audit"
-
 
 
 			pricePerMonthUSD={2999  } catch (error) {
@@ -26,19 +19,3 @@
 				"Capacity forecasting and staffing optimization",
 				"HIPAA-compliant data pipelines and audit",
 				"EHR integrations: HL7/FHIR, Epic, Cerner"
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			canonical="https: //ziontechgroup.com/healthcare-ai-solutions"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/healthcare-ai-solutions";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}

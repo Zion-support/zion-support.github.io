@@ -4,12 +4,6 @@ export default function AISolutionsPage() {
 
   const aiSolutions = [
     {
-        'Predictive Analytics'
-        'Pattern Recognition'
-        'Anomaly Detection'
-        'Recommendation Systems'
-      ],      icon: '🧠'
-      category: 'Core AI'
       complexity: 'Advanced'
     }
         'Predictive Analytics',
@@ -55,28 +49,6 @@ export default function AISolutionsPage() {
       icon: ''
       category: 'Analytics'
       complexity: 'Intermediate'
-    }
-    {
-      id: 'ai-automation'
-      title: 'AI-Powered Automation'
-      description: 'Intelligent automation that learns and improves over time.'
-      features: [
-        'Process Automation'
-        'Workflow Optimization'
-        'Intelligent Routing'
-        'Adaptive Workflows'
-      ]
-      icon: ''
-      category: 'Automation'
-      complexity: 'Intermediate'
-    },  ];      features: ['Process AutomationWorkflow OptimizationIntelligent RoutingAdaptive Workflows']
-      icon: ''
-      category: 'Automation'
-      complexity: 'Intermediate'
-    }
-  const useCases = [
-    {
-    {
   const use_cases = [;
     {
       industry: 'Manufacturing',
@@ -205,17 +177,6 @@ export default function AISolutionsPage() {
                     <ul className="space-y-1 mb-4">;
                       {solution && solution.features.map((feature, featureIndex) => (;
                         <li key={featureIndex} className="text-sm text-white/60 flex items-center">;
-                    </ul>
-
-                    <Link
-                      href={`/services#${solution.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
-                    >
-                      Learn More <span className='ml-1'>→</span>                    </Link>                      href={`/services#${solution.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      Learn More <span className="ml-1">→</span>
-                    </Link>
 
                           {feature}
                         </li>;
@@ -254,8 +215,6 @@ export default function AISolutionsPage() {
 
                   </div>
                 ))}
-              </div>
-            </div>
 
               </div>;
             </div>;
@@ -314,9 +273,14 @@ export default function AISolutionsPage() {
                       {tech}
                     </span>;
                   ))}
-                </div>
-              </div>
-            </div>
+
+                </div>;
+              </div>;
+            </div>;
+
+
+
+
 
             {/* Success Stories */}
             <div className='mb-16'>;

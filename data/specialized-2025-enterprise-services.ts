@@ -192,27 +192,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   },
       'Advanced predictive analytics platform with custom ML model development',
   },;
-
-
-];
-export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
-    benefits: [;
-      '60% decision accuracy improvement',
-      '35% operational cost reduction',
-      'Advanced ML algorithms',
-      'Real - time predictions',
-      'Custom model development',
-    ],
-    capabilities: [;
-      'Predictive modeling',
-      'Time series forecasting',
-      'Trend analysis',
-      'Anomaly detection',
-      'Scenario modeling',
-    ],
-    market_advantage:;
-      'Advanced predictive analytics platform with custom ML model development',
-  },
 ];
 ;
 export default specializedEnterpriseServices;    id: 'quantum - machine - learning - platform';
@@ -447,5 +426,4 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 export default specializedEnterpriseServices;
 
 
-;
 export default specializedEnterpriseServices;

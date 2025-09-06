@@ -116,45 +116,6 @@ export function MilestoneSuggestions({
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
 
-    const milestones = await generateMilestones(input),
-    
-    if (milestones.length > 0) {
-      setShowSuggestions(true),
-      if (onMilestonesGenerated) {
-        onMilestonesGenerated(milestones)
-;
-export function MilestoneSuggestions({;
-  projectName,;
-  scopeSummary,;
-  startDate,;
-  endDate,;
-  projectType,;
-  onMilestonesGenerated;
-}: MilestoneSuggestionsProps) {;
-  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
-  const [showSuggestions, setShowSuggestions] = useState(false),;
-  const handleGenerateMilestones = async () => {;
-    const input: MilestoneInput = {;
-      scope: `${projectName}: ${scopeSummary}`,;
-      startDate: startDate.toISOString(),;
-      endDate: endDate ? endDate.toISOString() : null,;
-      projectType: projectType || "Other";
-    },;
-    const milestones = await generateMilestones(input),;
-    if (milestones.length > 0) {;
-      setShowSuggestions(true),;
-      if (onMilestonesGenerated) {;
-        onMilestonesGenerated(milestones);
-      }
-    }
-  };
-  const formatDate = (dateString: string) => {;
-    try {;
-      return format(parseISO(dateString), 'MMM dd, yyyy');
-    } catch (error) {;
-      return dateString;
-    }
-  },
 
   return (
     <div className="space-y-4">
@@ -201,7 +162,6 @@ export function MilestoneSuggestions({;
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className='space-y-3'>
                         AI Suggested
                     </div>
                     <div className="text-sm text-muted-foreground">

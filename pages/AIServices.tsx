@@ -13,6 +13,29 @@ export default function AIServices() {
               services.
             </p>
             <p className="text-gray-600">AI Services page is under construction.</p>
+              AI Services page is under construction.;
+            </p>;
+          </div>;
+        </div>;
+      </div>;
+
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+}
+
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -105,4 +128,7 @@ export default function AIServices() {
       </div>
     </Layout>
   );
+}
+}
+    </Layout>);
 }

@@ -6,6 +6,7 @@ publish = "dist"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=4096"
 =======
@@ -24,6 +25,10 @@ NODE_OPTIONS = "--max-old-space-size=4096"
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> origin/main
+=======
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> pr-12166
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -32,6 +37,7 @@ NODE_OPTIONS = "--max-old-space-size=4096"
   directory = "netlify/functions"
 
 [[redirects]]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 from = "/api/*"
@@ -68,6 +74,11 @@ from = "/api/*"
 to = "/.netlify/functions/:splat"
 status = 200
 >>>>>>> origin/main
+=======
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+>>>>>>> pr-12166
 
 # Security and caching headers for static assets
 [[headers]]
@@ -97,6 +108,7 @@ status = 200
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 <<<<<<< HEAD
@@ -132,6 +144,9 @@ status = 200
 =======
 # Static redirects to mirror Next.js redirects (since output: export)
 >>>>>>> origin/main
+=======
+# Static redirects for exported site
+>>>>>>> pr-12166
 [[redirects]]
 <<<<<<< HEAD
 from = "/ai-customer-success-platform"
@@ -169,6 +184,7 @@ to = "/services/smart-crm-intelligence-suite/"
 status = 301
 
 [[redirects]]
+<<<<<<< HEAD
 <<<<<<< HEAD
   from = "/affiliate-attribution-suite"
   to = "/services/affiliate-attribution-suite/"
@@ -250,3 +266,8 @@ from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
 status = 301
 >>>>>>> origin/main
+=======
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+>>>>>>> pr-12166

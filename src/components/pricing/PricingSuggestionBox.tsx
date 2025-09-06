@@ -46,20 +46,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   rateType}) => {
   if (isLoading) {
 
-xport const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
-  rateType: "hourly" | "fixed"
-}
-
-export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
-
-  suggestion
-  isLoading
-  onApplySuggestion
-  rateType
-}) => {  if (isLoading) {
-  suggestion,
-  isLoading,
-  onApplySuggestion,
     return (
         <CardContent className="flex items-center justify-center p-6">
           <div className="text-center">

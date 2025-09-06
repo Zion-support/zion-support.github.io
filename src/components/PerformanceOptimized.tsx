@@ -3,9 +3,6 @@
 }
 }
 }
-// Debounced search hook
-export const useDebouncedSearch = (value: string, delay: number = 300) = > {const [debouncedValue, setDebouncedValue] = React.useState(value); React.useEffect(() = > {const handler = setTimeout(() = > {; setDebouncedValue(value)}, delay); return () = > {clearTimeout(handler)}}, [value, delay]); return debouncedValue}
-// Performance metrics collection
 import React from 'react';
 
 export default function PerformanceOptimized() {
@@ -179,12 +176,6 @@ export const useDebouncedSearch = (value: string, delay: number = 300) => {
   }, [value, delay])
   return debouncedValue
 }
-};
-};
-};
-};
-};
-};
 
 // Debounced search hook;
 export const useDebouncedSearch = (value: string, delay: number = 300) => {,;

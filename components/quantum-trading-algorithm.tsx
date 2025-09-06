@@ -2,22 +2,6 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
-  TrendingUp
-  Brain
-  Shield
-  Zap
-  Target
-  BarChart3
-  Cpu
-  Globe
-  Users
-  Award
-  CheckCircle
-  ArrowRight
-  Star
-  Phone
-  Mail
-  MapPin;
 
 
   TrendingUp,
@@ -242,36 +226,22 @@ export default function QuantumTradingAlgorithm() {
             transition={{ duration: 0.8 }}
             className='mb-8'
           >
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6'>
-              <TrendingUp className='w-4 h-4 mr-2' />
-              Financial Technology
-            </div>
-            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
-              <span className='bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent'>
-                Quantum Trading
-              </span>
-              <br />
-              <span className='text-white'>Algorithm Pro</span>
-            </h1>
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-              Advanced algorithmic trading platform leveraging quantum computing
-              principles for ultra-fast market analysis and predictive trading
-              strategies.            </p>          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
-              <TrendingUp className="w-4 h-4 mr-2" />
-              Financial Technology
-            </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                Quantum Trading
-              </span>
-              <br />
-              <span className="text-white">Algorithm Pro</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Advanced algorithmic trading platform leveraging quantum computing principles for ultra-fast market analysis and predictive trading strategies.
-            </p>
-          </motion.div>
+            <a
+              href='#pricing'
+              className='inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold text-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105'>;
+              <Target className='w-5 h-5 mr-2' />;
+              Get Started;
+            </a>;
+            <a
+              href='#contact'
+              className='inline-flex items-center px-8 py-4 rounded-full border-2 border-green-500/30 text-green-400 font-semibold text-lg hover:bg-green-500/10 transition-all duration-300'>;
+              <Phone className='w-5 h-5 mr-2' />              Contact Sales          >;
+
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+
+            <a
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -503,13 +473,10 @@ export default function QuantumTradingAlgorithm() {
       </section>;
 
       {/* Contact Section */}
-      <section
-        id='contact'
-        className='py-20 bg-gradient-to-b from-slate-900 to-black'
-      >
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+
+
+
+
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

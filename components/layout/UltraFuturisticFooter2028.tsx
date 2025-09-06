@@ -244,6 +244,8 @@ export default function UltraFuturisticFooter2028() {;
                   rel='noopener noreferrer'
                   {contactInfo.website}
 
+                  {contactInfo.website}
+
                 </a>
               </div>
             </div>
@@ -347,6 +349,8 @@ export default function UltraFuturisticFooter2028() {;
                   </li>;
               Quick Links
             </h3>
+              Quick Links
+            </h3>
             {/* Company Links */}
             <div className='mb - 6'>;
               <h4 className='font - medium text - purple - 300 mb - 3'>Company</h4>;
@@ -366,48 +370,6 @@ export default function UltraFuturisticFooter2028() {;
                     </Link>
                   </li>
                 ))}
-              </ul>
-            </div>
-
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className='text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2'
-                    >
-                      <link.icon className='w-4 h-4' />                      <span>{link.name}</span>                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2"
-                    >
-                      <link.icon className="w-4 h-4" />
-                      <span>{link.name}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {/* Resource Links */}
-            <div className='mb-6'>
-              <h4 className='font-medium text-purple-300 mb-3'>Resources</h4>
-              <ul className='space-y-2'>
-                {resourceLinks.map(link => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className='text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2'
-                    >
-                      <link.icon className='w-4 h-4' />                      <span>{link.name}</span>                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2"
-                    >
-                      <link.icon className="w-4 h-4" />
-                      <span>{link.name}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
               </ul>;
             </div>;
 
@@ -498,8 +460,5 @@ export default function UltraFuturisticFooter2028() {;
           <MessageCircle className="w-8 h-8 group-hover:rotate-12 transition-transform duration-300" />;
         </Link>;
       </div>;
-      {/* Background Effects */}
-}
-
       {/* Background Effects */}
 }

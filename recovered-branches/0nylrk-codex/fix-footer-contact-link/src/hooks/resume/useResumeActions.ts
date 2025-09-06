@@ -1,10 +1,4 @@
 
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Resume, ResumeBasicInfo  } from '@/types/resume';
-import { useAuth  } from '@/hooks/useAuth';
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
-export function useResumeActions() {
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume, ResumeBasicInfo} from '@/types/resume';
@@ -48,10 +42,6 @@ export function useResumeActions() {;
       showSuccessToast("Resume created", "Your resume has been created successfully");
     }
   }
-  const updateBasicInfo = async (resumeId: string, basicInfo: ResumeBasicInfo): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to update a resume')
-      return false
 ;
     setIsLoading(true),;
     setError(null),;
@@ -88,6 +78,13 @@ export function useResumeActions() {;
       const { error } = await supabase
         .from('talent_resumes')
         .update({
+    } catch (e: any) {
+      return handleResumeError (e, 'Could not update resume');
+    } finally {
+
+      setIsLoading(false)
+
+
 ;
     setIsLoading(true),;
     setError(null),;

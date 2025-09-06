@@ -1,18 +1,3 @@
-import { useState } from "react",
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-import { useToast } from "@/hooks/use-toast",
-import { useAuth } from "@/hooks/useAuth",
-import { ContractTemplate } from "@/types/contracts";
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";
-export function useContractTemplates() {
-  const { user, isAuthenticated } = useAuth();
-
-
-
-  const queryClient = useQueryClient();
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
   // Fetch templates for the current user
   const {
     data: templates = []
@@ -67,19 +52,12 @@ export function useContractTemplates() {;
       templateData
       isDefault = false
     }: {
-      title: string;
-      templateData: ContractFormValues
-      isDefault?: boolean
-    }) => {
-      if (!user) throw new Error("User not authenticated");
-      setIsLoading(true);
       try {
         // If this is set as default, unset any existing default
         if (isDefault) {
           await supabase
             .from('contract_templates')
             .update({ is_default: false })
-    };
 ;
       // Check condition
 if ( {) {
@@ -192,42 +170,45 @@ if ( {) {
       toast({
         title: "Template updated"
         description: "Contract template has been successfully updated."})
-    onError: (error: Error) => {
-      console && console.error("Error updating template:", error);
-      toast({
-        title: "Failed to update template";
-        description: "There was an error updating your contract template."
         variant: "destructive"})
     }
   });
   // Delete a template
   const deleteTemplate = useMutation({
     mutationFn: async (templateId: string) => {
-      if (!user) throw new Error("User not authenticated");
-      setIsLoading(true)
       try {
         const { error } = await supabase
           .from('contract_templates')
           .delete()
           .eq('id', templateId)
+      } finally {
+        setIsLoading (false);
+      }
+    }
+
+
+          .eq('user_id', user.id),
+        
+
+        if (error) throw error
+      } finally {
+        setIsLoading(false)
+      }
+
+    },
+
+
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Template deleted"
         description: "Contract template has been successfully deleted."})
-    onError: (error: Error) => {
-      console && console.error("Error deleting template:", error);
-      toast({
-        title: "Failed to delete template";
-        description: "There was an error deleting your contract template."
         variant: "destructive"})
     }
   });
   // Set a template as default
   const setDefaultTemplate = useMutation({
     mutationFn: async (templateId: string) => {
-      if (!user) throw new Error("User not authenticated");
-      setIsLoading(true)
       try {
         // First unset any existing default
         await supabase
@@ -238,6 +219,23 @@ if ( {) {
           .from('contract_templates')
           .update({ is_default: true })
           .eq('id', templateId)
+      } finally {
+        setIsLoading (false);
+      }
+    }
+
+
+          .eq('user_id', user.id),
+        
+
+        if (error) throw error
+      } finally {
+        setIsLoading(false)
+      }
+
+    },
+
+
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({

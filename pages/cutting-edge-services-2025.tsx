@@ -19,6 +19,29 @@ import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services
 import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
 import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech';
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+const serviceCategories = [
+import React from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+import { motion } from 'framer-motion',
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, ExternalLink } from 'lucide-react',
+import Layout from '../components / layout / Layout',
+import { cuttingEdgeAIServices2025 } from '../data / 2025 - cutting - edge - ai - services',
+import { cuttingEdgeITServices2025 } from '../data / 2025 - cutting - edge - it - services',
+import { cuttingEdgeMicroSaasServices2025 } from '../data / 2025 - cutting - edge - micro - saas',
+import { cuttingEdgeEmergingTechServices2025 } from '../data / 2025 - cutting - edge - emerging - tech',
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com';
+},
+const service_categories = [;
+
   {
     title: 'AI & Consciousness',
     description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
@@ -99,21 +122,6 @@ const serviceCategories = [;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
-],
-export default function CuttingEdgeServices2025() {
-  return (
-    <Layout>
-      <Head>
-        <title>Cutting-Edge Services 2025 | Zion Tech Group</title>
-        <meta name="description" content="Discover our revolutionary cutting-edge services including AI consciousness, quantum computing, enterprise IT, and micro SAAS solutions for 2025." />
-        <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, enterprise IT, micro SAAS, 2025 technology" />
-        <meta property="og:title" content="Cutting-Edge Services 2025 - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary technology services for the future. AI consciousness, quantum computing, enterprise IT, and micro SAAS solutions." />
-        <link rel="canonical" href="https://ziontechgroup.com/cutting-edge-services-2025" />
-      </Head>
-      {/* Hero Section */}
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -233,7 +241,6 @@ export default function CuttingEdgeServices2025() {
                         </div>
                         <div className="flex flex-col sm:flex-row gap-3">
                           <a
-                            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
                             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -267,37 +274,6 @@ export default function CuttingEdgeServices2025() {
               <motion.div
             className="text-center mb-16";
 
-          >;
-            <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip - text text - transparent">;
-              Transparent Pricing Plans;
-            </h2>;
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-              Choose the plan that best fits your business needs. All plans include our cutting - edge technology;
-              and expert support.;
-            </p>;
-          </motion.div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-            {['StarterProfessionalEnterprise'].map ((plan, index) => (
-              <motion.div;
-                className="group"
-              >
-                <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan}</h3>
-                  <div className="space-y-4 mb-8">
-                className="group";
-              >;
-                <div className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 p - 8 rounded - 2xl border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105">;
-                  <h3 className="text - 2xl font - bold text - white mb - 4">{plan}</h3>;
-                  <div className="space - y-4 mb - 8">;
-                    {plan === 'Starter' && (
-                    {plan === 'Professional' && (
-                      <>
-                        <div className="text-sm text-gray-400">Ideal for growing businesses</div>
-                        <div className="text-sm text-gray-400">Advanced features and priority support</div>
-                        <div className="text-sm text-gray-400">Custom configurations available</div>
-                      </>
-                    )}
-                    {plan === 'Enterprise' && (
 
                   <div className="text-center mb-8">
                     <div className="text-4xl font-bold text-cyan-400 mb-2">
@@ -334,11 +310,76 @@ export default function CuttingEdgeServices2025() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+            className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
               Ready to Experience the Future?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+                className="group"
+              >
+                <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <h3 className="text-2xl font-bold text-white mb-4">{plan}</h3>
+                  <div className="space-y-4 mb-8">
+                className="group";
+              >;
+                <div className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 p - 8 rounded - 2xl border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105">;
+                  <h3 className="text - 2xl font - bold text - white mb - 4">{plan}</h3>;
+                  <div className="space - y-4 mb - 8">;
+                    {plan === 'Starter' && (
+
+                      <>;
+                        <div className="text - sm text - gray - 400">Perfect for small businesses and startups</div>;
+                        <div className="text - sm text - gray - 400">Basic features and standard support</div>;
+                        <div className="text - sm text - gray - 400">Email support included</div>;
+                      </>)}
+                    {plan === 'Professional' && (
+                      <>;
+                        <div className="text - sm text - gray - 400">Ideal for growing businesses</div>;
+                        <div className="text - sm text - gray - 400">Advanced features and priority support</div>;
+                        <div className="text - sm text - gray - 400">Custom configurations available</div>;
+                      </>)}
+                    {plan === 'Enterprise' && (
+
+                  <div className="text-center mb-8">
+                    <div className="text-4xl font-bold text-cyan-400 mb-2">
+
+
+                      {plan === 'Starter' ? 'From $149' : plan === 'Professional' ? 'From $499' : 'From $999'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+                    </div>
+                    <div className="text-gray-400">per month</div>
+                  </div>
+                  <a
+                    href="/contact"
+                    className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300"
+                  >
+                    Get Started
+                    <ArrowRight className="ml-2 w-4 h-4" />
+
+
+                  </Link>
+                </div>
+              </motion.div>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Contact Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
@@ -404,8 +445,6 @@ export default function CuttingEdgeServices2025() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.a
                 href="/contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 whileHover={{ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -423,8 +462,6 @@ export default function CuttingEdgeServices2025() {
               </motion.a>
               <motion.a
                 href="tel:+13024640950"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 whileHover={{ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

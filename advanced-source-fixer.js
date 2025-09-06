@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -422,3 +423,18 @@ if ( {) {
 }
 export default AdvancedSourceFixer;
 ;
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const fixer = new AdvancedSourceFixer();
+  fixer.fixAllSourceFiles().catch(console.error);
+}
+export default AdvancedSourceFixer;
+if (require.main === module) {
+  const fixer = new AdvancedSourceFixer();
+  fixer.fixAllSourceFiles().catch(console.error);
+
+module.exports = AdvancedSourceFixer;
+
+export default AdvancedSourceFixer;
+
+}

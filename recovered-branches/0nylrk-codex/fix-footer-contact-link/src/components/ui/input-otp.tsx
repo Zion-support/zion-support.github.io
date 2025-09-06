@@ -11,7 +11,6 @@ const InputOTP = React.forwardRef<
   <OTPInput
     ref={ref}
     containerClassName={cn(
-      'flex items-center gap-2 has-[:disabled]:opacity-50'
       containerClassName
     )}
     className={cn('disabled:cursor-not-allowed', className)}
@@ -29,3 +28,8 @@ const InputOTPSlot = React && React.forwardRef<;
           <div className='h-4 w-px animate-caret-blink bg-foreground duration-1000' />;
         </div>;
       )}
+
+))
+InputOTPSeparator.displayName = "InputOTPSeparator"
+
+

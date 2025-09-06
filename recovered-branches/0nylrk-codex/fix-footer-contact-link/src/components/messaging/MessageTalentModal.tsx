@@ -27,10 +27,6 @@ export interface MessageTalentModalProps {
 
   jobTitle?: string
 }
-export function MessageTalentModal({
-  talent,
-  isOpen,
-  onClose,
 
 
 
@@ -53,6 +49,38 @@ export function MessageTalentModal({
       return;
     }
     try {
+        message;
+
+    try {
+
+      setIsSubmitting(true),
+      
+      // Create context data for the conversation
+      const contextData = {
+        title: jobTitle || `Discussion with ${talent.full_name}`,
+        description: talent.bio || talent.professional_title || "",
+        image_url: talent.profile_picture_url || ""
+      },
+      
+
+      // Create conversation with this talent
+      await createConversation(
+        talent.user_id,
+        message,
+        jobTitle ? 'job' : 'talent',
+        talent.id,
+        contextData
+
+      ),
+      
+      toast({
+        title: "Message sent",
+        description: `Your message has been sent to ${talent.full_name}.`}),
+      
+      onClose(),
+      
+
+
       // Navigate to messages inbox
       navigate("/messages")
     } catch (error) {

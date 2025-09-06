@@ -44,39 +44,10 @@ import {;
 import { useAuth } from '@/hooks/useAuth';
 import Link from 'next/link';
 export default function ZionHireAI() {;
-
-import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { useWhitelabel } from '@/context/WhitelabelContext'
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-  ArrowRight
-  Briefcase
-  PenTool
-  BarChart3
-  Users
-  Shield
-  Globe
-} from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth'
-import Link from 'next/link'
-export default function ZionHireAI() {
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel()
-  const { isAuthenticated } = useAuth()
-
-export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
   const { isAuthenticated } = useAuth();
 
   return (
-    <>
 
       <SEO
         title='Zion Hire AI - White-labeled AI Recruiting Assistant'
@@ -188,10 +159,6 @@ export default function ZionHireAI() {
       <Header />
       <main className='flex-1'>
         {/* Hero Section */}
-            <div className="grid gap-6 md:grid-cols-2 items-center">
-              <div className="space-y-4">
-                <h1 className="text-3xl md:text-5xl font-bold tracking-tighter text-white">
-                  {isWhitelabel ? `${brandName} Recruiting Assistant` : "Zion Hire AI"}
                 </h1>
                 <p className="text-lg text-zion-slate-light max-w-[600px]">
                   <Button 
@@ -265,23 +232,6 @@ export default function ZionHireAI() {
                       </span>
                       <span>Experience verification</span>
                     </li>
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-                    <li className="flex items-center">
-                      <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
-                      <span>Customizable scoring criteria</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
                   <Users className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Candidate Matchmaker</CardTitle>
                   <CardDescription>
@@ -337,15 +287,6 @@ export default function ZionHireAI() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
-                      <span>Custom logo and colors</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
-                      <span>Co-branded or white-labeled</span>
-                    </li>
                     <li className='flex items-center'>
                       <span className='bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Custom
@@ -387,7 +328,6 @@ export default function ZionHireAI() {
         </section>
 
         {/* CTA Section */}
-            </p>
             <Button 
               size="lg" 
               className="bg-zion-purple hover: bg-zion-purple-light text-white"

@@ -72,16 +72,6 @@
       'SOC 2 Type II, ISO 27001, Quantum Security Standards, Enterprise Security Protocols',
     ],
     link: 'https://ziontechgroup.com / quantum - ai - orchestrator',
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
 
     icon: '⚛️',
     color: 'from - indigo - 500 to - blue - 600',
@@ -177,7 +167,6 @@
       'Research collaboration tools'
     ]
     benefits: [
-];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 
       'Improve diagnostic accuracy by 99 && 99.9%',
     id: 'ai - healthcare - diagnostic',
@@ -820,8 +809,6 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     launchDate: '2025-02-15',;
     customers: 350,;
     rating: 4.9,;
-    reviews: 189;
-    rating: 4.9,
     reviews: 189;
   }
 ];

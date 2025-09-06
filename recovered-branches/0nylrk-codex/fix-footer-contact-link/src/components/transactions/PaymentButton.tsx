@@ -7,15 +7,6 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Loader2} from "lucide-react";
 import {useNavigate} from "react-router-dom";
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { Loader2 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
-interface PaymentButtonProps {
 
   amount: number
   serviceId: string
@@ -31,89 +22,6 @@ interface PaymentButtonProps {
   buttonText?: string,
   className?: string,
   onPaymentInitiated?: () => void,
-export function PaymentButton({
-  amount;
-  serviceId;
-  providerId;
-
-  buttonText = "Purchase";
-  className;
-  onPaymentInitiated;
-  const [isProcessing, setIsProcessing] = useState(false);
-  const { isAuthenticated, user } = useAuth();
-  const navigate = useNavigate();
-  const handlePaymentClick = async () => {
-    if (!isAuthenticated) {
-      toast({
-        title: "Authentication required"
-        description: "Please sign in to make a purchase."})
-      navigate("/login", {
-        state: { from: window.location.pathname }
-      });
-    }
-    try {
-      setIsProcessing(true);
-      if (onPaymentInitiated) {
-        onPaymentInitiated()
-  redirectUrl}: PaymentButtonProps) {
-  const [isProcessing, setIsProcessing] = useState(false),
-  const { isAuthenticated, user } = useAuth(),
-  const navigate = useNavigate(),
-  
-  const handlePaymentClick = async () => {
-    if (!isAuthenticated) {
-      toast({
-        title: "Authentication required",
-        description: "Please sign in to make a purchase."}),
-      
-      navigate("/login", { 
-        state: { from: window.location.pathname } 
-      }),
-      return
-import { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { cn } from "@/lib/utils",;
-import { useAuth } from "@/hooks/useAuth",;
-import { toast } from "@/hooks/use-toast",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Loader2 } from "lucide-react",;
-import { useNavigate } from "react-router-dom",;
-interface PaymentButtonProps {;
-  amount: number,;
-  serviceId: string,;
-  providerId: string,;
-  buttonText?: string,;
-  className?: string,;
-  onPaymentInitiated?: () => void,;
-  redirectUrl?: string;
-}
-;
-export function PaymentButton({;
-  amount,;
-  serviceId,;
-  providerId,;
-  buttonText = "Purchase",;
-  className,;
-  onPaymentInitiated,;
-  redirectUrl}: PaymentButtonProps) {;
-  const [isProcessing, setIsProcessing] = useState(false),;
-  const { isAuthenticated, user } = useAuth(),;
-  const navigate = useNavigate(),;
-  const handlePaymentClick = async () => {;
-    if (!isAuthenticated) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to make a purchase."}),;
-      navigate("/login", {;
-        state: { from: window.location.pathname } ;
-      }),;
-      return;
-    }
-;
-    try {;
-      setIsProcessing(true),;
-      if (onPaymentInitiated) {;
-        onPaymentInitiated();
       }
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
@@ -226,7 +134,9 @@ if ( {) {
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
-        "relative min-w-[120px]",
+
+        "relative min-w-[120px]"
+
         className
       )}>;
       {isProcessing ? (;
@@ -238,15 +148,20 @@ if ( {) {
         buttonText;
       )}
 }
-
-    </Button>;
-  );
-
-    </Button>;
-  );
-    </Button>;
-  );
-
-
-}
 ;
+  return (
+    <Button;
+      on_click={handlePaymentClick}
+      disabled={is_processing}
+      className={cn (
+        "relative min - w-[120px]";
+        class_name)}
+    >;
+      {is_processing ? (
+        <>;
+          <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" />;
+          Processing...;
+        </>) : (
+        button_text)}
+    </Button>);
+}

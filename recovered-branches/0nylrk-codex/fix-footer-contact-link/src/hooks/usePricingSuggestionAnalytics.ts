@@ -42,11 +42,6 @@ interface PricingSuggestionAnalytics {
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
-        setAnalytics({
-          ...analytics;
-          isLoading: false
-          error: "Failed to load pricing analytics data."
-        })
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,

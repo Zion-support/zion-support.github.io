@@ -184,7 +184,6 @@ import { Trash2, Download, Share2 } from 'lucide-react';
               }
               variant='outline'
               size='sm'
-                isSubmittingToCounsel
               }
               variant='outline'
               size='sm'
@@ -265,11 +264,6 @@ import { Trash2, Download, Share2 } from 'lucide-react';
                 key={section.id}
                 title={section.title}
                 content={section.content}
-                onContentChange={newContent =>
-                  handleSectionContentChange(section.id, newContent)
-                }              />
-                onContentChange={(newContent) => handleSectionContentChange(section.id, newContent)}
-              />;
             ))}
           </div>
         )}

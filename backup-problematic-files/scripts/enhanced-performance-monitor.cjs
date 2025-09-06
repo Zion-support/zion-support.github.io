@@ -2,6 +2,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -521,6 +523,9 @@ console.log('=')
       "action"
       log('warn', 'Performance "Alerts")
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-performance-monitor.cjs
+<<<<<<< HEAD
+      log('info', 'Performance "Recommendations")
+=======
 <<<<<<< HEAD
       log('info', 'Performance "Recommendations")
 =======

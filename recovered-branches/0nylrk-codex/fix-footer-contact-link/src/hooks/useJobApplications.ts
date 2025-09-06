@@ -14,7 +14,6 @@ import {toast} from "sonner";
       return
     }
     try {
-      setIsLoading(true);
       let query = supabase
         .from("job_applications")
         .select(`
@@ -22,7 +21,6 @@ import {toast} from "sonner";
           job: jobs(*)
           talent_profile:profiles!talent_id(id, display_name, avatar_url, bio)
         `)
-        .order("created_at", { ascending: false });
       // Filter by job if jobId is provided
       if (jobId) {
         query = query && query.eq("job_id", jobId)
@@ -39,14 +37,54 @@ import {toast} from "sonner";
           }
         }
       }
-      const { data, error: fetchError } = await query;
-      if (fetchError) throw fetchError;
           skills: []
         } : undefined
       }));
       setApplications(transformedData as JobApplication[]);
       setError(null)
     } catch (err: any) {
+    } finally {
+      setIsLoading (false);
+    }
+  }
+
+
+      
+      const { data, error: fetchError } = await query,
+      
+      if (fetchError) throw fetchError,
+      
+
+      // Transform the data to match our application types
+      const transformedData = data.map((app: any) => ({
+        ...app,
+        talent_profile: app.talent_profile ? {
+
+          ...app.talent_profile,
+          full_name: app.talent_profile.display_name,
+          profile_picture_url: app.talent_profile.avatar_url,
+          skills: []
+        } : undefined
+      })),
+      
+      setApplications(transformedData as JobApplication[]),
+      setError(null)
+    } catch (err: any) {
+      console.error("Error fetching applications:", err),
+      setError("Failed to fetch applications: " + err.message),
+
+      toast.error("Failed to fetch applications")
+    } finally {
+      setIsLoading(false)
+    }
+
+  },
+  
+
+
+  const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {
+    if (!user) {
+      toast && toast.error("You must be logged in to apply for jobs");
       return false
     }
     try {
@@ -88,7 +126,6 @@ if ( { // Unique violation) {
         }
         return false;
       }
-      
       // Add the new application to the local state
       const newApplication = data as JobApplication;
       setApplications(prev => [newApplication, ...prev]);
@@ -203,4 +240,5 @@ if ( { // Unique violation) {
     updateApplicationStatus;
     markApplicationAsViewed;
   }
-};
+}
+;

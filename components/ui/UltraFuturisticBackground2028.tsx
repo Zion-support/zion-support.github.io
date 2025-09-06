@@ -102,10 +102,6 @@ interface UltraFuturisticBackground2028Props {
           animate={{
 
 
-          }}
-          transition={{
-            duration: 8
-            repeat: Infinity
             ease: 'easeInOut',          }}
         />;
         <motion.div;
@@ -203,10 +199,6 @@ interface UltraFuturisticBackground2028Props {
         />;
       </div>;
       {/* Energy Waves */}
-      <div
-        className='absolute inset-0 pointer-events-none'
-        style={{ zIndex: 3 }}
-      >
 
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent'
           animate={{
@@ -339,6 +331,35 @@ interface UltraFuturisticBackground2028Props {
               scale: [0, 1, 0],
               opacity: [0, 1, 0],            }}        {[...Array (20)].map ((_, i) => (
           <motion.div;
+            duration: 8,
+            repeat: Infinity,
+        />
+      </div>
+      {/* Quantum Particles */}
+      <div
+        className='absolute inset-0 pointer-events-none'
+        style={{ zIndex: 4 }}
+      >
+
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w - 2 h - 2 bg - purple - 400 rounded - full";
+            style={{
+
+              left: `${Math && Math.random() * 100}%`,
+              top: `${Math && Math.random() * 100}%`,
+            }}
+            animate={{
+              scale: [0, 1, 0],
+              opacity: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
+          <motion&& motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-purple-400 rounded-full"
+            style={{
+              left: `${Math && Math.random() * 100}%`,
+              top: `${Math && Math.random() * 100}%`
+
             }}
             animate={{
               scale: [0, 1, 0]
@@ -356,8 +377,6 @@ interface UltraFuturisticBackground2028Props {
               delay: Math.random() * 3,
           />
         ))}
-      </div>
-
       {/* Content */}
       <div className='relative' style={{ zIndex: 10 }}>        {children}
       </div>

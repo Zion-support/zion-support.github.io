@@ -52,10 +52,6 @@ const generateSitemap = () => {
 },
 generateSitemap(),
 
-  console.log('Sitemap generated successfully at:', sitemapPath)
-},
-
-generateSitemap(),
 import { createWriteStream } from 'fs',;
 import { join } from 'path',;
 const generateSitemap = () => {;

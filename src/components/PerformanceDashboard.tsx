@@ -143,31 +143,6 @@ class ErrorBoundary extends React.Component {
             <p className='text-xs text-gray-500'>Average page load</p>
           </CardContent>
         </Card>
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Build Size</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{metrics.buildSize}</div>
-            <p className="text-xs text-gray-500">Total build output</p>
-          </CardContent>
-        </Card>
-        
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Page Count</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{metrics.pageCount}</div>
-            <p className="text-xs text-gray-500">Generated pages</p>
-          </CardContent>
-        </Card>
-        
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Load Time</CardTitle>
-          </CardHeader>
-          <CardContent>
           </CardContent>
         </Card>
       </div>
@@ -312,9 +287,6 @@ const PerformanceDashboard: React.FC = () => {;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-      <div className="flex space-x-4">
-        <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
-          <Shield className="h-4 w-4 mr-2" />
           Check Health Status
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">

@@ -15,24 +15,6 @@ import { Button } from '@/components / ui / button';
   Link,
 } from 'lucide-react';
 import { toast } from '@/hooks / use - toast';
-import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-  Download
-  FileImage
-  FileText
-  FileType
-  FileVideo
-  Link
-} from 'lucide-react'
-import { toast } from '@/hooks/use-toast'
-
 interface ResourceItem {
   id: string;
   title: string;
@@ -94,15 +76,10 @@ interface ResourceItem {
       title: 'Talking Points',
       description: 'Key messages and benefits to highlight',
       type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
-      url: '#'
-    }
-  ],
     // In a real app, this would download the actual resource
     toast({
       title: "Download started",
       description: `Downloading ${resource.title}`,
-
 
 
 
@@ -119,26 +96,6 @@ interface ResourceItem {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
-            {resources.map(resource => (
-              <Card
-                key={resource.id}
-                className='bg-zion-blue border-zion-blue-light overflow-hidden'
-              >
-                <CardContent className='p-6 flex flex-col items-center text-center'>
-                  <div className='mb-4'>{resource.icon}</div>
-                  <h3 className='font-semibold text-white mb-1'>
-                    {resource.title}
-                  </h3>
-                  <p className='text-xs text-zion-slate-light mb-4'>
-                    {resource.description}
-                  </p>
-                  <Button
-                    onClick={() => handleDownload(resource)}
-                    size='sm'
-                    variant='outline'
-                    className='w-full flex items-center gap-2'                  >
-                    <Download className='h-4 w-4' />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {resources.map((resource) => (
               <Card key={resource.id} className="bg-zion-blue border-zion-blue-light overflow-hidden">

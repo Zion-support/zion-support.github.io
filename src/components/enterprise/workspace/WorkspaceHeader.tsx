@@ -3,10 +3,6 @@ import { Button } from '@/components/ui/button';
 import { type Company } from './CompanyDashboard';
 import { Bell, Users, Settings } from 'lucide-react';
 interface WorkspaceHeaderProps {;
-import { Bell, Users, Settings } from 'lucide-react'
-interface WorkspaceHeaderProps {
-  company: Company
-interface WorkspaceHeaderProps {
   company: Company;
 
 import React from "react",
@@ -92,10 +88,6 @@ interface WorkspaceHeaderProps {
             </p>
           </div>
         </div>
-          </Button>
-          <Button variant="outline" size="icon" aria-label="Team members">
-            <Users className="h-4 w-4" />
-          </Button>
 }          </Button>
           <Button variant="outline" size="icon" aria-label="Team members">
             <Users className="h-4 w-4" />

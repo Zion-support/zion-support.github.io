@@ -2,9 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-    return res.status(400).json({ error: 'Missing required fields' });
-  }
-
   try {
 
     const timestamp = new Date().toISOString();
@@ -80,6 +77,3 @@ if ( {) {
 
 }
 
-    console.error('Request-to-hire failed', err);
-    return res.status(500).json({ error: 'Internal error' });
-  }

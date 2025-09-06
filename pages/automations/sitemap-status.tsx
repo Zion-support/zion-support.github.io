@@ -24,15 +24,3 @@ export default SitemapStatus;
     urlCount = (raw.match(/<url>/g) || []).length
     const raw = fs.readFileSync(p, 'utf8'),
     urlCount = (raw.match(/<url>/g) || []).length
-  } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  return { props: { urlCount }   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-};
-export default SitemapStatus;

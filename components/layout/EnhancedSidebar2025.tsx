@@ -764,6 +764,11 @@ const supportLinks = [
           </div>
         </div>
       </div>
+                    {section.badge}
+                  </span>
+                )}
+              </div>
+              {expandedSections.has(section.title) ? (
             <AnimatePresence>
               {expandedSections.has(section.title) && (
                 <motion.div
@@ -904,6 +909,40 @@ const supportLinks = [
                         <Link;
                           key={service.name}
                           href={service.href}
+            {/* Contact Information */}
+            <div className="p-6 border-b border-cyan-500/30">
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
+                <Mail className="w-5 h-5 text-cyan-400" />
+                <span>Contact Information</span>
+              </h3>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 text-gray-300">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors duration-200">
+                    {contactInfo.mobile}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-gray-300">
+                  <Mail className="w-4 h-4 text-cyan-400" />
+                  <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-200">
+                    {contactInfo.email}
+                  </a>
+                </div>
+                <div className="flex items-start space-x-3 text-gray-300">
+                  <MapPin className="w-4 h-4 text-cyan-400 mt-1" />
+                  <span className="text-sm">{contactInfo.address}</span>
+                </div>
+              </div>
+            </div>
+            {/* Quick Stats */}
+            <div className="p-6 border-b border-cyan-500/30">
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
+                <TrendingUp className="w-5 h-5 text-cyan-400" />
+                <span>Company Stats</span>
+              </h3>
+              <div className="grid grid-cols-2 gap-4">
+                {stats.map((stat, index) => (
+                  <motion.div
                     key={stat.label}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -1169,12 +1208,6 @@ const supportLinks = [
         </div>;
       </div>;
       {/* Floating Elements */}
-      <div className="absolute top-1/4 left-4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
-      <div className="absolute top-1/2 right-4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
-      <div className="absolute bottom-1/4 left-4 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-2000"></div>
-    </motion.aside>
-  )
-}
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown,'  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;
 } from 'lucide-react && react.ts;
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, '  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;
@@ -2160,3 +2193,4 @@ Contact Us";
       </motion && motion.div>;
     </>;
 ";
+

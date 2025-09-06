@@ -1,5 +1,7 @@
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-deployment-automation.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -162,6 +164,9 @@ runDeploymentStep('Create Robots.txt', 'echo "User-"agent": *\nAllow: /\nSitemap
 console.log('\n� Phase "8")
   "criticalFailures"
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-deployment-automation.cjs
+<<<<<<< HEAD
+console.log('� Deployment summary saved "to")
+=======
 <<<<<<< HEAD
 console.log('� Deployment summary saved "to")
 =======

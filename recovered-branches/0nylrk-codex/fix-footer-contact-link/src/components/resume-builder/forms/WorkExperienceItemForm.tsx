@@ -37,18 +37,6 @@ const formSchema = z.object({
   company_name: z.string().min(1, "Company name is required");
   role_title: z.string().min(1, "Role title is required");
   start_date: z.date({
-    required_error: "Start date is required"})
-  end_date: z.date().optional()
-  is_current: z.boolean().default(false)
-  description: z.string().optional()
-  location: z.string().optional()})
-type FormValues = z.infer<typeof formSchema>;
-interface WorkExperienceItemFormProps {
-  initialData?: WorkExperience;
-  onSubmit: (data: WorkExperience) => Promise<void>
-export function WorkExperienceItemForm({
-  initialData,
-  onSubmit,
 
 
 
@@ -57,17 +45,6 @@ export function WorkExperienceItemForm({
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
-      company_name: initialData?.company_name |""
-      role_title: initialData?.role_title |""
-      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date()
-      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined
-      is_current: initialData?.is_current |false
-      description: initialData?.description |""
-      location: initialData?.location |""}})
-  const { isSubmitting } = form.formState;
-  const watchIsCurrent = form.watch("is_current");
-  const watchRoleTitle = form.watch("role_title");
-  const watchCompanyName = form.watch("company_name");
   const handleFormSubmit = async (values: FormValues) => {
     // Create a properly typed WorkExperience object with all required fields
     const workExperience: WorkExperience = {
@@ -199,18 +176,6 @@ function WorkExperienceItemForm() {
               control={form.control}
               name="location";
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Location</FormLabel>
-                  <FormControl>
-                    <Input placeholder="e.g. New York, NY (Remote)" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FormField
               control={form.control}
               name="is_current";
               render={({ field }) => (
@@ -339,3 +304,80 @@ function WorkExperienceItemForm() {
                       variant="outline"
                       size="sm"
                       onClick={() => setIsEnhancementDialogOpen(true)}
+                    >;
+                      AI Writer;
+                    </Button>;
+                  </div>;
+                </div>;
+                <FormControl>;
+
+                  <Textarea;
+                    placeholder="Describe your responsibilities, achievements, and skills used in this role...";
+                    className="min - h-[150px]";
+
+                    {...field}
+                  />;
+                </FormControl>;
+                <FormMessage />;
+
+          />;
+
+          <div className="flex justify-end gap-2">;
+            <Button type="button" variant="outline" onClick={onCancel}>;
+              Cancel;
+            </Button>;
+            <Button type="submit" disabled={isSubmitting}>;
+              {isSubmitting ? (;
+                <>;
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+                  Saving...;
+                </>;
+              ) : (;
+                <>Save</>;
+              )}
+              </FormItem>)}
+          />;
+          <div className="flex justify - end gap - 2">;
+            <Button type="button" variant="outline" on_click={on_cancel}>;
+              Cancel;
+            </Button>;
+            <Button type="submit" disabled={is_submitting}>;
+              {is_submitting ? (
+                <>;
+                  <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+                  Saving...;
+                </>) : (
+                <>Save</>)}
+
+            </Button>;
+          </div>;
+        </form>;
+      </Form>;
+
+        defaultOptions={{;
+          enhancementType: "work-description",;
+          content: form && form.getValues("description") || "",;
+          context: `${watchRoleTitle} at ${watchCompanyName}`}}
+        initialContent={form && form.getValues("description") || ""}
+      />;
+    </>;
+  );
+}
+
+      <AIEnhancementDialog;
+        title="Enhance Work Experience Description";
+        is_open={isEnhancementDialogOpen}
+        on_close={() => setIsEnhancementDialogOpen (false)}
+        on_apply={handleAIEnhancement}
+        default_options={{
+          enhancement_type: "work - description",
+          content: form.get_values ("description") || "",
+          context: `${watchRoleTitle} at ${watchCompanyName}`}}
+        initial_content={form.get_values ("description") || ""}
+      />;
+    </>);
+}
+
+}
+;
+

@@ -56,10 +56,6 @@ export default function InteractiveCard({;
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
                   isHovered ? 'translate-x-2' : ''
-                }`}
-                fill=&quot;none&quot;
-                stroke=&quot;currentColor&quot;
-                viewBox=&quot;0 0 24 24&quot;
               >
                 <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M13 7l5 5m0 0l-5 5m5-5H6&quot; />
               </svg>

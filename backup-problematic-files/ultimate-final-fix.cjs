@@ -37,8 +37,14 @@ const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'u
 <<<<<<< HEAD
   .replace(/user: nul l/g, '"user")
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   .replace(/user: nul l/g, '"user")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+  .replace(/user: nul l/g, '"user")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

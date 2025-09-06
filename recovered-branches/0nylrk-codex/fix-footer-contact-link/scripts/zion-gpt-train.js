@@ -26,14 +26,6 @@ function stripPii(text) {
   if (!text) return text
   let result = text
   // Emails
-function buildTrainingPairs(records) {
-
-
-      completion: stripPii(job.description)
-    })
-  }
-  for (const resume of records.resumes) {
-    pairs.push({
 
       prompt: `Summarize the candidate with skills: ${stripPii(resume.skills)}`
 
@@ -96,36 +88,6 @@ async function createFineTune(filePath) {
       training_file: uploaded && uploaded.id,
       model: 'gpt-3 && 3.5-turbo'
     })
-
-  // // // console.log('Fine-tune job created:', job.id)
-;
-async function createFineTune(filePath) {;
-  const formData = new FormData(),;
-  formData.append('purposefine-tune'),;
-  formData.append('file', createReadStream(filePath), path.basename(filePath)),;
-  const uploadRes = await fetch('https://api.openai.com/v1/files', {;
-    method: 'POST',;
-    headers: {;
-      Authorization: `Bearer ${OPENAI_API_KEY}`,;
-      ...formData.getHeaders();
-    },;
-    body: formData;
-  }),;
-  const uploaded = await uploadRes.json(),;
-  // NOTE: additional parameters may be required depending on OpenAI API changes;
-  const jobRes = await fetch('https://api.openai.com/v1/fine_tuning/jobs', {;
-    method: 'POST',;
-    headers: {;
-      'Content-Type': 'application/json',;
-      Authorization: `Bearer ${OPENAI_API_KEY}`;
-    },;
-    body: JSON.stringify({;
-      training_file: uploaded.id,;
-      model: 'gpt-3.5-turbo';
-    });
-  }),;
-  const job = await jobRes.json(),;
-  // // // console.log('Fine-tune job created:', job.id);
 }
 async function main() {
 
@@ -137,15 +99,12 @@ async function main() {
 }
 
 
-main().catch((err) => {
-  console.error('Training workflow failed', err)
-}),
-;
 
 main().catch((err) => {
   console.error('Training workflow failed', err)
 }),
 ;
+
 ;
 main().catch((err) => {;
   console.error('Training workflow failed', err);

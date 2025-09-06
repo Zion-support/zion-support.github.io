@@ -37,10 +37,6 @@ interface ActiveFiltersProps {
   
   if (!hasActiveFilters) return null,
 
-        </ClickableBadge>
-      ))}
-      
-      {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
           ${priceRange[0]}-${priceRange[1]}/hr
           <X className="h-3 w-3" />
         </ClickableBadge>

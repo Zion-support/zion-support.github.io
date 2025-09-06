@@ -55,8 +55,6 @@ const MarketplaceInsights = ({ stats }: { stats: any }) => (
 // Filter controls
 const MarketplaceFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
-      <select value={filterCategory} onChange={(e,) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
-      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
         <option value="">All Categories</option>
         {categories.map((cat: string,) => <option key={cat} value={cat}>{cat}</option>)}
       </select>
@@ -149,7 +147,6 @@ function MarketplacePageContent() {;
       logErrorToProduction('Error in fetchProducts:', { data: error })
       throw new Error('Failed to load marketplace data. Please try again.')
     }
-  }, [sortBy, filterCategory, showRecommended])
   const {
     items: products
     loading
@@ -172,19 +169,11 @@ function MarketplacePageContent() {;
   const marketStats = useMemo((,) => {
     if (products.length === 0) return null
     return {
-      averagePrice: products.reduce((sum, p,) => sum + (p.price |0), 0) / products.length
-      averageRating: products.reduce((sum, p,) => sum + (p.rating |0), 0) / products.length
-      totalProducts: products.length
       availableCount: products.filter(p => p.availability === "Available").length
     }
   }, [products])
   const categories = useMemo((,) => {
     return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"]
-  }, [])
-  const [showScrollTop, setShowScrollTop] = useState(false)
-  useEffect((,) => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 800)
-    window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   // Loading state
@@ -463,8 +452,6 @@ if ( {) {
           showRecommended = {showRecommended,}
           setShowRecommended = {setShowRecommended,}
           loading = {isFetching,}
-              initial={{ opacity: 0, scale: 0.9 }} 
-              animate={{ opacity: 1, scale: 1 }} 
 ;
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>;
         <MarketplaceFilterControls;

@@ -32,9 +32,6 @@ import {
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
-    adminOnly: false,
-    icon: "Briefcase"
-  },
   "project-help": {
 
     id: "project-help"
@@ -43,7 +40,6 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     adminOnly: false
 
     icon: "MessageSquare"
-  }
   "ai-tools": {
 
     id: "ai-tools"
@@ -52,7 +48,6 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     adminOnly: false
 
     icon: "Code"
-  }
   "feedback": {
 
     id: "feedback"
@@ -84,32 +79,6 @@ const postsByCategory: Record<string, ForumPost[]> = {
   ];
   "project - help": [;
     {
-      id: "3"
-      title: "Looking for feedback on my automated testing approach"
-      content: "I've set up a CI/CD pipeline with the following testing strategy..."
-      authorId: "user3"
-      authorName: "Michael Wong"
-      categoryId: "project-help"
-      tags: ["testing", "automation", "ci-cd"];
-      createdAt: "2025-04-10T14:30:00Z"
-      updatedAt: "2025-04-10T14:30:00Z"
-      upvotes: 5
-      downvotes: 0
-      replyCount: 2
-    }
-    {
-      id: "5"
-      title: "How to handle client scope creep?"
-      content: "I'm working on a project where the client keeps adding requirements..."
-      authorId: "user5"
-      authorName: "David Lin"
-      categoryId: "project-help"
-      tags: ["client-management", "scope", "projects"];
-      createdAt: "2025-04-08T10:20:00Z"
-      updatedAt: "2025-04-08T10:20:00Z"
-      upvotes: 24
-      downvotes: 0
-      replyCount: 7
       id: "3",
       title: "Looking for feedback on my automated testing approach",
       content: "I've set up a CI / CD pipeline with the following testing strategy...",
@@ -189,9 +158,6 @@ const postsByCategory: Record<string, ForumPost[]> = {
       </AppLayout>;
     );
   }
-  const category = categoriesInfo[categoryId];
-  const IconComponent = iconMap[category.icon as keyof typeof iconMap] |MessageSquare;
-  const posts = postsByCategory[categoryId] |[];
   // Filter posts based on search query
   const filteredPosts = searchQuery
     ? posts.filter(post =>
@@ -199,7 +165,6 @@ const postsByCategory: Record<string, ForumPost[]> = {
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
-    : posts;
   // For announcements, check if user is admin
   const canCreatePost = categoryId !== "announcements" |(user?.userType === 'admin' |user?.role === 'admin');
 
@@ -266,9 +231,6 @@ const postsByCategory: Record<string, ForumPost[]> = {
             )}
           </div>;
         )}
-      </div>
-    </AppLayout>
-  )
 }
   "Megaphone": Megaphone;
 }

@@ -1,9 +1,3 @@
-import React, { useState } from "react",
-import { MessageCircle } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Avatar, AvatarFallback } from "@/components/ui/avatar",
 interface DiscussionPost {
 
   id: number;
@@ -21,12 +15,6 @@ interface DiscussionPost {
 }
 const initial_posts: DiscussionPost[] = [;
   {
-    id: 1
-    author: "Anna Zhou"
-    time: "2h ago"
-    title: "What AI trends are you most excited for in 2025?"
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"
-  }
   {
     id: 2
     author: "David Kim"
@@ -40,8 +28,6 @@ const initial_posts: DiscussionPost[] = [;
     setNewBody("");
     setShowNew(false);
   }
-
-
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
@@ -157,15 +143,6 @@ export const CommunityDiscussion:React.FC = () => {;
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
               rows={3}
-              <Button
-                variant="secondary"
-                size="sm"
-                className="bg-zion-blue text-white hover:bg-zion-blue-dark"
-                onClick={() => setShowNew(false)}
-              <Button
-                size="sm"
-                className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
-                onClick={handleAddPost}
               >
                 Post
               </Button>

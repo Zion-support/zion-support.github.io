@@ -1,7 +1,3 @@
-import { BlogPost } from '@/types/blog';
-// Sample blog data - in a real app this would come from an API or CMS
-export const BLOG_POSTS: BlogPost[] = [
-  {
 
     id: 'ai-trends-2025'
     title: '10 Emerging AI Trends to Watch in 2025'
@@ -53,16 +49,6 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "How to Optimize Your AI Service Listings for Maximum Visibility";
     slug: "optimize - ai - listings";
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.";
-import { BlogPost } from "@/types/blog",
-// Sample blog data - in a real app this would come from an API or CMS
-export const BLOG_POSTS: BlogPost[] = [
-  {
-    id: "ai-trends-2025",
-    title: "10 Emerging AI Trends to Watch in 2025",
-    slug: "ai-trends-2025",
-    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
-    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
-
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
 <h2>Crafting an Irresistible Service Title</h2>
 <p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
@@ -73,19 +59,6 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>Strategic Pricing and Package Structure</h2>
 <p>Consider offering tiered packages that cater to different client needs and budgets. Clearly differentiate what's included in each tier, and consider adding value-based pricing elements that tie your compensation to client results.</p>
 <h2>Leveraging Reviews and Testimonials</h2>
-<p>Social proof is powerful. Actively request detailed reviews from satisfied clients, and feature the most compelling testimonials prominently in your listing. Respond professionally to all feedback, including any critical reviews.</p>`
-      name: 'Marcus Johnson'
-      title: 'Marketing Strategist'
-      avatarUrl:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200'
-    }
-    publishedDate: 'Apr 10, 2025'
-    readTime: '8 min read'
-    category: 'Marketing'
-    tags: ['Marketing', 'AI Services', 'Visibility', 'SEO']
-    featuredImage:
-      'https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630'
-  }
   {
     id: 'green-it'
     title: "Green IT: Reducing Your Data Center's Carbon Footprint"
@@ -131,19 +104,6 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>Workload Optimization and Consolidation</h2>
 <p>Right-sizing infrastructure and implementing dynamic workload management ensures computing resources are used efficiently. Modern orchestration tools can automatically balance workloads to maximize utilization while powering down unused capacity.</p>
 <h2>Measuring and Reporting Impact</h2>
-<p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`
-      name: 'Sophia Chen'
-      title: 'Sustainability Engineer'
-      avatarUrl:
-        'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200'
-    }
-    publishedDate: 'Apr 5, 2025'
-    readTime: '6 min read'
-    category: 'Sustainability'
-    tags: ['Green IT', 'Sustainability', 'Data Centers', 'Energy Efficiency']
-    featuredImage:
-      'https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630'
-  }
   {
     id: 'ai-ethics-frameworks'
     title: 'Implementing Ethical AI Frameworks in Enterprise Applications'
@@ -166,42 +126,6 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"
   },
   {
-    id: "ai-ethics-frameworks",
-    title: "Implementing Ethical AI Frameworks in Enterprise Applications",
-    slug: "ai-ethics-frameworks",
-    excerpt: "A comprehensive guide to integrating ethical considerations into your AI development lifecycle.",
-    content: `<p>As AI systems become more prevalent in critical decision-making, organizations must implement robust ethical frameworks to ensure responsible deployment. This article provides a practical roadmap for embedding ethics throughout your AI development lifecycle.</p>
-<h2>Establishing Ethical Principles</h2>
-<p>Begin by defining clear ethical principles that align with your organization's values and industry requirements. These typically include fairness, transparency, accountability, privacy, and human oversight. These principles should be documented and socialized across all teams involved in AI development.</p>
-<h2>Data Ethics and Governance</h2>
-<p>Ethical AI begins with ethical data practices. Establish robust data governance policies that address collection consent, proper anonymization techniques, representation biases, and appropriate usage limitations. Regular data audits should verify adherence to these standards.</p>
-<h2>Model Development and Testing</h2>
-<p>Implement bias testing throughout the development process, not just at the end. Use diverse test datasets that represent different demographics and edge cases. Document model limitations and potential risks in model cards that accompany each deployed system.</p>
-<h2>Deployment with Human Oversight</h2>
-<p>Even highly accurate AI systems require human oversight mechanisms. Implement appropriate appeal processes, confidence thresholds that trigger human review, and ongoing monitoring for performance drift that might introduce new ethical concerns.</p>
-<h2>Continuous Ethical Evaluation</h2>
-<p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`
-      name: 'Dr. James Peterson'
-      title: 'AI Ethics Officer'
-      avatarUrl:
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200'
-    }
-    publishedDate: 'Mar 30, 2025'
-    readTime: '7 min read'
-    category: 'Ethics'
-    tags: ['AI Ethics', 'Enterprise AI', 'Responsible AI', 'Governance']
-    featuredImage:
-      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630'
-  }
-    },
-    published_date: 'Mar 30, 2025',
-    read_time: '7 min read',
-    category: 'Ethics',
-    tags: ['AI Ethics', 'Enterprise AI', 'Responsible AI', 'Governance'],
-    featuredImage:
-      'https://images && images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630',
-  },
-  {
     content: `<p>The demand for skilled AI professionals continues to outpace supply, creating intense competition among employers. This article examines effective strategies for attracting and retaining top AI talent in today's challenging market.</p>
 <h2>Beyond Compensation: What AI Talent Really Wants</h2>
 <p>While competitive salaries are essential, today's AI professionals are equally motivated by challenging problems, access to cutting-edge infrastructure, and opportunities to publish and contribute to the field. Creating an environment that balances practical applications with research opportunities can be a major differentiator.</p>
@@ -212,19 +136,6 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>Remote-First Talent Strategies</h2>
 <p>The most successful AI employers have embraced truly global talent strategies, creating distributed teams that leverage expertise regardless of location. This approach requires investing in collaboration tools, asynchronous workflows, and inclusive management practices.</p>
 <h2>Retention Through Growth Paths</h2>
-<p>Create clear advancement opportunities that don't force technical experts into management tracks. Dual-ladder career paths that equally value technical depth and leadership skills ensure AI professionals can progress while playing to their strengths.</p>`
-      name: 'Elena Rodriguez'
-      title: 'Head of AI Talent'
-      avatarUrl:
-        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200'
-    }
-    publishedDate: 'Mar 22, 2025'
-    readTime: '9 min read'
-    category: 'Recruitment'
-    tags: ['AI Talent', 'Recruitment', 'Tech Hiring', 'Retention']
-    featuredImage:
-      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630'
-  }
     },
     published_date: 'Mar 22, 2025',
     read_time: '9 min read',
@@ -234,28 +145,32 @@ export const BLOG_POSTS: BlogPost[] = [
       'https://images && images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630',
   },
   {
-    content: `<p>As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>
-<h2>Right-sizing Compute Resources</h2>
-<p>Many organizations overprovision computing resources for AI workloads. Implementing proper benchmarking and profiling helps identify true requirements and eliminate waste. Consider different compute profiles for development, training, and inference stages.</p>
-<h2>Model Compression Techniques</h2>
-<p>Recent advances in quantization, pruning, and knowledge distillation allow teams to reduce model size without significant performance loss. These compressed models require less compute for inference and can often run on less expensive hardware.</p>
-<h2>Strategic Cloud vs. On-Premise Decisions</h2>
-<p>While cloud platforms offer flexibility, organizations with consistent AI workloads often benefit from hybrid approaches. Analyze workload patterns to determine which components should remain in the cloud and which warrant dedicated hardware investments.</p>
-<h2>Training Efficiency Optimization</h2>
-<p>Implementing techniques like mixed precision training, gradient accumulation, and efficient hyperparameter optimization can significantly reduce training time and costs. Modern frameworks provide many of these optimizations with minimal configuration.</p>
-<h2>Inference Serving Architecture</h2>
-      avatarUrl:
-        'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200',    author: {
-      name: "Michael Wong";
-      title: "ML Infrastructure Architect"
-      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
-    }
     publishedDate: "Mar 15, 2025";
     readTime: "6 min read";
     category: "Infrastructure"
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
+  }
 ];
+
+      'https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630',
+    },
+    published_date: 'Mar 15, 2025',
+    read_time: '6 min read',
+    category: 'Infrastructure',
+    tags: [;
+      'AI Infrastructure',
+      'Cost Optimization',
+      'Machine Learning',
+      'Computing',
+    ],
+    featured_image:;
+      'https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=1200 & h=630',
+
+  },
+];
+
 }];
+
 
 
       name: "Michael Wong",

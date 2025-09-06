@@ -82,3 +82,16 @@ if ( {) {
     }
   }
 ;
+  // For demo purposes, let's provide a login / logout toggle;
+  const toggle_auth = () =>: any {
+    setIsAuthenticated (prev => !prev);
+  }
+;
+  return {
+    is_authenticated;
+    user_details;
+    saved_talents;
+    handleToggleSave;
+    toggle_auth;
+  }
+}

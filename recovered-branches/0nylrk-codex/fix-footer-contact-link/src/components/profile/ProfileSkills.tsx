@@ -1,9 +1,4 @@
 
-import {Badge} from "@/components/ui/badge";
-import {ProfileSkill} from "@/types/profile";
-import { Badge } from "@/components/ui/badge",
-import { ProfileSkill } from "@/types/profile",
-
 interface ProfileSkillsProps {
   skills: ProfileSkill[];
 }
@@ -22,13 +17,6 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
                 </span>
               )}
             </div>
-                style={{ width: `${(skill.level / 5) * 100}%` }}
-              />
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
 interface ProfileSkillsProps {;
   skills: ProfileSkill[];
 }

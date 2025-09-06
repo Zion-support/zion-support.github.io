@@ -10,26 +10,6 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Checkbox } from "@/components/ui/checkbox",
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-// Form validation schema
-const signupSchema = z
-  .object({
-    displayName: z.string().min(2, "Name must be at least 2 characters");
-    email: z.string().email("Please enter a valid email")
-    displayName: z.string().min(2, "Name must be at least 2 characters"),
-    email: z.string().email("Please enter a valid email"),
     password: z.string()
       .min(8, "Password must be at least 8 characters")
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
@@ -142,16 +122,6 @@ if ( {) {
                 </Link>;
               </p>;
             </div>;
-                            <Input
-                              placeholder="John Doe"
-                              className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              {...field}
-                            />;
-                            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
-                          </div>;
-                        </FormControl>;
-                        <FormMessage className="text-red-400" />;
-                      </FormItem>;
                     )}
                   />
                   <FormField

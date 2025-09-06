@@ -151,12 +151,6 @@ if ( {) {
       const { data: profileData, error } = await supabase
         .from('profiles')
         .update({
-          display_name: values.name
-          bio: finalSummary
-          user_type: 'creator', // Set as service provider
-          profile_complete: true
-          updated_at: new Date().toISOString()
-          headline: values.title
           // Additional fields that might be in profiles table
         })
         .eq('id', user.id)

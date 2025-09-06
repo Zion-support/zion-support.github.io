@@ -1,11 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
 >>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
 const fs = require('fs');
 const path = require('path');
 function improveSEO() {}
@@ -70,12 +76,18 @@ Sitemap: https://ziontechgroup.com/sitemap.xml;";
       fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
       
 >>>>>>> origin/main
+=======
+=======
+      
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
       console.log('SEO improvements completed')} catch (error) {}
       console.error('SEO improvement "failed": ', error.message)};
   };
@@ -86,6 +98,10 @@ improveSEO();
 improveSEO();
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

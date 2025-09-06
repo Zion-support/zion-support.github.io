@@ -1,6 +1,4 @@
 
-import Link from 'next / link';
-export type Course = {
   id: string;
   title: string;
   duration_minutes: number;
@@ -47,3 +45,4 @@ function CourseCard() {
     </div>);
 
   );
+

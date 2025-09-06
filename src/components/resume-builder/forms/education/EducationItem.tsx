@@ -7,12 +7,7 @@ export function EducationItem({
   onDelete
 }: EducationItemProps) {
 
-          </div>;
-          <div className='flex gap-2'>;
             <Button
               variant='ghost'
               size='icon'
               onClick={() => onEdit(education)}
-              aria-label='Edit education'            >;
-              <Edit className='h-4 w-4' />;
-            </Button>;

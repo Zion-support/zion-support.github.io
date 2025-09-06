@@ -1,5 +1,3 @@
-  }
-  if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
 
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
@@ -53,8 +51,6 @@ export function ProjectOfferBanner() {;
       {pendingOffers
         .filter(offer => !dismissed.has(offer.id))
         .map(offer => (
-          <Card
-            key = {offer.id,}
             className="border-2 border-primary bg-primary/5"
             onClick={() => handleViewOffer(offer.id)}
           >
@@ -150,16 +146,6 @@ export function ProjectOfferBanner() {;
             </CardContent>
           </Card>
         ))}
-    </div>
-  )
-}, [projects, isLoading])
-const handleDismiss = (projectId: string, e: React.MouseEvent) => {
-  e.stopPropagation ()
-setDismissed (prev => {
-  const updated = new Set (prev)
-updated.add (projectId)
-return updated
-})
 }
 }
 if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.has (p.id) ) ) {

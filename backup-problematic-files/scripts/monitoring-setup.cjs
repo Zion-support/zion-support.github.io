@@ -1,11 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
 >>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
 const fs = require("$1")
 const path = require("path")
     console.log("� Setting up error tracking...")
@@ -39,8 +45,14 @@ app.get("/ready")
 <<<<<<< HEAD
     console.log(" Monitoring setup completed!")
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(" Monitoring setup completed!")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+    console.log(" Monitoring setup completed!")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

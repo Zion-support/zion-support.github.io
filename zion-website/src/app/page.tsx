@@ -1,11 +1,3 @@
-import {
-  LightBulbIcon
-  CpuChipIcon
-  GlobeAltIcon
-  ShieldCheckIcon
-  ChartBarIcon
-  UserGroupIcon
-import React from 'react';
 
 
 import React from 'react';
@@ -147,20 +139,6 @@ export default /**
  */
 function HomePage() {
   return (
-    <div className="bg-black">
-      {/* Hero section */}
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Leading the Future of{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                AI & Technology
-              </span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions.
-              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. 
               Join the revolution that's reshaping industries worldwide.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -169,10 +147,6 @@ function HomePage() {
                 className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
               >
                 Get Started
-              </a>
-              <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-                Learn More <span aria-hidden="true">→</span>
-              </a>
               </Link>
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
                 Learn More <span aria-hidden="true">→</span>

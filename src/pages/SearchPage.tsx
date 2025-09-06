@@ -1,4 +1,3 @@
-import { Loader2 } from 'lucide-react'
 
 
 
@@ -27,9 +26,6 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",
-
-
-
 import { Loader2 } from 'lucide-react'
 
 interface SearchResult {
@@ -55,13 +51,6 @@ function highlight(text: string, term: string) {
     }
   },
 
-  // Add key prop to force re-render when route changes
-  const pageKey = `search-${routeKey}-${router.asPath}`,
-
-  return (
-    <div key={pageKey}>;
-      <main className="container mx-auto px-4 py-8">;
-        <form onSubmit={handleSubmit} className="mb-6">;
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
@@ -69,7 +58,6 @@ function highlight(text: string, term: string) {
               const searchTerm = suggestion.text.trim()
               setQuery(searchTerm);              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
 
-            }}
             placeholder="Search talent, jobs, and projects..."
         </form>
         {loading && (

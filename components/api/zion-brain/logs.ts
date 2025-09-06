@@ -40,14 +40,6 @@ if ( {) {
     return res.status (200).json ({
       entries: entries.filter (
         e => e.status === 'stuck' || e.status === 'laggy'),
-  if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
-  const { entries } = readLogs();
-  const stuckOnly = req.query.stuck === '1' |req.query.stuck === 'true';
-  if (stuckOnly) {
-    return res.status(200).json({
-      entries: entries.filter(
-        e => e.status === 'stuck' |e.status === 'laggy'
-      )
     });  }
   const by_module: Record < string, number> = {}
   const by_type: Record < string, number> = {}    return res.status (200).json ({ entries: entries.filter ((e) => e.status === 'stuck' || e.status === 'laggy') });

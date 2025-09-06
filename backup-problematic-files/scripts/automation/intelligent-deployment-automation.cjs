@@ -113,8 +113,14 @@ const http = require('http')
 <<<<<<< HEAD
       this.log(` Fatal error: ${error.message}`, 'ERROR'`)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log(` Fatal error: ${error.message}`, 'ERROR'`)
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+      this.log(` Fatal error: ${error.message}`, 'ERROR'`)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

@@ -143,20 +143,6 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
       action: "Join Community"
     },
     {
-      icon: <ShoppingBag className="h-5 w-5" />,
-      title: "First Purchase",
-      description: "Make your first purchase on the marketplace",
-      points: "100 pts",
-      action: "Browse Marketplace"
-    },  ];
-
-  const upcomingRewards = [;
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",;
-      description: "Invite friends to join Zion marketplace",;
-      points: "200 pts per referral",;
-      action: "Share Referral Link";
-    }
-
   const upcomingRewards = [;
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },;
     {;
@@ -562,18 +548,9 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                       Need more points
                     </p>                  )}
                 </div>
-              </div>
-                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
-                    <p className="text-xs text-muted-foreground">Need more points</p>
-                <div>
-                  <h4 className="font-medium">{reward.title}</h4>
-                  <p className="text-sm text-muted-foreground">{reward.category}</p>
-                </div>
                 <div className="text-right space-y-1">
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
-                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
-                      {redeeming ? 'Processing...' : 'Redeem'}
             <History className="h-5 w-5" />
             Points History
           </CardTitle>

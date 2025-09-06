@@ -1,9 +1,3 @@
-  Star
-  Quote
-  Users
-  Award
-  TrendingUp
-  CheckCircle;
   Star,
   Quote,
   Users,
@@ -234,7 +228,3 @@ export default EnhancedTestimonialsSection);
 export default EnhancedTestimonialsSection;
 ;
   );
-export default EnhancedTestimonialsSection;  )
-}
-export default EnhancedTestimonialsSection;
-

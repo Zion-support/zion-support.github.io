@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
 
-ursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
 import React from 'react';
@@ -111,6 +110,7 @@ export default function CloudDevOpsPage() {;
         </section>;
       </div>;
     </Layout>;
+  },
   {
     icon: GitBranch,
     title: 'CI/CD Pipelines',
@@ -132,17 +132,18 @@ export default function CloudDevOpsPage() {;
     description: '24/7 monitoring and proactive alerting systems'
   }
 ];
-const benefits = [
-  'Reduced infrastructure costs by up to 50%',
-  'Improved deployment speed and reliability',
-  'Enhanced security and compliance',
-  'Automated scaling and resource management',
-  'Better disaster recovery capabilities',
-  'Faster time-to-market for applications'
-];
-export default function CloudDevOpsServices() {
+export default function CloudDevOpsPage() {;
+const benefits = [;
+  'Reduced infrastructure costs by up to 50%',;
+  'Improved deployment speed and reliability',;
+  'Enhanced security and compliance',;
+  'Automated scaling and resource management',;
+  'Better disaster recovery capabilities',;
+  'Faster time-to-market for applications';
 ];
 export default function CloudDevOpsServices() {;
+
+
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"

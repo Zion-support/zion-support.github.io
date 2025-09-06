@@ -194,3 +194,7 @@ export default function MarketPricingPage() {
                 <li > WorkOS pricing: <a className="text - cyan - 400 underline" href={`https://workos.com / pricing`} target="_blank" rel="noopener noreferrer">workos.com / pricing</a></li>;
                 <li > Okta pricing: <a className="text - cyan - 400 underline" href={`https://www.okta.com / pricing/`} target="_blank" rel="noopener noreferrer">okta.com / pricing</a></li>;
               </ul>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;

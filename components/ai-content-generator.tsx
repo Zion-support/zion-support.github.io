@@ -52,10 +52,6 @@ import React from 'react';
     }
   ];
   const integrations = [
-    {
-      name: 'Shopify'
-      icon: '🛒'
-      description: 'E-commerce content automation'
     }
     { name: 'HubSpot', icon: '', description: 'Marketing automation sync' }
     { name: 'Mailchimp', icon: '', description: 'Email campaign content' }
@@ -76,7 +72,6 @@ import React from 'react';
       ],
       popular: false,
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
-
   return (
     <>;
       <Head>;
@@ -190,42 +185,6 @@ import React from 'react';
               href="#demo"
               variant="outline"
               size="lg"
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400">10M+</div>
-              <div className="text-gray-400">Words Generated</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400">99.9%</div>
-              <div className="text-gray-400">Uptime</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400">24/7</div>
-              <div className="text-gray-400">Support</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className='py-24 bg-gray-900 relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              Powerful Features
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Everything you need to create exceptional content at scale
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>      <section className="py-24 bg-gray-900 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
-              Powerful Features
-            </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {features.map((feature, index) => (
               <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
@@ -584,16 +543,6 @@ import React from 'react';
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
-                      className='flex items-center text-gray-300'
-                    >
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
-                  <p className="text-gray-400">{plan.description}</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
 
                       {feature}
                     </li>;

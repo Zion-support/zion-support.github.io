@@ -368,4 +368,3 @@ const contact = {
   }
 ];
 export default comprehensiveInnovativeServices;
-export default comprehensiveInnovativeServices;

@@ -5,10 +5,6 @@ export const focusElement = (elementId) => {
     element && element.focus()}
 };
 import React from 'react';
-
-interface AccessibilityProps {
-  // Add props here as needed
-import React from 'react';
 interface AccessibilityProps {
   // Add props here as needed
 }

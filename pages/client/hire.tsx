@@ -42,40 +42,6 @@ export default function ClientHirePage() {
     setLoading(true);
     setResult(null);
 
-    const paymentTerms =
-      termsType === 'hourly'
-        ? { type: 'hourly', hourlyRateUsd }
-        : termsType === 'fixed'
-          ? { type: 'fixed', fixedAmountUsd }
-          : { type: 'milestone', milestones: [] }
-    const res = await fetch('/api/marketplace/offers', {
-      method: 'POST'
-      headers: {
-        'Content-Type': 'application/json'
-        'x-demo-user-role': 'client'
-        'x-demo-user-id': 'client-1'
-      }
-      body: JSON.stringify({
-        talentSlug
-        startDateIso
-        scopeSummary
-        paymentTerms
-        agreementUrl
-      })
-    });
-    const json = await res.json();
-    setLoading(false);
-    if (!json.ok) {
-      alert(json.error |'Failed to send offer');
-    } else {
-      setResult(json.offer);
-      setShowFeedback(true);    }
-
-  }
-  return (
-    <div className='max-w-3xl mx-auto p-6 space-y-6'>
-      <h1 className='text-xl font-semibold'>Hire Talent</h1>
-      <div className='space-y-4 border rounded p-4'>
   const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module"),
   const [termsType, setTermsType] = useState("hourly"),
   const [hourlyRateUsd, setHourlyRateUsd] = useState(120),
@@ -88,10 +54,6 @@ export default function ClientHirePage() {
     setLoading(true),
     setResult(null),
     const paymentTerms =
-      termsType === "hourly"
-        ? { type: "hourly", hourlyRateUsd   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
         : termsType === "fixed";
@@ -119,9 +81,6 @@ export default function ClientHirePage() {
 
   }
   return (
-    <div className='max-w-3xl mx-auto p-6 space-y-6'>
-      <h1 className='text-xl font-semibold'>Hire Talent</h1>
-      <div className='space-y-4 border rounded p-4'>
     <div className="max-w-3xl mx-auto p-6 space-y-6">
       <h1 className="text-xl font-semibold">Hire Talent</h1>
 
@@ -179,6 +138,11 @@ export default function ClientHirePage() {
         userHeaders={{ 'x-demo-user-role': 'clientx-demo-user-id': 'client-1' }}
       />
     </div>
+        <div>
+          <label className="block text-sm font-medium">Agreement URL (optional)</label>
+          <input value={agreementUrl} onChange={(e) => setAgreementUrl(e.target.value)} placeholder="https://..." className="w-full border rounded px-3 py-2" />
+        </div>
+      {result && (
         <div className='border rounded p - 4 bg - emerald - 50'>;
           <div className='font - medium'>Offer sent</div>;
           <div className='text - sm'>Offer ID: {result.id}</div>        </div>)}

@@ -1,12 +1,3 @@
-  ArrowRight
-  Star
-  TrendingUp
-  Zap
-  Shield
-  Globe
-  Brain
-  Rocket
-  CheckCircle;
   ArrowRight,
   Star,
   TrendingUp,
@@ -189,36 +180,10 @@ interface EnhancedHero2026Props {
               ease: 'easeInOut',
               delay: Math.random() * 2,            }}  };
 
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Enhanced Background Elements */}
-      {/* Floating Elements */}
-            style={{
-              left: `${Math.random() * 100}%`
-              top: `${Math.random() * 100}%`}}
-            animate={{
             }}
             transition={{
-              duration: 3 + Math.random() * 2
-              repeat: Infinity
-              ease: 'easeInOut'
-              delay: Math.random() * 2,              ease: "easeInOut"
-              delay: Math.random() * 2
-            }}
-              duration: 3 + Math.random() * 2,
+              duration: 3 + Math.random () * 2,
               repeat: Infinity,
-
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-
-              ease: 'easeInOut',
-              delay: Math.random() * 2,              ease: "easeInOut",
-              delay: Math.random() * 2
-            }}
-
-            }}
 
 
 
@@ -268,21 +233,6 @@ interface EnhancedHero2026Props {
             ))}
           </motion.div>
 
-          {/* Enhanced CTA Section */}
-          <motion.div variants={itemVariants} className='space-y-6'>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-              <Button
-                href='/services'
-                variant='primary'
-                size='xl'
-                className='text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group'
-              >              >
-                <span className="flex items-center">
-                  <Rocket className="mr-3 w-7 h-7 group-hover:rotate-12 transition-transform" />
-                  Explore All Services
-                </span>
-                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </Button>
           {/* Enhanced CTA Section */}
 
               

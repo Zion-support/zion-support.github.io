@@ -80,17 +80,10 @@ export function AddMilestoneForm({;
       return;
     }
 
-    // If there are multiple milestones, submit them one by one
-    milestones.forEach(milestone => {
-      onSubmit({
-        title: milestone.title
-        description: milestone.description
-        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
-        amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
-      })
-    })
-  }
+
   },
+
+
 
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({

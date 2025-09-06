@@ -96,7 +96,6 @@ export default function ResourcesPage() {
                 <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-8">
                   <div className="flex items-center justify-between mb-4">
                     <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
-                      {paper.category}
                       {paper.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -176,11 +175,18 @@ export default function ResourcesPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
               >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
-                  <FileText className="w-8 h-8 text-white" />
+                <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-8">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
+                    </span>
+                    <span className="text-white/80 text-sm">{paper.pages} pages</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3 leading-tight">{paper.title}</h3>
+                  <p className="text-blue-100 leading-relaxed">{paper.description}</p>
                 </div>
                 <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
-                  {study.industry}
+
+
                   {study.industry  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -197,11 +203,6 @@ export default function ResourcesPage() {
                         <ArrowRight className="w-3 h-3 text-blue-500 flex-shrink-0" />
                         <span>{result}</span>
                       </li>
-                    ))}
-                  </ul>
-                </div>
-                <a
-                  href={study.readUrl}
                     ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -219,12 +220,6 @@ export default function ResourcesPage() {
                 >
                   <span>Read Case Study</span>
                   <ArrowRight className="w-4 h-4" />
-                </a>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* Videos */}
       <section className="py - 20 bg - slate - 900">;
         <div className="max - w-7xl mx - auto px - 6">;
@@ -304,7 +299,6 @@ export default function ResourcesPage() {
                 <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-6 text-center">
                   <Play className="w-12 h-12 text-white mx-auto mb-3" />
                   <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
-                    {video.category}
                     {video.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -330,6 +324,10 @@ export default function ResourcesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+                  className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
+                >
+                  <span>Read Case Study</span>
+                  <ArrowRight className="w-4 h-4" />
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Documentation</h2>
@@ -346,11 +344,14 @@ export default function ResourcesPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
               >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
-                  <BookOpen className="w-8 h-8 text-white" />
+                <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-6 text-center">
+                  <Play className="w-12 h-12 text-white mx-auto mb-3" />
+                  <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
+                  </span>
                 </div>
                 <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
-                  {doc.type}
+
+
                   {doc.type  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -364,7 +365,6 @@ export default function ResourcesPage() {
                   <span>Updated {doc.lastUpdated}</span>
                 </div>
                 <a
-                  href={doc.downloadUrl}
                   href={doc.downloadUrl  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -375,10 +375,6 @@ export default function ResourcesPage() {
                   Download
                 </a>
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* CTA */}
             ))  } catch (error) {
     console.error("Error:", error);

@@ -2,6 +2,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -828,6 +830,9 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx']
       content = "
     "email"
 <<<<<<< HEAD:backup-problematic-files/scripts/fix-remaining-corrupted-files.cjs
+<<<<<<< HEAD
+    "password"
+=======
 <<<<<<< HEAD
     "password"
 =======

@@ -39,15 +39,6 @@ interface JobPostingFormProps {
       setIsFormLoading(true);
 
 
-  const navigate = useNavigate();
-  const { createJob, updateJob, getJobById } = useJobs();
-  const [isFormLoading, setIsFormLoading] = useState(false);
-  const [editorContent, setEditorContent] = useState("");
-  const navigate = useNavigate(),
-  const { createJob, updateJob, getJobById } = useJobs(),
-  const [isFormLoading, setIsFormLoading] = useState(false),
-  const [editorContent, setEditorContent] = useState(""),
-  
   const {
     form,
     isLoading,
@@ -58,9 +49,6 @@ interface JobPostingFormProps {
     isRemote,
     setIsRemote,
     submitJob
-  } = useJobForm({ jobId, onSuccess });
-  const { handleSubmit, setValue, formState } = form;
-  const { isSubmitting } = formState;
   } = useJobForm({ jobId, onSuccess }),
 
   const { handleSubmit, setValue, formState } = form,
@@ -222,14 +210,6 @@ if ( {) {
       if (onSuccess) {
         onSuccess()
       }
-    } catch (error: any) {
-      console.error("Error creating/updating job:", error);
-      toast.error(error.message |"Failed to post job")
-    } finally {
-      setIsFormLoading(false)
-    }
-  }
-  if (isLoading |isFormLoading) {
 
 
   if (isLoading || isFormLoading) {;

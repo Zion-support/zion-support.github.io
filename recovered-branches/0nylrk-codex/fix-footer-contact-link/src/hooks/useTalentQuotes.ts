@@ -1,7 +1,3 @@
-import { useState  } from 'react';
-import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
-import { quoteRequestService  } from '@/services/quoteRequestService';
-import { useAuth  } from '@/hooks/useAuth';
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
@@ -38,6 +34,9 @@ export const useTalentQuotes = () => {;
     if (archiveFilter === 'archived' && !quote && quote.is_archived) {
       return false
     }
+    onSuccess: (_, variables) => {
+      let message = "Status updated";
+      if (variables && variables.status === 'in_review') {
         message = "Quote marked as viewed"
       } else if (variables && variables.status === 'responded') {
         message = "Quote marked as responded"
@@ -61,8 +60,6 @@ export const useTalentQuotes = () => {;
     };
 
 
-      }),
-      queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -87,6 +84,16 @@ export const useTalentQuotes = () => {;
     }
   });
   return {
+    quotes: filtered_quotes;
+    unread_count;
+    is_loading;
+    error;
+    status_filter;
+    setStatusFilter;
+
+
+    toggleArchive: (id: string, isArchived: boolean) => 
+
     },
     onError: (error: Error) => {
       toast({

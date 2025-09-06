@@ -1,7 +1,4 @@
 
-import Head from 'next/head';
-
-import React from 'react';
 import React from 'react',
 import React from 'react';
 export default function Update202508150111() {
@@ -22,12 +19,6 @@ export default function Update202508150111() {;
         <meta
           property='og:description'
           content="Autonomous update from Zion Tech Group's AI systems."
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                   </p>;
                 </div>;
               </div>;

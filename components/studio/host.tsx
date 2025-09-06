@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
 
-  voice: 'Visionary' | 'Grounded' | 'Technical';
-  language: string;
-  cloneStyleText?: string;
-}
-export default function StudioHostPage() {
-  const [persona, setPersona] = useState<PersonaConfig>({
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');

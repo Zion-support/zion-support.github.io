@@ -9,8 +9,6 @@ import {
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign;
 } from 'lucide-react',
-const QuantumNeuralNetworkPlatform = () =>: any {
-  const features = [;
     {
       icon: Brain,
       title: "Quantum Consciousness Integration",
@@ -74,14 +72,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
     {
       title: "Financial Modeling",
       description: "Advanced risk assessment and market prediction algorithms"
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-  ],
   return (
     <>
       <Head>
@@ -277,51 +267,34 @@ const QuantumNeuralNetworkPlatform = () =>: any {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            >
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
-                Ready to Experience the Future?
-              </h2>
-              <p className="text-xl text-gray-400 mb-8">
-                Join the quantum revolution and transform your AI capabilities today
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200 text-lg">
-                  Start Your Journey
-                  <Rocket className="ml-2 w-6 h-6" />
-                </Link>
-                <Link href="/services" className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-200 text-lg">
-                  Explore All Services
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  )
-}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+                  className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 p - 8 rounded - xl border border - slate - 700 / 50";
+                >;
+                  <h3 className="text - 2xl font - semibold text - white mb - 4">{use_case.title}</h3>;
+                  <p className="text - gray - 400 text - lg">{use_case.description}</p>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+        {/* CTA Section */}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-4xl mx - auto text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+
+};
+
+
 export default QuantumNeuralNetworkPlatform;
 
+},
+export default QuantumNeuralNetworkPlatform,
             >;
               <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Experience the Future?;

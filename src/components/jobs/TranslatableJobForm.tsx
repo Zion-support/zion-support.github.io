@@ -1,7 +1,3 @@
-export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {;
-  const { t } = useTranslation();
-  const { translateContent, isTranslating } = useTranslationService();
-  const { supportedLanguages, currentLanguage } = useLanguage();
   // Form fields with translations;
   const [title, setTitle] = useState<Record<SupportedLanguage, string>>({;
     en: "",;
@@ -36,8 +32,3 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     } catch (error) {;
       logErrorToProduction('Error translating ${field}:', { data: error });
       toast({;
-        </Button>;
-      </div>;
-    </form>;
-  );
-}

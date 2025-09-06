@@ -12,15 +12,6 @@ import {Link} from "react-router-dom";
 export default function ZionHireAI() {;
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
   const { isAuthenticated } = useAuth();
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { useWhitelabel } from "@/context/WhitelabelContext",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from "lucide-react",
-  
   return (
     <>
 
@@ -89,6 +80,15 @@ function ZionHireAI() {
                   >;
                     <Link to={is_authenticated ? "/enterprise / admin" : "/login"}>;
                       Get Started <ArrowRight className="ml - 2 h - 4 w - 4" />;
+                      Request Demo;
+                    </Link>;
+                  </Button>;
+                </div>;
+              </div>;
+              <div className="relative hidden md:block">;
+
+
+
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -214,4 +214,5 @@ export default function ZionHireAI() {;
       </main>;
       <Footer />;
 }
-;
+    </>);
+}

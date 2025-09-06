@@ -44,9 +44,11 @@ export default function SMBSolutionsPage() {;
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import React from 'react';
+import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
+
+
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 export default function SMBSolutionsPage() {;
   const smbServices = [;
@@ -81,6 +83,14 @@ export default function SMBSolutionsPage() {;
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."">;
       <div className="min-h-screen bg-gray-50">";
   ];
+
+
+  return (
+    <Layout
+      title="SMB Solutions - Zion Tech Group"
+
+  
+
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -89,8 +99,6 @@ export default function SMBSolutionsPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-          </div>;
-        </section>;
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -103,6 +111,12 @@ export default function SMBSolutionsPage() {;
             </motion.div>
           </div>
         </section>
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"
+          <div className="container mx-auto px-4 text-center">";
+
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Grow Your Business Today,;
+
             </h2>;
             <p className="text-xl mb-8 max-w-2xl mx-auto">";
               Ready to take your SMB to the next level? Let our experts help you choose the right technology solutions.;

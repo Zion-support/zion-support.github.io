@@ -1,19 +1,3 @@
-import {
-  Brain,
-  Shield,
-  Code,
-  CheckCircle,
-  Zap,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Users,
-  Lock,
-  Eye,
-  BarChart3,
-  Globe,;
-  Award,;
-} from 'lucide-react';
 
 import {
   Brain,
@@ -31,6 +15,7 @@ import {
   Globe,;
   Award,;
 } from 'lucide-react';
+
 
 import {
   Brain
@@ -172,8 +157,6 @@ import {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className='text-center mb-16'
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Transparent Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -397,7 +380,6 @@ import {
                       plan && plan.popular
                         ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
                         : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
-
         {/* Benefits Section */}
         <section className='py-20 bg-white/5'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
@@ -436,72 +418,12 @@ import {
                     title: "Improve Code Quality & Maintainability",;
                     description: "AI-powered insights help maintain consistent code standards and improve overall codebase health.";
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-                  }
-                ))}
-              </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Use Cases Section */}
-        <section className='py-20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-                    title: "Improve Code Quality & Maintainability",
-                    description: "AI - powered insights help maintain consistent code standards and improve overall codebase health.";
-                  }
-                ].map((benefit, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, coordinate_x: -20 }}
-                    whileInView={{ opacity: 1, coordinate_x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="flex items-start"
-                  >
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">
                       {benefit.icon}
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                       <p className="text-gray-300">{benefit.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-              <div className='space-y-8'>
-                  {
-                    icon: <CheckCircle className='w-8 h-8' />
-                    title: 'Ensure Compliance with Security Standards'
-                    description:
-                      'Meet SOC2, ISO27001, and other compliance requirements with automated security testing and reporting.'
-                  }
-                  {
-                    icon: <Users className='w-8 h-8' />
-                    title: 'Reduce Technical Debt & Bugs'
-                    description:
-                      'Proactive identification of code quality issues prevents technical debt accumulation and reduces production bugs.'
-                  }
-                  {
-                    icon: <Star className='w-8 h-8' />
-                    title: 'Enable Faster Development Cycles'
-                    description:
-                      'Confident code deployment with automated security validation accelerates your development and release processes.'
-                  },                ].map((benefit, index) => (                    icon: <Star className="w-8 h-8" />
-                    title: "Enable Faster Development Cycles"
-                    description: "Confident code deployment with automated security validation accelerates your development and release processes."
-                  }
                     </div>
                   </motion.div>
                 ))}
@@ -519,6 +441,10 @@ import {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

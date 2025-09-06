@@ -66,7 +66,6 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
       } finally {
         setIsMatching (false);
       }
-    }
     runMatching()
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
@@ -87,9 +86,6 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
     }
   }
 
-  return (
-    <div className="space-y-6">
-      <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}

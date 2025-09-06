@@ -1,103 +1,3 @@
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-    mobile: string;
-    email: string;
-    address: string;
-
-    website: string;
-  }
-
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;    mobile: string,
-    email: string,
-    address: string,
-    website: string
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: string,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
-
-  }
-  realImplementation: boolean
-  implementationDetails: string
-  launchDate: string
-  customers: number
-  rating: number
-
-  reviews: number
-}
-export const nextGenInnovativeServices: NextGenInnovativeService[] = [
-  // Quantum AI & Advanced Computing
-  {
-
-    id: 'quantum-ai-brain-computer-interface',
-    name: 'Quantum AI Brain-Computer Interface',
-
-    period: '/month',
-    description:;
-      'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.',
-    features: [;
-      'Quantum neural signal processing',
-      'Real - time brain activity monitoring',
-      'AI - powered cognitive enhancement',
-      'Neural pattern recognition',
-      'Secure quantum encryption',
-      'Multi - modal interface support',
-      'Advanced analytics dashboard',
-      'API for research integration',
-      'Compliance with medical standards',
-
-    tagline: 'World\'s first quantum-enhanced AI with human-like reasoning',
-    price: '$2,999',
-
-      '24 / 7 quantum AI support',    ],    price: '$2, 999',
     period: '/month',
     description: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.',
     features: [;
@@ -187,26 +87,74 @@ export interface NextGenInnovativeService {;
   popular: boolean;
   icon: string;
   color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: {
     mobile: string;
     email: string;
     address: string;
+
+    website: string;
+  }
+
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+
+  reviews: number
+}
+export const nextGenInnovativeServices: NextGenInnovativeService[] = [
+  // Quantum AI & Advanced Computing
+  {
 
     id: 'quantum-ai-brain-computer-interface'
     name: 'Quantum AI Brain-Computer Interface'
@@ -295,6 +243,13 @@ export interface NextGenInnovativeService {;
     launchDate: '2024-12-01'
     customers: 15
     rating: 4.9
+export const nextGenInnovativeServices: NextGenInnovativeService[] = [
+  // Quantum AI & Advanced Computing
+  {
+
+    id: 'quantum-ai-brain-computer-interface',
+    name: 'Quantum AI Brain-Computer Interface',
+
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.',
@@ -328,8 +283,6 @@ export interface NextGenInnovativeService {;
     launchDate: '2024-12-01',
     customers: 15,
     rating: 4.9,
-    reviews: 8
-  },
 
     reviews: 8
   }
@@ -528,8 +481,6 @@ export interface NextGenInnovativeService {;
     launchDate: '2024-11-15',
     customers: 8,
     rating: 4.8,
-    reviews: 12
-  },
 
     reviews: 12
   }
@@ -725,8 +676,6 @@ export interface NextGenInnovativeService {;
     launchDate: '2024-10-01',
     customers: 25,
     rating: 4.7,
-    reviews: 18
-  },
 
     reviews: 18
   }
@@ -927,8 +876,6 @@ export interface NextGenInnovativeService {;
     launchDate: '2024-09-01',
     customers: 12,
     rating: 4.9,
-    reviews: 15
-  },
 
     reviews: 15
   }
@@ -1123,8 +1070,6 @@ export interface NextGenInnovativeService {;
     launchDate: '2024-08-01',
     customers: 18,
     rating: 4.8,
-    reviews: 22
-  },
 
     reviews: 22
   }
@@ -1319,8 +1264,6 @@ export interface NextGenInnovativeService {;
     launchDate: '2024-07-01',
     customers: 35,
     rating: 4.9,
-    reviews: 28
-  },
 
     reviews: 28
   }
@@ -1513,8 +1456,6 @@ export interface NextGenInnovativeService {;
     launchDate: '2024-06-01',
     customers: 45,
     rating: 4.7,
-    reviews: 32
-  },
 
     reviews: 32
   }
@@ -1709,8 +1650,6 @@ export interface NextGenInnovativeService {;
     launchDate: '2024-05-01',
     customers: 22,
     rating: 4.8,
-    reviews: 19
-  },
 
     reviews: 19
   }
@@ -1907,8 +1846,6 @@ export interface NextGenInnovativeService {;
     launchDate: '2024-04-01',
     customers: 65,
     rating: 4.6,
-    reviews: 45
-  },
 
     reviews: 45
   }
@@ -1971,6 +1908,8 @@ export interface NextGenInnovativeService {;
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 
+
+
     growthRate: '250% annual growth',
     variant: 'quantum-iot-futuristic',
     contactInfo: {
@@ -1983,163 +1922,3 @@ export interface NextGenInnovativeService {;
     launchDate: '2024-03-01',
     customers: 38,
     rating: 4.7,
-  // Quantum AI & Advanced Computing;
-  {;
-    id: "quantum-ai-brain-computer-interface",
-    name: "Quantum AI Brain-Computer Interface",
-    tagline: "World\"s first quantum-enhanced AI with human-like reasoning",
-    price: "$2,999",
-    period: "/month",
-    description: "Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.",
-    features[ "Quantum neural signal processing",
-      "Real-time brain activity monitoring",
-      "AI-powered cognitive enhancement",
-      "Neural pattern recognition",
-      "Secure quantum encryption",
-      "Multi-modal interface support",
-      "Advanced analytics dashboard",
-      "API for research integration",
-      "Compliance with medical standards",
-      "24/7 quantum AI support" ],
-    popular: true,
-    icon: "🧠",
-    color: "from-purple-600 to-indigo-700",
-    textColor: "text-purple-400",
-    link: "https://ziontechgroup.com/quantum-ai-brain-computer-interface",
-    marketPosition: "Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.",
-    targetAudience: "Research institutions, Medical centers, Defense contractors, Tech companies, Universities",
-    trialDays: 30,
-    setupTime: "2-4 weeks",
-    category: "Quantum AI & Neuroscience",
-    growthRate: "300% annual growth",
-    variant: "quantum-ai-futuristic",
-    contactInfo: {;
-      mobile: "+1 302 464 0950",
-    period: "/month",
-    description: "Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.",
-    features[ "Satellite mission planning",
-      "Orbital mechanics calculations",
-      "Space weather monitoring",
-      "Launch vehicle integration",
-      "Ground station management",
-      "Space debris tracking",
-      "Mission analytics dashboard",
-      "Regulatory compliance tools",
-    marketPosition: "First comprehensive commercial space platform. 5x more features than existing solutions.",
-    targetAudience: "Space companies, Satellite operators, Launch providers, Government agencies, Research institutions",
-    trialDays: 30,
-    setupTime: "4-6 weeks",
-    category: "Space Technology",
-    period: "/month",
-    description: "Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.",
-    features[ "AI drug discovery algorithms",
-      "Genetic sequence analysis",
-      "Protein folding prediction",
-      "Drug interaction modeling",
-      "Clinical trial optimization",
-      "Regulatory compliance tools",
-      "Research collaboration platform",
-      "Advanced analytics dashboard",
-      "API for research integration",
-    marketPosition: "Leading AI drug discovery platform. 5x faster than traditional methods.",
-    targetAudience: "Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs",
-    trialDays: 30,
-    setupTime: "2-3 weeks",
-    category: "Biotech & Healthcare AI",
-      "Advanced backtesting",
-      "Regulatory compliance",
-      "Performance analytics",
-      "API for integration" ],
-    popular: true,
-    marketPosition: "First quantum AI trading platform. 100x faster than traditional systems.",
-    targetAudience: "Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions",
-    trialDays: 30,
-    setupTime: "3-4 weeks",
-    category: "Quantum Finance & Trading",
-      "Sensor fusion algorithms",
-      "Path planning & navigation",
-      "Obstacle detection & avoidance",
-      "Traffic prediction",
-      "Safety systems",
-      "Fleet management",
-      "Performance analytics",
-      "API for integration" ],
-    popular: true,
-    marketPosition: "Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.",
-    targetAudience: "Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies",
-    trialDays: 30,
-    setupTime: "4-6 weeks",
-    category: "Autonomous Vehicles & Robotics",
-    growthRate: "200% annual growth",
-    variant: "autonomous-futuristic",
-    contactInfo: {;
-      mobile: "+1 302 464 0950",
-      "Advanced analytics",
-      "Incident response",
-      "Compliance tools",
-      "Threat intelligence",
-      "Vulnerability assessment",
-      "Security automation",
-      "API for integration" ],
-    popular: true,
-    marketPosition: "First quantum-resistant cybersecurity platform. 100x more secure than traditional solutions.",
-    targetAudience: "Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure",
-    trialDays: 30,
-    setupTime: "2-3 weeks",
-    category: "Quantum Cybersecurity",
-      "Avatar customization",
-      "Social features",
-      "Monetization tools",
-      "Analytics dashboard",
-    marketPosition: "Leading metaverse AI platform. 5x more features than existing solutions.",
-    targetAudience: "Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies",
-    trialDays: 30,
-    setupTime: "2-3 weeks",
-    category: "Metaverse & Virtual Reality",
-      "Network security",
-      "Data encryption",
-      "Threat intelligence",
-      "Compliance tools",
-      "Performance analytics",
-      "API for integration",
-    marketPosition: "First quantum internet security platform. 100x more secure than traditional solutions.",
-    targetAudience: "Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations",
-    trialDays: 30,
-    setupTime: "3-4 weeks",
-    category: "Quantum Internet & Security",
-    period: "/month",
-    description: "Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.",
-    features[ "AI contract analysis",
-      "Risk assessment",
-      "Compliance checking",
-      "Legal research",
-      "Document comparison",
-      "Clause extraction",
-      "Legal analytics",
-      "Team collaboration",
-      "API for integration",
-      "Mobile app support" ],
-    popular: true,
-    marketPosition: "Leading AI legal platform. 10x faster than traditional legal review.",
-    targetAudience: "Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions",
-    trialDays: 30,
-    setupTime: "1-2 weeks",
-    category: "AI Legal Services",
-      "Device management",
-      "Data analytics",
-      "Security monitoring",
-      "Scalability tools",
-      "API for integration",
-      "Mobile app support",
-      "Cloud dashboard" ],
-    popular: true,
-    category: "Quantum IoT & Edge Computing",
-    growthRate: "250% annual growth",
-    variant: "quantum-iot-futuristic",
-    contactInfo: {;
-      mobile: "+1 302 464 0950",
-    },
-    real_implementation: true,
-    implementation_details: 'Complete quantum IoT platform with security, edge computing, and device management features.',
-    launch_date: '2024 - 03 - 01',
-    customers: 38,

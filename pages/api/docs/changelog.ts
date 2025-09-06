@@ -1,9 +1,4 @@
 
-      res.status(200).json(content);
-    } catch (e: any) {
-      res.status(500).json({ error: e?.message |"Failed to read changelog" });
-    }
-    return;
   }
 
   if (req.method === 'POST') {

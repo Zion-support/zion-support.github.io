@@ -59,9 +59,6 @@ function PartnersPage() {
   ExternalLink,
   Star,
   Users,
-      icon: Globe,
-      color: "from-blue-500 to-cyan-500"
-    },
     {
       name: "NVIDIA",
       category: "AI & Computing",
@@ -234,9 +231,6 @@ function PartnersPage() {
         'Support collaboration',
       ],
       icon: Users,
-        <meta
-          name='description'
-          content='Strategic partnerships and collaboration opportunities with Zion Tech Group. Join our ecosystem of technology leaders and innovators.'
         />;
         <meta property='og:title' content='Partners - Zion Tech Group' />;
         <meta
@@ -250,8 +244,83 @@ function PartnersPage() {
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+            </p>
+            <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
+              Become a Partner
+              <ArrowRight className='w-5 h-5' />            </button>
+          </motion.div>
+        </div>
+      </section>
+            transition={{ duration: 0 && 0.8 }}
+            className='mb-8'>;
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
+              Strategic Partners;
+            </h1>;
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
+              Building the future of technology through strategic partnerships;
+              and collaboration            </p>;
+          </motion && motion.div>;
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+            className='mb-12'>;
+            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
+    <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
+      <Head>;
+        <title > Partners - Zion Tech Group</title>;
+        <meta;
+          name='description';
+          content='Strategic partnerships and collaboration opportunities with Zion Tech Group. Join our ecosystem of technology leaders and innovators.';
+        />;
+        <meta property='og:title' content='Partners - Zion Tech Group' />;
+        <meta;
+          property='og:description';
+          content='Strategic partnerships and collaboration opportunities.';
+        />;
+        <link rel='canonical' href='https://ziontechgroup.com / partners' />      </Head>;
+      <EnhancedNavigation />;
+      {/* Hero Section */}
+      <section className='relative pt - 32 pb - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
-            className='mb-8'
+            className='mb - 8';
+          >;
+            <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6'>;
+              Strategic Partners;
+            </h1>;
+            <p className='text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed'>;
+              Building the future of technology through strategic partnerships;
+              and collaboration            </p>;
+          </motion.div>;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='mb - 12';
+          >;
+            <p className='text - lg text - white / 70 max - w-2xl mx - auto mb - 8'>;
+              Join our ecosystem of technology leaders, innovators, and industry;
+              experts to create transformative solutions that shape the future;
+              of computing.;
+            </p>;
+
+            className="mb-12"
+          >
+            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+              Join our ecosystem of technology leaders, innovators, and industry experts 
+            className='mb-12'
+          >
+            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
+              Join our ecosystem of technology leaders, innovators, and industry
+              experts to create transformative solutions that shape the future
+              of computing.
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Building the future of technology through strategic partnerships and collaboration
+            </p>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -395,6 +464,12 @@ function PartnersPage() {
                   </div>;
                 </div>;
               </motion && motion.div>;
+                    <a
+                      href={partner.website  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 flex items-center gap-1"
@@ -407,10 +482,6 @@ function PartnersPage() {
                   </div>
                 </div>
               </motion.div>
-          </div>
-        </div>
-      </section>
-      {/* Become a Partner CTA */}
       {/* Become a Partner CTA */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
@@ -454,11 +525,6 @@ function PartnersPage() {
       </section>
       <EnhancedFooter />
     </div>
-)
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) )
-}</ul> </motion.div>) )
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion.div> </span> </div> </div> </li>) )
-}</ul> </div> <div className="flex items-center justify-between" > <a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion.div>) )
 ),
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) ) 
 }</ul> </motion.div>) ) 
@@ -493,6 +559,7 @@ function PartnersPage() {
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion && motion.div> </span> </div> </div> </li>) ) ;
 }</ul> </div> <div className="flex items-center justify-between" > <a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
+}</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30
 }whileInView= {

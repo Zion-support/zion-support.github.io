@@ -1,3 +1,4 @@
+
   return (
     <>
       <Head>
@@ -13,10 +14,6 @@
                  Back to Case Studies
               </Link>
             </nav>
-            {/* Header */}
-            <header className="mb-12 text-center">
-              <div className="mb-4">
-                <span className="px-4 py-2 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30">
                 </span>
               </div>
               <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
@@ -84,11 +81,6 @@
               <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Scale Your Content?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-                  This case study demonstrates the real impact of AI automation in content generation.
-                  Let's discuss how we can help you achieve similar results.
-                </p>
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                  <Link
                     href="/contact"
                     className="bg-gradient-to-r from-purple-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-cyan-500 transition-all duration-300"
                   >
@@ -106,7 +98,6 @@
         </main>
       </div>
     </>
-  )
             <section className="text-center">;
               <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">;
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Scale Your Content?</h2>;

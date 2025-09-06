@@ -11,24 +11,6 @@ import {
   ArrowRight;
 } from 'lucide-react';
 
-import {
-  Mail
-  Phone
-  MapPin
-  Globe
-  Zap
-  Bot
-  Cloud
-  Shield
-  ArrowRight;
-} from 'lucide-react';
-
-export default function FuturisticFooter() {
-  const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
-export default function FuturisticFooter() {
-
-export default function FuturisticFooter() {;
-
   const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
 
 

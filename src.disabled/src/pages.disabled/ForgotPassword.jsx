@@ -32,3 +32,4 @@ export default function ForgotPassword({ }: ForgotPasswordProps) {
     </div>
   );
 }
+}

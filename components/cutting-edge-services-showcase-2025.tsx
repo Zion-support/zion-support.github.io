@@ -226,65 +226,18 @@ export default function CuttingEdgeServicesShowcase2025() {;
       coordinate_y: 0,
       opacity: 1,
       transition: {
+      }
+    }
+  }
+
+        duration: 0.5,
+      },
+    },  };
+
+  };
+
+
   return (
-    <>
-      <Head>
-        <title>
-          Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future
-          Technology Solutions
-        </title>
-        <meta
-          name='description'
-          content='Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology.'
-        />
-        <meta
-          name='keywords'
-          content='cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology'
-        />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/favicon.ico' />      </Head>
-      <Layout>
-        {/* Hero Section */}
-        <section className='relative overflow-hidden'>
-          <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
-          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text-center'
-            >
-              <motion.h1
-                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'                initial={{ opacity: 0, scale: 0.9 }}        <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future Technology Solutions</title>
-        <meta name="description" content="Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology." />
-        <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      <Layout>
-        {/* Hero Section */}
-        <section className='relative overflow-hidden'>
-          <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
-          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32'>        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text-center'
-            >
-              <motion.h1
-                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'              className="text-center"
-            >
-              <motion.h1
-                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.2 }}
-              >
-                Cutting-Edge Services
-                <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>
-                  Showcase 2025
-                </span>
-              </motion.h1>
 
 
               <motion.p
@@ -301,13 +254,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Discover revolutionary technology solutions that are reshaping
-                industries and defining the future. From AI consciousness to
-                space mining, experience the cutting edge of innovation.
-              </motion.p>
-              {/* Hero Stats */}
-              <motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future.
                 From AI consciousness to space mining, experience the cutting edge of innovation.
               </motion.p>
               {/* Hero Stats */}
@@ -443,6 +389,9 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 ))}
                 <button
 
+
+
+
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
                     viewMode === 'grid';
@@ -517,6 +466,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>                    </div>
+                          {tag}
+                        </span>;
+                      ))}
+                    </div>
+
+                    {/* Market Info */}
+                    <div className="flex items-center justify-between text-sm text-white/60 mb-4">
                       <span>Market: {service.marketSize}</span>
                       <span className="text-cyan-400">{service.category}</span>
                     </div>
@@ -562,6 +518,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       </a>;
                     </div>;
                   </div>;
+
 
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion && motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />;
@@ -683,8 +640,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
         </section>
       </Layout>
     </>
-
-  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
   hidden: {
   opacity: 0
 }

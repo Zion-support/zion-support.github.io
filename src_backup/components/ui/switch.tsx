@@ -125,8 +125,6 @@ export function ServicesPage() {;
               <span className="text-blue-600">🌐</span>
               <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
                 ziontechgroup.com
-              </a>
-              </Link>
             </div>
           </div>
         </div>
@@ -238,10 +236,6 @@ export function ServicesPage() {;
               We deliver innovative, reliable, and cost-effective solutions that drive real business results
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            <div className='text-center'>
-              <div className='bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <span className='text-2xl'>🚀</span>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
@@ -332,28 +326,6 @@ export function ServicesPage() {;
               className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors"
             >
               ✉️ Get Free Consultation
-            </a>
-            <a
-              href='https://ziontechgroup.com'
-              className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors'            >            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Get started with Zion Tech Group today and discover how our innovative solutions can drive growth, efficiency, and success for your organization.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="tel: +13024640950"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
-            >
-              📞 Call +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors"
-            >
-              ✉️ Get Free Consultation
-            </a>
-            <a
             </Link>
             </Link>
             <a 
@@ -386,8 +358,6 @@ function ServiceCard({ service }: ServiceCardProps) {
     return service.pricing.professional
   const popularPlan = getPopularPlan();
 
-  return (
-    <div className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
   )
       <div className="bg-white py-16">;
         <div className="container mx-auto px-4">;
@@ -767,9 +737,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
     if (service && service.pricing.basic && basic.popular) return service && service.pricing.basic;
     if (service && service.pricing.enterprise && enterprise.popular) return service && service.pricing.enterprise;
     return service && service.pricing.professional;
-
-  const popularPlan = getPopularPlan();
-
   return (
 
 
@@ -1021,11 +988,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
             <div className="space-y-4">
               {/* Benefits */}
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
-                <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-                <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
-                <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-                  {service.benefits.slice(0, 3).map((benefit, index) => (
 
                     <li key={index}>{benefit}</li>
                   ))}
@@ -1051,10 +1013,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                       {tech}
                     </span>;
                   ))}
-                </div>
-              </div>
-              {/* Deployment & Support */}
-              <div className='grid grid-cols-2 gap-4 text-sm'>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
                   <span className='font-medium text-gray-900'>Deployment:</span>
@@ -1111,8 +1069,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                   </Link>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
-                    className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors'                  >                    className="bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors"
-                    className="bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors"
                   >
                     ✉️ Email Inquiry
                   </Link>

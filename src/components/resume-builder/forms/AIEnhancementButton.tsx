@@ -39,8 +39,6 @@ if (.length < 10) {) {
       on_enhanced (enhanced_content);
     }
 
-      onClick={handleEnhance}
-      disabled={isEnhancing}
     >
       {isEnhancing ? (
         <Loader2 className="h-3 w-3 animate-spin" />

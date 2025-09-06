@@ -4,8 +4,3 @@ if (typeof window !== 'undefined') {;
     tracesSampleRate: 0.1,;
     integrations: [];
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}

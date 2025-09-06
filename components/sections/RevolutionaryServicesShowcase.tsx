@@ -13,12 +13,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
     <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
         {/* Header */}
-  return (
-    <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <motion.div
-          className="text-center mb-16"
 
         <motion&& motion.div
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
@@ -85,18 +79,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                   ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25';
                   : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50';
               }`}
-            >
-              {category.name}
-              <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>                {category.count}              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
-                {category.count}
-              <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>                {category.count}
 
 
               </span>
             </button>
           ))}
-        </motion.div>
-
         {/* Services Grid */}
         <motion&& motion.div
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
@@ -111,10 +98,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
               key={service && service.id}
               variants={itemVariants}
               className='group relative cursor-pointer'
-              style={{ perspective: '1000px' }}
-            >
-              <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>
-              <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>
               style={{ perspective: '1000px' }}>;
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>;
@@ -240,6 +223,62 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                     POPULAR
                   </div>
                 )}
+                {/* Service Header */}
+
+
+
+
+
+                      <div>
+                        <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
+        <motion.div;
+          className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12';
+          variants={container_variants}
+          initial='hidden';
+          whileInView='visible'          viewport={{ once: true }}          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12";
+          variants={container_variants}
+          initial="hidden";
+          whileInView="visible";
+        >;
+          {filtered_services.slice (0, visible_services).map ((service, index) => (
+            <motion.div;
+              key={service.id}
+              variants={item_variants}
+              className='group relative cursor - pointer';
+              style={{ perspective: '1000px' }}
+            >;
+              <div className='absolute -inset - 1 rounded - 2xl bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 opacity - 0 blur - lg transition - all duration - 300 group - hover:opacity - 75'></div>;
+              <div className='relative bg - black / 80 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 6 overflow - hidden h - full'>;
+                {/* Background Effects */}
+                <div className='absolute inset - 0 rounded - 2xl overflow - hidden'>;
+                  <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500'></div>;
+                  <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - white / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 700'></div>                </div>;
+                {/* Popular Badge */}
+                {service.popular && (
+                  <div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300'>;
+                    <Star className='w - 3 h - 3 inline mr - 1' />                    POPULAR              style={{ perspective: '1000px' }}
+            >;
+              <div className="absolute -inset - 1 rounded - 2xl bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 opacity - 0 blur - lg transition - all duration - 300 group - hover:opacity - 75"></div>;
+              <div className="relative bg - black / 80 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 6 overflow - hidden h - full">;
+                {/* Background Effects */}
+                <div className="absolute inset - 0 rounded - 2xl overflow - hidden">;
+                  <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500"></div>;
+                  <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - white / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 700"></div>;
+                </div>;
+                {/* Popular Badge */}
+                {service.popular && (
+                  <div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300'>;
+                    <Star className='w - 3 h - 3 inline mr - 1' />                  <div className="absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300">;
+                    <Star className="w - 3 h - 3 inline mr - 1" />;
+                    POPULAR;
+                  </div>)}
+                {/* Service Header */}
+                <div className='relative z - 10'>;
+                  <div className='flex items - start justify - between mb - 4'>;
+                    <div className='flex items - center space - x-3'>;
+                      <div className='text - 4xl'>{service.icon}</div>;
+                      <div>;
+                        <h3 className='text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;
 
                 {/* Service Header */}
                 <div className='relative z-10'>

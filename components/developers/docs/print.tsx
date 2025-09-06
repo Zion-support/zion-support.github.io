@@ -18,8 +18,6 @@ type DocsContent = {
 }
 ;
 type PageProps = {
-  docs: DocsContent
-};
 
   docs: DocsContent;
 }

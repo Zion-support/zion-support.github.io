@@ -1,22 +1,3 @@
-  Brain
-  Atom
-  Shield
-  Target
-  Rocket
-  ArrowRight
-  Check
-  Star
-  TrendingUp
-  Users
-  Globe
-  Zap
-  Lock
-  Cloud
-  Smartphone
-  Building
-  Phone
-  Mail
-  MapPin;} from 'lucide-react';
   Brain,
   Atom,
   Shield,
@@ -38,7 +19,6 @@
   ArrowRight, Check, Star, TrendingUp, Users;
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
 } from 'lucide-react';
-// Import our new 2025 V2 innovative services
 import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2';
 import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2';
@@ -85,7 +65,6 @@ function ComprehensiveServicesShowcase2025V2() {
     ...innovativeITServices2025ExpansionV2,
     ...innovativeAIServices2025ExpansionV2,
     ...industrySpecificSolutions2025V2,
-    ...emergingTechBreakthroughs2025V2,  ];    ...innovativeMicroSaas2025ExpansionV2;
     ...innovativeITServices2025ExpansionV2;
     ...innovativeAIServices2025ExpansionV2;
     ...industrySpecificSolutions2025V2;
@@ -247,6 +226,37 @@ export default function ComprehensiveServicesShowcase2025V2() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.h1 
+            className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>          <motion&& motion.p 
+
+            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
+            Experience the future of technology with our revolutionary portfolio;
+            of innovative micro SAAS, IT infrastructure, AI services, industry;
+            solutions, and emerging technology breakthroughs.;
+          </motion && motion.p>;
+          <motion&& motion.div
+            className='flex flex-col sm:flex-row gap-4 justify-center'            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>            Experience the future of technology with our revolutionary portfolio of innovative micro SAAS,;
+            IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.;
+          </motion && motion.p>;
+          <motion&& motion.div 
+
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
+
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+
             initial={_{ opacity: 0, _y: 30}}
             animate={_{ opacity: 1, _y: 0}}
             transition={_{ duration: 0.8}}
@@ -277,18 +287,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             </a>;
             <a
               href='#contact'
-            <a
-              href="#contact"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-              Get Started
-      {/* Contact Information */}
-      <section id='contact' className='py-16 px-4 bg-black/20'>
-        <div className='max-w-4xl mx-auto text-center'>
-          <motion.h2
-            className='text-3xl md:text-4xl font-bold text-white mb-8'            initial={{ opacity: 0, y: 20 }}      <section id="contact" className="py-16 px-4 bg-black/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold text-white mb-8"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -297,8 +295,24 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.h2>
           <motion.div
             className='grid md:grid-cols-3 gap-8'            initial={{ opacity: 0, y: 20 }}          <motion.div
-            className="grid md:grid-cols-3 gap-8"
-            initial={{ opacity: 0, y: 20 }}
+              className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'>            <a
+              href="#services" 
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg">;
+              Explore Services;
+            </a>;
+            <a
+              href="#contact" 
+              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+              Get Started
+            </div>
+            <div className='text-center'>
+              <MapPin className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
+              <h3 className='text-xl font-semibold text-white mb-2'>
+                Visit Us
+              </h3>
+              <p className='text-cyan-400 text-lg'>{contactInfo.address}</p>            </div>            <div className="text-center">
+              <MapPin className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
             whileInView={{ opacity: 1, y: 0 }}
     ...emergingTechBreakthroughs2025V2;
   const service_categories = [;
@@ -470,18 +484,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className="text - 3xl md:text - 4xl font - bold text - white mb - 8";
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <div className='text-center'>
-              <Phone className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
-              <h3 className='text-xl font-semibold text-white mb-2'>Call Us</h3>
-              <p className='text-cyan-400 text-lg'>{contactInfo.mobile}</p>
-            <div className='text-center'>
-              <Mail className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
-              <h3 className='text-xl font-semibold text-white mb-2'>
-                Email Us
-              </h3>
-              <p className='text-cyan-400 text-lg'>{contactInfo.email}</p>
 
 
       {_/* Contact Information */}
@@ -569,6 +571,12 @@ export default function ComprehensiveServicesShowcase2025V2() {
                 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {_category.services.map((service) => (
+                    <motion.div
+                  </p>;
+                </div>;
+                <div className='grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
+                  {category.services.map (service => (
+                    <motion.div;
                       key={service.id}
 
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
@@ -580,6 +588,160 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       <p className="text-gray-300 mb-4">
                         {_service.description}
                       </p>
+                        </div>
+                        <div className='flex items-center text-sm text-green-400'>
+                          <Star className='w-4 h-4 mr-2' />
+                          {service.growthRate}
+                        </div>
+                      </div>
+
+
+                          {(service as any).pricing?.starter || service.price}
+
+                      
+                      <div className="mb-6">
+                        <div className="text-2xl font-bold text-white mb-2">
+                          Starting at {_(service as any).pricing?.starter || service.price}
+
+
+
+                        </div>
+                        <div className='text-sm text-gray-400'>
+                          {(service as any).pricing?.professional
+                            ? `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}`
+                            : `${service.price} ${service.period}`}
+                        </div>
+                      </div>
+                    className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category && category.color} mb-6`}>;
+                    {category && category.icon}
+                  </div>;
+                  <h3 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+                    {category && category.name}
+                  </h3>;
+                  <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+                    {category && category.description}
+                  </p>;
+                </div>;
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+                  {category && category.services.map(service => (;
+                    <motion&& motion.div
+                      key={service && service.id}
+                      className='bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105'
+                      whileHover={{ y: -5 }}>;
+                      <h4 className='text-xl font-semibold text-white mb-3'>;
+                        {service && service.title}
+                      </h4>;
+                      <p className='text-gray-300 mb-4'>;
+                        {service && service.description}
+                      </p>;
+                      <div className='space-y-3 mb-6'>;
+                        <div className='flex items-center text-sm text-cyan-400'>;
+                          <TrendingUp className='w-4 h-4 mr-2' />;
+                          {service && service.marketSize}
+                        </div>;
+                        <div className='flex items-center text-sm text-green-400'>;
+                          <Star className='w-4 h-4 mr-2' />;
+                          {service && service.growthRate}
+                        </div>;
+                      </div>;
+                      <div className='mb-6'>;
+                        <div className='text-2xl font-bold text-white mb-2'>;
+                          Starting at{' '}
+                          {(service as any).pricing?.starter || service && service.price}
+                        </div>;
+                        <div className='text-sm text-gray-400'>;
+                          {(service as any).pricing?.professional;
+                            ? `Professional: ${(service as any).pricing && pricing.professional} | Enterprise: ${(service as any).pricing && pricing.enterprise}`;
+                            : `${service && service.price} ${service && service.period}`}
+                        </div>;
+                      </div>;
+                      <a
+                        href={`/services/${service && service.slug}`}
+                        className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200'>;
+                        Learn More <ArrowRight className='w-4 h-4 ml-2' />                      </a>            variants={staggerContainer}
+            initial="initial";
+            whileInView="animate";
+            viewport={{ once: true }}
+
+                      </p>;
+                      <div className='space - y-3 mb - 6'>;
+                        <div className='flex items - center text - sm text - cyan - 400'>;
+                          <TrendingUp className='w - 4 h - 4 mr - 2' />;
+                          {service.market_size}
+                        </div>;
+                        <div className='flex items - center text - sm text - green - 400'>;
+                          <Star className='w - 4 h - 4 mr - 2' />;
+                          {service.growth_rate}
+                        </div>;
+                      </div>;
+                      <div className='mb - 6'>;
+                        <div className='text - 2xl font - bold text - white mb - 2'>;
+                          Starting at{' '}
+                          {(service as any).pricing?.starter || service.price}
+                        </div>;
+                        <div className='text - sm text - gray - 400'>;
+                          {(service as any).pricing?.professional;
+                            ? `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}`;
+                            : `${service.price} ${service.period}`}
+                        </div>;
+                      </div>;
+                      <a;
+                        href={`/services/${service.slug}`}
+                        className='inline - flex items - center text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 200';
+                      >;
+                        Learn More <ArrowRight className='w - 4 h - 4 ml - 2' />                      </a>            variants={stagger_container}
+            initial="initial";
+            whileInView="animate";
+            viewport={{ once: true }}
+          >;
+            {service_categories.map ((category) => (
+              <motion.div key={category.id} variants={fadeInUp}>;
+                <div className="text - center mb - 12">;
+                  <div className={`inline - flex p - 4 rounded - 2xl bg - gradient - to - r ${category.color} mb - 6`}>;
+
+                    {category.icon}
+                  </div>;
+                  <h3 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
+                    {category.name}
+                  </h3>;
+                  <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+                    {category.description}
+
+                  </p>;
+                </div>;
+                <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+                  {category.services.map ((service) => (
+                    <motion.div;
+
+                      key={service.id}
+                      className="bg - black / 30 backdrop - blur - xl border border - cyan - 500 / 20 rounded - 2xl p - 6 hover:border - cyan - 500 / 50 transition - all duration - 300 hover:scale - 105";
+                      while_hover={{ coordinate_y: -5 }}
+                    >;
+                      <h4 className="text - xl font - semibold text - white mb - 3">;
+                        {service.title}
+                      </h4>;
+                      <p className="text - gray - 300 mb - 4">;
+                        {service.description}
+
+          >;
+            {serviceCategories && serviceCategories.map((category) => (;
+              <motion && motion.div key={category && category.id} variants={fadeInUp}>;
+                <div className="text-center mb-12">;
+                  <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category && category.color} mb-6`}>;
+                    {category && category.icon}
+                  </div>;
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">;
+                    {category && category.name}
+                  </h3>;
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+                    {category && category.description}
+                  </p>;
+                </div>;
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+                  {category && category.services.map((service) => (;
+                    <motion&& motion.div
+                      key={service && service.id}
+                      className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
                       <div className='space-y-3 mb-6'>
                         <div className='flex items-center text-sm text-cyan-400'>
                           <TrendingUp className='w-4 h-4 mr-2' />
@@ -598,101 +760,30 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       <div className='mb-6'>
                         <div className='text-2xl font-bold text-white mb-2'>
                           Starting at{' '}
-                          {(service as any).pricing?.starter |service.price}
-                          {(service as any).pricing?.starter || service.price}
                       
                       <div className="mb-6">
                         <div className="text-2xl font-bold text-white mb-2">
                           Starting at {_(service as any).pricing?.starter || service.price}
                         </div>
-                        <div className='text-sm text-gray-400'>
-                          {(service as any).pricing?.professional
-                            ? `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}`
-                            : `${service.price} ${service.period}`}
-                        </div>
-                      </div>
-                    className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category && category.color} mb-6`}>;
-                    {category && category.icon}
-                  </div>;
-                  <h3 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
-                    {category && category.name}
-                  </h3>;
-                  <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                    {category && category.description}
-                  </p>;
-                </div>;
-
-                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-                  {category && category.services.map(service => (;
-                    <motion&& motion.div
-                      key={service && service.id}
-                      className='bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105'
-                      whileHover={{ y: -5 }}>;
-                      <h4 className='text-xl font-semibold text-white mb-3'>;
-                        {service && service.title}
-                      </h4>;
-                      <p className='text-gray-300 mb-4'>;
-                        {service && service.description}
-                      </p>;
-
-                      <div className='space-y-3 mb-6'>;
-                        <div className='flex items-center text-sm text-cyan-400'>;
-                          <TrendingUp className='w-4 h-4 mr-2' />;
-                          {service && service.marketSize}
-                        </div>;
-                        <div className='flex items-center text-sm text-green-400'>;
-                          <Star className='w-4 h-4 mr-2' />;
-                          {service && service.growthRate}
+                        <div className="text-sm text-gray-400">
+                          {_(service as any).pricing?.professional ? 
+                            `Professional: ${(service as any).pricing.professional} | Enterprise: ${_(service as any).pricing.enterprise}` :
+                            `${_service.price} ${_service.period}`
+                          }
                         </div>;
                       </div>;
 
-                      <div className='mb-6'>;
-                        <div className='text-2xl font-bold text-white mb-2'>;
-                          Starting at{' '}
-                          {(service as any).pricing?.starter || service && service.price}
-                        </div>;
-                        <div className='text-sm text-gray-400'>;
-                          {(service as any).pricing?.professional;
-                            ? `Professional: ${(service as any).pricing && pricing.professional} | Enterprise: ${(service as any).pricing && pricing.enterprise}`;
-                            : `${service && service.price} ${service && service.period}`}
-                        </div>;
-                      </div>;
 
                       <a
                         href={`/services/${service && service.slug}`}
-                        className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200'>;
-                        Learn More <ArrowRight className='w-4 h-4 ml-2' />                      </a>            variants={staggerContainer}
-            initial="initial";
-            whileInView="animate";
-            viewport={{ once: true }}
-                    {category.icon}
-                  </div>;
-                  <h3 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
-                    {category.name}
-                  </h3>;
-                  <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                    {category.description}
-                      key={service.id}
-                      className="bg - black / 30 backdrop - blur - xl border border - cyan - 500 / 20 rounded - 2xl p - 6 hover:border - cyan - 500 / 50 transition - all duration - 300 hover:scale - 105";
-                      while_hover={{ coordinate_y: -5 }}
-                    >;
-                      <h4 className="text - xl font - semibold text - white mb - 3">;
-                        {service.title}
-                      </h4>;
-                      <p className="text - gray - 300 mb - 4">;
-                        {service.description}
+                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200">;
+                        Learn More <ArrowRight className="w-4 h-4 ml-2" />;
+                      </a>;
+                    </motion && motion.div>;
                   ))}
                 </div>;
               </motion && motion.div>;
             ))}
-      {/* Market Statistics */}
-      <section className='py-20 px-4 bg-black/20'>
-        <div className='max-w-7xl mx-auto'>
-          <motion.h2
-            className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section className="py-20 px-4 bg-black/20">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -702,8 +793,70 @@ export default function ComprehensiveServicesShowcase2025V2() {
           <motion.div
             className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'            initial={{ opacity: 0, y: 20 }}
           <motion.div
+          </motion && motion.div>;
+        </div>;
+      </section>;
+      {/* Market Statistics */}
+      <section className='py-20 px-4 bg-black/20'>;
+        <div className='max-w-7xl mx-auto'>;
+          <motion&& motion.h2
+            className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section className="py-20 px-4 bg-black/20">;
+        <div className="max-w-7xl mx-auto">;
+          <motion&& motion.h2 
+            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0 && 0.6 }}>;
+            Market Impact & Growth;
+          </motion && motion.h2>;
+          <motion&& motion.div
+            className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'            initial={{ opacity: 0, y: 20 }}          
+          <motion && motion.div 
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
             initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <div className='text-center'>
+              <div className='text-4xl md:text-5xl font-bold text-cyan-400 mb-2'>
+                25+
+              </div>
+              <div className='text-white text-lg'>New Services Added</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-4xl md:text-5xl font-bold text-blue-400 mb-2'>
+                $150B+
+              </div>
+              <div className='text-white text-lg'>Total Addressable Market</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-4xl md:text-5xl font-bold text-purple-400 mb-2'>
+                40%+
+              </div>
+              <div className='text-white text-lg'>Average Annual Growth</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-4xl md:text-5xl font-bold text-green-400 mb-2'>
+                5
+              </div>
+              <div className='text-white text-lg'>Service Categories</div>            </div>            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">$150B+</div>
+              <div className="text-white text-lg">Total Addressable Market</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">40%+</div>
+              <div className="text-white text-lg">Average Annual Growth</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">5</div>
+              <div className="text-white text-lg">Service Categories</div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h2
+            className="text-4xl md:text-5xl font-bold text-white mb-6"
             whileInView={{ opacity: 1, y: 0 }}
                       </p>;
                       <div className="space - y-3 mb - 6">;
@@ -749,26 +902,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className="text - 4xl md:text - 5xl font - bold text - white text - center mb - 16";
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
-
-      {_/* Market Statistics */}
-      <section className="py-20 px-4 bg-black/20">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            viewport={_{ once: true}}
-            transition={_{ duration: 0.6}}
-          >
-            Market Impact & Growth
-          </motion.h2>
-          
-          <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            viewport={_{ once: true}}
-            transition={_{ duration: 0.6, _delay: 0.2}}
+            transition={{ duration: 0.6 }}
           >
             <div className='text-center'>
               <div className='text-4xl md:text-5xl font-bold text-cyan-400 mb-2'>
@@ -808,6 +942,18 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.div>
         </div>
       </section>
+
+
+
+      {_/* Call to Action */}
+      <section className="py-20 px-4">
+
+
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h2
+            className="text-4xl md:text-5xl font-bold text-white mb-6"
+
+
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -816,27 +962,64 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.h2>
           <motion.p
             className='text-xl text-gray-300 mb-8'            initial={{ opacity: 0, y: 20 }}          <motion.p
+            transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}>;
+            <div className='text-center'>;
+              <div className='text-4xl md:text-5xl font-bold text-cyan-400 mb-2'>;
+                25+;
+              </div>;
+              <div className='text-white text-lg'>New Services Added</div>;
+            </div>;
+            <div className='text-center'>;
+              <div className='text-4xl md:text-5xl font-bold text-blue-400 mb-2'>;
+                $150B+;
+              </div>;
+              <div className='text-white text-lg'>Total Addressable Market</div>;
+            </div>;
+            <div className='text-center'>;
+              <div className='text-4xl md:text-5xl font-bold text-purple-400 mb-2'>;
+                40%+;
+              </div>;
+              <div className='text-white text-lg'>Average Annual Growth</div>;
+            </div>;
+            <div className='text-center'>;
+              <div className='text-4xl md:text-5xl font-bold text-green-400 mb-2'>;
+                5;
+              </div>;
+              <div className='text-white text-lg'>Service Categories</div>            </div>            </div>;
+            <div className="text-center">;
+              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">$150B+</div>;
+              <div className="text-white text-lg">Total Addressable Market</div>;
+            </div>;
+            <div className="text-center">;
+              <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">40%+</div>;
+              <div className="text-white text-lg">Average Annual Growth</div>;
+            </div>;
+            <div className="text-center">;
+              <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">5</div>;
+              <div className="text-white text-lg">Service Categories</div>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+      {/* Call to Action */}
+      <section className='py-20 px-4'>;
+        <div className='max-w-4xl mx-auto text-center'>;
+          <motion&& motion.h2
+            className='text-4xl md:text-5xl font-bold text-white mb-6'            initial={{ opacity: 0, y: 20 }}      <section className="py-20 px-4">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <motion&& motion.h2 
+            className="text-4xl md:text-5xl font-bold text-white mb-6"
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0 && 0.6 }}>;
+            Ready to Lead the Future?;
+          </motion && motion.h2>;
+          <motion&& motion.p
+            className='text-xl text-gray-300 mb-8'            initial={{ opacity: 0, y: 20 }}          <motion && motion.p 
             className="text-xl text-gray-300 mb-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            viewport={_{ once: true}}
-            transition={_{ duration: 0.6}}
-          >
-            Ready to Lead the Future?
-          </motion.h2>
-          <motion.p 
-            className="text-xl text-gray-300 mb-8"
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            viewport={_{ once: true}}
-            transition={_{ duration: 0.6, _delay: 0.2}}
-          >
-            Join thousands of businesses already transforming their operations
-            with our cutting-edge solutions.
-          </motion.p>
           >
             <a
               href={`mailto:${contactInfo.email}`}
@@ -862,6 +1045,24 @@ export default function ComprehensiveServicesShowcase2025V2() {
       </section>
     </div>
 );
+}
+              href='https://ziontechgroup && ziontechgroup.com'
+              className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'>              href={`mailto:${contactInfo && contactInfo.email}`}
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg";
+            >;
+              Contact Our Team;
+            </a>;
+            <a
+              href="https://ziontechgroup && ziontechgroup.com"
+              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">;
+              Visit Website;
+            </a>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
           >;
             <div className='text - center'>;
               <div className='text - 4xl md:text - 5xl font - bold text - cyan - 400 mb - 2'>;
@@ -958,4 +1159,47 @@ export default function ComprehensiveServicesShowcase2025V2() {
         </div>;
       </section>;
     </div>);
+            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={_{ opacity: 0, _y: 20}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            viewport={_{ once: true}}
+            transition={_{ duration: 0.6}}
+          >
+            Ready to Lead the Future?
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-gray-300 mb-8"
+            initial={_{ opacity: 0, _y: 20}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            viewport={_{ once: true}}
+            transition={_{ duration: 0.6, _delay: 0.2}}
+          >
+            Join thousands of businesses already transforming their operations
+            with our cutting-edge solutions.
+          </motion.p>
+          >
+            <a
+              href={`mailto:${contactInfo.email}`}
+              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg'
+            >
+              Contact Our Team
+            </a>
+            <a
+              href='https://ziontechgroup.com'
+              className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'            >              href={`mailto:${contactInfo.email}`}
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg"
+            >
+              Contact Our Team
+            </a>
+            <a
+              href="https://ziontechgroup.com"
+              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+            >
+              Visit Website
+            </a>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+);
 }

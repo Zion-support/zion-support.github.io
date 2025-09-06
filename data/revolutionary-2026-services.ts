@@ -65,16 +65,16 @@
     growthRate: '220% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      website: 'https://ziontechgroup.com';
     }
-    realImplementation: true
-    implementationDetails: 'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.';
-    launchDate: '2026-03-01';
+    real_implementation: true,
+    implementation_details: 'Space - grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.';
+    launch_date: '2026 - 03 - 01';
     customers: 45;
-    rating: 4.8
+    rating: 4.8,
+    reviews: 25;
 
 ];
 import { ServiceVariant } from '../types/service-variants',;

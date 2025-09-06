@@ -1,23 +1,3 @@
-  Menu,
-  X,
-  ChevronDown,
-  ChevronRight,
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Github,
-  ArrowRight,
-  Building,
-  Users,
-  ShoppingCart,
-  Shield,
-  Zap,
-  Globe,
-
 
 
 
@@ -44,6 +24,7 @@
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
+export default function Navigation() {
 export default function Navigation() {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -419,7 +400,6 @@ export default function Navigation() {;
             <div className="hidden lg:flex items-center space-x-4">;
               <button
                 onClick={() => setIsSearchOpen(true)}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link

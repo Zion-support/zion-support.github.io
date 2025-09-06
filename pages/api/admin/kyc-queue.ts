@@ -16,42 +16,4 @@ function load(): Record<string, KycProfile> {
     return {};
   }
 }
-  }
-  if (req.method === 'POST') {
-    const { userId, action, reason } = req.body as { userId?: string, action?: 'approve' | 'reject' | 'needs_more_info', reason?: string }
-    if (!userId |!action) return res.status(400).json({ error: 'Missing userId or action' })
-    const profile = db[userId]
-    if (!profile) return res.status(404).json({ error: 'Profile not found' })
-    const now = new Date().toISOString()
-    if (action === 'approve') profile.status = 'approved'
-    if (action === 'reject') profile.status = 'rejected'
-    if (action === 'needs_more_info') profile.status = 'needs_more_info'
-    profile.lastUpdatedAt = now
-    profile.auditTrail.push({ at: now, by: 'admin', action: `admin_${action}`, details: reason ? { reason } : undefined })
-    db[userId] = profile
-    save(db)
-    return res.status(200).json({ ok: true, profile })
-  try {
-    if (req.method === 'GET') {
-      const profiles = load();
-      res.json({ profiles });
-    } else if (req.method === 'POST') {
-      const { id, status } = req.body;
-      const profiles = load();
-      if (profiles[id]) {
-        profiles[id].status = status;
-        save(profiles);
-        res.json({ success: true });
-      } else {
-        res.status(404).json({ error: 'Profile not found' });
-      }
-    } else {
-      res.setHeader('Allow', 'GET, POST');
-      res.status(405).end('Method Not Allowed');
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 

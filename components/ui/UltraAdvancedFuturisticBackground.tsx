@@ -377,16 +377,6 @@ if (return) {
       }
       animationFrameId = requestAnimationFrame(animate)
 
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, [;
-    intensity,;
-    colorScheme,;
-    particleCount,;
-    animationSpeed,;
-    enableHolographic,;
-    enableQuantumEffects,;
-  ]);
   return (
     <div ref={containerRef} className='relative w-full h-full overflow-hidden'>;
       <canvas

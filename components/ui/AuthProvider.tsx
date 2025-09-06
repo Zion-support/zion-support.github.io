@@ -1,4 +1,3 @@
-
       if (stored === 'talent' || stored === 'client') {
         setRoleState(stored);      }        setRoleState(stored)
         setRoleState(stored);      }

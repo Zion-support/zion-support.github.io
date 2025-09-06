@@ -174,6 +174,61 @@ import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-
 import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
+import React, { useState, useMemo } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion, AnimatePresence } from 'framer-motion',;
+import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react',;
+import Button from '../components/ui/Button',;
+import Card from '../components/ui/Card',;
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',;
+import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2',;
+import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2',;
+import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2',;
+import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3',;
+import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3',;
+import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3',;
+export default function Services2026ShowcaseEnhancedPage() {
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('name'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+
+  // Map service variants to supported card variants
+  const mapServiceVariantToCardVariant = (serviceVariant: string): 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk' | 'enterprise-futuristic' | 'quantum-futuristic' | 'holographic-futuristic' | 'quantum-iot' | 'quantum-logistics' | 'quantum-financial' | 'quantum-energy' | 'quantum-neural' | 'quantum-cyberpunk' => {
+    if (serviceVariant.includes('quantum') && serviceVariant.includes('ai')) return 'quantum-advanced',
+    if (serviceVariant.includes('quantum')) return 'quantum',
+    if (serviceVariant.includes('ai')) return 'ai-futuristic',
+    if (serviceVariant.includes('holographic')) return 'holographic',
+    if (serviceVariant.includes('neural')) return 'neural',
+    if (serviceVariant.includes('cyberpunk')) return 'cyberpunk',
+    if (serviceVariant.includes('enterprise')) return 'enterprise-futuristic',
+    if (serviceVariant.includes('cloud')) return 'quantum-advanced',
+    if (serviceVariant.includes('security')) return 'cyberpunk',
+    if (serviceVariant.includes('data')) return 'neural',
+    if (serviceVariant.includes('mobility')) return 'holographic',
+    if (serviceVariant.includes('network')) return 'quantum-advanced',
+    if (serviceVariant.includes('backup')) return 'quantum-advanced',
+    if (serviceVariant.includes('itsm')) return 'enterprise-futuristic',
+    if (serviceVariant.includes('monitoring')) return 'neural',
+    if (serviceVariant.includes('blockchain')) return 'quantum-advanced',
+    if (serviceVariant.includes('metaverse')) return 'holographic',
+    if (serviceVariant.includes('iot')) return 'quantum-iot',
+    if (serviceVariant.includes('edge')) return 'quantum-advanced',
+    if (serviceVariant.includes('ar')) return 'holographic',
+    if (serviceVariant.includes('digital-twin')) return 'quantum-advanced',
+    if (serviceVariant.includes('5g')) return 'quantum-advanced',
+    if (serviceVariant.includes('biometric')) return 'cyberpunk',
+    if (serviceVariant.includes('autonomous')) return 'ai-futuristic',
+    if (serviceVariant.includes('revolutionary')) return 'quantum-advanced',
+    if (serviceVariant.includes('consulting')) return 'enterprise-futuristic',
+    if (serviceVariant.includes('api')) return 'quantum-advanced',
+    if (serviceVariant.includes('integration')) return 'quantum-advanced',
+    if (serviceVariant.includes('analytics')) return 'neural',
+    return 'default'
+  };
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -456,11 +511,59 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
             </motion.div>
           </div>
         </section>
+              {/* Search Bar */}
+
+
+        {/* Enhanced Search and Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
+              {/* Search Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
               <div className="relative mb-6">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search for services, technologies, or use cases..."
+                {/* Category Filter */}
+
+
+                  value={searchTerm  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="w-full bg-gray-800/50 border border-gray-600/30 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+              </div>
+              {/* Filters and Controls */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
+                  <select
                     value={selectedCategory  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -499,6 +602,134 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                   <label className="block text-sm font-medium text-gray-300 mb-2">View Mode</label>
                   <div className="flex bg-gray-800/50 border border-gray-600/30 rounded-lg p-1">
                     <button
+                  <span className="text-cyan-400 font-semibold">{all2026Services.length}</span> services
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        {/* Enhanced Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <AnimatePresence mode="wait">
+              {filteredServices.length === 0 ? (
+                <motion.div
+
+
+                  initial={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  animate={{ opacity: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  exit={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+                  className="text-center py-20"
+                >
+                  <div className="text-6xl mb-4">🔍</div>
+                  <h3 className="text-2xl font-semibold text-gray-300 mb-2">No services found</h3>
+                  <p className="text-gray-400">Try adjusting your search criteria or filters</p>
+                </motion.div>
+              ) : (
+                <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
+                  {filteredServices.map((service, index) => (
+                    <motion.div
+
+                    >;
+                      <List className="w - 4 h - 4 mx - auto" />;
+                    </button>;
+                  </div>;
+                </div>;
+              </div>;
+              {/* Results Count */}
+              <div className="text - center">;
+                <p className="text - gray - 400">;
+                  Showing <span className="text - cyan - 400 font - semibold">{filtered_services.length}</span> of{' '}
+                  <span className="text - cyan - 400 font - semibold">{all2026Services.length}</span> services;
+                </p>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+
+        {/* Enhanced Services Grid */}
+        <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <AnimatePresence mode="wait">;
+              {filtered_services.length === 0 ? (
+                <motion.div;
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="text - center py - 20";
+                >;
+                  <div className="text - 6xl mb - 4">🔍</div>;
+                  <h3 className="text - 2xl font - semibold text - gray - 300 mb - 2">No services found</h3>;
+                  <p className="text - gray - 400">Try adjusting your search criteria or filters</p>;
+                </motion.div>) : (
+                <div className={view_mode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6' : 'space - y-4'}>;
+                  {filtered_services.map ((service, index) => (
+                    <motion.div;
+                      key={service.id}
+                      initial={{ opacity: 0, coordinate_y: 20 }}
+                      animate={{ opacity: 1, coordinate_y: 0 }}
+                      exit={{ opacity: 0, coordinate_y: -20 }}
+                    onChange={(e) => setSelectedPriceRange(e.target.value)}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </select>;
+                </div>;
+                {/* Price Range Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Price Range</label>
+                  <select
+                    value={selectedPriceRange  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onChange={(e) => setSelectedPriceRange(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  >
+                    {priceRanges.map((range) => (
+                      <option key={range.id} value={range.id}>
+                    className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  >
+                    {sortOptions.map((option) => (
+                      <option key={option.id} value={option.id}>
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">View Mode</label>
+                  <div className="flex bg-gray-800/50 border border-gray-600/30 rounded-lg p-1">
+                    <button
+                      onClick={() => setViewMode('grid')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -536,6 +767,49 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                 <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
                   {filteredServices.map((service, index) => (
                     <motion.div
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+
+
+                      key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      exit={{ opacity: 0, y: -20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      className={viewMode === 'grid' ? '' : 'bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    >;
+                      <UltraFuturisticCard;
+                        variant={mapServiceVariantToCardVariant(service.variant)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        className="h-full"
+                      >
+                        <div className="p-6">
                           {/* Service Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -544,21 +818,14 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                           <div className="flex items-start justify-between mb-4">
                             <div className="text-4xl">{service.icon}</div>
                             {service.popular && (
-                              <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-                                Popular
-                              </div>
-                            )}
-                          </div>
-                          {/* Service Title and Tagline */}
-                          <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                          <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
-                          {/* Price */}
-                          <div className="mb-4">
-                            <span className="text-3xl font-bold text-cyan-400">{service.price}</span>
-                            <span className="text-gray-400">{service.period}</span>
-                          </div>
-                          {/* Description */}
-                          <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
+                      className={view_mode === 'grid' ? '' : 'bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 backdrop - blur - sm rounded - xl p - 6 border border - gray - 600 / 30'}
+                    >;
+                      <UltraFuturisticCard;
+                        variant={mapServiceVariantToCardVariant (service.variant)}
+                        className="h - full";
+                      >;
+                        <div className="p - 6">;
+                          {/* Service Header */}
                           <div className="mb-4">
                             <h4 className="text-sm font-semibold text-gray-200 mb-2">Key Features:</h4>
                             <ul className="space-y-1">
@@ -639,10 +906,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
           </div>
         </section>
 
-        {/* Enhanced Footer CTA */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -676,10 +939,5 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
         </section>
       </div>
     </UltraFuturisticBackground>
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
 

@@ -8,8 +8,6 @@ export type AdminNotesPanelProps = {;
 type Note = {;
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
-  targetType: string; // e.g., 'user' | 'listing'
-  targetId: string; // unique identifier for the target
 }
 ;
 type Note = {
@@ -89,9 +87,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         return;
       }
       setText('');
-      setAdding(false);    }
-
-      setAdding(false);    }
+    return (
 
 
     }

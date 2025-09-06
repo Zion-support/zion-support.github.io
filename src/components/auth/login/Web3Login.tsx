@@ -10,16 +10,6 @@ export function Web3Login() {;
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
-        description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
-      return
-  const handleWeb3Login = async () => {
-    if (!isWalletSystemAvailable) {
-      toast("Web3 login unavailable", {
-        description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
-      return
-  const handleWeb3Login = async () => {
-    if (!isWalletSystemAvailable) {
-      toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),
       return;
     } catch (error: any) {

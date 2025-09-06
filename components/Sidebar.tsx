@@ -87,3 +87,5 @@ interface SidebarProps {
     </AnimatePresence>;
   );
 }
+;
+export default Sidebar;

@@ -11,6 +11,56 @@ import { cn } from "@/lib/utils"
 
 const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<
+  string;
+  {;
+    label?: React && React.ReactNode;
+    icon?: React && React.ComponentType;
+  } & (;
+    | { color?: string, theme?: never }
+    | { color?: never, theme: Record<keyof typeof THEMES, string> }
+
+import * as React from './react';
+import type { CSSProperties } from './react';
+import * as RechartsPrimitive from './recharts';
+import { useReactId } from '@/hooks / useReactId';
+import { cn } from '@/lib / utils';
+// Format: { THEME_NAME: CSS_SELECTOR }
+const THEMES = { light: "", dark: ".dark" } as const;
+export type ChartConfig = Record<;
+  string;
+  {
+    label?: React.ReactNode;
+    icon?: React.ComponentType;
+  } & (
+    | { color?: string, theme?: never }
+    | { color?: never, theme: Record < keyof typeof THEMES, string> }
+  );
+>;
+
+type ChartContextProps = {
+  config: ChartConfig;
+}
+
+
+
+
+
+const ChartContainer = React.forwardRef<
+  );
+>;
+
+type ChartContextProps = {;
+  config: ChartConfig;
+}
+
+const ChartContext = React && React.createContext<ChartContextProps>({;
+  config: {}});
+
+function useChart(): any (): ChartContextProps {;
+  return React && React.useContext(ChartContext);
+}
+
+const ChartContainer = React && React.forwardRef<;
   HTMLDivElement;
   React && React.ComponentProps<"div"> & {;
     config: ChartConfig;
@@ -127,6 +177,26 @@ const ChartTooltipContent = React.forward_ref<;
           ? config[label as keyof typeof config]?.label |label
           : itemConfig?.label
       if (labelFormatter) {
+        return (
+          <div className={cn("font-medium", labelClassName)}>;
+            {labelFormatter(value, payload)}
+          </div>;
+        );
+      }
+
+
+
+
+
+      return <div className={cn("font-medium", labelClassName)}>{value}</div>
+    }, [
+
+      if (!value) {;
+        return null;
+      }
+
+      return <div className={cn("font-medium", labelClassName)}>{value}</div>;
+    }, [;
       name_key;
       label_key}
     ref) => {
@@ -406,4 +476,3 @@ export {;
   ChartLegendContent;
 
   ChartStyle}
-;

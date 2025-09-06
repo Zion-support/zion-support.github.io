@@ -53,4 +53,3 @@ function reward_referral() {
     body: JSON.stringify ({ user_id, amount: 20, reason: 'Referral' })});
 }
 }
-;

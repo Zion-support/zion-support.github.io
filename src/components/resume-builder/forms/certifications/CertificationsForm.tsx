@@ -13,9 +13,6 @@
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <CertificationFormFields form={form} />
 
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
-            <div className="flex justify-between pt-2">
                     form.reset({
                       name: '',
                       issuing_organization: '',
@@ -28,13 +25,6 @@
               >;
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
-              <div className='flex gap-2'>
-                <Button type='submit' disabled={isLoading}>
-                  {isLoading && (
-                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />
-                  )}
-                  {editingId ? 'Update' : 'Add'} Certification
-                </Button>
                   Next
               </div>
             </div>

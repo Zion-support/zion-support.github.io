@@ -19,12 +19,18 @@ class TypeChecker {}
       this.runTypeCheck()}, this.interval);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
     
 >>>>>>> origin/main
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
@@ -33,9 +39,13 @@ class TypeChecker {}
 =======
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
       const child = spawn('npm', ['run', 'type-check'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -53,12 +63,18 @@ class TypeChecker {}
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
 >>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
       child.on('close', (code) => {}
         if ( {})
           console.log('Type check passed ✓')) {}
@@ -71,9 +87,13 @@ class TypeChecker {}
 =======
           
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
           // Log type errors for manual review;
           this.logTypeErrors(output + errorOutput)};
       })} catch (error) {}
@@ -86,12 +106,18 @@ class TypeChecker {}
    ;);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
     
 >>>>>>> origin/main
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     if ( {})
       console.log('TypeScript errors "found": ')) {}
      {}
@@ -131,8 +157,14 @@ if ( {})
 <<<<<<< HEAD
 module.exports = TypeChecker;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = TypeChecker;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+module.exports = TypeChecker;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

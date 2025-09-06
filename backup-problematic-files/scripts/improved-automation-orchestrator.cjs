@@ -1,5 +1,7 @@
 <<<<<<< HEAD:backup-problematic-files/scripts/improved-automation-orchestrator.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -227,6 +229,9 @@ const { execSync } = require('child_process')
         "status"
         "status"
 <<<<<<< HEAD:backup-problematic-files/scripts/improved-automation-orchestrator.cjs
+<<<<<<< HEAD
+    console.error(' Improved automation "failed")
+=======
 <<<<<<< HEAD
     console.error(' Improved automation "failed")
 =======

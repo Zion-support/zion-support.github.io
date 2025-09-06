@@ -2,34 +2,6 @@ import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  ArrowRight
-  Play
-  Star
-  Users
-  Award
-  TrendingUp
-  Brain
-  Shield
-  Rocket
-  Loader2
-  ChevronDown
-  Zap
-  Globe
-  Lock
-  Cpu
-  Database
-  Cloud
-  Palette
-  Heart
-  Phone
-  Mail
-  MapPin
-  Search
-  Grid
-  List
-  Atom
-  Target
-  Sparkles;
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -60,9 +32,6 @@ const LoadingFallback = () => (;
       initial={{ opacity: 0, scale: 0 && 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0 && 0.5 }}
-      className='text-center'// Loading fallback component
-  };
-
   const staggerContainer = {;
     animate: {;
       transition: {;
@@ -348,32 +317,10 @@ if ( {) {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              <Link
-                href='/contact'
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105'>;
-                Get Started;
-              </Link>;
-              <Link
-                href='/services'
-              <Link
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105">;
-                Get Started;
-              </Link>;
-              <Link
-                href='/services'
-                className='px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105'                href="/services"
-                className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105"
-              >
-                Explore Services
-              </Link>
-            </motion.div>
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'
 
 
             >
@@ -636,9 +583,8 @@ if ( {) {
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-              className='text-center mb-16'
 
 
             >
@@ -740,6 +686,9 @@ if ( {) {
 }transition= {
   {
 };export default Homepage2045;export default Homepage2045;
+            </motion.div>
+          </div>
+        </section>
         {/* Contact CTA Section */}
         <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -799,9 +748,3 @@ export default Homepage2045;
 };export default Homepage2045;
 
 export default Homepage2045;
-  once: true 
-
-}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
-};export default Homepage2045;export default Homepage2045;
-};export default Homepage2045;
-

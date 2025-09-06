@@ -9,16 +9,6 @@
   color: string;
   type: 'energy' | 'data' | 'quantum' | 'neon';
   life: number;
-  x: number;
-  y: number;
-  radius: number;
-  intensity: number;
-  color: string;
-
-  pulse: number;
-export default function UltraFuturisticBackground2029({
-  children,
-}: {;
   children: React.ReactNode;
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);

@@ -82,17 +82,10 @@ import { ProjectReviewSection } from '@/components/projects/reviews/ProjectRevie
                     <span className="text-sm font-medium">Current Status:</span>
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
-                  <div className='flex justify-between items-center'>
-                    <span className='text-sm font-medium'>Creation Date:</span>
-                    <span className='text-sm'>
-                      {format(new Date(project.created_at), 'PPP')}
-                    </span>
-                  </div>
                     </span>
                   </div>
                 </div>
               </CardContent>
-              
               {/* Conditional Footer Based on Status */}
               {project.status === "changes_requested" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">

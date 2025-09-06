@@ -3,24 +3,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 import OpenAI from "openai";
 const client = new OpenAI({
-  const { allowed } = await ensureAdminFromApi(req);
-  if (!allowed) return res.status(403).json({ error: "Forbidden" });
-  if (req.method !== "POST")
-    return res.status(405).json({ error: "Method Not Allowed" });
-  const { operatorPrompt, inputs, metrics } = req.body |{}
-  const seed = [
-    "Problem & Opportunity"
-    "Solution & Product"
-    "Market Size (TAM/SAM/SOM)"
-    "Traction & Metrics"
-    "Business Model"
-    "Go-To-Market"
-    "Team"
-    "Roadmap"
-    "Token Strategy"
-    "Ask & Call to Action"
-  ];
-  try {
 
 
   const { allowed } = await ensureAdminFromApi(req);

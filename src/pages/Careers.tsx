@@ -45,15 +45,6 @@
             </div>
             <div className="rounded-lg overflow-hidden relative w-full h-full">
               <img
-              />
-            </div>
-          </div>
-          <div className='mb-24'>
-            <h2 className='text-3xl font-bold text-white mb-12 text-center'>
-              Our Benefits
-            </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              {benefits.map((benefit, index) => (
                 <div
                   key={index}
                   className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'>;

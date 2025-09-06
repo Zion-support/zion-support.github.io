@@ -1,15 +1,3 @@
-import { Fragment } from "react",
-import { Route, Routes } from "react-router-dom",
-import { ProtectedRoute } from "../components/ProtectedRoute",
-import CommunityPage from "../pages/CommunityPage",
-import ForumCategoryPage from "../pages/ForumCategoryPage",
-import ForumPostPage from "../pages/ForumPostPage",
-import CreatePostPage from "../pages/CreatePostPage",
-const CommunityRoutes = () => {
-const CommunityRoutes = () => {;
-  return (
-    <Routes>;
-      {/* Public routes */}
 const CommunityRoutes = () => {
 const CommunityRoutes = () => {;
   return (

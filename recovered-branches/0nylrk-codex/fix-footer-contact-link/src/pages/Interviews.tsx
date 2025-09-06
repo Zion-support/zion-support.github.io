@@ -1,32 +1,9 @@
 
-import React, { useEffect, useState } from "react",
-import { useInterviews } from "@/hooks/useInterviews",
-import { Interview } from "@/types/interview",
-import { AppHeader } from "@/layout/AppHeader",
-import { Footer } from "@/components/Footer",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { InterviewCard } from "@/components/interviews/InterviewCard",
-import { Button } from "@/components/ui/button",
-import { Calendar, Clock, Video } from "lucide-react";
-import { format, isAfter, parseISO, startOfDay } from "date-fns";
-function InterviewsContent() {
-  const { interviews, isLoading, fetchInterviews } = useInterviews();
-  const [activeTab, setActiveTab] = useState("upcoming");
-
-function InterviewsContent() {
-  const { interviews, isLoading, fetchInterviews } = useInterviews(),
-  const [activeTab, setActiveTab] = useState("upcoming"),
-
-
-  
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
 
     const loadInterviews = async () => {
       await fetchInterviews()
-    }
     loadInterviews()
   }, []);
   // Filter interviews based on status and date
@@ -34,14 +11,10 @@ function InterviewsContent() {
   const today = startOfDay(now);
   const upcomingInterviews = interviews
     .filter((interview) => {
-      const interviewDate = parseISO(interview.scheduled_date);
-      return isAfter(interviewDate, now) &&
         ['confirmedrequested'].includes(interview.status)
     })
     .sort((a, b) =>
       parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
-    );
-  const pendingInterviews = interviews.filter(interview =>
     interview.status === 'requested'
   );
   const pastInterviews = interviews.filter(interview => {
@@ -51,7 +24,6 @@ function InterviewsContent() {
   });
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
-    const grouped: Record<string, Interview[]> = {}
     interviews.forEach((interview) => {
       const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
       if (!grouped[dateKey]) {
@@ -68,58 +40,6 @@ function InterviewsContent() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
-import React, { useEffect, useState } from "react",;
-import { useInterviews } from "@/hooks/useInterviews",;
-import { Interview } from "@/types/interview",;
-import { AppHeader } from "@/layout/AppHeader",;
-import { Footer } from "@/components/Footer",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { SEO } from "@/components/SEO",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { InterviewCard } from "@/components/interviews/InterviewCard",;
-import { Button } from "@/components/ui/button",;
-import { Calendar, Clock, Video } from "lucide-react",;
-import { format, isAfter, parseISO, startOfDay } from "date-fns",;
-function InterviewsContent() {;
-  const { interviews, isLoading, fetchInterviews } = useInterviews(),;
-  const [activeTab, setActiveTab] = useState("upcoming"),;
-  useEffect(() => {;
-    // Modified to handle Promise<Interview[]> return type;
-    const loadInterviews = async () => {;
-      await fetchInterviews();
-    },;
-    loadInterviews();
-  }, []),;
-  // Filter interviews based on status and date;
-  const now = new Date(),;
-  const today = startOfDay(now),;
-  const upcomingInterviews = interviews;
-    .filter((interview) => {;
-      const interviewDate = parseISO(interview.scheduled_date),;
-      return isAfter(interviewDate, now) &&;
-        ['confirmedrequested'].includes(interview.status);
-    });
-    .sort((a, b) =>;
-      parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime();
-    ),;
-  const pendingInterviews = interviews.filter(interview =>;
-    interview.status === 'requested';
-  ),;
-  const pastInterviews = interviews.filter(interview => {;
-    const interviewDate = parseISO(interview.scheduled_date),;
-    return !isAfter(interviewDate, now) ||;
-      ['completeddeclinedcancelled'].includes(interview.status);
-  }),;
-  // Group interviews by date;
-  const groupInterviewsByDate = (interviews: Interview[]) => {;
-    const grouped: Record<string Interview[]> = {},;
-    interviews.forEach((interview) => {;
-      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd'),;
-      if (!grouped[dateKey]) {;
-        grouped[dateKey] = [];
-      }
-      grouped[dateKey].push(interview);
-    }),;
     return grouped;
   };
   const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);

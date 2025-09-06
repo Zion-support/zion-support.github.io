@@ -25,24 +25,3 @@ export default function AICustomerSuccessPlatform() {
 				"Expansion signals for upsell/cross-sell",
 				"Executive QBR reports and cohort analytics",
 				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["SaaS", "Fintech", "Media", "E‑commerce"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			canonical="https: //ziontechgroup.com/ai-customer-success-platform"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/ai-customer-success-platform";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}

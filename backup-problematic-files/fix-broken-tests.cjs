@@ -181,6 +181,8 @@ describe('${componentName}')
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-broken-tests.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     console.error(' Test file fixing "failed")
 =======
 <<<<<<< HEAD

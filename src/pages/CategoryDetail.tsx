@@ -7,8 +7,6 @@ const AUTO_SERVICE_TITLES = [
   "Machine Learning Model Tuning"
   "IoT Device Integration Service"
   "Blockchain Data Solutions"
-    }
-    'talents': {
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
@@ -155,8 +153,6 @@ const AUTO_SERVICE_TITLES = [
     <>
       <NextSeo title={seoTitle} description={seoDescription} />
       <Header />
-      <Suspense fallback={<ListingGridSkeleton />}>
-        <div className="min-h-screen bg-zion-blue">
 
       <Suspense fallback={<ListingGridSkeleton />}> 
 

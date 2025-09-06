@@ -1,15 +1,3 @@
-  ArrowRight
-  Brain
-  Zap
-  Shield
-  Rocket
-  Sparkles
-  Star
-  TrendingUp
-  Globe
-  Cpu
-  Lock
-  Cloud;
   ArrowRight,
   Brain,
   Zap,
@@ -258,6 +246,18 @@ const Enhanced2026ServicesShowcase = () => {;
       color: 'from-yellow-500 to-orange-500',;
     },;
   ];
+  return (
+    <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
+      {/* Background Effects */}
+
+      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10'></div>;
+      <div className='max-w-7xl mx-auto relative z-10'>        {/* Section Header */}  ];
+
+  const categories = [;
+    { name: 'AI Services', count: '150+', icon: Brain, color: 'from-purple-500 to-pink-500' },;
+    { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from-blue-500 to-cyan-500' },;
+    { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from-green-500 to-emerald-500' },;
+
     { name: 'IT Solutions', count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500' }
   ];
   return (
@@ -445,7 +445,6 @@ const Enhanced2026ServicesShowcase = () => {;
                   </div>
                 </div>
                 {/* Description */}
-                <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                   {service.description}
                 </p>
                     className={`w-12 h-12 bg-gradient-to-br ${service && service.color} rounded-xl flex items-center justify-center`}>;
@@ -579,11 +578,8 @@ const Enhanced2026ServicesShowcase = () => {;
                 whileTap={{ scale: 0 && 0.95 }}
                 transition={{ duration: 0 && 0.2, delay: 0 && 0.1 }}>;
                 <Link
-export default Enhanced2026ServicesShowcase;  )
-}
-export default Enhanced2026ServicesShowcase;
+  );
+
+};
 
 
-}
-}
-export default Enhanced2026ServicesShowcase;

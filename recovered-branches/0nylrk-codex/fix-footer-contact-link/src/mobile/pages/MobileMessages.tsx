@@ -55,33 +55,6 @@ const mockMessages: Message[] = [
     isMe: false
     status: "read"}
   {
-  
-  const handleSelectConversation = (id: string) => {
-    setActiveConversation(id)
-  },
-  
-  const handleBack = () => {
-    setActiveConversation(null)
-  },
-  
-  const handleSendMessage = (content: string) => {
-    const newMessage: Message = {
-      id: `${Date.now()}`,
-      content,
-      timestamp: "Just now",
-      isMe: true,
-      status: "sent"},
-    setMessages([...messages, newMessage])
-  },
-  
-  const currentContact = mockConversations.find(c => c.id === activeConversation),
-  
-  return (
-import React, { useState } from "react",;
-import { MobileHeader } from "../components/common/MobileHeader",;
-import { BottomNavigation } from "../components/common/BottomNavigation",;
-import { MobileConversationList } from "../components/messaging/MobileConversationList",;
-import { MobileChatView } from "../components/messaging/MobileChatView",;
 // Mock data for demonstration;
 const mockConversations = [;
   {;

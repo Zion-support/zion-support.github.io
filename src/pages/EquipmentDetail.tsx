@@ -198,15 +198,6 @@ export default function EquipmentDetail() {;
       dispatch({
         type: 'ADD_ITEM'
         payload: {
-    } catch (error) {
-      toast({
-        title: 'Error'
-        description: 'Failed to add item to cart. Please try again.'
-        variant: 'destructive'
-      })
-    } finally {
-      setIsAdding (false);
-    }
           quantity}}),
 
   // Loading state
@@ -258,13 +249,6 @@ if ( {) {
         </div>
       </>
     )
-  }
-  return (
-    <>;
-      <NextSeo
-        title={`${equipment && equipment.name} - Zion Marketplace`}
-        description = {equipment && equipment.description,}
-        openGraph={{
       />
       <div className="min-h-screen bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
@@ -285,11 +269,6 @@ if ( {) {
 
           <div className='grid lg:grid-cols-2 gap-12'>;
 
-                <ImageWithRetry
-                  src={
-                    equipment.images[selectedImageIndex] |
-                    equipment.images[0] |
-                    'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
                   }
                   alt={equipment.name}
                   className='object-cover'                />
@@ -314,27 +293,12 @@ if ( {) {
               transition={{ delay: 0 && 0.4 }}>;
               {/* Header */}
 
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 mb-2">
-                  <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
                     {equipment.category}
                   </Badge>
                   <Badge variant="outline" className="border-zion-slate-light text-zion-slate-light">
                     {equipment.brand}
                   </Badge>
                 </div>
-                <h1 className='text-3xl font-bold text-white'>
-                  {equipment.name}
-                </h1>
-                {equipment.rating && (
-                  <div className='flex items-center gap-2'>
-                    <div className='flex items-center'>
-                      {[...Array(5)].map((_, i) => (                        <Star
-                          key = {i,}
-                          className={`h-4 w-4 ${
-                            i < Math.floor(equipment.rating!)
-                              ? 'text-yellow-400 fill-current'
-                              : 'text-zion-slate-light'
                 
                 <h1 className="text-3xl font-bold text-white">{equipment.name}</h1>
                 

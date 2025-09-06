@@ -370,13 +370,6 @@ export default function PricingComparisonPage() {
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
                     {insight.insight}
-                  </p>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Detailed Comparison */}
         <section id='comparison' className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -595,8 +588,6 @@ export default function PricingComparisonPage() {
         <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-
-              Ready to Save Money and Get Better Features?
             </h2>
             <p className='text-xl text-indigo-100 mb-12'>
               Start your free trial today and see why thousands of businesses
@@ -784,4 +775,3 @@ export default function PricingComparisonPage() {
                 className="bg-white text-indigo-600 hover:bg-gray-100"
                 Try AI Content Generator
               </Button>
-              <Button

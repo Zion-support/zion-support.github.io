@@ -12,77 +12,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-  Check
-  Star
-  Zap
-  Shield
-  Users
-  Globe
-  ArrowRight
-  ExternalLink
-  TrendingUp
-  Clock
-  Target
-  Building
-  Rocket
-  Award
-  DollarSign
-  ChartBar
-  Lock
-  Cpu
-  Database
-  Cloud
-  Smartphone
-  Palette
-  Search
-  MessageSquare
-  FileText
-  Calendar
-  CreditCard
-  BarChart3
-  Settings
-  Zap as ZapIcon
-  Code
-  BookOpen
-  Activity
-  Database as DatabaseIcon
-  Play
-  Mail
-  Phone
-  MapPin
-  Filter
-  Grid
-  List
-  ChevronDown
-  ChevronUp
-  Sparkles
-  FlaskConical
-  Dna
-  Car
-  Leaf
-  Factory
-  Truck
-  Microscope
-  GraduationCap
-  ShieldCheck
-  Brain
-  Atom
-  Globe2
-  Bot
-  Eye
-  Trophy
-  FlaskConical as FlaskIcon
-  Dna as DnaIcon
-  Car as CarIcon
-  Leaf as LeafIcon
-  Factory as FactoryIcon
-  Truck as TruckIcon
-  Microscope as MicroscopeIcon
-  GraduationCap as GraduationCapIcon
-  ShieldCheck as ShieldCheckIcon
-  Crown
-  Gem
-  Diamond;
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -204,95 +133,6 @@ if ( {) {
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
 
-      popular: false
-    },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
-      ];
-      icon: <Star className="w-6 h-6" />
-      color: 'from-blue-500 to-cyan-600'
-      popular: false
-    }
-      name: 'Professional'
-      price: '$199'
-      period: '/month'
-      description: 'Ideal for growing businesses and teams'
-      features: [
-        'Advanced service access'
-        'Priority support'
-        'Advanced features'
-        'API access'
-        'Advanced analytics'
-        'Custom integrations'
-      ]
-      icon: <Gem className="w-6 h-6" />
-      color: 'from-purple-500 to-pink-600'
-      popular: true
-    },    {        'Advanced service accessPriority supportAdvanced featuresAPI accessAdvanced analyticsCustom integrations'
-      ];
-      icon: <Gem className="w-6 h-6" />
-      color: 'from-purple-500 to-pink-600'
-      popular: true
-    }
-      name: 'Enterprise'
-      price: '$499'
-      period: '/month'
-      description: 'For large organizations and enterprises'
-      features: [
-        'Full service access'
-        '24/7 dedicated support'
-        'All features'
-        'Custom development'
-        'Enterprise analytics'
-        'White-label options'
-        'SLA guarantees'
-      ]
-      icon: <Crown className="w-6 h-6" />
-      color: 'from-yellow-500 to-orange-600'
-      popular: false
-    },  ];        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees'
-      ];
-      icon: <Crown className="w-6 h-6" />
-      color: 'from-yellow-500 to-orange-600'
-      popular: false
-    }
-  // Market statistics
-  const marketStats = [
-    {
-      metric: '$15.2B'
-      label: 'Total Market Size'
-      description: 'Combined market value of all services'
-      icon: <ChartBar className='w-6 h-6' />
-    },    {
-      metric: '400+'
-      label: 'Services Available'
-      description: 'Comprehensive micro SaaS portfolio'
-      icon: <Database className='w-6 h-6' />
-    },    {
-      metric: '99.99%'
-      label: 'Uptime Guarantee'
-      description: 'Enterprise-grade reliability'
-      icon: <Shield className='w-6 h-6' />
-    },    {
-      metric: '2000%+'
-      label: 'Average ROI'
-      description: 'Proven business value'
-      icon: <TrendingUp className='w-6 h-6' />
-    },  ];      icon: <ChartBar className="w-6 h-6" />
-    }
-    {
-      metric: '400+'
-      label: 'Services Available'
-      description: 'Comprehensive micro SaaS portfolio'
-      icon: <Database className='w-6 h-6' />
-    },      icon: <Database className="w-6 h-6" />
-    }
-    {
-      metric: '99.99%'
-      label: 'Uptime Guarantee'
-      description: 'Enterprise-grade reliability'
-      icon: <Shield className='w-6 h-6' />
-    },      icon: <Shield className="w-6 h-6" />
-    }
-    {
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
@@ -596,11 +436,6 @@ if ( {) {
           <div className='container mx-auto px-4'>
             {/* Filters and Controls */}
             <motion.div
-              className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">
-          <div className="container mx-auto px-4">
-            {/* Filters and Controls */}
-            <motion.div
-              className="mb-8"
               className='mb-8'              initial={{ opacity: 0, y: 20 }}
 
               initial={{ opacity: 0, y: 20 }}
@@ -647,19 +482,6 @@ if ( {) {
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                      <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-              className={
-                viewMode === 'grid'
-                  ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-                  : 'space-y-6'
-              }
-              variants={containerVariants}
-              initial='hidden'
                     </button>;
                   </div>;
                 </div>;

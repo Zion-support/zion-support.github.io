@@ -1,7 +1,3 @@
-  body: string;
-}
-const initial_posts: DiscussionPost[] = [;
-  {
     author: 'Anna Zhou',
     time: '2h ago',
     title: 'What AI trends are you most excited for in 2025?',
@@ -244,7 +240,6 @@ export const CommunityDiscussion: React.FC = () => {;
                 onClick={handleAddPost}
                 disabled={!newTitle.trim() |!newBody.trim()}
                 onClick = {handleAddPost,}
-      </div>;
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
       </div>;
     </div>;

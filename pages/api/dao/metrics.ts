@@ -1,10 +1,4 @@
 
-import { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs";
-import path from "path";
-const configPath = path.join(process.cwd(), "data", "dao", "config.json");
-const cachePath = path.join(process.cwd(), "data", "dao", "metrics.json");
-async function fetchJson(url: string) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -43,6 +37,7 @@ export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
+
 
 ;
 export default async function handler(req, res) {

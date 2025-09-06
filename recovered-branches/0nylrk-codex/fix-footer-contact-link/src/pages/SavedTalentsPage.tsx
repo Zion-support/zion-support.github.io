@@ -10,20 +10,6 @@ import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
 export default function SavedTalentsPage() {;
-import { useState, useEffect } from "react",
-import { AppHeader } from "@/layout/AppHeader",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { TalentCard } from "@/components/talent/TalentCard",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
-import { toast } from "@/components/ui/use-toast";
-import { useNavigate } from "react-router-dom";
-export default function SavedTalentsPage() {
-  const { user } = useAuth();
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -62,6 +48,10 @@ if ( {) {
 }
           throw error;
         }
+        }
+
+
+
       } catch (error) {
 
         console.error ("Error fetching saved talents:", error);
@@ -73,12 +63,10 @@ if ( {) {
       } finally {
         setIsLoading (false);
       }
-    }
     fetchSavedTalents()
   }, [user]);
   const handleViewProfile = (talentId: string) => {
     navigate(`/talent/${talentId}`)
-  }
   const handleRequestHire = (talent: TalentProfile) => {
     // // // console.log("Request to hire:", talent),
     toast({
@@ -126,8 +114,6 @@ if ( {) {
           .eq('talent_id', talentId),;
         if (error) {;
           throw error;
-        }
-  
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         );
@@ -152,9 +138,6 @@ if ( {) {
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
-          .single();
-          .single(),
-  
         if (talentError) {
           console.error("Error fetching talent profile:", talentError),
           toast({
@@ -176,6 +159,7 @@ if ( {) {
         title: "Error"
         description: "Failed to update saved talents. Please try again later."
         variant: "destructive"})
+
 
   return (
     <>;

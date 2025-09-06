@@ -130,32 +130,6 @@
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
   contactInfo: {
       
     mobile: string, email: string,
@@ -1474,6 +1448,5 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     customers: 180,;
     rating: 4.9,;
     reviews: 156;
-
   }
 ];

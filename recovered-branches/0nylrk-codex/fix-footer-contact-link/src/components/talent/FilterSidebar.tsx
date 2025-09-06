@@ -27,15 +27,6 @@ import {FilterSidebarProps} from "@/types/filters";
   sortOption;
   setSortOption;
   clearFilters;
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Filter } from "lucide-react",
-import { SearchFilter } from "./filters/SearchFilter",
-import { SortFilter } from "./filters/SortFilter",
-import { SkillsFilter } from "./filters/SkillsFilter",
-import { AvailabilityFilter } from "./filters/AvailabilityFilter",
-import { RegionFilter } from "./filters/RegionFilter",
-import { ExperienceFilter } from "./filters/ExperienceFilter",
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -59,14 +50,6 @@ export function FilterSidebar({
   return (
     <>;
       {/* Filter header */}
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-lg font-semibold text-white flex items-center">
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />
-          Filters
-        </h3>
-        <Button
-          variant="ghost"
-          size="sm"
           onClick={clearFilters}
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent";
         >;

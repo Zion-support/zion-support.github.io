@@ -1,4 +1,3 @@
-export default function FuturisticHero() {
 
 export default function FuturisticHero() {
   return (
@@ -46,7 +45,6 @@ function FuturisticHero() {
           </p>
         </div>
       </div>
-    </section>;
   );
 
         <div className='mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow'>;

@@ -83,10 +83,6 @@ export default function AdminDashboard() {
             <li>Approve or remove listings with a few clicks.</li>
             <li>Assign roles and permissions to your team.</li>
           </ul>
-          <h2 className='text-2xl font-bold mb-4'>
-            Frequently Asked Questions
-          </h2>
-          <div className='space-y-4 mb-12'>
               <p className="font-semibold">Who can access the dashboard?</p>
             </div>
             <div>

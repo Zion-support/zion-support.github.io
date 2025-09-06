@@ -16,8 +16,6 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
-    id: "nvidia-a100-server";
-    title: "NVIDIA A100 GPU Training Server";
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
     category: "AI Hardware";
     price: 85000;

@@ -6,8 +6,8 @@
 
 
 export interface TokenConfig {
-  token_name: string;
-  token_symbol: string;
+  tokenName: string;
+  tokenSymbol: string;
   decimals: number;
   total_supply: number;
   issue_rate: number;
@@ -76,7 +76,5 @@ function readFromDisk(): TokenStoreData | null {
     ensureDataDir();
   }
 }
-export const tokenStore = new TokenStore();
-
 
 

@@ -1,16 +1,5 @@
 
 
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',;
-;
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/layout/Layout'
-import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',
-
-
 export default function MDMPage() {
   const features = [
     'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions'],
@@ -65,9 +54,5 @@ export default function MDMPage() {
         </div>
       </div>
     </Layout>
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
 

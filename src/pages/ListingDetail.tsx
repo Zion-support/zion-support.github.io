@@ -229,17 +229,6 @@ export default function ListingDetail() {
               </div>;
             </div>;
                   </Badge>;
-                  {listing && listing.featured && (;
-                    <Badge className='ml-2 bg-zion-cyan/20 text-zion-cyan'>                      Featured;
-                    </Badge>;
-                  )}
-                </div>            {/* Right Column - Details */}
-            <div className="lg:col-span-1">;
-              <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
-                <div className="mb-2">;
-                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">;
-                    {listing && listing.category}
-                  </Badge>;
                 
                 <h1 className="text-2xl font-bold text-white mb-4">{listing.title}</h1>
                 
@@ -276,20 +265,6 @@ export default function ListingDetail() {
                   </div>
                 )}
                 {/* Price */}
-                {/* Action Buttons */}
-                <div className="space-y-3 mb-8">
-                  {listing.price !== null ? (
-                    <PaymentButton
-                      buttonText="Buy Now"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
-                      onPaymentInitiated={() => {
-                        toast({
-                          title: "Payment Processing",
-                          description: "Redirecting to secure checkout..."
-                        })
-                <div className="space-y-3 mb-8">;
-                  {listing && listing.price !== null ? (;
-                    <PaymentButton
                       amount={listing.price}
                       serviceId={listing.id}
                       providerId={listing.author.id}
@@ -341,9 +316,6 @@ export default function ListingDetail() {
                           src={listing.author.avatarUrl}
                           alt={listing.author.name}
 
-                          className="object-cover"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement,
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                           }}
                         />

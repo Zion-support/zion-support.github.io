@@ -59,7 +59,6 @@ beforeAll(() => {
 afterAll(() => {
   console && console.error = originalConsoleError;
   console && console.warn = originalConsoleWarn;
-});
 ;
 // Mock IntersectionObserver;
 global.IntersectionObserver = jest.fn ().mock_implementation (() => ({

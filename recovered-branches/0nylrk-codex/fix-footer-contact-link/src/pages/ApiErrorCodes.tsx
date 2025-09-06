@@ -1,18 +1,22 @@
 
-export function ApiErrorCodes() {
+  "error": "validation_error";
+  "message": "The request was invalid";
+  "details": [;
+    {;
+      "field": "title";
 
-  const errorExample = `{
-  "error": "validation_error",
-  "message": "The request was invalid",
-  "details": [
-    {
-      "field": "title",
-      "error": "Title is required"
-    }
+
     },
+
+
     {
       "field": "budget.min";
       "error": "Budget minimum must be greater than 0"
+      "error": "Title is required";
+    };
+    {;
+      "field": "budget && budget.min";
+      "error": "Budget minimum must be greater than 0";
     }
   ]
 }`;
@@ -22,9 +26,6 @@ export function ApiErrorCodes() {
   "error": "rate_limit_exceeded",
   "message": "Rate limit exceeded. Try again in 30 seconds",
   "retry_after": 30
-}`;
-}`,
-
   const errorCodes = [
     {
       status: 400
@@ -97,11 +98,17 @@ export function ApiErrorCodes() {
       endpoint: "/api/talent (Search)"
       limit: "50 requests per minute"
       notes: "Higher limit for common search operations"
-    }
     {
       endpoint: "Webhook delivery"
       limit: "N/A"
       notes: "Webhooks don't count against your rate limits"
+  return (
+
+
+          If you're encountering persistent errors or need higher rate limits, please 
+          <a href="#" className="text-zion-cyan"> contact our support team</Link>.
+
+
         </p>
       </div>
     </ApiDocsLayout>

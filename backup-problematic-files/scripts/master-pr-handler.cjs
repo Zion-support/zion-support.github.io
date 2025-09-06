@@ -1,5 +1,7 @@
 <<<<<<< HEAD:backup-problematic-files/scripts/master-pr-handler.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -231,6 +233,9 @@ async function githubApiCall(endpoint, method = 'GET')
       "automationFailed"
     console.log('\n Final "Summary")
 <<<<<<< HEAD:backup-problematic-files/scripts/master-pr-handler.cjs
+<<<<<<< HEAD
+    console.error(' Master PR handler "failed")
+=======
 <<<<<<< HEAD
     console.error(' Master PR handler "failed")
 =======

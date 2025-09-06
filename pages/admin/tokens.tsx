@@ -42,21 +42,12 @@ export default function AdminTokens() {
     if (data.error) alert(data.error)
     await load()
   }
-      method: "POST"
-      headers: { "Content-Type": "application/json" }
-      body: JSON.stringify(config)})
-    const data = await res.json()
 
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(config)}),
     const data = await res.json(),
     setConfig(data)
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
   return (
     <EnhancedLayout title="Admin: ZION$">
       <div className="max-w-4xl mx-auto space-y-6">
@@ -93,13 +84,6 @@ export default function AdminTokens() {
                   <span className="text-gray-600">{t.userId}</span>
                   <span className="text-gray-500">{t.reason.replaceAll("_"," ")}</span>
                 </div>
-              </div>
-            ))}
-            {transactions.length === 0 && <div className="text-gray-500">No transactions.</div>}
-          </div>
-        </div>
-      </div>
-    </EnhancedLayout>
 }
 
 import React, { useEffect, useState } from './react';,

@@ -24,6 +24,7 @@ export default function UltraFuturisticServiceShowcase2029(): any ({;
   subtitle = 'Experience the future of technology with our revolutionary solutions',;
 }: UltraFuturisticServiceShowcase2029Props) {;
   return (
+  title?: string;
   subtitle?: string
 }
 export default function UltraFuturisticServiceShowcase2029({
@@ -56,10 +57,6 @@ export default function UltraFuturisticServiceShowcase2029({
               key={service && service.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20'
-
-            >
               <div className='flex items-center justify-between mb-4'>
                 <div className='flex items-center space-x-2'>
                   <div className='w-3 h-3 bg-cyan-400 rounded-full animate-pulse' />
@@ -187,7 +184,7 @@ export default function UltraFuturisticServiceShowcase2029({
           </Link>
         </motion.div>
       </div>
-    </section>;
+
   );
 
               </p>;

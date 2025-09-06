@@ -35,12 +35,6 @@ import {Atom, CheckCircle, Shield, Sparkles} from 'lucide-react';
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="flex items-center gap-3 text-cyan-300 mb-2"><Sparkles className="w-5 h-5" /><span className="font-semibold">{s.name}</span></div>
                   <p className="text-gray-300 text-sm">Learn more</p>
-          <section className='text-center'>
-            <div className='inline-flex items-center justify-center gap-3 text-gray-300'>
-              <Shield className='w-5 h-5 text-purple-400' />
-              <span>
-                Post-quantum readiness assessments and migration planning
-              </span>            </div>
               ))}
 
 
@@ -127,5 +121,7 @@ import {Atom, CheckCircle, Shield, Sparkles} from 'lucide-react';
           </section>;
         </div>;
       </div>;
+
+
 
 

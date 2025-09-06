@@ -18,8 +18,6 @@ export function useAuthEventHandlers(
     setTimeout(() => {
       if (mappedUser) {
         checkNewRegistration(mappedUser)
-      };
-    }, 0);
       }
     }, 0);
     }, 0),

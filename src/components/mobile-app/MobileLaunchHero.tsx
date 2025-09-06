@@ -47,8 +47,6 @@
               </Link>
             </div>
           </div>
-          <div className='flex-1 flex justify-center md:justify-end'>
-            <div className='relative'>
               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">

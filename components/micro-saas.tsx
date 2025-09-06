@@ -4210,8 +4210,6 @@ export default function MicroSaasPage() {;
                           <span className="text-sm">{feature}</span>;
                         </li>;
                       ))}
-                    </ul>
-                  </div>
 
                     </ul>;
                   </div>;
@@ -4448,8 +4446,6 @@ export default function MicroSaasPage() {;
           </div>;
         </div>;
       </section>;
-}
-  );
 }
   );
 }

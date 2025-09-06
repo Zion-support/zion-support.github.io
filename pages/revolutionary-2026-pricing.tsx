@@ -264,6 +264,196 @@ export default function Revolutionary2026Pricing(req, res) {
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2026-pricing" />
         </Head>
         {/* Enhanced Navigation */}
+        <EnhancedNavigation2026 />;
+
+        {/* Hero Section */}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 relative overflow - hidden">;
+          <div className="absolute inset - 0 bg - gradient - to - r from - purple - 900 / 20 via - transparent to - cyan - 900 / 20"></div>;
+          <div className="max - w-7xl mx - auto relative z - 10">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+
+
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+              className="text-center mb-16"
+            >
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                  Revolutionary 2026 Pricing
+                </span>
+              </h1>
+              <p className="text-gray-300 text-xl max-w-4xl mx-auto leading-relaxed mb-8">
+
+
+
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
+                  <div className="text-2xl font-bold text-purple-400">{pricingStats.totalServices}+</div>
+                  <div className="text-gray-400 text-sm">Total Services</div>
+                </div>
+                <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
+                  <div className="text-2xl font-bold text-green-400">${Math.round(pricingStats.averagePrice).toLocaleString()}</div>
+                  <div className="text-gray-400 text-sm">Average Price</div>
+                </div>
+                <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
+                  <div className="text-2xl font-bold text-blue-400">${pricingStats.lowestPrice}</div>
+                  <div className="text-gray-400 text-sm">Starting Price</div>
+                </div>
+                <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
+                  <div className="text-2xl font-bold text-yellow-400">{pricingStats.popularServices}</div>
+                  <div className="text-gray-400 text-sm">Popular Services</div>
+                </div>
+              </div>
+            </motion.div>
+
+              className="text - center mb - 16";
+            >;
+              <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">;
+                <span className="bg - gradient - to - r from - purple - 400 via - pink - 400 to - cyan - 400 bg - clip - text text - transparent">;
+                  Revolutionary 2026 Pricing;
+                </span>;
+              </h1>;
+              <p className="text - gray - 300 text - xl max - w-4xl mx - auto leading - relaxed mb - 8">;
+                Transparent, competitive pricing for our cutting - edge AI, quantum computing, and emerging technology solutions.;
+                Get maximum ROI with our revolutionary services.;
+              </p>;
+              {/* Pricing Statistics */}
+              <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto">;
+                <div className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - xl p - 4">;
+                  <div className="text - 2xl font - bold text - purple - 400">{pricing_stats.total_services}+</div>;
+                  <div className="text - gray - 400 text - sm">Total Services</div>;
+                </div>;
+                <div className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - xl p - 4">;
+                  <div className="text - 2xl font - bold text - green - 400">${Math.round (pricing_stats.average_price).toLocaleString ()}</div>;
+                  <div className="text - gray - 400 text - sm">Average Price</div>;
+                </div>;
+                <div className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - xl p - 4">;
+                  <div className="text - 2xl font - bold text - blue - 400">${pricing_stats.lowest_price}</div>;
+                  <div className="text - gray - 400 text - sm">Starting Price</div>;
+                </div>;
+                <div className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - xl p - 4">;
+                  <div className="text - 2xl font - bold text - yellow - 400">{pricing_stats.popular_services}</div>;
+                  <div className="text - gray - 400 text - sm">Popular Services</div>;
+                </div>;
+              </div>;
+            </motion.div>;
+
+            {/* Contact Information */}
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+
+
+              className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6 max-w-2xl mx-auto"
+            >
+              <h3 className="text-xl font-bold text-white mb-4 text-center">Need Custom Pricing?</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                <div className="flex flex-col items-center space-y-2">
+                  <Phone className="w-5 h-5 text-purple-400" />
+                  <span className="text-sm text-gray-300">{contactInfo.mobile}</span>
+                </div>
+                <div className="flex flex-col items-center space-y-2">
+                  <Mail className="w-5 h-5 text-purple-400" />
+                  <span className="text-sm text-gray-300">{contactInfo.email}</span>
+                </div>
+                <div className="flex flex-col items-center space-y-2">
+                  <MapPin className="w-5 h-5 text-purple-400" />
+                  <span className="text-sm text-gray-300">{contactInfo.address}</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+
+        {/* Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+        <section className="py-8 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6">
+              <div className="flex flex-col lg:flex-row gap-6">
+
+              className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl p - 6 max - w-2xl mx - auto";
+            >;
+              <h3 className="text - xl font - bold text - white mb - 4 text - center">Need Custom Pricing?</h3>;
+              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text - center">;
+                <div className="flex flex - col items - center space - y-2">;
+                  <Phone className="w - 5 h - 5 text - purple - 400" />;
+                  <span className="text - sm text - gray - 300">{contact_info.mobile}</span>;
+                </div>;
+                <div className="flex flex - col items - center space - y-2">;
+                  <Mail className="w - 5 h - 5 text - purple - 400" />;
+                  <span className="text - sm text - gray - 300">{contact_info.email}</span>;
+                </div>;
+                <div className="flex flex - col items - center space - y-2">;
+                  <MapPin className="w - 5 h - 5 text - purple - 400" />;
+                  <span className="text - sm text - gray - 300">{contact_info.address}</span>;
+                </div>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+
+        {/* Filters */}
+        <section className="py - 8 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <div className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl p - 6">;
+              <div className="flex flex - col lg:flex - row gap - 6">;
+                {/* Category Filter */}
+                <div className="flex flex - wrap gap - 2">;
+                  {categories.map ((category) => (
+                    <button;
+                      key={category.id}
+                      on_click={() => setSelectedCategory (category.id)}
+                      className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 200 ${
+                        selected_category === category.id;
+                          ? 'bg - purple - 600 text - white';
+                          : 'bg - black / 40 text - gray - 300 hover:bg - black / 60 hover:text - white';
+                      }`}
+
+        {/* Enhanced Navigation */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <EnhancedNavigation2026 />;
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20"></div>
           <div className="max-w-7xl mx-auto relative z-10">
@@ -300,6 +490,9 @@ export default function Revolutionary2026Pricing(req, res) {
                 </span>
               </h1>
               <p className="text-gray-300 text-xl max-w-4xl mx-auto leading-relaxed mb-8">
+                Transparent, competitive pricing for our cutting-edge AI, quantum computing, and emerging technology solutions.
+                Get maximum ROI with our revolutionary services.
+              </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
                   <div className="text-2xl font-bold text-purple-400">{pricingStats.totalServices}+</div>
@@ -354,6 +547,110 @@ export default function Revolutionary2026Pricing(req, res) {
           <div className="max-w-7xl mx-auto">
             <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6">
               <div className="flex flex-col lg:flex-row gap-6">
+                      }`}
+                    >;
+                      {category.icon} {category.name} ({category.count});
+                    </button>))}
+                </div>;
+
+                {/* Price Range Filter */}
+                <div className="flex flex - wrap gap - 2">;
+                  {price_ranges.map ((range) => (
+                    <button;
+                      key={range.id}
+                      on_click={() => setSelectedPriceRange (range.id)}
+                      className={`px - 3 py - 2 rounded - lg text - sm font - medium transition - all duration - 200 ${
+                        selectedPriceRange === range.id;
+                          ? 'bg - blue - 600 text - white';
+                          : 'bg - black / 40 text - gray - 300 hover:bg - black / 60 hover:text - white';
+                      }`}
+                    >;
+                      {range.name}
+
+
+                {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                <div className="flex flex-wrap gap-2">
+                  {categories.map((category) => (
+                    <button
+                      key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      onClick={() => setSelectedCategory(category.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
+                        selectedCategory === category.id;
+                          ? 'bg-purple-600 text-white';
+                          : 'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-white';
+                      }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    >;
+                      {category.icon} {category.name} ({category.count});
+                    </button>;
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </div>;
+                {/* Price Range Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                <div className="flex flex-wrap gap-2">
+                  {priceRanges.map((range) => (
+                    <button
+                      key={range.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      onClick={() => setSelectedPriceRange(range.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
+                        selectedPriceRange === range.id;
+                          ? 'bg-blue-600 text-white';
+                          : 'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-white';
+                      }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    >;
+                      {range.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </button>;
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </div>;
+                {/* Sort Options */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                <div className="flex items-center space-x-4">
+                  <select
                     value={sortBy  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -368,6 +665,9 @@ export default function Revolutionary2026Pricing(req, res) {
                   >
                     {sortOptions.map((option) => (
                       <option key={option.id} value={option.id}>
+                        {option.name}
+
+
                         {option.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -430,9 +730,6 @@ export default function Revolutionary2026Pricing(req, res) {
                 </motion.div>
               ) : (
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
                   initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -530,30 +827,75 @@ export default function Revolutionary2026Pricing(req, res) {
                           </a>
                         </div>
                         <div className="absolute top-4 right-4 flex flex-col gap-2">
+                            className="bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold py - 3 px - 6 rounded - xl transition - all duration - 200 flex items - center justify - center group - hover:scale - 105";
+                          >;
+                            Learn More;
+                            <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform" />;
+                          </Link>;
+                          <a;
+                            href={`tel:${contact_info.mobile}`}
+                            className="bg - black / 40 hover:bg - black / 60 text - white font - semibold py - 3 px - 6 rounded - xl border border - purple - 500 / 30 hover:border - purple - 500 / 60 transition - all duration - 200 flex items - center justify - center";
+                          >;
+                            <Phone className="w - 4 h - 4 mr - 2" />;
+                            Contact Sales;
+                          </a>;
+                        </div>;
+                        {/* Badges */}
+                        <div className="absolute top - 4 right - 4 flex flex - col gap - 2">;
                           {service.popular && (
-                            <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
-                              POPULAR
-                            </div>
-                          )}
-                          {service.price.includes('Custom') && (
-                            <div className="bg-gradient-to-r from-purple-400 to-pink-400 text-white text-xs font-bold px-3 py-1 rounded-full">
-                              CUSTOM
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        </section>
 
-        {/* Pricing Comparison */}
+                            <div className="bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full">;
+                              POPULAR;
+                            </div>)}
+                          {service.price.includes ('Custom') && (
+                            <div className="bg - gradient - to - r from - purple - 400 to - pink - 400 text - white text - xs font - bold px - 3 py - 1 rounded - full">;
+                              CUSTOM;
+                            </div>)}
+
+                          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                        </div>;
+                      </div>;
+                    </motion.div>))}
+                </motion.div>)}
+            </AnimatePresence>;
+          </div>;
+        </section>;
+
+        {/* Pricing Comparison */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -610,32 +952,6 @@ export default function Revolutionary2026Pricing(req, res) {
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-              {/* Support */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              <motion.div;
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.6, delay: 0.3 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -649,7 +965,6 @@ export default function Revolutionary2026Pricing(req, res) {
             </div>
           </div>
         </section>
-        {/* Call to Action */}
               className="bg-gradient-to-r from-purple-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-12"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -660,7 +975,6 @@ export default function Revolutionary2026Pricing(req, res) {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href={`tel:${contactInfo.mobile}`}
                   className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
@@ -681,10 +995,5 @@ export default function Revolutionary2026Pricing(req, res) {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
 

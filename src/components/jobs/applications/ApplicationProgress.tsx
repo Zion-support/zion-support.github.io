@@ -34,17 +34,6 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
 }
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
-  const statusRank: Record<ApplicationStatus, number> = {
-    new: 1
-    viewed: 2
-    shortlisted: 3
-    interview: 4
-    hired: 5
-    rejected: 5}
-  const currentRank = statusRank[current]
-  const statusRank_ = statusRank[status]
-  const currentRank = statusRank[current]
-  const statusRank_ = statusRank[status]
   if (currentRank < statusRank_) {
     return <CheckCircle2 className="h-4 w-4 text-green-500" />
   } else if (currentRank === statusRank_) {

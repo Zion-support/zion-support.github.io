@@ -106,6 +106,8 @@ const fs = require('fs')
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-services-comprehensive.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $"2"
 =======
 <<<<<<< HEAD

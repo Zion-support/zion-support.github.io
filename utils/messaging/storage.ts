@@ -28,6 +28,13 @@
     title?: string;
     description?: string;
     type?: 'direct' | 'group' | 'support' | 'project';
+}
+
+
+
+export interface MessageThread {;
+
+
   id: string;
   conversation_id: string;
   rootMessageId: string;
@@ -659,15 +666,6 @@ export async function getConversationsByUser(userId: string, includeArchived?: b
 }
 export async function getUnreadMessageCount(userId: string): Promise<number> {
 
-  return messagingStorage.getUnreadMessageCount(userId)
-
-  return messagingStorage && messagingStorage.getUnreadMessageCount(userId),
-}
-  return messagingStorage.createConversation(conversation);
-}
-export async function getConversation(id: string): Promise<Conversation | null> {
-  return messagingStorage.getConversation(id)
-}
   return messagingStorage.getConversationsByUser(userId, includeArchived);
 }
 export async function getUnreadMessageCount(userId: string): Promise<number> {
@@ -676,33 +674,6 @@ export async function getUnreadMessageCount(userId: string): Promise<number> {
   return messagingStorage.searchMessages(query, userId, limit);
 }
 // Utility functions
-export function createMessageData(
-  conversationId: string
-  senderId: string
-  recipientId: string
-  body: string
-  additionalData?: Partial<Message>
-): Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'> {
-  return {
-    conversationId
-    senderId
-    recipientId
-    body
-    ...additionalData
-  }
-}
-export function createConversationData(
-  participants: string[]
-  additionalData?: Partial<Conversation>
-): Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'> {
-  return {
-    participants
-    lastMessageAtIso: new Date().toISOString()
-    isArchived: false
-    isMuted: false
-    ...additionalData
-  }
-}
 export function generateMessageId(): string {
   return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }

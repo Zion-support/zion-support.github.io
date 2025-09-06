@@ -65,7 +65,6 @@ export const "zion2026CuttingEdgeMicroSaasServices": Zion2026CuttingEdgeMicroSaa
       'Enterprise security and compliance'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-blue-600 to-purple-700',
     "textColor": 'text-blue-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-business-intelligence-platform-2026',
@@ -111,7 +110,6 @@ export const "zion2026CuttingEdgeMicroSaasServices": Zion2026CuttingEdgeMicroSaa
       '24/7 autonomous security operations'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-green-600 to-blue-700',
     "textColor": 'text-green-400',
     "link": 'https://ziontechgroup.com/quantum-enhanced-cybersecurity-operations-center-2026',
@@ -157,7 +155,6 @@ export const "zion2026CuttingEdgeMicroSaasServices": Zion2026CuttingEdgeMicroSaa
       'Advanced security and compliance automation'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-orange-600 to-red-700',
     "textColor": 'text-orange-400',
     "link": 'https://ziontechgroup.com/autonomous-devops-platform-ai-orchestration-2026',
@@ -203,7 +200,6 @@ export const "zion2026CuttingEdgeMicroSaasServices": Zion2026CuttingEdgeMicroSaa
       'Advanced compliance and sustainability tracking'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-purple-600 to-pink-700',
     "textColor": 'text-purple-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-supply-chain-management-2026',
@@ -249,7 +245,6 @@ export const "zion2026CuttingEdgeMicroSaasServices": Zion2026CuttingEdgeMicroSaa
       'Advanced performance analytics'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-yellow-600 to-green-700',
     "textColor": 'text-yellow-400',
     "link": 'https://ziontechgroup.com/quantum-enhanced-financial-trading-platform-2026',
@@ -295,7 +290,6 @@ export const "zion2026CuttingEdgeMicroSaasServices": Zion2026CuttingEdgeMicroSaa
       'HIPAA-compliant security and privacy'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-red-600 to-pink-700',
     "textColor": 'text-red-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-healthcare-analytics-platform-2026',
@@ -341,7 +335,6 @@ export const "zion2026CuttingEdgeMicroSaasServices": Zion2026CuttingEdgeMicroSaa
       'Advanced analytics and reporting'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-gray-600 to-blue-700',
     "textColor": 'text-gray-400',
     "link": 'https://ziontechgroup.com/autonomous-manufacturing-intelligence-platform-2026',
@@ -387,7 +380,6 @@ export const "zion2026CuttingEdgeMicroSaasServices": Zion2026CuttingEdgeMicroSaa
       'Enterprise-grade edge infrastructure'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-indigo-600 to-purple-700',
     "textColor": 'text-indigo-400',
     "link": 'https://ziontechgroup.com/quantum-enhanced-edge-computing-platform-2026',
@@ -433,7 +425,6 @@ export const "zion2026CuttingEdgeMicroSaasServices": Zion2026CuttingEdgeMicroSaa
       'Advanced legal analytics and reporting'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-yellow-600 to-orange-700',
     "textColor": 'text-yellow-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-legal-research-platform-2026',
@@ -479,7 +470,6 @@ export const "zion2026CuttingEdgeMicroSaasServices": Zion2026CuttingEdgeMicroSaa
       'Advanced analytics and reporting'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-pink-600 to-red-700',
     "textColor": 'text-pink-400',
     "link": 'https://ziontechgroup.com/autonomous-content-creation-marketing-platform-2026',

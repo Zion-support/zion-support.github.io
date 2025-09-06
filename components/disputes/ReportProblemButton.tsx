@@ -1,7 +1,3 @@
-  projectId
-  entityType
-  entityId
-}: {
   projectId,
   entityType,
   entityId,

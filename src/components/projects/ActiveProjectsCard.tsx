@@ -51,9 +51,6 @@ export function ActiveProjectsCard() {;
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
 
-  return (
-  }
-  return (
               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>

@@ -105,29 +105,6 @@ export async function evaluateHeuristics(
     }
   }
   // Check condition
-if (&&) {
-  $2
-}
-    event.content) {
-    if () {) {
-  $2
-}
-      reasons.push ('outside_payment_link_detected');
-      severity = 'high';
-    }
-    const phrases = containsSuspiciousPhrase (event.content);
-    // Check condition
-if ( {) {
-  $2
-}
-      reasons.push (...phrases.map (p => `suspicious_phrase:"${p}"`));
-      // Check condition
-if (severity = 'medium') {
-  $2
-}
-    }
-  }
-  // Check condition
 if ( {) {
   $2
 }
@@ -181,7 +158,6 @@ export function runHeuristics(data: any): HeuristicResult {
   const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
   return {
   }
-
 }
 ;
   return {;

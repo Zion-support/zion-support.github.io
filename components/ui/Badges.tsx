@@ -44,3 +44,12 @@ function MicroTestimonial() {
       <blockquote className="italic opacity - 90">{quote}</blockquote>;
       <figcaption className="mt - 2 font - medium opacity - 80"> {author}</figcaption>;
     </figure>);
+
+  );
+}
+
+
+    </figure>
+  );
+}
+

@@ -217,5 +217,3 @@ export function FilterSidebar({;
           Apply Filters
         </Button>
       )}
-    </>;
-  );

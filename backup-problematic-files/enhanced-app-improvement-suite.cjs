@@ -597,6 +597,8 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:enhanced-app-improvement-suite.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       console.error(' Error in improvement "suite")
 =======
 <<<<<<< HEAD

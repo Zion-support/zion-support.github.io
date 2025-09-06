@@ -1,32 +1,8 @@
 import { motion } from 'framer-motion';
 
-  Search
-  Filter
-  Star
-  CheckCircle
-  ArrowRight
-  Brain
-  Atom
-  Shield
-  Rocket
-  Target
-  Microscope
-  Phone
-  Mail
-  MapPin
-  TrendingUp
-  Users
-  Award
-  Zap
-  Globe
-  Cpu
-  Database
-  Lock
-  Cloud
-  Stethoscope
-  GraduationCap
-  Leaf
-  Truck;
+import { 
+  Search, Filter, Star, CheckCircle, ArrowRight, 
+
   Search,
   Filter,
   Star,
@@ -78,104 +54,6 @@ const contactInfo = {
 };
 
 const serviceCategories = [
-  {
-    id: 'financial-technology'
-    title: ' Financial Technology'
-    description: 'Innovative fintech, DeFi, and financial services'
-    icon: TrendingUp
-    color: 'from-green-500 to-emerald-500'
-    services: [...innovativeFinancialServices2025]
-    gradient: 'from-green-500/20 to-emerald-500/20'
-    badge: 'New'
-  },  {    badge: 'New'
-  }
-  {
-    id: 'healthcare-biotech'
-    title: ' Healthcare & Biotech'
-    description: 'AI-powered healthcare and biotechnology solutions'
-    icon: Stethoscope
-    color: 'from-blue-500 to-indigo-500'
-    services: [...innovativeHealthcareServices2025]
-    gradient: 'from-blue-500/20 to-indigo-500/20'
-    badge: 'Hot'
-  },  {    badge: 'Hot'
-  }
-  {
-    id: 'education-technology'
-    title: ' Education Technology'
-    description: 'AI-powered learning and educational innovation'
-    icon: GraduationCap
-    color: 'from-purple-500 to-pink-500'
-    services: [...innovativeEducationServices2025]
-    gradient: 'from-purple-500/20 to-pink-500/20'
-    badge: 'Innovative'
-  },  {    badge: 'Innovative'
-  }
-  {
-    id: 'sustainability-green-tech'
-    title: ' Sustainability & Green Tech'
-    description: 'Environmental technology and sustainability solutions'
-    icon: Leaf
-    color: 'from-emerald-500 to-teal-500'
-    services: [...innovativeSustainabilityServices2025]
-    gradient: 'from-emerald-500/20 to-teal-500/20'
-    badge: 'Eco-Friendly'
-  },  {    badge: 'Eco-Friendly'
-  }
-  {
-    id: 'logistics-supply-chain'
-    title: ' Logistics & Supply Chain'
-    description: 'Autonomous logistics and supply chain optimization'
-    icon: Truck
-    color: 'from-orange-500 to-red-500'
-    services: [...innovativeLogisticsServices2025]
-    gradient: 'from-orange-500/20 to-red-500/20'
-    badge: 'Autonomous'
-  }
-  {
-    id: 'ai-consciousness'
-    title: ' AI & Consciousness'
-    description:
-      'Revolutionary AI consciousness and emotional intelligence platforms',    icon: Brain
-    color: 'from-violet-500 to-purple-500'
-    services: [...innovativeAIServices2025]
-    gradient: 'from-violet-500/20 to-indigo-500/20'
-    badge: 'Revolutionary'
-  },  {    badge: 'Autonomous'
-  }
-  {
-    id: 'ai-consciousness'
-    title: ' AI & Consciousness'
-    description: 'Revolutionary AI consciousness and emotional intelligence platforms'
-    color: 'from-violet-500 to-purple-500'
-    services: [...innovativeAIServices2025]
-    gradient: 'from-violet-500/20 to-indigo-500/20'
-    badge: 'Revolutionary'
-  },    badge: 'Revolutionary'
-  }
-  {
-    id: 'quantum-emerging'
-    title: ' Quantum & Emerging Tech'
-    description: 'Quantum computing, DNA computing, and beyond'
-    icon: Atom
-    color: 'from-indigo-500 to-blue-500'
-    services: [...emergingTechServices2025]
-    gradient: 'from-indigo-500/20 to-cyan-500/20'
-    badge: 'Quantum'
-  },  {    badge: 'Quantum'
-  }
-  {
-    id: 'enterprise-it'
-    title: ' Enterprise IT'
-    description: 'Autonomous operations and zero-trust security'
-    icon: Shield
-    color: 'from-blue-500 to-cyan-500'
-    services: [...innovativeITServices2025]
-    gradient: 'from-blue-500/20 to-teal-500/20'
-    badge: 'Enterprise'
-  },  {    badge: 'Enterprise'
-  }
-  {
     description: 'Innovative solutions for every business need',
     icon: Target,
     color: 'from - teal - 500 to - green - 500',
@@ -416,25 +294,6 @@ function InnovativeServicesShowcase2025() {
 
               >
                 {/* Service Header */}
-                <div className='mb-6'>
-                  <div className='flex items-center justify-between mb-4'>
-                    <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center'>
-                      <Target className='w-6 h-6 text-white' />
-                    </div>
-                    <div className='text-right'>
-                      <div className='text-sm text-gray-400'>
-                        {service.category}
-                      </div>
-                      <div className='text-2xl font-bold text-white'>
-                        ${service.pricing?.starter?.price |'Custom'}
-                      </div>
-                      <div className='text-sm text-gray-400'>/month</div>
-                    </div>
-                  </div>
-                  <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
-                    {service.name}
-                  </h3>
-                  <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}              >
                 {/* Service Header */}
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-4">
@@ -527,10 +386,6 @@ function InnovativeServicesShowcase2025() {
                       </li>
 
                     )}
-                  </ul>
-                </div>
-                {/* Market Info */}
-                <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
 
                 {/* Market Info */}
                 <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
@@ -570,13 +425,21 @@ function InnovativeServicesShowcase2025() {
                   </a>
                 </div>
               </motion.div>
-            ))}
-          </div>
-
           {sortedServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
+          )}
+
+        </div>;
+      </section>;
+        </div>
+      </section>
+              </div>            </motion.div>
+
+
+
+
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-b from-slate-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-slate-900 to-black">;

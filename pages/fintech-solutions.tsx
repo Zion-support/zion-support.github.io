@@ -3,13 +3,6 @@
 			slug="fintech-solutions"
 			description="AI solutions for fraud detection, risk scoring, KYC/AML automation, and real-time decisioning. Improve compliance and customer experience across the lifecycle."
 			subtitle="Smarter finance with lower risk and faster time to yes."
-			features={[
-				"Transaction anomaly detection and entity resolution"
-				"Credit risk models with explainability"
-				"KYC/AML case automation and SAR drafts"
-				"Collections optimization and next-best-action"
-				"Realtime rules with feature store integration"
-
 
 
 			pricePerMonthUSD={2799  } catch (error) {
@@ -26,19 +19,3 @@
 				"Collections optimization and next-best-action",
 				"Realtime rules with feature store integration",
 				"Integrations: Core banking, KYC, payments, CRMs"
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			canonical="https: //ziontechgroup.com/fintech-solutions"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/fintech-solutions";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}

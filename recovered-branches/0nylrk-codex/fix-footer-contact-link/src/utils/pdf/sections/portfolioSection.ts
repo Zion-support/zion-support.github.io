@@ -1,8 +1,4 @@
 
-import { jsPDF  } from 'jspdf';
-import { PortfolioProject  } from '@/types/resume';
-import { PdfThemeColors } from '../themeConfig';
-export function addPortfolioSection(
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
@@ -88,3 +84,4 @@ if ( {) {
     doc.text (project.title, 20, y_pos);
     y_pos += 6;
 ;
+}

@@ -91,15 +91,6 @@ export function DynamicListingPage(): any ({;
   ]);
   const handleSliderChange = (values: number[]) => {
     setCurrentPriceFilter([values[0], values[1]])
-  }
-  const filteredListings = allListings.filter(listing => {
-    const matchesSearch = !searchQuery |
-      listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-      listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
-      (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-    const matchesCategory = selectedCategory === "all" |listing.category === selectedCategory;
-    const matchesPrice = listing.price === null |(
-      listing.price >= currentPriceFilter[0] &&
       listing.price <= currentPriceFilter[1]
     );
     const matchesRating =
@@ -540,12 +531,6 @@ value={selectedCategory}
                 onClick={() => {;
                   console && console.log("Resetting filters");
                   setSearchQuery("");
-                className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
-                onClick={() => {
-                  console.log("Resetting filters");
-                  setSearchQuery("");
-                  setSelectedCategory("all")
-                  setCurrentPriceFilter([priceRange.min, priceRange.max]);
                   // // // console.log("Resetting filters"),
                   setSearchQuery(""),
                   setSelectedCategory("all"),
@@ -629,20 +614,6 @@ value={selectedCategory}
                     listing={listing}
                     view={view}
                     onRequestQuote={handleRequestQuote}
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-20">
-                <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
-                <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
-                <Button
-                  variant="outline"
-                  onClick={() => {
-                    setSearchQuery("");
-                    setSelectedCategory("all");
-                    setCurrentPriceFilter([priceRange.min, priceRange.max]);
-
-                    setSelectedRating(null)
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
                 >;

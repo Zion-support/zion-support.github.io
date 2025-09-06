@@ -7,9 +7,6 @@
 };
 null;
 
-}/> </Head> </li>) ) 
-}</ul> </div>) ) 
-}</ul> </div> <div>) ) 
 }</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {
   `tel:$ {
   contactInfo.mobile.replace (/[^+\\d]/g, '')

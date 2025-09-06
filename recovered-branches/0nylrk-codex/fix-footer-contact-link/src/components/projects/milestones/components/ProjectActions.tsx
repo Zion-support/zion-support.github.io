@@ -1,7 +1,3 @@
-import { Button  } from '@/components/ui/button';
-import { Link  } from 'react-router-dom';
-import { ShieldAlert } from "lucide-react";
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 
 import {Button} from '@/components/ui/button';
 import {Link} from 'react-router-dom';
@@ -25,11 +21,6 @@ interface ProjectActionsProps {
   isTalent: boolean,
   onAddMilestone: () => void
 }
-export function ProjectActions({
-  projectId,
-  isUnderDispute,
-  disputeId,
-  isTalent,
   onAddMilestone
 }: ProjectActionsProps) {
   return (

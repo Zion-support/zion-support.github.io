@@ -1,19 +1,7 @@
 
-// Content analysis functionality
-import { suspiciousPhrases  } from './constants';
-import { AnalysisResult } from './types';
-import { suspiciousPhrases } from './constants',
-import { AnalysisResult } from './types',
 /**
  * Analyzes text content for suspicious patterns
  */
-
-export const analyzeContent = (content: string): AnalysisResult => {;
-  const contentLower = content.toLowerCase();
-export const analyzeContent = (content: string): AnalysisResult => {
-  const contentLower = content.toLowerCase();
-  const reasons: string[] = []
-  const contentLower = content.toLowerCase(),
 
 
   const contentLower = content && content.toLowerCase();
@@ -68,4 +56,3 @@ export const analyzeContent = (content: string): AnalysisResult => {;
   return {
     reasons
   }
-}

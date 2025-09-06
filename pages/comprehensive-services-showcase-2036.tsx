@@ -33,19 +33,33 @@ import {real2036InnovativeServices} from '../data / real - 2036 - innovative - s
 import {real2036ITServices} from '../data / real - 2036 - it - services';
 import {real2036AIServices} from '../data / real - 2036 - ai - services';
 import {motion} from 'framer-motion';
-import Layout from '../components/layout/Layout',
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
-import { real2036ITServices } from '../data/real-2036-it-services',
-import { real2036AIServices } from '../data/real-2036-ai-services',
-import { motion } from 'framer-motion',
 const ComprehensiveServicesShowcase2036: React.FC = () => {
   const allServices = [
     ...real2036InnovativeServices;
     ...real2036ITServices;
     ...real2036AIServices
-  ],
-  const categories = [...new Set(allServices.map(service => service.category))],
+
+  const categories = [...new Set(allServices && allServices.map(service => service && service.category))],;
   return (
+
+
+              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+            >
+              2036 Services Showcase
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
+            >
+              Experience the future of technology with our revolutionary portfolio of AI, Quantum Computing, Space Technology, and cutting-edge IT solutions
+            </motion.p>
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+className="flex flex-col sm:flex-row gap-4 justify-center"
             <motion.h1
               initial={{ opacity: 0, y: 50 }  } catch (error) {
     console.error("Error:", error);
@@ -249,15 +263,35 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                             <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs px-2 py-1 rounded-full">
                               Popular
                             </span>
+                        <p className="text-gray-300 text-sm mb-3">{service.description}</p>
+                        <div className="mb-3">
+                          <span className="text-2xl font-bold text-green-400">{service.price}</span>
+                          <span className="text-gray-400 text-sm">/{service.period}</span>
+                        </div>
+                        <div className="space-y-1 mb-3">
+                          {service.features.slice(0, 2).map((feature, idx) => (
+
+
+                            <div key={idx} className="flex items-center text-xs text-gray-300">
+                              <span className="text-cyan-400 mr-2">•</span>
+                              {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                            </div>;
+                          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
                         </div>
                         <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm">
                           View Details
                         </button>
                       </motion.div>
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20'
             >
               <h2 className='text-4xl font-bold mb-6 text-white'>
                 Ready to Transform Your Business?

@@ -1,39 +1,25 @@
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: "512M",
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: "128M",
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: "1G",
-      env: {
-        NODE_ENV: "development",
-        PM2_PROCESS_NAME: "code - quality - monitor",
-        QUALITY_THRESHOLD: "80",
-        AUTO_FIX_CRITICAL: "true",
-      },
+
+
+module.exports = {
+  apps: [;
+    {
+
+module && module.exports = {
   apps: [
     {
+      name: "auto-fix",
+      script: "scripts/pm2/auto-fix && fix.js",
+      name: "auto - fix",
+      script: "scripts / pm2 / auto - fix.js",
+
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: "512M",
-      env: { NODE_ENV: "production" },
-      log_file: "logs/pm2/auto-fix && fix.log",
-      error_file: "logs/pm2/auto-fix-error && error.log",
-      out_file: "logs/pm2/auto-fix-out && out.log",
-    },
-    {
-      name: "healthcheck",
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: "128M",
-      env: { NODE_ENV: "production" },
       instances: 1,
       autorestart: true,
       watch: false,
@@ -44,6 +30,311 @@
         QUALITY_THRESHOLD: "80",
         AUTO_FIX_CRITICAL: "true",
       },
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: "128M",
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: "1G",
+      env: {
+        NODE_ENV: "development",
+        PM2_PROCESS_NAME: "code - quality - monitor",
+        QUALITY_THRESHOLD: "80",
+        AUTO_FIX_CRITICAL: "true",
+      },
+      env: {
+        NODE_ENV: "development"
+        PM2_PROCESS_NAME: "code-quality-monitor"
+        QUALITY_THRESHOLD: "80"
+        AUTO_FIX_CRITICAL: "true"
+      }
+      log_file: "logs/pm2/code-quality-monitor.log"
+      error_file: "logs/pm2/code-quality-monitor-error.log"
+      out_file: "logs/pm2/code-quality-monitor-out.log"
+    }
+  ]
+
+
+
+}
+module.exports = {
+  apps: [
+    {
+      name: "auto-fix"
+      script: "scripts/pm2/auto-fix.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "512M"
+      env: {
+        NODE_ENV: "production"
+      }
+      log_file: "logs/pm2/auto-fix.log"
+      error_file: "logs/pm2/auto-fix-error.log"
+      out_file: "logs/pm2/auto-fix-out.log"
+    }
+    {
+      name: "healthcheck"
+      script: "scripts/pm2/healthcheck.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "128M"
+      env: {
+        NODE_ENV: "production"
+      }
+      log_file: "logs/pm2/health.log"
+      error_file: "logs/pm2/health-error.log"
+      out_file: "logs/pm2/health-out.log"
+    }
+    {
+      name: "code-quality-monitor"
+      script: "scripts/pm2/code-quality-monitor.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "1G"
+      env: {
+        NODE_ENV: "development"
+        PM2_PROCESS_NAME: "code-quality-monitor"
+        QUALITY_THRESHOLD: "80"
+        AUTO_FIX_CRITICAL: "true"
+      }
+      log_file: "logs/pm2/code-quality-monitor.log"
+      error_file: "logs/pm2/code-quality-monitor-error.log"
+      out_file: "logs/pm2/code-quality-monitor-out.log"
+    }
+  ]
+}
+module.exports = {
+  apps: [
+    {
+      name: "auto-fix"
+      script: "scripts/pm2/auto-fix.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "512M"
+      env: { NODE_ENV: "production" }
+      log_file: "logs/pm2/auto-fix.log"
+      error_file: "logs/pm2/auto-fix-error.log"
+      out_file: "logs/pm2/auto-fix-out.log"
+    }
+    {
+      name: "healthcheck"
+      script: "scripts/pm2/healthcheck.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "128M"
+      env: { NODE_ENV: "production" }
+      log_file: "logs/pm2/health.log"
+      error_file: "logs/pm2/health-error.log"
+      out_file: "logs/pm2/health-out.log"
+    }
+    {
+      name: "code-quality-monitor"
+      script: "scripts/pm2/code-quality-monitor.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "1G"
+      env: {
+        NODE_ENV: "development"
+        PM2_PROCESS_NAME: "code-quality-monitor"
+        QUALITY_THRESHOLD: "80"
+        AUTO_FIX_CRITICAL: "true"
+      }
+      log_file: "logs/pm2/code-quality-monitor.log"
+      error_file: "logs/pm2/code-quality-monitor-error.log"
+      out_file: "logs/pm2/code-quality-monitor-out.log"
+    }
+  ]
+}
+module.exports = {
+  apps: [
+    {
+      name: "auto-fix"
+      script: "scripts/pm2/auto-fix.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "512M"
+      env: { NODE_ENV: "production" }
+      log_file: "logs/pm2/auto-fix.log"
+      error_file: "logs/pm2/auto-fix-error.log"
+      out_file: "logs/pm2/auto-fix-out.log"
+    }
+    {
+      name: "healthcheck"
+      script: "scripts/pm2/healthcheck.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "128M"
+      env: { NODE_ENV: "production" }
+      log_file: "logs/pm2/health.log"
+      error_file: "logs/pm2/health-error.log"
+      out_file: "logs/pm2/health-out.log"
+    }
+    {
+      name: "code-quality-monitor"
+      script: "scripts/pm2/code-quality-monitor.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "1G"
+      env: {
+        NODE_ENV: "development"
+        PM2_PROCESS_NAME: "code-quality-monitor"
+        QUALITY_THRESHOLD: "80"
+        AUTO_FIX_CRITICAL: "true"
+      }
+      log_file: "logs/pm2/code-quality-monitor.log"
+      error_file: "logs/pm2/code-quality-monitor-error.log"
+      out_file: "logs/pm2/code-quality-monitor-out.log"
+    }
+  ]
+}
+module.exports = {
+  apps: [
+    {
+      name: "auto-fix"
+      script: "scripts/pm2/auto-fix.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "512M"
+      env: { NODE_ENV: "production" }
+      log_file: "logs/pm2/auto-fix.log"
+      error_file: "logs/pm2/auto-fix-error.log"
+      out_file: "logs/pm2/auto-fix-out.log"
+    }
+    {
+      name: "healthcheck"
+      script: "scripts/pm2/healthcheck.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "128M"
+      env: { NODE_ENV: "production" }
+      log_file: "logs/pm2/health.log"
+      error_file: "logs/pm2/health-error.log"
+      out_file: "logs/pm2/health-out.log"
+    }
+    {
+      name: "code-quality-monitor"
+      script: "scripts/pm2/code-quality-monitor.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "1G"
+      env: {
+        NODE_ENV: "development"
+        PM2_PROCESS_NAME: "code-quality-monitor"
+        QUALITY_THRESHOLD: "80"
+        AUTO_FIX_CRITICAL: "true"
+      }
+      log_file: "logs/pm2/code-quality-monitor.log"
+      error_file: "logs/pm2/code-quality-monitor-error.log"
+      out_file: "logs/pm2/code-quality-monitor-out.log"
+    }
+  ]
+}
+module.exports = {
+  apps: [
+    {
+      name: "auto-fix"
+      script: "scripts/pm2/auto-fix.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "512M"
+      env: { NODE_ENV: "production" }
+      log_file: "logs/pm2/auto-fix.log"
+      error_file: "logs/pm2/auto-fix-error.log"
+      out_file: "logs/pm2/auto-fix-out.log"
+    }
+    {
+      name: "healthcheck"
+      script: "scripts/pm2/healthcheck.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "128M"
+      env: { NODE_ENV: "production" }
+      log_file: "logs/pm2/health.log"
+      error_file: "logs/pm2/health-error.log"
+      out_file: "logs/pm2/health-out.log"
+    }
+    {
+      name: "code-quality-monitor"
+      script: "scripts/pm2/code-quality-monitor.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "1G"
+      env: {
+        NODE_ENV: "development"
+        PM2_PROCESS_NAME: "code-quality-monitor"
+        QUALITY_THRESHOLD: "80"
+        AUTO_FIX_CRITICAL: "true"
+      }
+      log_file: "logs/pm2/code-quality-monitor.log"
+      error_file: "logs/pm2/code-quality-monitor-error.log"
+      out_file: "logs/pm2/code-quality-monitor-out.log"
+    }
+  ]
+}
+module.exports = {
+  apps: [
+    {
+      name: "auto-fix"
+      script: "scripts/pm2/auto-fix.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "512M"
+      env: { NODE_ENV: "production" }
+      log_file: "logs/pm2/auto-fix.log"
+      error_file: "logs/pm2/auto-fix-error.log"
+      out_file: "logs/pm2/auto-fix-out.log"
+    }
+    {
+      name: "healthcheck"
+      script: "scripts/pm2/healthcheck.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "128M"
+      env: { NODE_ENV: "production" }
+      log_file: "logs/pm2/health.log"
+      error_file: "logs/pm2/health-error.log"
+      out_file: "logs/pm2/health-out.log"
+    }
+    {
+      name: "code-quality-monitor"
+      script: "scripts/pm2/code-quality-monitor.js"
+      instances: 1
+      autorestart: true
+      watch: false
+      max_memory_restart: "1G"
+      env: {
+
+
+
+
+module.exports = { apps: [ { name: 'auto-fix',script: 'scripts/pm2/auto-fix.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '512M',env: { NODE_ENV: 'production' },log_file: 'logs/pm2/auto-fix.log',error_file: 'logs/pm2/auto-fix-error.log',out_file: 'logs/pm2/auto-fix-out.log' },{ name: 'healthcheck',script: 'scripts/pm2/healthcheck.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '128M',env: { NODE_ENV: 'production' },log_file: 'logs/pm2/health.log',error_file: 'logs/pm2/health-error.log',out_file: 'logs/pm2/health-out.log' },{ name: 'code-quality-monitor',script: 'scripts/pm2/code-quality-monitor.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '1G',env: { NODE_ENV: 'development',PM2_PROCESS_NAME: 'code-quality-monitor',QUALITY_THRESHOLD: '80',AUTO_FIX_CRITICAL: 'true' },log_file: 'logs/pm2/code-quality-monitor.log',error_file: 'logs/pm2/code-quality-monitor-error.log',out_file: 'logs/pm2/code-quality-monitor-out.log' } ] };
+module.exports = { apps: [ { name: 'auto-fix',script: 'scripts/pm2/auto-fix.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '512M',env: { NODE_ENV: 'production' },log_file: 'logs/pm2/auto-fix.log',error_file: 'logs/pm2/auto-fix-error.log',out_file: 'logs/pm2/auto-fix-out.log' },{ name: 'healthcheck',script: 'scripts/pm2/healthcheck.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '128M',env: { NODE_ENV: 'production' },log_file: 'logs/pm2/health.log',error_file: 'logs/pm2/health-error.log',out_file: 'logs/pm2/health-out.log' },{ name: 'code-quality-monitor',script: 'scripts/pm2/code-quality-monitor.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '1G',env: { NODE_ENV: 'development',PM2_PROCESS_NAME: 'code-quality-monitor',QUALITY_THRESHOLD: '80',AUTO_FIX_CRITICAL: 'true' },log_file: 'logs/pm2/code-quality-monitor.log',error_file: 'logs/pm2/code-quality-monitor-error.log',out_file: 'logs/pm2/code-quality-monitor-out.log' } ] };
+module.exports = { apps: [ { name: 'auto-fix',script: 'scripts/pm2/auto-fix.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '512M',env: { NODE_ENV: 'production' },log_file: 'logs/pm2/auto-fix.log',error_file: 'logs/pm2/auto-fix-error.log',out_file: 'logs/pm2/auto-fix-out.log' },{ name: 'healthcheck',script: 'scripts/pm2/healthcheck.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '128M',env: { NODE_ENV: 'production' },log_file: 'logs/pm2/health.log',error_file: 'logs/pm2/health-error.log',out_file: 'logs/pm2/health-out.log' },{ name: 'code-quality-monitor',script: 'scripts/pm2/code-quality-monitor.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '1G',env: { NODE_ENV: 'development',PM2_PROCESS_NAME: 'code-quality-monitor',QUALITY_THRESHOLD: '80',AUTO_FIX_CRITICAL: 'true' },log_file: 'logs/pm2/code-quality-monitor.log',error_file: 'logs/pm2/code-quality-monitor-error.log',out_file: 'logs/pm2/code-quality-monitor-out.log' } ] };
+module.exports = { apps: [ { name: 'auto-fix',script: 'scripts/pm2/auto-fix.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '512M',env: { NODE_ENV: 'production' },log_file: 'logs/pm2/auto-fix.log',error_file: 'logs/pm2/auto-fix-error.log',out_file: 'logs/pm2/auto-fix-out.log' },{ name: 'healthcheck',script: 'scripts/pm2/healthcheck.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '128M',env: { NODE_ENV: 'production' },log_file: 'logs/pm2/health.log',error_file: 'logs/pm2/health-error.log',out_file: 'logs/pm2/health-out.log' },{ name: 'code-quality-monitor',script: 'scripts/pm2/code-quality-monitor.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '1G',env: { NODE_ENV: 'development',PM2_PROCESS_NAME: 'code-quality-monitor',QUALITY_THRESHOLD: '80',AUTO_FIX_CRITICAL: 'true' },log_file: 'logs/pm2/code-quality-monitor.log',error_file: 'logs/pm2/code-quality-monitor-error.log',out_file: 'logs/pm2/code-quality-monitor-out.log' } ] };
+
+
+
+}
+module.exports = {
   apps: [
     {
       name: "auto-fix",
@@ -77,7 +368,6 @@
       watch: false,
       max_memory_restart: "1G",
       env: {
-      env: {
         NODE_ENV: "development"
         PM2_PROCESS_NAME: "code-quality-monitor"
         QUALITY_THRESHOLD: "80"
@@ -89,6 +379,7 @@
     }
   ]
 }
+      env: {
         NODE_ENV: "development"
         PM2_PROCESS_NAME: "code-quality-monitor"
         QUALITY_THRESHOLD: "80"

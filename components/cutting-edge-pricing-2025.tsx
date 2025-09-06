@@ -1,6 +1,10 @@
 import Head from 'next/head';
 
 import Head from 'next / head';
+} from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import {
   Check
   Zap
   Shield
@@ -396,10 +400,9 @@ export default function CuttingEdgePricing2025() {;
     ...cuttingEdgeEnterpriseITServices2025;
     ...cuttingEdgeMicroSaasServices2025;
   ];
-                <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>
-                  Pricing 2025
-                </span>
-              </motion.h1>
+
+  return (
+
 
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
@@ -490,16 +493,32 @@ export default function CuttingEdgePricing2025() {;
                       {stat.number}
                     </div>
                 ))}
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
+
+              </motion && motion.div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+
+
 
         {/* Pricing Tiers Section */}
         <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
+
+                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
+
+                  </div>
+
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Pricing Tiers Section */}
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -529,17 +548,6 @@ export default function CuttingEdgePricing2025() {;
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
                   className={`relative group ${
-                        </li>
-
-                      ))}
-                    </ul>
-
-                        </li>
-
-                      ))}
-                    </ul>
-
-
 
                     <a
                       href={tier && tier.ctaLink}
@@ -548,13 +556,15 @@ export default function CuttingEdgePricing2025() {;
                           ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25'
                           : 'border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10'
 
-                    </a>
-                  </div>
-                </motion.div>
               ))}
-            </div>
-          </div>
-        </section>
+
+            </div>;
+          </div>;
+        </section>;
+
+
+
+
 
         {/* Service Categories Section */}
         <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>;
@@ -566,6 +576,10 @@ export default function CuttingEdgePricing2025() {;
                   </div>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
         {/* Service Categories Section */}
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -638,6 +652,7 @@ export default function CuttingEdgePricing2025() {;
                         <p className="text - white / 70 text - sm leading - relaxed mb - 4">;
                           {service.description}
 
+
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 
                         >
@@ -697,6 +712,8 @@ export default function CuttingEdgePricing2025() {;
                         ${service.pricing.starter.price}
                         <span className='text - sm font - normal text - white / 60'>;
                           /{service.pricing.starter.period}
+                      <span>Market: {service.marketSize}</span>
+
                       <span className="text-cyan-400">{service.category}</span>
                     </div>
                         </span>                      </div>;
@@ -737,9 +754,6 @@ export default function CuttingEdgePricing2025() {;
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-            </motion.div>
-          </div>
-        </section>
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">

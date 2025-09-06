@@ -49,19 +49,6 @@ interface ApplicationActionsProps {
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-          Contact
-        </Link>
-      </Button>
-    </div>
-  )
-import Link from "next/link",;
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger;
-} from "@/components/ui/dropdown-menu",;
-import { Button } from "@/components/ui/button",;
 import { Eye, ChevronDown, Loader2 } from 'lucide-react';
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 interface ApplicationActionsProps {;

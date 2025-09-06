@@ -1,7 +1,3 @@
-        <code className='language-javascript'>{code}</code>
-      </pre>
-              </div>;
-            ))}
           </div>;
         )}
       <button

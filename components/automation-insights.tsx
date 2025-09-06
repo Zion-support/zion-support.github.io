@@ -7,10 +7,6 @@ export default function AutomationInsightsPage() {
       id: 'ai-automation-2025'
       title: 'AI Automation Trends 2025'
       description:
-        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends'
-      readTime: '8 min read'
-      featured: true
-    }
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
       readTime: '8 min read',
       featured: true;

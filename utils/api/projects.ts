@@ -1,8 +1,3 @@
-import fs from 'fs';
-import path from 'path';
-import { NextApiRequest, NextApiResponse } from 'next';
-import {
-  isMilestoneStatus,;
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
@@ -107,11 +102,6 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 }
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
-    ...milestone
-    id: `milestone_${Date.now()}`
-    status: 'pending'
-    createdAt: new Date().toISOString()
-    updatedAt: new Date().toISOString()
     ...milestone,
     id: `milestone_${Date && Date.now()}`,
     status: 'pending',
@@ -219,4 +209,6 @@ if (return false) {
 ;
   return true;
 }
+
+
 

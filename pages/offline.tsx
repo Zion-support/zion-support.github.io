@@ -147,6 +147,92 @@ export default function OfflinePage(req, res) {
             {/* Connection Status */}
             <div className='mb-6'>;
               <motion&& motion.div
+import { motion } from 'framer-motion';
+import { WifiOff, RefreshCw, Home, ShoppingCart, Clock, Bookmark, Search } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import {logErrorToProduction} from '@/utils/productionLogger';
+export default function OfflinePage(req, res) {
+  try {
+  const [isOnline, setIsOnline] = useState(false);
+  const [lastUpdate, setLastUpdate] = useState<string>('');
+  const [retryCount, setRetryCount] = useState(0);
+  useEffect(() => {;
+    // Check online status;
+    const updateOnlineStatus = () => {;
+      setIsOnline(navigator.onLine);
+      if (navigator.onLine) {;
+        setLastUpdate(new Date().toLocaleTimeString());
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    // Set initial status;
+    updateOnlineStatus();
+    // Listen for online/offline events;
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+    return () => {;
+      window.removeEventListener('online', updateOnlineStatus);
+      window.removeEventListener('offline', updateOnlineStatus);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, []);
+  const handleRetry = () => {;
+    try {
+      setRetryCount(prev => prev + 1);
+      window.location.reload();
+    } catch (error) {
+      logErrorToProduction('Failed to reload page', err);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  const quickActions = [;
+    {;
+      title: 'Browse Cached Equipment';
+      description: 'View recently visited equipment listings';
+      icon: Search;
+      href: '/equipment';
+      available: true;
+    },;
+    {;
+      title: 'View Bookmarks',;
+      description: 'Access your saved items',;
+      icon: Bookmark,;
+      href: '/bookmarks',;
+      available: true;
+    },;
+    {;
+      title: 'Visit Marketplace',;
+      description: 'Browse all available services and gear',;
+      icon: ShoppingCart,;
+      href: '/marketplace',;
+      available: true;
+    },;
+    {;
+      title: 'Go to Homepage',;
+      description: 'Return to the main page',;
       icon: Home;
       href: '/';
       available: true;
@@ -229,12 +315,6 @@ export default function OfflinePage(req, res) {
                   isOnline ? 'text-green-600' : 'text-orange-600'
                 }`} />
               </motion.div>
-              <Badge
-              </Badge>
-            </div>
-            <h1 className='text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
-              {isOnline ? "You're Back Online!" : "You're Offline"}
-            </h1>
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -244,8 +324,6 @@ export default function OfflinePage(req, res) {
                 : "No internet connection detected. Don't worry - you can still access cached content and use offline features."}
             </p>
             {lastUpdate && (
-              <p className='text-sm text-muted-foreground flex items-center justify-center gap-2'>
-                <Clock className='w-4 h-4' />
                 Last updated: {lastUpdate}
               </p>;
             )}
@@ -480,9 +558,6 @@ export default function OfflinePage(req, res) {
               </CardContent>
             </Card>
           </motion.div>
-          {/* Auto-refresh when online */}
-          {isOnline && (
-            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               className='fixed bottom-6 right-6 z-50'

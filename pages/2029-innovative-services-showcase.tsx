@@ -93,39 +93,10 @@ function InnovativeServicesShowcase2029() {
   }
 }
   ],
-  return (
-    <>
-      <Head>
-        <title>2029 Innovative Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="Discover our cutting-edge 2029 innovative services including AI autonomous ecosystems, emerging tech breakthroughs, and practical business solutions. Transform your business with next-generation technology." />
-        <meta name="keywords" content="2029 services, AI autonomous, emerging technology, business solutions, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/2029-innovative-services-showcase" />
-      </Head>
-      <div className="min-h-screen bg-black text-white">
-        <UltraFuturisticNavigation2029 />
-        <section className="py-32 bg-gradient-to-br from-black via-purple-900/20 to-black">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            >
-              <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8">
-                2029 Innovative Services
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
         <section className="py-32 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -151,11 +122,6 @@ function InnovativeServicesShowcase2029() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
 
-
-                Experience the future of technology with our revolutionary AI autonomous ecosystems,
-
-                Experience the future of technology with our revolutionary AI autonomous ecosystems, 
-                Experience the future of technology with our revolutionary AI autonomous ecosystems,
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">

@@ -7,27 +7,6 @@ import {ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook,
 import type { BlogPost as BlogPostType } from "@/types/blog";
 import {Separator} from "@/components/ui/separator";
 import {AppLayout} from "@/layout/AppLayout";
-import { useState, useEffect } from "react",
-import { useParams, Link, useNavigate } from "react-router-dom",
-import { SEO } from "@/components/SEO",
-import { Button } from "@/components/ui/button",
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react",
-import type { BlogPost as BlogPostType } from "@/types/blog",
-import { Separator } from "@/components/ui/separator";
-import { AppLayout } from "@/layout/AppLayout";
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts";
-export default function BlogPost() {
-
-  const { slug } = useParams() as { slug: string }
-  const navigate = useNavigate();
-  const [post, setPost] = useState<BlogPostType | null>(null);
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
-  const [showShareMenu, setShowShareMenu] = useState(false);
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts",
-export default function BlogPost() {
-  const { slug } = useParams() as { slug: string },;
   const navigate = useNavigate();
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
@@ -140,7 +119,6 @@ export default function BlogPost() {;
       </AppLayout>;
     );
   }
-  
   return (
     <AppLayout>
       <SEO
@@ -201,8 +179,6 @@ export default function BlogPost() {;
             </div>
           </div>
           {/* Featured image */}
-          <div className="mb-12 max-w-5xl mx-auto">
-            <div className="aspect-[21/9] rounded-lg overflow-hidden">
               <img
                 src={post.featuredImage}
                 alt={post.title}
@@ -212,17 +188,6 @@ export default function BlogPost() {;
                 alt={post.title}
                 className="object-cover w-full h-full"
                 onError={(e) => {
-                  const target = e.target as HTMLImageElement,
-                  target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
-          <div className="mb-12 max-w-5xl mx-auto">;
-            <div className="aspect-[21/9] rounded-lg overflow-hidden">;
-              <img;
-                src={post.featuredImage} ;
-                alt={post.title}
-                className="object-cover w-full h-full";
-                onError={(e) => {;
-                  const target = e.target as HTMLImageElement;
-                  target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
                 }}
               />
             </div>
@@ -243,25 +208,6 @@ export default function BlogPost() {;
                   #{tag}
                 </span>;
               ))}
-            </div>
-            <Separator className="my-12 bg-zion-blue-light" />
-            {/* Related articles */}
-            {relatedPosts.length > 0 && (
-              <div className="mt-12">
-                <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {relatedPosts.map(relatedPost => (
-                    <Link
-                      key={relatedPost.id}
-                      to={`/blog/${relatedPost.slug}`}
-                      className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300"
-                    >
-                      <div className="aspect-[16/9] relative">
-                        <img
-                          src={relatedPost.featuredImage}
-                          alt={relatedPost.title}
-                          className="object-cover w-full h-full"
-                          onError={(e) => {
                           }}
                         />;
                       </div>;

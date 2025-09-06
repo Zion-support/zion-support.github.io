@@ -8,8 +8,6 @@ export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'complet
 
 export interface Milestone {;
 
-export interface Milestone {;
-
   id: string;
   project_id: string;
   title: string;
@@ -19,12 +17,6 @@ export interface Milestone {;
   status: MilestoneStatus;
   created_at: string;
   updated_at: string;
-  created_by: string
-  deliverables?: any[]
-}
-export interface MilestoneActivity {
-
-export interface MilestoneActivity {;
   id: string;
   milestone_id: string;
   user_id: string;

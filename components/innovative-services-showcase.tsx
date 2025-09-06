@@ -95,26 +95,12 @@ export default function InnovativeServicesShowcase() {
     visible: {
       opacity: 1
       transition: {
-        staggerChildren: 0.1
-        delayChildren: 0.2
-      }
-    },  };        delayChildren: 0.2
-      }
-    }
-  }
   const itemVariants = {
     hidden: { opacity: 0, y: 30 }
     visible: {
       opacity: 1
       y: 0
       transition: {
-        duration: 0.6
-        ease: 'easeOut'
-      }
-    },  };        ease: "easeOut"
-      }
-    }
-  }
   const featuredServices = [
     {
       title: ' Quantum Internet Security Platform'
@@ -1091,7 +1077,6 @@ export default function InnovativeServicesShowcase() {;
                     <div className="text - sm text - gray - 400 mb - 4">{service.market_size}  {service.growth_rate}</div>;
                     <a;
                       href={service.link}
-
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1128,43 +1113,6 @@ export default function InnovativeServicesShowcase() {;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                 <a
                   href="/contact"
-                <a
-                  href='/services'
-                  className='border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300'                  href="/services"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
-                >
-                  Explore All Services
-                </a>
-              </div>
-              <div className='mt-12 text-center'>
-                <p className='text-gray-400 mb-4'>Contact us directly:</p>
-                <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>
-                  <div className='flex items-center space-x-2'>
-                    <Phone className='w-5 h-5 text-cyan-400' />
-                    <span className='text-white'>{contactInfo.mobile}</span>
-                  </div>
-                  <div className='flex items-center space-x-2'>
-                    <Mail className='w-5 h-5 text-purple-400' />
-                    <span className='text-white'>{contactInfo.email}</span>
-                  </div>
-                  <div className='flex items-center space-x-2'>
-                    <MapPin className='w-5 h-5 text-pink-400' />
-                    <span className='text-white'>{contactInfo.address}</span>                  </div>                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Mail className="w-5 h-5 text-purple-400" />
-                    <span className="text-white">{contactInfo.email}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="w-5 h-5 text-pink-400" />
-                    <span className="text-white">{contactInfo.address}</span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </UltraAdvancedFuturisticBackground>
             >;
               <motion.a;
                 href='/services';

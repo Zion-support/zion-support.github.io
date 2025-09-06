@@ -178,7 +178,3 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
           padding: tokens.spacing.md;
         }
       }
-    }
-    tokens
-  }
-}

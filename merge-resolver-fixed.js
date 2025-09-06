@@ -94,29 +94,3 @@ for (const file of files) {
 }
 ;
 // Main execution;
-  let fixedCount = 0,;
-  for (const file of files) {;
-    try {;
-      const content = fs.readFileSync(file, 'utf8'),;
-      if (content.includes('') || content.includes('
-}
-}
-}
-  let fixedCount = 0;
-  for (const file of files) {;
-    try {;
-      const content = fs.readFileSync(file, 'utf8'),;
-        if (fixMergeConflicts(file)) {;
-          fixedCount++;
-        }
-      }
-    } catch (error) {;
-      // Skip files that can't be read;
-    }
-  }
-;
-  console.log(`✅ Fixed merge conflicts in ${fixedCount} files`),;
-  console.log('🎉 Merge conflict resolution completed!');
-}
-;
-main().catch(console.error),;

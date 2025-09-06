@@ -5,10 +5,6 @@
     deleteWebhook,
     testWebhook,
 
-  // Create webhook form state
-  const [webhookName, setWebhookName] = useState(""),
-  const [webhookUrl, setWebhookUrl] = useState(""),
-  const [webhookSecret, setWebhookSecret] = useState(""),
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),
 
@@ -269,14 +265,12 @@ export function WebhooksManager() {;
           Set up webhooks to get notified when events happen in your Zion account.
         </CardDescription>
       </CardHeader>
-      <CardContent>
       
       <CardContent>
         <div className="flex justify-between items-center mb-6">
           <p className="text-sm text-zinc-400">
             You have {webhooks.length} {webhooks.length === 1 ? 'webhook' : 'webhooks'}
           </p>
-          <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
           
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
@@ -360,14 +354,6 @@ export function WebhooksManager() {;
               <p className="text-sm mt-1">Create one to receive event notifications.</p>
             </div>
           ) : (
-            webhooks.map(webhook => (
-              <div
-                key={webhook.id}
-                className='p-4 border border-zinc-800 rounded-lg'
-              >
-                <div className='flex items-center justify-between'>              <div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
-            webhooks.map((webhook) => (
-              <div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="font-medium">{webhook.name}</h3>
@@ -386,16 +372,6 @@ export function WebhooksManager() {;
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">
                         <DropdownMenuItem
-                          onClick={() => setShowTestDialog(webhook.id)}
-                          className='cursor-pointer'                        >
-                          <PlayCircle size={14} className='mr-2' /> Test
-                        </DropdownMenuItem>
-                        <DropdownMenuItem
-                          onClick={() => setShowDeleteConfirm(webhook.id)}
-                          className="cursor-pointer text-red-500"
-                        >
-                          <X size={14} className="mr-2" /> Delete
-                        </DropdownMenuItem>
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>;
                         </Label>;
                       </div>;
@@ -476,10 +452,6 @@ export function WebhooksManager() {;
         </Button>
       </CardFooter>
 
-              <DialogFooter>
-                <Button variant="outline" onClick={() => setShowTestDialog(null)}>
-                  Cancel
-                </Button>
                 <Button
                   variant='outline'
                   onClick={() => setShowTestDialog(null)}

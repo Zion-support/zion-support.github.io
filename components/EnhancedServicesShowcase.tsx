@@ -1,16 +1,3 @@
-  Brain
-  Shield
-  Rocket
-  Cpu
-  Database
-  Atom
-  Users
-  CheckCircle
-  TrendingUp
-  Clock
-  Star
-  Filter
-  ChevronDown;
 
 } from 'lucide-react';
 interface Service {;
@@ -45,20 +32,6 @@ interface Service {
   market_size: string;
   growth_rate: string;
   popular?: boolean;
-  const filteredServices = services.filter(service => {
-    const matchesCategory =
-      selectedCategory === 'all' |service.category === selectedCategory;
-    const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-  const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ComponentType<any> } = {
-      'AI & Analytics': Brain
-      Security: Shield
-      Infrastructure: Cpu
-      'Space Tech': Rocket
-      'Emerging Tech': Brain
-      'Quantum AI': Atom
   return (
     <section id='services' className='py-24 px-6 relative overflow-hidden'>;
       {/* Background */}
@@ -107,7 +80,6 @@ interface Service {
 
 
         {/* Filters */}
-        <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>
           {/* Category Filter */}
           <div className="relative">
             <select
@@ -126,9 +98,12 @@ interface Service {
                   {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
-            </select>
-            <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />
-          </div>
+
+
+            </select>;
+            <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />;
+          </div>;
+
           {/* Search */}
           <div className='relative'>;
             <input
@@ -136,59 +111,12 @@ interface Service {
               placeholder='Search services...'
               value={searchTerm}
 
-        {/* Services Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          </div>;
-
           {/* Search */}
           <div className="relative">;
             <input
               type="text"
               placeholder="Search services..."
               value={searchTerm}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-            >
-              {/* Popular Badge */}
-              {service.popular && (
-                <div className="absolute top-4 right-4 z-20">
-                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
-                    <Star className="w-3 h-3" />
-                    Popular
-                  </div>
-                </div>
-              )}
-
-
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64"
-            />
-            <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
-          </div>
-        </div>
-        {/* Services Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {filteredServices.map((service, index) => (
-            <div
-              key={service.id}
-              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-            >
-              {/* Popular Badge */}
-              {service.popular && (
-                <div className='absolute top-4 right-4 z-20'>
-                  <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
-                    <Star className='w-3 h-3' />                    Popular          {filteredServices.map((service, index) => (
-            <div
-              key={service.id}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-            >
-              {/* Popular Badge */}
-              {service.popular && (
-                <div className="absolute top-4 right-4 z-20">
-                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
-                    <Star className="w-3 h-3" />
-                    Popular
-                  </div>
-                </div>
-              )}
 
 
               {/* Service Content */}
@@ -453,16 +381,18 @@ interface Service {
                   </div>
                 </div>
                     ))}
-                  </div>
-                </div>
+
+                  </div>;
+                </div>;
+
+
+
+
 
                 {/* Benefits */}
 
 
                     ))}
-                  </div>
-                </div>
-
                 {/* ROI and Market Info */}
 
                 <div className="mb-6 p-4 bg-white/5 rounded-lg">
@@ -581,11 +511,3 @@ export default EnhancedServicesShowcase);
 export default EnhancedServicesShowcase;
 ;
   );
-export default EnhancedServicesShowcase;  )
-}
-export default EnhancedServicesShowcase;
-
-
-}
-}
-export default EnhancedServicesShowcase;

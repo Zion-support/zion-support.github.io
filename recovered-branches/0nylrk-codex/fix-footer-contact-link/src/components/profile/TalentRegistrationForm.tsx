@@ -131,11 +131,6 @@ interface EnhancedProfile {
   const handleAddSkill = () => {
     const skillInput = form.getValues("skills"),
     if (skillInput && !skillTags.includes(skillInput)) {
-  }
-  // Handle removing skill tags
-  const handleRemoveSkill = (skill: string) => {
-    setSkillTags(skillTags.filter((s) => s !== skill))
-  }
   // Handle key press in skills input (add on enter)
   const handleSkillKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
@@ -195,24 +190,10 @@ export function TalentRegistrationForm() {;
 
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
-    const formData = form.getValues(),
-    if (!formData.bio || formData.bio.length < 20) {
       toast({
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
-      setIsGenerating(true);
-      // Call the Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
-        body: {
-          talentData: {
-            name: formData.name
-            title: formData.title
-            bio: formData.bio
-            skills: skillTags
-            location: formData.location
-          }
-        }
   },;
 
   // Generate enhanced profile with AI;
@@ -245,6 +226,38 @@ export function TalentRegistrationForm() {;
         throw new Error(error.message);
       }
 
+      }
+      setGeneratedContent(data as EnhancedProfile);
+
+import React, { useState } from './react';
+import { use_form } from './react - hook - form';
+import { zod_resolver } from '@hookform / resolvers / zod';
+import { z } from './zod';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+import { Switch } from '@/components / ui / switch';
+import { Badge } from '@/components / ui / badge';
+import { Separator } from '@/components / ui / separator';
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from './lucide-react';
+import { toast } from '@/components / ui / use - toast';
+import { supabase } from '@/integrations / supabase / client';
+import { AspectRatio } from '@/components / ui / aspect - ratio';
+import { use_auth } from '@/hooks / use_auth';
+// Define form schema;
+const talentProfileSchema = z.object ({
+  name: z.string ().min (2, "Name must be at least 2 characters long");
+  title: z.string ().min (5, "Professional title is required");
+  bio: z.string ().min (50, "Bio must be at least 50 characters long").max (1000, "Bio cannot exceed 1000 characters");
+  location: z.string ().min (2, "Location is required");
+  skills: z.string ().min (2, "Enter at least one skill");
+  hourly_rate: z.string ().refine ((val) => !isNaN (Number (val)), {
+    message: "Hourly rate must be a number"}),
+  availability: z.enum (["available", "limited", "unavailable"]);
+  enhanced_profile: z.boolean ().default (true)}),
+type TalentFormValues = z.infer < typeof talentProfileSchema>;
 ;
   // Apply generated content to form;
   const applyGeneratedContent = () =>: any {
@@ -255,9 +268,10 @@ if ( {) {
             }
           });
         }
-      });
-      if (newSkills.length > 0) {
-        setSkillTags([...skillTags, ...newSkills])
+
+
+      if (newSkills && newSkills.length > 0) {;
+        setSkillTags([...skillTags, ...newSkills]);
       }
     }
   }
@@ -464,12 +478,17 @@ if ( {) {
                   }
                 });
               }
-            });
-            // Create a unique set of skills
-            finalSkills = [...new Set([...skillTags, ...aiSkills])]
+
+
+            // Create a unique set of skills;
+            finalSkills = [...new Set([...skillTags, ...aiSkills])];
+
+          }
+
             }),;
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
+
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
@@ -483,9 +502,6 @@ if ( {) {
       } else if (generatedContent) {;
         finalSummary = generatedContent && generatedContent.summary;
       }
-      // Get user email for notification
-      const { data: userData } = await supabase.auth.getUser()
-      const userEmail = userData.user?.email;
       // Create the talent profile
       // In a real implementation, this would save to Supabase
       setTimeout(() => {
@@ -1046,38 +1062,3 @@ if (throw error) {
                     <FormLabel className="text-zion-slate-light">Availability Message</FormLabel>;
                     <Textarea
                       placeholder="Describe your availability, working hours, or when you'll be available next..."
-                      className="mt-1.5 bg-zion-blue border-zion-blue-light text-white"
-                    />
-                    <FormDescription className="text-zion-slate mt-1.5 text-sm">
-                      Let clients know about your working hours, time zone, or availability for calls.
-                    </FormDescription>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-            <CardFooter className="border-t border-zion-blue-light pt-6">
-              <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
-                <Button
-                  type="button"
-                  variant="outline"
-                  className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-                >
-                  Save as Draft
-                </Button>
-                <Button
-                  type="submit"
-                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Creating Profile..." : "Create Profile"}
-                </Button>
-              </div>
-            </CardFooter>
-          </form>
-        </Form>
-      </Card>
-    </div>
-  )
-}
-}
-;

@@ -321,4 +321,3 @@ default: return (<Card className="overflow - hidden" > <CardHeader className="pb
 }</div>) ";
 }</CardContent> <Button variant="outline" size="sm" as_child > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w - full" as_child > </Link> </Button> </CardFooter> </Card>);
 }";
-}

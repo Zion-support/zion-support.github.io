@@ -1,3 +1,214 @@
+import { motion } from 'framer-motion';
+
+
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Star,
+  Rocket,
+  Brain,
+  Atom,
+  Building,
+  Briefcase,
+  Microscope,
+  Twitter,
+  Facebook,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+  Zap,
+  Sparkles,
+  Shield,
+  Cpu,;
+  Database,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, ;
+
+
+  Rocket, Brain, Atom, Building, Briefcase, Microscope;
+  Twitter, Facebook, Linkedin, Instagram, Youtube;
+  Github, Zap, Sparkles, Shield, Cpu, Database
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
+}
+import { 
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, 
+  Rocket, Brain, Atom, Building, Briefcase, Microscope;
+  Twitter, Facebook, Linkedin, Instagram, Youtube;
+  Github, Zap, Sparkles, Shield, Cpu, Database
+} from 'lucide-react';
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+const serviceCategories = [
+  {
+    title: 'AI & Machine Learning'
+    icon: Brain
+    services: [
+
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
+      { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },
+      { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform' },
+      { name: 'AI-Powered IT Asset Management', href: '/ai-powered-it-asset-management' }
+    ]
+  };
+  {
+    title: '🧠 AI & Technology',
+    services: [
+      { name: 'AI Services', href: '/ai-services' },
+      { name: 'Machine Learning', href: '/machine-learning' },
+      { name: 'Natural Language Processing', href: '/nlp-services' },
+      { name: 'Computer Vision', href: '/computer-vision' }
+    ]
+  };
+
+  {
+    title: '⚛️ Quantum & Emerging Tech'
+    services: [
+
+      { name: 'Quantum Computing', href: '/quantum-computing' },
+      { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
+      { name: 'IoT Platforms', href: '/iot-platforms' },
+      { name: 'Space Technology', href: '/space-tech' }
+    ]
+  };
+
+  {
+    title: '🏙️ Enterprise Solutions'
+    services: [
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Globe,;
+  ArrowRight,;
+  Star,;
+  Rocket,;
+  Brain,;
+  Atom,;
+  Building,;
+  Briefcase,;
+  Microscope,;
+  Twitter,;
+  Facebook,;
+  Linkedin,;
+  Instagram,;
+  Youtube,;
+  Github,;
+  Zap,;
+  Sparkles,;
+  Shield,;
+  Cpu,;
+  Database,;} from 'lucide-react';import { ;
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, ;
+  Rocket, Brain, Atom, Building, Briefcase, Microscope;
+  Twitter, Facebook, Linkedin, Instagram, Youtube;
+  Github, Zap, Sparkles, Shield, Cpu, Database;
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com';
+};
+const serviceCategories = [;
+  {;
+    title: 'AI & Machine Learning',;
+    icon: Brain,;
+    services: [;
+      {;
+        name: 'AI Consciousness Evolution',;
+        href: '/ai-consciousness-evolution-2029',;
+      },;
+      {;
+        name: 'Quantum Neural Networks',;
+        href: '/quantum-neural-network-platform',;
+      },;
+      {;
+        name: 'Autonomous Business Operations',;
+        href: '/autonomous-business-operations-platform',;
+      },;
+      {;
+        name: 'AI-Powered IT Asset Management',;
+        href: '/ai-powered-it-asset-management',;
+      },;
+    ],;
+  },  {      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },;
+      { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },;
+      { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform' },;
+      { name: 'AI-Powered IT Asset Management', href: '/ai-powered-it-asset-management' }
+    ];
+  };
+    title: '🧠 AI & Technology',;
+    services: [;
+      { name: 'AI Services', href: '/ai-services' },;
+      { name: 'Machine Learning', href: '/machine-learning' },;
+      { name: 'Natural Language Processing', href: '/nlp-services' },;
+      { name: 'Computer Vision', href: '/computer-vision' },;
+    ],;
+  },  {      { name: 'Computer Vision', href: '/computer-vision' }
+    ];
+  };
+  {;
+    title: '⚛️ Quantum & Emerging Tech',;
+    services: [;
+      { name: 'Quantum Computing', href: '/quantum-computing' },;
+      { name: 'Blockchain Solutions', href: '/blockchain-solutions' },;
+      { name: 'IoT Platforms', href: '/iot-platforms' },;
+      { name: 'Space Technology', href: '/space-tech' },;
+    ],;
+  },  {      { name: 'Space Technology', href: '/space-tech' }
+    ];
+  };
+  {;
+    title: '🏙️ Enterprise Solutions',;
+    services: [;
+      { name: 'Enterprise IT', href: '/enterprise-it' },;
+      { name: 'Cloud Solutions', href: '/cloud-solutions' },;
+      { name: 'Cybersecurity', href: '/cybersecurity' },;
+      { name: 'DevOps Automation', href: '/devops-automation' },;
+    ],;
+
+  },];      { name: 'DevOps Automation', href: '/devops-automation' }
+    ];
+  }
+];
+
+      { name: 'Enterprise IT', href: '/enterprise-it' },
+      { name: 'Cloud Solutions', href: '/cloud-solutions' },
+      { name: 'Cybersecurity', href: '/cybersecurity' },
+      { name: 'DevOps Automation', href: '/devops-automation' }
+    ]
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -176,57 +387,6 @@ const footerSections = [
       { name: 'Cookie Policy', href: '/cookies' },
       { name: 'Data Protection', href: '/data - protection' },
       { name: 'Accessibility', href: '/accessibility' },
-            <p className='text-gray-400 mb-6 leading-relaxed'>
-              Leading the revolution in AI, quantum computing, and autonomous
-              technology solutions. Transforming businesses with cutting-edge
-              innovation.
-            </p>
-            {/* Contact Information */}
-            <div className='space-y-3 mb-6'>
-              <div className='flex items-center space-x-3 text-gray-400 hover:text-white transition-colors'>
-                <Phone className='w-4 h-4' />
-                <a href={`tel:${contactInfo.mobile}`} className='text-sm'>
-                  {contactInfo.mobile}
-                </a>
-              </div>
-              <div className='flex items-center space-x-3 text-gray-400 hover:text-white transition-colors'>
-                <Mail className='w-4 h-4' />
-                <a href={`mailto:${contactInfo.email}`} className='text-sm'>
-                  {contactInfo.email}
-                </a>
-              </div>
-              <div className='flex items-center space-x-3 text-gray-400'>
-                <MapPin className='w-4 h-4' />
-                <span className='text-sm'>{contactInfo.address}</span>              </div>            </div>
-            {/* Social Links */}
-            <div className='flex space-x-4'>
-              {socialLinks.map(social => (            {/* Contact Information */}
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
-                <Phone className="w-4 h-4" />
-                <a href={`tel:${contactInfo.mobile}`} className="text-sm">
-                  {contactInfo.mobile}
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
-                <Mail className="w-4 h-4" />
-                <a href={`mailto:${contactInfo.email}`} className="text-sm">
-                  {contactInfo.email}
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-400">
-                <MapPin className="w-4 h-4" />
-                <span className="text-sm">{contactInfo.address}</span>
-              </div>
-            </div>
-            {/* Social Links */}
-                  rel="noopener noreferrer"
-                  className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-
 ];
 
 
@@ -237,11 +397,6 @@ const footerSections = [
 
 
           {/* Service Categories */}
-          <div className='lg:col-span-1'>
-            <h4 className='text-lg font-semibold text-white mb-6'>
-              Our Services
-            </h4>
-            <div className='space-y-4'>
 
 
               {serviceCategories.map((category, index) => (
@@ -261,12 +416,6 @@ const footerSections = [
 
 
           {/* Quick Links */}
-          <div className='lg:col-span-1'>
-            <h4 className='text-lg font-semibold text-white mb-6'>
-              Quick Links
-            </h4>
-            <div className='grid grid-cols-2 gap-2'>
-              {quickLinks.map(link => (
 
 
                 <Link
@@ -282,6 +431,19 @@ const footerSections = [
               ))}
             </div>
           </div>
+          {/* Footer Sections */}
+          <div className='lg:col-span-1'>
+            <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>
+            <div className='space-y-4'>
+              {footerSections.map(section => (
+
+                <div key={section.title}>
+                  <h5 className='text-sm font-medium text-gray-300 mb-3'>
+                    {section.title}
+                  </h5>
+                  <ul className='space-y-2'>
+                    {section.links.map(link => (
+                      <li key={link.name}>
                         <Link
                           href={link && link.href}
                           className='text-sm text-gray-400 hover:text-white transition-colors duration-200'>                <div key={section && section.title}>;
@@ -574,7 +736,3 @@ export default UltraFuturisticFooter2029);
 export default UltraFuturisticFooter2029;
 ;
   );
-export default UltraFuturisticFooter2029;  )
-}
-export default UltraFuturisticFooter2029;
-

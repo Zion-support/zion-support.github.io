@@ -1,7 +1,3 @@
-import { ProviderConnection, SyncLogEntry } from "./types";
-import { v4 as uuidv4 } from "uuid";
-import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
 
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
@@ -17,9 +13,6 @@ async function mockProviderCall<T>(
 
 // ATS actions
 export const ats = {
-  async updateStatus(
-    return mockProviderCall(connection, "update_status", { status });
-  }
 }
   async syncContact(
     connection: ProviderConnection

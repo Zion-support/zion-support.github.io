@@ -16,15 +16,6 @@ export default function AboutPage() {
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
 	}
-import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
-export default function AboutPage() {
-	const contactInfo = {
-		mobile: '+1 302 464 0950',
-		email: 'kleber@ziontechgroup.com',
-		address: '364 E Main St STE 1008 Middletown DE 19709',
-		website: 'https://ziontechgroup.com';
-	};
-
 	const pillars = [
 		{ title: 'AI-first Engineering', icon: <Brain className="w-6 h-6" />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' }
 		{ title: 'Platform and SRE', icon: <ShieldCheck className="w-6 h-6" />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' }
@@ -32,35 +23,6 @@ export default function AboutPage() {
 		{ title: 'Global Delivery', icon: <Globe className="w-6 h-6" />, desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.' }
 	];
 	return (
-      title: 'Innovation'
-      description: 'Constantly pushing boundaries and exploring new frontiers in technology'
-      color: 'text-cyan-400'
-      gradient: 'from-cyan-400 to-blue-500'}
-    {
-      title: 'Autonomy'
-      description: 'Building systems that can operate independently and make intelligent decisions'
-      color: 'text-fuchsia-400'
-      gradient: 'from-fuchsia-400 to-purple-500'}
-    {
-      title: 'Impact'
-      description: 'Creating technology that makes a positive difference in the world'
-      color: 'text-green-400'
-      gradient: 'from-green-400 to-emerald-500'}]
-  const services = [
-    {
-      title: 'AI Development'
-      description: 'Advanced machine learning models, natural language processing, computer vision systems, and autonomous decision making.'
-      gradient: 'from-cyan-400 to-blue-500'}
-    {
-      title: 'Automation Systems'
-      description: 'Cloud infrastructure automation, CI/CD pipeline optimization, self-healing applications, and performance monitoring.'
-      gradient: 'from-fuchsia-400 to-purple-500'}]
-  const achievements = [
-    { number: '600+', label: 'Services', color: 'text-cyan-400' }
-    { number: '1000%', label: 'ROI', color: 'text-fuchsia-400' }
-    { number: '24/7', label: 'Support', color: 'text-green-400' }
-    { number: '99.9%', label: 'SLA', color: 'text-blue-400' }]
-  const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -311,4 +273,5 @@ export default function AboutPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com';
+
 

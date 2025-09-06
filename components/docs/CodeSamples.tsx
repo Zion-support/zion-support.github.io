@@ -64,15 +64,6 @@ export default function CodeSamples(): any ({ samples }: Props) {;
       <div className="flex gap-2 mb-2">
         {tabs.map((t) => (
           <button
-
-            key={t.key}
-            className={`px-3 py-1 rounded border ${active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
-            onClick={() => setActive(t.key)}
-          >
-            {t.label}
-          </button>
-        ))}
-          <button
             key={t && t.key}
             className={`px-3 py-1 rounded border ${active === t && t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
             onClick={() => setActive(t && t.key)}

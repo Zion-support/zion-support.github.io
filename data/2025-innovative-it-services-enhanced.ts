@@ -752,12 +752,6 @@ export interface InnovativeITService2025 {
     realImplementation: true, implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.',
     launchDate: '2024-09-01', customers: 123,
     rating: 4.8,
-
-    realImplementation: true;
-    implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.';
-    launchDate: '2024-09-01';
-    customers: 123;
-
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeITService2025 {;
   id: string,;
@@ -1814,3 +1808,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
     reviews: 52;
   }
 ];
+
+;
+

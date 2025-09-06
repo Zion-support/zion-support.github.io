@@ -1,37 +1,13 @@
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
 export default function Careers() {
   // Sample job listings
 
   const jobs = {
     engineering: [
       {
-        title: "Senior Frontend Engineer"
-        location: "Remote"
-        type: "Full-time"
-        department: "Engineering"
         title: "Senior Frontend Engineer",
         location: "Remote",
         type: "Full-time",
         department: "Engineering",
-        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
-      }
-      {
-        title: "AI Research Engineer"
-        location: "San Francisco, CA";
-        type: "Full-time"
-        department: "Engineering"
-        description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
-      }
-      {
-        title: "AI Research Engineer",
-        location: "San Francisco, CA",
-        type: "Full-time",
-        department: "Engineering",
-        description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
-      },
       {
         title: "Full Stack Developer"
         location: "Remote"
@@ -41,12 +17,6 @@ export default function Careers() {
       }
     product: [
       {
-        title: "Product Manager"
-        location: "New York, NY";
-        type: "Full-time"
-        department: "Product"
-        description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
-      }
       {
         title: "UX/UI Designer"
         location: "Remote"
@@ -62,12 +32,6 @@ export default function Careers() {
         type: "Full-time"
         department: "Marketing"
         description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."
-      }
-      {
-        title: "Content Strategist"
-        location: "London, UK";
-        type: "Full-time"
-        department: "Marketing"
         description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."
       }
     ];
@@ -148,23 +112,6 @@ export default function Careers() {
                           </Button>;
                         </div>;
                       </CardContent>;
-              ))}
-            </Tabs>
-          </div>
-          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md: p-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
-            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              We're always looking for talented individuals who are passionate about AI and technology.
-              Send us your resume and let's start a conversation.
-            </p>
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
-              Send General Application
-            </Button>
-          </div>
-        </div>
-      </main>
-    </AppLayout>
-  )
                   ))}
                 </TabsContent>;
               ))}
@@ -196,4 +143,5 @@ export default function Careers() {
         </div>;
       </main>;
 }
-;
+    </AppLayout>);
+}

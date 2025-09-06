@@ -30,8 +30,6 @@ import { Search } from 'lucide-react'
       router.push(path)
       setSearchValue("")
     }
-  }
-  return (
       <Link href="/developers/docs" className="flex items-center mb-8">
        <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">
         <span className="text-white font-bold">Z</span>

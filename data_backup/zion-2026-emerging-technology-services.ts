@@ -65,7 +65,6 @@ export const "zion2026EmergingTechnologyServices": Zion2026EmergingTechnologySer
       'Advanced blockchain analytics and reporting'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-purple-600 to-blue-700',
     "textColor": 'text-purple-400',
     "link": 'https://ziontechgroup.com/quantum-enhanced-blockchain-web3-platform-2026',
@@ -111,7 +110,6 @@ export const "zion2026EmergingTechnologyServices": Zion2026EmergingTechnologySer
       'Advanced metaverse analytics and reporting'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-indigo-600 to-purple-700',
     "textColor": 'text-indigo-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-metaverse-development-platform-2026',
@@ -157,7 +155,6 @@ export const "zion2026EmergingTechnologyServices": Zion2026EmergingTechnologySer
       'Advanced IoT analytics and reporting'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-green-600 to-blue-700',
     "textColor": 'text-green-400',
     "link": 'https://ziontechgroup.com/quantum-enhanced-iot-platform-2026',
@@ -203,7 +200,6 @@ export const "zion2026EmergingTechnologyServices": Zion2026EmergingTechnologySer
       'Advanced space analytics and reporting'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-blue-600 to-indigo-700',
     "textColor": 'text-blue-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-space-technology-platform-2026',
@@ -249,7 +245,6 @@ export const "zion2026EmergingTechnologyServices": Zion2026EmergingTechnologySer
       'Advanced neural analytics and reporting'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-purple-600 to-pink-700',
     "textColor": 'text-purple-400',
     "link": 'https://ziontechgroup.com/quantum-enhanced-neural-network-bci-platform-2026',
@@ -295,7 +290,6 @@ export const "zion2026EmergingTechnologyServices": Zion2026EmergingTechnologySer
       'Advanced biotech analytics and reporting'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-green-600 to-teal-700',
     "textColor": 'text-green-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-biotechnology-synthetic-biology-platform-2026',
@@ -341,7 +335,6 @@ export const "zion2026EmergingTechnologyServices": Zion2026EmergingTechnologySer
       'Advanced climate analytics and reporting'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-teal-600 to-green-700',
     "textColor": 'text-teal-400',
     "link": 'https://ziontechgroup.com/quantum-enhanced-climate-environmental-technology-platform-2026',
@@ -387,7 +380,6 @@ export const "zion2026EmergingTechnologyServices": Zion2026EmergingTechnologySer
       'Advanced robotics analytics and reporting'
     ],
     "popular": true,
-    "icon": '',
     "color": 'from-gray-600 to-blue-700',
     "textColor": 'text-gray-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-robotics-automation-platform-2026',

@@ -1,52 +1,11 @@
-
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue} from "@/components/ui/select"
-import { Label } from "@/components/ui/label"
-import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-import { ChevronRight, Zap, Star } from 'lucide-react'
-type ResumeStep = "basics" | "experience" | "education" | "skills"
-import React, { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue} from "@/components/ui/select"
-type ResumeStep = "basics" | "experience" | "education" | "skills"
-export function MobileResumeBuilder() {
-  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics")
-  const renderStepContent = () => {
-    switch (currentStep) {
-      case "basics": return <BasicsStep />
-      case "experience":
-        return <ExperienceStep />
-      case "education":
-        return <EducationStep />
-      case "skills":
-        return <SkillsStep />
-      default:
-        return <BasicsStep />
     }
   }
   return (
     <div className="space-y-6 px-4 pb-24">;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
         <Button
-          onClick={() => setCurrentStep("basics")}
         >
           Basics
-        </Button>
-        <Button
-        >
-          Education
         </Button>
         <Button
         >
@@ -54,13 +13,6 @@ export function MobileResumeBuilder() {
         </Button>
         <Button
 
-          variant={currentStep === "skills" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-          onClick={() => setCurrentStep("skills")}
-          variant={currentStep === "skills" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-          onClick={() => setCurrentStep("skills")}
-        >
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
@@ -78,9 +30,6 @@ export function MobileResumeBuilder() {
         </Button>
       </div>
       {renderStepContent()}
-      <Button className="w-full flex gap-2" size="lg">
-        <Zap className="h-5 w-5" /> Enhance with AI
-      </Button>
       <Button variant="default" className="w-full" size="lg">
       </Button>
     </div>

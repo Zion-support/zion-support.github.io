@@ -16,9 +16,6 @@ interface ResultsHeaderProps {;
           ) : (
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
           )}
-        </span>;
-      )}
-    </div>;
   );
 }
         <div className="flex items - center">;
@@ -48,4 +45,3 @@ function ResultsHeader() {
     </div>));
 }
 
-;

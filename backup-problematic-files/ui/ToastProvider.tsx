@@ -5,7 +5,6 @@
   on_action?: () => void;
   duration_ms?: number;
 }
-  toasts: Toast[];
   addToast: (toast: Omit<Toast, 'id'>) => string;
   removeToast: (id: string) => void;
   clearToasts: () => void;
@@ -27,6 +26,33 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 
   const addToast = useCallback((toast: Omit<Toast, 'id'>) => {
     const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`
+    const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
+    setToasts(prev => [...prev, item]);
+    if (item.durationMs && item.durationMs > 0) {setTimeout(() => removeToast(id), item.durationMs);
+export type ToastContextValue = {
+  toasts: Toast[];
+  add_toast: (toast: Omit < Toast, 'id'>) => string;
+  remove_toast: (id: string) => void;
+  clear_toasts: () => void;
+}
+const ToastContext = create_context < ToastContextValue | undefined>(undefined);
+export /**
+ * ToastProvider - Function description
+ */
+function ToastProvider() {
+  const [toasts, set_toasts] = useState < Toast[]>([]);
+  const remove_toast = useCallback ((id: string) => {
+    set_toasts (prev => prev.filter (t => t.id !== id));
+  }, []);
+  const add_toast = useCallback ((toast: Omit < Toast, 'id'>) => {
+    const id = `${Date.now ()}_${Math.random ().to_string (36).slice (2)}`;
+    const item: Toast = { id, variant: 'default', duration_ms: 4000, ...toast }
+    set_toasts (prev => [...prev, item]);
+    // Check condition
+if ( {) {
+  $2
+}
+      set_timeout (() => remove_toast (id), item.duration_ms);
     }
     return id;
   }, [remove_toast]);
@@ -54,11 +80,6 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
                       {t.actionLabel}
                     </button>;
                   )}
-:components/ui/ToastProvider.tsx
-</div>
-                <button onClick={() => removeToast(t.id)} className=&quot;text-xs opacity-60 hover:opacity-100&quot;>×</button>
-                </div>
-                <button onClick={() => removeToast(t.id)} className="text-xs opacity-60 hover:opacity-100">×</button>
               </div>
             </motion.div>
           ))}

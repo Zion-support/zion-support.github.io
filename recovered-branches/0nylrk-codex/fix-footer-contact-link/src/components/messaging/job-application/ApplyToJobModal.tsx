@@ -1,8 +1,3 @@
-  Dialog
-  DialogContent
-  DialogDescription
-  DialogHeader
-  DialogTitle
   Dialog,
   DialogContent,
   DialogDescription,

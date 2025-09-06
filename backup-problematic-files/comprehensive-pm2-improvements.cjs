@@ -819,6 +819,8 @@ const { execSync, spawn } = require('child_process')
             this.log('� Next "steps")
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             this.log('� Next "steps")
 =======
 <<<<<<< HEAD

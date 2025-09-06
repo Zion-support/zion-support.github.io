@@ -24,19 +24,6 @@ export default function AffiliateDashboard() {
     } catch (e: any) {
       setMsg(e?.message |'Error')
     }
-  }
-  const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
-
-import { useEffect, useMemo, useState } from 'react';
-function getRefCode(): string {;
-  if (typeof window === 'undefined') return '',;
-  return localStorage.getItem('ref_code') || '';
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-  const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
-
 
 
   }
@@ -124,20 +111,6 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
       <div className="text-2xl font-semibold">{value}</div>
     </div>
-  )
-;
-  const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]);
-  if (!code) {;
-    return (;
-      <div className="space-y-4">;
-        <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>;
-        <p className="text-gray-600 dark: text-gray-300">No referral code found. Visit your referral link first or register on the Partners page.</p>;
-      </div>;
-    );
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 
 import { useEffect, useMemo, useState } from 'react',

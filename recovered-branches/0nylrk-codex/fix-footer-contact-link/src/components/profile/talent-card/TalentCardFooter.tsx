@@ -8,28 +8,6 @@ import {HireRequestModal} from "@/components/profile/hire-request";
 import {useAuthStatus} from "@/hooks/talent";
 import {UserProfile} from "@/types/auth";
 import {useNavigate} from "react-router-dom";
-}
-export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-
-  const navigate = useNavigate();
-  // Create a compatible UserProfile from UserDetails
-  const userProfile: UserProfile = {
-    id: userDetails?.id
-    displayName: userDetails?.name |''
-    email: userDetails?.email |''
-    userType: ''
-    profileComplete: false
-    createdAt: new Date().toISOString()
-    updatedAt: new Date().toISOString()
-  }
-  // Handle request to hire
-  const handleRequestHire = (e: React.MouseEvent) => {
-    e.stopPropagation()
-    if (onRequestHire) {
-      onRequestHire(profile)
-    } else {
 interface TalentCardFooterProps {;
   profile: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -161,8 +139,5 @@ if ( {) {
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
         userDetails={userProfile}
-      />
-    </>
-  )
 }
 ;

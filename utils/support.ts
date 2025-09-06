@@ -57,5 +57,3 @@ export function searchArticles(articles: HelpArticle[], query: string): HelpArti
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
-}
-}

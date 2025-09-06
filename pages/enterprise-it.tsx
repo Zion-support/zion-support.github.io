@@ -1,4 +1,10 @@
 
+  const solutions = [
+    { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
+    { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
+    { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' },
+    { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }],
+
 
   return (
     <Layout>
@@ -11,8 +17,6 @@ import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
-
-
 export default function EnterpriseITPage() {
   const features = [
     'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'],
@@ -57,9 +61,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
               ))}
             </div>
           </section>
-        </div>
-      </div>
-    </Layout>
                 </Link>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -120,6 +121,12 @@ function EnterpriseITPage() {
                   <div className="text - gray - 200 font - semibold mb - 2">{s.name}</div>;
                   <p className="text - gray - 300 text - sm">Learn more</p>;
                 </a>))}
+                </Link>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
           </section>;
         </div>;

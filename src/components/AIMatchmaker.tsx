@@ -21,37 +21,6 @@ interface AIMatchmakerProps {
       toast({
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
-        variant: "destructive"}),
-      return
-    }
-
-    setIsMatchmaking(true),
-    setHasSearched(true),
-    
-    try {
-      logInfo("Starting AI matching", { data: { query, serviceType } }),
-      
-      // Get AI matches
-      const results = await findMatches(
-        query,
-        serviceType,
-        3
-      ),
-      
-      logInfo('AI matching results:', { data: results }),
-      setMatches(results),
-      
-      toast({
-        title: "Matches Found",
-        description: `Found ${results.length} matches based on your description.`})
-    } catch (error) {
-      logErrorToProduction('Error during AI matching:', { data: error }),
-      toast({
-        title: "Matching Error",
-        description: "We couldn't find matches for your request. Please try again.",
-        variant: "destructive"}),
-      // Set empty matches to show no results found UI
-      setMatches([])
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
           AI Matchmaker;
         </CardTitle>;

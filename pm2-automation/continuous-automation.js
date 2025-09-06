@@ -151,3 +151,5 @@ if ( {
     console.error('Continuous Automation "failed": ', error);
     process.exit(1)})}
 module.exports = ContinuousAutomation;
+
+

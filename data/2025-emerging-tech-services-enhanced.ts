@@ -475,12 +475,6 @@ export interface EmergingTechService2025 {
     realImplementation: true, implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.',
     launchDate: '2024-04-30', customers: 18,
     rating: 4.8,
-
-    realImplementation: true;
-    implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.';
-    launchDate: '2024-04-30';
-    customers: 18;
-
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechService2025 {;
   id: string,;
@@ -1141,3 +1135,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     reviews: 11;
   }
 ];
+
+;
+

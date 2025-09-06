@@ -1,11 +1,3 @@
-import React, { useState } from 'react';
-import { Button  } from '@/components/ui/button';
-import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Loader2, Sparkles, Check  } from 'lucide-react';
-import { Badge  } from '@/components/ui/badge';
-import { format, parseISO } from 'date-fns';
-interface MilestoneSuggestionsProps {
   projectName: string,
   scopeSummary: string,
   startDate: Date,
@@ -45,6 +37,18 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
 export function MilestoneSuggestions({
+  projectName;
+  scopeSummary;
+  startDate;
+  endDate;
+  projectType;
+  onMilestonesGenerated;
+}: MilestoneSuggestionsProps) {;
+  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
+
+
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,

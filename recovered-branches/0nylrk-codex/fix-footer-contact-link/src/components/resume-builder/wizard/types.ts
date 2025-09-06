@@ -46,15 +46,6 @@ export interface NavigationButtonsProps {;
   nextLabel?: string,;
   isLoading?: boolean;
 }
-export interface ResumeProgressProps {
-  resume: Resume | null;
-  progress: number
-}
-export interface CreateResumeFormProps {
-  onCreateResume: (title: string) => Promise<void>;
-  onCancel: () => void;
-  isLoading: boolean
-}
 ;
 export interface ResumeProgressProps {;
   resume: Resume | null,;
@@ -65,13 +56,6 @@ export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
   onCancel: () => void;
   isLoading: boolean;
-}
-export interface EmptyResumeProps {
-  onCreateClick: () => void;
-}
-  onCreateClick: () => void
-}
-;
 }
 export interface EmptyResumeProps {
 

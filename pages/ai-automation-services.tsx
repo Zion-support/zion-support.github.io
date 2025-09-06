@@ -395,13 +395,6 @@ const benefits = [;
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-full h-full text-white" />
                 </div>
-                <h3 className='text-2xl font-bold text-white mb-4'>
-                  {service.title}
-                </h3>
-                <p className='text-gray-300 mb-6 leading-relaxed'>
-                  {service.description}
-                </p>
-                <ul className='space-y-2'>
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                 
@@ -411,20 +404,6 @@ const benefits = [;
                       <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      {/* Detailed Services */}
-      <section className='py-20 bg-black'>
-        <div className='container mx-auto px-4'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text-center mb-16'
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -485,30 +464,33 @@ const benefits = [;
   }
 }
                   </div>
-                      <span>Learn More</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                    <Link
-                      href='/contact'
-                      className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
-                    >                      Get Started
-                    <Link href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
-                      Get Started
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-2xl font-bold text-emerald-400">
+                      {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className={`w-4 h-4 ${i < service.rating ? 'text-yellow-400 fill-current' : 'text-gray-600'}`} />
+                      <span className="text-gray-400 text-sm ml-2">({service.reviews})</span>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="text-center p-3 bg-gray-800/50 rounded-lg">
+                      <div className="text-emerald-400 font-bold">{service.customers}+</div>
+                      <div className="text-gray-400 text-sm">Customers</div>
+                    </div>
+                    <div className="text-center p-3 bg-gray-800/50 rounded-lg">
+                      <div className="text-emerald-400 font-bold">{service.trialDays}</div>
+                      <div className="text-gray-400 text-sm">Trial Days</div>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                      <span key={featureIndex} className="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-sm">
                     </Link>
                   </div>
                 </div>
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
-        <div className='container mx-auto px-4'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -528,27 +510,6 @@ const benefits = [;
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span>
@@ -615,8 +576,6 @@ const benefits = [;
                 </button>
               </Link>
             </div>
-            <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
                 <div className='text-3xl font-bold text-emerald-400 mb-2'>
                   24/7
@@ -699,5 +658,47 @@ const benefits = [;
                   350%;
                 </div>;
                 <div className='text - gray - 300'>Average ROI</div>              </div>;
+
+  )
+            className="max-w-4xl mx-auto";
+          >;
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
+              Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+              Join thousands of companies already transforming their operations with AI automation.;
+              Get started today and see the difference intelligent automation can make.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
+              <Link href="/contact" className="group">;
+                <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">;
+                  <span>Start Your Automation Journey</span>;
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+                </button>;
+              </Link>;
+              <Link href="/comprehensive-services-showcase-2025" className="group">;
+                <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">;
+                  <span>View All Services</span>;
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+                </button>;
+              </Link>;
+            </div>;
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">;
+              <div>;
+                <div className="text-3xl font-bold text-emerald-400 mb-2">24/7</div>;
+                <div className="text-gray-300">AI Monitoring</div>;
+              </div>;
+              <div>;
+                <div className="text-3xl font-bold text-emerald-400 mb-2">99.9%</div>;
+                <div className="text-gray-300">Uptime Guarantee</div>;
+              </div>;
+              <div>;
+                <div className="text-3xl font-bold text-emerald-400 mb-2">350%</div>;
+                <div className="text-gray-300">Average ROI</div>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
 
 

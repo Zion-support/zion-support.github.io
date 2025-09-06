@@ -1,3 +1,6 @@
+  } catch (e) {
+    return [];
+
 const fs = require('fs'),;
 const path = require('path'),;
 const { OpenAI } = require('openai'),;
@@ -25,15 +28,6 @@ async function main() {
     console.error('Missing OPENAI_API_KEY')
     process.exit(1)
   }
-  const all = readAll()
-  const recent = all.filter(lastNDays(7))
-  const downs = recent.filter((r) => r.rating === 'down')
-  if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true })
-  const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`)
-  const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md')
-  if (downs.length === 0) {
-    fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.')
-    console.log('No low-rated feedback to analyze.')
     return
   }
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON.stringify(downs.slice(-100), null, 2)}`

@@ -1,63 +1,7 @@
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Brain, BarChart3, TrendingUp, Users, Target, Zap;
-  Shield, Database, Globe, ArrowRight, CheckCircle, Star
- } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import {
-  Brain, BarChart3, TrendingUp, Users, Target, Zap,
-  Shield, Database, Globe, ArrowRight, CheckCircle, Star
-} from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
 export default function AIBusinessIntelligencePage() {
 
   const features = [
     {
-      icon: Brain
-      title: 'Predictive Analytics'
-      description:
-        'Forecast future trends and customer behavior with 95% accuracy using advanced machine learning algorithms.'
-      color: 'from-purple-500 to-pink-500'
-    }
-    {
-      icon: BarChart3
-      title: 'Real-time Dashboards'
-      description:
-        'Monitor key performance indicators in real-time with customizable, interactive dashboards.'
-      color: 'from-blue-500 to-cyan-500'
-    }
-    {
-      icon: TrendingUp
-      title: 'Performance Optimization'
-      description:
-        'Automatically identify bottlenecks and optimize business processes for maximum efficiency.'
-      color: 'from-green-500 to-emerald-500'
-    }
-    {
-      icon: Users
-      title: 'Customer Insights'
-      description:
-        'Deep understanding of customer behavior, preferences, and lifetime value through AI analysis.'
-      color: 'from-orange-500 to-red-500'
-    }
-    {
-      icon: Target
-      title: 'Strategic Planning'
-      description:
-        'Data-driven decision making with scenario modeling and risk assessment capabilities.'
-      color: 'from-indigo-500 to-purple-500'
-    }
-    {
-      icon: Zap
-      title: 'Automated Reporting'
-      description:
-        'Generate comprehensive reports automatically, saving hours of manual work each week.'
-      color: 'from-yellow-500 to-orange-500'
-    }
   ];
 const AIBusinessIntelligence: React.FC = () => {
   const benefits = [
@@ -119,6 +63,48 @@ const AIBusinessIntelligence: React.FC = () => {
     },
     {
       icon: Target,
+  ];
+;
+  return (
+    <Layout>;
+      <Head>;
+
+          content='https://ziontechgroup && ziontechgroup.com/ai-business-intelligence'
+        />      </Head>;
+
+      <EnhancedNavigation />;
+
+
+      {/* Hero Section */}
+      <section className='pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
+        <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            className='text-center'>;
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
+              AI-Powered;
+              <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;
+                {' '}
+                Business Intelligence;
+              </span>;
+            </h1>;
+            <p className='text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8'>;
+              Transform raw data into actionable insights with our advanced AI;
+              platform. Make data-driven decisions, predict future trends, and;
+              optimize every aspect of your business with machine;
+              learning-powered analytics.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <a
+                href='/contact'
+                className='bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'>;
+                Get Started Today;
+              </a>;
+              <a
+                href='#demo'
+
+
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered
@@ -140,6 +126,9 @@ const AIBusinessIntelligence: React.FC = () => {
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Watch Demo
+      {/* Features */}
+
+
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-slate-900 mb-6'>;

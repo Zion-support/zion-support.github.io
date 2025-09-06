@@ -12,29 +12,6 @@ const Blueprint20250818123006: React.FC = () => {
     complexity: 'critical'
     lastUpdated: '2025-08-18 12:30:06'
     version: '1.5.0'
-  const edgeNodes = [
-    {
-      name: 'North America'
-      description: 'Primary edge node with high availability'
-      status: 'active'
-      health: 'excellent'
-      latency: '15ms'
-    }
-    {
-      name: 'Europe'
-      description: 'Secondary edge node for EU traffic'
-      status: 'active'
-      health: 'excellent'
-      latency: '25ms'
-    }
-    {
-      name: 'Asia Pacific'
-      description: 'Edge node for APAC region'
-      status: 'active'
-      health: 'excellent'
-      latency: '35ms'
-    }
-    {
 
   const edgeNodes = [
 
@@ -64,12 +41,6 @@ const Blueprint20250818123006: React.FC = () => {
       description: 'Edge node for LATAM region',
       status: 'deploying',
       health: 'good',
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
   const features = [
     {
       feature: 'Global Load Balancing',
@@ -125,7 +96,6 @@ const Blueprint20250818123006: React.FC = () => {
              Back to Blueprints
           </Link>
           <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            {blueprintDetails.name}
           </h1>
           <p className="text-gray-300 text-lg">
             {blueprintDetails.description}
@@ -153,7 +123,6 @@ const Blueprint20250818123006: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Recently updated</p>
           </div>
         </div>
-        {/* Edge Nodes */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Edge Computing Nodes</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -162,7 +131,6 @@ const Blueprint20250818123006: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{node.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getHealthColor(node.health)}`}>
-                    {node.health}
                     {node.health  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -212,9 +180,6 @@ const Blueprint20250818123006: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
                 <p className="text-purple-400 text-sm font-medium">Benefit: {feature.benefit}</p>
               </div>
-            ))}
-          </div>
-        </div>
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Network Architecture</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">

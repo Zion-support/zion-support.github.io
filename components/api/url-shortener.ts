@@ -62,6 +62,9 @@ export default async function handler(
     }
 }
 }
+  const shortCode = params.shortCode;
+  const shortUrl = urlStorage.get(shortCode);
+  if (!shortUrl |!shortUrl.isActive) {
     return {
       not_found: true,    }      not_found: true;
     }

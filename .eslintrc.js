@@ -67,6 +67,7 @@ module && module.exports = {
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
@@ -126,6 +127,10 @@ ursor/add-new-services-and-deploy-updates-0462
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+=======
+
+
+>>>>>>> pr-12166
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -142,6 +147,7 @@ ursor/add-new-services-and-deploy-updates-0462
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-console': 'off',
     'no-undef': 'off',
+<<<<<<< HEAD
     'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-explicit-any': 'warn'
   },
@@ -240,6 +246,10 @@ module.exports = {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+
+
+>>>>>>> pr-12166
     node: true,
     browser: true,
     es2021: true
@@ -252,8 +262,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> pr-12166
   env: {
     node: true,
     es2021: true
@@ -271,6 +284,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   env: {
     browser: true,
@@ -349,6 +363,9 @@ module.exports = {
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
   },
+=======
+
+>>>>>>> pr-12166
 
 
 
@@ -528,11 +545,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       jsx: true
     }
   extends: ['next/core-web-vitals'],
+<<<<<<< HEAD
 origin/automation-improvements-final
 <<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+=======
+
+>>>>>>> pr-12166
   rules: {
 <<<<<<< HEAD
     "@typescript-eslint/no-unused-vars": "off",
@@ -559,6 +580,7 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -582,6 +604,11 @@ origin/automation-improvements-final
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 >>>>>>> origin/main
+=======
+  ignore_patterns: [;
+=======
+
+>>>>>>> pr-12166
   ignorePatterns: [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -794,8 +821,11 @@ origin/automation-improvements-final
     "database/",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> pr-12166
 
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
@@ -917,6 +947,7 @@ origin/automation-improvements-final
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -969,10 +1000,13 @@ origin/automation-improvements-final
     "broken_files_backup/",
 <<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> pr-12166
     "build - verification.js",
     "check - syntax.js",
     "clean - conflicts.js",
     "commit - and - push.js",
+<<<<<<< HEAD
 <<<<<<< HEAD
   ],
 }
@@ -1020,6 +1054,10 @@ origin/automation-improvements-final
   ]
 };
 };
+=======
+  ],
+}
+>>>>>>> pr-12166
 ;
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -1069,6 +1107,7 @@ module.exports = {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1087,3 +1126,5 @@ module.exports = {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/main
+=======
+>>>>>>> pr-12166

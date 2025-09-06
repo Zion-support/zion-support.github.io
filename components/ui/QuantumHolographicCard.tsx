@@ -1,13 +1,3 @@
-  Star
-  Zap
-  Shield
-  TrendingUp
-  ArrowRight
-  ExternalLink
-  Check
-  Users
-  Clock
-  DollarSign;
 } from 'lucide-react';
 interface QuantumHolographicCardProps {
   service: {
@@ -25,6 +15,10 @@ import {;
 } from 'lucide-react';
 interface QuantumHolographicCardProps {;
   service: {;
+} from 'lucide-react';
+
+interface QuantumHolographicCardProps {
+  service: {
     id: string;
     name: string;
     tagline: string;
@@ -199,10 +193,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
             )}
           </div>
 
-
-            )}
-          </div>
-
           {/* Price and trial */}
             <div className="flex items-center space-x-2">
               <span className="text-3xl font-bold text-white">{service.price}</span>
@@ -247,6 +237,11 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>;
               <Zap className='w-4 h-4 text-yellow-400' />;
           {/* Key metrics */}
+                  key={index}
+                  className="flex items - center space - x-2 text - sm text - gray - 300";
+                  custom={index}
+
+
                 </motion.div>
               ))}
           {/* Market data */}
@@ -297,10 +292,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
               </div>
             </div>
           </div>
-          {/* Contact information */}
-          <div className='bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50'>
-            <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>
-              <Shield className='w-4 h-4 text-blue-400' />
               <span>Contact & Support</span>
             </h4>
             <div className='space-y-2 text-sm text-gray-300'>
@@ -420,9 +411,10 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
           </div>
 
           {/* CTA Button */}
-          <motion.a
-            href={service.link}
-            className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
+
+
+
+
 
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}

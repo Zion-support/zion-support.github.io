@@ -39,7 +39,6 @@ export function QuoteRequestForm() {
   const { toast } = useToast(),
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service"),
   const [isSubmitting, setIsSubmitting] = useState(false),
-  
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -63,7 +62,6 @@ export function QuoteRequestForm() {
       ...prev
       ...data
     }))
-  }
     }
   }
   const handleSubmit = async () => {
@@ -86,6 +84,23 @@ export function QuoteRequestForm() {
       setIsSubmitting (false);
     }
   }
+        return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;
+      case "details":;
+        return <ProjectDetailsStep formData={formData} updateFormData={updateFormData} />;
+      case "timeline":;
+        return <TimelineStep formData={formData} updateFormData={updateFormData} />;
+      case "budget":;
+        return <BudgetStep formData={formData} updateFormData={updateFormData} />;
+      case "summary":;
+        return <SummaryStep formData={formData} updateFormData={updateFormData} />;
+      default: return null;
+    }
+
+
+  },
+  
+
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-3xl mx-auto">
@@ -422,4 +437,5 @@ export function QuoteRequestForm() {;
         </Card>;
       </div>;
 }
-;
+    </div>);
+}

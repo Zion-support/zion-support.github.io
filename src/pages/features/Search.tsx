@@ -181,7 +181,6 @@ export default function SearchFeature() {
       </main>
     </>
   )
-;
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;

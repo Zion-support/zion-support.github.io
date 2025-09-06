@@ -67,19 +67,6 @@
             <Textarea
               placeholder={`Message to ${profileName}...`}
               value={message}
-          <Button
-            type='submit'
-            className='w-full bg-zion-cyan hover:bg-zion-cyan/90'
-            disabled={isSending}              required
-              required;
-            />;
-          </div>;
-          <div>;
-              onChange={(e) => setMessage(e.target.value)}
-              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
-              required
-            />
-          </div>
             {isSending ? "Sending..." : "Send Message"}
           </Button>
         </div>

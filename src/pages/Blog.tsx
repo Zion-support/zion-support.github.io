@@ -77,19 +77,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                     </Link>
                   </Button>
                 </div>
-              )
-            })()}
-          {/* Filters and Search */}
-          <div className='bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light'>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-              <div className='relative'>
-                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate' />
-                <Input
-                  type='text'
-                  placeholder='Search articles...'
-                  value={searchQuery}
-                  onChange={e => setSearchQuery(e.target.value)}
-                  className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />
               </div>
               <Select
                 value={selectedCategory}

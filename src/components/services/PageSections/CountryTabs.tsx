@@ -101,7 +101,6 @@ export function CountryTabs(): any ({;
               onQuote={onQuote}
               isPopular={popularCountries.includes(country.country)}
             />;
-          ))}
         </div>
         {totalPages > 1 && (
           <div className='mt-8'>

@@ -66,13 +66,6 @@ function TalentDirectory() {
     setIsHireModalOpen;
     selected_talent;
     setSelectedTalent;
-  const handleRequestHire = (talent: TalentProfile) => {
-    setSelectedTalent(talent)
-    setIsHireModalOpen(true)
-  }
-  const viewProfile = (id: string) => {
-    // Navigate to the talent profile page
-    navigate(`/talent/${id}`)
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -271,3 +264,32 @@ export default function TalentDirectory() {;
                   </div>;
                   <FilterSidebar
                     searchTerm={searchTerm}
+                    setSearchTerm={setSearchTerm}
+                    selected_skills={selected_skills}
+                    toggle_skill={toggle_skill}
+                    selected_availability={selected_availability}
+                    toggle_availability={toggle_availability}
+                    selected_regions={selected_regions}
+                    toggle_region={toggle_region}
+                    price_range={price_range}
+                    setPriceRange={setPriceRange}
+                    experience_range={experience_range}
+                    setExperienceRange={setExperienceRange}
+                    expanded_sections={expanded_sections}
+                    toggle_section={toggle_section}
+                    sort_option={sort_option}
+                    setSortOption={setSortOption}
+                    clear_filters={clear_filters}
+                    isMobileFilterOpen={isMobileFilterOpen}
+                  />;
+                </div>;
+
+              </div>)}
+          </div>;
+        </div>;
+      </div>;
+    </AppLayout>);
+}
+
+;
+

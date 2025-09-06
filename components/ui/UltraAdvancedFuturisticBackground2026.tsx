@@ -258,7 +258,6 @@ if ( {) {
       }
 
     }
-
     // Holographic layer class
     class HolographicLayer {
       x: number;

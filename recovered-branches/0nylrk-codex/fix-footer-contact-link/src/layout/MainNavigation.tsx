@@ -30,7 +30,6 @@ interface MainNavigationProps {
       name: "Equipment"
       href: "/equipment"
       matches: (path: string) => path.startsWith("/equipment")
-    }
     {
       name: "Community"
       href: "/community"
@@ -83,6 +82,9 @@ interface MainNavigationProps {
             <Link
               to="/messages"
               className={cn(
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+              )}>;
               <MessageSquare className="w-4 h-4 mr-1" />;
               Messages;
               {unreadCount > 0 && (;

@@ -1,9 +1,3 @@
-  id: string;
-  filename: string;
-  originalName: string;
-  mimeType: string;
-  size: number;
-  url: string;
 
   uploaded_at: Date,
   uploaded_by: string;
@@ -200,172 +194,6 @@ class AICustomerSupportService {
           {
             id: 'msg_002',
             content: 'Hi John, I can help you with this API integration issue. Let me investigate the error.';
-;
-export interface ChatbotSession {;
-  id: string,;
-  customerId: string,;
-  startTime: Date,;
-  endTime?: Date,;
-  messages: ChatbotMessage[],;
-  intent: string,;
-  confidence: number,;
-  resolved: boolean,;
-  escalated: boolean,;
-  satisfaction: number, // 1-5;
-}
-;
-export interface ChatbotMessage {;
-  id: string,;
-  content: string,;
-  sender: 'customer' | 'bot',;
-  timestamp: Date,;
-  intent?: string,;
-  confidence?: number;
-}
-;
-export interface KnowledgeBaseArticle {;
-  id: string,;
-  title: string,;
-  content: string,;
-  category: string,;
-  tags: string[],;
-  views: number,;
-  helpful: number,;
-  notHelpful: number,;
-  lastUpdated: Date,;
-  createdBy: string;
-}
-;
-export interface SupportAnalytics {;
-  totalTickets: number,;
-  openTickets: number,;
-  resolvedTickets: number,;
-  averageResolutionTime: number,;
-  averageFirstResponseTime: number,;
-  customerSatisfaction: number,;
-  chatbotResolutionRate: number,;
-  topCategories: Array<{ category: string, count: number }>,;
-  agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }>;
-}
-;
-export interface AIRecommendation {;
-  type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement',;
-  title: string,;
-  description: string,;
-  impact: 'low' | 'medium' | 'high',;
-  confidence: number,;
-  actionItems: string[];
-}
-;
-class AICustomerSupportService {;
-  private tickets: SupportTicket[] = [],;
-  private customers: Customer[] = [],;
-  private agents: SupportAgent[] = [],;
-  private chatbotSessions: ChatbotSession[] = [],;
-  private knowledgeBase: KnowledgeBaseArticle[] = [],;
-  private analytics: SupportAnalytics,;
-  constructor() {;
-    this.initializeSampleData(),;
-    this.updateAnalytics();
-  }
-;
-  private initializeSampleData() {;
-    // Initialize sample customers;
-    this.customers = [;
-      {;
-        id: 'cust_001',;
-        name: 'John Doe',;
-        email: 'john.doe@company.com',;
-        company: 'TechCorp Inc.',;
-        plan: 'pro',;
-        totalTickets: 5,;
-        resolvedTickets: 4,;
-        averageResponseTime: 15,;
-        satisfactionScore: 4.5,;
-        lastContactDate: new Date('2025-01-10'),;
-        createdAt: new Date('2024-06-01');
-      },;
-      {;
-        id: 'cust_002',;
-        name: 'Jane Smith',;
-        email: 'jane.smith@startup.com',;
-        company: 'StartupXYZ',;
-        plan: 'basic',;
-        totalTickets: 3,;
-        resolvedTickets: 3,;
-        averageResponseTime: 25,;
-        satisfactionScore: 4.0,;
-        lastContactDate: new Date('2025-01-08'),;
-        createdAt: new Date('2024-08-15');
-      }
-    ],;
-    // Initialize sample agents;
-    this.agents = [;
-      {;
-        id: 'agent_001',;
-        name: 'Mike Johnson',;
-        email: 'mike.johnson@ziontech.com',;
-        role: 'tier2',;
-        skills: ['Technical SupportAPI IntegrationDatabase Issues'],;
-        isAvailable: true,;
-        currentTickets: 2,;
-        maxTickets: 5,;
-        performance: {;
-          ticketsResolved: 45,;
-          averageResolutionTime: 2.5,;
-          customerSatisfaction: 4.6,;
-          firstResponseTime: 12,;
-          escalationRate: 8;
-        }
-      },;
-      {;
-        id: 'agent_002',;
-        name: 'Lisa Chen',;
-        email: 'lisa.chen@ziontech.com',;
-        role: 'tier1',;
-        skills: ['General SupportBillingAccount Management'],;
-        isAvailable: true,;
-        currentTickets: 1,;
-        maxTickets: 8,;
-        performance: {;
-          ticketsResolved: 78,;
-          averageResolutionTime: 1.8,;
-          customerSatisfaction: 4.4,;
-          firstResponseTime: 8,;
-          escalationRate: 15;
-        }
-      }
-    ],;
-    // Initialize sample tickets;
-    this.tickets = [;
-      {;
-        id: 'ticket_001',;
-        title: 'API Integration Issue',;
-        description: 'Getting 500 error when trying to integrate with our CRM system',;
-        status: 'in_progress',;
-        priority: 'high',;
-        category: 'technical',;
-        customerId: 'cust_001',;
-        assignedAgentId: 'agent_001',;
-        tags: ['apiintegrationerror'],;
-        attachments: [],;
-        messages: [;
-          {;
-            id: 'msg_001',;
-            content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?',;
-            senderType: 'customer',;
-            senderId: 'cust_001',;
-            isInternal: false,;
-            createdAt: new Date('2025-01-10T10:00:00Z'),;
-            attachments: [];
-          },;
-          {;
-            id: 'msg_002',;
-            content: 'Hi John, I can help you with this API integration issue. Let me investigate the error.',;
-            senderType: 'agent',;
-            senderId: 'agent_001',;
-            isInternal: false,;
-            createdAt: new Date('2025-01-10T10:15:00Z'),;
             sender_type: 'agent';
             sender_id: 'agent_001';
             is_internal: false;
@@ -757,15 +585,6 @@ if ( {) {
     return article;
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
-    const lowerQuery = query.toLowerCase()
-    return this.knowledgeBase.filter(article =>
-      article.title.toLowerCase().includes(lowerQuery) |
-      article.content.toLowerCase().includes(lowerQuery) |
-      article.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
-    ).sort((a, b) => b.views - a.views)
-  }
-  }
-  async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
 
     const lowerQuery = query && query.toLowerCase(),
     return this && this.knowledgeBase.filter(article => 
@@ -1094,5 +913,36 @@ if ( {) {
 }
 export const aiCustomerSupportService = new AICustomerSupportService();
 
+  async get_ticket (ticket_id: string): Promise < SupportTicket | null> {
+    return this.tickets.find (t => t.id === ticket_id) || null;
+  }
+  async get_tickets (status?: SupportTicket['status']): Promise < SupportTicket[]> {
+    // Check condition
+if ( {) {
+  $2
+}
+      return this.tickets.filter (t => t.status === status);
+    }
+    return this.tickets;
+  }
+  async get_customer (customer_id: string): Promise < Customer | null> {
+    return this.customers.find (c => c.id === customer_id) || null;
+  }
+  async get_customers (): Promise < Customer[]> {
+    return this.customers;
+  }
+  async get_agents (): Promise < SupportAgent[]> {
+    return this.agents;
+  }
+  async getChatbotSessions (): Promise < ChatbotSession[]> {
+    return this.chatbot_sessions;
+  }
+  async getKnowledgeBase (): Promise < KnowledgeBaseArticle[]> {
+    return this.knowledge_base;
+  }
+  async get_analytics (): Promise < SupportAnalytics> {
+    return this.analytics;
+  }
+}
+export const aiCustomerSupportService = new AICustomerSupportService ();
 ;
-export const aiCustomerSupportService = new AICustomerSupportService();

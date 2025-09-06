@@ -25,144 +25,6 @@ import {useTranslation} from "react-i18next";
 import {useTranslationService} from "@/hooks/useTranslationService";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {toast} from "@/components/ui/use-toast";
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent } from "@/components/ui/card",
-import { Loader2, Globe } from "lucide-react",
-import { useTranslation } from "react-i18next",
-import { useTranslationService } from "@/hooks/useTranslationService",
-interface TranslatableJobFormProps {
-
-  onSubmit: (formData: any) => void
-  isSubmitting?: boolean
-}
-export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
-  const { t } = useTranslation();
-  const { translateContent, isTranslating } = useTranslationService();
-  const { supportedLanguages, currentLanguage } = useLanguage();
-  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage);
-  // Form fields with translations
-  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
-    en: ""
-    es: ""
-    pt: ""
-    ar: ""})
-  const [description, setDescription] = useState<Record<SupportedLanguage, string>>({
-    en: ""
-    es: ""
-    pt: ""
-    ar: ""})
-  const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({
-    en: ""
-    es: ""
-    pt: ""
-    ar: ""})
-  const [budget, setBudget] = useState("");
-  const [deadline, setDeadline] = useState("");
-  // Handle text changes
-  const handleTitleChange = (value: string) => {
-    setTitle({ ...title, [activeTab]: value })
-  }
-  const handleDescriptionChange = (value: string) => {
-    setDescription({ ...description, [activeTab]: value })
-  }
-  const handleRequirementsChange = (value: string) => {
-    setRequirements({ ...requirements, [activeTab]: value })
-  }
-  // Handle form submission
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    // Complete any missing translations with auto-translation
-    await ensureAllTranslations();
-    onSubmit({
-      title;
-      description;
-      requirements;
-      budget
-      deadline})
-  }
-  
-  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage),
-  
-  // Form fields with translations
-  const [title, setTitle] = useState<Record<SupportedLanguage string>>({
-    en: "",
-    es: "",
-    pt: "",
-    ar: ""}),
-  
-  const [description, setDescription] = useState<Record<SupportedLanguage string>>({
-    en: "",
-    es: "",
-    pt: "",
-    ar: ""}),
-  
-  const [requirements, setRequirements] = useState<Record<SupportedLanguage string>>({
-    en: "",
-    es: "",
-    pt: "",
-    ar: ""}),
-  
-  const [budget, setBudget] = useState(""),
-  const [deadline, setDeadline] = useState(""),
-  
-  // Handle text changes
-  const handleTitleChange = (value: string) => {
-    setTitle({ ...title, [activeTab]: value })
-  },
-  
-  const handleDescriptionChange = (value: string) => {
-    setDescription({ ...description, [activeTab]: value })
-  },
-  
-  const handleRequirementsChange = (value: string) => {
-    setRequirements({ ...requirements, [activeTab]: value })
-  },
-  
-  // Handle form submission
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    
-    // Complete any missing translations with auto-translation
-    await ensureAllTranslations(),
-    
-    onSubmit({
-      title,
-      description,
-      requirements,
-      budget,
-      deadline})
-  },
-  
-  // Auto translate content when language tab changes
-  const handleTabChange = async (tab: SupportedLanguage) => {
-    if (tab !== activeTab) {
-      setActiveTab(tab)
-
-  onSubmit: (formData: any) => void
-  isSubmitting?: boolean
-}
-
-
-
-
-
-  // Auto translate content when language tab changes
-  const handleTabChange = async (tab: SupportedLanguage) => {
-    if (tab !== activeTab) {
-      setActiveTab(tab)
-
-
-
-    }
-  }
-  // Auto translate function
-  const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {
-    let sourceLanguage: SupportedLanguage = 'en'
-    let content = '';
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -265,15 +127,12 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
         break;
       }
     }
-    
-    if (!content) {
-      toast({
-        title: t('translation.no_content')
-        description: t('translation.add_content_first')
-        variant: "destructive"})
-      return
-    }
-    try {
+
+
+      const { translations, error } = await translateContent(content, 'job', sourceLanguage),
+      
+
+
       if (error) {
         toast({
           title: t('translation.translation_failed')

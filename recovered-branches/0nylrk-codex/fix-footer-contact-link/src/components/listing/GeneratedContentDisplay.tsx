@@ -37,12 +37,12 @@ interface GeneratedContent {;
 ;
 interface GeneratedContentDisplayProps {;
   content: GeneratedContent;
-  onApply: () => void
-}
-export function GeneratedContentDisplay({
-  content
-  onApply
-}: GeneratedContentDisplayProps) {
+
+
+
+export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
+
+
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -59,9 +59,11 @@ export function GeneratedContentDisplay({
                 {tag}
               </Badge>;
             ))}
-          </div>
-        </div>
+
+
         
+
+
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Suggested Price Range
@@ -138,17 +140,8 @@ function GeneratedContentDisplay() {
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </CardFooter>
-    </Card>
-  )
-          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
-        >;
-          Apply to My Listing;
-          <ArrowRight className="ml-2 h-4 w-4" />;
-        </Button>;
-      </CardFooter>;
 
 
     </Card>;
   );
-        <Button;
 }

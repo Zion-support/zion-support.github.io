@@ -1,4 +1,10 @@
 
+  const solutions = [
+    { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
+    { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
+    { name: '5G Private Networks', href: '/5g-private-network-solutions' },
+    { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }],
+
 
   return (
     <Layout>
@@ -11,8 +17,6 @@ import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',
-
-
 export default function EmergingTechPage() {
   const features = [
     'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
@@ -57,9 +61,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
               ))}
             </div>
           </section>
-        </div>
-      </div>
-    </Layout>
                 </Link>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -120,6 +121,12 @@ function EmergingTechPage() {
                   <div className="text - gray - 200 font - semibold mb - 2">{s.name}</div>;
                   <p className="text - gray - 300 text - sm">Learn more</p>;
                 </a>))}
+                </Link>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
           </section>;
         </div>;

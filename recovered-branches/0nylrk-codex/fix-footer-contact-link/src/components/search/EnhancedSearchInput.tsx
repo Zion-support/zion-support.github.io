@@ -35,10 +35,6 @@ interface EnhancedSearchInputProps {
   searchSuggestions: SearchSuggestion[]
 }
 
-export function EnhancedSearchInput({ ;
-  value;
-export function EnhancedSearchInput({ 
-  value,
   onChange, 
   placeholder = "Search...", 
   searchSuggestions 

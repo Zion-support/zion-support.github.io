@@ -296,8 +296,6 @@ function MilestoneCard() {
           )}
         </div>
       )}
-            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">
-        {canClientMarkInProgress && (
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
 

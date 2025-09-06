@@ -1,21 +1,9 @@
-import { Button } from "@/components/ui/button";
-import { Download  } from 'lucide-react';
-import { Resume } from "@/types/resume";
-interface ResumePreviewCardProps {
-  isLoading: boolean
-}
-export function ResumePreviewCard({
-  resume
-  onDownload
-  isLoading
-}: ResumePreviewCardProps) {
 interface ResumePreviewCardProps {
   resume: Resume,
   onDownload: () => void,
   isLoading: boolean
 }
 
-export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
   return (
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;
       <CardContent className="p-4">;

@@ -25,3 +25,11 @@ export function TalentPlaceholder() {;
       </Button>;
     </div>;
   );
+
+  )
+  )
+
+}
+;
+
+

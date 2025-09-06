@@ -71,11 +71,6 @@ export type {;
 } as const;
 // Service availability and status
 export const getServiceStatus = () => {
-  return {
-    urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-    passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-    qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-    fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
   return {;
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
@@ -277,9 +272,6 @@ textAnalysis: {
   users: 3890, requests: 11500, avgResponse: 178 
 }
 
-    }
-  }
-}
 
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 };
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 };

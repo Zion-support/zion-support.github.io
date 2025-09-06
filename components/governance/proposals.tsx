@@ -1,12 +1,3 @@
-export async function getStaticProps() {
-  try {;
-    const p = path.join(process.cwd(), 'data', 'governance', 'proposals.json');
-    const raw = fs.readFileSync(p, 'utf8');
-    return { props: { data: JSON.parse(raw) } }
-  } catch {
-    return { props: { data: { updatedAt: null, proposals: [] } } }
-  }
-export default function Proposals({
             <a
               className='text-blue-600 underline'
               href={p && p.url}
@@ -32,3 +23,12 @@ export async function getStaticProps() {;
 }
 
 }
+
+  );
+}
+
+
+    </div>
+  );
+}
+

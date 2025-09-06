@@ -274,12 +274,6 @@ export const getEmergingTechServicesByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-    return price >= minPrice && price <= maxPrice;
-  });
-};import { MicroSaasService  } from "./enhanced-real-micro-saas-services";
-const contact = {mobile: "+1 302 464 0950"
-  email: "kleber@ziontechgroup.com"
-  address: "364 E Main St STE 1008 Middletown DE 19709";
   website: "https://ziontechgroup.com";
   id: string, name: string,
   tagline: string, description: string,
@@ -1098,44 +1092,6 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     reviews: 7;
 ]}
 export interface EmergingTechService {
-export interface EmergingTechService {;
-  });
-  id: string,;
-  name: string,;
-  tagline: string,;
-  description: string,;
-  category: string,;
-  price: {;
-    monthly: number,;
-    yearly: number,;
-    currency: string,;
-    trialDays: number,;
-    setupTime: string;
-  },;
-  features: string[],;
-  benefits: string[],;
-  targetAudience: string[],;
-  marketPosition: string,;
-  competitors: string[],;
-  techStack: string[],;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  roi: string,;
-  useCases: string[],;
-  integrations: string[],;
-  support: string,;
-  compliance: string[],;
-  link: string,;
-  icon: string,;
-  color: string,;
-  popular: boolean,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
-;
-};
 
 export interface EmergingTechService {;
 

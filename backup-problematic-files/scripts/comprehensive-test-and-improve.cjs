@@ -38,8 +38,14 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
     optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+    optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

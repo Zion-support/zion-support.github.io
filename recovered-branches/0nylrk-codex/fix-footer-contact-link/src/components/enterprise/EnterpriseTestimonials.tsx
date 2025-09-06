@@ -32,14 +32,6 @@ const testimonials = [
     image: "/placeholder.svg"
   }
   {
-    quote:
-      "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous."
-    author: "Elena Rodriguez"
-    title: "CTO"
-    company: "FutureTech Systems"
-    image: "/placeholder.svg"
-  }
-];
 
 export function EnterpriseTestimonials() {;
   return (
@@ -113,3 +105,21 @@ export function EnterpriseTestimonials() {;
                   <blockquote className="text-xl mb-6 italic">;
 }
 ;
+                      </p>;
+                    </div>;
+                  </div>;
+                </div>;
+
+              </CarouselItem>))}
+          </CarouselContent>;
+          <div className="flex justify - center gap - 2 mt - 8">;
+
+            <CarouselPrevious />;
+            <CarouselNext />;
+          </div>;
+        </Carousel>;
+      </div>;
+
+    </section>);
+
+}

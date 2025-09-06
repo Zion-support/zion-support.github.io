@@ -20,10 +20,6 @@ import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticN
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-    description: 'Beyond the future of technology'
-    icon: Rocket
-    color: 'from-violet-600 to-purple-600'
-    services: futuristic2028Services.slice(0, 4)
   }
   {
     title: ' Smart City & Infrastructure'
@@ -46,52 +42,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
     color: 'from-emerald-600 to-teal-600'
     services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
   }
-  {
-    title: ' Blockchain & Web3'
-    description: 'Decentralized solutions'
-    icon: Globe
-    color: 'from-orange-600 to-red-600'
-    services: emergingTech2028Services.filter(s => s.category.includes('Blockchain')).slice(0, 4)
-  }
-  {
-    title: ' Autonomous & Mobility'
-    description: 'Self-driving and mobility solutions'
-    icon: Car
-    color: 'from-red-600 to-pink-600'
-    services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4)
-  }
-]
-  }
-}
-],
-export default function ServicesShowcase2028() {
-  return (
-    <>
-      <Head>
-        <title>2028 Futuristic Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations. Transform your business with next-generation technology." />
-        <meta name="keywords" content="2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group" />
-        <meta property="og:title" content="2028 Futuristic Services Showcase - Zion Tech Group" />
-        <meta property="og:description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations." />
-        <meta property="og:url" content="https://ziontechgroup.com/2028-services-showcase" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/2028-services-showcase" />
-      </Head>
-      <UltraFuturisticNavigation2028 />
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20 overflow-hidden">
-        {/* Animated Background */}
-      {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20 overflow-hidden">
-        {/* Animated Background */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-1/2 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -99,9 +49,6 @@ export default function ServicesShowcase2028() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -204,10 +151,6 @@ export default function ServicesShowcase2028() {
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-purple-200 text-sm">{service.name}</span>
                         </div>
-                      ))}
-                    </div>
-                    <Link
-                      href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -267,10 +210,6 @@ export default function ServicesShowcase2028() {
                         <span className="text-purple-300">({service.reviews} reviews)</span>
                       </div>
                       <div className="text-sm text-purple-300">
-                        <span className="font-medium">Market Size:</span> {service.marketSize}
-                      </div>
-                      <div className="text-sm text-purple-300">
-                        <span className="font-medium">Growth Rate:</span> {service.growthRate}
                         <span className="font-medium">Market Size:</span> {service.marketSize  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -441,12 +380,13 @@ export default function ServicesShowcase2028() {
         </div>;
       </section>;
       <UltraFuturisticFooter2028 />;
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
+import { futuristic2028Services } from '../data/2028-futuristic-innovations';
+import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 

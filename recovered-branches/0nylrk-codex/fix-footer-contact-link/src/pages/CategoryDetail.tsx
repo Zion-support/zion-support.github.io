@@ -1,26 +1,8 @@
 
-import { useParams, Link } from "react-router-dom",
-import { Header } from "@/components/header/Header",
-import { Footer } from "@/components/Footer",
-import { GradientHeading } from "@/components/GradientHeading",
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { useState, useEffect } from "react",
-import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react",
-import { MARKETPLACE_LISTINGS } from "@/data/listingData",
-import { useNavigate } from "react-router-dom",
-import { toast } from "@/hooks/use-toast";
-export default function CategoryDetail() {
-  // Cast to specify the expected route param type since useParams may be untyped
-
-  const { slug } = useParams() as { slug?: string }
-  const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(true);
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
     icon: <Bot className="w-6 h-6" />
-  });
   // Map of category slugs to their display data
   const categoryData = {
     'services': {
@@ -69,7 +51,6 @@ export default function CategoryDetail() {
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
       icon: <Code className="w-6 h-6" />
-    }
     'business-solutions': {
       title: "Business Solutions"
       description: "Enterprise AI integrations and services"
@@ -80,23 +61,10 @@ export default function CategoryDetail() {
       title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') |"Category"
       description: "Explore our collection in this category"
       icon: <Bot className="w-6 h-6" />
-    }
-    setCategory(currentCategory);
     // Filter listings by category
     const categoryTitle = currentCategory.title;
     const filteredListings = MARKETPLACE_LISTINGS.filter(listing =>
       listing.category.toLowerCase() === categoryTitle.toLowerCase()
-    );
-    // If we don't have real listings for this category, generate placeholder listings
-    const listingsToShow = filteredListings.length > 0 ? filteredListings :
-      Array(4).fill(null).map((_, index) => ({
-        id: `${slug}-${index}`
-        title: `${currentCategory.title} Product ${index + 1}`
-        description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`
-        category: currentCategory.title
-        price: Math.floor(Math.random() * 500) + 50
-        currency: "$"
-        tags: [`${slug}`, "ai", "tool"];
         author: {
           name: `Provider ${index + 1}`
           id: `author-${index + 1}`
@@ -301,6 +269,8 @@ if ( {) {
             </GradientHeading>;
             <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
               {category.description}
+              ))}
+            </div>;
           )}
         </div>
       </div>

@@ -1,32 +1,3 @@
-  Star,
-  CheckCircle,
-  ArrowRight,
-  TrendingUp,
-  Users,
-  Award,
-  Clock,
-  Zap,
-  Shield,
-  Brain,
-  Atom,
-  Rocket,
-  ShoppingCart,
-  Cpu,
-  Globe,
-  Lock,
-  Video,
-  Palette,
-  BarChart,
-  UserCheck,
-  FileText,
-  Heart,
-  Eye,
-  Search,;
-  Phone,;
-} from 'lucide-react';
-import { realMarketServices } from '../../data/2024-real-market-services';
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
-  Star, CheckCircle, ArrowRight, TrendingUp, Users, ;
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
@@ -296,6 +267,9 @@ const service_categories = [;
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
         {/* Header */}
 
+
+    hidden: { opacity: 0, y: 20 },
+
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">;
       {/* Animated Background */}
@@ -307,6 +281,35 @@ const service_categories = [;
       </div>;
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 
+        {/* Header */}
+      }
+    }
+  }
+;
+  const item_variants = {
+    hidden: { opacity: 0, coordinate_y: 20 },
+    visible: { opacity: 1, coordinate_y: 0 },
+  }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  return (
+    <section className='py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden'>;
+      {/* Animated Background */}
+
+  return (
+    <section className="py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden">;
+      {/* Animated Background */}
+      <div className="absolute inset - 0 overflow - hidden">;
+        <div className="absolute -top - 40 -right - 40 w - 80 h - 80 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded - full blur - 3xl animate - pulse"></div>;
+        <div className="absolute -bottom - 40 -left - 40 w - 80 h - 80 bg - gradient - to - tr from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 1000"></div>;
+        <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 bg - gradient - to - r from - green - 500 / 10 to - teal - 500 / 10 rounded - full blur - 3xl animate - pulse delay - 500"></div>;
+      </div>;
+      <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
         {/* Header */}
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -396,6 +399,12 @@ const service_categories = [;
 
             ))}
 
+          </div>;
+        </motion && motion.div>;
+
+
+
+
         {/* Search and Filter */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -423,10 +432,6 @@ const service_categories = [;
 
 
               ))}
-            </select>
-          </div>
-        </motion.div>
-
         {/* Service Categories */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -442,10 +447,6 @@ const service_categories = [;
               )}
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular
 
-                  Popular
-
-                </div>
-              )}
 
           </div>;
         </motion && motion.div>;
@@ -678,6 +679,19 @@ const service_categories = [;
               </h3>;
               <p className="text-gray-300 mb-4 leading-relaxed">;
               </p>;
+              {/* Service Meta */}
+              <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
+                <div className='flex items-center space-x-2 text-gray-400'>
+                  <Clock className='w-4 h-4' />
+                  <span>{service.setupTime}</span>
+                </div>                  <span>{service.setupTime}</span>
+
+                {service.description}
+              </p>
+
+              {/* Features */}
+
+                    <span>{feature}</span>
                   </div>
                 ))}
                 {service.features.length > 3 && (
@@ -685,6 +699,8 @@ const service_categories = [;
                 {service.features.slice(0, 3).map((feature, idx) => (
                   <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                  </div>
+                    +{service.features.length - 3} more features
                   </div>
                 )}
               </div>
@@ -783,6 +799,8 @@ const service_categories = [;
               <div className='flex space-x-3'>
 
                 <a
+                <a
+
                   href={service.link}
                   className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group"
                 >
@@ -861,8 +879,6 @@ const service_categories = [;
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
               <a
                 href="/contact"
-  );
-}
 }
   );
 }

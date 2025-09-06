@@ -11,7 +11,6 @@ const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-};
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2
@@ -254,12 +253,6 @@ const Homepage2040: React.FC = () => {
                 variants={itemVariants}
                 className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
                 role="banner"
-                aria-label="Company recognition"
-              >
-                <Star className="w-5 h-5 animate-pulse" aria-hidden="true" />
-                <span>Innovation Leader 2040</span>
-                <Sparkles className="w-5 h-5 animate-pulse" aria-hidden="true" />
-              </motion.div>
                 variants={itemVariants}
                 id="hero-heading"
                 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight"
@@ -493,9 +486,6 @@ const Homepage2040: React.FC = () => {
                       <div className="mb - 6">;
                         <span className="text - 2xl font - bold text - cyan - 400">;
                           {service.price}
-
-                      {/* CTA Button */}
-                      <Link 
                         href={service.link}
                         className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25"
                       >
@@ -581,3 +571,8 @@ const Homepage2040: React.FC = () => {
     </Layout>
   )
 }
+export default Homepage2040;
+
+
+export default Homepage2040;
+

@@ -639,8 +639,6 @@ const Homepage2038: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className='text-center mb-20'
-
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent'>
                 Innovative Micro SAAS
@@ -791,8 +789,6 @@ const Homepage2038: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className='text-center mb-20'
-
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'>
                 Advanced IT Infrastructure
@@ -942,8 +938,6 @@ const Homepage2038: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className='text-center mb-20'
-
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                 Why Choose Zion Tech Group?
               </h2>
@@ -958,12 +952,6 @@ const Homepage2038: React.FC = () => {
                   icon: <Brain className='w-12 h-12' />
                   title: 'AI Consciousness Evolution'
                   description:
-                    'Leading the development of artificial consciousness and emotional intelligence'
-                  color: 'from-purple-500 to-pink-500'
-                }
-                {
-                  icon: <Atom className='w-12 h-12' />
-                  title: 'Quantum Computing Power'
                     'Leading the development of artificial consciousness and emotional intelligence',
                   color: 'from-purple-500 to-pink-500',
                 },

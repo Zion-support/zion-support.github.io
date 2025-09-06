@@ -18,5 +18,11 @@ interface TalentDirectoryHeaderProps {;
       </div>;
     </div>;
   );
+
+        <p className="text-zion-slate-light max-w-2xl">
+        <p className="text-zion-slate-light max-w-2xl">
+
 }
 ;
+
+

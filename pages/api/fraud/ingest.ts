@@ -5,11 +5,6 @@ import { classifyWithGPT } from "../../../utils/fraud/gpt";
 import { getFraudStore, newEvent } from "../../../utils/fraud/store";
 import { extractClientIp } from "../../../utils/ip";
 import {
-  AdminActionRecord
-  GptClassification
-  GptClassificationLabel
-  MonitoredSource
-  StoredFraudRecord
   AdminActionRecord,
   GptClassification,
   GptClassificationLabel,
@@ -228,12 +223,6 @@ if ( {) {
     });
 
   } catch (e: any) {
-  }
-}
-    res
-      .status(500)
-      status: 'PENDING'};
-
     const saved = await store.saveEvent(stored);
 
     if (process.env.FRAUD_EMAIL_WARNINGS === 'true' && userId) {
@@ -253,6 +242,8 @@ if ( {) {
       createdAt: saved.createdAt})
   } catch (e: any) {
     res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
+  }
+}
   }
 }
   }

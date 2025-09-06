@@ -1,11 +1,13 @@
-threshold: number, //token balance threshold
-}
-const BADGES: Badge[] = [
-  { id: 'starter', label: 'Starter', threshold: 50 }
-  { id: 'rising', label: 'Rising Star', threshold: 200 }
-  { id: 'pro', label: 'Pro', threshold: 500 }
-  { id: 'elite', label: 'Elite', threshold: 1000 }
-];
+
+import React from 'react';
+  id: string;
+label: string;
+
+
+
+export function currentBadge(balance: number): Badge | null {;
+
+
   let current: Badge | null = null;
 threshold: number, //token balance threshold ;
 };
@@ -127,8 +129,6 @@ function Badges() {
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'              ? "bg - yellow - 100 border - yellow - 300 text - yellow - 800";
               : "bg - gray - 100 border - gray - 200 text - gray - 500";
 
-
-export default function Badges({ balance }: { balance: number }) {;
 
 export default function Badges({ balance }: { balance: number }) {
   const active = currentBadge(balance);

@@ -75,42 +75,6 @@ function CountryServiceCard() {
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple"
-          }`}
-        >
-          Select Service
-        </Button>
-      </CardFooter>
-    </Card>
-  )
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { Globe, Server, Clock, MapPin, Check } from "lucide-react",;
-import { CountryPricing } from "@/data/onsiteServicePricing",;
-interface CountryServiceCardProps {;
-  country: CountryPricing,;
-  onSelect: (country: CountryPricing) => void,;
-  isPopular?: boolean;
-}
-;
-export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {;
-  // Get region flag based on country name (for demo purposes);
-  const getRegionEmoji = (countryName: string): string => {;
-    const emojiMap: Record<string string> = {;
-      "United States": "🇺🇸",;
-      "United Kingdom": "🇬🇧",;
-      "Canada": "🇨🇦",;
-      "Australia": "🇦🇺",;
-      "Germany": "🇩🇪",;
-      "France": "🇫🇷",;
-      "Japan": "🇯🇵",;
-      "China": "🇨🇳",;
-      "Brazil": "🇧🇷",;
-      "India": "🇮🇳",;
-      "Russia": "🇷🇺",;
-      "Singapore": "🇸🇬",;
-      "South Korea": "🇰🇷",;
-      "South Africa": "🇿🇦",;
       // Default if no flag is found;
       "default": "🌐";
     };
@@ -148,5 +112,5 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
           Select Service;
         </Button>;
       </CardFooter>;
+    </Card>);
 }
-;

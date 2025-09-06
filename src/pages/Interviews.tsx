@@ -25,8 +25,6 @@
             <TabsTrigger value="pending">
               Pending
               {pendingInterviews.length > 0 && (
-                <span className='ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs'>
-                <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
             {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>

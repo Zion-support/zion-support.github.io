@@ -1,7 +1,4 @@
 
-const AIAssistant: React.FC = () => {
-import React from 'react',
-import Head from 'next/head';
 
   return (
     <Layout>;
@@ -141,5 +138,6 @@ export default function AIAssistantPage() {
     </>
   )
 }
+
 
 

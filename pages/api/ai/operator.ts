@@ -1,8 +1,4 @@
 
-// In-memory simple rate limiter (per IP)
-const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000, // 5 minutes
-const RATE_LIMIT_MAX_REQUESTS = 15,
-
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

@@ -132,8 +132,14 @@ const { execSync, spawn } = require("child_process")
 <<<<<<< HEAD
   console.log(")
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.log(")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+  console.log(")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

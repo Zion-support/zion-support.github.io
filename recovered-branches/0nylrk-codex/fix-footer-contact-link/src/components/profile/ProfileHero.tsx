@@ -41,30 +41,10 @@ interface ProfileHeroProps {
   aiScore?: number,
   profileType: 'service' | 'talent'
 }
-export function ProfileHero({
-  name,
-  title,
-  avatarUrl,
-  coverImageUrl,
-  location,
-  rating,
-  reviewCount,
-  aiScore,
   profileType
 }: ProfileHeroProps) {
   return (
 
-    <div className="w-full overflow-hidden">
-      <div className="relative">
-        <AspectRatio ratio={3/1} className="bg-zion-blue-light">
-          {coverImageUrl ? (
-            <img
-              src={coverImageUrl}
-              alt={`${name} cover`}
-              className="w-full h-full object-cover"
-            />
-          ) : (
-            <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
@@ -83,11 +63,6 @@ export function ProfileHero({
                   </div>;
                   </div>;
                 )}
-                
-                {aiScore && (
-                  <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
-                    AI Match: {aiScore}%
-                  </div>
                 )}
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 import { AspectRatio } from '@/components / ui / aspect - ratio';

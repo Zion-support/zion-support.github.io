@@ -1,11 +1,3 @@
-import React, { useState } from "react";
-import {
-  Dialog
-  DialogContent
-  DialogDescription
-  DialogFooter
-  DialogHeader
-  DialogTitle
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -29,18 +21,6 @@ export function IntegrationConnectionModal(): any ({;
   integration,;
 }: IntegrationConnectionModalProps) {;
   const [isConnecting, setIsConnecting] = useState(false);
-
-export function IntegrationConnectionModal({
-  isOpen
-  onClose
-  integration
-}: IntegrationConnectionModalProps) {
-  const [isConnecting, setIsConnecting] = useState(false);
-  const [syncSettings, setSyncSettings] = useState({
-    autoCreateContacts: true
-    pushNotes: false
-    syncJobDetails: true
-    syncApplicantData: true
 
 
 interface IntegrationConnectionModalProps {;
@@ -105,7 +85,6 @@ export function IntegrationConnectionModal(): any ({;
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">Sync Settings</h3>
-                
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="autoCreateContacts" 
@@ -118,7 +97,6 @@ export function IntegrationConnectionModal(): any ({;
                     Auto-create contacts in {integration.name}
                   </Label>
                 </div>
-                
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="pushNotes" 
@@ -129,7 +107,6 @@ export function IntegrationConnectionModal(): any ({;
                   />
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
                 </div>
-                
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="syncJobDetails" 
@@ -140,7 +117,6 @@ export function IntegrationConnectionModal(): any ({;
                   />
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
                 </div>
-                
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="syncApplicantData" 
@@ -240,10 +216,6 @@ export function IntegrationConnectionModal(): any ({;
                   {integration && integration.lastSync;
                     ? new Date(integration && integration.lastSync).toLocaleString();
                     : "Never"}
-                </p>
-              </div>
-            </div>
-            
             <DialogFooter className="flex items-center justify-between">
               <Button
                 variant="outline"
@@ -274,10 +246,6 @@ export function IntegrationConnectionModal(): any ({;
           <>
             <div className="space-y-4 py-4">
               <p className="text-sm">
-                Connect your {integration.name} account to sync job contacts
-                applicants, and more. You'll be redirected to {integration.name}{" "}
-                to authorize this connection.
-              </p>
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">What will be synced:</h3>
                 <ul className="list-disc pl-4 text-sm space-y-1">

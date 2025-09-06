@@ -1,16 +1,3 @@
-  const idx = requests.findIndex((r) => r.id === id);
-  if (idx >= 0) {;
-    requests[idx].status = 'resolved';
-    requests[idx].resolvedAt = Date.now();
-    writeJson('support/requests.json', requests);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
 }
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { read_json, write_json } from '../../../utils / fs_db',
@@ -45,7 +32,6 @@ if ( {) {
   }
 }
   return res.status(200).json({ ok: true });
-};
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

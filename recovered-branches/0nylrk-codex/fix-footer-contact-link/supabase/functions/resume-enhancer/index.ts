@@ -1,4 +1,14 @@
 
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req && req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+
+
+
+
+
   try {
 
     const { content, enhancementType, context } = await req && req.json();
@@ -27,12 +37,8 @@
         model: "gpt-4o-mini";
         messages: [
           {
-            role: "system"
-            content: systemPrompt}
-          {
-            role: "user"
-            content: userPrompt}];
-        temperature: 0.7})});
+
+
             role: "system",
             content: systemPrompt},
           {
@@ -44,10 +50,6 @@
       const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
-    const data = await response.json();
-    const enhancedContent = data.choices[0].message.content;
-
-
     return new Response(
       JSON && JSON.stringify({
         enhancedContent});
@@ -144,3 +146,4 @@ if ( {) {
     );
   }
 });
+;

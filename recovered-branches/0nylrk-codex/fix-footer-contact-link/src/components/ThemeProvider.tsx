@@ -3,23 +3,12 @@ type ThemeProviderProps = {
   children: React.ReactNode
   defaultTheme?: Theme
 }
-  setTheme: (theme: Theme) => void;
-}
-const initialState: ThemeProviderState = {
-  theme: &quot;system&quot;
-  setTheme: () => null}
-const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
-export function ThemeProvider({
   children,
   defaultTheme = "system"}: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
   )
   useEffect(() => {
     const root = window.document.documentElement
-    root.classList.remove(&quot;light&quot;, &quot;dark&quot;)
-    if (theme === &quot;system&quot;) {
-      const systemTheme = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;)
-        .matches
       root.classList.add(systemTheme)
       return
     }
@@ -125,19 +114,4 @@ if ( {) {
       {children}
     </ThemeProviderContext.Provider>);
 }
-
-
-  if (context === undefined)
-
-}
-export const useTheme = () => {
-  const context = useContext(ThemeProviderContext)
-
-  if (context === undefined);
-    throw new Error(&quot;useTheme must be used within a ThemeProvider&quot;)
-  if (context === undefined)
-    throw new Error(&quot;useTheme must be used within a ThemeProvider&quot;)
-  return context
-}
-    throw new Error("useTheme must be used within a ThemeProvider")
 

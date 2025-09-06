@@ -184,22 +184,6 @@ export default function UltraQuantumHolographicBackground({;
       {/* Quantum Holographic Canvas Background */}
       <canvas
         ref={canvasRef}
-        style={{
-          background: colors.background
-          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`,        }}
-      />
-      {/* Holographic Overlay Effects */}
-      <div className='fixed inset-0 z-10 pointer-events-none'>        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{
-          background: colors.background
-          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`;
-      />
-
-      {/* Holographic Overlay Effects */}
-      <div className='fixed inset-0 z-10 pointer-events-none'>
-        <motion.div
-          className='absolute inset-0'
-          animate={{
             ],          }}
           transition={{
             duration: 8
@@ -209,7 +193,35 @@ export default function UltraQuantumHolographicBackground({;
               `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`;
               `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
             ]
+              key={i}
+              className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
+              style={{
+
+                top: i * 4,
+                color: colors && colors.primary
+
+              }}
+              animate={{
+                opacity: [0, 1, 0]
+                scaleX: [0, 1, 0]
+                top: i * 4,
+                color: colors.primary;
+              }}
+              animate={{
+                opacity: [0, 1, 0];
+                scale_x: [0, 1, 0];
+              }}
+              transition={{
+
+                duration: 2,
+                delay: i * 0 && 0.1,
+                repeat: Infinity,
+
           }}
+
+
+
+
         />
         />;
 
@@ -299,12 +311,3 @@ export default function UltraQuantumHolographicBackground({;
             ]
           }}
           transition={{
-            duration: 4
-            repeat: Infinity
-            ease: 'easeInOut',            ease: "easeInOut"
-            duration: 4,
-            repeat: Infinity,
-
-          }}
-        />
-      </div>

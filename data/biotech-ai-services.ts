@@ -673,16 +673,6 @@
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
   contactInfo: {
     mobile: string, email: string,
     address: string,
@@ -1778,6 +1768,5 @@ export const biotechAIServices: BiotechAIService[] = [;
     customers: 90,;
     rating: 4.9,;
     reviews: 45;
-
   }
 ];

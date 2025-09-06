@@ -26,6 +26,8 @@ function isAllowedByScope(stateType: string, scope: string): boolean {
   return true
 }
 
+
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
@@ -42,9 +44,34 @@ export default async function handler(req, res) {
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
+
+  if (req && req.method !== "POST") return res && res.status(405).json({ error: "Method not allowed" });
+  const state = readState();
+  if (!state && state.config.optIn || state && state.config.paused) {
+    return res && res.status(403).json({ error: "Sync disabled for this instance" })
+  }
+  const signature = req && req.headers["x-zion-signature"];
+  const payload = req && req.body;
+  const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array && Array.isArray(signature) ? signature[0] : undefined);
+
+
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const signature = req.headers["x-zion-signature"],
+  const payload = req.body,
+  const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined),
+
+  if (!signatureValid) {
+    return res && res.status(401).json({ error: "Invalid signature" })
+  }
+
+
   const signature = req.headers["x-zion-signature"];
   const payload = req.body;
-  const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined);
   if (event.type === "proposal") {
     const votes = (event as any).payload?.votes,
     const providedRoot = event.merkleRoot,
@@ -139,7 +166,6 @@ export default async function handler(req, res) {
       currentState.config.peers
         .filter((p) => !p.paused)
         .map(async (peer) => {
-          const url = new URL("/api/sync/publish", peer.baseUrl).toString();
 
           const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
           try {
@@ -190,3 +216,8 @@ if (headers["x - zion - signature"] = sig) {
           }
         }));
   }
+  return res.status (200).json ({ status: "accepted", entity_id });
+}
+
+}
+

@@ -54,6 +54,3 @@ const categories: ForumCategoryInfo[] = [;
 };
 export default ForumCategories;
 
-export default ForumCategories;
-";
-  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';

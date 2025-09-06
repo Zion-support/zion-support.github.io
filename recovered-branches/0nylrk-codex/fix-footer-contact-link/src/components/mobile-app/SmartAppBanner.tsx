@@ -11,32 +11,11 @@ interface SmartAppBannerProps {
   delay?: number, // Delay in milliseconds before showing the banner;
 }
 
-  appName = "Zion Marketplace";
-  appIconSrc;
-  appStoreUrl = "/download";
-  googlePlayUrl = "/download"
-  delay = 1500
-}) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const isMobile = useIsMobile();
-  appName = "Zion Marketplace",
-  appIconSrc,
-  appStoreUrl = "/download",
-  googlePlayUrl = "/download",
-  delay = 1500
-}) => {
-  const [isVisible, setIsVisible] = useState(false),
-  const isMobile = useIsMobile(),
-  
   useEffect(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !localStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true)
-      }, delay);
-      return () => clearTimeout(timer)
-    }
-  }, [isMobile, delay]);
   // Only render on mobile devices
   if (!isMobile |!isVisible) {
     return process.env.NODE_ENV === 'development' ? (
@@ -123,4 +102,3 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
           <p className="text-xs text-gray-300">Get our app for the best experience</p>;
         </div>;
 
-export default SmartAppBanner;

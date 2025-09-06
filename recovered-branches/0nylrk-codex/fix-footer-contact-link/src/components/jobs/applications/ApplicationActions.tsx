@@ -28,10 +28,6 @@ export function ApplicationActions({;
   application;
   processingId;
   onViewApplication;
-export function ApplicationActions({
-  application,
-  processingId,
-  onViewApplication,
   onStatusChange
 }: ApplicationActionsProps) {
   return (

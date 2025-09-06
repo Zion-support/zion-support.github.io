@@ -20,22 +20,6 @@ interface AnalyzeRequest {
   content: string,
   contentType: string,
   flagId?: string
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
-import { corsHeaders } from "../_shared/cors.ts",;
-interface AnalyzeRequest {;
-  content: string,;
-  contentType: string,;
-  flagId?: string;
-}
-;
-interface AnalysisResult {;
-  classification: string,;
-  explanation: string,;
-  success: boolean;
-
-
-}
 
   explanation: string
   success: boolean
@@ -67,7 +51,6 @@ if ( {) {
   $2
 }
     throw new Error ("Missing required environment variables");
-
 
 // Validate request content
 const validateRequest = (data: unknown): AnalyzeRequest => {
@@ -101,6 +84,15 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
     followed by a brief explanation (max 1-2 sentences) of your reasoning.
     Format your response exactly like: "CLASSIFICATION: explanation"
   `
+        messages: [
+
+
+          { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." },
+          { role: "user", content: prompt }
+        ],
+        temperature: 0.3,
+
+
         max_tokens: 150
       })
     });
@@ -119,38 +111,16 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
     if (analysisText && analysisText.includes(": ")) {
       explanation = analysisText && analysisText.split(":")[1].trim()
     }
-;
-    const analysisText = data.choices[0]?.message?.content || "",;
-    // // // console.log("OpenAI analysis result:", analysisText),;
-    // Parse the result;
-    let classification = "SAFE",;
-    let explanation = "No issues detected.",;
-    if (analysisText.includes("SUSPICIOUS")) {;
-      classification = "SUSPICIOUS";
-    } else if (analysisText.includes("DANGEROUS")) {;
-      classification = "DANGEROUS";
     }
     
     // Extract explanation
     if (analysisText.includes(": ")) {
       explanation = analysisText.split(":")[1].trim()
-;
-    // Extract explanation;
-    if (analysisText.includes(": ")) {;
-      explanation = analysisText.split(":")[1].trim();
-    }
-;
     return { classification, explanation }
   } catch (error) {
     console && console.error("Error calling OpenAI:", error);
     throw error
   }
-}
-// Update flag in database if flagId was provided
-const updateFraudFlag = async (
-  supabase: ReturnType<typeof createClient>;
-  flagId: string
-  classification: string
   explanation: string
 ): Promise<void> => {
   if (!flagId) return

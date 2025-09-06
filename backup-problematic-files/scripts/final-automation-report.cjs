@@ -5,12 +5,18 @@
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
 >>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -61,8 +67,14 @@ const path = require('path')
 <<<<<<< HEAD
     console.error('Final Automation Report "failed")
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error('Final Automation Report "failed")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+    console.error('Final Automation Report "failed")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

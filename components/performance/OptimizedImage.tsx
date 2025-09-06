@@ -49,9 +49,6 @@ if ( {) {
       className={class_name}
       priority={priority}
       sizes={sizes}
-  );
-};
-
 export default OptimizedImage;
       quality={quality}
       style={style}
@@ -60,4 +57,3 @@ export default OptimizedImage;
 };
 
 export default OptimizedImage;
-;

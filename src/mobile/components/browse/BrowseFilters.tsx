@@ -190,7 +190,6 @@ interface BrowseFiltersProps {
                     </div>
                   </>
                 )}
-                <div className='space-y-2'>
                   <Label>Location</Label>
                 <div className='space-y-2'>
 ursor/fix-website-loading-errors-and-merge-6662

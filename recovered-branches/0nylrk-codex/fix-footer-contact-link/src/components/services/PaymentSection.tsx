@@ -5,13 +5,6 @@ interface PaymentSectionProps {
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment
 
-  const handlePaymentInitiated = () => {
-    toast({
-      title: "Processing your request"
-      description:
-        "You'll be redirected to our secure payment portal momentarily."
-    });
-  }
 
   return (
     <div className="text-center">

@@ -13,21 +13,21 @@ const typeFixes = [{ "pattern": /strin\s+g/g, "replacement": 'string' },
 ];
 function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content = fs && fs.readFileSync(filePath, 'utf8');
     let fixedContent = content;
     let hasChanges = false;
-    typeFixes.forEach(fix => {
-      const newContent = fixedContent.replace(fix.pattern, fix.replacement);
+    typeFixes && typeFixes.forEach(fix => {
+      const newContent = fixedContent && fixedContent.replace(fix && fix.pattern, fix && fix.replacement);
       if (newContent !== fixedContent) {
         fixedContent = newContent;
         hasChanges = true}
     });
     if (hasChanges) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed types "in": ${filePath}`);
+      fs && fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console && console.log(`Fixed types "in": ${filePath}`);
       return true}
     return false} catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console && console.error(`Error fixing ${filePath}:`, error && error.message);
     return false}
 async function main() {
   const patterns = ['src/**/*.tsx',

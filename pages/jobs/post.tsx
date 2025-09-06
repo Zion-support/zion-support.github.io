@@ -79,42 +79,9 @@ const PostJob: NextPage = () => {
             <EnhancedButton type="submit">Post Job</EnhancedButton>
           </div>
         </form>
-          {preview ? (
-            <div className="space-y-2">
-              <div>
-                <div className='text-sm opacity-70'>Title</div>
-                <div className='font-medium'>{title |'Untitled job'}</div>
-                <div className="text-sm opacity-70">Title</div>
-                <div className="font-medium">{title || 'Untitled job'}</div>
               </div>
               <div>
                 <div className="text-sm opacity-70">Budget</div>
                 <div className="font-medium">{budget ? `$${budget}` : 'Not specified'}</div>
               </div>
               <div>
-                <div className='text-sm opacity-70'>Description</div>
-                <p className='whitespace-pre-wrap'>
-                  {description |'No description provided.'}
-                </p>
-              </div>
-            </div>
-          ) : (
-            <p className='text-sm opacity-80'>
-              Click Preview to see how your job will appear to talent.
-            </p>          )}
-        </aside>
-      </div>
-    </div>
-  );
-}
-export default PostJob;
-
-            <p className="text-sm opacity-80">Click Preview to see how your job will appear to talent.</p>
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </aside>;
-      </div>;
-export default PostJob;

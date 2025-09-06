@@ -97,6 +97,8 @@ const "ContactPage": React.FC = () => {;
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+
+
   const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
@@ -448,6 +450,8 @@ const "Contact": NextPage = () => {;
                   </div>;
                   <motion&& motion.button
                     type=\"submit\"
+
+
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -629,6 +633,8 @@ const "Contact": NextPage = () => {;
     </>;
   );
 }
+
+
           </div>
         </section>
       </div>

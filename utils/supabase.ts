@@ -27,9 +27,7 @@ export const supabase = {
       });
     });
   });
-        single: () => null
-      })
-    })
-}
+
   });
 };
+

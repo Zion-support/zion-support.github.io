@@ -1,94 +1,13 @@
-import React from 'react';
-
 import Head from 'next/head';
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
 
-const PricingPage: React.FC = () => {
-  return (
-    <>
-      <Head>
-        <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Transparent, flexible pricing for AI, IT, and Micro SaaS services." />
-      </Head>
-      <section className="bg-white">
-        <div className="container mx-auto px-4 py-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Pricing</h1>
-          <p className="text-gray-600 mb-10 max-w-3xl">
-            We tailor solutions to your needs. Below are typical starting ranges observed in the market. Get a custom quote at any time.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="border rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">AI Development</h3>
-              <p className="text-gray-600 mb-4">Model prototyping, fine-tuning, RAG, and integrations.</p>
-              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
-                <li>POC: $5,000–$15,000</li>
-                <li>MVP: $20,000–$60,000</li>
-                <li>Enterprise: $75,000+</li>
-              </ul>
-            </div>
-
-            <div className="border rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Micro SaaS</h3>
-              <p className="text-gray-600 mb-4">Idea validation, build, payments, analytics, hosting.</p>
-              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
-                <li>Starter: $8,000–$25,000</li>
-                <li>Growth: $30,000–$80,000</li>
-                <li>Scale: $100,000+</li>
-              </ul>
-            </div>
-
-            <div className="border rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Cloud & DevOps</h3>
-              <p className="text-gray-600 mb-4">AWS/GCP/Azure architecture, IaC, observability.</p>
-              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
-                <li>Audit & Setup: $3,000–$12,000</li>
-                <li>Migration: $10,000–$40,000</li>
-                <li>Managed: from $2,000/mo</li>
-              </ul>
-            </div>
-
-            <div className="border rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Cybersecurity</h3>
-              <p className="text-gray-600 mb-4">Pen-testing, hardening, SOC, compliance.</p>
-              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
-                <li>Security Audit: $4,000–$15,000</li>
-                <li>Remediation: $8,000–$50,000</li>
-                <li>Managed SOC: from $3,000/mo</li>
-              </ul>
-            </div>
-
-            <div className="border rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Data & Analytics</h3>
-              <p className="text-gray-600 mb-4">Warehouses, pipelines, BI, ML ops.</p>
-              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
-                <li>Strategy & Setup: $5,000–$20,000</li>
-                <li>Dashboards: $6,000–$25,000</li>
-                <li>ML Ops: $25,000+</li>
-              </ul>
-            </div>
-
-            <div className="border rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Web & Mobile</h3>
-              <p className="text-gray-600 mb-4">React/Next.js, React Native, APIs.</p>
-              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
-                <li>Website: $3,000–$15,000</li>
-                <li>MVP App: $20,000–$70,000</li>
-                <li>Enterprise: $80,000+</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-export default PricingPage;
 
 import React from 'react';
 import Head from 'next/head';
+
+
+
 import React from 'react';
+import Head from 'next / head';
 import {
   Check
   Star
@@ -207,64 +126,6 @@ import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2'
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-  // Enhanced service categories with pricing
-  const serviceCategories = [
-    {
-      name: 'Next-Generation AI'
-      description: 'Revolutionary AI platforms'
-      services: [
-        'AI Multimodal Fusion'
-        'AI Autonomous Decision Engine'
-        'AI Emotional Intelligence'
-      ]
-      avgPrice: '$3,199/month'
-      savings: 'Save 60-80% vs. competitors'
-    }
-    {
-      name: 'Cutting-Edge IT Infrastructure'
-      description: 'Advanced infrastructure solutions'
-      services: [
-        'Zero Trust Architecture'
-        'Edge Computing Orchestration'
-        '5G Private Networks'
-      ]
-      avgPrice: '$4,999/month'
-      savings: 'Save 50-70% vs. competitors'
-    }
-    {
-      name: 'Innovative Micro SaaS'
-      description: 'Creative and practical SaaS tools'
-      services: [
-        'AI Brand Personality'
-        'Virtual Event Holograms'
-        'AI Meeting Transcriber'
-      ]
-      avgPrice: '$199/month'
-      savings: 'Save 40-60% vs. competitors'
-    }
-    {
-      name: 'Quantum & Space Technology'
-      description: 'Quantum computing and space solutions'
-      services: [
-        'Quantum AI Hybrid'
-        'Space Technology Platform'
-        'Quantum Cybersecurity'
-      ]
-      avgPrice: '$5,999/month'
-      savings: 'Save 70-85% vs. competitors'
-    }
-    {
-      name: 'Enterprise IT Services'
-      description: 'Comprehensive enterprise solutions'
-      services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening']
-      avgPrice: '$2,999/month'
-      savings: 'Save 45-65% vs. competitors'
-    },  ];
-
-}
-  ],
-  // Enhanced pricing tiers with more realistic and comprehensive offerings
-  const pricingTiers = [
     {
       name: 'Next - Generation AI',
       description: 'Revolutionary AI platforms',
@@ -519,54 +380,6 @@ export default function PricingPage() {
         />;
         <meta
           name='twitter:image'
-        <title>
-          Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI &
-          Quantum Services
-        </title>
-        <meta
-          name='description'
-          content='Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month), Professional ($149/month), or Enterprise ($499/month) plans with generous free trials.'
-        />
-        <meta
-          name='keywords'
-          content='pricing, micro SaaS pricing, AI services pricing, quantum computing pricing, enterprise pricing'
-        />
-        <meta name='author' content='Zion Tech Group' />
-        <meta name='robots' content='index, follow' />
-        {/* Open Graph */}
-        <meta
-          property='og:title'
-          content='Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI & Quantum Services'
-        />
-        <meta
-          property='og:description'
-          content='Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month), Professional ($149/month), or Enterprise ($499/month) plans.'
-        />
-        <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://ziontechgroup.com/pricing' />
-        <meta
-          property='og:image'
-          content='https://ziontechgroup.com/og-image.jpg'
-        />
-        {/* Twitter */}
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta
-          name='twitter:title'
-          content='Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI & Quantum Services'
-        />
-        <meta
-          name='twitter:description'
-          content='Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month), Professional ($149/month), or Enterprise ($499/month) plans.'
-        />
-        <meta
-          name='twitter:image'
-          content='https://ziontechgroup.com/og-image.jpg'
-        />
-      </Head>
-      <div className='container mx-auto px-4 py-12'>
-        {/* Hero Section */}
-        <div className='text-center mb-16'>
-          <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
             Transparent Pricing
           </h1>
           <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
@@ -748,46 +561,6 @@ export default function PricingPage() {
                 key={index}
                 variant={index % 2 === 0 ? 'quantum' : 'holographic'}
                 interactive={true}
-                <h3 className='text-xl font-bold text-white mb-2'>
-                  {proposition.title}
-                </h3>
-                <p className='text-gray-300 text-sm mb-4'>
-                  {proposition.description}
-                </p>
-                <div className='text-3xl font-bold text-cyan-400 mb-2'>
-                  {proposition.metric}
-                </div>
-                <div className='text-sm text-gray-400'>
-                  {proposition.detail}
-        {/* Service Category Pricing Examples */}
-        <div className='mb-20'>
-          <h2 className='text-3xl font-bold text-white mb-12 text-center'>
-            Service Category Pricing
-          </h2>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-        {/* Service Category Pricing Examples */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">
-            Service Category Pricing
-          </h2>
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-<h3 className="text-xl font-bold text-white mb-2">{proposition.title}</h3>
-                <h3 className="text-xl font-bold text-white mb-2">{proposition.title}</h3>
-                <p className="text-gray-300 text-sm mb-4">{proposition.description}</p>
-                <div className="text-3xl font-bold text-cyan-400 mb-2">{proposition.metric}</div>
-                <div className="text-sm text-gray-400">{proposition.detail}</div>
-              </UltraFuturisticCard>
-))}
-          </div>;
-        </div>;
-        {/* Service Category Pricing Examples */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             ))}
 
           </div>;
@@ -863,12 +636,6 @@ export default function PricingPage() {
                   Explore Services
                   <ChevronRight className="ml-2 w-4 h-4" />
                 </Button>
-        {/* Popular Services Pricing */}
-        <div className='mb-20'>
-          <h2 className='text-3xl font-bold text-white mb-12 text-center'>
-            Popular Services Pricing
-          </h2>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices.slice(0, 6).map((service, index) => (
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -887,13 +654,6 @@ export default function PricingPage() {
                 key={service && service.id}
                 variant={service && service.variant as any}
                 interactive={true}
-                <div className='mb-4'>
-                  <div className='text-xs text-gray-400 mb-2'>
-                    Key Features:
-                  </div>
-                  <ul className='text-xs text-gray-300 space-y-1'>
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <li key={idx} className='flex items-center'>
                         <Check className='w-3 h-3 text-green-400 mr-2' />                        {feature}
                       </li>;
 
@@ -913,25 +673,6 @@ export default function PricingPage() {
                   Learn More;
                   <ExternalLink className='ml-2 w-4 h-4' />                </Button>;
               </UltraFuturisticCard>;
-                >
-                  Learn More
-                  <ExternalLink className='ml-2 w-4 h-4' />                </Button>
-              </UltraFuturisticCard>
-        {/* FAQ Section */}
-        <div className='mb-20'>
-          <h2 className='text-3xl font-bold text-white mb-12 text-center'>
-            Frequently Asked Questions
-          </h2>
-          <div className='max-w-4xl mx-auto space-y-4'>
-            <UltraFuturisticCard variant='quantum' className='p-6'>
-              <h3 className='text-lg font-bold text-white mb-3'>
-                What's included in the free trial?
-              </h3>
-              <p className='text-gray-300'>
-                All plans include a generous free trial period with full access
-                to the selected services. No credit card required to start your
-                trial.
-              </p>
             </UltraFuturisticCard>
             <UltraFuturisticCard variant='holographic' className='p-6'>
               <h3 className='text-lg font-bold text-white mb-3'>
@@ -1104,11 +845,6 @@ export default function PricingPage() {
                 href='/contact'
                 variant='secondary'
                 size='lg'
-            <div className='text-sm text-gray-400'>
-              <p>
-                ✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant
-                Setup
-              </p>
           </UltraFuturisticCard>
         </div>
       </div>

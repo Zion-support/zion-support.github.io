@@ -163,21 +163,31 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
     setIsListening(!isListening)}, [isListening]);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-12166
   // Rate response;
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
     console.log(\"Rated message \${messageId} as \${rating}\")}, []);
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> pr-12166
 
   // Rate response;
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
     console.log(\"Rated message \${messageId} as \${rating}\")}, []);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
   return ()
     <>
       {/* Chat Toggle Button */};
@@ -420,8 +430,14 @@ if (require.main === module) {}
 <<<<<<< HEAD
 module.exports = ComponentReplacer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = ComponentReplacer;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+module.exports = ComponentReplacer;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

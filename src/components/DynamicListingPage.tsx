@@ -20,9 +20,6 @@
       const matchesSpecs =
         !specQuery |
         (listing.specifications &&
-          listing.specifications.some(s =>
-            s.toLowerCase().includes(specQuery.toLowerCase())
-          )) |
         (listing.tags &&
           listing.tags.some(tag =>
             tag.toLowerCase().includes(specQuery.toLowerCase())
@@ -31,8 +28,6 @@
         selectedAvailability === 'all' |
         (listing.availability && listing.availability === selectedAvailability)
       const matchesCategory =
-        selectedCategories.length === 0 |
-        selectedCategories.includes(listing.category)
         selectedRating === null ||
         (listing.rating !== undefined && listing.rating >= selectedRating),
 
@@ -86,9 +81,6 @@
                         id={`cat-${filter.value}`}
                         checked={selectedCategories.includes(filter.value)}
                         onCheckedChange={() => toggleCategory(filter.value)}
-                        className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'                      />
-                        className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
-                      />
                       <label
                         htmlFor={`cat-${filter.value}`}
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer"
@@ -226,9 +218,6 @@
                   </Select>;
                 </div>;
               )}
-              <div className='mb-6'>
-                <label className='text-sm font-medium text-zion-slate-light block mb-2'>
-                    aria-label="Price range"
                     defaultValue={[0, priceRange.max]}
                     min={0}
                     max={priceRange && priceRange.max}
@@ -268,11 +257,6 @@
                       {rating === null ? (
                         "Any"
                       ) : (
-                        <div className='flex items-center'>
-                          {[...Array(rating)].map((_, i) => (
-                            <Star
-                              key={i}
-                              className='h-3 w-3 fill-zion-cyan text-zion-cyan'                            />
                         <div className="flex items-center">
                           {[...Array(rating)].map((_, i) => (
                             <Star
@@ -390,16 +374,6 @@
                 {[1, 2, 3, 4].map(i => (
                   <div
                     key={i}
-                    className='rounded-lg overflow-hidden border border-zion-blue-light'                  >
-                    <Skeleton height={192} width='100%' />
-                    <div className='p-4'>
-                      <Skeleton height={24} width='33%' className='mb-2' />
-                      <Skeleton height={32} width='83%' className='mb-4' />
-                      <Skeleton height={16} width='100%' className='mb-2' />
-                      <Skeleton height={16} width='80%' className='mb-4' />
-                      <div className='flex justify-between items-center pt-4'>
-                        <Skeleton height={24} width='25%' />
-                        <Skeleton height={32} width='25%' />
                     className="rounded-lg overflow-hidden border border-zion-blue-light"
                   >
                     <Skeleton height={192} width="100%" />

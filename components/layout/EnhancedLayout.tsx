@@ -1,9 +1,3 @@
-export type EnhancedLayoutProps = {
-  children: React.ReactNode;}
-export type EnhancedLayoutProps = {
-  children: React.ReactNode
-export type EnhancedLayoutProps = {
-  children: React.ReactNode
 }
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   useEffect(() => {
@@ -73,3 +67,12 @@ export type EnhancedLayoutProps = {
 }
 }
   );
+export type EnhancedLayoutProps = {
+  children: React.ReactNode;}
+export type EnhancedLayoutProps = {
+  children: React.ReactNode
+export type EnhancedLayoutProps = {
+  children: React.ReactNode
+}
+
+

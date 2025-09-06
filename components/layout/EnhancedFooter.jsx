@@ -1,5 +1,4 @@
 
-
 const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear();
 

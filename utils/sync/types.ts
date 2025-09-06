@@ -1,19 +1,3 @@
-}
-export interface InstanceConfig {instanceId: string;
-  optIn: boolean;
-  paused: boolean;
-  scope: SyncScope;
-  peers: Peer[];
-  secretConfigured: boolean;
-}
-
-export type SyncScope = "full" | "dao" | "marketplace",
-export interface Peer {
-  id: string,
-  base_url: string, // e.g., https: //zion - latam.example.org;
-  scope?: SyncScope,
-  paused?: boolean;
-}
 export interface InstanceConfig {
   instance_id: string,
   opt_in: boolean,
@@ -30,34 +14,6 @@ export type SyncEventType =;
   | "token_transfer";
   | "talent_mobility";
   | "dao_endorsement";
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export interface ProposalVoteEntry {
-  voterId: string;
-  weight: number;
-  choice: string;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export interface ProposalPayload extends BaseEventPayload {;
-  proposalId: string;
-  title: string;
-  votes: ProposalVoteEntry[];
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export interface TokenTransferPayload extends BaseEventPayload {;
-  txId: string;
   token: string;
   amount: number;
   fromSubnet: string;
@@ -89,14 +45,6 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
 ;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
   subjectId: string, // userId or teamId;
-  score: number;
-  category: string, // e.g., grants, contributions;
-  rank?: number,;
-  period?: string, // e.g., 2025-Q3;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 ;
 export type SyncEventPayload =;
@@ -122,13 +70,3 @@ export type SyncEventPayload =;
 ;
 export interface MultiverseState {;
   config: InstanceConfig,;
-  lastSyncedAt: number;
-  seenEventIds: Record<string, true>,;
-  latestVersionByEntityId: Record<string, number>,;
-  proposalMerkleById: Record<string, string>;
-  events: SyncEvent[];
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}

@@ -28,7 +28,6 @@ interface IndexProps {;
   // Add props here as needed;
 }
 export default function Index(): any ({ }: IndexProps) {;
-export default function Index({ }: IndexProps) {
   return (
     <div className={className || ''}>
       <h1>Index</h1>

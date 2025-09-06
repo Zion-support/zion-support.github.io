@@ -1,5 +1,7 @@
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-app-improvement-automation.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -478,6 +480,9 @@ console.log('======')
       execSync('npm run export', { "stdio"})
   "status"
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-app-improvement-automation.cjs
+<<<<<<< HEAD
+    console.error('� Automation "failed")
+=======
 <<<<<<< HEAD
     console.error('� Automation "failed")
 =======

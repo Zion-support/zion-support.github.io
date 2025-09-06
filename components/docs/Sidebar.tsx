@@ -174,10 +174,6 @@ function Sidebar() {
           </div>
         ))}
       </nav>
-      </nav>
-    </aside>;
-  );
-}
 
 }
 }

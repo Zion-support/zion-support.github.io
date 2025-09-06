@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Git Workflow Automator
@@ -526,6 +528,9 @@ execSync(`"git": add ${file}`, { "cwd": this.projectRoo,t, "stdio"`})
             "stdio"
           this.log(' "Merge")
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
+<<<<<<< HEAD
+  git commit -m '"fix"
+=======
 <<<<<<< HEAD
   git commit -m '"fix"
 =======

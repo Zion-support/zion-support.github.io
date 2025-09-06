@@ -1,35 +1,3 @@
-  Brain
-  Star
-  Users
-  TrendingUp
-  Zap
-  Shield
-  CheckCircle
-  Clock
-  Award
-  Target
-  Globe
-  Sparkles
-  Cpu
-  Lock
-  Cloud
-  BarChart3
-  Eye
-  Heart
-  Lightbulb
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  Globe as GlobeIcon;} from 'lucide-react';import {
-  Brain, Star, Users, TrendingUp, Zap, Shield
-  CheckCircle, Clock, Award, Target, Globe, Sparkles;
-  Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
-  ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
 const features = [
@@ -227,8 +195,6 @@ const features = [;
   'Spiritual growth pathways',
   'Personal transformation tracking',
 ];
-
-export default function AIConsciousnessEvolution2025() {
   return (
 
 
@@ -374,9 +340,6 @@ export default function AIConsciousnessEvolution2025() {
                   key={stat && stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
-                  className='text-center'
-
                 >
                   <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>
                     {stat.icon}
@@ -390,17 +353,6 @@ export default function AIConsciousnessEvolution2025() {
 
               ))}
             </div>
-
-            {/* CTA Buttons */}
-            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>              <motion.button
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-            {/* CTA Buttons */}
-            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>              <motion.button
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
 
             {/* CTA Buttons */}
 
@@ -542,13 +494,6 @@ label: 'Success Rate',
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-              >
-                <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
-                  <Brain className='w-8 h-8 text-purple-400' />
-                </div>
-                <h3 className='text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200'>
-
-
               </motion.div>
             ))}
 
@@ -848,13 +793,6 @@ label: 'Success Rate',
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-              >
-                <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
-                  <Lightbulb className='w-8 h-8 text-purple-400' />
-                </div>
-                <h3 className='text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200'>
-
-
               </motion.div>
             ))}
 
@@ -920,15 +858,39 @@ label: 'Success Rate',
                 <p className="text-sm text-gray-300 font-medium">{tech}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
+
+          </div>;
+        </div>;
+      </section>;
+
+
+
+
 
       {/* Testimonials Section */}
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
+
+                className='text-center group'
+
+              >
+                <div className='w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300'>
+                  <Cpu className='w-10 h-10 text-purple-400' />
+                </div>
+                <p className='text-sm text-gray-300 font-medium'>{tech}</p>              </motion.div>              >
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                  <Cpu className="w-10 h-10 text-purple-400" />
+                </div>
+                <p className="text-sm text-gray-300 font-medium">{tech}</p>
+              </motion.div>
+
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1116,27 +1078,6 @@ label: 'Success Rate',
               }
 
 
-                }`}
-
-                  plan.popular 
-                    ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20' 
-
-                    : 'border-purple-500/20'
-              <motion.div;
-                popular: false
-                description:
-                  'Advanced features for serious consciousness development'
-                features: [
-                  'Advanced AI assessment'
-                  'Unlimited exercises'
-                  'Personalized coaching'
-                  'Priority support'
-                  'Advanced analytics'
-                  'Integration with wearables'
-                  'Group sessions'
-                ]
-                popular: true
-              },              {                  'Advanced AI assessmentUnlimited exercisesPersonalized coachingPriority supportAdvanced analyticsIntegration with wearablesGroup sessions'
                 ];
                 popular: true
                 key={plan.name}
@@ -1144,11 +1085,6 @@ label: 'Success Rate',
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className={`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border rounded-2xl p-8 ${
-                  plan.popular
-                    ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20'                    : 'border-purple-500/20'
-
-                    : 'border-purple-500/20'
                 }`}
               >;
                 {plan.popular && (
@@ -1206,9 +1142,6 @@ label: 'Success Rate',
                 </button>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
@@ -1262,16 +1195,6 @@ label: 'Success Rate',
                   icon: <MapPin className='w-6 h-6' />,
                   label: 'Visit Us',
                   value: contactInfo.address,
-                },              ].map((contact, index) => (            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile },
-                { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email },
-                { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
-                },              ].map((contact, index) => (
-
-                { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
-              ].map((contact, index) => (
-
                 <motion.div
                   key={contact.label}
                 Consciousness?;

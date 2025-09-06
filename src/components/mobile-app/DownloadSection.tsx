@@ -1,4 +1,3 @@
-              
               <AppStoreButtons 
                 className="mb-8" 
                 appStoreUrl={appStoreUrl}

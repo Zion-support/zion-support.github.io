@@ -3,18 +3,6 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  Linkedin
-  Twitter
-  Github
-  Award
-  Users
-  Globe
-  Code
-  Shield
   ArrowRight,
   Phone,
   Mail,
@@ -26,10 +14,6 @@ import { motion } from "framer-motion";
   Users,
   Globe,
   Code,
-} from "lucide-react";
-import Layout from "../components/Layout";
-const teamMembers = [
-  {
     id: 1,
     name: "Kleber Santos",
     position: "CEO & Founder",
@@ -116,15 +100,6 @@ const teamMembers = [
     ],
   },
   {
-    id: 6,
-    name: "Lisa Wang",
-    position: "Head of Product Development",
-    department: "Product",
-    bio: "Product strategist with experience building scalable SaaS platforms and mobile applications. Focuses on user experience and market fit.",
-    image: "/api/placeholder/300/300",
-    linkedin: "https://linkedin.com/in/lisawang",
-    twitter: "https://twitter.com/lisawang",
-    github: "https://github.com/lisawang",
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
@@ -152,7 +127,6 @@ const teamMembers = [
     expertise: 'Project Management',
     icon: Users,
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
-origin/automation-improvements-final
     id: 6
     name: "Lisa Wang"
     position: "Head of Product Development"
@@ -163,6 +137,12 @@ origin/automation-improvements-final
     twitter: "https://twitter.com/lisawang"
     github: "https://github.com/lisawang"
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
+  }
+];
+
+;
+const departments = [;
+
   {
     name: "Leadership"
     description: "Strategic vision and company direction"
@@ -704,7 +684,6 @@ const teamMembers = [;
 export default function TeamPage() {;
 
   return (
-ursor/integrate-build-improve-and-re-verify-8f7d
     <>
       <SEO
         title="Our Team | Zion Tech Group"
@@ -738,7 +717,6 @@ export default function TeamPage() {
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
 			<div className="container mx-auto px-4 py-16">
 				<h1 className="text-4xl font-bold mb-4">Our Team</h1>
-    </Layout>);
 }
 import Head from './next / head';
 import { motion  } from './framer-motion';

@@ -11,9 +11,6 @@ import { Handshake, MessageSquare } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
 import { UserProfile } from "@/types/auth",
-import { toast } from "@/hooks/use-toast";
-import { SEO } from "@/components/SEO";
-export default function TalentProfilePage() {
 import { toast } from "@/hooks/use-toast",
 import { SEO } from "@/components/SEO",
 export default function TalentProfilePage() {
@@ -42,9 +39,6 @@ export default function TalentProfilePage() {
     email: userDetails?.email |'', // Ensure email is always a string
     userType: null, // Default empty string since userDetails doesn't have this property
     profileComplete: false, // Default value since userDetails doesn't have this property
-    created_at: new Date().toISOString(); // Default value since userDetails doesn't have this property
-    updated_at: new Date().toISOString(); // Default value since userDetails doesn't have this property    role: '', // Default empty string since userDetails doesn't have this property
-    name: ''
     points: 0
 
 

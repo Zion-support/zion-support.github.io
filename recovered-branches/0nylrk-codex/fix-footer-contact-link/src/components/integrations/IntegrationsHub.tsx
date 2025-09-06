@@ -1,10 +1,4 @@
 
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
   Card,
   CardContent,
   CardDescription,
@@ -21,9 +15,6 @@ export function IntegrationsHub() {
   const [activeTab, setActiveTab] = useState("marketplace");
 
 
-
-import { WebhookManager } from "./WebhookManager";
-import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
         <div className="flex gap-2">
           <Button variant="outline">View Documentation</Button>
           <Button>Connect New Integration</Button>
@@ -88,10 +79,6 @@ import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
       
 
 
-            <Button variant="outline" className="w-full">View All Activity</Button>
-          </CardFooter>
-        </Card>
-      </div>
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid grid-cols-3 md: w-[400px]">
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
@@ -210,5 +197,5 @@ export function IntegrationsHub() {;
         </div>;
       </Tabs>;
   );
+    </div>);
 }
-;

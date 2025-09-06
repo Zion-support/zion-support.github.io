@@ -55,15 +55,6 @@ const EnhancedError: React.FC<{
           ) : (
             <WifiOff className='h-6 w-6 text-red-600' />
           )}
-        </div>
-        <div className="text-center">
-          <h3 className="font-semibold text-red-900 dark:text-red-100">
-            {isOnline ? 'Loading Failed' : 'Offline'}
-          </h3>
-          <p className='text-sm text-red-700 dark:text-red-200 mt-1'>
-            {isOnline
-              ? error.message |'Failed to load component'
-              : 'Please check your internet connection'}
           <Button 
             onClick={retry} 
             variant="outline" 
@@ -179,10 +170,6 @@ const EnhancedError: React.FC<{
       {...(options |{})}
       {...(props as any)}
 
-// Predefined dynamic loaders for common heavy components
-// Note: These are examples - uncomment and install types as needed
-// export const DynamicChartComponent = createDynamicComponent(
-//   (,) => import('recharts').then(module => ({ default: module.LineChart }))
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">

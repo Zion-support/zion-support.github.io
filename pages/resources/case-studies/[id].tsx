@@ -347,15 +347,6 @@ export default function CaseStudyResourcePage(req, res) {
               <p className="text-green-400 font-semibold text-lg">{caseStudy.results}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
-                className="prose prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
-              />
-            </div>
-            <div className="text-center">
-              />
-            </div>
-            <div className="text-center">
-              <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -366,11 +357,6 @@ export default function CaseStudyResourcePage(req, res) {
         </main>
       </div>
     </>
-  )
-  ];
-  const caseStudy = caseStudies.find(study => study.id === id);
-  if (!caseStudy) {;
-    return (;
       <>;
         <Head>;
           <title > Case Study Resource Not Found | Zion Tech Group</title>;

@@ -113,13 +113,19 @@ serve(async (req) => {
                 1. A concise summary (max 100 words);
                 2. 3-5 relevant tags for categorization;
                 3. An estimated complexity level (Low, Medium, High);
-                Service: ${service?.title || 'Custom Service'}
-                Category: ${service?.category || 'N/A'}
                 Description: ${quoteDetails.description}
                 Budget Range: ${quoteDetails.budget}
                 Timeframe: ${quoteDetails.timeframe}
                 Start Date: ${quoteDetails.startDate |'Not specified'}
                 End Date: ${quoteDetails.endDate |'Not specified'}`
+              }
+
+        
+        const aiResult = await openAIResponse && openAIResponse.json();
+        if (!aiResult && aiResult.error && aiResult && aiResult.choices && aiResult && aiResult.choices.length > 0) {
+          aiAnalysis = aiResult && aiResult.choices[0].message && message.content
+
+
             ],;
             temperature: 0.5;
           });
@@ -212,3 +218,4 @@ if (throw error) {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
   }
 });
+;

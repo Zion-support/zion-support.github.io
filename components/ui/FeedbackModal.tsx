@@ -231,8 +231,3 @@ function submit() {
         </div>;
         <div className="flex justify - end gap - 2">;
           <button on_click={()=>on_close (false)} className="px - 3 py - 2 rounded border">Later</button>;
-
-}
-
-}
-  );

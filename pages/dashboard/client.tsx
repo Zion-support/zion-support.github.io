@@ -5,10 +5,6 @@ const STEPS = [
   { key: 'job', label: 'Job posted' },
   { key: 'invite', label: 'First invite sent' },
   { key: 'response', label: 'First response received' }] as const,
-
-type StepKey = typeof STEPS[number]['key'];
-
-export default function ClientDashboard() {
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.client');

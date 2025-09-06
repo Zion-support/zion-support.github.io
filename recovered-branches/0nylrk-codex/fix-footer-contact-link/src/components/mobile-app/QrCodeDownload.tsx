@@ -42,8 +42,6 @@ export const QrCodeDownload: React.FC = () => {
       </div>
     </section>
 
-
-};
   )
 },
 import React from "react",;

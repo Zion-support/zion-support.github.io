@@ -1,7 +1,3 @@
-import { useState } from "react",
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
-import { Input } from "@/components/ui/input",
-import { Card } from "@/components/ui/card",
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -9,53 +5,6 @@ interface ServiceTypeStepProps {
 // Sample data - would come from an API in a real application
 const SAMPLE_LISTINGS: ListingItem[] = [
 
-  {
-    id: "service-1"
-    title: "AI Development"
-    category: "Services"
-    image:
-      "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&auto=format"
-  }
-  {
-    id: "service-2"
-    title: "Cloud Migration"
-    category: "Services"
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format"
-  }
-  {
-    id: "talent-1"
-    title: "AI Engineer"
-    category: "Talents"
-    image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&auto=format"
-  }
-  {
-    id: "talent-2"
-    title: "Data Scientist"
-    category: "Talents"
-    image:
-      "https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=800&auto=format"
-  }
-  {
-    id: "equipment-1"
-    title: "Workstation"
-    category: "Equipment"
-    image:
-      "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format"
-  }
-  {
-    id: "equipment-2"
-    title: "Server Rack"
-    category: "Equipment"
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format"
-  }
-];
-export function ServiceTypeStep({
-  formData
-  updateFormData
-}: ServiceTypeStepProps) {
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
   
@@ -109,9 +58,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       </div>
       {formData.serviceType && (
         <div className="space-y-4">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
-            <Input
 import { useState } from "react",;
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;

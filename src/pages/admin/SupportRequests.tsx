@@ -137,24 +137,6 @@ export default function SupportRequests() {;
     if (categoryFilter && request.category !== categoryFilter) {;
       return false;
     }
-  return (
-    <>
-      <SEO 
-        title="Support Requests | Admin Dashboard"
-        description="Manage and track user support requests and issues"
-      />
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
-          <div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Support Requests
-            </h1>
-            <p className="text-zion-slate-light mt-2">
-              Manage and respond to user support requests and issues
-            </p>
-          </div>
-          <div className='mt-4 md:mt-0'>
-            <Button className='bg-zion-purple hover:bg-zion-purple-light'>
           
           <div className="mt-4 md:mt-0">
             <Button className="bg-zion-purple hover:bg-zion-purple-light">

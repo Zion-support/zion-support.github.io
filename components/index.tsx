@@ -54,6 +54,7 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
                 <ArrowRight className="w-5 h-5" />;
               </a>;
               <a
+            animate={{ y: [0, -20, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60"
           />;
@@ -173,18 +174,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
                     <span className="text-sm font-medium">Learn More</span>
                     <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             ))}
-          </div>
-        </div>
-      </section>
-      {/* Stats Section */}
-      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
-        <div className='max-w-7xl mx-auto'>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-
-      {/* Stats Section */}
-
             {stats.map((stat, index) => (
               <motion.div
 import {

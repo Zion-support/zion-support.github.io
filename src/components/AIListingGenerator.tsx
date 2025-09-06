@@ -27,23 +27,12 @@ if ( {) {
             <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
             AI Listing Optimizer
           </CardTitle>
-          <p className='text-sm text-zion-slate-light'>
-            Provide basic information and let AI generate optimized
-            SEO-friendly content for your listing
-          <p className="text-sm text-zion-slate-light">
-            Provide basic information and let AI generate optimized, SEO-friendly content for your listing
           </p>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
             <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>
             <Input
-              id='title'
-              value={title}
-              onChange={e => handleInputChange(e, 'title')}
-              placeholder='Enter your product or service title'
-              className='bg-zion-blue border border-zion-blue-light text-white'
-              disabled={isLoading}            />
               id="title"
               value={title}
               onChange={(e) => handleInputChange(e, 'title')}
@@ -279,7 +268,6 @@ if ( {) {
                 Description
               </h3>
               <p className='text-white'>{generatedContent.description}</p>
-            </div>
             </div>
             <div>
               <h3 className='text-sm font-medium text-zion-slate-light mb-2'>

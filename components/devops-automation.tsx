@@ -18,17 +18,15 @@ import Button from '../components/ui/Button';
       icon: <Shield className="w-6 h-6" />
       title: 'Security Automation'
       description: 'Automated security scanning and compliance checks'
-import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
-
-export default function DevOpsAutomationPage() {
-  const features = [
-    {
   GitBranch,
   Zap,
   Shield,
   BarChart3,
   Check,
   Star,
+export default function DevOpsAutomationPage() {
+  const features = [
+
   ];
   const pricingPlans = [
     {
@@ -168,116 +166,91 @@ export default function DevOpsAutomationPage() {
       cons: ['Requires maintenance_no managed service'];
     }
   ];
-    {
-      title: 'Automated Testing'
-      description: 'Run comprehensive test suites on every commit'
-      icon: ''
-      color: 'from-green-500 to-emerald-600'
-    },    {
-      title: 'Security Scanning'
-      description: 'Automated vulnerability detection and compliance checks'
-      icon: ''
-      color: 'from-red-500 to-pink-600'
-    },    {
-      title: 'Deployment Automation'
-      description: 'Zero-downtime deployments with rollback capabilities'
-      icon: ''
-      color: 'from-blue-500 to-cyan-600'
-    },    {
-      title: 'Infrastructure Management'
-      description: 'Automated scaling and resource optimization'
-      icon: ''
-      color: 'from-green-500 to-emerald-600'
-    };
-    {
-      title: 'Security Scanning',
-      description: 'Automated vulnerability detection and compliance checks',
-      icon: '',
-      color: 'from-red-500 to-pink-600'
-    };
-    {
-      title: 'Deployment Automation',
-      description: 'Zero - downtime deployments with rollback capabilities',
-      icon: '',
-      color: 'from-blue-500 to-cyan-600'
-    };
-    {
-      title: 'Infrastructure Management',
-      description: 'Automated scaling and resource optimization',
-      icon: '',
-      color: 'from-purple-500 to-indigo-600'
-    },  ];      color: 'from-green-500 to-emerald-600'
-    }
-    {
-      title: 'Security Scanning'
-      description: 'Automated vulnerability detection and compliance checks'
-      icon: ''
-      color: 'from-red-500 to-pink-600'
-    },      color: 'from-red-500 to-pink-600'
-    }
-    {
-      title: 'Deployment Automation'
-      description: 'Zero-downtime deployments with rollback capabilities'
-      icon: ''
-      color: 'from-blue-500 to-cyan-600'
-    },      color: 'from-blue-500 to-cyan-600'
-    }
-    {
-      title: 'Infrastructure Management'
-      description: 'Automated scaling and resource optimization'
-      icon: ''
-      color: 'from-purple-500 to-indigo-600'
-    },      color: 'from-purple-500 to-indigo-600'
+  return (
 
-export default function DevOpsAutomationPage() {;
-  const features = [;
-    {;
-      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines',;
-      description: 'Automated build, test, and deployment workflows';
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600';
-    };
-    {;
-      icon: <Zap className="w-6 h-6" />,;
-      title: 'Infrastructure as Code',;
-      description: 'Terraform, CloudFormation, and Kubernetes automation';
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600';
-    };
-    {;
-      icon: <Shield className="w-6 h-6" />,;
-      title: 'Security Automation',;
-      description: 'Automated security scanning and compliance checks',;
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600';
-    };
-    {;
-      icon: <BarChart3 className="w-6 h-6" />,;
-      title: 'Performance Monitoring',;
-      description: 'Real-time performance insights and optimization',;
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',;
-    },;
-      title: 'CI/CD Pipelines',;
-      description: 'Automated build, test, and deployment workflows',;
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',;
-    },;
-    {;
-      icon: <Zap className='w-6 h-6' />,;
-      title: 'Infrastructure as Code',;
-      description: 'Terraform, CloudFormation, and Kubernetes automation',;
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',;
-    },;
-    {;
-      icon: <Shield className='w-6 h-6' />,;
-      title: 'Security Automation',;
-      description: 'Automated security scanning and compliance checks',;
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',;
-    },;
-    {;
-      icon: <BarChart3 className='w-6 h-6' />,;
-      title: 'Performance Monitoring',;
-      description: 'Real-time performance insights and optimization',;
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',;
-    },  ];      color: 'bg-gradient-to-br from-orange-500 to-red-600';
-    }
-  ];
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+
+      <div className='min-h-screen bg-black'>;
+        {/* Hero Section */}
+        <section className='pt-32 pb-20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20'>;
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
+            <div className='mb-8'>;
+              <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6'>;
+                <span className='w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse' />;
+                DevOps Automation Platform;
+              </div>;
+            </div>;
+            <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>;
+              DevOps Automation;
+            </h1>;
+            <p className='text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12'>;
+              Streamline your development workflow with automated CI/CD;
+              pipelines, infrastructure as code, and intelligent security;
+              automation. Deploy faster, safer, and more reliably.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+
+              <Button
+                href='#pricing'
+                variant='primary'
+                size='lg'
+                className='bg-blue-600 hover:bg-blue-700 text-white'              >
+                Start Free Trial
+              </Button>
+              <Button
+                href='#demo'
+                variant='outline'
+                size='lg'
+                className='border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'              >                href="#pricing"
+                variant="primary"
+                size="lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white"
+                Start Free Trial
+              </Button>
+              <Button
+
+    <>
+      <Head>
+        <title>DevOps Automation - Zion Tech Group | Professional CI/CD & Infrastructure Automation</title>
+        <meta name="description" content="Professional DevOps automation platform with CI/CD, infrastructure as code, and security automation. Plans starting at $39/month." />
+        <meta property="og:title" content="DevOps Automation - Zion Tech Group" />
+        <meta property="og:description" content="Professional DevOps automation starting at $39/month. CI/CD pipelines, infrastructure as code, and security automation." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+
+      <div className="min-h-screen bg-black">
+        {/* Hero Section */}
+        <section className="pt-32 pb-20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="mb-8">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" />
+                DevOps Automation Platform
+              </div>
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+              DevOps Automation
+            </h1>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
+              Streamline your development workflow with automated CI/CD pipelines, infrastructure as code, and intelligent security automation. Deploy faster, safer, and more reliably.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                href="#pricing"
+                variant="primary"
+                size="lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white"
+              >
+                Start Free Trial
+              </Button>
+              <Button
+                href="#demo"
+                variant="outline"
+                size="lg"
+                className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white"
+              >
+
                 Watch Demo
 
       color: 'from - blue - 500 to - cyan - 600',
@@ -426,14 +399,6 @@ export default function DevOpsAutomationPage() {;
                   className='text-center group hover:scale-105 transition-transform duration-300'
                 >
                   <div
-                    className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}
-                  >
-                    {example.icon}
-                  </div>
-                  <h3 className='text-xl font-semibold text-white mb-4'>
-                    {example.title}
-                  </h3>
-                  <p className='text-gray-400'>{example.description}</p>                </Card>                What You Can Automate
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See how Zion DevOps can transform your development workflow.
@@ -471,9 +436,6 @@ export default function DevOpsAutomationPage() {;
                   >
                     {example.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{example.title}</h3>
-                  <p className="text-gray-400">{example.description}</p>
-                </Card>
                   <p className='text-gray-400'>{example.description}</p>                </Card>
 
                 </Card>
@@ -601,40 +563,6 @@ export default function DevOpsAutomationPage() {;
                   }`}
                 >;
                   {plan.popular && (
-                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
-                      <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium'>                        Most Popular
-                      </span>
-                    </div>
-                  )}                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <div className='text-center'>
-                    <h3 className='text-2xl font-bold text-white mb-2'>
-                      {plan.name}
-                    </h3>
-                    <div className='mb-6'>
-                      <span className='text-4xl font-bold text-white'>
-                        {plan.price}
-                      </span>
-                      <span className='text-gray-400'>{plan.period}</span>
-                    </div>
-                    <p className='text-gray-300 mb-8'>{plan.description}</p>
-                    <ul className='text-left space-y-3 mb-8'>
-                      {plan.features.map((feature, featureIndex) => (
-                        <li
-                          key={featureIndex}
-                          className='flex items-center text-gray-300'
-                        >
-                          <Check className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />                          {feature}                    </div>
-                    <p className="text-gray-300 mb-8">{plan.description}</p>
-                    <ul className="text-left space-y-3 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                          {feature}
 
                           {feature}
 
@@ -685,6 +613,11 @@ export default function DevOpsAutomationPage() {;
                     <Button;
                       href={plan.name === 'Enterprise' ? '/contact' : '#signup'}
                       variant={plan.popular ? 'primary' : 'outline'}
+                        plan.popular
+
+                        plan.popular 
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
 
                           : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
@@ -730,6 +663,26 @@ export default function DevOpsAutomationPage() {;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {marketComparison.map((competitor, index) => (
                 <Card key={index} className="p-6">
+        {/* Market Comparison Section */}
+        <section className='py-24 bg-gray-800'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-20'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+
+                How We Compare to the Competition
+              </h2>
+              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+                See why Zion DevOps is the smart choice for automation.
+              </p>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              {marketComparison.map((competitor, index) => (
+                <Card key={index} className='p-6'>
+                  <div className='text-center mb-6'>
+                    <h3 className='text-xl font-bold text-white mb-2'>
+                      {competitor.competitor}
+                    </h3>
+                    <div className='flex items-center justify-center mb-2'>                      {[...Array(5)].map((_, i) => (                <Card key={index} className="p-6">
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-bold text-white mb-2">{competitor.competitor}</h3>
                     <div className="flex items-center justify-center mb-2">
@@ -743,33 +696,6 @@ export default function DevOpsAutomationPage() {;
                           }`}
                         />;
                       ))}
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <p className='text-sm font-medium text-red-400 mb-1'>
-                        Cons:
-                      </p>
-                      <ul className='text-sm text-gray-300 space-y-1'>
-                        {competitor.cons.map((con, conIndex) => (
-                          <li key={conIndex} className='flex items-center'>
-                            <span className='w-4 h-4 text-red-400 mr-2 flex-shrink-0'>
-                              ×
-                            </span>                            {con}                      <p className="text-sm font-medium text-red-400 mb-1">Cons:</p>
-                      <ul className="text-sm text-gray-300 space-y-1">
-                        {competitor.cons.map((con, conIndex) => (
-                          <li key={conIndex} className="flex items-center">
-                            <span className="w-4 h-4 text-red-400 mr-2 flex-shrink-0">×</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
 
             </div>;
           </div>;

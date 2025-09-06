@@ -262,11 +262,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
               <span className="text-6xl md:text-8xl">Innovations</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            {/* Service Statistics */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
@@ -325,10 +320,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
           </div>
         </div>
       </section>
-      {/* Featured Services */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
             transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Revolutionary Services</span>
@@ -373,14 +364,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                   </div>
                 </div>
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
             transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               All <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Revolutionary Services</span>
@@ -389,15 +372,58 @@ export default function Ultimate2026ServicesShowcase(req, res) {
               Explore our complete portfolio of cutting-edge 2026 innovations
             </p>
           </motion.div>
+            {/* Search Bar */}
+
+
+          {/* Filters and Search */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="mb-12 space-y-6">
+            {/* Search Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
             <div className="relative max-w-2xl mx-auto">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search revolutionary services..."
-                value={searchTerm}
+              {/* Category Filter */}
+
+
+                value={searchTerm  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all"
               />
             </div>
+            {/* Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div className="relative">
+                <select
+                  value={selectedCategory  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
                   onChange={(e) => setSelectedCategory(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
@@ -414,32 +440,17 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                   onChange={(e) => setSelectedPriceRange(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   {priceRanges.map((range) => (
                     <option key={range.id} value={range.id}>
-                      {range.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </option>;
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </select>
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
-              </div>
-              {/* Sort */}
-              <div className="relative">
-                <select
-                  value={sortBy}
+                  on_change={(e) => setSelectedPriceRange (e.target.value)} className="appearance - none bg - gray - 800 border border - gray - 700 rounded - lg px - 4 py - 2 text - white focus:outline - none focus:border - cyan - 500 focus:ring - 2 focus:ring - cyan - 500 / 20 transition - all">;
+                  {price_ranges.map ((range) => (
+                    <option key={range.id} value={range.id}>;
+                      {range.name}
+
+
               {/* Sort */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              <div className="relative">
-                <select
-                  value={sortBy  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -538,6 +549,9 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">
+                        {service.price}
+
+
                         {service.price  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -572,27 +586,19 @@ export default function Ultimate2026ServicesShowcase(req, res) {
       <section className="py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business with 2026 Innovations?
-            </h2>
-            <p className="text-xl text-white/90 mb-8">
-              Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+      <section className="py - 20 bg - gradient - to - r from - cyan - 600 via - purple - 600 to - pink - 600">;
+        <div className="max - w-4xl mx - auto text - center px - 6">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+
+
+              Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing,
+
 
               Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing,
               and emerging technology solutions to gain competitive advantages and drive unprecedented growth.
@@ -654,9 +660,5 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                   <span>{contactInfo.address}</span>
                 </div>
               </div>
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
 

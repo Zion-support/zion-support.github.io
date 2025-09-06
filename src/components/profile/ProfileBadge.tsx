@@ -4,7 +4,6 @@ import { cn } from '@/lib/utils';
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
 interface ProfileBadgeProps {;
   type: BadgeType;
-  className?: string;  type: BadgeType,
   className?: string
 }
 

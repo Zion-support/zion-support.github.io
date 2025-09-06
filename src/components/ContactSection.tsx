@@ -20,7 +20,6 @@
           description: err.message,
           variant: "destructive"})
       })
-  },
 
 
 
@@ -112,7 +111,6 @@
                   <Textarea
                     id="message"
                     name="message"
-                    rows = {4,}
                 </div>;
               </form>;
             </div>;

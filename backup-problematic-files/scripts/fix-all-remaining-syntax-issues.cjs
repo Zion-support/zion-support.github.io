@@ -2,6 +2,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -741,6 +743,9 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
       "features"
         <meta name="description" content="
 <<<<<<< HEAD:backup-problematic-files/scripts/fix-all-remaining-syntax-issues.cjs
+<<<<<<< HEAD
+        <meta property="og:description" content="
+=======
 <<<<<<< HEAD
         <meta property="og:description" content="
 =======

@@ -6,12 +6,6 @@ import {format} from "date-fns";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -48,16 +42,12 @@ interface ReviewsModerationTableProps {
 
   onRefresh: () => void
 }
-export function ReviewsModerationTable({
-  reviews,
-  isLoading,
 
 
 
 
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
 
@@ -186,7 +176,7 @@ if ( {) {
         <TableHeader>;
           <TableRow>;
                         src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name || ""}
+                        alt={review.reviewer_profile.display_name |""}
                       />
                     ) : (
                       <AvatarFallback>

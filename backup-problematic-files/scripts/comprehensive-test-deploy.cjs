@@ -2,6 +2,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -238,6 +240,9 @@ console.log('=')
     this.log('===')
     this.log('\n Recommendations:')
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-test-deploy.cjs
+<<<<<<< HEAD
+    this.log('\\n� Comprehensive test & deploy suite completed!')
+=======
 <<<<<<< HEAD
     this.log('\\n� Comprehensive test & deploy suite completed!')
 =======

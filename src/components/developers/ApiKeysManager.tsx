@@ -505,7 +505,6 @@ export function ApiKeysManager() {;
                       </p>;
                     </PopoverContent>;
                   </Popover>;
-          )}
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
         <div className="text-xs text-zinc-500">
           Keep your API keys secure. They have the same permissions as your account.
@@ -562,26 +561,6 @@ export function ApiKeysManager() {;
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-                </div>;
-              </div>;
-            ));
-          )}
-        </div>
-      </CardContent>
-      
-      <CardFooter className="justify-between border-t border-zinc-800 py-4">
-        <div className="text-xs text-zinc-500">
-          Keep your API keys secure. They have the same permissions as your account.
-        </div>
-        <Button variant="outline" size="sm" onClick={fetchApiKeys}>
-          Refresh
-        </Button>
-      </CardFooter>
-
-      {/* Regenerate Key Confirmation Dialog */}
-      <AlertDialog;
-        open={showRegenerateConfirm !== null} ;
-        onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;

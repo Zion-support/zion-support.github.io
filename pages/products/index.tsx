@@ -1,15 +1,258 @@
-import React from 'react';
-import { NextPage } from 'next';
-import Head from 'next/head';
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-origin/main
-origin/automation-improvements-final
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
 import Layout from '../../components/Layout';
+
+const Index: NextPage = () => {
+  return (
+
+
+    <Layout
+      title="Products - Zion Tech Group"
+      description="Discover our comprehensive suite of technology products designed to transform your business operations."
+      keywords="products, technology solutions, AI, cloud, security, automation, collaboration">;
+      <div className="min-h-screen bg-gray-50">;
+        {/* Hero Section */}
+
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
+          <div className="absolute inset-0">;
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
+          </div>;
+
+          <div className="container mx-auto px-4 relative z-10">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Products</span>;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+                Comprehensive technology products designed to transform your business operations and drive growth.;
+              </p>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+        {/* Search and Filter Section */}
+        <section className="py-12 bg-white">;
+          <div className="container mx-auto px-4">;
+            <div className="max-w-4xl mx-auto">;
+              {/* Search Bar */}
+              <div className="mb-8">;
+                <div className="relative">;
+                  <input
+                    type="text"
+                    placeholder="Search products..."
+                    value={searchTerm}
+
+                    onChange={(e) => setSearchTerm(e && e.target.value)}
+                    className="w-full px-6 py-4 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
+                  />;
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
+                </div>;
+              </div>;
+
+
+              {/* Category Filter */}
+              <div className="flex flex-wrap gap-2 justify-center mb-8">;
+                {categories && categories.map((category) => (;
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${;
+                      selectedCategory === category;
+                        ? 'bg-blue-600 text-white';
+                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300';
+                    }`}
+                  >;
+                    {category}
+                  </button>;
+                ))}
+
+              </div>;
+
+              <div className="text-center">;
+
+                <button
+                  onClick={() => {;
+                    setSearchTerm('');
+                    setSelectedCategory('All');
+                  }}
+
+                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold";
+import Head from 'next / head';
+import Link from 'next / link';
+import { motion } from 'framer-motion';
+import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
+import Layout from '../../components / Layout';
+;
+const products = [;
+  {
+    id: 'ai - analytics - suite',
+    name: 'ZionAI Analytics Suite',
+    description: 'Comprehensive business intelligence platform with AI - powered insights and predictive analytics.',
+    category: 'AI & Analytics',
+    pricing: '$2, 999 / month',
+    features: ['Real - time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'API Integration'],
+    benefits: ['Data - Driven Decisions', 'Improved Efficiency', 'Competitive Advantage', 'Scalable Solutions'],
+    icon: Award,
+    popular: true;
+  },
+  {
+    id: 'cloud - infrastructure',
+    name: 'ZionCloud Infrastructure',
+    description: 'Scalable cloud infrastructure solutions with enterprise - grade security and performance.',
+    category: 'Cloud Services',
+    pricing: '$4, 999 / month',
+    features: ['Auto - scaling', '99.9% Uptime', 'Global CDN', 'Security Compliance'],
+    benefits: ['Cost Optimization', 'High Availability', 'Global Performance', 'Secure Operations'],
+    icon: Globe,
+    popular: true;
+  },
+  {
+    id: 'cybersecurity - suite',
+    name: 'ZionShield Security',
+    description: 'Advanced cybersecurity solutions with threat detection and prevention capabilities.',
+    category: 'Security',
+    pricing: '$3, 999 / month',
+    features: ['Threat Detection', 'Real - time Monitoring', 'Incident Response', 'Compliance Management'],
+    benefits: ['Enhanced Security', 'Risk Mitigation', 'Compliance Ready', 'Peace of Mind'],
+    icon: Shield,
+    popular: false;
+  },
+  {
+    id: 'automation - platform',
+    name: 'ZionAutomate Platform',
+    description: 'Intelligent automation platform for streamlining business processes and workflows.',
+    category: 'Automation',
+    pricing: '$2, 499 / month',
+    features: ['Workflow Automation', 'Process Optimization', 'Integration Hub', 'Analytics Dashboard'],
+    benefits: ['Increased Productivity', 'Reduced Errors', 'Cost Savings', 'Better Efficiency'],
+    icon: Zap,
+    popular: false;
+  },
+  {
+    id: 'collaboration - suite',
+    name: 'ZionCollaborate Suite',
+    description: 'Comprehensive collaboration platform for teams and organizations.',
+    category: 'Collaboration',
+    pricing: '$1, 999 / month',
+    features: ['Team Chat', 'Video Conferencing', 'File Sharing', 'Project Management'],
+    benefits: ['Better Communication', 'Improved Collaboration', 'Remote Work Ready', 'Enhanced Productivity'],
+    icon: Users,
+    popular: false;
+  },
+  {
+    id: 'data - management',
+    name: 'ZionData Manager',
+    description: 'Advanced data management and governance platform for enterprise data needs.',
+    category: 'Data Management',
+    pricing: '$3, 499 / month',
+    features: ['Data Governance', 'Quality Management', 'Compliance Tools', 'Analytics Integration'],
+    benefits: ['Data Quality', 'Compliance Ready', 'Better Insights', 'Risk Reduction'],
+    icon: Star,
+    popular: false;
+  }
+];
+;
+const categories = [;
+  'All',
+  'AI & Analytics',
+  'Cloud Services',
+  'Security',
+  'Automation',
+  'Collaboration',
+  'Data Management';
+];
+;
+const ProductsIndex: NextPage = () => {
+  const [selected_category, setSelectedCategory] = React.useState ('All');
+  const [search_term, setSearchTerm] = React.useState ('');
+;
+  const filtered_products = products.filter (product => {
+    const matches_category = selected_category === 'All' || product.category === selected_category;
+    const matches_search = product.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+                        product.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+                        product.category.toLowerCase ().includes (search_term.toLowerCase ());
+    return matches_category && matches_search;
+  });
+;
+  return (
+    <Layout;
+      title="Products - Zion Tech Group";
+      description="Discover our comprehensive suite of technology products designed to transform your business operations.";
+      keywords="products, technology solutions, AI, cloud, security, automation, collaboration";
+    >;
+      <div className="min - h-screen bg - gray - 50">;
+        {/* Hero Section */}
+        <section className="relative bg - gradient - to - br from - blue - 900 via - purple - 900 to - indigo - 900 text - white py - 20 overflow - hidden">;
+          <div className="absolute inset - 0">;
+            <div className="absolute top - 20 left - 10 w - 72 h - 72 bg - blue - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse"></div>;
+            <div className="absolute top - 40 right - 10 w - 72 h - 72 bg - purple - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse animation - delay - 2000"></div>;
+            <div className="absolute -bottom - 8 left - 20 w - 72 h - 72 bg - indigo - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse animation - delay - 4000"></div>;
+          </div>;
+          <div className="container mx - auto px - 4 relative z - 10">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text - center";
+            >;
+              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
+                Our <span className="text - transparent bg - clip - text bg - gradient - to - r from - blue - 400 to - purple - 400">Products</span>;
+              </h1>;
+              <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
+                Comprehensive technology products designed to transform your business operations and drive growth.;
+              </p>;
+            </motion.div>;
+          </div>;
+        </section>;
+        {/* Search and Filter Section */}
+        <section className="py - 12 bg - white">;
+          <div className="container mx - auto px - 4">;
+            <div className="max - w-4xl mx - auto">;
+              {/* Search Bar */}
+              <div className="mb - 8">;
+                <div className="relative">;
+                  <input;
+                    type="text";
+                    placeholder="Search products...";
+                    value={search_term}
+                    on_change={(e) => setSearchTerm (e.target.value)}
+                    className="w - full px - 6 py - 4 pl - 12 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+                  />;
+                  <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
+                </div>;
+              </div>;
+              {/* Category Filter */}
+              <div className="flex flex - wrap gap - 2 justify - center mb - 8">;
+                {categories.map ((category) => (
+                  <button;
+                    key={category}
+                    on_click={() => setSelectedCategory (category)}
+                    className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all duration - 200 ${
+                      selected_category === category;
+                        ? 'bg - blue - 600 text - white';
+                        : 'bg - gray - 200 text - gray - 700 hover:bg - gray - 300';
+                    }`}
+                  >;
+                    {category}
+                  </button>))}
+              </div>;
+              <div className="text - center">;
+                <button;
+                  on_click={() => {
+                    setSearchTerm ('');
+                    setSelectedCategory ('All');
+                  }}
+                  className="px - 6 py - 3 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition - colors font - semibold";
+
                 >;
                   Clear Filters;
                 </button>;
@@ -45,10 +288,6 @@ import Layout from '../../components/Layout';
                 </button>;
                 <Link
                   href="/contact"
-    <div>
-      <Head>
-        <title>Index - Zion Tech Solutions</title>
-        <meta name='description' content='Index page' />
       </Head>
 ursor/integrate-build-improve-and-re-verify-8f7d
 

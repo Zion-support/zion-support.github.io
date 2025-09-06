@@ -23,15 +23,9 @@ const defaultContext: WhitelabelContextType = {
 // without falling back to an empty object which triggers TS2740 errors.
 const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
   const context = useContext(WhitelabelContext);
-  if (!context) {
-    throw new Error('useWhitelabel must be used within a WhitelabelProvider')
-  }
-  const context = useContext(WhitelabelContext);
   if (!context) {;
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');
   }
-
-export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenant, isLoading } = useWhitelabelTenant();
   useEffect(() => {

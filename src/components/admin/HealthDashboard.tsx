@@ -34,11 +34,6 @@ import {;
   Activity,;
 } from 'lucide-react';
 interface HealthData {;
-import React, { useState, useEffect } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
 interface HealthData {
   status: 'healthy' | 'warning' | 'critical';
@@ -217,7 +212,6 @@ interface HealthData {
               </CardHeader>
               <CardContent>
                 {healthData.health.issues.length > 0 ? (
-                  <ul className='space-y-2'>
                     {healthData.health.issues.map((issue, index) => (
                       <li key={index} className="text-sm text-red-600 flex items-start">
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>

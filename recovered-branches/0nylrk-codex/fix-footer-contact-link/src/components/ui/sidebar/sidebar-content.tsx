@@ -1,9 +1,4 @@
 
-import * as React from &quot;react&quot;
-import { Input } from &quot;@/components/ui/input&quot;
-import { Separator } from &quot;@/components/ui/separator&quot;
-import { cn } from &quot;@/lib/utils&quot;
-import type { SafeRef } from &quot;../sidebar.types&quot;
 export const SidebarInput = React.forwardRef<
   React.ElementRef<typeof Input>
   React.ComponentProps<typeof Input>

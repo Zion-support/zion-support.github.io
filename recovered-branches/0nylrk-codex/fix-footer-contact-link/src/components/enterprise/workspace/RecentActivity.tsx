@@ -4,11 +4,6 @@ export function RecentActivity() {
 
   const activities = [
     {
-      id: "act-1"
-      user: "Michael Chen"
-      action: "posted a new job"
-      target: "Senior React Developer"
-      timestamp: "1h ago"
       id: "act-1",
       user: "Michael Chen",
       action: "posted a new job",
@@ -92,4 +87,5 @@ export function RecentActivity() {;
         </div>;
       </CardContent>;
 }
-;
+    </Card>);
+}

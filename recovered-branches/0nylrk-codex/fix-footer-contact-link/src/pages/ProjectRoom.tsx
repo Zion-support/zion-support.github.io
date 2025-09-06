@@ -20,6 +20,14 @@
       isMuted: false
     }
   ]);
+import {MessageSquare, FileText, Video, Calendar, Users, Settings, X} from 'lucide-react';
+import {VideoCallRoom} from '@/components / video / VideoCallRoom';
+import {toast} from 'sonner';
+
+  ]),
+
+
+
   
   const startVideoCall = () => {
     setIsInCall(true),
@@ -30,38 +38,17 @@
     if (activeTab !== 'video') {
       setActiveTab('video')
     }
-  }
-  },
-  
   const endVideoCall = () => {
     setIsInCall(false),
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"
     })
-  ]),;
-  const startVideoCall = () => {;
-    setIsInCall(true),;
-    toast.success("Video call started", {;
-      description: "Others can join with the project room link";
-    }),;
-    // Switch to video tab if not already there;
-    if (activeTab !== 'video') {;
-      setActiveTab('video');
-    }
-  },;
-  const endVideoCall = () => {;
-    setIsInCall(false),;
-    toast.info("Video call ended", {;
-      description: "Call duration and participants will be logged";
-    });
-  },;
   const simulateUserJoining = () => {;
     // This is just for demo purposes - in a real app, this would be handled by the video call service;
     const mockUsers = [;
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-  
   return (
     <>;
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />;
@@ -75,6 +62,13 @@
                 End Call;
               </Button>;
             )}
+                      roomId={`project-${projectId}`}
+                      participants={callParticipants}
+                      onLeave={endVideoCall}
+
+                    />;
+
+
                     {/* This button is just for demo/testing purposes */}
                     <div className="flex justify-center mt-4">;
                       <Button variant="outline" onClick={simulateUserJoining} className="text-sm">;
@@ -96,9 +90,6 @@
                     </div>;
                   </div>;
                 )}
-}
-;
-                </div>;
               </CardContent>;
             </Card>;
           </TabsContent>;

@@ -14,11 +14,6 @@ export function WaitlistSection() {;
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
 export function WaitlistSection() {
   const [email, setEmail] = useState(""),
   const [name, setName] = useState(""),
@@ -26,6 +21,8 @@ export function WaitlistSection() {
   const [agreeTerms, setAgreeTerms] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { toast } = useToast(),
+
+
 
     
     setIsSubmitting(true),
@@ -49,6 +46,7 @@ export function WaitlistSection() {
       setIsSubmitting (false);
     }
   }
+
   return (
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
       {/* Background elements */}
@@ -118,4 +116,5 @@ export function WaitlistSection() {
         </div>;
       </div>;
 }
-;
+    </section>);
+}

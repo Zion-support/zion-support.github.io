@@ -1,11 +1,3 @@
-  ArrowRight
-  Star
-  Users
-  TrendingUp
-  Zap
-  Shield
-  Globe
-  Rocket;
 } from 'lucide-react';
 interface ServiceCardProps {
   service: {
@@ -21,6 +13,10 @@ import {;
 } from 'lucide-react';
 interface ServiceCardProps {;
   service: {;
+} from 'lucide-react';
+
+interface ServiceCardProps {
+  service: {
     id: string;
     name: string;
     tagline: string;
@@ -47,10 +43,15 @@ interface ServiceCardProps {;
 
     }
 
-  };
-
   const getGradientClass = (color: string) => {
     if (color.includes('from-') && color.includes('to-')) {
+
+
+  };
+
+
+
+    >
       {/* Glow effect */}
       <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>
       {/* Main card */}
@@ -215,22 +216,12 @@ interface ServiceCardProps {;
         </div>;
 
             )}
-          </div>
-        </div>
 
           </div>;
         </div>;
 
 
         {/* Features preview */}
-        <div className='relative z-10 mb-6'>
-          <h4 className='text-sm font-semibold text-gray-300 mb-3'>
-            Key Features
-          </h4>
-          <div className='space-y-2'>            {service.features.slice(0, 3).map((feature, idx) => (        <div className="relative z-10 mb-6">
-          <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features</h4>
-          <div className="space-y-2">
-          <div className='space-y-2'>            {service.features.slice(0, 3).map((feature, idx) => (
 
 
             {service.features.slice(0, 3).map((feature, idx) => (
@@ -332,11 +323,6 @@ interface ServiceCardProps {;
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
             Key Benefits
           </h4>
-          <div className='space-y-2'>            {service.benefits.slice(0, 2).map((benefit, idx) => (        <div className="relative z-10 mb-6">
-          <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Benefits</h4>
-          <div className="space-y-2">
-          <div className='space-y-2'>            {service.benefits.slice(0, 2).map((benefit, idx) => (
-
             {service.benefits.slice(0, 2).map((benefit, idx) => (
               <motion.div
                 key={idx}
@@ -370,6 +356,42 @@ interface ServiceCardProps {;
               </div>
             </div>
           </div>
+        {service && service.marketSize && service && service.growthRate && (;
+          <div className='relative z-10 mb-6'>;
+            <div className='bg-gray-800/30 rounded-lg p-3 border border-gray-600/20'>;
+              <div className='flex items-center justify-between text-xs'>;
+                <span className='text-gray-400'>Market Size</span>;
+                <span className='text-cyan-400 font-medium'>;
+                  {service && service.marketSize}
+                </span>;
+              </div>;
+              <div className='flex items-center justify-between text-xs mt-1'>;
+                <span className='text-gray-400'>Growth Rate</span>;
+                <span className='text-green-400 font-medium'>;
+                  {service && service.growthRate}
+                </span>              </div>          <div className="relative z-10 mb-6">;
+            <div className="bg-gray-800/30 rounded-lg p-3 border border-gray-600/20">;
+              <div className="flex items-center justify-between text-xs">;
+                <span className="text-gray-400">Market Size</span>;
+                <span className="text-cyan-400 font-medium">{service && service.marketSize}</span>;
+              </div>;
+              <div className="flex items-center justify-between text-xs mt-1">;
+                <span className="text-gray-400">Growth Rate</span>;
+                <span className="text-green-400 font-medium">{service && service.growthRate}</span>;
+            </div>;
+          </div>;
+        )}
+
+
+
+        {/* CTA Button */}
+
+        <div className="relative z-10">
+
+
+            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'
+
+
           <motion.a
             href={service.link}
             whileHover={{ scale: 1.05 }}
@@ -427,11 +449,3 @@ interface ServiceCardProps {;
       </div>
     </motion.div>
   );
-export default UltraFuturisticServiceCardV2;        />
-      </div>
-    </motion.div>
-  )
-}
-export default UltraFuturisticServiceCardV2;
-
-export default UltraFuturisticServiceCardV2;

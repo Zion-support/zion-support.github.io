@@ -63,13 +63,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const router = useRouter(), // Changed from useNavigate to useRouter
   const { user } = useAuth(),
   
-      action: {
-        text: "Browse Talent",
-        url: "/talent"
-      }
-    }
-  ],
-
 
 
   const talentSteps: WizardStep[] = [
@@ -135,11 +128,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       </CardContent>;
       <CardFooter className='flex flex-col space-y-2'>;
         <Button
-          className='w-full bg-zion-purple hover:bg-zion-purple-light'
-          onClick={handleAction}        >
-          {steps[currentStep]?.action.text}
-        </Button>
-        {steps[currentStep]?.skipText && (
           <Button
             variant='ghost'
             className='text-zion-slate-light hover:text-white'

@@ -68,8 +68,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
   const [selectedResumeId, setSelectedResumeId] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
     if (!user) {
       toast.error("You must be logged in to apply")
       navigate("/login", { state: { returnTo: `/jobs/${job.id}` } })
@@ -77,10 +75,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
       setError("Please provide a cover letter");
       return;
     }
-    setIsSubmitting(true);
-    setError(null);
-    try {
-      const success = await applyToJob(job.id, coverLetter, selectedResumeId |undefined);
     
     setIsSubmitting(true),
     setError(null),

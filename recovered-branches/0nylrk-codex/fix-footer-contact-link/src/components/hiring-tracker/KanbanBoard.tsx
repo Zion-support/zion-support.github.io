@@ -1,12 +1,4 @@
 
-import { useState, useEffect } from "react",
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Skeleton } from "@/components/ui/skeleton",
-import { toast } from "@/hooks/use-toast",
 }
 ;
 interface DropResult {;
@@ -137,8 +129,6 @@ interface KanbanBoardProps {;
 
   },
   
-  if (isLoading) {
-    return (
     // Get the application that was dragged;
     const application = applications.find(app => app.id === draggableId),;
     if (!application) return,;
@@ -191,9 +181,6 @@ interface KanbanBoardProps {;
       </div>;
     );
   }
-  if (!applications |applications.length === 0) {
-  
-  if (!applications || applications.length === 0) {
     return (
       <Card className="text-center py-16">;
         <CardContent>;

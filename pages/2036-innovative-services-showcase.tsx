@@ -1,94 +1,3 @@
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-
-import {
-  Brain
-  Rocket
-  Shield
-  Zap
-  Target
-  Atom
-  Globe
-  Cpu
-  Lock
-  Cloud
-  Settings
-  Eye
-  Award
-  Clock
-  Star
-  TrendingUp
-  Users
-  Building
-  Lightbulb
-  ArrowRight
-  Filter
-  Search
-  Grid
-  List
-  Phone
-  Mail
-  MapPin;
-} from 'lucide-react';
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
-import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-const categories = [
-  'All Services'
-  'AI & Data'
-  'Quantum Technology'
-  'Space Technology'
-  'IT Infrastructure'
-  'Cybersecurity'
-  'Edge Computing'
-  'Blockchain'
-  'Manufacturing'
-  'Healthcare AI'
-  'Emerging Technology'
-  'Biotechnology'
-  'Human-Computer Interaction'
-  'Metaverse'
-  'Autonomous Systems'
-  'Climate Technology'
-];
-const categoryIcons: { [key: string]: React.ReactNode } = {
-  'AI & Data': <Brain className='w-5 h-5' />
-  'Quantum Technology': <Atom className='w-5 h-5' />
-  'Space Technology': <Rocket className='w-5 h-5' />
-  'IT Infrastructure': <Cpu className='w-5 h-5' />
-  Cybersecurity: <Shield className='w-5 h-5' />
-  'Edge Computing': <Zap className='w-5 h-5' />
-  Blockchain: <Globe className='w-5 h-5' />
-  Manufacturing: <Building className='w-5 h-5' />
-  'Healthcare AI': <Eye className='w-5 h-5' />
-  'Emerging Technology': <Lightbulb className='w-5 h-5' />
-  Biotechnology: <Target className='w-5 h-5' />
-  'Human-Computer Interaction': <Users className='w-5 h-5' />
-  Metaverse: <Globe className='w-5 h-5' />
-  'Autonomous Systems': <Rocket className='w-5 h-5' />
-  'Climate Technology': <Globe className='w-5 h-5' />,}
-export default function InnovativeServicesShowcase2036() {
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<;
-    'name' | 'price' | 'rating' | 'marketSize';
-  >('name');
-import Layout from '../components/layout/Layout',
-import { motion } from 'framer-motion',
-import {
-  Brain, Rocket, Shield, Zap, Target, Atom, Globe,
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock,
-  Star, TrendingUp, Users, Building, Lightbulb,
-  ArrowRight, Filter, Search, Grid, List, Phone, Mail, MapPin
-} from 'lucide-react',
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
-import { real2036SpecializedServices } from '../data/real-2036-specialized-services',
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -134,10 +43,6 @@ export default function InnovativeServicesShowcase2036() {
       case 'price':
         return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'rating':
-        return (
-          parseFloat(b.marketSize?.replace('$', '').replace('B', '') |'0') -
-          parseFloat(a.marketSize?.replace('$', '').replace('B', '') |'0')
-        );
           >
             2036 Innovative Services
           </motion.h1>
@@ -227,6 +132,7 @@ export default function InnovativeServicesShowcase2036() {
           <motion&& motion.div
             className='text-center mb-16'            initial={{ opacity: 0, y: 20 }}
 
+          >
             <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
               <Phone className="w-8 h-8 mx-auto mb-4 text-cyan-400" />
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
@@ -249,10 +155,20 @@ export default function InnovativeServicesShowcase2036() {
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
               Revolutionary Services
             </h2>
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Revolutionary Services
+            </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover our comprehensive portfolio of innovative micro SAAS
               services, AI platforms, and cutting-edge technology solutions
               designed for the future.            </p>
+          </motion.div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our comprehensive portfolio of innovative micro SAAS services,
+              AI platforms, and cutting-edge technology solutions designed for the future.
+            </p>
+          </motion.div>
           {/* Filters and Controls */}
           <motion.div
             className='mb-12 space-y-6'            initial={{ opacity: 0, y: 20 }}
@@ -313,20 +229,6 @@ export default function InnovativeServicesShowcase2036() {
                   className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
                 />
               </div>
-
-          </motion.div>
-          {/* Filters and Controls */}
-
-          <motion.div 
-            className="mb-12 space-y-6"
-            initial={{ opacity: 0, y: 20 }}
-
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.6 }}
-            viewport={{ once: true }}>;
-            {/* Search and View Controls */}
-
-
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
@@ -337,6 +239,9 @@ export default function InnovativeServicesShowcase2036() {
                   <option value='rating'>Sort by Rating</option>
                   <option value='marketSize'>Sort by Market Size</option>
                 </select>
+                  >
+                    <Grid className="w-5 h-5" />
+                  </button>
                   <button
                     onClick={() => setViewMode('grid')  } catch (error) {
     console.error("Error:", error);
@@ -355,6 +260,14 @@ export default function InnovativeServicesShowcase2036() {
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-500 text-black' : 'text-gray-400 hover:text-white'}`}
                   >
+                    <List className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+
             {/* Category Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -460,6 +373,78 @@ export default function InnovativeServicesShowcase2036() {
             }          >;
             {sorted_services.map ((service, index) => (
               <motion.div;
+            {/* Category Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="flex flex-wrap gap-3 justify-center">
+              {categories.map((category) => (
+                <button
+                  key={category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onClick={() => setSelectedCategory(category)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 ${;
+                    selectedCategory === category;
+                      ? 'bg-cyan-500 text-black border-cyan-500';
+                      : 'bg-gray-800/50 text-gray-300 border-gray-700 hover:border-cyan-400 hover:text-cyan-400';
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                >
+                  {categoryIcons[category] || <Star className="w-4 h-4" />  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  {category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </button>;
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </motion.div>;
+          {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <motion.div;
+            variants={containerVariants  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >;
+            {sortedServices.map((service, index) => (;
+              <motion.div;
                 key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -506,18 +491,6 @@ export default function InnovativeServicesShowcase2036() {
                     <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
                   </div>
 
-                    {/* Features */}
-                  {/* Service Details */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  <div className="space-y-4">
-                    {/* Category and Rating */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                     <div className="flex items-center justify-between">
                       <span className="px-3 py-1 bg-gray-800 text-cyan-400 text-sm rounded-full border border-gray-700">
                     </p>;

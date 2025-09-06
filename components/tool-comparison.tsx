@@ -2,6 +2,11 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import {
+
   Search,
   Filter,
   TrendingUp,
@@ -519,6 +524,7 @@ function ToolComparisonPage() {
       default: return 0;
   });
 
+
   return (
 
         />;
@@ -661,6 +667,7 @@ function ToolComparisonPage() {
             <div className='flex items-center space-x-2'>;
               <Filter className='w-5 h-5 text-gray-400' />;
             </div>
+
 
             {/* Sort */}
             <div className='flex items-center space-x-2'>
@@ -860,9 +867,6 @@ function ToolComparisonPage() {
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
               <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
-          )}
-        </div>
-      </section>
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -936,9 +940,6 @@ function ToolComparisonPage() {
                 </div>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
 
           </div>;
         </div>;
@@ -975,22 +976,6 @@ function ToolComparisonPage() {
         </div>;
       </section>;
 
-
-  );
-}
-    </>);
-}
-              className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'            >              href="/saas-marketplace"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
-              Explore All Tools
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-}
 
   );
 }

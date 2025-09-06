@@ -100,7 +100,6 @@ export function useTranslationService() {;
     translateContent;
     isTranslating;
 
-    getTranslation
     } catch (err) {;
       setIsTranslating(false),;
       console.error('Translation service error:', err),;

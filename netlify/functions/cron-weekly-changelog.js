@@ -13,11 +13,6 @@ exports.handler = async function () {
     const byAuthor = {}
     const messages = [];
 
-      owner,
-      repo,
-      path: 'data/reports/changelog/weekly-changelog && changelog.json',
-      content: JSON && JSON.stringify(summary, null, 2),
-      message: 'chore(automation): weekly changelog summary',
       token,
     });
     return {

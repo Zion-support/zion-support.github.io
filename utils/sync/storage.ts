@@ -1,11 +1,4 @@
 
-  async getJob(id: string): Promise<SyncJob | null> {
-    return this.jobs.get(id) || null;
-  }
-
-}
-
-
 
     );
   }
@@ -171,18 +164,5 @@ const default_state: SyncState = {
 }
 }
 }
-  return events;export function resetState(): void {;
-  state = { ...defaultState };
-}
-
 }
 }
-}
-  return events;export function resetState(): void {;
-  state = { ...defaultState };
-}
-
-}
-}
-}
-

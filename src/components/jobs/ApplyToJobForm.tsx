@@ -294,10 +294,6 @@ export function ApplyToJobForm({ job, onSuccess } ApplyToJobFormProps) {;
             type="file"
             accept=".pdf"
             className="mt-1"
-            onChange = {(e,) => setResumeFile(e.target.files?.[0] |null),}
-          />
-        </div>
-      </div>
             onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
           />
         </div>

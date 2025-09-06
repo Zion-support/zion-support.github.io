@@ -295,9 +295,6 @@ export default function Careers() {;
                   <span className="text-gray-300">{benefit}</span>;
                 </div>;
               ))}
-
-        {/* Job Openings */}
-        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -346,9 +343,6 @@ export default function Careers() {;
                     </div>;
                   </div>;
                   <a
-
-        {/* General Application */}
-        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -385,3 +379,6 @@ export default function Careers() {;
               </a>;
             </div>;
           </div>;
+
+export default CareersPage;
+

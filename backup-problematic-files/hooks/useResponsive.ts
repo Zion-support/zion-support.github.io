@@ -1,3 +1,11 @@
+    window.addEventListener(;
+  'resize', updateDimensions);
+    return () => window.removeEventListener(;
+
+  'resize', updateDimensions)}, []),;
+  return state},;
+export default useResponsive,;import { useState, useEffect } from 'react';
+
 
   'resize', updateDimensions)}, []);
   return state}
@@ -16,7 +24,6 @@ const defaultBreakpoints: Breakpoints = {
   xl: 1280
   '2xl': 1536
 }
-<<<<<<< HEAD
 
     updateDimensions();
     window.addEventListener(,

@@ -41,7 +41,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   setSeverityFilter;
   contentTypeFilter;
 
-  setContentTypeFilter
   resetFilters}) => {
   setContentTypeFilter,;
   resetFilters}) => {;

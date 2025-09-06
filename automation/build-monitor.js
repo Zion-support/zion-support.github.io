@@ -491,3 +491,6 @@ class BuildMonitor {
 // Main execution
 if (require.main === module) {
   const monitor = new BuildMonitor(),
+
+
+module.exports = BuildMonitor;

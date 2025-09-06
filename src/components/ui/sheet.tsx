@@ -49,7 +49,6 @@ const SheetHeader = ({
     {...props}
   />
 )
-SheetHeader.displayName = &quot;SheetHeader&quot;
 const SheetFooter = ({
   className
   ...props
@@ -60,7 +59,6 @@ const SheetFooter = ({
     {...props}
   />
 )
-SheetFooter.displayName = &quot;SheetFooter&quot;
 const SheetTitle = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Title>
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>

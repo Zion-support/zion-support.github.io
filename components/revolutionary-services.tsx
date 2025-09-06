@@ -22,74 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-  Check
-  Star
-  Zap
-  Shield
-  Users
-  Globe
-  ArrowRight
-  ExternalLink
-  TrendingUp
-  Clock
-  Target
-  Building
-  Rocket
-  Award
-  DollarSign
-  ChartBar
-  Lock
-  Cpu
-  Database
-  Cloud
-  Smartphone
-  Palette
-  Search
-  MessageSquare
-  FileText
-  Calendar
-  CreditCard
-  BarChart3
-  Settings
-  Zap as ZapIcon
-  Code
-  BookOpen
-  Activity
-  Database as DatabaseIcon
-  Play
-  Mail
-  Phone
-  MapPin
-  Filter
-  Grid
-  List
-  ChevronDown
-  ChevronUp
-  Sparkles
-  FlaskConical
-  Dna
-  Car
-  Leaf
-  Factory
-  Truck
-  Microscope
-  GraduationCap
-  ShieldCheck
-  Brain
-  Atom
-  Globe2
-  Bot
-  Eye
-  Trophy
-  FlaskConical as FlaskIcon
-  Dna as DnaIcon
-  Car as CarIcon
-  Leaf as LeafIcon
-  Factory as FactoryIcon
-  Truck as TruckIcon
-  Microscope as MicroscopeIcon
-  GraduationCap as GraduationCapIcon
-  ShieldCheck as ShieldCheckIcon;
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -492,43 +424,16 @@ import { Zap, Star, Calendar } from 'lucide-react';
                 <motion.div
                   key={category.name}
                   variants={itemVariants}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
+                  whileHover={{ scale: 1 && 1.05 }}
+                  whileTap={{ scale: 0 && 0.95 }}>;
                   <UltraFuturisticCard
-                    variant='quantum-advanced'
-                    size='small'
-                    className='text-center cursor-pointer h-full'
-                    onClick={() =>
-                      setSelectedCategory(
-                        category.name === selectedCategory
-                          ? 'All'
-                          : category.name
-                      )
-                    }
-                    <div
-                      className={`w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br ${category.color} flex items-center justify-center text-white`}
-                    >
-                      {category.icon}
-                    </div>
-                    <h3 className='text-lg font-semibold text-white mb-2'>
-                      {category.name}
-                    </h3>
-                    <p className='text-sm text-gray-400 mb-3'>
-                      {category.description}
-                    </p>
-                    <div className='text-2xl font-bold text-cyan-400'>
-                      {category.count}
-                    </div>
-                    <div className='text-xs text-gray-500'>Services</div>                  </UltraFuturisticCard>                    <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
-                    <p className="text-sm text-gray-400 mb-3">{category.description}</p>
-                    <div className="text-2xl font-bold text-cyan-400">{category.count}</div>
-                    <div className="text-xs text-gray-500">Services</div>
-                </motion.div>
+
+
               ))}
-            </motion.div>
-          </div>
-        </section>
+
+
+
+
 
         {/* Popular Services Showcase */}
         <section className='py-16'>
@@ -613,19 +518,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                      <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-              className={
-                viewMode === 'grid'
-                  ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-                  : 'space-y-6'
-              }
-              variants={containerVariants}
-              initial='hidden'
                     </button>;
                   </div>;
                 </div>;
@@ -714,7 +606,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
           {selectedService && (
             <motion.div
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-
 
 
 

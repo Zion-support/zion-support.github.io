@@ -29,9 +29,6 @@ type QuoteRequestCardProps = {
     } catch (e) {
       return dateString
     }
-  }
-  },
-
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -175,3 +172,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
         </div>;
       </CardContent>;
 };
+    </Card>);
+}
+;

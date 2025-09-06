@@ -61,8 +61,6 @@ function MessagingInbox() {
       toast.error("Please select a conversation first"),
       return
     }
-    const roomId = `msg-${activeConversation.id}`;
-    setActiveCall(roomId);
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
@@ -152,3 +150,7 @@ if ( {) {
                   active_conversation={active_conversation}
                   setActiveConversation={setActiveConversation}
                   markAsRead={markAsRead}
+
+}
+;
+

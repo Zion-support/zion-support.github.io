@@ -8,12 +8,18 @@ const path = // // require('path');
 const { execSync } = // // require('child_process');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
 >>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
 class SyntaxErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -28,12 +34,18 @@ class SyntaxErrorFixer {}
     this.fixedFiles = new Set();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
     
 >>>>>>> origin/main
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     this.syntaxPatterns = {}
       unterminatedStrings: []
         /(["'`])((?:(?!\1)[^\\]|\\.)*?)(?=\n|$)/g,`
@@ -67,12 +79,18 @@ class SyntaxErrorFixer {}
     };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
 >>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
@@ -100,12 +118,18 @@ class SyntaxErrorFixer {}
       this.log('info', 'Syntax Error Fixer Service started successfully');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
       
 >>>>>>> origin/main
+=======
+=======
+      
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
       // Keep the process alive;
       setInterval(async () => {}
         await this.performSyntaxFixes()}, this.fixInterval)} catch (error) {}
@@ -121,12 +145,18 @@ class SyntaxErrorFixer {}
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
 >>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -142,12 +172,18 @@ class SyntaxErrorFixer {}
       this.fixedFiles.clear();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
 >>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
       // Find files with syntax issues;
       const filesWithIssues = await this.findFilesWithSyntaxIssues();
       if (filesWithIssues.length === 0) {}
@@ -161,12 +197,18 @@ class SyntaxErrorFixer {}
         await Promise.all(batch.map(file => this.fixFileSyntax(file)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
         
 >>>>>>> origin/main
+=======
+=======
+        
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
         // Small delay between batches;
         if (i + batchSize < filesWithIssues.length) {}
           await new Promise(resolve => setTimeout(resolve, 1000))};
@@ -182,12 +224,18 @@ class SyntaxErrorFixer {}
     const filesWithIssues = [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
 >>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     for (const dir of sourceDirs) {}
       const fullPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(fullPath)) {}
@@ -233,12 +281,18 @@ class SyntaxErrorFixer {}
     const backticks = (content.match(/`/g) || []).length;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
     
 >>>>>>> origin/main
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {}
       return true};
     // Check for unterminated comments;
@@ -255,12 +309,18 @@ class SyntaxErrorFixer {}
     const closeParens = (content.match(/\)/g) || []).length;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
     
 >>>>>>> origin/main
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     if (openBraces !== closeBraces || openBrackets !== closeBrackets || openParens !== closeParens) {}
       return true};
     // Check for malformed imports/exports;
@@ -289,12 +349,18 @@ class SyntaxErrorFixer {}
         this.log('info', `Successfully fixed syntax issues in: ${filePath}`);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
         
 >>>>>>> origin/main
+=======
+=======
+        
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
         // Verify the fix;
         if (await this.verifyFix(filePath)) {}
           this.log('info', `Fix verification passed for: ${filePath}`)} else {`}
@@ -452,12 +518,18 @@ class SyntaxErrorFixer {}
     const closeParens = (fixed.match(/\)/g) || []).length;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
     
 >>>>>>> origin/main
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     // Add missing closing braces;
     if (openBraces > closeBraces) {}
       const missing = openBraces - closeBraces;
@@ -551,12 +623,18 @@ class SyntaxErrorFixer {}
     this.log('info', `Syntax fix report generated: ${reportPath}`);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
     
 >>>>>>> origin/main
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     return report};
   generateRecommendations() {}
     const recommendations = [];
@@ -619,8 +697,14 @@ fixer.start().catch(error => {})
 <<<<<<< HEAD
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 });
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+});
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

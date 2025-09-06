@@ -15,7 +15,7 @@ import Footer from '../Footer';
 
 
 
-;
+import React from 'react';
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -23,7 +23,6 @@ interface LayoutProps {;
   title?: string;
   description?: string;
   keywords?: string;
-  canonical?: string;
 export default function Layout({
   children
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"

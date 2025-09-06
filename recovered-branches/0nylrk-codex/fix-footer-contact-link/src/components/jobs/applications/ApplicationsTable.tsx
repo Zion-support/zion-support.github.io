@@ -18,28 +18,6 @@ import {Briefcase, User} from "lucide-react";
 import {HireConfirmationModal} from "@/components/hiring-tracker/HireConfirmationModal";
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
-import { format } from "date-fns",
-import { JobApplication } from "@/types/jobs",
-import { Avatar } from "@/components/ui/avatar",
-import { 
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow
-} from "@/components/ui/table",
-import { ApplicationActions } from "./ApplicationActions",
-import { StatusBadge } from "./StatusBadge",
-import { Briefcase, User } from "lucide-react",
-import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",
-interface ApplicationsTableProps {
-
-  applications: JobApplication[]
-  processingId: string | null
-  onViewApplication: (applicationId: string) => Promise<void>
-  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
-  onViewScore: (application: JobApplication) => void
 }
 export function ApplicationsTable({
   applications
@@ -52,10 +30,6 @@ export function ApplicationsTable({
   const [hireModalOpen, setHireModalOpen] = useState(false);
 
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
-  const handleHireClick = (application: JobApplication) => {
-    setSelectedApplication(application)
-    setHireModalOpen(true)
-  }
   const handleHireConfirmed = () => {
     // This will be called after the hire confirmation is completed
     toast({

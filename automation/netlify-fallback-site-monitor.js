@@ -11,10 +11,6 @@ body: JSON && JSON.stringify ({
 
 exports.handler = async (_event, _context) => {
     // // // console.log('site-monitor fallback executed locally'),
-#!/usr / bin / env node //Netlify Function Fallback: site - monitor //This is a local fallback when the main function is unavailable try {
-  console.error ('Fallback execution error:', error);
-
-    
     try {
         // Basic fallback logic
         const result = {
@@ -44,14 +40,6 @@ exports.handler = async (_event, _context) => {
 
         console && console.error('Fallback execution error:', error),
         return {
-            statusCode: 500
-            body: JSON.stringify({
-                error: 'Fallback execution failed'
-
-                message: error.message
-            })
-        }
-    }
 #!/usr/bin/env node;
 // Netlify Function Fallback: site-monitor;
 // This is a local fallback when the main function is unavailable;

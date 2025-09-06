@@ -34,3 +34,4 @@ export default function 2025specializedindustrysolutions({ }: 2025specializedind
       <p>This component is currently under development.</p>
     </div>
   );
+

@@ -24,40 +24,10 @@ export interface Branding {;
   grantPortal?: boolean,;
   trailer?: boolean,;
   bookStore?: boolean;
-  governanceMode: GovernanceMode;
-  branding: Branding;
-  modules: DeployModules;
-  requestedRoutes?: string[];
-  governanceMode: GovernanceMode,;
-  branding: Branding,;
-  modules: DeployModules,;
-  requestedRoutes?: string[];
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-;
-export interface DeployLogEntry {
-  timestamp: string;
-  level: "info" | "warn" | "error",;
-  action: string;
-  details?: Record<string, unknown> | string;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-}
-export interface DeployLogEntry {timestamp: string;
-  level: "info" | "warn" | "error";
-  action: string;
-  details?: Record<string unknown> | string;
-}
-export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "event";
-  path: string;
-  description?: string;
 }
 ;
 export interface DeployResult {;
@@ -126,8 +96,3 @@ export interface DeployResult {
 export interface AccessControlConfig {
   allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
   adminKeyConfigured: boolean;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}

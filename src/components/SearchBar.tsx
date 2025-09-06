@@ -15,7 +15,6 @@ import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 interface SearchBarProps {
   /**
 
-  value: string;  value: string
 
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
   const router = useRouter()
@@ -88,22 +87,6 @@ interface SearchBarProps {
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react';import { Input } from '@/components/ui/input';import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-            ) {
-              setFocused(false)
-              setHighlightedIndex(-1)
-            }          }}
-          className='pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate'
-          aria-autocomplete='list'
-          aria-activedescendant={
-            highlightedIndex !== -1
-              ? `suggestion-item-${highlightedIndex}`
-              : undefined
-          }
-          autoComplete='search'
-          onKeyDown={e => {            if (!focused |suggestions.length === 0) {
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate"
-import React, { useState, useEffect, useRef } from 'react',;
-import { useRouter } from 'next/router',;
 import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
@@ -148,16 +131,6 @@ interface SearchBarProps {;
                 fireEvent('search', { search_term: value });
                 router.push(`/search?q=${encodeURIComponent(value)}`);
                 setFocused(false);
-                break;
-              case 'ArrowUp':
-                e.preventDefault();
-                setHighlightedIndex((prev) => (prev - 1 + suggestions.length) % suggestions.length);
-                break;
-              case 'Enter':
-                if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {
-                  e.preventDefault();
-                  handleSelect(suggestions[highlightedIndex])
-                } else if (value.trim()) {
                   // This case should ideally be handled by the form's onSubmit;
                   // but if SearchBar is used standalone, this provides a fallback.
                   e.preventDefault();

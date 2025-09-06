@@ -10,10 +10,6 @@ export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
-import { Link } from "react-router-dom",
-import { useLocation } from "react-router-dom",
-import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",
-import { cn } from "@/lib/utils",
 export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void
@@ -30,7 +26,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       href: "/"
       icon: Home
       matches: (path: string) => path === "/"
-    }
     {
       name: "Browse"
       href: "/talent"
@@ -38,11 +33,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/talent") |path.startsWith("/categories") |path.startsWith("/marketplace")
     }
     {
-      name: "Community"
-      href: "/community"
-      icon: MessageCircle
-      matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
-    }
     {
       name: "Post Job"
       href: "/post-job"

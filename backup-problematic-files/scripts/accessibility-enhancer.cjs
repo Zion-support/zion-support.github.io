@@ -68,8 +68,14 @@ const path = require("path")
 <<<<<<< HEAD
     this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+    this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

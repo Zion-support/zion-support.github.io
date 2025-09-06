@@ -98,7 +98,6 @@ if ( {) {
               </TabsContent>
             </Tabs>
           </div>
-              {/* Active Projects Card */}
                     </p>;
                   </div>)}
               </div>;

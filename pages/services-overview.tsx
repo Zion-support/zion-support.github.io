@@ -1,6 +1,3 @@
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
 import {
   Brain,
   Network,
@@ -15,6 +12,9 @@ import {
   Star,
   Award,
   Clock,
+} from "lucide-react";
+import Layout from "../components/Layout";
+const serviceCategories = [
   {
     title: "AI Services"
     description:
@@ -156,10 +156,6 @@ const serviceCategories = [
     color: 'from-indigo-500 to-purple-600'
   }
 ];
-  { number: "500+", label: "Projects Completed" }
-  { number: "99.9%", label: "Uptime Guarantee" }
-  { number: "24/7", label: "Support Available" }
-  { number: "50+", label: "Countries Served" }
 ];
 const benefits = [
 ;
@@ -194,25 +190,6 @@ const benefits = [;
     description: "Track record of successful implementations"
     icon: Award
   }
-    title: "Expert Team",
-    description: "Experienced professionals with deep industry knowledge",
-    icon: Users,
-  },
-  {
-    title: "Cutting-Edge Technology",
-    description: "Latest technologies and innovative solutions",
-    icon: Target,
-  },
-  {
-    title: "Scalable Solutions",
-    description: "Solutions that grow with your business",
-    icon: Globe,
-  },
-  {
-    title: "Proven Results",
-    description: "Track record of successful implementations",
-    icon: Award,
-  },
 ];
 export default function ServicesOverviewPage() {
 
@@ -225,15 +202,6 @@ export default function ServicesOverviewPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Our{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                  Services
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Comprehensive technology services designed to transform your
-                business operations, enhance security, and drive innovation
-                across all technology domains.
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -363,14 +331,6 @@ function ServicesOverviewPage() {
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  <div
-                    className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}
-                  >
-                    <category.icon className="w-16 h-16 text-white" />
-                  </div>
-
-                    <category.icon className="w-16 h-16 text-white" />
-                  </div>
 
 
                   <div className="p-6">
@@ -399,11 +359,8 @@ function ServicesOverviewPage() {
                       <ul className="space-y-1">
                         {category.services.map((service, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">
-                            {service}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -433,6 +390,8 @@ function ServicesOverviewPage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+                and unwavering commitment to your success.
+                We deliver exceptional results through innovation, expertise, and unwavering commitment to your success.
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

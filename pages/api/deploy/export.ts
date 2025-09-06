@@ -2,10 +2,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query
   if (!id |typeof id !== 'string') {
     return res.status(400).json({ error: 'Missing id' })
-    id
-    exportedAt: new Date().toISOString()
-    note: 'This is a stub export. Connect to persistence to return real deployment state.'}
-  res.setHeader('Content-Typeapplication/json')
 
     note: 'This is a stub export. Connect to persistence to return real deployment state.'},
   res.setHeader('Content-Typeapplication/json'),
@@ -43,3 +39,14 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+
+
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+

@@ -65,12 +65,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
       onOpenChange(false),
       setFormData({
-        description: ''
-        email: ''
-        budget: BUDGET_RANGES[0].value
-        timeframe: TIMELINE_OPTIONS[0].value})
-      setStartDate(new Date());
-      setEndDate(undefined);
       setCurrentStep('details')
     } catch (error) {
       console.error("Error submitting quote:", error),
@@ -115,10 +109,6 @@ if (throw error) {
     } finally {
       setIsSubmitting (false);
     }
-  const nextStep = () => {
-    if (currentStep === 'details') setCurrentStep('timeline');
-    else if (currentStep === 'timeline') setCurrentStep('contact')
-  }
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
@@ -278,14 +268,12 @@ if (throw error) {
                     <div className="flex justify-between">;
                       <span className="text-zion-slate-light">End Date:</span>;
                       <span className="text-white">{format(endDate, "PPP")}</span>;
-                    </div>;                  )}
-                </div>;
-              </div>;
-            </div>;
           )}
 
-          <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">
-            {currentStep !== 'details' && (
+
+          <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">;
+            {currentStep !== 'details' && (;
+
               <Button
                 type="button"
                 variant="outline"

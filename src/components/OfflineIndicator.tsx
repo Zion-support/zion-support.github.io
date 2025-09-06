@@ -1,12 +1,3 @@
-import { WifiOff, Wifi } from 'lucide-react'
-import { useState, useEffect } from 'react',
-import { WifiOff, Wifi } from 'lucide-react'
-import { Alert, AlertDescription } from '@/components/ui/alert',
-
-import { Alert, AlertDescription } from '@/components/ui/alert'
-export const OfflineIndicator = () => {
-import { WifiOff, Wifi } from 'lucide-react'
-import { Alert, AlertDescription } from '@/components/ui/alert',
 
 
       if (!online) {
@@ -39,7 +30,6 @@ export const OfflineIndicator = () => {;
         setShowOfflineAlert(true);
       } else if (showOfflineAlert) {;
         // Show brief "back online" message then hide;
-  }, [showOfflineAlert]),
 
   if (!showOfflineAlert) return null;
 

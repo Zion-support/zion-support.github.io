@@ -4,14 +4,6 @@
         { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
         { name: 'Contact Sales', href: '/contact' }]
     };
-export default function DocsPage() {
-export default function DocsPage() {
-  const contact = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
-  };
 
     {
       title: 'AI Services Docs'
@@ -60,12 +52,6 @@ export default function DocsPage() {
       color: 'text-purple-400'
     }
     {
-      title: 'Community Forum'
-      description: 'Connect with other developers and users'
-      icon: <ExternalLink className='w-6 h-6' />
-      href: '/community'
-      color: 'text-yellow-400'
-    }
   ];
   const filteredDocs = documentationItems.filter(doc => {
     const matchesSearch =

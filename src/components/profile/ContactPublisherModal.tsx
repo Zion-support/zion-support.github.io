@@ -142,8 +142,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
             <span className="block">Email:</span>;
             <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">;
               {publisherEmail}
-              render={({ field }: { field: any }) => (
-                <FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input

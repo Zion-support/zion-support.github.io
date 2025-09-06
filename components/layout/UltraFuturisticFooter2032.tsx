@@ -762,14 +762,6 @@ export default function UltraFuturisticFooter2032() {
             {/* Company Info */}
 
 
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-
-
-                    {contactInfo.website}
-
                   </a>
                 </div>
               </div>
@@ -805,6 +797,8 @@ const itemVariants = {
                 <ul className='space-y-2'>                  {quickLinks.map((link, index) => (
                     <li key={index}>
                       <Link
+                Quick Access
+              </h3>
                 Quick Access
               </h3>
               {/* Quick Links */}

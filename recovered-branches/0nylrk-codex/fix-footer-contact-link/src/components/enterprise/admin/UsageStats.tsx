@@ -17,38 +17,6 @@ export function UsageStats() {
   return (
 
 
-        </p>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <Card>
-          <CardHeader>
-            <CardTitle>Job Postings</CardTitle>
-            <CardDescription>
-              Set monthly limits for job postings across your organization
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div>
-              <div className="flex items-center justify-between mb-2">
-                <div className="text-sm font-medium">Monthly job posting limit</div>
-                <Badge variant="outline">25 / 50</Badge>
-              </div>
-              <Progress value={50} className="h-2" />
-            </div>
-            <div className="grid gap-4">
-              <div className="grid grid-cols-3 items-center gap-4">
-                <div className="text-sm">New limit:</div>
-                <div className="col-span-2">
-                  <Input type="number" min="1" defaultValue="50" />
-                </div>
-              </div>
-            </div>
-          </CardContent>
-          <CardFooter>
-            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
-          </CardFooter>
-        </Card>
-        
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -78,9 +46,6 @@ export function UsageStats() {
         
 
 
-            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
-          </CardFooter>
-        </Card>
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -110,9 +75,6 @@ export function UsageStats() {
         
 
 
-            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
-          </CardFooter>
-        </Card>
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -251,5 +213,7 @@ export function UsageStats() {;
           </div>;
         </div>;
   );
+        <Button > Contact Us</Button>;
+      </div>;
+    </div>);
 }
-;

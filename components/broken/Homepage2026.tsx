@@ -318,8 +318,6 @@ const Homepage2026: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'
 
 
               >
@@ -1001,7 +999,3 @@ export default Homepage2026);
 export default Homepage2026;
 ;
   );
-export default Homepage2026;  )
-}
-export default Homepage2026;
-

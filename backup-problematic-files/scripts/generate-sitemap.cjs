@@ -65,9 +65,13 @@ const glob = require('glob');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+/**
+ * Generate sitemap for the website
+ */
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -195,6 +199,7 @@ class SitemapGenerator {
       // Ensure public directory exists
       const publicDir = path.dirname(this.outputFile);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
   /**
@@ -293,14 +298,19 @@ class SitemapGenerator {
       const publicDir = path.dirname(this.sitemapPath);
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> origin/main
+=======
+>>>>>>> pr-12166
       if (!fs.existsSync(publicDir)) {
         fs.mkdirSync(publicDir, { recursive: true });
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> pr-12166
       // Write sitemap
       fs.writeFileSync(this.outputFile, xml);
 
@@ -345,6 +355,7 @@ class SitemapGenerator {
 
     return `${header}\n${urlEntries}\n${footer}`;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -388,6 +399,10 @@ class SitemapGenerator {
   }
 <<<<<<< HEAD
 >>>>>>> origin/main
+=======
+  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> pr-12166
 }
 
 // Run if called directly

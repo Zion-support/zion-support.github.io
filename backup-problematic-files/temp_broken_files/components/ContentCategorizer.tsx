@@ -39,14 +39,6 @@ interface ContentCategory {id: string;
   count: number;
   subcategories?: string[];
 }
-const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [selectedDateRange, setSelectedDateRange] = useState('all');
-  const [selectedRelevance, setSelectedRelevance] = useState('all');
-  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   // Sample content data - in a real implementation, this would come from an API;
   const contentItems: ContentItem[] = [;
     {;
@@ -290,15 +282,6 @@ const contentItems: ContentItem[] = [
     { id: 'high', name: 'High Priority', color: 'text-green-400' }
     { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
     { id: 'low', name: 'Low Priority', color: 'text-red-400' }
-  ];
-  const filteredItems = useMemo(() => {const filtered = contentItems.filter(item => {;
-      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) |;
-                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) |;
-                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' |item.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' |item.subcategory === selectedSubcategory;
-      const matchesType = selectedType === 'all' |item.type === selectedType;
-      const matchesRelevance = selectedRelevance === 'all' |item.relevance === selectedRelevance;
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
     });
     // Sort items;
@@ -306,13 +289,6 @@ const contentItems: ContentItem[] = [
       switch (sortBy) {;
         case 'date':;
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
-          break;
-        case 'relevance':;
-          const relevanceOrder = { high: 3, medium: 2, low: 1 }
-          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
-          break;
-        case 'title':;
-          comparison = a.title.localeCompare(b.title);
           break;
   ],
 
@@ -387,10 +363,6 @@ type=&quot;text&quot;
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
           {/* Category Filter */}          <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
-            <select
-              value={selectedCategory}
-              onChange={(e) => {setSelectedCategory(e.target.value);
-                setSelectedSubcategory('all');
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.name} ({category.count})
@@ -532,10 +504,6 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                     {tag}
                   </span>;
                 ))}
-{item.tags.length > 3 && (
-                  <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
-                    +{item.tags.length - 3}
-                  </span>;
               {/* Metadata */}
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
                 <span className=&quot;flex items-center gap-1&quot;>

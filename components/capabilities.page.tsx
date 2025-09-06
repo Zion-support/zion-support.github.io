@@ -45,6 +45,20 @@ function CapabilitiesPage() {
           </div>))}
       </div>;
     </EnhancedLayout>);
+const CAPABILITIES = [
+  'Full‑stack Web'
+  'Mobile (iOS/Android)'
+  'AI/ML'
+  'Cloud & DevOps'
+  'Data Engineering'
+  'Blockchain'
+  'IoT'
+  'Security',];const CAPABILITIES = [
+  'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
+];
+
+export default function CapabilitiesPage() {
+  return (
     <EnhancedLayout>
       <h1 className='text-2xl font-semibold'>Capabilities</h1>
       <div className='mt-6 grid md:grid-cols-4 gap-4 text-sm'>

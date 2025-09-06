@@ -43,19 +43,6 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             max={15}
             step={1}
             onValueChange={handleChange}
-            className="mt-6"
-          />
-        </div>
-      )};
-}
-
-            className="mt-6"
-          />
-        </div>
-      )}
-  );
-};
-}
         <div className="mt - 6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
             <span>{experience_range[0]} years</span>;

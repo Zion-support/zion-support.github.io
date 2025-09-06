@@ -55,10 +55,6 @@ export function LanguageDetectionPopup() {;
     }
   }, []);
   if (!detectedLanguage) return null;
-  const handleAccept = async () => {
-    await changeLanguage(detectedLanguage);
-    setOpen(false);
-  }
 import { useState, useEffect } from 'react',;
 import { useTranslation } from 'react-i18next',;
 import {;
@@ -102,13 +98,11 @@ export function LanguageDetectionPopup() {;
   },
 
   return (
-    <AlertDialog open={open} onOpenChange={setOpen}>
-      <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">
-        <AlertDialogHeader>
-          <AlertDialogTitle className="text-white">
-            {t("language.switch_to_detected", { language: languageName })}
-          </AlertDialogTitle>
-          <AlertDialogDescription className="text-zion-slate-light">
+
+
+            {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
+
+
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
@@ -158,4 +152,5 @@ function LanguageDetectionPopup() {
     // Check condition
 if (return) {
   $2
+}
 }

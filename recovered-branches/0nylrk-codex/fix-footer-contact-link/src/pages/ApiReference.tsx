@@ -1,13 +1,4 @@
 
-import React, { useState } from "react",
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-export function ApiReference() {
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
-
-export function ApiReference() {
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
 
   // Sample endpoint data
 
@@ -18,10 +9,6 @@ export function ApiReference() {
       path: "/api/jobs"
       description: "Retrieve a list of job postings with optional filtering"
       parameters: [
-        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" }
-        { name: "category", type: "string", description: "Filter by job category" }
-        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" }
-        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }]
       responses: {
         "200": {
           description: "A list of jobs"
@@ -97,47 +84,6 @@ function ApiReference() {
         "201": {
           description: "Job created successfully"
           example: `{
-        "400": {
-          description: "Bad request"
-          example: `{
-  "error": "validation_error",
-  "message": "Invalid input",
-  "details": [
-    {
-    }
-  ]
-}`
-        }
-import React, { useState } from "react",;
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
-import { CodeBlock } from "@/components/developers/CodeBlock",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-export function ApiReference() {;
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),;
-  // Sample endpoint data;
-  const endpoints = [;
-    {;
-      id: "get-jobs",;
-      method: "GET",;
-      path: "/api/jobs",;
-      description: "Retrieve a list of job postings with optional filtering",;
-      parameters: [;
-        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" },;
-        { name: "category", type: "string", description: "Filter by job category" },;
-        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },;
-        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],;
-      responses: {;
-        "200": {;
-          description: "A list of jobs",;
-          example: `{;
-  "jobs": [;
-    {;
-      "id": "job-123",;
-      "title": "Senior React Developer",;
-      "description": "We're looking for an experienced React developer...",;
-      "category": "development",;
-      "budget": {;
-        "min": 5000,;
         "max": 10000,;
         "currency": "USD";
       };
@@ -227,14 +173,6 @@ export function ApiReference() {;
     "description": "Looking for a UX designer with 3+ years experience...",
     "category": "design",
     "budget": {
-      "min": 3000;
-      "max": 5000
-      "currency": "USD"
-    }
-    "skills": ["Figma", "User Research", "Prototyping"];
-    "deadline": "2023-07-01T00:00:00Z"
-  }'`
-    }
       "min": 3000,
       "max": 5000,
       "currency": "USD"
@@ -261,6 +199,20 @@ export function ApiReference() {;
       "availability": "full - time";
       "years_experience": 5;
       "location": "Remote, US";
+      "bio": "Experienced full stack developer with a focus on React and Node.js...";
+    }
+    // More talent profiles...;
+  ];
+  "count": 38;
+  "limit": 20;
+  "offset": 0;
+}`;
+        }
+
+
+      },
+
+
       requestExample: `curl -X GET \\
   https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\
   -H "Authorization: Bearer YOUR_API_KEY"`
@@ -292,9 +244,6 @@ export function ApiReference() {;
                         </div>;
                       </>;
                     )}
-                    <h4 className="text-lg font-medium text-white mb-3">Example Request</h4>
-                    <CodeBlock
-                      code={activeEndpointData.requestExample}
                       language="bash"
                       showLineNumbers={true}
                     />
@@ -325,8 +274,6 @@ export function ApiReference() {;
                             'bg-red-950 text-red-500'
                           }`}>;
                             {status}
-                        <CodeBlock 
-                          code={response.example} 
                           language="json"
                           showLineNumbers={true}
                         />;
@@ -352,7 +299,4 @@ export default ApiReference;
       </div>;
     </ApiDocsLayout>);
 }
-export default ApiReference;
-
-;
 export default ApiReference;

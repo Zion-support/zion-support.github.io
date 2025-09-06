@@ -35,9 +35,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-          {logs.map((log) => (
-            <li key={log.id} className="flex items-center justify-between">
-              <span>{log.generatedAt || log.file}</span>
               <span className="text-gray-600">{log.insights?.theme}</span>
             </li>
           ))}
@@ -48,26 +45,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
         <a href="/api/automation/cloud-logs" className="inline-flex items-center px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700">Refresh Logs</a>
       </div>
     </div>
-import { useEffect, useState } from 'react';
-export default function CloudAutomationHub(req, res) {
-  try {
-  const [logs, setLogs] = useState<any[]>([]);
-  useEffect(() => {;
-    fetch('/api/automation/cloud-logs');
-      .then((r) => r.json());
-      .then((d) => setLogs(d.logs || []));
-      .catch(() => setLogs([]));
-  }, []);
-  return (;
-    <div className="space-y-6">;
       <div>;
       </div>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
 

@@ -38,11 +38,6 @@ export default function AdminKycPage() {
             <div key={p.userId} className="border rounded p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                 </div>
                 <div className="flex gap-2">
                   <button onClick={() => act(p.userId, 'approve')} className="px-3 py-1 rounded bg-green-600 text-white">Approve</button>
@@ -66,5 +61,6 @@ export default function AdminKycPage() {
         </div>
       </main>
     </>
+
 
 

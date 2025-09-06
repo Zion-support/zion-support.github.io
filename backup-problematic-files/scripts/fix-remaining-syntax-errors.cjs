@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const fs = require("fs");"const path = require("path");"console.log(" Fixing remaining syntax errors.");const filesToFix = [" "/workspace/components/Footer.tsx"," "/workspace/pages/about.tsx"," "/workspace/pages/ai-services.tsx"," "/workspace/pages/index.tsx"," "/workspace/pages/it-services.tsx"];let totalFixes = 0;filesToFix.forEach(filePath => { if (fs.existsSync(filePath)) {" let content = fs.readFileSync(filePath, "utf8"); let modified = false; / Fix line breaks in className attributes" content = content.replace(/className="([^"]*)\n\s*([^"]*)"/g, "className="$1 $2""); / Fix any remaining unterminated strings"" content = content.replace(/className="([^"]*)\n\s*([^"]*)"\s*>/g, "className="$1 $2">"); / Fix missing closing tags" content = content.replace(/<div([^>]*)\s*>\s*$/gm, "<div$1>"); / Fix any remaining syntax issues" content = content.replace(/\s+\n\s*>/g, ">"); " if (content !== fs.readFileSync(filePath, "utf8")) { fs.writeFileSync(filePath, content);" console.log(` Fixed: ${path.relative("/workspace", filePath)}`); totalFixes++; modified = true; } }});`console.log(`\n Summary:`);`console.log(` Files processed: ${filesToFix.length}`);`console.log(` Files fixed: ${totalFixes}`);"console.log(" Syntax error fixes completed!");""`"`
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,6 +43,8 @@ function fixHoverSyntax(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     
 =======
 <<<<<<< HEAD
@@ -72,6 +72,8 @@ function fixHoverSyntax(filePath) {
       { from: /"2xl":\s*/g, to: '2xl:' },
     ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     
 =======
 <<<<<<< HEAD
@@ -97,6 +99,8 @@ function fixHoverSyntax(filePath) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     if (modified) {
       fs.writeFileSync(filePath, content);
       }`);
@@ -112,11 +116,14 @@ function fixHoverSyntax(filePath) {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (modified) {
       fs.writeFileSync(filePath, content);
       console.log(`✅ Fixed syntax errors in ${filePath}`);
       return true;
     }
+<<<<<<< HEAD
+=======
     
 <<<<<<< HEAD
 =======
@@ -136,6 +143,8 @@ function fixHoverSyntax(filePath) {
     return false;
   }
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -168,9 +177,9 @@ function fixAllFiles() {
     'pages/services.tsx',
     'pages/pricing.tsx'
   ];
-<<<<<<< HEAD
-  
   let totalFixed = 0;
+<<<<<<< HEAD
+=======
   
 =======
 <<<<<<< HEAD
@@ -198,10 +207,10 @@ function fixAllFiles() {
     }
   }
 });
-<<<<<<< HEAD
-  
   return totalFixed;
 }
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
   return totalFixed;
@@ -232,11 +241,13 @@ function fixAllFiles() {
 try {
   console.log('🔍 Scanning for syntax errors...');
   const fixedCount = fixAllFiles();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   if (fixedCount > 0) {
     console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -268,11 +279,11 @@ try {
   } else {
     console.log('✨ No syntax errors found to fix');
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 } catch (error) {
   console.error('❌ Error:', error.message);
+<<<<<<< HEAD
+  process.exit(1);
+=======
   process.exit(1);
 }
 =======

@@ -13,10 +13,6 @@ const accessibilityChecks = {
     return true
   }
 };
-Object.entries(accessibilityChecks).forEach(([name, check]) => {
+Object && Object.entries(accessibilityChecks).forEach(([name, check]) => {
   try {
     const result = check();
-    console.log(` ${name}: ${result ? 'PASS' : 'FAIL'}`);
-  } catch (error) {
-    console.log(` ${name}: ERROR - ${error.message}`);
-  }

@@ -23,6 +23,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     d.setDate(d.getDate() - (13 - i));
     return `${d.getMonth() + 1}/${d.getDate()}`;
 
+    const d = new Date(now);
+    d && d.setDate(d && d.getDate() - (13 - i));
+    return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
+    return `${d.getMonth() + 1}/${d.getDate()}`
+  });
+
+
   const marketplace = [
     {
       key: 'jobs_24h'

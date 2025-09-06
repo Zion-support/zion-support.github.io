@@ -1,15 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
 
-import { motion } from 'framer-motion';
-  Zap
-  Clock
-  TrendingUp
-  Activity
-  Gauge
-  Cpu
-  Database
-  Network;
-
 
 } from 'lucide-react';
 interface PerformanceMetrics {;
@@ -215,6 +205,11 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
           }
         }
       });
+  const getPerformanceScore = (): number => {
+    let score = 100;
+
+    
+
     if (metrics.firstContentfulPaint > 1800) score -= 20;
     if (metrics.largestContentfulPaint > 2500) score -= 25;
     if (metrics.loadTime > 3000) score -= 15;
@@ -240,7 +235,6 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-          className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
 
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
@@ -287,10 +281,6 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
             <Network className="w-6 h-6 text-red-400 mx-auto mb-2" />
             <div className="text-lg font-bold text-white">{Math.round(metrics.firstInputDelay)}ms</div>
             <div className="text-xs text-white/60">FID</div>
-      <div className='space-y-3'>        <button
-
-        <button
-
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
@@ -559,6 +549,14 @@ if (return 'D') {
     </div>);
 }export default PerformanceOptimizer;}
       // Preload critical resources;
+      preload_images.for_each (image => {
+addResourceHint (image, 'image');
+'      });';
+      preload_fonts.for_each (font => {
+        addResourceHint (font, 'style');
+'      });'    }}, [preload_images, preload_fonts]);
+  return (
+    <Head>;
 {/* Preload critical resources */}
       {preload_images.map ((image, index) => (
         <link;

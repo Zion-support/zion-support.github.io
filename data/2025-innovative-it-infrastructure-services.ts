@@ -1,7 +1,4 @@
 
-
-
-
 export const innovativeITInfrastructureServices2025 = [
   {
     id: 'quantum-edge-computing-orchestrator',

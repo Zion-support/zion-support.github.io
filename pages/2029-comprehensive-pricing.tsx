@@ -145,29 +145,6 @@ export default function ComprehensivePricing2029() {
       <section className="relative overflow-hidden py-32">
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          >
-            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8">
-              2029 Comprehensive Pricing
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-      <section className="relative overflow-hidden py-32">
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -210,37 +187,84 @@ export default function ComprehensivePricing2029() {
                 }`}
               >;
                 <div;
-                  className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${;
-                    billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1';
-                  }`  } catch (error) {
+                  }`}
+
+                />;
+              </button>;
+              <span className="text - gray - 400">Annual (20% off)</span>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+
+      {/* Category Filter */}
+
+
+      {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                />
-              </button>
-              <span className="text-gray-400">Annual (20% off)</span>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      {/* Category Filter */}
       <section className="py-12 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <motion.button
-              >
-                <category.icon className="w-5 h-5" />
-                <span>{category.name}</span>
-                <span className="px-2 py-1 bg-gray-700 rounded-full text-xs">
+                key={category.id}
+                on_click={() => setSelectedCategory (category.id)}
+                className={`flex items - center gap - 3 px - 6 py - 3 rounded - full border - 2 transition - all duration - 300 ${
+                  selected_category === category.id;
+                    ? 'border - purple - 500 bg - purple - 500 / 20 text - purple - 300';
+                    : 'border - gray - 600 text - gray - 400 hover:border - gray - 500 hover:text - gray - 300';
+                }`}
+
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}
+              >;
+                <category.icon className="w - 5 h - 5" />;
+                <span>{category.name}</span>;
+                <span className="px - 2 py - 1 bg - gray - 700 rounded - full text - xs">;
+
                   {category.count}
-                </span>
-              </motion.button>
-            ))}
-          </div>
-        </div>
-      </section>
+
+
+                  {category.count  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                </span>;
+              </motion.button>))}
+          </div>;
+        </div>;
+      </section>;
+
+      {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
             viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Service Pricing
@@ -264,10 +288,6 @@ export default function ComprehensivePricing2029() {
                     <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                     <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                   </div>
-                  {/* Pricing */}
-                  <div className="text-center mb-6">
-                    <div className="text-4xl font-bold text-purple-400 mb-2">
-                      {getBillingText(service.price)}
                   {/* Pricing */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -300,6 +320,28 @@ export default function ComprehensivePricing2029() {
                     {service.category.slice(0, 3).map((cat, catIndex) => (
                       <span
                         key={catIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600">
+                        {cat}
+
+
+                        {cat  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </span>;
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </div>;
+                  {/* Key Features */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <ul className="space-y-2">
@@ -308,10 +350,6 @@ export default function ComprehensivePricing2029() {
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
-                      ))}
-                    </ul>
-                  </div>
-                  {/* Key Benefits */}
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -573,6 +611,10 @@ export default function ComprehensivePricing2029() {
           </motion.div>
         </div>
       </section>
+    </div>
+
+}
+
           >;
             <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
               Ready to Get Started?;

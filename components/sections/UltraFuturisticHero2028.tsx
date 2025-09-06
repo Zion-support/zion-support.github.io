@@ -1,22 +1,3 @@
-import {
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Users,
-  Award,
-  Play,
-  CheckCircle,
-  DollarSign,
-  Clock,
-  Target,;
-  Crown,;} from 'lucide-react';
 
 import {
   Rocket,
@@ -37,6 +18,7 @@ import {
   Clock,
   Target,;
   Crown,;} from 'lucide-react';
+
 
 import {
   Rocket
@@ -78,12 +60,6 @@ export default function UltraFuturisticHero2028() {
       color: 'from-blue-500 to-cyan-500'
     }
     {
-      icon: Shield
-      text: 'Quantum Internet Security'
-      color: 'from-red-500 to-orange-500'
-    },  ];    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-emerald-500 to-teal-500' }
-    { icon: Atom, text: 'Quantum Time Manipulation', color: 'from-violet-500 to-purple-500' }
-    { icon: Rocket, text: 'Space Debris Management', color: 'from-blue-500 to-cyan-500' }
       icon: Shield,
       text: 'Quantum Internet Security',
       color: 'from-red-500 to-orange-500',;
@@ -255,24 +231,6 @@ export default function UltraFuturisticHero2028() {;
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-              >
-                <div className='bg-gradient-to-br from-gray-900/80 to-black/80 border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/50 hover:bg-gray-900/90 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 backdrop-blur-sm'>
-                  <div
-                    className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
-                  >
-                    <feature.icon className='w-8 h-8 text-white' />
-
-
-                  </h3>
-                </div>
-              </motion.div>
-                  </div>
-                <div className="bg-gradient-to-br from-gray-900/80 to-black/80 border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/50 hover:bg-gray-900/90 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 backdrop-blur-sm">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white text-center group-hover:text-cyan-400 transition-colors">
-                    {feature.text}
                   </h3>
                 </div>
               </motion.div>
@@ -282,40 +240,9 @@ export default function UltraFuturisticHero2028() {;
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className='mb-16'
-        >
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'>            {stats.map((stat, index) => (          className="mb-16"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
-                className='text-center group'
-
-              >
-                <div className='w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300'>
-                  <stat.icon className='w-10 h-10 text-cyan-400' />
-                </div>
-                <div className='text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
-                  {stat.value}
-                </div>
-                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300">
-                  <stat.icon className="w-10 h-10 text-cyan-400" />
-                </div>
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                  {stat.value}
-                </div>
-
                 </div>
               </motion.div>
             ))}
-          </div>
-        </motion.div>
-
         {/* Trust Indicators */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -379,9 +306,6 @@ export default function UltraFuturisticHero2028() {;
           </div>
         </motion.div>
       </div>
-
-
-
 
       {/* Scroll Indicator */}
       <motion&& motion.div

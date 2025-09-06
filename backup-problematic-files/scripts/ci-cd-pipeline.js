@@ -130,6 +130,8 @@ console.log(' CI/CD Pipeline Started')';class CICDPipeline {';  constructor() {;
           "name": 'Build Application', ';          "description": 'Build application for production', ';          "critical": true,";          "skip": false},";        {;
           "name": 'Performance Testing', ';          "description": 'Run performance tests', ';          "critical": false,";          "skip": false},";        {;
           "name": 'Deploy to Staging', ';          "description": 'Deploy to staging environment', ';          "critical": true,";          "skip": this.pipelineLog.environment === 'development'}, ';        {';          "name": 'Deploy to Production', ';          "description": 'Deploy to production environment', ';          "critical": true,";          "skip": this.pipelineLog.environment !== 'production'}']';      // Execute each pipeline stage;
+      console.log(`🌿 "Branch": ${this.pipelineLog.branch}`);"
+      console.log("📝 "Commit": ${this.pipelineLog.commit}");
       // Define pipeline stages;
       const pipelineStages = [;
         {;

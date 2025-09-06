@@ -2,27 +2,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-  ArrowRight
-  Star
-  Users
-  Award
-  Clock
-  Brain
-  Atom
-  Shield
-  Rocket
-  Zap
-  TrendingUp
-  Globe
-  Cpu
-  Database
-  Cloud
-  Lock
-  Palette
-  Target
-  CheckCircle
-  Sparkles;} from 'lucide-react';import {
-  ArrowRight, Star, Users, Award, Clock
   Brain, Atom, Shield, Rocket, Zap;
   TrendingUp, Globe, Cpu, Database, Cloud;
   Lock, Palette, Target, CheckCircle, Sparkles;
@@ -31,47 +10,6 @@ import {
 import { realMicroSaasServices2025  } from '../data/real-micro-saas-services-2025';
 import { realITServices2025  } from '../data/real-it-services-2025';
 import { realAIServices2025 } from '../data/real-ai-services-2025';
-
-    .slice(0, 3);
-  const featuredIT = realITServices2025;
-    .filter(service => service && service.popular);
-    .slice(0, 3);
-  const featuredAI = realAIServices2025;
-    .filter(service => service && service.popular);
-    .slice(0, 3);
-  return (
-    <Layout>;
-      {/* Main Content */}
-  return (
-    <Layout>;
-      {/* Main Content */}
-      <main className='relative z-10'>const Homepage2037: React.FC = () => {;
-  // Get featured services from each category;
-  const featuredMicroSaas = realMicroSaasServices2025 && realMicroSaasServices2025.filter(service => service && service.popular).slice(0, 3);
-  const featuredIT = realITServices2025 && realITServices2025.filter(service => service && service.popular).slice(0, 3);
-  const featuredAI = realAIServices2025 && realAIServices2025.filter(service => service && service.popular).slice(0, 3);
-  return (
-    <Layout>;
-      {/* Main Content */}
-      <main className='relative z-10'>;
-        {/* Hero Section */}
-        <section className='min-h-screen flex items-center justify-center px-4 relative'>;
-          {/* Animated background elements */}
-          <div className='absolute inset-0 overflow-hidden'>
-            <div className='absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
-            <div className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
-            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>
-          </div>
-          <div className='text-center max-w-5xl mx-auto relative z-10'>            <motion.div        {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-4 relative">
-          {/* Animated background elements */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
-          </div>
-          <div className="text-center max-w-5xl mx-auto relative z-10">
-            <motion.div
 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -658,20 +596,6 @@ const Homepage2037: React.FC = () => {
 
 
                     service={{
-                    }}
-                    variant='ai'                  />
-                </motion.div>
-              ))}
-                      icon: service.icon
-                    }}
-                    variant="ai"
-            </div>
-
-                      icon: service.icon
-                    }}
-                    variant="ai"
-            </div>
-
 
 
                     }}
@@ -818,27 +742,23 @@ const Homepage2037: React.FC = () => {
             </div>                      popular: service.popular,
                       category: service.category,
                     }}
-                    variant="enterprise"
-            </div>
+                    service={{
 
-                      id: service.id
-                      name: service.name
-                      tagline: service.tagline
-                      description: service.description
-                      price: service.price
-                      period: service.period
-                      features: service.features.slice(0, 5)
-                      popular: service.popular
-                      category: service.category
-                      icon: service.icon
+
                     }}
-                    variant='enterprise'                  />
-                </motion.div>
+                    variant='enterprise'                  />;
+                </motion && motion.div>;
               ))}
-                      icon: service.icon
+
+            </div>                      popular: service && service.popular,;
+                      category: service && service.category,;
+                      icon: service && service.icon;
+
                     }}
-                    variant="enterprise"
-            </div>
+                    variant="enterprise";
+                  />;
+                </motion && motion.div>;
+              ))}
 
 
                   />
@@ -970,27 +890,23 @@ const Homepage2037: React.FC = () => {
             </div>                      popular: service.popular,
                       category: service.category,
                     }}
-                    variant="automation"
-            </div>
+                    service={{
 
-                      id: service.id
-                      name: service.name
-                      tagline: service.tagline
-                      description: service.description
-                      price: service.price
-                      period: service.period
-                      features: service.features.slice(0, 5)
-                      popular: service.popular
-                      category: service.category
-                      icon: service.icon
+
                     }}
-                    variant='automation'                  />
-                </motion.div>
+                    variant='automation'                  />;
+                </motion && motion.div>;
               ))}
-                      icon: service.icon
+
+            </div>                      popular: service && service.popular,;
+                      category: service && service.category,;
+                      icon: service && service.icon;
+
                     }}
-                    variant="automation"
-            </div>
+                    variant="automation";
+                  />;
+                </motion && motion.div>;
+              ))}
 
 
                   />

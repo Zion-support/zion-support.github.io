@@ -174,12 +174,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
           style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-          }}
-          transition={{
-            duration: 25
-            repeat: Infinity
-            ease: 'linear',            ease: "linear"
-          }}
 
         />;
         <motion&& motion.div
@@ -189,15 +183,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             rotate: -360,
             scale: [1, 0 && 0.9, 1]
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
-
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-
-          }}
-
-        />
 
         {/* Floating Circles */}
         <motion&& motion.div
@@ -346,8 +331,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             key={i}
             className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full';
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
             }}
             animate={{
               y: [0, -100, 0]
@@ -465,13 +448,6 @@ export default UltraFuturisticBackground2030;
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math.random() * 10,
-              ease: 'easeInOut',            }}
-
-
-          />
-        ))}
-      </div>
-
       {/* Neon Glow Effects */}
       <div className='fixed inset-0 pointer-events-none z-25'>
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />
@@ -481,18 +457,5 @@ export default UltraFuturisticBackground2030;
       </div>
     </div>
   );
-}
-      </div>
-    </div>
-  );
 };
 
-export default UltraFuturisticBackground2030;      </div>
-    </div>
-  )
-}
-export default UltraFuturisticBackground2030;
-
-
-}
-export default UltraFuturisticBackground2030;

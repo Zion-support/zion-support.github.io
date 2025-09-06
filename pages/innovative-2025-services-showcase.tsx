@@ -28,25 +28,11 @@
   ],
 
 
-  const fadeInUp = {
-    initial: { opacity: 0, y: 30 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: "easeOut"   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  },
-
-
 
   const staggerContainer = {
     animate: {
       transition: {
         staggerChildren: 0.1
-      }
-    }
-  }
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -93,10 +79,6 @@
 }
                 className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
                 style={{
-                  left: `${Math.random() * 100}%`
-                  top: `${Math.random() * 100}%`
-                  animationDelay: `${Math.random() * 2}s`
-                  animationDuration: `${2 + Math.random() * 3}s`
                 }}
               />))}
           </div>;
@@ -262,8 +244,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-          >
-            Experience the future of technology with our revolutionary AI platforms, quantum computing solutions,
             autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.
           </motion.p>
           <motion.div
@@ -277,8 +257,6 @@
                   <input
                     type="text"
                     placeholder="Search innovative services..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
                     value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -294,7 +272,6 @@
                   <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
                 </div>
               </div>
-              {/* Category Filters */}
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
                   <button
@@ -321,17 +298,6 @@
                     <category.icon className="w-5 h-5" />
                     <span>{category.name}</span>
                     <span className="bg-gray-700 px-2 py-1 rounded-full text-xs">
-                      {category.count}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-          </motion.section>
-          {/* Services Grid */}
-          <motion.section
-            className="relative z-20 py-16 px-4 sm:px-6 lg:px-8"
-            variants={staggerContainer}
                       {category.count  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -456,11 +422,6 @@
                           <span className="text-3xl font-bold text-white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>
                           <span className="text-gray-400 ml-2">{(service as any).period || ''}</span>
                         </div>
-                        {/* Features */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                         <div className="space-y-3 mb-8">
                           {service.features.slice(0, 5).map((feature, featureIndex) => (
                             <div key={featureIndex} className="flex items-start space-x-3">
@@ -473,20 +434,6 @@
   }
 }
                           {service.features.length > 5 && (
-                        <div className="grid grid-cols-3 gap-4 mb-6 text-center">
-                          <div>
-                            <div className="text-lg font-bold text-white">{(service as any).customers |'1000'}+</div>
-                            <div className="text-xs text-gray-400">Customers</div>
-                          </div>
-                          <div>
-                            <div className="text-lg font-bold text-white">{(service as any).rating |'4.8'}</div>
-                            <div className="text-xs text-gray-400">Rating</div>
-                          </div>
-                          <div>
-                            <div className="text-lg font-bold text-white">{(service as any).reviews |'500'}</div>
-                            <div className="text-xs text-gray-400">Reviews</div>
-                          </div>
-                        </div>
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -656,11 +603,6 @@
               </div>
               <div className="mt-12 pt-8 border-t border-gray-800 text-center">
                 <p className="text-gray-400 text-sm">
-                  © 2025 Zion Tech Group. All rights reserved. | 
-                  <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> | 
-                  © 2025 Zion Tech Group. All rights reserved. |
-                  <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
-
                   <Link href="/terms" className="hover:text-white transition-colors ml-2">Terms of Service</Link>
                 </p>
               </div>

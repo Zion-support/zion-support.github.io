@@ -13,4 +13,3 @@ const Iot-platforms: React.FC<Iot-platformsProps> = ({ className }) => {
     </div>
   );
 }
-}

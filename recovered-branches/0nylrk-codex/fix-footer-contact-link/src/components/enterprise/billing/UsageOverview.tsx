@@ -12,11 +12,15 @@ export function UsageOverview() {
       used: 1250
       total: 5000
       percentage: 25
-    }
     storage: {
       used: 2.4
       total: 10
       percentage: 24
+
+  return (
+
+
+
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Progress } from "@/components/ui/progress",;
@@ -86,4 +90,5 @@ export function UsageOverview() {;
         </Tabs>;
       </CardContent>;
 }
-;
+    </Card>);
+}

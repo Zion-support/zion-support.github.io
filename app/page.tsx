@@ -1,3 +1,9 @@
+
+
+          <Link 
+            href="/services" 
+
+
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
             Explore Services
@@ -13,6 +19,38 @@
             title="Micro SaaS"
             href="/services/micro-saas"
             description="End-to-end product engineering with billing, auth, analytics and growth."
+          />
+          <Card 
+            title="AI Services" 
+            href="/services/ai-services" 
+            description="LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps." 
+            icon="🤖" 
+          />
+          <Card 
+            title="IT Services" 
+            href="/services/it-services" 
+            description="Cloud migration, DevOps, SRE, security hardening and cost optimization." 
+            icon="⚙️" 
+
+
+          />
+          <Card
+            title="Business Automation"
+            href="/services/automation-tools"
+            description="Intelligent automation tools that streamline operations and boost productivity by 300%."
+            icon="⚡"
+          />
+          <Card
+            title="AI Copilots"
+            href="/services/ai-copilots"
+            description="Intelligent assistants that enhance productivity and automate complex tasks."
+            icon="🧠"
+          />
+          <Card
+            title="Data Analytics"
+            href="/services/data-analytics"
+            description="Advanced analytics and BI solutions that transform data into actionable insights."
+            icon="📊"
           />
         </div>
       </section>

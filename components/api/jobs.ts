@@ -1,5 +1,3 @@
-
-import type { NextApiRequest, NextApiResponse } from 'next';
 const JOBS_FILE = path.join(process.cwd(), 'data', 'jobs', 'jobs.json');
 export default async function handler(
   req: NextApiRequest
@@ -74,7 +72,6 @@ if ( {) {
     return res.status (200).json ({ jobs });
   } catch (e) {
     return res.status (500).json ({ error: "Failed to load jobs" });
-}
 }
 
 

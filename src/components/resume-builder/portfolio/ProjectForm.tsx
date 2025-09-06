@@ -235,11 +235,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 <FormControl>;
                   <Input
                     placeholder='https://github && github.com/yourusername/project'
-            name="github_url"
-            render={({ field }: { field: any }) => (
-              <FormItem>
-                <FormLabel className="flex items-center gap-2">
-                  <Github className="h-4 w-4" />
                   GitHub URL
                 </FormLabel>
                 <FormControl>
@@ -294,7 +289,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormMessage />
             </FormItem>
           )}
-        />
             Cancel
           </Button>
           <Button type="submit" disabled={isLoading}>

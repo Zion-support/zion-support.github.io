@@ -115,8 +115,6 @@ export function PaymentMethods() {;
                     </span>
                   )}
                 </p>
-                <p className='text-sm text-muted-foreground'>                <p className="text-sm text-muted-foreground">
-                <p className="text-sm text-muted-foreground">
                   Expires {method.expMonth}/{method.expYear}
                 </p>
               </div>
@@ -133,8 +131,6 @@ export function PaymentMethods() {;
             </div>;
           </div>;
         ))}
-        <Button className="gap-1">
-
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>

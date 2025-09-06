@@ -1,9 +1,4 @@
 
-import {Review} from "@/types/reviews";
-import {ReviewCard} from "./ReviewCard";
-import { Review } from "@/types/reviews",
-import { ReviewCard } from "./ReviewCard",
-
 interface ReviewsListProps {
   reviews: Review[];
   isLoading: boolean;
@@ -45,8 +40,6 @@ interface ReviewsListProps {;
       </div>;
     );
   }
-  
-  if (reviews.length === 0) {
     return (
       <div className="text-center py-8 border rounded-lg bg-muted/20">;
         <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>;

@@ -18,8 +18,6 @@ export default function BlogPage() {
           kleber@ziontechgroup.com.
         </p>
       </div>
-    </UltraFuturisticBackground>;
-    </UltraFuturisticBackground>
   );export default function BlogPage() {
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">

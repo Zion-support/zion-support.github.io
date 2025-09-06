@@ -4,6 +4,15 @@ const Table = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div className="relative w-full overflow-auto">
     <table
+      ref={ref}
+      className={cn (&quot;w - full caption - bottom text - sm & quot;, class_name)}
+      {...props}
+
+
+Table.displayName = "Table"
+
+
+
 const TableHeader = React.forwardRef<
   HTMLTableSectionElement
   React.HTMLAttributes<HTMLTableSectionElement>
@@ -14,14 +23,20 @@ TableHeader.displayName = "TableHeader"
 
 
 
-  <thead ref={ref} className={cn("[&_tr]:border-b", className)} {...props} />
-))
-TableHeader.displayName = &quot;TableHeader&quot;
 const TableBody = React.forwardRef<
   HTMLTableSectionElement
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
   <tbody
+    ref={ref}
+    className={cn (&quot;[&_tr:last - child]:border - 0&quot;, class_name)}
+    {...props}
+
+
+TableBody.displayName = "TableBody"
+
+
+
 const TableFooter = React.forwardRef<
   HTMLTableSectionElement
   React.HTMLAttributes<HTMLTableSectionElement>
@@ -63,11 +78,32 @@ const TableCell = React.forwardRef<
   React.HTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => (
   <td
+    ref={ref}
+    className={cn (&quot;p - 4 align - middle [&:has ([role = checkbox])]:pr - 0&quot;, class_name)}
+    {...props}
+
+
+TableCell.displayName = "TableCell"
+
+
+
 const TableCaption = React.forwardRef<
   HTMLTableCaptionElement
   React.HTMLAttributes<HTMLTableCaptionElement>
 >(({ className, ...props }, ref) => (
   <caption
+    ref={ref}
+    className={cn (&quot;mt - 4 text - sm text - muted - foreground & quot;, class_name)}
+    {...props}
+
+/>));
+TableCaption.display_name = &quot;TableCaption & quot;
+;
+
+TableCaption.displayName = "TableCaption"
+
+
+export {
   Table,
   TableHeader,
   TableBody,

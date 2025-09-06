@@ -58,13 +58,6 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-                      {route.label}
-                    </Link>
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
@@ -82,13 +75,6 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-                      {route.label}
-                    </Link>
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
@@ -106,13 +92,6 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-                      {route.label}
-                    </Link>
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>

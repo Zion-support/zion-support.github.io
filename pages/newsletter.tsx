@@ -20,7 +20,9 @@ import {
 } from "lucide-react";
   Clock
 } from 'lucide-react';
-origin/automation-improvements-final
+
+
+
 
   ArrowRight
   Users
@@ -82,25 +84,6 @@ const benefits = [;
       "Stay updated with the latest trends and developments in technology."
     icon: TrendingUp
   }
-    title: "Webinar Invitations",
-    description:
-      "Receive invitations to our expert-led webinars and virtual events.",
-    icon: Video,
-  },
-  {
-    title: "Early Access",
-    description:
-      "Be the first to know about new features, products, and services.",
-    icon: Zap,
-  },
-  {
-    title: "Industry Insights",
-    description:
-      "Stay updated with the latest trends and developments in technology.",
-    icon: TrendingUp,
-  },
-];
-
     content:
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable."
     rating: 5
@@ -145,19 +128,21 @@ export default function NewsletterPage() {
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
     setIsSubscribed(true);
     setIsLoading(false);
   }
   return (
-    <Layout>
-      <Head>
-        <title>Newsletter - Zion Tech Group</title>
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+    <Layout>;
+      <Head>;
+        <title>Newsletter - Zion Tech Group</title>;
         <meta
           name="description"
           content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
-        />
+        />;
+      </Head>;
+      <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="container mx-auto px-4">;
@@ -165,19 +150,11 @@ export default function NewsletterPage() {
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl font-bold mb-6">
-                Stay Ahead with Our Newsletter
-              </h1>
-              <p className="text-xl mb-8 text-blue-100">
-                Get exclusive insights, industry trends, and early access to new
-                features delivered directly to your inbox.
-              </p>
 
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
               </p>
               
+
 
 
               {!isSubscribed ? (
@@ -238,12 +215,6 @@ export default function NewsletterPage() {
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                What You'll Get
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -589,6 +560,8 @@ function NewsletterPage() {
                   className="bg-gray-50 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+
+
                     ))}
                   </div>;
                   <p className="text-gray-600 mb-4 italic">;
@@ -611,19 +584,11 @@ function NewsletterPage() {
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl font-bold mb-6">
-                Ready to Join Our Community?
-              </h2>
-              <p className="text-xl mb-8 text-green-100">
-                Subscribe now and start receiving valuable insights delivered to
-                your inbox every week.
-              </p>
 
                 Subscribe now and start receiving valuable insights delivered to your inbox every week.
               </p>
               
+
 
 
               {!isSubscribed && (
@@ -668,6 +633,3 @@ function NewsletterPage() {
                   </div>;
                 </form>;
               )}
-}
-}
-}

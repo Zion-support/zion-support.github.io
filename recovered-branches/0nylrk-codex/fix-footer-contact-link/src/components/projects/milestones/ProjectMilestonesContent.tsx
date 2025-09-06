@@ -1,12 +1,4 @@
 
-import {useParams} from 'react-router-dom';
-import {useProjects} from '@/hooks/useProjects';
-import {useMilestones} from '@/hooks/useMilestones';
-import {useJobDetails} from '@/hooks/useJobDetails';
-import {useAuth} from '@/hooks/useAuth';
-import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
-import {useDisputeCheck} from '@/hooks/useDisputeCheck';
-import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
   const { user } = useAuth();
   const { getProjectById } = useProjects();
   const {
@@ -28,44 +20,6 @@ import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions,
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
 
-import React, { useState, useEffect } from 'react',;
-import { useParams } from 'react-router-dom',;
-import { useProjects } from '@/hooks/useProjects',;
-import { useMilestones } from '@/hooks/useMilestones',;
-import { useJobDetails } from '@/hooks/useJobDetails',;
-import { useAuth } from '@/hooks/useAuth',;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
-import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
-;
-import { ;
-  MilestoneActivities,;
-  MilestoneManager,;
-  MilestoneCreator,;
-  ProjectActions,;
-  ProjectHeader;
-} from './components',;
-;
-export function ProjectMilestonesContent() {;
-  const { projectId } = useParams() as { projectId?:string },;
-  const { user } = useAuth(),;
-  const { getProjectById } = useProjects(),;
-  const { ;
-    milestones, ;
-    activities,;
-    isLoading:milestonesLoading, ;
-    createMilestone,;
-    updateMilestoneStatus,;
-    deleteMilestone,;
-    uploadDeliverable,;
-    isSubmitting,;
-    refetch;
-  } = useMilestones(projectId),;
-  const [project, setProject] = useState<any>(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [activeTab, setActiveTab] = useState('milestones'),;
-  const { job, isLoading:jobLoading } = useJobDetails(project?.job_id),;
-  ;
-  const { isUnderDispute, disputeId } = useDisputeCheck(projectId),;
   useEffect(() => {;
     async function loadProject() {;
       if (!projectId) return,;
@@ -84,9 +38,6 @@ export function ProjectMilestonesContent() {;
           setProject(projectData)}
       } catch (error) {} finally {setIsLoading(false)}
     }
-    loadProject(),;
-    refetch(),;
-  }, [projectId, getProjectById, refetch]),;
   const handleMilestoneCreated = async () => {;
     await refetch();
   };
@@ -105,7 +56,6 @@ export function ProjectMilestonesContent() {;
       </div>;
     );
   }
-          projectId={projectId || ''}
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}
           isTalent={isTalent}

@@ -107,10 +107,6 @@ document.addEventListener ('touchmove', () => {
   passive: true
 })
 }, [isMobile]);
-const getStatusIcon = (status: string) => {
-  switch (status) {
-}
-children
 }{
   /* Mobile Optimization Panel */
 }<AnimatePresence> {

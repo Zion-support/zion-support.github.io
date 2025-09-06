@@ -1,9 +1,4 @@
 
-import React from "react",
-import { WorkspaceHeader } from "./WorkspaceHeader",
-import { SharedInbox } from "./SharedInbox",
-import { TeamStats } from "./TeamStats",
-import { QuickActions } from "./QuickActions",
 export interface Company {
   id: string,
   name: string,
@@ -38,9 +33,6 @@ export interface Company {;
   billingCycle: string;
   workspaceUrl: string
 }
-  company: Company;
-}
-
 export function CompanyDashboard({ company }: CompanyDashboardProps) {
   return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">
@@ -56,10 +48,6 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
           <SharedInbox />
         </div>
       </div>
-  )
-;
-export function CompanyDashboard({ company }: CompanyDashboardProps) {;
-  return (;
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">;
       <WorkspaceHeader company={company} />;
 
@@ -109,5 +97,5 @@ function CompanyDashboard() {
         </div>;
       </div>;
   );
+    </div>);
 }
-;

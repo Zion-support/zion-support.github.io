@@ -58,7 +58,7 @@ interface AIListingFormProps {;
           id="targetAudience"
           value={targetAudience}
         onClick={handleSubmit}
-        disabled={isLoading || !title || !category}
+        disabled={isLoading |!title |!category}
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
         {isLoading ? (

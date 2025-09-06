@@ -12,3 +12,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       alt={alt}
       width={width}
       height={height}
+export default OptimizedImage;

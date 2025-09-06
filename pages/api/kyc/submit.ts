@@ -1,9 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import type { KycProfile } from '../../../utils/kyc';
-import { validateKycSubmission } from '[^']*';
-import { getAmlProvider } from '[^']*';
-import fs from 'fs';
-import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
 
@@ -39,6 +34,14 @@ function save(db: Record<string, KycProfile>) {
     .split(',')[0]
     .trim();
   if (ip) {
+
+
+function load(): Record<string, KycProfile> {
+  try {
+    const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw);
+
+
   // Compute simple risk score
   let riskScore = 10; // base low risk
   if (flags && flags.has('aml_alert')) riskScore += 50;
@@ -85,10 +88,6 @@ function handler() {
   if (return res.status (400).json ({ error: 'Missing user_id' })) {
   $2
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 }
       .status (400);

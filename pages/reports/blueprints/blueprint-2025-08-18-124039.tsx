@@ -12,20 +12,6 @@ const Blueprint20250818124039: React.FC = () => {
     complexity: 'critical'
     lastUpdated: '2025-08-18 12:40:39'
     version: '0.9.0'
-  const quantumComponents = [
-    {
-      name: 'Quantum Simulator'
-      description: 'Classical simulation of quantum algorithms'
-      status: 'active'
-      health: 'excellent'
-    }
-    {
-      name: 'Quantum Algorithm Library'
-      description: 'Collection of quantum algorithms and implementations'
-      status: 'active'
-      health: 'excellent'
-    }
-    {
 
   const quantumComponents = [
 
@@ -51,12 +37,6 @@ const Blueprint20250818124039: React.FC = () => {
       name: 'Quantum Error Correction',
       description: 'Error detection and correction mechanisms',
       status: 'research',
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
   const features = [
     {
       feature: 'Quantum Algorithm Optimization',
@@ -115,7 +95,6 @@ const Blueprint20250818124039: React.FC = () => {
              Back to Blueprints
           </Link>
           <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            {blueprintDetails.name}
           </h1>
           <p className="text-gray-300 text-lg">
             {blueprintDetails.description}
@@ -143,7 +122,6 @@ const Blueprint20250818124039: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Recently updated</p>
           </div>
         </div>
-        {/* Quantum Components */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Quantum Computing Components</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -152,7 +130,6 @@ const Blueprint20250818124039: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{component.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getHealthColor(component.health)}`}>
-                    {component.health}
                     {component.health  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -201,9 +178,6 @@ const Blueprint20250818124039: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
                 <p className="text-indigo-400 text-sm font-medium">Benefit: {feature.benefit}</p>
               </div>
-            ))}
-          </div>
-        </div>
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Quantum Architecture</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">

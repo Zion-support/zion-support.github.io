@@ -392,12 +392,6 @@ export default function UltraFuturisticNavigation2034() {;
   return (
     <>;
       {/* Top Contact Bar */}
-      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>
-        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
-          <div className='flex items-center space-x-6'>
-            <div className='flex items-center space-x-2'>
-              <Phone className='w-4 h-4 text-cyan-400' />
-              <span className='hover:text-cyan-400 transition-colors'>
 
                 {contactInfo.mobile}
               </span>
@@ -503,15 +497,6 @@ export default function UltraFuturisticNavigation2034() {;
         isScrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' 
           : 'bg-transparent'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className='flex items-center space-x-3'
-
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -583,11 +568,6 @@ export default function UltraFuturisticNavigation2034() {;
                 </Link>
               ))}
 
-                >
-                  {link.name}
-                </Link>
-              ))}
-              
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
@@ -1033,10 +1013,6 @@ function UltraFuturisticNavigation2034() {
             </motion.div>
 
           )}
-        </AnimatePresence>
-      </nav>
-      {/* Spacer for fixed navigation */}
-      <div className='h-20'></div>
     </>
         </AnimatePresence>;
       </nav>;

@@ -10,59 +10,6 @@ import {Badge} from "@/components/ui/badge";
 import {Skeleton} from "@/components/ui/skeleton";
 import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
-import React, { useState } from "react",
-import { useQuery } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Skeleton } from "@/components/ui/skeleton",
-import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react";
-import { formatDistanceToNow } from "date-fns";
-interface Transaction {
-
-  id: string
-  user_id: string
-  provider_id: string
-  service_id: string
-  amount: number
-  currency: string
-  status: 'pending' | 'completed' | 'refunded' | 'cancelled'
-  in_escrow: boolean
-  created_at: string
-
-  const { user } = useAuth();
-  const { toast } = useToast();
-
-  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
-
-interface Transaction {
-  id: string,
-  user_id: string,
-  provider_id: string,
-  service_id: string,
-  amount: number,
-  currency: string,
-  status: 'pending' | 'completed' | 'refunded' | 'cancelled',
-  in_escrow: boolean,
-  created_at: string,
-    display_name?: string
-  },
-  service?: {
-    title?: string
-import React, { useState } from "react",;
-import { useQuery } from "@tanstack/react-query",;
-import { supabase } from "@/integrations/supabase/client",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useToast } from "@/hooks/use-toast",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Skeleton } from "@/components/ui/skeleton",;
-import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",;
-import { formatDistanceToNow } from "date-fns",;
 interface Transaction {;
   id: string,;
   user_id: string,;
@@ -196,8 +143,5 @@ interface Transaction {;
             </p>;
           </div>;
         )}
-      </div>
-    </div>
-  )
 }
 ;

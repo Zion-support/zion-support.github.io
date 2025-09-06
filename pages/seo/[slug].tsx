@@ -5,43 +5,14 @@
   region?: string;
   const router = useRouter();
   const { slug } = router && router.query as { slug?: string };
-
-  faq: Array<{ q: string; a: string }>;};
-
-export default function SEOLandingPage() {;
-  service?: string,;
-  faq: Array<{ q: string, a: string }>;
-},;
-export default function SEOLandingPage(req, res) {
-  try {
-  const router = useRouter();
-  service?: string,;
-  faq: Array<{ q: string, a: string }>;
-},;
-export default function SEOLandingPage(req, res) {
-  try {
-
-
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
-  const [payload, setPayload] = React.useState<LandingPayload | null>(null);
-  React.useEffect(() => {;
-    if (!router.isReady || !slug) return,;
-    const dataParam = (router.query?.data as string) || '';
+  const [payload, setPayload] = React && React.useState<LandingPayload | null>(null);
+  React && React.useEffect(() => {;
+    if (!router && router.isReady || !slug) return;
+    const dataParam = (router && router.query?.data as string) || '';
     if (dataParam) {;
       try {;
         setPayload(JSON && JSON.parse(decodeURIComponent(dataParam)));
         return;
-      } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
   }, [router.isReady, slug]);
@@ -148,7 +119,6 @@ if (return null) {
       <FAQ items={payload.faq} />;
     </div>);
 ;
-);
   )
   } catch (error) {
     console.error("Error:", error);

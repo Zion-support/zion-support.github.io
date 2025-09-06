@@ -11,18 +11,6 @@ import {Steps, Step} from "@/components/ui/steps";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export default function Onboarding() {;
-import { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection",
-import { ProfileSetup } from "@/components/onboarding/ProfileSetup",
-import { Steps, Step } from "@/components/ui/steps",
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-export default function Onboarding() {
   const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
 
@@ -32,22 +20,66 @@ export default function Onboarding() {
   // Convert our user types to match what's expected in the database
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
     switch (type) {
-      case "serviceProvider": return "creator",
-      case "talent":
-        return "jobSeeker",
-      case "client":
-        return "employer"
-      default:
-        return "buyer"
-    }
-  }
+
+  // Convert our user types to match what's expected in the database;
+  const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {;
+    switch (type) {;
+      case "serviceProvider": return "creator";
+      case "talent":;
+        return "jobSeeker";
+
+
+  },
+
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
-    setUserType(type);
+    setUserType(type),
+    
+
+
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
       navigate('/service-onboarding')
       return
     } else if (type === "talent") {
+      navigate('/talent-onboarding');
+      return;
+    }
+
+
+    // Continue with the onboarding flow for clients;
+    setCurrentStep(1);
+  };
+
+  const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {;
+    if (!user || !userType) {;
+      toast({;
+        title: "Authentication Error",;
+        description: "Your session may have expired. Please log in again.",;
+        variant: "destructive"}),;
+
+      navigate('/login');
+      return;
+    }
+
+
+  },
+
+
+  const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
+    if (!user |!userType) {
+      toast({
+
+        title: "Authentication Error",
+        description: "Your session may have expired. Please log in again.",
+        variant: "destructive"}),
+      navigate('/login'),
+      return
+    }
+    
+    const dbUserType = mapUserTypeToDatabase(userType),
+    
+
+
     try {
       await updateProfile({
         id: user.id
@@ -142,4 +174,5 @@ export default function Onboarding() {
       </div>;
       <Footer />;
 }
-;
+    </>);
+}

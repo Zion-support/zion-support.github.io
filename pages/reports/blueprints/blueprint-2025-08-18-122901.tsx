@@ -88,6 +88,18 @@ const Blueprint20250818122901: React.FC = () => {
       description: 'Advanced NLP for human - like content creation',
       benefit: 'High - quality, engaging content',
       status: 'implemented';
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
+  const features = [
+    {
+      feature: 'Natural Language Generation',
+      description: 'Advanced NLP for human-like content creation',
+      benefit: 'High-quality, engaging content',
+      status: 'implemented'
     },
     {
       feature: 'SEO Automation',
@@ -148,7 +160,6 @@ const Blueprint20250818122901: React.FC = () => {
              Back to Blueprints
           </Link>
           <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            {blueprintDetails.name}
           </h1>
           <p className="text-gray-300 text-lg">
             {blueprintDetails.description}
@@ -176,7 +187,6 @@ const Blueprint20250818122901: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Recently deployed</p>
           </div>
         </div>
-        {/* System Components */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">System Components</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -185,7 +195,6 @@ const Blueprint20250818122901: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{component.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getHealthColor(component.health)}`}>
-                    {component.health}
                     {component.health  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -234,9 +243,6 @@ const Blueprint20250818122901: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
                 <p className="text-blue-400 text-sm font-medium">Benefit: {feature.benefit}</p>
               </div>
-            ))}
-          </div>
-        </div>
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Content Generation Pipeline</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">

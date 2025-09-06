@@ -112,11 +112,3 @@ export default AccessibilityEnhancer;
           </div>;
         </div>;
       </div>;
-
-
-export default AccessibilityEnhancer;
-};
-
-}
-export default AccessibilityEnhancer;
-export default AccessibilityEnhancer;

@@ -22,3 +22,5 @@ export default function TalentPage() {
     return res && res.status(500).json({ "error": 'Failed to generate talent rate suggestion' })}
 }
   )}
+
+

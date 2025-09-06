@@ -165,12 +165,6 @@ class AggressiveSyntaxFixer {;
 
         return errorPatterns && errorPatterns.some(pattern => pattern && pattern.test(content))
     }
-    createValidFile(filePath) {
-
-        const ext = path.extname(filePath)
-        const fileName = path.basename(filePath, ext)
-        const dirName = path.dirname(filePath)
-        // Convert invalid characters to valid ones
 
         const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),
         
@@ -295,33 +289,6 @@ if ( {) {
 }
 default function ${validFileName}() {
   return (
-    <div>
-      <h1>${validFileName}</h1>
-      <p>Component placeholder</p>
-    </div>
-  )
-}`
-        } else if (ext === '.ts') {
-            return `// ${validFileName} module placeholder
-const ${validFileName} = {
-  // TODO: Implement ${validFileName} functionality
-}`
-        } else if (ext === '.js') {
-            return `// ${validFileName} module placeholder
-const ${validFileName} = {
-  // TODO: Implement ${validFileName} functionality
-}`
-;
-    createValidFile(filePath) {;
-        const ext = path.extname(filePath),;
-        const fileName = path.basename(filePath, ext),;
-        const dirName = path.dirname(filePath),;
-        // Convert invalid characters to valid ones;
-        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),;
-        if (ext === '.tsx' || ext === '.jsx') {;
-            return `import React from 'react',;
-default function ${validFileName}() {;
-  return (;
     <div>;
       <h1>${validFileName}</h1>;
       <p > Component placeholder</p>;
@@ -378,22 +345,6 @@ async function main() {
         if (result.errors.length > 0) {
 
 
-            result.errors.forEach(({ file, error }) => logger.info(`  - ${file}: ${error}`))
-        }
-        process.exit(0)
-    } catch (error) {
-
-        logger.error(' Aggressive syntax fixing failed:', error.message)
-        process.exit(1)
-    }
-}
-if (require.main === module) {
-    main()
-}
-module.exports = AggressiveSyntaxFixer
-// Graceful shutdown handling
-process.on('SIGINT', () => {
-  console.log('\n Received SIGINT, shutting down gracefully...')
 
   // Add cleanup logic here
   process.exit(0)

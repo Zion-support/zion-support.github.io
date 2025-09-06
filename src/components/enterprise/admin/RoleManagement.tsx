@@ -61,21 +61,6 @@ export function RoleManagement() {;
     {;
 
 
-  return (
-    <div className="space-y-6">
-      <div>
-        <h3 className='text-xl font-medium mb-4'>Role Permissions</h3>
-        <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>
-          {Object.entries(roleDescriptions).map(([role, description]) => (
-            <div
-              key={role}
-              className='bg-card rounded-lg p-4 border border-border'
-            >
-              <div className='flex items-center gap-2 mb-2'>
-                <Badge variant={role === 'Admin' ? 'default' : 'outline'}>
-                  {role}
-                </Badge>              </div>
-              <p className='text-sm text-muted-foreground'>{description}</p>
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           {Object.entries(roleDescriptions).map(([role, description]) => (

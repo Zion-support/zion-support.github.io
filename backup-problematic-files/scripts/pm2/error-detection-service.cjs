@@ -9,12 +9,18 @@ const { execSync, spawn } = // // require('child_process');
 const chokidar = // // require('chokidar');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
 >>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
 class ErrorDetectionService {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -25,12 +31,18 @@ class ErrorDetectionService {}
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
     
 >>>>>>> origin/main
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     this.errorTypes = {}
       "syntax": [],
       "typescript": [],
@@ -52,12 +64,18 @@ class ErrorDetectionService {}
     };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
 >>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}
@@ -85,12 +103,18 @@ class ErrorDetectionService {}
       this.log('info', 'Error Detection Service started successfully');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
       
 >>>>>>> origin/main
+=======
+=======
+      
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
       // Keep the process alive;
       setInterval(() => {}
         if (!this.isRunning) {}
@@ -107,12 +131,18 @@ class ErrorDetectionService {}
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
 >>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -263,12 +293,18 @@ class ErrorDetectionService {}
       ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
 >>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
       for (const configFile of configFiles) {}
         const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {}
@@ -301,12 +337,18 @@ class ErrorDetectionService {}
     const files = [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
 >>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     sourceDirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(fullPath)) {}
@@ -347,12 +389,18 @@ class ErrorDetectionService {}
     const closeComments = (content.match(/\*\//g) || []).length;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
     
 >>>>>>> origin/main
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     if (openComments !== closeComments) {}
       return true};
     // Check for missing semicolons in certain contexts;
@@ -551,12 +599,18 @@ class ErrorDetectionService {}
       report.summary.errorsByType[type] = count;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
       
 >>>>>>> origin/main
+=======
+=======
+      
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
       this.errorTypes[type].forEach(error => {})
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++})}
@@ -708,8 +762,14 @@ service.start().catch(error => {})
 <<<<<<< HEAD
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 });
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+});
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

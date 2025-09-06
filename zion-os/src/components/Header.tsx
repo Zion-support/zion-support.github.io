@@ -145,6 +145,7 @@ export default function Header() {;
           {/* Desktop Navigation */}
               </Link>
             ))}
+;
             {/* Services Dropdown */}
               <button 
                 className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group"
@@ -225,10 +226,6 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                     {service.name}
                   </Link>;
                 ))}
-</div>
-              <div className=&quot;pt-4&quot;>
-              </div>
-              <div className="pt-4">
                 <Link
                   href="/contact"
                   className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-200"

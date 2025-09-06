@@ -1,5 +1,3 @@
-  Award,;
-  Lightbulb,;} from 'lucide-react';
 
 import {;
   Search,;
@@ -211,19 +209,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
     hidden: { opacity: 0, y: 20 },;
     visible: {;
       opacity: 1,;
-    >
-      <div className="min-h-screen">
-        <Head>
-          <title>2025 Innovative Services Showcase - Zion Tech Group | Revolutionary AI, Quantum & Emerging Tech</title>
-          <meta name="description" content="Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting-edge emerging technologies. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="AI services 2025, quantum computing, blockchain, IoT, edge computing, 5G, cybersecurity, metaverse, space technology, Zion Tech Group" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta property="og:title" content="2025 Innovative Services Showcase - Zion Tech Group" />
-          <meta property="og:description" content="Revolutionary AI, quantum computing, and emerging technology services for 2025. Contact: +1 302 464 0950" />
-          <meta property="og:url" content="https://ziontechgroup.com/enhanced-services-showcase-2025" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/enhanced-services-showcase-2025" />
-        </Head>
         <Head>;
           <title>;
             2025 Innovative Services Showcase - Zion Tech Group | Revolutionary;
@@ -258,20 +243,31 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
             >
-              <div className="flex items-center justify-center mb-6">
-                <Sparkles className="w-12 h-12 text-cyan-400 mr-4" />
-                <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                  2025 Innovation Showcase
-                </h1>
-                <Sparkles className="w-12 h-12 text-pink-400 ml-4" />
-              </div>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Revolutionary AI, Quantum Computing & Emerging Technology Services
-              </p>
-              <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
-                Discover our cutting-edge solutions that are transforming industries and driving the future of technology
-              </p>
               {/* Service Statistics */}
+              <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
+                <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
+                  <div className='text-3xl font-bold text-cyan-400'>;
+                    {allServices && allServices.length}
+                  </div>;
+                  <div className='text-gray-400'>Total Services</div>;
+                </div>;
+                <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
+                  <div className='text-3xl font-bold text-purple-400'>;
+                    {aiCount + quantumCount}
+                  </div>;
+                  <div className='text-gray-400'>AI & Quantum</div>;
+                </div>;
+                <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
+                  <div className='text-3xl font-bold text-green-400'>;
+                    {blockchainCount + iotCount}
+                  </div>;
+                  <div className='text-gray-400'>Emerging Tech</div>;
+                </div>;
+                <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
+                  <div className='text-3xl font-bold text-pink-400'>;
+                    {spaceCount + cybersecurityCount}
+
+
                 </div>
                 <div className="text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl">
                   <div className="text-3xl font-bold text-purple-400">{aiCount + quantumCount}</div>
@@ -495,11 +491,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                           <Star className="w-4 h-4 fill-current" />
                           <span>Popular</span>
                         </div>
-                      )}
-                    </div>
-                    {/* Service Title and Description */}
-                    <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors'>
-                      {service.name}
                     </h3>
                     <p className='text-gray-300 text-sm mb-4 line-clamp-2'>                      {service.description}
                     </p>
@@ -558,6 +549,17 @@ export default function EnhancedServicesShowcase2025(req, res) {
                         <div>🌐 {service.contactInfo.website}</div>
                       </div>
                     </div>
+                    {/* Contact Information */}
+                    <div className='mt-4 pt-4 border-t border-gray-700'>;
+                      <div className='text-xs text-gray-400 mb-2'>;
+                        Contact Information:;
+                      </div>;
+                      <div className='text-xs text-gray-300 space-y-1'>                        <div>📱 {service && service.contactInfo.mobile}</div>;
+                        <div>✉️ {service && service.contactInfo.email}</div>;
+                        <div>🌐 {service && service.contactInfo.website}</div>;
+                      </div>;
+                    </div>;
+                  </motion && motion.div>;
                 ))}
             {/* No Results Message */}
             {filteredServices && filteredServices.length === 0 && (;

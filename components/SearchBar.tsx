@@ -30,3 +30,4 @@ interface SearchResult {;
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
+export default SearchBar;

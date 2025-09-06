@@ -252,6 +252,8 @@ Make sure to set the following environment variable
 - NODE_ENV=${this.environment}
 - PORT=3000;
 - NEXT_PUBLIC_API_URL=your_api_url;
+        this.deploymentSteps.push("✅ ${verification.name} verified")} catch (error) {";        console.log(`  ⚠️ ${verification.name} verification failed`);";        this.warnings.push("${verification.name} verification failed")}"}
+    this.deploymentSteps.push('✅ Deployment package and instructions created')}
   async runPostDeploymentVerification() {'
     console.log(' Running post-deployment verification...');
     const verifications = ['

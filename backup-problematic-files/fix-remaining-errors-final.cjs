@@ -141,6 +141,8 @@ const filesToFix = ['src/components/SEO.tsx']
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-remaining-errors-final.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     content = content.replace(/^\s*")
 =======
 <<<<<<< HEAD

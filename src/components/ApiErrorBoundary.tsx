@@ -50,11 +50,6 @@
                     Try Again
                   </>
                 )}
-              </Button>
-              <Button
-                variant='outline'
-                onClick={() => window.location.reload()}
-                className='w-full'              >
                 Reload Page
             </div>
             {!this.state.isOnline && (
@@ -116,8 +111,6 @@
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
-                <pre className='mt-2 whitespace-pre-wrap break-all'>
-                <pre className="mt-2 whitespace-pre-wrap break-all">
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>

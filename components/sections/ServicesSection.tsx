@@ -1,11 +1,3 @@
-  Brain
-  Cloud
-  RefreshCw
-  Wifi
-  Shield
-  BarChart3
-  ArrowRight
-  Zap;} from 'lucide-react';import {
   Brain;
   Cloud
   RefreshCw
@@ -220,6 +212,9 @@ const ServicesSection: React.FC = () => {;
       <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
         {/* Section Header */}
 
+
+    hidden: { opacity: 0, y: 20 },
+
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">;
       {/* Background Elements */}
@@ -231,6 +226,28 @@ const ServicesSection: React.FC = () => {;
       <div className="relative container mx-auto px-4">;
 
         {/* Section Header */}
+      }
+    }
+  }
+;
+  const card_variants = {
+    hidden: { opacity: 0, coordinate_y: 20 },
+    visible: { opacity: 1, coordinate_y: 0 },
+  }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  return (
+    <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden'>;
+      {/* Background Elements */}
+
+  return (
+    <section className="py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden">;
+      {/* Background Elements */}
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
 
@@ -361,6 +378,27 @@ const ServicesSection: React.FC = () => {;
                 {/* Content */}
                 <h3 className="text - 2xl font - bold text - white mb - 4 group - hover:text - blue - 400 transition - colors duration - 300">;
                   {service.title}
+                  ))}
+
+                </h3>;
+                <p className="text - gray - 300 mb - 6 leading - relaxed">;
+                  {service.description}
+                </p>;
+                {/* Features */}
+                <ul className='space - y-2 mb - 8'>;
+                  {service.features.map (feature => (
+                    <li;
+                      key={feature}
+                      className='flex items - center space - x-3 text - gray - 400';
+                    >;
+                      <div className='w - 2 h - 2 bg - blue - 400 rounded - full' />;
+                      <span className='text - sm'>{feature}</span>                    </li>                <ul className="space - y-2 mb - 8">;
+                  {service.features.map ((feature) => (
+                    <li key={feature} className="flex items - center space - x-3 text - gray - 400">;
+                      <div className="w - 2 h - 2 bg - blue - 400 rounded - full" />;
+                      <span className="text - sm">{feature}</span>))}
+                </ul>;
+
                 {/* CTA */}
                 <Link;
                   href={service.href}

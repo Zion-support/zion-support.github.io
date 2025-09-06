@@ -67,6 +67,15 @@ import {
   XCircle,
   Search,
 
+import fs from 'fs';
+import path from 'path';
+
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+} from 'lucide-react';
+
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -211,8 +220,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
       case 'error': return 'bg-red-100 text-red-800';
       case 'critical': return 'bg-red-200 text-red-900';
       default: return 'bg-gray-100 text-gray-800';    }
-    const dataStr = JSON.stringify(filteredLogs, null, 2);
-    const dataUri =
       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
@@ -310,11 +317,32 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
           <Button onClick={refreshLogs} disabled={isLoading} variant='outline'>;
             <RefreshCw
               className={`h-4 w-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
+    const dataStr = JSON.stringify(filteredLogs, null, 2);
+    const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
+    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
+
+    const linkElement = document.createElement('a');
+    linkElement.setAttribute('href', dataUri);
+    linkElement.setAttribute('download', exportFileDefaultName);
   },;
   const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();
   };
 
+  const formatTimestamp = (timestamp: string) => {
+    return new Date(timestamp).toLocaleString();  }
+  const formatPerformance = (performance?: LogEntry['performance']) => {
+    if (!performance) return null;
+    const parts = [];
+    if (performance.memory) {
+      parts.push(`Memory: ${(performance.memory / 1024 / 1024).toFixed(1)}MB`)
+    }
+    if (performance.timing) {
+      parts.push(`Timing: ${performance.timing}ms`)
+    }
+    if (performance.fps) {
+      parts.push(`FPS: ${performance.fps}`)
+    }
   const formatPerformance = (performance?: LogEntry['performance']) => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       } catch (error) {
@@ -363,8 +391,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                 <SelectValue placeholder='All levels' />
               </SelectTrigger>
               <SelectContent>
-            </Select>
-            <Select value={categoryFilter} onValueChange={setCategoryFilter}>
               <SelectTrigger>
               </SelectTrigger>
               <SelectContent>
@@ -391,7 +417,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
               <SelectContent>
                 <SelectItem value="all">All Sources</SelectItem>
                 {sources.map(source => (
-                  <SelectItem key={source} value={source}>
                     {source}
                   </SelectItem>                ))}
               </SelectContent>
@@ -475,14 +500,18 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                             <summary className="cursor-pointer">Stack Trace</summary>
                             <pre className="mt-1 text-xs overflow-x-auto">{log.error.stack}</pre>
                           </details>
-                    </div>
-                  </div>
-                  {log.url && (
-                    <div className='text-xs text-muted-foreground truncate'>                      URL: {log.url}
-                    </div>
                 </div>
               ))
             ) : (
+              <div className="text-center text-muted-foreground py-8">
+                No logs found matching the current filters.
+              </div>
+                  )}
+                </div>;
+              ));
+            ) : (;
+              <div className='text-center text-muted-foreground py-8'>                No logs found matching the current filters.;
+              </div>;
               <div className="text-center text-muted-foreground py-8">
                 No logs found matching the current filters.
               </div>

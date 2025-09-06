@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -168,6 +170,9 @@ console.log('====')
       const result = await this.runCommand(cmd, desc, { "stdio"})
       "recommendations"
     this.log(`Report saved "to"`)
+<<<<<<< HEAD
+      this.log(` Enhanced automation suite "failed"`)
+=======
 <<<<<<< HEAD
       this.log(` Enhanced automation suite "failed"`)
 =======

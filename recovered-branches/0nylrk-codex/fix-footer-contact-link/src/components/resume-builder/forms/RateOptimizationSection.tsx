@@ -24,19 +24,10 @@ interface RateOptimizationSectionProps {
   rateType: "hourly" | "fixed"
 }
 
-  location
-  control,
-  setValue,
-  skills,
-  yearsExperience,
-  location,
   rateType
 }) => {
   const handleSuggestionApplied = (rate: number) => {
     setValue("hourlyRate", rate)
-  }
-  },
-
   return (
     <div className="space-y-4">
       <FormField
@@ -114,13 +105,15 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
             years_experience={years_experience}
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
-          />
-        </CardContent>
-      </Card>
-    </div>
-  )
           />;
         </CardContent>;
       </Card>;
     </div>;
 };
+            rate_type={rate_type}
+          />;
+        </CardContent>;
+      </Card>;
+    </div>);
+}
+;

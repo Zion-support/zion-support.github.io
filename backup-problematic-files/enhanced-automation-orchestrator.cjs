@@ -181,6 +181,8 @@ const { execSync } = require('child_process')
         "failed"
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         "failed"
 =======
 <<<<<<< HEAD

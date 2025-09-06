@@ -8,11 +8,6 @@
             <div className="enhanced-card hover:shadow-lg cursor-pointer">
               <h2 className="text-xl font-semibold">{it.title}</h2>
               <p className="text-sm text-gray-600 mt-1">{it.desc}</p>
-        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
       </div>;
     </main>;
   );

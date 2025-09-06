@@ -1,24 +1,3 @@
-  id: string;
-  question: string;
-  options: string[];
-  answerIndex: number;
-}
-type Props = {
-  questions: Question[];
-  onComplete: (score: number) => void;};  id: string
-  question: string
-  options: string[]
-  answerIndex: number
-}
-type Props = {
-  questions: Question[]
-  onComplete: (score: number) => void
-  const [answers, setAnswers] = useState<Record<string, number>>({});
-  const [submitted, setSubmitted] = useState(false);
-  const score = questions.reduce(
-    (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0)
-    0
-  );
     setSubmitted(true);
     onComplete(score);
   }
@@ -81,3 +60,9 @@ type Props = {
           )}
         </div>
       ))}
+
+  );
+}
+
+
+

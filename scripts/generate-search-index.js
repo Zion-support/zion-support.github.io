@@ -3,10 +3,6 @@
  * Generate Search Index;
  * Creates a search index for the website content;
  */;
-const fs = require('fs');
-const path = require('path');
-const PAGES_DIR = path.join(__dirname, '..pages');
-const OUTPUT_DIR = path.join(__dirname, '..public', 'search');
 ;
 const fs = require('fs'),;
 const path = require('path'),;
@@ -20,6 +16,8 @@ const CONTENT_TYPES = {'pages':{;
     extensions:['.tsx.ts', '.jsx.js'];
     exclude:['_app_document', 'api'];
     exclude:[];
+  }
+
 const fs = require('fs'),;
 const path = require('path'),;
 const PAGES_DIR = path.join(__dirname, '..pages'),;
@@ -35,8 +33,6 @@ const CONTENT_TYPES = {;
     path: path.join(PAGES_DIR, 'blog'),;
     extensions: ['.tsx.ts.jsx.js'],;
     exclude: [];
-  }
-},
 
   }
 }

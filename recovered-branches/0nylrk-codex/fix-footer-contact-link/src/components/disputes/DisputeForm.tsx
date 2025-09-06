@@ -43,20 +43,6 @@ const formSchema = z.object({
     .min(20, { message: "Description must be at least 20 characters" })
   attachments: z.array(z.any()).optional()})
 type DisputeFormProps = {
-  projectId: string
-  milestoneId?: string;
-  onDisputeCreated?: (disputeId: string) => void
-  onCancel?: () => void
-}
-export function DisputeForm({
-  projectId
-  milestoneId
-  onDisputeCreated
-  onCancel
-}: DisputeFormProps) {
-  const { createDispute } = useDisputes();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [files, setFiles] = useState<File[]>([]);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -83,9 +69,6 @@ export function DisputeForm({
         
 
 
-          // // // console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
-        }
-        toast.success("Your dispute has been submitted");
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
@@ -181,6 +164,7 @@ export function DisputeForm({
                     placeholder="Please provide specific details about the issue...";
                     className="min - h-[150px]";
                     {...field}
+                            onClick={() => removeFile(index)}
                           >;
                             Remove;
                           </Button>;

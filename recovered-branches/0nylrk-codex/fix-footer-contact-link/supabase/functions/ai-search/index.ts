@@ -19,10 +19,6 @@ serve(async (req) => {
     const { query } = await req && req.json();
     if (!query) {
       return new Response(
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      )
-    }
-    const openAiKey = Deno.env.get("OPENAI_API_KEY");
     if (!openAiKey) throw new Error("OPENAI_API_KEY is not set");
     const configuration = new Configuration({ apiKey: openAiKey });
     const openai = new OpenAIApi(configuration);
@@ -103,3 +99,4 @@ if ( {) {
     );
   }
 });
+;

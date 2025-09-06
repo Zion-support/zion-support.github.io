@@ -11,8 +11,6 @@ export type NotificationType =
 export interface Notification extends BaseNotification {;
 
 
-  | 'onboarding';
-  | 'system';
   type: NotificationType;
   action_url?: string
   action_text?: string

@@ -2,8 +2,6 @@
   userId?: string;
 }) {;
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
-
-  return (
         className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded"
       >
         Download PDF

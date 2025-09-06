@@ -17,6 +17,13 @@ const icon_map = {
 };
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
 
+  return (
+
+
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
+        
+
+
         return (
           <TooltipProvider key={badge.id}>
             <Tooltip>
@@ -40,4 +47,3 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
             </Tooltip>
           </TooltipProvider>
         )
-export default UserBadges;

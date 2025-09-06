@@ -4,10 +4,6 @@
         'Content-Type': 'application/json'
       }
       // Add timeout to prevent hanging
-      }
-    }
-    setLoading(true)
-    setResponse(null)
     try {
       const res = await fetch (url, options);
       const content_type = res.headers.get ('content - type');

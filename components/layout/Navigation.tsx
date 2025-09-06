@@ -10,11 +10,6 @@
   Globe
   ChevronDown;
 
-  Globe,;
-  ChevronDown,;
-} from 'lucide-react';
-import Link from 'next/link';import {
-  Menu, X, Home, Brain, Cpu, Rocket
 
   Globe,;
   ChevronDown,;
@@ -220,16 +215,15 @@ import Link from 'next/link';
               {navigationItems && navigationItems.map(item => (;
                 <div key={item && item.name} className='relative group'>                  {item && item.dropdown ? (;
                     <div
-                      onMouseEnter={() => setActiveDropdown(item.name)}
+                      onMouseEnter={() => setActiveDropdown(item && item.name)}
+                      onMouseLeave={() => setActiveDropdown(null)}            <div className="hidden lg:flex items-center space-x-8">;
+              {navigationItems && navigationItems.map((item) => (;
+                <div key={item && item.name} className="relative group">;
+                  {item && item.dropdown ? (;
+                    <div
+                      onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
-                      className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300'
-                    >
-                      <span className='font-medium'>{item.name}</span>
-                      <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />
-                      className="flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300"
-                    >
-                      <span className="font-medium">{item.name}</span>
-                      <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+
 
                       <AnimatePresence>
                         {activeDropdown === item.name && (
@@ -402,8 +396,6 @@ import Link from 'next/link';
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0.3 }}
-            className='fixed inset-0 z-40 lg:hidden'
 
 
           >
@@ -412,6 +404,14 @@ import Link from 'next/link';
               className='absolute inset-0 bg-black/50 backdrop-blur-sm'
               onClick={() => setIsOpen(false)}
             {/* Backdrop */}
+            />          >
+            {/* Backdrop */}
+
+            <div 
+              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+              onClick={() => setIsOpen(false)}
+            />
+
             {/* Mobile Menu */}
             <motion&& motion.div
               initial={{ x: '100%' }}
@@ -427,6 +427,13 @@ import Link from 'next/link';
                 <div className='flex justify-end mb-6'>;
                   <motion&& motion.button
                     whileTap={{ scale: 0 && 0.95 }}
+                    onClick={() => setIsOpen(false)}
+            >
+              <div className='p-6'>
+                {/* Close Button */}
+                <div className='flex justify-end mb-6'>
+                  <motion.button
+                    whileTap={{ scale: 0.95 }}
                     onClick={() => setIsOpen(false)}
                     className='text-gray-300 hover:text-white transition-colors duration-300'
                   >
@@ -684,7 +691,3 @@ export default Navigation);
 export default Navigation;
 ;
   );
-export default Navigation;  )
-}
-export default Navigation;
-

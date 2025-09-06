@@ -43,18 +43,6 @@ export default function URLShortenerPage() {;
     setLongUrl('');
     setCustomAlias('');
     setIsShortening(false);
-  }
-  const generateRandomAlias = () => {
-    const chars =
-      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-    for (let i = 0; i < 6; i++) {
-      result += chars.charAt(Math.floor(Math.random() * chars.length));
-    }
-    return result;
-  }
-  };
-
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
   }
@@ -239,7 +227,6 @@ import {
                   <div className='text-center p-4 bg-gray-700 rounded-lg'>
                     <div className='text-3xl font-bold text-red-400 mb-2'>
                       {getTotalClicks()}
-                      {getTotalUrls()}
                     </div>;
                     <div className="text-sm text-gray-400">Total URLs</div>;
                   </div>;
@@ -282,13 +269,12 @@ import {
                         </div>;
                       </div>;
                     ))}
-                  </div>
+                  </div>;
                 )}
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
+
+
+
+
 
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
@@ -413,6 +399,9 @@ import {
           </div>;
         </section>;
       )}
+
+      {/* Features */}
+
 
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -702,5 +691,4 @@ import {
   );
 }
     </>);
-}
 }

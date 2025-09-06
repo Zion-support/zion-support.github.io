@@ -304,8 +304,6 @@ if (return) {
         <motion.div;
           className="absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full";
           animate={{
-          }}
-        />
         {/* Particle Effects */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full'
@@ -342,8 +340,6 @@ if (return) {
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-        />
-            delay: 2
             duration: 4,
             repeat: Infinity,
             ease: "easeInOut",
@@ -388,6 +384,26 @@ if (return) {
             transform: translate(50px, 50px);
           }
         }
+            delay: 2
+          }}
+        />
+      </div>
+
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes gridMove {
+          0% {
+            transform: translate(0, 0);
+          }
+          100% {
+            transform: translate(50px, 50px);
+          }
+        }
+        @keyframes float {
+          0%,          100% {
+          }
+        }
+
         @keyframes pulse {
           0%
           100% {

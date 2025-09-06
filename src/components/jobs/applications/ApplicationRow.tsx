@@ -51,9 +51,6 @@ export function ApplicationRow(): any ({;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
 
-
-  const talentName = application.talent_profile?.full_name || 'Unknown'
-
   return (
   const talentName = application.talent_profile?.full_name |'Unknown'
 
@@ -75,9 +72,6 @@ export function ApplicationRow(): any ({;
       </TableCell>
       <TableCell>
 
-        <div className="flex items-center gap-1">
-          <Calendar className="h-4 w-4 text-muted-foreground" />
-          <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
         </div>
       </TableCell>
       <TableCell>

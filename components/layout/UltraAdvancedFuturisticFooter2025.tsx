@@ -1,20 +1,3 @@
-  Mail
-  Phone
-  MapPin
-  Globe
-  Twitter
-  Linkedin
-  Github
-  ArrowUp
-  Crown
-  Zap
-  Brain
-  Rocket
-  Shield
-  Users
-  BookOpen
-  Briefcase
-  Atom;
   Mail,
   Phone,
   MapPin,
@@ -121,14 +104,6 @@ interface FooterSection {;
         { label: 'Our Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
         { label: 'Investors', href: '/investors' },
-  return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 -z-10">
-  return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 -z-10">
 
 
 
@@ -141,24 +116,6 @@ interface FooterSection {;
         {[...Array(30)].map((_, i) => (;
           <motion&& motion.div
             key={i}
-            className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full'
-            animate={{
-              x: [0, Math.random() * 1000, 0]
-              y: [0, Math.random() * 1000, 0]
-              opacity: [0, 0.6, 0]
-              scale: [0, 1, 0]
-            }}            transition={{
-              duration: 15 + Math.random() * 10
-              repeat: -1
-              delay: Math.random() * 8
-              ease: 'easeInOut',              x: [0, Math.random() * 1000, 0];
-              y: [0, Math.random() * 1000, 0];
-              opacity: [0, 0.6, 0];
-              scale: [0, 1, 0]}}
-              duration: 15 + Math.random() * 10
-              repeat: -1
-              delay: Math.random() * 8
-              ease: 'easeInOut'
             }}
           />;
         ))}
@@ -451,10 +408,3 @@ interface FooterSection {;
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3, delay: 1 }}
       >
-export default UltraAdvancedFuturisticFooter2025;      </motion.button>
-    </footer>
-  )
-}
-export default UltraAdvancedFuturisticFooter2025;
-
-export default UltraAdvancedFuturisticFooter2025;

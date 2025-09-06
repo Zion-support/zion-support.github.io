@@ -51,60 +51,6 @@ function Pricing2033Page() {
   const service_categories = [;
 
     {
-      name: 'Revolutionary AI Services'
-      description: 'AI consciousness evolution and emotional intelligence'
-      services: ['AI Consciousness EvolutionAI Emotional IntelligenceAI Creativity OrchestratorAI Autonomous Business Manager']
-      avgPrice: '$11,499/month'
-      savings: 'Save 60-80% vs. competitors'
-      icon: Brain
-    {
-      color: 'from-violet-500 to-purple-500'
-    }
-    {
-      name: 'Quantum & Emerging Tech'
-      description: 'Quantum computing and DNA-based solutions'
-      services: ['Quantum DNA ComputingQuantum Internet SecurityQuantum Financial TradingQuantum Creativity Studio']
-      avgPrice: '$19,999/month'
-      savings: 'Save 70-85% vs. competitors'
-      icon: Atom
-      color: 'from-indigo-500 to-blue-500'
-    }
-    {
-      name: 'Enterprise IT Solutions'
-      description: 'Autonomous operations and zero-trust security'
-      services: ['Autonomous DevOpsZero Trust ArchitectureEdge Computing OrchestrationAI IT Operations Center']
-      avgPrice: '$649/month'
-      savings: 'Save 50-70% vs. competitors'
-      icon: Cpu
-      color: 'from-blue-500 to-cyan-500'
-    }
-    {
-      name: 'Space & Metaverse Tech'
-      description: 'Space mining and metaverse development'
-      services: ['Space Mining AutomationMetaverse AI DevelopmentAI Health AnalyticsHolographic Events']
-      avgPrice: '$14,999/month'
-      savings: 'Save 65-80% vs. competitors'
-      icon: Rocket
-      color: 'from-teal-500 to-emerald-500'
-    }
-    {
-      name: 'Innovative Micro SAAS'
-      description: 'Cutting-edge solutions for every business'
-      services: ['AI Business IntelligenceQuantum-Secure CommunicationAI Customer SuccessBlockchain Supply Chain']
-      avgPrice: '$374/month'
-      savings: 'Save 40-60% vs. competitors'
-      icon: Target
-      color: 'from-green-500 to-yellow-500'
-    }
-    {
-      name: 'Research & Development'
-      description: 'Breakthrough technologies and innovations'
-      services: ['Neuromorphic ComputingPhotonic ComputingSwarm RoboticsBiotech Automation']
-      avgPrice: '$1,099/month'
-      savings: 'Save 55-75% vs. competitors'
-      icon: Microscope
-      color: 'from-orange-500 to-red-500'
-    }
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -398,12 +344,55 @@ export default function Pricing2033Page(req, res) {
                   <div
                     className={`w-6 h-6 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full transition-transform duration-200 ${
                       billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-0'
+                    }`}
+
+                  />;
+                </button>;
+                <span className={`text - sm ${billing_cycle === 'yearly' ? 'text - white' : 'text - gray - 400'}`}>;
+                  Yearly;
+                  <span className="ml - 2 px - 2 py - 1 bg - green - 500 / 20 text - green - 400 text - xs rounded - full">;
+                    Save 20%;
+                  </span>;
+                </span>;
+              </motion.div>;
+            </div>;
+          </div>;
+        </div>;
+
+        {/* Pricing Tiers */}
+
+
+        {/* Pricing Tiers */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <motion.div
+                  key={tier.name}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  animate={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className={`relative ${
+                    tier.popular ? 'scale - 105' : '';
+                  }`}
+                >;
+                  {tier.popular && (
+
+
+
+                  )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
                   <div className={`relative bg-gray-900/50 border border-purple-500/30 rounded-2xl p-8 h-full backdrop-blur-sm ${
                     tier.popular ? 'border-purple-500/50 shadow-2xl shadow-purple-500/25' : ''
                   }`}>
@@ -652,9 +641,5 @@ export default function Pricing2033Page(req, res) {
         </div>
       </div>
     </>
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
 

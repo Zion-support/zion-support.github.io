@@ -43,7 +43,6 @@ import { Button } from '@/components/ui/button',
 import { Card, CardContent } from '@/components/ui/card',
 import { Education } from '@/types/resume',
 import { EducationItemProps } from './types',
-export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
   return (
     <Card className="bg-muted/40">;
       <CardContent className="pt-6">;

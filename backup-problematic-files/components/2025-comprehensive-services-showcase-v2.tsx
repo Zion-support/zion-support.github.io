@@ -1,10 +1,12 @@
+  Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
+} from 'lucide-react',;
+// Import our new 2025 V2 innovative services;
                           {(service as any).pricing?.professional ?;
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;
                             `${service.price} ${service.period}`;
           >
             Our Comprehensive Service Portfolio
           </motion.h2>
-          
           <motion.div 
             className="space-y-20"
             variants={staggerContainer}
@@ -25,7 +27,6 @@
                     {category.description}
                   </p>
                 </div>
-                
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service) => (
                     <motion.div
@@ -39,7 +40,6 @@
                       <p className="text-gray-300 mb-4">
                         {service.description}
                       </p>
-                      
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center text-sm text-cyan-400">
                           <TrendingUp className="w-4 h-4 mr-2" />
@@ -50,7 +50,6 @@
                           {service.growthRate}
                         </div>
                       </div>
-                      
                       <div className="mb-6">
                         <div className="text-2xl font-bold text-white mb-2">
                           Starting at {(service as any).pricing?.starter || service.price}
@@ -94,27 +93,10 @@
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text - 4xl md:text - 5xl font - bold text - white mb - 6";
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text - xl text - gray - 300 mb - 8";
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             className="flex flex - col sm:flex - row gap - 4 justify - center";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}

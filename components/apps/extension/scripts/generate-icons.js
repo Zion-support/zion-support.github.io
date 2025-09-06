@@ -30,4 +30,3 @@ for (const size of sizes) {
 }
   console.log('generated', out)
 }
-}

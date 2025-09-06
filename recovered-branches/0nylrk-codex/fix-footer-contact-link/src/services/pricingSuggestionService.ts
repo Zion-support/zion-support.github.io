@@ -4,50 +4,11 @@
 
   scope?: string
 
-  experienceLevel?: string
-}
-  skills: string[];
-
-  yearsExperience: number
-
-  location?: string
-}
-export interface PricingSuggestion {
-  minRate: number,
-  maxRate: number,
-  confidence: "High" | "Medium" | "Low",
-  explanation: string
-;
-// Define types for the pricing recommendation;
-export interface PricingSuggestion {;
-  minRate: number,;
-  maxRate: number,;
-  confidence: "High" | "Medium" | "Low",;
-  explanation: string;
-}
-;
-export interface ClientBudgetParams {;
-  jobTitle: string,;
-  category: string,;
-  timeline?: string,;
-  scope?: string,;
-  experienceLevel?: string;
-}
-;
-export interface TalentRateParams {;
-  skills: string[],;
-  yearsExperience: number,;
-  location?: string;
-}
-
 // Mock function to generate suggestions
 // In production, this would call an AI service or API
 export async function getClientBudgetSuggestion(params: ClientBudgetParams): Promise<PricingSuggestion> {
   try {
     // This would be replaced with an actual API call to an AI model
-    // For now, we'll simulate a response based on job category
-    const { jobTitle, category } = params;
-    // Simulate API call delay
 
     await new Promise(resolve => setTimeout(resolve, 1000));
     // Basic logic to determine budget range based on category
@@ -70,6 +31,16 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       minRate = 45;
       maxRate = 90;
       confidence = "High"
+    } else {
+      min_rate = 25;
+      max_rate = 50;
+      confidence = "Low";
+    }
+
+
+    
+
+
     // Adjust based on job title keywords
 
     const lowercaseTitle = jobTitle && jobTitle.toLowerCase();
@@ -91,10 +62,9 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       maxRate -= 15,;
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low;
     }
-    
-    // Generate explanation
-    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`,
-    
+    // Generate explanation;
+    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${job_title}", we recommend a budget range of $${min_rate}-$${max_rate}/hour. This aligns with current market trends for similar projects.`;
+;
     return {
       min_rate;
       max_rate;
@@ -102,15 +72,6 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       explanation;
     }
   } catch (error) {
-    console.error("Error generating budget suggestion:", error),
-    // Return a fallback suggestion
-    return {
-      minRate: 30;
-      maxRate: 60;
-      confidence: "Low"
-      minRate: 30,
-      maxRate: 60,
-      confidence: "Low",
       explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
     }
       confidence: "Low",
@@ -273,20 +234,10 @@ if ( {) {
     }
     console.error("Error generating rate suggestion:", error);
     return {
-      minRate: 25,
-      maxRate: 50,
-      confidence: "Low",
       explanation: "We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages."
     };
   }
 }
-// Function to save pricing analytics data
-export async function trackPricingSuggestion(data: {
-  userId: string;
-  suggestionType: 'client' | 'talent';
-  suggestedMin: number;
-  suggestedMax: number;
-  actualValue?: number
   accepted: boolean
 }) {
   try {
@@ -313,3 +264,5 @@ export async function trackPricingSuggestion(data: {
   }
 }
 ;
+  }
+}

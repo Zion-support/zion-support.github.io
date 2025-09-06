@@ -1,10 +1,22 @@
 import Layout from '../../components/Layout';
+import {GraduationCap,, Users,, BookOpen,, Laptop,, Globe} from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import {GraduationCap,, Users,, BookOpen,, Laptop,, Globe,, CheckCircle,, ArrowRight} from 'lucide-react';
+import Layout from '../../components/Layout';
+import {GraduationCap,, Users,, BookOpen,, CheckCircle,, ArrowRight} from 'lucide-react';
+const features = [;
+  {}
+    icon: GraduationCap,;
+    title: 'Learning Management Systems,',;
+    description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
   },
   {}
     icon: Users,
     title: 'Student Information Systems,',
     description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',
   },
+  },;
   {}
     title: 'Digital Content Management',
     description: 'Interactive digital content creation and distribution'
@@ -106,13 +118,14 @@ export default function EducationSolutions() {
     benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording']
   }
 ];
-
 export default function EducationSolutionsPage() {
   return (
     <Layout
       title="Education Solutions - Zion Tech Group"
       description="Comprehensive education technology solutions for schools, universities, and educational institutions. LMS, SIS, and digital learning platforms."
-      keywords="education solutions, learning management system, student information system, educational technology, digital learning"
+      keywords="education solutions, learning management system, student information system, educational technology, digital learning">;
+      <div className="min-h-screen bg-white">;
+        {/* Hero Section */}
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -169,6 +182,12 @@ export default function EducationSolutionsPage() {
                     {feature.description}
                   </p>
                 </div>
+                        {benefit}
+                      </div>;
+                    ))}
+                  </div>;
+                </motion && motion.div>;
+              ))}
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto">";
               <h2 className="text-3xl font-bold text-white text-center mb-12">";
@@ -224,10 +243,6 @@ export default function EducationSolutionsPage() {
             </div>;
           </div>;
         </section>;
-      </div>;
-    </Layout>;
-        {/* Benefits Section */}
-              ))}
             </div>
           </div>
         </section>

@@ -10,13 +10,6 @@ export interface CreateNotificationParams {;
   title: string;
   message: string;
   type: NotificationType;
-  relatedId?: string | null;
-  sendEmail?: boolean;
-  actionUrl?: string | null
-  actionText?: string | null
-}
-
-export interface CreateNotificationResult {;
   success: boolean;
   notificationId?: string
   error?: any

@@ -15,8 +15,6 @@ export const useRecordActivity = () => {
           *,
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
-        .single();
-      if (error) throw error;
     }
   }
   return {

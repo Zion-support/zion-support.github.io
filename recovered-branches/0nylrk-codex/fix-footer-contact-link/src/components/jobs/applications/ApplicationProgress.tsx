@@ -6,6 +6,42 @@ interface ApplicationProgressProps {
 
   const getProgressValue = () => {
     switch (status) {
+        return 20;
+      case "viewed":;
+        return 40;
+      case "shortlisted":;
+        return 60;
+      case "interview":;
+        return 80;
+      case "hired":;
+        return 100;
+      case "rejected":;
+        return 100;
+      default:;
+        return 0;
+    }
+  }
+
+
+      case "new": return 20,
+      case "viewed": return 40,
+      case "shortlisted": return 60,
+      case "interview": return 80,
+      case "hired": return 100,
+      case "rejected": return 100,
+      default: return 0
+
+    }
+
+  },
+
+  const progressValue = getProgressValue(),
+  
+  return (
+    <div className={cn("w-full space-y-2", className)}>
+      <Progress value={progressValue} className="h-2" />
+
+
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />

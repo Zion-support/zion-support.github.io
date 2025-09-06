@@ -32,11 +32,6 @@ try {// Ensure clean working directory;
     try {execSync('git pull origin main');
     } catch (error) {console.log('  Merge conflicts detected. Resolving...');
         // Find files with merge conflicts;
-            for (const file of files) {;
-                if (file.trim()) {;
-                    console.log(`Resolving conflicts in: ${file}`);
-                    try {execSync(`git checkout --ours "${file}"`);
-                    } catch (e) {execSync(`git checkout --theirs "${file}"`);
                     }
                     exec_sync (`git add "${file}"`);
                 }

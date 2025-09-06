@@ -1,7 +1,3 @@
-import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js";
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY |process.env.OPENAI_API_TOKEN;
-async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null> {if (!OPENAI_API_KEY) return null;
-  const system = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3-7 phased milestones. Each milestone must include: title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week-based deadlines. Output ONLY valid JSON object with key \"milestones\": [...]`;
   const user = {;
     scopeOfWork: input.scopeOfWork;
     startDateIso: input.startDateIso;

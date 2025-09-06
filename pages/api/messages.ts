@@ -23,20 +23,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (idx === -1) {
       res && res.status(404).json({ error: "Conversation not found" });
       return;
-      id: uuidv4()
-      conversationId: String(conversationId)
-      sender: { type: sender.type, id: String(sender.id) }
-      text: text ? String(text) : undefined
-      attachments: Array.isArray(attachments) ? attachments : undefined
-      createdAtIso: now
-      readBy: [{ participantId: String(sender.id), readAtIso: now }]
-    }
-      return;
-    }
-    }
-
-    const now = new Date().toISOString();
-    const msg: Message = {
     res.status(201).json({ message: msg });
     return
   }
@@ -47,19 +33,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { conversationId } = req.query;
     const conversations = readJsonFile<Conversation[]>(FILE, []);
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  if (req.method === 'GET') {
-    const { conversationId } = req.query;
-    const conversations = readJsonFile<Conversation[]>(FILE, []),;
-    const conv = conversations.find((c) => c.id === String(conversationId));
-    if (!conv) {;
-      res.status(404).json({ error: 'Conversation not found' });
       return;
     }
     res && res.status(200).json({ conversation: conv });

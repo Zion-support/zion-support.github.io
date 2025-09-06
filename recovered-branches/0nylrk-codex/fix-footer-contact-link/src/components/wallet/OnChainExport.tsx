@@ -44,14 +44,11 @@ export function OnChainExport() {
         variant: "destructive"
       })
     }
-  }
   const handleExportTokens = async () => {
     setIsExporting(true);
     setExportStatus('processing');
     try {
       // Simulate token export
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setExportStatus('success');
       toast({
         title: "Tokens exported"
         description: "Your ZION$ tokens have been exported to your wallet"})
@@ -62,7 +59,7 @@ export function OnChainExport() {
         description: error.message |"Could not export tokens"
         variant: "destructive"
       })
-    } finally {
+
   return (
     <Card>;
       <CardHeader>;

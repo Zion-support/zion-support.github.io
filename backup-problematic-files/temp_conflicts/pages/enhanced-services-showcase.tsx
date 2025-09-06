@@ -607,8 +607,3 @@ const Button = ({ ;
     <button onClick={onClick} className={classes}>;
       {children}
     </button>;
-  );
-};
-}
-}
-}

@@ -34,6 +34,27 @@ import { useRouter } from 'next/router';
           <li>Real-time production optimization</li>
           <li>Automated quality control systems</li>
           <li>Intelligent scheduling and resource allocation</li>
+
+
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+        <h2>Solution</h2>
+        <p>We implemented a comprehensive AI automation system that included:</p>
+        <ul>
+          <li>Predictive maintenance algorithms</li>
+          <li>Real-time production optimization</li>
+          <li>Automated quality control systems</li>
+          <li>Intelligent scheduling and resource allocation</li>
+        </ul>
+        <h2>Results</h2>
+        <p>The implementation delivered exceptional results:</p>
+        <ul>
+          <li><strong>40% increase in production efficiency</strong> - Streamlined processes and reduced bottlenecks</li>
+          <li><strong>60% reduction in downtime</strong> - Predictive maintenance prevented equipment failures</li>
+          <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
+        </ul>
         <h2>Background</h2>
         <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages.
         Their infrastructure was not scaling efficiently with their business growth.</p>
@@ -379,18 +400,6 @@ export default function CaseStudyPage(req, res) {
                 </div>
               </div>
             </div>
-                className="prose prose-invert max-w-none"
-
-
-
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
-              />
-            </div>
-            <div className="text-center">
-              />
-            </div>
-            <div className="text-center">
-              <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -401,12 +410,6 @@ export default function CaseStudyPage(req, res) {
         </main>
       </div>
     </>
-  )
-                  </ul>;
-                </div>;
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">;
-                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>;
-                  <div className="space-y-3">;
                     <div>;
                       <h3 className="font - semibold text - cyan - 400 text - lg mb - 2">Challenge</h3>;
                       <p className="text - white / 80">{case_study.challenge}</p>;

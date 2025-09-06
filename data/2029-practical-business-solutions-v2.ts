@@ -1,54 +1,3 @@
-      'Real-time data analytics'
-      'Predictive business modeling'
-      'Automated report generation'
-      'Custom dashboard creation'
-      'Data visualization tools'
-      'Business trend analysis'
-      'Performance benchmarking'
-      'ROI tracking automation'
-      'Market opportunity identification'
-      'Competitive intelligence'
-    ]
-    popular: true
-    marketPosition:
-      'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.'
-    targetAudience:
-      'Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies'
-    trialDays: 21
-    setupTime: '2-3 weeks'
-    category: 'AI Business Intelligence'
-    realService: true
-    technology: [
-      'Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics'
-    ]
-    integrations: [
-      'ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'
-    ]
-    useCases: [
-      'Real-time data analyticsPredictive business modelingAutomated report generationCustom dashboard creationData visualization toolsBusiness trend analysisPerformance benchmarkingROI tracking automation';
-      'Market opportunity identificationCompetitive intelligence'
-    ];
-    popular: true;
-    color: 'from-blue-500 via-indigo-500 to-purple-500';
-    textColor: 'text-blue-400';
-    link: 'https://ziontechgroup.com/services/ai-business-intelligence-suite';
-
-    marketPosition: 'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.'
-    targetAudience: 'Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies';
-    trialDays: 21;
-    setupTime: '2-3 weeks';
-    category: 'AI Business Intelligence';
-    realService: true
-    technology: ['Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics'];
-    integrations: ['ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'];
-    useCases: ['Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'];
-    roi: 'Average customer sees 350% ROI through improved decision making and business optimization.'
-    competitors: ['Tableau, Power BI, Qlik, Looker, Domo'];
-
-    marketSize: '$18B market';
-    growthRate: '280% annual growth';
-    variant: 'ai-futuristic';
-    contactInfo: {
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -1549,6 +1498,48 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     rating: 4 && 4.9,
     reviews: 198;
 ]}}
+import { ServiceVariant } from '../types/service-variants',;
+export interface PracticalBusinessSolution2029 {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+;
 
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
   // AI-Powered Business Intelligence;
@@ -1915,4 +1906,3 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
-};

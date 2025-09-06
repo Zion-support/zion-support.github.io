@@ -1,6 +1,4 @@
 
-import { GradientHeading } from "./GradientHeading",
-import { Button } from "./ui/button",
 import { CheckCircle2 } from "lucide-react";
 
 import {
@@ -11,21 +9,6 @@ import {
   TableHeader
   TableRow
 } from "./ui/table";
-export function ComparisonSection() {
-  return (
-    <section className="py-20 bg-zion-blue-dark">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <GradientHeading>Compare & Save</GradientHeading>
-          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
-            See how Zion can drastically reduce your IT costs compared to
-            traditional providers
-
-import { GradientHeading } from "./GradientHeading",
-import { Button } from "./ui/button",
-import { CheckCircle2 } from "lucide-react",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",
-
 
 
           </p>
@@ -50,17 +33,27 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
                     savings: "60%"
                   }
                   {
+                      {item.service}
+                    </TableCell>;
+                    <TableCell className="text - center text - zion - slate - light">;
+                      {item.traditional}
+                    </TableCell>;
+                    <TableCell className="text - center text - zion - cyan font - semibold">;
+                      {item.zion}
+                    </TableCell>;
+                    <TableCell className="text - center text - green - 400 font - bold">;
+                      {item.savings}
+
+
+            
+
+
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
             </Button>
           </div>
         </div>
       </div>
-  )
-import { GradientHeading } from "./GradientHeading",;
-import { Button } from "./ui/button",;
-import { CheckCircle2 } from "lucide-react",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;
 export function ComparisonSection() {;
   return (
     <section className="py-20 bg-zion-blue-dark">;
@@ -98,5 +91,5 @@ export function ComparisonSection() {;
         </div>;
       </div>;
   );
+    </section>);
 }
-;

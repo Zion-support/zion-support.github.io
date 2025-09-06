@@ -14,10 +14,6 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
         </div>
       ) : (
         <span>
-          {resultCount === 0
-            ? "No talents found. Try adjusting your filters."
-            : `Found ${resultCount} talent${resultCount !== 1 ? "s" : ""}`}
-        </span>
 interface ResultsHeaderProps {;
   isLoading: boolean,;
   resultCount: number;

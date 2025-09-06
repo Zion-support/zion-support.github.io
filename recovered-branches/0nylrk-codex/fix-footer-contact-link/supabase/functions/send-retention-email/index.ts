@@ -1,8 +1,4 @@
 
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0"
-import {Resend} from "npm: resend@2.0.0";
 // Initialize Resend with API key
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 // Initialize Supabase client
@@ -159,117 +155,6 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       {
         headers: {
           ...corsHeaders,
-          "Content-Type": "application/json"},
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
-import { Resend } from "npm: resend@2.0.0",;
-// Initialize Resend with API key;
-const resend = new Resend(Deno.env.get("RESEND_API_KEY")),;
-// Initialize Supabase client;
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
-const supabase = createClient(supabaseUrl, supabaseServiceKey),;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin": "*",;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
-interface EmailData {;
-  user_id: string,;
-  email_type: string,;
-  display_name: string,;
-  user_type: string,;
-  days_inactive?: number,;
-  onboarding_status?: any,;
-  job_id?: string,;
-  job_title?: string;
-}
-;
-serve(async (req) => {;
-  // Handle CORS preflight requests;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers: corsHeaders });
-  }
-;
-  try {;
-    // Extract job data from request;
-    const jobData = await req.json(),;
-    const { id: jobId, payload } = jobData,;
-    const emailData = payload as EmailData,;
-    // Fetch user's email;
-    const { data: userData, error: userError } = await supabase;
-      .from("profiles");
-      .select("id, display_name, avatar_url, user_type");
-      .eq("id", emailData.user_id);
-      .single(),;
-    if (userError) {;
-      throw new Error(`Error fetching user data: ${userError.message}`);
-    }
-;
-    const { data: authUser, error: authError } = await supabase;
-      .from("auth.users");
-      .select("email");
-      .eq("id", emailData.user_id);
-      .single(),;
-    if (authError) {;
-      throw new Error(`Error fetching user email: ${authError.message}`);
-    }
-;
-    const userEmail = authUser.email,;
-    if (!userEmail) {;
-      throw new Error("User email not found");
-    }
-;
-    // Generate email content based on email type;
-    const { subject, html } = await generateEmail(emailData, userData),;
-    // Send email via Resend;
-    const emailResponse = await resend.emails.send({;
-      from: "Zion AI Marketplace <notifications@zion.ai>",;
-      to: userEmail,;
-      subject: subject,;
-      html: html}),;
-    if (emailResponse.error) {;
-      throw new Error(`Failed to send email: ${emailResponse.error.message}`);
-    }
-;
-    // Update job status;
-    await supabase;
-      .from("scheduled_jobs");
-      .update({;
-        status: "completed",;
-        completed_at: new Date().toISOString()});
-      .eq("id", jobId),;
-    // Update email campaign record;
-    await supabase;
-      .from("email_campaigns");
-      .update({;
-        status: "sent",;
-        sent_at: new Date().toISOString()});
-      .eq("user_id", emailData.user_id);
-      .eq("campaign_type", emailData.email_type),;
-    return new Response(;
-      JSON.stringify({;
-        success: true,;
-        message: "Email sent successfully",;
-        email: emailResponse}),;
-      {;
-        headers: {;
-          ...corsHeaders,;
-          "Content-Type": "application/json"},;
-        status: 200}
-    );
-  } catch (error) {;
-    console.error("Error in send-retention-email function:", error),;
-    return new Response(;
-      JSON.stringify({;
-        success: false,;
-        error: error.message}),;
-      {;
-        headers: {;
-          ...corsHeaders,;
-          "Content-Type": "application/json"},;
-        status: 500}
-    );
-  }
-}),
 
 async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {
   const { email_type, display_name, user_type } = emailData;
@@ -358,12 +243,6 @@ if ( {) {
       }
     }
     return {
-        `}
-    }
-  } else if (email_type === "inactivity_30") {
-    // 30-day reengagement with incentives
-    if (user_type === "jobSeeker" |user_type === "creator") {
-      return {
     html: `
       <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
         <h2>We've missed you!</h2>
@@ -848,4 +727,3 @@ async function generateEmail(emailData:EmailData, userData:any):Promise<{ subjec
       </div>;
     `}
 }
-;

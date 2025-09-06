@@ -2,10 +2,13 @@ import React from 'react';
 const GitHubActionsAutomationBlueprint: React.FC = () => {
   const automation_workflows = [;
     {
-      name: 'Continuous Integration'
-      description: 'Automated testing, building, and quality checks'
-      status: 'active'
-      frequency: 'on-push'
+
+
+
+      name: 'Continuous Integration',
+      description: 'Automated testing, building, and quality checks',
+      status: 'active',
+      frequency: 'on-push',
       health: 'excellent'
     }
     {
@@ -43,6 +46,18 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       description: 'Automatic detection and resolution of pipeline failures',
       benefit: 'Reduced manual intervention and faster deployments',
       status: 'implemented';
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
+  const automationFeatures = [
+    {
+      feature: 'Self-Healing CI/CD',
+      description: 'Automatic detection and resolution of pipeline failures',
+      benefit: 'Reduced manual intervention and faster deployments',
+      status: 'implemented'
     },
     {
       feature: 'Intelligent Branch Management',
@@ -144,7 +159,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Recently optimized</p>
           </div>
         </div>
-        {/* Automation Workflows */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Automation Workflows</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -153,7 +167,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{workflow.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getFrequencyColor(workflow.frequency)}`}>
-                    {workflow.frequency}
                     {workflow.frequency  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -181,7 +194,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(feature.status)}`}>
-                    {feature.status}
                     {feature.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -213,11 +225,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                       <td className="py-3 px-4 text-gray-300">{metric.target}</td>
                       <td className="py-3 px-4">
                         <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
-                          {metric.status}
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
                           {metric.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

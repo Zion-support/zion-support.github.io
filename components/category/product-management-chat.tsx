@@ -19,3 +19,8 @@ import type { NextPage } from 'next';
     </div>;
   );
 };
+export default ProductManagementChat;
+
+
+export default ProductManagementChat;
+

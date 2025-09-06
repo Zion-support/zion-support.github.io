@@ -1,3 +1,5 @@
+
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -53,6 +55,32 @@ const benefits = [;
     title: 'Enhanced Security,',;
     description: 'Bank-grade security measures protect sensitive financial data and transactions.,',;
     icon: Shield;
+];
+const benefits = [
+  {
+    title: 'Enhanced Security',
+    description: 'Bank-grade security measures protect sensitive financial data and transactions.',
+    icon: Shield
+  },
+  {}
+
+    title: 'Improved Efficiency,',;
+    description: 'Automated processes reduce manual work and increase operational efficiency.,',;
+    icon: BarChart3,;
+  },;
+  {}
+    title: 'Better Risk Management,',;
+    description: 'AI-powered risk assessment helps make informed financial decisions.,',;
+    icon: TrendingUp,;
+  },;
+  {}
+    title: 'Regulatory Compliance,',;
+    description: 'Built-in compliance tools ensure adherence to financial regulations.,',;
+    icon: FileText,;
+
+  }
+
+
 ;];
 export default function FinancePage() {;
   return (
@@ -90,6 +118,16 @@ export default function FinancePage() {;
             </motion && motion.div>;
           </div>;
         </section>;
+];
+
+export default function FinancePage() {;
+  return (
+    <Layout
+      title="Financial Technology Solutions - Zion Tech Group"
+      description="Transform financial services with blockchain solutions, AI trading algorithms, digital payments, and risk management systems."
+      keywords="fintech, blockchain solutions, AI trading, digital payments, risk management, financial technology">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -188,6 +226,9 @@ export default function FinancePage() {;
                   </ul>,;
                 </motion && motion.div>;
               ))}
+            </div>,
+          </div>;
+        </section>;
             </div>
           </div>
         </section>
@@ -256,6 +297,9 @@ export default function FinancePage() {;
                   <p className="text-gray-600 leading-relaxed">{benefit && benefit.description}</p>";
                 </motion && motion.div>;
               ))}
+            </div>,
+          </div>;
+        </section>;
             </div>
           </div>
         </section>

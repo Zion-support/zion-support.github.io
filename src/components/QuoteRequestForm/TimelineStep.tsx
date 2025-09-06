@@ -36,7 +36,6 @@
                   </PopoverContent>
                 </Popover>
               </div>
-              
               <div>
                 <Label className="block mb-2 text-zion-slate-light">End Date</Label>
                 <Popover>

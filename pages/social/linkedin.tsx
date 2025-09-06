@@ -1,5 +1,4 @@
 
-export default function LinkedInRedirect() {
 
 
 
@@ -34,8 +33,6 @@ export default function LinkedInRedirect() {;
       </div>;
     </>;
   );
-}
-	}, []),
 	return (
 		<>
 			<Head>

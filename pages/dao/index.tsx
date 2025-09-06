@@ -1,27 +1,3 @@
-type Metrics = {
-  updatedAt: number;
-  tokenDistribution: { address: string, percent: number }[],;
-  topHolders: Holder[];
-  activeProposals: any[];
-  governanceParticipationRate: number;
-  cached?: boolean;
-},;
-export default function DaoMetrics(req, res) {
-  try {
-  const [data, setData] = useState<Metrics | null>(null);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {;
-    async function load() {;
-      setLoading(true);
-      const resp = await fetch('/api/dao/metrics');
-      const json = await resp.json();
-      setData(json);
-      setLoading(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -93,9 +69,5 @@ export default function DaoMetrics(req, res) {
         </div>
       </section>
     </div>
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
 

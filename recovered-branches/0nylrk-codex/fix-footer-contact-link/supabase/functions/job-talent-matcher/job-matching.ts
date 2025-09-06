@@ -13,10 +13,9 @@ import { JobData, MatchResult } from "./types.ts",
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",
 
 // Initialize the Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
-const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
-const supabase = createClient(supabaseUrl, supabaseAnonKey),
-
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
+const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
 /**
  * Main function to process job-talent matching
  * @param job The job data to find matches for
@@ -55,39 +54,5 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
         _type: "job_match",
         _related_id: jobId
       })
-}
-;
-/**;
- * Stores match results in the database and creates notifications;
- * @param jobId The ID of the job;
- * @param matchedTalents Array of match results;
- */;
-export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {;
-  const matchInsertPromises = matchedTalents.map(async (match) => {;
-    const { error: matchError } = await supabase;
-      .from("job_talent_matches");
-      .insert({;
-        job_id: jobId,;
-        talent_id: match.talentId,;
-        match_score: match.score,;
-        matched_skills: match.matchedSkills,;
-        reason: match.reason;
-      }),;
-    if (matchError) {;
-      console.error(`Error storing match for talent ${match.talentId}:`, matchError);
-    } else {;
-      // Create notifications for each matched talent;
-      await supabase.rpc('create_notification', {;
-        _user_id: match.talentId,;
-        _title: "New Job Match",;
-        _message: `A new job "${jobTitle}" matches your skills. Check it out!`,;
-        _type: "job_match";
-        _related_id: jobId;
-      });
-    }
-  });
-  await Promise.all(matchInsertPromises);
-;
-  await Promise.all (matchInsertPromises);
 }
 ;

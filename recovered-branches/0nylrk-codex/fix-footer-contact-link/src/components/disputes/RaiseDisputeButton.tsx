@@ -33,10 +33,6 @@ interface RaiseDisputeButtonProps {
   className?: string
 }
 
-export function RaiseDisputeButton({ ;
-  projectId;
-export function RaiseDisputeButton({ 
-  projectId,
   milestoneId, 
   variant = "outline", 
   size,
@@ -66,33 +62,6 @@ export function RaiseDisputeButton({
               Please provide details about the issue you're experiencing with this project.
             </DialogDescription>
           </DialogHeader>
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogHeader,;
-  DialogTitle,;
-  DialogDescription,;
-  DialogOverlay;
-} from "@/components/ui/dialog",;
-import { DisputeForm } from "./DisputeForm",;
-import { useNavigate } from "react-router-dom",;
-import { ShieldAlert } from "lucide-react",;
-interface RaiseDisputeButtonProps {;
-  projectId: string,;
-  milestoneId?: string,;
-  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",;
-  size?: "default" | "sm" | "lg" | "icon",;
-  className?: string;
-}
-;
-export function RaiseDisputeButton({;
-  projectId,;
-  milestoneId,;
-  variant = "outline",;
-  size,;
-  className;
 
 export function RaiseDisputeButton(): any ({ ;
   projectId;

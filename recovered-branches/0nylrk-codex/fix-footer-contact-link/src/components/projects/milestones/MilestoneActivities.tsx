@@ -37,14 +37,6 @@ interface Activity {
       } catch (err) {
       }
     }
-    if (projectId) {
-      fetchActivities()
-    }
-  }, [projectId]);
-  function getActivityDescription(activity: Activity): string {
-    switch (activity.action) {
-      case 'created':
-
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;
@@ -118,11 +110,6 @@ interface Activity {
                 </div>;
               </div>;
             ))}
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
 }
     // Check condition
 if ( {) {

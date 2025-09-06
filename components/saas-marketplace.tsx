@@ -2,6 +2,11 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import {
+
   Zap,
   Shield,
   BarChart3,
@@ -14,188 +19,12 @@ import {
   Cloud,
   ArrowRight,
   Star,
-  Check,;
-  ExternalLink,;} from 'lucide-react';import { ;
-  Zap;
-  Shield
-  BarChart3
-  Globe
-  Users
-  Lock
-  TrendingUp
-  Code
-  Database
 
   Cloud;
   ArrowRight;
   Star;
   Check;
 
-      rating: 4.9
-      users: '1M+'
-      icon: <Shield className='w-8 h-8 text-blue-400' />
-      color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
-      features: [
-        'Global payment methods'
-        'Subscription billing'
-        'Fraud protection'
-        'Compliance tools'
-        'Developer-friendly API'
-        'Analytics dashboard'
-      ]
-      website: 'https://stripe.com'
-      useCase:
-        'Essential for any online business that needs to accept payments, especially SaaS companies and e-commerce.'
-      pros: [
-        'Developer-friendly'
-        'Global reach'
-        'Excellent docs'
-        'Reliable'
-      ]
-      cons: ['Higher fees than some alternatives', 'Complex for beginners']
-    }
-    {
-      name: 'Intercom'
-      description:
-        'Customer messaging platform that helps businesses build better customer relationships through personalized, messenger-based experiences.'
-      category: 'Customer Support'
-      pricing: '$39 - $999/month'
-      rating: 4.6
-      users: '25K+'
-      icon: <Users className='w-8 h-8 text-green-400' />
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      features: [
-        'Live chat'
-        'Customer messaging'
-        'Help desk'
-        'User onboarding'
-        'Analytics & reporting'
-        'Integration ecosystem'
-      ]
-      website: 'https://intercom.com'
-      useCase:
-        'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.'
-      pros: [
-        'Great UX'
-        'Powerful features'
-        'Good integrations'
-        'Mobile apps'
-      ]
-      cons: ['Expensive', 'Complex pricing', 'Can be overwhelming']
-    }
-    {
-      name: 'Mixpanel'
-      description:
-        'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',      category: 'Analytics'
-      pricing: 'Free - $25/month'
-      rating: 4.5
-      users: '26K+'
-      icon: <BarChart3 className='w-8 h-8 text-purple-400' />,      description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.'
-      category: 'Analytics'
-      pricing: 'Free - $25/month'
-      rating: 4.5
-      users: '26K+'
-      icon: <BarChart3 className='w-8 h-8 text-purple-400' />
-      features: [
-        'User behavior tracking'
-        'Funnel analysis'
-        'A/B testing'
-        'Real-time data'
-        'Custom events'
-        'Mobile analytics'
-      ]
-      website: 'https://mixpanel.com'
-      useCase:
-        'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.'
-      pros: [
-        'Powerful analytics'
-        'Real-time data'
-        'Good documentation'
-        'Flexible'
-      ]
-      cons: ['Complex setup', 'Expensive at scale', 'Steep learning curve']
-    }
-    {
-      name: 'MongoDB Atlas'
-      description:
-        'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',      category: 'Database'
-      pricing: 'Free - $57/month'
-      rating: 4.7
-      users: '35K+'
-      icon: <Database className='w-8 h-8 text-green-400' />,      description: 'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.'
-      category: 'Database'
-      pricing: 'Free - $57/month'
-      rating: 4.7
-      users: '35K+'
-      icon: <Database className='w-8 h-8 text-green-400' />
-      features: [
-        'Fully managed MongoDB'
-        'Global clusters'
-        'Auto-scaling'
-        'Backup & recovery'
-        'Security & compliance'
-        'Monitoring & alerting'
-      ]
-      website: 'https://mongodb.com/atlas'
-      useCase:
-        'Perfect for developers who want to use MongoDB without managing infrastructure, especially for modern web applications.'
-      pros: [
-        'Fully managed'
-        'Global distribution'
-        'Auto-scaling'
-        'Good free tier'
-      ]
-      cons: ['Can be expensive', 'Vendor lock-in', 'Limited customization']
-    }
-    {
-      name: 'Vercel'
-      description:
-        'Platform for deploying and hosting frontend applications with automatic scaling, global CDN, and zero configuration.'
-      category: 'Hosting'
-      pricing: 'Free - $20/month'
-      rating: 4.8
-      users: '100K+'
-      icon: <Cloud className='w-8 h-8 text-black' />
-      color: 'bg-gradient-to-br from-gray-800 to-black'
-      features: [
-        'Zero-config deployment'
-        'Global CDN'
-        'Automatic scaling'
-        'Git integration'
-        'Preview deployments'
-        'Edge functions'
-      ]
-      website: 'https://vercel.com'
-      useCase:
-        'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent performance.'
-      pros: ['Zero config', 'Excellent performance', 'Great DX', 'Free tier']
-      cons: ['Limited backend features', 'Can be expensive for high traffic']
-    }
-    {
-      name: 'Linear'
-      description:
-        'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',      category: 'Project Management'
-      pricing: 'Free - $8/month'
-      rating: 4.9
-      users: '10K+'
-      icon: <TrendingUp className='w-8 h-8 text-blue-400' />,      description: 'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.'
-      category: 'Project Management'
-      pricing: 'Free - $8/month'
-      rating: 4.9
-      users: '10K+'
-      icon: <TrendingUp className='w-8 h-8 text-blue-400' />
-      features: [
-        'Issue tracking'
-        'Roadmap planning'
-        'Team collaboration'
-        'Git integration'
-        'Automated workflows'
-        'Mobile apps'
-      ]
-      website: 'https://linear.app'
-      useCase:
-        'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
-      pros: [
         'Lightning fast',
         'Beautiful design',
         'Great keyboard shortcuts',
@@ -363,8 +192,8 @@ import {
                 }`}
               >;
                 {category}
-
       {/* Services Grid */}
+
 
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
@@ -374,32 +203,6 @@ import {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredServices.map((service, index) => (
-                      {service.icon}
-                    </div>
-                  </div>
-                  <div className='flex-1'>
-                    <div className='flex items-center justify-between mb-2'>
-                      <h3 className='text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300'>
-                        {service.name}
-                      </h3>
-                      <div className='flex items-center space-x-2'>
-                        <Star className='w-4 h-4 text-yellow-400 fill-current' />
-                        <span className='text-sm text-gray-300'>
-                          {service.rating}
-                        </span>
-                      </div>
-                    </div>
-                    <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>
-                      <span className='px-2 py-1 bg-gray-800 rounded-full'>
-                        {service.category}
-                      </span>
-                      <span>{service.users} users</span>
-                      <span className='text-green-400'>{service.pricing}</span>
-                    </div>
-                    <p className='text-gray-400 leading-relaxed mb-4'>
-                      {service.description}
-                    </p>
-
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:

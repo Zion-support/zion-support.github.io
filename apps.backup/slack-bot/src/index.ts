@@ -113,13 +113,3 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   }
 })
 (async () => {
-  const port = Number(process.env.SLACK_PORT |3001)
-  await app.start(port)
-  // eslint-disable-next-line no-console
-}),;
-(async () => {;
-  const port = Number(process.env.SLACK_PORT || 3001),;
-  await app.start(port),;
-  // eslint-disable-next-line no-console;
-  // // // console.log(`⚡️ Zion Slack bot running on port ${port}`);
-})();

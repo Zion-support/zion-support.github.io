@@ -2,29 +2,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-  Brain
-  Heart
-  Eye
-  MessageCircle
-  Users
-  Shield
-  Zap
-  TrendingUp
-  CheckCircle
-  ArrowRight
-  Star
-  Phone
-  Mail
-  MapPin
-  Globe
-  Cpu
-  Lock
-  BarChart3
-  Smartphone
-  Database
-  Cloud
-  Server
-  ShieldCheck;
 
 
   Brain,
@@ -75,8 +52,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
   Smartphone,
   Database,
   Cloud,
-
-
   Zap, TrendingUp, CheckCircle, ArrowRight, Star;
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
   Smartphone, Database, Cloud, Server, ShieldCheck
@@ -507,19 +482,10 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             <motion.div;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8'
-            >
-            >
-              <Brain className="w-4 h-4 mr-2" />
-               2029 Revolutionary AI Technology
-            </motion.div>
             {/* Main Heading */}
             <motion&& motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
 
 
             >
@@ -588,15 +554,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
               <Link
                 href="#pricing"
-                className="group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-white font-bold rounded-2xl text-lg transition-all duration-300 hover:bg-purple-500/10"
-              >
-                <span className="flex items-center">
-                  View Pricing
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </span>
-              </Link>
-            </motion.div>
-
             {/* Key Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -738,6 +695,21 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{feature && feature.title}</h3>;
                 <p className="text-gray-300 text-center leading-relaxed">{feature && feature.description}</p>;
               </motion && motion.div>;
+              >
+                <div className={`flex justify-center mb-6`}>
+                  <div
+                    className={`p-4 rounded-xl bg-gradient-to-r ${feature.color} bg-opacity-20`}
+                  >
+                    <feature.icon className='w-8 h-8 text-white' />
+                  </div>
+                </div>
+                <h3 className='text-xl font-bold text-white mb-4 text-center'>
+                  {feature.title}
+                </h3>
+                <p className='text-gray-300 text-center leading-relaxed'>
+                  {feature.description}
+                </p>              </motion.div>              >
+                <div className={`flex justify-center mb-6`}>
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${feature.color} bg-opacity-20`}>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -927,6 +899,21 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{useCase && useCase.title}</h3>;
                 <p className="text-gray-300 text-center leading-relaxed">{useCase && useCase.description}</p>;
               </motion && motion.div>;
+              >
+                <div className={`flex justify-center mb-6`}>
+                  <div
+                    className={`p-4 rounded-xl bg-gradient-to-r ${useCase.color} bg-opacity-20`}
+                  >
+                    <useCase.icon className='w-8 h-8 text-white' />
+                  </div>
+                </div>
+                <h3 className='text-xl font-bold text-white mb-4 text-center'>
+                  {useCase.title}
+                </h3>
+                <p className='text-gray-300 text-center leading-relaxed'>
+                  {useCase.description}
+                </p>              </motion.div>              >
+                <div className={`flex justify-center mb-6`}>
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${useCase.color} bg-opacity-20`}>
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
@@ -1273,4 +1260,3 @@ export default AIEmotionalIntelligencePlatform2029;
 };
 
 
-export default AIEmotionalIntelligencePlatform2029;

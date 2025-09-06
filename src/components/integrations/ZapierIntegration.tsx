@@ -1,24 +1,5 @@
 import { Check, Copy, ExternalLink } from 'lucide-react'
 export function ZapierIntegration() {
-  const [copied, setCopied] = useState(false)
-  const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R')
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-import { Zap } from 'lucide-react'
-export function ZapierIntegration() {
-  const [copied, setCopied] = useState(false)
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")
-  const handleCopyApiKey = () => {
-    navigator.clipboard.writeText(apiKey)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-    toast.success('API key copied to clipboard')
-    navigator.clipboard.writeText(apiKey)
-    setCopied(true)
-    setTimeout((,) => setCopied(false), 2000)
-    toast.success("API key copied to clipboard")
-  }
-
     <div className='space-y-6'>;
       <div className='grid md:grid-cols-3 gap-6'>;
         <Card className='md:col-span-2'>;

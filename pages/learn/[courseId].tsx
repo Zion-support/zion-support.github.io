@@ -6,13 +6,6 @@ import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
 export default function CourseView() {
 
-import ProgressBar from '../../components/learn/ProgressBar';
-import Quiz from '../../components/learn/Quiz';
-import CertificatePreview from '../../components/learn/CertificatePreview';
-import CoachWidget from '../../components/learn/CoachWidget';
-  const router = useRouter();
-  const { courseId } = router.query as { courseId: string };
-  const [course, setCourse] = useState<any>(null);
 
   const [progress, setProgress] = useState<any>({
     percent: 0
@@ -83,72 +76,6 @@ import ProgressBar from '../../components/learn/ProgressBar';
 import Quiz from '../../components/learn/Quiz';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
-export default function CourseView(req, res) {
-  try {
-  const router = useRouter();
-  const { courseId } = router.query as { courseId: string };
-  const [course, setCourse] = useState<any>(null);
-  const [progress, setProgress] = useState<any>({ percent: 0, completedLessons: [] }),;
-  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
-  const [finalPassed, setFinalPassed] = useState(false);
-  useEffect(() => {;
-    if (!courseId) return,;
-    async function load() {;
-      const [courseResp, progResp] = await Promise.all([;
-        fetch(`/api/learn/courses/${courseId}`);
-        fetch(`/api/learn/progress?userId=demo-user`);
-      ]),;
-      const courseData = await courseResp.json();
-      const progData = await progResp.json();
-      setCourse(courseData.course);
-      const cp = (progData.progress && progData.progress[courseId]) || { percent: 0, completedLessons: [] },;
-      setProgress(cp);
-      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    load();
-  }, [courseId]),;
-  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]),;
-  async function markLessonComplete(lessonId: string) {;
-    const completedCount = (progress.completedLessons || []).includes(lessonId);
-      ? (progress.completedLessons || []).length;
-      : (progress.completedLessons || []).length + 1;
-    const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100);
-    const resp = await fetch('/api/learn/progress', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON.stringify({ userId: 'demo-user', courseId, lessonId, percent });
-    }),;
-    const data = await resp.json();
-    setProgress(data.progress);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  function onModuleQuizComplete(score: number) {;
-    // For demo, simply mark as completed when quiz attempted;
-    if (currentLessonId) markLessonComplete(currentLessonId);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  async function onFinalQuizComplete(score: number) {;
-    const needed = course?.finalQuiz?.passThreshold || 0;
-    const passed = score >= needed;
-    setFinalPassed(passed);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  if (!course) return <div>Loading...</div>,
   return (
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
@@ -193,15 +120,6 @@ export default function CourseView(req, res) {
                   >;
                     Mark Complete;
                   </button>;
-                </li>;
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </ul>
-          </aside>
-          <section className="lg:col-span-3 space-y-4">
             {currentLesson ? (
               <div className="border rounded p-4">
                 <div className="font-medium">{currentLesson.title}</div>
@@ -230,5 +148,7 @@ export default function CourseView(req, res) {
         </div>
       </div>
     </div>
+
+
 
 

@@ -21,10 +21,6 @@
 
     entropy: number
 
-    crackTime: string
-  }
-  warnings: string[]
-}
   commonPasswords: Set<string>;
 
   commonWords: Set<string>
@@ -574,4 +570,3 @@ if ( {) {
 export const passwordStrengthService = new PasswordStrengthService ();
 ;
 // Export the class for custom instances;
-export { PasswordStrengthService };

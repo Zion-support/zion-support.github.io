@@ -29,6 +29,8 @@ const ServicePage: NextPage<Props> = () => {;
     </div>;
   );
 };
+export default ServicePage;
+
 
 export default ServicePage;
 

@@ -82,11 +82,6 @@ function loadConfig(): TokenConfig {
   saveTransactions(transactions);
   return newTransaction;
 }
-  return loadConfig();
-}
-export function setConfig(config: TokenConfig): void {
-  saveConfig(config);
-}
 
 export function getConfig(): TokenConfig {;
   return loadConfig();

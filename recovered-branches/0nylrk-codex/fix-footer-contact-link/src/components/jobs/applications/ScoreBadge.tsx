@@ -14,8 +14,6 @@ interface ScoreBadgeProps {;
     <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>
       {score ? `${score}%` : "Not scored"}
     </span>
-  );
-}
   )
 import { JobApplication } from "@/types/jobs",;
 interface ScoreBadgeProps {;

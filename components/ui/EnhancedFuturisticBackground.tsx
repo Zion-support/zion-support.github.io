@@ -88,10 +88,6 @@ const EnhancedFuturisticBackground: React.FC<;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-      }
-      isDead() {
-        return this.life <= 0 |this.opacity < 0.01;      }
-        return this.life <= 0 || this.opacity < 0.01;      }        
         ctx.restore()
         return this.life <= 0 || this.opacity < 0.01;      }
 
@@ -114,6 +110,50 @@ const EnhancedFuturisticBackground: React.FC<;
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
     }
+    // Connection lines between particles
+      max_life: number,
+        this.coordinate_x = Math.random () * canvas.width;
+        this.coordinate_y = Math.random () * canvas.height;
+        this.vx = (Math.random () - 0.5) * settings.speed * animation_speed;
+        this.vy = (Math.random () - 0.5) * settings.speed * animation_speed;
+        this.size = Math.random () * settings.size + 1;
+        this.color =;
+          colors.particles[Math.floor (Math.random () * colors.particles.length)];
+        this.opacity = Math.random () * settings.opacity;
+        this.life = Math.random () * 100;
+        this.max_life = 100;      }        this.color = colors.particles[Math.floor (Math.random () * colors.particles.length)];
+        this.opacity = Math.random () * settings.opacity;
+        this.life = Math.random () * 100;
+        this.max_life = 100;
+      update () {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.life--;
+;
+        // Wrap around edges;
+        // Check condition
+if (this.coordinate_x = canvas.width) {
+  $2
+}
+        // Check condition
+if (this.coordinate_x = 0) {
+  $2
+}
+        // Check condition
+if (this.coordinate_y = canvas.height) {
+  $2
+}
+        // Check condition
+if (this.coordinate_y = 0) {
+  $2
+}
+        // Fade out near end of life;
+        // Check condition
+if ( {) {
+  $2
+}
+          this.opacity *= 0.95;        }          this.opacity *= 0.95;
+        }
       }
     }
         );

@@ -1,17 +1,4 @@
 
-import { useState, useEffect } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
-import { toast } from "@/hooks/use-toast";
-import { useAuthStatus } from "@/hooks/talent";
-export function useSavedTalents() {
-  const { isAuthenticated, userDetails } = useAuthStatus();
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
-  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-
-    const fetchSavedTalents = async () => {
-      if (!isAuthenticated |!userDetails.id) {
         setIsLoading(false);
         return
       }
@@ -32,16 +19,6 @@ export function useSavedTalents() {
               .in('id', talentIds);
             if (talentError) throw talentError;
             setSavedTalents(talentData |[])
-import { useState, useEffect } from "react",;
-import { supabase } from "@/integrations/supabase/client",;
-import { TalentProfile } from "@/types/talent",;
-import { toast } from "@/hooks/use-toast",;
-import { useAuthStatus } from "@/hooks/talent",;
-export function useSavedTalents() {;
-  const { isAuthenticated, userDetails } = useAuthStatus(),;
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),;
-  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
   // Fetch saved talents;
   useEffect (() => {
     const fetchSavedTalents = async () => {
@@ -105,6 +82,40 @@ if (throw talent_error) {
       } finally {
         setIsLoading(false)
       }
+      toast({
+
+
+        title: "Authentication required",
+        description: "Please log in to save talents to your favorites",
+
+
+        variant: "destructive"
+;
+    fetchSavedTalents ();
+  }, [is_authenticated, user_details.id]);
+;
+  // Toggle save talent;
+  const toggleSaveTalent = async (talent: TalentProfile) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Authentication required";
+        description: "Please log in to save talents to your favorites",
+        variant: "destructive";
+      });
+      return;
+    }
+
+
+
+    
+    const isSaved = savedTalentIds && savedTalentIds.includes(talent && talent.id);
+    
+
+
+
     try {
       if (isSaved) {
         // Remove from saved_talents
@@ -112,10 +123,6 @@ if (throw talent_error) {
           .from('saved_talents')
           .delete()
           .eq('user_id', userDetails.id)
-          .eq('talent_id', talent.id);
-        if (error) throw error;
-        setSavedTalents(prev => prev.filter(t => t.id !== talent.id));
-        setSavedTalentIds(prev => prev.filter(id => id !== talent.id));
           .eq('user_id', userDetails && userDetails.id)
           .eq('talent_id', talent && talent.id);
         if (error) throw error;
@@ -135,16 +142,6 @@ if (throw talent_error) {
       }
     } catch (error) {
       toast({
-        title: "Error";
-        description: "There was a problem updating your favorites. Please try again."
-        variant: "destructive"
-      })
-    }
-  }
-  // Check if talent is saved
-  const isTalentSaved = (talentId: string) => {
-    return savedTalentIds.includes(talentId)
-  }
   return {
     savedTalents;
     savedTalentIds;
@@ -152,29 +149,6 @@ if (throw talent_error) {
     toggleSaveTalent;
 
     isTalentSaved
-      } catch (error) {;
-        console.error('Error fetching saved talents:', error),;
-        toast({;
-          title: "Error loading favorites",;
-          description: "There was a problem loading your saved talents.",;
-          variant: "destructive";
-        });
-      } finally {;
-        setIsLoading(false);
-      }
-    },;
-    fetchSavedTalents();
-  }, [isAuthenticated, userDetails.id]),;
-  // Toggle save talent;
-  const toggleSaveTalent = async (talent: TalentProfile) => {;
-    if (!isAuthenticated || !userDetails.id || !talent.id) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please log in to save talents to your favorites",;
-        variant: "destructive";
-      }),;
-      return;
-    }
 ;
     try {
       // Check condition

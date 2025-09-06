@@ -10,9 +10,5 @@ export default function CertificatePage() {
       <h1 className="text-2xl font-semibold">Certificate</h1>
       <CertificatePreview courseId={courseId} />
     </div>
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
 

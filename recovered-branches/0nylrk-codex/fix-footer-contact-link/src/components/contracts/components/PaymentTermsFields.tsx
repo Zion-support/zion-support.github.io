@@ -105,11 +105,6 @@ function PaymentTermsFields() {
       {form && form.watch("paymentTerms") === "milestone" && (;
         <div className="pt-2">;
           <MilestoneSuggestions
-            projectName={form.getValues("projectName") |"Project"}
-            scopeSummary={form.getValues("scopeSummary") |""}
-            startDate={form.getValues("startDate") |new Date()}
-            endDate={form.getValues("endDate")}
-            projectType={form.getValues("projectName").includes("AI") ? "AI/ML" :
             projectName={form && form.getValues("projectName") || "Project"}
             scopeSummary={form && form.getValues("scopeSummary") || ""}
             startDate={form && form.getValues("startDate") || new Date()}

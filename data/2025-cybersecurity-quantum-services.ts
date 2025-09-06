@@ -1,14 +1,3 @@
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
-    setupTime: string;
 
     enterprise: string;
   }
@@ -193,13 +182,6 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'
     ]
     support:
-    color: 'from-green-500 to-emerald-600'
-    popular: true
-    launchDate: '2024-02-15'
-    customers: 2500
-    rating: 4.8
-    reviews: 1900
-  }
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
@@ -554,8 +536,6 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     launchDate: '2024-02-15',;
     customers: 2500,;
     rating: 4.8,;
-    reviews: 1900;
-    rating: 4.8,
     reviews: 1900;
   }
 ];

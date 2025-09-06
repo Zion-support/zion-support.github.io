@@ -15,22 +15,6 @@ import {useNavigate} from "react-router-dom";
 import {SearchSuggestion} from "@/types/search";
 import {AppLayout} from "@/layout/AppLayout";
 export default function Marketplace() {;
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
-import { Grid3X3, ListFilter } from "lucide-react",
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { FilterSidebar } from "@/components/search/FilterSidebar",
-import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar",
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData",
-import { toast } from "@/hooks/use-toast",
-import { useNavigate } from "react-router-dom",
-import { SearchSuggestion } from "@/types/search";
-import { AppLayout } from "@/layout/AppLayout";
-export default function Marketplace() {
 
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
@@ -69,11 +53,38 @@ export default function Marketplace() {
     return true
   });
   const handleFilterChange = (filterType: string, value: string) => {
-    console.log(`Filter changed: ${filterType} = ${value}`)
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+        );
+        break;
+    }
+
+  };
+
+  const clearAllFilters = () => {;
+
+    setSearchQuery("");
+    setSelectedProductTypes([]);
+    setSelectedLocations([]);
+    setSelectedAvailability([]);
+
+
+  },
+  
+
+  const clearAllFilters = () => {
+    setSearchQuery(""),
+    setSelectedProductTypes([]),
+    setSelectedLocations([]),
+    setSelectedAvailability([]),
+    setSelectedRating(null)
+
+  },
+  
+
+
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
@@ -207,7 +218,6 @@ if ( {) {
         }
       });
     }
-  },
 
 
   },
@@ -224,10 +234,6 @@ if ( {) {
           </p>
         </div>
               filters={{
-                selectedProductTypes;
-                selectedLocations;
-                selectedAvailability
-
                 selectedRating
                 selected_locations;
                 selected_availability,

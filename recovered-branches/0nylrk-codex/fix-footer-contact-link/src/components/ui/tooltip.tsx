@@ -1,7 +1,3 @@
-import {cn} from '@/lib/utils';
-const TooltipProvider = TooltipPrimitive.Provider;
-const Tooltip = TooltipPrimitive.Root;
-const TooltipTrigger = TooltipPrimitive.Trigger;
 import * as React from "react"
 import * as TooltipPrimitive from "@radix-ui/react-tooltip"
 import * as React from "react"
@@ -27,6 +23,7 @@ const TooltipContent = React.forwardRef<
     ref={ref}
     sideOffset={sideOffset}
     className={cn(
+      className
     )}
     {...props}
   />;

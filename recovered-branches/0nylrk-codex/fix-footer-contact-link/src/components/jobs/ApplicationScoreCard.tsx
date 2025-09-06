@@ -1,10 +1,4 @@
 
-import { useState } from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card",
-import { supabase } from "@/integrations/supabase/client",
-import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react",
 interface ApplicationScoreCardProps {
 
   application: JobApplication
@@ -16,13 +10,6 @@ interface ApplicationScoreCardProps {
 
 
 
-  // Determine if application has been scored
-  const hasScore = typeof application.match_score === 'number',
-  
-  // Format the date when the application was scored
-  const scoredDate = application.scored_at 
-    ? new Date(application.scored_at).toLocaleDateString() 
-    : null,
 
   const hasScore = typeof application.match_score === 'number';
   // Format the date when the application was scored
@@ -32,15 +19,9 @@ interface ApplicationScoreCardProps {
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined) => {
     switch (suggestion) {
-      case "Low Match":
-        return "bg-orange-100 text-orange-800"
-      default:
-        return "bg-gray-100 text-gray-800"
       case "Strongly Recommended": return "bg-green-100 text-green-800";
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800";
-
-
 
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
@@ -166,6 +147,13 @@ function ApplicationScoreCard() {
           .select("*")
           .eq("id", application.id)
           setIsScoring(false);
+          return toast && toast.error("Failed to check scoring status");
+        }
+
+
+        if (data && data.scored_at) {;
+
+          setIsScoring(false);
           toast && toast.success("Resume scoring completed");
           if (onScoreUpdated) onScoreUpdated(data as JobApplication);
           return;
@@ -247,11 +235,6 @@ function ApplicationScoreCard() {
                         )}
                     )}
                       </div>;
-                    {application.match_breakdown.experience_match && (
-                      <div>
-                        <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
-                        <p>{application.match_breakdown.experience_match.analysis}</p>
-                      </div>
                     )}
 
 
@@ -297,8 +280,5 @@ function ApplicationScoreCard() {
             </Button>;
           </div>;
         )}
-      </CardContent>
-    </Card>
-  )
 }
 ;

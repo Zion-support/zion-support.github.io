@@ -15,11 +15,6 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
         return
       }
       try {
-        setIsLoading(true);
-        let query = supabase
-          .from("disputes")
-          .select("id, status")
-          .eq("project_id", projectId);
         // If milestone ID is provided, filter by that too
         if (milestoneId) {
           query = query && query.eq("milestone_id", milestoneId)
@@ -90,13 +85,6 @@ if ( {) {
         setDisputeStatus(null);
         setDisputeId(null)
       } finally {
-      }
-    }
-    checkDispute()
-  }, [projectId, milestoneId]);
-  return {
-    isUnderDispute
-    disputeStatus
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;

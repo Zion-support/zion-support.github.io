@@ -63,9 +63,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
     if (onLeave) {
       onLeave()
     }
-  }
-  return (
-    <Card className={`w-full ${className |'max-w-5xl mx-auto'}`}>
       <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">
         <div className="flex items-center space-x-2">
           <CardTitle className="text-white">Video Call</CardTitle>

@@ -77,12 +77,6 @@ export function SmartContractBuilder({;
   talent;
   clientName;
   onContractGenerated;
-export function SmartContractBuilder({
-  isOpen,
-  onClose,
-  talent,
-  clientName,
-  onContractGenerated,
   onDeploy
 }: SmartContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
@@ -96,14 +90,6 @@ export function SmartContractBuilder({
     useEscrow: true
 
     deployToChain: false
-  });
-  const [deployStatus, setDeployStatus] = useState<string>('');
-  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
-  const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts();
-
-  const handleLoadTemplate = (templateData: ContractFormValues) => {
-    setFormValues(templateData)
-  }
   // Convert ContractFormValues to contract content string
   const handleContractGenerated = async (formValues: ContractFormValues) => {
     if (!formValues) return

@@ -1,15 +1,6 @@
 import React from 'react';
 
 import { motion } from 'framer-motion';
-import {
-  ArrowRight
-  Star
-  TrendingUp
-  Zap
-  Shield
-  Brain
-  Globe
-  Rocket;
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
@@ -49,10 +40,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.3
-        ease: 'easeOut' as const
-      }
-    },  };        ease: "easeOut" as const
       }
     }
   }
@@ -434,6 +421,21 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           </div>;
 
           <motion&& motion.div
+        {/* IT Infrastructure Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className='mb-20'
+
+        >
+          <div className='flex items-center space-x-3 mb-8'>
+            <Globe className='w-6 h-6 text-purple-400' />
+            <h3 className='text-2xl font-bold text-white'>
+              IT Infrastructure & Security
+            </h3>
+          </div>
+          <motion.div
             variants={containerVariants}
             initial='hidden'
             whileInView='visible'
@@ -532,12 +534,6 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
-          </motion.div>
-        </motion.div>
-
 
 
 
@@ -545,12 +541,6 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className='text-center mt-16'
-
-
-
-
         {/* CTA Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}

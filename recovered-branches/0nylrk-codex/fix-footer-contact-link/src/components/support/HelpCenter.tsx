@@ -16,20 +16,6 @@ export default function HelpCenter() {;
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
-import React, { useState } from "react",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { HelpCategoryList } from "./HelpCategoryList",
-import { HelpArticleList } from "./HelpArticleList",
-import { HelpArticleView } from "./HelpArticleView",
-import { HELP_CATEGORIES } from "./help-content",
-import { AppLayout } from "@/layout/AppLayout",
-import { Search } from "lucide-react",
-export default function HelpCenter() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
-  const [searchQuery, setSearchQuery] = useState(""),
   
   const handleCategorySelect = (categoryId: string) => {
     (setSelectedCategory(categoryId), setSelectedArticle(null));
@@ -68,20 +54,6 @@ export default function HelpCenter() {
               <TabsTrigger value="faq">FAQ</TabsTrigger>
               <TabsTrigger value="contact">Contact Us</TabsTrigger>
             </TabsList>
-import React, { useState } from "react",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { HelpCategoryList } from "./HelpCategoryList",;
-import { HelpArticleList } from "./HelpArticleList",;
-import { HelpArticleView } from "./HelpArticleView",;
-import { HELP_CATEGORIES } from "./help-content",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { Search } from "lucide-react",;
-export default function HelpCenter() {;
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
-  const [searchQuery, setSearchQuery] = useState(""),;
   const handleCategorySelect = (categoryId: string) => {;
     setSelectedCategory(categoryId),;
     setSelectedArticle(null);
@@ -373,5 +345,5 @@ export default function HelpCenter() {;
                   <div>;
                     <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>;
                     <p className="text-zion-slate-light">;
+    </AppLayout>);
 }
-;

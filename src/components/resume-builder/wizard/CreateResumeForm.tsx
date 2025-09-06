@@ -6,13 +6,6 @@ import { Loader2 } from 'lucide-react'
   onCancel,
   isLoading,
 }: CreateResumeFormProps) => {
-
-import { CreateResumeFormProps } from './types'
-export const CreateResumeForm = ({
-  onCreateResume
-  onCancel
-  isLoading
-}: CreateResumeFormProps) => {
   const [newResumeTitle, setNewResumeTitle] = useState('')
   const handleSubmit = async () => {
     if (!newResumeTitle.trim()) return;
@@ -44,7 +37,6 @@ export const CreateResumeForm = ({
               Create;
             </Button>;
           </div>;
-  const [newResumeTitle, setNewResumeTitle] = useState(''),
 
           <Button variant='ghost' onClick={onCancel} className='mt-4'>            Cancel;
 

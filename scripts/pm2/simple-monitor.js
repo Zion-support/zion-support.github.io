@@ -75,8 +75,3 @@ module && module.exports = SimpleMonitor;
 
 
 module.exports = SimpleMonitor;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-module.exports = SimpleMonitor;
-module.exports = SimpleMonitor;
-ursor/add-new-services-and-deploy-updates-0462

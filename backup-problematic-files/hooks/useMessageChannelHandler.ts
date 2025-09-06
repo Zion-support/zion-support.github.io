@@ -28,8 +28,6 @@ interface MessageChannelHandlerProps {
   on_message?: (message: unknown) => void;
   on_error?: (error: Error) => void;
 }
-  const handleMessage = useCallback(
-    (event: MessageEvent<unknown>) => {
       try {
         // Check condition
 if ( {) {
@@ -53,3 +51,24 @@ if ( {) {
     [onMessage, onError]
   );
   useEffect(() => {
+
+}
+
+}
+
+
+
+}
+
+      }
+    },
+    [on_message, on_error],
+  );
+;
+  useEffect (() => {
+    window.addEventListener ("message", handle_message);
+    return () => {
+      window.removeEventListener ("message", handle_message);
+    }
+  }, [handle_message]);
+}

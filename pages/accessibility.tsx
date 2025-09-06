@@ -22,18 +22,18 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-  Eye
-  Ear
-  Hand
-  Brain
-  CheckCircle
-  AlertTriangle
-  Globe
-  Users
-  Shield
-  Zap
-  FileText
-  Settings
+import Link from 'next/link';
+import MainLayout from '../components/layout/MainLayout';
+import Link from 'next / link';
+import MainLayout from '../components / layout / MainLayout';
+import { motion } from 'framer-motion';
+
+  Eye,
+  Ear,
+  Hand,
+  Brain,
+  CheckCircle,
+
   Eye, 
   Ear, 
   Hand, 
@@ -52,8 +52,27 @@ const accessibility_features = [;
   }
 ];
 
-origin/main
-origin/automation-improvements-final
+
+
+
+export default function AccessibilityPage() {
+
+interface AccessibilityProps {
+  className?: string;
+}
+
+const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
+  return (
+    <MainLayout
+      title="Accessibility - Zion Tech Group"
+      description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2 && 2.1, Section 508, and ADA standards.">;
+      <div className="min-h-screen bg-gray-50">;
+        <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+
 
             </motion.div>
           </div>

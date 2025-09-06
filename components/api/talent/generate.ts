@@ -13,8 +13,26 @@ import OpenAI from 'openai';
     const prompt = `You are assisting with creating a professional marketplace talent profile. Return strict JSON with fields: summary (100-150 words), skills (array of standardized skill tags), title (optimized), category (one of: AI/ML, Engineering, DevOps/Cloud, Security, Data, Product). Use concise, compelling language.
 INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperience: ${experience || ''}\nSkills: ${skills || ''}`;
 
+
+    const content = completion && completion.choices?.[0]?.message?.content || '{}';
+    const parsed = JSON && JSON.parse(content);
+
+
+
   }      name;
       title: parsed && parsed.title || title || 'Professional';
       category: parsed && parsed.category || null;
       summary: parsed && parsed.summary || '',
       skills: Array && Array.isArray(parsed && parsed.skills) ? parsed && parsed.skills.slice(0, 20) : []})
+}
+
+
+      skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
+  } catch (e: any) {
+    return res.status (500).json ({ error: e.message || 'OpenAI error' });
+}
+  }
+
+}
+
+

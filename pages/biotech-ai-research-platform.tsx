@@ -1,18 +1,3 @@
-        <link rel="canonical" href="https://ziontechgroup.com/biotech-ai-research-platform" />
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent">Biotech AI Research Platform</h1>
-            <p className="mt-4 text-slate-300">Accelerate discovery with intelligent automation across analysis and experimentation.</p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2 p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
-              <h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
-              <p className="text-slate-300">Drug discovery automation, sequence analysis, structure prediction, trial optimization, and compliance workflows with auditability.</p>
-            </div>
-            <div className="p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
-              <div className="text-3xl font-bold text-white text-base font-medium text-gray-400">Starting at $12,999<span >/month</span></div>
               </div>
             </div>
           </div>
@@ -20,3 +5,10 @@
       </div>
     </Layout>
   )
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+

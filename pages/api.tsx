@@ -59,6 +59,9 @@ export default function APIPage() {
     "message": "Hello, how can you help me?"
     "model": "gpt-4"
     "temperature": 0.7
+} from "lucide-react";
+export default function APIPage() {
+  const apiEndpoints = [
     {
       id: "auth",
       title: "Authentication",
@@ -295,6 +298,11 @@ export default function APIPage() {
         </section>
       </div>
     </Layout>
+
+
+
+  );
+  );
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4">;

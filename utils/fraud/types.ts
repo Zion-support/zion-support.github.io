@@ -25,7 +25,4 @@ export interface FraudDetectionResult {;
   rules: {
     suspicious_activity: {
       enabled: boolean;
-    confidenceThreshold: number,
-  };
-
 }

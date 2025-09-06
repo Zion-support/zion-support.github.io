@@ -9,7 +9,6 @@
 // Define theme presets
 export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
   switch (preset) {
-  switch (preset) {
     case 'dark':;
       return {
 

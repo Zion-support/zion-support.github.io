@@ -1,11 +1,3 @@
-      icon: <Star className="h-8 w-8 text-zion-purple" />
-      title: "AI-Match Instantly"
-      description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
-    }
-      icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />
-      title: "Track Milestones"
-      description: "Monitor project progress and approve milestones directly from your phone."
-    }
 
 
     {

@@ -136,10 +136,6 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2026-services-showcase" />
       </Head>
       <UltraAdvancedNavigation />
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -243,6 +239,24 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
             </motion.div>
           </div>
         </section>
+              {/* Search Bar */}
+
+
+        {/* Search and Filter Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-600/30">
+              {/* Search Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
               <div className="relative mb-8">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />
                 <input
@@ -256,37 +270,40 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                 <div className="flex flex-wrap gap-3">
                   {categories.map((category) => (
                     <button
-                      key={category.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      onClick={() => setSelectedCategory(category.id)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      className={`flex items-center gap-2 px-4 py-2 rounded-xl border transition-all duration-300 ${;
-                        selectedCategory === category.id;
-                          ? 'bg-cyan-600 border-cyan-500 text-white';
-                          : 'bg-gray-800/50 border-gray-600/30 text-gray-300 hover:border-cyan-500/50';
-                      }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    >
-                      <category.icon className="w-4 h-4" />
+              <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">;
+                {/* Category Filter */}
+                <div className="flex flex - wrap gap - 3">;
+                  {categories.map ((category) => (
+                    <button;
+                      key={category.id}
+                      on_click={() => setSelectedCategory (category.id)}
+                      className={`flex items - center gap - 2 px - 4 py - 2 rounded - xl border transition - all duration - 300 ${
+                        selected_category === category.id;
+                          ? 'bg - cyan - 600 border - cyan - 500 text - white';
+                          : 'bg - gray - 800 / 50 border - gray - 600 / 30 text - gray - 300 hover:border - cyan - 500 / 50';
+                      }`}
+
+                    >;
+                      <category.icon className="w - 4 h - 4" />;
                       {category.name}
-                      <span className="bg-gray-700/50 px-2 py-1 rounded-lg text-xs">
+                      <span className="bg - gray - 700 / 50 px - 2 py - 1 rounded - lg text - xs">;
+
                         {category.count}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-                {/* Sort and View Controls */}
-                <div className="flex items-center gap-4">
-                  <select
+
+
+                      {category.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className="bg-gray-800/50 border border-gray-600/30 rounded-xl px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     <option value="popularity">Most Popular</option>
@@ -297,12 +314,75 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                   </select>
                   <div className="flex bg-gray-800/50 rounded-xl p-1 border border-gray-600/30">
                     <button
+                      }`}
+                    >;
+                      <svg className="w - 5 h - 5" fill="current_color" view_box="0 0 20 20">;
+                        <path d="M5 3a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2V5a2 2 0 00 - 2-2H5zM5 11a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2v - 2a2 2 0 00 - 2-2H5zM11 5a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2V5zM11 13a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2v - 2z" />;
+                      </svg>;
+                    </button>;
+                    <button;
+                      on_click={() => setViewMode ('list')}
+                      className={`p - 2 rounded - lg transition - all duration - 300 ${
+                        view_mode === 'list' ? 'bg - cyan - 600 text - white' : 'text - gray - 400 hover:text - white';
+                      }`}
+
+                    >;
+                      <svg className="w - 5 h - 5" fill="current_color" view_box="0 0 20 20">;
+                        <path fill_rule="evenodd" d="M3 4a1 1 0 011 - 1h12a1 1 0 110 2H4a1 1 0 01 - 1-1zm0 4a1 1 0 011 - 1h12a1 1 0 110 2H4a1 1 0 01 - 1-1zm0 4a1 1 0 011 - 1h12a1 1 0 110 2H4a1 1 0 01 - 1-1z" clip_rule="evenodd" />;
+                      </svg>;
+                    </button>;
+                  </div>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+
+        {/* Services Grid */}
+
+        <section className="py - 12 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              variants={container_variants}
+              initial="hidden";
+              animate="visible";
+              className={view_mode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' : 'space - y-6'}
+
+        {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              variants={containerVariants  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              initial="hidden"
+              animate="visible"
+              className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+            >;
+              <AnimatePresence>;
+                {filteredServices.map((service) => (;
+                  <motion.div;
                     key={service.id}
                     variants={item_variants}
                     layout;
-                    className={`bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl rounded - 3xl border border - gray - 600 / 30 overflow - hidden transition - all duration - 500 hover:scale - 105 hover:border - cyan - 500 / 50 group ${
-                      view_mode === 'list' ? 'flex flex - col lg:flex - row' : '';
-                    }`}
+                    className={`bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl border border-gray-600/30 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-cyan-500/50 group ${;
+                      viewMode === 'list' ? 'flex flex-col lg:flex-row' : '';
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   >;
 
                     {/* Service Header */  } catch (error) {
@@ -325,7 +405,6 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                       <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
                         <div className="flex items-center gap-1">
                           <Users className="w-4 h-4" />
-                          {service.customers.toLocaleString()}
                         </div>
                         <div className="flex items-center gap-1">
                           <Clock className="w-4 h-4" />
@@ -409,13 +488,6 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                   Clear Filters
                 </button>
               </div>
-            )}
-          </div>
-        </section>
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -495,10 +567,6 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href={`tel:${contactInfo.mobile}`}
-                  className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
-                >
-                  <Phone className="w-5 h-5" />
                   className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
                 >
                   <Mail className="w-5 h-5" />
@@ -512,9 +580,5 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
 

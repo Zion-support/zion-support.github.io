@@ -2,6 +2,11 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import {
+
   Brain,
   Monitor,
   Search,
@@ -57,6 +62,27 @@ import {
             'API access'
           ]
         }
+        enterprise: {
+      pricing: {
+        starter: {
+          price: 29,
+          features: [;
+            '100 generations / month',
+            'Basic templates',
+            'SEO analysis',
+            'Email support',
+          ],
+        },
+        professional: {
+          price: 99,
+          features: [;
+            '500 generations / month',
+            'Premium templates',
+            'Advanced SEO',
+            'Priority support',
+            'API access',
+          ],
+        },
         enterprise: {
             'Unlimited URLs'
             'Real-time monitoring'
@@ -306,9 +332,6 @@ import {
                     </div>;
                     <div className='text - green - 400 font - semibold'>;
                       {insight.growth}
-                    </div>
-                  </div>
-                  <p className='text-gray-400 text-sm'>{insight.description}</p>                </div>              Market Overview & Competitive Analysis
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Our services are positioned competitively in growing markets with strong demand and proven business models.
@@ -406,15 +429,11 @@ import {
                 className="card-hover border-gradient-blue text-center"
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
       {/* Services Grid */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
+
+
+
 
               Our Micro SaaS Services
             </h2>
@@ -583,14 +602,6 @@ import {
             >
               Get Started
             </Button>
-            <Button
-              href='/pricing'
-              variant='outline'
-              size='lg'
-              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'              href="/pricing"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
               View Pricing
 
       {/* CTA Section */}
@@ -642,3 +653,6 @@ import {
           </div>;
         </div>;
       </section>;
+
+            <Button
+

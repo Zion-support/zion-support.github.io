@@ -43,11 +43,6 @@ export function ApiKeysManager() {
     setShowCreateDialog(false);
     setKeyName("");
     setSelectedScopes([])
-  }
-  const handleRegenerateKey = async (keyId: string) => {
-    await regenerateApiKey(keyId)
-    setShowRegenerateConfirm(null)
-  }
   // Scope options
   const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [
     { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' }
@@ -114,42 +109,6 @@ export function ApiKeysManager() {
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
-import { useState } from "react",;
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",;
-import { format } from "date-fns",;
-import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
-import { Input } from "@/components/ui/input",;
-import { Checkbox } from "@/components/ui/checkbox",;
-import { Label } from "@/components/ui/label",;
-import { Badge } from "@/components/ui/badge",;
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
-import CodeBlock from "./CodeBlock",;
-export function ApiKeysManager() {;
-  const {;
-    keys,;
-    loading,;
-    newApiKey,;
-    fetchApiKeys,;
-    createApiKey,;
-    regenerateApiKey,;
-    revokeApiKey,;
-    clearNewApiKey;
-  } = useApiKeys(),;
-  const [showCreateDialog, setShowCreateDialog] = useState(false),;
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),;
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),;
-  // Create key form state;
-  const [keyName, setKeyName] = useState(""),;
-  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),;
-  // Load keys on mount;
-  useState(() => {;
-    fetchApiKeys();
-  }),;
   const handleCreateKey = async () => {;
     if (keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0) return;
     await createApiKey(keyName, selectedScopes);
@@ -227,66 +186,14 @@ export function ApiKeysManager() {;
                   <DropdownMenu>;
                     <DropdownMenuTrigger as_child>;
 
-                        disabled={!key.is_active}
-                      >
-                        <RefreshCw size={14} className="mr-2" /> Regenerate
-                      </DropdownMenuItem>
-                      <DropdownMenuItem
-                        onClick={() => setShowDeleteConfirm(key.id)}
-                        className="cursor-pointer text-red-500"
-                        disabled={!key.is_active}
-                      >
-                        <X size={14} className="mr-2" /> Revoke
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {key.scopes.map((scope) => (
-                    <Badge
-                      key={scope}
-                      variant="secondary"
-                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
-                    >
-                      {scope}
-                    </Badge>
-                  ))}
-                </div>
-                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
-                  <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>
-                  <Popover>
-                    <PopoverTrigger className="flex items-center hover:text-zinc-300">
-                      <Clock size={12} className="mr-1" />
-                      Last used: {key.last_used_at
-                        ? format(new Date(key.last_used_at), 'MMM d, yyyy')
-                        : 'Never'}
-                    </PopoverTrigger>
-                    <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">
-                      <p className="text-sm mb-1">Last Used</p>
-                      <p className="text-xs text-zinc-400">
-                        {key.last_used_at
-                          ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss')
                           : 'This API key has never been used'}
-                      </p>
-                    </PopoverContent>
-                  </Popover>
-                  {key.expires_at && (
-                    <span>Expires: {format(new Date(key.expires_at), 'MMM d, yyyy')}</span>
-                  )}
-                </div>
-              </div>
-            ))
-          )}
-        </div>
-      </CardContent>
-      <CardFooter className="justify-between border-t border-zinc-800 py-4">
-        <div className="text-xs text-zinc-500">
-          Keep your API keys secure. They have the same permissions as your account.
-        </div>
-        <Button variant="outline" size="sm" onClick={fetchApiKeys}>
-          Refresh
-        </Button>
-      </CardFooter>
+                      </p>;
+                    </PopoverContent>;
+                  </Popover>;
+
+
+
+
 
       {/* Regenerate Key Confirmation Dialog */}
       <AlertDialog

@@ -1,17 +1,4 @@
 
-import { useState  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { Button  } from '@/components/ui/button';
-import { Form  } from '@/components/ui/form';
-import { Certification  } from '@/types/resume';
-import { Loader2  } from 'lucide-react';
-import { useResume  } from '@/hooks/useResume';
-import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { format  } from 'date-fns';
-import { CertificationsList  } from './CertificationsList';
-import { CertificationFormFields  } from './CertificationFormFields';
-import { CertificationFormValues, certificationSchema } from './types';
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {Button} from '@/components/ui/button';
@@ -54,54 +41,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  // Helper function to format dates as strings for form inputs
-  const formatDateValue = (dateValue: string | Date | undefined): string => {
-    if (!dateValue) return '';
-    if (typeof dateValue === 'string') return dateValue
-    return format(dateValue, 'yyyy-MM-dd')
-  }
-  const form = useForm<CertificationFormValues>({
-    resolver: zodResolver(certificationSchema)
-    defaultValues: {
-      name: ''
-      issuing_organization: ''
-      issue_date: ''
-      expiration_date: ''
-      credential_id: ''
-      credential_url: ''}})
-  const handleAddOrUpdate = async (data: CertificationFormValues) => {
-    try {
-      setError(null);
-      let success
-      const certData: Certification = {
-        name: data.name
-        issuing_organization: data.issuing_organization
-        issue_date: data.issue_date |undefined
-        expiration_date: data.expiration_date |undefined
-        credential_id: data.credential_id
-        credential_url: data.credential_url}
-      if (editingId) {
-        success = await updateCertification(editingId, certData)
-      } else {
-        success = await addCertification(resumeId, certData)
-import { useState } from 'react',;
-import { useForm } from 'react-hook-form',;
-import { Button } from '@/components/ui/button',;
-import { Form } from '@/components/ui/form',;
-import { Certification } from '@/types/resume',;
-import { Loader2 } from 'lucide-react',;
-import { useResume } from '@/hooks/useResume',;
-import { Alert, AlertDescription } from '@/components/ui/alert',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { format } from 'date-fns',;
-import { CertificationsList } from './CertificationsList',;
-import { CertificationFormFields } from './CertificationFormFields',;
-import { CertificationFormValues, certificationSchema } from './types',;
-interface CertificationsFormProps {;
-  resumeId: string,;
-  certifications: Certification[],;
-  onComplete: () => void,;
-  onBack: () => void;
 }
 export /**
  * CertificationsForm - Function description
@@ -112,22 +51,6 @@ function CertificationsForm() {
   const [error, set_error] = useState < string | null>(null);
 ;
   // Helper function to format dates as strings for form inputs;
-      }
-      if (success) {
-        form.reset({
-          name: ''
-          issuing_organization: ''
-          issue_date: ''
-          expiration_date: ''
-          credential_id: ''
-          credential_url: ''})
-        setEditingId(null)
-      }
-    } catch (err: any) {
-      setError(err.message |'An error occurred')
-    }
-  };
-
       }
 
 

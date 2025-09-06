@@ -175,7 +175,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
             variant="ghost"
             size="sm"
             className="h-4 w-4 p-0 hover:bg-transparent"
-            onClick={() => removeFilter(filter.key)}
             aria-label={`Remove ${filter.label} filter`}
           >
             <X className="h-3 w-3" />
@@ -339,11 +338,6 @@ if ( {) {
 },
 
 export default ActiveFiltersBar,
-interface Filter {
-  key: string
-  value: string
-  label: string
-}
   onClearAll: : unknown void}
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >

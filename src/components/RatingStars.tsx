@@ -12,9 +12,6 @@ export function RatingStars({ value;
             />
           )
         }
-        if (i === filled && half) {
-          return (
-            <StarHalf
               key={i}
               className="h-4 w-4 fill-zion-cyan text-zion-cyan"
             />

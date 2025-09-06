@@ -59,7 +59,6 @@ function useCarousel(): CarouselContextProps {;
   const context = React.useContext(CarouselContext) as CarouselContextProps | null;
   if (!context) {;
     throw new Error("useCarousel must be used within a <Carousel />");
-  }
   return context as CarouselContextProps;
 }
 type CarouselPlugin = any;
@@ -103,8 +102,6 @@ const Carousel = React.forwardRef<
   ) => {
     const [carouselRef, api] = useEmblaCarousel(
       {
-        ...(opts |{})
-        axis: orientation === &quot;horizontal&quot; ? &quot;x&quot; : &quot;y&quot;}
       plugins
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
@@ -179,7 +176,6 @@ const CarouselContent = React.forwardRef<
     </div>
   )
 })
-CarouselContent.displayName = &quot;CarouselContent&quot;
 const CarouselItem = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
@@ -193,7 +189,6 @@ const CarouselItem = React.forwardRef<
     />
   )
 })
-CarouselItem.displayName = &quot;CarouselItem&quot;
   return (
     <Button;
       ref={ref}

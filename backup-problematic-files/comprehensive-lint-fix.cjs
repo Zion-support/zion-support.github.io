@@ -184,6 +184,8 @@ console.log(" Starting comprehensive lint error fixes...")
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:comprehensive-lint-fix.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           lines[i] = line.replace(/"[^"]*$/, '"")
 =======
 <<<<<<< HEAD

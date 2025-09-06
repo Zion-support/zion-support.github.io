@@ -74,8 +74,6 @@ export function ImageWithRetry({
       />;
       {failed && (;
         <button
-export default ImageWithRetry;
-
   src,
   alt = '',
   fallbackSrc = '/images/image-placeholder.svg',

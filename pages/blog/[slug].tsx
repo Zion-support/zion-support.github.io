@@ -66,30 +66,6 @@ function parseMarkdown(filePath: string): BlogPost | null {;
 if ( {) {
   $2
 }
-;
-interface BlogPostPageProps {;
-  /**;
-   * Preloaded blog post for static generation. Can be null if not found.;
-   */;
-  initialPost: BlogPost | null;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
-  const router = useRouter();
-  const { slug } = router.query;
-  const [post, setPost] = React.useState<BlogPost | null>(initialPost);
-  const [error, setError] = React.useState<string | null>(null);
-  React.useEffect(() => {;
-    if (initialPost && initialPost.slug === slug) {;
-      setPost(initialPost);
-      setError(null), // Clear any previous error;
-    } else if (slug) {;
-      // This case handles if the slug changes and initialPost is not for the current slug;
-      // Or if initialPost was null from getStaticProps (which shouldn't happen if notFound is true);
       // For now, we will rely on getStaticProps to provide the correct post or a 404.;
       // If initial_post is null and getStaticProps didn't return not_found, that's an inconsistent state.;
       // The previous logic tried a fallback here, but we aim to make getStaticProps authoritative.;
@@ -113,11 +89,8 @@ if ( {) {
   $2
 }
   }
-  const articleLd = {
-    author: post.author.name
-    publishedTime: post.publishedDate
-    tags: post.tags |[]}
-  const body = (post as any).body |post.content
+    tags: post.tags || []},
+  const body = (post as any).body || post.content;
   return (
     <>;
       <AdvancedSEO;
@@ -148,10 +121,26 @@ if ( {) {
         {post.featuredImage && (
           <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
             <img
+              alt={post.title}
+
+
+              src={post.featuredImage  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              alt={post.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
               className="object-cover w-full h-full"
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement
                 target.src = '/images/blog-placeholder.svg'
+
 
               }  } catch (error) {
     console.error("Error:", error);
@@ -164,13 +153,3 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-        <ReactMarkdown>{body}</ReactMarkdown>;
-        <AuthorBio author={post.author} />;
-        <SocialShareButtons title={post.title} />;
-        <CommentsSection slug={post.slug} />;
-      </main>;
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}

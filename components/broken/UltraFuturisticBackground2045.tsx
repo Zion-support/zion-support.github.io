@@ -404,9 +404,3 @@ if ( {) {
       </div>;
     </div>;
   );
-export default UltraFuturisticBackground2045;
-
-}
-}
-}
-export default UltraFuturisticBackground2045;

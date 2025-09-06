@@ -13,16 +13,6 @@ interface StickyActionProps {;
   children: React && React.ReactNode,;
 
   showAfterScroll?: number;
-import { cn } from "@/lib/utils",
-import { motion, AnimatePresence } from "framer-motion",
-
-interface StickyActionProps {
-  className?: string,
-  children: React.ReactNode,
-  showAfterScroll?: number,
-  position?: "bottom" | "top"
-}
-export function StickyAction({
   className;
   children;
 
@@ -51,8 +41,6 @@ function StickyAction() {
       } else {
         setIsVisible (false);
       }
-    }
-    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener ("scroll", handle_scroll);
     }

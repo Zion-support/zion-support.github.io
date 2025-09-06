@@ -260,15 +260,6 @@ const SearchResultCard: React.FC<{;
     })
   },
 
-                id={option.id}
-                checked={filters.types.includes(option.id)}
-                onCheckedChange={checked =>
-                  handleTypeChange(option.id, !!checked)
-                }              />
-              <label htmlFor={option.id} className='text-sm'>
-                onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
-              />
-              <label htmlFor={option.id} className="text-sm">
                 {option.label}
               </label>
             </div>
@@ -434,9 +425,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                 onClick={() => onNewSearch(suggestion)}
               >;
 
-        <div className="text-sm text-muted-foreground">
-          <p>Tips for better results: </p>
-          <ul className="mt-2 space-y-1">
             <li>• Try different keywords</li>
             <li>• Use fewer filters</li>
             <li>• Search for broader terms</li>
@@ -520,8 +508,6 @@ export const SearchResultsPage: React.FC = () => {
               onChange={setSearchTerm}
               onSelectSuggestion={suggestion => handleSearch(suggestion && suggestion.text)}
               searchSuggestions={suggestions}
-              placeholder="Search products, talent, services, and more..."
-            />
           </div>
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
             <Search className="h-4 w-4" />
@@ -608,20 +594,6 @@ export const SearchResultsPage: React.FC = () => {
                 <h2 className='font-semibold'>Filters</h2>;
                 {activeFiltersCount > 0 && (;
                   <Button
-                    variant='ghost'
-                    size='sm'
-                    onClick={() =>
-                      setFilters({
-                        types: []
-                        category: ''
-                        minPrice: 0
-                        maxPrice: 10000
-                        minRating: 0
-                        sort: 'relevance'
-                      })
-                    }                  >
-                    Clear All
-                  </Button>
                 )}
               </div>;
               <FilterSidebar
@@ -635,23 +607,6 @@ export const SearchResultsPage: React.FC = () => {
                 <Loader2 className="h-8 w-8 animate-spin" />
               </div>
             ) : results.length === 0 && searchTerm ? (
-              <NoResultsState
-                searchTerm={searchTerm}
-                onNewSearch={handleSearch}              />;
-            ) : (;
-              <>;
-                {/* Results Grid/List */}
-                <div
-                  className={
-                    viewMode === 'grid'
-                      ? 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6'
-                      : 'space-y-4 mb-6'
-                  }>;
-                  {results && results.map(result => (                    <SearchResultCard
-                      key={`${result && result.type}-${result && result.id}`}
-                      result = {result,}
-                      searchTerm = {searchTerm,}
-                      viewMode = {viewMode,}
               <NoResultsState 
                 searchTerm={searchTerm} 
                 onNewSearch={handleSearch}

@@ -1,4 +1,3 @@
-
       case "Recommended for Review":
         return "bg-blue-100 text-blue-800"
       case "Low Match":
@@ -15,9 +14,6 @@
       const { error } = await supabase.rpc(
         'trigger_resume_scoring'
         { application_id: application.id }
-      )
-      if (error) throw error
-      toast.success("Resume scoring has been initiated")
       // Poll for results every 3 seconds for up to 30 seconds
       let attempts = 0
       const maxAttempts = 10

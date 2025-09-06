@@ -9,7 +9,6 @@ export default function ServicesAdvertisingPage() {
     '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling'
     'Flexible deployment: SaaS or self-hosted options'
 
-  ],
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Social Media Manager</h2>
 					<p className="text-slate-300">Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p>
@@ -65,8 +64,6 @@ export default function ServicesAdvertisingPage() {
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2 mb-3">{o.name}</div>
                   <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
-                    {o.points.map((p) => (<li key={p}>{p}</li>))}
-                  </ul>
             </div>
           </section>
           <section>
@@ -323,7 +320,6 @@ export default function ServicesAdvertisingPage() {
               <a href={`tel:${contact.mobile.replace(/[^+\d]/g, '')}`} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 flex items-center gap-3">
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <span className="text-gray-200">{contact.mobile}</span>
-              </a>
               <a href={`mailto:${contact.email}`} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-purple-500/40 flex items-center gap-3">
                 <Mail className="w-5 h-5 text-purple-400" />
                 <span className="text-gray-200">{contact.email}</span>
@@ -337,22 +333,12 @@ export default function ServicesAdvertisingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">More Featured Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { name: 'Email Deliverability Monitor', price: '$149/mo', href: '/email-deliverability-monitor' }
-                { name: 'API Security Scanner', price: '$799/mo', href: '/api-security-scanner' }
-                { name: 'Domain & DNS Monitor', price: '$89/mo', href: '/domain-dns-monitor' }
-                { name: 'Uptime & SLO Monitor', price: '$99/mo', href: '/uptime-slo-monitor' }
-                { name: 'PDF Render API', price: '$49/mo', href: '/pdf-render-api' }
 
                 { name: 'Email Deliverability Monitor', price: '$149/mo', href: '/email-deliverability-monitor' },
                 { name: 'API Security Scanner', price: '$799/mo', href: '/api-security-scanner' },
                 { name: 'Domain & DNS Monitor', price: '$89/mo', href: '/domain-dns-monitor' },
                 { name: 'Uptime & SLO Monitor', price: '$99/mo', href: '/uptime-slo-monitor' },
                 { name: 'PDF Render API', price: '$49/mo', href: '/pdf-render-api' },
-                { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>

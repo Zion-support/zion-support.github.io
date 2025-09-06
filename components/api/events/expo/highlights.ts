@@ -21,3 +21,5 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res && res.status(500).json({ error: e && e.message || 'Failed to generate highlights' })
   };
 }
+
+

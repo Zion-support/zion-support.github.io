@@ -26,13 +26,6 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
   } catch (error) {
 
     // Fall back to default font
-    doc.setFont('helvetica')
-import { jsPDF } from 'jspdf',;
-export interface FontConfig {;
-  regular: ArrayBuffer,;
-  bold?: ArrayBuffer,;
-  italic?: ArrayBuffer,;
-  boldItalic?: ArrayBuffer;
 }
 export type FontFamily = 'default' | 'montserrat' | 'open - sans' | 'roboto';
 ;

@@ -84,7 +84,6 @@ const NewsPage: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  ],
   const latestNews = [
     {
       id: 4
@@ -199,6 +198,134 @@ export default function NewsPage() {
                 News & Press
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+const NewsPage: React.FC = () => {
+  const newsArticles = [
+    {
+      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform'
+      excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.'
+      author: 'Press Team'
+      date: '2025-01-15'
+      author: 'Zion Tech Group'
+      readTime: '5 min read'
+      featured: true
+      image: '/images/news/ai-consciousness-breakthrough.jpg'
+      tags: ['AI ConsciousnessBreakthroughResearchInnovation']
+    }
+    {
+      id: 2
+      title: 'Series C Funding Round: Zion Tech Group Raises $250M for Global Expansion'
+      excerpt: 'Major investment round led by leading venture capital firms to accelerate AI consciousness platform development and international market expansion.'
+      category: 'company'
+      date: '2025-01-10'
+      author: 'Zion Tech Group'
+      readTime: '3 min read'
+      featured: true
+      image: '/images/news/series-c-funding.jpg'
+      tags: ['FundingInvestmentGrowthExpansion']
+    }
+    {
+      id: 3
+      title: 'Quantum-Secure Cloud Infrastructure Launches in Partnership with Microsoft Azure'
+      excerpt: 'World\'s first quantum-secure cloud platform provides unbreakable encryption for enterprise customers, setting new security standards.'
+      category: 'partnerships'
+      date: '2025-01-05'
+      author: 'Zion Tech Group'
+      readTime: '4 min read'
+      featured: true
+      image: '/images/news/quantum-azure-partnership.jpg'
+      tags: ['Quantum ComputingMicrosoft AzureSecurityPartnership']
+    }
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import {;
+  Newspaper,;
+  Calendar,;
+  User,;
+  Tag,;
+  ArrowRight,;
+  ExternalLink,;
+  TrendingUp,;
+  Award,;
+  Rocket,;
+  Globe,;
+  Brain,;
+  Atom,;
+  Zap;
+} from 'lucide-react',;
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+const NewsPage: React.FC = () => {;
+  const newsArticles = [;
+    {;
+      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform';
+      excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.';
+      author: 'Press Team';
+      date: '2025-01-15';
+      author: 'Zion Tech Group',;
+      readTime: '5 min read',;
+      featured: true,;
+      image: '/images/news/ai-consciousness-breakthrough.jpg',;
+      tags: ['AI ConsciousnessBreakthroughResearchInnovation'];
+    },;
+    {;
+      id: 2,;
+      title: 'Series C Funding Round: Zion Tech Group Raises $250M for Global Expansion',;
+      excerpt: 'Major investment round led by leading venture capital firms to accelerate AI consciousness platform development and international market expansion.',;
+      category: 'company',;
+      date: '2025-01-10',;
+      author: 'Zion Tech Group',;
+      readTime: '3 min read',;
+      featured: true,;
+      image: '/images/news/series-c-funding.jpg',;
+      tags: ['FundingInvestmentGrowthExpansion'];
+    },;
+    {;
+      id: 3,;
+      title: 'Quantum-Secure Cloud Infrastructure Launches in Partnership with Microsoft Azure',;
+      excerpt: 'World\'s first quantum-secure cloud platform provides unbreakable encryption for enterprise customers, setting new security standards.',;
+      category: 'partnerships',;
+      date: '2025-01-05',;
+      author: 'Zion Tech Group',;
+      readTime: '4 min read',;
+      featured: true,;
+      image: '/images/news/quantum-azure-partnership.jpg',;
+      tags: ['Quantum ComputingMicrosoft AzureSecurityPartnership'];
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const latestNews = [
+    {
+      id: 4
+      title: 'AI Customer Success Platform Achieves 99.9% Customer Retention Rate'
+      excerpt: 'Revolutionary AI-powered customer success solution demonstrates exceptional results in preventing churn and improving customer satisfaction.'
+      category: 'product'
+      date: '2025-01-12'
+      author: 'Sarah Chen'
+      readTime: '4 min read'
+      featured: false
+      image: '/images/news/ai-customer-success.jpg'
+      tags: ['AICustomer SuccessRetentionPlatform']
+    }
+    {
+      id: 5
+      title: 'Zion Tech Group Named to Forbes AI 50 List for Second Consecutive Year'
+      excerpt: 'Recognition as one of the world\'s most innovative AI companies highlights our leadership in artificial intelligence and quantum computing.'
+      category: 'company'
+      date: '2025-01-08'
+      author: 'Zion Tech Group'
+      readTime: '2 min read'
+      featured: false
+      image: '/images/news/forbes-ai-50.jpg'
+      tags: ['RecognitionForbesAI LeadershipInnovation']
+    }
+    {
+      id: 6,
+      title: 'New Research Paper: "Quantum Neural Networks for Drug Discovery"',
+      excerpt: 'Breakthrough research demonstrates quantum computing applications in pharmaceutical research, potentially accelerating drug development by decades.',
+      category: 'research',
         {/* Category Filter */}
         <section className="py - 10 px - 4">;
           <div className="container mx - auto max - w-6xl">;
@@ -218,87 +345,6 @@ export default function NewsPage() {
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
-export default function NewsPage() {
-  const newsItems = [
-    {
-      title: "Zion Tech Group Named Top AI Innovation Company 2025"
-      category: "Awards & Recognition"
-      date: "January 15, 2025"
-      excerpt: "Zion Tech Group has been recognized as one of the top AI innovation companies of 2025 by TechCrunch, highlighting our breakthrough work in autonomous AI systems and quantum computing integration."
-      image: "/api/placeholder/600/400"
-      source: "TechCrunch"
-      url: "#"
-      featured: true
-      icon: Award
-      color: "from-yellow-500 to-orange-500"
-    }
-    {
-      title: "Revolutionary Quantum AI Breakthrough Announced"
-      category: "Technology Innovation"
-      date: "January 10, 2025"
-      excerpt: "Zion Tech Group announces a major breakthrough in quantum AI integration, achieving unprecedented performance improvements in machine learning algorithms through quantum-enhanced neural networks."
-      image: "/api/placeholder/600/400"
-      source: "MIT Technology Review"
-      url: "#"
-      featured: false
-      icon: Brain
-      color: "from-purple-500 to-pink-500"
-    }
-    {
-      title: "Partnership with Fortune 500 Financial Institution"
-      category: "Business Development"
-      date: "January 5, 2025"
-      excerpt: "Zion Tech Group announces strategic partnership with leading financial institution to deploy AI-powered risk assessment and fraud detection systems across their global operations."
-      image: "/api/placeholder/600/400"
-      source: "Business Insider"
-      url: "#"
-      featured: false
-      icon: Users
-      color: "from-blue-500 to-cyan-500"
-    }
-    {
-      title: "New Cybersecurity Division Launch"
-      category: "Company News"
-      date: "December 28, 2024"
-      excerpt: "Zion Tech Group expands its service portfolio with the launch of a dedicated cybersecurity division, offering quantum-resistant encryption and AI-powered threat detection solutions."
-      image: "/api/placeholder/600/400"
-      source: "Security Weekly"
-      url: "#"
-      featured: false
-      icon: Rocket
-      color: "from-red-500 to-orange-500"
-    }
-    {
-      title: "Record-Breaking AI Model Performance"
-      category: "Research & Development"
-      date: "December 20, 2024"
-      excerpt: "Our research team achieves record-breaking performance in natural language processing, with our latest AI model outperforming industry benchmarks by 40% in accuracy and 60% in speed."
-      image: "/api/placeholder/600/400"
-      source: "AI Research Journal"
-      url: "#"
-      featured: false
-      icon: Brain
-      color: "from-emerald-500 to-teal-500"
-    }
-    {
-      title: "Global Expansion: New Office in Singapore"
-      category: "Company News"
-      date: "December 15, 2024"
-      excerpt: "Zion Tech Group announces the opening of its new Asia-Pacific headquarters in Singapore, expanding our global reach and strengthening partnerships in the region."
-      image: "/api/placeholder/600/400"
-      source: "Singapore Business Times"
-      url: "#"
-      featured: false
-      icon: Globe
-      color: "from-indigo-500 to-purple-500"
-    }
-  ]
-  const categories = ["All", "Awards & Recognition", "Technology Innovation", "Business Development", "Company News", "Research & Development"]
-  const [selectedCategory, setSelectedCategory] = React.useState("All")
-  const filteredNews = selectedCategory === "All"
-    ? newsItems
-    : newsItems.filter(item => item.category === selectedCategory)
-  const featuredNews = newsItems.filter(item => item.featured)
       title: "Zion Tech Group Named Top AI Innovation Company 2025",
       category: "Awards & Recognition",
       date: "January 15, 2025",
@@ -369,14 +415,6 @@ export default function NewsPage() {
       featured: false,
       icon: Globe,
       color: "from-indigo-500 to-purple-500"
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-    : newsItems.filter(item => item.category === selectedCategory),
-  const featuredNews = newsItems.filter(item => item.featured),
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -646,7 +684,6 @@ const NewsPage: React.FC = () => {;
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="text-sm text-white/60 bg-white/5 px-3 py-1 rounded-full">
-                          {item.category}
                           {item.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -681,28 +718,6 @@ const NewsPage: React.FC = () => {;
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
-                    : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* News Grid */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
                 key={category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -788,7 +803,6 @@ const NewsPage: React.FC = () => {;
                       <item.icon className="w-5 h-5 text-white" />
                     </div>
                     <span className="text-xs text-white/60 bg-white/5 px-2 py-1 rounded-full">
-                      {item.category}
                       {item.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -817,7 +831,6 @@ const NewsPage: React.FC = () => {;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
                     <a
-                      href={`/news/${news.id}`}
                       href={`/news/${news.id}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -857,7 +870,6 @@ const NewsPage: React.FC = () => {;
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm font-medium rounded-full border border-cyan-500/30">
-                      {article.category}
                       {article.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -870,10 +882,6 @@ const NewsPage: React.FC = () => {;
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
-                      {new Date(article.date).toLocaleDateString()}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4" />
                     </div>
                   </div>
                   <button className="w-full px-4 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-2">
@@ -881,6 +889,35 @@ const NewsPage: React.FC = () => {;
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </motion.article>
+        {/* Newsletter Signup */}
+              <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6">;
+                Stay Updated;
+              </h2>;
+              <p className="text - xl text - gray - 400 max - w-2xl mx - auto mb - 8">;
+                Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing.;
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gray - 800 / 30">;
+          <div className="max - w-4xl mx - auto text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+
+
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </div>;
+        </section>;
+        {/* Newsletter Signup */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Stay Updated
               </h2>
@@ -932,7 +969,6 @@ const NewsPage: React.FC = () => {;
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
-                      {release.category}
                       {release.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -989,26 +1025,6 @@ const NewsPage: React.FC = () => {;
                 >
                   <div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-500/20 transition-all duration-300 border border-white/20">
                     <div className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300">
-                      {category.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-sm font-semibold text-white mb-1">
-                    {category.name}
-                  </h3>
-                  <p className="text-gray-400 text-xs">{category.count} articles</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Recent News */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
                       {category.icon  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1082,7 +1098,6 @@ const NewsPage: React.FC = () => {;
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
-                      {news.category}
                       {news.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1116,6 +1131,31 @@ const NewsPage: React.FC = () => {;
                     </div>
                   </div>
                 </motion.article>
+        {/* Media Contact */}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-4xl mx - auto text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+
+
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </div>;
+        </section>;
+        {/* Media Contact */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1167,6 +1207,22 @@ const NewsPage: React.FC = () => {;
         </section>
       </div>
       {/* CTA Section */}
+      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+        <div className="max - w-4xl mx - auto text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+
+
+      {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -1195,11 +1251,6 @@ const NewsPage: React.FC = () => {;
               Ready to Stay Informed?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Explore our latest research, industry insights, and technology breakthroughs
-              that are shaping the future of AI and quantum computing.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link
                 href="/blog"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
@@ -1229,8 +1280,6 @@ const NewsPage: React.FC = () => {;
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Get in Touch
@@ -1377,10 +1426,6 @@ const NewsPage: React.FC = () => {;
                   No news articles match your current filters. Try adjusting your search or category selection.
                 </p>
               </motion.div>
-            )}
-          </div>
-        </section>
-        {/* Press Releases */}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -1407,11 +1452,6 @@ const NewsPage: React.FC = () => {;
                     </a>
                   </div>
                 </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Media Resources */}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -1448,11 +1488,6 @@ const NewsPage: React.FC = () => {;
                     </a>
                   </div>
                 </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - cyan - 500 / 10 via - purple - 500 / 10 to - pink - 500 / 10">;
           <div className="container mx - auto px - 4 text - center">;

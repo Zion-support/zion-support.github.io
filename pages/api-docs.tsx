@@ -2,12 +2,6 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {
-  ArrowRight
-  Server
-  Lock
-  Brain
-  Cloud
 import { 
   ArrowRight,
   Server,
@@ -172,6 +166,21 @@ export default function ApiDocsPage() {
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
+      </div>
+
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Help with Integration?</h2>;
+            <p className="text-xl mb-8 max-w-2xl mx-auto">;
+              Our developer support team is here to help you integrate our APIs successfully.;
+            </p>;
+            <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+              Contact Developer Support;
+            </Link>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
@@ -199,4 +208,5 @@ export default function ApiDocsPage(req, res) {
       <div className="container mx-auto px-4 py-16 text-gray-200">;
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>;
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>;
+
 

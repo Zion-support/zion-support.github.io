@@ -54,6 +54,67 @@ import { useRouter } from 'next/router';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+
+
+import { supabase } from '@/integrations/supabase/client', // Import Supabase client
+import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
+export default function VerifyStatus() {
+
+  const router = useRouter()
+  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
+
+  const { email: emailParam } = router.query,
+import { supabase } from '@/integrations/supabase/client', // Import Supabase client;
+import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state;
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
+export default function VerifyStatus(req, res) {
+  try {
+  const router = useRouter();
+  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext;
+  const { email: emailParam } = router.query;
+
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
+  const [isResending, setIsResending] = useState(false);
+  const [isCheckingStatus, setIsCheckingStatus] = useState(false);
+  const [lastSentTime, setLastSentTime] = useState<Date | null>(null);
+  const [countdown, setCountdown] = useState(0);
+
+
+    if (countdown > 0) {
+      interval = setInterval(() => {
+        setCountdown(prev => prev - 1)
+      }, 1000)
+    }
+    return () => clearInterval(interval)
+
+
+      return
+    }
+    setIsResending(true)
+    setError('')
+    setMessage('')
+    }
+    return () => clearInterval(interval)
+  }, [countdown]),
+
+  const handleResendEmail = async () => {
+    if (!email) {
+      setError('Please enter your email address'),
+      return
+    }
+
+    setIsResending(true),
+    setError(''),
+    setMessage(''),
+
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
 import { AuthLayout } from '@/layout';
 
@@ -176,6 +237,10 @@ export default function VerifyStatus() {
       set_error ('Please enter your email address'),
       return;
     }
+          {/* Header */}
+
+
+          {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -189,7 +254,6 @@ export default function VerifyStatus() {
               Check and manage your email verification status
             </p>
           </div>
-          {/* Success Message */}
           {/* Success Message */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -200,8 +264,6 @@ export default function VerifyStatus() {
               <CheckCircle className="h-4 w-4" />
               <AlertDescription>{message}</AlertDescription>
             </Alert>
-          )}
-          {/* Error Message */}
           {error && (
             <Alert variant="destructive">
               <AlertCircle className="h-4 w-4" />
@@ -225,6 +287,12 @@ export default function VerifyStatus() {
             <Input
               id="email"
               type="email"
+              value={email}
+              on_change={(e) => set_email (e.target.value)}
+              placeholder="Enter your email address";
+              className="w - full";
+            />;
+
               value={email  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -239,11 +307,6 @@ export default function VerifyStatus() {
               className="w-full"
             />
             {email && (
-              <p className="text-xs text-gray-500">
-                We'll check the verification status for this email address
-              </p>
-            )}
-          </div>
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -261,13 +324,6 @@ export default function VerifyStatus() {
               <div className="text-sm text-slate-700 dark:text-slate-300 space-y-1">
               </div>
               {lastSentTime && (
-                <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center">
-                  <Clock className="h-3 w-3 mr-1" />
-                  Last email sent: {lastSentTime.toLocaleTimeString()}
-                </p>
-              )}
-            </div>
-          )}
                   Last email sent: {lastSentTime.toLocaleTimeString()  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -321,11 +377,6 @@ export default function VerifyStatus() {
                   <Eye className="h-4 w-4 mr-2" />
                   Check Verification Status
                 </>
-              )}
-            </Button>
-            {/* Resend Email Button */}
-            <Button
-              onClick={handleResendEmail}
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -372,7 +423,6 @@ export default function VerifyStatus() {
               Try Login
             </Button>
           </div>
-          {/* Help Text */}
           {/* Help Text */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -391,9 +441,6 @@ export default function VerifyStatus() {
               Go Back
             </Button>
           </div>
-          {/* Additional Options */}
-          <div className="border-t pt-4 space-y-2">
-            <Button
               variant="ghost"
               className="w-full text-sm"
             >
@@ -410,6 +457,7 @@ export default function VerifyStatus() {
       </div>
     </AuthLayout>
   )
+
 
 };
 

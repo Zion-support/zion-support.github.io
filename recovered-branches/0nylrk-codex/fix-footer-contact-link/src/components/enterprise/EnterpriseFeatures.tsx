@@ -1,9 +1,22 @@
 
 const features = [
+import React from './react';
+import { Users, Shield, Briefcase, Award, Settings, Globe } from './lucide-react';
+const features = [;
   {
-    title: "Private Hiring Portal"
-    description: "Create a secure, private hiring portal accessible only to your team members.";
-    icon: Shield}
+
+
+    title: "Private Hiring Portal",
+    description: "Create a secure, private hiring portal accessible only to your team members.",
+    icon: Shield},
+
+
+  {
+
+    title: "Dedicated Talent Pool",
+    description: "Access to a curated pool of pre - vetted talent matched to your industry and needs.",
+    icon: Users},
+
   {
     title: "Custom SLA"
     description: "Get guaranteed response times and dedicated support with our custom SLAs."

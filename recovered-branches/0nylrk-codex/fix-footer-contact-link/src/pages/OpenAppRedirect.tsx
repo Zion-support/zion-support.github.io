@@ -1,9 +1,4 @@
 
-// This component handles deep linking to the mobile app
-
-const OpenAppRedirect: React.FC = () => {
-  const navigate = useNavigate()
-  const [status, setStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting');
   useEffect(() => {
     const attemptAppOpen = async () => {
       const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -26,11 +21,6 @@ const OpenAppRedirect: React.FC = () => {
             window.location.href = androidAppUrl
           } else if (isiOS) {
             window.location.href = iosAppUrl
-        }, 2500), // Wait 2.5 seconds before redirecting to store
-        // Try to open the app
-        window.location.href = appScheme
-      } else {
-        // Not on mobile, redirect to mobile launch page
 import React, { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
@@ -71,13 +61,15 @@ const OpenAppRedirect: React.FC = () => {;
           navigate(fallbackUrl);
         }, 1500);
       }
-      
-      // Clear timeout if page visibility changes (meaning app opened successfully)
-      document.addEventListener("visibilitychange", () => {
-        if (document.hidden && timeout) {
-          clearTimeout(timeout)
-        }
-      })
+
+
+    },
+    
+    attemptAppOpen()
+  }, [navigate]),
+  
+
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-zion-blue">
       <SEO

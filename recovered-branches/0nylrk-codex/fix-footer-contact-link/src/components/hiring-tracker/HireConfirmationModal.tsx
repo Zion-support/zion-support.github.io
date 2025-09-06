@@ -1,8 +1,3 @@
-import {
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogHeader;
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -17,9 +12,6 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
-import { useAuth } from "@/hooks/useAuth";
-import { JobApplication } from "@/types/jobs";
-export interface HireConfirmationModalProps {
 
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";

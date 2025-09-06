@@ -289,6 +289,19 @@
                  2025 Zion Tech Group. All rights reserved.;
               </div>;
               <div className='flex items-center gap-6 text-sm text-gray-400'>;
+          {/* Bottom Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className='mt-16 pt-8 border-t border-gray-800/50'
+
+          >
+            <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
+              <div className='text-sm text-gray-400'>
+                © 2025 Zion Tech Group. All rights reserved.
+              </div>
+              <div className='flex items-center gap-6 text-sm text-gray-400'>
                 <Link
                   href='/privacy'
                   className='hover:text-white transition-colors duration-200'>;

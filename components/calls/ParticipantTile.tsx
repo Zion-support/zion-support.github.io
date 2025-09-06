@@ -1,7 +1,3 @@
-  RemoteParticipant
-  LocalParticipant
-  TrackPublication
-  Track;
 
 import type {;
   RemoteParticipant,;
@@ -14,12 +10,6 @@ type Props = {;
   participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  useEffect(() => {
-    const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
-      if (track.kind === 'video' && videoRef.current) {
-        track.attach(videoRef.current);
   isLocal?: boolean;
   displayName?: string;
 };
@@ -55,6 +45,19 @@ type Props = {;
         playsInline
         muted={Boolean(isLocal)}
         className='w-full h-48 object-cover bg-black'
+
+  return (
+
+    <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">;
+      <video ref={videoRef} autoPlay playsInline muted={Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />;
+      <audio ref={audioRef} autoPlay className="hidden" />;
+      <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white">;
+        {displayName || (participant as any).name || (isLocal ? 'You' : 'Participant')}
+      </div>;
+    </div>;
+  );
+}
+
   RemoteParticipant,
   LocalParticipant,
   TrackPublication,

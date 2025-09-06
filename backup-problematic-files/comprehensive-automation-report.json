@@ -8,19 +8,12 @@
     },
     "codeQuality": {
       "success": false,
-      "duration": 42831,
-      "errors": [
-        "spawnSync /bin/sh ENOBUFS",
-        "spawnSync /bin/sh ENOBUFS"
-      ],
       "duration": 6393,
       "errors": [],
       "warnings": []
     },
     "securityAudit": {
       "success": true,
-      "duration": 5672,
-      "errors": [],
       "warnings": []
     },
     "seoOptimization": {
@@ -30,10 +23,6 @@
     },
     "accessibilityImprovement": {
       "success": false,
-      "duration": 1378,
-      "errors": [
-        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nA configuration object specifies rule \"jsx-a11y/alt-text\", but could not find plugin \"jsx-a11y\".\n\nCommon causes of this problem include:\n\n1. The \"jsx-a11y\" plugin is not defined in your configuration file.\n2. The \"jsx-a11y\" plugin is not defined within the same configuration object in which the \"jsx-a11y/alt-text\" rule is applied.\n\n"
-      ],
       "duration": 291,
       "errors": [],
       "warnings": []
@@ -46,14 +35,3 @@
     },
     "deployment": {
       "success": true,
-      "errors": [],
-      "warnings": []
-    }
-  },
-  "recommendations": [
-    "Review and fix code quality issues",
-    "Address security vulnerabilities",
-    "Optimize application performance",
-    "Enhance accessibility features"
-  ]
-}

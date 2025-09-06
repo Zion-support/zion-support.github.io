@@ -2,47 +2,6 @@ import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  ArrowRight
-  Play
-  Star
-  Users
-  Award
-  TrendingUp
-  Brain
-  Shield
-  Rocket
-  Loader2
-  ChevronDown
-  Zap
-  Globe
-  Lock
-  Cpu
-  Database
-  Cloud
-  Palette
-  Heart
-  Phone
-  Mail
-  MapPin
-  Search
-  Grid
-  List
-  Sparkles
-  Target
-  BarChart3
-  Lightbulb
-  Code
-  Server
-  Network
-  ShieldCheck
-  BrainCircuit
-  Atom
-  Satellite
-  Eye
-  Clock
-  DollarSign
-  CheckCircle
-  ArrowUpRight;
 
 
 class ErrorBoundary extends React.Component {
@@ -76,7 +35,6 @@ import { motion, AnimatePresence } from 'framer-motion';
   Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite;
   Eye, Clock, DollarSign, CheckCircle, ArrowUpRight;
 } from 'lucide-react';
-// Import our new innovative services
 import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
 import { innovative2046ITServices } from '../data/innovative-2046-it-services';
 import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
@@ -172,7 +130,6 @@ const QuantumLoadingFallback = () => (
       initial={{ opacity: 0, scale: 0 && 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
-      className='text-center relative z-10'
 
 
     >
@@ -894,7 +851,6 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
                       }`}
                     >;
                       {category === 'all' ? 'All Categories' : category}
-
             {/* Services Grid */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 50 }}

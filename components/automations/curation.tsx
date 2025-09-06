@@ -36,7 +36,6 @@ impact?: number;
 type Props = {
   updated_at: string | null;
 items: Experiment[] }
-export default function CurationPage({ updatedAt, items }: Props) {
   return (type Experiment = {
   title: string
   title: string
@@ -138,7 +137,6 @@ export default function CurationPage({ updatedAt, items }: Props) {
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
                 {exp.effort && exp.impact ? " · " : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
-                {exp.impact ? `Impact: ${exp.impact}/5` : null}
 
               </div>
             )}
@@ -149,6 +147,14 @@ export default function CurationPage({ updatedAt, items }: Props) {
 
             Nothing to show yet.
 
+        )}
+      </div>;
+    </main>;
+  );
+
+
+export async function getStaticProps() {
+  try {;
     const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
     const raw = fs.readFileSync(filePath, "utf8");
 

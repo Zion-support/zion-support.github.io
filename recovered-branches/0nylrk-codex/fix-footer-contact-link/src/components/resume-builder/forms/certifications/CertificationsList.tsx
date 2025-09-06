@@ -1,9 +1,4 @@
 
-import { Certification  } from '@/types/resume';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
-import { Edit, Trash2  } from 'lucide-react';
-import { format } from 'date-fns';
 import {Certification} from '@/types/resume';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -86,20 +81,6 @@ if ( {) {
 
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">
-                  Issued:{" "}
-                  {cert.issue_date
-                    ? typeof cert.issue_date === "string"
-                      ? cert.issue_date
-                      : format(cert.issue_date, "MMM yyyy")
-                    : "N/A"}
-                  {cert.expiration_date && (
-                    <>
-                      {" "}
-                      · Expires:{" "}
-                      {typeof cert.expiration_date === "string"
-                        ? cert.expiration_date
-                        : format(cert.expiration_date, "MMM yyyy")}
-                    </>
                   Issued: {cert.issue_date ? (typeof cert.issue_date === 'string' 
                     ? cert.issue_date 
                     : format(cert.issue_date, 'MMM yyyy')) : 'N/A'}

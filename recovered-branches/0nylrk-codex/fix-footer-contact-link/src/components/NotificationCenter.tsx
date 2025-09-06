@@ -28,10 +28,6 @@ export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
     unreadCount, 
-    markAsRead, ;
-    markAllAsRead;
-    markAsRead, 
-    markAllAsRead,
     dismissNotification, 
     loading,
     filter,
@@ -57,16 +53,12 @@ export const NotificationCenter: React.FC = () => {
 
   const handleMarkAllAsRead = async () => {
     try {
-      await markAllAsRead(),
-      toast.success("All notifications marked as read")
-    } catch (err) {
-      console.error("Failed to mark notifications as read:", err),
-      toast.error("Failed to update notifications")
+      };
+
+      loadNotifications();
     }
-  }
-  const handleFilterChange = (newFilter: FilterType) => {
-    setFilter(newFilter as any)
-  }
+
+
   },
 
   const handleFilterChange = (newFilter: FilterType) => {
@@ -104,7 +96,6 @@ export const NotificationCenter: React.FC = () => {
       </PopoverTrigger>;
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
         <NotificationHeader
-          unreadCount={unreadCount}
           onMarkAllAsRead={handleMarkAllAsRead}
           filter={filter as FilterType}
           onFilterChange={handleFilterChange}
@@ -127,3 +118,11 @@ export const NotificationCenter: React.FC = () => {
     </Popover>;
   );
 };
+          on_dismiss={dismiss_notification}
+          on_retry={fetch_notifications}
+        />;
+        <NotificationFooter on_close={() => set_open (false)} />;
+      </PopoverContent>;
+    </Popover>);
+}
+;

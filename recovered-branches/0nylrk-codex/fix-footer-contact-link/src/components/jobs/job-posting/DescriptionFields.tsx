@@ -1,9 +1,3 @@
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormDescription
-  FormMessage
   FormField,
   FormItem,
   FormLabel,
@@ -28,7 +22,6 @@ interface DescriptionFieldsProps {
             <FormLabel>Job Description</FormLabel>;
             <FormControl>;
               <Textarea
-
 
 
 import React from 'react',
@@ -63,8 +56,8 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
             <FormControl>
                 value={editorContent}
                 onChange={(e) => {;
-                  handleEditorChange(e.target.value);
-                  field.onChange(e.target.value);
+                  handleEditorChange(e && e.target.value);
+                  field && field.onChange(e && e.target.value);
                 }}
                 className="min-h-[200px]";
 import React from './react';

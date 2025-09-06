@@ -12,8 +12,14 @@ const path = require("path")";console.log("� Error Prevention & Automation Sys
 <<<<<<< HEAD
       this.log(` ${description} "failed"`)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log(` ${description} "failed"`)
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+      this.log(` ${description} "failed"`)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

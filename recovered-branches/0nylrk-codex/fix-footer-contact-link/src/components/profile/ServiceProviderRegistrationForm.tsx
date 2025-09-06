@@ -16,28 +16,6 @@ import {toast} from "@/components/ui/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {useAuth} from "@/hooks/useAuth";
-import React, { useState } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Switch } from "@/components/ui/switch",
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import {
-  Form;
-  FormControl;
-  FormDescription;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react",
-import { toast } from "@/components/ui/use-toast",
-import { supabase } from "@/integrations/supabase/client",
 // Define form schema
 
 const serviceProfileSchema = z.object({
@@ -71,11 +49,6 @@ type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
   const handleAddService = () => {
     const serviceInput = form.getValues("services"),
     if (serviceInput && !serviceTags.includes(serviceInput)) {
-  }
-  // Handle removing service tags
-  const handleRemoveService = (service: string) => {
-    setServiceTags(serviceTags.filter((s) => s !== service))
-  }
   // Handle key press in services input (add on enter)
   const handleServiceKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
@@ -175,26 +148,10 @@ export function ServiceProviderRegistrationForm() {;
 
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
-    const formData = form.getValues(),
-    if (!formData.bio || formData.bio.length < 20) {
       toast({
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
-    }
-    try {
-      setIsGenerating(true);
-      // Call the Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke('service-profile-enhancer', {
-        body: {
-          providerData: {
-            name: formData.name
-            title: formData.title
-            bio: formData.bio
-            services: serviceTags
-            location: formData.location
-          }
-        }
   },;
   // Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {;
@@ -286,10 +243,6 @@ if ( {) {
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
-      }
-      // Get user email for notification
-      const { data: userData } = await supabase.auth.getUser()
-      const userEmail = userData.user?.email;
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
@@ -301,32 +254,40 @@ if ( {) {
       }
 
 
-      // Create the service profile
-      const { data: profileData, error } = await supabase
-        .from('profiles')
-        .update({
-          display_name: values.name
-          bio: finalSummary
-          user_type: "creator", // Set as service provider
-          profile_complete: true
-          updated_at: new Date().toISOString()
-          headline: values.title
-          // Additional fields that might be in profiles table
-        })
-        .eq('id', user.id)
+      // Get user email for notification;
+      const { data: userData } = await supabase && supabase.auth.getUser(),;
+      const userEmail = userData && userData.user?.email;
+
+      // Create the service profile;
+      const { data: profileData, error } = await supabase;
+        .from('profiles');
+        .update({;
+          display_name: values && values.name,;
+          bio: finalSummary,;
+          user_type: "creator", // Set as service provider;
+          profile_complete: true,;
+          updated_at: new Date().toISOString(),;
+          headline: values && values.title,;
+          // Additional fields that might be in profiles table;
+        });
+        .eq('id', user && user.id);
+
+        .select();
+      if (error) throw error;
+
+
+        .select(),
+
+      if (error) throw error,
+
+
+
       // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
       /*
       const { error: serviceError } = await supabase
         .from('service_profiles')
         .insert({
-          user_id: user.id
-          services: finalServices
-          hourly_rate: Number(values.hourlyRate)
-          availability_status: values.availability
-          location: values.location
-          website: values.website |null})
-      if (serviceError) throw serviceError;
         try {
           await supabase.functions.invoke ('send - email', {
             body: {
@@ -355,9 +316,6 @@ if ( {) {
     } finally {
       setIsSubmitting(false)
     }
-  }
-  },
-
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -459,10 +417,6 @@ if ( {) {
                           </FormControl>
                           <FormMessage className="text-red-400" />
                         </FormItem>
-                      )}
-                    />
-                  </div>
-                </div>
 ;
       // Get user email for notification;
       const { data: userData } = await supabase.auth.getUser(),;
@@ -1144,3 +1098,47 @@ if ( {) {
                                 type="radio"
                                 id="unavailable"
                                 value="unavailable"
+                                Currently Unavailable;
+                              </label>;
+                            </div>;
+                          </div>;
+                        </FormControl>;
+
+                        <FormMessage className="text - red - 400" />;
+                      </FormItem>)}
+
+                  />;
+                </div>;
+              </div>;
+            </CardContent>;
+
+            <CardFooter className="border - t border - zion - blue - light pt - 6">;
+              <div className="flex flex - col sm:flex - row gap - 4 w - full sm:justify - between">;
+                <Button;
+                  type="button";
+                  variant="outline";
+                  className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white";
+                >;
+                  Save as Draft;
+                </Button>;
+                <Button;
+                  type="submit";
+                  className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
+                  disabled={is_submitting}
+                >;
+                  {is_submitting ? "Creating Profile..." : "Create Service Profile"}
+
+                </Button>;
+              </div>;
+            </CardFooter>;
+          </form>;
+        </Form>;
+      </Card>;
+
+    </div>);
+}
+
+
+}
+;
+

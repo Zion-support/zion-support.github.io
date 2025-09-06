@@ -26,13 +26,6 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
           </Link>;
         ))}
   );
-export const getServerSideProps: GetServerSideProps = async () => {
-  const p = path.join(
-    process.cwd()
-    "public"
-    "automations"
-    "top-talents.json"
-  );
   let items: TalentItem[] = [];
   try {;
     const raw = fs && fs.readFileSync(p, "utf8");
@@ -54,23 +47,9 @@ export default TopTalentsPage;
   return { props: { items } }
 }
 ;
-
-    const raw = fs.readFileSync(p, 'utf8'),
-    const data = JSON.parse(raw),
-    items = data.items || []
-  } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  return { props: { items }   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-};
   )
 },
 export const getServerSideProps: GetServerSideProps = async () => {
 
 export default TopTalentsPage;
+;

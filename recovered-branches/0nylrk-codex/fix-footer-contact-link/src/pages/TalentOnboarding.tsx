@@ -7,10 +7,6 @@ import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 export default function TalentOnboarding() {;
   const { user, isLoading } = useAuth();
-import React from "react",
-import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
 
   // If not authenticated, redirect to login
   if (!isLoading && !user) {

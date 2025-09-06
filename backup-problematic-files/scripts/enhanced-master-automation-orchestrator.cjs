@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -456,6 +458,9 @@ console.log('======')
       { "name": 'Test Suite', "command": 'npm test || echo "No tests configured"}
     const phase5Tasks = [{ name: 'Metrics Generation', "command": 'echo "Generating final metrics..."}]
       { "name": 'Report Generation', "command": 'echo "Generating comprehensive report..."}
+<<<<<<< HEAD
+      log('info', '"Recommendations")
+=======
 <<<<<<< HEAD
       log('info', '"Recommendations")
 =======

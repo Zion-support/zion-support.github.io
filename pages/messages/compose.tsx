@@ -90,6 +90,18 @@ if (return null) {
       ? `Invite ${recipient_name || talent_name || 'Talent'}`;
       : type === 'apply';
         ? `Apply to ${job_title || 'Job'}`;
+import { useRouter } from 'next/router';
+import { useCurrentUser } from '../../hooks/useCurrentUser';
+export default function ComposePage(req, res) {
+  try {
+  const router = useRouter();
+  const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
+  const { user, loading } = useCurrentUser();
+
+  const [message, setMessage] = React.useState('');
+  const [linkUrl, setLinkUrl] = React.useState('');
+  const [file, setFile] = React.useState<File | null>(null);
+  const [sending, setSending] = React.useState(false);
         : 'New Message';
   const context =;
     type === 'invite';
@@ -97,6 +109,21 @@ if (return null) {
       : type === 'apply';
         ? { type: 'application', job_id, job_title }
         : { type: 'general' }
+    setSending(true);
+    let attachmentBase64: string | undefined;
+    if (file) {;
+      const buff = await file.arrayBuffer();
+      const base64 = Buffer.from(buff).toString('base64');
+      attachmentBase64 = `data:${mime},base64,${base64}`;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    const res = await fetch('/api/messages/compose', {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({
     });
     const data = await res.json ();
     set_sending (false);
@@ -116,6 +143,10 @@ if (return null) {
               {type === 'invite' && job_title;
                 ? `Hi ${talent_name || recipient_name || ''}, Id like to invite you to discuss a project: ${job_title}`;
                 : null}
+            </p>
+          </div>
+          <div className="p-4 space-y-3">
+            <textarea
               value={message}
               on_change={e => set_message (e.target.value)}
               rows={6}

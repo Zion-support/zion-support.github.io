@@ -77,10 +77,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       p => p && p.status === 'active'
     ).length;
 
-    const categoryCounts: Record<string, number> = {};
-    usersData.forEach(u => {
-      geoCounts[u.country |'Unknown'] =
-        (geoCounts[u.country |'Unknown'] |0) + 1;
     });
   } catch (e: any) {
 

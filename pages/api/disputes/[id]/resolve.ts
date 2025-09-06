@@ -22,61 +22,6 @@ export default async function handler(
     if (!dispute) return res.status($1).json({ $2 });
     const { resolutionSummary, status } = req.body |{}
     const now = new Date().toISOString();
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Allow', ['POST']);
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getDisputeById, upsertDispute } from '../../../../utils/fsdb';
-import { parseUserFromRequest, ensureAdmin } from '../../../../utils/auth';
-export default async function handler(req, res) {
-  try {
-  const { id } = req.query;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    const dispute = await getDisputeById(id);
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-    const { resolutionSummary, status } = req.body || {};
-    const now = new Date().toISOString();
-    if (status && !['ResolvedUnder ReviewOpen'].includes(status)) {;
-      return res.status(400).json({ error: 'Invalid status' });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    dispute.status = status || 'Resolved';
-    dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
-    dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
-    dispute.updatedAt = now;
-    await upsertDispute(dispute);
-    return res.status(200).json({ dispute });
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
     dispute.updatedAt = now;
     await upsertDispute(dispute);

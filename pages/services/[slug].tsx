@@ -1,11 +1,3 @@
-import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
-import {enhancedRealMicroSaasServices} from '../../data / enhanced - real - micro - saas - services';
-import {extra_services} from '../../data / extra - services';
-import {additionalEnhancedServices} from '../../data / additional - real - services';
-import {newRealServices} from '../../data / new - real - services';
-import {marketReadyServices} from '../../data / market - ready - services';
-;
-type Service = (typeof enhancedRealMicroSaasServices)[number];
 }
 ;
 function getAllServices (): Service[] {
@@ -45,11 +37,6 @@ export async function getStaticPaths() {;
     if (s && s.id) slugs && slugs.add(toSlug(s && s.id));
     else if (s && s.name) slugs && slugs.add(toSlug(s && s.name));
   }
-  return {
-    paths: Array.from(slugs).map(slug => ({ params: { slug } }))
-    fallback: false
-  }
-export async function getStaticProps({ params }: { params: { slug: string } }) {
   const services = getAllServices();
   const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
 

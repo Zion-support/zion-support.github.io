@@ -4,24 +4,6 @@
     {
       "type": "unit",
       "status": "failed",
-    },
-    {
-      "type": "smoke",
-      "status": "failed",
-    },
-    {
-      "type": "lint",
-      "status": "failed",
-      "details": "spawnSync /bin/sh ENOBUFS"
-    },
-    {
-      "type": "typescript",
-      "status": "failed",
-      "details": "spawnSync /bin/sh ENOBUFS"
-    },
-    {
-      "type": "build",
-      "status": "failed",
     }
   ],
   "coverage": {},

@@ -1,24 +1,17 @@
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
-      path: ''
-      filename: 'legal/terms-of-use.md'
-      type: 'text'
-      content: `# Terms of Use\n\nBy using Zion products, you agree to these terms. Replace with counsel-approved language.`
-    }
-    {
-      path: ''
-      filename: 'legal/privacy-policy.md'
-      type: 'text'
-      content: `# Privacy Policy\n\nWe respect your privacy. Replace with counsel-approved language.`
-    }
-    {
-      path: ''
-      filename: 'legal/jurisdictional-disclosures.md'
-      type: 'text'
-      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
-    }
+
+
+
       path: '',
+
+      filename: 'legal / terms - of - use.md',
+
+      type: 'text',
+
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
+    },;
 
       filename: 'legal / terms - of - use.md',
 

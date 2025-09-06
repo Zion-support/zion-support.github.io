@@ -230,6 +230,7 @@ class ErrorMonitor {
       const ErrorFixerAutomation = require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
+      console.log('✅ Error fixer completed');
     } catch (error) {
       console.error(' Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({

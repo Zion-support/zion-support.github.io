@@ -1,14 +1,25 @@
-  }
-}
-export const trackPageView = (url: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
 
       page_path: url,;
+
+    });
+  }
+
+  if (typeof window !== 'undefined' && window && window.gtag) {
+    window && window.gtag('config', GA_TRACKING_ID, {
+      page_path: url,
+
+    });
+  }
+}
+
+      page_path: url,;
+
       page_path: url,
     });
   }
 };
 
+export const measurePerformance = () => {
   }
   return null;
 }
@@ -54,13 +65,6 @@ interface WebVitalMetric {
   value: number;
   id: string;
 }
-export const trackWebVitals = (metric: WebVitalMetric) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', metric.name, {
-      value: Math.round(metric.value)
-      event_category: 'Web Vitals'
-      event_label: metric.id
-      non_interaction: true
       non_interaction: true,
     });
   }
@@ -137,13 +141,8 @@ if ( {') {
 // Declare global types;
 declare global {
   interface Window {
-}
-    gtag: (...args: unknown[]) => void, dataLayer: unknown[],
-  }
-}
     gtag: (...args: unknown[]) => void;
     dataLayer: unknown[];
   }
-}
 }
 }

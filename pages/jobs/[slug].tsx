@@ -1,7 +1,3 @@
-import { useRouter  } from 'next/router';
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton',
-import EnhancedLoading from '../../components/ui/EnhancedLoading',
 import {useRouter} from 'next/router';
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
@@ -16,23 +12,6 @@ import useResponsive from '../../hooks/useResponsive';
 
   return (
 
-import { useRouter } from 'next/router',
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton',
-import EnhancedLoading from '../../components/ui/EnhancedLoading',
-import useResponsive from '../../hooks/useResponsive',
-import { useToast } from '../../components/ui/NotificationSystem',
-import { useEffect, useState } from 'react',
-export default function JobDetailsPage() {
-  const router = useRouter(),
-  const { slug } = router.query as { slug?: string },
-  const { isMobile } = useResponsive(),
-  const { notify } = useToast(),
-  const [loading, setLoading] = useState(true),
-  useEffect(() => { const t = setTimeout(() => setLoading(false), 600), return () => clearTimeout(t) }, []),
-  const onApply = () => {
-    notify('Application submitted! We’ll notify you when it’s viewed.success')
-  },
   return (
     <div className="relative">
       {loading ? (
@@ -42,6 +21,8 @@ export default function JobDetailsPage() {
           <EnhancedCard>
             <div className='flex items-start justify-between gap-3'>
               <div>
+              <li>3+ years with Python or TypeScript</li>
+
               <li>Experience with ML/AI production systems</li>
               <li>Familiarity with cloud infra and CI/CD</li>
             </ul>
@@ -58,6 +39,7 @@ export default function JobDetailsPage() {
             <EnhancedButton onClick={onApply} variant="primary" fullWidth>Apply Now</EnhancedButton>
           </div>
         </div>
+
 
 
 }

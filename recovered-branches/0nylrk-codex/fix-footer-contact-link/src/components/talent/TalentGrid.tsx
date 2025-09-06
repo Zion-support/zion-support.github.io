@@ -40,12 +40,24 @@ export function TalentGrid({
   const handleRequestHireInternal = (talent: TalentProfile) => {
     if (handleRequestHire) {
       handleRequestHire(talent)
-    }
-  }
-  const handleViewProfile = (id: string) => {
-    if (viewProfile) {
-      viewProfile(id)
     } else {
+
+;
+  const handleViewProfile = (id: string) =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      view_profile (id);
+
+    } else {
+      onTalentClick (id);
+    }
+
+      // Default implementation
+
+  };
+
       // // // console.log("Request to hire:", talent.id)
 import { TalentCard } from "@/components/talent/TalentCard",;
 import { TalentProfile } from "@/types/talent",;
@@ -87,7 +99,6 @@ export function TalentGrid({;
       onTalentClick(id);
     }
   },
-  
   if (isLoading) {
     return <div className="py-8 text-center">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>
@@ -143,8 +154,6 @@ export function TalentGrid({;
           isAuthenticated={isAuthenticated}
         />;
       ))}
-    </div>
-  )
 }
   }
 ;

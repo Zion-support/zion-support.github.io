@@ -65,37 +65,3 @@ export default function FilterBar({ category, level, isFree, onChange }: Props) 
       <select
         className="border rounded px-3 py-2 bg-white dark:bg-black"
         value={category}
-        value={level}
-        onChange={e => onChange({ category, level: e.target.value, isFree })}
-      >
-        <option value=''>All Levels</option>        <option>Beginner</option>        value={level}
-        onChange={(e) => onChange({ category, level: e.target.value, isFree })}
-      >
-        <option value="">All Levels</option>
-        <option>Beginner</option>
-        <option>Intermediate</option>
-        <option>Advanced</option>
-      </select>
-      <select
-        className='border rounded px-3 py-2 bg-white dark:bg-black'
-        value={isFree}
-        onChange={e => onChange({ category, level, isFree: e.target.value })}
-      >
-        <option value=''>All Pricing</option>
-        <option value='true'>Free</option>
-        <option value='false'>Paid</option>
-      </select>
-    </div>;
-    </div>
-  );        value={isFree}
-        onChange={(e) => onChange({ category, level, isFree: e.target.value })}
-      >
-        <option value="">All Pricing</option>
-        <option value="true">Free</option>
-        <option value="false">Paid</option>
-      </select>
-    </div>
-  );
-}
-}
-

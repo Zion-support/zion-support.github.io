@@ -509,6 +509,4 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     rating: 4.8;
     reviews: 112;
   }
-    popular: true, icon: '🏭',
-
 ];

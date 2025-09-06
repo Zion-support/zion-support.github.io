@@ -13,152 +13,6 @@ import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
 import {toast} from "@/hooks/use-toast";
 import {Check, Flag, Search, Settings, X} from "lucide-react";
 import {supabase} from "@/integrations/supabase/client";
-import { useState, useEffect } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { useNavigate } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
-import { toast } from "@/hooks/use-toast",
-
-  id: string
-  user_id: string
-  name: string
-  status: 'pending' | 'approved' | 'rejected'
-  created_at: string
-  niche: string
-  audience_size: string
-  social_media?: Record<string, string>;
-
-interface PartnerProfile {
-  id: string,
-  user_id: string,
-  name: string,
-  status: 'pending' | 'approved' | 'rejected',
-  created_at: string,
-  niche: string,
-  audience_size: string,
-  social_media?: Record < string, string>;
-  website?: string;
-  bio?: string;
-  payout_method?: string;
-  fraud_flags?: number;
-  commission_rate?: number;
-}
-export default function PartnerManager() {
-  const [partners, setPartners] = useState<PartnerProfile[]>([]),
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("pending");
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [commissionRate, setCommissionRate] = useState(25);
-  const { user, isAuthenticated } = useAuth();
-
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (!isAuthenticated) {
-      navigate("/login");
-      return;
-    }
-    fetchPartners()
-  }, [isAuthenticated, navigate]);
-  const fetchPartners = async () => {
-    try {
-      setIsLoading(true);
-      // In a real application, check admin permissions here
-      const { data, error } = await supabase
-        .from('partner_profiles')
-        .select('*')
-        .order('created_at', { ascending: false })
-      if (error) throw error;
-      // If no data is returned, use mock data
-      if (!data |data.length === 0) {
-        const mockData: PartnerProfile[] = [
-          {
-            id: '1'
-            user_id: 'user1'
-            name: 'AI Bytes'
-            status: 'pending'
-            created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString()
-            niche: 'AI Tutorials'
-            audience_size: '10k-50k'
-            social_media: { twitter: '@aibytes', youtube: 'AI Bytes' }
-            website: 'aibytes.com'
-            bio: 'We create AI tutorials and insights for developers.'
-            payout_method: 'paypal'
-            fraud_flags: 0
-            commission_rate: 25
-          }
-          {
-            id: '2'
-            user_id: 'user2'
-            name: 'ML Academy'
-            status: 'approved'
-            created_at: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000).toISOString()
-            niche: 'Machine Learning Education'
-            audience_size: 'over100k'
-            social_media: { twitter: '@mlacademy', youtube: 'ML Academy' }
-            website: 'mlacademy.edu'
-            bio: 'Premiere online academy for machine learning enthusiasts.'
-            payout_method: 'bank'
-            fraud_flags: 0
-            commission_rate: 30
-          }
-          {
-            id: '3'
-            user_id: 'user3'
-            name: 'Tech Insights'
-            status: 'rejected'
-            created_at: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString()
-            niche: 'Technology News'
-            audience_size: '1k-10k'
-            social_media: { twitter: '@techinsights' }
-            website: 'techinsights.io'
-            bio: 'We share insights about the latest in tech.'
-            payout_method: 'crypto'
-            fraud_flags: 2
-            commission_rate: 20
-          }
-          {
-            id: '4'
-            user_id: 'user4'
-            name: 'CodeMaster'
-            status: 'approved'
-            created_at: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString()
-            niche: 'Coding Tutorials'
-            audience_size: '50k-100k'
-            social_media: { youtube: 'CodeMaster', linkedin: 'codemaster' }
-            website: 'codemaster.dev'
-            bio: 'Learn to code with our expert tutorials.'
-            payout_method: 'paypal'
-            fraud_flags: 0
-            commission_rate: 25
-          }
-          {
-            id: '5'
-            user_id: 'user5'
-            name: 'AI Daily'
-            status: 'pending'
-            created_at: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString()
-            niche: 'AI News'
-            audience_size: '10k-50k'
-            social_media: { twitter: '@aidaily', instagram: '@aidailynews' }
-            website: 'aidaily.news'
-            bio: 'Daily updates on the world of artificial intelligence.'
-            payout_method: 'platform_credit'
-            fraud_flags: 1
-            commission_rate: 20
-          }
-        ];
-        setPartners(mockData);
 interface PartnerProfile {;
   id: string,;
   user_id: string,;
@@ -248,17 +102,6 @@ export default function PartnerManager() {;
     // Filter by status
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
-    }
-    // Filter by search query
-    if (query) {
-      const lowerQuery = query.toLowerCase();
-      filtered = filtered.filter(p =>
-        p.name.toLowerCase().includes(lowerQuery) |
-        p.niche.toLowerCase().includes(lowerQuery) |
-        p.bio?.toLowerCase().includes(lowerQuery) |
-        p.website?.toLowerCase().includes(lowerQuery)
-      )
-    }
     } catch (error) {;
       console && console.error("Error fetching partners:", error);
       toast({;
@@ -295,7 +138,6 @@ export default function PartnerManager() {;
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value)
     filterPartners(partners, activeTab, e.target.value)
-  }
   },
 
   const handleTabChange = (value: string) => {
@@ -399,14 +241,22 @@ export default function PartnerManager() {;
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
-        return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>,
-      case 'approved':
-        return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>,
-      case 'rejected':
-        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>
-      default:
-        return <Badge variant="outline">{status}</Badge>
-    }
+  };
+
+  const getStatusBadge = (status: string) => {;
+    switch (status) {;
+      case 'pending':;
+        return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>;
+      case 'approved':;
+        return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>;
+
+
+  },
+
+
+
+  const getFraudFlagBadge = (flags: number = 0) => {
+    if (flags === 0) return null
       case 'rejected':;
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,;
       default:;
@@ -416,30 +266,6 @@ export default function PartnerManager() {;
 
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
         <Flag className="h-3 w-3" />
-        {flags}
-      </Badge>
-    )
-  }
-  return (
-    <div className="container max-w-7xl py-10">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight text-white">Partner Management</h1>
-          <p className="text-zion-slate-light">Approve and manage affiliate partners</p>
-        </div>
-      </div>
-      <Card className="bg-zion-blue-dark border-zion-blue-light mb-8">
-        <CardHeader className="pb-3">
-          <CardTitle>Overview</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid gap-4 md:grid-cols-3">
-            <Card className="bg-zion-blue border-zion-blue-light">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-zion-slate-light">
-                  Pending Applications
-                </CardTitle>
-                <div className="text-2xl font-bold text-white">
   },;
   const getStatusBadge = (status: string) => {;
     switch (status) {;
@@ -502,21 +328,6 @@ export default function PartnerManager() {;
               </CardHeader>
               <CardContent className="pt-0">
                 <p className="text-xs text-zion-slate-light">
-                  Currently approved and active partners
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-zion-blue border-zion-blue-light">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-zion-slate-light">
-                  Fraud Flags
-                </CardTitle>
-                <div className="text-2xl font-bold text-white">
-                  {partners.reduce((total, p) => total + (p.fraud_flags |0), 0)}
-                </div>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <p className="text-xs text-zion-slate-light">
                   Total potential fraud flags detected
                 </p>
               </CardContent>
@@ -533,7 +344,83 @@ export default function PartnerManager() {;
           <div className="w-full md:w-80">
             <div className="relative">
               <Search className="absolute left-2 top-2.5 h-4 w-4 text-zion-slate-light" />
+                  Partners waiting for review and approval;
+                </p>;
+              </CardContent>;
+            </Card>;
+
+            <Card className="bg - zion - blue border - zion - blue - light">;
+              <CardHeader className="pb - 2">;
+                <CardTitle className="text - sm font - medium text - zion - slate - light">;
+                  Active Partners;
+                </CardTitle>;
+                <div className="text - 2xl font - bold text - white">;
+                  {partners.filter (p => p.status === 'approved').length}
+                </div>;
+              </CardHeader>;
+              <CardContent className="pt - 0">;
+                <p className="text - xs text - zion - slate - light">;
+
+                  Currently approved and active partners;
+                </p>;
+              </CardContent>;
+            </Card>;
+
+            <Card className="bg - zion - blue border - zion - blue - light">;
+              <CardHeader className="pb - 2">;
+                <CardTitle className="text - sm font - medium text - zion - slate - light">;
+                  Fraud Flags;
+                </CardTitle>;
+                <div className="text - 2xl font - bold text - white">;
+                  {partners.reduce ((total, p) => total + (p.fraud_flags || 0), 0)}
+                </div>;
+              </CardHeader>;
+              <CardContent className="pt - 0">;
+                <p className="text - xs text - zion - slate - light">;
+
+                  Total potential fraud flags detected;
+                </p>;
+              </CardContent>;
+            </Card>;
+          </div>;
+        </CardContent>;
+      </Card>;
+
+      <Card className="bg - zion - blue - dark border - zion - blue - light">;
+        <CardHeader className="pb - 3 flex flex - col md:flex - row justify - between md:items - center gap - 4">;
+          <div>;
+            <CardTitle > Partners</CardTitle>;
+            <CardDescription > Manage partnership applications and settings</CardDescription>;
+          </div>;
+          <div className="w - full md:w - 80">;
+            <div className="relative">;
+              <Search className="absolute left - 2 top - 2.5 h - 4 w - 4 text - zion - slate - light" />;
+              <Input;
+                placeholder="Search partners...";
+                className="pl - 8";
+                value={search_query}
+                on_change={handle_search}
+
+              />;
+            </div>;
+          </div>;
+        </CardHeader>;
+        <CardContent>;
+
+          <Tabs value={active_tab} onValueChange={handleTabChange} className="space - y-4">;
+            <TabsList className="grid grid - cols - 4 w - full md:w - auto">;
+
+              <TabsTrigger value="pending">Pending</TabsTrigger>;
+              <TabsTrigger value="approved">Approved</TabsTrigger>;
+              <TabsTrigger value="rejected">Rejected</TabsTrigger>;
+              <TabsTrigger value="all">All</TabsTrigger>;
+            </TabsList>;
+
+
+              <PartnerTable 
                 partners={filteredPartners} 
+
+
                 isLoading={isLoading}
             <TabsContent value="pending" className="space - y-4">;
               <PartnerTable;
@@ -544,6 +431,9 @@ export default function PartnerManager() {;
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
+                isLoading={isLoading}
+              />;
+            </TabsContent>;
             <TabsContent value="approved" className="space - y-4">;
               <PartnerTable;
                 partners={filtered_partners}
@@ -597,10 +487,6 @@ export default function PartnerManager() {;
               )}
               {selectedPartner.status === 'pending' && (
                 <div className="flex justify-end gap-2 mt-4">
-                  >
-                    <X className="h-4 w-4 mr-1" />
-                    Reject
-                  </Button>
                   </AlertTitle>;
                   <AlertDescription>;
                     This application has triggered our fraud detection system. Review carefully before approving.;
@@ -667,10 +553,6 @@ export default function PartnerManager() {;
         </DialogContent>;
       </Dialog>;
     </div>;
-function PartnerTable({
-  partners
-  isLoading
-  onViewDetails
 
 function PartnerTable({ 
   partners, 
@@ -735,21 +617,51 @@ function PartnerTable({
                   </>;
                 )}
                 <Button
-                  variant="outline"
-                
-                <Button 
-
-                  variant="outline" 
                   size="sm"
                   onClick={() => onViewDetails(partner)}
-                >
-                  View
-                </Button>
-              </div>
-            </TableCell>
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
-  )
+                  <>;
+                    <Button;
+                      variant="ghost";
+                      size="sm";
+                      on_click={() => onUpdateStatus (partner.id, 'rejected')}
+                      className="text - red - 500 hover:text - red - 600 hover:bg - red - 900 / 20";
+                    >;
+                      <X className="h - 4 w - 4" />;
+                      <span className="sr - only">Reject</span>;
+                    </Button>;
+                    <Button;
+                      variant="ghost";
+                      size="sm";
+                      on_click={() => onUpdateStatus (partner.id, 'approved')}
+                      className="text - green - 500 hover:text - green - 600 hover:bg - green - 900 / 20";
+                    >;
+                      <Check className="h - 4 w - 4" />;
+                      <span className="sr - only">Approve</span>;
+                    </Button>;
+                  </>)}
+                <Button;
+                  variant="ghost";
+                  size="sm";
+                  on_click={() => onOpenSettings (partner)}
+                  className="text - zion - slate - light hover:text - white";
+                >;
+                  <Settings className="h - 4 w - 4" />;
+                  <span className="sr - only">Settings</span>;
+                </Button>;
+                <Button;
+                  variant="outline";
+                  size="sm";
+                  on_click={() => onViewDetails (partner)}
+                >;
+                  View;
+                </Button>;
+              </div>;
+            </TableCell>;
+
+          </TableRow>))}
+      </TableBody>;
+    </Table>);
 }
+
+;
+

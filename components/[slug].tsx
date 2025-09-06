@@ -286,27 +286,6 @@ export default function DynamicServicePage() {;
           </div>;
         </div>;
       </div>;
-// Static export support: generate root-level pages for service slugs;
-
-// Static export support: generate root-level pages for service slugs
-type Svc = (typeof enhancedRealMicroSaasServices)[number];
-function collectAllServices(): Svc[] {
-  return enhancedRealMicroSaasServices.concat(
-    extraServices as Svc[]
-    additionalEnhancedServices as Svc[]
-    innovativeAIServices as Svc[]
-    quantumSpaceServices as Svc[]
-    enterpriseITServices as Svc[]
-    newRealServices as Svc[]
-    marketReadyServices as Svc[]
-    nextGenerationAIServices as Svc[]
-    emergingTechnologyServices as Svc[]
-    comprehensiveITSolutions as Svc[]
-    marketValidatedServices as Svc[]
-    newRealInnovations as Svc[]
-    realMarketServices as Svc[]
-    realVerifiedServices as unknown as Svc[]
-  );
 
 function normalizeSlug(): any (value: string): string {;
   return value;
@@ -329,7 +308,6 @@ function normalizeSlug(): any (value: string): string {;
 
   };
 }
-
 
 
   const services = collectAllServices();
@@ -508,7 +486,3 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client - side.;
   return { props: {} }
 }
-  return { props: {} };
-};
-
-};

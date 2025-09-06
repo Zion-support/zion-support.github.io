@@ -1,8 +1,3 @@
-export type FilterType =
-  | "all"
-  | "unread"
-  | "onboarding"
-  | "messages"
   | "system";
 interface NotificationFilterProps {
   filter: FilterType;
@@ -22,8 +17,6 @@ export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system'
 interface NotificationFilterProps {;
   filter: FilterType,;
   onFilterChange: (filter: FilterType) => void;
-}
-
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   filter
   onFilterChange

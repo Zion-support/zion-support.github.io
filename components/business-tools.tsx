@@ -1,44 +1,3 @@
-  ExternalLink
-  Check
-  Star
-  Zap
-  Users
-  Globe
-  BarChart3
-  Bot
-  Cloud
-  Lock
-  Database
-  Code
-  Palette
-  Search
-  Mail
-  Calendar
-  CreditCard
-  FileText
-  Video
-  Music
-  Image
-  Globe2
-  Smartphone
-  Monitor
-  Server
-  Cpu
-  HardDrive
-  Brain
-  Target
-  TrendingUp
-  Shield
-  Rocket
-  Briefcase
-  Cog
-  Lightbulb
-  ChartBar
-  Clock
-  CheckCircle
-  AlertCircle
-  MessageSquare;
-} from 'lucide-react';import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
 export default function BusinessToolsPage() {
   const businessTools = [
     {
@@ -92,13 +51,6 @@ export default function BusinessToolsPage() {
           icon: <Calendar className='w-6 h-6' />
           color: 'bg-gradient-to-br from-red-500 to-pink-600'
         }
-      ]
-    },    {          icon: <Calendar className="w-6 h-6" />
-          color: 'bg-gradient-to-br from-red-500 to-pink-600'
-        }
-      ]
-    }
-      category: 'Communication & Collaboration'
       tools: [
         {
           name: 'Slack'
@@ -501,11 +453,6 @@ export default function BusinessToolsPage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Business Tools */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -562,9 +509,6 @@ export default function BusinessToolsPage() {
                             {feature}
                           </li>;
                         ))}
-                      </ul>
-                    </div>
-
                     <Button
 
 
@@ -631,8 +575,6 @@ export default function BusinessToolsPage() {
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8'>
-
-            Ready to Transform Your Business Operations?
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             These business tools can streamline your operations, improve team
@@ -710,4 +652,3 @@ href="/contact"
               className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
               Explore Micro SaaS
             </Button>
-            <Button

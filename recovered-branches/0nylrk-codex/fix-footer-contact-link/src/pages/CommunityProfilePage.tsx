@@ -1,16 +1,4 @@
 
-import { useState, useEffect } from "react",
-import { useParams, Link } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { formatDistanceToNow } from "date-fns",
-import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community",
-import PostCard from "@/components/community/PostCard",
 // Mock user data
 
 const mockUser: CommunityUser = {
@@ -58,10 +46,6 @@ const mockUser: CommunityUser = {
     downvotes: 0
     replyCount: 6
   }
-  const { userId } = useParams();
-  const [user, setUser] = useState<CommunityUser | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [posts, setPosts] = useState<ForumPost[]>([]);
 import { useState, useEffect } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -370,4 +354,5 @@ export default function CommunityProfilePage() {;
         </div>;
       </div>;
 }
-;
+    </AppLayout>);
+}

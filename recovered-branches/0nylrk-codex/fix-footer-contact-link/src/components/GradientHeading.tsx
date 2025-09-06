@@ -1,10 +1,7 @@
 
-import { cn } from "@/lib/utils";
 import React from "react";
 interface GradientHeadingProps {
 
-  children: React.ReactNode
-  className?: string;
 interface GradientHeadingProps {
   children: React.ReactNode,
   className?: string,
@@ -15,9 +12,6 @@ interface GradientHeadingProps {
       className={cn(
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";
 
-        className
-        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
-        className
       )}
     >
       {children}

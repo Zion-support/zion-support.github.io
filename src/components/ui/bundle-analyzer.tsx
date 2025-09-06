@@ -279,7 +279,6 @@ export function BundleAnalyzer() {;
                 </div>;
               </div>;
 
-}
         </CardContent>;
       </Card>;
     </div>;

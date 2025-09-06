@@ -1,27 +1,14 @@
 
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
 
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { FileText, ShieldCheck } from "lucide-react",
 
   onStandardClick: () => void;
   onSmartClick: () => void
 }
-export function ContractTypeCards({
-  onStandardClick
-  onSmartClick
-}: ContractTypeCardsProps) {
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>

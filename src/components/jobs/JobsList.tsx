@@ -8,8 +8,6 @@ import { Badge } from "@/components/ui/badge",
 import { Loader2, Edit, X, Eye } from 'lucide-react'
 import { format } from "date-fns",
 
-  filter?: JobStatus
-  onSelectJob?: (jobId: string, jobTitle: string) => void}
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const { user } = useAuth()
   const [jobs, setJobs] = useState<Job[]>([])
@@ -96,11 +94,6 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
         setIsLoading(false);
       }
     };
-  return (
-    <div className="grid gap-6 md:grid-cols-2">
-      {jobs.map((job,) => (
-        <Card
-          key = {job.id,}
   },
 
   },
@@ -110,7 +103,6 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
       {jobs.map((job) => (
         <Card 
           key={job.id} 
-          className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}

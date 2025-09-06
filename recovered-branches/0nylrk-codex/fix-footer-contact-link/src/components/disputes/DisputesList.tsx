@@ -23,15 +23,6 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
 import { ShieldAlert } from "lucide-react",
 import { Link } from "react-router-dom",
-type DisputesListProps = {
-  disputes: Dispute[]
-  isLoading: boolean
-}
-export function DisputesList({ disputes, isLoading }: DisputesListProps) {
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
-  const filteredDisputes = statusFilter === "all"
-    ? disputes
-    : disputes.filter(dispute => dispute.status === statusFilter);
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default";
@@ -79,40 +70,6 @@ function DisputesList() {
       default:;
         return "default";
     }
-    return (;
-      <div className="text-center py-12 border rounded-md bg-muted/20">;
-        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
-        <h3 className="text-xl font-medium">No disputes found</h3>;
-        <p className="text-muted-foreground mt-2">;
-          No active disputes match the selected filter;
-        </p>;
-      </div>;
-    ),;
-  }
-;
-        </div>;
-        <div className="border rounded-md">;
-          <Table>;
-            <TableHeader>;
-              <TableRow>;
-                <TableHead>Case ID</TableHead>;
-                <TableHead>Project</TableHead>;
-                <TableHead>Parties</TableHead>;
-                <TableHead>Created</TableHead>;
-                <TableHead>Status</TableHead>;
-                <TableHead className="text-right">Actions</TableHead>;
-              </TableRow>;
-            </TableHeader>;
-            <TableBody>;
-              {[...Array(5)].map((_, i) => (;
-                <TableRow key={i}>;
-                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>;
-                  <TableCell><Skeleton className="h-4 w-40" /></TableCell>;
-                  <TableCell><Skeleton className="h-4 w-32" /></TableCell>;
-                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>;
-                  <TableCell><Skeleton className="h-6 w-20" /></TableCell>;
-                  <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
-                </TableRow>;
               ))}
             </TableBody>;
           </Table>;

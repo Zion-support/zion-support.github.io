@@ -691,8 +691,14 @@ if (require.main === module) {}
 <<<<<<< HEAD
 module.exports = AdvancedPerformanceMonitor;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = AdvancedPerformanceMonitor;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+module.exports = AdvancedPerformanceMonitor;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

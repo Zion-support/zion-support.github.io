@@ -1,6 +1,5 @@
 
 
-interface ProviderMeta {
   id: string;
   name: string;
   category: 'crm' | 'ats';
@@ -90,50 +89,6 @@ export default function AdminIntegrationsPage() {
       await new Promise(r => setTimeout(r, 500));
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh();
-    } finally { setLoading(false);   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  async function disconnect(providerId: string) {
-    setLoading(true);
-    try {
-      await fetch('/api/integrations/disconnect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) });
-      await refresh();
-    } finally { setLoading(false);   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  async function resync(providerId: string) {
-    setLoading(true);
-    try {
-      await fetch('/api/integrations/resync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) });
-      await refresh();
-    } finally { setLoading(false);   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const grouped = useMemo(() => ({
-    crm: providers.filter(p => p.category === 'crm'),
-    ats: providers.filter(p => p.category === 'ats')
-  }), [providers]);
 
 
 
@@ -157,35 +112,14 @@ export default function AdminIntegrationsPage() {
     const conn = connections[p && p.id] || { status: 'disconnected' };
     const isConnected = conn && conn.status === 'connected';
     return (
-      <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
-        <div className="w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800">
-          <div className="font-semibold mb-2">Sync Rules — {provider.name}</div>
-          <div className="space-y-3 text-sm">
-            {isCrm ? (
-              <>
-                <label className='flex items-center gap-2'>
-                  <input
-                    type='checkbox'
-                    checked={!!syncRules.autoCreateContacts}
-                    onChange={e =>
-                      setSyncRules({
-                        ...syncRules
-                        autoCreateContacts: e.target.checked
-                      })
-                    }
-                  />{' '}
-                  Auto-create contacts
-                </label>
-                <div>
-                  <div className='mb-1'>Push notes:</div>
-                  <div className='flex gap-3'>
-                    <label className='flex items-center gap-2'>
-                      <input
-                        type='radio'
-                        name='pushNotes'
-                        checked={syncRules.pushNotesMode === 'auto'}
-                        onChange={() =>
-                          setSyncRules({ ...syncRules, pushNotesMode: 'auto' })
+
+  function RulesModal() {;
+    if (!selected) return null;
+    const provider = providers && providers.find(p => p && p.id === selected)!;
+    const isCrm = provider && provider.category === 'crm';
+    return (
+
+
                         }
                       />{' '}
                       Auto;
@@ -217,6 +151,7 @@ export default function AdminIntegrationsPage() {
             </li>          </ul>
         </section>
 
+        </section>
         <section>
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
           <ManualOverrideForm />
@@ -224,12 +159,22 @@ export default function AdminIntegrationsPage() {
       </main>
       <RulesModal />
     </>
+
+        <section>;
+          <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>          <ManualOverrideForm />;
+        </section>;
+      </main>;
+      <RulesModal />;
+    </>;
+
+
   );
 function ManualOverrideForm() {;
   const [jobId, setJobId] = useState('');
   const [disableCrmSync, setDisableCrmSync] = useState(false);
   const [disableAtsSync, setDisableAtsSync] = useState(false);
   const [message, setMessage] = useState('');
+  }
   )
   } catch (error) {
     console.error("Error:", error);

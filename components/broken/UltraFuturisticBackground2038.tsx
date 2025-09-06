@@ -256,20 +256,6 @@ if ( {) {
         if (particle.type === 'particle') {
           ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
           ctx.beginPath();
-        // Boundary wrapping with quantum tunneling effect
-        if (
-          particle.x < 0 |
-          particle.x > canvas.width |
-          particle.y < 0 |
-          particle.y > canvas.height
-        ) {
-          if (Math.random() > 0.8) {
-            // Quantum tunneling
-            particle.x = Math.random() * canvas.width;
-            particle.y = Math.random() * canvas.height;
-          } else {
-            particle.x = (particle.x + canvas.width) % canvas.width;
-            particle.y = (particle.y + canvas.height) % canvas.height;          }          ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fill()
         }
@@ -576,14 +562,6 @@ if ( {) {
                 key={i}
                 className='absolute w - px h - 32 bg - gradient - to - b from - transparent via - purple - 500 to - transparent opacity - 20';
                 style={{
-                  top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
-                animate={{
-                  height: [32, 64, 32];
-                  opacity: [0.2, 0.6, 0.2]}}
-                transition={{
-
-                  top: `${(i * 3) % 100}%`,
-
 
 
                   left: `${(i * 5) % 100}%`,
@@ -647,8 +625,6 @@ if ( {) {
                 }}
 
             ))}
-          </div>
-        )}
 
         {/* Holographic grid */}
         {theme === 'holographic' && (
@@ -667,12 +643,6 @@ if ( {) {
                   top: `${(i * 7) % 100}%`,            {[...Array (15)].map ((_, i) => (
               <motion.div;
                 key={i}
-                className='absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30'
-                style={{
-                  top: `${(i * 7) % 100}%`,            {[...Array(15)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
                 style={{
                   top: `${(i * 7) % 100}%`}}
                 animate={{
@@ -701,10 +671,6 @@ if ( {) {
                   duration: 4 + i * 0 && 0.3,
                   repeat: Infinity,
                   ease: 'easeInOut',                }}
-              />
-            ))}
-          </div>
-        )}
 
         {/* Consciousness waves */}
         {theme === 'consciousness' && (

@@ -206,9 +206,6 @@ interface MilestoneCardProps {
               projectId={projectId}
               milestoneId={id}
               variant='ghost'
-              size='sm'            <RaiseDisputeButton
-              projectId = {projectId,}
-              milestoneId = {id,}
               variant="ghost"
               size="sm"
             />
@@ -229,14 +226,6 @@ interface MilestoneCardProps {
           )}
           
           {isUnderDispute && (
-              Actions frozen due to dispute
-            </Button>
-          )}
-        </div>
-      </CardFooter>
-    </Card>
-  )
-}
   );
 }
       <CardHeader className='pb - 2'>;

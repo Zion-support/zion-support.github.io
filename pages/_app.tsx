@@ -12,10 +12,9 @@ import '../styles/globals.css';
 import EnhancedNavigation from '../components/layout/EnhancedNavigation';
 import EnhancedFooter from '../components/layout/EnhancedFooter';
 
-function Header(): any {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  return (
+}
+
 import '../src/styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {

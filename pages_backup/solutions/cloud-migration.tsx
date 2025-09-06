@@ -21,6 +21,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -44,8 +46,16 @@ import { Cloud,
 } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
+const phases = [;
+  {}
+
+    title: 'Assessment & Planning,',;
+    description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',;
+    icon: BarChart3,;
+    steps: [,;
+      'Infrastructure audit,',;
+      'Workload analysis',',;
+      'Migration strategy',',;
 
       'Risk assessment'';
     ];

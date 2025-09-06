@@ -46,32 +46,15 @@ const formSchema = z.object({
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const { toast } = useToast();
-export function ContractForm({
-  talent,
-  clientName,
-  initialValues,
-  onFormValuesChange,
-  onContractGenerated,
-  deployOptions,
 
 
 
   onDeployOptionsChange
 }: ContractFormProps) {
-  const form = useForm<ContractFormValues>({
-    resolver: zodResolver(formSchema)
-    defaultValues: initialValues |{
-      projectName: ""
-      scopeSummary: ""
-      startDate: new Date()
-      paymentTerms: talent.hourly_rate ? "hourly" : "fixed"
-      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : ""
-      additionalClauses: ["nda", "ip"]}});
   // Update form when initialValues change
   useEffect(() => {
     if (initialValues) {
       Object.keys(initialValues).forEach((key) => {
-  
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones)
     // If payment terms isn't already set to milestone, update it
@@ -102,6 +85,19 @@ export function ContractForm({
         title: "Contract Generation Failed"
         description: error instanceof Error ? error.message : "Something went wrong. Please try again."
         variant: "destructive"})
+    } finally {
+
+      setIsGenerating(false)
+
+  }, [form, onFormValuesChange]),;
+  const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {;
+    setGeneratedMilestones(milestones),;
+    // If payment terms isn't already set to milestone, update it;
+    if (form.getValues("paymentTerms") !== "milestone") {;
+      form.setValue("paymentTerms", "milestone");
+    }
+
+;
   return (
     <>;
       <DialogHeader>;
@@ -159,18 +155,6 @@ export function ContractForm({
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
-          />
-          <AdditionalClausesFields
-            form={form}
-          />
-          <Button
-            type="submit"
-          />
-          <AdditionalClausesFields 
-            form={form}
-          />
-          <Button 
-            type="submit" 
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;

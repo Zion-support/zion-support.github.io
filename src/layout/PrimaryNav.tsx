@@ -63,9 +63,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
           
-              <EnhancedSearchInput
-                value={query}
-                onChange={setQuery}
                 onSelectSuggestion={sugg => {
                   logDebug('PrimaryNav search suggestion selected:', {
                     suggestion: sugg
@@ -168,7 +165,6 @@ if ( {) {
             {!isLoggedIn && (
               <Link
 
-              >
                 href="/auth/login"
                 className="text-sm hover:text-primary"
                 data-testid="login-link"
@@ -257,17 +253,6 @@ setLoginOpen (true)
               exit = {
   { opacity: 0
   height: 0
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true"
-          />
-          <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu
-              unreadCount={unreadCount}
-              onClose={() => setMobileMenuOpen(false)}
-              openLoginModal={(returnToPath) => setLoginOpen(true)}
-            />;
-          </div>;
         </div>;
       </header>;
       {mobileMenuOpen && (

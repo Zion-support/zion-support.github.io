@@ -140,9 +140,6 @@ if ( {) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
         <Button
-          variant='outline'
-          size='sm'
-          onClick={() => setIsVisible(true)}
           Quick Actions
       </div>
     )

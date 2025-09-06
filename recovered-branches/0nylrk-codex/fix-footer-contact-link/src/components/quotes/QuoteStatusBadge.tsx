@@ -12,6 +12,10 @@
   responded: { label: "Responded", className: "bg-purple-500 hover:bg-purple-600" }
   closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" }
   archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }}
+interface QuoteStatusBadgeProps {
+
+  status: QuoteStatus
+
 
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
   const config = statusConfig[status];
@@ -36,3 +40,6 @@ interface QuoteStatusBadgeProps {;
 }
 
 };
+    </Badge>);
+}
+;

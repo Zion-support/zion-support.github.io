@@ -9,18 +9,17 @@ export interface ReferralCode {;
   id: string;
   user_id: string;
   code: string;
-  created_at: string
-  updated_at: string
-}
-  id: string;
-  user_id: string;
-  code: string;
-  created_at: string
-  updated_at: string
+
+  created_at: string,
+  updated_at: string;
+
 }
 export interface Referral {
+}
+
 
 export interface Referral {;
+
   id: string;
   referrer_id: string;
   referred_id: string | null;
@@ -32,12 +31,6 @@ export interface Referral {;
   referrer_user_type: string | null;
   created_at: string;
   completed_at: string | null;
-  reward_issued: boolean
-  reward_issued_at: string | null
-}
-export interface ReferralReward {
-
-export interface ReferralReward {;
   id: string;
   user_id: string;
   referral_id: string;

@@ -4,9 +4,6 @@ export interface Achievement {
   title: string
   description: string
   achieved: boolean
-
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-
 export interface Achievement {
   id: string,
   title: string,
@@ -14,8 +11,6 @@ export interface Achievement {
   achieved: boolean
 }
 
-interface AchievementBadgesProps {
-  achievements: Achievement[]
 import { BadgeCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 export interface Achievement {;

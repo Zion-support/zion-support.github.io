@@ -74,3 +74,8 @@ if ( {) {
   metrics.fcp > 2000 ? 'text - red - 400': 'text - green - 400';
 }`;
 }> {
+export default EnhancedPerformanceMonitor;
+
+
+;
+

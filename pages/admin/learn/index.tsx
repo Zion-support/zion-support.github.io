@@ -62,9 +62,11 @@ export default function AdminLearn(req, res) {
       </div>
       <button onClick={saveCourse} className="px-4 py-2 bg-blue-600 text-white rounded">Save Course</button>
 
+
     </div>
   );
 };
+
       {message && <div className="text-sm">{message}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

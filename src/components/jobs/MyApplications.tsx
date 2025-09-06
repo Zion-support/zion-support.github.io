@@ -35,14 +35,10 @@ import {ApplicationStatus} from "@/types/jobs";
   }
   return (
     <div className="grid gap-4 md:grid-cols-2">
-      {applications.map((application,) => (
-      {applications.map((application) => (
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
               <CardTitle className="text-lg">
-                {application.job?.title |"Unknown Job"}
-                {application.job?.title || "Unknown Job"}
               </CardTitle>
               {getStatusBadge(application.status)}
             </div>
@@ -96,13 +92,6 @@ export function MyApplications() {;
       </Card>;
     );
   }
-                  {application.cover_letter}
-                </p>
-              )}
-              <div className="flex justify-between items-center">
-                <Button
-                  variant="outline"
-                  size="sm"
                   className="text-xs"
                   asChild
                 >

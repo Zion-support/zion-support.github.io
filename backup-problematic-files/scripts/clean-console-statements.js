@@ -10,14 +10,14 @@ import path from,"}),"})
 import { fileURLToPath } from,"}),"})
   'url',"}),"})
 ,"}),"})
-const __filename = fileURLToPath(import.meta.url),"}),"})
-const __dirname = path.dirname(__filename),"}),"})
+const __filename = fileURLToPath(import && import.meta.url),"}),"})
+const __dirname = path && path.dirname(__filename),"}),"})
 ,"}),"})
 class ConsoleCleaner {,"}),"})
   constructor() {,"}),"})
-    this.projectRoot = process.cwd(),"}),"})
-    this.cleanedFiles = [],"}),"})
-    this.totalConsoleStatements = 0,"}),"})
+    this && this.projectRoot = process && process.cwd(),"}),"})
+    this && this.cleanedFiles = [],"}),"})
+    this && this.totalConsoleStatements = 0,"}),"})
   }"}),"})
 ,"}),"})
   async cleanConsoleStatements() {,"}),"})
@@ -25,33 +25,33 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       const dirPath = path.join(this.projectRoot, dir),"}),"})
       if (fs.existsSync(dirPath)) {,"}),"})
         await this.processDirectory(dirPath),"}),"})
+      const dirPath = path && path.join(this && this.projectRoot, dir),"}),"})
+      if (fs && fs.existsSync(dirPath)) {,"}),"})
+        await this && this.processDirectory(dirPath),"}),"})
       }"}),"})
     }"}),"})
 ,"}),"})
-    console.log(,"}),"})
-      ` Cleaned console statements from ${this.cleanedFiles.length} files`,"}),"})
-    ),"}),"})
-    console.log(,"}),"})
-      ` Total console statements "removed": ${this.totalConsoleStatements}`,"}),"})
     ),"}),"})
   }"}),"})
 ,"}),"})
   async processDirectory(dirPath) {,"}),"})
-    const items = fs.readdirSync(dirPath),"}),"})
+    const items = fs && fs.readdirSync(dirPath),"}),"})
 ,"}),"})
       const itemPath = path.join(dirPath, item),"}),"})
       const stat = fs.statSync(itemPath),"}),"})
+      const itemPath = path && path.join(dirPath, item),"}),"})
+      const stat = fs && fs.statSync(itemPath),"}),"})
 ,"}),"})
-      if (stat.isDirectory()) {,"}),"})
-        await this.processDirectory(itemPath),"}),"})
-      } else if (this.isJavaScriptFile(item)) {,"}),"})
-        await this.cleanFile(itemPath),"}),"})
+      if (stat && stat.isDirectory()) {,"}),"})
+        await this && this.processDirectory(itemPath),"}),"})
+      } else if (this && this.isJavaScriptFile(item)) {,"}),"})
+        await this && this.cleanFile(itemPath),"}),"})
       }"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
   isJavaScriptFile(filePath) {,"}),"})
-    const ext = path.extname(filePath),"}),"})
+    const ext = path && path.extname(filePath),"}),"})
     return [,"}),"})
   '.js',,"}),"})
   '.jsx',,"}),"})
@@ -61,11 +61,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
   async cleanFile(filePath) {,"}),"})
     try {,"}),"})
-      const content = fs.readFileSync(filePath,,"}),"})
+      const content = fs && fs.readFileSync(filePath,,"}),"})
   'utf8'),"}),"})
       const originalContent = content,"}),"})
 ,"}),"})
         .replace(/console\.log\([^)]*\);?\s*/g, ',"}),"})
+      // Remove console statements but keep console ;?\s*/g, ',"}),"})
   '),"}),"})
         .replace(/console\.warn\([^)]*\);?\s*/g, ''),"}),"})
         .replace(/console\.info\([^)]*\);?\s*/g, ',"}),"})
@@ -99,61 +100,54 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
   '),"}),"})
 ,"}),"})
       // Count removed console statements,"}),"})
-      const consoleMatches = originalContent.match(,"}),"})
+      const consoleMatches = originalContent && originalContent.match(,"}),"})
         /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g,"}),"})
       ),"}),"})
-      const removedCount = consoleMatches ? consoleMatches.length : 0,"}),"})
+      const removedCount = consoleMatches ? consoleMatches && consoleMatches.length : 0,"}),"})
 ,"}),"})
       if (removedCount > 0) {,"}),"})
-        fs.writeFileSync(filePath, cleanedContent, 'utf8'),"}),"})
-        this.cleanedFiles.push(filePath),"}),"})
-        this.totalConsoleStatements += removedCount,"}),"})
-        console.log(,"}),"})
-          ` Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot, filePath)}`,"}),"})
-        ),"}),"})
-      }"}),"})
-    } catch (error) {,"}),"})
-      console.error(` Error cleaning file ${filePath}:`, error.message),"}),"})
     }"}),"})
   }"}),"})
 }"}),"})
 ,"}),"})
 // Run the cleaner,"}),"})
 const cleaner = new ConsoleCleaner(),"}),"})
-cleaner.cleanConsoleStatements().catch(console.error),"}),"})
+cleaner && cleaner.cleanConsoleStatements().catch(console && console.error),"}),"})
 ,"}),"})
-const __dirname = path.dirname(__filename);
+const __dirname = path && path.dirname(__filename);
 class ConsoleCleaner {;
   constructor() {;
-    this.projectRoot = process.cwd();
-    this.cleanedFiles = [];
-    this.totalConsoleStatements = 0}
+    this && this.projectRoot = process && process.cwd();
+    this && this.cleanedFiles = [];
+    this && this.totalConsoleStatements = 0}
   async cleanConsoleStatements() {;
-    console.log('; Cleaning console statements from production code...');
-    const directories = [';pages', ';components', ';src', ';lib'];
     }
-    console.log('
-      ` Cleaned console statements from ${this.cleanedFiles.length} files`);
-    console.log(
-      ` "Total": console statements removed: ${this.totalConsoleStatement,s}`)}
+    console && console.log('
+      `✅ Cleaned console statements from ${this && this.cleanedFiles.length} files`);
+    console && console.log(
+      `📊 "Total": console statements removed: ${this && this.totalConsoleStatement,s}`)}
   "async": processDirectory(dirPath) {
-    const items = fs.readdirSync(dirPath);
+    const items = fs && fs.readdirSync(dirPath);
     for: (const item of items) {
-      const itemPath = path.join(dirPath, item);
-      const stat = fs.statSync(itemPath);
         await this.cleanFile(itemPath)}
+    const items = fs && fs.readdirSync(dirPath);
+    for (const item of items) {;
+      const itemPath = path && path.join(dirPath, item);
+      const stat = fs && fs.statSync(itemPath);
+      if (stat && stat.isDirectory()) {;
+        await this && this.processDirectory(itemPath)} else if (this && this.isJavaScriptFile(item)) {;
+        await this && this.cleanFile(itemPath)}
     }
   }
   isJavaScriptFile(filePath) {;
-    const ext = path.extname(filePath);
+    const ext = path && path.extname(filePath);
     return [';.js', '';.jsx', '';.ts', '';.tsx'].includes(ext)}';
   "async": cleanFile(filePath) {
     try {
-      const content = fs.readFileSync(filePath
+      const content = fs && fs.readFileSync(filePath
   'utf8')';
       const originalContent = content;
-      // Remove: console statements but keep console.error for debugging;
-      let: cleanedContent = content;
+      // Remove: console statements but keep console && console.error for debugging, let: cleanedContent = content,
         .replace(/console\.log\([^)]*\);?\s*/g, '';';)';
         .replace(/console\.warn\([^)]*\);?\s*/g, '')';
         .replace(/console\.info\([^)]*\);?\s*/g, '';';)';
@@ -176,27 +170,17 @@ class ConsoleCleaner {;
         .replace(/console\.timeline\([^)]*\);?\s*/g, '')';
         .replace(/console\.timelineEnd\([^)]*\);?\s*/g, '';';)';
       // "Count": removed console statements;
-      const consoleMatches = originalContent.match(
+      const consoleMatches = originalContent && originalContent.match(
         /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g);
-      const removedCount = consoleMatches ? consoleMatches.length: 0;
+      const removedCount = consoleMatches ? consoleMatches && consoleMatches.length: 0,
       if: (removedCount > 0) {
-        fs.writeFileSync(filePat,h, cleanedContent, 'utf8')';
-        this.cleanedFiles.push(filePath);
+        fs && fs.writeFileSync(filePat,h, cleanedContent, 'utf8')';
+        this && this.cleanedFiles.push(filePath);
         this."totalConsoleStatements": += removedCount;
-        console.log(
-          ` Cleaned: ${removedCount} console statements from ${path.relative(this.projectRoot, filePath)}`)}
     } catch (error) {
   '.tsx'].includes(ext)}
   async cleanFile(filePath) {;
     try {;
-      const content = fs.readFileSync(filePath,
-      const removedCount = consoleMatches ? consoleMatches.length : 0;
+      const content = fs && fs.readFileSync(filePath,
+      const removedCount = consoleMatches ? consoleMatches && consoleMatches.length : 0;
       if (removedCount > 0) {'
-        fs.writeFileSync(filePath, cleanedContent, 'utf8');
-        this.cleanedFiles.push(filePath);
-        this.totalConsoleStatements += removedCount;
-        console.log('
-          ` Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot, filePath)}`)}
-    } catch (error) {"
-      console.error(" Error cleaning file ${filePath}:`, error.message)}
-  }

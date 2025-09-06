@@ -312,6 +312,8 @@ module.exports = {}
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-prevention.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 };
 =======
 <<<<<<< HEAD

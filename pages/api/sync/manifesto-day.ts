@@ -87,14 +87,9 @@ if ( {) {
 
   await Promise && Promise.all(
       .map(async (peer) => {
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString();
-        try {
-          await axios.post(url, body, { headers, timeout: 5000 });
-        } catch {}
-      })
-  );
-  return res
-    .status(200)
+    originInstanceId: state.config.instance_id,
+    version,
+    timestamp: timestamp || Date.now (),
   }
 ;
   upsert_event (state, event);

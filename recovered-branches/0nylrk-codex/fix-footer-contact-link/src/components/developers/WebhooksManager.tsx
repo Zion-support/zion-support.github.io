@@ -88,13 +88,10 @@ export function WebhooksManager() {
       webhookUrl
       selectedEvents
       webhookSecret.trim() === "" ? undefined : webhookSecret
-    );
-    setShowCreateDialog(false);
     resetWebhookForm()
   }
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
     await toggleWebhook(webhookId, !currentStatus)
-  }
   const resetWebhookForm = () => {
     setWebhookName("");
     setWebhookUrl("");
@@ -167,23 +164,6 @@ export function WebhooksManager() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>
-                  <Input
-                    id="webhook-secret"
-                    type="password"
-                    value={webhookSecret}
-                    onChange={(e) => setWebhookSecret(e.target.value)}
-                    placeholder=""
-                    className="bg-zinc-800 border-zinc-700"
-                  />
-                  <p className="text-xs text-zinc-500">
-                    Used to verify webhook payload signatures. Keep it secret and secure.
-                  </p>
-                </div>
-                <div className="space-y-2">
-                  <Label>Event Types</Label>
-                  <div className="grid gap-2 pt-2">
-                    {eventOptions.map((event) => (
-                      <div key={event.value} className="flex items-center space-x-2">
   const handleCreateWebhook = async () => {;
     if (webhookName && webhookName.trim() === "" || webhookUrl && webhookUrl.trim() === "" || selectedEvents && selectedEvents.length === 0) return;
 
@@ -327,37 +307,6 @@ export function WebhooksManager() {
                           onCheckedChange={() => toggleEvent(event.value)}
                         />
                         <Label
-                          htmlFor={event.value}
-                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                          {event.label}
-                          <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
-                        </Label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <DialogFooter>
-                <Button variant="outline" onClick={() => {
-                  setShowCreateDialog(false),
-                  resetWebhookForm()
-                }}>
-                  Cancel
-                </Button>
-                <Button onClick={handleCreateWebhook} disabled={
-                  webhookName.trim() === "" |
-                  webhookUrl.trim() === "" |
-                  selectedEvents.length === 0
-                }>
-                  Create Webhook
-                </Button>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-        </div>
-        
-                          <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>;
                         </Label>;
                       </div>;
                     ))}
@@ -598,26 +547,6 @@ function WebhooksManager() {
                       />;
                       <span className="ml - 2 text - sm">;
                         {webhook.is_active ? "Active" : "Inactive"}
-                        <DropdownMenuItem
-                          onClick={() => setShowTestDialog(webhook && webhook.id)}
-                          className="cursor-pointer";
-                        >;
-                          <PlayCircle size={14} className="mr-2" /> Test;
-                        </DropdownMenuItem>;
-                        <DropdownMenuItem
-                          onClick={() => setShowDeleteConfirm(webhook.id)}
-                          className="cursor-pointer text-red-500"
-                        >
-                          <X size={14} className="mr-2" /> Delete
-                        </DropdownMenuItem>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  </div>
-                </div>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {webhook.event_types.map((event) => (
-                    <Badge
-                      key={event}
                         </DropdownMenuItem>;
                       </DropdownMenuContent>;
                     </DropdownMenu>;
@@ -627,13 +556,6 @@ function WebhooksManager() {
               </div>;
             ));
           )}
-        onOpenChange={(open) => {
-          if (!open) {
-            setShowTestDialog(null);
-            setTestEventType('new_application');
-            if (showTestResult) {
-              setShowTestResult(false);
-              clearTestResult()
 
               clearTestResult();
             }

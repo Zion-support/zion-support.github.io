@@ -44,8 +44,6 @@
             </TableRow>
           ) : (
             quotes.map(quote => (
-              <TableRow
-                key = {quote.id,}
                 className="border-zion-blue-light hover:bg-zion-blue"
               >
                 <TableCell className="text-white">

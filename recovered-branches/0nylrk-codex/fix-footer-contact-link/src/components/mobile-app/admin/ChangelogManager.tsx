@@ -1,48 +1,8 @@
 
-import React, { useState } from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
 
-  const [entries, setEntries] = useState<ChangelogEntry[]>([
-    {
-      id: "1"
-      version: "1.0.0"
-      date: "2025-05-15"
-      changes: "Initial release of the Zion AI Marketplace app."
-    }
-  ]);
-  const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry, "id">>({
-    version: ""
-    date: new Date().toISOString().split("T")[0]
-    changes: ""
-  });
-  const handleAddEntry = () => {
-    if (!newEntry.version |!newEntry.changes) return;
-    const entry: ChangelogEntry = {
-      ...newEntry
-      id: Math.random().toString(36).substring(2, 9)
-    }
-    setEntries([entry, ...entries]);
-    setNewEntry({
-      version: ""
-      date: new Date().toISOString().split("T")[0]
-      changes: ""
-    });
-  }
-  const handleRemoveEntry = (id: string) => {
-    setEntries(entries.filter((entry) => entry.id !== id));
-  }
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setNewEntry((prev) => ({ ...prev, [name]: value }));
-  }
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -132,13 +92,17 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               />;
             </div>;
               onClick={handleAddEntry}
-              disabled={!newEntry.version || !newEntry.changes}
-            >
-              <Plus className="mr-2 h-4 w-4" />
-              Add
-            </Button>
-          </div>
+
+              disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
+              <Plus className="mr-2 h-4 w-4" />;
+              Add;
+            </Button>;
+          </div>;
+
+
+
           
+
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
@@ -173,15 +137,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 <p className="text-sm whitespace-pre-wrap">{entry && entry.changes}</p>;
               </div>;
             ))}
-              <p className="text-center text-gray-400 py-4">
-                No changelog entries yet
-              </p>
-            )}
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-              <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
             )}
           </div>;
         </div>;

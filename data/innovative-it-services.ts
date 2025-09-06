@@ -392,16 +392,6 @@
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
   contactInfo: {
     mobile: string, email: string,
     address: string,
@@ -1067,6 +1057,5 @@ export const innovativeITServices: InnovativeITService[] = [;
     customers: 2500,;
     rating: 4.7,;
     reviews: 1250;
-
   }
 ];

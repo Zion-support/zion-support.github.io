@@ -20,15 +20,6 @@ interface EmptyStateProps {
     href?: string,
     onClick?: () => void
   },
-  className?: string
-}
-
-export function EmptyState({
-  icon,
-  title,
-  description,
-  action,
-  secondaryAction,
   className}: EmptyStateProps) {
   return (
     <div
@@ -36,59 +27,6 @@ export function EmptyState({
       className={cn(
         "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 
-        {icon}
-import React from "react",;
-import { cn } from "@/lib/utils",;
-import { Button } from "@/components/ui/button",;
-import { Link } from "react-router-dom",;
-interface EmptyStateProps {;
-  icon: React.ReactNode,;
-  title: string,;
-  description: string,;
-  action?: {;
-    text: string,;
-    href?: string,;
-    onClick?: () => void;
-  },;
-  secondaryAction?: {;
-    text: string,;
-    href?: string,;
-    onClick?: () => void;
-  },;
-  className?: string;
-;
-interface EmptyStateProps {;
-  icon:React.ReactNode,;
-  title:string,;
-  description:string,;
-  action?:{;
-    text:string,;
-    href?:string,;
-    onClick?:() => void;
-  },;
-  secondaryAction?:{;
-    text:string,;
-    href?:string,;
-    onClick?:() => void;
-  },;
-  className?:string,;
-}
-;
-export function EmptyState({;
-  icon,;
-  title,;
-  description,;
-  action,;
-  secondaryAction;
-  className}: EmptyStateProps) {;
-  return (;
-    <div;
-      className={cn(;
-        "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50";
-        className;
-      )}
-    >
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
         {icon}
 
       </div>;
@@ -102,9 +40,6 @@ export function EmptyState({;
               <Link to={action && action.href}>{action && action.text}</Link>;
             </Button>;
           ) : (;
-        )}
-
-
 
               onClick={action.onClick}
             >

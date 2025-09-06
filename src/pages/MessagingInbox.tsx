@@ -5,7 +5,6 @@ import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { ConversationsList, ConversationDetailView } from '@/components / messaging';
 import { useIsMobile } from '@/hooks / use - mobile';
 import { toast } from 'sonner';
-export default function MessagingInbox() {
 
 
 export default function MessagingInbox() {
@@ -41,10 +40,6 @@ export default function MessagingInbox() {
       toast.error("Please select a conversation first"),
       return
     }
-    
-    // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
   
   return (
       <div className="min-h-screen bg-zion-blue">
@@ -64,7 +59,6 @@ export default function MessagingInbox() {
               </Button>
             )}
           </div>
-          
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
               {/* Conversations List */}

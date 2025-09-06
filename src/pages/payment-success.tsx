@@ -10,14 +10,6 @@ export default function PaymentSuccess() {
         <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">
           <CheckCircle2 className="h-6 w-6 text-green-600" />
         </div>
-        <h1 className='text-2xl font-bold text-white mb-2'>
-          {t('errors.payment_success_title')}
-        </h1>
-        <p className='text-zion-slate-light mb-6'>
-          {t('errors.payment_success_message')}
-        </p>
-        <div className='flex flex-col space-y-3'>
-          <Button
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >

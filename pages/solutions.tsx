@@ -26,6 +26,9 @@ import {
 import React from 'react',
 import Layout from '../components / layout / Layout',
 import SEO from '../components / SEO',
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
   Target, Brain, Rocket, Shield, Zap, Atom, Cpu,
@@ -42,13 +45,15 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
 const Solutions: NextPage = () => {
   const industry_solutions = [;
     {
-      id: 'healthcare'
-      name: 'Healthcare Solutions'
-      description: 'AI-powered healthcare technology solutions'
-      features: ['Patient Care OptimizationDiagnostic AIHealthcare AnalyticsCompliance Management']
-      price: '$3,999'
-      period: 'month'
-      popular: true
+
+
+      id: 'healthcare',
+      name: 'Healthcare Solutions',
+      description: 'AI - powered healthcare technology solutions',
+      features: ['Patient Care OptimizationDiagnostic AIHealthcare AnalyticsCompliance Management'],
+      price: '$3, 999',
+      period: 'month',
+      popular: true,
       icon: <Heart className="w-8 h-8" />
     }
     {
@@ -100,29 +105,6 @@ const Solutions: NextPage = () => {
       period: 'month'
       popular: false
       icon: <BookOpenCheck className="w-8 h-8" />
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  const solutionCapabilities = [
-    {
-      title: 'Industry Expertise'
-      description: 'Deep domain knowledge across sectors'
-      icon: <Briefcase className="w-6 h-6" />
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  const caseStudies = [
-    {
-      title: "Healthcare Provider Digital Transformation"
-      industry: "Healthcare"
-      description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency."
-      results: [
   ],
   const solutionCapabilities = [
     {
@@ -188,7 +170,6 @@ const Solutions: NextPage = () => {
         "Predictive maintenance cost savings"
       ],
       technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
-  ],
   return (
     <UltraAdvancedFuturisticBackground>
       <div className="min-h-screen">
@@ -196,10 +177,78 @@ const Solutions: NextPage = () => {
           <title>Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>
           <meta name="description" content="Discover Zion Tech Group's comprehensive solutions portfolio including Micro SaaS platforms, AI-powered tools, Business Intelligence, Process Automation, and Cloud platforms." />
         </Head>
+    },
+    {
+      id: 'financial',
+      name: 'Financial Solutions',
+      description: 'Advanced financial technology and services',
+      features: ['Risk ManagementFraud DetectionTrading SystemsCompliance Automation'],
+    },
+    {
+      id: 'manufacturing',
+      name: 'Manufacturing Solutions',
+      description: 'Smart manufacturing and Industry 4.0',
+      features: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationIoT Integration'],
+    },
+    {
+      id: 'retail',
+      name: 'Retail Solutions',
+      description: 'Digital transformation for retail businesses',
+    },
+    {
+      id: 'government',
+      name: 'Government Solutions',
+      description: 'Technology solutions for public sector',
+      features: ['Digital ServicesSecurity & ComplianceData ManagementCitizen Engagement'],
+    },
+    {
+      id: 'education',
+      name: 'Education Solutions',
+      description: 'Innovative educational technology',
+      features: ['Learning PlatformsStudent AnalyticsAdministrative SystemsVirtual Classrooms'],
+      } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  ],
+  const solutionCapabilities = [
+    {
+      title: 'Industry Expertise',
+      description: 'Deep domain knowledge across sectors',
+      icon: <Briefcase className="w-6 h-6" />
+    },
+    {
+      title: 'Custom Development',
+      description: 'Tailored solutions for unique needs',
+    },
+    {
+      title: 'Integration Services',
+      description: 'Seamless system integration',
+    },
+    {
+      title: 'AI & Automation',
+      description: 'Intelligent automation solutions',
+    },
+    {
+      title: 'Cloud & Security',
+      description: 'Secure cloud infrastructure',
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const caseStudies = [
+    {
+      title: "Healthcare Provider Digital Transformation",
+      industry: "Healthcare",
+      description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency.",
+    },
+    {
+      title: "Manufacturing IoT Integration",
+      industry: "Manufacturing",
+      description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency.",
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
@@ -253,7 +302,6 @@ const Solutions: NextPage = () => {
                 >
                   <div className="flex items-center mb-4">
                     <div className="p-2 bg-orange-500/20 rounded-lg mr-3">
-                      {capability.icon}
                       {capability.icon  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -290,14 +338,15 @@ const Solutions: NextPage = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   {solution.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <div className="text-center mb-6">
-                    <div className="inline-flex p-3 bg-orange-500/20 rounded-full mb-4">
+
+                    <div className="absolute -top - 3 left - 1/2 transform -translate - x-1 / 2">;
+                      <span className="bg - gradient - to - r from - orange - 500 to - red - 600 text - white px - 4 py - 1 rounded - full text - sm font - semibold">;
+                        Most Popular;
+                      </span>;
+                    </div>)}
+                  <div className="text - center mb - 6">;
+                    <div className="inline - flex p - 3 bg - orange - 500 / 20 rounded - full mb - 4">;
+
                       {solution.icon}
                   )  } catch (error) {
     console.error("Error:", error);
@@ -315,7 +364,6 @@ const Solutions: NextPage = () => {
                     <h3 className="text-2xl font-bold text-white mb-2">{solution.name}</h3>
                     <p className="text-gray-300 mb-4">{solution.description}</p>
                     <div className="text-3xl font-bold text-orange-400 mb-2">
-                      {solution.price}
                       {solution.price  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -370,7 +418,6 @@ const Solutions: NextPage = () => {
           </motion.div>
         </div>
       </section>
-        {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -413,9 +460,6 @@ const Solutions: NextPage = () => {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-}
-export default Solutions;
-
             >;
               <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - orange - 400 to - red - 500 bg - clip - text text - transparent">;
                 Ready for Industry Transformation?;

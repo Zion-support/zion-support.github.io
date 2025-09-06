@@ -128,8 +128,6 @@ export default function CareersPage() {;
           </div>;
         </div>;
       </section>;
-
-
       {/* Open Positions */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -387,3 +385,6 @@ export default function CareersPage() {;
             </div>;
           </div>;
 }
+
+}
+

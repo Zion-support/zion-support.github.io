@@ -1,3 +1,5 @@
+
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -53,9 +55,37 @@ const benefits = [;
     title: 'Improved Patient Outcomes,',;
     description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.,',;
     icon: Heart;
+];
+const benefits = [
+  {
+    title: 'Improved Patient Outcomes',
+    description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.',
+    icon: Heart
+  },
+  {}
+
+    title: 'Enhanced Efficiency,',;
+    description: 'Streamlined workflows and automated processes reduce administrative burden.,',;
+    icon: Activity,;
+  },;
+  {}
+    title: 'Cost Reduction,',;
+    description: 'Optimized resource allocation and preventive care reduce overall healthcare costs.,',;
+    icon: BarChart3,;
+  },;
+  {}
+    title: 'Regulatory Compliance,',;
+    description: 'Built-in compliance tools ensure adherence to healthcare regulations and standards.,',;
+    icon: Shield,;
+
+  }
+
+
 ;];
 const caseStudies = [;
   {}
+
+
     title: 'AI Diagnostic System Implementation,',;
     description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.,',;
     results: ['60% faster diagnosis, '25% accuracy improvement', '40% cost reduction']',;
@@ -113,6 +143,16 @@ export default function HealthcarePage() {;
             </motion && motion.div>;
           </div>;
         </section>;
+];
+
+export default function HealthcarePage() {;
+  return (
+    <Layout
+      title="Healthcare Technology Solutions - Zion Tech Group"
+      description="Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, EHR systems, and medical imaging solutions."
+      keywords="healthcare technology, medical AI, telemedicine, EHR systems, medical imaging, healthcare analytics">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-red-900 via-pink-900 to-rose-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -211,6 +251,9 @@ export default function HealthcarePage() {;
                   </ul>,;
                 </motion && motion.div>;
               ))}
+            </div>,
+          </div>;
+        </section>;
             </div>
           </div>
         </section>
@@ -279,6 +322,9 @@ export default function HealthcarePage() {;
                   <p className="text-gray-600 leading-relaxed">{benefit && benefit.description}</p>";
                 </motion && motion.div>;
               ))}
+            </div>,
+          </div>;
+        </section>;
             </div>
           </div>
         </section>
@@ -375,6 +421,9 @@ export default function HealthcarePage() {;
                   </div>,;
                 </motion && motion.div>;
               ))}
+            </div>,
+          </div>;
+        </section>;
             </div>
           </div>
         </section>

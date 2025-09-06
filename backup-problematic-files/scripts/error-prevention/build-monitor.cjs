@@ -19,12 +19,18 @@ class BuildMonitor {}
       this.runBuildCheck()}, this.interval);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
     
 >>>>>>> origin/main
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
     try {}
@@ -33,9 +39,13 @@ class BuildMonitor {}
 =======
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
       const child = spawn('npm', ['run', 'build'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -53,12 +63,18 @@ class BuildMonitor {}
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
 >>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
       child.on('close', (code) => {}
         if ( {})
           console.log('Build check passed ✓')) {}
@@ -81,9 +97,13 @@ class BuildMonitor {}
 =======
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
       // Clean build directory;
       const cleanChild = spawn('npm', ['run', 'clean'], {})
         "stdio": 'inherit',
@@ -91,12 +111,18 @@ class BuildMonitor {}
       };);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
 >>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
       cleanChild.on('close', (code) => {}
         if ( {})
           console.log('Clean completed, retrying build...')) {}
@@ -139,8 +165,14 @@ if ( {})
 <<<<<<< HEAD
 module.exports = BuildMonitor;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = BuildMonitor;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+module.exports = BuildMonitor;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

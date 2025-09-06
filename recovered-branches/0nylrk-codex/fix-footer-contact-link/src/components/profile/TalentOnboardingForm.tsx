@@ -123,13 +123,6 @@ export function TalentOnboardingForm() {;
     portfolioLinks: z.array(
       z.object({
         url: z.string().url("Must be a valid URL").min(5, "URL is required")})
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const [currentStep, setCurrentStep] = useState(1);
-  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null);
-  const [cvFileName, setCvFileName] = useState<string | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSuccessScreen, setShowSuccessScreen] = useState(false);
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema)
     defaultValues: {
@@ -165,11 +158,6 @@ export function TalentOnboardingForm() {;
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
-    }
-    reader.readAsDataURL(file);
-    // Store the file in the form data
-    form.setValue("basicInfo.profilePicture", file)
-  }
 import React, { useState } from "react",;
 import { useForm, useFieldArray } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;

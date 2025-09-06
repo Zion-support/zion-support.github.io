@@ -1,4 +1,5 @@
 
+
 'use client';
 'use client';
 ;
@@ -75,9 +76,6 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
-
-
           {/* Badge */}
           <motion&& motion.div
             initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -317,6 +315,15 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
               <span className="text-lg font-medium">Watch Demo</span>
             </button>
           </motion.div>
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            {stats.map((stat, index) => (
+              <motion.div
+
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -330,21 +337,20 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
               </motion.div>
 
             ))}
-          </motion.div>
-        </motion.div>
-      </div>
+
+          </motion && motion.div>;
+        </motion && motion.div>;
+      </div>;
+
+
+
+
 
       {/* Scroll Indicator */}
       <motion&& motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-export default HeroSection;        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-};
-
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           className='w - 6 h - 10 border - 2 border - white / 30 rounded - full flex justify - center'          className="w - 6 h - 10 border - 2 border - white / 30 rounded - full flex justify - center";
         >;

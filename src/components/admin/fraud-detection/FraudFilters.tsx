@@ -96,7 +96,6 @@ interface FraudFiltersProps {;
 }
 '"},
 ;
-};
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   searchQuery,;
   setSearchQuery,;

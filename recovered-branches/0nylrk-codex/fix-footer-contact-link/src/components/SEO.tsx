@@ -19,10 +19,6 @@ interface SEOProps {
   canonical?: string,
   noindex?: boolean
 }
-export function SEO({
-  title,
-  description,
-  keywords,
   // Default to the Google Drive image URL
 
   ogImage = "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
@@ -39,6 +35,7 @@ export function SEO({
   const siteTitle = "Zion - The Future of Tech & AI Marketplace",
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle,
   
+
   return (
     <Helmet>;
       <title>{fullTitle}</title>;
@@ -100,4 +97,5 @@ export function SEO({;
     </Helmet>;
   );
 }
-;
+    </Helmet>);
+}

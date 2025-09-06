@@ -4,6 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const { username, password } = req.body |{}
   const envUser = process.env.ADMIN_USERNAME |'kleber@ziontechgroup.com';
   const envPass = process.env.ADMIN_PASSWORD |'Tw2.R5u&2!sDfeW';
+    res.status(405).json({ error: 'Method Not Allowed' });
     return
   }
 

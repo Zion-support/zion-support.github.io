@@ -5,10 +5,6 @@
           suggestionType: "client",
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
-          accepted: true
-        })
-      }
-    }
 
 
 
@@ -37,10 +33,6 @@
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
-        )}
-      </div>
-    </div>
-  )
 }
 if (scope) params.scope = scope
 if (experienceLevel) params.experienceLevel = experienceLevel

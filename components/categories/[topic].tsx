@@ -71,12 +71,6 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
       </div>;
 
 
-export const getServerSideProps: GetServerSideProps = async ctx => {;
-  const topic = String(ctx.params?.topic || '');
-  const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
-  return { props: { topic, posts } }
-}
-export default TopicPage;      </Head>
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
         <div className="mb-6">
@@ -113,4 +107,5 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   return { props: { topic, posts } }
 }
 export default TopicPage;
+
 

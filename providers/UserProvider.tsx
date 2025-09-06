@@ -1,10 +1,3 @@
-  createContext
-  useContext
-  useEffect
-  useMemo
-  useState;} from 'react';} from 'react';
-export type UserRole = 'client' | 'talent';
-export type User = {
   useMemo,;
   useState,;} from 'react';} from 'react';
 
@@ -14,28 +7,39 @@ import React, { createContext, useContext, useEffect, useMemo, useState } from '
 export type UserRole = 'client' | 'talent';
   id: string;
   name: string;
+  email: string;
   role: UserRole;
-  user: User | null;
-  loading: boolean;
-  login: (email: string, password: string) => Promise<void>;
-  logout: () => void;
+  avatarUrl?: string;
+  onboardingCompleted: boolean;
+
+};
+
+export type UserContextValue = {;
+
+  create_context,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,} from 'react';} from 'react';
+;
+export type UserRole = 'client' | 'talent';
+;
+export type User = {
+  id: string;
+  name: string;
+  role: UserRole;
+  avatar_url?: string;
+  onboarding_completed: boolean;
+}
+;
+export type UserContextValue = {
   user: User | null;
   set_user: (user: User | null) => void;
   logout: () => void;
-  completeOnboarding: () => void;
-}
-;
-const UserContext = createContext<UserContextValue | undefined>(undefined);
-const DEFAULT_USER: User = {;
-  id: 'u_001',;
-  name: 'Jordan Lee',;
-  role: 'client',;
-  onboardingCompleted: false}
-;
-export function UserProvider({ children }: { children: React.ReactNode }) {;
-  const [user, setUser] = useState<User | null>(null);
-  useEffect(() => {;
-    try {;
+
+
+
+
       const raw = localStorage.getItem('zion.user');
       if (raw) {
         setUser(JSON.parse(raw));
@@ -47,13 +51,11 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
     }
   }, []);
 
+
 export function useUser() {;
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
-}
-}
-  updateUser: (userData: Partial<User>) => Promise<void>;
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -76,3 +78,5 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 
   useEffect(() => {
     try {
+
+

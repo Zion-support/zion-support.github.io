@@ -8,13 +8,6 @@ interface PricingSuggestionBoxProps {
   rateType: "hourly" | "fixed"
 }
 
-export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
-  suggestion;
-  isLoading;
-export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
-  suggestion;
-  isLoading;
-
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
@@ -28,10 +21,6 @@ import {PricingSuggestion} from "@/services/pricingSuggestionService";
   onApplySuggestion: () => void
 
 
-  onApplySuggestion
-  suggestion,
-  isLoading,
-  onApplySuggestion,
   rateType}) => {
   if (isLoading) {
     return (
@@ -69,10 +58,6 @@ interface PricingSuggestionBoxProps {;
             </p>;
           </div>;
         </CardContent>;
-  }
-  if (!suggestion) {
-    return null
-  }
   }
 
 

@@ -1,9 +1,4 @@
 
-import { SEO  } from '@/components/SEO';
-import { AppHeader  } from '@/layout/AppHeader';
-import { Footer  } from '@/components/Footer';
-import { DisputeDetail  } from '@/components/disputes';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
 import {SEO} from '@/components/SEO';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
@@ -32,7 +27,4 @@ export default DisputeDetailPage;
 
     </ProtectedRoute>);
 }
-export default DisputeDetailPage;
-
-;
 export default DisputeDetailPage;

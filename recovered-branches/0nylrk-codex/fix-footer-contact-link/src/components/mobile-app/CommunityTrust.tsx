@@ -5,7 +5,6 @@ export const CommunityTrust: React.FC = () => {
     { value: "4.8", label: "App Store Rating" }
     { value: "50K+", label: "Downloads" }
     { value: "96%", label: "User Satisfaction" }
-import {Star} from "lucide-react";
 import React from "react",
 import { Star } from "lucide-react",
 export const CommunityTrust: React.FC = () => {

@@ -4,9 +4,6 @@
   type: 'folder' | 'file';
   exists?: boolean;
   children?: TreeNode[];
-interface TreeProps {
-  nodes: TreeNode[];
-  onDeploy?: (path: string) => void;
 function NodeItem({
   node
   depth
@@ -69,6 +66,42 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
       {nodes && nodes.map((n) => (;
       ))}
     </div>;
+  );
+
+        </span>;
+        <div className="ml - auto flex gap - 2">;
+          <button className="px - 2 py - 0.5 text - xs bg - gray - 100 rounded" on_click={copy_path} title="Copy path">Copy</button>;
+          <button className="px - 2 py - 0.5 text - xs bg - gray - 100 rounded" on_click={clone_path} title="Create template">Template</button>;
+          <button className="px - 2 py - 0.5 text - xs bg - emerald - 100 rounded" on_click={deploy} title="Auto - deploy">Deploy</button>;
+        </div>;
+      </div>;
+      {has_children && open && (
+        <div className="ml - 4 border - l pl - 2">;
+          {node.children!.map ((child) => (
+            <NodeItem key={child.path} node={child} depth={depth + 1} on_deploy={on_deploy} />))}
+        </div>)}
+    </div>);
+;
+export /**
+ * Tree - Function description
+ */
+function Tree() {
+  return (
+    <div className='w - full'>;
+      {nodes.map (number => (        <NodeItem key={n.path} node={n} depth={0} on_deploy={on_deploy} />))}
+    </div>));
+}
+export /**
+ * Tree - Function description
+ */
+function Tree() {
+  return (
+    <div className="w - full">;
+      {nodes.map ((n) => (
+      ))}
+    </div>);
+;
+
 export default Tree;
 
 }</div> </div> {;

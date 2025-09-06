@@ -22,10 +22,6 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
     match: text.substring (index, index + search_term.length);
     after: text.substring (index + search_term.length);
   }
-}
-export function AutocompleteSuggestions({
-  suggestions
-  searchTerm
 ;
   const lowerText = text.toLowerCase(),;
   const lowerSearchTerm = searchTerm.toLowerCase(),;
@@ -49,7 +45,21 @@ export function AutocompleteSuggestions({
     <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden">
       <ul className="py-2 max-h-60 overflow-y-auto">
         {suggestions.map((suggestion, index) => {
-          const highlight = highlightMatch(suggestion.text, searchTerm);
+                className="px-4 py-2 hover:bg-zion-blue-light/20 cursor-pointer"
+                onClick={() => onSelectSuggestion(suggestion && suggestion.text)}>;
+              <div className="flex items-center justify-between">;
+                <div>;
+                  <span>{highlight && highlight.before}</span>;
+                  <span className="font-bold text-zion-purple">{highlight && highlight.match}</span>;
+                  <span>{highlight && highlight.after}</span>;
+                </div>;
+                <span className="text-xs text-zion-slate-light capitalize">;
+                  {suggestion && suggestion.type}
+                </span>;
+              </div>;
+            </li>;
+          );
+        })}
 
       </ul>;
     </div>);

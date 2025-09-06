@@ -8,14 +8,6 @@ import {Card, CardContent} from "@/components/ui/card";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ProjectOfferBanner() {;
-import { useEffect, useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { Bell, Calendar, X } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { useProjects } from "@/hooks/useProjects";
-import { Project } from "@/types/projects";
-export function ProjectOfferBanner() {
 
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
@@ -56,8 +48,6 @@ export function ProjectOfferBanner() {;
   };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
-  }
-  
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -86,6 +76,19 @@ export function ProjectOfferBanner() {;
                 </Button>
                 <Button
                   size="sm"
+                  variant="ghost"
+                  onClick={(e) => handleDismiss(offer && offer.id, e)}
+                >;
+                  <X className="h-4 w-4" />;
+                </Button>;
+              </div>;
+            </CardContent>;
+          </Card>;
+        ))}
+
+    </div>;
+  );
+}
 import { useEffect, useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Bell, Calendar, X } from './lucide-react';

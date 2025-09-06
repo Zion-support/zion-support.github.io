@@ -19,31 +19,6 @@ import { ReviewForm } from "./ReviewForm";
 import { useReviews } from "@/hooks/useReviews";
 interface LeaveReviewModalProps {
 
-interface LeaveReviewModalProps {
-  projectId: string,
-  revieweeId: string,
-  revieweeName: string,
-  isOpen: boolean,
-  onClose: () => void
-  projectId;
-  revieweeId;
-  revieweeName;
-  isOpen;
-  onClose}: LeaveReviewModalProps) {;
-  const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId);
-  const [open, setOpen] = useState(isOpen);
-import { useState, useEffect } from "react",;
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogDescription,;
-  DialogHeader,;
-  DialogTitle,;
-  DialogTrigger} from "@/components/ui/dialog",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { ReviewForm } from "./ReviewForm",;
-import { useReviews } from "@/hooks/useReviews",;
 interface LeaveReviewModalProps {;
   projectId: string,;
   revieweeId: string,;
@@ -86,10 +61,6 @@ interface LeaveReviewModalProps {;
           onSubmit={handleSubmit}
           defaultValues={userReview |undefined}
           isSubmitting={isSubmitting}
-        />
-      </DialogContent>
-    </Dialog>
-  )
 }
 import { useState, useEffect } from './react';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';

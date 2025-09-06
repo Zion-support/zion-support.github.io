@@ -2,8 +2,6 @@ interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
-}
-
 
 import React, { useState } from "react",;
 import { MapPin } from "lucide-react",;

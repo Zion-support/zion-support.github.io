@@ -19,9 +19,6 @@
           >
             Hire
           </Button>
-            onClick = {handleViewProfile,}
-          
-          
           <Button 
             variant="outline" 
             size="sm" 

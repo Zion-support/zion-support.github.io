@@ -45,16 +45,3 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(405).json({ error: 'Method not allowed' })
 ;
   const { userId, reviewerId, type, note } = req.body || {};
-  try {
-    await supabase.from('trust_peer_reviews').insert(review);
-  } catch {}
-  return res.status(200).json({ ok: true, review });  }
-  const review: TrustPeerReview = {
-    userId;
-    reviewerId;
-    type;
-    note;
-
-}
-}
-  if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {

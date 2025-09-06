@@ -104,15 +104,18 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
         </a>;
       );
 
+    }
     return (
-      <button
+      <button;
         ref={ref}
-        type="button"
-        className={cn(
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent";
-          active && "bg-accent font-medium text-accent-foreground"
+
+          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
+          active && "bg-accent font-medium text-accent-foreground",
+
+
           "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
           active && "bg-accent font-medium text-accent-foreground",
+
           className
         )}
         {...props}>;
@@ -124,9 +127,6 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
       </button>;
     );
   }
-
-SidebarMenuItem.displayName = "SidebarMenuItem",
-
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   children: React.ReactNode
@@ -138,10 +138,6 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
       <div className="pl-2">{children}</div>
     </div>
   )
-export { SidebarMenuItem, SidebarMenuGroup },
-),;
-SidebarMenuItem.displayName = "SidebarMenuItem",;
-interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
   title: string,;
   children: React && React.ReactNode;
 }

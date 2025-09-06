@@ -1,6 +1,3 @@
-  message?: string;
-  duration?: number
-}
 interface ToastProps {
   toast: Toast
   onRemove: (id: string) => void
@@ -22,6 +19,12 @@ interface ToastProps {;
   toast: Toast;
   onRemove: (id: string) => void;
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
+  onRemove: (id: string) => void;
+
+  id: string,
+  type: ToastType,
+  title: string,;
+
   message?: string;
   duration?: number
 }
@@ -29,7 +32,6 @@ interface ToastProps {
   toast: Toast
   onRemove: (id: string) => void
 }
-
 
 
 
@@ -48,8 +50,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         return <Info className='w-5 h-5 text-blue-400' />;    }
 
     }
-
-  };
 
   const getBorderColor = () => {
     switch (toast.type) {
@@ -108,12 +108,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 
 
   return (
-    <div className='fixed top-4 right-4 z-50 space-y-3'>
-      <AnimatePresence>
-        {toasts.map(toast => (          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
-        ))}
-      </AnimatePresence>
-  );};          }}
           className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
         >
           <X className="w-4 h-4 text-white/60 hover:text-white" />
@@ -163,9 +157,19 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
         ))}
       </AnimatePresence>
     </div>
-      </AnimatePresence>;
-    </div>;
-  );  );
+
+interface ToastContainerProps {
+  toasts: Toast[]
+  onRemove: (id: string) => void
+}
+export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
+  return (
+    <div className="fixed top-4 right-4 z-50 space-y-3">
+      <AnimatePresence>
+        {toasts.map((toast) => (
+          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
+        ))}
+      </AnimatePresence>
 };
 
 // Hook for managing toasts;

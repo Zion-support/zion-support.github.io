@@ -143,6 +143,10 @@ export default function UltraFuturisticBackground2029() {;
                   ctx.beginPath();
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(partner.x, partner.y);
+
+                  ctx.stroke();                }
+
+
                 }
               }
             }
@@ -415,9 +419,6 @@ export default function UltraFuturisticBackground2029() {;
             }}
           />;
         ))}
-      </div>
-    </div>
-);  )
-}
 
   );
+

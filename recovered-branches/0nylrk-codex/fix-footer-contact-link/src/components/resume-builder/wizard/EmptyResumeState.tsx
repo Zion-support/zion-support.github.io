@@ -16,8 +16,6 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
       </CardContent>
     </Card>
 
-
-};
   )
 },
 import { Card, CardContent } from "@/components/ui/card",;

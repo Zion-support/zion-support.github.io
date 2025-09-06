@@ -1,9 +1,3 @@
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
-import { Textarea } from "@/components/ui/textarea",
-import { Check, Pencil } from 'lucide-react'
 interface GeneratedDescriptionDisplayProps {;
   description: string;
   onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {;
@@ -87,8 +81,6 @@ export function GeneratedDescriptionDisplay({;
             {editedDescription}
           </div>;
         )}
-            className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
-          >
             Save Changes
           </Button>
         </CardFooter>

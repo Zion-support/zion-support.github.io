@@ -1,10 +1,4 @@
 
-export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-;
-export interface CodeSample {
-  language: 'curl' | 'javascript' | 'python';
-  code: string;
-;
 export interface RateLimitInfo {
   tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;

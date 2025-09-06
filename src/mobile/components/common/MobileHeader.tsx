@@ -9,16 +9,6 @@ title: string;  showBack?: boolean;  title: string
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
-  onSettingsClick?: () => void
-export function MobileHeader({
-  title
-export function MobileHeader({
-  title
-  showBack = false
-  showNotifications = false
-  showSettings = false
-  className
-  onNotificationsClick
   onSettingsClick}: MobileHeaderProps) {
   const router = useRouter()
   return (
@@ -27,11 +17,6 @@ export function MobileHeader({
       <div className="flex items-center justify-between h-14 px-4">
         <div className="flex items-center">
           {showBack && (
-            <Button
-              variant="ghost"
-              size="icon"
-              className="mr-2"
-              onClick = {(,) => router.back(),}
             >
               <ChevronLeft className="h-5 w-5" />
               <span className="sr-only">Back</span>

@@ -1,5 +1,7 @@
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-branch-merger.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -200,6 +202,9 @@ console.log('==')
         execSync('git push origin main', { "stdio"})
         console.error(' Failed to push "changes")
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-branch-merger.cjs
+<<<<<<< HEAD
+    console.error(' Comprehensive branch merger "failed")
+=======
 <<<<<<< HEAD
     console.error(' Comprehensive branch merger "failed")
 =======

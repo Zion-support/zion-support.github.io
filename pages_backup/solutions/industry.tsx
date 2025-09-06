@@ -21,6 +21,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -31,8 +33,49 @@ import { motion } from 'framer-motion';
 import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
+const industries = [;
+  {}
+
+    name: 'Healthcare,',;
+    icon: Heart,;
+    description: 'HIPAA-compliant solutions for healthcare providers and medical institutions,',;
+    features: ['HIPAA Compliance, 'Patient Data Security', 'Telemedicine Platforms', 'Medical Records Management'],',;
+    color: 'from-red-500 to-pink-500'',;
+  },;
+  {}
+    name: 'Finance,',;
+    icon: CreditCard,;
+    description: 'Secure financial technology and payment solutions for banks and fintech companies,',;
+    features: ['PCI DSS Compliance, 'Fraud Detection', 'Payment Processing', 'Risk Management'],',;
+    color: 'from-green-500 to-emerald-500'',;
+  },;
+  {}
+    name: 'E-commerce,',;
+    icon: Globe,;
+    description: 'Scalable online retail and marketplace platforms for digital commerce,',;
+    features: ['Scalable Architecture, 'Payment Integration', 'Inventory Management', 'Customer Analytics'],',;
+    color: 'from-blue-500 to-cyan-500'',;
+  },;
+  {}
+    name: 'Education,',;
+    icon: GraduationCap,;
+    description: 'Learning management and educational technology solutions,',;
+    features: ['LMS Development, 'Student Analytics', 'Online Assessment', 'Content Management'],',;
+    color: 'from-purple-500 to-indigo-500'',;
+  },;
+  {}
+    name: 'Manufacturing,',;
+    icon: Factory,;
+    description: 'IoT and automation solutions for manufacturing and industrial operations,',;
+    features: ['IoT Integration, 'Process Automation', 'Quality Control', 'Supply Chain Management'],',;
+    color: 'from-orange-500 to-red-500'',;
+  },;
+  {}
+    name: 'Real Estate,',;
+    icon: Home,;
+    description: 'Property management and real estate technology platforms,',;
+    features: ['Property Management, 'Virtual Tours', 'Market Analytics', 'Transaction Management'],',;
+    color: 'from-yellow-500 to-orange-500'',;
 
   }
 ;];

@@ -135,13 +135,6 @@ import {;
           {isAdmin && dispute?.status === 'open' && (;
             <Button onClick={() => handleStatusChange('under_review')}>              Start Review;
             </Button>;
-      case "open": return "default",
-      case "under_review": return "secondary",
-      case "resolved": return "outline", // Changed from "success" to "outline"
-      case "closed": return "outline",
-      default: return "default"
-    }
-  },
 
   return (
     <div className="container mx-auto p-4 space-y-6">
@@ -295,9 +288,6 @@ import {;
                     <CardTitle>Resolution</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    {dispute.resolution_type && (
-                      <div className='mt-4'>
-                        <Badge>
                           Resolution:{' '}
                           {dispute && dispute.resolution_type.replace('_', ' ')}
                         </Badge>;

@@ -3,4 +3,3 @@ module.exports = default function PlatformEngineering() { return; }; return null
 import React from 'react';
 interface PlatformengineeringProps {
   // Add props here as needed
-}

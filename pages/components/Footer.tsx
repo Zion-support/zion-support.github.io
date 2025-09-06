@@ -3,167 +3,6 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 import React from 'react';
 import Link from 'next/link';
-ursor/integrate-build-improve-and-re-verify-8f7d
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
-
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  ArrowRight,
-  Brain,
-  Network,
-  Cloud,
-  Shield,
-  BarChart3,
-  Users,
-  Settings,
-  FileText,
-  MessageSquare,
-  Calendar,
-  ShoppingCart,
-  BookOpen,
-  Building,
-  Heart,
-  DollarSign,
-  Target,
-  Zap,
-  Award,
-  Star,
-  CheckCircle,
-  Clock,
-  TrendingUp,
-  Eye,
-  Lock,
-  Code,
-  Home,
-  Camera,
-  Music,
-  Gamepad2,
-  Truck,
-  Calculator,
-  CreditCard,
-  Paintbrush,
-  HardDrive,
-  Activity,
-  Lightbulb,
-  Wrench,
-  PieChart,
-  ClipboardList,
-  Layers;
-} from 'lucide-react';
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-  Mail
-  Phone
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Github
-} from "lucide-react";
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-const footerSections = [
-  {
-    title: 'Services',
-    links: [
-      { title: 'AI Services', href: '/ai-services', icon: Brain },
-      { title: 'IT Services', href: '/it-services', icon: Network },
-      { title: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
-      { title: 'Quantum Computing', href: '/quantum-computing', icon: Code },
-      { title: 'Blockchain', href: '/blockchain', icon: Lock },
-      { title: 'IoT Solutions', href: '/iot', icon: Globe },
-      { title: 'AR/VR Solutions', href: '/ar-vr', icon: Eye },
-      { title: 'Space Technology', href: '/space-tech', icon: Settings }
-    ]
-  },
-  {
-    title: 'Solutions',
-    links: [
-      { title: 'Enterprise Solutions', href: '/enterprise', icon: Building },
-      { title: 'Startup Solutions', href: '/startup', icon: Settings },
-      { title: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
-      { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-      { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 },
-      { title: 'Automation', href: '/automation', icon: Zap },
-      { title: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp },
-      { title: 'Custom Development', href: '/custom-development', icon: Code }
-    ]
-  },
-  {
-    title: 'Industries',
-    links: [
-      { title: 'Healthcare', href: '/industries/healthcare', icon: Heart },
-      { title: 'Finance', href: '/industries/finance', icon: DollarSign },
-      { title: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
-      { title: 'Retail', href: '/industries/retail', icon: ShoppingCart },
-      { title: 'Education', href: '/industries/education', icon: BookOpen },
-      { title: 'Real Estate', href: '/industries/real-estate', icon: Home },
-      { title: 'Agriculture', href: '/industries/agriculture', icon: Target },
-      { title: 'Energy', href: '/industries/energy', icon: Zap }
-    ]
-  },
-  {
-    title: 'Resources',
-    links: [
-      { title: 'Blog', href: '/blog', icon: FileText },
-      { title: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-      { title: 'White Papers', href: '/white-papers', icon: FileText },
-      { title: 'Webinars', href: '/webinars', icon: Calendar },
-      { title: 'Tutorials', href: '/tutorials', icon: BookOpen },
-      { title: 'API Documentation', href: '/api-docs', icon: Code },
-      { title: 'Training', href: '/training', icon: BookOpen },
-      { title: 'FAQ', href: '/faq', icon: MessageSquare }
-    ]
-  },
-  {
-    title: 'Company',
-    links: [
-      { title: 'About Us', href: '/about', icon: Building },
-      { title: 'Team', href: '/team', icon: Users },
-      { title: 'Careers', href: '/careers', icon: Users },
-      { title: 'Partners', href: '/partners', icon: Globe },
-      { title: 'News', href: '/news', icon: FileText },
-      { title: 'Contact', href: '/contact', icon: MessageSquare },
-      { title: 'Privacy Policy', href: '/privacy', icon: Lock },
-      { title: 'Terms of Service', href: '/terms', icon: FileText }
-    ]
-  },
-  {
-    title: 'Support',
-    links: [
-      { title: 'Help Center', href: '/help', icon: MessageSquare },
-      { title: 'Documentation', href: '/docs', icon: FileText },
-      { title: 'API Reference', href: '/api', icon: Code },
-      { title: 'Status Page', href: '/status', icon: BarChart3 },
-      { title: 'Community', href: '/community', icon: Users },
-      { title: 'Training', href: '/training', icon: BookOpen },
-      { title: 'Free Consultation', href: '/consultation', icon: Calendar },
-      { title: 'Get Quote', href: '/quote', icon: FileText }
-    ]
-  }
-];
-
-const microSaasCategories = [
-  { title: 'Marketing Tools', icon: Target, count: 15 },
-  { title: 'Productivity', icon: Settings, count: 12 },
-  { title: 'Analytics', icon: BarChart3, count: 18 },
-  { title: 'Automation', icon: Zap, count: 22 },
-  { title: 'Security', icon: Shield, count: 8 },
-  { title: 'Finance', icon: DollarSign, count: 10 },
-  { title: 'Design', icon: Paintbrush, count: 6 },
-  { title: 'Development', icon: Code, count: 14 }
-];
 
   const footerLinks = {
     services: [
@@ -277,6 +116,7 @@ const microSaasCategories = [
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
             <motion.div
+            <motion.div
               transition={{ duration: 0 && 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0">;
                {currentYear} Zion Tech Group. All rights reserved.;
@@ -375,10 +215,6 @@ const microSaasCategories = [
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-            
-origin/main
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

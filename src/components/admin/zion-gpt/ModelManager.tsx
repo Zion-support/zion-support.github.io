@@ -1,10 +1,3 @@
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
-import { supabase  } from '@/integrations/supabase/client';
-import { ModelConfig  } from '@/utils/zion-gpt';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-  errorMessage?: string
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
@@ -109,7 +102,6 @@ interface ModelVersionData extends ModelConfig {
                         <span className="ml-1">Check</span>;
                       </Button>;
                     ) : model && model.trainingStatus === 'succeeded' ? (;
-                        onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
                       >
                         {model.active ? (
                           <>

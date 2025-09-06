@@ -683,6 +683,14 @@ function processFile(filePath) {
       totalFixes += result && result.changes;
       console && console.log(` Fixed ${filePath} (${result && result.changes} import fixes)`)}
     filesProcessed++} catch (error) {
+
+
+
+// Main function
+
+async function main() {
+  console ;
+
   const patterns = ['pages/**/*.{tsx,jsx}',
     'src/**/*.{tsx,jsx}',
     'components/**/*.{tsx,jsx}',

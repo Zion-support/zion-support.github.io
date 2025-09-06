@@ -59,9 +59,6 @@ function CybersecurityServicesPage() {
   CheckCircle,
   Star,
   Users,
-      icon: Eye,
-      color: "from-red-500 to-orange-500"
-    },
     {
       title: "Quantum-Resistant Encryption",
       description: "Future-proof security with quantum-resistant cryptography",
@@ -94,38 +91,6 @@ function CybersecurityServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  ],
-  const stats = [
-    { number: "99.99%", label: "Threat Detection Rate", icon: Shield },
-    { number: "24/7", label: "Security Monitoring", icon: Eye },
-    { number: "0", label: "Security Breaches", icon: Lock },
-    { number: "500+", label: "Protected Systems", icon: CheckCircle   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <Head>
-        <title>Cybersecurity Services - Zion Tech Group</title>
-        <meta
-          name='description'
-          content='Advanced cybersecurity solutions from Zion Tech Group. AI-powered threat detection, quantum-resistant encryption, and comprehensive security services.'
-        />;
-        <meta
-          property='og:title'
-          content='Cybersecurity Services - Zion Tech Group'
-        />;
-        <meta
-          property='og:description'
-          content='Advanced cybersecurity solutions for comprehensive protection.'
-        />;
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/services/cybersecurity'
-        />      </Head>
-      <EnhancedNavigation />
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
@@ -135,14 +100,6 @@ function CybersecurityServicesPage() {
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-red-400 bg-clip-text text-transparent mb-6'>
               Cybersecurity
             </h1>
-            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
-              Advanced security solutions that protect your digital assets and
-              ensure business continuity            </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
               we provide comprehensive cybersecurity solutions that keep your
               business secure and compliant.
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
@@ -192,7 +149,11 @@ function CybersecurityServicesPage() {
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               From AI-powered threat detection to quantum-resistant encryption, we provide 
-              comprehensive cybersecurity solutions that keep your business secure and compliant.
+              we provide comprehensive cybersecurity solutions that keep your
+              business secure and compliant.
+
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Advanced security solutions that protect your digital assets and ensure business continuity
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
               Secure Your Business
@@ -216,26 +177,21 @@ function CybersecurityServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+              comprehensive cybersecurity solutions that keep your business secure and compliant.
+            </p>
+            <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
+              Secure Your Business
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </motion.div>
+        </div>
+      </section>
+
+
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-orange-400" />
                 </div>
-                <div className='text-3xl font-bold text-white mb-2'>
-                  {stat.number}
-                </div>
-                <div className='text-white/70'>{stat.label}</div>              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Services Grid */}
-      <section className='py-20 px-6'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text-center mb-16'
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
@@ -375,6 +331,7 @@ function CybersecurityServicesPage() {
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
+}</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -533,6 +490,20 @@ function CybersecurityServicesPage() {
                 Security Assessment;
               </button>;
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                Learn More;
+  )
+          >;
+            <h2 className="text-4xl font-bold text-white mb-6">;
+              Ready to Secure Your Business?;
+            </h2>;
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
+              Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity.;
+            </p>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+              <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">;
+                Security Assessment;
+              </button>;
+              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
+                Learn More;
               </button>;
             </div>;
           </motion.div>;

@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+
     sort;
     order: (order as any) |'desc';
     page: page ? Number(page) : 0;
@@ -170,6 +171,16 @@ function toCsv(rows: any[]): string {
       updates: Record<string, any>;
     }
     if (!id) return res.status(400).json({ error: 'Missing id' });
+      return res.status(200).json({ items: pageItems, total });
+    }
+  }
+
+  if (req.method === 'PATCH') {
+    const { id, updates } = req.body as {
+      id: string;
+      updates: Record<string, any>;
+    };
+    if (!id) return res && res.status(400).json({ error: 'Missing id' });
     if (useSupabase) {
       const { data, error } = await client
         .from(type)
@@ -186,11 +197,14 @@ function toCsv(rows: any[]): string {
         updated_at: new Date().toISOString()
       }
       list[idx] = updated as any;
+    }
+  }
+
+
+
       return res.status(200).json({ item: updated });    }
 
     }
-
-  }
 
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';

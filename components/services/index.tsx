@@ -133,24 +133,11 @@ export default function ServicesIndexPage() {
   };
 
   return (
-    <UltraFuturisticBackground variant="quantum" intensity={1.5}>
-      <Head>
-        <title>Zion AI Marketplace - Services</title>
-        <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." />
-      </Head>
-      <div className="relative">
-        <div className="absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500" />
-        <div className="flex flex-col sm: flex-row gap-6">
-          <MarketplaceFilters availableCategories={availableCategories} value={filters} onChange={setFilters} />
-          <div className="flex-1">
-            <div className="mb-4 flex items-center justify-between">
-              <h1 className="text-2xl font-semibold text-white">Services</h1>
-              <div className="text-sm text-white/70">{filtered.length} results</div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {filtered.map((service) => (
-                <EnhancedMarketplaceCard key={service.slug |service.id} service={service} onRequestQuote={handleRequestQuote} />
+
+
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
+
+
               ))}
             </div>
           </div>
@@ -276,6 +263,15 @@ if ( {) {
         onClose={() => setModalOpen(false)}
         service={selected}
         onSubmit={handleSubmit}
-export default ServicesPage;
 
+      <QuoteRequestModal;
+        open={modal_open}
+        on_close={() => setModalOpen (false)}
+        service={selected}
+        on_submit={handle_submit}
+      />;
+    </div>);
 }
+;
+export default ServicesPage;
+;

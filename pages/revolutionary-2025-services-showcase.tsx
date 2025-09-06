@@ -121,163 +121,6 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search, Filter, Star, Users, TrendingUp
-  DollarSign, Clock, CheckCircle, ArrowRight
-  Brain, Rocket, Dna, Globe, Shield, Wifi
-  Package, Bot, Car, Building2, Monitor, Cpu
-  Zap, Atom, Database, Cloud, Lock, Code
-  Phone, Mail, MapPin, ExternalLink, ChevronDown
-  Award, Target, Zap as ZapIcon, Globe as GlobeIcon
-} from 'lucide-react'
-// Import the new revolutionary services
-import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
-import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
-const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices]
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-],;
-export default function Revolutionary2025ServicesShowcase(req, res) {
-  try {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
-  const [viewMode, setViewMode] = useState('grid');
-  const filteredServices = allServices.filter(service => {;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' ||;
-                           service.category.toLowerCase().includes(selectedCategory.toLowerCase());
-    return matchesSearch && matchesCategory;
-  });
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;
-      case 'price-low':;
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),;
-      case 'price-high':;
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')),;
-      case 'rating':;
-        return b.rating - a.rating,;
-      case 'customers':;
-        return b.customers - a.customers,;
-      default: return b.popular ? 1 : -1;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-  {
-    id: 'quantum-emerging'
-    title: '⚛️ Quantum & Emerging Tech'
-    description: 'Quantum computing, DNA computing, and beyond'
-    icon: Atom
-    color: 'from-blue-500 to-cyan-500'
-    services: allServices.filter(s => s.category.includes('Quantum') |s.category.includes('DNA Computing'))
-    gradient: 'from-blue-500/20 to-cyan-500/20'
-  }
-  {
-    id: 'space-tech'
-    title: '🚀 Space Technology & Satellite'
-    description: 'Space mission management and satellite operations'
-    icon: Rocket
-    color: 'from-indigo-500 to-blue-500'
-    services: allServices.filter(s => s.category.includes('Space Technology'))
-    gradient: 'from-indigo-500/20 to-blue-500/20'
-  }
-  {
-    id: 'cybersecurity'
-    title: '🔒 Next-Generation Cybersecurity'
-    description: 'Quantum encryption and AI threat detection'
-    icon: Shield
-    color: 'from-red-500 to-pink-500'
-    services: allServices.filter(s => s.category.includes('Cybersecurity'))
-    gradient: 'from-red-500/20 to-pink-500/20'
-  }
-  {
-    id: 'cloud-infrastructure'
-    title: '☁️ Quantum Cloud & Infrastructure'
-    description: 'Quantum-enhanced cloud computing and infrastructure'
-    icon: Cloud
-    color: 'from-cyan-500 to-blue-500'
-    services: allServices.filter(s => s.category.includes('Cloud') |s.category.includes('Infrastructure'))
-    gradient: 'from-cyan-500/20 to-blue-500/20'
-  }
-  {
-    id: 'fintech'
-    title: '🏦 Financial Technology Revolution'
-    description: 'AI-powered trading and quantum risk management'
-    icon: DollarSign
-    color: 'from-green-500 to-emerald-500'
-    services: allServices.filter(s => s.category.includes('Financial Technology'))
-    gradient: 'from-green-500/20 to-emerald-500/20'
-  }
-  {
-    id: 'industrial-iot'
-    title: '🏭 Industrial IoT & Smart Manufacturing'
-    description: 'Zero downtime manufacturing and predictive maintenance'
-    icon: Building2
-    color: 'from-gray-500 to-slate-500'
-    services: allServices.filter(s => s.category.includes('Industrial IoT'))
-    gradient: 'from-gray-500/20 to-slate-500/20'
-  }
-  {
-    id: 'edtech'
-    title: '🎓 Education Technology Revolution'
-    description: 'AI-powered personalized learning and 10x faster knowledge acquisition'
-    icon: Users
-    color: 'from-blue-500 to-cyan-500'
-    services: allServices.filter(s => s.category.includes('Education Technology'))
-    gradient: 'from-blue-500/20 to-cyan-500/20'
-  }
-  {
-    id: 'sustainability'
-    title: '🌱 Sustainability & Green Technology'
-    description: 'AI-powered environmental solutions for carbon neutrality'
-    icon: Globe
-    color: 'from-green-500 to-emerald-500'
-    services: allServices.filter(s => s.category.includes('Sustainability'))
-    gradient: 'from-green-500/20 to-emerald-500/20'
-  }
-  {
-    id: 'logistics'
-    title: '🚛 Logistics & Supply Chain'
-    description: '99.9% delivery accuracy and zero waste supply chain'
-    icon: Package
-    color: 'from-orange-500 to-red-500'
-    services: allServices.filter(s => s.category.includes('Logistics'))
-    gradient: 'from-orange-500/20 to-red-500/20'
-  }
-]
-export default function Revolutionary2025ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [sortBy, setSortBy] = useState('popularity')
-  const [viewMode, setViewMode] = useState('grid')
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesCategory = selectedCategory === 'all' |
-                           service.category.toLowerCase().includes(selectedCategory.toLowerCase())
-    return matchesSearch && matchesCategory
-  })
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''))
-      case 'price-high':
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''))
-      case 'rating':
-        return b.rating - a.rating
-      case 'customers':
-        return b.customers - a.customers
-      default: return b.popular ? 1 : -1
-    }
-  })
 import {;
   Search, Filter, Star, Users, TrendingUp,;
   DollarSign, Clock, CheckCircle, ArrowRight,;
@@ -470,11 +313,6 @@ const serviceCategories = [
                 <input
                   type="text"
                   placeholder="Search revolutionary services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                />
-              </div>
               {/* Filters */}
               <div className="flex flex - wrap gap - 4 items - center">;
                 {/* Category Filter */}
@@ -529,11 +367,6 @@ const serviceCategories = [
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
                 </div>
-                {/* Sort Filter */}
-                <div className="relative">
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
                 {/* Sort Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -746,12 +579,6 @@ const serviceCategories = [
                             {service.features.slice(0, 4).map((feature, featureIndex) => (
                               <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                                 <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                                {feature}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        {/* Market Data */}
                                 {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -803,8 +630,6 @@ const serviceCategories = [
                           <div className="flex items-center gap-2 text-purple-400">
                             <Phone className="w-3 h-3" />
                             <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">
-                              {service.contactInfo.mobile}
-                            </a>
                               {service.contactInfo.mobile  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -815,8 +640,6 @@ const serviceCategories = [
                           <div className="flex items-center gap-2 text-blue-400">
                             <Mail className="w-3 h-3" />
                             <a href={`mailto:${service.contactInfo.email}`} className="hover:text-white">
-                              {service.contactInfo.email}
-                            </a>
                               {service.contactInfo.email  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -895,23 +718,6 @@ const serviceCategories = [
                               <div className="flex items-center gap-3 mb-2">
                                 <h3 className="text-xl font-bold text-white">{service.name}</h3>
                                 {service.popular && (
-                                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                                    POPULAR
-                                  </span>
-                                )}
-                              </div>
-                              <p className="text-gray-300 text-sm">{service.tagline}</p>
-                            </div>
-                          </div>
-                          <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                            <div>
-                              <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>
-                              <ul className="space-y-1">
-                                {service.features.slice(0, 4).map((feature, featureIndex) => (
-                                  <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                                    {feature}
                                     {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -930,39 +736,6 @@ const serviceCategories = [
                               <div className="flex flex-wrap gap-2">
                                 {service.technology.slice(0, 6).map((tech, techIndex) => (
                                   <span key={techIndex} className="bg-gray-800/50 text-gray-300 text-xs px-2 py-1 rounded">
-                                    {tech}
-                                  </span>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        {/* Right Column */}
-                        <div className="lg:w-80 space-y-4">
-                          {/* Price */}
-                          <div className="text-center">
-                            <div className="text-3xl font-bold text-white mb-1">
-                              {service.price}
-                              <span className="text-lg text-gray-400 font-normal">{service.period}</span>
-                            </div>
-                            <div className="text-sm text-gray-400">30-day free trial</div>
-                          </div>
-                          {/* Market Data */}
-                          <div className="grid grid-cols-2 gap-3">
-                            <div className="bg-gray-800/50 rounded-lg p-3 text-center">
-                              <div className="text-xs text-gray-400 mb-1">Market Size</div>
-                              <div className="text-sm text-gray-200">{service.marketSize}</div>
-                            </div>
-                            <div className="bg-gray-800/50 rounded-lg p-3 text-center">
-                              <div className="text-xs text-gray-400 mb-1">Growth Rate</div>
-                              <div className="text-sm text-gray-200">{service.growthRate}</div>
-                            </div>
-                          </div>
-                          {/* ROI */}
-                          <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-3">
-                            <div className="text-xs text-green-400 mb-1">Expected ROI</div>
-                            <div className="text-sm text-green-300">{service.roi}</div>
-                          </div>
                               </div>;
                             </div>;
                           </div>;
@@ -1038,7 +811,6 @@ const serviceCategories = [
                               </button>
                             </Link>
                           </div>
-                          {/* Contact Info */}
                           {/* Contact Info */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

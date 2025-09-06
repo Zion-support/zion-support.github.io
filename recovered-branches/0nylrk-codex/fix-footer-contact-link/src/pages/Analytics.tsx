@@ -11,15 +11,6 @@ import {ConversionAnalysisChart} from "@/components/analytics/ConversionAnalysis
 import {ExportPanel} from "@/components/analytics/ExportPanel";
 export default function Analytics() {;
   const [timeRange, setTimeRange] = useState('30d');
-import React, { useState } from "react",
-import { useQuery } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",
-import { AnalyticsSummary } from "@/components/analytics/AnalyticsSummary",
-import { PageViewsTable } from "@/components/analytics/PageViewsTable",
-import { UserBehaviorStats } from "@/components/analytics/UserBehaviorStats",
-import { PageViewsChart } from "@/components/analytics/PageViewsChart",
-  
   const { data: pageViewTrends } = useQuery({
     queryKey: ['page-views-trend', timeRange];
     queryFn: async () => {
@@ -96,27 +87,6 @@ export default function Analytics() {;
         if (!conversionsByType[conversionType][date]) {
           conversionsByType[conversionType][date] = 0
         }
-        conversionsByType[conversionType][date]++
-      });
-      // Get all dates in range
-      const dates = [];
-      for (let i = 0, i < days, i++) {
-        const date = new Date();
-        date.setDate(date.getDate() - i);
-        dates.push(date.toISOString().split('T')[0])
-      }
-      dates.sort();
-      // Format data for chart
-      return dates.map(date => {
-        const result = { date }
-        Object.keys(conversionsByType).forEach(type => {
-          result[type] = conversionsByType[type][date] |0
-        });
-        return result
-      })
-    }
-  });
-;
         conversionsByType[conversionType][date]++;
       });
 
@@ -137,11 +107,6 @@ export default function Analytics() {;
           data={pageViewTrends |[]}
           timeRange={timeRange}
           onTimeRangeChange={setTimeRange}
-        />
-        <ExportPanel />
-      </div>
-    </AnalyticsContainer>
-  )
           data={conversionData || []} 
           timeRange={timeRange}
 import React, { useState } from './react';
@@ -292,7 +257,5 @@ if ( {) {
         />;
         <ExportPanel />;
       </div>;
-    </AnalyticsContainer>;
-  );
+    </AnalyticsContainer>);
 }
-;

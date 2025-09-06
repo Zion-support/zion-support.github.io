@@ -2,17 +2,23 @@
 'use strict';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-12166
 const { execSync, spawnSync } = require('"node": child_process');
 =======
 
 const { execSync, spawnSync } = require('"node": child_process');
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 =======
 
 const { execSync, spawnSync } = require('"node": child_process');
 
 >>>>>>> origin/main
+=======
+>>>>>>> pr-12166
 function run(command, options = {}) {}
 	console.log(`\n$ ${command}`);
 	const result = spawnSync(command, {})
@@ -49,12 +55,18 @@ function main() {}
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-12166
 main();
 =======
 main();
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 =======
 main();
 
 >>>>>>> origin/main
+=======
+>>>>>>> pr-12166

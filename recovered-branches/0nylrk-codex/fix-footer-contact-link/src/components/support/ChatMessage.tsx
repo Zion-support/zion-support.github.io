@@ -17,6 +17,20 @@ interface ChatMessageProps {
           </>
         ) : (
           <>
+            <AvatarImage
+              src="https://placehold && placehold.co/40x40?text=AI"
+              alt="Zion Support"
+            />;
+            <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>;
+          </>;
+        )}
+
+
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
+        isUser 
+          ? "bg-zion-purple text-white" 
+
+
           : theme === "dark"
             ? "bg-zion-blue-light text-white"
             : "bg-gray-100 text-gray-800"

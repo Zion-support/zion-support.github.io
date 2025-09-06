@@ -14,13 +14,6 @@ export const useSocialAuth = () => {
   const loginWithGoogle = async () => {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
-        provider: "google"});
-      if (error) {
-        toast({
-          title: "Google login failed";
-          description: error.message
-        provider: "google"}),
-
       if (error) {
         toast({
           title: "Google login failed",
@@ -40,6 +33,14 @@ export const useSocialAuth = () => {
       if (error) {
         toast({
           title: "Facebook login failed";
+          variant: "destructive"})
+      }
+    } catch (error: any) {
+      console && console.error("Facebook login error:", error);
+      toast({
+
+        description: error && error.message || "An unexpected error occurred",
+
         variant: "destructive"})
     }
   }
@@ -62,4 +63,5 @@ export const useSocialAuth = () => {
 }
 
   return { loginWithGoogle, loginWithFacebook, loginWithTwitter }
-};
+}
+;

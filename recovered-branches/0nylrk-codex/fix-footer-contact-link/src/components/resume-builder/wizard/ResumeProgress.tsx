@@ -28,5 +28,3 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {;
       <Progress value={progress} className="h-2 w-full sm: w-48" />;
     </div>;
   );
-
-export default ResumeProgress;

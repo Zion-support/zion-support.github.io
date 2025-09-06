@@ -5,6 +5,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!userId |typeof amount !== "number" |!reason) {
     return res.status(400).json({ error: "userId, amount, reason required" })
 
+
   };
 };
 

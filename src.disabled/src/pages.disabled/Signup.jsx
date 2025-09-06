@@ -32,3 +32,4 @@ export default function Signup({ }: SignupProps) {
     </div>
   );
 }
+}

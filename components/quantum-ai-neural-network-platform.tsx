@@ -1,20 +1,4 @@
 
-  Atom
-  Brain
-  Zap
-  Shield
-  Users
-  Target
-  ArrowRight
-  Check
-  Star
-  Globe
-  Cpu
-  Network;
-} from 'lucide-react';
-
-import SEO from '../components/SEO';
-
 
 
 const QuantumAINeuralNetworkPlatform: React.FC = () => {
@@ -424,9 +408,19 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
               </motion.div>
 
             ))}
-          </div>
-        </div>
-      </section>
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* Pricing Section */}
+      <section className='py-20 bg-gray-900/50'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gray-900/50">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+          <motion&& motion.div
+
+
 
       {/* Pricing Section */}
       <section className='py-20 bg-gray-900/50'>
@@ -437,8 +431,10 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className='text-center mb-16'
+
+
+
+
 
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
@@ -578,8 +574,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
         </div>
       </section>
     </div>
-export default QuantumAINeuralNetworkPlatform;  )
-}
-export default QuantumAINeuralNetworkPlatform;
+  );
 
-export default QuantumAINeuralNetworkPlatform;
+};
+
+

@@ -161,6 +161,46 @@ import Link from 'next/link';
                           <div className="space-y-2">
                             {item.dropdown.map((dropdownItem) => (
                               <Link
+                  </Link>
+                )}
+
+                {/* Dropdown Menu */}
+                {item.dropdown && (
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
+
+                      >
+                        <div className='p-4'>
+                          <div className='text-sm text-gray-400 mb-3'>
+                            {item.description}
+                          </div>
+                          <div className='space-y-2'>
+                            {item.dropdown.map(dropdownItem => (
+                              <Link
+                                key={dropdownItem.name}
+                                href={dropdownItem.href}
+                                className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group'
+                              >
+                                <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200'>
+                                  <dropdownItem.icon className='w-5 h-5 text-cyan-400' />
+                                </div>
+                                <div className='flex-1'>
+                                  <div className='text-white font-medium group-hover:text-cyan-400 transition-colors duration-200'>
+                                    {dropdownItem.name}
+                                  </div>
+                                  <div className='text-sm text-gray-400'>
+                                    {dropdownItem.description}                                  </div>
+                                </div>
+                                <div className='text-sm font-semibold text-cyan-400'>                                  {dropdownItem.price}                                <div className="text-sm font-semibold text-cyan-400">
+                                  {dropdownItem.price}
+                                </div>
+                              </Link>
                             ))}
                           </div>;
                         </div>;
@@ -223,10 +263,6 @@ import Link from 'next/link';
               className="text-gray-300 hover:text-white transition-colors duration-200"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-      </div>
 
       {/* Mobile Menu */}
       <AnimatePresence>;
@@ -235,6 +271,40 @@ import Link from 'next/link';
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden'
+          >
+            <div className='px-4 py-6 space-y-4'>
+              {navigationItems.map(item => (                <div key={item.name}>
+                  {item.dropdown ? (
+                    <div>
+                      <button            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {navigationItems.map((item) => (
+                  {item.dropdown ? (
+                    <div>
+                      <button
+                        onClick={() =>
+                          setActiveDropdown(
+                            activeDropdown === item.name ? null : item.name
+                          )
+                        }
+                        className='flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3'
+                        <div className='flex items-center space-x-3'>
+                          {item.icon && <item.icon className='w-5 h-5' />}
+                          <span>{item.name}</span>
+                        </div>
+                        <ChevronDown
+                          className={`w-4 h-4 transition-transform duration-200 ${
+                            activeDropdown === item.name ? 'rotate-180' : ''
                           }`}
                         />
                       </button>

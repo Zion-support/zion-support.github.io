@@ -1,25 +1,4 @@
 
-  Menu
-  X
-  ChevronDown
-  Search
-  User
-  Settings
-  LogOut
-  Bell
-  Globe
-  Zap
-  Brain
-  Rocket
-  Dna
-  DollarSign
-  Lock
-  Wifi
-  Truck
-  Gamepad2
-  Bot
-  Factory
-  Car
   Menu,
   X,
   ChevronDown,
@@ -349,6 +328,22 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   )}
                 </div>;
               ))}
+              {/* Contact Info */}
+
+              <div className="pt-4 border-t border-cyan-500/20">;
+                <div className="space-y-2 text-sm text-gray-400">;
+                  <div className="flex items-center space-x-2">;
+                    <Globe className="w-4 h-4" />;
+                    <span>{contactInfo && contactInfo.website}</span>;
+                  </div>;
+                  <div className="flex items-center space-x-2">;
+                    <User className="w-4 h-4" />;
+                    <span>{contactInfo && contactInfo.email}</span>;
+                  </div>;
+                </div>;
+              </div>;
+
+
               {/* Mobile CTA */}
               <div className="pt-4">;
                 <Link

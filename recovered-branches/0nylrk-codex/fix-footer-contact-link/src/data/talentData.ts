@@ -1,7 +1,4 @@
 
-import { TalentProfile } from "@/types/talent";
-// Sample talent profiles with realistic data for the talent directory
-export const TALENT_PROFILES: TalentProfile[] = [
   {
 
     bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
@@ -156,14 +153,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
           'Developed a deep learning system for detecting abnormalities in chest X-rays with 97% sensitivity, reducing radiologist workload by 35% and improving early detection rates.'
       }
       {
-title: 'Cancer Treatment Response Prediction',
-        description:
-          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.',
-      },
-    ],
-  },;
-];
-}];
         title: "Cancer Treatment Response Prediction",
         description: "Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes."
       }

@@ -28,3 +28,5 @@ function handler() {
   res.set_header ('Set - Cookie', cookie);
   res.status (200).json ({ ok: true });
 }
+
+

@@ -2,7 +2,6 @@ interface CacheItem<T> {
   "value": T;
   expiresAt: number;
   createdAt: number;'
-
 interface CacheConfig {
   "defaultTTL": number; // Time to live in milliseconds
   maxSize: number;

@@ -2,6 +2,8 @@ import type { GetServerSideProps } from 'next';
 
 
 export default function VendorProfilePage({ vendor }: Props) {
+export default function VendorProfilePage({ vendor }: Props) {
+
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   if (!vendor) return <div className='text-gray-500'>Vendor not found.</div>;  if (!vendor) return <div className="text-gray-500">Vendor not found.</div>;
@@ -51,17 +53,6 @@ export default function VendorProfilePage({ vendor }: Props) {
                 ) : (;
                   <div className="w-full h-40 bg-gray-100 dark:bg-gray-900" />;
                 )}
-        </div>
-      </div>
-
-      <div>
-
-      </div>
-
-      {vendor.packages && vendor.packages.length > 0 && (
-        <div>
-
-                </div>
 
             ))}
           </div>;
@@ -144,12 +135,3 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
     </div>
   );
 
-  const { getVendorBySlug } = await import('../../utils/vendor-store');
-  const vendor = slug ? getVendorBySlug(slug) |null : null;
-  return { props: { vendor } }
-}
-
-  const vendor = slug ? getVendorBySlug(slug) || null : null;
-  return { props: { vendor } };
-};
-};

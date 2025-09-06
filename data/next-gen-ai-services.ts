@@ -286,8 +286,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-12-20',
     customers: 3,
     rating: 4.9,
-    reviews: 2
-  },
 
     reviews: 2
   }
@@ -494,8 +492,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-11-20',
     customers: 180,
     rating: 4.8,
-    reviews: 95
-  },
 
     reviews: 95
   }
@@ -701,8 +697,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-12-10',
     customers: 12,
     rating: 4.9,
-    reviews: 6
-  },
 
     reviews: 6
   }
@@ -916,8 +910,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-11-25',
     customers: 45,
     rating: 4.7,
-    reviews: 23
-  },
 
     reviews: 23
   }
@@ -1127,8 +1119,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-12-05',
     customers: 8,
     rating: 4.8,
-    reviews: 4
-  },
 
     reviews: 4
   }
@@ -1331,8 +1321,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-12-15',
     customers: 6,
     rating: 4.9,
-    reviews: 3
-  },
 
     reviews: 3
   }
@@ -1532,8 +1520,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-11-30',
     customers: 75,
     rating: 4.6,
-    reviews: 38
-  },
 
     reviews: 38
   }
@@ -1651,10 +1637,6 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Integration with existing systems'
       'Scalable cloud infrastructure'
       '24/7 optimization support',    ],    description: 'Breakthrough AI optimization engine that uses quantum-inspired algorithms to solve complex business problems. Achieve optimal solutions 1000x faster than traditional methods.'
-      '24/7 optimization support',    ],    description: 'Breakthrough AI optimization engine that uses quantum-inspired algorithms to solve complex business problems. Achieve optimal solutions 1000x faster than traditional methods.',
-    features: [
-      'Quantum-inspired optimization algorithmsMulti-objective optimizationReal-time constraint solvingMachine learning optimizationAPI for custom optimization problemsPerformance analytics dashboardCustom algorithm developmentIntegration with existing systems',
-      'Scalable cloud infrastructure24/7 optimization support'
     popular: true,
     icon: '⚡',
     color: 'from-blue-600 to-cyan-700',
@@ -1723,6 +1705,26 @@ export const nextGenAIServices: NextGenAIService[] = [
     customers: 75,
 
       website: 'https://ziontechgroup.com'
+    popular: true,
+    icon: '⚡',
+    color: 'from-blue-600 to-cyan-700',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/ai-quantum-optimization-engine',
+    targetAudience: 'Manufacturing companies, Logistics firms, Financial institutions, Research organizations, Government agencies, Energy companies',
+    trialDays: 30,
+    setupTime: '3 weeks',
+    category: 'AI & Quantum Computing',
+    realService: true,
+    integrations: ['SAPOracleSalesforceCustom APIsDatabase systemsCloud platforms'],
+    useCases: ['Supply chain optimizationFinancial portfolio optimizationManufacturing process optimizationEnergy grid optimizationTransportation routingResource allocation'],
+    roi: 'Average customer sees 1200% ROI through operational efficiency improvements and cost reductions.',
+    competitors: ['Traditional optimization software ($100K+)Basic optimization tools ($20K+)'],
+    growthRate: '250% annual growth',
+    variant: 'quantum-advanced',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
 
     realImplementation: true,
@@ -1963,8 +1965,6 @@ export const nextGenAIServices: NextGenAIService[] = [
   },
 
     reviews: 38
-  }
-  {
 
     id: 'ai-creative-intelligence-suite'
     name: 'AI Creative Intelligence Suite'
@@ -2376,8 +2376,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-08-01',
     customers: 180,
     rating: 4.8,
-    reviews: 156
-  },
 
     reviews: 156
   }
@@ -2576,8 +2574,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-02-15',
     customers: 89,
     rating: 4.9,
-    reviews: 67
-  },
 
     reviews: 67
   }
@@ -2800,8 +2796,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-01-20',
     customers: 342,
     rating: 4.8,
-    reviews: 289
-  },
 
     reviews: 289
   }
@@ -3018,8 +3012,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-03-10',
     customers: 67,
     rating: 4.9,
-    reviews: 45
-  },
 
     reviews: 45
   }
@@ -3212,12 +3204,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '2-4 weeks',
     category: 'AI & Financial Technology',
     realService: true,
-    technology: ['TensorFlowPyTorchPythonReactNode.jsPostgreSQLRedisAWS'],
-    integrations: ['Interactive BrokersTD AmeritradeE*TRADEBinanceCoinbase ProCustom APIs'],
-    useCases: ['Algorithmic tradingPortfolio managementRisk assessmentMarket analysisStrategy backtestingPerformance optimization'],
-    roi: 'Average customer sees 200% ROI within 6 months through improved trading window.window.window.performance.',
-    competitors: ['AlgoTraderMetaTraderNinjaTraderTradeStationCustom solutions'],
-    marketSize: '$35B algorithmic trading market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
@@ -3230,8 +3216,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-02-01',
     customers: 23,
     rating: 4.9,
-    reviews: 18
-  },
 
     reviews: 18
   }
@@ -3321,6 +3305,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     customers: 45,
 
 
+
+
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
@@ -3333,239 +3319,3 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-01-10',
     customers: 45,
     rating: 4.9,
-    reviews: 34
-import { ServiceVariant } from '../types/service-variants',;
-export interface NextGenAIService {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-];export const nextGenAIServices: NextGenAIService[] = [;
-  // Advanced AI & Neural Network Services;
-  {;
-    id: "neural-quantum-brain-interface",
-    name: "Neural Quantum Brain Interface",
-    tagline: "Direct neural interface with quantum AI for cognitive enhancement",
-    price: "$25,999",
-    period: "/month",
-    description: "Revolutionary neural interface that directly connects human brains to quantum AI systems, enabling unprecedented cognitive enhancement, memory augmentation, and real-time learning acceleration.",
-    features[ "Direct neural signal processing",
-      "Quantum AI cognitive enhancement",
-      "Real-time memory augmentation",
-      "Neural pattern recognition",
-      "Cognitive performance optimization",
-      "Brain-computer interface",
-      "Quantum neural networks",
-      "Advanced analytics dashboard",
-      "API for research integration",
-      "24/7 neural support center" ],
-    popular: true,
-    icon: "🧠",
-    color: "from-purple-600 to-indigo-700",
-    textColor: "text-purple-400",
-    link: "https://ziontechgroup.com/neural-quantum-brain-interface",
-    marketPosition: "First-to-market neural quantum interface. Competes with Neuralink ($10,000+), Kernel ($50,000+). Our advantage: Quantum AI integration and cognitive enhancement.",
-    targetAudience: "Research institutions, Medical facilities, Defense contractors, Gaming companies, Educational institutions, Healthcare providers",
-    trialDays: 5,
-    setupTime: "8-12 weeks",
-    category: "Neural AI & Brain Interface",
-    targetAudience: "Content agencies, Marketing firms, E-commerce businesses, Publishers, Educational institutions, Entertainment companies",
-    trialDays: 14,
-    setupTime: "1 week",
-    category: "Quantum AI Content",
-    marketSize: "$5B AI content market, 300% annual growth",
-    growthRate: "300% annual growth",
-    variant: "ai-futuristic",
-    contactInfo: {;
-      mobile: "+1 302 464 0950",
-      "Citation and validation",
-      "Research collaboration",
-      "Performance analytics",
-      "API for integration",
-    marketPosition: "First-to-market autonomous AI research platform. No direct competitors. Our advantage: Fully autonomous research and breakthrough discoveries.",
-    targetAudience: "Research institutions, Universities, Pharmaceutical companies, Technology companies, Government agencies, Scientific organizations",
-    trialDays: 7,
-    setupTime: "4-6 weeks",
-    category: "AI Autonomous Research",
-      "AI script writing",
-      "Voice synthesis",
-      "Music composition",
-      "Special effects generation",
-    targetAudience: "Film studios, Production companies, Marketing agencies, Content creators, Educational institutions, Entertainment companies",
-    trialDays: 14,
-    setupTime: "2-3 weeks",
-    category: "Quantum AI Video",
-    targetAudience: "Research institutions, Technology companies, Financial institutions, Pharmaceutical companies, Government agencies, Academic institutions",
-    trialDays: 5,
-    setupTime: "6-8 weeks",
-    category: "AI Quantum Computing",
-      "Continuous improvement",
-      "Adaptive learning",
-      "Performance optimization",
-      "Automatic architecture updates",
-    marketPosition: "First-to-market self-evolving neural network platform. No direct competitors. Our advantage: Continuous self-improvement and exponential performance gains.",
-    targetAudience: "AI research institutions, Technology companies, Machine learning engineers, Data scientists, Academic institutions, Innovation labs",
-    trialDays: 10,
-    setupTime: "4-6 weeks",
-    category: "Neural Network Evolution",
-      "Original content creation",
-      "Creative optimization",
-      "Style transfer",
-      "Collaboration tools",
-      "Performance analytics",
-      "Creative analytics",
-      "API for integration",
-    marketPosition: "First-to-market quantum AI creativity engine. Competes with traditional creative tools but offers unlimited AI creativity.",
-    targetAudience: "Creative agencies, Design firms, Marketing companies, Entertainment companies, Educational institutions, Individual creators",
-    trialDays: 21,
-    setupTime: "2-3 weeks",
-    category: "Quantum AI Creativity",
-    marketPosition: "First-to-market neural interface with AI integration. Competes with Neuralink ($10,000+/month) and Kernel ($50,000+/month).",
-    targetAudience: "Research institutions, Medical facilities, Defense contractors, Technology companies, Universities",
-    trialDays: 30,
-    setupTime: "2-4 weeks",
-    category: "AI & Neuroscience",
-    growthRate: "500% annual growth",
-    variant: "neural-quantum",
-    contactInfo: {;
-      mobile: "+1 302 464 0950",
-      "Custom quantum algorithm development",
-      "Integration with existing IT infrastructure",
-      "Quantum security protocols" ],
-    popular: true,
-    marketPosition: "Competitive with IBM Quantum ($10,000+/month) and Google Quantum AI ($15,000+/month). Our advantage: AI optimization and hybrid computing capabilities.",
-    targetAudience: "Financial institutions, Pharmaceutical companies, Research organizations, Government agencies, Technology companies",
-    trialDays: 30,
-    setupTime: "4-6 weeks",
-    category: "AI & Quantum Computing",
-    growthRate: "400% annual growth",
-    variant: "quantum-advanced",
-    contactInfo: {;
-      mobile: "+1 302 464 0950",
-      "Space traffic management",
-      "Mission optimization algorithms",
-      "Predictive maintenance",
-      "Integration with ground stations",
-    marketPosition: "First-to-market AI-powered space mission control. Competes with traditional space operations ($100,000+/month) and manual mission control.",
-    targetAudience: "Space agencies, Satellite operators, Defense contractors, Aerospace companies, Research institutions",
-    trialDays: 45,
-    setupTime: "6-8 weeks",
-    category: "AI & Space Technology",
-      "Genetic sequence analysis",
-      "Protein structure prediction",
-      "Clinical trial optimization",
-      "Biomarker identification",
-      "Drug repurposing algorithms",
-      "Integration with research databases",
-    marketPosition: "Competitive with Insilico Medicine ($50,000+/month) and BenevolentAI ($60,000+/month). Our advantage: Faster discovery times and lower costs.",
-    targetAudience: "Pharmaceutical companies, Biotech startups, Research institutions, Medical centers, Government agencies",
-    trialDays: 60,
-    setupTime: "8-12 weeks",
-    category: "AI & Biotechnology",
-      "Maintenance scheduling automation",
-      "Performance analytics",
-      "Custom alert system",
-      "Integration with CMMS",
-      "Mobile app support",
-      "Predictive analytics API",
-    marketPosition: "Advanced predictive maintenance platform. Traditional solutions cost $50K+ annually.",
-    targetAudience: "Manufacturing companies, Energy companies, Transportation firms, Healthcare facilities, Data centers, Industrial facilities",
-    trialDays: 30,
-    setupTime: "3 weeks",
-    category: "AI & Industrial IoT",
-    realService: true,
-      "Custom algorithm development",
-      "Automated insights generation",
-      "Risk assessment engine",
-      "Scenario planning tools",
-      "Executive dashboard",
-    targetAudience: "Fortune 500 companies, Financial institutions, Healthcare organizations, Retail chains, Manufacturing companies",
-    trialDays: 30,
-    setupTime: "3-6 weeks",
-    category: "AI & Business Intelligence",
-    realService: true,
-      "Predictive customer behavior",
-      "Omnichannel experience orchestration",
-      "Sentiment analysis & monitoring",
-      "Automated customer journey mapping",
-      "Customer feedback automation",
-      "Loyalty program optimization",
-      "ROI tracking & analytics" ],
-    popular: true,
-    marketPosition: "Leading edge in AI-powered CX. Competes with Adobe Experience Cloud ($1000+/month) and Salesforce Marketing Cloud ($400+/month) with superior AI capabilities.",
-    targetAudience: "E-commerce companies, Retail chains, Hospitality businesses, Financial services, Healthcare providers",
-    trialDays: 21,
-    setupTime: "2-4 weeks",
-    category: "AI & Customer Experience",
-    realService: true,
-    period: "/month",
-    description: "Advanced supply chain optimization platform that uses AI to predict demand, optimize inventory, and streamline logistics operations for maximum efficiency and cost savings.",
-    features[ "Demand forecasting with 90% accuracy",
-      "Inventory optimization algorithms",
-      "Route optimization & logistics planning",
-      "Supplier performance analytics",
-      "Risk assessment & mitigation",
-      "Automated reorder systems",
-      "Cost optimization recommendations",
-      "Sustainability tracking",
-      "Compliance management" ],
-    popular: true,
-    marketPosition: "Leading edge in AI-powered supply chain optimization. Competes with SAP SCM ($5000+/month) and Oracle SCM ($3000+/month) with superior AI capabilities.",
-    targetAudience: "Manufacturing companies, Retail chains, Logistics providers, E-commerce platforms, Distribution companies",
-    trialDays: 30,
-    setupTime: "4-8 weeks",
-    category: "AI & Supply Chain",
-    realService: true,
-    marketPosition: "Leading edge in AI-powered trading. Competes with AlgoTrader ($5000+/month) and MetaTrader ($1000+/month) with superior AI capabilities.",
-    targetAudience: "Hedge funds, Investment firms, Professional traders, Financial institutions, High-net-worth individuals",
-    trialDays: 14,
-    setupTime: "2-4 weeks",
-    category: "AI & Financial Technology",
-    realService: true,
-    integrations["Interactive Brokers", "TD Ameritrade", "E*TRADE", "Binance", "Coinbase Pro", "Custom APIs"],
-    useCases["Algorithmic trading", "Portfolio management", "Risk assessment", "Market analysis", "Strategy backtesting", "Performance optimization"],
-    roi: "Average customer sees 200% ROI within 6 months through improved trading performance.",
-    competitors["AlgoTrader", "MetaTrader", "NinjaTrader", "TradeStation", "Custom solutions"],
-      "Patient data integration",
-      "Treatment recommendation engine",
-      "Risk assessment algorithms",
-      "Clinical decision support",
-      "Automated reporting",
-      "HIPAA compliance",
-      "Integration with EMR systems",
-      "Continuous learning algorithms" ],
-    popular: true,
-    marketPosition: "Leading edge in AI-powered healthcare. Competes with IBM Watson Health ($10000+/month) and Google Health AI ($5000+/month) with superior accuracy.",
-    targetAudience: "Hospitals, Medical clinics, Diagnostic centers, Healthcare providers, Medical research institutions",
-    trialDays: 30,
-    setupTime: "6-12 weeks",
-    category: "AI & Healthcare",
-    realService: true,

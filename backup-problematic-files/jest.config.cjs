@@ -93,6 +93,7 @@ module.exports = {
 =======
 =======
 >>>>>>> origin/automation-improvements-final
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -103,6 +104,8 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -177,6 +180,8 @@ module.exports = {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   coverageReporters: ['text', 'lcov'],
   coverageThreshold: {
     global: {
@@ -200,12 +205,16 @@ module.exports = {
 =======
 =======
 >>>>>>> origin/automation-improvements-final
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
   testTimeout: 10000,
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+<<<<<<< HEAD
+module.exports = createJestConfig(customJestConfig)
+=======
 <<<<<<< HEAD
 module.exports = createJestConfig(customJestConfig)
 =======

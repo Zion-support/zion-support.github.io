@@ -1,5 +1,4 @@
 
-import React from "react";
 
 import React from "react",
 import {
@@ -60,16 +59,6 @@ function RoleManagement() {
       email: "taylor@example.com"
       role: "Viewer"
       permissions: {
-    "Admin": "Full access to all features and settings";
-    "Recruiter": "Can manage candidates and job postings";
-    "Manager": "Can view candidates and create jobs";
-    "Viewer": "Read-only access to candidates"}
-
-  const roleDescriptions: Record<string string> = {
-    "Admin": "Full access to all features and settings",
-    "Recruiter": "Can manage candidates and job postings",
-    "Manager": "Can view candidates and create jobs",
-    "Viewer": "Read-only access to candidates"},
 
 export function RoleManagement() {;
   // Mock team members data;

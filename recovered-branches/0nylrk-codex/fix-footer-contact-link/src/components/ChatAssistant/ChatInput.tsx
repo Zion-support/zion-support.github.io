@@ -1,8 +1,3 @@
-  useState,
-  useRef,
-  useEffect,
-  FormEvent,
-  KeyboardEvent,;
 
 import React, {;
   useState,;
@@ -75,12 +70,11 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
-        className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
-        disabled={!message.trim() |disabled}
-      >
-        <Send className="h-5 w-5" />
-      </Button>
-    </form>
+}
+
+);
+  )
+
 }
 
 );

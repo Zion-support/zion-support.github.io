@@ -1,8 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-  appendLog
-  evaluateReflexes
-  readState
-  writeState;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
   if (req && req.method === 'GET') {

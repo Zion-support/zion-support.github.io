@@ -1,10 +1,8 @@
-              
               <AppStoreButtons 
                 className="mb-8" 
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
-              
               <div className="flex gap-2 items-center text-sm text-gray-400">
                 <span>Compatible with iOS 14+ and Android 8.0+</span>
               </div>

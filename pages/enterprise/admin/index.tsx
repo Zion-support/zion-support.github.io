@@ -42,7 +42,6 @@ export default function CompanyAdmin() {;
 
       </header>
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
-        {(['members', 'usage', 'activity', 'billing'] as const).map(t => (
           <button
             key={t}
             onClick={() => setTab(t)}
@@ -141,6 +140,19 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
     setMembers(members && members.filter(m => m && m.id !== id));
   };
 
+  return (
+
+  set_members: (m: Member[]) => void;
+}) {  const [name, set_name] = useState ('');
+  const [email, set_email] = useState ('');
+  const [role, set_role] = useState < Member['role']>('viewer');
+;
+  const add = async () => {
+    const r = await fetch (`/api / enterprise / companies/${COMPANY_ID}/members`, {
+      method: 'POST',
+      headers: { 'Content - Type': 'application / json' },
+      body: JSON.stringify ({ name, email, role }),
+    });
               }}
             >;
               Actions;
@@ -296,20 +308,6 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
             >
               Actions
             </th>          </tr>
-        <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>Add</button>
-      </div>
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-        <thead>
-          <tr>
-            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Name</th>
-            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Email</th>
-            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Role</th>
-            <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {members.map(m => (
-            <tr key={m.id}>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.name}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.email}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
@@ -324,50 +322,6 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
         </tbody>
       </table>
     </section>
-  );
-function UsageTab({
-  usage
-  setUsage
-  seatsUsed
-}: {
-  usage: Usage;
-  setUsage: (u: Usage) => void;
-  seatsUsed: number;
-}) {
-  const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(
-    usage.monthlyJobPosts
-  );
-  const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd);
-  const save = async () => {
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, {
-      method: 'PATCH'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ monthlyJobPosts, budgetCapUsd })
-    });
-    setUsage({ monthlyJobPosts, budgetCapUsd });  }
-
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
-                <button onClick={() => remove(m.id)} style={{ color: '#b91c1c' }}>Remove</button>
-              </td>
-            </tr>
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </tbody>;
-      </table>;
-    </section>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: Usage) => void, seatsUsed: number }) {
-  const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(usage.monthlyJobPosts),
-  const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd),
   const save = async () => {
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) });
     setUsage({ monthlyJobPosts, budgetCapUsd })
@@ -386,22 +340,6 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
           <input type="number" value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
         </label>
       </div>
-  );
-function ActivityTab({ events }: { events: any[] }) {
-  return (
-    <section>
-      <h2>Team activity</h2>
-      <ul>
-        {events.map(e => (
-          <li key={e.id}>
-            <span style={{ color: '#6b7280' }}>
-              {new Date(e.timestampIso).toLocaleString()} —{' '}
-            </span>            <strong>{e.actorEmail}</strong> {e.action}
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
       <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
         <button onClick={save} style={{ padding: '0.5rem 0.75rem' }}>Save limits</button>
         <span>Seats used: {seatsUsed}</span>
@@ -425,11 +363,6 @@ function ActivityTab({ events }: { events: any[] }) {
     </section>
   )
 }
-          </li>;
-        ))}
-      </ul>;
-    </section>;
-  );
 function BillingTab({ invoices }: { invoices: Invoice[] }) {
   return (
 
@@ -471,6 +404,15 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
         <tbody>
           {invoices.map(inv => (
             <tr key={inv.id}>
+                {inv.periodStartIso} → {inv.periodEndIso}
+              </td>;
+              <td;
+                style={{
+
+                  padding: 8,
+                  border_bottom: '1px solid #f3f4f6',
+                  text_align: 'right',
+
                 }}
               >;
                 ${inv.amount_usd.to_fixed (2)}
@@ -522,23 +464,5 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'center' }}>{inv.status}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
-        </tbody>
-      </table>
-    </section>
-);
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </tbody>;
-      </table>;
-    </section>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
 

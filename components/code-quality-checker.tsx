@@ -1,5 +1,26 @@
 
-export default function CodeQualityCheckerPage() {
+
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+
+import Button from '../components/ui/Button';
+
+import {
+
+  Code,
+  CheckCircle,
+  AlertTriangle,
+  Zap,
+  BarChart3,
+  ArrowRight,
+  Play,
+  Shield,
+  Clock,;
+  TrendingUp,;
+
+
+export default function CodeQualityCheckerPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [codeInput, setCodeInput] = useState('');
@@ -356,6 +377,57 @@ export default function CodeQualityCheckerPage() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-teal"
+            ))}
+
+
+
+
+
+      {/* Supported Languages Section */}
+
+
+
+
+
+              Multi-Language Support
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              We support a wide range of programming languages with
+              language-specific analysis rules and best practices.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {supportedLanguages.map((language, index) => (
+          </div>;
+        </div>;
+      </section>;
+      {/* Supported Languages Section */}
+      <section className='section-padding bg-gradient-cursor'>;
+        <div className='container-cursor'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+              Multi-Language Support;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+              We support a wide range of programming languages with;
+              language-specific analysis rules and best practices.;
+            </p>;
+          </div>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+            {supportedLanguages && supportedLanguages.map((language, index) => (;
+                      {feature.icon}
+                    </div>
+                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-4 text-white">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {feature.description}
+
+                      {feature.description}
+
                     </p>
                   </div>
                 </div>
@@ -582,16 +654,10 @@ export default function CodeQualityCheckerPage() {
                         <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
                       )}
               {/* Quality Metrics */}
-              <Card className='border-gradient-teal'>
-                <h3 className='text-2xl font-bold mb-6 text-white'>
-                  Quality Metrics
-                </h3>
-                <div className='space-y-4'>
-                  <div className='flex justify-between items-center'>
-                    <span className='text-gray-400'>Complexity</span>
-                    <span className='text-orange-400 font-bold'>
-                      {analysisResults.metrics.complexity}
-                    </span>
+
+
+
+
 
                   </div>
                   <div className='flex justify-between items-center'>
@@ -646,11 +712,6 @@ export default function CodeQualityCheckerPage() {
         </section>
       )}
 
-      {/* Pricing Section */}
-      <section id='pricing' className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
               Simple Pricing
             </h2>
@@ -918,18 +979,6 @@ export default function CodeQualityCheckerPage() {
                 </ul>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-              </Card>
-            ))}
 
           </div>;
         </div>;
@@ -957,16 +1006,6 @@ export default function CodeQualityCheckerPage() {
               href='/contact'
               variant='outline'
               size='lg'
-              className='border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl'            >              href="/contact"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl"
-              Schedule Demo
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
               Schedule Demo;
             </Button>;
           </div>;
@@ -974,10 +1013,5 @@ export default function CodeQualityCheckerPage() {
       </section>;
 
 
-  );
-}
-}
-  );
-}
     </>);
 }

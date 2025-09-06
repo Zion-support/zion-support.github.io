@@ -1,5 +1,16 @@
 
 export type IntegrationCategory = 'crm' | 'ats';
+
+export type IntegrationCategory = 'crm' | 'ats';
+export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+
+export type IntegrationProviderId =;
+  | 'salesforce';
+  | 'hubspot';
+  | 'zoho';
+  | 'pipedrive';
+  | 'greenhouse';
+  | 'lever';
 export type IntegrationCategory = 'crm' | 'ats';
 export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 export type IntegrationProviderId =

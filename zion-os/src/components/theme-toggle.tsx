@@ -24,6 +24,15 @@ function ThemeToggle() {
             theme === "light";
               ? "bg - zion - blue text - white";
               : "text - zinc - 400 hover:text - zinc - 100";
+  return (;
+    <div className="flex items-center gap-2">;
+      <span className="sr-only">Theme</span>;
+      <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1">;
+        <button;
+          onClick={() => setTheme("light")}
+
+              ? "bg-zion-blue text-white";
+              : "text-zinc-400 hover:text-zinc-100";
           }`}
           aria - label="Switch to light theme";
           aria - pressed={theme === "light"}

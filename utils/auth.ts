@@ -107,11 +107,6 @@ export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowe
 }
 export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): DemoUser {
   return {
-    id: `user-${Date.now()}`
-    name
-    role
-    email: `${name.toLowerCase().replace(/\s+/g, '.')}@zion.os`
-  }
     id: `user-${Date.now()}`,
     name,
     role,

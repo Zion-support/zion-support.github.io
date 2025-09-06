@@ -35,6 +35,7 @@ interface ReviewFormValues {
   would_work_again?: boolean,
   is_anonymous?: boolean
 
+
 interface ReviewFormProps {;
   projectId: string,;
   revieweeId: string,;
@@ -95,6 +96,10 @@ export function ReviewForm({
   onSubmit,
   defaultValues,
   isSubmitting}: ReviewFormProps) {
+
+  const [hoveredStar, setHoveredStar] = useState<number>(0),
+  
+
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
       rating: defaultValues.rating
@@ -247,12 +252,6 @@ export function ReviewForm({;
               </div>;
             </FormItem>;
           )}
-    }
-  },
-  
-  const watchRating = form.watch("rating"),
-  
-  return (
         {/* Review Text */}
         <FormField
           control={form && form.control}
@@ -594,3 +593,7 @@ if ( {) {
               <FormMessage />;
             </FormItem>;
           )}
+
+}
+;
+

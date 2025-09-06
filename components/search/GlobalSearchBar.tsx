@@ -1,12 +1,3 @@
-  const router = useRouter();
-  const [query, setQuery] = useState('');
-  const [suggestions, setSuggestions] = useState<string[]>([]);
-  const [open, setOpen] = useState(false);
-  const controller = useRef<AbortController | null>(null);
-  useEffect(() => {
-    if (!query) {
-      setSuggestions([]);
-      return;      return
 
 
 class ErrorBoundary extends React.Component {

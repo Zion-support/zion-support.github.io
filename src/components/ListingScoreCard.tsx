@@ -157,13 +157,6 @@ function ListingScoreCard() {
                     star <= Math.round(rating)
                       ? 'text-zion-cyan fill-zion-cyan'
                       : 'text-zion-slate-light'
-              ))}
-            </div>
-            <span className="text-sm text-zion-slate-light ml-1">
-              ({reviewCount})
-            </span>
-          </div>
-        )}
               </Badge>;
             ))}
           </div>;

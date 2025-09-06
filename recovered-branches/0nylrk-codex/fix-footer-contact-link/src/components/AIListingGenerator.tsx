@@ -8,30 +8,6 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Sparkles, ArrowRight} from "@/components/icons";
 import {supabase} from "@/integrations/supabase/client";
 import {Badge} from "@/components/ui/badge";
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Skeleton } from "@/components/ui/skeleton",
-import { Sparkles, ArrowRight } from "@/components/icons",
-import { supabase } from "@/integrations/supabase/client";
-import { Badge } from "@/components/ui/badge";
-interface GeneratedContent {
-
-  description: string
-  tags: string[]
-  suggestedPrice: {
-    min: number
-
-    max: number
-  }
-  keyPoints: string[]
-}
-interface AIListingGeneratorProps {
-
-  onApplyGenerated?: (content: GeneratedContent) => void
 
 interface GeneratedContent {
   description: string,
@@ -41,54 +17,26 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
-import React, { useState } from "react",;
-import { useToast } from "@/hooks/use-toast",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Skeleton } from "@/components/ui/skeleton",;
-import { Sparkles, ArrowRight } from "@/components/icons",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Badge } from "@/components/ui/badge",;
-interface GeneratedContent {;
-  description: string,;
-  tags: string[],;
-  suggestedPrice: {;
-    min: number,;
-    max: number;
-  },;
-  keyPoints: string[];
-}
-;
-interface AIListingGeneratorProps {;
-  onApplyGenerated?: (content: GeneratedContent) => void,;
-  initialValues?: {;
-    title?: string,;
-    category?: string,;
-    keyFeatures?: string,;
-    targetAudience?: string;
-  }
-}
 
 
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
     switch(field) {
       case 'title':
-        setTitle(e.target.value),
-        break,
-      case 'category':
-        setCategory(e.target.value),
-        break,
-      case 'keyFeatures':
-        setKeyFeatures(e.target.value),
-        break,
-      case 'targetAudience':
-        setTargetAudience(e.target.value)
-        break
-    }
-  }
+        break;
+      case 'category':;
+        setCategory(e && e.target.value);
+        break;
+      case 'keyFeatures':;
+        setKeyFeatures(e && e.target.value);
+        break;
+      case 'targetAudience':;
+        setTargetAudience(e && e.target.value),;
+        break;
+
+
   },
+
+
 
   const handleGenerate = async () => {
     if (!title |!category) {
@@ -272,7 +220,7 @@ if ( {) {
               value={targetAudience}
               onChange={(e) => handleInputChange(e, 'targetAudience')}
             onClick={handleGenerate}
-            disabled={isLoading || !title || !category}
+            disabled={isLoading |!title |!category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
             {isLoading ? (
@@ -296,6 +244,22 @@ if ( {) {
             <div className="flex flex-wrap gap-2">
               {[...Array(5)].map((_, i) => (
                 <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />
+              ))}
+            </div>;
+            <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />;
+            <div className="space-y-2">;
+              {[...Array(3)].map((_, i) => (;
+                <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />;
+              ))}
+            </div>;
+          </CardContent>;
+        </Card>;
+      )}
+
+
+
+
+
       {generatedContent && !isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark">
           <CardHeader>

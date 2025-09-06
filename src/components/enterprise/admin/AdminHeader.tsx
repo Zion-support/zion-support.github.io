@@ -89,4 +89,3 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
         <Button>Customize Workspace</Button>
       </div>
     </div>
-;

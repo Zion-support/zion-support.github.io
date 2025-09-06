@@ -1,15 +1,4 @@
 
-// All services combined const allServices = [ ...advancedAIMLServices;
- // All services combined const allServices = [ ...advancedAIMLServices;
-// All services combined const allServices = [ ...advancedAIMLServices;
- // All services combined const allServices = [ ...advancedAIMLServices;
-
-
-
- // All services combined const allServices = [ ...advancedAIMLServices;
-
-// All services combined const allServices = [ ...advancedAIMLServices;
- // All services combined const allServices = [ ...advancedAIMLServices;
 ...advancedCybersecurityServices;
 ...advancedCloudDevOpsServices2025;
 ...industrySpecificSolutions;
@@ -170,7 +159,6 @@
                       Get Started
                     </a>
                     <a
-                      href={`tel:${(service as any).mobile |'+1 302 464 0950'}`}
                       className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Phone className="w-4 h-4" />
@@ -242,8 +230,6 @@
                           <span className="ml-1">{service.category}</span>
                         </span>
                       </div>
-
-
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">;
                         <div>;
@@ -308,9 +294,6 @@
                                   {feature}
                                 </li>
                               ))}
-                            </ul>
-                          </div>
-
                           {/* Category and Action */}
                           <div className="flex flex-col items-end space-y-3">
                             <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>

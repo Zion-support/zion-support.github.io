@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-} from '../../../types/grants';
-const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
@@ -30,6 +28,13 @@ function grantPath(id: string) {
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
 }
+
+function writeGrant(record: GrantApplication) {
+
+  ensureDir(),
+  fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
+  ensureDir()
+
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
   if (!id) {
@@ -177,3 +182,6 @@ if ( {) {
   res.status (405).end ('Method Not Allowed');  res.set_header ('AllowGET, PUT');
   res.status (405).end ('Method Not Allowed');
 }
+
+}
+

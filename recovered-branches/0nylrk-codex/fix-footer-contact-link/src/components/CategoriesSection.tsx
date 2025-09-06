@@ -1,9 +1,4 @@
 
-
-import {GradientHeading} from "./GradientHeading";
-import {Link} from "react-router-dom";
-import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
-const categories = [
   {
     title: "Services"
     description: "On-demand IT support, consulting, development, and more";
@@ -56,7 +51,9 @@ const categories = [;
     description: "On-demand IT support, consulting, development, and more";
 }
 
-export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+
+export function CategoriesSection(): any ({ showTitle = true }: CategoriesSectionProps) {;
+
   return (
     <section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4">;
@@ -131,7 +128,6 @@ function CategoriesSection() {
                 className="px - 6 py - 3 bg - zion - blue - light hover:bg - zion - blue - dark border border - zion - purple / 20 hover:border - zion - purple / 50 rounded - full text - zion - cyan transition - all duration - 300";
               >;
                 {service.title}
-};
           </div>;
         </div>;
 

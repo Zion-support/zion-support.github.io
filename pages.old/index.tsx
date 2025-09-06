@@ -73,9 +73,6 @@ export default function HomePage() {;
             <p className="text-xl "md": text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.;
             </p>;
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center">;
-              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
-                Get Started Today;
               </Link>;
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">;
                 Explore Services;
@@ -84,41 +81,3 @@ export default function HomePage() {;
           </motion && motion.div>;
         </div>;
       </section>;
-      {/* Services Section */}
-      <section className="py-20 bg-gray-50">;
-        <div className="container mx-auto px-4">;
-          <motion&& motion.div
-            className="text-center mb-12 "md": mb-16"
-            initial={{ opacity: 0, "y": 30 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            })}
-          </div>;
-        </div>;
-      </section>;
-      {/* Stats Section */}
-      <section className="py-20 bg-white">;
-        <div className="container mx-auto px-4">;
-          <div className="grid grid-cols-2 "md": grid-cols-4 gap-8">;
-            {stats && stats.map((stat, index) => (;
-              <motion&& motion.div
-                key={index}
-                className="text-center"
-                initial={{ "opacity": 0, "y": 30 }}
-                whileInView={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }}
-                viewport={{ "once": true }}>;
-                <div className="text-3xl "md": text-4xl font-bold text-blue-600 mb-2">;
-                  {stat && stat.number}
-                </div>;
-                <div className="text-gray-600 font-medium">{stat && stat.label}</div>;
-              </motion && motion.div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
-        <div className="container mx-auto px-4 text-center">;
-          <motion&& motion.div
-            initial={{ "opacity": 0, "y": 30 }}
-            whileInView={{ "opacity": 1, "y": 0 }}

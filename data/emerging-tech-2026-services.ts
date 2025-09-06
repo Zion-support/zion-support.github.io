@@ -72,16 +72,16 @@
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      website: 'https://ziontechgroup.com';
     }
-    realImplementation: true
-    implementationDetails: 'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.';
-    launchDate: '2026-04-20';
+    real_implementation: true,
+    implementation_details: 'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real - time monitoring and predictive analytics.';
+    launch_date: '2026 - 04 - 20';
     customers: 180;
-    rating: 4.8
+    rating: 4.8,
+    reviews: 120;
 
 ];
 import { ServiceVariant } from '../types/service-variants',;

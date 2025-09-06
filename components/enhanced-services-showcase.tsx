@@ -1,9 +1,4 @@
 
-//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
- //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
- //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-
 //Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
 ...cuttingEdgeITServices;
 ...innovativeMicroSaasV2Services;
@@ -50,6 +45,14 @@ const Button = ({
       </a>;
     );
   }
+  return (
+    <button onClick={onClick} className={classes}>;
+      {children}
+
+    </button>;
+  );
+};
+
   class_name = '';
   children, on_click;
 }: {

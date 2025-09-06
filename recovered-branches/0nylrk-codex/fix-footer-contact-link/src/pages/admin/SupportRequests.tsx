@@ -1,13 +1,4 @@
 
-import React, { useState } from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Search, Filter } from "lucide-react",
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
@@ -180,16 +171,6 @@ const MOCK_SUPPORT_REQUESTS = [;
     return true
   });
   // Count by status for the summary dashboard
-  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
-  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
-  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
-  const totalCount = MOCK_SUPPORT_REQUESTS.length;
-  const resetFilters = () => {
-    setSearchQuery(""),
-    setStatusFilter(null),
-    setPriorityFilter(null),
-    setCategoryFilter(null)
-  }
 
   return (
     <AppLayout>

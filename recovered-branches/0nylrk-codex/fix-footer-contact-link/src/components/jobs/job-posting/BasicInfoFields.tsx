@@ -1,8 +1,3 @@
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
   FormField,
   FormItem,
   FormLabel,
@@ -35,9 +30,44 @@ import { Card, CardContent } from "@/components/ui/card",
 interface BasicInfoFieldsProps {
   control: Control < any>;
 }
-export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
-  control
-}) => {
+
+
+
+
+  return (
+    <div className="space-y-4">
+      <FormField
+        control={control}
+        name="title"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Job Title</FormLabel>
+            <FormControl>
+              <Input placeholder="e.g. Senior React Developer" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+
+import React, { useState } from "react",;
+import { Control } from "react-hook-form",;
+import {;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormMessage;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;
+import { Card, CardContent } from "@/components/ui/card",;
+
+interface BasicInfoFieldsProps {;
+  control: Control<any>;
+}
+
+export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
+  control,;
+}) => {;
   const [minBudget, setMinBudget] = useState<string>("");
   const [maxBudget, setMaxBudget] = useState<string>("");
   const handleSuggestionApplied = (min: number, max: number) => {
@@ -190,13 +220,6 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                     on_change (e);
                   }}
                   {...rest}
-      <Card>
-        <CardContent className="pt-4">
-          <ClientBudgetRecommender
-            jobTitle={control._formValues.title |""}
-            category={control._formValues.category |""}
-            experienceLevel={control._formValues.experienceLevel |""}
-      
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender

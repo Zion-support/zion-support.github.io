@@ -1,5 +1,7 @@
 <<<<<<< HEAD:backup-problematic-files/scripts/advanced-app-enhancer.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -691,6 +693,9 @@ export const "Spinner"
     "lg"
     const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1")]
 <<<<<<< HEAD:backup-problematic-files/scripts/advanced-app-enhancer.cjs
+<<<<<<< HEAD
+console.log('\n New Features "Added")
+=======
 <<<<<<< HEAD
 console.log('\n New Features "Added")
 =======

@@ -1,8 +1,4 @@
 
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Sparkles, Loader2  } from 'lucide-react';
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2} from 'lucide-react';
@@ -78,20 +74,6 @@ export function AIEnhancementButton({
       setError('Please enter at least some basic content before enhancing'),
       return
     }
-;
-    setError(null),;
-    const enhancedContent = await enhanceContent(;
-      currentContent,;
-      enhancementType,;
-      context;
-    );
-    if (enhancedContent) {;
-      onEnhanced(enhancedContent);
-    }
-  },
-
-
-  
   return (
     <Button
       type="button"

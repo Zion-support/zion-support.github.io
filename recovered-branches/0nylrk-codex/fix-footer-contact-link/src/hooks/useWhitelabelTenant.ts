@@ -93,6 +93,17 @@ if ( {) {
           set_tenant (null);
           return;
         }
+        } else {
+          set_tenant (null);
+        }
+
+        console && console.error('Error loading tenant:', err);
+        let message = err && err.message || 'An unexpected error occurred while loading tenant configuration';
+        if (
+          message && message.includes('Failed to send a request to the Edge Function') ||
+          message && message.includes('Failed to connect to Supabase') ||
+          message && message.includes('No internet connection')
+
         ) {
           message = 'Unable to reach the server. Please check your internet connection and try again.'
         }

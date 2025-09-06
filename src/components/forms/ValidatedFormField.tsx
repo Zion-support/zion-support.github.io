@@ -79,11 +79,6 @@ export function ValidatedFormField({
       setValidationState(error ? 'invalid' : 'valid')
     }, debounceMs)
     setDebounceTimer(timer)
-  }
-  const getValidationIcon = () => {
-    if (!showValidIcon |!isTouched |validationState === 'idle') return null
-    switch (validationState) {
-      case 'validating':
 
               {...form.register(name)}
             />
@@ -111,9 +106,6 @@ export function ValidatedFormField({
             />;
             <label
               htmlFor={name}
-              type={showPassword ? 'text' : 'password'}
-              disabled={disabled}
-              className={cn(baseClasses, 'pr-20')}
               {...form.register(name)}
             />
             <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">

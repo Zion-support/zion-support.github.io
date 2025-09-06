@@ -11,7 +11,6 @@ const InputOTP = React.forwardRef<
   <OTPInput
     ref={ref}
     containerClassName={cn(
-      'flex items-center gap-2 [&:has([disabled])]:opacity-50'
       containerClassName
     )}
     className={cn("disabled:cursor-not-allowed", className)}
@@ -33,10 +32,6 @@ const InputOTPGroup = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("flex items-center", className)} {...props} />
-))
-InputOTPGroup.displayName = "InputOTPGroup"
-
 
 
 const InputOTPSlot = React.forwardRef<

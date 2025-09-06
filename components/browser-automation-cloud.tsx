@@ -152,3 +152,7 @@ function BrowserAutomationCloudPage() {
         </section>;
       </main>;
 }
+
+	),
+}
+

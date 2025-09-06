@@ -154,10 +154,6 @@ export function TalentProfile({;
         reviewCount={profile.rating_count}
       />;
       {/* Main content area */}
-        {/* Left Column - Skills & Info */}
-        <div className="space-y-8">
-          <ProfileSkills skills={skillsArray} />
-          <ProfileAvailability availability={availability} />
           <ProfileContact 
             email={profile.user_id}
             profileName={profile.full_name}

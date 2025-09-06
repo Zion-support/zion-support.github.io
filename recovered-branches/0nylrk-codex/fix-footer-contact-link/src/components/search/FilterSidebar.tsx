@@ -11,10 +11,6 @@ interface FilterSidebarProps {
   onFilterChange: (filterType: string, value: string) => void
   onRatingChange: (rating: number | null) => void
 
-  filters;
-  filterOptions;
-  onFilterChange;
-  onRatingChange;
 interface FilterSidebarProps {;
   filters: {;
     selectedProductTypes: string[],;

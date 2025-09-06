@@ -1,18 +1,3 @@
-  ChevronDown
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Cpu
-  Shield
-  Rocket
-  Globe
-  Database
-  Lock
-  Cloud
-  Eye
-  Timer
-  Sparkles;
   ChevronDown,
   Star,
   TrendingUp,
@@ -174,26 +159,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
         {/* Header */}
 
-  return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
-      </div>
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
-
-        {/* Header */}
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className='text-center mb-16'        >          className="text-center mb-16"
-          className='text-center mb-16'        >
 
 
         >
@@ -206,9 +174,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           <motion&& motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-          >
             {subtitle}
           </motion.p>
         </motion.div>
@@ -265,15 +230,20 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true }}
+
+
+          ))}
+
+        </motion && motion.div>;
+
+
+        </motion.div>
+
+
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className='text-center mt-16'
 
 
         >
@@ -363,6 +333,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
               { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
               { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
+              <motion.div
         {/* Innovation Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -397,7 +368,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                 value: (
                   services.reduce((sum, s) => sum + s.rating, 0) /
                   services.length
-
               <motion.div
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
             {[;
@@ -451,8 +421,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
         </motion.div>
       </div>
     </section>
-export default UltraFuturistic2029ServiceShowcase;  )
-}
-export default UltraFuturistic2029ServiceShowcase;
+  );
 
-export default UltraFuturistic2029ServiceShowcase;
+};
+
+

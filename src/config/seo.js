@@ -5,4 +5,3 @@ export default defaultSEO;
 
 export default defaultSEO;
 ;
-}

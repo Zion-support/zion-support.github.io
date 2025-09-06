@@ -32,6 +32,28 @@ serve(async (req) => {
       .select("id, payload")
       .eq("job_type", "send_retention_email")
       .eq("status", "pending")
+        try {
+          // Call the send - retention - email function for each job;
+          const reminder_response = await fetch (
+            `${supabase_url}/functions / v1 / send - retention - email`;
+            {
+              method: "POST";
+              headers: {
+
+
+
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${supabaseServiceKey}`};
+              body: JSON && JSON.stringify(job)}
+          );
+
+          if (!reminderResponse && reminderResponse.ok) {
+            const errorText = await reminderResponse && reminderResponse.text();
+            console && console.error(`Failed to process job ${job && job.id}: ${errorText}`);
+            
+
+
+
             // Update job status to failed
             await supabase
               .from("scheduled_jobs")
@@ -85,3 +107,4 @@ serve(async (req) => {;
 
   }
 });
+;

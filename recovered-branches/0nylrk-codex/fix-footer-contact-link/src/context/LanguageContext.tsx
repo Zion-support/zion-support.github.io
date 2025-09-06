@@ -1,10 +1,5 @@
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 
-  currentLanguage: SupportedLanguage
-  changeLanguage: (lang: SupportedLanguage) => Promise<void>
-  isRTL: boolean
-  supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[]
-}
   currentLanguage: SupportedLanguage,
   changeLanguage: (lang: SupportedLanguage) => Promise<void>,
   isRTL: boolean,
@@ -26,10 +21,6 @@ const defaultLanguageContext: LanguageContextType = {
 
 const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({
-  children
-  authState = { isAuthenticated: false, user: null }
-}) => {
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
   children, 

@@ -3,6 +3,7 @@
     chain: 'evm' | 'sol';
   } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 
+
 export default function AccountSettingsPage(req, res) {
   try {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
@@ -418,5 +419,6 @@ if (return) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 

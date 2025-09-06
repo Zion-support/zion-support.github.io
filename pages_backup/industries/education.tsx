@@ -1,3 +1,5 @@
+
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -53,6 +55,32 @@ const benefits = [;
     title: 'Improved Learning Outcomes,',;
     description: 'Personalized learning experiences lead to better student performance.,',;
     icon: GraduationCap;
+];
+const benefits = [
+  {
+    title: 'Improved Learning Outcomes',
+    description: 'Personalized learning experiences lead to better student performance.',
+    icon: GraduationCap
+  },
+  {}
+
+    title: 'Enhanced Engagement,',;
+    description: 'Interactive tools and gamification increase student participation.,',;
+    icon: Users,;
+  },;
+  {}
+    title: 'Better Accessibility,',;
+    description: 'Online platforms make education accessible to more students.,',;
+    icon: Globe,;
+  },;
+  {}
+    title: 'Data-Driven Insights,',;
+    description: 'Analytics help educators make informed decisions about teaching methods.,',;
+    icon: BarChart3,;
+
+  }
+
+
 ;];
 export default function EducationPage() {;
   return (
@@ -90,6 +118,16 @@ export default function EducationPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
+];
+
+export default function EducationPage() {;
+  return (
+    <Layout
+      title="Education Technology Solutions - Zion Tech Group"
+      description="Transform education with learning management systems, virtual classrooms, AI tutors, and student analytics platforms."
+      keywords="education technology, LMS, virtual classrooms, AI tutoring, student analytics, edtech">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-orange-900 via-amber-900 to-yellow-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -188,6 +226,9 @@ export default function EducationPage() {;
                   </ul>,;
                 </motion && motion.div>;
               ))}
+            </div>,
+          </div>;
+        </section>;
             </div>
           </div>
         </section>
@@ -256,6 +297,9 @@ export default function EducationPage() {;
                   <p className="text-gray-600 leading-relaxed">{benefit && benefit.description}</p>";
                 </motion && motion.div>;
               ))}
+            </div>,
+          </div>;
+        </section>;
             </div>
           </div>
         </section>

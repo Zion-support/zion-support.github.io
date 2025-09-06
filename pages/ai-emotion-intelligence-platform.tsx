@@ -191,8 +191,6 @@ export default function AIEmotionIntelligencePlatform() {
                 AI & Customer Experience
               </motion.div>
               <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -296,10 +294,6 @@ export default function AIEmotionIntelligencePlatform() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
               transition={{ duration: 0.8, delay: 1.2 }} className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">;
               <div className="text-center">;
                 <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">27</div>;
@@ -514,9 +508,5 @@ export default function AIEmotionIntelligencePlatform() {
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2030>
     </>
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
 

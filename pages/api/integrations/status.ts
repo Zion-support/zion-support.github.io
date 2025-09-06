@@ -11,4 +11,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     connections[p.id] = conn |{ providerId: p.id, status: 'disconnected' }
 
 
-

@@ -2,46 +2,6 @@ import Layout from '../components/layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Search
-  Filter
-  Grid3X3
-  List
-  Star
-  Users
-  TrendingUp
-  Zap
-  Brain
-  Atom
-  Shield
-  Rocket
-  Palette
-  BookOpen
-  Truck
-  DollarSign
-  Settings
-  ArrowRight
-  ChevronDown
-  CheckCircle
-  Clock
-  Award
-  Target
-  Globe
-  Sparkles
-  Cpu
-  Lock
-  Cloud
-  BarChart3
-  Eye
-  Heart
-  Lightbulb
-  Palette as PaletteIcon
-  Code
-  Database
-  Shield as ShieldIcon
-  Globe as GlobeIcon
-  Zap as ZapIcon
-  Target as TargetIcon;} from 'lucide-react';import {
-  Search, Filter, Grid3X3, List
 
 
 // Import service data;
@@ -107,6 +67,14 @@ import { emergingTechServicesEnhanced2025 } from '../data / emerging - tech - se
   Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings;
   ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3;
   Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
+
+// Import service data
+import { innovativeRealMicroSaasServices2025  } from '../data/2025-innovative-real-micro-saas-services';
+import { innovativeAIServicesEnhanced2025  } from '../data/2025-innovative-ai-services-enhanced';
+import { innovativeITServicesEnhanced2025  } from '../data/2025-innovative-it-services-enhanced';
+import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
+
+
   id: string;
   name: string;
   tagline: string;
@@ -309,9 +277,6 @@ export default function ComprehensiveServicesShowcase2025() {;
           return 0;
       }
     });
-    setFilteredServices(filtered);  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
-  const getCategoryColor = (category: string) => {
-    switch (category) {        case 'price-low':
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'price-high':
           return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
@@ -567,14 +532,6 @@ export default function ComprehensiveServicesShowcase2025() {;
                     key={range.value}
                     value={range.value}
                     className='bg-gray-900 text-white'
-                  >                    {range.label}              {/* Price Range Filter */}
-              <select
-                value={selectedPriceRange}
-                onChange={(e) => setSelectedPriceRange(e.target.value)}
-                className="px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
-              >
-                {priceRanges.map((range) => (
-                  <option key={range.value} value={range.value} className="bg-gray-900 text-white">
                     {range.label}
                   </option>
                 ))}
@@ -646,11 +603,57 @@ export default function ComprehensiveServicesShowcase2025() {;
                   </div>
                 </div>
                 {/* Service Info */}
-                <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>
 
+      {/* Services Grid / List */}
+      <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12'>;
+        {/* Results Count */}
+        <div className='mb - 8'>;
+          <p className='text - gray - 400'>            Showing {filtered_services.length} of {all_services.length} services      <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12">;
+        {/* Results Count */}
+        <div className="mb - 8">;
+          <p className="text - gray - 400">;
+          </p>;
+        </div>;
+        {view_mode === 'grid' ? (
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {filtered_services.map ((service, index) => (          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+            {filtered_services.map ((service, index) => (
+              <motion.div;
+                key={service.id}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                animate={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className='group relative bg - gradient - to - br from - gray - 900 / 50 to - black / 50 backdrop - blur - lg border border - cyan - 500 / 20 rounded - 2xl p - 6 hover:border - cyan - 400 / 40 hover:shadow - 2xl hover:shadow - cyan - 500 / 20 transition - all duration - 300';
+              >;
+                {/* Category Badge */}
+                <div className='absolute top - 4 right - 4'>;
+                  <span;
+                    className={`inline - flex items - center px - 3 py - 1 rounded - full text - xs font - medium bg - gradient - to - r ${getCategoryColor (service.category)} text - white`}
+                  >;
+                    {getCategoryIcon (service.category)}
+                    <span className='ml - 2'>{service.category}</span>                  </span>;
+                </div>;
+                {/* Service Icon */}
+                <div className='mb - 4'>;
+                  <div className='w - 16 h - 16 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - xl flex items - center justify - center text - cyan - 400 group - hover:scale - 110 transition - transform duration - 300'>                    {service.icon}              >;
+                {/* Category Badge */}
+                <div className="absolute top - 4 right - 4">;
+                  <span className={`inline - flex items - center px - 3 py - 1 rounded - full text - xs font - medium bg - gradient - to - r ${getCategoryColor (service.category)} text - white`}>;
+                    {getCategoryIcon (service.category)}
+                    <span className="ml - 2">{service.category}</span>;
+                  </span>;
+                </div>;
+                {/* Service Icon */}
+                <div className='mb - 4'>;
+                  <div className='w - 16 h - 16 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - xl flex items - center justify - center text - cyan - 400 group - hover:scale - 110 transition - transform duration - 300'>                <div className="mb - 4">;
+                  <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - xl flex items - center justify - center text - cyan - 400 group - hover:scale - 110 transition - transform duration - 300">;
                     {service.icon}
+                  </div>;
+                </div>;
+                {/* Service Info */}
+                <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 300 transition - colors duration - 200'>;
 
-                    {service.icon}
+
+
 
                   {service.name}
                 </h3>;
@@ -729,12 +732,6 @@ export default function ComprehensiveServicesShowcase2025() {;
                     <span>Growth: {service.growthRate}</span>
                   </div>
                 </div>
-                key={service.id}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className='group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'
-
               >
                 <div className="flex items-start space-x-6">
                   {/* Service Icon */}
@@ -871,49 +868,13 @@ export default function ComprehensiveServicesShowcase2025() {;
 
                     {/* Features */}
                         ))}
-                      </div>
-                    </div>
-
-
                     {/* CTA */}
-                    <div className='flex items-center justify-between'>
-                      <button className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105'>
-                        Learn More
-                      </button>
-                      <div className='text-xs text-gray-500'>
-                        Launched:{' '}
-                        {new Date(service.launchDate).toLocaleDateString()}                      </div>                    <div className="flex items-center justify-between">
-                      <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">
-                        Learn More
-                      </button>
-                      <div className="text-xs text-gray-500">
-                        Launched: {new Date(service.launchDate).toLocaleDateString()}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+
+
             ))}
 </div>;
         )}
 
-        {/* No Results */}
-        {filteredServices.length === 0 && (
-          <div className='text-center py-20'>
-            <div className='w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6'>
-              <Search className='w-12 h-12 text-cyan-400' />
-            </div>
-            <h3 className='text-2xl font-bold text-white mb-2'>
-              No services found
-            </h3>
-            <p className='text-gray-400 mb-6'>
-              Try adjusting your search terms or filters to find what you're
-              looking for.            </p>          <div className="text-center py-20">
-            <div className="w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Search className="w-12 h-12 text-cyan-400" />
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-            <p className="text-gray-400 mb-6">
-              Try adjusting your search terms or filters to find what you're looking for.
             <button
               onClick={() => {;
                 setSearchTerm('');
@@ -1104,25 +1065,6 @@ export default function ComprehensiveServicesShowcase2025() {;
             <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
               <a
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-              >
-                Get Started Today
-              </a>
-              <a
-                href='/pricing'
-                className='border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200'                href="/pricing"
-                className="border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200"
-              >
-                View Pricing Plans
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </Layout>
-  );
-  filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () )
-  filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () ) 
 }//Sort services filtered.sort ( (a, b) => {
   switch (sortBy) {
   case 'popular': return b.customers - a.customers;
@@ -1153,10 +1095,6 @@ top: `$ {
   opacity: 1, y: 0
 }transition= {
   {
-  once: true 
-}> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion && motion.div> </div> </div> </Layout>)   );
-
-}> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   )
 }
       <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border - cyan - 500 / 20'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20 text - center'>          <motion.div      <div className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border - cyan - 500 / 20">;

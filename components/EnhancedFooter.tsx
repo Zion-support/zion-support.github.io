@@ -1,11 +1,3 @@
-  Brain
-  Mail
-  Phone
-  MapPin
-  Globe
-  Github
-  Linkedin
-  Twitter;
   Brain,
   Mail,
   Phone,
@@ -140,18 +132,6 @@ const EnhancedFooter: React.FC = () => {;
                 <Phone className='w-4 h-4' />;
                 <a
                   href='tel:+13024640950'
-                  className='hover:text-white transition-colors'
-                >
-                  +1 (302) 464-0950
-                </a>
-              </div>
-              <div className='flex items-center space-x-3 text-white/70'>
-                <MapPin className='w-4 h-4' />                <span>Global Operations</span>              <div className="flex items-center space-x-3 text-white/70">
-                <MapPin className="w-4 h-4" />
-                <span>Global Operations</span>
-              </div>
-            </div>
-          </div>
 import Link from 'next/link';
 
 import {
@@ -175,29 +155,6 @@ import {
               {socialLinks && socialLinks.map(social => (        <div className="pt-8 border-t border-white/10">;
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
             {/* Copyright */}
-            <div className="text-white/60 text-sm">
-            </div>
-            {/* Social Links */}
-            <div className='flex items-center space-x-4'>
-              {socialLinks.map(social => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/70 hover:text-white transition-all duration-200'
-                  aria-label={social.name}
-                >
-                  <social.icon className='w-5 h-5' />                </a>                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/70 hover:text-white transition-all duration-200"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
 
             <div className="text-white/60 text-sm">;
             </div>;
@@ -213,11 +170,6 @@ import {
         </div>
       </div>
     </footer>
-  );
-};export default EnhancedFooter;  )
-}
-};
-
 export default EnhancedFooter;
 import React from './react';
   FileText,

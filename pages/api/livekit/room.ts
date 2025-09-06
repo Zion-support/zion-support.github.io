@@ -40,6 +40,16 @@ export default async function handler(
     }
     const date = new Date();
     const pad = (n: number) => String(n).padStart(2, "0");
+      }
+      await room_service.create_room (opts).catch (() => Promise.resolve ());
+    } catch (e) {
+      // In some deployments without server access, proceed with computed room name;
+      console.warn (
+        "Room create skipped or failed, proceeding with room_name only",
+      );
+    }
+    return res.status (200).json ({ room_name });
+  } catch (err: any) {
 
     return res.status(200).json({ roomName })
   } catch (err: any) {

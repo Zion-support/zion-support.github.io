@@ -1,5 +1,4 @@
 ;
-interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
   // add more env variables as needed;
 }
 interface ImportMeta {readonly env: ImportMetaEnv;
@@ -25,10 +24,6 @@ declare module 'lovable-tagger' {import { Plugin } from 'vite';
   export function componentTagger(): Plugin;
 }
 // Add Node.js globals;
-declare let __dirname: string;
-declare let process: {env: {;
-    [key: string]: string | undefined;
-    NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
   }
 }
@@ -54,19 +49,6 @@ declare module '@vitejs/plugin-react - swc' {
   import { Plugin } from 'vite',
   export default function reactSWC (): Plugin;
 }
-// Removed custom lucide-react stub;
-// Create a replacement stub for LiveKit components;
-declare module '@livekit/components-react' {export interface VideoCallProps {;
-    room?: string;
-    token?: string;
-    serverUrl?: string;
-    onDisconnect?: () => void;
-    className?: string;
-    className?: string,
-    variant?: "default" | "secondary" | "destructive" | "outline",
-    children?: React.ReactNode,
-    key?: string | number
-},;
 declare module 'path' {
   export function resolve (...paths: string[]): string,
   export function join (...paths: string[]): string,
@@ -91,10 +73,6 @@ declare module '@/components / ui / badge' {
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
 }
-// ProductListingCard type fixes;
-declare module '@/components/ProductListingCard' {;
-  export interface ProductListingCardProps {;
-    listing: any,;
     view?: any,  // Made optional to fix the errors;
     onRequestQuote: (listing_id: string) => void,
     key?: string | number;
@@ -114,8 +92,4 @@ declare module '@livekit / components - react' {
   export const VideoCall: React.FC < VideoCallProps>;
   export const LiveKitRoom: React.FC < any>;
 }
-;
-declare module '@livekit/components-styles' {;
-  // Empty stub for the styles;
 }
-;

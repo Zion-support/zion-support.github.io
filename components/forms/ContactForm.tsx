@@ -42,6 +42,20 @@ const ContactForm: React.FC = () => {;
   const [submitStatus, setSubmitStatus] = useState<;
     'idle' | 'success' | 'error';
   >('idle');
+} from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: ''
+    email: ''
+    company: ''
+    phone: ''
+    service: ''
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'success' | 'error'
+  >('idle');
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -154,14 +168,6 @@ const ContactForm: React.FC = () => {;
       content: '+1 (555) 123-4567',
       href: 'tel:+15551234567'
 
-  return (
-    <section className="py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]" />
-        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]" />
-      </div>
-
 
         >
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
@@ -220,8 +226,6 @@ const ContactForm: React.FC = () => {;
                   </div>
                 </motion.a>
               ))}
-            </div>
-
             {/* Additional Info */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -440,7 +444,3 @@ export default ContactForm);
 export default ContactForm;
 ;
   );
-export default ContactForm;  )
-}
-export default ContactForm;
-

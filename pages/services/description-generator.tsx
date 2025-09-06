@@ -1,3 +1,6 @@
+export default function ServiceDescriptionGeneratorPage() {;
+export default function ServiceDescriptionGeneratorPage(req, res) {
+  try {
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
@@ -9,20 +12,23 @@
 
   >('professional');
 
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
+  const keyFeatures = useMemo(() => {;
+    return featuresInput;
+      .split('\n');
+      .map((f) => f.trim());
+      .filter(Boolean);
+  }, [featuresInput]),;
+  async function handleSubmit(e: React.FormEvent) {;
+    e.preventDefault(),;
     setLoading(true);
     setError(null);
-    setAccepted(false)
+    setAccepted(false);
     try {
-      const response = await fetch('/api/generate-service-description', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
       const response = await fetch('/api/generate-service-description', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
@@ -44,13 +50,34 @@
     return res.status(500).json({ error: "Internal server error" });
   }
   return (
-    <div className="max-w-3xl mx-auto">
-      <h1 className="text-2xl font-semibold mb-4">Service Description Generator</h1>
-      <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
-        Enter your service details. We will generate a polished description using GPT-4. You can edit it on the page and accept when ready.
-      </p>
+
+    <div className='max-w-3xl mx-auto'>;
+      <h1 className='text-2xl font-semibold mb-4'>;
+        Service Description Generator;
+      </h1>;
+      <p className='text-sm text-gray-600 dark:text-gray-300 mb-6'>;
+        Enter your service details. We will generate a polished description;
+        using GPT-4. You can edit it on the page and accept when ready.;
+      </p>;
+
+
       <form
         onSubmit={handleSubmit}
+        className='space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4'>;
+        <div>;
+          <label className='block text-sm font-medium mb-1'>;
+            Service Title;
+          </label>;
+          <input
+            type='text'
+            className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+            placeholder='e && e.g., On-Demand Web Performance Audit'
+            value={title}
+
+    setAccepted(true)
+  }
+
+
         <div>
           <label className="block text-sm font-medium mb-1">Service Title</label>
           <input
@@ -91,6 +118,13 @@
           <button
             type="submit"
             disabled={loading}
+          <button
+            type="submit"
+            disabled={loading  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60"
           >
             {loading ? 'Generating…' : 'Generate Description'}

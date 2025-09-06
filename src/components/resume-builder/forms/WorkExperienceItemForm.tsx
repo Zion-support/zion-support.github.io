@@ -7,79 +7,6 @@
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData?.is_current || false,
-  })
-  const { isSubmitting } = form.formState
-  const watchIsCurrent = form.watch('is_current')
-  const watchRoleTitle = form.watch('role_title')
-  const watchCompanyName = form.watch('company_name')
-  const handleFormSubmit = async (values: FormValues,) => {
-    // Create a properly typed WorkExperience object with all required fields
-    const workExperience: WorkExperience = {
-      id: initialData?.id
-      company_name: values.company_name, // Required
-      role_title: values.role_title, // Required
-      start_date: values.start_date, // Required
-      end_date: values.end_date, // Optional
-      is_current: values.is_current, // Required
-      description: values.description, // Optional
-      location: values.location, // Optional
-      company_name: initialData?.company_name || "",
-      role_title: initialData?.role_title || "",
-      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
-      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
-      is_current: initialData?.is_current || false,
-  })
-  const { isSubmitting } = form.formState
-  const watchIsCurrent = form.watch('is_current')
-  const watchRoleTitle = form.watch('role_title')
-  const watchCompanyName = form.watch('company_name')
-  const handleFormSubmit = async (values: FormValues,) => {
-    // Create a properly typed WorkExperience object with all required fields
-    const workExperience: WorkExperience = {
-      id: initialData?.id
-      company_name: values.company_name, // Required
-      role_title: values.role_title, // Required
-      start_date: values.start_date, // Required
-      end_date: values.end_date, // Optional
-      is_current: values.is_current, // Required
-      description: values.description, // Optional
-      location: values.location, // Optional
-    }
-    await onSubmit(workExperience)
-  }
-  const handleAIEnhancement = (content: string) => {
-    form.setValue('description', content, { shouldDirty: true })
-    setIsEnhancementDialogOpen(false)
-  }
-      description: initialData?.description || "",
-      location: initialData?.location || ""}}),
-  
-  const { isSubmitting } = form.formState,
-  const watchIsCurrent = form.watch("is_current"),
-  const watchRoleTitle = form.watch("role_title"),
-  const watchCompanyName = form.watch("company_name"),
-
-  const handleFormSubmit = async (values: FormValues) => {
-    // Create a properly typed WorkExperience object with all required fields
-    const workExperience: WorkExperience = {
-      id: initialData?.id,
-      company_name: values.company_name,  // Required
-      role_title: values.role_title,      // Required
-      start_date: values.start_date,      // Required
-      end_date: values.end_date,          // Optional
-      is_current: values.is_current,      // Required
-      description: values.description,    // Optional
-      location: values.location,          // Optional
-    },
-    
-    await onSubmit(workExperience)
-  },
-
-  const handleAIEnhancement = (content: string) => {
-    form.setValue("description", content, { shouldDirty: true }),
-    setIsEnhancementDialogOpen(false)
-  },
-
 
   return (
     <>
@@ -93,12 +20,6 @@
                   </FormControl>
                   <FormMessage />
                 </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='role_title'
-              render={({ field }: { field: any }) => (                <FormItem>
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -407,8 +328,6 @@ function WorkExperienceItemForm() {
               </FormItem>
             )}
           />
-          <div className='flex justify-end gap-2'>
-            <Button type='button' variant='outline' onClick={onCancel}>
               Cancel
             </Button>
             <Button type="submit" disabled={isSubmitting}>
@@ -429,9 +348,6 @@ function WorkExperienceItemForm() {
         </form>;
       </Form>;
 
-        isOpen={isEnhancementDialogOpen}
-        onClose={() => setIsEnhancementDialogOpen(false)}
-        onApply={handleAIEnhancement}
         }}
         initialContent={form.getValues('description') |''}      />
 

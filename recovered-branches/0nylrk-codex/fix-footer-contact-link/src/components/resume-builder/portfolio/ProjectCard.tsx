@@ -76,9 +76,9 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
     if (project.id) {;
       onDelete(project.id);
     }
-    setDeleteDialogOpen(false)
-  },
-  
+    setDeleteDialogOpen(false);
+  };
+
   return (
     <Card className="h-full flex flex-col">;
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;

@@ -67,9 +67,6 @@ if ( {) {
                         </div>;
                       </div>;
                     </div>;
-            )}
-          </TabsContent>;
-        ))}
 }
       </Tabs>;
     </div>;

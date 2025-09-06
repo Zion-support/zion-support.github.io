@@ -18,40 +18,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-
-  Activity
-  BarChart3
-  AlertTriangle
-  Clock
-  Database
-  Globe
-  Lock
-  Shield
-  TrendingUp
-  Users
-  Zap
-  ArrowRight
-  Play
-  CheckCircle
-  Star
-  Server
-  Cloud
-  Eye
-  Bell
-  Settings
-  Code;
-  Settings,;
-  Code,;
 } from 'lucide-react';
+
 export default function CloudMonitoringPage() {
   const features = [
-    {;
-      icon: <Activity className='w-8 h-8 text-white' />,import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
-    {
-      icon: <Activity className='w-8 h-8 text-white' />,
 
 
 export default function CloudMonitoringPage() {
@@ -99,68 +69,18 @@ export default function CloudMonitoringPage() {
       icon: <Zap className='w-8 h-8 text-white' />
       title: 'Auto-scaling'
       description:
-        'Intelligent auto-scaling based on real-time metrics and predictive analytics.'
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
-      gradient: 'from-teal-400 to-blue-500'
-    }
         'Intelligent auto-scaling based on real-time metrics and predictive analytics.',
       color: 'bg-gradient-to-br from-teal-500 to-blue-600',
       gradient: 'from-teal-400 to-blue-500',
     },;
   ];
 
-  const monitoringCapabilities = [
-    {
-      category: 'Infrastructure'
-      icon: <Server className='w-6 h-6 text-blue-400' />
-      metrics: [
-        'CPU Usage'
-        'Memory Utilization'
-        'Disk I/O'
-        'Network Performance'
-        'Container Metrics'
-      ]
-    }
-    {
-      category: 'Applications'
-      icon: <Code className='w-6 h-6 text-green-400' />
-      metrics: [
-        'Response Time'
-        'Error Rates'
-        'Throughput'
-        'User Experience'
-        'API Performance'
-      ]
-    }
-    {
-      category: 'Databases'
-      icon: <Database className='w-6 h-6 text-purple-400' />
-      metrics: [
-        'Query Performance'
-        'Connection Pool'
-        'Index Usage'
-        'Replication Lag'
-        'Storage Growth'
-      ]
-    }
-    {
-      category: 'Security'
-      icon: <Shield className='w-6 h-6 text-red-400' />
-      metrics: [
-        'Threat Detection'
-        'Access Logs'
-        'Vulnerability Scans'
-        'Compliance Status'
-        'Audit Trails'
-      ]
-    },  ];      icon: <Shield className="w-6 h-6 text-red-400" />
-      metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails']
-    }
-  ];
 
 export default function CloudMonitoringPage() {
   const features = [
     {
+      metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails']
+    }
   ];
   const pricingPlans = [
     {
@@ -299,6 +219,21 @@ export default function CloudMonitoringPage() {
               and insights;
             </p>;
           </div>;
+                </p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Monitoring Capabilities */}
+      <section className='py-24 bg-black relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+
+              Comprehensive Monitoring
+
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Monitor every aspect of your infrastructure with detailed metrics and insights
@@ -327,10 +262,10 @@ export default function CloudMonitoringPage() {
               </Card>;
             ))}
       {/* Use Cases Section */}
-      <section className='py-24 bg-gray-900 relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+
+
+
+
 
               Use Cases
             </h2>
@@ -364,18 +299,6 @@ export default function CloudMonitoringPage() {
             {useCases && useCases.map((useCase, index) => (;
               <Card
                 key={index}
-                          {benefit}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
       <section id='pricing' className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -455,16 +378,6 @@ export default function CloudMonitoringPage() {
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
-                      className='flex items-center text-gray-300'
-                    >
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
-                  <p className="text-gray-400">{plan.description}</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
 
                       {feature}
                     </li>;
@@ -630,8 +543,5 @@ export default function CloudMonitoringPage() {
         </div>
       </section>
     </>
-}
-}
-}
   );
 }

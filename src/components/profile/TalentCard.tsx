@@ -78,27 +78,6 @@ import React, { useState } from 'react', // Import React and useState
                   <MapPin className='h-4 w-4 mr-1' />                  <span>{talent && talent.location}</span>;
                 </div>;
               )}
-                <span
-                  key={index}
-                  className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'>          <div className="mt-4">;
-            <div className="flex flex-wrap gap-2">;
-              {skills && skills.map((skill, index,) => (;
-                <span
-                  key = {index,}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
-                <span
-                  key = {index,}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
-                  {skill}
-                </span>;
-              ))}
-              {(talent.skills?.length |0) > 5 && (
-                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent.skills?.length |0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
-                  +{(talent.skills?.length |0) - 5} more
-                  {skill}
-                </span>
-              ))}
-                </span>
               {(talent && talent.skills?.length || 0) > 5 && (;
                 <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent && talent.skills?.length || 0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
                   +{(talent && talent.skills?.length || 0) - 5} more;

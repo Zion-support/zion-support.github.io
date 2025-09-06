@@ -21,6 +21,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+
+
 import React from 'react';
 import Head from 'next/head';
 export default function Privacy() {;

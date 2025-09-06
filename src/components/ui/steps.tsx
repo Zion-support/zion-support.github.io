@@ -3,7 +3,6 @@
     <li
 
       className={cn(
-        "relative flex items-center"
         className
       )}>;
       <div
@@ -62,7 +61,6 @@ export function Step({;
               status === "complete"}
         )}
       >;
-            "text-white": status === "current" |status === "complete"})}
           {label}
         </h3>
         {description && (
@@ -83,12 +81,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         >
       </div>;
 
-      <div className="ml-4 min-w-0">;
-        <h3
-          className={cn("text-sm font-medium", {
-            "text-zion-slate-light": status === "incomplete"
-            "text-white": status === "current" || status === "complete"})}>;
-          {label}
 interface StepsProps {
   currentStep: number
   className?: string
@@ -114,6 +106,3 @@ export function Steps({ currentStep, className, children }: StepsProps) {
             className="h-full bg-zion-purple transition-all"
             style={{
 
-}/> </div> </div> </div>) 
-}"};
-;

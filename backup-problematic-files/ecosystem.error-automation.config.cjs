@@ -679,6 +679,9 @@ module.exports = {
       'pre-setup': ''
     }
   }
+<<<<<<< HEAD
+};
+=======
 };
 <<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 =======

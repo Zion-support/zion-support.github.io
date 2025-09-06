@@ -28,16 +28,10 @@ export default function ToolPage() {
         'No support - resistance to changeWeak support - some interest but no actionModerate support - willing to try pilot projectsStrong support - actively championing automationFull support - automation is strategic priority'
       ]
     }
-  }
-  const calculateScore = () => {
-    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0)
-    const maxScore = questions.length * 5
-    const percentage = (totalScore / maxScore) * 100
-    if (percentage >= 80) return { level: 'Advanced', color: 'text-green-400', description: 'Your organization is well-positioned for advanced automation initiatives.' }
-    if (percentage >= 60) return { level: 'Intermediate', color: 'text-yellow-400', description: 'You have a solid foundation and can move forward with strategic automation.' }
-    if (percentage >= 40) return { level: 'Beginner', color: 'text-orange-400', description: 'You have some groundwork to do before major automation projects.' }
-    return { level: 'Foundation', color: 'text-red-400', description: 'Focus on building fundamentals before automation projects.' }
-  }
+  const handleAnswer = (questionId: string, value: number) => {
+    setAnswers(prev => ({ ...prev, [questionId]: value }))
+
+
   const nextQuestion = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)
@@ -120,12 +114,43 @@ function ToolPage() {
   }
 }
   },
-  const resetAssessment = () => {
-    setCurrentQuestion(0)
-    setAnswers({})
-    setShowResults(false)
-  }
+  const calculate_score = () =>: any {
+    const total_score = Object.values (answers).reduce ((sum, score) => sum + score, 0),
+    const max_score = questions.length * 5,
+    const percentage = (total_score / max_score) * 100,
+    // Check condition
+if (return { level: 'Advanced', color: 'text - green - 400', description: 'Your organization is well - positioned for advanced automation initiatives.' }, ) {
+  $2
+}
+    // Check condition
+if (return { level: 'Intermediate', color: 'text - yellow - 400', description: 'You have a solid foundation and can move forward with strategic automation.' }, ) {
+  $2
+}
+    // Check condition
+if (return { level: 'Beginner', color: 'text - orange - 400', description: 'You have some groundwork to do before major automation projects.' }, ) {
+  $2
+}
+    return { level: 'Foundation', color: 'text - red - 400', description: 'Focus on building fundamentals before automation projects.' }
   },
+  const next_question = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      setCurrentQuestion (current_question + 1);
+    } else {
+      setShowResults (true);
+    }
+
+    setCurrentQuestion(0);
+    setAnswers({});
+    setShowResults(false)
+  };
+
+
+
+  },
+
   if (showResults) {
     const result = calculateScore()
     return (
@@ -312,18 +337,6 @@ function ToolPage() {
                 >
                   Previous
                 </button>
-                  onClick={nextQuestion}
-                  disabled={!answers[currentQ.id]}
-                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'}
-                </button>
-              </div>
-            </div>
-          </div>
-        </main>
-      </div>
-    </>
 }
 
   },
@@ -394,6 +407,24 @@ if ( {) {
                   className="bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300 disabled:opacity - 50 disabled:cursor - not - allowed";
                 >;
                   {current_question === questions.length - 1 ? 'Get Results' : 'Next'}
+                  onClick={nextQuestion  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  disabled={!answers[currentQ.id]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </button>;
               </div>;
             </div>;

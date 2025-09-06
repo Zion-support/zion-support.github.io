@@ -53,6 +53,13 @@ const Hero: React.FC<HeroProps> = ({
             {subtitle}
 
           </p>
+            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
+              {primaryAction && (
+          </p>;
+          {/* Action Buttons */}
+          {(primaryAction || secondaryAction) && (;
+            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
+              {primaryAction && (;
                 <Button
                   href={primaryAction && primaryAction.href}
                   size='lg'
@@ -74,8 +81,6 @@ const Hero: React.FC<HeroProps> = ({
               )}
             </div>;
           )}
-        </div>
-
         {/* Stats Section */}
         {stats && (;
           <div
@@ -170,7 +175,6 @@ const Hero: React.FC<HeroProps> = ({
             ))}
           </div>;
         )}
-        {/* Trust Indicators */}
         <div
           className='mt-16 md:mt-20 animate-fade-in'
           style={{ animationDelay: '0.8s' }}
@@ -198,11 +202,6 @@ const Hero: React.FC<HeroProps> = ({
         </div>
       </div>
       {/* Scroll Indicator */}
-      <div className='absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce'>
-        <div className='w-6 h-10 border-2 border-white/20 rounded-full flex justify-center'>
-          <div className='w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse' />        </div>
-      </div>
-      {/* Decorative Elements */}      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse" />
         </div>

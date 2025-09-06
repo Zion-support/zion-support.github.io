@@ -59,13 +59,3 @@ declare namespace React {;
   // errors when `@types/react` is not present.;
   export interface IntrinsicElements {;
     [elemName: string]: any;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}

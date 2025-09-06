@@ -23,6 +23,15 @@ export const getServerSideProps: GetServerSideProps = async () => {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+import { GetServerSideProps } from 'next';
+import { useState } from 'react';
+import { readJson } from '../../utils/fsDb';
+export const getServerSideProps: GetServerSideProps = async () => {;
+  const requests = readJson<any[]>('support/requests.json', []),;
+  return { props: { initialRequests: requests }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 },;
 export default function SupportRequests(req, res) {

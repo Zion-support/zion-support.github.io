@@ -504,7 +504,6 @@ export function LoginForm() {;
             type='button'
             variant='outline'
             className='w-1/2 ml-2'
-          >
             Check status
           </Button>
         </div>

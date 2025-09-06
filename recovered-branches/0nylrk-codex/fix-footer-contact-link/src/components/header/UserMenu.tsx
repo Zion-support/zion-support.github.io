@@ -8,6 +8,7 @@ import {
       await logout ();
     } catch (error) {
 
+
   if (!user) {;
     return (
       <div className="hidden md: flex items-center space-x-4">;
@@ -28,12 +29,6 @@ import {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <div className="grid gap-2 px-2 py-2">
-          <div className="text-sm font-medium leading-none">
-            {user.displayName |"User"}
-          </div>
-          <div className="text-muted-foreground text-xs leading-none">
-            {user.email}
-          </div>
         </div>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>

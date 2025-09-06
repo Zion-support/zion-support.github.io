@@ -28,45 +28,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         boostInSearch: false
         progress: {}
       }
-      const courseProgress = user.progress[courseId] |{
-        completedLessons: []
-        percent: 0
-        completed: false
-      }
-      if (lessonId && !courseProgress.completedLessons.includes(lessonId)) {
-        courseProgress.completedLessons.push(lessonId);
-        certifications: [],
-        badges: [],
-        boostInSearch: false,
-        progress: {},
-      };
-      const courseProgress = user && user.progress[courseId] || {
-        completedLessons: [],
-        percent: 0,
-        completed: false,
-      };
-      if (lessonId && !courseProgress && courseProgress.completedLessons.includes(lessonId)) {
-        courseProgress && courseProgress.completedLessons.push(lessonId);
-      }
-      if (typeof percent === 'number') {
-      users[userId] = user;
-      writeUsers(users);
-      return res && res.status(200).json({ ok: true, progress: courseProgress });
-    }
-    res.setHeader('Allow', 'GET, POST');
-    return res.status(405).end('Method Not Allowed');
-
-  } catch (e: any) {
-    return res
-      .status(500)
-      .json({ error: e?.message ?? 'Failed to handle progress' });
-  }
-
-
-
-}
-        course_progress.completed_lessons.push (lesson_id);
-      }
       // Check condition
 if ( {) {
   $2

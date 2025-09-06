@@ -21,20 +21,6 @@ export interface CategorizedSkills {;
 
   softSkills: string[]
 
-  other: string[]
-}
-export interface EnhancedProfile {
-
-  summary: string
-
-  categorizedSkills: CategorizedSkills
-}
-export function useTalentProfileEnhancer() {
-  const [isGenerating, setIsGenerating] = useState(false);
-
-  const [error, setError] = useState<string | null>(null);
-  const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
-    setIsGenerating(true);
 
 export interface EnhancedProfile {
   summary: string,
@@ -106,7 +92,6 @@ export function useTalentProfileEnhancer() {;
     isGenerating;
 
     error
-  }
 }
 
 import { useState } from 'react',;
@@ -157,14 +142,5 @@ export function useTalentProfileEnhancer() {;
     } finally {;
       setIsGenerating(false),;
     }
-  },;
-  ;
-  return {;
-    enhanceProfile,;
-    isGenerating,;
-    error;
-  },;
-} 
-}
   }
 }

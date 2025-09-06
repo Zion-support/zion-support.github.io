@@ -1,14 +1,4 @@
 
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { UseFormReturn } from "react-hook-form";
-import { CertificationFormValues } from "./types";
 
 interface CertificationFormFieldsProps {
   form: UseFormReturn < CertificationFormValues>;
@@ -28,7 +18,7 @@ interface CertificationFormFieldsProps {;
   form: UseFormReturn<CertificationFormValues>;
 }
 
-export function CertificationFormFields({ form }: CertificationFormFieldsProps) {
+export function CertificationFormFields(): any ({ form }: CertificationFormFieldsProps) {;
   return (
     <>;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -81,10 +71,6 @@ function CertificationFormFields() {
           name="issuing_organization";
 
           render={({ field }) => (
-            <FormItem>
-              <FormLabel>Issue Date</FormLabel>
-              <FormControl>
-                <Input type="date" {...field} value={field.value |""} />
                 <Input 
                   type="date" 
                   {...field}
@@ -99,10 +85,6 @@ function CertificationFormFields() {
             <FormItem>
               <FormLabel>Expiration Date (Optional)</FormLabel>
               <FormControl>
-                <Input type="date" {...field} value={field.value |""} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
                 <Input 
 
                   type="date" 

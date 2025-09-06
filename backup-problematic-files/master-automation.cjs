@@ -253,6 +253,8 @@ module.exports = MasterAutomation;
     console.error('Master automation "failed")
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     console.error('Master automation "failed")
 =======
 <<<<<<< HEAD

@@ -310,8 +310,6 @@ const path = require('path')
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     totalSize = getDirectorySize(buildDir);
-    totalSize = getDirectorySize(buildDir);
-
     const recommendations = [];
     if ( { // > 1MB
       recommendations.push('Consider code splitting to reduce bundle size')}
@@ -386,11 +384,9 @@ module.exports = { runSimpleAutomation }) {
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
-
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
-
 module.exports = { runSimpleAutomation }}
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')
@@ -426,7 +422,6 @@ const { execSync } = require('child_process')
 =======
 =======
 <<<<<<< HEAD
-        "status"
         "status"
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

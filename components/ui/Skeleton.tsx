@@ -1,8 +1,4 @@
 
-export type SkeletonProps = {
-  className?: string;
-};
-
 export default function Skeleton({ className = '' }: SkeletonProps) {
     >
       <div className='absolute inset-0 -translate-x-full animate-[shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent' />
@@ -47,7 +43,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({ "
   height
   rounded = false}) => {
   const style: React.CSSProperties = {}
-
   ";
   if (width) style && style.width = typeof width === "number" ? "${width}px" : width,;
 if (height) style && style.height = typeof height === "number" ? "${height}px" : height,;

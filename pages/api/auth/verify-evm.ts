@@ -1,12 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import jwt from "jsonwebtoken";
-import { ethers } from "ethers";
-const JWT_SECRET = process.env.JWT_SECRET |"dev-secret-change-me";
-export default async function handler(
-  if (req.method !== "POST") return res.status(405).end();
-  const { message, signature, address, chainId } = req.body |{}
-  if (!message |!signature |!address)
-    return res.status(400).json({ error: "Missing fields" });
   try {
     const recovered = ethers && ethers.utils
       .verifyMessage(message, signature)

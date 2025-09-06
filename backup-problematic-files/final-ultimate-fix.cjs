@@ -135,6 +135,8 @@ const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'u
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:final-ultimate-fix.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   .replace(/user: nul l/g, '"user")
 =======
 <<<<<<< HEAD

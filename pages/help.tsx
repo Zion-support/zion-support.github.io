@@ -48,9 +48,29 @@ const helpArticles = [
     color: "green"
     articles: [
       {
-    id: "cloud-services",
-    title: "Cloud Services",
-    description: "Cloud infrastructure and deployment solutions.",
+  },
+  {
+    id: "ai - services",
+    title: "AI Services",
+    description: "Everything about our AI and machine learning solutions.",
+    icon: HelpCircle,
+    color: "green",
+    articles: [;
+      {
+        title: "AI Implementation Guide",
+        description: "How to implement AI solutions in your business",
+        read_time: "10 min read",
+        type: "Guide",
+      },
+      {
+        title: "Machine Learning Models",
+        description: "Understanding different ML models and their applications",
+        read_time: "8 min read",
+        type: "Technical",
+      },
+
+      {
+
         title: 'AI Best Practices',
         description: 'Tips and best practices for AI development',
         readTime: '6 min read',
@@ -66,13 +86,6 @@ const helpArticles = [
         readTime: "12 min read"
         type: "Guide"
       }
-        title: "Cloud Security",
-        description: "Best practices for securing your cloud infrastructure",
-        readTime: "9 min read",
-        type: "Security",
-      },
-    ],
-  },
         title: "Cloud Security"
         description: "Best practices for securing your cloud infrastructure"
         readTime: "9 min read"
@@ -171,7 +184,6 @@ const helpCategories = [;
 
 export default function HelpPage() {;
   const [searchTerm, setSearchTerm] = useState("");
-  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
 
 
   }
@@ -185,6 +197,9 @@ export default function HelpPage() {;
       )
     }))
     .filter((category) => category.articles.length > 0);
+
+
+
 
   return (
     <>;

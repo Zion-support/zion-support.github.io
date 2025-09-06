@@ -35,11 +35,6 @@
   rating: number;
 
   reviews: number;
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
-export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -50,27 +45,12 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
   {
-    id: 'ai-autonomous-business-processor'
-    name: 'AI Autonomous Business Processor'
-    tagline:
-      'Fully autonomous business process optimization with zero human intervention'
-    price: '$1,299'
-    period: '/month'
-    description:
-      'An advanced AI system that autonomously analyzes, optimizes, and executes business processes across all departments. Continuously learns and improves without human oversight.'
-    features: [
-      'Autonomous process discovery and mapping'
-      'Real-time optimization algorithms'
-      'Cross-departmental coordination'
-      'Predictive maintenance scheduling'
-      'Resource allocation optimization'
-      'Performance analytics dashboard'
-      'Automated decision making'
-      'Process improvement suggestions'
-      'Integration with existing systems'
-      '24/7 autonomous operation'
-    ]
-    popular: true
+      'Predictive maintenance scheduling',
+      'Resource allocation optimization',
+      'Performance analytics dashboard',
+      'Automated decision making',
+      'Process improvement suggestions',
+      'Integration with existing systems',
 
 
       'Autonomous process discovery and mapping',

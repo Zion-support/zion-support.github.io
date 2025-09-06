@@ -64,19 +64,6 @@ export default function Comprehensive2025ServicesShowcase() {
     })
   const containerVariants = {
     hidden: { opacity: 0 }
-    visible: {
-      opacity: 1
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-    visible: {
-      opacity: 1
-      y: 0
-      transition: {
-        duration: 0.5
-      }
-    }
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -173,7 +160,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  },
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -185,7 +171,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Comprehensive 2025 Innovative Services Showcase  Zion Tech Group","url":"https://ziontechgroup.com/comprehensive-2025-services-showcase","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
       <EnhancedNavigation />
-      {/* Hero Section */}
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -373,11 +358,30 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
   }
 }
                 {service.popular && (
-                  <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold rounded-full">
-                    POPULAR
-                  </div>
-                )}
+
+                  <div className="absolute top - 4 right - 4 px - 3 py - 1 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - xs font - bold rounded - full">;
+                    POPULAR;
+                  </div>)}
+
                 {/* Service Header */}
+                <div className="flex items - start gap - 4 mb - 6">;
+                  <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br ${service.color} p - 4 flex items - center justify - center text - 2xl`}>;
+                    {service.icon}
+
+
+                )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+                {/* Service Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`}>
                     {service.icon  } catch (error) {

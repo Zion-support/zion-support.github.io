@@ -1,8 +1,3 @@
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Resume  } from '@/types/resume';
-import { useAuth } from '@/hooks/useAuth';
-export function useFetchResume() {
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';

@@ -1,20 +1,8 @@
 
-import { useState, useEffect } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes";
-import { toast } from "sonner";
-export function useDisputes() {
-  const { user } = useAuth();
-  const [disputes, setDisputes] = useState<Dispute[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
 
   const [error, setError] = useState<string | null>(null);
   const fetchDisputes = async () => {
     if (!user) {
-            job:jobs(title)
-          )
-          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url));
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
         `)
         .order("created_at", { ascending: false });
@@ -29,6 +17,23 @@ export function useDisputes() {
         client_profile: data && data.client_profile?.client_profile;
         talent_profile: data && data.talent_profile?.talent_profile;
         project: {
+        }
+      } as Dispute;
+    } catch (err: any) {
+
+
+  },
+
+  const createDispute = async (disputeData: { 
+    project_id: string,
+    milestone_id?: string,
+    reason_code: string,
+
+
+    description: string
+  }): Promise<Dispute | null> => {
+    if (!user) {
+      toast && toast.error("You must be logged in to create a dispute");
       return null
     }
     try {
@@ -47,6 +52,17 @@ export function useDisputes() {
       const { error } = await supabase
         .from("disputes")
         .update({ status })
+      return true
+    } catch (err: any) {
+      console && console.error("Error updating dispute status:", err);
+      toast && toast.error("Failed to update dispute status");
+      return false
+
+      console.error ("Error fetching dispute:", err);
+      toast.error ("Failed to fetch dispute details");
+
+    disputeId: string, 
+
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -136,13 +152,10 @@ export function useDisputes() {;
     resolution: { summary: string, resolution_type: string }
   ): Promise < boolean> => {
     try {
-      const { error } = await supabase
-        .from("disputes")
-        .update({
-          status: 'resolved';
-          resolved_at: new Date().toISOString();
-          resolution_summary: resolution.summary
-          resolution_type: resolution.resolution_type
+
+          resolution_summary: resolution && resolution.summary,
+          resolution_type: resolution && resolution.resolution_type
+
         })
         .eq("id", disputeId);
       if (error) throw error;
@@ -157,6 +170,34 @@ export function useDisputes() {;
       toast && toast.error("Failed to resolve dispute");
       return false
     }
+    try {
+      const { data, error } = await supabase;
+        .from ("dispute_messages");
+        .select (`;
+          *;
+
+
+        .order("created_at", { ascending: true }),
+      
+      if (error) throw error,
+      
+
+
+      return data as DisputeMessage[]
+    } catch (err: any) {
+      console && console.error("Error fetching dispute messages:", err);
+      toast && toast.error("Failed to fetch messages");
+      return []
+    }
+
+
+  },
+
+
+
+  const addDisputeMessage = async (disputeId: string, message: string, isAdminNote = false): Promise<boolean> => {
+    if (!user) {
+      toast && toast.error("You must be logged in to send a message");
       return false
     }
     try {
@@ -271,4 +312,3 @@ export function useDisputes() {;
     addDisputeMessage;
   }
 }
-;

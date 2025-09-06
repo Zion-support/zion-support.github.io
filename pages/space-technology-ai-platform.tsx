@@ -1,9 +1,4 @@
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com'
   }
   
   static getDerivedStateFromError(error) {
@@ -160,6 +155,27 @@ function SpaceTechnologyAIPlatform() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
   }
+import React from 'react',
+import Head from 'next/head',
+export default function SpaceTechnologyAIPlatform() {
+
+  const contactInfo = {
+
+  const features = [
+    'AI-powered satellite operationsAutonomous space explorationSpace data analyticsSatellite constellation managementSpace debris trackingReal-time monitoringPredictive maintenanceMission planning tools',
+    'API accessExpert consultation'
+  ],
+  const useCases = [
+    'Satellite operationsSpace explorationEarth observationSpace debris monitoringMission planningSpace research'
+  ],
+  const integrations = [
+    'NASA APIsESA APIsSatellite ground stationsGIS systemsSlackMicrosoft TeamsCustom applications'
+  ],
+  const competitors = [
+    'Lockheed Martin',
+    'Boeing',
+    'Northrop Grumman',
+  ];
                   key={feature}
                   initial={{ opacity: 0, scale: 0.8, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, scale: 1, coordinate_y: 0 }}
@@ -179,11 +195,6 @@ function SpaceTechnologyAIPlatform() {
                     </p>
                   </div>
                 </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Market Position Section */}
         {/* Market Position Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
@@ -212,18 +223,6 @@ function SpaceTechnologyAIPlatform() {
                       <span className="text-gray-300">{competitor}</span>
                     </div>
                 </div>
-                <div className='p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl border border-green-500/30'>
-                  <div className='flex items-center space-x-3'>
-                    <div className='w-3 h-3 bg-green-500 rounded-full'></div>
-                    <span className='text-green-300 font-semibold'>
-                      Our Advantage: AI integration, comprehensive platform
-                      affordable pricing
-                    </span>                  </div>
-                </div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
                 </div>
               </motion.div>
               <motion.div
@@ -231,46 +230,6 @@ function SpaceTechnologyAIPlatform() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
-                initial={{ opacity: 0, x: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, x: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="space-y-6"
-              >
-                <h3 className="text-2xl font-bold text-white mb-6">Market Statistics</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="p-6 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-xl border border-blue-500/30 text-center">
-                    <div className="text-3xl font-bold text-blue-400 mb-2">$447.5B</div>
-                    <div className="text-blue-300 text-sm">Market Size</div>
-                  </div>
-                  <div className="p-6 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl border border-purple-500/30 text-center">
-                    <div className="text-3xl font-bold text-purple-400 mb-2">350%</div>
-                    <div className="text-purple-300 text-sm">Annual Growth</div>
-                  </div>
-                  <div className="p-6 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl border border-green-500/30 text-center">
-                    <div className="text-3xl font-bold text-green-400 mb-2">800%</div>
-                    <div className="text-green-300 text-sm">Average ROI</div>
-                  </div>
-                  <div className="p-6 bg-gradient-to-r from-yellow-600/20 to-orange-600/20 rounded-xl border border-yellow-500/30 text-center">
-                    <div className="text-3xl font-bold text-yellow-400 mb-2">24</div>
-                    <div className="text-yellow-300 text-sm">Months to ROI</div>
-                  </div>
                 </div>
               </motion.div>
             </div>
@@ -290,6 +249,9 @@ function SpaceTechnologyAIPlatform() {
                 Transform every aspect of space operations with AI-powered intelligence
               </p>
             </motion.div>
+                <motion.div
+
+                  className="group relative"
                   key={useCase  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

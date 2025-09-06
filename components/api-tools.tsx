@@ -2,6 +2,11 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import {
+
   Code,
   Database,
   Globe,
@@ -654,15 +659,7 @@ variant="ghost"
                 </div>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
       {/* Developer Resources */}
-      <section className='py-24 bg-gray-800'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-20'>
-            <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
 
 
               Developer Resources

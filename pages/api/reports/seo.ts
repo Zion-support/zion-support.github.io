@@ -1,7 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-
 
 const p = path.join(process.cwd(), 'data', 'reports', 'seo', 'weekly-seo.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

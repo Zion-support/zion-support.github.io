@@ -5,37 +5,6 @@
           .select (
             `;
             talent_profile (
-              id
-              user_id
-              full_name
-              professional_title
-              profile_picture_url
-              hourly_rate
-              bio
-              years_experience
-              key_projects
-              skills
-              location
-              availability
-              is_verified
-            )
-          `
-          )
-          .eq('user_id', user.id)
-        if (error) {
-          throw error
-        }
-        if (data) {
-          // Extract talent profiles and convert to TalentProfile type
-          const talentProfiles = data.map(
-            (item: any) => item.talent_profile as unknown as TalentProfile
-          )
-          setSavedTalents(talentProfiles) }
-      } catch (error) {
-        logErrorToProduction(
-          error instanceof Error ? error.message : String(error)
-          error instanceof Error ? error : undefined
-          { message: 'Error fetching saved talents' }
           .eq("user_id", user.id),
 
         if (error) {

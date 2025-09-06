@@ -82,30 +82,6 @@ if ( {) {
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage;
                         src={review.reviewer_profile.avatar_url}
-                    {review.is_anonymous ? (
-                      <span className="text-sm font-medium">Anonymous</span>
-                    ) : (
-                      <span className='text-sm font-medium'>
-                        {review.reviewer_profile?.display_name |'User'}
-                      <span className="text-sm font-medium">
-                        {review.reviewer_profile?.display_name || "User"}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              </TableCell>
-              <TableCell>{renderStars(review.rating)}</TableCell>
-              <TableCell>
-                {format(new Date(review.created_at), "MMM d, yyyy")}
-              </TableCell>
-              <TableCell>
-                <Badge
-                  variant="outline"
-                >
-                  {review.status.charAt(0).toUpperCase() + review.status.slice(1)}
-                </Badge>
-              </TableCell>
-              <TableCell>
                 {review.report_count > 0 ? (
                   <Badge variant='destructive'>{review.report_count}</Badge>) : (
                   'None')}
@@ -194,19 +170,10 @@ if ( {) {
                           )
                         ) : (
                           <User className='h-4 w-4' />
-                      {selectedReview.is_anonymous
-                        ? 'Anonymous'
-                        : selectedReview.reviewer_profile?.display_name |
-                          'User'}
                     <Badge variant='outline'>{selectedReview.status}</Badge>
                   </div>
                 </div>
                 <div>{renderStars(selectedReview.rating)}</div>
-              </div>
-              <div className='border rounded-md p-3 bg-muted/20'>
-                <p className='whitespace-pre-wrap'>
-                  {selectedReview.review_text}
-                </p>
               </div>
                   {selectedReview.communication_rating && (
                     <Badge variant='outline'>

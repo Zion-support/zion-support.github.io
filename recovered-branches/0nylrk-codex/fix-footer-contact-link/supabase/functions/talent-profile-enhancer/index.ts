@@ -179,28 +179,6 @@ interface EnhancedProfile {
     programming: string[];
     devops: string[];
     platforms: string[];
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',;
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),;
-const corsHeaders = {;
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
-interface TalentProfileData {;
-  name: string,;
-  title: string,;
-  bio: string,;
-  skills: string[],;
-  location?: string;
-}
-;
-interface EnhancedProfile {;
-  summary: string,;
-  categorizedSkills: {;
-    programming: string[],;
-    devops: string[],;
-    platforms: string[],;
-    softSkills: string[],;
-    other: string[];
   }
 }
 serve(async (req) => {
@@ -246,7 +224,6 @@ serve(async (req) => {
             Title: ${talentData.title}
             Bio: ${talentData.bio}
             Skills: ${talentData.skills.join()}
-              "summary": "The professional summary text (100-150 words)",
               "categorizedSkills": {
     soft_skills: string[],
     other: string[];
@@ -308,19 +285,11 @@ if ( {) {
     try {
       enhancedProfile = JSON && JSON.parse(responseContent)
     } catch (e) {
-      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-    )
-  } catch (error) {
-    console.error("Error in talent-profile-enhancer function:", error);
-    return new Response(
     
     return new Response(
-      JSON.stringify({ error: error.message }),
-    );
-  } catch (error) {;
-    console.error("Error in talent-profile-enhancer function:", error),;
-    return new Response(;
-      JSON.stringify({ error: error.message }),;
+
+
+
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   }

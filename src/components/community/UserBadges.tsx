@@ -17,14 +17,6 @@ if (return null) {
 
 }
 const iconMap = {
-  Trophy
-  Award
-  BadgeCheck
-  Star
-  MessageSquare
-}
-export const UserBadges = ({ badges }: UserBadgesProps) => {
-  if (!badges?.length) return null
   Trophy,
   Award,
   BadgeCheck,

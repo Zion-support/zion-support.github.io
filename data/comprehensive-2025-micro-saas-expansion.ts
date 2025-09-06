@@ -1,8 +1,4 @@
 
-import { ServiceVariant } from '../types/service-variants',
-
-marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
-}
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';

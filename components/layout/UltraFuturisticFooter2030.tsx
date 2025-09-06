@@ -1,31 +1,6 @@
 import { motion } from 'framer-motion';
 
-import {
-  Phone
-  Mail
-  MapPin
-  Globe
-  Zap
-  Brain
-  Atom
-  Rocket
-  Shield
-  Cpu
-  Target
-  Microscope
-  Users
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Youtube
-  Github
-  ArrowRight
-  Heart
-  Star
-  Award
-  CheckCircle;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom
+
   Phone,
   Mail,
   MapPin,
@@ -329,6 +304,20 @@ const socialLinks = [;
                       className="w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40";
                     >;
                       <social && social.icon className="w-5 h-5" />;
+              {/* Certifications */}
+              <div className='space-y-3'>
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
+                  <Award className='w-4 h-4' />
+
+                  <span>Certifications</span>
+                </h5>
+                <div className='grid grid-cols-1 gap-2'>
+                  {certifications.map((cert, index) => (
+                    <div
+                      key={index}
+                      href={social.href}                <span > Connect & Trust</span>;
+              </h4>;
+
               {/* Social Links */}
               <div className="space - y-3">;
                 <h5 className="text - sm font - medium text - green - 300">Follow Us</h5>;
@@ -421,8 +410,6 @@ const socialLinks = [;
         <div className='border-t border-purple-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
-              <div className='flex items-center space-x-6 text-sm text-gray-400'>;
-              <div className='flex items-center space-x-6 text-sm text-gray-400'>
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
                 <Link
                   href='/privacy'

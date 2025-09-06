@@ -15,7 +15,6 @@ const PaginationLink = ({
     {...props}
   />
 )
-PaginationLink.displayName = &quot;PaginationLink&quot;
 const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
   ({ page, isActive, className, ...props }, ref) => (
     <button
@@ -46,7 +45,6 @@ const PaginationPrevious = ({
     <span>Previous</span>
   </PaginationLink>
 )
-PaginationPrevious.displayName = &quot;PaginationPrevious&quot;
 const PaginationNext = ({
   className
   ...props
@@ -61,7 +59,6 @@ const PaginationNext = ({
     <ChevronRight className="h-4 w-4" />
   </PaginationLink>
 )
-PaginationNext.displayName = &quot;PaginationNext&quot;
 const PaginationEllipsis = ({
   className
   ...props

@@ -1,11 +1,3 @@
-  id: string;
-  customerId: string;
-  subject: string;
-  description: string;
-  priority: 'low' | 'medium' | 'high' | 'urgent';
-  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
-  category: string;
-  tags: string[];
 
   attachments: string[],
   conversation_history: CustomerMessage[];
@@ -49,6 +41,9 @@
 
     customerSatisfaction: number
   }>
+}
+export interface CustomerServiceRequest {
+  customer_id: string;
   subject: string;
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
@@ -60,17 +55,6 @@
   ai_response?: AIResponse;
   estimatedResolutionTime: string;
 
-  ticketId: string;
-  status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
-  ai_response?: AIResponse;
-  estimatedResolutionTime: string;
-
-  private apiKey: string;
-
-  private baseUrl: string
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
-    this.apiKey = apiKey
-    this.baseUrl = baseUrl
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
@@ -180,21 +164,6 @@
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
 
-  id: string,;
-  customerId: string,;
-  subject: string,;
-  description: string,;
-  priority: 'low' | 'medium' | 'high' | 'urgent',;
-  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
-  category: string,;
-  assignedTo?: string,;
-  createdAt: Date,;
-  updatedAt: Date,;
-  resolvedAt?: Date,;
-  customerSatisfaction?: number,;
-  tags: string[],;
-  attachments: string[],;
-  conversationHistory: CustomerMessage[];
 }
 export class AICustomerServiceService {
   private api_key: string;

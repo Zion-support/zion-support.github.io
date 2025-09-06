@@ -1,15 +1,5 @@
 
 
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/layout/Layout'
-
-
 export default function DocsPage() {
 	return (
 		<Layout>
@@ -23,3 +13,11 @@ export default function DocsPage() {
 			</section>
 		</Layout>
 	)
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+

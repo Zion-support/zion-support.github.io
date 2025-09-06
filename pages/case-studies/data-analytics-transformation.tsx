@@ -20,6 +20,22 @@
               How a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform
             </p>
           </header>
+            {/* Company Overview */}
+
+
+          {/* Case Study Content */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="max-w-4xl mx-auto">
+            {/* Company Overview */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -585,3 +601,8 @@ export default function CaseStudyPage(req, res) {
           </div>;
         </main>;
       </div>;
+        <meta name="description" content="Discover how a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform. Read our detailed case study." />
+        <meta name="keywords" content="data analytics, healthcare analytics, predictive modeling, big data, machine learning" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+        <main className="container mx-auto px-6 py-12">

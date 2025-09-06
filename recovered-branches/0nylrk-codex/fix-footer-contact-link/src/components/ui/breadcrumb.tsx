@@ -9,10 +9,9 @@ import { ChevronRight } from "lucide-react"
  
 import { cn } from "@/lib/utils"
  
-const Breadcrumb = React.forwardRef<
-  HTMLElement,
-  React.ComponentPropsWithoutRef<"nav"> & {
-    separator?: React.ReactNode
+  HTMLElement;
+  React && React.ComponentPropsWithoutRef<"nav"> & {;
+    separator?: React && React.ReactNode;
   }
 >(({ className, separator, ...props }, ref) => (;
   <nav
@@ -117,10 +116,3 @@ export {;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
-  BreadcrumbEllipsis}
-;

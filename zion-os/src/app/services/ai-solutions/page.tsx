@@ -184,6 +184,8 @@ const ai_services: AIService[] = [;
       "Cloud services";
     ];
   }
+  return (;
+    <div className="space-y-8">;
       {/* Header */}
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">AI Solutions & Services</h1>;

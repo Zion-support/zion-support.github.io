@@ -30,6 +30,74 @@
     </div>;
   );
 }
+    const handleKeyDown = (e: KeyboardEvent) => {;
+      if (e.key === "Tab") {;
+        if (e.shiftKey) {;
+          if (document.activeElement === firstElement) {;
+
+            firstElement.focus();
+          }
+        }
+      }
+}
+// Keyboard navigation hook;
+export function useKeyboardNavigation (items: any[], on_select: (item: any) => void) {
+  const [selected_index, setSelectedIndex] = useState (-1),
+  const handleKeyDown = (e: KeyboardEvent) =>: any {
+    switch (e.key) {
+      case "ArrowDown": e.prevent_default (),
+        setSelectedIndex (prev => (prev + 1) % items.length),
+        break,
+      case "ArrowUp":;
+        e.prevent_default (),
+        setSelectedIndex (prev => (prev - 1 + items.length) % items.length),
+        break,
+      case "Enter":;
+      case " ":;
+        e.prevent_default (),
+        // Check condition
+if ( {) {
+  $2
+}
+          on_select (items[selected_index]);
+        }
+        break,
+      case "Escape": setSelectedIndex (-1),
+        break;
+    }
+  },
+  useEffect (() => {
+    document.addEventListener ("keydown", handleKeyDown),
+    return () => document.removeEventListener ("keydown", handleKeyDown);
+  }, [items, selected_index, on_select]),
+  return { selected_index, setSelectedIndex }
+}
+// Announcement component for screen readers;
+export /**
+ * Announcement - Function description
+ */
+function Announcement() {
+  const [announcements, set_announcements] = useState < string[]>([]),
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_announcements (prev => [...prev, message]),
+      // Clear announcement after a delay;
+      const timer = set_timeout (() => {
+        set_announcements (prev => prev.slice (1));
+      }, 1000),
+      return () => clear_timeout (timer);
+    }
+  return (;
+    <div aria-live={priority} aria-atomic="true" className="sr-only">;
+      {announcements.map((announcement, index) => (;
+        <div key={index}>{announcement}</div>;
+      ))}
+    </div>;
+  );
+}
   return (;
     <div className="space-y-2">;
       <div className="flex justify-between text-sm">;

@@ -1,5 +1,7 @@
 <<<<<<< HEAD:backup-problematic-files/scripts/advanced-monitoring-system.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -353,6 +355,9 @@ console.log(' Starting Advanced Monitoring System...')
     throw new Error("Performance "issues")
     console.log("⚠  Performance "issues")
 <<<<<<< HEAD:backup-problematic-files/scripts/advanced-monitoring-system.cjs
+<<<<<<< HEAD
+  return { "status": 'success', "metrics": mockPerformance, "message"}
+=======
 <<<<<<< HEAD
   return { "status": 'success', "metrics": mockPerformance, "message"}
 =======

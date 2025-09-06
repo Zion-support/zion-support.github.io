@@ -12,10 +12,6 @@ interface StepProps {
   description?: string,
   className?: string
 }
-export function Step({
-  status,
-  label,
-  description,
   className}: StepProps) {
   return (
     <li
@@ -41,14 +37,37 @@ export function Step({
             {/* Step number would go here */}
           </span>;
         )}
-      </div>
-      <div className="ml-4 min-w-0">
-        <h3
-          className={cn("text-sm font-medium", {
-            "text-zion-slate-light": status === "incomplete";
-            "text-white": status === "current" |status === "complete"})}
+
+
             "text-zion-slate-light": status === "incomplete",
             "text-white": status === "current" || status === "complete"})}
+
+
+        >
+      </div>;
+
+      <div className="ml-4 min-w-0">;
+        <h3
+          className={cn("text-sm font-medium", {
+            "text-zion-slate-light": status === "incomplete"
+            "text-white": status === "current" || status === "complete"})}>;
+          {label}
+        </h3>;
+        {description && (;
+          <p className="text-sm text-zion-slate-light">{description}</p>;
+        )}
+      </div>;
+    </li>;
+  );
+}
+
+
+
+
+
+interface StepsProps {
+  currentStep: number
+
 interface StepsProps {;
   currentStep: number,;
   className?: string;

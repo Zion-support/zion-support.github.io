@@ -12,6 +12,17 @@ export default function ITServices() {
             </p>
           </div>
           <div className="text-center">
+              IT Services page is under construction.;
+            </p>;
+          </div>;
+        </div>;
+      </div>;
+
+
+
+}
+
+
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';

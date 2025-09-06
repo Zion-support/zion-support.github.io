@@ -17,7 +17,6 @@ export default async function handler(
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {;
     const current = await getTrustWeights();
-    return res && res.status(200).json({ current, defaults: getDefaultWeights() })
   }
 }
     const current = await getTrustWeights ();

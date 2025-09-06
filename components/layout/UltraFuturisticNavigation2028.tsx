@@ -312,20 +312,6 @@ const companyLinks = [
                         <div className="space-y-2">;
                           {category && category.services.slice(0, 2).map((service) => (;
                             <Link
-                              key={service.name}
-                              href={service.href}
-                              className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors group"
-                            >
-                              <div className="flex items-center justify-between">
-                                <div>
-                                  <h4 className="text-sm font-medium text-white group-hover:text-purple-300 transition-colors">
-                                    {service.name}
-                                  </h4>
-                                  <p className="text-xs text-purple-300">{service.description}</p>
-                                </div>
-                                <span className="text-xs text-purple-400 font-medium">{service.price}</span>
-                              </div>
-                                </span>                              </div>
 
 
                             </Link>
@@ -424,37 +410,6 @@ const companyLinks = [
                   </div>;
                 ))}
               {/* Mobile Company Links */}
-              <div className='space-y-4'>
-                <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>
-                  Company
-                </h3>
-                <div className='grid grid-cols-2 gap-4'>
-                  {companyLinks.map(link => (                    <Link
-                      key={link.name}
-                      href={link.href}
-                      onClick={closeMenu}              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white border-b border-purple-500/30 pb-2">
-                  Company
-                </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {companyLinks.map((link) => (
-                      key={link.name}
-                      href={link.href}
-                      onClick={closeMenu}
-                      className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
-                    >
-                      <link.icon className='w-5 h-5 text-purple-400' />
-                      <span className='text-purple-200'>
-                        {link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}
-                      </span>                    </Link>                      className="flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
-                    >
-                      <link.icon className="w-5 h-5 text-purple-400" />
-                      <span className="text-purple-200">{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
-                  ))}
-                </div>
-              </div>
-              {/* Mobile CTA */}
-              <div className='pt-4 border-t border-purple-500/30'>
 
 
                   ))}
@@ -484,48 +439,11 @@ const companyLinks = [
           </motion.div>
 
         )}
-      </AnimatePresence>
 
       </AnimatePresence>;
 
 
       {/* Search Results Dropdown */}
-      {searchQuery && filteredServices.length > 0 && (
-        <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50'>
-          <div className='p-4'>
-            <div className='space-y-2'>
-              {filteredServices.slice(0, 8).map(service => (
-                <Link
-                  key={service.name}
-                  href={service.href}
-                  className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
-                >
-                  <div className='flex items-center justify-between'>
-                    <div>
-                      <h4 className='text-sm font-medium text-white'>
-                        {service.name}
-                      </h4>
-                      <p className='text-xs text-purple-300'>
-                        {service.description}
-                      </p>
-                    </div>
-                    <span className='text-xs text-purple-400 font-medium'>
-                      {service.price}
-                    </span>                  </div>                <Link
-                  key={service.name}
-                  href={service.href}
-                  className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
-                >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h4 className="text-sm font-medium text-white">{service.name}</h4>
-                      <p className="text-xs text-purple-300">{service.description}</p>
-                    </div>
-                    <span className="text-xs text-purple-400 font-medium">{service.price}</span>
-                  </div>
-                    </span>                  </div>
-
-
                 </Link>
               ))}
             </div>;

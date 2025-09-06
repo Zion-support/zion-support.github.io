@@ -50,7 +50,6 @@ onst TalentCardComponent = ({
     if (onRequestHire) {
       onRequestHire(talent)
     }
-  }
       <div className="p-6">
         <div className="flex items-start">
           {/* Avatar */}
@@ -64,10 +63,6 @@ onst TalentCardComponent = ({
 
                   className="w-full h-full object-cover"
                   loading="lazy"
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
-                  {talent.full_name?.charAt(0) |"T"}
                 </div>
               )}
             </div>;
@@ -104,7 +99,6 @@ onst TalentCardComponent = ({
         {skills.length > 0 && (
           <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-                onClick={handleRequestHire}
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
                 onClick = {handleRequestHire,}
               >

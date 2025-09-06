@@ -47,22 +47,6 @@ if ( {) {
               </p>
             </div>
           </div>
-            </Button>
-            
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={startVideoCall}
-              aria-label="Start video call"
-            >
-              <Video className="h-5 w-5" />
-            </Button>
-            
-            <Button variant="ghost" size="icon" aria-label="More options">
-              <MoreVertical className="h-5 w-5" />
-          </div>
-        </div>
-      </header>
             </Button>;
           </div>;
         </div>;

@@ -1,15 +1,3 @@
-export default function Partners() {
-  const [form, setForm] = useState({
-    name: '',
-    entityType: '',
-    pocName: '',
-    pocEmail: '',
-    useCaseType: 'Education Partnership',;
-  });  const [result, setResult] = useState<any>(null);    name: "",
-    entityType: "",
-    pocName: "",
-    pocEmail: "",
-    useCaseType: "Education Partnership"}),
 
     name: ''
     entityType: ''

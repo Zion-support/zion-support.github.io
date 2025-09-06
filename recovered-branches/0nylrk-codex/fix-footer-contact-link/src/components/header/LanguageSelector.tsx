@@ -3,10 +3,6 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
-  DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
   DropdownMenu,
@@ -44,9 +40,5 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
             </div>
           </DropdownMenuItem>
         ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
-      </DropdownMenuContent>;
-    </DropdownMenu>;
   );
 }

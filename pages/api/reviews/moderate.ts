@@ -131,3 +131,14 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+      }
+    } else {
+      return res.status (400).json ({ error: 'Invalid action' });
+    }
+    await write_reviews (reviews);
+    return res.status (200).json ({ message: 'OK' });
+  } catch (error: any) {
+    return res;
+      .status (500);
+      .json ({ error: 'Internal server error', details: error?.message });
+  }

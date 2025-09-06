@@ -1,9 +1,3 @@
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Sparkles, Loader2, RefreshCw, Check, X  } from '@/components/icons';
-import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIContentEnhancer';
-import { toast } from '@/hooks/use-toast';
-interface AIEnhancementButtonProps {
 
 
 
@@ -30,11 +24,6 @@ interface AIEnhancementButtonProps {
   size?: "default" | "sm" | "lg" | "icon",
   contentLength?: number
 }
-  buttonText = "Enhance with AI";
-  className;
-  variant = "ghost";
-  size = "sm";
-export function AIEnhancementButton({
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -95,7 +84,6 @@ export function AIEnhancementButton({;
     }
 
   },
-  
   const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent);
@@ -121,10 +109,6 @@ export function AIEnhancementButton({;
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
-  }
-  const handleRegenerate = async () => {
-    await handleEnhance()
-  }
     return (
       <div className="flex gap-2 items-center">;
         <Button
@@ -315,35 +299,23 @@ export function AIEnhancementButton({;
       type="button";
       variant={variant}
       size={size}
-      className={`gap-1 ${className}`}
-      onClick={handleEnhance}
-      disabled={isEnhancing}
-    >;
-      {isEnhancing ? (;
-        <Loader2 className="h-4 w-4 animate-spin" />;
-      ) :(;
-        <Sparkles className="h-4 w-4" />;
-      )}
+
       <span className="text-xs">{buttonText}</span>;
     </Button>;
-  ),; 
-}export function AIEnhancementButton ({
-  options;
-onEnhanced;
-buttonText = "Enhance with AI";
-className;
-variant = "ghost";
-size = "sm";
-contentLength = 10 
-}: AIEnhancementButtonProps) {
-  const {
-  enhanceContent, isEnhancing 
-}= useAIContentEnhancer ();
-const [showActions, setShowActions] = useState (false);
-const [generatedContent, setGeneratedContent] = useState<string | null> (null);
-if ( (!options.content || options.content.trim () .length < contentLength) && (!options.context || options.context.trim () .length < contentLength) ) {
-  toast ({
-  variant: "destructive" 
-});
-return 
+  );
 }
+
+      className={`gap - 1 ${class_name}`}
+      on_click={handle_enhance}
+      disabled={is_enhancing}
+    >;
+      {is_enhancing ? (
+        <Loader2 className="h - 4 w - 4 animate - spin" />) : (
+        <Sparkles className="h - 4 w - 4" />)}
+      <span className="text - xs">{button_text}</span>;
+    </Button>);
+}
+
+}
+;
+

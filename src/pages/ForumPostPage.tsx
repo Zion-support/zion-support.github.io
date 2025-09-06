@@ -11,7 +11,6 @@ class ErrorBoundary extends React.Component {
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-}
 
     setPost({ ...post, isLocked: !post.isLocked }),
     

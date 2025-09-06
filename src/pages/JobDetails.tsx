@@ -72,38 +72,6 @@ interface Job {;
   deadline?: string;
 export default function JobDetails() {
 
-  const formatBudget = (budget: any) => {
-  if (isLoading) {
-    return <JobDetailsSkeleton />;
-  if (error |!job) {
-      </>
-    )
-  }
-
-  if (error || !job) {;
-    return (
-      <>;
-        <Header />;
-        <div className='container mx-auto px-4 py-16 text-center'>;
-          <h1 className='text-2xl font-bold mb-4'>Job Not Found</h1>;
-          <p className='mb-8'>;
-            The job you're looking for doesn't exist or has been removed.;
-          </p>;
-          <Button onClick={() => router && router.push('/careers')}>View All Jobs</Button>        </div>;
-      </>;
-    );
-  }
-      return;
-    }
-    if (
-      user?.userType !== 'talent' &&
-      user?.userType !== 'admin' &&
-      user?.userType !== 'client'
-    ) {
-      toast.error('Only job seekers can apply for jobs');
-      return;
-    }
-    setIsApplyModalOpen(true);
 
   return (
     <>
@@ -112,7 +80,6 @@ export default function JobDetails() {
         description={job.description.substring(0, 160)}
       />
       <Header />
-
 
                 
                 <div className="flex items-start">
@@ -142,7 +109,6 @@ export default function JobDetails() {
                     Apply Now;
                   </Button>;
                 )}
-                
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
                   </div>
@@ -156,19 +122,3 @@ export default function JobDetails() {
       {job && (;
         <ApplyToJobModal
           job={{
-          }}
-
-          isOpen={isApplyModalOpen}
-          onClose={() => setIsApplyModalOpen(false)}        />;
-      )}
-    </>;
-  );
-}`) ;
-}`);
-//Added null check for job_id return;
-}setIsApplyModalOpen (true) ;
-  />) ;
-}</>) ;
-}'";
-}
-}

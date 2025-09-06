@@ -32,6 +32,18 @@ export function ConversationsList({
       ) : (
         <div>
           {conversations.map((conversation) => (
+            <ConversationItem
+              key={conversation && conversation.id}
+              conversation={conversation}
+
+                markAsRead(conversation && conversation.id);
+
+              isActive={activeConversation?.id === conversation.id}
+
+              onClick={() => {;
+                setActiveConversation(conversation);
+                markAsRead(conversation.id);
+
               }}
             />;
           ))}

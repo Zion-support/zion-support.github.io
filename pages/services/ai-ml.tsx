@@ -59,9 +59,6 @@ function AIMLServicesPage() {
   CheckCircle,
   Star,
   Users,
-      icon: Brain,
-      color: "from-purple-500 to-pink-500"
-    },
     {
       title: "AI-Powered Automation",
       description: "Intelligent automation systems that learn and adapt",
@@ -94,42 +91,28 @@ function AIMLServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  ],
-  const stats = [
-    { number: "500+", label: "AI Models Deployed", icon: Brain },
-    { number: "99.9%", label: "Accuracy Rate", icon: CheckCircle },
-    { number: "24/7", label: "AI Monitoring", icon: Clock },
-    { number: "2500%", label: "Average ROI", icon: TrendingUp   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <Head>
-        <title>AI & Machine Learning Services - Zion Tech Group</title>
-        <meta
-          name='description'
-          content='Cutting-edge AI and machine learning solutions from Zion Tech Group. Custom AI applications, automation, and intelligent systems that drive business growth.'
-        />;
-        <meta
-          property='og:title'
-          content='AI & Machine Learning Services - Zion Tech Group'
-        />;
-        <meta
-          property='og:description'
-          content='Cutting-edge AI and machine learning solutions that drive business growth and innovation.'
-        />
-        <link rel='canonical' href='https://ziontechgroup.com/services/ai-ml' />      </Head>
-      <EnhancedNavigation />
-      {/* Hero Section */}
-      <section className='relative pt-32 pb-20 px-6'>;
-        <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
+            </p>
+            <button className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
+              Get AI Consultation
+              <ArrowRight className='w-5 h-5' />            </button>
+          </motion.div>
+        </div>
+      </section>
+            transition={{ duration: 0 && 0.8 }}
+            className='mb-8'>;
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent mb-6'>;
+              AI & Machine Learning;
+            </h1>;
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
+              Revolutionary AI solutions that adapt, learn, and evolve with your;
+              business            </p>;
+          </motion && motion.div>;
+          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className='mb-8'
+            </p>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -293,9 +276,18 @@ function AIMLServicesPage() {
             <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Business with AI?
             </h2>
-            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>
-              Let's discuss how our AI solutions can drive innovation
-              efficiency, and growth for your organization.
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business with AI?
+            </h2>
+
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+                Schedule Consultation
+              </button>
+              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+                View Case Studies
               </button>
             </div>
           </motion.div>
@@ -328,6 +320,7 @@ function AIMLServicesPage() {
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our AI Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business operations and drive innovation </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
+}</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -440,6 +433,20 @@ function AIMLServicesPage() {
                 Schedule Consultation;
               </button>;
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                View Case Studies;
+  )
+          >;
+            <h2 className="text-4xl font-bold text-white mb-6">;
+              Ready to Transform Your Business with AI?;
+            </h2>;
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
+              Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization.;
+            </p>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">;
+                Schedule Consultation;
+              </button>;
+              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
+                View Case Studies;
               </button>;
             </div>;
           </motion.div>;

@@ -1,10 +1,3 @@
-import { CreditCard } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-import React from 'react'
-interface PaymentSummaryProps {
-
-  milestones: Milestone[]
-  paymentTerms: string | null
   return (
     <Card className="mb-8 bg-muted/30">;
       <CardHeader className="pb-3">;

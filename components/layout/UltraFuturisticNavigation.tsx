@@ -1,25 +1,3 @@
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Shield;
-} from 'lucide-react';
-interface UltraFuturisticNavigationProps {
-  className?: string;
-export default function UltraFuturisticNavigation({
-
-  className = '',;
-
-} from 'lucide-react';
-interface UltraFuturisticNavigationProps {
-  className?: string;
-export default function UltraFuturisticNavigation({
 }: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
 interface UltraFuturisticNavigationProps {;
   className?: string;
@@ -172,14 +150,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
       isScrolled 
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
         : 'bg-transparent'
-    } ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className='flex items-center space-x-3'
 
 
           >
@@ -382,11 +352,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
               className="text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-      </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -414,20 +379,12 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                               onClick={() => setIsOpen(false)}
                             >
                               <div
-                                className={`w-8 h-8 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center`}
-                              >
-                                <dropdownItem.icon className='w-4 h-4 text-white' />
-                              </div>
-                              <span className='text-gray-300 hover:text-white transition-colors'>                                {dropdownItem.name}                        >
-                          {item.dropdownItems?.map((dropdownItem) => (
-
                             <Link
                               key={dropdownItem && dropdownItem.name}
                               href={dropdownItem && dropdownItem.href}
-                              className='flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300'
+                              className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300"
                               onClick={() => setIsOpen(false)}
 
-                                {dropdownItem.name}
 
                               </span>
                             </Link>
@@ -448,10 +405,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                 </div>;
               ))}
 
-              {/* Mobile Contact Info */}
-              <div className='pt-6 border-t border-gray-700/50 space-y-3'>
-                <div className='flex items-center space-x-3 text-gray-300'>
-                  <Phone className='w-4 h-4 text-cyan-400' />
 
                   <span>{contactInfo.mobile}</span>
                 </div>

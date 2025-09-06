@@ -68,16 +68,6 @@ export default async function handler(
     y -= 14
   }
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-  if (req.method !== "POST") return res.status($1).json({ $2 });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
   try {
 
     const { id } = req && req.body || {};
@@ -217,5 +207,3 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}

@@ -53,10 +53,6 @@ export const checkNewRegistration = async (user: UserDetails) => {
           scheduled_for: new Date ().toISOString ();
           status: "pending";
           payload: {
-            user_id: user.id;
-            email_type: "welcome_series";
-            user_type: user.userType |"unknown"
-            display_name: user.displayName |user.email?.split("@")[0] |"User"
           }
         });
             user_id: user.id,
@@ -113,4 +109,9 @@ export const checkNewRegistration = async (user: UserDetails) => {;
     }
   } catch (error) {
   }
-};
+}
+
+    console.error ("Error checking or scheduling welcome email:", error);
+  }
+}
+;

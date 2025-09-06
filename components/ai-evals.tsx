@@ -10,13 +10,6 @@ import Button from '../components/ui/Button';
 
 export default function AIEvalsPage() {
   const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com'
-  }
-export default function AIEvalsPage() {
-  const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -94,47 +87,6 @@ export default function AIEvalsPage() {;
             </p>;
           </div>;
 
-                  <Button
-                    href='/contact'
-                    className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                  >
-                    Request Demo
-                  </Button>
-                </div>
-              </div>
-            </Card>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12'>
-            <Card className='p-6 bg-black/30 border border-purple-500/30'>
-              <h3 className='text-lg font-semibold mb-2'>
-                Guardrails & Policies
-              </h3>
-              <p className='text-gray-300 text-sm'>
-                Safety checks for toxicity, PII/PHI, jailbreaks and policy
-                enforcement before responses reach users.
-              </p>
-            </Card>
-            <Card className='p-6 bg-black/30 border border-emerald-500/30'>
-              <h3 className='text-lg font-semibold mb-2'>Observability</h3>
-              <p className='text-gray-300 text-sm'>
-                Latency, cost, and quality KPIs with prompt/version diffs and
-                canary alerts in CI and prod.
-              </p>
-            </Card>
-            <Card className='p-6 bg-black/30 border border-cyan-500/30'>
-              <h3 className='text-lg font-semibold mb-2'>Integrations</h3>
-              <p className='text-gray-300 text-sm'>
-                GitHub Actions, CircleCI, Datadog, Slack and PagerDuty. SDKs for
-                Node and Python.
-              </p>
-            </Card>
-          </div>
-          <div className='bg-black/20 border border-cyan-500/30 rounded-2xl p-6'>
-            <h3 className='text-xl font-semibold text-white mb-4 text-center'>
-              Contact
-            </h3>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-sm'>
-              <div className='flex items-center justify-center gap-2 text-cyan-400'>
                     Request Demo;
                   </Button>;
                 </div>;
@@ -148,30 +100,22 @@ export default function AIEvalsPage() {;
             </Card>;
           </div>;
 
-                className='border-cyan-500 text-cyan-400'
-              >
-                Explore Services <ExternalLink className='w-4 h-4 ml-2' />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </QuantumHolographicMatrixBackground>
-  );					<div className="bg-black/20 border border-cyan-500/30 rounded-2xl p-6">
-						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-							<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`}>{contactInfo.mobile}</a></div>
-							<div className="flex items-center justify-center gap-2 text-purple-400"><Mail className="w-4 h-4" /> <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></div>
-							<div className="flex items-center justify-center gap-2 text-emerald-400"><MapPin className="w-4 h-4" /> <a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs">{contactInfo.address}</a></div>
-						</div>
-						<div className="text-center mt-6">
-							<Button href="/services" variant="outline" className="border-cyan-500 text-cyan-400">Explore Services <ExternalLink className="w-4 h-4 ml-2" /></Button>
-						</div>
-					</div>
-				</div>
-			</section>
-		</QuantumHolographicMatrixBackground>
 	);
 }
-	);
+
+
+    </QuantumHolographicMatrixBackground>);					<div className="bg - black / 20 border border - cyan - 500 / 30 rounded - 2xl p - 6">;
+      <h3 className="text - xl font - semibold text - white mb - 4 text - center">Contact</h3>;
+      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - sm">;
+      <div className="flex items - center justify - center gap - 2 text - cyan - 400"><Phone className="w - 4 h - 4" /> <a href={`tel:${contact_info.mobile.replace (/[^+\d]/g, '')}`}>{contact_info.mobile}</a></div>;
+      <div className="flex items - center justify - center gap - 2 text - purple - 400"><Mail className="w - 4 h - 4" /> <a href={`mailto:${contact_info.email}`}>{contact_info.email}</a></div>;
+      <div className="flex items - center justify - center gap - 2 text - emerald - 400"><MapPin className="w - 4 h - 4" /> <a href={`https://maps.google.com/?q=${encodeURIComponent (contact_info.address)}`} target="_blank" rel="noopener noreferrer" className="text - xs">{contact_info.address}</a></div>;
+      </div>;
+      <div className="text - center mt - 6">;
+      <Button href="/services" variant="outline" className="border - cyan - 500 text - cyan - 400">Explore Services <ExternalLink className="w - 4 h - 4 ml - 2" /></Button>;
+      </div>;
+    </div>;
+    </div>;
+  </section>;
+  </QuantumHolographicMatrixBackground>);
 }

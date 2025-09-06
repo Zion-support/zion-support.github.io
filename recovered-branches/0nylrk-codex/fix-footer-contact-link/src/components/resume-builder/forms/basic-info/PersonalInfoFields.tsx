@@ -77,3 +77,22 @@ function PersonalInfoFields() {
         control={control}
         name="email";
         render={({ field }) => (
+            <FormControl>;
+              <Input placeholder="+1 234 567 8900" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+
+      />;
+    </div>;
+  );
+}
+
+          </FormItem>)}
+      />;
+    </div>);
+}
+
+  )
+}
+;
+

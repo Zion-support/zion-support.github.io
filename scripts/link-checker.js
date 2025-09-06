@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env node,"}),"})
 /**,"}),"})
  * Link Checker Script,"}),"})
@@ -225,6 +227,9 @@ class LinkChecker {;
       const content = fs && fs.readFileSync(file,utf8');
       const links = this && this.extractLinks(content);
       for (const link of links) {;
+
+    : ${link}")}
+
       }
     }
   }
@@ -232,12 +237,12 @@ class LinkChecker {;
     const mdFiles = this && this.findFiles(
   '.md')';
     for: (const file of mdFiles) {
-      const content = fs && fs.readFileSync(file,utf8';)';
       const links = this && this.extractMarkdownLinks(content);
       "for": (const link of links) {
         this && this.checkedLinks++;
-        if: (!this && this.isValidLink(link)) {
-  '.md');
+
+    : ${link}")}
+
       }
       const packagePath = path && path.join(this && this.projectRoot,package && package.json');
       if (fs && fs.existsSync(packagePath)) {;
@@ -319,4 +324,3 @@ class LinkChecker {;
       return true} catch {;
       return false}
   }
-}

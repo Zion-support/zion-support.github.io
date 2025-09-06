@@ -1,10 +1,5 @@
 import React from 'react';
 
-import { useState } from "react",
-import { BookOpen, Code, Copy, Terminal } from "lucide-react",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Alert, AlertDescription } from "@/components/ui/alert",
 export function ApiDocumentation() {
   return (
 
@@ -63,19 +58,6 @@ function ApiDocumentation() {
 
           <TabsContent value="jobs" className="space - y-6">;
   headers: {
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  };
-});
-  }
-});
-const data = await response.json();
-console.log(data),`;
-}),
-
-const data = await response.json(),
-// // // console.log(data),`,
-                python: `import requests
-headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
     headers=headers
 )
@@ -164,13 +146,6 @@ print(data)`;
                 success: `{
   "data": [;
     {
-        "currency": "USD"
-      }
-      "status": "active";
-      "client_id": "user_xyz789";
-      "created_at": "2025-05-15T10:30:00Z"
-    }
-    // More jobs...
       },
       "status": "active",
       "client_id": "user_xyz789",
@@ -263,6 +238,16 @@ print(data)`;
               response_examples={{
                 success: `{
   "data": {
+    "application_count": 12
+      "min": 5000;
+      "max": 10000;
+      "currency": "USD";
+    }
+    "status": "active";
+    "client_id": "user_xyz789";
+    "created_at": "2025 - 05 - 15T10: 30:00Z";
+    "deadline": "2025 - 06 - 30T23:59:59Z",
+    "application_count": 12;
   }
 }`;
               }}
@@ -284,15 +269,42 @@ print(data)`;
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
-    "title": "Senior React Developer";
-    "description": "We need an experienced React developer...";
-    "category": "development"
-    "skills": ["react", "typescript", "node.js"];
   body: JSON.stringify({
     title: 'Senior React Developer'
     description: 'We need an experienced React developer...'
     category: 'development'
     skills: ['reacttypescriptnode.js']
+    title: 'Senior React Developer',
+    description: 'We need an experienced React developer...',
+    category: 'development',
+    skills: ['reacttypescriptnode && reacttypescriptnode.js'],
+    budget: {
+
+})
+
+const data = await response && response.json()
+console && console.log(data),`
+
+                python: `import requests
+import json
+      min: 5000,
+      max: 10000,
+      currency: 'USD';
+    }
+    deadline: '2025 - 06 - 30T23:59:59Z';
+  });
+});
+;
+const data = await response.json ();
+console.log (data), `;
+                python: `import requests;
+import json;
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
+}
+payload = {
+    'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode && reacttypescriptnode.js']
+
     },
     deadline: '2025-06-30T23:59:59Z'
   })
@@ -306,19 +318,6 @@ headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
     'budget': {
-        'min': 5000
-        'max': 10000
-        'currency': 'USD'
-    }
-    'deadline': '2025-06-30T23:59:59Z'
-}
-response = requests.post(
-    'https: //api.ziontechgroup.com/v1/jobs';
-    headers=headers
-    data=json.dumps(payload)
-)
-data = response.json()
-print(data)`
         'currency': 'USD';
     }
     'deadline': '2025 - 06 - 30T23:59:59Z';
@@ -327,6 +326,15 @@ print(data)`
               response_examples={{
                 success: `{
   "data": {
+    "deadline": "2025-06-30T23:59:59Z"
+      "min": 5000;
+      "max": 10000;
+      "currency": "USD";
+    }
+    "status": "new";
+    "client_id": "user_xyz789";
+    "created_at": "2025 - 05 - 16T14: 22:10Z",
+    "deadline": "2025 - 06 - 30T23:59:59Z";
   }
 }`;
               }}
@@ -521,6 +529,9 @@ print(data)`;
   }
 }`;
               }}
+
+
+
             />
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
@@ -1018,25 +1029,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-  body: JSON.stringify({
-    talent_id: 'talent_abc123'
-    project_name: 'E-commerce Website Redesign'
-    project_summary: 'Redesign our outdated e-commerce website with modern UI'
-    project_description: 'Our current website is 5 years old and needs a complete overhaul...'
-    timeline: '2-3 months'
-    budget_min: 8000
-    budget_max: 12000
-    requester_name: 'John Doe'
-    requester_email: 'john@example.com'
-  })
-});
-const data = await response.json();
-console.log(data),`;
-                python: `import requests
-import json
-headers = {
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-}
     'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
     'budget_max': 12000;
     'requester_name': 'John Doerequester_email': 'john@example.com'
@@ -1512,10 +1504,6 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
     ];
   }
 }`}
-  description;
-  note;
-  params = [];
-  codeExamples;
   description;
   note;
   params = [];

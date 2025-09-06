@@ -247,9 +247,9 @@ export default function Revolutionary2026ServicesShowcase() {
         {/* AI Autonomous Services Section */}
         <motion&& motion.div
           variants={containerVariants}
-          initial='hidden'
-          whileInView='visible'
 
+
+          viewport={{ once: true }}
 
           viewport={{ once: true }}
           className='mb-20'
@@ -320,15 +320,6 @@ export default function Revolutionary2026ServicesShowcase() {
               </motion.div>
             ))}
           </div>
-            <Link
-              href='/services?category=ai-autonomous'
-              className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
-              View All AI Autonomous Services{' '}
-              <ArrowRight className='w-5 h-5 ml-2' />            </Link>          <div className="text-center mt-8">;
-            <Link
-              href="/services?category=ai-autonomous"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">;
-              View All AI Autonomous Services <ArrowRight className="w-5 h-5 ml-2" />;
 
           className='mb-20'>;
           <div className='flex items-center space-x-3 mb-12'>;
@@ -388,6 +379,91 @@ export default function Revolutionary2026ServicesShowcase() {
         {/* Quantum Space Tech Services Section */}
         <motion&& motion.div
           variants={containerVariants}
+
+
+
+
+
+          viewport={{ once: true }}
+
+                      </span>;
+                      <span className='text - gray - 400 text - sm'>;
+                        ({service.reviews});
+                      </span>;
+                    </div>;
+                  </div>;
+                  <Link;
+                    href={service.link}
+                    className='inline - flex items - center text - blue - 400 hover:text - blue - 300 transition - colors text - sm font - medium';
+                  >;
+                    Learn More <ArrowRight className='w - 4 h - 4 ml - 2' />                  </Link>                    <div>;
+                      <span className="text - 2xl font - bold text - blue - 400">{service.price}</span>;
+                      <span className="text - gray - 400">{service.period}</span>;
+                    </div>;
+                    <div className="flex items - center space - x-1">;
+                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />;
+                      <span className="text - yellow - 400 text - sm">{service.rating}</span>;
+                      <span className="text - gray - 400 text - sm">({service.reviews})</span>;
+                    </div>;
+                  </div>;
+                  <Link;
+                    href={service.link}
+                    className="inline - flex items - center text - blue - 400 hover:text - blue - 300 transition - colors text - sm font - medium";
+                  >;
+                    Learn More <ArrowRight className="w - 4 h - 4 ml - 2" />;
+                  </Link>;
+                </div>;
+              </motion.div>))}
+          </div>;
+          <div className='text - center mt - 8'>;
+            <Link;
+              href='/services?category = ai - autonomous';
+              className='inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white font - semibold rounded - xl hover:from - blue - 700 hover:to - cyan - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30';
+            >;
+              View All AI Autonomous Services{' '}
+              <ArrowRight className='w - 5 h - 5 ml - 2' />            </Link>          <div className="text - center mt - 8">;
+            <Link;
+              href="/services?category = ai - autonomous";
+              className="inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white font - semibold rounded - xl hover:from - blue - 700 hover:to - cyan - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30";
+            >;
+              View All AI Autonomous Services <ArrowRight className="w - 5 h - 5 ml - 2" />;
+          </div>;
+        </motion.div>;
+        {/* Quantum Space Tech Services Section */}
+        <motion.div;
+          variants={container_variants}
+          initial='hidden';
+          whileInView='visible';
+          initial='hidden'
+          whileInView='visible'
+
+          viewport={{ once: true }}
+          className='mb - 20';
+        >;
+          <div className='flex items - center space - x-3 mb - 12'>;
+            <div className='w - 12 h - 12 bg - gradient - to - br from - indigo - 500 to - purple - 500 rounded - xl flex items - center justify - center'>;
+              <Rocket className='w - 6 h - 6 text - white' />;
+            </div>;
+            <div>;
+              <h3 className='text - 3xl font - bold text - white'>;
+                Quantum Space Technology;
+              </h3>;
+              <p className='text - indigo - 300'>;
+                Revolutionary quantum - powered space exploration and technology;
+              </p>;
+            </div>;
+          </div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {featuredQuantumServices.map ((service, index) => (
+              <motion.div;
+
+                key={service.id}
+                variants={item_variants}
+                className='group relative'          viewport={{ once: true }}
+
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+
           className="mb-20"
         >
           <div className="flex items-center space-x-3 mb-12">

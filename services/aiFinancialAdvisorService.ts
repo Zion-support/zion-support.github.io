@@ -1,8 +1,3 @@
-  id: string;
-  userId: string;
-  name: string;
-  totalValue: number;
-  currency: string;
 
   riskTolerance: 'conservative' | 'moderate' | 'aggressive'
 
@@ -137,24 +132,12 @@ export interface FinancialPlan {;
   created_at: Date,
   updated_at: Date;
 }
-
-  requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
-  parameters: Record<string, any>;
-
-  preferences?: Record<string, any>
-}
   success: boolean;
   data: {
     portfolio?: InvestmentPortfolio;
     recommendations?: InvestmentRecommendation[];
     plan?: FinancialPlan;
 
-  private apiKey: string;
-
-  private baseUrl: string
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
-    this.apiKey = apiKey
-    this.baseUrl = baseUrl
   }
   async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
     try {

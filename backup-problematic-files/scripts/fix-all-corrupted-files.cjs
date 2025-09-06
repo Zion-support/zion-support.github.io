@@ -2,6 +2,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -606,6 +608,9 @@ const corruptedFiles = ['pages/docs/api-reference.tsx']
     "address"
     "site"
 <<<<<<< HEAD:backup-problematic-files/scripts/fix-all-corrupted-files.cjs
+<<<<<<< HEAD
+        <meta name="description" content="
+=======
 <<<<<<< HEAD
         <meta name="description" content="
 =======

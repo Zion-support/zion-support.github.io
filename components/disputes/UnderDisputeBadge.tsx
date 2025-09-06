@@ -14,11 +14,6 @@ export default function UnderDisputeBadge(): any ({;
   projectId,;
 }: {;
 
-  return { hasActiveDispute, isLoading: !data && !error }
-export default function UnderDisputeBadge({
-
-  projectId,
-}: {;
   projectId: string;
 }) {;
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
@@ -28,6 +23,12 @@ export default function UnderDisputeBadge({
       Under Dispute;
     </span>;
   );  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
+  return { hasActiveDispute, isLoading: !data && !error }
+}
+
+
+
+
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
 

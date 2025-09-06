@@ -1,8 +1,4 @@
 
-import {GradientHeading} from "./GradientHeading";
-import {useState} from "react";
-import { GradientHeading } from "./GradientHeading",
-import { useState } from "react",
 // Real company logos for trusted partners - with more reliable image URLs
 
 const trustedCompanies = [
@@ -82,16 +78,11 @@ const trustedCompanies = [
     name: "Citi Bank"
     logo: "/logos/citi-logo.svg"
     alt: "Citi Bank logo"
-  }
   {
     name: "Thomson Reuters"
     logo: "/logos/thomson-reuters-logo.svg"
     alt: "Thomson Reuters logo"
   }
-];
-export function TrustedBySection() {
-  // Use state to track logos that failed to load
-  const [failedLogos, setFailedLogos] = useState<Record<string, boolean>>({});
   const handleImageError = (companyName: string) => {
     setFailedLogos(prev => ({
       ...prev
@@ -117,12 +108,6 @@ export function TrustedBySection() {
                   {company.name}
                 </div>
               ) : (
-                <img
-                  src={company.logo}
-                  alt={company.alt}
-                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
-import { GradientHeading } from "./GradientHeading",;
-import { useState } from "react",;
 // Real company logos for trusted partners - with more reliable image URLs;
 const trustedCompanies = [;
   {;
@@ -138,13 +123,6 @@ const trustedCompanies = [;
               )}
             </div>;
           ))}
-        </div>
-        <div className="text-center mt-10">
-          <p className="text-zion-slate-light text-sm">And many more enterprises worldwide...</p>
-        </div>
-      </div>
-    </section>
-  )
 }
 import { GradientHeading } from './GradientHeading';
 import { useState } from './react';

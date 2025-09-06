@@ -8,26 +8,11 @@
   Star,
   ExternalLink,
   CheckCircle,
-  TrendingUp,;
-  Shield,;} from 'lucide-react';import { ;
-  Brain;
-  MessageSquare
-  Image
-  Video
-  Code
-  FileText
-  Zap
 
   Star;
   ExternalLink;
   CheckCircle;
   TrendingUp;
-        'Advanced reasoning & analysis'
-        'Web browsing & real-time info'
-        'Plugin ecosystem access'
-        'Code generation & debugging'
-        'Professional writing assistance'
-      ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
         'Advanced reasoning & analysis',
         'Web browsing & real-time info',
         'Plugin ecosystem access',
@@ -148,36 +133,35 @@
       features: [;
         'Advanced reasoning abilitiesDocument analysisCode generationCreative writingResearch assistance';
       ];
-      pricing: '$20/month'
-      marketPrice: '$20/month'
-      website: 'https://claude.ai'
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-      textColor: 'text-orange-400'
-      gradient: 'from-orange-400 to-red-500'
-      popular: false
-      category: 'Conversational AI'
-    }
-      icon: <FileText className='w-8 h-8 text-white' />
-      title: 'Jasper AI'
-      description:
-        'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.'
-      features: [
-        'Content generation'
-        'Brand voice training'
-        'SEO optimization'
-        'Team collaboration'
-        'Enterprise integrations'
-      ],      pricing: '$39-125/month',        'Content generationBrand voice trainingSEO optimizationTeam collaborationEnterprise integrations'
-      ];
-      pricing: '$39-125/month'
-      marketPrice: '$40-150/month'
-      website: 'https://jasper.ai'
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600'
-      textColor: 'text-teal-400'
-      gradient: 'from-teal-400 to-cyan-500'
-      popular: false
-      category: 'Content Creation'
-    },  ];      category: 'Content Creation'
+  ];
+
+;
+  const aiMarketStats = [;
+
+    {
+
+      title: 'AI Market Size',
+      value: '$136.6B',
+      growth: '+37% YoY',
+      description: 'Global AI market value in 2024'
+    };
+    {
+      title: 'AI Adoption Rate',
+      value: '35%',
+      growth: '+12% YoY',
+      description: 'Businesses actively using AI tools'
+    };
+    {
+      title: 'AI Investment',
+      value: '$93.5B',
+      growth: '+28% YoY',
+      description: 'Global AI investment in 2024'
+    };
+    {
+      title: 'AI Productivity Gain',
+      value: '40%',
+      growth: '+15% YoY',
+
     }
         'Advanced reasoning abilities',
         'Document analysis',
@@ -192,15 +176,11 @@
               </Card>
 
             ))}
-          </div>
-        </div>
-      </section>
-
       {/* AI Tools Grid */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
+
+
+
 
               Curated AI Tools & Services
             </h2>
@@ -449,15 +429,11 @@
               </Card>
 
             ))}
-          </div>
-        </div>
-      </section>
-
       {/* AI Implementation Guide */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
+
+
+
 
               Getting Started with AI Tools
             </h2>

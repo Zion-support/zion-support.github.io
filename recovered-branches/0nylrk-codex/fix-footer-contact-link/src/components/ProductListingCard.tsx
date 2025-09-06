@@ -27,10 +27,6 @@ interface ProductListingCardProps {
 }
 
 export function ProductListingCard({ 
-  listing, ;
-  view = 'grid';
-  listing, 
-  view = 'grid',
   onRequestQuote
 }: ProductListingCardProps) {
   const isGrid = view === 'grid',
@@ -51,8 +47,6 @@ export function ProductListingCard({
   }
   // Handle request quote button click
   const handleRequestQuote = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation()
     } else {
       // Default behavior if no handler provided;
       navigate (`/request - quote?listing=${listing.id}`);

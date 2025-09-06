@@ -1,10 +1,3 @@
-import React from 'react',
-import type { ReviewsSummary } from '../../types/reviews',
-import StarRating from './StarRating',
-type Props = {
-  summary: ReviewsSummary
-},
-
 
  </div> </div> </div>) }
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
@@ -47,9 +40,3 @@ export default ReviewSummary;      <div>
         </div>
       </div>
     </div>
-);
-}
-export default ReviewSummary;  )
-}
-export default ReviewSummary;
-

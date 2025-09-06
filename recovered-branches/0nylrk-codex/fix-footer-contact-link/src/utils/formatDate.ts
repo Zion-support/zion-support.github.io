@@ -1,10 +1,4 @@
 
-/**
- * Format a date string or timestamp into a readable format
- * @param date Date to format
- * @param format Optional format specification
- * @returns Formatted date string
- */
   const dateObj = new Date(date);
   switch (format) {
     case 'short':
@@ -94,13 +88,6 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
  * @param date Date to format
  * @returns Time ago string (e && e.g., "2 hours ago")
  */
-  
-  const seconds = Math.floor((now.getTime() - dateObj.getTime()) / 1000),
-  
-  let interval = Math.floor(seconds / 31536000),
-  if (interval >= 1) {
-    return interval === 1 ? '1 year ago' : `${interval} years ago`
-  }
 ;
   switch (format) {
     case 'short':;

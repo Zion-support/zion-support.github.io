@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/resolve-merge-conflicts.cjs
 <<<<<<< HEAD
 =======
@@ -52,8 +53,13 @@ function resolveMergeConflicts(filePath) {
       if (line.includes('')) {
         inConflict = true;
         conflictType = 'head';
+=======
+conflictType = 'incoming';
+>>>>>>> pr-12166
         continue;
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       if (line.includes('')) {
 =======
@@ -72,11 +78,11 @@ function resolveMergeConflicts(filePath) {
         continue;
       }
       
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         inConflict = false;
         conflictType = '';
         continue;
       }
-      
       if (!inConflict) {
         resolvedLines.push(line);
       } else if (conflictType === 'head') {
@@ -85,12 +91,10 @@ function resolveMergeConflicts(filePath) {
       }
       // Skip incoming version (second part)
     }
-    
     // Write resolved content
     fs.writeFileSync(filePath, resolvedLines.join('\n'));
     console.log(`✅ Resolved conflicts in: ${filePath}`);
     return true;
-    
   } catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false;
@@ -169,22 +173,21 @@ class MergeConflictResolver {
           } catch (error) {
             // Skip files that can"t be read,,
 }
-
 // Function to find all files with merge conflicts
 function findConflictedFiles(dir) {
   const conflictedFiles = [];
-  
   function scanDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         scanDirectory(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
+<<<<<<< HEAD
+          const content = fs.readFileSync(fullPath, 'utf8');
+=======
           const content = fs.readFileSync(fullPath, 'utf8');
 <<<<<<< HEAD:backup-problematic-files/scripts/resolve-merge-conflicts.cjs
 <<<<<<< HEAD

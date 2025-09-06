@@ -9,12 +9,78 @@ import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 
-
   <nav
     role='navigation'
     aria-label='pagination'
     className={cn('mx-auto flex w-full justify-center', className)}
     {...props}
+  <ul
+;
+import {cn} from '@/lib / utils';
+import {ButtonProps, button_variants} from '@/components / ui / button';
+;
+const Pagination = ({ class_name, ...props }: React.ComponentProps<'nav'>) =>: any (
+  <nav;
+    role='navigation';
+    aria - label='pagination';
+    className={cn ('mx - auto flex w - full justify - center', class_name)}
+    {...props}
+  />);
+Pagination.display_name = 'Pagination';
+;
+const PaginationContent = React.forward_ref<;
+  HTMLUListElement,
+  React.ComponentProps<'ul'>;
+>(({ class_name, ...props }, ref) => (
+  <ul;
+    ref={ref}
+    className={cn ('flex flex - row items - center gap - 1', class_name)}
+    {...props}
+
+  />));
+PaginationContent.display_name = 'PaginationContent';
+;
+const PaginationItem = React.forward_ref<;
+  HTMLLIElement,
+  React.ComponentProps<'li'>;
+>(({ class_name, ...props }, ref) => (
+  <li ref={ref} className={cn ('', class_name)} {...props} />));
+PaginationItem.display_name = 'PaginationItem';
+;
+
+type PaginationLinkProps = {
+  is_active?: boolean;
+} & Pick < ButtonProps, 'size'> &;
+  React.ComponentProps<'a'>;
+
+  />
+
+))
+PaginationContent.displayName = "PaginationContent"
+
+const PaginationItem = React.forwardRef<
+  HTMLLIElement,
+  React.ComponentProps<"li">
+>(({ className, ...props }, ref) => (
+  <li ref={ref} className={cn("", className)} {...props} />
+))
+PaginationItem.displayName = "PaginationItem"
+
+type PaginationLinkProps = {
+  isActive?: boolean
+} & Pick<ButtonProps "size"> &
+  React.ComponentProps<"a">
+
+const PaginationLink = ({
+  className,
+  isActive,
+  size = "icon",
+
+
+  ...props
+}: PaginationLinkProps) => (
+PaginationContent && PaginationContent.displayName = 'PaginationContent';
+
 const PaginationItem = React && React.forwardRef<;
   HTMLLIElement,;
   React && React.ComponentProps<'li'>;
@@ -50,17 +116,6 @@ PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
     <MoreHorizontal className="h-4 w-4" />
     <span className="sr-only">More pages</span>
   </span>
-);
-PaginationEllipsis.displayName = 'PaginationEllipsis';
-export {
-  Pagination
-  PaginationContent
-  PaginationEllipsis
-  PaginationItem
-  PaginationLink
-  PaginationNext
-  PaginationPrevious
-}
 )
 PaginationEllipsis.displayName = "PaginationEllipsis"
 
@@ -260,19 +315,3 @@ PaginationEllipsis.displayName = "PaginationEllipsis";
 PaginationEllipsis.displayName = "PaginationEllipsis"
 
 
-  >;
-    <MoreHorizontal className="h-4 w-4" />;
-    <span className="sr-only">More pages</span>;
-  </span>;
-);
-PaginationEllipsis.displayName = "PaginationEllipsis";
-;
-export {;
-  Pagination,;
-  PaginationContent,;
-  PaginationEllipsis,;
-  PaginationItem,;
-  PaginationLink;
-  PaginationNext;
-  PaginationPrevious}
-;

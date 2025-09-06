@@ -15,15 +15,6 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                 <FileText className="text-zion-purple h-12 w-12 opacity-50" />;
               </div>;
             )}
-              {project.tags && project.tags.length > 0 && (
-                <div className="flex flex-wrap gap-1 mb-2">
-                  {project.tags.map((tag, i) => (
-                    <Badge
-                      key={i}
-                      variant="outline"
-                      className="text-xs border-zion-slate-dark text-zion-slate-light"
-                    >
-                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
                       {tag}
                     </Badge>;
                   ))}

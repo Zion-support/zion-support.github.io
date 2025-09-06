@@ -1,5 +1,3 @@
-      title: &quot;Complete Marketplace&quot;
-      description: &quot;Jobs, talent, projects, and token systems create a thriving digital economy ecosystem.&quot;
       features: [
         &quot;Job & Talent Marketplace&quot;
         &quot;Token System + Rewards&quot;

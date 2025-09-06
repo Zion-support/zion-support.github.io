@@ -402,14 +402,6 @@ if (return 'bg - orange - 400') {
                 <div>;
                   <Button
                     onClick={generateStrongPassword}
-                    className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold'
-                  >
-                    <RefreshCw className='w-5 h-5 mr-2' />                    Generate Strong Password                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    Generate Strong Password
-                  </Button>
-                </div>
                 {/* Generated Password Display */}
 
                 {/* Generated Password Display */}
@@ -499,21 +491,12 @@ if (return 'bg - orange - 400') {
                   </div>;
 
                   {/* Security Checks */}
-                  <div>
-                    <h4 className='text-lg font-semibold text-white mb-3'>
-                      Security Criteria
-                    </h4>
-                    <div className='space-y-3'>
-                      {Object.entries(checks).map(([key, passed]) => (
-                        <div key={key} className='flex items-center space-x-3'>
-                          {getCheckIcon(passed)}
-                          <span
+
+
                             className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}
-                          >                            {key === 'length' && 'At least 8 characters'}                      {Object.entries(checks).map(([key, passed]) => (
-                        <div key={key} className="flex items-center space-x-3">
-                          {getCheckIcon(passed)}
-                          <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>
+
                           >                            {key === 'length' && 'At least 8 characters'}
+
 
                             {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
@@ -526,39 +509,13 @@ if (return 'bg - orange - 400') {
 
 
                   {/* Suggestions */}
-                  {suggestions.length > 0 && (
-                    <div>
-                      <h4 className='text-lg font-semibold text-white mb-3'>
-                        Suggestions
-                      </h4>
-                      <div className='space-y-2'>
-                        {suggestions.map((suggestion, index) => (
-                          <div
-                            key={index}
-                            className='flex items-start space-x-3'
-                          >
-                            <AlertTriangle className='w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0' />
-                            <span className='text-sm text-yellow-300'>
-                              {suggestion}
-                            </span>                          </div>                      <h4 className="text-lg font-semibold text-white mb-3">Suggestions</h4>
-                      <div className="space-y-2">
-                        {suggestions.map((suggestion, index) => (
-                          <div key={index} className="flex items-start space-x-3">
-                            <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                            <span className="text-sm text-yellow-300">{suggestion}</span>
+
+
+
                             </span>                          </div>
 
                           </div>
 
-                        ))}
-                      </div>
-                    </div>
-                  )}
-              )}
-            </Card>
-          </div>
-        </div>
-      </section>
                         ))}
                       </div>;
                     </div>;

@@ -1,5 +1,4 @@
 
-import React, {
 
 import React, {;
   createContext,;
@@ -77,6 +76,7 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
       if (typeof window !== 'undefined') {
 
         window.localStorage.setItem('zion_user_role', role);      }
+
 
       }
     } catch {}

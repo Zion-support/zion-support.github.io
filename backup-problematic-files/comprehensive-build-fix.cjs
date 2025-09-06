@@ -160,6 +160,8 @@ console.log(' Starting comprehensive build fix...')
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:comprehensive-build-fix.cjs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   fixed = fixed.replace(/href=""tel": \s*\+/g, 'href=""tel")
 =======
 <<<<<<< HEAD

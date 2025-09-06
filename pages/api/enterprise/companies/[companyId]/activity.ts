@@ -5,39 +5,6 @@
   if (!company) return res && res.status(404).json({ error: "company_not_found" });
   return res && res.status(200).json(company && company.activity);
 }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ activity: [] });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { store } from '../../../../../utils/data/enterpriseStore';
-export default function handler(req, res) {
-  try {
-  const { companyId } = req.query;
-  if (!companyId || typeof companyId !== 'string') {;
-    return res.status(400).json({ error: 'companyId required' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ activity: [] });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { store } from '../../../../../utils/data/enterpriseStore';
-export default function handler(req, res) {
-  try {
-  const { companyId } = req.query;
-  if (!companyId || typeof companyId !== 'string') {;
-    return res.status(400).json({ error: 'companyId required' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 export default /**

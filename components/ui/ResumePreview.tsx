@@ -1,6 +1,4 @@
 
-import React, { forward_ref } from 'react';
-export type ResumeData = {
   name: string;
   contact?: {;
     email?: string;
@@ -34,17 +32,6 @@ export type ResumeData = {
     start?: string;
     end?: string;
     location?: string;
-    institution: string;
-    degree?: string;
-    start?: string;
-    end?: string;
-  }>;
-  certifications?: string[];
-    title: string;
-    description?: string;
-    link?: string;
-    technologies?: string[];
-  }>;
 };
 
     {children}
@@ -97,8 +84,6 @@ export type ResumePreviewProps = {
 }
 ;
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    );
-
       >
         <div className='p-8'>
 export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(;
@@ -147,30 +132,13 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                   {data.contact.website}
                 </a>)}
               {data.contact?.linkedin && (
-                <a
-                  className='underline'
-                  href={data.contact.linkedin}
-                  target='_blank'
-                  rel='noreferrer'
-                >                  LinkedIn
-                </a>
-              )}
-              {data.contact?.github && (                <a className="underline" href={data.contact.linkedin} target="_blank" rel="noreferrer">
-                  LinkedIn
-                </a>
-              )}
-              {data.contact?.github && (
-                <a
-                  className='underline'
-                  href={data.contact.github}
-                  target='_blank'
-                  rel='noreferrer'
-                >                  GitHub                <a className="underline" href={data.contact.github} target="_blank" rel="noreferrer">
-                  GitHub
-                </a>
-              )}
-            </div>
-          </header>
+
+            </div>;
+          </header>;
+
+
+
+
 
           {/* Summary */}
 
@@ -199,6 +167,15 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
 
           {/* Skills & Technologies */}
           {(data.skills?.length || data.technologies?.length) && (
+            <section className='mb-5'>
+              <SectionTitle>Skills & Technologies</SectionTitle>
+              <div className='mt-2 text-sm flex flex-wrap gap-2'>
+                {data.skills?.map((s, idx) => (
+          )}
+
+          {/* Skills & Technologies */}
+          {(data.skills?.length || data.technologies?.length) && (
+
             <section className='mb-5'>
               <SectionTitle>Skills & Technologies</SectionTitle>
               <div className='mt-2 text-sm flex flex-wrap gap-2'>
@@ -361,6 +338,12 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
             </section>
           ) : null}
 
+          {/* Education */}
+
+
+
+                      {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
+
                         .join(' • ')}
                     </div>
                   </div>
@@ -394,16 +377,4 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
 ;
 ResumePreview.display_name = 'ResumePreview';
 ;
-export default ResumePreview;
-export default ResumePreview;
-
-}
-}
-}
-}
-}
-}
-}
-}
-}
 export default ResumePreview;

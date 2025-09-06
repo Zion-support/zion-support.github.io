@@ -1,4 +1,5 @@
 
+
   projectId: string
 
 interface MilestoneActivitiesProps {;
@@ -6,4 +7,7 @@ interface MilestoneActivitiesProps {;
 }
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   return <div>Activity will be shown here</div>;
+
 }
+;
+

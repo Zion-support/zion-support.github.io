@@ -50,6 +50,14 @@ function matchesRegion(): any (profile: TalentProfile, region?: string) {;
             ${p && p.hourlyRateUsd}/hr  {p && p.availability}
           </div>;
         </div>;
+      ))}
+    </div>;
+  );
+
+}
+
+}
+
 import React from './react';
 import { TALENT_PROFILES  } from '../../data / talent';
 import type { TalentProfile } from "../../data / talent";
@@ -131,4 +139,4 @@ if ( {) {
           </div>;
         </div>))}
     </div>);
-}
+

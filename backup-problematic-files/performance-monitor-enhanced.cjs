@@ -100,6 +100,8 @@ const path = require('path')
     this.log(' Starting performance monitoring...')
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     this.log(' Starting performance monitoring...')
 =======
 <<<<<<< HEAD

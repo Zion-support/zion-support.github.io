@@ -2,25 +2,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-  ArrowRight
-  Zap
-  Brain
-  Atom
-  Rocket
-  Star
-  TrendingUp
-  Shield
-  Globe
-  Cpu
-  Sparkles
-  Play
-  CheckCircle
-  Award
-  Users
-  Clock
-  Phone
-  Mail;} from 'lucide-react';import {
-  ArrowRight, Zap, Brain, Atom, Rocket, Star
   ArrowRight,
   Zap,
   Brain,
@@ -107,15 +88,9 @@ const stats = [;
 
         {/* Main Heading */}
         <motion&& motion.div
-  return (
-
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className='mb-8'        >          className="mb-8"
-          className='mb-8'        >
 
 
         >
@@ -209,15 +184,6 @@ const stats = [;
 
           <Link
             href="/services"
-            className="group px-8 py-4 border-2 border-purple-500/30 text-purple-300 font-semibold rounded-2xl text-lg hover:bg-purple-500/10 hover:border-purple-500/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
-          >
-            <span className="flex items-center">
-              Explore Services
-              <Play className="ml-2 w-5 h-5 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
-            </span>
-          </Link>
-        </motion.div>
-
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -531,34 +497,6 @@ function UltraFuturisticHero2030() {
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          <h3 className='text-2xl font-bold text-white mb-6'>
-            Ready to Transform Your Business?
-          </h3>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
-            <div className='flex flex-col items-center'>
-              <Phone className='w-6 h-6 text-purple-400 mb-2' />
-              <span className='text-gray-300 text-sm'>Call Us</span>
-              <a
-                href={`tel:${contactInfo.mobile}`}
-                className='text-white font-semibold hover:text-purple-400 transition-colors'
-              >
-                {contactInfo.mobile}
-              </a>
-            </div>
-            <div className='flex flex-col items-center'>
-              <Mail className='w-6 h-6 text-cyan-400 mb-2' />
-              <span className='text-gray-300 text-sm'>Email Us</span>
-              <a
-                href={`mailto:${contactInfo.email}`}
-                className='text-white font-semibold hover:text-cyan-400 transition-colors'
-              >
-                {contactInfo.email}
-              </a>
-            </div>
-            <div className='flex flex-col items-center'>
-              <Globe className='w-6 h-6 text-emerald-400 mb-2' />
-              <span className='text-gray-300 text-sm'>Visit Us</span>
-              <a
                 href={contactInfo.website}
                 className='text-white font-semibold hover:text-emerald-400 transition-colors'
               >                {contactInfo.website.replace('https://', '')}            <div className="flex flex-col items-center">
@@ -593,7 +531,6 @@ function UltraFuturisticHero2030() {
             </div>
           </div>
         </motion.div>
-
 
 
 

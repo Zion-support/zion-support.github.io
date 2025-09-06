@@ -17,10 +17,6 @@
         <ImageIcon className='w-6 h-6' />      </div>
     )
   }
-  );        aria-label={alt}
-'use client',;
-import Image from 'next/image',;
-import { useState } from 'react',;
 'use client',;
 import Image from 'next/image',;
 import { useState } from 'react',;

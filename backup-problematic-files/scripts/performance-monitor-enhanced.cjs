@@ -5,8 +5,14 @@ const path = require('path')
 <<<<<<< HEAD
     console.log(' Performance metrics collected and saved')
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(' Performance metrics collected and saved')
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+    console.log(' Performance metrics collected and saved')
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

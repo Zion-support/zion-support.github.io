@@ -16,36 +16,19 @@ import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/qu
 export default function QuoteManager() {
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { useAdminQuotes } from "@/hooks/useAdminQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { 
-  Card;
-  CardContent
-} from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Navigate } from "react-router-dom",
+    quotes;
+    is_loading;
+    error;
+    status_filter;
+    setStatusFilter;
+    archive_filter;
+    setArchiveFilter;
+    search_query;
+    setSearchQuery;
+    date_range;
+    setDateRange;
 
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
-import type { QuoteRequest } from "@/types/quotes",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { QuoteDetails } from "@/components/quotes/QuoteDetails",
-import { ExportToCSV } from "@/components/quotes/ExportToCSV",
-import {
-  QuoteStatusCards,
-  QuotesFilter,
-  QuotesTable
-} from "@/components/admin/quotes",
 
-export default function QuoteManager() {
-  const { user } = useAuth(),
-  const isAdmin = user?.userType === 'admin',
-  
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
-  const [showDetails, setShowDetails] = useState(false),
 
   const {
     quotes,
@@ -62,9 +45,6 @@ export default function QuoteManager() {
     updateStatus,
     toggleArchive,
     deleteQuote
-  } = useAdminQuotes();
-  } = useAdminQuotes(),
-
   // Count quotes by status
   const statusCounts = {
     new: quotes.filter(q => q.status === 'new').length

@@ -254,8 +254,6 @@ export default /**
  * UltraFuturisticFooter2029V2 - Function description
  */
 function UltraFuturisticFooter2029V2() {
-
-export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className='relative bg - black / 90 backdrop - blur - xl border - t border - cyan - 500 / 20'>      { name: 'Research', href: '/research' }
     ];
@@ -439,6 +437,70 @@ export default function UltraFuturisticFooter2029V2() {
                     <div
                       className={`p-2 rounded-lg bg-gradient-to-r ${category && category.color}`}>;
                       <category && category.icon className='w-5 h-5 text-white' />;
+              >
+                <div
+                  className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}
+                >
+                  <div className='flex items-center space-x-3 mb-3'>
+                    <div
+                      className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}
+                    >
+                      <category.icon className='w-5 h-5 text-white' />
+                    </div>
+                    <h4 className='font-semibold text-white text-sm'>
+                      {category.title}
+                    </h4>
+                  </div>
+                  <ul className='space-y-2'>
+                    {category.services.slice(0, 3).map(service => (
+                      <li key={service.name}>
+                        <Link
+                          href={service.href}
+                          className='text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block'                        >              >
+                <div className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
+                      <category.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <h4 className="font-semibold text-white text-sm">{category.title}</h4>
+                  </div>
+                  <ul className="space-y-2">
+                    {category.services.slice(0, 3).map((service) => (
+                      <li key={service.name}>
+                        <Link
+                className='group';
+              >;
+                <div;
+                  className={`p - 4 rounded - xl bg - gradient - to - br ${category.color} bg - opacity - 10 border border - cyan - 500 / 20 hover:border - cyan - 500 / 40 transition - all duration - 300`}
+                >;
+                  <div className='flex items - center space - x-3 mb - 3'>;
+                    <div;
+                      className={`p - 2 rounded - lg bg - gradient - to - r ${category.color}`}
+                    >;
+                      <category.icon className='w - 5 h - 5 text - white' />;
+                    </div>;
+                    <h4 className='font - semibold text - white text - sm'>;
+                      {category.title}
+                    </h4>;
+                  </div>;
+                  <ul className='space - y-2'>;
+                    {category.services.slice (0, 3).map (service => (
+                      <li key={service.name}>;
+                        <Link;
+                          href={service.href}
+                          className='text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 text - xs block'                        >              >;
+                <div className={`p - 4 rounded - xl bg - gradient - to - br ${category.color} bg - opacity - 10 border border - cyan - 500 / 20 hover:border - cyan - 500 / 40 transition - all duration - 300`}>;
+                  <div className="flex items - center space - x-3 mb - 3">;
+                    <div className={`p - 2 rounded - lg bg - gradient - to - r ${category.color}`}>;
+                      <category.icon className="w - 5 h - 5 text - white" />;
+                    </div>;
+                    <h4 className="font - semibold text - white text - sm">{category.title}</h4>;
+                  </div>;
+                  <ul className="space - y-2">;
+                    {category.services.slice (0, 3).map ((service) => (
+                      <li key={service.name}>;
+                        <Link;
+
                           href={service.href}
                           className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 text - xs block";
                         >;
@@ -454,6 +516,11 @@ export default function UltraFuturisticFooter2029V2() {
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>            {/* Copyright */}      <div className="border-t border-gray-800">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
+      {/* Bottom Footer */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+
             {/* Copyright */}
             <motion&& motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -499,10 +566,15 @@ export default function UltraFuturisticFooter2029V2() {
                 </Link>
 
               ))}
-            </motion.div>
-          </div>
-        </div>
-      </div>
+
+            </motion && motion.div>;
+          </div>;
+        </div>;
+      </div>;
+
+
+
+
 
       {/* Newsletter Signup */}
       <motion&& motion.div

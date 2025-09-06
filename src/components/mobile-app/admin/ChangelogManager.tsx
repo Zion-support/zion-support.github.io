@@ -65,8 +65,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <Input
                 placeholder="Version (e.g. 1.0.1)"
                 name="version"
-                value={newEntry.version}
-                onChange={handleInputChange}
               />
               <Input
                 type="date"
@@ -110,7 +108,6 @@ interface ChangelogManagerProps {;
                     <span className="text-zion-cyan font-semibold">v{entry.version}</span>
                     <span className="text-sm text-gray-400">{entry.date}</span>
                   </div>
-                    onClick={() => handleRemoveEntry(entry.id)}
                     className="text-gray-400 hover:text-red-400 p-1 h-auto"
                   >
                     <Trash2 className="h-4 w-4" />

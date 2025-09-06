@@ -19,7 +19,4 @@
         browserName: webkit',        ...devices['iPhone 12']}
     }
   ];
-  reporter: [
-    ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
-});
-});
+

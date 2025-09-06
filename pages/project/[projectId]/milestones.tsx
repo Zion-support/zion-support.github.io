@@ -1,12 +1,3 @@
-import Head from 'next/head';
-import MilestoneForm from '../../../components/monetization/MilestoneForm';
-import MilestoneCard from '../../../components/monetization/MilestoneCard';
-
-import { Milestone } from '../../../utils/types/milestones';
-import {
-  createMilestone
-  fetchMilestones
-  updateMilestoneStatus;
 } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   if (typeof window === 'undefined') return 'client';
@@ -20,24 +11,6 @@ export default function ProjectMilestonesPage() {;
   const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() =>
     getRoleFromEnvOrQuery()
   );  const [milestones, setMilestones] = useState<Milestone[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  useEffect(() => {
-    setRole(getRoleFromEnvOrQuery());  }, []);
-  // Demo cookie-based auth to hit API successfully
-  useEffect(() => {
-import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
-function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {;
-  if (typeof window === 'undefined') return 'client',;
-  const url = new URL(window.location.href);
-  const r = url.searchParams.get('role');
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-export default function ProjectMilestonesPage(req, res) {
-  try {
-  const router = useRouter();
-  const { 'project-id': projectId } = router.query as any;
-  const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() => getRoleFromEnvOrQuery());
-  const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {;
@@ -82,6 +55,12 @@ import { Milestone } from '../../../utils/types/milestones';
   }) => {;
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
+  }, [projectId]);
+
+
+    setMilestones(prev => [res.milestone, ...prev]);  };
+
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -214,6 +193,25 @@ if (return, ) {
             ))}
           </div>
         )}
+        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+        {loading && <div>Loading milestones...</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        {error && <div className="text-red-600">{error}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        {!loading && !error && (
+          <div className="space-y-4">
+            {milestones.length === 0 && (
               <div className="text-gray-600">No milestones yet. {role !== 'talent' ? 'Create the first one.' : ''}</div>
             )  } catch (error) {
     console.error("Error:", error);

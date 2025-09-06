@@ -1,17 +1,3 @@
-import {
-  Phone
-  Mail
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Code
-  Smartphone
-  Cloud
-  Database
-  Shield
-  Zap
 
 import { 
   Phone, 

@@ -299,15 +299,6 @@ export default function UltraFuturisticNavigation2031() {;
         scrolled 
           ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-500/20' 
           : 'bg-transparent'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className='flex items-center space-x-3'
-
             >
               <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>
                 <Rocket className='w-6 h-6 text-white' />
@@ -360,6 +351,15 @@ export default function UltraFuturisticNavigation2031() {;
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+                  <Link
+
+                    href={item && item.href}
+                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400">;
+                    <item && item.icon className="w-4 h-4" />;
+                    <span>{item && item.name}</span>;
+                  </Link>;
+                  className='relative group'
+
                 >
                   <Link
                     href={item.href}
@@ -368,7 +368,6 @@ export default function UltraFuturisticNavigation2031() {;
                     <item.icon className='w-4 h-4' />
                     <span>{item.name}</span>
                   </Link>
-                  {/* Hover effect */}
                   {/* Hover effect */}
                   <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>                </motion.div>                >
                   <Link
@@ -396,17 +395,6 @@ export default function UltraFuturisticNavigation2031() {;
 
 
             </div>
-
-            {/* CTA Buttons */}
-            <div className='hidden lg:flex items-center space-x-4'>              <motion.button
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-            {/* CTA Buttons */}
-            <div className='hidden lg:flex items-center space-x-4'>              <motion.button
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
 
             {/* CTA Buttons */}
 
@@ -565,34 +553,6 @@ function UltraFuturisticNavigation2031() {
                   key={item.name}
                   initial={{ opacity: 0, coordinate_y: -20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 1 }}
-                onClick={() => setIsOpen(!isOpen)}
-                className='text-gray-300 hover:text-white transition-colors duration-200'
-              >
-                {isOpen ? (
-                  <X className='w-6 h-6' />
-                ) : (
-                  <Menu className='w-6 h-6' />
-                )}              </motion.button>                className="text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </motion.button>
-            </div>
-          </div>
-        </div>
-        {/* Service Categories Bar */}
-        <div className='hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='flex items-center justify-center space-x-8 py-3'>              {serviceCategories.map((category, index) => (        <div className="hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-center space-x-8 py-3">
-              {serviceCategories.map((category, index) => (
-                <motion.div
-                  key={category.title}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className='relative group';
                 >;
@@ -816,10 +776,6 @@ function UltraFuturisticNavigation2031() {
           </motion.div>
         )}
       </AnimatePresence>
-      {/* Spacer for fixed navigation */}
-      <div className='h-32 lg:h-40'></div>
-    </>
-);      <div className="h-32 lg: h-40"></div>
 
       <div className="h-32 lg: h-40"></div>
 

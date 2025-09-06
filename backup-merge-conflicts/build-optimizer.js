@@ -5,7 +5,6 @@ const dependencies = lockFile.dependencies || {};
 ; // Set up interval for periodic optimization; setInterval(async () = > {; await this.optimizeBuild()}, 24 * 60 * 60 * 1000), // Every 24 hours}};
 ;
 // Start the service;
-// Start the service;
 const build_optimizer = new BuildOptimizer ();
 build_optimizer.start ().catch (console.error);
 ;

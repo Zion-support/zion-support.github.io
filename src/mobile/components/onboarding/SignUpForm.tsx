@@ -1,9 +1,5 @@
 import React from 'react';
 
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
-import {logErrorToProduction} from '@/utils/productionLogger';
-export function SignUpForm() {;
-
     }
     if (!formData.email.trim()) {
       errors.email = 'Email is required'
@@ -15,41 +11,6 @@ export function SignUpForm() {;
     } else if (!strongPasswordRegex.test(formData.password)) {
       errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
     }
-  const [is_loading, setIsLoading] = useState (false);
-  const [signup_mode, setSignupMode] = useState (true);
-  const [error, set_error] = useState ("");
-  const [field_errors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({});
-  const [showVerificationMessage, setShowVerificationMessage] = useState (false);
-  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-    const { name, value } = e.target;
-    setFormData (prev => ({ ...prev, [name]: value }));
-    set_error ("");    setFieldErrors (prev => ({ ...prev, [name]: "" }));
-  }
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setError("")
-    setFieldErrors({})
-    setIsLoading(true)
-    const errors: { email?: string, password?: string, name?: string } = {}
-import React, { useState } from "react",
-import { Label } from "@/components/ui/label",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { LoadingSpinner } from "@/components/ui/enhanced-loading-states",
-import { useRouter } from 'next/router',
-import Link from 'next/link',
-import { useAuth } from "@/context/auth/AuthProvider",
-import { AlertCircle } from 'lucide-react'
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter",
-import {logErrorToProduction} from '@/utils/productionLogger',
-export function SignUpForm() {
-
-  const router = useRouter(),
-  const { signUp, login, loginWithGoogle } = useAuth(),
-    if (signupMode && !formData.name.trim()) {
-      errors.name = 'Full name is required'
-  
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors)
       setIsLoading(false)
@@ -133,13 +94,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         )}
 
 
-              placeholder="Enter your full name"
-            />
-            {fieldErrors.name && (
-              <p className="text-red-500 text-sm">{fieldErrors.name}</p>
-            )}
-          </div>
-        )}
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
           <Input

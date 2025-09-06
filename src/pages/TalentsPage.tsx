@@ -13,7 +13,6 @@ import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card'
 import Spinner from '@/components/ui/spinner';
 // Market insights component for talents
 const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
-  <Card className;
   // Loading state
   if (loading && talents.length === 0) {
     return (

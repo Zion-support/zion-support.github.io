@@ -18,11 +18,6 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   onOpenChange?: (open: boolean) => void;
 }
 
-export const SidebarProvider = React.forwardRef<;
-  HTMLDivElement;
-export const SidebarProvider = React.forwardRef<
-  HTMLDivElement,
-
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 const SIDEBAR_KEYBOARD_SHORTCUT = "b";
@@ -61,6 +56,20 @@ export const SidebarProvider = React && React.forwardRef<;
     const open = openProp ?? _open
     const setOpen = React.useCallback(
       (value: boolean | ((value: boolean) => boolean)) => {
+        const open_state = typeof value === "function" ? value (open) : value;
+        // Check condition
+if ( {) {
+  $2
+}
+          setOpenProp (open_state);
+        } else {
+          _setOpen (open_state);
+        }
+
+
+
+
+
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
       }
@@ -102,9 +111,6 @@ export const SidebarProvider = React && React.forwardRef<;
         ) {;
           event.preventDefault();
           toggleSidebar();
-        }
-      }
-
       window.addEventListener("keydown", handleKeyDown)
       return () => window.removeEventListener("keydown", handleKeyDown)
     }, [toggleSidebar])
@@ -196,8 +202,6 @@ if (
                 ...style} as CSSProperties
               }
             className={cn(
-              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar";
-
               className
             )}
             ref={ref}

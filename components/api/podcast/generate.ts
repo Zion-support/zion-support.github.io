@@ -19,30 +19,6 @@ function writeEpisodes(episodes: any[]) {
 4) YouTube and Spotify descriptions
 5) A single-sentence Best Quote
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
-      });
-      return res
-        .status(500)
-        .json({ error: 'Failed to generate structured content' });    }
-    const episodes = readEpisodes();
-    const episode = {
-      id
-      createdAt: new Date().toISOString()
-      persona
-      invitee
-      topic
-      title: generated.title
-      questions: generated.questions |[]
-      timeMarkers: generated.timeMarkers |{
-        intro: '00:00'
-        segments: []
-        closing: '14:30'
-      }
-      transcript: generated.transcript
-      youtubeDescription: generated.youtubeDescription |''
-      spotifyDescription: generated.spotifyDescription |''
-      bestQuote: generated.bestQuote |''
-      audio: {}
-    }
 
     writeEpisodes(episodes);
     return res && res.status(200).json({ episode })
@@ -54,5 +30,27 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 }
     const episode = {
 
+      transcript: generated.transcript,
+      youtube_description: generated.youtube_description || '',
+      spotify_description: generated.spotify_description || '',
+      best_quote: generated.best_quote || '',
+      audio: {},
+    }
+    episodes.unshift (episode);
+    write_episodes (episodes);
+;
+    return res.status (200).json ({ episode });
+  } catch (error: any) {
+    console.error (error);
+    return res.status (500).json ({ error: error?.message || 'Unknown error' });
+  }    episodes.unshift (episode);
+    write_episodes (episodes);
+;
+    return res.status (200).json ({ episode });
+  } catch (error: any) {
+    console.error (error);
+    return res.status (500).json ({ error: error?.message || 'Unknown error' });
 }
+  }
+
 }

@@ -1,5 +1,3 @@
-import Head from 'next/head',
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 export default function FrontLanding() {
   return (
@@ -48,6 +46,7 @@ export default function FrontLanding() {
             </Link>          </div>
         </nav>
       </header>
+
       {/* Hero */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -89,20 +88,6 @@ export default function FrontLanding() {
                 desc: 'Agents continuously analyze, invent, and evolve automations.'
               }
               {
-                title: 'Repo Sync'
-                desc: 'Changes are committed and pushed automatically to main.'
-              }
-              {
-                title: 'Zero Ops'
-                desc: 'Conservative edits with logs, reports, and guardrails.'
-              }
-              {
-                title: 'Scalable'
-              }
-              {
-                title: 'Observability'
-                desc: 'Dashboards, reports, and GitHub Actions artifacts.'
-              }
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 title: 'Observability',
@@ -606,6 +591,11 @@ export default function FrontLanding(req, res) {
     </div>;
   );
 
+}
+        {/* Explore more */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>

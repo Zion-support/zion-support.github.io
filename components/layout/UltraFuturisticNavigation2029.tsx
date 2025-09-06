@@ -389,7 +389,6 @@ export default function UltraFuturisticNavigation2029() {;
               {/* Services Dropdown */}
 
 
-
                     {serviceCategories.map((category, index) => (
                       <motion.div
                         key={category.title}
@@ -471,12 +470,6 @@ export default function UltraFuturisticNavigation2029() {;
                 Get Started
               </motion.button>
             </div>
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
 
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
 
@@ -579,51 +572,6 @@ export default function UltraFuturisticNavigation2029() {;
                       href={item && item.href}
                       onClick={closeMenu}
                 {/* Mobile Services */}
-                <div className='mt-8'>
-                  <h3 className='text-lg font-semibold text-white mb-4'>
-                    Our Services
-                  </h3>
-                  <div className='space-y-3'>
-                    {serviceCategories.slice(0, 6).map(category => (
-                      <div
-                        key={category.title}
-                        className='p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20'
-                      >
-                        <h4 className='font-medium text-white mb-2'>
-                          {category.title}
-                        </h4>
-                        <p className='text-sm text-gray-400 mb-3'>
-                          {category.description}
-                        </p>
-                        <div className='space-y-2'>
-                          {category.services.slice(0, 2).map(service => (                            <Link
-                              key={service.name}
-                              href={service.href}
-                              onClick={closeMenu}                <div className="mt-8">
-                  <h3 className="text-lg font-semibold text-white mb-4">Our Services</h3>
-                  <div className="space-y-3">
-                    {serviceCategories.slice(0, 6).map((category) => (
-                      <div key={category.title} className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
-                        <h4 className="font-medium text-white mb-2">{category.title}</h4>
-                        <p className="text-sm text-gray-400 mb-3">{category.description}</p>
-                        <div className="space-y-2">
-                          {category.services.slice(0, 2).map((service) => (
-                              key={service.name}
-                              href={service.href}
-                              onClick={closeMenu}
-                              className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200'
-                            >
-                              <div className='flex items-center justify-between'>
-                                <span className='text-sm text-gray-300'>
-                                  {service.name}
-                                </span>
-                                <span className='text-xs text-cyan-400 font-mono'>
-                                  {service.price}
-                                </span>                              </div>                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200"
-                            >
-                              <div className="flex items-center justify-between">
-                                <span className="text-sm text-gray-300">{service.name}</span>
-                                <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
 
 
                             </Link>
@@ -664,8 +612,6 @@ export default function UltraFuturisticNavigation2029() {;
           </motion.div>
         )}
       </AnimatePresence>
-      {/* Spacer for fixed navigation */}
-      <div className='h-20' />
     </>
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}

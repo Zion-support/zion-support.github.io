@@ -46,11 +46,9 @@ function handle_report() {
   return (
 
 
-      <section className="grid gap - 4">;
-        {reviews.map ((r) => (<ReviewCard key={r.id} review={r} on_report={handle_report} />))}
-        {!reviews.length && (<div className="enhanced - card">No public reviews yet.</div>)}
-      </section>;
-    </main>);
+      </section>
+    </main>
+  )
 },
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { slug } = ctx.query as { slug: string },
@@ -85,10 +83,3 @@ export default ClientPage,
 },
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { slug } = ctx.query as { slug: string },
-  return { props: { clientId: slug }   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-};
-export default ClientPage;

@@ -12,8 +12,14 @@ const largeFiles = ['pages/ai-services.tsx']
 <<<<<<< HEAD
 console.log(' File size optimization completed')
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 console.log(' File size optimization completed')
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+console.log(' File size optimization completed')
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

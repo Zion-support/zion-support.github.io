@@ -80,25 +80,6 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion';
 import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations';
-export default function AdvancedServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity')
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000])
-  // Combine all services
-      return matchesSearch && matchesCategory && matchesPrice
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
-        case 'price':
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''))
-        case 'rating':
-          return b.rating - a.rating
-        case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
         default: return 0
       }
     })
@@ -123,11 +104,6 @@ export default function AdvancedServicesShowcase2025() {
     }
 
   const getCategoryIcon = (category: string) => {
-  },
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category),
-    const categoryData = categories.find(cat => cat.id === category);
-    return categoryData?.icon || '🚀'
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -191,8 +167,6 @@ export default function AdvancedServicesShowcase2025() {
                 <input
                   type="text"
                   placeholder="Search services by name, description, or features..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
                   value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -207,6 +181,10 @@ export default function AdvancedServicesShowcase2025() {
                 />
               </div>
             </div>
+              {/* Category Filter */}
+
+
+            {/* Filters Row */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -221,15 +199,6 @@ export default function AdvancedServicesShowcase2025() {
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
-                  ))}
-                </select>
-              </div>
-              {/* Sort By */}
-              <div className="flex-1">
-                <label className="block text-sm font-medium text-white/70 mb-3">Sort By</label>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -309,30 +278,6 @@ export default function AdvancedServicesShowcase2025() {
                     <Grid className="w-5 h-5" />
                   </button>
                   <button
-                    onClick={() => setViewMode('list')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    className={`p-2 rounded-lg transition-all duration-300 ${;
-                      viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white';
-                    }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  >
-                    <List className="w-5 h-5" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      {/* Services Grid/List */}
-      <section className="px-6 pb-20">
-        <div className="max-w-7xl mx-auto">
           {/* Results Count */}
           <motion.div;
             initial={{ opacity: 0 }}
@@ -410,12 +355,6 @@ export default function AdvancedServicesShowcase2025() {
                         </div>
                       </div>
                       {service.popular && (
-                        <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium px-3 py-1 rounded-full">
-                          Popular
-                        </span>
-                      )}
-                    </div>
-                    {/* Description */}
                     <p className="text-white/80 mb-4 leading-relaxed">{service.description}</p>
                     {/* Price and Details */  } catch (error) {
     console.error("Error:", error);
@@ -454,12 +393,73 @@ export default function AdvancedServicesShowcase2025() {
                             <span className="text-white/80 text-sm">{feature}</span>
                           </div>
                         {service.features.length > 3 && (
-                          <div className="text-white/60 text-sm">
-                            +{service.features.length - 3} more features
-                          </div>
-                        )}
+
+                          <div className="text - white / 60 text - sm">;
+                            +{service.features.length - 3} more features;
+                          </div>)}
+                      </div>;
+                    </div>;
+
+                    {/* Category and Technology */}
+                    <div className="flex items - center justify - between mb - 6">;
+                      <div className="flex items - center gap - 2">;
+                        <span className="text - xs bg - white / 10 text - white / 70 px - 3 py - 1 rounded - full">;
+                          {getCategoryIcon (service.category)} {service.category}
+                        </span>;
+                      </div>;
+                      <div className="text - white / 60 text - sm">;
+                        {service.technology.slice (0, 2).join ()}
+                        {service.technology.length > 2 && '...'}
+
+
+                        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </div>;
+                    </div>;
+                    {/* Category and Technology */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs bg-white/10 text-white/70 px-3 py-1 rounded-full">
+                          {getCategoryIcon(service.category)} {service.category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </span>
                       </div>
-                    </div>
+                      <div className="text-white/60 text-sm">
+                        {service.technology.slice(0, 2).join()  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      <div className="text-white/60 text-sm">
+                        {service.technology.slice(0, 2).join(', ')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        {service.technology.length > 2 && '...'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </div>;
+                    </div>;
+                    {/* ROI and Benefits */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
                     <div className="mb-6">
                       <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-xl p-4 border border-cyan-500/20">
                         <h4 className="text-cyan-400 font-semibold mb-2">ROI & Benefits</h4>
@@ -467,6 +467,47 @@ export default function AdvancedServicesShowcase2025() {
                         <div className="flex flex-wrap gap-2">
                           {service.benefits.slice(0, 2).map((benefit, idx) => (
                             <span key={idx} className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full">
+                              {benefit}
+
+                            </span>))}
+                        </div>;
+                      </div>;
+                    </div>;
+
+                    {/* Action Buttons */}
+                    <div className="flex gap - 3">;
+                      <a;
+                        href={service.link}
+
+
+                              {benefit  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                            </span>;
+                          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </div>;
+                      </div>;
+                    </div>;
+                    {/* Action Buttons */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    <div className="flex gap-3">
+                      <a
+                        href={service.link  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
@@ -507,42 +548,41 @@ export default function AdvancedServicesShowcase2025() {
       <section className="px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          >
-            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-              Our advanced services are designed to give you a competitive edge in the rapidly evolving technology landscape.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
-              >
-                Schedule Consultation
-                <ArrowRight className="w-5 h-5" />
-              </a>
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+              className="text - center py - 20";
+            >;
+              <div className="text - 6xl mb - 4">🔍</div>;
+              <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;
+              <p className="text - white / 70 mb - 6">Try adjusting your search criteria or filters</p>;
+              <button;
+                on_click={() => {
+                  setSearchTerm (''),
+                  setSelectedCategory ('all'),
+                  setPriceRange ([0, 10000]);
+                }}
+                className="bg - gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 text - white font - semibold py - 3 px - 6 rounded - xl transition - all duration - 300";
+              >;
+                Clear Filters;
+              </button>;
+            </motion.div>)}
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className="px - 6 py - 20">;
+        <div className="max - w-4xl mx - auto text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+
+
               </Link>
+
+
               <a
                 href="tel:+13024640950"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"

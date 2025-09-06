@@ -457,7 +457,6 @@ if ( {) {
               <TableHead>Parties</TableHead>
               <TableHead>Created</TableHead>
               <TableHead>Status</TableHead>
-              <TableHead className='text-right'>Actions</TableHead>
             {filteredDisputes.map((dispute) => (
               <TableRow key={dispute.id}>
                 <TableCell className="font-mono text-xs">

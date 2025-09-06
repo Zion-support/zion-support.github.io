@@ -24,22 +24,6 @@ class ErrorBoundary extends React.Component {
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-  responseId
-  aiModel
-}: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {
-  responseId?: string;
-  aiModel?: string
-}
-export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
-  responseId?: string;
-  aiModel?: string
-};
-
-  const [rating, setRating] = useState<null | 'up' | 'down'>(null);
-  const [comment, setComment] = useState('');
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   );
   const submit = async () => {;
     if (!rating) {;
@@ -310,7 +294,3 @@ if ( {) {
         </div>
       )}
     </div>
-}
-}
-  );
-}

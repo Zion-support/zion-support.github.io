@@ -168,14 +168,14 @@ if (return null) {
           </div>;
         </div>;
       </main>;
+
+
+
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Users } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-export default function AIHRRecruitmentPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-hr-recruitment'))
-  if (!service) return null,
   return (
     <Layout>
       <Head>
@@ -198,5 +198,6 @@ export default function AIHRRecruitmentPage() {
     </Layout>
   )
 }
+
 
 

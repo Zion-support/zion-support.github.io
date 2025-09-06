@@ -9,56 +9,6 @@ export default function TokenomicsWhitepaperBuilder() {;
   const [legalReview, setLegalReview] = useState(false);
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-type DistributionItem = { label: string, percent: number };
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
-export default function TokenomicsWhitepaperBuilder(req, res) {
-  try {
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [publicPreview, setPublicPreview] = useState(false);
-  const [legalReview, setLegalReview] = useState(false);
-  const [tokenName, setTokenName] = useState('ZION$');
-  const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
-  const [useCases, setUseCases] = useState<string>(
-    'Access to premium AI agents, marketplace discounts, reputation staking, governance participation'
-  );
-  const [rewardsLogic, setRewardsLogic] = useState<string>(
-    'Earn via contributions, referrals, and successful task completions; burn on dispute resolution fees and premium access'
-  );  const [distribution, setDistribution] = useState<DistributionItem[]>([
-    { label: 'Ecosystem & Rewards', percent: 35 }
-    { label: 'Community Treasury', percent: 20 }
-    { label: 'Team & Contributors', percent: 15 }
-    { label: 'Investors', percent: 15 }
-    { label: 'Liquidity & Market Making', percent: 10 }
-    { label: 'Advisors & Partnerships', percent: 5 }
-  ]);
-  const [governance, setGovernance] = useState<string>(
-    'One-token-one-vote with quadratic weighting for proposals; staking required for proposal submission; delegated voting supported'
-  );
-  const [jurisdiction, setJurisdiction] = useState<string>('US');
-  const [operatorPrompt, setOperatorPrompt] = useState<string>(
-    defaultOperatorPrompt
-  );
-  const totalPercent = useMemo(
-    () => distribution.reduce((acc, d) => acc + (Number(d.percent) |0), 0)
-    [distribution]
-  );
   const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
 
@@ -228,44 +178,6 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
       copy[index] = item;
-      return copy;
-    });
-  }
-  function addDistributionItem() {
-    setDistribution(prev => [...prev, { label: 'New Allocation', percent: 0 }]);
-  }
-  function removeDistributionItem(index: number) {
-    setDistribution(prev => prev.filter((_, i) => i !== index));  }
-  async function handleShareableLink() {
-    const res = await fetch('/api/whitepaper/share', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ markdown: previewMarkdown, publicPreview })
-    });
-    if (!res.ok) {
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  function addDistributionItem() {;
-    setDistribution((prev) => [...prev, { label: 'New Allocation', percent: 0 }]);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  function removeDistributionItem(index: number) {;
-    setDistribution((prev) => prev.filter((_, i) => i !== index));
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-      copy[index] = item;
       alert('Failed to create share link');
       return;
       } catch (error) {
@@ -406,6 +318,18 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
                   </button>;
                 </div>;
               </div>;
+  const sections = [
+    'Executive Summary'
+    'Market Context'
+    'Utility & Usage'
+    'Rewards System'
+    'Distribution'
+    'Governance Model'
+    'Risks + Disclaimers'
+  ];
+
+}
+  const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'],
   return (
     <>
       <Head>
@@ -482,10 +406,6 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
                 <DistributionDonut data={distribution} />
               </div>
             </div>
-              <textarea
-                className='w-full border rounded-md px-3 py-2'
-                rows={4}
-                value={operatorPrompt}
                   onClick={handleGenerate}
                   className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'
                 >
@@ -520,6 +440,13 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   }
 }
               </div>
+<span className="text-xs opacity-60">Auto-updating preview</span>
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
             </div>
             <MarkdownPreview markdown={previewMarkdown} activeSection={activeSection} />
@@ -543,11 +470,6 @@ function buildLocalMarkdown(input: {;
 }) {;
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
-  return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
   switch (j) {
     case 'US':;
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
@@ -610,6 +532,8 @@ function MarkdownPreview({
   return (
 
 
+
+
       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -636,27 +560,3 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   }, [markdown]),
   const content = parts[activeSection] || '',
   return (
-    <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
-  )
-;
-function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {;
-  // Very lightweight section filter: split by headings;
-  const parts = useMemo(() => {;
-    const sections = markdown.split(/\n## /g);
-    const map: Record<string, string> = {};
-    sections.forEach((s, i) => {;
-      if (i === 0) return, // first is H1;
-      const [titleLine, ...rest] = s.split('\n');
-      map[titleLine.trim()] = rest.join('\n');
-    }),;
-    return map;
-  }, [markdown]);
-  const content = parts[activeSection] || '';
-  return (;
-    <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}

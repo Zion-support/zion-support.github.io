@@ -1,10 +1,4 @@
 
-import { Button  } from '@/components/ui/button';
-import { ArrowLeft, FileText, Link  } from 'lucide-react';
-import { PdfExportButton  } from '../PdfExportButton';
-import { Resume  } from '@/types/resume';
-import { useState  } from 'react';
-import { useIsMobile } from '@/hooks/use-mobile';
 import {Button} from '@/components/ui/button';
 import {ArrowLeft, FileText, Link} from 'lucide-react';
 import {PdfExportButton} from '../PdfExportButton';
@@ -15,10 +9,6 @@ interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void
 }
-  const [isPrinting, setIsPrinting] = useState(false);
-
-  const isMobile = useIsMobile();
-  const handleBrowserPrint = () => {
     setIsPrinting(true);
 
     // Inject print-specific CSS only for the duration of printing;
@@ -27,10 +17,6 @@ interface PreviewHeaderProps {
       @media print {;
         body * {;
           visibility: hidden;
-        }
-        .print-section, .print-section * {
-          visibility: visible
-        }
         .print-section {
           position: absolute
           left: 0
@@ -81,10 +67,6 @@ function PreviewHeader() {
         }
         .no - print {
           display: none !important;
-    // Trigger print dialog
-    window.print();
-    // Remove the temporary style element after printing
-    setTimeout(() => {
     
     // Trigger print dialog
     window.print(),
@@ -123,3 +105,6 @@ function PreviewHeader() {
     </div>
     document.head.append_child (style);
 ;
+
+
+

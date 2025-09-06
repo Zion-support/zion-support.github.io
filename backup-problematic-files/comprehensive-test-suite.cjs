@@ -210,6 +210,8 @@ console.log('🧪 Starting Comprehensive Test Suite...')
       throw new Error(`Missing required "dependencies"`)
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       throw new Error(`Missing required "dependencies"`)
 =======
 <<<<<<< HEAD

@@ -29,27 +29,6 @@ interface ErrorBoundaryProps {
   showReportButton?: boolean;
   context?: string;
 }
-export class GlobalErrorBoundary extends Component<
-  ErrorBoundaryProps
-  ErrorBoundaryState
-> {
-  private retryTimeouts: NodeJS.Timeout[] = []
-  constructor(props: ErrorBoundaryProps) {
-    super(props)
-export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  private retryTimeouts: NodeJS.Timeout[] = []
-  constructor(props: ErrorBoundaryProps) {
-    super(props)
-
-    this.state = {
-      hasError: false
-      error: null
-      errorInfo: null
-      errorId: null
-      retryCount: 0
-      userFeedback: ''
-      showDetails: false
-    } }    ,}
       showDetails: false
     }
   }
@@ -65,11 +44,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     const errorId = this.generateErrorId()
     // Enhanced error logging
     const enhancedError = {
-      scope.setLevel('error');      scope.setContext('errorInfo', {
-        componentStack: errorInfo.componentStack
-        retryCount: this.state.retryCount
-      })
-      Sentry.captureException(error)
     })
     // Custom error handler
     if (this.props.onError) {

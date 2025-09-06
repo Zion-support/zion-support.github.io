@@ -43,10 +43,6 @@ import {
 export function FeatureCTAs() {
   const features = [
     {
-      title: "AI Talent Matching",;
-      description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
-      title: "AI Talent Matching",
-      description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
       link: "/marketplace",
       badge: "Popular",
@@ -72,14 +68,12 @@ export function FeatureCTAs() {
       icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />
       link: "/equipment"
       details: "Access cutting-edge technology with flexible options to buy, rent, or lease specialized equipment for your tech projects."
-    }
     {
       title: "Community Hub"
       description: "Connect with like-minded professionals, share insights, and stay updated with industry trends.";
       icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />
       link: "/community"
       details: "Join thousands of tech professionals in discussions, AMAs with industry leaders, and exclusive community events."
-    }
     {
       title: "Mobile Experience"
       description: "Take Zion with you on the go with our mobile app for iOS and Android devices."

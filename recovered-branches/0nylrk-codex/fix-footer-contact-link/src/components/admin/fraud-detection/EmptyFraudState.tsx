@@ -1,9 +1,4 @@
 
-import React from "react",
-import { Button } from "@/components/ui/button";
-import { ShieldAlert } from "lucide-react";
-interface EmptyFraudStateProps {
-  has_filters: boolean;
 
 interface EmptyFraudStateProps {
   hasFilters: boolean,

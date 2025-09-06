@@ -35,9 +35,6 @@ serve(async (req) => {
       JSON && JSON.stringify({ error: error && error.message });
       {
 
-        headers: { ...corsHeaders, "Content-Type": "application/json" };
-        status: 500}
-    )
         headers: { ...corsHeaders, "Content-Type": "application/json" },
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
@@ -51,3 +48,6 @@ interface EmailRequest {;
     );
   }
 });
+
+;
+

@@ -1,10 +1,3 @@
-import React from "react";
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
 } from "@/components/ui/card";
 
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
@@ -55,8 +48,6 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
           dataKeys={["views"]}
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
-        />;
-      </CardContent>;
     </Card>;
   );
   );

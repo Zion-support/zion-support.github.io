@@ -1,14 +1,6 @@
 
 
 export default function SecurityAudit({ report }: Props) {
-};
-</pre> </div>)
- 
-};
-</pre> </div>) 
-
-
-export default function SecurityAudit({ report }: Props) {
   return (
     <div className="space-y-4">
       <header className="space-y-1">

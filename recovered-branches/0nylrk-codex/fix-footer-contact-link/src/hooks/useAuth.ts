@@ -33,4 +33,3 @@ export const useAuth = (): AuthContextType => {;
 }`. Casting here ensures the // returned value matches `AuthContextType` exactly. return context as AuthContextType 
 };
   return context as AuthContextType;
-};

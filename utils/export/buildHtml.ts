@@ -6,13 +6,6 @@
         <div class="content">${paragraphize (c.content)}</div>;
       </section>;
     `);
-    .join('\n\n');
-  const visualsHtml = [;
-    ...visuals.timelineImages;
-    ...visuals.daoVoteCharts;
-    ...visuals.uiScreens];
-    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
-    .join('\n');
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
     .join ('\n\n'),
   const visuals_html = [;

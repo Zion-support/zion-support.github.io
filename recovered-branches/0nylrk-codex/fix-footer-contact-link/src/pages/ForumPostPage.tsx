@@ -1,19 +1,4 @@
 
-import { useState } from "react",
-import { useParams, Link } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO",
-import { Button } from "@/components/ui/button",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from "lucide-react",
-import { formatDistanceToNow, format } from "date-fns",
-import { ForumPost, ForumReply } from "@/types/community",
-import { useAuth } from "@/hooks/useAuth",
-import ReplyCard from "@/components/community/ReplyCard",
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -65,7 +50,6 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-01T14:30:00Z"
     upvotes: 12
     downvotes: 0
-  }
   {
     id: "reply2"
     postId: "1"
@@ -105,6 +89,23 @@ const mockReplies: ForumReply[] = [
   const { toast } = useToast();
   const [post, setPost] = useState(mockPost);
   const [replies, setReplies] = useState(mockReplies);
+    return (
+      <AppLayout>;
+        <div className="container py-8">;
+          <h1>Post not found</h1>;
+          <Button asChild className="mt-4">;
+            <Link to="/community">Back to Community</Link>;
+          </Button>;
+        </div>;
+      </AppLayout>;
+    );
+  }
+
+
+  },
+
+
+
   const handleDownvote = () => {
     if (!user) {
       toast({
@@ -125,15 +126,6 @@ const mockReplies: ForumReply[] = [
     }
     // Create a new reply
     const newReply: ForumReply = {
-      id: `reply${Date.now()}`
-      postId: post.id
-      content;
-      authorId: user.id |'unknown'
-      authorName: user.displayName |'Anonymous'
-      authorAvatar: user.avatarUrl
-      createdAt: new Date().toISOString()
-      updatedAt: new Date().toISOString()
-      upvotes: 0
       downvotes: 0
     }
     setReplies([...replies, newReply]);
@@ -141,7 +133,6 @@ const mockReplies: ForumReply[] = [
     toast({
       title: "Reply posted"
       description: "Your reply has been added to the discussion"})
-  }
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer
     if (!isAuthor && !isAdminOrMod) {
@@ -163,9 +154,6 @@ const mockReplies: ForumReply[] = [
 
       ...reply,
       isAnswer: reply.id === replyId
-    }));
-    setReplies(updatedReplies);
-    setPost({ ...post, isAnswered: true })
     })),
     
     setReplies(updatedReplies),
@@ -174,7 +162,6 @@ const mockReplies: ForumReply[] = [
     toast({
       title: "Answer marked"
       description: "The reply has been marked as the accepted answer"})
-  }
   const handleReportPost = () => {
     if (!user) {
       toast({
@@ -185,7 +172,6 @@ const mockReplies: ForumReply[] = [
     toast({
       title: "Report submitted"
       description: "A moderator will review this content"})
-  }
   const handlePinPost = () => {
     if (!isAdminOrMod) return;
     setPost({ ...post, isPinned: !post.isPinned })
@@ -194,8 +180,6 @@ const mockReplies: ForumReply[] = [
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
   }
   const handleLockPost = () => {
-    if (!isAdminOrMod) return;
-    setPost({ ...post, isLocked: !post.isLocked })
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked"
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
@@ -343,6 +327,14 @@ const mockReplies: ForumReply[] = [
                     Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.
                   </AlertDescription>
                 </Alert>
+              )}
+            </div>;
+          )}
+
+
+          
+
+
           {post.isLocked && (
             <Alert className="mb-8">
               <AlertDescription className="flex items-center">
@@ -355,6 +347,26 @@ const mockReplies: ForumReply[] = [
             {replies
               .filter(reply => !reply.isAnswer)
               .map(reply => (
+                <ReplyCard
+                  key={reply && reply.id}
+                  reply={reply}
+
+                  onMarkAnswer={() => handleMarkAsAnswer(reply && reply.id)}
+                  canMarkAnswer={!post && post.isAnswered && (isAuthor || isAdminOrMod)}
+                />;
+                  onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
+
+                  canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
+                />
+
+              ))}
+          </div>;
+        </div>;
+      </div>;
+    </AppLayout>;
+  );
+}
+
         <div className="mt - 8">;
           <h2 className="text - xl font - bold mb - 6">Responses ({post.reply_count})</h2>;
           {post.is_answered && (
@@ -398,51 +410,3 @@ const mockReplies: ForumReply[] = [
         </div>;
       </div>;
     </AppLayout>);
-          ;
-          <div className="space-y-6">;
-            {replies;
-              .filter(reply => !reply.isAnswer);
-              .map(reply => (;
-                <ReplyCard;
-                  key={reply.id}
-                  reply={reply}
-                  onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
-                  canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
-                />;
-              ))}
-          </div>;
-        </div>;
-      </div>;
-    </AppLayout>;
-  ),; downvotes: 0 
-};
-{
-  id: "reply3";
-postId: "1";
-content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.";
-authorId: "user4";
-authorName: "Emma Davis";
-authorRole: "ML Research Lead";
-createdAt: "2025-04-02T09:45:00Z";
-updatedAt: "2025-04-02T09:45:00Z";
-upvotes: 15;
-downvotes: 0;
-isAnswer: true 
-};
-{
-  id: "reply4";
-postId: "1";
-content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?";
-authorId: "user5";
-authorName: "David Lin";
-createdAt: "2025-04-02T11:20:00Z";
-updatedAt: "2025-04-02T11:20:00Z";
-upvotes: 4;
-downvotes: 0 
-}];
-//Using `useParams` without type arguments avoids issues when TypeScript //can't determine the generic type for the helper from React Router. //Cast the result instead to provide the expected shape. //For this demo, we'll assume the post is found if (!post) {
-  return (<AppLayout> <div className="container py-8" > <h1>Post not found</h1> <Button asChild className="mt-4" > <Link to="/community" >Back to Community</Link> </Button> </div> </AppLayout> const handleUpvote = () => {
-  if (!user) {
-  toast ({
-  return;
-}

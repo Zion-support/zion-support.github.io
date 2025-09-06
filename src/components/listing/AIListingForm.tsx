@@ -1,27 +1,3 @@
-import { Sparkles } from 'lucide-react'
-interface AIListingFormProps {
-  onSubmit: (formData: {
-    title: string;
-    category: string;
-    keyFeatures: string;
-    targetAudience: string
-
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Sparkles } from 'lucide-react'
-interface AIListingFormProps {
-  onSubmit: (formData: {
-    title: string
-    category: string
-    keyFeatures: string
-    targetAudience: string;
-  }) => void;
-  isLoading: boolean;  initialValues?: {
-    title?: string
-    category?: string
-    keyFeatures?: string
-    targetAudience?: string
-  };    title: string,
     category: string,
     keyFeatures: string,
     targetAudience: string
@@ -166,8 +142,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           id="targetAudience"
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
-          placeholder="e.g. Developers, Marketers, Startups"
-          className="bg-zion-blue border border-zion-blue-light text-white"
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
         {isLoading ? (

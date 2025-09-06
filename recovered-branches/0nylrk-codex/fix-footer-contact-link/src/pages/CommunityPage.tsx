@@ -9,17 +9,6 @@ import ForumCategories from "@/components/community/ForumCategories";
 import PostCard from "@/components/community/PostCard";
 import {useAuth} from "@/hooks/useAuth";
 import {ForumPost} from "@/types/community";
-import { useState } from "react",
-import { Link } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { SEO } from "@/components/SEO",
-import { AppLayout } from "@/layout/AppLayout",
-import ForumCategories from "@/components/community/ForumCategories",
-import PostCard from "@/components/community/PostCard",
-// Mock data for featured posts
-const featuredPosts: ForumPost[] = [
-  {
 
     id: "1"
     title: "Best practices for AI model fine-tuning"
@@ -120,13 +109,6 @@ const recentPosts: ForumPost[] = [
         title="Community Forum | Zion AI Marketplace"
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
         keywords="community, forum, discussion, AI marketplace, questions, answers"
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
-      </div>
-    </AppLayout>
-  )
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -251,4 +233,5 @@ export default function CommunityPage() {;
         </Tabs>;
       </div>;
 }
-;
+    </AppLayout>);
+}

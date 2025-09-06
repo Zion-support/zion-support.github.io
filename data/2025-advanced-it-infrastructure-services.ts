@@ -725,9 +725,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 ;
   }
 ];
-;
-  }
-];
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedITInfrastructureService {;
   id: string,;

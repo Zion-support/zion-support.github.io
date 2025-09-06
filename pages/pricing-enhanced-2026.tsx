@@ -59,7 +59,6 @@ import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-
 import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
-  ],
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -76,6 +75,10 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       variant: 'quantum' as const
       popular: false
       cta: 'Start Free Trial'
+      color: 'from-blue-500 to-indigo-600'
+
+    };
+
     {
       name: 'Professional'
       description: 'Ideal for growing businesses and teams'
@@ -90,6 +93,10 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       variant: 'holographic' as const
       popular: true
       cta: 'Start Free Trial'
+      color: 'from-purple-500 to-pink-600'
+
+    };
+
     {
       name: 'Enterprise'
       description: 'For large organizations and enterprises'
@@ -165,12 +172,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
           <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
         </Head>
-        {/* Enhanced Header Section */}
-        <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
         {/* Enhanced Header Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -234,21 +235,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                 }`}
               >;
                 <span;
-                  className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${;
-                    billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1';
-                  }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                />
-              </button>
-              <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
-                Yearly <span className="text-cyan-400 text-sm">(Save 20%)</span>
-              </span>
-            </div>
-            {/* Contact Information */}
-            {/* Contact Information */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -284,18 +270,18 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                   className="relative"
                 >
                   <UltraFuturisticCard
-                    variant={tier.variant  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    className={`h-full ${tier.popular ? 'ring-2 ring-cyan-500 ring-opacity-50' : ''}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  >
+                  className="relative";
+                >;
+                  <UltraFuturisticCard;
+                    variant={tier.variant}
+                    className={`h - full ${tier.popular ? 'ring - 2 ring - cyan - 500 ring - opacity - 50' : ''}`}
+                  >;
                     {tier.popular && (
+
+
+
+                    
+
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -516,10 +502,5 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
         </div>
       </div>
     </UltraFuturisticBackground>
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
 

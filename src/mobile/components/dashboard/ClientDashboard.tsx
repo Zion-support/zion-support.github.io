@@ -26,8 +26,6 @@ export function ClientDashboard() {
                 </div>
                 <Badge>3 Milestones</Badge>
               </div>
-              <div className="space-y-1">
-                <div className="flex justify-between text-sm">
                   <span className="font-medium">60%</span>
                 </div>
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">

@@ -45,10 +45,7 @@
   talentSlug: string;
   appliedAtIso: string;
   status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN';
-  coverLetter?: string;
-  proposedRate?: number;
-  proposedTimeline?: string;
-  portfolioItems?: string[];
+}
   id: string;
   conversation_id: string;
   sender_id: string;
@@ -520,41 +517,6 @@ export async function deleteMessage(id: string): Promise<boolean> {
   return marketplaceStore && marketplaceStore.deleteMessage(id),
 }
 // Utility functions
-export function createProjectData(
-  title: string
-  summary: string
-  clientId: string
-  additionalData?: Partial<Project>
-): Omit<Project, 'id' | 'createdAt' | 'updatedAt'> {
-  return {
-}
-export function createOfferData(
-  clientId: string
-  talentSlug: string
-  scopeSummary: string
-  paymentTerms: Offer['paymentTerms']
-  additionalData?: Partial<Offer>
-): Omit<Offer, 'id' | 'createdAtIso'> {
-  return {
-}
-export function createApplicationData(
-  projectId: string
-  talentSlug: string
-  additionalData?: Partial<Application>
-): Omit<Application, 'id' | 'appliedAtIso'> {
-  return {
-}
-export function createMessageData(
-  conversationId: string
-  senderId: string
-  recipientId: string
-  body: string
-  additionalData?: Partial<Message>
-): Omit<Message, 'id' | 'sentAtIso'> {
-  return {
-
-
-
     conversationId,
     senderId,
     recipientId,

@@ -55,9 +55,6 @@
       {currentStepData.target && (
         <div;
           className="fixed z-30 pointer-events-none";
-          style={{top: 0;
-            left: 0;
-            right: 0;
             bottom: 0}}
         >;
           <div;

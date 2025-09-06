@@ -73,7 +73,6 @@
             <>
               <div className="space-y-2">
                 <Label>Select blockchain network</Label>
-              
               <div className="space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
                 <Input 
@@ -94,9 +93,6 @@
                   defaultValue={deploymentOptions && deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions;                    network: value as BlockchainNetwork;
-                  onCheckedChange={(checked) => setDeploymentOptions({;
-                    ...deploymentOptions;
-                    useEscrow: checked;
                   })}
                   className="flex flex-col space-y-1";
                 >;

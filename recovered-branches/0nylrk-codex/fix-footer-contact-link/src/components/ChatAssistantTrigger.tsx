@@ -1,10 +1,4 @@
 
-import { useState } from "react",
-import { MessageSquare } from "lucide-react",
-import { Button } from "@/components/ui/button";
-import { ChatAssistant } from "@/components/ChatAssistant";
-export function ChatAssistantTrigger() {
-  const [isOpen, setIsOpen] = useState(false);
 
   // Handle sending messages to the AI chat assistant
 
@@ -13,10 +7,6 @@ export function ChatAssistantTrigger() {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
-          "Content-Type": "application/json"}
-        body: JSON.stringify({
-          messages: [{ role: "user", content: message }]
-        })});
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
@@ -25,9 +15,6 @@ export function ChatAssistantTrigger() {
 
       console.error("Error in AI chat:", error),
       return Promise.resolve()
-    }
-  }
-  return (
     }
   }
   return (
@@ -56,8 +43,6 @@ export function ChatAssistantTrigger() {
           onSendMessage={handleSendMessage}
         />;
       )}
-    </>
-  )
 }
 import { useState } from './react';
 import { MessageSquare } from './lucide-react';

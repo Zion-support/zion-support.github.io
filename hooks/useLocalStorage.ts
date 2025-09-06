@@ -1,9 +1,11 @@
 };
-export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {;
-  const [storedValue, setStoredValue] = useState<T>(() => {;
-};
-export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {;
-  const [storedValue, setStoredValue] = useState<T>(() => {;
+
+export const useLocalStorage = <T>(key: string, initialValue: T) => {
+  const [storedValue, setStoredValue] = useState<T>(() => {
+
+
+
+
 }
 export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {const [storedValue, setStoredValue] = useState<T>(() => {;
     try {;

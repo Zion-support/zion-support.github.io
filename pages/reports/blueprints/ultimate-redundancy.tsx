@@ -2,10 +2,15 @@ import React from 'react';
 const UltimateRedundancyBlueprint: React.FC = () => {
   const system_features = [;
     {
-      name: 'Quantum-Level Redundancy'
-      description: 'Advanced redundancy patterns with quantum-inspired algorithms'
-      status: 'active'
-      priority: 'critical'
+
+      name: 'Quantum - Level Redundancy',
+      description: 'Advanced redundancy patterns with quantum - inspired algorithms',
+
+      name: 'Quantum-Level Redundancy',
+      description: 'Advanced redundancy patterns with quantum-inspired algorithms',
+
+      status: 'active',
+      priority: 'critical',
       health: 'excellent'
     }
     {
@@ -49,6 +54,24 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       description: 'Post - quantum cryptography for data security',
       benefit: 'Future - proof security standards',
       status: 'implemented';
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
+  const advancedCapabilities = [
+    {
+      capability: 'Neural Network Monitoring',
+      description: 'Deep learning-based anomaly detection',
+      benefit: 'Early threat detection and prevention',
+      status: 'implemented'
+    },
+    {
+      capability: 'Quantum Encryption',
+      description: 'Post-quantum cryptography for data security',
+      benefit: 'Future-proof security standards',
+      status: 'implemented'
     },
     {
       capability: 'Adaptive Scaling',
@@ -143,7 +166,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Recently enhanced</p>
           </div>
         </div>
-        {/* System Features */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Advanced System Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +174,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{feature.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getPriorityColor(feature.priority)}`}>
-                    {feature.priority}
                     {feature.priority  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -180,7 +201,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{capability.capability}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(capability.status)}`}>
-                    {capability.status}
                     {capability.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -212,11 +232,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                       <td className="py-3 px-4 text-gray-300">{metric.target}</td>
                       <td className="py-3 px-4">
                         <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
-                          {metric.status}
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
                           {metric.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

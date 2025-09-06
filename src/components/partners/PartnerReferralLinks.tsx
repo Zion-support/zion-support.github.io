@@ -204,14 +204,6 @@ export function PartnerReferralLinks() {;
                 Generate a trackable link for specific marketing campaigns
               </DialogDescription>
             </DialogHeader>
-            <div className='grid gap-4 py-4'>
-              <div className='grid gap-2'>
-                <Label htmlFor='campaign'>Campaign Type</Label>
-                <Select
-                  value={selectedCampaign}
-                  onValueChange={setSelectedCampaign}                >
-                  <SelectTrigger id='campaign'>
-                    <SelectValue placeholder='Select campaign type' />
             <div className="grid gap-4 py-4">
               <div className="grid gap-2">
                 <Label htmlFor="campaign">Campaign Type</Label>

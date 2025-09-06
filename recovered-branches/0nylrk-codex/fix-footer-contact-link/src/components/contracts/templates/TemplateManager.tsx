@@ -98,9 +98,6 @@ export function TemplateManager({
         {mode === "list" ? (
           <div className="space-y-4">
             <div className="flex justify-end">
-              <Button
-                variant="outline"
-                onClick={() => setMode("save")}
                 disabled={!currentValues}
               >
                 Save Current as Template

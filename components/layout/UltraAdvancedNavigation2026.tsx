@@ -2,31 +2,6 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Users
-  Briefcase
-  BookOpen
-  MessageCircle;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Users, Briefcase
-  BookOpen, MessageCircle
   Menu,
   X,
   ChevronDown,
@@ -644,6 +619,23 @@ const UltraAdvancedNavigation2026 = () =>: any {
   return (
     <>;
       {/* Enhanced Navigation Bar */}
+            {/* Logo */}
+            <Link href='/' className='flex items - center space - x-3 group'>;
+              <div className='relative'>;
+                <div className='w - 12 h - 12 bg - gradient - to - br from - purple - 500 via - pink - 500 to - cyan - 500 rounded - 2xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300'>;
+                  <Rocket className='w - 6 h - 6 text - white' />;
+                </div>;
+                <div className='absolute inset - 0 bg - gradient - to - br from - purple - 500 via - pink - 500 to - cyan - 500 rounded - 2xl blur - xl opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300'></div>;
+              </div>;
+              <div className='hidden sm:block'>;
+                <div className='text - 2xl font - bold bg - gradient - to - r from - purple - 400 via - pink - 400 to - cyan - 400 bg - clip - text text - transparent'>;
+                  Zion Tech Group;
+                </div>;
+                <div className='text - xs text - gray - 400'>;
+                  Revolutionary Technology Solutions;
+                </div>              </div>;
+            </Link>;
+
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items - center space - x-8'>;
               {navigation_items.map (item => (
@@ -677,6 +669,21 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   Revolutionary Technology Solutions;
                 </div>              </div>;
             </Link>;
+                  {/* Dropdown Menu */}
+                  <AnimatePresence>;
+                    {activeDropdown === item && item.name && (;
+                      <motion&& motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+
+
+                              <Link
+                                key={subItem && subItem.name}
+                                href={subItem && subItem.href}
+                                className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group"
+                                onClick={() => setActiveDropdown(null)}
+
+
                                   {subItem.description}
                                 </div>
                               </Link>
@@ -686,6 +693,23 @@ const UltraAdvancedNavigation2026 = () =>: any {
                           </div>
                           <Link
                             href={item.href}
+                          <Link
+                            href={item && item.href}
+                            className="block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200">;
+                            View All {item && item.name}
+                          </Link>;
+                        </div>;
+                      </motion && motion.div>;
+                    )}
+                  </AnimatePresence>;
+                </div>;
+              ))}
+
+
+
+              {/* Quick Links */}
+
+
                 <Link
                   href='/pricing'
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'>;
@@ -794,38 +818,11 @@ const UltraAdvancedNavigation2026 = () =>: any {
               </Link>
             </div>
 
-              </Link>;
-            </div>;
-              </Link>
-            </div>
-
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200'
-            >
-              {isOpen ? (
-                <X className='w-6 h-6' />
-              ) : (
-                <Menu className='w-6 h-6' />
-              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-      </nav>
-            {/* Mobile Menu Button */}
-            <button;
-              on_click={() => setIsOpen (!is_open)}
-              className='lg:hidden p - 2 text - gray - 300 hover:text - white transition - colors duration - 200';
-            >;
-              {is_open ? (
-                <X className='w - 6 h - 6' />) : (
-                <Menu className='w - 6 h - 6' />)}            </button>              className="lg:hidden p - 2 text - gray - 300 hover:text - white transition - colors duration - 200";
-            >;
-              {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
+
+
             </button>;
           </div>;
         </div>;
@@ -842,8 +839,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
             onClick={() => setIsOpen(false)}
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
 
@@ -963,9 +958,3 @@ export default UltraAdvancedNavigation2026;
       <div className='h-20'></div>
     </>
   );
-export default UltraAdvancedNavigation2026;    </>
-  );
-}
-export default UltraAdvancedNavigation2026;
-
-export default UltraAdvancedNavigation2026;

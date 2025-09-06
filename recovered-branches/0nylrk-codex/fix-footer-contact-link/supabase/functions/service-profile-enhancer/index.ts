@@ -48,6 +48,23 @@ if ( {) {
       );
     }
 
+    // Get OpenAI API key from environment
+    const apiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+    if (!apiKey) {
+      return new Response(
+
+    // Get OpenAI API key from environment;
+    const api_key = Deno.env.get ("OPENAI_API_KEY");
+    // Check condition
+if ( {) {
+  $2
+}
+      return new Response (
+        JSON.stringify ({
+
+          error: "OpenAI API key not configured"});
+        JSON.stringify({
+
           error: "OpenAI API key not configured"}),
 ;
     // Get OpenAI API key from environment;
@@ -59,14 +76,11 @@ if ( {) {
         { headers, status: 500 }
       );
     }
-    const prompt = `
-    You are an expert in creating professional service profiles. Based on the following information about a service provider, create:
-    1. A concise yet compelling professional summary (max 250 words)
-    2. A list of 5-10 specific services they could offer based on their description
-    Service Provider Name: ${providerData.name}
-    Business/Service Title: ${providerData.title}
-    Location: ${providerData.location}
-    Current Bio: ${providerData.bio}
+
+
+    ${providerData.services && providerData.services.length > 0 
+
+
       ? `Current Services: ${providerData.services.join(", ")}`
 
     Service Provider Name: ${providerData && providerData.name}
@@ -80,7 +94,36 @@ if ( {) {
         model: "gpt-4";
         messages: [
           {
-            role: "system"
+
+    const prompt = `;
+    You are an expert in creating professional service profiles. Based on the following information about a service provider, create:;
+    1. A concise yet compelling professional summary (max 250 words);
+    2. A list of 5 - 10 specific services they could offer based on their description;
+    Service Provider Name: ${provider_data.name}
+    Business / Service Title: ${provider_data.title}
+    Location: ${provider_data.location}
+    Current Bio: ${provider_data.bio}
+    ${provider_data.services && provider_data.services.length > 0;
+      ? `Current Services: ${provider_data.services.join (", ")}`;
+      : "No services listed yet."}
+    Focus on highlighting their unique value proposition, expertise, and professionalism.;
+    Only respond with JSON in this exact format: {
+      "summary": "Professional summary goes here...",
+      "services": ["Service 1", "Service 2", "Service 3", ...];
+    }
+    `;
+;
+    const response = await fetch ("https://api.openai.com / v1 / chat / completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${api_key}`;
+        "Content - Type": "application / json"}
+      body: JSON.stringify ({
+        model: "gpt - 4";
+        messages: [;
+          {
+            role: "system",
+
             content: "You are an expert at creating professional service descriptions for marketplaces."}
           {
             role: "user"
@@ -89,10 +132,6 @@ if ( {) {
       console.error("OpenAI API error:", responseData),
       return new Response(
         JSON.stringify({
-          details: responseData}),
-    ${providerData.services && providerData.services.length > 0;
-      ? `Current Services: ${providerData.services.join(", ")}`;
-      : "No services listed yet."}
     if (!response && response.ok) {
       console && console.error("OpenAI API error:", responseData);
       return new Response(
@@ -121,14 +160,6 @@ if ( {) {
       const content = responseData && responseData.choices[0].message && message.content;
       const parsedContent = JSON && JSON.parse(content);
       return new Response(
-          raw: responseData.choices[0]?.message?.content}),
-      );
-    } catch (error) {;
-      console.error("Error parsing AI response:", error),;
-      return new Response(;
-        JSON.stringify({;
-          error: "Failed to parse AI response",;
-          raw: responseData.choices[0]?.message?.content}),;
       const content = response_data.choices[0].message.content;
       const parsed_content = JSON.parse (content);
 ;
@@ -156,25 +187,12 @@ if ( {) {
       );
     }
   } catch (error) {
-    console.error("Function error:", error),
-    return new Response(
-      JSON.stringify({
         error: "Internal server error"}),
       { 
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*"}, 
         status: 500 
-  } catch (error) {;
-    console.error("Function error:", error),;
-    return new Response(;
-      JSON.stringify({;
-        error: "Internal server error"}),;
-      {;
-        headers: {;
-          "Content-Type": "application/json",;
-          "Access-Control-Allow-Origin": "*"},;
-        status: 500;
       }
     );
   }

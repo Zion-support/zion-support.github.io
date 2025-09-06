@@ -1,27 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
 const benefits = [
   'Data-driven decision making',
   'Improved business performance',
@@ -41,6 +17,7 @@ const benefits = [;
   'Automated reporting and analytics';
 ];
 export default function DataAnalyticsServices() {;
+
   return (
     <Layout
       title="Data Analytics Services - Zion Tech Group"
@@ -99,24 +76,6 @@ export default function DataAnalyticsServices() {;
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
-              <div>;
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
-                  Why Choose Our Data Analytics Services?;
-                </h2>;
-                <p className="text-xl text-gray-600 mb-8">;
-                  Our data analytics experts help you transform raw data into;
-                  actionable insights that drive business growth and innovation.;
-                </p>;
-                <ul className="space-y-4">;
-                  {benefits && benefits.map((benefit, index) => (;
-                    <li key={index} className="flex items-start">;
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
-                      <span className="text-gray-700">{benefit}</span>;
-                    </li>;
                   ))}
                 </ul>
               </div>

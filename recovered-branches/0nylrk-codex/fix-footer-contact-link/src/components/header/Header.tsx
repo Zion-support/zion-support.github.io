@@ -1,10 +1,3 @@
-import { Link  } from 'react-router-dom';
-import { Logo  } from './Logo';
-import { UserMenu  } from './UserMenu';
-import { LanguageSelector  } from './LanguageSelector';
-import { MainNavigation  } from '@/layout/MainNavigation';
-import { useAuth  } from '@/hooks/useAuth';
-import { useWhitelabel  } from '@/context/WhitelabelContext';
 import {Link} from 'react-router-dom';
 import {Logo} from './Logo';
 import {UserMenu} from './UserMenu';
@@ -31,17 +24,6 @@ export interface HeaderProps {
     textColor: string
   }
 }
-  
-  // If we have a white-label tenant and no specific customTheme is provided,
-  // use the tenant's primary color
-  const effectiveTheme = customTheme || (isWhitelabel ? {
-    primaryColor,
-    backgroundColor: '#0f172a', // Default dark background
-    textColor: '#ffffff', // Default light text
-  } : undefined),
-
-
-  
   const headerStyle = effectiveTheme ? {
     backgroundColor: effectiveTheme.backgroundColor
     color: effectiveTheme.textColor
@@ -62,6 +44,7 @@ export interface HeaderProps {
       navigate(`/search?q=${encodeURIComponent(query)}`);
       setQuery("");
     }
+
   return (
     <header
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"

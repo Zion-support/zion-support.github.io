@@ -10,13 +10,6 @@ import {
   CheckCircle,
   XCircle,
   AlertTriangle;
-} from 'lucide-react';
-export default function CookiePolicyPage() {
-  const [cookiePreferences, setCookiePreferences] = useState({
-    necessary: true
-    analytics: false
-    marketing: false
-    functional: false
     necessary: true,
     analytics: false,
     marketing: false,
@@ -246,75 +239,10 @@ export default function CookiePolicyPage() {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                What Are Cookies?
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Cookies are small text files that are stored on your device when you visit our website.
-                They help us provide you with a better experience and understand how you use our site.
-              </p>
-            </motion.div>
-            <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <motion.div
-                  className="bg-gray-50 p-6 rounded-lg"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex items-center mb-4">
-                    <Info className="w-6 h-6 text-blue-600 mr-3" />
-                    <h3 className="text-lg font-semibold text-gray-900">How We Use Cookies</h3>
-                  </div>
-                  <ul className="space-y-2 text-gray-600">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1" />
-                      <span>Remember your preferences and settings</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1" />
-                      <span>Analyze website traffic and usage patterns</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1" />
-                      <span>Improve website performance and functionality</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1" />
-                      <span>Provide personalized content and recommendations</span>
-                    </li>
-                  </ul>
-                </motion.div>
-                <motion.div
-                  className="bg-gray-50 p-6 rounded-lg"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.1 }}
-                  viewport={{ once: true }}
               </div>;
             </div>;
           </div>;
         </section>;
-        {/* Contact Information */}
-        <section className="py-20 bg-gray-50">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Layout from '../components/Layout';
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Layout from '../components/Layout';
-
-
-export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>;
       <SEO
@@ -324,7 +252,6 @@ export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
       <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
-origin/automation-improvements-final
       <div className="container mx-auto px-4 py-24 text-white">
         <div className="max-w-3xl mx-auto space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
@@ -344,18 +271,9 @@ origin/automation-improvements-final
 }
 }
 }
-      </div>
-    </UltraAdvancedFuturisticBackground>
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
     </>);
 ;
+<li > Purpose: performance and security</li> <li > Retention: session or short‑term</li> <li > Opt‑out: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;
       </div>;
-    </UltraAdvancedFuturisticBackground>;
-  );
+    </UltraAdvancedFuturisticBackground>);
 }

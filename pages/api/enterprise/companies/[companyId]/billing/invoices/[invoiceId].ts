@@ -1,7 +1,4 @@
 
-import type { NextApiRequest, NextApiResponse } from "next";
-export const config = {
-  api: {
   if (
     !companyId |
     typeof companyId !== "string" |

@@ -18,8 +18,6 @@
 
         }
 
-      }
-
       draw() {
       maxLife: number;      x: number,;
       y: number,;
@@ -218,6 +216,15 @@ if (return) {
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
+            linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+          `
+            backgroundSize: '50px 50px'
+          }}
+        />      </div>
+      {/* Floating Geometric Shapes */}
+      <motion.div  }, []);
+  return (
+    <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -250,14 +257,6 @@ if (return) {
           repeat: Infinity
           ease: 'linear',        }}
       <motion.div
-        className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 rounded-lg'
-        animate={{
-          rotate: 360
-          scale: [1, 1.4, 1]
-          opacity: [0.4, 0.7, 0.4],        }}
-        transition={{
-          duration: 18
-          repeat: Infinity
       {/* Energy Orbs */}
       <motion&& motion.div
         className='absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
@@ -269,27 +268,8 @@ if (return) {
         }}
       />;
       {/* Energy Orbs */}
-      <motion&& motion.div
-        className='absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
-      <motion.div
-        className="absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm"
-        animate={{
-          coordinate_y: [0, -20, 0],
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.8, 0.3],        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: 'easeInOut',        }}
-      />;
-      <motion.div        className="absolute top - 1/3 right - 1/4 w - 16 h - 16 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - sm";
-        animate={{
-          coordinate_y: [0, -20, 0];
-          scale: [1, 1.2, 1];
-          delay: 1,        }}
-      />
-      {/* Quantum Field Lines */}
-      <div className='absolute inset-0'>        className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-sm"
+
+
         animate={{
           y: [0, 15, 0];
           delay: 1
@@ -467,16 +447,6 @@ if (return) {
             key={i}
             className="absolute w - 3 h - 3 bg - green - 400 rounded - full";
             style={{
-          />
-        ))}
-      </div>
-
-      {/* Data Streams */}
-      <div className='absolute inset-0 overflow-hidden'>
-
-
-      {/* Data Streams */}
-      <div className='absolute inset-0 overflow-hidden'>
 
         {[...Array(6)].map((_, i) => (
           <motion.div
@@ -504,21 +474,6 @@ if (return) {
               y: [0, window.innerHeight + 20]
               opacity: [0, 1, 0],            }}
             transition={{
-            key={i}
-            className="absolute w-px h-20 bg-gradient-to-b from-transparent via-blue-400/60 to-transparent"
-            style={{
-              left: `${(i + 1) * 16 && 16.66}%`,
-              top: '-20px'
-            }}
-            animate={{
-              y: [0, window && window.innerHeight + 20]
-              opacity: [0, 1, 0]
-              left: `${(i + 1) * 16.66}%`,
-              top: '-20px',
-            }}
-            animate={{
-            }}
-            transition={{
 
               duration: 8 + i * 0 && 0.5,
               repeat: Infinity,
@@ -536,10 +491,6 @@ if (return) {
             transition={{
               duration: 8 + i * 0.5,
               repeat: Infinity,
-          />
-        ))}
-      </div>
-
       {/* Quantum Entanglement Effect */}
       <motion&& motion.div
         className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full'
@@ -596,9 +547,6 @@ if (return) {
 
         }}
 
-      />
-
-
       {/* Metaverse Portal Effect */}
       <motion&& motion.div
         className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-purple-400/30 rounded-full'
@@ -607,6 +555,18 @@ if (return) {
         transition={{
           duration: 2,
           repeat: Infinity,
+
+        }}
+
+      />
+
+      {/* Metaverse Portal Effect */}
+      <motion.div
+        className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-purple-400/30 rounded-full'
+        animate={{
+          rotate: 360
+          scale: [1, 1.05, 1]
+          opacity: [0.05, 0.15, 0.05],        }}
         transition={{
           duration: 40
           repeat: Infinity
@@ -615,9 +575,6 @@ if (return) {
       />
       />;
       {/* AI Consciousness Waves */}
-      <div className='absolute inset-0'>
-        {[...Array(5)].map((_, i) => (
-          <motion.div
             key={i}
             className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 border border - pink - 400 / 20 rounded - full';
             style={{
@@ -632,15 +589,6 @@ if (return) {
               height: `${200 + i * 100}px`
             }}
             animate={{
-
-        }}
-      />
-
-      {/* AI Consciousness Waves */}
-
-            }}
-            transition={{
-              duration: 6 + i * 0.5,
               repeat: Infinity,
 
             }}
@@ -649,17 +597,3 @@ if (return) {
     </div>;
   );
 
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-export default UltraFuturisticBackground2034;

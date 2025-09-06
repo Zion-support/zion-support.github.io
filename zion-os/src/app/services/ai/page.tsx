@@ -5,6 +5,14 @@
           <h1 className="text-5xl font-bold mb-6"> AI Services & Solutions</h1>;
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">;
             we deliver enterprise-grade AI solutions that drive real results.;
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">;
+        <div className="container mx-auto px-6 text-center">;
+          <h1 className="text-5xl font-bold mb-6">🤖 AI Services & Solutions</h1>;
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">;
+
+            we deliver enterprise-grade AI solutions that drive real results.;
           </p>;
           <div className="mt - 8">;
             <a href="tel:+13024640950" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 50 transition - colors mr - 4">;

@@ -23,14 +23,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     primary: 'text-primary',
     success: 'text-green-500',
     warning: 'text-yellow-500',
-  return (
-    <div className={cn('flex items-center gap-2', className)}>
-      <Loader2
-        className={cn(
-          'animate-spin'
-          sizeClasses[size]
-          variantClasses[variant]
-        )}
 }
 //Progressive loading component useEffect ( () => {
   if (currentStep !== undefined) {
@@ -145,17 +137,6 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
                 {action.label}
               </Button>
             )}
-            {action && (
-              <Button
-                onClick={action.onClick}
-                variant={canRetry ? 'outline' : 'default'}
-              >
-            
-            {action && (
-              <Button onClick={action.onClick} variant={canRetry ? "outline" : "default"}>
-                {action.label}
-              </Button>
-            )}
 
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant='ghost'>
@@ -176,38 +157,6 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
   columns = 4,
   variant = 'card',
-            {variant === 'card' && (
-              <>
-                <Skeleton variant="rectangular" className="h-32" />
-                <div className="space-y-2">
-                  <Skeleton variant="text" className="h-6 w-3/4" />
-                  <Skeleton variant="text" lines={2} />
-                  <div className="flex gap-2">
-                    <Skeleton variant="text" className="h-4 w-16" />
-                    <Skeleton variant="text" className="h-4 w-20" />
-                  </div>
-                </div>
-              </>
-            )}
-            
-            {variant === 'list' && (
-              <div className="flex gap-4">
-                <Skeleton variant="circular" />
-                <div className="flex-1 space-y-2">
-                  <Skeleton variant="text" className="h-5 w-1/2" />
-                  <Skeleton variant="text" lines={2} />
-                </div>
-              </div>
-            )}
-            
-            {variant === 'table' && (
-              <div className="flex items-center gap-4">
-                <Skeleton variant="text" className="h-4 w-1/4" />
-                <Skeleton variant="text" className="h-4 w-1/3" />
-                <Skeleton variant="text" className="h-4 w-1/6" />
-                <Skeleton variant="text" className="h-4 w-1/4" />
-              </div>
-            )}
           </CardContent>;
         </Card>;
       ))}
@@ -226,14 +175,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   isLoading = false,
   loadTime,
   itemCount,
-  className
-}) => {
-  const getPerformanceColor = (time: number) => {
-    if (time < 100) return 'text-green-500',
-    if (time < 300) return 'text-yellow-500',
-    return 'text-red-500'
-  },
-
 
 
   if (isLoading) {
@@ -244,10 +185,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       </Badge>
     )
   }
-    >
-
-  return (
-    <div className={cn('flex items-center gap-2 text-xs text-muted-foreground', className)}>
       {loadTime && (
         <Badge variant="outline" className={getPerformanceColor(loadTime)}>
           <Zap className="h-3 w-3 mr-1" />
@@ -256,7 +193,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       )}
 
 
-}
 }
 }
 }

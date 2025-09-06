@@ -68,11 +68,6 @@ function TalentPool() {
               </div>;
             </div>;
           ))}
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
         </div>;
       </CardContent>;
     </Card>;

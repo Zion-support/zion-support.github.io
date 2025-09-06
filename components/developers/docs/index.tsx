@@ -1,3 +1,7 @@
+import path from 'path';
+import fs from 'fs';
+
+
   id: string;
   title: string;
   html?: string;
@@ -6,9 +10,6 @@ type DocsContent = {
   title: string;
   sections: Section[];
 }
-};
-
-export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
 
 
 };
@@ -18,8 +19,6 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
   const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json');
   const raw = fs.readFileSync(contentPath, 'utf8');
   const docs = JSON.parse(raw) as DocsContent;
-  return { props: { docs } }
-}
 
 export default function ApiDocsPage({ docs }: PageProps) {
       nav={docs.sections.map(s => ({ id: s.id, title: s.title }))}

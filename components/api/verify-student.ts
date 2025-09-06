@@ -3,8 +3,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
-} from '../../utils/api/partnerAuth';
-
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'

@@ -1,21 +1,4 @@
 
-import {
-  MessageSquare;
-  Briefcase;
-  Code;
-  FileText;
-  Megaphone
-} from "@/components/icons",
-
-
-
-const categories: ForumCategoryInfo[] = [
-  {
-
-
-    icon: "Briefcase"
-  }
-import { ForumCategory, ForumCategoryInfo } from "@/types/community",
 
 const categories: ForumCategoryInfo[] = [
   {
@@ -33,7 +16,6 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "MessageSquare"
-  }
   {
 
     id: "ai-tools"
@@ -42,7 +24,6 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "Code"
-  }
   {
 
     id: "feedback"

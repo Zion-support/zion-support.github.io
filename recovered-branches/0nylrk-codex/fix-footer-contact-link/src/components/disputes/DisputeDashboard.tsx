@@ -3,11 +3,6 @@ import React, { useEffect } from "react";
 import { useDisputes } from "@/hooks/useDisputes";
 import { DisputesList } from "./DisputesList";
 import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
   Card,
   CardContent,
   CardDescription,

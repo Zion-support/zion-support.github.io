@@ -1,17 +1,4 @@
 }</div> </div>) import fs from 'fs';
-import path from 'path';
-export type Trend = {
-  id: string
-  date: string
-  title: string
-  highlights: string[]
-  summary: string
-  tags: string[]
-}
-export async function getServerSideProps() {
-</div> </div>) ) 
- </div> </div>) ) 
-}</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
 export type Trend = {

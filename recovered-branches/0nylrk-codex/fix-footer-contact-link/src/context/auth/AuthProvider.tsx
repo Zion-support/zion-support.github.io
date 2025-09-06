@@ -8,11 +8,6 @@ import {useNavigate, useLocation} from 'react-router-dom';
 import {useAuthState} from "./useAuthState";
 import {useAuthEventHandlers} from "./useAuthEventHandlers";
 import {mapProfileToUser} from "./profileMapper";
-export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const {
-    user, setUser
-    isLoading, setIsLoading
-    onboardingStep, setOnboardingStep
   } = useAuthState();
   const navigate = useNavigate();
   const location = useLocation();
@@ -39,8 +34,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const { 
     user, setUser, 
     isLoading, setIsLoading, 
-    onboardingStep, setOnboardingStep ;
-  } = useAuthState();
     onboardingStep, setOnboardingStep 
   } = useAuthState(),
   
@@ -101,11 +94,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         }
         setIsLoading(false);
       }
-    );
-    // Initial session check
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (!session) {
-        setIsLoading(false)
       }
     });
 

@@ -178,6 +178,23 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                 />
               </div>
             </div>
+              {/* Category Filter */}
+
+
+            {/* Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div>
+                <label className="block text-sm font-medium text-white/70 mb-2">Category</label>
+                <select
                   value={selectedCategory  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -194,10 +211,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
-                  ))}
-                </select>
-              </div>
-              {/* Price Range Filter */}
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   <option value="all">All Prices</option>
@@ -206,10 +219,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                   <option value="enterprise">Enterprise ($5,000+)</option>
                 </select>
               </div>
-              {/* Sort By */}
-              <div>
-                <label className="block text-sm font-medium text-white/70 mb-2">Sort By</label>
-                <select
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   <option value="popularity">Popularity</option>
@@ -303,7 +312,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                           </div>
                           <div>
                             <h3 className="font-bold text-lg text-white group-hover:text-cyan-300 transition-colors duration-300">
-                              {service.name}
                               {service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -314,11 +322,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                           </div>
                         </div>
                         {service.popular && (
-                          <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
-                            Popular
-                          </div>
-                        )}
-                      </div>
                       {/* Description */}
                       <p className="text-white/80 text-sm mb-4 line-clamp-3">
                         {service.description  } catch (error) {
@@ -362,50 +365,14 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                           <span className="text - xs text - white / 50">({service.reviews})</span>;
                         </div>;
                       </div>;
-                      {/* Price and Rating */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="text-2xl font-bold text-cyan-400">
-                          {service.price  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          <span className="text-sm text-white/60">{service.period}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <StarIcon className="w-4 h-4 text-yellow-400 fill-current" />
-                          <span className="text-sm text-white/70">{service.rating}</span>
-                          <span className="text-xs text-white/50">({service.reviews})</span>
-                        </div>
-                      </div>
-                      {/* Price and Rating */}
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="text-2xl font-bold text-cyan-400">
-                      {/* Price and Rating */}
-                      <div className="flex items - center justify - between mb - 4">;
-                        <div className="text - 2xl font - bold text - cyan - 400">;
-                          {service.price}
-                          <span className="text-sm text-white/60">{service.period}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <StarIcon className="w-4 h-4 text-yellow-400 fill-current" />
-                          <span className="text-sm text-white/70">{service.rating}</span>
-                          <span className="text-xs text-white/50">({service.reviews})</span>
-                        </div>
-                      </div>
                           href={service.link}
+
+
                       {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                      <div className="flex gap-2">
-                        <a
-                          href={service.link  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -507,7 +474,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
               >
                 Schedule Consultation
                 <ArrowRight className="w-5 h-5" />
-              </a>
                 className="px-8 py-4 border border-white/20 hover:border-cyan-400/50 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
@@ -527,10 +493,5 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
       </section>
       <EnhancedFooter />
     </div>
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
 

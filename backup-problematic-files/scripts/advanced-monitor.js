@@ -1,25 +1,3 @@
-#!/usr/bin/env node
-/**
- * Advanced Monitoring Script
- */
-const pm2 = // // require("child_process");
-const fs = // // require("child_process");
-const path = // // require("path")
-class AdvancedMonitor {
-  constructor() {
-  checkDiskSpace() {
-    const { execSync } = // // require("child_process")
-    try {
-      const diskUsage = execSync("df -h /", { "encoding": "utf8" })
-      const timestamp = new Date().toISOString()
-      const logEntry = `[${timestamp}] Disk "usage": ${diskUsage}\n`
-  }
-  checkMemoryUsage() {
-    const { execSync } = // // require("child_process")
-    try {
-      const memoryUsage = execSync("free -h", { "encoding": "utf8" })
-      const timestamp = new Date().toISOString()
-      const logEntry = `[${timestamp}] Memory "usage": ${memoryUsage}\n`
 // Start monitoring
 const monitor = new AdvancedMonitor()
 monitor.startMonitoring()

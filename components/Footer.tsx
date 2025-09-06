@@ -1,11 +1,3 @@
-  Phone
-  Mail
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  ArrowRight
   Phone,
   Mail,
   MapPin,
@@ -344,8 +336,6 @@ const Footer: React.FC = () => {
               {footerLinks.solutions.map((link) => (
                 <li key={link.name}>
                   <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors"
           {/* Company */}
           <div>
             <h3 className=text-lg font-semibold mb-6">Company</h3>
@@ -380,8 +370,6 @@ const Footer: React.FC = () => {
               {footerLinks && footerLinks.company.map((link) => (;
                 <li key={link && link.name}>;
                   <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors"
           {/* Resources */}
           <div>
             <h3 className=text-lg font-semibold mb-6">Resources</h3>
@@ -397,7 +385,6 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-
 
 
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
@@ -485,7 +472,7 @@ const Footer: React.FC = () => {
                 Terms of Service;
               </Link>;
               <Link
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
+    </footer>);
 }
+
+

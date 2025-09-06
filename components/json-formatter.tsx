@@ -1,14 +1,4 @@
 
-  Code
-  Copy
-  RefreshCw
-  CheckCircle
-  XCircle
-  ArrowRight
-  Download
-  Upload
-  Settings
-  Eye;
   Code,
   Copy,
   RefreshCw,
@@ -45,38 +35,26 @@ export default function JSONFormatterPage() {;
       const minified = JSON.stringify(parsed);
       setFormattedJson(minified);
       setIsValid(true);
-      setErrorMessage('');
-    } catch (error) {
-      setIsValid(false);
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');    }      setErrorMessage('')
-    } catch (error) {
-      setIsValid(false);
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
-  }
-  const validateJSON = () => {
-    if (!inputJson.trim()) {
-      setIsValid(true);
-      setErrorMessage('');
-      return;    }      return
-    }
-    try {
-      JSON.parse(inputJson);
-      setIsValid(true);
-      setErrorMessage('');
-    } catch (error) {
-      setIsValid(false);
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');    }      setErrorMessage('')
-    } catch (error) {
-      setIsValid(false);
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
-  }
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');    }
-
-    }
-
   };
 
-  const clearAll = () => {
+
+
+    try {;
+      JSON && JSON.parse(inputJson);
+
+      setIsValid(true);
+      setErrorMessage('');
+    } catch (error) {;
+      setIsValid(false);
+      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');    }      setErrorMessage('');
+    } catch (error) {;
+      setIsValid(false);
+
+
+      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
+  };
+
+  const clearAll = () => {;
     setInputJson('');
     setFormattedJson('');
     setIsValid(true);
@@ -238,12 +216,12 @@ export default function JSONFormatterPage() {;
         </div>
       </section>
       {/* Features */}
-      <section className='py-20 bg-gray-800'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+
+
 
               Professional JSON Formatting Features
+
+
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and

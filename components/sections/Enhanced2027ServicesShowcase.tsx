@@ -1,22 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  ArrowRight
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Atom
-  Rocket
-  Shield
-  Target
-  CheckCircle
-  ExternalLink
-  Search
-  Filter
-  Grid
-  List
-  ChevronDown;} from 'lucide-react';
 
 
   ArrowRight,
@@ -64,6 +48,99 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         case 'name':
           return a.name.localeCompare(b.name);
         case 'price':
+
+          return (
+            parseFloat(a && a.price.replace(/[^0-9.]/g, '')) -;
+            parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
+          );
+        case 'roi':;
+          return (
+            parseFloat(a && a.roi.replace(/[^0-9.]/g, '')) -;
+            parseFloat(b && b.roi.replace(/[^0-9.]/g, ''));
+          );
+        default:;
+          return 0;      }          return parseFloat(a && a.price.replace(/[^0-9.]/g, '')) - parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
+        case 'roi':;
+          return parseFloat(a && a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b && b.roi.replace(/[^0-9.]/g, ''));
+        default: return 0;
+    });
+
+
+
+
+
+  const getCategoryColor = (category: string) => {
+    const colors = {
+
+
+  const getCategoryColor = (category: string) => {;
+    const colors = {;
+      'AI & Machine Learning': 'from-purple-500 to-indigo-600',;
+      'Quantum Computing': 'from-blue-500 to-cyan-600',;
+      'Emerging Technology': 'from-green-500 to-emerald-600',;
+      'Business Operations': 'from-orange-500 to-red-600',;
+      Cybersecurity: 'from-red-500 to-pink-600',;
+      'Enterprise IT': 'from-indigo-500 to-purple-600',;
+      'Healthcare & Biotechnology': 'from-emerald-500 to-teal-600',;
+      'Financial Technology': 'from-yellow-500 to-orange-600',;
+      'Space Technology': 'from-violet-500 to-purple-600',;
+      'Neural Technology': 'from-pink-500 to-rose-600',;
+      'Materials Science': 'from-cyan-500 to-blue-600',;
+      'Environmental Technology': 'from-teal-500 to-green-600',;
+    };
+    return (
+      colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
+    );  };
+
+  const getCategoryIcon = (category: string) => {;
+    const icons = {      'AI & Machine Learning': 'from-purple-500 to-indigo-600Quantum Computing': 'from-blue-500 to-cyan-600Emerging Technology': 'from-green-500 to-emerald-600Business Operations': 'from-orange-500 to-red-600Cybersecurity': 'from-red-500 to-pink-600Enterprise IT': 'from-indigo-500 to-purple-600Healthcare & Biotechnology': 'from-emerald-500 to-teal-600Financial Technology': 'from-yellow-500 to-orange-600Space Technology': 'from-violet-500 to-purple-600Neural Technology': 'from-pink-500 to-rose-600Materials Science': 'from-cyan-500 to-blue-600Environmental Technology': 'from-teal-500 to-green-600';
+    };
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
+  };
+
+  const getCategoryIcon = (category: string) => {;
+    const icons = {;
+      'AI & Machine Learning': <Brain className='w-5 h-5' />,;
+      'Quantum Computing': <Atom className='w-5 h-5' />,;
+      'Emerging Technology': <Rocket className='w-5 h-5' />,;
+      'Business Operations': <Target className='w-5 h-5' />,;
+      Cybersecurity: <Shield className='w-5 h-5' />,;
+      'Enterprise IT': <Zap className='w-5 h-5' />,;
+      'Healthcare & Biotechnology': <Brain className='w-5 h-5' />,;
+      'Financial Technology': <TrendingUp className='w-5 h-5' />,;
+      'Space Technology': <Rocket className='w-5 h-5' />,;
+      'Neural Technology': <Brain className='w-5 h-5' />,;
+      'Materials Science': <Atom className='w-5 h-5' />,;
+      'Environmental Technology': <Rocket className='w-5 h-5' />,;
+    return icons[category as keyof typeof icons] || <Zap className='w-5 h-5' />;
+  };
+
+
+  return (
+    <section className='py-20 bg-gray-900'>
+      <div className='container mx-auto px-4'>
+        {/* Header */}
+        <motion.div
+          className='text-center mb-16'          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+
+
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.6 }}>;
+          <h2 className='text-5xl font-bold mb-6'>;
+            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+              2027 Revolutionary Services;
+            </span>;
+          </h2>;
+          <p className='text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;
+            Discover our cutting-edge portfolio of 500+ innovative services;
+            spanning AI consciousness, quantum computing, synthetic biology, and;
+            beyond. Each service delivers measurable ROI and transforms your;
+            business into a future-ready powerhouse.          </p>;
+        </motion && motion.div>;
+
+
 
         {/* Search and Filters */}
         <motion&& motion.div
@@ -252,7 +329,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                       </div>
                     </div>
                     {/* Content */}
-                    <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors'>
                       {service.name}
                     </h3>;
                     <p className='text - gray - 300 mb - 4 leading - relaxed'>                    <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - cyan - 400 transition - colors">;
@@ -319,15 +395,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         ))}
 
                     {/* Tags */}
-                    <div className='flex flex-wrap gap-2 mb-6'>
-                      {service.tags.slice(0, 3).map((tag, idx) => (
-                        <span
-                          key={idx}
-                          className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                        >                    <div className="flex flex-wrap gap-2 mb-6">
-                      {service.tags.slice(0, 3).map((tag, idx) => (
-                        <span
-                          key={idx}
-                          className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"
+
+
+
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                        >
 
                         >
@@ -337,32 +407,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                       ))}
                     </div>
 
-                    </div>;
-                    </div>
-
-
                     {/* CTA */}
                     <Link
-                      href={service.link}
-                      className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'
-                    >
-                      <span>Learn More</span>
-                      <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />                    </Link>                      className="inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
-                    >
-                      <span>Learn More</span>
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          ) : (
-            <motion.div
-              key='list'              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-              className='space-y-4'            >              key="list"
-              className='space-y-4'            >
 
 
               initial={{ opacity: 0, scale: 0.95 }}
@@ -448,6 +494,25 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     </div>;
                   </div>;
                 </motion && motion.div>;
+                        </div>
+                        <Link
+                          href={service.link}
+                          className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'
+                        >
+                          <span>Learn More</span>
+                          <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />                        </Link>                        </div>
+                        <Link
+                          href={service.link}
+                          className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+                        >
+                          <span>Learn More</span>
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+
               ))}
             </motion && motion.div>;
           )}
@@ -482,13 +547,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               Clear Filters
             </button>
           </motion.div>
-        {/* CTA Section */}
-        <motion.div
-          className='mt-20 text-center'          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
           className="mt-20 text-center"
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 

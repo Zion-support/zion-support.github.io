@@ -288,8 +288,6 @@
 
 
 export const getPopularEmergingTechServices = () => {;
-
-
   return innovative2026EmergingTechServices.filter(service => service.popular);
 }
 // DNA Computing Platform realImplementation: true;
@@ -601,4 +599,3 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
     const price = parse_int (service.price.replace ('$', '').replace (, ''));
     return price >= min_price && price <= max_price;
   });
-};

@@ -1,9 +1,3 @@
-import {useState} from 'react';
-import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
-import {quoteRequestService} from '@/services/quoteRequestService';
-import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
-import { useToast } from '@/components/ui/use-toast';
-import type { DateRange } from '@/types/dateRange';
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');
@@ -90,7 +84,6 @@ import type { DateRange } from '@/types/dateRange';
   // Update quote status mutation
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
-      quoteRequestService.updateStatus(id, status),
     onSuccess: () => {
       toast({
         title: "Status updated"
@@ -111,6 +104,9 @@ import type { DateRange } from '@/types/dateRange';
       })
     }
   });
+  // Delete mutation
+  const deleteMutation = useMutation({
+    mutationFn: (id: string) => quoteRequestService && quoteRequestService.delete(id);
     onSuccess: () => {
       toast({
         title: "Quote deleted"
@@ -130,6 +126,19 @@ import type { DateRange } from '@/types/dateRange';
     }
   });
   return {
+    quotes: filtered_quotes;
+    is_loading;
+    error;
+    status_filter;
+    setStatusFilter;
+    archive_filter;
+    setArchiveFilter;
+    search_query;
+    setSearchQuery;
+
+
+    toggleArchive: (id: string, isArchived: boolean) => 
+
     },
     onError: (error: Error) => {
       toast({

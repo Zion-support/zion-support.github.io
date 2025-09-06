@@ -60,116 +60,12 @@ export default function AISeosuitePage() {
       icon: <Zap className='w-8 h-8 text-white' />
       title: 'Automated Reports'
       description:
-        'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
-      color: 'bg-gradient-to-br from-pink-500 to-rose-600'
-      gradient: 'from-pink-400 to-rose-500'
-    }
         'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
       color: 'bg-gradient-to-br from-pink-500 to-rose-600',
       gradient: 'from-pink-400 to-rose-500',
     },;
   ];
 
-  const seoTools = [
-    {
-      category: 'Keyword Research'
-      icon: <Search className='w-6 h-6 text-blue-400' />
-      tools: [
-        'Long-tail keyword finder'
-        'Competitor keyword analysis'
-        'Search volume estimation'
-        'Keyword difficulty scoring'
-        'Trending keywords'
-      ]
-    }
-    {
-      category: 'On-Page SEO'
-      icon: <Target className='w-6 h-6 text-green-400' />
-      tools: [
-        'Content optimization'
-        'Meta tag generator'
-        'Schema markup builder'
-        'Internal linking suggestions'
-        'Image optimization'
-      ]
-    }
-    {
-      category: 'Technical SEO'
-      icon: <Settings className='w-6 h-6 text-purple-400' />
-      tools: [
-        'Site audit tool'
-        'Page speed analyzer'
-        'Mobile optimization'
-        'Core Web Vitals'
-        'XML sitemap generator'
-      ]
-    }
-    {
-      category: 'Analytics & Reporting'
-      icon: <BarChart3 className='w-6 h-6 text-orange-400' />
-      tools: [
-        'Ranking tracker'
-        'Traffic analysis'
-        'Conversion tracking'
-        'Competitor monitoring'
-        'Custom dashboards'
-      ]
-    },  ];      title: 'AI Keyword Research'
-      description: 'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.'
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-      gradient: 'from-blue-400 to-cyan-500'}
-    {
-      icon: <TrendingUp className="w-8 h-8 text-white" />
-      title: 'Ranking Analytics'
-      description: 'Track your search rankings in real-time with comprehensive analytics and competitor insights.'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      gradient: 'from-green-400 to-emerald-500'}
-    {
-      icon: <Target className="w-8 h-8 text-white" />
-      title: 'Content Optimization'
-      description: 'AI-powered content analysis and optimization suggestions to improve search visibility.'
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-      gradient: 'from-purple-400 to-indigo-500'}
-    {
-      icon: <BarChart3 className="w-8 h-8 text-white" />
-      title: 'Technical SEO'
-      description: 'Comprehensive technical SEO audits with actionable recommendations for improvement.'
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-      gradient: 'from-orange-400 to-red-500'}
-    {
-      icon: <Globe className="w-8 h-8 text-white" />
-      title: 'Local SEO'
-      description: 'Optimize for local search with location-based keyword research and citation management.'
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
-      gradient: 'from-teal-400 to-blue-500'}
-    {
-      icon: <Zap className="w-8 h-8 text-white" />
-      title: 'Automated Reports'
-      description: 'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
-      color: 'bg-gradient-to-br from-pink-500 to-rose-600'
-      gradient: 'from-pink-400 to-rose-500'}]
-  const seoTools = [
-    {
-      category: 'Keyword Research'
-      icon: <Search className="w-6 h-6 text-blue-400" />
-      tools: ['Long-tail keyword finderCompetitor keyword analysisSearch volume estimationKeyword difficulty scoringTrending keywords']
-    }
-    {
-      category: 'On-Page SEO'
-      icon: <Target className="w-6 h-6 text-green-400" />
-      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
-    }
-    {
-      category: 'Technical SEO'
-      icon: <Settings className="w-6 h-6 text-purple-400" />
-      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
-    }
-    {
-      category: 'Analytics & Reporting'
-      icon: <BarChart3 className="w-6 h-6 text-orange-400" />
-      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
-    }
-  ];
 
 export default function AISeosuitePage() {
   const features = [
@@ -386,8 +282,6 @@ export default function AISeosuitePage() {
                 </div>;
                 <h3 className='text - xl font - bold mb - 4 text - white group - hover:text - blue - 400 transition - colors duration - 300'>;
                   {feature.title}
-                </h3>
-                <p className='text-gray-400 leading-relaxed'>                  {feature.description}              Powerful SEO Features
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Everything you need to dominate search rankings and drive organic traffic
@@ -417,10 +311,6 @@ export default function AISeosuitePage() {
                 </p>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
       {/* SEO Tools Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -665,16 +555,6 @@ export default function AISeosuitePage() {
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
-                      className='flex items-center text-gray-300'
-                    >
-                      <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
-                  <p className="text-gray-400">{plan.description}</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                      {feature}
 
                       {feature}
                     </li>;
@@ -822,10 +702,5 @@ export default function AISeosuitePage() {
         </div>
       </section>
     </>
-}
-}
-}
-}
-}
   );
 }

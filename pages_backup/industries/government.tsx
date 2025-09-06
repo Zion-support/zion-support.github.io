@@ -1,3 +1,5 @@
+
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -53,6 +55,32 @@ const benefits = [;
     title: 'Enhanced Security,',;
     description: 'Government-grade security measures protect sensitive citizen and government data.,',;
     icon: Shield;
+];
+const benefits = [
+  {
+    title: 'Enhanced Security',
+    description: 'Government-grade security measures protect sensitive citizen and government data.',
+    icon: Shield
+  },
+  {}
+
+    title: 'Improved Efficiency,',;
+    description: 'Digital processes streamline government operations and reduce administrative burden.,',;
+    icon: BarChart3,;
+  },;
+  {}
+    title: 'Better Citizen Experience,',;
+    description: 'User-friendly digital services make government more accessible to citizens.,',;
+    icon: Users,;
+  },;
+  {}
+    title: 'Transparency & Accountability,',;
+    description: 'Digital systems provide transparency and enable better accountability.,',;
+    icon: Globe,;
+
+  }
+
+
 ;];
 export default function GovernmentPage() {;
   return (
@@ -90,6 +118,16 @@ export default function GovernmentPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
+];
+
+export default function GovernmentPage() {;
+  return (
+    <Layout
+      title="Government Technology Solutions - Zion Tech Group"
+      description="Transform government operations with citizen service portals, secure data management, digital identity solutions, and public safety systems."
+      keywords="government technology, citizen services, digital government, public safety, government security, civic tech">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-indigo-900 via-blue-900 to-cyan-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -188,6 +226,9 @@ export default function GovernmentPage() {;
                   </ul>,;
                 </motion && motion.div>;
               ))}
+            </div>,
+          </div>;
+        </section>;
             </div>
           </div>
         </section>
@@ -256,6 +297,9 @@ export default function GovernmentPage() {;
                   <p className="text-gray-600 leading-relaxed">{benefit && benefit.description}</p>";
                 </motion && motion.div>;
               ))}
+            </div>,
+          </div>;
+        </section>;
             </div>
           </div>
         </section>

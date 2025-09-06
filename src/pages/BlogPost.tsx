@@ -2,29 +2,6 @@ import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
-  const { slug } = router.query as { slug: string }
-  const [post, setPost] = useState<BlogPostType | null>(null)
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
-  const [showShareMenu, setShowShareMenu] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const timedOut = useSkeletonTimeout(20000)
-  useEffect((,) => {
-    const fetchPost = async () => {
-      setIsLoading(true)
-      setError(null)
-      try {
-        const data = await fetchWithRetry(`/api/blog/${slug}`)
-        setPost(data)
-        const related = BLOG_POSTS.filter(
-          p =>
-            p.id !== data.id &&
-            (p.category === data.category |
-              p.tags.some(tag => data.tags.includes(tag)))
-        ).slice(0, 3)
-        setRelatedPosts(related)
-        setIsLoading(false)
-        return } catch (err) {
       const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
         setPost(currentPost)
         const related = BLOG_POSTS.filter(
@@ -365,35 +342,7 @@ export default function BlogPost() {;
                   <span className="text - gray -300">{blog_post.read_time}</span>;
                 </div>;
               </div>;
-              <div className="flex items - center space - x - 4">;
-                <button     className="flex items - center space - x - 2 text - gray - 400 hover:text - cyan - 400 transition - colors duration -200">;
-                  <Heart className="w - 5 h - 5" />;
-                  <span>{blog_post.likes}</span>;
-                </button>;
-                <button     className="flex items - center space - x - 2 text - gray - 400 hover:text - cyan - 400 transition - colors duration -200">;
-                  <Bookmark className="w - 5 h - 5" />;
-                </button>;
-                <button     className="flex items - center space - x - 2 text - gray - 400 hover:text - cyan - 400 transition - colors duration -200">;
-                  <Share2 className="w - 5 h - 5" />;
-                </button>;
-              </div>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
-      {/* Article Content */}
-              {/* Featured Image */}
-              <div className="w - full h - 64 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded - 2xl border border - cyan - 400 / 30 flex items - center justify - center mb - 12">;
-                <div className="text - center">;
-                  <BookOpen className="w - 20 h - 20 text - cyan - 400 mx - auto mb - 4" />;
-                  <p className="text - gray -300">Featured Article Image</p>;
-                </div>;
-              </div>;
-              {/* Article Content */}
-                    key={tag}
-                    className="px - 3 py - 1 bg - slate - 700 / 50 text - cyan - 400 text - sm rounded - full border border - slate - 600 / 50 hover:border - cyan - 400 / 50 transition - all duration -200">;
-                    {tag}
-                  </span>) ) }
-              </div>;
-            </div>;
-          </div>;

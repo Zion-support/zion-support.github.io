@@ -8,10 +8,6 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { UseFormReturn } from "react-hook-form",
 import { FormValues } from "./useHireRequestForm",
-interface TimelineFieldProps {
-  form: UseFormReturn<FormValues>;
-}
-export function TimelineField({ form }: TimelineFieldProps) {
 
   const timelineOptions = [
     { value: "Less than 1 week", label: "Less than 1 week" }

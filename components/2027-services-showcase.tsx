@@ -392,9 +392,6 @@ export default function ServicesShowcase2027() {;
                   value={searchTerm}
               {/* Category Filter */}
                   ))}
-                </select>
-              </div>
-
               {/* Price Range Filter */}
 
 
@@ -435,8 +432,6 @@ export default function ServicesShowcase2027() {;
                   ))}
                 </select>
               </div>
-
-
 
               {/* Sort By */}
               <div>
@@ -525,8 +520,6 @@ export default function ServicesShowcase2027() {;
                             +{service.features.length - 3} more features
                           </div>
                         )}
-                      </div>
-                    </div>
 
                     {/* ROI */}
 
@@ -582,21 +575,11 @@ export default function ServicesShowcase2027() {;
                   </div>;
                 </motion && motion.div>;
               ))}
-            </AnimatePresence>
-          </div>
-
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (;
             <motion&& motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-                onClick={() => {
-                  setSearchTerm('');
-                  setSelectedCategory('all');
-                  setSelectedPriceRange('all');
-                }}
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')
-
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
@@ -604,14 +587,11 @@ export default function ServicesShowcase2027() {;
               </button>
             </motion.div>
           )}
-        </div>
-      </section>
-
       {/* Contact Section */}
-      <section className='px-4 sm:px-6 lg:px-8 mb-20'>
-        <div className='max-w-4xl mx-auto'>
-          <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>
-            <h2 className='text-3xl font-bold text-white mb-4'>
+
+
+
+
 
               Ready to Transform Your Business?
             </h2>
@@ -665,49 +645,3 @@ export default function ServicesShowcase2027() {;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link
                 href="/contact"
-              <Link
-                href='/pricing'
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'                href="/pricing"
-                className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
-              >
-                View Pricing Plans
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Footer */}
-      <footer className='px-4 sm:px-6 lg:px-8 py-12 border-t border-cyan-500/30'>
-        <div className='max-w-7xl mx-auto text-center'>
-          <div className='mb-8'>
-            <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4 shadow-2xl shadow-cyan-500/50'>
-              Z
-            </div>
-            <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2'>
-              Zion Tech Group
-            </h3>
-            <p className='text-cyan-300'>2027 Innovation Hub</p>
-          </div>
-          <div className='text-cyan-300 text-sm'>
-            <p>&copy; 2027 Zion Tech Group. All rights reserved.</p>
-            <p className='mt-2'>
-              <Link
-                href='/privacy'
-              <Link
-                href='/contact'
-                className='hover:text-cyan-400 transition-colors duration-300'
-              >
-                Contact Us
-              </Link>            </p>              Z
-            </div>
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-              Zion Tech Group
-            </h3>
-            <p className="text-cyan-300">2027 Innovation Hub</p>
-          </div>
-          <div className="text-cyan-300 text-sm">
-            <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>
-            <p className="mt-2">
-              <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300">Privacy Policy</Link>
-    </UltraFuturisticMatrixBackground2027>));
-}

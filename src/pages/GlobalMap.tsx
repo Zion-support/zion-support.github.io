@@ -137,12 +137,6 @@ export default function GlobalMapPage() {;
           </div>
           <div className="flex-1 space-y-6">
             <section>
-              <h2 className='text-xl font-semibold mb-2'>
-                Top Regions by Talent
-              </h2>
-              <ul className='space-y-1'>
-                {topRegions.map(r => (
-                  <li key={r.id} className='flex justify-between border-b pb-1'>                    <span>{r.region}</span>
               <h2 className="text-xl font-semibold mb-2">Top Regions by Talent</h2>
               <ul className="space-y-1">
                 {topRegions.map((r) => (

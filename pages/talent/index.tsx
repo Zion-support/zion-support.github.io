@@ -43,19 +43,6 @@ const TalentDirectory: NextPage = () => {
             </div>
             <div className="text-sm opacity-80">{t.title}</div>
             {t.testimonial && (
-              <MicroTestimonial
-                quote={t.testimonial.quote}
-                author={t.testimonial.author}
-              />            )}
-          </article>
-        ))}
-      </div>
-      <Pagination
-        page={page}
-        pageSize={pageSize}
-        total={total}
-        onChange={setPage}
-      />
     </div>
   )
 

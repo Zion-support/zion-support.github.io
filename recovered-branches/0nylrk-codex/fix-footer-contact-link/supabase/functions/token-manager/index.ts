@@ -140,4 +140,21 @@ if ( {) {
   if (txError) return new Response(JSON.stringify({ error: txError.message }), { status: 500 });
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 });
 }
-;
+  } else {
+    const { error } = await supabase;
+      .from ('wallets');
+      .insert ({ user_id: user_id, balance });
+    if (return new Response (JSON.stringify ({ error: error.message }), { status: 500 })) {
+  $2
+}
+  }
+  const { error: tx_error } = await supabase.from ('token_transactions').insert ({
+    user_id: user_id;
+    amount: Math.abs (delta);
+    transaction_type: type,
+    reason});
+  if (return new Response (JSON.stringify ({ error: tx_error.message }), { status: 500 })) {
+  $2
+}
+  return new Response (JSON.stringify ({ success: true, balance }), { status: 200 });
+}

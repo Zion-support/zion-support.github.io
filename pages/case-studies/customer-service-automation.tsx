@@ -20,6 +20,22 @@
               How a Financial Services Provider achieved 80% reduction in response time with AI-powered chatbots and automated ticket routing
             </p>
           </header>
+            {/* Company Overview */}
+
+
+          {/* Case Study Content */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="max-w-4xl mx-auto">
+            {/* Company Overview */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -96,14 +112,12 @@
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-green-400 mb-3">Automated Ticket Routing</h4>
                     <p className="text-white/80">
-                      Smart routing algorithms automatically assign tickets to the most
                       qualified agents based on expertise and workload.
                     </p>
                   </div>
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-green-400 mb-3">Sentiment Analysis</h4>
                     <p className="text-white/80">
-                      Real-time sentiment analysis identifies customer emotions and
                       prioritizes urgent cases automatically.
                     </p>
                   </div>

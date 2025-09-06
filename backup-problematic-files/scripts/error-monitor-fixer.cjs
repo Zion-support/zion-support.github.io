@@ -28,8 +28,14 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

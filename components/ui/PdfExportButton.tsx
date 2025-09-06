@@ -58,8 +58,5 @@ export type PdfExportButtonProps = {;
     </button>);
       Download as PDF
     </button>
-      Download as PDF
-    </button>
-);
 }
   );

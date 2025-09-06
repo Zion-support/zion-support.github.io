@@ -1,5 +1,1 @@
-  language: 'en',
-  resolvedLanguage: 'en';
-};
-
 }

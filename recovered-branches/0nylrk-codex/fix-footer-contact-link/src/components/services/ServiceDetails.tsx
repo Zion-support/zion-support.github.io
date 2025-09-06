@@ -1,18 +1,4 @@
 
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Server, Clock, MapPin} from "lucide-react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Server, Clock, MapPin } from "lucide-react",
-
-interface ServiceDetailsProps {
-  country: string;
-}
-interface ServiceDetailsProps {
-  country: string;
-}
-// Component to show service details for the selected country
-export function ServiceDetails({ country }: ServiceDetailsProps) {
-  // Get datacenters for regions (simplified - in production this would come from a real database)
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Server, Clock, MapPin } from './lucide-react';
 
@@ -49,11 +35,38 @@ function ServiceDetails() {
       "Australia": ["Sydney", "Melbourne", "Perth"],
       "Singapore": ["Singapore Central"],
       "Canada": ["Toronto", "Montreal", "Vancouver"],
-      // Default for other countries
-      "default": ["Major metropolitan areas"]
     }
     return dataCenters[country] |dataCenters["default"]
   }
+      "Japan": "JST";
+      "Australia": "AEST / ACDT / AWST depending on location";
+      "Singapore": "SGT";
+
+
+    },
+    
+    return regions[country] || regions["default"]
+  },
+  
+
+  // Get region-specific instructions
+  const getRegionalInstructions = (country: string): string => {
+    // In a real implementation, this would be much more detailed and specific
+    const timeZones: Record<string string> = {
+      "United States": "EST/CST/PST depending on location",
+      "United Kingdom": "GMT/BST",
+      "Germany": "CET/CEST",
+      "Japan": "JST",
+      "Australia": "AEST/ACDT/AWST depending on location",
+      "Singapore": "SGT",
+      "default": "Local timezone"
+
+    },
+    
+    const timezone = timeZones[country] || timeZones["default"],
+    
+
+
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
            `Response times are typically within 4 hours for metropolitan areas. ` +
            `Please have site access permissions and contact details ready for our technicians. ` +
@@ -253,24 +266,3 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
             </h4>
             <p className="text-zion-slate-light">
               {getRegionalInstructions(country)}
-            </p>
-          </div>
-          <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">
-            <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>
-            <ul className="list-disc list-inside text-zion-slate-light space-y-1">
-              <li>Transportation to your site</li>
-              <li>First hour of onsite technical support</li>
-              <li>Basic hardware diagnosis</li>
-              <li>Network connectivity troubleshooting</li>
-              <li>Equipment installation assistance</li>
-            </ul>
-          </div>
-        </div>
-      </CardContent>
-      <CardFooter className="border-t border-zion-blue-light pt-4">
-        <p className="text-sm text-zion-slate-light">
-          For custom enterprise needs or multi-site services in {country}, please contact our enterprise team for tailored pricing.
-        </p>
-      </CardFooter>
-    </Card>
-  )

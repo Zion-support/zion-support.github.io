@@ -2,10 +2,6 @@ import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
-  Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
- } from 'lucide-react';
-import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -373,9 +369,14 @@ if ( {) {
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
 
               ))}
-            </motion.div>
-          </div>
-        </section>
+
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+
+
 
         {/* Services Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
@@ -459,20 +460,12 @@ if ( {) {
                   <UltraFuturisticServiceCard2035 service={service} />;
                 </motion && motion.div>;
               ))}
-            </motion.div>
-
             {/* View All Services Button */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
               viewport={{ once: true }}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto'
-              >
-                <span>View All Services</span>
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -533,11 +526,6 @@ if ( {) {
                   icon: <Brain className='w-12 h-12' />
                   title: 'AI-Powered Solutions'
                   description:
-                    'Leverage the latest AI and machine learning technologies for intelligent automation and insights'
-                }
-                {
-                  icon: <Shield className='w-12 h-12' />
-                  title: 'Enterprise Security'
                   description:
                     'Military-grade security protocols and compliance standards to protect your business'
                 }
@@ -600,9 +588,19 @@ if ( {) {
                 </motion.div>
 
               ))}
-            </div>
-          </div>
-        </section>
+
+            </div>;
+          </div>;
+        </section>;
+
+
+        {/* CTA Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-4xl mx-auto text-center">;
+            <motion&& motion.div
+
+
 
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>

@@ -23,11 +23,6 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
 
-export type ProposalForm = {;
-
-
-
-export type ProposalForm = {;
   targetInstitution: string;
   targetInstitution: string;
   type: ProposalType;
@@ -45,18 +40,6 @@ export type ProposalForm = {
   regionalScope: string,
   budgetOrGoals: string,
   supportingMultiverses: string,;
-  language?: string;
-  customPrompt?: string
-}
-export default function ProposalGenerator() {
-  const [form, setForm] = useState<ProposalForm>({
-    targetInstitution: 'UNDP'
-    type: 'Workforce Dev'
-    regionalScope: 'Global'
-    budgetOrGoals: ''
-    supportingMultiverses: ''
-    language: 'English'
-    customPrompt:
 
 
   language?: string;
@@ -119,8 +102,6 @@ export default function ProposalGenerator() {;
         body: JSON.stringify({
       });
       const data = await res.json();
-      setStatusMessage('Export failed');    }      const data = await res.json();
-      setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl })
       setStatusMessage('Exported. Files saved.')
     } catch (e) {
       console.error(e);
@@ -190,10 +171,6 @@ export default function ProposalGenerator() {;
       setStatusMessage('Submission failed');    }
   }
   return (
-        <div className='space-y-4'>      const data = await res.json();
-      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
-    } catch (e) {
-      console.error(e);
 
     <div className='space-y-6'>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -306,14 +283,6 @@ export default function ProposalGenerator() {;
           <div className='flex gap-2'>;
             <button
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
-                className="w-full border rounded px-3 py-2 min-h-[80px]"
-                value={form && form.customPrompt}
-                onChange={(e) => handleChange('customPrompt', e && e.target.value)}
-              />;
-            </div>;
-          </div>;
-          <div className="flex gap-2">;
-            <button
               onClick={handleGenerate}
               disabled={isGenerating}
             >
@@ -327,22 +296,6 @@ export default function ProposalGenerator() {;
               Export (PDF/JSON/MD)
             </button>
             <button
-              className='px-4 py-2 bg-purple-600 text-white rounded'              onClick={handleSubmitBridge}              className="px-4 py-2 bg-purple-600 text-white rounded"
-              onClick={handleSubmitBridge}
-              onClick={handleGenerate}
-              disabled={isGenerating}>;
-              {isGenerating ? 'Generating...' : 'Generate Draft'}
-            </button>;
-            <button
-
-
-              onClick={handleExport}
-              disabled={!draftMarkdown}>;
-              Export (PDF/JSON/MD);
-            </button>;
-            <button
-
-
               )}
             </div>;
           )}

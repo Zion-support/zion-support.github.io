@@ -61,14 +61,6 @@ if ( {) {
                    Community posts: 25 pts each;
                   <br /> Refer friends: 200 pts each;
                 </p>;
-        {isAuthenticated && (
-          <Tooltip>
-            <TooltipTrigger asChild>
-                variant='ghost'
-                size='sm'
-                onClick={handleRefresh}
-                disabled={isRefreshing |loading}
-                className='p-1 h-6 w-6 text-muted-foreground hover:text-foreground'
                 <p className='text - xs mt - 2 text - muted - foreground border - t pt - 1'>;
                   Click to learn more and join!;
                 </p>;

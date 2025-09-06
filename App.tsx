@@ -8,3 +8,13 @@ import AboutPage from './src/pages/About';
 import ContactPage from './src/pages/Contact';
   );
 }
+;
+export default /**
+ * App - Function description
+ */
+function App() {
+  return (
+    <main>;
+      <h1 > Hello App</h1>;
+    </main>);
+}

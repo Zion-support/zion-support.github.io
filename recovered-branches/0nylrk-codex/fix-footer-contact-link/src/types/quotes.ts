@@ -35,15 +35,6 @@ export interface QuoteFormData {
   project_description: string;
   start_date?: Date;
   end_date?: Date;
-  name: string;
-  email: string;
-  phone: string
-  company: string
-}
-export interface Budget {
-
-
-export interface Budget {;
   amount: number;
   maxAmount?: number
   type: BudgetType

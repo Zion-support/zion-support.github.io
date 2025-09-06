@@ -1,16 +1,22 @@
       }
     } catch {}
   }, []);
-  function completeOnboarding() {
-    try {
-      if (typeof window !== 'undefined') {
-        window.localStorage.setItem('zion_has_onboarded', '1');
+
+
+  function completeOnboarding() {;
+    try {;
+      if (typeof window !== 'undefined') {;
+        window && window.localStorage.setItem('zion_has_onboarded', '1');
+
+        window.localStorage.setItem('zion_has_onboarded1')
       }
     } catch {}
-    setOpen(false);  }        window.localStorage.setItem('zion_has_onboarded1')
+    setOpen(false);  }        window && window.localStorage.setItem('zion_has_onboarded1');
       }
     } catch {}
-    setOpen(false)
+
+
+
     setOpen(false);  }
 
   }

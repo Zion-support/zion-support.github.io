@@ -3,27 +3,6 @@ import { motion } from 'framer-motion';
 
 import {
 
-import {;
-  ArrowRight,;
-  Star,;
-  Search,;
-  Shield,;
-  Globe,;
-  TrendingUp,;
-  Brain,;
-  Atom,;
-  Zap,;
-  Cpu,;
-  Cloud,;
-  BarChart3,;
-  Lock,;
-  Rocket,;
-  Eye,;
-  Sparkles,;
-  Target,;
-  Users,;
-  Award,;
-  Clock,;} from 'lucide-react';import { ;
   ArrowRight;
   Star, ;
 import {
@@ -80,16 +59,6 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
     ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3);
     ...innovative2041ITServices.filter(s => s.popular).slice(0, 2);
     ...innovative2041AIServices.filter(s => s.popular).slice(0, 1)
-  ];
-  const testimonials = [
-    {
-      name: 'Dr. Sarah Chen',
-      role: 'Chief AI Officer, FutureTech Inc.',
-      company: 'FutureTech Inc.',
-      content:
-        "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago."
-      avatar: '👩‍💼'
-    }
     {
       name: 'Marcus Rodriguez',
       role: 'VP Quantum Computing, QuantumCorp',
@@ -167,7 +136,6 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
           </div>
 
           {/* Hero Content */}
-          <div className="text-center max-w-7xl mx-auto relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -231,18 +199,11 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
               {stats.map ((stat, index) => (
                 <motion.div;
                   key={stat.label}
-                  className='text-center'                  initial={{ opacity: 0, y: 20 }}                  className="text-center"
-                  className='text-center'                  initial={{ opacity: 0, y: 20 }}
-
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-              ))}
-            </motion.div>
-          </div>
-        </section>
               ))}
 
 
@@ -319,6 +280,19 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
               {featuredServices && featuredServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+
+            <motion.div
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
+
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              {featuredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.5, delay: 0 && 0.4 + index * 0 && 0.1 }}
@@ -408,14 +382,6 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              {testimonials.map((testimonial, index) => (
-                <motion.div
-                  key={testimonial.name}
-                  className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}                  className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"
-                  className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}
 
 
                   initial={{ opacity: 0, y: 30 }}
@@ -427,10 +393,6 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
                   <p className="text-gray-300 mb-6 leading-relaxed">{testimonial.content}</p>
                   <div className="flex items-center gap-2 mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
-              ))}
-            </motion.div>
-          </div>
-        </section>
               ))}
 
 

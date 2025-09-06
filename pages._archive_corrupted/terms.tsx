@@ -38,3 +38,4 @@ export default function Terms(): any ({ }: TermsProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
+

@@ -27,10 +27,6 @@ function fileToBase64(file: File): Promise<string> {
   })
 }
 export default function BookBuilder() {
-  const [project, setProject] = useState<BookProject>(initialProject)
-  const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER')
-  const [busy, setBusy] = useState<boolean>(false)
-  const coverPreview = useMemo(() => {
     return (
       <div className="w-full max-w-2xl border rounded-lg overflow-hidden shadow bg-white text-gray-900">
         <div className="p-8 space-y-2">
@@ -130,16 +126,7 @@ export default function BookBuilder() {
                 value={project.meta.title}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, title: e.target.value } })}              />
             </label>
-:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-                value={project.meta.title}
-                onChange={(e) => setProject({ ...project, meta: { ...project.meta, title: e.target.value } })}              />
-            </label>
-:components/book/BookBuilder.tsx
-            <label className="space-y-1">
-              <div className="text-xs uppercase opacity-60">Subtitle</div>
-              <input
-                className="w-full border rounded px-3 py-2"
+
             <label className=&quot;space-y-1&quot;>
               <div className=&quot;text-xs uppercase opacity-60&quot;>Subtitle</div>
               <input,
@@ -147,16 +134,7 @@ className=&quot;w-full border rounded px-3 py-2&quot;
                 value={project.meta.subtitle}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}              />
             </label>
-:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-                value={project.meta.subtitle}
-                onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}              />
-            </label>
-:components/book/BookBuilder.tsx
-            <label className="space-y-1">
-              <div className="text-xs uppercase opacity-60">Author</div>
-              <input
-                className="w-full border rounded px-3 py-2"
+
             <label className=&quot;space-y-1&quot;>
               <div className=&quot;text-xs uppercase opacity-60&quot;>Author</div>
               <input,
@@ -164,17 +142,7 @@ className=&quot;w-full border rounded px-3 py-2&quot;
                 value={project.meta.author}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}              />
             </label>
-:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-                value={project.meta.author}
-                onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}              />
-            </label>
-:components/book/BookBuilder.tsx
-            <label className="space-y-1">
-              <div className="text-xs uppercase opacity-60">ISBN (optional)</div>
-              <input
-                className="w-full border rounded px-3 py-2"
-                placeholder="9781234567897"
+
             <label className=&quot;space-y-1&quot;>
               <div className=&quot;text-xs uppercase opacity-60&quot;>ISBN (optional)</div>
               <input,
@@ -210,16 +178,6 @@ className=&quot;w-full border rounded px-3 py-2&quot;
         <h2 className="font-semibold">Chapters</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {project.chapters.map((ch, idx) => (
-            <div key={idx} className="border rounded-lg p-4 space-y-2">
-              <div className="font-medium">{ch.title}</div>
-              <textarea
-                className="w-full min-h-[160px] border rounded p-2"
-                value={ch.content}
-                onChange={(e) => {
-                  const chapters: BookChapter[] = [...project.chapters]
-                  chapters[idx] = { ...chapters[idx], content: e.target.value }
-                  setProject({ ...project, chapters })
-                }}
             <div key={idx} className=&quot;border rounded-lg p-4 space-y-2&quot;>
               <div className=&quot;font-medium&quot;>{ch.title}</div>
               <textarea,
@@ -245,14 +203,6 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
                 }}
               />
-                value={q.attribution ?? ''}
-                onChange={(e) => {
-                  const quoteCallouts = [...project.visuals.quoteCallouts]
-                  quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value }
-
-                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
-                }}
-                placeholder="Attribution"
                 value={q.attribution ?? ''}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts],

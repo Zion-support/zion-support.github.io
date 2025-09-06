@@ -1,8 +1,4 @@
 
-import React from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Download } from "lucide-react",
 interface ExportPanelProps {
 
   platform: AppPlatform
@@ -36,18 +32,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join(),
         
         // Add keywords as additional rows
-        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
-      }
-      // Create download link
-      const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' })
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = fileName;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
 import React from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -156,3 +140,6 @@ interface ExportPanelProps {;
         </div>;
       </CardContent>;
 };
+    </Card>);
+}
+;

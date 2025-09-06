@@ -25,9 +25,9 @@ interface TabDefinition {
 
 export function DeveloperPortal() {;
   const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState<string>("documentation");
-export function DeveloperPortal() {
-  const { user } = useAuth();
+
+
+
 
   const [activeTab, setActiveTab] = useState<string>("documentation");
 

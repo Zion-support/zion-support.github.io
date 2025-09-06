@@ -18,6 +18,23 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
     }
     return config;
   }
+
+      config.plugins.push(};
+        new BundleAnalyzerPlugin({;
+          "analyzerMode": 'static';
+
+
+}
+
+}
+
+};
+
+
+}
+}
+
+
 ;
 const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer');
 module.exports = {

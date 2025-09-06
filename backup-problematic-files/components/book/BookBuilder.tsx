@@ -6,11 +6,6 @@
           <div className="text - lg opacity - 80">{project.meta.subtitle}</div>;
           <div className="pt - 6 text - sm opacity - 70">By {project.meta.author}</div>;
           {project.meta.isbn ? (
-                value={project.meta.subtitle}
-                on_change={(e) => set_project ({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}
-              />;
-            </label>;
-            <label className="space - y-1">;
               <div className="text - xs uppercase opacity - 60">Author</div>;
               <input;
                 className="w - full border rounded px - 3 py - 2";

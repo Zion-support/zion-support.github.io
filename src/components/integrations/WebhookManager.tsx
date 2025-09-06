@@ -153,13 +153,6 @@ export function WebhookManager() {;
             Define webhooks to notify external systems when events occur in Zion.
           </CardDescription>
         </CardHeader>
-        <CardContent className='space-y-4'>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-            <div className='space-y-2'>
-              <Label htmlFor='webhook-name'>Webhook Name</Label>
-              <Input
-                id='webhook-name'
-                placeholder='e.g., Job Postings Webhook'
         <CardContent className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
@@ -177,9 +170,6 @@ export function WebhookManager() {;
                   key = {event,}
                   onRemove = {(,) => handleRemoveEvent(event),}
               ))}
-            </div>
-            <div className='flex space-x-2'>
-              <Select
             
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
@@ -444,14 +434,6 @@ export function WebhookManager() {;
                       <SelectValue placeholder="Test webhook" />
                     </SelectTrigger>
                     <SelectContent>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-        )}
         {testResult && (
           <Card className='mt-4 border-blue-200'>
             <CardHeader>

@@ -1,3 +1,5 @@
+
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -53,6 +55,32 @@ const benefits = [;
     title: 'Increased Efficiency,',;
     description: 'Automated processes and AI optimization improve production efficiency.,',;
     icon: Activity;
+];
+const benefits = [
+  {
+    title: 'Increased Efficiency',
+    description: 'Automated processes and AI optimization improve production efficiency.',
+    icon: Activity
+  },
+  {}
+
+    title: 'Reduced Downtime,',;
+    description: 'Predictive maintenance prevents unexpected equipment failures.,',;
+    icon: Wrench,;
+  },;
+  {}
+    title: 'Better Quality,',;
+    description: 'Automated quality control ensures consistent product quality.,',;
+    icon: Shield,;
+  },;
+  {}
+    title: 'Cost Savings,',;
+    description: 'Optimized operations and reduced waste lower manufacturing costs.,',;
+    icon: BarChart3,;
+
+  }
+
+
 ;];
 export default function ManufacturingPage() {;
   return (
@@ -90,6 +118,16 @@ export default function ManufacturingPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
+];
+
+export default function ManufacturingPage() {;
+  return (
+    <Layout
+      title="Manufacturing Technology Solutions - Zion Tech Group"
+      description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
+      keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4 && 4.0">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;

@@ -5,14 +5,6 @@
   }
 }
 import React from 'react';
-  Star
-  ExternalLink
-  ArrowRight
-  TrendingUp
-  Users
-  Clock
-  Shield
-  Zap;
 } from 'lucide-react';
 
 interface EnhancedServiceCardProps {
@@ -40,10 +32,6 @@ interface EnhancedServiceCardProps {;
     icon: string;
     color: string;
     text_color: string;
-    hover: {
-      coordinate_y: -8,
-      scale: 1.02,
-      transition: {
         ease: 'ease_out' as const,
       },
     },  }
@@ -96,19 +84,6 @@ interface EnhancedServiceCardProps {;
           >
             {service.icon}
           </motion.div>
-          <div className='text-right'>
-            <div className='text-2xl font-bold text-white'>{service.price}</div>
-            <div className='text-sm text-gray-400'>{service.period}</div>          </div>
-        </div>
-        {/* Title & Tagline */}
-        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
-          {service.name}
-        </h3>
-        <p className='text-gray-300 text-sm mb-4 leading-relaxed'>          {service.tagline}
-        </p>
-        {/* Description */}
-        <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>          {service.description}
-        </p>
           <div className="text-right">
             <div className="text-2xl font-bold text-white">{service.price}</div>
             <div className="text-sm text-gray-400">{service.period}</div>
@@ -210,16 +185,11 @@ interface EnhancedServiceCardProps {;
               </div>
 
             )}
-          </div>
-        </div>
-
         {/* Market Info */}
-        <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>
-          <div className='flex items-center justify-between mb-2'>
-            <span className='text-xs font-semibold text-white'>
-              Market Size
-            </span>
-            <span className='text-xs text-cyan-400'>{service.marketSize}</span>
+
+
+
+
 
           </div>
           <div className='flex items-center justify-between mb-2'>

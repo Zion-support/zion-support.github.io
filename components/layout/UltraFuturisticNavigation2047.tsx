@@ -429,8 +429,6 @@ const navigation_items: NavigationItem[] = [;
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
-                      className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'
 
 
                     >
@@ -561,6 +559,15 @@ const navigation_items: NavigationItem[] = [;
       <AnimatePresence>;
         {is_open && (
           <motion.div;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -821,7 +828,3 @@ export default UltraFuturisticNavigation2047);
 export default UltraFuturisticNavigation2047;
 ;
   );
-export default UltraFuturisticNavigation2047;  )
-}
-export default UltraFuturisticNavigation2047;
-

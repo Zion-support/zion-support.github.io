@@ -221,13 +221,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
           <motion&& motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400"
           >
             <AlertTriangle className="h-8 w-8 mb-2" />
             <span className="text-sm">Failed to load image</span>
             {retries > 0 && (
-              <span className='text-xs mt-1'>Retried {retries} times</span>
-              <span className="text-xs mt-1">Retried {retries} times</span>
             )}
           </motion && motion.div>;
         )}
@@ -289,7 +286,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
           {loadedCount}/{images.length} loaded
         </span>
       </div>
-      <div
         className={`grid gap-4`}
         style={{
           gridTemplateColumns: `repeat(${columns}, 1fr)`,        }}>;
@@ -318,7 +314,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
             </div>;
           </motion && motion.div>;
         ))}
-    alt
 
   const initials = null;
     fallback ||

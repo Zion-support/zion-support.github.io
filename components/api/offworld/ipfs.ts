@@ -46,4 +46,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     return res && res.status(400).json({ error: 'Unsupported action' });
   } catch (e: any) {
-}
+
+

@@ -44,14 +44,68 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
   if (isLoading) {;
     return <LoadingState />;
-  }
-  if (error) {
-    return <ErrorState error={error} />
-  }
-  if (applications.length === 0) {
-    return <EmptyState />
+
+
+
+
   }
 
+
+  if (error) {;
+    return <ErrorState error={error} />;
+  }
+
+  if (applications && applications.length === 0) {;
+    return <EmptyState />;
+
+  }
+  }
+
+
+
+  return (
+    <>;
+      <ApplicationsTable
+import { useState } from './react';
+import { JobApplication, ApplicationStatus } from '@/types / jobs';
+import { useJobApplications } from '@/hooks / useJobApplications';
+import { ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog } from './applications';
+;
+interface JobApplicationsTableProps {
+  job_id: string;
+}
+export /**
+ * JobApplicationsTable - Function description
+ */
+function JobApplicationsTable() {
+  const {
+    applications,
+    is_loading,
+    error,
+    updateApplicationStatus,
+    markApplicationAsViewed;
+    refetch;
+  } = useJobApplications (job_id);
+;
+  const [processing_id, setProcessingId] = useState < string | null>(null);
+  const [selected_application, setSelectedApplication] = useState < JobApplication | null>(null);
+  const [showScoreDialog, setShowScoreDialog] = useState (false);
+;
+  const handleStatusChange = async (application_id: string, new_status: ApplicationStatus) => {
+    setProcessingId (application_id),
+    try {
+      await updateApplicationStatus (application_id, new_status);
+      // If it's not already viewed, mark it as viewed;
+      const application = applications.find (app => app.id === application_id);
+      // Check condition
+if ( {) {
+  $2
+}
+        await markApplicationAsViewed (application_id);
+      }
+    } finally {
+      setProcessingId (null);
+    }
   }
         applications={applications}
         processing_id={processing_id}
