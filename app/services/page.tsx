@@ -59,6 +59,13 @@ export default function ServicesOverviewPage() {
           bullets={["Native development", "Cross-platform", "App store optimization"]}
           icon="📱"
         />
+        <ServiceCard
+          href="/services/emerging-tech"
+          title="Emerging Technologies"
+          description="Quantum Computing, IoT, AR/VR, and next-gen solutions"
+          bullets={["Quantum computing", "IoT solutions", "AR/VR development"]}
+          icon="⚛️"
+        />
       </div>{" "}
       <CTA />{" "}
     </div>

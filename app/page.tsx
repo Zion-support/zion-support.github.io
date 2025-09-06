@@ -50,6 +50,12 @@ export default function HomePage() {
             description="Cloud migration, DevOps, SRE, security hardening and cost optimization."
             icon="⚙️"
           />
+          <Card
+            title="Emerging Technologies"
+            href="/services/emerging-tech"
+            description="Quantum Computing, IoT, AR/VR, and next-generation solutions."
+            icon="⚛️"
+          />
         </div>
       </section>
 
