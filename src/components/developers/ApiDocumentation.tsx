@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { BookOpen, Terminal } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -1209,3 +1210,32 @@ function EndpointSection({
       )}
     </div>
   );
+=======
+
+<<<<<<< HEAD
+
+    f'https://api.ziontechgroup.com/v1/jobs/{job_id}';
+    headers=headers
+
+<<<<<<< HEAD
+    'https: //api.ziontechgroup.com/v1/jobs', headers=headers,
+
+    data=json.dumps(payload)
+
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+    f'https://api.ziontechgroup.com/v1/talent/{talent_id}';
+    headers=headers
+
+<<<<<<< HEAD
+    'https: //api.ziontechgroup.com/v1/quotes', headers=headers,
+
+    data=json.dumps(payload)
+
+<<<<<<< HEAD
+  const webhookSecret = process.env.WEBHOOK_SECRET;
+  
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

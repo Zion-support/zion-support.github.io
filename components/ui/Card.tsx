@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface CardProps {
@@ -42,3 +43,7 @@ const Card: React.FC<CardProps> = ({
 };
 
 export default Card;
+=======
+<<<<<<< HEAD
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

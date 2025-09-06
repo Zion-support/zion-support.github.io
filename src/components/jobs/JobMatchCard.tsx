@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -180,3 +181,14 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 }</div> Apply Now </Button>) ;
 }</div> </div> </CardContent> </Card>) ;
 }"
+=======
+<<<<<<< HEAD
+  talentId, 
+  name, 
+  title, 
+  company, 
+  avatar, 
+  location, 
+  category, 
+  matchPercent, 
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -10,6 +10,9 @@
   "results": [],
   "buildBreakingFiles": [],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "totalFiles": 1,
     "filesWithIssues": 1,
     "totalIssues": 3,
@@ -57,6 +60,7 @@
   "buildBreakingFiles": [
     "pages/enhanced-services.tsx"
   ],
+<<<<<<< HEAD
   "generatedAt": "2025-08-21T00:41:50.318Z"
 =======
   "generatedAt": "2025-08-20T22:28:10.605Z"
@@ -64,3 +68,6 @@
   "generatedAt": "2025-08-21T00:50:13.709Z"
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-49d4
 }
+=======
+  "generatedAt": "2025-08-21T00:41:50.318Z"}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

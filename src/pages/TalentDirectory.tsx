@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useNavigate
 import Link from 'next/link';
@@ -439,3 +440,15 @@ export default function TalentDirectory() {
 }/> </div> </div>) ;
 }</div> </div> </div>) ;
 }"
+=======
+
+<<<<<<< HEAD
+  const isAdmin = user?.userType === 'admin';
+
+
+
+<<<<<<< HEAD
+  const pageKey = `talent-directory-${routeKey}-${router.asPath}`;
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

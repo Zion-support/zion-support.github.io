@@ -6,9 +6,13 @@
     "criticalFailures": 0,
     "canBuild": true,
     "timestamp": "2025-08-20T12:26:14.200Z"
+<<<<<<< HEAD
 =======
     "timestamp": "2025-08-19T23:54:02.694Z"
 =======
+=======
+    "timestamp": "2025-08-19T23:54:02.694Z"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "timestamp": "2025-08-19T23:51:14.696Z"
   },
   "results": [
@@ -16,7 +20,10 @@
       "name": "Page Structure Validation",
       "status": "PASS",
       "result": "All 23 pages are properly structured",
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       "result": "All 29 pages are properly structured",
       "critical": true
     },

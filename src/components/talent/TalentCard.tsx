@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Badge } from '@/components/ui/badge';
@@ -165,3 +166,11 @@ const TalentCardComponent = ({
   );
 };
 "
+=======
+<<<<<<< HEAD
+
+
+export const TalentCard = React.memo(TalentCardComponent),
+TalentCard.displayName = 'TalentCard';
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

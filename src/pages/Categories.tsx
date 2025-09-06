@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import useSWR from 'swr';
 import { CategoryCard } from '@/components/CategoryCard';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -118,3 +119,13 @@ return (<> <NextSeo title="Browse Categories" description="Explore AI service an
 }</div>) ;
 }</ErrorBoundary> </div> </div> </>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+
+    fallbackData: initialCategories}),
+
+  const categories = data || [],
+  const isLoading = !data && !error;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

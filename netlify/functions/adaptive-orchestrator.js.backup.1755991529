@@ -2,6 +2,9 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 function runNode(relativePath, args = []) {
   const absolutePath = path.resolve(__dirname, '..', '..', relativePath);
   const result = spawnSync('node', [absolutePath, ...args], { stdio: 'pipe', encoding: 'utf8' });
@@ -13,6 +16,7 @@ function nowMinute() {
 }
 
 function shouldRunEvery(n) {
+<<<<<<< HEAD
   return nowMinute() % n === 0;
 =======
 function runNode(relPath, args = []) {
@@ -26,6 +30,9 @@ function now() {
   return { hour: d.getUTCHours(), dow: d.getUTCDay(), minutes: d.getUTCMinutes() };
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
 }
+=======
+  return nowMinute() % n === 0;}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 exports.config = {
   schedule: '*/5 * * * *',
@@ -33,6 +40,7 @@ exports.config = {
 
 exports.handler = async () => {
   const logs = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
   function logStep(name, fn) {
     logs.push(`\n=== ${name} ===`);
@@ -46,12 +54,20 @@ exports.handler = async () => {
     const { status, stdout, stderr } = runNode(rel, args);
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
     if (stdout) logs.push(stdout);
+=======
+  function logStep(name, fn) {
+    logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = fn();    if (stdout) logs.push(stdout);
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
     return status;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   // Always: light front/home refreshers
   logStep('front-index:auto-advertise', () => runNode('automation/front-index-auto-advertiser.cjs'));
   logStep('homepage:auto-advertiser', () => runNode('automation/homepage-auto-advertiser.cjs'));
@@ -78,6 +94,7 @@ exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
   return { statusCode: 200, body: logs.join('\n') };
+<<<<<<< HEAD
 };
 =======
   // Always keep front/home fresh on each tick
@@ -114,3 +131,6 @@ exports.handler = async () => {
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
 };
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
+=======
+};
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

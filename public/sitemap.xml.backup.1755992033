@@ -3,6 +3,9 @@
   <url>
     <loc>https://zion.app/</loc>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     <lastmod>2025-08-11T11:14:25.268Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,6 +17,7 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 =======
 =======
@@ -1674,6 +1678,24 @@
   </url>
   <url>
 <<<<<<< HEAD
+=======
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/services/web-performance-rum-synthetic-starter/</loc>    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/services/webhook-relay-replay-pro/</loc>    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/services/website-accessibility-monitor/</loc>    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     <loc>https://ziontechgroup.com/services/website-analytics-small-business/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1694,6 +1716,7 @@
     <priority>0.8</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/smart-city-infrastructure/</loc>
 =======
     <loc>https://zion.app/pricing</loc>
@@ -1728,6 +1751,12 @@
   </url>
   <url>
 <<<<<<< HEAD
+=======
+    <loc>https://ziontechgroup.com/smart-city-infrastructure/</loc>    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     <loc>https://ziontechgroup.com/automation</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -1735,6 +1764,7 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/contact</loc>
+<<<<<<< HEAD
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 =======
 =======
@@ -48803,3 +48833,6 @@
   </url>
 </urlset>
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-655c
+=======
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

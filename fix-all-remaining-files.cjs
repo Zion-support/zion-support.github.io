@@ -10,8 +10,12 @@ import { Menu, X, Home, Settings, User, LogOut } from 'lucide-react';
 import Link from 'next/link';
 
 interface SidebarProps {
+<<<<<<< HEAD
   isOpen: boolean;
   onClose: () => void;
+=======
+  isOpen: boolean, onClose: () => void,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
@@ -50,12 +54,20 @@ export default Sidebar;`
   },
   {
     path: 'components/SimpleLayout.tsx',
+<<<<<<< HEAD
     content: `import React from 'react';
 import Header from './Header';
 import Footer from './layout/Footer';
 
 interface SimpleLayoutProps {
   children: React.ReactNode;
+=======
+    content: `import React from 'react', import Header from './Header',
+import Footer from './layout/Footer';
+
+interface SimpleLayoutProps {
+  children: React.ReactNode,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }
 
 const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children }) => {
@@ -74,12 +86,20 @@ export default SimpleLayout;`
   },
   {
     path: 'components/SkeletonLoader.tsx',
+<<<<<<< HEAD
     content: `import React from 'react';
 
 interface SkeletonLoaderProps {
   className?: string;
   lines?: number;
 }
+=======
+    content: `import React from 'react',
+interface SkeletonLoaderProps {
+    className?: string,
+    lines?: number
+  }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({ 
   className = '', 
@@ -102,12 +122,20 @@ export default SkeletonLoader;`
   },
   {
     path: 'components/layout/EnhancedFooter.tsx',
+<<<<<<< HEAD
     content: `import React from 'react';
+=======
+    content: `import React from 'react',
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 import { Building, Mail, Phone, MapPin } from 'lucide-react';
 import Link from 'next/link';
 
 const EnhancedFooter: React.FC = () => {
+<<<<<<< HEAD
   return (
+=======
+    return (
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -149,17 +177,28 @@ const EnhancedFooter: React.FC = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+<<<<<<< HEAD
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
 };
+=======
+          <p>&copy,
+    2024 Zion Tech Group. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  )
+  };
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 export default EnhancedFooter;`
   },
   {
     path: 'components/layout/Footer.tsx',
+<<<<<<< HEAD
     content: `import React from 'react';
 import Link from 'next/link';
 
@@ -174,13 +213,33 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
+=======
+    content: `import React from 'react', import Link from 'next/link',
+
+const Footer: React.FC = () => {
+    return (
+    <footer className="bg-gray-800 text-white py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <p>&copy,
+    2024 Zion Tech Group. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  )
+  };
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 export default Footer;`
   },
   {
     path: 'components/layout/Header.tsx',
+<<<<<<< HEAD
     content: `import React from 'react';
 import Link from 'next/link';
+=======
+    content: `import React from 'react', import Link from 'next/link',
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 const Header: React.FC = () => {
   return (
@@ -205,12 +264,20 @@ export default Header;`
   },
   {
     path: 'components/layout/Layout.tsx',
+<<<<<<< HEAD
     content: `import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 
 interface LayoutProps {
   children: React.ReactNode;
+=======
+    content: `import React from 'react', import Header from './Header',
+import Footer from './Footer';
+
+interface LayoutProps {
+  children: React.ReactNode,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -229,12 +296,20 @@ export default Layout;`
   },
   {
     path: 'components/layout/MainLayout.tsx',
+<<<<<<< HEAD
     content: `import React from 'react';
 import Header from '../Header';
 import Footer from './Footer';
 
 interface MainLayoutProps {
   children: React.ReactNode;
+=======
+    content: `import React from 'react', import Header from '../Header',
+import Footer from './Footer';
+
+interface MainLayoutProps {
+  children: React.ReactNode,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
@@ -278,12 +353,19 @@ export default LazyComponent;`
   },
   {
     path: 'components/performance/OptimizedImage.tsx',
+<<<<<<< HEAD
     content: `import React from 'react';
 import Image from 'next/image';
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
+=======
+    content: `import React from 'react', import Image from 'next/image',
+
+interface OptimizedImageProps {
+  src: string, alt: string,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   width?: number;
   height?: number;
   className?: string;
@@ -321,12 +403,17 @@ export default OptimizedImage;`
   },
   {
     path: 'components/ui/EnhancedMarketplaceCard.tsx',
+<<<<<<< HEAD
     content: `import React from 'react';
 import Image from 'next/image';
+=======
+    content: `import React from 'react', import Image from 'next/image',
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 import Link from 'next/link';
 import { Star, Users, Calendar } from 'lucide-react';
 
 interface EnhancedMarketplaceCardProps {
+<<<<<<< HEAD
   title: string;
   description: string;
   image: string;
@@ -335,6 +422,12 @@ interface EnhancedMarketplaceCardProps {
   users: number;
   category: string;
   href: string;
+=======
+  title: string, description: string,
+  image: string, price: string,
+  rating: number, users: number,
+  category: string, href: string,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }
 
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
@@ -399,14 +492,22 @@ import Link from 'next/link';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 
 interface NavigationItem {
+<<<<<<< HEAD
   label: string;
   href?: string;
+=======
+  label: string, href?: string,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   children?: NavigationItem[];
 }
 
 interface InteractiveNavigationProps {
+<<<<<<< HEAD
   items: NavigationItem[];
   className?: string;
+=======
+  items: NavigationItem[], className?: string,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }
 
 const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ 
@@ -478,16 +579,25 @@ export default InteractiveNavigation;`
 import { X, CheckCircle, AlertCircle, Info, XCircle } from 'lucide-react';
 
 interface Notification {
+<<<<<<< HEAD
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
   title: string;
   message: string;
+=======
+  id: string, type: 'success' | 'error' | 'warning' | 'info',
+  title: string, message: string,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   duration?: number;
 }
 
 interface NotificationSystemProps {
+<<<<<<< HEAD
   notifications: Notification[];
   onRemove: (id: string) => void;
+=======
+  notifications: Notification[], onRemove: (id: string) => void,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({ 

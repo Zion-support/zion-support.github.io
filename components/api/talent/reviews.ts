@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -8,10 +9,18 @@ export default async function handler(
     // In a real implementation, fetch reviews from Supabase by talent id/slug
     const { slug } = req.query as { slug?: string };
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 });
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {
+    // In a real implementation, fetch reviews from Supabase by talent id/slug
+    const { slug } = req.query as { slug?: string };
+    return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   }
 
   if (req.method === 'POST') {
     // In a real implementation, validate and insert review into Supabase
+<<<<<<< HEAD
     return res.status(201).json({ ok: true });
   }
 
@@ -19,3 +28,10 @@ export default async function handler(
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');
+=======
+    return res.status(201).json({ ok: true })
+  }
+
+  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

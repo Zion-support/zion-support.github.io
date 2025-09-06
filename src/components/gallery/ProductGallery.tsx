@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, Suspense } from 'react';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
@@ -132,3 +133,10 @@ export function ProductGallery({
       )}
     </Dialog>
   );
+=======
+
+<<<<<<< HEAD
+
+  const poster = images[0];
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

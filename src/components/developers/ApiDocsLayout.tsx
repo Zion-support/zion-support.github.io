@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { SearchSuggestion } from '@/types/search';
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -109,3 +110,12 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 }</div> </div>) ;
 }export default ApiDocsLayout;
 "
+=======
+
+<<<<<<< HEAD
+  const currentPath = router.pathname;
+<<<<<<< HEAD
+
+export default ApiDocsLayout;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

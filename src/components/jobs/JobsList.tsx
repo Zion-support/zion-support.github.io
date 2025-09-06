@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
@@ -208,3 +209,7 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
 }</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) ) ;
 }</div>) ;
 }'"
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

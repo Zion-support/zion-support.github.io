@@ -1,5 +1,8 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   "generatedAt": "2025-08-12T01:33:59.547Z",
   "functions": [
     "a11y-alt-text-runner",
@@ -8,6 +11,7 @@
     "ai-changelog-runner",
     "auto-scheduler",
     "automation-matrix",
+<<<<<<< HEAD
     "autonomous-cloud-brain",
 =======
   "generatedAt": "2025-08-12T01:34:55.479Z",
@@ -35,6 +39,15 @@
     "component-size-report",
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-7783
     "continuous-front-runner",
+=======
+    "autonomous-cloud-brain",    "autonomous-invention-orchestrator",
+    "autonomous-master-orchestrator",
+    "broken-image-scanner",
+    "broken-image-scanner-runner",
+    "canonical-auditor",
+    "cloud-swarm-committer",
+    "cloud_orchestrator",    "continuous-front-runner",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "continuous-orchestrator",
     "cron-heartbeat",
     "cron-hub",
@@ -83,6 +96,7 @@
     "orchestrator-swarm",
     "orphan-pages-detector",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "pagespeed-insights-runner",
     "pm2-automation-redundancy",
 =======
@@ -97,15 +111,23 @@
     "roadmap-curator",
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-7783
     "schedule-content-index",
+=======
+    "pagespeed-insights-runner",
+    "pm2-automation-redundancy",    "schedule-content-index",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "schedule-homepage",
     "schedule-knowledge-graph",
     "schedule-site-health",
     "security-audit",
     "security-audit-runner",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "seo-audit-runner",
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-7783
+=======
+    "seo-audit-runner",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "site-crawler",
     "sitemap_runner",
     "todo-scanner-runner",

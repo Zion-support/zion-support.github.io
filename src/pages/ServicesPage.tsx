@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
@@ -587,3 +588,16 @@ export default function ServicesPage() {
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+    allServices = [...allServices, ...newServices];
+    
+    let filteredServices = allServices;
+    
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

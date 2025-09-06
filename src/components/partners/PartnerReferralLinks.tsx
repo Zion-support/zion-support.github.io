@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -291,3 +292,11 @@ document.body.removeChild (link);
 }readOnly className="font-mono text-xs"/> <Button > <Copy className="h-4 w-4"/> <span className="sr-only">Copy</span> </Button> </div> </CardContent> </Card>) ) ) : (<Card className="bg-zion-blue/20 border-dashed border-zion-blue-light"> <CardContent className="flex flex-col items-center justify-center p-6"> <p className="text-zion-slate-light text-center mb-4"> Create custom campaign links to track different marketing efforts </p> <Button className="flex items-center gap-2"> <Plus className="h-4 w-4" /> Create First Link </Button> </CardContent> </Card>) ;
 }</div> </div>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+
+  
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   LucideIcon,
   BadgeCheck,
@@ -77,3 +78,11 @@ export const badgeList: BadgeMeta[] = [
 
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find(b => b.key === key);
+=======
+<<<<<<< HEAD
+  | "monetized";
+
+<<<<<<< HEAD
+  badgeList.find((b) => b.key === key);
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

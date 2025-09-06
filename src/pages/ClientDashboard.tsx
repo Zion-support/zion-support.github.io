@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { JobsList } from '@/components/jobs/JobsList';
 import { Button } from '@/components/ui/button';
@@ -222,3 +223,10 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
 }</div> </div> </div> </div> </main> </>) ;
 }export default function ClientDashboard () {;
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"
+=======
+
+<<<<<<< HEAD
+    onboardingStatus.responseReceived;
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

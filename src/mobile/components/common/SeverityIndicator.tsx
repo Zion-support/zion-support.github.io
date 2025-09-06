@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
@@ -43,3 +44,11 @@ export function SeverityIndicator({
 };
 return (</div>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+      default:
+        return <CheckCircle className={cn(
+          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4";
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

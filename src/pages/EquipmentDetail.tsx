@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { NextSeo } from '@/components/NextSeo';
@@ -594,3 +595,11 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 }</p> </div> </div>) ;
 }</div> </motion.div> </div> </div> </div> </>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+            const stored = sessionStorage.getItem(`equipment:${id}`);
+<<<<<<< HEAD
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

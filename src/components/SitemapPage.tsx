@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { completeSitemap, dynamicPaths } from '@/config/sitemap';
 import Link from 'next/link';
@@ -199,3 +200,7 @@ export const SitemapPage: React.FC = () => {
   );
 };
 '"
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

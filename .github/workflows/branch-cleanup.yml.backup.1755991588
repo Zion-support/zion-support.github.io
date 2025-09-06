@@ -10,12 +10,18 @@ permissions:
   actions: read
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 concurrency:
   group: branch-cleanup-${{ github.ref }}
   cancel-in-progress: false
 
+<<<<<<< HEAD
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 jobs:
   cleanup:
     runs-on: ubuntu-latest
@@ -34,11 +40,15 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       - name: Run workflow
         run: echo "Workflow completed successfully"
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+<<<<<<< HEAD
 
 =======
 
@@ -51,3 +61,5 @@ concurrency:
       - name: Generate README (non-blocking)
         run: node scripts/generate-readme.js || true
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

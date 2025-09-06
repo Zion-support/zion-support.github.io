@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,6 +15,7 @@
   "dependencies": {
     "next": "^14.0.0",
     "react": "^18.2.0",
+<<<<<<< HEAD
     "react-dom": "^18.2.0"
 =======
 <<<<<<< HEAD
@@ -447,6 +451,9 @@
     "uuid": "^11.1.0"
 >>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
   },
+=======
+    "react-dom": "^18.2.0"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   "devDependencies": {
     "@babel/core": "^7.28.3",
     "@babel/plugin-transform-runtime": "^7.28.3",
@@ -467,6 +474,7 @@
     "@typescript-eslint/parser": "^8.39.0",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.57.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "eslint-config-next": "^14.0.0",
     "postcss": "^8.4.32",
@@ -490,4 +498,9 @@
 >>>>>>> 3c1dda747d3aa200ea8a4e49d78b84af83a4d328
 >>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
   }
+=======
+    "eslint-config-next": "^14.0.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0"  }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }

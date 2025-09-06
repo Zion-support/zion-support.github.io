@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import {
   Card,
@@ -116,3 +117,7 @@ export function JobMatchesCard({
       </CardFooter>
     </Card>
   );
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

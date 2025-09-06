@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
@@ -312,3 +313,11 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   handleHireConfirmed ;
 }/> </>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+
+  const candidateName = application.talent_profile?.full_name || "Candidate";
+  
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

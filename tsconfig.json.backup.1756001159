@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "target": "ES2017",
     "useDefineForClassFields": true,
     "lib": [
@@ -55,6 +58,7 @@
         "./types/*"
       ]
     },
+<<<<<<< HEAD
     /* Bundler mode */
 =======
     "target": "es5",
@@ -70,6 +74,10 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
 <<<<<<< HEAD
+=======
+    /* Bundler mode */    "moduleResolution": "node",
+    "resolveJsonModule": true,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -100,6 +108,7 @@
     "zion.app/recovered-content/**",
     "apps/**",
     "src/**"
+<<<<<<< HEAD
   ]
 =======
     "isolatedModules": true,
@@ -114,3 +123,6 @@
   "exclude": ["node_modules"]
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2750
 }
+=======
+  ]}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

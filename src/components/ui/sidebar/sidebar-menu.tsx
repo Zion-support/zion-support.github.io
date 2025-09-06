@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { forwardRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -58,3 +59,19 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({
   );
 };
 "
+=======
+
+<<<<<<< HEAD
+    return(<button
+        ref={ref}
+<<<<<<< HEAD
+
+
+SidebarMenuItem.displayName = "SidebarMenuItem";
+
+<<<<<<< HEAD
+
+
+export { SidebarMenuItem, SidebarMenuGroup };
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export const BrowserRouter = ({ children }: { children: any }) => children;
@@ -28,3 +29,11 @@ export default {
   useParams,
   useSearchParams,
 };
+=======
+
+<<<<<<< HEAD
+export const NavLink = Link;
+export const Navigate = ({ to }: { to: string }) => null;
+export const MemoryRouter = BrowserRouter;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

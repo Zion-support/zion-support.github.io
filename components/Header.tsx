@@ -1,3 +1,6 @@
+
+'use client';
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,21 +14,22 @@ import {
   ChevronDown, 
   Menu, 
   X,
-  Brain,
-  TrendingUp,
-  FileText,
+  Code,
+  Smartphone,
+  Cloud,
   Database,
   Shield,
   Zap,
-  Cog,
-  Code
+  Building,
+  ShoppingCart,
+  Heart,
+  GraduationCap,
+  Factory,
+  Truck,
+  CreditCard
 } from 'lucide-react';
 
-interface HeaderProps {
-  className?: string;
-}
-
-const Header: React.FC<HeaderProps> = ({ className = '' }) => {
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -35,68 +39,139 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
 
   const servicesDropdown = [
     {
-      title: 'AI Services',
-      href: '/ai-services',
-      description: 'Advanced AI solutions',
-      icon: Brain
+      title: 'Web Development',
+      description: 'Custom websites and web applications',
+      href: '/services/web-development',
+      icon: Code
     },
     {
-      title: 'IT Solutions',
-      href: '/it-solutions',
-      description: 'Complete IT infrastructure',
+      title: 'Mobile Development',
+      description: 'iOS and Android applications',
+      href: '/services/mobile-development',
+      icon: Smartphone
+    },
+    {
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure',
+      href: '/services/cloud-solutions',
+      icon: Cloud
+    },
+    {
+      title: 'Database Management',
+      description: 'Database design and optimization',
+      href: '/services/database-management',
       icon: Database
     },
     {
-      title: 'Micro SaaS',
-      href: '/micro-saas',
-      description: 'Custom SaaS applications',
-      icon: Zap
+      title: 'Security Services',
+      description: 'Cybersecurity and data protection',
+      href: '/services/security',
+      icon: Shield
     },
     {
-      title: 'Web Development',
-      href: '/web-development',
-      description: 'Modern web applications',
-      icon: Code
+      title: 'Performance Optimization',
+      description: 'Speed and efficiency improvements',
+      href: '/services/performance',
+      icon: Zap
     }
   ];
 
   const solutionsDropdown = [
     {
-      title: 'Cloud Migration',
-      href: '/cloud-migration',
-      description: 'Seamless cloud transitions',
-      icon: Database
+      title: 'Enterprise Solutions',
+      description: 'Comprehensive business technology solutions',
+      href: '/solutions/enterprise',
+      icon: Building
     },
     {
-      title: 'Cybersecurity',
-      href: '/cybersecurity',
-      description: 'Protect your digital assets',
-      icon: Shield
+      title: 'E-commerce Platforms',
+      description: 'Online store development and management',
+      href: '/solutions/ecommerce',
+      icon: ShoppingCart
     },
     {
-      title: 'Analytics',
-      href: '/analytics',
-      description: 'Data-driven insights',
-      icon: TrendingUp
+      title: 'Healthcare Technology',
+      description: 'Specialized healthcare IT solutions',
+      href: '/solutions/healthcare',
+      icon: Heart
+    },
+    {
+      title: 'Educational Platforms',
+      description: 'Learning management systems',
+      href: '/solutions/education',
+      icon: GraduationCap
     }
   ];
 
   const industriesDropdown = [
-    { name: 'Healthcare', href: '/healthcare', icon: Shield },
-    { name: 'Finance', href: '/finance', icon: TrendingUp },
-    { name: 'Education', href: '/education', icon: FileText },
-    { name: 'Manufacturing', href: '/manufacturing', icon: Cog }
+    { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
+    { name: 'Logistics', href: '/industries/logistics', icon: Truck },
+    { name: 'Finance', href: '/industries/finance', icon: CreditCard },
+    { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
+    { name: 'Education', href: '/industries/education', icon: GraduationCap },
+    { name: 'Retail', href: '/industries/retail', icon: ShoppingCart }
   ];
 
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Industries', href: '/industries' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
+  const servicesDropdown = [
+    {
+      title: 'Web Development',
+      description: 'Custom websites and web applications',
+      href: '/services/web-development',
+      icon: () => <div className="w-6 h-6 bg-blue-100 rounded" />
+    },
+    {
+      title: 'Mobile Apps',
+      description: 'iOS and Android applications',
+      href: '/services/mobile-apps',
+      icon: () => <div className="w-6 h-6 bg-green-100 rounded" />
+    },
+    {
+      title: 'AI Solutions',
+      description: 'Artificial intelligence integration',
+      href: '/services/ai-solutions',
+      icon: () => <div className="w-6 h-6 bg-purple-100 rounded" />
+    },
+    {
+      title: 'Cloud Services',
+      description: 'Cloud infrastructure and migration',
+      href: '/services/cloud-services',
+      icon: () => <div className="w-6 h-6 bg-orange-100 rounded" />
+    },
+  ];
+
+  const solutionsDropdown = [
+    {
+      title: 'E-commerce Solutions',
+      description: 'Complete online store setup',
+      href: '/solutions/ecommerce',
+      icon: () => <div className="w-6 h-6 bg-blue-100 rounded" />
+    },
+    {
+      title: 'CRM Systems',
+      description: 'Customer relationship management',
+      href: '/solutions/crm',
+      icon: () => <div className="w-6 h-6 bg-green-100 rounded" />
+    },
+  ];
+
+  const industriesDropdown = [
+    { name: 'Healthcare', href: '/industries/healthcare', icon: () => <div className="w-5 h-5 bg-red-100 rounded" /> },
+    { name: 'Finance', href: '/industries/finance', icon: () => <div className="w-5 h-5 bg-blue-100 rounded" /> },
+    { name: 'Education', href: '/industries/education', icon: () => <div className="w-5 h-5 bg-green-100 rounded" /> },
+    { name: 'Manufacturing', href: '/industries/manufacturing', icon: () => <div className="w-5 h-5 bg-yellow-100 rounded" /> },
   ];
 
   return (
-    <header className={`bg-white shadow-lg ${className}`}>
+    <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -248,8 +323,8 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
               </AnimatePresence>
             </div>
 
-            {/* Regular Navigation Links */}
-            {navigation.map((item) => (
+            {/* Regular Navigation Items */}
+            {navigation.slice(0, 2).map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -260,28 +335,43 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2"
-            onClick={toggleMenu}
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center space-x-4 text-sm text-gray-600">
+            <div className="flex items-center">
+              <Phone className="h-4 w-4 mr-1" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center">
+              <Mail className="h-4 w-4 mr-1" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+          </div>
 
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden"
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="p-2"
             >
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
-                {navigation.map((item) => (
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden"
+          >
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
+              {navigation.map((item) => (
+                <div key={item.name}>
                   <Link
-                    key={item.name}
                     href={item.href}
                     className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
                     onClick={() => setIsMenuOpen(false)}
@@ -289,7 +379,6 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
                     {item.name}
                   </Link>
                 ))}
-                
                 <Link
                   href="/contact"
                   onClick={() => setIsMenuOpen(false)}
@@ -302,6 +391,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
           )}
         </AnimatePresence>
       </nav>
+
     </header>
   );
 };

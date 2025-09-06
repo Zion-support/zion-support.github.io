@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React, {
@@ -340,3 +341,10 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 // )
 
 export default DynamicComponentLoader;
+=======
+
+<<<<<<< HEAD
+      setLoadingState(prev => ({
+        ...prev;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

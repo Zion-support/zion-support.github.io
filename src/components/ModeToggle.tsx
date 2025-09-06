@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -39,10 +40,18 @@ export function ModeToggle() {
   })();
 
   const isDarkMode = resolvedTheme === 'dark';
+=======
+
+<<<<<<< HEAD
+
+
+  const isDarkMode = resolvedTheme === "dark";
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
   const handleToggle = () => {
     try {
       // Determine the new theme we are switching TO
+<<<<<<< HEAD
       const newTheme = isDarkMode ? 'light' : 'dark';
 
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`);
@@ -168,3 +177,10 @@ if (!isClient) {";
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>) ;
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
 }'"
+=======
+      const newTheme = isDarkMode ? "light" : "dark";
+
+      logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

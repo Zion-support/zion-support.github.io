@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 name: Nightly Sitemap
 
 on:
   schedule:
     - cron: '0 3 * * *'
   workflow_dispatch: {}
+<<<<<<< HEAD
 =======
 name: Generate Sitemap
 
@@ -16,10 +20,13 @@ on:
   workflow_dispatch:
 >>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 permissions:
   contents: write
 
 jobs:
+<<<<<<< HEAD
 <<<<<<< HEAD
   build-sitemap:
 =======
@@ -30,6 +37,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 <<<<<<< HEAD
+=======
+  build-sitemap:    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         with:
           persist-credentials: true
 
@@ -54,6 +67,7 @@ jobs:
           else
             git commit -m "chore(automation): update sitemap [skip ci]"
             git push
+<<<<<<< HEAD
           fi
 =======
       - name: Setup Node.js
@@ -70,3 +84,6 @@ jobs:
           commit_message: 'chore(seo): update sitemap.xml'
           file_pattern: sitemap.xml
 >>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
+=======
+          fi
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -142,3 +143,7 @@ h-4 w-4"/>) ";
   setIncludePortfolio ;
 }> Include Portfolio Projects </DropdownMenuCheckboxItem> <DropdownMenuSeparator /> Download PDF </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu>) ;
 }'"
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

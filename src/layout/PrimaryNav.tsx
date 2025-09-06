@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import Link from 'next/link';
@@ -267,3 +268,14 @@ setLoginOpen (true) ;
   setLoginOpen ;
 }/> </>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+
+
+  let unreadCount = 0;
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+                  
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

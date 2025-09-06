@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -138,3 +139,11 @@ profile.id || '' ;
   userProfile ;
 }/> </>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+    
+<<<<<<< HEAD
+    
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

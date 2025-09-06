@@ -4,7 +4,11 @@
 # This script validates the YAML syntax of all workflow files
 
 echo "🔍 Validating GitHub Actions Workflows..."
+<<<<<<< HEAD
 echo "========================================"
+=======
+echo "====="
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 # Find all workflow files
 WORKFLOW_FILES=$(find .github/workflows -name "*.yml" -o -name "*.yaml" 2>/dev/null)
@@ -99,7 +103,11 @@ for file in $WORKFLOW_FILES; do
 done
 
 echo ""
+<<<<<<< HEAD
 echo "========================================"
+=======
+echo "====="
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 echo "📊 Validation Summary:"
 echo "Total files: $TOTAL_FILES"
 echo "Errors found: $ERROR_COUNT"

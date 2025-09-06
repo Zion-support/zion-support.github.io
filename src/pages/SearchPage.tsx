@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
@@ -320,3 +321,10 @@ router.push (`/search?q=$ {;
 }</TabsContent> </Tabs>) ;
 }</main> </div>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+  const pageKey = `search-${routeKey}-${router.asPath}`;
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

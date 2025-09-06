@@ -214,6 +214,9 @@ h3 {
 /* Focus styles */
 :focus {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   outline: 2px solid var(--neon-blue);
   outline-offset: 2px;
 }
@@ -517,6 +520,7 @@ h3 {
 }
 
 /* Quantum Matrix Grid */
+<<<<<<< HEAD
 .quantum-matrix {
 =======
   outline: 2px solid var(--primary);
@@ -755,12 +759,25 @@ h3 {
 @keyframes grid-move {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
   0% {
+=======
+.quantum-matrix {  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: matrixMove 30s linear infinite;
+}
+
+@keyframes matrixMove {  0% {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     transform: translate(0, 0);
   }
   100% {
     transform: translate(50px, 50px);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }
 
 /* Holographic Scan Lines */
@@ -1407,6 +1424,7 @@ h3 {
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
+<<<<<<< HEAD
   *::after {
 =======
 }
@@ -1475,6 +1493,12 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 <<<<<<< HEAD
+=======
+  *::after {    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }
 
 /* Enhanced Print Styles */
@@ -1774,7 +1798,11 @@ h3 {
     0 0 5px rgba(59, 130, 246, 0.5),
     0 0 10px rgba(59, 130, 246, 0.3),
     0 0 15px rgba(59, 130, 246, 0.1);
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
+=======
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

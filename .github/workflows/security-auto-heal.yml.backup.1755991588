@@ -7,6 +7,7 @@ on:
 
 permissions:
 <<<<<<< HEAD
+<<<<<<< HEAD
   contents: write
   pull-requests: write
   actions: read
@@ -18,6 +19,11 @@ concurrency:
   cancel-in-progress: true
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 
+=======
+  contents: write
+  pull-requests: write
+  actions: read
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 jobs:
   main:
     name: Main Job

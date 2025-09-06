@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Milestone,
@@ -131,3 +132,10 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   );
 };
 "
+=======
+
+<<<<<<< HEAD
+
+};
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "target": "ES2020",
     "module": "commonjs",
 =======
@@ -54,6 +55,16 @@
     "target": "ES2017"
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
   },
+=======
+    "target": "ES2020",
+    "module": "commonjs",    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "outDir": "dist",
+    "types": ["node", "hardhat"],
+    "skipLibCheck": true  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   "include": ["scripts", "hardhat.config.ts", "typechain-types"],
   "exclude": ["node_modules"]
 }

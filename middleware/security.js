@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
@@ -21,3 +22,20 @@ export function securityMiddleware(request) {
   }
   
   return response;
+=======
+// Security headers middleware
+export function securityHeaders(req, res, next) {
+  Object.entries({
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'X-XSS-Protection': '1; mode=block',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
+  }).forEach(([key, value]) => {
+    res.setHeader(key, value);
+  });
+  
+  next();
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

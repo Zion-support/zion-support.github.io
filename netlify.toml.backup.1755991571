@@ -11,7 +11,10 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -64,10 +67,14 @@
 
 [[redirects]]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   from = "/ai-customer-success-automation"
   to = "/ai-customer-success-platform"
   status = 301
 
+<<<<<<< HEAD
 [[redirects]]
 =======
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-d08b
@@ -90,12 +97,18 @@
 [[redirects]]
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-d08b
   from = "/autonomous-it-operations"
+=======
+[[redirects]]  from = "/autonomous-it-operations"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   to = "/autonomous-it-operations-center"
   status = 301
 
 [[redirects]]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   from = "/quantum-network-security"
   to = "/quantum-internet-security-platform"
   status = 301
@@ -121,12 +134,16 @@
   status = 301
 
 [[redirects]]
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-d08b
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   from = "/quantum-internet-security"
   to = "/quantum-internet-security-platform"
   status = 301
 
 [[redirects]]
+<<<<<<< HEAD
 <<<<<<< HEAD
   from = "/browser-automation-cloud/"
   to = "/browser-automation-cloud"
@@ -190,3 +207,8 @@
   status = 301
   force = true
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-d08b
+=======
+  from = "/browser-automation-cloud/"
+  to = "/browser-automation-cloud"
+  status = 301
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

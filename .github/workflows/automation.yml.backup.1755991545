@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 name: Autonomous Automations
 =======
 name: Scheduled Automations
@@ -100,3 +101,17 @@ jobs:
           git commit -m "chore(automation): scheduled automations artifacts [skip ci]" || echo "No changes"
           git push origin HEAD:${GITHUB_REF#refs/heads/}
 >>>>>>> origin/cursor/enhance-and-automate-web-app-with-ai-ae0d
+=======
+name: Autonomous Automations
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+jobs:
+  run-automations:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useParams
 import { supabase } from '@/integrations/supabase/client';
@@ -151,3 +152,12 @@ const WhitepaperViewPage: React.FC = () => {
 };
 export default WhitepaperViewPage;
 '"
+=======
+
+<<<<<<< HEAD
+
+
+
+export default WhitepaperViewPage;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

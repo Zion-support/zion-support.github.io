@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -226,3 +227,19 @@ export function EducationFormFields({
       </form>
     </Form>
   );
+=======
+
+<<<<<<< HEAD
+
+  end_date: z.string().optional(),
+  is_current: z.boolean().default(false),
+  description: z.string().optional(),
+  location: z.string().optional()}),
+
+type EducationFormValues = z.infer<typeof educationSchema>;
+
+
+<<<<<<< HEAD
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
 <<<<<<< HEAD
+<<<<<<< HEAD
   actions: read
 =======
   pull-requests: write
@@ -17,6 +18,9 @@ concurrency:
   cancel-in-progress: true
 >>>>>>> origin/cursor/check-and-fix-github-actions-workflows-d32c
 
+=======
+  actions: read
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 jobs:
   main:
     name: Main Job

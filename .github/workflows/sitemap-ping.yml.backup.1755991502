@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 name: Sitemap Ping
 
 on:
@@ -13,6 +16,7 @@ jobs:
       - name: Ping Google & Bing
         run: |
           curl -s "https://www.google.com/ping?sitemap=https://ziontechgroup.com/sitemap.xml" || true
+<<<<<<< HEAD
           curl -s "https://www.bing.com/ping?sitemap=https://ziontechgroup.com/sitemap.xml" || true
 =======
 name: Sitemap Generate and Ping
@@ -56,3 +60,6 @@ jobs:
           curl -fsSL "https://www.google.com/ping?sitemap=${SITEMAP_URL}" || true
           curl -fsSL "https://www.bing.com/ping?sitemap=${SITEMAP_URL}" || true
 >>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a
+=======
+          curl -s "https://www.bing.com/ping?sitemap=https://ziontechgroup.com/sitemap.xml" || true
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

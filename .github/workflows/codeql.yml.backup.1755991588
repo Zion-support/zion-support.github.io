@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 name: "CodeQL"
 =======
 name: CodeQL
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 
+=======
+name: "CodeQL"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 on:
   push:
     branches: ["main", "develop", "cursor/**"]
@@ -49,9 +53,14 @@ jobs:
         uses: github/codeql-action/analyze@v3
         with:
 <<<<<<< HEAD
+<<<<<<< HEAD
           category: "/language:${{matrix.language}}"
  
 
 =======
           category: '/language:javascript'
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+          category: "/language:${{matrix.language}}"
+ 
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -4,8 +4,8 @@ const path = require('path');
 
 class AppEnhancementSuite {
   constructor(projectRoot) {
-    this.projectRoot = projectRoot;
-    this.enhancements = [];
+    this.projectRoot = projectRoot,
+    this.enhancements = []
   }
   log(message) {
     console.log(message);

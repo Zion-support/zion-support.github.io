@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
@@ -88,10 +89,16 @@ export function CertificationsForm({
       setError(err.message || 'An error occurred');
     }
   };
+=======
+
+<<<<<<< HEAD
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
     form.reset({
+<<<<<<< HEAD
       ...cert,
       issue_date: formatDateValue(cert.issue_date),
       expiration_date: formatDateValue(cert.expiration_date),
@@ -188,3 +195,12 @@ export function CertificationsForm({
   editingId ? 'Cancel' : 'Back' ;
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
 }'"
+=======
+      ...cert;
+      issue_date: formatDateValue(cert.issue_date),
+      expiration_date: formatDateValue(cert.expiration_date)})
+  };
+
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

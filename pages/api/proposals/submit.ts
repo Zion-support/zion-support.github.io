@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
+<<<<<<< HEAD
 import {
   getProposal,
   updateProposalMeta,
@@ -13,12 +14,18 @@ async function submitByEmail(
   text: string,
   attachments: any[] = []
 ) {
+=======
+import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
+
+async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT || 587);
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
   const from = process.env.EMAIL_FROM || user;
   if (!host || !user || !pass) throw new Error('Email not configured');
+<<<<<<< HEAD
   const transporter = nodemailer.createTransport({
     host,
     port,
@@ -33,6 +40,14 @@ export default async function handler(
 ) {
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
+=======
+  const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } });
+  await transporter.sendMail({ from, to, subject, text, attachments })
+}
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   try {
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
     if (!id) return res.status(400).json({ error: 'id is required' });
@@ -44,12 +59,17 @@ export default async function handler(
       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
       const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || 'N/A'}`;
+<<<<<<< HEAD
       await submitByEmail(to, subject, text);
+=======
+      await submitByEmail(to, subject, text)
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     }
 
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
     try {
+<<<<<<< HEAD
       const hash = crypto
         .createHash('sha256')
         .update(JSON.stringify(meta))
@@ -68,3 +88,16 @@ export default async function handler(
       .status(500)
       .json({ error: error?.message || 'Submission failed' });
   }
+=======
+      const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
+      ensRecordHash = `0x${hash}`;
+      updateArtifacts(id, { ensRecordHash })
+    } catch {}
+
+    const updated = updateProposalMeta(id, (m) => ({ ...m, status: 'Submitted' }));
+    return res.status(200).json({ meta: updated })
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message || 'Submission failed' })
+  }
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

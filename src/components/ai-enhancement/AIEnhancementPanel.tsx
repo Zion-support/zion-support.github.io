@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Card,
@@ -176,3 +177,10 @@ export function AIEnhancementPanel({
       )}
     </Card>
   );
+=======
+
+<<<<<<< HEAD
+    ...defaultOptions;
+    content: initialContent || defaultOptions.content}),
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

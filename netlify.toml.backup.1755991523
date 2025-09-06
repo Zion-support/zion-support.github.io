@@ -80,6 +80,7 @@
 
 [[scheduled.functions]]
 <<<<<<< HEAD
+<<<<<<< HEAD
   name = "autonomous-meta-orchestrator"
   schedule = "*/2 * * * *" # every 2 minutes
 =======
@@ -87,6 +88,10 @@
   schedule = "*/1 * * * *" # every minute
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-d83c
 
+=======
+  name = "autonomous-meta-orchestrator"
+  schedule = "*/2 * * * *" # every 2 minutes
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 [[scheduled.functions]]
   name = "trigger-all-and-commit"
   schedule = "*/1 * * * *" # every minute

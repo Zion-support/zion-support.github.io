@@ -7,10 +7,15 @@ on:
 
 permissions:
   contents: write
+<<<<<<< HEAD
 <<<<<<< HEAD:.github/workflows/backups/accessibility-audit.yml.backup
 =======
   pull-requests: write
 >>>>>>> origin/cursor/check-and-fix-github-actions-workflows-efb2:.github/workflows/broken_workflows_backup_1755470975/rapid-sync.yml
+=======
+:.github/workflows/backups/accessibility-audit.yml.backup
+  pull-requests: write
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   actions: read
 
 jobs:

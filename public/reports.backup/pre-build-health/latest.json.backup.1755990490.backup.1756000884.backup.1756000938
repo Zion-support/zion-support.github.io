@@ -2,10 +2,14 @@
   "summary": {
     "totalChecks": 6,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "passedChecks": 6,
     "failedChecks": 0,
     "criticalFailures": 0,
     "canBuild": true,
+<<<<<<< HEAD
     "timestamp": "2025-08-19T17:38:03.158Z"
 =======
     "passedChecks": 5,
@@ -15,6 +19,9 @@
     "timestamp": "2025-08-19T17:47:07.698Z"
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-ce5e
   },
+=======
+    "timestamp": "2025-08-19T17:38:03.158Z"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   "results": [
     {
       "name": "Page Structure Validation",
@@ -37,6 +44,7 @@
     {
       "name": "Environment Variables",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "status": "PASS",
       "result": "Environment variables check completed",
 =======
@@ -44,6 +52,10 @@
       "error": "Missing environment variables: NODE_VERSION, NODE_OPTIONS",
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-ce5e
       "critical": false
+=======
+      "status": "PASS",
+      "result": "Environment variables check completed",      "critical": false
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     },
     {
       "name": "File Permissions",
@@ -59,6 +71,7 @@
     }
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
   "recommendations": []
 =======
   "recommendations": [
@@ -66,3 +79,6 @@
   ]
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-ce5e
 }
+=======
+  "recommendations": []}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

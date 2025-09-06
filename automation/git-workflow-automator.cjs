@@ -138,9 +138,9 @@ class GitWorkflowAutomator {
         'Check git status'
       );
       if (!statusResult.success || !statusResult.output.trim()) {
-        this.log('No changes to commit');
-        return;
-      }
+    this.log('No changes to commit'),
+    return
+  }
 
       // Commit changes
       const commitMessage = `fea: t: Automated improvements and fixes - ${new Date().toISOString()}`;

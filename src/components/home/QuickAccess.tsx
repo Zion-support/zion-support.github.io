@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
@@ -98,3 +99,10 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
   );
 
 export default QuickAccess;
+=======
+
+<<<<<<< HEAD
+
+export default QuickAccess;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

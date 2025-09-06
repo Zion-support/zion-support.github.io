@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 name: Pr Size Labeler
 
 on:
@@ -33,6 +36,7 @@ jobs:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+<<<<<<< HEAD
 
 =======
 name: PR Size Labeler
@@ -60,3 +64,5 @@ jobs:
           fail_if_xl: false
           update_always: true
 >>>>>>> origin/cursor/deploy-autonomous-cloud-automations-and-sync-c342
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

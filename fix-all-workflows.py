@@ -183,7 +183,11 @@ def fix_workflow_file(file_path):
 def main():
     """Main function to fix all workflow files"""
     print("🚀 GitHub Actions Workflow Auto-Fixer")
+<<<<<<< HEAD
     print("=====================================")
+=======
+    print("==")
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     
     # Find all workflow files
     workflow_dir = Path('.github/workflows')
@@ -208,7 +212,11 @@ def main():
             fixed_count += 1
         print()
     
+<<<<<<< HEAD
     print("=====================================")
+=======
+    print("==")
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     print(f"📊 Fix Summary:")
     print(f"Total files: {total_count}")
     print(f"Successfully processed: {fixed_count}")

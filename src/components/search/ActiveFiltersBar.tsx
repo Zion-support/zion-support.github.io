@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -149,3 +150,14 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 };
 export default ActiveFiltersBar;
 '"
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+export default ActiveFiltersBar;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Table,
@@ -257,3 +258,12 @@ export function TeamManagement() {
 }</div> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </div> </div>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+
+      description: `An invitation has been sent to ${newMemberEmail}`}),
+
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

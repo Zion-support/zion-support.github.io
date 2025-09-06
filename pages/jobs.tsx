@@ -1,11 +1,15 @@
 import type { NextPage } from 'next';
 import Seo from '../components/seo/Seo';
 import { JobPostingJsonLd } from 'next-seo';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 const Jobs: NextPage = () => {
   const job = {
     title: 'Senior Full-Stack Engineer (Next.js + AI)',
     description: 'Build modern AI-enabled web apps at Zion Tech Solutions.',
+<<<<<<< HEAD
     datePosted: new Date().toISOString().slice(0, 10),
     employmentType: 'FULL_TIME',
     validThrough: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30)
@@ -27,6 +31,23 @@ const Jobs: NextPage = () => {
   return (
     <div>
       <Seo title='Jobs' description='Open roles at Zion Tech Solutions.' />
+=======
+    datePosted: new Date().toISOString().slice(0, 10);
+    employmentType: 'FULL_TIME',
+    validThrough: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30).toISOString().slice(0, 10);
+    baseSalary: {
+      currency: 'USD',
+      value: 160000,
+      unitText: 'YEAR'},
+    hiringOrganization: {
+      name: 'Zion Tech Solutions',
+      sameAs: 'https://ziontechgroup.netlify.app',
+      logo: 'https://ziontechgroup.netlify.app/logo.png'},
+    jobLocationType: 'TELECOMMUTE'} as const,
+  return (
+    <div>
+      <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       <JobPostingJsonLd
         datePosted={job.datePosted}
         description={job.description}
@@ -43,7 +64,14 @@ const Jobs: NextPage = () => {
         <p>{job.description}</p>
       </main>
     </div>
+<<<<<<< HEAD
   );
 };
 
 export default Jobs;
+=======
+  )
+};
+
+export default Jobs;
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

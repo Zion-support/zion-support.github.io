@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 name: Link Checker
 
 on:
@@ -45,6 +48,7 @@ jobs:
               });
             } catch (e) {
               core.warning('Failed to create issue: ' + e.message);
+<<<<<<< HEAD
             }
 =======
 name: Link Check
@@ -86,3 +90,6 @@ jobs:
           name: link_audit_report
           path: link_audit_report
 >>>>>>> origin/cursor/crawl-and-fix-site-links-and-pages-f00e
+=======
+            }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 name: Security Audit
 
 on:
@@ -33,6 +36,7 @@ jobs:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+<<<<<<< HEAD
 
 =======
 name: Weekly Security Audit
@@ -73,3 +77,5 @@ jobs:
           delete-branch: true
           labels: automation, security
 >>>>>>> origin/cursor/build-zion-ai-marketplace-service-listing-9ebf
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

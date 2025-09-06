@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import {
   FormField,
@@ -357,3 +358,23 @@ export const commonValidations = {
     },
   },
 };
+=======
+
+<<<<<<< HEAD
+
+  const fieldError = form.formState.errors[name];
+  const isTouched = form.formState.touchedFields[name];
+
+
+<<<<<<< HEAD
+
+
+      default:
+        return (
+
+<<<<<<< HEAD
+      return null;
+    };
+  }},
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

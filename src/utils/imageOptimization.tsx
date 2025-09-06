@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  const observer = new IntersectionObserver ( ([entry]) => {;
   if (entry && entry.isIntersecting) {;
   return () => observer.disconnect () ;
@@ -171,3 +172,9 @@ export function getImageDimensions(
     img.onerror = reject;
     img.src = src;
   });
+=======
+
+<<<<<<< HEAD
+    
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

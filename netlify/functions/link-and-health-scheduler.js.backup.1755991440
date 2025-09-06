@@ -4,9 +4,13 @@ exports.handler = async function() {
   try {
     execSync('node automation/site-link-crawler.cjs || true', { stdio: 'inherit', shell: true });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     execSync('node automation/site-link-fixer.cjs || true', { stdio: 'inherit', shell: true });
 >>>>>>> origin/cursor/crawl-and-fix-site-links-and-pages-f374
+=======
+    execSync('node automation/site-link-fixer.cjs || true', { stdio: 'inherit', shell: true });
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     execSync('node automation/external-link-check.cjs || true', { stdio: 'inherit', shell: true });
     execSync('node scripts/generate-sitemap.js || true', { stdio: 'inherit', shell: true });
     execSync('node automation/sitemap-runner.cjs || true', { stdio: 'inherit', shell: true });

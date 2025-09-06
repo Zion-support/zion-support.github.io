@@ -1,27 +1,35 @@
 #!/bin/bash
 
-# Script to resolve remaining merge conflicts
-# This will use the incoming changes (from the branch being merged) for most files
+# Script to resolve merge conflicts systematically
+# Keep our PM2 automation improvements, accept main branch for others
 
-echo "Resolving remaining merge conflicts..."
+echo "Resolving merge conflicts..."
 
-# List of files with conflicts
-files=(
-    "components/layout/Header.tsx"
-    "components/layout/Layout.tsx"
-    "components/layout/MainLayout.tsx"
-    "components/performance/LazyComponent.tsx"
-    "components/performance/OptimizedImage.tsx"
-    "components/ui/EnhancedMarketplaceCard.tsx"
-    "components/ui/InteractiveNavigation.tsx"
-    "components/ui/NotificationSystem.tsx"
-)
+# Keep our PM2 automation files
+git checkout --ours ecosystem.config.js
+git checkout --ours pm2-automation.sh
+git checkout --ours eslint.config.cjs
 
-# For each file, use the incoming version (from the branch being merged)
-for file in "${files[@]}"; do
-    echo "Resolving conflicts in $file..."
+# For most other files, accept the main branch version
+git status --porcelain | grep "^UU\|^AA\|^DD" | while read line; do
+    file=$(echo "$line" | cut -c4-)
+    
+    # Skip our important files
+    if [[ "$file" == "ecosystem.config.js" || "$file" == "pm2-automation.sh" || "$file" == "eslint.config.cjs" ]]; then
+        echo "Keeping our version of $file"
+        continue
+    fi
+    
+    # Accept main branch version for most files
+    echo "Accepting main branch version of $file"
     git checkout --theirs "$file"
-    git add "$file"
 done
 
-echo "All conflicts resolved!"
+echo "Adding resolved files..."
+git add .
+
+echo "Committing merge resolution..."
+git commit -m "Resolve merge conflicts - keep PM2 automation improvements"
+
+echo "Pushing resolved changes..."
+git push origin HEAD

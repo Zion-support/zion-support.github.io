@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react';
 import { Badge } from '@/types/community';
 import {
@@ -60,3 +61,13 @@ export const UserBadges = ({;
 };
 export default UserBadges;
 '"
+=======
+<<<<<<< HEAD
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
+        
+<<<<<<< HEAD
+
+
+export default UserBadges;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

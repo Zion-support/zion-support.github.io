@@ -1,5 +1,8 @@
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 let withSentryConfig = (cfg) => cfg;
 try {
@@ -8,6 +11,7 @@ try {
   withSentryConfig = (cfg) => sentry.withSentryConfig(cfg, { silent: true });
 } catch {}
 
+<<<<<<< HEAD
 const baseConfig = {
 =======
 const os = require('os');
@@ -16,6 +20,9 @@ const nextConfig = {
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
 >>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
   poweredByHeader: false,
+=======
+const baseConfig = {  poweredByHeader: false,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   trailingSlash: false,
   reactStrictMode: true,
   bundlePagesRouterDependencies: true,

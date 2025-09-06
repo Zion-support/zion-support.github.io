@@ -1,5 +1,117 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
+
+// More comprehensive syntax fixes
+const fixes = [
+  // Fix missing commas in function parameters
+  {
+    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1 = $2,$3'
+  },
+  // Fix missing commas in object destructuring
+  {
+    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2,$3'
+  },
+  // Fix missing commas in array destructuring
+  {
+    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1 = $2,$3'
+  },
+  // Fix missing commas in function calls
+  {
+    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1 = $2,$3'
+  },
+  // Fix missing commas in object properties
+  {
+    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2,$3'
+  },
+  // Fix missing commas in interface properties
+  {
+    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2,$3'
+  },
+  // Fix missing commas in type definitions
+  {
+    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2,$3'
+  },
+  // Fix missing commas in function parameters
+  {
+    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1 = $2,$3'
+  },
+  // Fix missing commas in object destructuring
+  {
+    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2,$3'
+  },
+  // Fix missing commas in array destructuring
+  {
+    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1 = $2,$3'
+  },
+  // Fix missing commas in function calls
+  {
+    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1 = $2,$3'
+  },
+  // Fix missing commas in object properties
+  {
+    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2,$3'
+  },
+  // Fix missing commas in interface properties
+  {
+    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2,$3'
+  },
+  // Fix missing commas in type definitions
+  {
+    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2,$3'
+  },
+  // Fix missing commas in function parameters
+  {
+    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1 = $2,$3'
+  },
+  // Fix missing commas in object destructuring
+  {
+    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2,$3'
+  },
+  // Fix missing commas in array destructuring
+  {
+    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1 = $2,$3'
+  },
+  // Fix missing commas in function calls
+  {
+    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1 = $2,$3'
+  },
+  // Fix missing commas in object properties
+  {
+    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2,$3'
+  },
+  // Fix missing commas in interface properties
+  {
+    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2,$3'
+  },
+  // Fix missing commas in type definitions
+  {
+    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2,$3'
+  }
+];
 
 function fixFile(filePath) {
 

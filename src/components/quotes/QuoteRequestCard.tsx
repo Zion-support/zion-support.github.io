@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { format } from 'date-fns';
 import {
@@ -109,3 +110,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   );
 };
 "
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

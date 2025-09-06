@@ -158,3 +158,26 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 else
     echo "⏸️  Changes not pushed. You can review and push manually later."
 fi
+                fi
+            done
+            
+            # Add resolved files
+            git add .
+            
+            # Commit the merge
+            if git commit -m "Auto-resolve merge conflicts for PR #$pr"; then
+                echo "Successfully resolved conflicts for PR #$pr"
+                git push origin main
+            else
+                echo "Failed to resolve conflicts for PR #$pr"
+                git merge --abort
+            fi
+        fi
+    else
+        echo "PR #$pr has conflicts, skipping for now"
+    fi
+    
+    echo "---"
+done
+
+echo "Merge conflict resolution complete!"

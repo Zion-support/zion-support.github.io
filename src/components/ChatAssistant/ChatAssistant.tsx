@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {
   useState,
   useEffect,
@@ -346,3 +347,18 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
 }</p> <div className="flex justify-end space-x-3" > <Button > Cancel </Button> <Button > Send </Button> </div> </div> </div>) ;
 }</div>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+  const isGuest = !auth?.isAuthenticated;
+
+<<<<<<< HEAD
+
+
+  const handleSendMessage = async (messageContent: string) => {
+
+    if (!messageContent.trim()) return,
+
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

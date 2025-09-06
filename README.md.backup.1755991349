@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 # Zion AI Marketplace – Chat Assistant
 
 An accessible, mobile-ready chat assistant powered by OpenAI. Includes a floating widget you can embed on every page and a secure server proxy so your API key stays private.
@@ -63,6 +66,7 @@ The widget creates a floating button and a panel (bottom-right on desktop, full-
 ## Notes
 
 - The assistant greets users, answers FAQs, and guides through marketplace features. Customize the system prompt in `server/index.js`.
+<<<<<<< HEAD
 - For streaming responses, you can extend the server to use OpenAI streaming and emit text via server-sent events.
 =======
 # Zion AI Marketplace – Assistant Widget
@@ -114,3 +118,6 @@ If your site is hosted separately, deploy this server and set `ALLOWED_ORIGIN` a
 - Default model is `gpt-4o-mini`. You can set `OPENAI_MODEL` to any GPT-4 family model available to your key.
 - For enterprise usage, add authentication and stronger rate limiting.
 >>>>>>> origin/cursor/build-zion-ai-marketplace-chat-assistant-7fc3
+=======
+- For streaming responses, you can extend the server to use OpenAI streaming and emit text via server-sent events.
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

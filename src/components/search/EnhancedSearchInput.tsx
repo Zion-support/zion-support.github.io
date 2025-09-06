@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Search, X } from 'lucide-react';
@@ -310,3 +311,9 @@ break ;
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
 }</div> <AutocompleteSuggestions /> </div>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+
+          
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

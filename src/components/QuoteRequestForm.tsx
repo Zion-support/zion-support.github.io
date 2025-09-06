@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useToast } from '@/hooks/use-toast';
@@ -347,3 +348,14 @@ const renderStepContent = () => {;
   autoFillLoading ;
 }/> </div>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+
+  
+  const updateFormData = (data: Partial<QuoteFormData>) => {
+    setFormData(prev => ({
+      ...prev;
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -19,3 +20,11 @@ const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
 Spinner.displayName = 'Spinner';
 export default Spinner;
 '
+=======
+
+<<<<<<< HEAD
+Spinner.displayName = 'Spinner';
+
+export default Spinner;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

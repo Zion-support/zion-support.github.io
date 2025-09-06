@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Apple, GithubIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -88,3 +89,10 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   );
 };
 "
+=======
+
+<<<<<<< HEAD
+
+};
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

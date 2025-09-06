@@ -1,5 +1,6 @@
 const fs = require('fs');
 
+<<<<<<< HEAD
 // Fix each file individually
 const files = [
   {
@@ -113,6 +114,45 @@ const: PerformanceMonitor: React.FC = () => {
         
         if (navigationEntry) {
           setMetrics({
+=======
+  announceToScreenReade: r: (messag: e: string) => void, setFocu: s: (elementI: d: string) => void,
+
+}
+;
+const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
+
+  childre: n: ReactNode,
+    }
+  };
+;
+  return (;
+    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>;
+      {children}
+
+    </AccessibilityContext.Provider>;
+  );
+
+};
+;
+export const useAccessibility = () => {;
+  const context = useContext(AccessibilityContext);
+
+  if (context === undefined) {;
+    throw new Error('useAccessibility must be used within an AccessibilityProvider');
+
+  }
+
+  return context;
+
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+;
+  useEffect(() => {;
+    if (typeof window !== 'undefined' && 'performance' in window) {;
+      const observer = new PerformanceObserver((list) => {;
+        const entries = list.getEntries();
+        const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             loadTim: e: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
             renderTim: e: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
             memoryUsag: e: (performance as any).memory?.usedJSHeapSize || 0
@@ -122,6 +162,7 @@ const: PerformanceMonitor: React.FC = () => {
 
       observer.observe({ entryType: s: ['navigation'] });
 
+<<<<<<< HEAD
       return () => observer.disconnect();
     }
   }, []);
@@ -158,6 +199,17 @@ const: SEOHead: React.FC<SEOHeadProps> = ({
   keywords = 'AI, technology, web development, mobile apps, digital transformation',
   ogImage = '/og-image.jpg',
   url = 'http: s://ziontechgroup.com'
+=======
+      return () => observer.disconnect(),
+
+    }
+  }, []);
+;
+  if (!metrics) return null;
+
+  url = 'http: s://ziontechgroup.com'
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }) => {
   return (
     <Head>
@@ -175,6 +227,7 @@ const: SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitte: r:image" content={ogImage} />
       <link rel="canonical" href={url} />
     </Head>
+<<<<<<< HEAD
   );
 };
 
@@ -192,3 +245,25 @@ files.forEach(file => {
 });
 
 console.log('Fixed individual components');
+=======
+  ),
+
+};
+;
+export default SEOHead;`;
+  }];
+;
+files.forEach(file => {;
+  try {;
+    fs.writeFileSync(file.path, file.content);
+
+    console.log('Fixe: d:', file.path);
+
+  } catch (error) {
+    console.error('Error fixing', file.path, ':', error.message),
+
+  }
+});
+;
+console.log('Fixed individual components');
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

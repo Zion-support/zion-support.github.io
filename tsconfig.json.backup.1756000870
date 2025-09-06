@@ -17,6 +17,9 @@
     "paths": {
       "@/*": [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         "./*"
       ],
       "@/pages/*": [
@@ -39,6 +42,7 @@
       ]
     },
     /* Bundler mode */
+<<<<<<< HEAD
     "moduleResolution": "bundler",
 =======
         "./src/*"
@@ -84,6 +88,9 @@
     "moduleResolution": "node",
 >>>>>>> origin/cursor/website-audit-and-enhancement-bb45
     "esModuleInterop": true,
+=======
+    "moduleResolution": "bundler",    "esModuleInterop": true,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "resolveJsonModule": true,
     "strict": false,
     "noUnusedLocals": false,
@@ -120,6 +127,9 @@
     "node_modules",
     "zion.app/recovered-content/**",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "contracts/**",
     "dao/**",
     "zion-os/**",
@@ -128,6 +138,7 @@
     "monitoring/**",
     "scripts/**",
     "server/**",
+<<<<<<< HEAD
     "cypress/**"
 =======
     "apps/**",
@@ -138,4 +149,7 @@
     "**/*.spec.tsx"
 >>>>>>> origin/cursor/website-audit-and-enhancement-bb45
   ]
+=======
+    "cypress/**"  ]
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }

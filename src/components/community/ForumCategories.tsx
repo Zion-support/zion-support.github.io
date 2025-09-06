@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import {
   Card,
@@ -111,3 +112,15 @@ export const ForumCategories = () => {
 };
 export default ForumCategories;
 "
+=======
+
+<<<<<<< HEAD
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+
+
+<<<<<<< HEAD
+
+
+export default ForumCategories;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useMemo } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { cn } from '@/lib/utils';
@@ -109,3 +110,12 @@ function formatMessageWithLinks(message: string): string {
   );
 
   return formattedMessage;
+=======
+
+<<<<<<< HEAD
+
+      <div className={cn(
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm";
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

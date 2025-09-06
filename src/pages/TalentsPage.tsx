@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -681,3 +682,12 @@ export default function TalentsPage() {
 }> <ArrowUp className=" h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+
+    let filteredTalents = allTalents;
+    
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

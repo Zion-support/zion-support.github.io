@@ -4,7 +4,11 @@
 
 // NOTE: This file should not be edited
 <<<<<<< HEAD
+<<<<<<< HEAD
 // see https://nextjs.org/docs/basic-features/typescript for more information.
 =======
 // see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+=======
+// see https://nextjs.org/docs/basic-features/typescript for more information.
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

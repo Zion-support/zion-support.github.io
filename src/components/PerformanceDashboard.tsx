@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Card,
@@ -275,3 +276,15 @@ const PerformanceDashboard: React.FC = () => {
 };
 
 export default PerformanceDashboard;
+=======
+
+<<<<<<< HEAD
+
+      case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />;
+      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />;
+      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />;
+      default: return <AlertCircle className="h-4 w-4 text-gray-500" />
+
+export default PerformanceDashboard, 
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

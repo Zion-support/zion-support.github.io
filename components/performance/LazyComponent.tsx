@@ -1,14 +1,17 @@
-import React, { Suspense, ComponentType } from 'react';
+import React from 'react'
+};
+import React, { Suspense, lazy } from 'react';
+
 
 interface LazyComponentProps {
-  component: ComponentType<any>;
-  fallback?: React.ReactNode;
-  [key: string]: any;
+  component: ComponentType<Record<string, unknown>>;
+  fallback?: ReactNode;
+  [key: string]: unknown,
 }
 
 const LazyComponent: React.FC<LazyComponentProps> = ({ 
   component: Component, 
-  fallback = <div>Loading...</div>, 
+  fallback = <div className="animate-pulse bg-gray-200 h-32 rounded" />,
   ...props 
 }) => {
   return (
@@ -19,3 +22,5 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 };
 
 export default LazyComponent;
+
+

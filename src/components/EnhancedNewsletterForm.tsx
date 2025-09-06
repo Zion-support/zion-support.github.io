@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState, useRef } from 'react';
@@ -126,3 +127,12 @@ export function EnhancedNewsletterForm() {
       </div>
     </div>
   );
+=======
+
+<<<<<<< HEAD
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

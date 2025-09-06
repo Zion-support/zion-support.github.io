@@ -1,6 +1,10 @@
 # SEO Audit (Autonomous)
 
+<<<<<<< HEAD
 Generated: 2025-09-06T00:57:27.834Z
+=======
+Generated: 2025-09-06T01:35:54.611Z
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 | File | Title | Meta | Links | Images |
 |---|---:|---:|---:|---:|

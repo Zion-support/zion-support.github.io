@@ -46,9 +46,9 @@ class ImportCleaner {
         // Extract the base name (before 'as')
         const baseName = imp.split(' as ')[0].trim();
         if (!seen.has(baseName)) {
-          uniqueImports.push(imp);
-          seen.add(baseName);
-        }
+    uniqueImports.push(imp),
+    seen.add(baseName)
+  }
       }
 
       // Create new import statement
@@ -92,8 +92,8 @@ class ImportCleaner {
 
 // Run if called directly
 if (require.main === module) {
-  const cleaner = new ImportCleaner();
-  cleaner.cleanAllFiles().catch(console.error);
-}
+    const cleaner = new ImportCleaner(),
+    cleaner.cleanAllFiles().catch(console.error)
+  }
 
 module.exports = ImportCleaner;

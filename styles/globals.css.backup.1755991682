@@ -203,6 +203,9 @@ h3 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 /* New Futuristic Effects */
 
 /* Holographic effect */
@@ -397,6 +400,7 @@ h3 {
 }
 
 .glitch::before,
+<<<<<<< HEAD
 .glitch::after {
 =======
 @keyframes particleFloat {
@@ -462,6 +466,9 @@ h3 {
 .cyberpunk-glitch::after {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
   content: attr(data-text);
+=======
+.glitch::after {  content: attr(data-text);
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   position: absolute;
   top: 0;
   left: 0;
@@ -469,6 +476,7 @@ h3 {
   height: 100%;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .glitch::before {
   animation: glitch-1 2s infinite;
@@ -481,6 +489,13 @@ h3 {
 }
 
 <<<<<<< HEAD
+=======
+.glitch::before {
+  animation: glitch-1 2s infinite;  color: #ff0000;
+  z-index: -1;
+}
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 .glitch::after {
   animation: glitch-2 2s infinite;
   color: #00ff00;
@@ -496,6 +511,7 @@ h3 {
 }
 
 @keyframes glitch-1 {
+<<<<<<< HEAD
   0%, 100% { transform: translate(0); }
 =======
 .cyberpunk-glitch::after {
@@ -528,6 +544,19 @@ h3 {
   60% { transform: translate(-2px, -2px); }
   80% { transform: translate(-2px, 2px); }
 <<<<<<< HEAD
+=======
+  0%, 100% { transform: translate(0); }  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { transform: translate(0); }  20% { transform: translate(2px, -2px); }
+  40% { transform: translate(2px, 2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(-2px, 2px); }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }
 
 /* Enhanced component styles */
@@ -548,6 +577,7 @@ h3 {
   overflow: hidden;
 }
 
+<<<<<<< HEAD
 .button::before {
 =======
   100% { transform: translate(0); }
@@ -563,6 +593,9 @@ h3 {
 .futuristic-card::before {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
   content: '';
+=======
+.button::before {  content: '';
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   position: absolute;
   top: 0;
   left: -100%;
@@ -578,6 +611,9 @@ h3 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 .button:hover::before {
   left: 100%;
 }
@@ -590,6 +626,7 @@ h3 {
 /* Enhanced typography */
 .futuristic-text {
   background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
+<<<<<<< HEAD
   background-size: 300% 300%;
 =======
 .futuristic-card:hover::before {
@@ -775,12 +812,18 @@ h3 {
   background-size: 200% 200%;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
   -webkit-background-clip: text;
+=======
+  background-size: 300% 300%;  -webkit-background-clip: text;
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradientShift 3s ease infinite;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 @keyframes textGradient {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -840,6 +883,7 @@ h3 {
   .neural-bg,
   .quantum-tunnel,
   .floating-orbs,
+<<<<<<< HEAD
   .matrix-rain {
 =======
 .text-glow {
@@ -914,6 +958,13 @@ h3 {
     border: 1px solid #000 !important;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
   }
+=======
+  .matrix-rain {    background: none !important;
+  }
+  
+  .cyber-grid {
+    background-size: 15px 15px;  }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }
 
 /* Dark mode enhancements */

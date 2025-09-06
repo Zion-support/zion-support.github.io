@@ -2,6 +2,9 @@ name: Link Check
 
 on:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   push:
     branches: [ main, master ]
   schedule:
@@ -35,6 +38,7 @@ jobs:
             git push
           else
             echo "No changes to commit"
+<<<<<<< HEAD
           fi
 =======
   pull_request:
@@ -89,3 +93,6 @@ jobs:
           content-filepath: ./lychee/out.md
           labels: 'automation, bug'
 >>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
+=======
+          fi
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

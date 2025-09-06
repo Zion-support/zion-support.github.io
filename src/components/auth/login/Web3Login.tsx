@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/useAuth';
@@ -109,3 +110,14 @@ const buttonTitle = !isWalletSystemAvailable ? "Web3 login is currently unavaila
   buttonContent ;
 }</Button>) ;
 }"
+=======
+
+<<<<<<< HEAD
+
+
+  const buttonDisabled = isLoading || !isWalletSystemAvailable;
+  const buttonTitle = !isWalletSystemAvailable
+    ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
+    : "";
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

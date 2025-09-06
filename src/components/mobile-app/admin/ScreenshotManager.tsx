@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -172,3 +173,22 @@ return filtered;
 }</div> </CardContent> </Card>) ;
 };
 "
+=======
+
+<<<<<<< HEAD
+  
+  const addScreenshots = (files: File[]) => {
+    // Filter for image files only
+    const imageFiles = files.filter(file => file.type.startsWith('image/'));
+    
+<<<<<<< HEAD
+    const maxScreenshots = platform === "ios" ? 10 : 8;
+    const availableSlots = maxScreenshots - screenshots.length;
+    
+<<<<<<< HEAD
+      
+<<<<<<< HEAD
+
+};
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

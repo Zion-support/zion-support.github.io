@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Brain, Clock, Award, Zap } from 'lucide-react';
 import {
@@ -100,3 +101,10 @@ export const AppFeatures: React.FC = () => {";
 }</div> </div> </section>) ;
 };
 "
+=======
+
+<<<<<<< HEAD
+
+};
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

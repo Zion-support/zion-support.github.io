@@ -6,11 +6,15 @@
     "criticalFailures": 0,
     "canBuild": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "timestamp": "2025-08-19T23:48:12.683Z"
 =======
     "timestamp": "2025-08-19T23:53:03.716Z"
 >>>>>>> origin/cursor/build-and-fix-errors-2334
   },
+=======
+    "timestamp": "2025-08-19T23:48:12.683Z"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   "results": [
     {
       "name": "Page Structure Validation",

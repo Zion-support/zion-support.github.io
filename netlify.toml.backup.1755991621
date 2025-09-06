@@ -11,7 +11,10 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -50,6 +53,9 @@
 
 [[redirects]]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   from = "/ai-customer-success-automation"
   to = "/ai-customer-success-platform"
   status = 301
@@ -147,6 +153,7 @@
 [[redirects]]
   from = "/quantum-internet-security"
   to = "/quantum-internet-security-platform"
+<<<<<<< HEAD
   status = 301
 =======
   from = "/rag-evaluation-lab"
@@ -184,3 +191,6 @@
   status = 302
   force = true
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-fe5e
+=======
+  status = 301
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

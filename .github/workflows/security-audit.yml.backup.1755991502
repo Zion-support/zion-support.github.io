@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 name: Weekly Security Audit
 
 on:
@@ -9,6 +12,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+<<<<<<< HEAD
 
 =======
 name: Security Audit
@@ -19,11 +23,16 @@ on:
   workflow_dispatch:
 
 >>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       - name: Checkout
         uses: actions/checkout@v4
       - name: Use Node.js
@@ -45,6 +54,7 @@ jobs:
           body: 'Weekly npm audit report in data/security/npm-audit.json'
           branch: automation/security-audit
           delete-branch: true
+<<<<<<< HEAD
           labels: automation, security
 =======
       - uses: actions/checkout@v4
@@ -68,3 +78,6 @@ jobs:
             echo "No changes to commit"
           fi
 >>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a
+=======
+          labels: automation, security
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

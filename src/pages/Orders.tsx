@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import Link from 'next/link'; // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth';
@@ -121,3 +122,10 @@ export default function OrdersPage() {
       )}
     </div>
   );
+=======
+
+<<<<<<< HEAD
+
+  const formatDate = (date: string) => new Date(date).toLocaleDateString(),
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

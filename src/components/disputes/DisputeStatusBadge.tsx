@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge';
 import { ShieldAlert } from 'lucide-react';
 import {
@@ -44,3 +45,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       </TooltipContent>
     </Tooltip>
   );
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

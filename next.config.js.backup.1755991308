@@ -57,6 +57,7 @@ const nextConfig = {
     // Disable profiling for faster builds
     swcTraceProfiling: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
     // Removed esmExternals to prevent external module dynamic import issues
@@ -68,6 +69,9 @@ const nextConfig = {
     // Partial Prerendering currently requires canary – disabled for now
 >>>>>>> origin/cursor/check-logs-and-improve-project-quality-a28f
   },
+=======
+      },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
   images: {
     unoptimized: isNetlify, // Disable optimization on Netlify to prevent 404s
@@ -318,7 +322,10 @@ const nextConfig = {
         })
       );
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     }
     
     // Development optimizations to prevent memory leaks with 176+ pages
@@ -915,7 +922,10 @@ const nextConfig = {
     ];
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   
   // Skip ESLint during build for faster deployment  
   eslint: {
@@ -925,7 +935,10 @@ const nextConfig = {
   // Enable SWC minification explicitly (already default in Next 15)
   swcMinify: true,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-logs-and-improve-project-quality-a28f
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 };
 
 module.exports = withSentryConfig(baseConfig);

@@ -41,7 +41,7 @@
       "category": "accessibility",
       "item": "ariaLabels",
       "description": "Add proper ARIA labels to interactive elements",
-      "priority": "high",
+      "priority": "medium",
       "estimatedTime": 3
     },
     {
@@ -62,7 +62,7 @@
       "category": "accessibility",
       "item": "screenReader",
       "description": "Add screen reader support",
-      "priority": "high",
+      "priority": "medium",
       "estimatedTime": 3
     },
     {
@@ -139,7 +139,7 @@
       "category": "monitoring",
       "item": "performanceMonitoring",
       "description": "Add performance monitoring",
-      "priority": "high",
+      "priority": "medium",
       "estimatedTime": 1
     },
     {

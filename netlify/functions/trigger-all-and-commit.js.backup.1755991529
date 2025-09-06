@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -11,6 +14,7 @@ exports.handler = async function(event, context) {
     const reportPath = path.join(process.cwd(), 'trigger-all-and-commit-report.md');
     
     const reportContent = `# trigger-all-and-commit Report
+<<<<<<< HEAD
 =======
 exports.handler = async function() {
   const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/, '');
@@ -33,6 +37,8 @@ exports.handler = async function() {
   }
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 Generated: ${timestamp}
 
 ## Status
@@ -57,6 +63,7 @@ Generated: ${timestamp}
     } catch (gitError) {
       console.log('Git error:', gitError.message);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     
     console.log('✅ trigger-all-and-commit completed successfully');
@@ -142,6 +149,11 @@ Generated: ${timestamp}
 
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
     return {
+=======
+    
+    console.log('✅ trigger-all-and-commit completed successfully');
+        return {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       statusCode: 200,
       body: JSON.stringify({
         message: 'trigger-all-and-commit completed successfully',

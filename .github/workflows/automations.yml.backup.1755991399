@@ -21,6 +21,9 @@ jobs:
         with:
           node-version: '20'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           cache: 'npm'
       - name: Install deps
         run: npm ci
@@ -40,6 +43,7 @@ jobs:
             git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
           else
             echo "No changes to commit"
+<<<<<<< HEAD
           fi
 =======
           cache: npm
@@ -48,3 +52,6 @@ jobs:
       - name: Run workflow
         run: echo "Workflow completed successfully"
 >>>>>>> origin/cursor/check-and-fix-github-actions-workflows-efb2
+=======
+          fi
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

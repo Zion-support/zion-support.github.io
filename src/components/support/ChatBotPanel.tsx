@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { Button } from '@/components/ui/button';
@@ -442,3 +443,40 @@ timestamp: new Date () ;
 }Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) ";
 }aria-label="Send message" h-4 w-4" /> </Button> </form> </div> </div>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+    
+<<<<<<< HEAD
+
+      timestamp: new Date()},
+    
+<<<<<<< HEAD
+        timestamp: new Date()},
+      
+<<<<<<< HEAD
+        description: "We're having trouble connecting to our support service."}),
+      
+<<<<<<< HEAD
+      
+<<<<<<< HEAD
+      id: `bot-escalation-${Date.now()}`,
+
+      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
+
+      sender: "bot",
+      timestamp: new Date()},
+    
+<<<<<<< HEAD
+
+  const handleQuickReply = (text: string) => {
+    handleSendMessage(text)
+  };
+
+<<<<<<< HEAD
+    
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

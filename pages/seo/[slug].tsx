@@ -2,6 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import TalentGrid from '../../components/seo/TalentGrid';
 import FAQ from '../../components/seo/FAQ';
+<<<<<<< HEAD
 
 export type LandingPayload = {
   title: string;
@@ -10,6 +11,15 @@ export type LandingPayload = {
   region?: string;
   service?: string;
   faq: Array<{ q: string; a: string }>;
+=======
+export type LandingPayload = {
+  title: string,
+  h1: string,
+  bodyHtml: string,
+  region?: string;
+  service?: string;
+  faq: Array<{ q: string, a: string }>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 };
 
 export default function SEOLandingPage() {
@@ -24,6 +34,7 @@ export default function SEOLandingPage() {
     if (dataParam) {
       try {
         setPayload(JSON.parse(decodeURIComponent(dataParam)));
+<<<<<<< HEAD
         return;
       } catch {}
     }
@@ -36,11 +47,19 @@ export default function SEOLandingPage() {
       service: undefined,
       faq: [],
     });
+=======
+        return
+      } catch {}
+    }
+    // Fallback: render a basic placeholder until a generated page is deployed
+    setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   }, [router.isReady, slug]);
 
   if (!payload) return null;
 
   return (
+<<<<<<< HEAD
     <div className='max-w-4xl mx-auto'>
       <head>
         <title>{payload.title}</title>
@@ -57,9 +76,26 @@ export default function SEOLandingPage() {
 
       <div className='mt-8'>
         <h2 className='text-lg font-semibold mb-2'>Featured Talent</h2>
+=======
+    <div className="max-w-4xl mx-auto">
+      <head>
+        <title>{payload.title}</title>
+        <meta name="description" content={`${payload.title} • Zion Marketplace`} />
+      </head>
+      <h1 className="text-2xl font-semibold mb-4">{payload.h1}</h1>
+      <div className="prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: payload.bodyHtml }} />
+
+      <div className="mt-8">
+        <h2 className="text-lg font-semibold mb-2">Featured Talent</h2>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         <TalentGrid region={payload.region} service={payload.service} />
       </div>
 
       <FAQ items={payload.faq} />
     </div>
+<<<<<<< HEAD
   );
+=======
+  )
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

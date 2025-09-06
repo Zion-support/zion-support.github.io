@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function LocalHome() {
   return (
     <main className='min-h-screen bg-black text-zinc-100 p-8'>
@@ -8,3 +9,6 @@ export default function LocalHome() {
       </section>
     </main>
   );
+=======
+export default function LocalHome(){return (<main className="min-h-screen bg-black text-zinc-100 p-8"><section className="prose prose-invert max-w-3xl mx-auto"><h1>Zion</h1><p>Fido, konfirmita.</p><p>Suvereneco estas protokolo.</p></section></main>)}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

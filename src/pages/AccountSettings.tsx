@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
 import { Header } from '@/components/Header';
@@ -297,3 +298,13 @@ export default function AccountSettings() {
       </main>
     </>
   );
+=======
+
+<<<<<<< HEAD
+
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
+      const address = accounts[0];
+      
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

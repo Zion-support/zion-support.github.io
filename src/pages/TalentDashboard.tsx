@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -227,3 +228,10 @@ export default function TalentDashboard() {
       <TalentDashboardContent />
     </ProtectedRoute>
   );
+=======
+
+<<<<<<< HEAD
+    onboardingStatus.matchReceived;
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 name: Cloud Automation (Daily)
 
 on:
@@ -13,6 +16,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+<<<<<<< HEAD
 =======
 name: Cloud Daily Automations
 
@@ -43,6 +47,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
 <<<<<<< HEAD
+=======
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           node-version: 20
           cache: 'npm'
 
@@ -61,6 +70,7 @@ jobs:
         run: npm run sync-health:run || true
 
       - name: Post-automation git sync (safe)
+<<<<<<< HEAD
         run: npm run automation:git-sync || true
 =======
           node-version: '20.x'
@@ -105,3 +115,6 @@ jobs:
             echo "No changes to commit"
           fi
 >>>>>>> origin/cursor/build-zion-ipo-readiness-portal-e565
+=======
+        run: npm run automation:git-sync || true
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

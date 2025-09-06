@@ -1,7 +1,10 @@
 [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "route": "/2025-advanced-services-showcase",
     "title": "",
     "h1": ""
@@ -67,7 +70,10 @@
     "h1": "Service not found"
   },
   {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-e549
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "route": "/_app",
     "title": "",
     "h1": ""
@@ -81,6 +87,9 @@
     "route": "/about",
     "title": "About Us - Zion Tech Group",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "h1": ""
   },
   {
@@ -110,6 +119,7 @@
   },
   {
     "route": "/edge-computing-orchestration",
+<<<<<<< HEAD
     "title": "Edge Computing Orchestration - Zion Tech Group",
 =======
     "h1": "We build practical AI and platform solutions"
@@ -439,6 +449,9 @@
     "title": "",
 >>>>>>> origin/cursor/website-audit-and-enhancement-e549
     "h1": ""
+=======
+    "title": "Edge Computing Orchestration - Zion Tech Group",    "h1": ""
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   },
   {
     "route": "/",
@@ -447,6 +460,9 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "route": "/portfolio",
     "title": "Our Portfolio - Zion Tech Group",
     "h1": ""
@@ -489,6 +505,7 @@
   {
     "route": "/terms",
     "title": "Terms of Service - Zion Tech Group",
+<<<<<<< HEAD
     "h1": ""
 =======
     "route": "/innovative-services-showcase-2025",
@@ -4051,4 +4068,7 @@
     "h1": "Founder Course: Launch Your Zion Instance"
 >>>>>>> origin/cursor/website-audit-and-enhancement-e549
   }
+=======
+    "h1": ""  }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 ]

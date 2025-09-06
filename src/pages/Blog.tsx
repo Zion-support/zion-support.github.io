@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -370,3 +371,13 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
 
 }</div> </div> </>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+
+      selectedCategory === "All Categories" || post.category === selectedCategory;
+
+<<<<<<< HEAD
+
+  logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

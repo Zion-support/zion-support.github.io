@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { QuoteFormData, ListingItem, ServiceType } from '@/types/quotes';
 import { Input } from '@/components/ui/input';
@@ -256,3 +257,12 @@ return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold t
 }</div> </div>) ;
 }</div>) ;
 }"
+=======
+
+<<<<<<< HEAD
+
+      const maxRetries = 3;
+
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

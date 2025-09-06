@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
 import { X, ArrowRight } from 'lucide-react';
@@ -105,3 +106,10 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   );
 };
 '"
+=======
+
+<<<<<<< HEAD
+  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
+  
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

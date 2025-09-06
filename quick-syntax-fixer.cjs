@@ -85,9 +85,9 @@ class QuickSyntaxFixer {
 
 // Run the fixer
 if (require.main === module) {
-  const fixer = new QuickSyntaxFixer();
-  fixer.run().catch(console.error);
-}
+    const fixer = new QuickSyntaxFixer(),
+    fixer.run().catch(console.error)
+  }
 
 module.exports = QuickSyntaxFixer;
 <<<<<<< HEAD

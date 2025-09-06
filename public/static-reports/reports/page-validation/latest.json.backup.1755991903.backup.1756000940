@@ -1,6 +1,9 @@
 {
   "summary": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "totalFiles": 1,
     "filesWithIssues": 1,
     "totalIssues": 3,
@@ -39,6 +42,7 @@
           "type": "WARNING",
           "code": "PAGE_TOO_SHORT",
           "message": "Page content seems too short, may be incomplete",
+<<<<<<< HEAD
           "line": 0,
 =======
     "totalFiles": 4,
@@ -99,10 +103,14 @@
           "line": 31,
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-5f5b
           "severity": "warning"
+=======
+          "line": 0,          "severity": "warning"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         }
       ]
     }
   ],
+<<<<<<< HEAD
 <<<<<<< HEAD
   "buildBreakingFiles": [
     "pages/enhanced-services.tsx"
@@ -117,3 +125,9 @@
   "generatedAt": "2025-08-20T18:46:21.467Z"
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-5f5b
 }
+=======
+  "buildBreakingFiles": [
+    "pages/enhanced-services.tsx"
+  ],
+  "generatedAt": "2025-08-21T00:33:41.084Z"}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Project } from '@/types/projects';
 
 import { useState } from 'react';
@@ -124,3 +125,19 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
       )}
     </Card>
   );
+=======
+
+<<<<<<< HEAD
+
+  
+  const isCompleted = project.status === "completed";
+  const isClient = user?.id === project.client_id;
+  const isTalent = user?.id === project.talent_id;
+  
+  const clientProfile = project?.talent_profile;
+  const talentProfile = project.talent_profile;
+
+
+  
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -7,14 +7,22 @@ on:
 permissions:
   contents: write
   actions: read
+<<<<<<< HEAD
 <<<<<<< HEAD:.github/workflows/backup-20250818-113801/branch-cleanup.yml
   pull-requests: write
 =======
+=======
+:.github/workflows/backup-20250818-113801/branch-cleanup.yml
+  pull-requests: write
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 concurrency:
   group: "branch-cleanup-${{ github.ref }}"
   cancel-in-progress: true
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-and-fix-github-actions-workflows-efb2:.github/workflows/broken_workflows_backup_1755470975/branch-cleanup.yml
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 jobs:
   main:
     name: Main Job

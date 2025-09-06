@@ -3,6 +3,9 @@
 ## Overview
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 Welcome to Zion Tech Group's professional micro SaaS services! We offer a suite of enterprise-grade API services designed for developers, businesses, and startups. Each service comes with free tiers, comprehensive documentation, and lightning-fast performance.
 
 ## 🚀 Services Overview
@@ -34,6 +37,7 @@ Advanced email validation service with comprehensive deliverability scoring and 
 ```bash
 curl -X POST /api/email-validator \
   -H "Content-Type: application/json" \
+<<<<<<< HEAD
   -d '{"email": "user@example.com"}'
 =======
 Welcome to our comprehensive suite of micro SaaS services designed to accelerate your development, enhance security, and optimize performance. Built by developers, for developers, these services provide professional-grade functionality that you can integrate directly into your applications.
@@ -112,6 +116,12 @@ console.log(`Suggestions: ${result.suggestions.join(', ')}`);
 ---
 
 <<<<<<< HEAD
+=======
+  -d '{"email": "user@example.com"}'```
+
+---
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 ### 2. Password Strength Analyzer
 **Endpoint:** `/api/password-strength`  
 **Free Tier:** 500 checks/month  
@@ -139,6 +149,7 @@ Comprehensive password security analysis with entropy calculation and improvemen
 ```bash
 curl -X POST /api/password-strength \
   -H "Content-Type: application/json" \
+<<<<<<< HEAD
   -d '{"password": "your_password_here"}'
 =======
 ### 3. Password Strength Analyzer
@@ -177,6 +188,12 @@ const strongPassword = passwordStrengthService.generateStrongPassword(16);
 ---
 
 <<<<<<< HEAD
+=======
+  -d '{"password": "your_password_here"}'```
+
+---
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 ### 3. Smart URL Shortener
 **Endpoint:** `/api/url-shortener`  
 **Free Tier:** 1000 URLs/month  
@@ -204,6 +221,7 @@ Professional URL shortening service with analytics, custom codes, and click trac
 ```bash
 curl -X POST /api/url-shortener \
   -H "Content-Type: application/json" \
+<<<<<<< HEAD
   -d '{"originalUrl": "https://example.com", "customCode": "optional"}'
 =======
 ### 4. URL Shortener Service
@@ -245,6 +263,12 @@ console.log(`Total clicks: ${analytics.totalClicks}`);
 ---
 
 <<<<<<< HEAD
+=======
+  -d '{"originalUrl": "https://example.com", "customCode": "optional"}'```
+
+---
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 ### 4. Text Analysis Suite
 **Endpoint:** `/api/text-analyzer`  
 **Free Tier:** 50 analyses/month  
@@ -454,6 +478,7 @@ Our micro SaaS services are provided under commercial licenses. See individual s
 
 **Ready to get started?** [Explore our services](/micro-saas) or [try our demos](/demos) today!
 
+<<<<<<< HEAD
 For questions or support, [contact our team](/contact) or visit our [GitHub repository](https://github.com/Zion-Holdings/zion.app).
 =======
 ### 5. File Compression Service
@@ -880,3 +905,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 *Empowering developers to build better, faster, and more secure applications.*
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-b762
+=======
+For questions or support, [contact our team](/contact) or visit our [GitHub repository](https://github.com/Zion-Holdings/zion.app).
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

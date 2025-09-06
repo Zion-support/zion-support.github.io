@@ -276,10 +276,14 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "route": "/comprehensive-2025-services-showcase",
     "title": "Comprehensive 2025 Innovative Services Showcase — Zion Tech Group",
     "h1": "2025 Innovative Services Showcase"
   },
+<<<<<<< HEAD
   {
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-32cd
@@ -420,6 +424,9 @@
     "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-32cd
     "h1": "Zion Tech Group"
+=======
+  {    "h1": "Zion Tech Group"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   },
   {
     "route": "/innovative-services-showcase-2025",
@@ -543,10 +550,14 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "route": "/pricing-2025",
     "title": "2025 Pricing & Services — Zion Tech Group",
     "h1": "2025 Pricing & Services"
   },
+<<<<<<< HEAD
   {
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-32cd
@@ -718,6 +729,9 @@
     "h1": "Ultimate Futuristic Services"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-32cd
   },
+=======
+  {  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   {
     "route": "/url-shortener",
     "title": "URL Shortener - Zion Tech Group",

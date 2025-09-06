@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -579,3 +580,16 @@ downvotes: 0 ;
 }/>) ) ;
 }</div> </div> </div> </>) ;
 }'"
+=======
+
+<<<<<<< HEAD
+
+  const isAuthor = user?.id === post?.authorId;
+  
+  // Check if user is admin/mod
+  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
+  
+
+  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

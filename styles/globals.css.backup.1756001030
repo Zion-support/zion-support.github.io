@@ -3,15 +3,22 @@
 @tailwind utilities;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 /* Import Inter font for modern typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
+<<<<<<< HEAD
 /* CSS Variables for modern theming */
 =======
 /* Enhanced Futuristic Design System with Superior Contrast */
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b8f6
 :root {
+=======
+/* CSS Variables for modern theming */:root {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   --background: #000000;
   --foreground: #ffffff;
   --primary: #3b82f6;
@@ -73,6 +80,7 @@
   box-shadow: var(--holographic-glow);
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* Enhanced Selection */
 ::selection {
@@ -236,6 +244,11 @@ input, textarea, select {
   padding: 0.75rem 1rem;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b8f6
   color: white;
+=======
+/* Enhanced Selection */
+::selection {
+  background: rgba(0, 255, 255, 0.4);  color: white;
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 }
 

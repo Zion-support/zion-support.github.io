@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useMemo } from 'react';
 import {
   onsiteServicePricing,
@@ -130,3 +131,16 @@ export function ITServicePricingTable() {
       </div>
     </div>
   );
+=======
+
+<<<<<<< HEAD
+
+      direction: 
+        sortConfig.key === key && sortConfig.direction === "ascending" 
+          ? "descending" 
+          : "ascending"})
+  };
+
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

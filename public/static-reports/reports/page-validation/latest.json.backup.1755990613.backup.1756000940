@@ -8,7 +8,10 @@
     "canBuild": true
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   "results": [
     {
       "file": "pages/_app.tsx",
@@ -25,6 +28,7 @@
     }
   ],
   "buildBreakingFiles": [],
+<<<<<<< HEAD
   "generatedAt": "2025-08-19T18:36:05.933Z"
 =======
   "results": [],
@@ -32,3 +36,6 @@
   "generatedAt": "2025-08-19T18:00:18.033Z"
 >>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-2064
 }
+=======
+  "generatedAt": "2025-08-19T18:36:05.933Z"}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
