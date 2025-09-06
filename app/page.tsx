@@ -50,24 +50,27 @@ function ServiceCard({
   return (
     <Link
       href={href}
-      className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      className="group block p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transform hover:-translate-y-2 hover:scale-105"
       aria-label={`Learn more about ${title} services`}
     >
       <div className="flex items-center mb-4">
-        {icon && <span className="text-2xl mr-3" aria-hidden="true">{icon}</span>}
-        <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
+        {icon && <span className="text-3xl mr-4 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">{icon}</span>}
+        <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">{title}</h3>
       </div>
-      <p className="text-gray-600 leading-relaxed mb-4">{description}</p>
+      <p className="text-gray-600 leading-relaxed mb-4 group-hover:text-gray-700 transition-colors duration-300">{description}</p>
       {bullets.length > 0 && (
-        <ul className="space-y-1" role="list">
+        <ul className="space-y-2" role="list">
           {bullets.map((bullet, index) => (
-            <li key={index} className="text-sm text-gray-600 flex items-center">
-              <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 flex-shrink-0" aria-hidden="true"></span>
+            <li key={index} className="text-sm text-gray-600 flex items-center group-hover:text-gray-700 transition-colors duration-300">
+              <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-300" aria-hidden="true"></span>
               {bullet}
             </li>
           ))}
         </ul>
       )}
+      <div className="mt-4 text-blue-600 font-medium text-sm group-hover:text-blue-700 transition-colors duration-300">
+        Learn more →
+      </div>
     </Link>
   );
 }
@@ -76,31 +79,40 @@ export default function HomePage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg" role="banner">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-          Zion Tech Group
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Enterprise AI solutions, micro SaaS development, and comprehensive IT services
-          that drive business transformation and growth.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/services"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-            aria-label="Explore our comprehensive service offerings"
-          >
-            Explore Services
-          </Link>
-          <a
-            href="https://ziontechgroup.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
-            aria-label="Visit our main website (opens in new tab)"
-          >
-            Visit Main Site
-          </a>
+      <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-lg relative overflow-hidden" role="banner">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-4 -left-4 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+          <div className="absolute -bottom-8 -right-4 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" style={{ animationDelay: '4s' }}></div>
+        </div>
+        
+        <div className="relative z-10">
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 animate-fade-in">
+            Zion Tech Group
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto animate-slide-up">
+            Enterprise AI solutions, micro SaaS development, and comprehensive IT services
+            that drive business transformation and growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <Link
+              href="/services"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-lg hover:shadow-xl"
+              aria-label="Explore our comprehensive service offerings"
+            >
+              Explore Services
+            </Link>
+            <a
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+              aria-label="Visit our main website (opens in new tab)"
+            >
+              Visit Main Site
+            </a>
+          </div>
         </div>
       </section>
 
@@ -197,61 +209,61 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-12 bg-gray-50 rounded-lg" aria-labelledby="why-choose-heading">
-        <div className="text-center mb-12">
-          <h2 id="why-choose-heading" className="text-3xl font-bold text-gray-900 mb-4">
+      <section className="py-16 bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg" aria-labelledby="why-choose-heading">
+        <div className="text-center mb-16">
+          <h2 id="why-choose-heading" className="text-4xl font-bold text-gray-900 mb-6 animate-fade-in">
             Why Choose Zion Tech Group?
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-slide-up">
             We combine technical expertise with business acumen to deliver
             solutions that drive real results.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" role="list" aria-label="Key advantages and benefits">
-          <div className="text-center p-6">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">⚡</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label="Key advantages and benefits">
+          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+            <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-3xl">⚡</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
               Fast Delivery
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
               Rapid development and deployment with agile methodologies
             </p>
           </div>
 
-          <div className="text-center p-6">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">🔒</span>
+          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+            <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-3xl">🔒</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-green-600 transition-colors duration-300">
               Secure & Reliable
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
               Enterprise-grade security and 99.9% uptime guarantee
             </p>
           </div>
 
-          <div className="text-center p-6">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">🎯</span>
+          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+            <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-3xl">🎯</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors duration-300">
               Custom Solutions
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
               Tailored solutions that fit your specific business needs
             </p>
           </div>
 
-          <div className="text-center p-6">
-            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">📞</span>
+          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+            <div className="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-3xl">📞</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors duration-300">
               24/7 Support
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
               Round-the-clock technical support and maintenance
             </p>
           </div>
@@ -259,22 +271,40 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="text-center py-16" role="complementary" aria-labelledby="cta-heading">
-        <h2 id="cta-heading" className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Transform Your Business?
-        </h2>
-        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Let&apos;s discuss your project and create a custom solution that drives
-          real business value. Our team has delivered 1000+ successful
-          projects across various industries.
-        </p>
-        <Link
-          href="/contact"
-          className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-          aria-label="Contact us to get started with your project"
-        >
-          Get Started Today
-        </Link>
+      <section className="text-center py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 rounded-lg relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="absolute -top-4 -left-4 w-96 h-96 bg-white/10 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+          <div className="absolute -bottom-8 -right-4 w-96 h-96 bg-white/10 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+        
+        <div className="relative z-10">
+          <h2 id="cta-heading" className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto animate-slide-up">
+            Let&apos;s discuss your project and create a custom solution that drives
+            real business value. Our team has delivered 1000+ successful
+            projects across various industries.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <Link
+              href="/contact"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 shadow-lg hover:shadow-xl"
+              aria-label="Contact us to get started with your project"
+            >
+              Get Started Today
+            </Link>
+            <Link
+              href="/services"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+              aria-label="Explore our services"
+            >
+              View Our Services
+            </Link>
+          </div>
+        </div>
       </section>
     </div>
   );
