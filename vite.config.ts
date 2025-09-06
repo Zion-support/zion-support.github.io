@@ -66,9 +66,6 @@ export default defineConfig({
       mangle: {
         safari10: true,
         properties: {
-        }
-      }
-    },
   },
   optimizeDeps: {
     include: [
@@ -77,8 +74,6 @@ export default defineConfig({
       'react-router-dom',
       'framer-motion',
       'lucide-react',
-  esbuild: {
-    jsx: 'automatic',
   },
   server: {
     port: 3000,
@@ -89,8 +84,6 @@ export default defineConfig({
       overlay: false,
     },
     fs: {
-      allow: ['..']
-    }
   },
   preview: {
     port: 4173,
@@ -100,7 +93,6 @@ export default defineConfig({
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
   },
   envPrefix: ['VITE_', 'ZION_'],
   experimental: {
@@ -110,6 +102,3 @@ export default defineConfig({
       } else {
         return { relative: true };
       }
-    }
-  }
-});
