@@ -1,11 +1,10 @@
-import React from 'react';
-export default function Page() {
-  return (
-    <main className="min-h-screen bg-black text-zinc-100 p-8">
-      <section className="prose prose-invert max-w-3xl mx-auto">
-        <h1>book-builder</h1>
-        <p>Auto-healed placeholder. Replace with real content.</p>
-      </section>
-    </main>
-  );
+import dynamic from 'next/dynamic';
+const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), { ssr: false });
+export default function BookBuilderPage(req, res) {
+  try {
+  return <BookBuilder />;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

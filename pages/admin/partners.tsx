@@ -1,3 +1,149 @@
+<<<<<<< HEAD
+import { useEffect, useState } from 'react';
+export default function AdminPartners(req, res) {
+  try {
+  const [partners, setPartners] = useState<any[]>([]);
+  const [selected, setSelected] = useState<string>('');
+  const [flags, setFlags] = useState<any[]>([]);
+  useEffect(() => {;
+    (async () => {;
+      try {
+        const res = await fetch('/api/admin/partners/list');
+        const json = await res.json();
+        setPartners(json.partners || []);
+      } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    })();
+  }, []),;
+  async function updatePartner(code: string, updates: any) {;
+    await fetch('/api/admin/partners/update', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON.stringify({ code, ...updates })}),;
+    const res = await fetch('/api/admin/partners/list');
+    const json = await res.json();
+    setPartners(json.partners || []);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  async function viewFlags(code: string) {;
+    setSelected(code);
+    const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
+    const json = await res.json();
+    setFlags(json.flags || []);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return (
+    <div className="space-y-6">
+      <h1 className="text-2xl font-semibold">Admin • Partners</h1>
+      <div className="overflow-auto">
+        <table className="min-w-full text-sm">
+          <thead>
+            <tr className="text-left border-b">
+              <th className="py-2 pr-4">Code</th>
+              <th className="py-2 pr-4">Name</th>
+              <th className="py-2 pr-4">Status</th>
+              <th className="py-2 pr-4">Commission</th>
+              <th className="py-2 pr-4">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {partners.map((p) => (
+              <tr key={p.code} className="border-b">
+                <td className="py-2 pr-4">{p.code}</td>
+                <td className="py-2 pr-4">{p.name}</td>
+                <td className="py-2 pr-4">{p.status}</td>
+                <td className="py-2 pr-4">
+                  <input
+                    type="number"
+                    defaultValue={p.commission_rate  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    min={0  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    max={1  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    step={0.01  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onBlur={(e) => updatePartner(p.code, { commission_rate: Number(e.target.value) })  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className="w-24 border rounded px-2 py-1"
+                  />
+                </td>
+                <td className="py-2 pr-4 space-x-2">
+                  <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'approved' })}>Approve</button>
+                  <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'rejected' })}>Reject</button>
+                  <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
+                </td>
+              </tr>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </tbody>
+        </table>
+      </div>
+      {selected && (
+        <div className="p-4 rounded border">
+          <h2 className="font-semibold mb-2">Fraud Flags • {selected}</h2>
+          <ul className="list-disc pl-6">
+            {flags.map((f, idx) => (
+              <li key={idx}>
+                <span className="font-medium">{f.type}</span> — {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </li>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            {flags.length === 0 && <li className="text-gray-500 list-none">No flags</li>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </ul>
+        </div>
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
@@ -13,7 +159,6 @@ interface Partner {
   lastActivity: string;
   totalReferrals: number;
   totalEarnings: number;
-}
 
 const mockPartners: Partner[] = [
   {
@@ -68,53 +213,104 @@ const AdminPartnersPage: React.FC = () => {
     setTimeout(() => {
       setPartners(mockPartners);
       setLoading(false);
-    }, 1000);
-  }, []);
+    }, 1000);  }, []);
 
-  const filteredPartners = partners.filter(partner => {
-    const matchesSearch = partner.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         partner.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         partner.contactEmail.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesStatus = statusFilter === 'all' || partner.status === statusFilter;
-    return matchesSearch && matchesStatus;
-  });
+  async function updatePartner(code: string, updates: any) {
+    await fetch('/api/admin/partners/update', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ code, ...updates }),
+    });
+    const res = await fetch('/api/admin/partners/list');
+    const json = await res.json();
+    setPartners(json.partners || []);  }
 
-  const handleStatusChange = (partnerId: string, newStatus: Partner['status']) => {
-    setPartners(prev => 
-      prev.map(partner => 
-        partner.id === partnerId 
-          ? { ...partner, status: newStatus }
-          : partner
-      )
+  async function viewFlags(code: string) {
+    setSelected(code),
+    const res = await fetch(
+      `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
     );
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'active': return 'bg-green-100 text-green-800';
-      case 'inactive': return 'bg-red-100 text-red-800';
-      case 'pending': return 'bg-yellow-100 text-yellow-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  const totalPartners = partners.length;
-  const activePartners = partners.filter(p => p.status === 'active').length;
-  const totalEarnings = partners.reduce((sum, p) => sum + p.totalEarnings, 0);
-  const totalReferrals = partners.reduce((sum, p) => sum + p.totalReferrals, 0);
+    const json = await res.json();
+    setFlags(json.flags || []);
+  }
 
   return (
-    <>
-      <Head>
-        <title>Admin Partners - Zion Tech Group</title>
-        <meta name="description" content="Manage partner relationships and commissions" />
-      </Head>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold">Partner Management</h1>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
-            Add New Partner
-          </button>
+    <div className='space-y-6'>
+      <h1 className='text-2xl font-semibold'>Admin • Partners</h1>
+      <div className='overflow-auto'>
+        <table className='min-w-full text-sm'>
+          <thead>
+            <tr className='text-left border-b'>
+              <th className='py-2 pr-4'>Code</th>
+              <th className='py-2 pr-4'>Name</th>
+              <th className='py-2 pr-4'>Status</th>
+              <th className='py-2 pr-4'>Commission</th>
+              <th className='py-2 pr-4'>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {partners.map(p => (
+              <tr key={p.code} className='border-b'>
+                <td className='py-2 pr-4'>{p.code}</td>
+                <td className='py-2 pr-4'>{p.name}</td>
+                <td className='py-2 pr-4'>{p.status}</td>
+                <td className='py-2 pr-4'>
+                  <input
+                    type='number'                    defaultValue={p.commission_rate}
+                    min={0}
+                    max={1}
+                    step={0.01}
+                    onBlur={e =>
+                      updatePartner(p.code, {
+                        commission_rate: Number(e.target.value),
+                      })
+                    }
+                    className='w-24 border rounded px-2 py-1'
+                  />
+                </td>
+                <td className='py-2 pr-4 space-x-2'>
+                  <button
+                    className='px-2 py-1 rounded border'
+                    onClick={() =>
+                      updatePartner(p.code, { status: 'approved' })
+                    }
+                  >
+                    Approve
+                  </button>
+                  <button
+                    className='px-2 py-1 rounded border'
+                    onClick={() =>
+                      updatePartner(p.code, { status: 'rejected' })
+                    }
+                  >
+                    Reject
+                  </button>
+                  <button
+                    className='px-2 py-1 rounded border'
+                    onClick={() => viewFlags(p.code)}
+                  >
+                    Fraud Flags
+                  </button>                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {selected && (
+        <div className='p-4 rounded border'>
+          <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>
+          <ul className='list-disc pl-6'>
+            {flags.map((f, idx) => (
+              <li key={idx}>
+                <span className='font-medium'>{f.type}</span> — {f.severity}{' '}
+                {f.note && <span className='text-gray-500'>({f.note})</span>}
+              </li>
+            ))}
+            {flags.length === 0 && (
+              <li className='text-gray-500 list-none'>No flags</li>
+            )}
+          </ul>
         </div>
 
         {/* Stats Cards */}
@@ -281,6 +477,4 @@ const AdminPartnersPage: React.FC = () => {
       </main>
     </>
   );
-};
-
-export default AdminPartnersPage;
+>>>>>>> main

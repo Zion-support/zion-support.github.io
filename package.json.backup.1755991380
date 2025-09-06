@@ -1,5 +1,20 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           "postautomation": "npm run automation:git-sync",
       "lint:staged": "lint-staged",
       "performance:audit": "node automation/performance-audit.cjs",
@@ -10,6 +25,12 @@
       "nextgen:cron:stop": "bash automation/nextgen-cron.sh stop",
       "nextgen:cron:status": "bash automation/nextgen-cron.sh status",
       "nextgen:scheduler": "node automation/nextgen-scheduler.cjs"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     },
 =======
   "name": "bolt.new.zion.app",
@@ -231,7 +252,21 @@
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status"
   },
 >>>>>>> origin/cursor/build-zion-protocol-whitepaper-document-a8e0
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "dependencies": {
+    },  "dependencies": {
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    },  "dependencies": {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    },  "dependencies": {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
@@ -264,11 +299,31 @@
     "openai": "^5.12.2",
     "path": "^0.12.7",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
     "pdfkit": "^0.17.1",
 =======
     "pdfkit": "^0.13.0",
 >>>>>>> origin/cursor/build-zion-protocol-whitepaper-document-a8e0
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "postcss": "^8.4.32",
+    "pdfkit": "^0.17.1",    "postcss": "^8.4.32",
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "pdfkit": "^0.17.1",    "postcss": "^8.4.32",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "pdfkit": "^0.17.1",    "postcss": "^8.4.32",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "react": "^17.0.2",
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
@@ -303,7 +358,22 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "name": "zion-sdk-monorepo",
   "private": true,
   "version": "0.1.0",

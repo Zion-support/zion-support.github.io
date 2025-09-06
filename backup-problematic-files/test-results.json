@@ -1,0 +1,16 @@
+{
+
+    },
+    {
+      "name": "Type Check",
+      "status": "failed",
+      "error": "spawnSync /bin/sh ENOBUFS"
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "passed": 1,
+    "failed": 5
+  }
+
+}

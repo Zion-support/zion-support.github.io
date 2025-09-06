@@ -3,7 +3,6 @@ setIsTablet (isTabletDevice);
 //Apply mobile-specific optimizations if (isMobileDevice && enableMobileLayout) {
   checkDevice ();
 window.addEventListener ('resize', checkDevice);
-return () => window.removeEventListener ('resize', checkDevice) 
 }, [enableMobileLayout, enablePerformanceMode]);
 //Detect orientation changes checkOrientation ();
 window.addEventListener ('orientationchange', checkOrientation);
@@ -12,19 +11,19 @@ const handleTouchStart = (e: TouchEvent) => {
   if (e.touches.length === 1) {
   touchStartRef.current = {
   
-}
+
 };
 const handleTouchMove = (e: TouchEvent) => {
   if (e.touches.length === 1 && touchStartRef.current) {
   touchMoveRef.current = {
   
-}
+
 });
 const handleTouchEnd = (e: TouchEvent) => {
   if (touchStartRef.current && touchMoveRef.current) {
   touchStartRef.current = null;
 touchMoveRef.current = null 
-}
+
 });
 //Optimize fonts for high DPI fonts.forEach (font => {
   font.setAttribute ('crossoriginanonymous') 
@@ -43,7 +42,7 @@ lastTimeRef.current = currentTime;
 };
 animationFrameId = requestAnimationFrame (measurePerformance);
 //Monitor memory usage 
-}
+
 }, 2000);
 //Monitor battery level if ('getBattery' in navigator) {
   (navigator as any) .getBattery () .then ( (battery: unknown) => {
@@ -51,16 +50,15 @@ animationFrameId = requestAnimationFrame (measurePerformance);
   setPerformanceMetrics (prev => ({
   updateBatteryLevel ();
 battery.addEventListener ('levelchange', updateBatteryLevel);
-return () => battery.removeEventListener ('levelchange', updateBatteryLevel) 
-}) 
+
 }//Monitor network speed updateNetworkSpeed ();
 connection.addEventListener ('change', updateNetworkSpeed);
-return () => connection.removeEventListener ('change', updateNetworkSpeed) 
+
 }//Minimum distance and duration thresholds if (distance < 50 || duration < 100) return null;
 //Determine direction if (Math.abs (deltaX) > Math.abs (deltaY) ) {
   return {
   
-}
+
 };
 const handleGestureAction = (gesture: TouchGesture) => {
   switch (gesture.type) {
@@ -69,8 +67,7 @@ const handleGestureAction = (gesture: TouchGesture) => {
   
 }break;
 case 'longPress': //Show context menu or additional options break;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
+
 };
 if (viewport) {
   viewport.setAttribute ('contentwidth=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no') 
@@ -98,7 +95,7 @@ img.decoding = 'async'
 });
 //Reduce motion for better performance if (window.matchMedia (' (prefers-reduced-motion: reduce) ') .matches) {
   document.documentElement.classList.add ('reduced-motion') 
-}
+
 };
 const applyLandscapeOptimizations = () => {
   //Landscape-specific optimizations document.documentElement.classList.add ('landscape-mode');
@@ -145,12 +142,12 @@ const handleMediaQueryChange = (e: MediaQueryListEvent) => {
   setCurrentOrientation (e.matches ? 'portrait' : 'landscape') 
 };
 if (!showPanel || !isVisible) return null;
-}
+
 };
 const getStatusIcon = (status: string) => {
   switch (status) {
   
-}
+
 };
 children 
 }{
@@ -168,4 +165,5 @@ children
 }` 
 }</style> </>) 
 };
+export default MobileOptimizer;
 export default MobileOptimizer;

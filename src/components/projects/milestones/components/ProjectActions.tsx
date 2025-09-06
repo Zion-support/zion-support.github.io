@@ -1,12 +1,86 @@
- {;
-  isUnderDispute && disputeId ? (<Button variant="outline" asChild> <Link href= {;
-  `/dashboard/disputes/$ {;
-  disputeId ;
-}` ";
-}> <ShieldAlert className="h-4 w-4 mr-2" /> View Active Dispute </Link> </Button>) : (<RaiseDisputeButton />) ;
-}{;
-  isTalent && !isUnderDispute && (<Button onClick={;
-  onAddMilestone ;
-}> Add Milestone </Button>) ;
-}</div>) ;
-}"
+<<<<<<< HEAD
+
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+import Link from 'next/link',;
+import { ShieldAlert } from 'lucide-react';
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
+interface ProjectActionsProps {;
+  projectId: string,;
+  isUnderDispute: boolean,;
+  disputeId?: string,;
+  isTalent: boolean,;
+  onAddMilestone: () => void;
+}
+=======
+import React from 'react';
+import {Button} from '@/components/ui/button';
+import Link from 'next/link';
+import { ShieldAlert } from 'lucide-react';
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+
+interface ProjectActionsProps {
+  projectId: string;
+  isUnderDispute: boolean;
+  disputeId?: string;
+  isTalent: boolean;
+  onAddMilestone: () => void;
+>>>>>>> main
+
+export function ProjectActions({
+  projectId,
+  isUnderDispute,
+  disputeId,
+  isTalent,
+<<<<<<< HEAD
+  onAddMilestone
+}: ProjectActionsProps) {
+  return (
+    <div className="flex gap-2">
+      {isUnderDispute && disputeId ? (
+        <Button variant="outline" asChild>
+          <Link href={`/dashboard/disputes/${disputeId}`}>
+            <ShieldAlert className="h-4 w-4 mr-2" />
+=======
+  onAddMilestone,
+}: ProjectActionsProps) {
+  return (
+    <div className='flex gap-2'>
+      {isUnderDispute && disputeId ? (
+        <Button variant='outline' asChild>
+          <Link href={`/dashboard/disputes/${disputeId}`}>
+            <ShieldAlert className='h-4 w-4 mr-2' />            View Active Dispute
+          </Link>
+        </Button>
+      ) : (
+        <RaiseDisputeButton projectId={projectId} variant='outline' />
+
+>>>>>>> main
+            View Active Dispute
+          </Link>
+        </Button>
+      ) : (
+<<<<<<< HEAD
+        <RaiseDisputeButton 
+          projectId={projectId}
+          variant="outline"
+        />
+      )}
+      {isTalent && !isUnderDispute && (;
+        <Button onClick={onAddMilestone}>;
+          Add Milestone;
+        </Button>;
+      )}
+    </div>;
+  );
+}
+;
+=======
+
+      )}
+      {isTalent && !isUnderDispute && (
+        <Button onClick={onAddMilestone}>Add Milestone</Button>
+      )}
+    </div>
+  );
+>>>>>>> main

@@ -17,13 +17,9 @@ setIsSearching (false)
   const handleClickOutside = (event: MouseEvent) => {
   if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {
   
-}
 }, []);
 //Handle filter toggle const toggleFilter = (filterId: string) => {
-  setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId) return (<div className= {
-  `relative $ {
-  className 
-}` 
+  setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId) 
 }> {
   /* Search Form */ 
 }<form onSubmit= {
@@ -42,19 +38,19 @@ setIsSearching (false)
   showResults && (<motion.div initial= {
   {
   opacity: 0, y: -10, scale: 0.95 
-}
+
 }animate= {
   {
   opacity: 1, y: 0, scale: 1 
-}
+
 }exit= {
   {
   opacity: 0, y: -10, scale: 0.95 
-}
+
 }transition= {
   {
   duration: 0.2 
-}
+
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto" > {
   /* Filters */ 
 }{
@@ -84,15 +80,15 @@ setIsSearching (false)
   showSuggestions && suggestions.length > 0 && (<motion.div initial= {
   {
   opacity: 0, y: -10 
-}
+
 }animate= {
   {
   opacity: 1, y: 0 
-}
+
 }exit= {
   {
   opacity: 0, y: -10 
-}
+
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10" > {
   /* Quick Actions */ 
 }<div className="p-4 border-b border-gray-700"> <h3 className="text-sm font-medium text-gray-400 mb-3">Quick Actions</h3> <div className="grid grid-cols-2 gap-2"> {
@@ -132,7 +128,7 @@ setIsSearching (false)
 }whileHover= {
   {
   scale: 1.02 
-}
+
 }className="p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-all duration-300 border border-transparent hover:border-cyan-400/30" onClick= {
   () => handleResultSelect (result) 
 }> <div className="flex items-start justify-between"> <div className="flex-1"> <h4 className="font-medium text-white mb-1"> {
@@ -177,3 +173,16 @@ setIsSearching (false)
 // Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
 wait: number 
 }export default EnhancedSearch;
+// Debounce utility function
+function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: NodeJS.Timeout,
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout),
+    timeout = setTimeout(() => func(...args), wait)
+  };
+}
+
+export default EnhancedSearch;

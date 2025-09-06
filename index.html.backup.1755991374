@@ -4,6 +4,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <title>Zion — AI‑Powered Marketplace</title>
     <meta name="description" content="Zion is the AI-powered marketplace for IT services, AI talents, advanced equipment, and innovation projects. Build faster with verified experts and secure transactions." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,6 +59,12 @@
           <div class="trust">
             <span class="trust-badge">Verified experts</span>
             <span class="trust-badge">Secure escrow</span>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
             <span class="trust-badge">AI‑matched</span>
 =======
     <title>Zion — The AI-Powered Marketplace for High-Tech</title>
@@ -138,11 +159,29 @@
               </div>
             </div>
 >>>>>>> origin/cursor/build-zion-marketplace-landing-page-edf0
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           </div>
         </div>
       </section>
 
+            <span class="trust-badge">AI‑matched</span>          </div>
+        </div>
+      </section>
+
 <<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+            <span class="trust-badge">AI‑matched</span>          </div>
+        </div>
+      </section>
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       <!-- Featured Categories -->
       <section id="categories" class="section">
         <div class="container">
@@ -173,6 +212,12 @@
               <div class="icon" aria-hidden="true">🚀</div>
               <h3 class="card-title">Innovation</h3>
               <p class="card-body">Pilot programs, R&D collaborations, and venture‑ready solutions to accelerate outcomes.</p>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
               <a class="card-link" href="#signup">Explore innovation</a>
 =======
       <section class="categories section-pad" id="categories">
@@ -187,37 +232,41 @@
               <h3>Services</h3>
               <p>On-demand IT, cloud, security, data, and DevOps delivered by verified partners.</p>
               <a href="#waitlist" class="card-cta">Find Services</a>
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             </article>
-            <article class="card reveal">
-              <div class="icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l3.09 6.26L22 10.27l-5 4.87L18.18 22 12 18.77 5.82 22 7 15.14l-5-4.87 6.91-1.01L12 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-              </div>
-              <h3>Talents</h3>
-              <p>AI engineers, data scientists, MLOps, and product leaders ready to engage.</p>
-              <a href="#waitlist" class="card-cta">Meet Talents</a>
-            </article>
-            <article class="card reveal">
-              <div class="icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16v10H4zM8 7V5h8v2" stroke="currentColor" stroke-width="2"/></svg>
-              </div>
-              <h3>Equipment</h3>
-              <p>GPU servers, networking, storage, and lab gear from verified vendors.</p>
-              <a href="#waitlist" class="card-cta">Browse Equipment</a>
-            </article>
-            <article class="card reveal">
-              <div class="icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M2 12h20M7 7l10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              </div>
-              <h3>Innovation</h3>
-              <p>IP, prototypes, algorithms, and research available for license or collaboration.</p>
-              <a href="#waitlist" class="card-cta">Explore Innovation</a>
->>>>>>> origin/cursor/build-zion-marketplace-landing-page-edf0
-            </article>
+              <a class="card-link" href="#signup">Explore innovation</a>            </article>
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+              <a class="card-link" href="#signup">Explore innovation</a>            </article>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+              <a class="card-link" href="#signup">Explore innovation</a>            </article>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           </div>
         </div>
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       <!-- Why Choose Us -->
       <section id="why" class="section muted">
         <div class="container">
@@ -245,6 +294,12 @@
               <div class="icon" aria-hidden="true">🌐</div>
               <h3 class="card-title">Enterprise‑Ready</h3>
               <p class="card-body">Compliance‑friendly workflows, NDAs, and role‑based access for teams.</p>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
             </article>
 =======
       <section class="why section-pad" id="why">
@@ -272,11 +327,29 @@
               <p>Transparent pricing, competitive bids, and utilization insights to reduce TCO.</p>
             </div>
 >>>>>>> origin/cursor/build-zion-marketplace-landing-page-edf0
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           </div>
         </div>
       </section>
 
+            </article>          </div>
+        </div>
+      </section>
+
 <<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+            </article>          </div>
+        </div>
+      </section>
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       <!-- Testimonials -->
       <section id="testimonials" class="section">
         <div class="container">
@@ -317,6 +390,12 @@
                 <img class="avatar" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=120&auto=format&fit=crop" alt="Portrait of satisfied customer" />
                 <div class="who">
                   <span class="name">Sofia Ibrahim</span>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
                   <span class="role">CTO, Atlas Robotics</span>
 =======
       <section class="how section-pad" id="how">
@@ -358,28 +437,21 @@
                 <div class="person">
                   <div class="name">Amara Chen</div>
                   <div class="role">CTO, Quantiflow</div>
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
                 </div>
-              </figcaption>
-            </figure>
-            <figure class="testimonial reveal">
-              <blockquote>“We reduced infrastructure procurement time by 60% leveraging verified vendors on Zion.”</blockquote>
-              <figcaption>
-                <img alt="Avatar" src="https://i.pravatar.cc/80?img=2" />
-                <div class="person">
-                  <div class="name">Daniel Romero</div>
-                  <div class="role">Head of Ops, Vectra Labs</div>
-                </div>
-              </figcaption>
-            </figure>
-            <figure class="testimonial reveal">
-              <blockquote>“The AI recommendations are impressive — they consistently surfaced the right partners.”</blockquote>
-              <figcaption>
-                <img alt="Avatar" src="https://i.pravatar.cc/80?img=3" />
-                <div class="person">
-                  <div class="name">Priya Natarajan</div>
-                  <div class="role">Director of AI, Northbridge</div>
->>>>>>> origin/cursor/build-zion-marketplace-landing-page-edf0
-                </div>
+                  <span class="role">CTO, Atlas Robotics</span>                </div>
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+                  <span class="role">CTO, Atlas Robotics</span>                </div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+                  <span class="role">CTO, Atlas Robotics</span>                </div>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
               </figcaption>
             </figure>
           </div>
@@ -387,6 +459,21 @@
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       <!-- Signup CTA -->
       <section id="signup" class="section cta">
         <div class="container cta-inner">
@@ -397,6 +484,12 @@
             <input id="email" name="email" type="email" placeholder="Work email" required />
             <button class="button button-primary" type="submit">Sign up</button>
           </form>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
           <p class="cta-footnote">By signing up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
 =======
       <section class="trusted section-pad" id="trusted">
@@ -410,173 +503,41 @@
             <div class="logo-pill">IBM</div>
             <div class="logo-pill">Intel</div>
           </div>
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         </div>
-      </section>
-
-      <section class="automations section-pad" id="automations">
-        <div class="container">
-          <h2 class="section-title reveal">Autonomous Cloud Automations</h2>
-          <p class="section-subtitle reveal">Fully cloud-native workflows that run continuously and sync results to this repository — no servers, no humans required.</p>
-          <div class="card-grid">
-            <article class="card reveal">
-              <h3>Deploy to GitHub Pages</h3>
-              <p>Builds and deploys the site on each push to main and on demand.</p>
-              <div class="badge"><img alt="status" data-badge="deploy-pages.yml"></div>
-              <div class="links"><a class="card-cta" data-workflow="deploy-pages.yml">View workflow</a> · <a class="card-cta" data-runs="deploy-pages.yml">Runs</a></div>
-            </article>
-            <article class="card reveal">
-              <h3>Lighthouse CI</h3>
-              <p>Performance, accessibility, SEO checks; creates issues on regressions.</p>
-              <div class="badge"><img alt="status" data-badge="lighthouse-ci.yml"></div>
-              <div class="links"><a class="card-cta" data-workflow="lighthouse-ci.yml">View workflow</a> · <a class="card-cta" data-runs="lighthouse-ci.yml">Runs</a></div>
-            </article>
-            <article class="card reveal">
-              <h3>Visual Regression</h3>
-              <p>Playwright snapshots guard against unintended UI changes.</p>
-              <div class="badge"><img alt="status" data-badge="visual-regression.yml"></div>
-              <div class="links"><a class="card-cta" data-workflow="visual-regression.yml">View workflow</a> · <a class="card-cta" data-runs="visual-regression.yml">Runs</a></div>
-            </article>
-            <article class="card reveal">
-              <h3>Link Checker</h3>
-              <p>Scans for broken links across the site and markdown docs.</p>
-              <div class="badge"><img alt="status" data-badge="link-check.yml"></div>
-              <div class="links"><a class="card-cta" data-workflow="link-check.yml">View workflow</a> · <a class="card-cta" data-runs="link-check.yml">Runs</a></div>
-            </article>
-            <article class="card reveal">
-              <h3>Security (CodeQL)</h3>
-              <p>Code scanning for JavaScript; alerts on discovered vulnerabilities.</p>
-              <div class="badge"><img alt="status" data-badge="security-codeql.yml"></div>
-              <div class="links"><a class="card-cta" data-workflow="security-codeql.yml">View workflow</a> · <a class="card-cta" data-runs="security-codeql.yml">Runs</a></div>
-            </article>
-            <article class="card reveal">
-              <h3>Auto Format</h3>
-              <p>Prettier runs on a schedule and commits formatting changes.</p>
-              <div class="badge"><img alt="status" data-badge="auto-format.yml"></div>
-              <div class="links"><a class="card-cta" data-workflow="auto-format.yml">View workflow</a> · <a class="card-cta" data-runs="auto-format.yml">Runs</a></div>
-            </article>
-            <article class="card reveal">
-              <h3>Auto Dependency Updates</h3>
-              <p>Weekly minor/patch upgrades via PRs with best-effort build.</p>
-              <div class="badge"><img alt="status" data-badge="auto-deps.yml"></div>
-              <div class="links"><a class="card-cta" data-workflow="auto-deps.yml">View workflow</a> · <a class="card-cta" data-runs="auto-deps.yml">Runs</a></div>
-            </article>
-            <article class="card reveal">
-              <h3>Site Maintenance</h3>
-              <p>Generates sitemap, robots, and manifest and commits them.</p>
-              <div class="badge"><img alt="status" data-badge="site-maintenance.yml"></div>
-              <div class="links"><a class="card-cta" data-workflow="site-maintenance.yml">View workflow</a> · <a class="card-cta" data-runs="site-maintenance.yml">Runs</a></div>
-            </article>
-            <article class="card reveal">
-              <h3>Synthetic Uptime</h3>
-              <p>Probes public site frequently; opens issues on failures.</p>
-              <div class="badge"><img alt="status" data-badge="synthetic-uptime.yml"></div>
-              <div class="links"><a class="card-cta" data-workflow="synthetic-uptime.yml">View workflow</a> · <a class="card-cta" data-runs="synthetic-uptime.yml">Runs</a></div>
-            </article>
-            <article class="card reveal">
-              <h3>SEO Enhance</h3>
-              <p>Ensures canonical, og:url, and Twitter meta are correct based on live URL.</p>
-              <div class="badge"><img alt="status" data-badge="seo-enhance.yml"></div>
-              <div class="links"><a class="card-cta" data-workflow="seo-enhance.yml">View workflow</a> · <a class="card-cta" data-runs="seo-enhance.yml">Runs</a></div>
-            </article>
-            <article class="card reveal">
-              <h3>Accessibility Audit</h3>
-              <p>axe-core audit on the homepage with issue creation on violations.</p>
-              <div class="badge"><img alt="status" data-badge="a11y-axe.yml"></div>
-              <div class="links"><a class="card-cta" data-workflow="a11y-axe.yml">View workflow</a> · <a class="card-cta" data-runs="a11y-axe.yml">Runs</a></div>
-            </article>
-            <article class="card reveal">
-              <h3>Secret Scan</h3>
-              <p>Gitleaks scans the repo for hard-coded secrets.</p>
-              <div class="badge"><img alt="status" data-badge="secret-scan-gitleaks.yml"></div>
-              <div class="links"><a class="card-cta" data-workflow="secret-scan-gitleaks.yml">View workflow</a> · <a class="card-cta" data-runs="secret-scan-gitleaks.yml">Runs</a></div>
-            </article>
-            <article class="card reveal">
-              <h3>Search Engine Ping</h3>
-              <p>Pings Google and Bing after successful deploys.</p>
-              <div class="badge"><img alt="status" data-badge="search-engine-ping.yml"></div>
-              <div class="links"><a class="card-cta" data-workflow="search-engine-ping.yml">View workflow</a> · <a class="card-cta" data-runs="search-engine-ping.yml">Runs</a></div>
-            </article>
-            <article class="card reveal">
-              <h3>Asset Optimize</h3>
-              <p>Compresses images automatically and commits smaller versions.</p>
-              <div class="badge"><img alt="status" data-badge="assets-optimize.yml"></div>
-              <div class="links"><a class="card-cta" data-workflow="assets-optimize.yml">View workflow</a> · <a class="card-cta" data-runs="assets-optimize.yml">Runs</a></div>
-            </article>
-            <article class="card reveal">
-              <h3>OG Image Generator</h3>
-              <p>Renders a fresh Open Graph image from the homepage and commits it.</p>
-              <div class="badge"><img alt="status" data-badge="og-image.yml"></div>
-              <div class="links"><a class="card-cta" data-workflow="og-image.yml">View workflow</a> · <a class="card-cta" data-runs="og-image.yml">Runs</a></div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="waitlist section-pad" id="waitlist">
-        <div class="container grid-2">
-          <div class="waitlist-copy">
-            <h2 class="section-title reveal">Get Early Access</h2>
-            <p class="section-subtitle reveal">Join the waitlist to be the first to hire, buy, and innovate on Zion.</p>
-            <ul class="bullets reveal">
-              <li>Priority onboarding</li>
-              <li>Founders’ community</li>
-              <li>Early feature access</li>
-            </ul>
-          </div>
-          <form class="waitlist-form reveal" id="waitlist-form" novalidate>
-            <div class="form-row">
-              <div class="form-field">
-                <label for="name">Full name</label>
-                <input id="name" name="name" type="text" placeholder="Jane Doe" required />
-                <small class="error" data-for="name"></small>
-              </div>
-              <div class="form-field">
-                <label for="email">Work email</label>
-                <input id="email" name="email" type="email" placeholder="jane@company.com" required />
-                <small class="error" data-for="email"></small>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-field">
-                <label for="company">Company</label>
-                <input id="company" name="company" type="text" placeholder="Acme Corp" required />
-                <small class="error" data-for="company"></small>
-              </div>
-              <div class="form-field">
-                <label for="role">Role</label>
-                <input id="role" name="role" type="text" placeholder="IT Manager" required />
-                <small class="error" data-for="role"></small>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-field full">
-                <label for="interest">Primary interest</label>
-                <select id="interest" name="interest" required>
-                  <option value="" disabled selected>Select one</option>
-                  <option>Services</option>
-                  <option>Talents</option>
-                  <option>Equipment</option>
-                  <option>Innovation</option>
-                </select>
-                <small class="error" data-for="interest"></small>
-              </div>
-            </div>
-            <div class="form-row inline">
-              <label class="checkbox">
-                <input type="checkbox" id="newsletter" name="newsletter" />
-                <span>Also subscribe to product updates</span>
-              </label>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full" id="submit-btn">Request Invite</button>
-            <p class="form-success" id="form-success" role="status" aria-live="polite"></p>
-          </form>
->>>>>>> origin/cursor/build-zion-marketplace-landing-page-edf0
-        </div>
+          <p class="cta-footnote">By signing up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>        </div>
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+          <p class="cta-footnote">By signing up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>        </div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+          <p class="cta-footnote">By signing up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>        </div>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       </section>
     </main>
 
     <footer class="site-footer">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       <div class="container footer-inner">
         <div class="brand-row">
           <a class="brand" href="#" aria-label="Zion home">
@@ -598,55 +559,26 @@
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </body>
-</html>
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
-      <div class="container footer-grid">
-        <div class="footer-brand">
-          <div class="logo">
-            <span class="logo-mark">Z</span>
-            <span class="logo-text">Zion</span>
-          </div>
-          <p>AI‑powered marketplace for high‑tech products, services, talents, and innovation.</p>
-        </div>
-        <nav class="footer-nav" aria-label="Footer">
-          <div>
-            <h4>Product</h4>
-            <ul>
-              <li><a href="#categories">Categories</a></li>
-              <li><a href="#why">Why Zion</a></li>
-              <li><a href="#how">How It Works</a></li>
-              <li><a href="#waitlist">Waitlist</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#testimonials">Testimonials</a></li>
-              <li><a href="#trusted">Trusted By</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Press</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Contact</h4>
-            <ul>
-              <li><a href="mailto:hello@joinzion.ai">hello@joinzion.ai</a></li>
-              <li><a href="#">Support</a></li>
-              <li><a href="#">Legal</a></li>
-              <li><a href="#">Privacy</a></li>
-            </ul>
-          </div>
-        </nav>
-        <div class="footer-social">
-          <a href="#" aria-label="LinkedIn" class="social-btn">in</a>
-          <a href="#" aria-label="X" class="social-btn">x</a>
-          <a href="#" aria-label="GitHub" class="social-btn">gh</a>
-        </div>
-      </div>
-      <div class="container footer-bottom">
-        <p>© <span id="year"></span> Zion. All rights reserved.</p>
-      </div>
-    </footer>
-  </body>
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 </html>
+</html>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-zion-marketplace-landing-page-edf0
+=======
+</html>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+</html>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

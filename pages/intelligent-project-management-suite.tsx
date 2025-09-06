@@ -1,11 +1,17 @@
-import React from 'react';
-export default function Page() {
-  return (
-    <main className="min-h-screen bg-black text-zinc-100 p-8">
-      <section className="prose prose-invert max-w-3xl mx-auto">
-        <h1>intelligent-project-management-suite</h1>
-        <p>Auto-healed placeholder. Replace with real content.</p>
-      </section>
-    </main>
-  );
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+export async function getStaticProps() {;
+	return (getSlugStaticProps as any)({ params: { slug: 'intelligent-project-management-suite' } });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export default function IntelligentProjectManagementSuite(req, res) {
+  try {
+	return <ServicePage {...props} />;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

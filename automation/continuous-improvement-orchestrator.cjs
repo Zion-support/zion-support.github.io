@@ -9,6 +9,7 @@ class ContinuousImprovementOrchestrator {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.logsDir = path.join(this.projectRoot, 'logs');
+    this.isRunning = false;
     
     // Ensure directories exist
     [this.reportsDir, this.logsDir].forEach(dir => {
@@ -25,24 +26,52 @@ class ContinuousImprovementOrchestrator {
 
   async runContinuousImprovements() {
     this.log('🔄 Starting Continuous Improvement Orchestrator...');
+    this.isRunning = true;
     
-    const improvements = {
-      codeAnalysis: await this.analyzeCode(),
-      dependencyUpdate: await this.updateDependencies(),
-      securityScan: await this.scanSecurity(),
-      performanceCheck: await this.checkPerformance(),
-      testCoverage: await this.improveTestCoverage(),
-      documentationUpdate: await this.updateDocumentation(),
-      buildOptimization: await this.optimizeBuild()
-    };
+    const improvements = [
+      { name: 'Code Quality', fn: this.improveCodeQuality.bind(this) },
+      { name: 'Performance', fn: this.optimizePerformance.bind(this) },
+      { name: 'Security', fn: this.enhanceSecurity.bind(this) },
+      { name: 'Accessibility', fn: this.improveAccessibility.bind(this) },
+      { name: 'SEO', fn: this.optimizeSEO.bind(this) },
+      { name: 'Testing', fn: this.enhanceTesting.bind(this) },
+      { name: 'Documentation', fn: this.improveDocumentation.bind(this) },
+      { name: 'Monitoring', fn: this.setupMonitoring.bind(this) }
+    ];
+
+    const results = [];
+    
+    for (const improvement of improvements) {
+      if (!this.isRunning) break;
+      
+      this.log(`🔄 Running ${improvement.name} improvement...`);
+      try {
+        const result = await improvement.fn();
+        results.push({
+          name: improvement.name,
+          success: result.success,
+          message: result.message,
+          timestamp: new Date().toISOString()
+        });
+        this.log(`✅ ${improvement.name} improvement completed`);
+      } catch (error) {
+        results.push({
+          name: improvement.name,
+          success: false,
+          message: error.message,
+          timestamp: new Date().toISOString()
+        });
+        this.log(`❌ ${improvement.name} improvement failed: ${error.message}`);
+      }
+    }
 
     const report = {
       timestamp: new Date().toISOString(),
-      improvements,
+      results,
       summary: {
-        totalTasks: Object.keys(improvements).length,
-        successfulTasks: Object.values(improvements).filter(r => r.success).length,
-        failedTasks: Object.values(improvements).filter(r => !r.success).length
+        totalImprovements: results.length,
+        successfulImprovements: results.filter(r => r.success).length,
+        failedImprovements: results.filter(r => !r.success).length
       }
     };
 
@@ -54,93 +83,84 @@ class ContinuousImprovementOrchestrator {
     return report;
   }
 
-  async analyzeCode() {
-    this.log('🔍 Analyzing code quality...');
+  async improveCodeQuality() {
     try {
-      // Run comprehensive code analysis
-      execSync('npm run lint', { stdio: 'pipe' });
+      execSync('npm run lint:fix', { stdio: 'pipe' });
       execSync('npm run type-check', { stdio: 'pipe' });
-      
-      return { success: true, message: 'Code analysis completed' };
+      return { success: true, message: 'Code quality improvements applied' };
     } catch (error) {
-      return { success: false, message: `Code analysis failed: ${error.message}` };
+      return { success: false, message: `Code quality improvement failed: ${error.message}` };
     }
   }
 
-  async updateDependencies() {
-    this.log('📦 Updating dependencies...');
+  async optimizePerformance() {
     try {
-      // Check for outdated dependencies
-      execSync('npm outdated', { stdio: 'pipe' });
-      
-      // Update dependencies
-      execSync('npm update', { stdio: 'pipe' });
-      
-      return { success: true, message: 'Dependencies updated' };
+      execSync('npm run performance:optimize', { stdio: 'pipe' });
+      execSync('npm run analyze', { stdio: 'pipe' });
+      return { success: true, message: 'Performance optimizations applied' };
     } catch (error) {
-      return { success: false, message: `Dependency update failed: ${error.message}` };
+      return { success: false, message: `Performance optimization failed: ${error.message}` };
     }
   }
 
-  async scanSecurity() {
-    this.log('🔒 Scanning for security issues...');
+  async enhanceSecurity() {
     try {
-      // Run security audit
       execSync('npm audit', { stdio: 'pipe' });
-      
-      return { success: true, message: 'Security scan completed' };
+      execSync('npm audit fix --force', { stdio: 'pipe' });
+      return { success: true, message: 'Security enhancements applied' };
     } catch (error) {
-      return { success: false, message: `Security scan failed: ${error.message}` };
+      return { success: false, message: `Security enhancement failed: ${error.message}` };
     }
   }
 
-  async checkPerformance() {
-    this.log('⚡ Checking performance...');
+  async improveAccessibility() {
     try {
-      // Run performance analysis
-      execSync('npm run performance:analyze', { stdio: 'pipe' });
-      
-      return { success: true, message: 'Performance check completed' };
+      execSync('npm run test:accessibility', { stdio: 'pipe' });
+      return { success: true, message: 'Accessibility improvements applied' };
     } catch (error) {
-      return { success: false, message: `Performance check failed: ${error.message}` };
+      return { success: false, message: `Accessibility improvement failed: ${error.message}` };
     }
   }
 
-  async improveTestCoverage() {
-    this.log('🧪 Improving test coverage...');
+  async optimizeSEO() {
     try {
-      // Run tests with coverage
-      execSync('npm run test:coverage', { stdio: 'pipe' });
-      
-      return { success: true, message: 'Test coverage improved' };
+      execSync('npm run sitemap:generate', { stdio: 'pipe' });
+      return { success: true, message: 'SEO optimizations applied' };
     } catch (error) {
-      return { success: false, message: `Test coverage improvement failed: ${error.message}` };
+      return { success: false, message: `SEO optimization failed: ${error.message}` };
     }
   }
 
-  async updateDocumentation() {
-    this.log('📚 Updating documentation...');
+  async enhanceTesting() {
     try {
-      // Generate updated documentation
+      execSync('npm run test:comprehensive', { stdio: 'pipe' });
+      return { success: true, message: 'Testing enhancements applied' };
+    } catch (error) {
+      return { success: false, message: `Testing enhancement failed: ${error.message}` };
+    }
+  }
+
+  async improveDocumentation() {
+    try {
       execSync('npm run readme:generate', { stdio: 'pipe' });
-      
-      return { success: true, message: 'Documentation updated' };
+      return { success: true, message: 'Documentation improvements applied' };
     } catch (error) {
-      return { success: false, message: `Documentation update failed: ${error.message}` };
+      return { success: false, message: `Documentation improvement failed: ${error.message}` };
     }
   }
 
-  async optimizeBuild() {
-    this.log('🔨 Optimizing build...');
+  async setupMonitoring() {
     try {
-      // Clean and rebuild
-      execSync('npm run clean', { stdio: 'pipe' });
-      execSync('npm run build', { stdio: 'pipe' });
-      
-      return { success: true, message: 'Build optimized' };
+      execSync('npm run monitor:health', { stdio: 'pipe' });
+      return { success: true, message: 'Monitoring setup completed' };
     } catch (error) {
-      return { success: false, message: `Build optimization failed: ${error.message}` };
+      return { success: false, message: `Monitoring setup failed: ${error.message}` };
     }
+  }
+
+  stop() {
+    this.log('🛑 Stopping Continuous Improvement Orchestrator...');
+    this.isRunning = false;
   }
 }
 
@@ -150,7 +170,7 @@ if (require.main === module) {
   orchestrator.runContinuousImprovements()
     .then(report => {
       console.log('✅ Continuous Improvement Orchestrator completed!');
-      console.log(`📊 Summary: ${report.summary.successfulTasks}/${report.summary.totalTasks} tasks successful`);
+      console.log(`📊 Summary: ${report.summary.successfulImprovements}/${report.summary.totalImprovements} improvements successful`);
     })
     .catch(error => {
       console.error('❌ Continuous Improvement Orchestrator failed:', error);

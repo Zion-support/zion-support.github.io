@@ -1,6 +1,12 @@
 module.exports = {
   plugins: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
     tailwindcss: {},
     autoprefixer: {},
 =======
@@ -12,5 +18,22 @@ module.exports = {
     'autoprefixer': {},
 >>>>>>> 3c1dda747d3aa200ea8a4e49d78b84af83a4d328
 >>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   },
+    tailwindcss: {},
+    autoprefixer: {},  },
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    tailwindcss: {},
+    autoprefixer: {},  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    tailwindcss: {},
+    autoprefixer: {},  },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 };

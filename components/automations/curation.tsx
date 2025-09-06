@@ -1,4 +1,8 @@
- type Experiment = {
+import React from 'react';
+import fs from 'fs';
+import path from 'path';
+
+type Experiment = {
   title: string;
 hypothesis?: string;
 metric?: string;
@@ -7,32 +11,59 @@ impact?: number
 };
 type Props = {
   updatedAt: string | null;
-items: Experiment[] 
+items: Experiment[] };
+
+export default function CurationPage({ updatedAt, items }: Props) {
+  return (
+
 };
-export default function CurationPage ({
-  updatedAt, items 
-}: Props) {
-  return (<main className="mx-auto max-w-4xl px-4 py-12" > <h1 className="text-2xl font-bold text-gray-900" >AI Curated Growth Experiments</h1> updatedAt ? (<p className="mt-2 text-sm text-gray-600" >Last updated: {
-  updatedAt 
-}</p>) : (<p className="mt-2 text-sm text-gray-600" >No curated output yet. It will appear here automatically after the next run.</p>) 
-}</div>) 
-}</div>) ) 
-}Nothing to show yet. </div>) 
-}</div> </main>) 
-}return {
-  props: {
-  updatedAt: parsed.updatedAt || null;
-items: parsed.items || [] 
-};
-revalidate: 300 
-}
-}catch {
-  return {
-  props: {
-  updatedAt: null;
-items: [] 
-};
-revalidate: 300 
-}
-}
-}
+
+export default function CurationPage({ updatedAt, items }: Props) {
+  return (
+
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+
+              </div>
+            )}
+          </div>
+        ))}
+        {!items.length && (
+          <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.
+
+            Nothing to show yet.
+
+          </div>
+        )}
+      </div>
+    </main>
+  );
+
+export async function getStaticProps() {
+  try {
+    const filePath = path.join(
+      process.cwd(),
+      'data',
+      'ai-curation',
+      'growth-experiments.json'
+    );
+    const raw = fs.readFileSync(filePath, 'utf8');    const parsed = JSON.parse(raw);
+    return {
+      props: {
+        updatedAt: parsed.updatedAt || null,
+        items: parsed.items || [],
+      },
+      revalidate: 300,
+    };  } catch {
+    return {
+      props: {
+        updatedAt: null,
+
+    const parsed = JSON.parse(raw);
+    return {
+      props: {
+        updatedAt: parsed.updatedAt || null,
+
+  } catch {
+    return {
+      props: {
+        updatedAt: null,

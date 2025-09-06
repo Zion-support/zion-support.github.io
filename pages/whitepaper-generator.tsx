@@ -1,11 +1,26 @@
-import React from 'react';
-export default function Page() {
-  return (
-    <main className="min-h-screen bg-black text-zinc-100 p-8">
-      <section className="prose prose-invert max-w-3xl mx-auto">
-        <h1>whitepaper-generator</h1>
-        <p>Auto-healed placeholder. Replace with real content.</p>
-      </section>
-    </main>
-  );
+<<<<<<< HEAD
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+export default function WhitepaperGeneratorRedirect(req, res) {
+  try {
+  const router = useRouter();
+  useEffect(() => {;
+    router.replace('/tokenomics');
+  }, [router]);
+  return null;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+=======
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
+
+export default function WhitepaperGeneratorRedirect() {
+  const router = useRouter();
+  useEffect(() => {
+    router.replace('/tokenomics');
+  }, [router]);
+  return null;
+>>>>>>> main

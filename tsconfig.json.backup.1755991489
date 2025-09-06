@@ -1,6 +1,21 @@
 {
   "compilerOptions": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "target": "ES2024",
     "useDefineForClassFields": true,
     "lib": ["ES2024", "DOM", "DOM.Iterable", "WebWorker", "WebWorker.Iterable"],
@@ -27,15 +42,37 @@
     "moduleResolution": "bundler",
     "esModuleInterop": true,
     "module": "esnext",
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     "esModuleInterop": true,
 =======
     "target": "ES2020",
     "module": "commonjs",
 >>>>>>> origin/cursor/deploy-zion-os-token-and-dao-cross-chain-e51f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "moduleResolution": "node",
     "esModuleInterop": true,
     "resolveJsonModule": true,
+    "esModuleInterop": true,    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
 <<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "esModuleInterop": true,    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "isolatedModules": true,
     /* Linting */
     "strict": true,
@@ -59,6 +96,12 @@
   "exclude": [
     "node_modules",
     "zion.app/recovered-content/**"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
   ]
 =======
     "strict": true,
@@ -69,4 +112,18 @@
   "include": ["scripts", "hardhat.config.ts", "typechain-types"],
   "exclude": ["node_modules"]
 >>>>>>> origin/cursor/deploy-zion-os-token-and-dao-cross-chain-e51f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
+  ]}
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  ]}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  ]}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

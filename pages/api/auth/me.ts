@@ -1,10 +1,18 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
+import { getUserFromRequest } from '../../../utils/auth';
+<<<<<<< HEAD
+export default function handler(req, res) {
+  try {
+  const user = getUserFromRequest(req);
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-  
-  res.status(200).json({ user: null });
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const user = getUserFromRequest(req);
+  if (!user) return res.status(200).json({ user: null });
+  res.status(200).json({ user });
+>>>>>>> main
 }

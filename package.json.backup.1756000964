@@ -20,11 +20,32 @@
   },
   "devDependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@types/node": "^18.0.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "autoprefixer": "^10.4.16",
     "eslint": "^9.34.0",
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     "lucide-react": "^0.541.0",
 =======
     "@commitlint/cli": "^19.8.1",
@@ -47,7 +68,21 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.4",
 >>>>>>> origin/cursor/install-dependencies-and-build-185d
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "postcss": "^8.4.32",
+    "lucide-react": "^0.541.0",    "postcss": "^8.4.32",
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "lucide-react": "^0.541.0",    "postcss": "^8.4.32",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "lucide-react": "^0.541.0",    "postcss": "^8.4.32",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "tailwindcss": "^3.4.0",
     "typescript": "^5.0.0"
   }

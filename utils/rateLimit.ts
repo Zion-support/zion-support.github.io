@@ -1,3 +1,2 @@
- const store: Map<string number[]> = new Map ();
-}return true 
-}
+import type { NextApiRequest, NextApiResponse } from 'next';
+

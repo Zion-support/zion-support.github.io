@@ -1,9 +1,75 @@
- export function MessageBubble ({
-  message, isUserMessage 
-}: MessageBubbleProps) {
-  return (<div className= {
-  cn ({
-  message.attachment url && (<a href= {
-  message.attachment url 
-}target="blank" rel="noopener noreferrer" className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30" > </div> </div> </div>) 
+
+<<<<<<< HEAD
+import React from 'react',;
+import { format } from 'date-fns',;
+import { PaperclipIcon } from 'lucide-react',;
+import { cn } from '@/lib/utils',;
+import { Message } from '@/types/messaging',;
+interface MessageBubbleProps {;
+  message: Message,;
+  isUserMessage: boolean;
+=======
+import React from 'react';
+import {format} from 'date-fns';
+import {PaperclipIcon} from 'lucide-react';
+import {cn} from '@/lib/utils';
+import {Message} from '@/types/messaging';
+interface MessageBubbleProps {
+  message: Message,
+  isUserMessage: boolean
+>>>>>>> main
 }
+
+export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
+  return (
+    <div className={cn(
+<<<<<<< HEAD
+      "flex",
+      isUserMessage ? "justify-end" : "justify-start"
+    )}>
+      <div className={cn(
+        "max-w-[75%] rounded-lg px-4 py-2",
+=======
+      "flex";
+      isUserMessage ? "justify-end" : "justify-start"
+    )}>
+      <div className={cn(
+        "max-w-[75%] rounded-lg px-4 py-2";
+>>>>>>> main
+        isUserMessage 
+          ? "bg-zion-purple text-white" 
+          : "bg-zion-blue-dark text-white"
+      )}>
+        <div className="whitespace-pre-wrap">{message.content}</div>
+        
+        {message.attachment_url && (
+          <a 
+            href={message.attachment_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30"
+          >
+            <PaperclipIcon className="h-3 w-3 mr-1" />
+            {message.attachment_name || 'Attachment'}
+<<<<<<< HEAD
+          </Link>
+=======
+          </a>
+>>>>>>> main
+        )}
+        
+        <div className="text-xs opacity-70 text-right mt-1">
+          {format(new Date(message.created_at), 'h:mm a')}
+<<<<<<< HEAD
+        </div>;
+      </div>;
+    </div>;
+  );
+=======
+        </div>
+      </div>
+    </div>
+  )
+>>>>>>> main
+}
+;

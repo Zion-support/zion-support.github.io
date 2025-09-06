@@ -5,18 +5,9 @@
 
 [build.environment]
   NODE_VERSION = "18"
-=======
-  functions = "netlify/functions"
-
-[build.environment]
-  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
-  NODE_ENV = "production"
->>>>>>> origin/autobot/2025-08-24T03-49-38-332Z
-
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-<<<<<<< HEAD
 [functions]
   directory = "netlify/functions"
 
@@ -25,10 +16,40 @@
   to = "/.netlify/functions/:splat"
   status = 200
 =======
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
+  command = "npm ci && npm run build"
+  publish = "out"
 
-# Static redirects for exported site
+[build.environment]
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+
+# Security and caching headers for static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-DNS-Prefetch-Control = "on"
+    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    X-Permitted-Cross-Domain-Policies = "none"
+    Origin-Agent-Cluster = "?1"
+
+# Static redirects to mirror Next.js redirects (since output: export)
 [[redirects]]
   from = "/ai-customer-success-platform"
   to = "/services/ai-customer-success-platform/"
@@ -68,4 +89,4 @@
   from = "/affiliate-attribution-suite"
   to = "/services/affiliate-attribution-suite/"
   status = 301
->>>>>>> origin/autobot/2025-08-24T03-49-38-332Z
+>>>>>>> origin/chore/seo-redirects-netlify-fix

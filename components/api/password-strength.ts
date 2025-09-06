@@ -1,4 +1,4 @@
- password.toLowerCase () .includes (pattern) );
+password.toLowerCase () .includes (pattern) );
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 if (score < 30) strength = 'very-weak';
 else if (score < 50) strength = 'weak';
@@ -14,5 +14,106 @@ if (!hasSymbols) feedback.push ('Add special characters');
 if (hasCommonPatterns) feedback.push ('Avoid common patterns and words');
 if (entropy < 30) feedback.push ('Password is too predictable');
 // Generate suggestions 
-}
-}
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<PasswordStrengthResult | { error: string }>
+) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });  }
+
+  }
+
+  try {
+    const { password } = req.body;
+
+    if (!password || typeof password !== 'string') {
+      return res.status(400).json({ error: 'Password is required' });
+    }
+
+    // Password analysis
+    const length = password.length;
+    const hasUppercase = /[A-Z]/.test(password);
+    const hasLowercase = /[a-z]/.test(password);
+    const hasNumbers = /\d/.test(password);
+    const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
+
+    // Check for common patterns
+    const commonPatterns = [
+      '123',
+      'abc',
+      'qwe',
+      'password',
+      'admin',
+      'user',
+      'test',
+      '123456',
+      'password123',
+      'admin123',
+      'qwerty',
+      'asdf',
+    ];
+    const hasCommonPatterns = commonPatterns.some(pattern =>      password.toLowerCase().includes(pattern)
+    );
+
+    // Calculate entropy (simplified)
+
+      password.toLowerCase().includes(pattern)
+    );
+
+    // Calculate entropy (simplified)
+
+    score += hasUppercase ? 10 : 0;
+    score += hasLowercase ? 10 : 0;
+    score += hasNumbers ? 10 : 0;
+    score += hasSymbols ? 15 : 0;
+
+    if (!hasUppercase) feedback.push('Add uppercase letters');
+
+    if (!hasLowercase) feedback.push('Add lowercase letters');
+    if (!hasNumbers) feedback.push('Add numbers');
+    if (!hasSymbols) feedback.push('Add special characters');
+    if (hasCommonPatterns) feedback.push('Avoid common patterns and words');
+    if (entropy < 30) feedback.push('Password is too predictable');
+
+    // Generate suggestions
+    const suggestions: string[] = [],
+    if (score < 50) {
+      suggestions.push(
+        'Use a mix of uppercase, lowercase, numbers, and symbols'
+      );
+
+      suggestions.push('Make it at least 12 characters long');
+      suggestions.push('Avoid personal information and common words');
+    }
+    if (hasCommonPatterns) {
+      suggestions.push('Replace common patterns with random characters');
+      suggestions.push('Consider using a passphrase instead');
+    }
+    if (entropy < 40) {
+      suggestions.push('Increase randomness by using more character types');
+      suggestions.push('Consider using a password generator');
+    }
+
+    const result: PasswordStrengthResult = {
+      password,
+      strength,
+      score: Math.max(0, Math.min(100, score)),
+      feedback,
+      details: {
+        length,
+        hasUppercase,
+        hasLowercase,
+        hasNumbers,
+        hasSymbols,
+        hasCommonPatterns,
+        entropy: Math.round(entropy * 100) / 100,
+      },
+      suggestions,
+    };
+
+    res.status(200).json(result);
+  } catch (error) {
+    console.error('Password strength check error:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }

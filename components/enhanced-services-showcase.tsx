@@ -20,23 +20,21 @@ const containerVariants = {
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2 
-}
-}
 };
-}
+
 };
 <motion.div initial= {
   {
   opacity: 0, y: 30 
-}
+
 }animate= {
   {
   opacity: 1, y: 0 
-}
+
 }transition= {
   {
   duration: 0.8 
-}
+
 }> <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Enhanced Services Showcase </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16" > <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 border border-cyan-500/30" > <Users className="w-5 h-5 text-cyan-400" /> <span className="text-cyan-300 font-semibold" >600+ Services</span> </div> <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full px-6 py-3 border border-purple-500/30" > <TrendingUp className="w-5 h-5 text-purple-400" /> <span className="text-purple-300 font-semibold" >1000% ROI</span> </div> <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-pink-500/20 to-cyan-500/20 rounded-full px-6 py-3 border border-pink-500/30" > <Zap className="w-5 h-5 text-pink-400" /> <span className="text-pink-300 font-semibold" >24/7 Support</span> </div> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6" > Featured Service Categories </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore our most innovative and high-impact service categories </p> </motion.div> </div> <ArrowRight className="w-4 h-4" /> </div>) ) 
 }</div> <Button > View All {
   category.title.split (' ') [0"Services </Button> </div> </div> </motion.div>) ) 
@@ -156,19 +154,19 @@ visible: {
 }<section className="py-20 px-4 sm:px-6 lg:px-8"> <div className="max-w-4xl mx-auto text-center"> <motion.div initial= {
   {
   opacity: 0, y: 30 
-}
+
 }whileInView= {
   {
   opacity: 1, y: 0 
-}
+
 }transition= {
   {
   duration: 0.8 
-}
+
 }viewport= {
   {
   once: true 
-}
+
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8"> Join thousands of companies achieving breakthrough results with our revolutionary services </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"> <div className="flex items-center justify-center space-x-3"> <Phone className="w-6 h-6 text-cyan-400"/> <span className="text-lg"> {
   contactInfo.mobile 
 }</span> </div> <div className="flex items-center justify-center space-x-3"> <Mail className="w-6 h-6 text-purple-400"/> <span className="text-lg"> {
@@ -176,18 +174,55 @@ visible: {
 }</span> </div> <div className="flex items-center justify-center space-x-3"> <MapPin className="w-6 h-6 text-green-400"/> <span className="text-lg"> {
   contactInfo.address 
 }</span> </div> </div> <div className="flex flex-col sm: flex-row gap-4 justify-center"> <Button href="/contact"variant=" primary"size=" lg"className="text-lg px-8 py-4"> Start Your Transformation <Rocket className="ml-2 w-6 h-6"/> </Button> <Button href="/pricing"variant=" secondary"size=" lg"className="text-lg px-8 py-4"> View Pricing <DollarSign className="ml-2 w-6 h-6" /> </Button> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticMatrixBackground>) 
-}//Button component (if not imported) return (<a href= {
-  href 
-}className= {
-  classes 
+}//Button component (if not imported) 
 }> {
   children 
 }</a>) 
-}return (<button onClick= {
-  onClick 
-}className= {
-  classes 
+}
 }> {
   children 
 }</button>) 
+};
+// Button component (if not imported)
+const Button = ({ 
+  href,
+  variant = 'primary';
+  size = 'md';
+  className = '';
+  children, onClick 
+}: {
+  href?: string;
+  variant?: 'primary' | 'secondary';
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+  children: React.ReactNode,
+  onClick?: () => void
+}) => {
+  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900',
+  const variantClasses = {
+    primary: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-cyan-500',
+    secondary: 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500'
+  };
+  
+  const sizeClasses = {
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg'
+  };
+
+  const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`;
+
+  if (href) {
+    return (
+      <a href={href} className={classes}>
+        {children}
+      </a>
+    )
+  }
+
+  return (
+    <button onClick={onClick} className={classes}>
+      {children}
+    </button>
+  )
 };

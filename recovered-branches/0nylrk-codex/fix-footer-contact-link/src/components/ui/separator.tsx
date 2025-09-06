@@ -1,7 +1,52 @@
-import * as React from "react" import * as SeparatorPrimitive from "@radix-ui/react-separator" const Separator = React.forwardRef< React.ElementRef<typeof SeparatorPrimitive.Root>;
-React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>) 
-}{
-  ...props 
-}/>) ) Separator.displayName = SeparatorPrimitive.Root.displayName export {
-  Separator 
-}
+<<<<<<< HEAD
+import * as React from "react"
+import * as SeparatorPrimitive from "@radix-ui/react-separator"
+
+import { cn } from "@/lib/utils"
+=======
+import * as React from 'react';
+import * as SeparatorPrimitive from '@radix-ui/react-separator';
+
+import {cn} from '@/lib/utils';
+>>>>>>> main
+
+const Separator = React.forwardRef<
+  React.ElementRef<typeof SeparatorPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
+<<<<<<< HEAD
+>(
+  (
+    { className, orientation = "horizontal", decorative = true, ...props },
+=======
+></typeof>(
+  (
+    { className, orientation = 'horizontal', decorative = true, ...props },
+>>>>>>> main
+    ref
+  ) => (
+    <SeparatorPrimitive.Root
+      ref={ref}
+      decorative={decorative}
+      orientation={orientation}
+      className={cn(
+<<<<<<< HEAD
+        "shrink-0 bg-border",
+        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
+=======
+        'shrink-0 bg-border',
+        orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]',
+>>>>>>> main
+        className
+      )}
+      {...props}
+    />
+  )
+);
+Separator.displayName = SeparatorPrimitive.Root.displayName;
+<<<<<<< HEAD
+export { Separator }
+;
+=======
+
+export { Separator };
+>>>>>>> main

@@ -1,33 +1,22 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
 const store: Record<string, any> = (global as any).ZION_DID_STORE || {};
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
+export default function handler(req: any, res: any) {
+  res.status(200).json({ store });
+import type { NextApiRequest, NextApiResponse } from 'next';
+const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {};
+export default function handler(req, res) {
   try {
-    const { did } = req.query;
-
-    if (!did || typeof did !== 'string') {
-      return res.status(400).json({ error: 'DID parameter is required' });
-    }
-
-    const didData = store[did];
-
-    if (!didData) {
-      return res.status(404).json({ error: 'DID not found' });
-    }
-
-    res.status(200).json({
-      success: true,
-      did,
-      data: didData
-    });
+  const { address } = req.query as { address?: string };
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
   } catch (error) {
-    res.status(500).json({ 
-      error: 'Failed to retrieve DID data' 
-    });
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
