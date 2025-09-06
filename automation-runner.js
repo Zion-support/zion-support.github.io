@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
 
 class AutomationRunner {
   constructor() {
@@ -262,7 +262,7 @@ console.log('Performance report generated:', reportPath);
 }
 
 // Run the automation
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   const runner = new AutomationRunner();
   runner.runAllAutomations().catch(error => {
     console.error('Automation runner failed:', error);
@@ -270,4 +270,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = AutomationRunner;
+export default AutomationRunner;
