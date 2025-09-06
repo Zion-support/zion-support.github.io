@@ -1,6 +1,10 @@
 #!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 class AdvancedSourceFixer {
   constructor() {
@@ -226,9 +230,13 @@ class AdvancedSourceFixer {
   }
 }
 
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
 }
 
+<<<<<<< HEAD
+export default AdvancedSourceFixer;
+=======
 module.exports = AdvancedSourceFixer;
+>>>>>>> 737a07d029e82dd264d6d7a313e811252fe35474

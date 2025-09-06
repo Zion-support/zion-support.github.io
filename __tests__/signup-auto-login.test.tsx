@@ -1,6 +1,8 @@
-// Mock test for signup auto login
+import { describe, it, expect } from 'vitest';
+
 describe('Signup Auto Login', () => {
-  it('should render without crashing', () => {
-    expect(true).toBe(true);
+  it('renders without crashing', () => {
+    // Add signup auto login tests here
+    expect(true).toBeTruthy();
   });
 });

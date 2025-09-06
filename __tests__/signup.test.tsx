@@ -1,6 +1,8 @@
-// Mock test for signup
+import { describe, it, expect } from 'vitest';
+
 describe('Signup', () => {
-  it('should render without crashing', () => {
-    expect(true).toBe(true);
+  it('renders without crashing', () => {
+    // Add signup tests here
+    expect(true).toBeTruthy();
   });
 });

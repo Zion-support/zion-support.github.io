@@ -1,6 +1,8 @@
-// Mock test for utils
+import { describe, it, expect } from 'vitest';
+
 describe('Utils', () => {
-  it('should work correctly', () => {
-    expect(true).toBe(true);
+  it('should work', () => {
+    // Add utility tests here
+    expect(true).toBeTruthy();
   });
 });

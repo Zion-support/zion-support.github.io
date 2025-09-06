@@ -1,6 +1,8 @@
-// Mock test for profile page
+import { describe, it, expect } from 'vitest';
+
 describe('Profile Page', () => {
-  it('should render without crashing', () => {
-    expect(true).toBe(true);
+  it('renders without crashing', () => {
+    // Add profile page tests here
+    expect(true).toBeTruthy();
   });
 });
