@@ -522,6 +522,13 @@
     ]
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/about",
     "vector": [
       0,
@@ -782,13 +789,297 @@
       1
     ]
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+  {
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+    "route": "/comprehensive-2025-services-showcase",
+    "vector": [
+      2,
+      0,
+      0,
+      1,
+      1,
+      1,
+      3,
+      0,
+      1,
+      2,
+      0,
+      0,
+      3,
+      0,
+      0,
+      0,
+      4,
+      0,
+      0,
+      7,
+      0,
+      3,
+      0,
+      0,
+=======
   {    "vector": [
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  {    "vector": [
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       1,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      1,
+      0,
+      1,
+      0,
+      1,
+      2,
+      4,
+      1,
+      4,
+      1,
+      0,
+      0,
+      1,
+      0,
+      3,
+      2,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      7,
+      1,
+      3,
+      0,
+      2,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      2,
+      0,
+      0,
+      2,
+      0,
+      0,
+      1,
+      2,
+      1,
+      1,
+      1,
+      1,
+      2,
+      0,
+      0,
+      1,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      2,
+      2,
+      0,
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      0,
+      0,
+      7,
+      0,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      2,
+      0,
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      4,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      5,
+      0,
+      1,
+      0,
+      2,
+      1,
+      0,
+      2,
+      0,
+      0,
+      0,
+      1,
+      4,
+      0,
+      2,
+      1,
+      2,
+      0,
+      2,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      3,
+      0,
+      1,
+      1,
+      0,
+      1,
+      5,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      0,
+      2,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      10,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      2,
+      0,
+      0,
+      2,
+      0,
+      4,
+      0,
+      2,
+      0,
+      1,
+      1,
+      0,
+      0,
+      2,
+      0,
+      3,
+      1,
+      0,
+      2,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      5,
+      0,
+      0,
+      1,
+      0,
+      1,
+      2,
+      1,
+      6,
+      1,
+      1,
+      0
+    ]
+  },
+  {
+<<<<<<< HEAD
+    "route": "/contact",
+=======
+    "route": "/comprehensive-2026-services-showcase",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+    "vector": [
+      0,
+      0,
+      0,
+      1,
+<<<<<<< HEAD
+      0,
+      0,
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       3,
       0,
       1,
@@ -797,10 +1088,29 @@
       0,
       2,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      0,
+=======
+      1,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+      1,
+      1,
+      0,
+      0,
+<<<<<<< HEAD
+=======
       0,      1,
       1,
       0,
       0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      1,
+      1,
+      0,
+      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       1,
       1,
@@ -830,6 +1140,134 @@
       1,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      3,
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+      2,
+      1,
+      1,
+      2,
+<<<<<<< HEAD
+      2,
+      0,
+      0,
+      3,
+      3,
+      0,
+      1,
+      2,
+      0,
+      1,
+      0,
+      1,
+      1,
+      3,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      3,
+      0,
+      2,
+      0,
+      3,
+      1,
+      0,
+=======
+      0,
+      0,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+      0,
+=======
+      3,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      4,
+      0,
+      0,
+      0,
+      5,
+<<<<<<< HEAD
+      1,
+=======
+      3,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      2,
+      1,
+      2,
+      0,
+      1,
+      2,
+      0,
+      1,
+      0,
+      2,
+      3,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      7,
+      2,
+      4,
+      2,
+      2,
+      1,
+      2,
+      0,
+      0,
+      1,
+      0,
+      0,
+      2,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      2,
+      1,
+      0,
+      1,
+      0,
+      2,
+      0,
+      0,
+      3,
+      0,
+      2,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+      0,
+=======
       3,      0,
       4,
       0,
@@ -837,12 +1275,23 @@
       0,
       5,
       1,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       4,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -898,11 +1347,64 @@
       0,
       3,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      1,
+=======
+      1,
+      0,
+      0,
+      1,
+      3,
+      0,
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      0,
+      0,
+      0,
+      8,
+      1,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      4,
+      0,
+      1,
+      1,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+      0,
+=======
       1,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       4,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       5,
       3,
@@ -913,12 +1415,42 @@
       0,
       1,
       3,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      1,
+=======
+      0,
+      0,
+      2,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      4,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+      0,
+=======
       1,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       3,
       0,
       1,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       6,
       0,
@@ -927,10 +1459,51 @@
       1,
       2,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      0,
+=======
+      6,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      2,
+      1,
+      0,
+      2,
+      3,
+      3,
+      0,
+      0,
+      1,
+      1,
+      0,
+      2,
+      0,
+      0,
+      5,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+      0,
+      0,
+      0,
+      1,
+<<<<<<< HEAD
+=======
+=======
       0,      0,
       0,
       0,
       1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      0,
+      0,
+      0,
+      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       3,
       1,
       0,
@@ -943,10 +1516,24 @@
       0,
       1,
       1,
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       1,
       0,
       2,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       1,
       1,
@@ -959,13 +1546,33 @@
       0,
       1,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      1,
+=======
+      0,
+      0,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+      0,
+=======
       1,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      1,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       3,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       12,
       0,
@@ -1003,13 +1610,84 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      2,
+=======
+      0,
+      1,
+      0,
+      2,
+      0,
+      0,
+      2,
+      12,
+      2,
+=======
       2,      1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      2,      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       2,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      2,
+      4,
+      0,
+      0,
+      4,
+      1,
+      4,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      2,
+      0,
+      2,
+      0,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+      1,
+      2,
+      0,
+      0,
+      0,
+<<<<<<< HEAD
+      0,
+      0
+=======
+      2,
+      0,
+      0,
+      3,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      10,
+      1,
+      0,
+      2
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+    ]
+=======
       0,
       0    ]
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,
+      0    ]
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   },
   {
     "route": "/",
@@ -1534,13 +2212,40 @@
     ]
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "route": "/resources",
+    "vector": [
+      1,
+=======
+    "route": "/services-advertising-2026",
+    "vector": [
+      0,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+      0,
+=======
     "route": "/resources",
     "vector": [
       1,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "route": "/resources",
+    "vector": [
+      1,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       1,
       1,
       1,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       1,
       0,
       0,
@@ -1565,11 +2270,25 @@
       2,
       2,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       2,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       1,
       0,
@@ -1945,14 +2664,89 @@
       0,
       0,
       0,
-      0,      0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      0,
+=======
+      1,
+      5,
+      4,
+      1,
+      1,
+      4,
+      0,
+      3,
+      0,
+      3,
+      3,
+      0,
+      1,
+      2,
+      0,
+      4,
+      1,
+      1,
+      9,
+      4,
+      3,
+      1,
+      5,
+      0,
+      3,
+      0,
+      0,
+      1,
+      1,
+      1,
+      4,
       0,
       0,
       1,
       0,
+      0,
+      0,
+      2,
+      1,
+      1,
+      2,
+      0,
+      4,
+      0,
+      0,
+      2,
+      0,
+      2,
+      2,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+      0,
+      0,
+      0,
+      1,
+<<<<<<< HEAD
+=======
+=======
+      0,      0,
+      0,
+      0,
+      1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      0,
+      0,
+      0,
+      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      0,
       2,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       4,
       0,
       0,
@@ -1960,6 +2754,13 @@
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -2201,24 +3002,86 @@
       0,
       3,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      6,
+=======
+      1,
+      5,
+      0,
+      0,
+      6,
+      1,
+      9,
+      3,
+      2,
+      2,
+      2,
+      0,
+      3,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+      0,
+=======
       6,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      6,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       11,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       4,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      0,
+=======
+      8,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      4,
+      0,
+      0,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+      1,
+=======
       0,      1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       2,
       0,
@@ -2254,13 +3117,67 @@
       0,
       3,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      0,
+=======
+      5,
+      5,
+      0,
+      4,
+      1,
+      0,
+      2,
+      2,
+      1,
+      0,
+      5,
+      0,
+      3,
+      2,
+      0,
+      0,
+      0,
+      7,
+      1,
+      3,
+      1,
+      2,
+      1,
+      0,
+      2,
+      1,
+      0,
+      2,
+      3,
+      6,
+      0,
+      0,
+      3,
+      3,
+      0,
+      2,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+      0,
+=======
       0,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       5,
       0,
       0,
       0,
       1,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
@@ -2273,25 +3190,112 @@
       0,
       0,
       7,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      0,
+=======
+      3,
+      1,
+      0,
+      0,
+      0,
+      3,
+      3,
+      0,
+      0,
+      0,
+      3,
+      4,
+      0,
+      2,
+      3,
+      2,
+      2,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+      0,
+      0,
+      2,
+      1,
+<<<<<<< HEAD
+=======
       0,      0,
       0,
       2,
       1,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0,      0,
+      0,
+      2,
+      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       0,
       0,
       1,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      0,
+=======
+      1,
+      3,
+=======
+      0,      1,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      0,
+      3,
+      0,
+      2,
+<<<<<<< HEAD
+      11,
+      2,
+      1,
+      0,
+      0,
+      4,
+      2,
+      7,
+      0,
+      0,
+      4,
+      4,
+      4,
+      1,
+      1,
+      0,
+      3,
+      0,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+      1,
+      0,
+      3,
+      0,
+<<<<<<< HEAD
+=======
+      2,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+=======
       0,      1,
       0,
       3,
       0,
       2,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       8,
       1,
       0,
@@ -2335,6 +3339,34 @@
       1,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      0
+=======
+      0,
+      0,
+      2,
+      0,
+      0,
+      4,
+      3,
+      1,
+      2,
+      2,
+      1,
+      1,
+      2,
+      8,
+      1,
+      1,
+      1
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+    ]
+=======
       0    ]
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      0    ]
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 ]

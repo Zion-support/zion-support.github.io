@@ -3,7 +3,20 @@
   "errors": [],
   "warnings": [
     "No upstream configured for current branch.",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "Set upstream to origin/cursor/build-zion-ai-talent-profile-system-f64e."
+=======
+    "Set upstream to origin/cursor/create-dynamic-listing-pages-with-filters-fc72."
+>>>>>>> origin/cursor/create-dynamic-listing-pages-with-filters-fc72
+  ],
+=======
     "Set upstream to origin/cursor/build-zion-ai-talent-profile-system-f64e."  ],
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "Set upstream to origin/cursor/build-zion-ai-talent-profile-system-f64e."  ],
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "checks": {
     "user": {
       "name": "Cursor Agent",
@@ -12,7 +25,20 @@
     "origin": "origin\thttps://x-access-token:ghs_RmdmFzwAuISk7w5OodZkDZA2JagVDv42OQIP@github.com/Zion-Holdings/zion.app (fetch)\norigin\thttps://x-access-token:ghs_RmdmFzwAuISk7w5OodZkDZA2JagVDv42OQIP@github.com/Zion-Holdings/zion.app (push)",
     "fsck": {
       "status": 0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "output": "dangling tree 4d0760e8508ee8da55d2e7b70ad255ecfc7301b0\n"
+=======
+      "output": "dangling tree e8b59a70fa961ce61b2034e1e0a8a3be23ac1696\n"
+>>>>>>> origin/cursor/create-dynamic-listing-pages-with-filters-fc72
+    },
+=======
       "output": "dangling tree 4d0760e8508ee8da55d2e7b70ad255ecfc7301b0\n"    },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "output": "dangling tree 4d0760e8508ee8da55d2e7b70ad255ecfc7301b0\n"    },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "working": "clean"
   }
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }}},
 =======
 const { defineConfig,devices } from "@playwright/test"; export default defineConfig({ testDir: "./tests/e2e"; fullyParallel: true; forbidOnly: !process.env.CI retries: process.env.C,I ? 2 :,0; workers: process.env.CI ? 1 : undefined; reporter: "html"; use: { baseURL: "http: trace: "on-first-retry"}; projects: [{ name: "chromium"; use: { .devices["Desktop Chrom,e"]}},{ name: "firefox"; use: { .devices["Desktop Firefo,x"]}},{ name: "webkit"; use: { .devices["Desktop Safar,i"]}},{ name: "Mobile Chrome"; use: { .devices["Pixe,l 5"]}},{ name: "Mobile Safari"; use: { .devices["iPhon,e 12"]}}]; webServer: { command: "npm run dev"; url: "http: reuseExistingServer: "!process.env.CI"}});'"'"
@@ -19,3 +20,6 @@ export default function Playwright.config({ }: Playwright.configProps) {
 }
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+}}};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45

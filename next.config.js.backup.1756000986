@@ -1,8 +1,28 @@
 const path = require('path');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+const os = require('os');
+
+const nextConfig = {
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
+=======
+
+const nextConfig = {
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+  poweredByHeader: false,
+=======
 const os = require('os');
 
 const nextConfig = {
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',  poweredByHeader: false,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+const os = require('os');
+
+const nextConfig = {
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',  poweredByHeader: false,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   trailingSlash: false,
   reactStrictMode: true,
   bundlePagesRouterDependencies: true,
@@ -55,7 +75,20 @@ const nextConfig = {
     // Memory and performance optimizations for 176+ pages
     largePageDataBytes: 128 * 1000, // Reduced to 128KB for better performance
     workerThreads: false, // Disable worker threads to reduce memory usage
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    cpus: Math.min(2, require('os').cpus().length), // Adaptive CPU limit
+=======
+    cpus: Math.min(2, 2), // Adaptive CPU limit
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+    // Bundle analysis optimizations moved to root level
+=======
     cpus: Math.min(2, require('os').cpus().length), // Adaptive CPU limit    // Bundle analysis optimizations moved to root level
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    cpus: Math.min(2, require('os').cpus().length), // Adaptive CPU limit    // Bundle analysis optimizations moved to root level
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     // Disable profiling for faster builds
     swcTraceProfiling: false,
   },

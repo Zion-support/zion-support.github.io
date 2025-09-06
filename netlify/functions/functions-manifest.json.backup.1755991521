@@ -1,5 +1,18 @@
 {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "generatedAt": "2025-08-12T01:34:07.665Z",
+=======
+  "generatedAt": "2025-08-12T01:34:01.359Z",
+>>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-cb39
+  "functions": [
+=======
   "generatedAt": "2025-08-12T01:34:07.665Z",  "functions": [
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  "generatedAt": "2025-08-12T01:34:07.665Z",  "functions": [
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "a11y-alt-text-runner",
     "ai-changelog-runner",
     "ai-trends-radar-runner",
@@ -7,7 +20,20 @@
     "auto-scheduler",
     "automation-heartbeat",
     "automation-matrix",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "autonomous-cloud-brain",
+=======
+    "autonomous-cloud-trigger",
+>>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-cb39
+    "autonomous-invention-orchestrator",
+=======
     "autonomous-cloud-brain",    "autonomous-invention-orchestrator",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "autonomous-cloud-brain",    "autonomous-invention-orchestrator",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "autonomous-meta-orchestrator",
     "broken-image-scanner",
     "broken-image-scanner-runner",

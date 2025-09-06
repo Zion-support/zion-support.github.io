@@ -5,7 +5,20 @@
     "failedChecks": 0,
     "criticalFailures": 0,
     "canBuild": true,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "timestamp": "2025-08-19T17:33:41.810Z"
+=======
+    "timestamp": "2025-08-19T17:47:19.387Z"
+>>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-9138
+  },
+=======
     "timestamp": "2025-08-19T17:33:41.810Z"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "timestamp": "2025-08-19T17:33:41.810Z"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "results": [
     {
       "name": "Page Structure Validation",

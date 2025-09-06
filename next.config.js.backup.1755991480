@@ -1,7 +1,31 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+const nextConfig = {
+  assetPrefix,
+  poweredByHeader: false,
+  trailingSlash: false,
+=======
+/** @type {import('next').NextConfig} */
+const path = require('path');
+
+const isIpfs = process.env.NEXT_PUBLIC_ASSET_PREFIX?.includes('/ipfs/');
+
+module.exports = {
+>>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
+  reactStrictMode: true,
+=======
 const nextConfig = {
   assetPrefix,
   poweredByHeader: false,
   trailingSlash: false,  reactStrictMode: true,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+const nextConfig = {
+  assetPrefix,
+  poweredByHeader: false,
+  trailingSlash: false,  reactStrictMode: true,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   bundlePagesRouterDependencies: true,
 
   // Optimized for fast builds (hanging issue SOLVED)
@@ -65,6 +89,13 @@ const nextConfig = {
   },
 
   images: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     unoptimized: isNetlify, // Disable optimization on Netlify to prevent 404s
     loader: 'default',
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -216,7 +247,20 @@ const nextConfig = {
       // For Netlify, use more conservative settings
       formats: ['image/webp'],
       minimumCacheTTL: 60, // Shorter cache for debugging
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }),
+=======
+    domains: ["localhost"],
+    unoptimized: true,
+>>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
+  },
+=======
     }),  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    }),  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
@@ -312,6 +356,13 @@ const nextConfig = {
         })
       );
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
     
     // Development optimizations to prevent memory leaks with 176+ pages
@@ -961,12 +1012,32 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
   async redirects() {
     return [
       { source: '/mobile-launch', destination: '/download', permanent: true },
     ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+  },
+=======
+  trailingSlash: true,
+  assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX || undefined,
+>>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
+  webpack: (config) => {
+=======
   },  webpack: (config) => {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  },  webpack: (config) => {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     // Support TS path alias '@/...' by mapping it to the project root
     config.resolve = config.resolve || {};
     config.resolve.alias = config.resolve.alias || {};

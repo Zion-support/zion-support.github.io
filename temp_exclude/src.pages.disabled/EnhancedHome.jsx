@@ -1,0 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:src.pages.disabled/EnhancedHome.jsx
+<<<<<<< \"HEAD\": src.pages.disabled/EnhancedHome.jsx import React from \'react\'; export default EnhancedHome; const EnhancedHome = () => {}; return(); <div className=\"min-h-screen flex items-center justify-center text-white\">; Enhanced Home is temporarily unavailable. Please use the Home page.; </div>; );\" };\";\" export default EnhancedHome;\";\" \"'\";\" import React from \'react\'; export default EnhancedHome; const EnhancedHome = () => {}; return () ; <div className=\"min - h-screen flex items - center justify - center text - white\">; Enhanced Home is temporarily unavailable. Please use the Home page.; </div>;) ;\" };\";\" export default EnhancedHome;\";\" \"'\";\"'\''\";
+<<<<<<< "HEAD": src.pages.disabled/EnhancedHome.jsx import _React from 'react'; export default EnhancedHome; const EnhancedHome = () => {}; return(); <div className="min-h-screen flex items-center justify-center text-white">; Enhanced Home is temporarily unavailable. Please use the Home page.; </div>; );" };";" export default EnhancedHome;";" "'";" import _React from 'react'; export default EnhancedHome; const EnhancedHome = () => {}; return () ; <div className="min - h-screen flex items - center justify - center text - white">; Enhanced Home is temporarily unavailable. Please use the Home page.; </div>;) ;" };";" export default EnhancedHome;";" "'";"'''";
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< \"HEAD\": src.pages.disabled/EnhancedHome.jsx import React from \'react\'; export default EnhancedHome; const EnhancedHome = () => {}; return(); <div className=\"min-h-screen flex items-center justify-center text-white\">; Enhanced Home is temporarily unavailable. Please use the Home page.; </div>; );\" };\";\" export default EnhancedHome;\";\" \"'\";\" import React from \'react\'; export default EnhancedHome; const EnhancedHome = () => {}; return () ; <div className=\"min - h-screen flex items - center justify - center text - white\">; Enhanced Home is temporarily unavailable. Please use the Home page.; </div>;) ;\" };\";\" export default EnhancedHome;\";\" \"'\";\"'\''\";
+<<<<<<< "HEAD": src.pages.disabled/EnhancedHome.jsx import _React from 'react'; export default EnhancedHome; const EnhancedHome = () => {}; return(); <div className="min-h-screen flex items-center justify-center text-white">; Enhanced Home is temporarily unavailable. Please use the Home page.; </div>; );" };";" export default EnhancedHome;";" "'";" import _React from 'react'; export default EnhancedHome; const EnhancedHome = () => {}; return () ; <div className="min - h-screen flex items - center justify - center text - white">; Enhanced Home is temporarily unavailable. Please use the Home page.; </div>;) ;" };";" export default EnhancedHome;";" "'";"'''";
+=======
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/src.pages.disabled/EnhancedHome.jsx

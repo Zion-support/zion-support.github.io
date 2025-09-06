@@ -1,18 +1,55 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<<< HEAD:.github/workflows/release.yml.backup.1755991400
+=======
+<:.github/workflows/release.yml.backup.1755991400
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+name: Release
+=
+name: Seo Validator
+<<<<<<< HEAD
+>>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3:.github/workflows/seo-validator.yml.backup.1755990323
+
+=======
 <:.github/workflows/release.yml.backup.1755991400
 name: Release
 =
 name: Seo Validator
 >
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 on:
   workflow_dispatch: {}
   schedule:
     - cron: '*/10 * * * *'
 
 permissions:
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<<< HEAD:.github/workflows/release.yml.backup.1755991400
+========
+<<<<<<< HEAD
+>>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3:.github/workflows/seo-validator.yml.backup.1755990323
+  contents: write
+  actions: read
+=======
+  contents: read
+>>>>>>> origin/cursor/fix-github-actions-errors-987b
+
+=======
 <:.github/workflows/release.yml.backup.1755991400
 =
 >  contents: write
   actions: read
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+<:.github/workflows/release.yml.backup.1755991400
+=
+>  contents: write
+  actions: read
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 jobs:
   main:
     name: Main Job
@@ -32,13 +69,40 @@ jobs:
 
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<<< HEAD:.github/workflows/release.yml.backup.1755991400
+=======
+<:.github/workflows/release.yml.backup.1755991400
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      - name: Run workflow
+        run: |
+<<<<<<< HEAD
+          echo "Workflow Workflow completed successfully"
+=======
+        run: echo "Workflow completed successfully"
+>>>>>>> origin/cursor/check-and-fix-github-actions-workflows-efb2
+========
+=======
 <:.github/workflows/release.yml.backup.1755991400
       - name: Run workflow
         run: |
           echo "Workflow Workflow completed successfully"=
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          echo "Workflow Workflow completed successfully"=
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3:.github/workflows/seo-validator.yml.backup.1755990323
+=======
 >
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

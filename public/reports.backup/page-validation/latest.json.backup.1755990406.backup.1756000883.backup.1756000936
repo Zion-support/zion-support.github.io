@@ -24,5 +24,22 @@
   ],
   "results": [],
   "buildBreakingFiles": [],
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-19T18:31:39.368Z"
+=======
+  "generatedAt": "2025-08-19T17:36:12.904Z"
+=======
+  "generatedAt": "2025-08-19T17:38:37.285Z"
+>>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-64cf
+}
+=======
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-19T18:31:39.368Z"}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-19T18:31:39.368Z"}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

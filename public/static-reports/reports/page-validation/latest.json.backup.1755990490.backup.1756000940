@@ -7,6 +7,13 @@
     "buildBreakingFiles": 0,
     "canBuild": true
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "results": [
     {
       "file": "pages/_app.tsx",
@@ -22,8 +29,23 @@
       ]
     }
   ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
   "results": [],
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-19T17:56:48.039Z"
+=======
+=======
+  "results": [],
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-19T17:56:48.039Z"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  "results": [],
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-19T17:56:48.039Z"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "generatedAt": "2025-08-19T17:38:00.458Z"
 }

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 /** @type {import('next').NextConfig} */
 const path = require('path');
 
@@ -15,6 +22,23 @@ const baseConfig = {
   eslint: { ignoreDuringBuilds: true },
   async rewrites() { return [{ source: '/webhooks/receive', destination: '/api/webhooks/receive' }]; },
   exportPathMap: async function (defaultPathMap) { delete defaultPathMap['/developers']; delete defaultPathMap['/dashboard/api-access']; return defaultPathMap; },
+<<<<<<< HEAD
+<<<<<<< HEAD
+  webpack: (config) => { config.resolve = config.resolve || {}; config.resolve.alias = config.resolve.alias || {}; config.resolve.alias['@'] = path.resolve(__dirname); return config; },
+=======
+const nextConfig = {
+	reactStrictMode: true,
+	swcMinify: true,
+	optimizeFonts: false,
+	output: 'export',
+	trailingSlash: true
+>>>>>>> origin/cursor/build-nextjs-app-and-handle-errors-5869
+};
+=======
   webpack: (config) => { config.resolve = config.resolve || {}; config.resolve.alias = config.resolve.alias || {}; config.resolve.alias['@'] = path.resolve(__dirname); return config; },};
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  webpack: (config) => { config.resolve = config.resolve || {}; config.resolve.alias = config.resolve.alias || {}; config.resolve.alias['@'] = path.resolve(__dirname); return config; },};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 module.exports = withSentryConfig(baseConfig);

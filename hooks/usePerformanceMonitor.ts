@@ -1,12 +1,10 @@
-import { useState, useEffect } from 'react';
 
-},;
-export default usePerformanceMonitor,;interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
+<<<<<<< HEAD
+
+interface PerformanceMetrics {
+  loadTime: number, firstContentfulPaint: number,
+  largestContentfulPaint: number, firstInputDelay: number,
+  cumulativeLayoutShift: number,
 }
 
 export function usePerformanceMonitor() {
@@ -18,9 +16,9 @@ export function usePerformanceMonitor() {
 
     // Check if Performance Observer is supported
     if (!('PerformanceObserver' in window)) {
-      setIsSupported(false);
-      return;
-    }
+    setIsSupported(false),
+    return
+  }
 
     setIsSupported(true);
 
@@ -76,6 +74,7 @@ export function usePerformanceMonitor() {
     try {
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.warn('Performance Observer not fully supported:', error);
     }
 
@@ -86,32 +85,9 @@ export function usePerformanceMonitor() {
 
   return { metrics, isSupported };
 }
-import { useEffect } from 'react;
-;
-export const usePerformanceMonitor = () => {,
-  useEffect(() => {;
-    // Monitor Core Web Vitals,
-    if (typeof window !== 'undefined' && web-vitals' in window) {,
-      import('web-vitals).then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {,
-        getCLS(console.log),
-        getFID(console.log),
-        getFCP(console.log),
-        getLCP(console.log),
-        getTTFB(console.log)
-      })
-    };
-    // Monitor bundle size,
-    const observer = new PerformanceObserver((list) => {,
-      for (const entry of list.getEntries()) {,
-        if (entry.entryType === 'navigation') {
-        };
-      };
-    }),
-,
-    observer.observe({ entryTypes: [navigation'] }),
-,
-    return () => observer.disconnect()
-  }, [])
+
+=======
 };
-,
-export default usePerformanceMonitor,
+;
+export default usePerformanceMonitor;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

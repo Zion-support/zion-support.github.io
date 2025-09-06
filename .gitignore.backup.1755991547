@@ -34,6 +34,14 @@ Thumbs.db
 # Editors
 .vscode/
 .idea/
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 *.swp
 *.swo
 *~
@@ -53,3 +61,10 @@ automation/logs/autonomous-system.log .next/
 !/.vscode
 !/.vscode/extensions.json
 !/.vscode/settings.json
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/enhance-and-automate-with-cursor-extensions-bb30
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

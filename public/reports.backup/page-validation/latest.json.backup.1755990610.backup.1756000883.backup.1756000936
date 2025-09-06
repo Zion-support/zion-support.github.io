@@ -7,6 +7,13 @@
     "buildBreakingFiles": 0,
     "canBuild": true
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "results": [
     {
       "file": "pages/_app.tsx",
@@ -23,4 +30,17 @@
     }
   ],
   "buildBreakingFiles": [],
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "generatedAt": "2025-08-19T17:38:00.458Z"
+=======
+  "generatedAt": "2025-08-19T18:36:05.933Z"
+>>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-1200
+}
+=======
   "generatedAt": "2025-08-19T17:38:00.458Z"}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  "generatedAt": "2025-08-19T17:38:00.458Z"}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

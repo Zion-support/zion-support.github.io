@@ -51,8 +51,24 @@
   },
   {
     "route": "/404",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "title": "404 - Page Not Found | Zion Tech Group",
+    "h1": "404"
+=======
+    "title": "",
+    "h1": "404 - Page Not Found"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
+  },
+=======
     "title": "404 - Page Not Found | Zion Tech Group",
     "h1": "404"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "title": "404 - Page Not Found | Zion Tech Group",
+    "h1": "404"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     "route": "/500",
     "title": "",
@@ -70,12 +86,39 @@
   },
   {
     "route": "/_document",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "title": "",
+=======
+    "title": "Zion Tech Group - Pioneering Autonomous Business Operations",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
+    "h1": ""
+=======
+    "title": "",    "h1": ""
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  },
+  {
+    "route": "/about",
+    "title": "About Us | Zion Tech Group",
+<<<<<<< HEAD
+    "h1": "About Zion Tech Group"
+=======
+    "title": "About Us - Zion Tech Group",
+    "h1": "We build practical AI and platform solutions"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
+  },
+=======
     "title": "",    "h1": ""
   },
   {
     "route": "/about",
     "title": "About Us | Zion Tech Group",
     "h1": "About Zion Tech Group"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "h1": "About Zion Tech Group"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     "route": "/agency-dashboard",
     "title": "",
@@ -288,8 +331,24 @@
   },
   {
     "route": "/contact",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "title": "Contact Us | Zion Tech Group",
+    "h1": "Get in Touch"
+=======
+    "title": "Contact Us - Zion Tech Group | Get Started with Revolutionary Micro SaaS Services",
+    "h1": "Let's Transform Your Business"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
+  },
+=======
     "title": "Contact Us | Zion Tech Group",
     "h1": "Get in Touch"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "title": "Contact Us | Zion Tech Group",
+    "h1": "Get in Touch"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     "route": "/cutting-edge-pricing-2025",
     "title": "Cutting-Edge Pricing 2025 - Zion Tech Group | Future Technology Solutions",
@@ -361,11 +420,82 @@
     "h1": "Enhanced Services Showcase"
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/explore",
     "title": "Explore Technology Categories | Zion Tech Group",
     "h1": "Explore Technology Categories"
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+  {
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
+    "route": "/expo",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/favorites",
+    "title": "Favorites — Zion AI Marketplace",
+    "h1": "Saved Talent"
+  },
+  {
+    "route": "/features.page",
+    "title": "",
+    "h1": "Features"
+  },
+  {
+    "route": "/holographic-ai-communication-platform",
+    "title": "Holographic AI Communication Platform - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/iam-access-review",
+    "title": "{service.name} - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/incident-automation-suite",
+    "title": "{service.name} - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/incubator",
+    "title": "",
+    "h1": "Zion Incubator"
+  },
+  {
+    "route": "/index-enhanced",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/index.page",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/",
+<<<<<<< HEAD
+    "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
+    "h1": "Zion Tech Group"
+=======
+    "title": "",
+    "h1": ""
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
+  },
+=======
   {  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  {  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     "route": "/innovative-services-showcase-2025",
     "title": "Innovative Services Showcase 2025 | Zion Tech Group",
@@ -577,11 +707,62 @@
     "h1": "Salary Insights"
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/search",
     "title": "Search | Zion Tech Group",
     "h1": "Search Our Services"
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+  {
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
+    "route": "/secrets-rotation-automation",
+    "title": "",
+    "h1": "Secrets Rotation Automation"
+  },
+  {
+    "route": "/security-awareness-phishing",
+    "title": "{service.name} - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/seo-analyzer-tool",
+    "title": "SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis & Optimization",
+    "h1": "SEO Analyzer Tool"
+  },
+  {
+    "route": "/services-advertising",
+    "title": "",
+    "h1": "Services Advertising"
+  },
+  {
+    "route": "/services.page",
+    "title": "",
+    "h1": "Services"
+  },
+  {
+    "route": "/services",
+<<<<<<< HEAD
+    "title": "AI & Technology Services | Zion Tech Group",
+    "h1": "AI & Technology Services"
+=======
+    "title": "Revolutionary 2029 Technology Services | Zion Tech Group",
+    "h1": ""
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
+  },
+=======
   {  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  {  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     "route": "/site-health",
     "title": "Site Health — A11y, Performance, Links",
@@ -590,7 +771,20 @@
   {
     "route": "/sitemap",
     "title": "Sitemap | Zion Tech Group",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "h1": "Site Map"
+=======
+    "h1": "Sitemap"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
+  },
+=======
     "h1": "Site Map"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "h1": "Site Map"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     "route": "/soc2-compliance-automation",
     "title": "",

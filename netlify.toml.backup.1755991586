@@ -11,6 +11,13 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -157,6 +164,13 @@
   status = 301
 
 [[redirects]]
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   from = "/events"
   to = "/news"
   status = 301
@@ -197,4 +211,82 @@
   from = "/:splat"
   to = "/:splat/"
   status = 301
+<<<<<<< HEAD
+<<<<<<< HEAD
   force = true
+=======
+  from = "/ai-autonomous-ecosystem"
+  to = "/ai-autonomous-ecosystem-manager"
+  status = 301
+
+[[redirects]]
+  from = "/ai-financial-fraud-detection"
+  to = "/ai-financial-risk"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-vehicle-ai"
+  to = "/autonomous-vehicle-ai-platform"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-internet-security"
+  to = "/quantum-internet-security-platform"
+  status = 301
+
+[[redirects]]
+  from = "/ai-ethics-governance"
+  to = "/ai-ethics-governance-framework"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-threat-detection"
+  to = "/quantum-cybersecurity-platform"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-identity-verification"
+  to = "/quantum-cybersecurity-platform"
+  status = 301
+
+[[redirects]]
+  from = "/blockchain-enterprise-platform"
+  to = "/blockchain-infrastructure-platform"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-networking"
+  to = "/quantum-internet-security-platform"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-data-center"
+  to = "/quantum-cloud-infrastructure-platform"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-it-operations"
+  to = "/autonomous-it-operations-center"
+  status = 301
+
+[[redirects]]
+  from = "/ai-content-marketing-automation"
+  to = "/intelligent-content-automation-platform"
+  status = 301
+
+[[redirects]]
+  from = "/ai-autonomous-business-process-automation"
+  to = "/ai-autonomous-business-operations"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-encryption-gateway"
+  to = "/quantum-internet-security-platform"
+  status = 301
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b433
+=======
+  force = true
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  force = true
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

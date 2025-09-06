@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 module.exports = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -22,4 +29,29 @@ module.exports = {
     **/__tests__/**/*.(ts|tsx|js),
     **/?(*.)+(spec|test).(ts|tsx|js)
   ]
+<<<<<<< HEAD
+<<<<<<< HEAD
 };
+=======
+/** @type {import('jest').Config} */
+module.exports = {
+  testEnvironment: 'jsdom',
+  roots: ['<rootDir>/'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+  },
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  testMatch: ['**/__tests__/**/*.(spec|test).(ts|tsx|js)'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+  },
+};
+>>>>>>> origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3
+=======
+};
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

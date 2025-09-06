@@ -1,0 +1,28 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:pages_backup_conflicts/privacy.tsx
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup_conflicts/privacy.tsx
+import React from \'react\'; export default function Privacy() { return ( <div className=\"min-h-screen bg-white py-16\"> <div className=\"max-w-3xl mx-auto px-4\"> <h1 className=\"text-3xl font-bold mb-6\">Privacy Policy</h1> <p className=\"text-gray-700\">We respect your privacy. This is a placeholder policy. Contact us for details.</p> </div> </div> )}; export default Privacy;
+const React from "react"; export default function Privacy() { return ( <div className="min-h-screen bg-white py-16"> <div className="max-w-3xl mx-auto px-4"> <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1> <p className="text-gray-700">We respect your privacy. This is a placeholder policy. Contact us for details.</p> </div> </div> )}; export default Privacy;'"'"
+import _React from 'react'; export default function Privacy() { return ( <div className="min-h-screen bg-white py-16"> <div className="max-w-3xl mx-auto px-4"> <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1> <p className="text-gray-700">We respect your privacy. This is a placeholder policy. Contact us for details.</p> </div> </div> )}; export default Privacy;
+=======
+import _React from 'react'; export default function Privacy() { return ( <div className="min-h-screen bg-white py-16"> <div className="max-w-3xl mx-auto px-4"> <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1> <p className="text-gray-700">We respect your privacy. This is a placeholder policy. Contact us for details.</p> </div> </div> )}; export default Privacy;
+=======
+<<<<<<< HEAD:pages_backup_conflicts/privacy.tsx
+<<<<<<< HEAD
+import React from \'react\'; export default function Privacy() { return ( <div className=\"min-h-screen bg-white py-16\"> <div className=\"max-w-3xl mx-auto px-4\"> <h1 className=\"text-3xl font-bold mb-6\">Privacy Policy</h1> <p className=\"text-gray-700\">We respect your privacy. This is a placeholder policy. Contact us for details.</p> </div> </div> )}; export default Privacy;
+const React from "react"; export default function Privacy() { return ( <div className="min-h-screen bg-white py-16"> <div className="max-w-3xl mx-auto px-4"> <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1> <p className="text-gray-700">We respect your privacy. This is a placeholder policy. Contact us for details.</p> </div> </div> )}; export default Privacy;'"'"
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup_conflicts/privacy.tsx
+import _React from 'react'; export default function Privacy() { return ( <div className="min-h-screen bg-white py-16"> <div className="max-w-3xl mx-auto px-4"> <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1> <p className="text-gray-700">We respect your privacy. This is a placeholder policy. Contact us for details.</p> </div> </div> )}; export default Privacy;
+=======
+<<<<<<< HEAD
+import _React from 'react'; export default function Privacy() { return ( <div className="min-h-screen bg-white py-16"> <div className="max-w-3xl mx-auto px-4"> <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1> <p className="text-gray-700">We respect your privacy. This is a placeholder policy. Contact us for details.</p> </div> </div> )}; export default Privacy;
+=======
+import React from \'react\'; export default function Privacy() { return ( <div className=\"min-h-screen bg-white py-16\"> <div className=\"max-w-3xl mx-auto px-4\"> <h1 className=\"text-3xl font-bold mb-6\">Privacy Policy</h1> <p className=\"text-gray-700\">We respect your privacy. This is a placeholder policy. Contact us for details.</p> </div> </div> )}; export default Privacy;
+const React from "react"; export default function Privacy() { return ( <div className="min-h-screen bg-white py-16"> <div className="max-w-3xl mx-auto px-4"> <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1> <p className="text-gray-700">We respect your privacy. This is a placeholder policy. Contact us for details.</p> </div> </div> )}; export default Privacy;'"'"
+import _React from 'react'; export default function Privacy() { return ( <div className="min-h-screen bg-white py-16"> <div className="max-w-3xl mx-auto px-4"> <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1> <p className="text-gray-700">We respect your privacy. This is a placeholder policy. Contact us for details.</p> </div> </div> )}; export default Privacy;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

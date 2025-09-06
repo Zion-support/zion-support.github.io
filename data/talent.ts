@@ -1,29 +1,26 @@
-// Stub talent data - placeholder for missing functionality;
-export const TALENT_PROFILES = [;
-  {;
-    id:'1',;
-    slug:'sample-talent',;
-    name:'Sample Talent',;
-    title:'Full Stack Developer',;
-    category:'Development',;
-    location:'Remote',;
-    timezone:'UTC',;
-    region:'Global',;
-    skills:['ReactNode.js', 'TypeScript'],;
-    summary:'Experienced developer with expertise in modern web technologies.',;
-    bio:'Passionate about creating innovative solutions.',;
-    hourlyRateUsd:75,;
-    requestQuote:true,;
-    availability:'Open',;
-    profileImageUrl:null,;
-    videoUrl:null,;
-    portfolio:null,;
-    verified:false,;
-    rating:0,;
-    reviewsCount:0,;
-    createdAt:new Date().toISOString(),;
-    originalLanguage:'en',;
-    translations:{}
-  }],
-// Stub talent data - placeholder for missing functionality 
-}];
+export const TALENT_PROFILES = [
+  {
+    id: '1',
+    slug: 'sample-talent',
+    name: 'Sample Talent',
+    title: 'Full Stack Developer',
+    bio: 'Experienced developer with expertise in React, Node.js, and TypeScript.',
+    skills: ['React', 'Node.js', 'TypeScript', 'PostgreSQL'],
+    location: 'San Francisco, CA',
+    hourlyRate: 75,
+    availability: 'Available',
+    experience: '5+ years',
+    portfolio: 'https://example.com/portfolio',
+    linkedin: 'https://linkedin.com/in/sample-talent',
+    github: 'https://github.com/sample-talent',
+    verified: true,
+    rating: 4.8,
+    reviewCount: 24,
+    completedProjects: 15,
+    responseTime: 'Within 2 hours',
+    languages: ['English', 'Spanish'],
+    timezone: 'PST',
+    createdAt: '2023-01-15T00:00:00Z',
+    updatedAt: '2024-01-15T00:00:00Z'
+  }
+];

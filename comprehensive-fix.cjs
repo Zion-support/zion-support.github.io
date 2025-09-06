@@ -44,8 +44,8 @@ function fixFile(filePath) {;
 
 class ComprehensiveFixer {
   constructor() {
-    this.fixedFiles = [];
-    this.errors = [];
+    this.fixedFiles = [],
+    this.errors = []
   }
 
   log(message) {
@@ -102,7 +102,7 @@ class ComprehensiveFixer {
       content = content.replace(/import\s+([^}]+)\}\s*from\s+/g, 'import { $1 } from ');
       
       // Fix broken function declarations
-      content = content.replace(/const:\s*(\w+):\s*React\.FC/g, 'const $1: React.FC');
+      content = content.replace(/const:\s*(\w+):\s*React\.FC/g, 'const $1: React.FC'),
       content = content.replace(/interface\s+(\w+)\s*\{_([^}]+)_\}/g, 'interface $1 { $2 }');
       
       // Fix broken JSX
@@ -115,9 +115,8 @@ class ComprehensiveFixer {
       content = content.replace(/\(\s*_([^)]+)_\s*\)/g, '($1)');
       
       // Fix broken object properties
-      content = content.replace(/(\w+):\s*n:\s*(\w+)/g, '$1: $2');
-      content = content.replace(/(\w+):\s*s:\s*(\w+)/g, '$1: $2');
-      
+      content = content.replace(/(\w+):\s*n:\s*(\w+)/g, '$1: $2'),
+      content = content.replace(/(\w+):\s*s:\s*(\w+)/g, '$1: $2'),
       // Fix broken array syntax
       content = content.replace(/\[\s*_([^\]]+)_\s*\]/g, '[ $1 ]');
       
@@ -271,7 +270,10 @@ class ComprehensiveFixer {
       } else if (entry.isFile() && (entry.name.endsWith('.tsx') || entry.name.endsWith('.ts') || entry.name.endsWith('.jsx') || entry.name.endsWith('.js'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD
+=======
           if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>') || content.includes('{_') || content.includes('_}') || content.includes('_ ') || content.includes('&quot;') || content.includes('&amp;') || content.includes('&lt;') || content.includes('&gt;')) {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             files.push(fullPath);
           }
         } catch (error) {

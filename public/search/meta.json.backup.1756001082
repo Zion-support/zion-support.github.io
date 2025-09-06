@@ -605,11 +605,326 @@
     "h1": "Resources"
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/revolutionary-2025-services-showcase",
     "title": "Revolutionary 2025 Services Showcase | Zion Tech Group",
     "h1": "Revolutionary 2025 Services"
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+  {
+=======
+>>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
+    "route": "/revolutionary-2028-pricing",
+    "title": "2028 Revolutionary Pricing - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/revolutionary-services",
+    "title": "Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI, Autonomous Systems, Space Technology",
+    "h1": ""
+  },
+  {
+    "route": "/saas-marketplace",
+    "title": "SaaS Marketplace - Zion Tech Group",
+    "h1": "SaaS Marketplace"
+  },
+  {
+    "route": "/salary-insights",
+    "title": "",
+    "h1": "Salary Insights"
+  },
+  {
+    "route": "/secrets-rotation-automation",
+    "title": "",
+    "h1": "Secrets Rotation Automation"
+  },
+  {
+    "route": "/security-awareness-phishing",
+    "title": "{service.name} - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/seo-analyzer-tool",
+    "title": "SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis & Optimization",
+    "h1": "SEO Analyzer Tool"
+  },
+  {
+    "route": "/services-advertising",
+    "title": "",
+    "h1": "Services Advertising"
+  },
+  {
+    "route": "/services.page",
+    "title": "",
+    "h1": "Services"
+  },
+  {
+    "route": "/services",
+    "title": "Revolutionary 2029 Technology Services | Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/site-health",
+    "title": "Site Health — A11y, Performance, Links",
+    "h1": ""
+  },
+  {
+    "route": "/sitemap",
+    "title": "Sitemap | Zion Tech Group",
+    "h1": "Sitemap"
+  },
+  {
+    "route": "/soc2-compliance-automation",
+    "title": "",
+    "h1": "SOC 2 Compliance Automation"
+  },
+  {
+    "route": "/solutions",
+    "title": "Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions",
+    "h1": "Industry Solutions"
+  },
+  {
+    "route": "/startup-tools",
+    "title": "Startup Tools & Resources - Zion Tech Group",
+    "h1": "Startup Tools & Resources"
+  },
+  {
+    "route": "/team",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/technology-insights",
+    "title": "Technology Insights | Zion Tech Group - Research & Innovation",
+    "h1": "Technology Insights"
+  },
+  {
+    "route": "/tool-comparison",
+    "title": "Tool Comparison - Zion Tech Group",
+    "h1": "Tool Comparison"
+  },
+  {
+    "route": "/trust",
+    "title": "",
+    "h1": "Trust & Reputation"
+  },
+  {
+    "route": "/ultimate-futuristic-services-showcase-2025",
+    "title": "Ultimate Futuristic Services Showcase 2025 | Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/url-shortener",
+    "title": "URL Shortener - Zion Tech Group",
+    "h1": "URL Shortener"
+  },
+  {
+    "route": "/wcag-accessibility-scanner",
+    "title": "{service.name} - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/website-performance-monitor",
+    "title": "Website Performance Monitor - Zion Tech Group | Real-Time Website Monitoring Tool",
+    "h1": "Website Performance Monitor"
+  },
+  {
+    "route": "/whitepaper-builder",
+    "title": "",
+    "h1": "Zion Protocol Whitepaper"
+  },
+  {
+    "route": "/zion/ipfs",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/vendors/[slug]",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/vendors",
+    "title": "",
+    "h1": "Vendors"
+  },
+  {
+    "route": "/vendors/register",
+    "title": "",
+    "h1": "Apply to become a Vendor Partner"
+  },
+  {
+    "route": "/token/integrations",
+    "title": "",
+    "h1": "ZION$ Integrations"
+  },
+  {
+    "route": "/token/model",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/talent/[slug]",
+    "title": "",
+    "h1": "Talent"
+  },
+  {
+    "route": "/talent",
+    "title": "",
+    "h1": "Talent"
+  },
+  {
+    "route": "/talent/new",
+    "title": "",
+    "h1": "Add Talent"
+  },
+  {
+    "route": "/talent/onboarding",
+    "title": "",
+    "h1": "Thanks! We’re using AI to optimize your profile."
+  },
+  {
+    "route": "/studio/host",
+    "title": "",
+    "h1": "Podcast Studio Host"
+  },
+  {
+    "route": "/services/[id]",
+    "title": "{service.name} | Zion Tech Group - Micro SaaS Services",
+    "h1": "Service Not Found"
+  },
+  {
+    "route": "/services/[slug]",
+    "title": "{service.name} | Zion Tech Group",
+    "h1": "{service.name}"
+  },
+  {
+    "route": "/services/ai-model-development-chat",
+    "title": "AiModelDevelopmentChat - Zion Tech Solutions",
+    "h1": "AiModelDevelopmentChat"
+  },
+  {
+    "route": "/services/ai-seo-auditor",
+    "title": "Services • Ai-seo-auditor - Placeholder",
+    "h1": "AiSeoAuditor"
+  },
+  {
+    "route": "/services/api-development-chat",
+    "title": "ApiDevelopmentChat - Zion Tech Solutions",
+    "h1": "ApiDevelopmentChat"
+  },
+  {
+    "route": "/services/business-intelligence-chat",
+    "title": "BusinessIntelligenceChat - Zion Tech Solutions",
+    "h1": "BusinessIntelligenceChat"
+  },
+  {
+    "route": "/services/cloud-migration-services-chat",
+    "title": "CloudMigrationServicesChat - Zion Tech Solutions",
+    "h1": "CloudMigrationServicesChat"
+  },
+  {
+    "route": "/services/customer-support-chatbot",
+    "title": "Services • Customer-support-chatbot - Placeholder",
+    "h1": "CustomerSupportChatbot"
+  },
+  {
+    "route": "/services/data-pipeline-engineering-chat",
+    "title": "DataPipelineEngineeringChat - Zion Tech Solutions",
+    "h1": "DataPipelineEngineeringChat"
+  },
+  {
+    "route": "/services/database-design-chat",
+    "title": "DatabaseDesignChat - Zion Tech Solutions",
+    "h1": "DatabaseDesignChat"
+  },
+  {
+    "route": "/services",
+    "title": "Zion AI Marketplace - Services",
+    "h1": "Services"
+  },
+  {
+    "route": "/services/instagram-content-scheduler",
+    "title": "Instagram Content Scheduler | Services",
+    "h1": "InstagramContentScheduler"
+  },
+  {
+    "route": "/services/landing-page-generator",
+    "title": "Services • Landing-page-generator - Placeholder",
+    "h1": "LandingPageGenerator"
+  },
+  {
+    "route": "/services/mobile-app-development-chat",
+    "title": "MobileAppDevelopmentChat - Zion Tech Solutions",
+    "h1": "MobileAppDevelopmentChat"
+  },
+  {
+    "route": "/services/network-security-chat",
+    "title": "NetworkSecurityChat - Zion Tech Solutions",
+    "h1": "NetworkSecurityChat"
+  },
+  {
+    "route": "/services/performance-optimization-chat",
+    "title": "PerformanceOptimizationChat - Zion Tech Solutions",
+    "h1": "PerformanceOptimizationChat"
+  },
+  {
+    "route": "/services/price-intelligence-service",
+    "title": "Services • Price-intelligence-service - Placeholder",
+    "h1": "PriceIntelligenceService"
+  },
+  {
+    "route": "/services/quality-assurance-testing-chat",
+    "title": "QualityAssuranceTestingChat - Zion Tech Solutions",
+    "h1": "QualityAssuranceTestingChat"
+  },
+  {
+    "route": "/services/security-auditing-chat",
+    "title": "SecurityAuditingChat - Zion Tech Solutions",
+    "h1": "SecurityAuditingChat"
+  },
+  {
+    "route": "/services/system-administration-chat",
+    "title": "SystemAdministrationChat - Zion Tech Solutions",
+    "h1": "SystemAdministrationChat"
+  },
+  {
+    "route": "/services/technical-documentation-chat",
+    "title": "TechnicalDocumentationChat - Zion Tech Solutions",
+    "h1": "TechnicalDocumentationChat"
+  },
+  {
+    "route": "/services/ui-ux-design-chat",
+    "title": "UiUxDesignChat - Zion Tech Solutions",
+    "h1": "UiUxDesignChat"
+  },
+  {
+    "route": "/services/web-application-development-chat",
+    "title": "WebApplicationDevelopmentChat - Zion Tech Solutions",
+    "h1": "WebApplicationDevelopmentChat"
+  },
+  {
+    "route": "/reports",
+    "title": "",
+<<<<<<< HEAD
+    "h1": "Reports"
+=======
+    "h1": "Autonomous Content Hub"
+>>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
+  },
+=======
   {  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  {  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     "route": "/reports/links",
     "title": "",

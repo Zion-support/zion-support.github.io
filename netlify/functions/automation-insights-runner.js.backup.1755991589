@@ -22,6 +22,13 @@ exports.handler = async () => {
     return status;
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   // Generate sitemap for crawling
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap.js'));
 
@@ -32,7 +39,29 @@ exports.handler = async () => {
     logs.push(`Search index generation skipped: ${String(error)}`);
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  // Commit and push
+=======
+  // Crawl external links and generate report
+  logStep('links:check', () => runNode('scripts/automations/check_links.cjs'));
+
+  // If there are any local link fixers, run them (optional best-effort)
+  try {
+    logStep('links:fixer', () => runNode('automation/site-link-fixer.cjs'));
+  } catch (error) {
+    logs.push(`No site-link-fixer found or failed gracefully: ${String(error)}`);
+  }
+
+  // Commit and push any changes
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+  logStep('git:sync', () => runNode('automation/git-sync.cjs'));
+=======
   // Commit and push  logStep('git:sync', () => runNode('automation/git-sync.cjs'));
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  // Commit and push  logStep('git:sync', () => runNode('automation/git-sync.cjs'));
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   return { statusCode: 200, body: logs.join('\n') };
 };

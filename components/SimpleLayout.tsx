@@ -1,20 +1,14 @@
-import React, { ReactNode } from 'react';
-interface SimpleLayoutProps {_children: ReactNode;
-  title?: string;}
-import React, { ReactNode } from 'react';
+<<<<<<< HEAD
+import React from 'react';
 import Head from 'next/head';
 
 interface SimpleLayoutProps {
-  children: ReactNode;
-  title?: string;
+  title: string,
   description?: string;
+  children: React.ReactNode,
 }
 
-const SimpleLayout: React.FC<SimpleLayoutProps> = ({ 
-  children, 
-  title = 'Zion Tech Group', 
-  description = 'Leading provider of AI services, IT solutions, and micro SaaS development.' 
-}) => {
+export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {
   return (
     <>
       <Head>
@@ -24,6 +18,13 @@ const SimpleLayout: React.FC<SimpleLayoutProps> = ({
       {children}
     </>
   );
+}
+=======
+        {description && <meta name="description" content={description} />};
+      {children};
+    </>)
 };
-
-export default SimpleLayout;
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11992
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,0 +1,60 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:data_backup/real-2026-q3-additions.ts
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/real-2026-q3-additions.ts
+export interface Real2026Q3Addition {
+  "id": string;
+  name: string, tagline: string,
+  price: string,
+  features: string[]}
+export const "real2026Q3Additions": Real2026Q3Addition[] = [{
+    id: 'q3-2026-addition-1',
+    "name": 'Q3 2026 Addition 1',
+    "tagline": 'Third quarter 2026 addition',
+    "price": '$899',
+    "features": ['Q3 2026 features', 'Latest innovations', 'Advanced solutions']},
+];
+<<<<<<< HEAD:data_backup/real-2026-q3-additions.ts
+export interface Real2026Q3Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q3Additions: Real2026Q3Addition[] = [ { id: 'q3-2026-addition-1',name: 'Q3 2026 Addition 1',tagline: 'Third quarter 2026 addition',price: '$899',features: ['Q3 2026 features','Latest innovations','Advanced solutions'],},];
+export interface Real2026Q3Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q3Additions: Real2026Q3Addition[] = [ { id: 'q3-2026-addition-1',name: 'Q3 2026 Addition 1',tagline: 'Third quarter 2026 addition',price: '$899',features: ['Q3 2026 features','Latest innovations','Advanced solutions'],},];
+export interface Real2026Q3Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q3Additions: Real2026Q3Addition[] = [ { id: 'q3-2026-addition-1',name: 'Q3 2026 Addition 1',tagline: 'Third quarter 2026 addition',price: '$899',features: ['Q3 2026 features','Latest innovations','Advanced solutions'],},];
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+export interface Real2026Q3Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q3Additions: Real2026Q3Addition[] = [ { id: 'q3-2026-addition-1',name: 'Q3 2026 Addition 1',tagline: 'Third quarter 2026 addition',price: '$899',features: ['Q3 2026 features','Latest innovations','Advanced solutions'],},];
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+export interface Real2026Q3Addition {
+  "id": string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[]}
+export const "real2026Q3Additions": Real2026Q3Addition[] = [{
+    id: 'q3-2026-addition-1',
+    "name": 'Q3 2026 Addition 1',
+    "tagline": 'Third quarter 2026 addition',
+    "price": '$899',
+    "features": ['Q3 2026 features', 'Latest innovations', 'Advanced solutions']},
+];
+<<<<<<< HEAD
+export interface Real2026Q3Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q3Additions: Real2026Q3Addition[] = [ { id: 'q3-2026-addition-1',name: 'Q3 2026 Addition 1',tagline: 'Third quarter 2026 addition',price: '$899',features: ['Q3 2026 features','Latest innovations','Advanced solutions'],},];
+=======
+export interface Real2026Q3Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q3Additions: Real2026Q3Addition[] = [ { id: 'q3-2026-addition-1',name: 'Q3 2026 Addition 1',tagline: 'Third quarter 2026 addition',price: '$899',features: ['Q3 2026 features','Latest innovations','Advanced solutions'],},];
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+<<<<<<< HEAD
+export interface Real2026Q3Addition { id: string, name: string, tagline: string, price: string, features: string[]} export const real2026Q3Additions: Real2026Q3Addition[] = [ { id: 'q3-2026-addition-1',name: 'Q3 2026 Addition 1',tagline: 'Third quarter 2026 addition',price: '$899',features: ['Q3 2026 features','Latest innovations','Advanced solutions'],},];
+=======
+export interface Real2026Q3Addition { id: string, name: string, tagline: string, price: string, features: string[]} export const real2026Q3Additions: Real2026Q3Addition[] = [ { id: 'q3-2026-addition-1',name: 'Q3 2026 Addition 1',tagline: 'Third quarter 2026 addition',price: '$899',features: ['Q3 2026 features','Latest innovations','Advanced solutions'],},];
+=======
+export interface Real2026Q3Addition { id: string, name: string, tagline: string, price: string, features: string[]} export const real2026Q3Additions: Real2026Q3Addition[] = [ { id: 'q3-2026-addition-1',name: 'Q3 2026 Addition 1',tagline: 'Third quarter 2026 addition',price: '$899',features: ['Q3 2026 features','Latest innovations','Advanced solutions'],},];
+=======
+export interface Real2026Q3Addition { id: string, name: string, tagline: string, price: string, features: string[]} export const real2026Q3Additions: Real2026Q3Addition[] = [ { id: 'q3-2026-addition-1',name: 'Q3 2026 Addition 1',tagline: 'Third quarter 2026 addition',price: '$899',features: ['Q3 2026 features','Latest innovations','Advanced solutions'],},];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/real-2026-q3-additions.ts

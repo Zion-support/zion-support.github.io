@@ -690,7 +690,20 @@
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
     "uuid": "^11.1.0",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "web3.storage": "^4.6.0"
+=======
+    "ethers": "^5.7.2"
+>>>>>>> origin/cursor/deploy-zion-omnichain-bridge-and-depin-integration-3253
+  },
+=======
     "web3.storage": "^4.6.0"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "web3.storage": "^4.6.0"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
@@ -754,6 +767,13 @@
   "devDependencies": {
     "rimraf": "^6.0.1"
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   },
   "type": "module"
 }

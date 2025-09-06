@@ -1,9 +1,26 @@
 import js from '@eslint/js';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 export default [
   js.configs.recommended,
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+export default [
+  js.configs.recommended,
+  {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
@@ -36,6 +53,13 @@ export default [
     }
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-005b
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     ignores: [
       'node_modules/',
       '.next/',
@@ -49,9 +73,28 @@ export default [
       'public/reports/**',
       'netlify/',
       'ecosystem*.cjs',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      '**/*.cjs',
+      'components/**',
+      'pages/**',
+      'services/**'
+=======
+      '**/*.cjs'
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-005b
+    ]
+=======
       '**/*.cjs',
       'components/**',
       'pages/**',
       'services/**'    ]
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      '**/*.cjs',
+      'components/**',
+      'pages/**',
+      'services/**'    ]
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 ];
