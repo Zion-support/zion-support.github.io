@@ -301,5 +301,4 @@ if ( {})
      {}
   const testAutomation = new ComprehensiveTestAutomation}(;);
   testAutomation.run().catch(console.error)};
-module.exports = ComprehensiveTestAutomation;
-module.exports = ComprehensiveTestAutomation;
+

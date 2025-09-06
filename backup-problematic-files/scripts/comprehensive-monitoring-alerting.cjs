@@ -1,3 +1,4 @@
+
     log('info', `CPU "usage": ${monitoringReport.metrics.cpu}%`);
     log('info', `Memory "usage": ${monitoringReport.metrics.memory}%`);
     log('info', `Disk "usage": ${monitoringReport.metrics.disk}%`);
@@ -37,10 +38,10 @@
     log('error', 'Fatal error in comprehensive monitoring and alerting', error.message);
     process.exit(1)}
 }
-main();
-#!/usr/bin/env node;
 
-main();#!/usr/bin/env node;
+main();
+
+#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -90,5 +91,4 @@ console.log('')
     "message"
     "action"
       log('warn', 'Alerts "generated")
-      log('info', 'Monitoring "Recommendations")
       log('info', 'Monitoring "Recommendations")

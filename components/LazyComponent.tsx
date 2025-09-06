@@ -17,3 +17,4 @@ const LazyComponent: React.FC < LazyComponentProps> = ({
     </Suspense>);
 },
 
+export default LazyComponent;

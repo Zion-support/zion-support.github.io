@@ -1,58 +1,68 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'About | Zion Tech Group',
-  description: 'Learn about Zion Tech Group\'s mission, vision, and commitment to delivering cutting-edge AI and technology solutions.',
-  keywords: 'about, mission, vision, AI, technology, innovation, zion tech group',
+  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
 };
 
 export default function AboutPage() {
   return (
-    <div className="max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">About Zion Tech Group</h1>
-      
-      <div className="prose prose-lg max-w-none">
-        <p className="text-gray-600 mb-6">
-          Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. We are committed to transforming businesses through cutting-edge technology and innovative approaches.
-        </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            About Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            We are a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.
+          </p>
+        </div>
         
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h2>
-        <p className="text-gray-600 mb-6">
-          To empower businesses with cutting-edge AI and technology solutions that drive innovation, efficiency, and growth. We strive to be the bridge between complex technology and practical business applications.
-        </p>
-        
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Vision</h2>
-        <p className="text-gray-600 mb-6">
-          To be the global leader in AI and technology solutions, recognized for our innovation, reliability, and commitment to client success. We envision a future where technology seamlessly integrates with business operations to create unprecedented value.
-        </p>
-        
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Why Choose Us</h2>
-        <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
-          <li>Expert team with deep expertise in AI and emerging technologies</li>
-          <li>Proven track record of delivering successful projects</li>
-          <li>Commitment to innovation and continuous learning</li>
-          <li>Client-focused approach with personalized solutions</li>
-          <li>Comprehensive support and maintenance services</li>
-        </ul>
-        
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Values</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Innovation</h3>
-            <p className="text-gray-600">We constantly explore new technologies and approaches to deliver cutting-edge solutions.</p>
+            <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
+            <p className="text-gray-300 mb-6">
+              To democratize access to cutting-edge AI and technology solutions, empowering businesses of all sizes to compete and thrive in the digital age.
+            </p>
+            <p className="text-gray-300 mb-6">
+              We combine technical expertise with business acumen to create solutions that drive real results for our clients.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="/contact"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
+              >
+                Get in Touch
+              </a>
+              <a
+                href="/services"
+                className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors text-center"
+              >
+                Our Services
+              </a>
+            </div>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Quality</h3>
-            <p className="text-gray-600">We maintain the highest standards in all our deliverables and services.</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Integrity</h3>
-            <p className="text-gray-600">We conduct business with honesty, transparency, and ethical practices.</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Collaboration</h3>
-            <p className="text-gray-600">We work closely with our clients to understand their needs and deliver tailored solutions.</p>
+          
+          <div className="bg-gray-800 rounded-lg p-8">
+            <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
+            <ul className="space-y-4">
+              <li className="flex items-center text-gray-300">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                1000+ successful projects delivered
+              </li>
+              <li className="flex items-center text-gray-300">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                24/7 technical support
+              </li>
+              <li className="flex items-center text-gray-300">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                Enterprise-grade security
+              </li>
+              <li className="flex items-center text-gray-300">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                Custom solutions for every need
+              </li>
+            </ul>
           </div>
         </div>
       </div>

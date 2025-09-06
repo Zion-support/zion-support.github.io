@@ -1,117 +1,84 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import React from 'react';
 import './globals.css';
-import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
-  keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
+  title: {
+    default: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
+    template: '%s | Zion Tech Group'
+  },
+  description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services. Transform your business with cutting-edge technology and expert consulting.',
+  keywords: 'AI solutions, micro SaaS, enterprise IT, cloud migration, DevOps, cybersecurity, business automation, digital transformation',
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
-  robots: 'index, follow',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://ziontechgroup.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
+    type: 'website',
+    locale: 'en_US',
     url: 'https://ziontechgroup.com',
+    title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
+    description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services. Transform your business with cutting-edge technology.',
     siteName: 'Zion Tech Group',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group',
+        alt: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
       },
     ],
-    locale: 'en_US',
-    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions.',
+    title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
+    description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services.',
     images: ['/og-image.jpg'],
+    creator: '@ziontechgroup',
   },
-  viewport: 'width=device-width, initial-scale=1',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
+  category: 'technology',
+  classification: 'Business Technology Services',
+  referrer: 'origin-when-cross-origin',
+  colorScheme: 'light',
   themeColor: '#000000',
 };
-
-function Header() {
-  return (
-    <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
-      <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto">
-        <Link href="/" className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors">
-          Zion Tech Group
-        </Link>
-        <div className="hidden md:flex gap-6">
-          <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
-          <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
-          <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
-        </div>
-        <button className="md:hidden p-2" aria-label="Toggle menu">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </nav>
-    </header>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="border-t border-gray-200 mt-10 py-6 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Services</h3>
-            <div className="space-y-2">
-              <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">All Services</Link>
-              <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link>
-              <Link href="/services/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Services</Link>
-              <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">IT Services</Link>
-            </div>
-          </div>
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Company</h3>
-            <div className="space-y-2">
-              <Link href="/" className="block text-gray-600 hover:text-blue-600 transition-colors">Home</Link>
-              <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">Contact</Link>
-            </div>
-          </div>
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Contact Info</h3>
-            <div className="text-sm text-gray-600 space-y-1">
-              <div>Mobile: +1 302 464 0950</div>
-              <div>Email: <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-600 transition-colors">kleber@ziontechgroup.com</a></div>
-              <div>Address: 364 E Main St STE 1008<br />Middletown DE 19709</div>
-            </div>
-          </div>
-        </div>
-        <div className="border-t border-gray-200 mt-6 pt-4 text-xs text-gray-500 text-center">
-          © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
-        </div>
-      </div>
-    </footer>
-  );
-}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen">
+        <div className="min-h-screen bg-white">
           {children}
-        </main>
-        <Footer />
+        </div>
       </body>
     </html>
   );

@@ -2,12 +2,11 @@ import React from 'react';
 interface AddToCart.testProps {
   // Add props here as needed
 }
-export default function AddToCart.test({ }: AddToCart.testProps) {
-<=
 }
 
->export default function AddToCart.test({ }: AddToCart.testProps) {
-<
+export default function AddToCart.test({ }: AddToCart.testProps) {
+export default function AddToCart.test({ }: AddToCart.testProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -37,25 +36,25 @@ interface FiveGSolutionsProps {
 
 
 export default function FiveGSolutions({ }: FiveGSolutionsProps) {
-=
 import React from 'react';
 interface AddToCart.testProps {
   // Add props here as needed
 }
 export default function AddToCart.test({ }: AddToCart.testProps) {
->  return (
+  return (
     <div>
       <h1>AddToCart.test</h1>
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-=
 
 
->}
-><
+}
+}
+
+
+}
+
 
 
 }
@@ -67,8 +66,9 @@ export default function AddToCart.test({ }: AddToCart.testProps) {
 }
 }
 :temp_exclude/src.pages.disabled/FiveGSolutions.jsx
-=
->}
+}
+
+}
 
 
 
@@ -77,9 +77,7 @@ export default function AddToCart.test({ }: AddToCart.testProps) {
 
 :src.pages.disabled/FiveGSolutions.jsx
 }
-<}
 }
 }
 }
-=
->
+}

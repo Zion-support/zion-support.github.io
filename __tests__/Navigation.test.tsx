@@ -62,6 +62,14 @@ describe('Navigation', () => {
 });
 
 origin/main
+
+
+
+
+
+  test('displays correct content', () => {
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+});
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
