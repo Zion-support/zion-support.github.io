@@ -6,6 +6,14 @@ export interface Notification {
   type: string;
   related_id?: string;
   read: boolean;
-  created_at: string,
+<<<<<<< HEAD
+
+  created_at: string
+
   updated_at: string
 }
+=======
+  created_at: string,
+  updated_at: string;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

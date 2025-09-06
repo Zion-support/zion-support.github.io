@@ -1,6 +1,7 @@
-import React, { useState } from 'react',;
-import { Link } from 'react-router-dom',;
-import { SERVICE_CATEGORIES } from '@/data/servicesData',;
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Link  } from 'react-router-dom';
+import { SERVICE_CATEGORIES } from '@/data/servicesData';
 export function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,25 +12,25 @@ export function ContactPage() {
     message: '',
     budget: '',
     timeline: ''
-  }),
-
-  const [selectedService, setSelectedService] = useState(''),
-
+=======
+import React from 'react';
+import { render, screen } from '@testing - library / react';
+import { MemoryRouter } from 'react-router-dom';
+import EquipmentPage from './EquipmentPage';
+describe ('EquipmentPage', () => {
+  it ('renders equipment page correctly', () => {
+    render (
+      <MemoryRouter>;
+        <EquipmentPage />;
+      </MemoryRouter>);
+    expect (screen.getByText ('Equipment')).toBeInTheDocument ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  });
+  const [selectedService, setSelectedService] = useState('');
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target,
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  },
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    // Here you would typically send the form data to your backend
-    const mailtoLink = `mailto:kleber@ziontechgroup.com?subject=Service Inquiry from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ACompany: ${formData.company}%0D%0APhone: ${formData.phone}%0D%0AService: ${formData.service}%0D%0ABudget: ${formData.budget}%0D%0ATimeline: ${formData.timeline}%0D%0AMessage: ${formData.message}`,
-    window.location.href = mailtoLink
-  },
-
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}
@@ -427,4 +428,4 @@ export function ContactPage() {
       </div>
     </div>
   )
-};
+}

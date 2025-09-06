@@ -1,32 +1,110 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
-  authenticateRequest,
-  calculateUsageSummary,;
+<<<<<<< HEAD
+  authenticateRequest
+  calculateUsageSummary;
 } from '../../../utils/api/partnerAuth';
-
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', 'GET');
-    return res.status(405).json({ error: 'Method Not Allowed' });
+  try {
+  if (req && req.method !== 'GET') {
+    res && res.setHeader('Allow', 'GET');
+    return res && res.status(405).json({ error: 'Method Not Allowed' });
   }
   const auth = await authenticateRequest(req);
   if (!auth) {
-    return res.status(401).json({ error: 'Unauthorized' });
+    return res && res.status(401).json({ error: 'Unauthorized' });
   }
+<<<<<<< HEAD
+  const summary = await calculateUsageSummary(auth && auth.partner.id);
+  return res && res.status(200).json({ summary });
+=======
+<<<<<<< HEAD
   const summary = await calculateUsageSummary(auth.partner.id);
   return res.status(200).json({ summary });
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { authenticateRequest, calculateUsageSummary } from "../../../utils/api/partnerAuth";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+=======
+  const summary = await calculateUsageSummary(auth && auth.partner.id);
+  return res && res.status(200).json({ summary });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") {
-    res.setHeader("Allow", "GET");
-    return res.status(405).json({ error: "Method Not Allowed" })
+  try {
+  if (req && req.method !== "GET") {
+    res && res.setHeader("Allow", "GET");
+    return res && res.status(405).json({ error: "Method Not Allowed" })
   }
-  const auth = await authenticateRequest(req);
-  if (!auth) {
-    return res.status(401).json({ error: "Unauthorized" })
-  }
-  const summary = await calculateUsageSummary(auth.partner.id);
+<<<<<<< HEAD
+  const auth = null;
   return res.status(200).json({ summary })
 }
+<<<<<<< HEAD
+=======
+  const auth = await authenticateRequest(req);
+  if (!auth) {
+    return res && res.status(401).json({ error: "Unauthorized" })
+  }
+  const summary = await calculateUsageSummary(auth && auth.partner.id);
+  return res && res.status(200).json({ summary })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  authenticate_request,
+  calculateUsageSummary,
+} from '../../../utils / api / partner_auth';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ('Allow', 'GET');
+    return res.status (405).json ({ error: 'Method Not Allowed' });
+  }
+  const auth = await authenticate_request (req);
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (401).json ({ error: 'Unauthorized' });
+  }
+  const summary = await calculateUsageSummary (auth.partner.id);
+  return res.status (200).json ({ summary });
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ("Allow", "GET");
+    return res.status (405).json ({ error: "Method Not Allowed" });
+  }
+  const auth = await authenticate_request (req);
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (401).json ({ error: "Unauthorized" });
+  }
+  const summary = await calculateUsageSummary (auth.partner.id);
+  return res.status (200).json ({ summary });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

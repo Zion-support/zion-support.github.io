@@ -1,3 +1,26 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React from 'react';
 
 interface SitemapProps {
@@ -10,7 +33,15 @@ interface SitemapProps {
 interface SitemapProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
+  res && res.status(200).send(sitemap)}
+=======
+<<<<<<< HEAD
+  res && res.status(200).send(sitemap)}
+=======
   res.status(200).send(sitemap)}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { NextApiRequest,NextApiResponse } from';next'';; export: default function handler(req: NextApiReques,t,res: NextApiResponse) { const baseUrl ,= https: const staticPages = [
     ','; /about';,'';/contact';';,'';/services';';,'';/products';';,'';/talent';';,'';/blog';';,'';/blockchain-solutions';';,'';/iot-platforms';';,'';/enhanced-home';';,'';/auth';';,'';/auth/callback';';,'';/auth/forgot-password';';,'';/auth/reset-password';';,'';/auth/verify',
     '
@@ -26,7 +57,7 @@ import { NextApiRequest,NextApiResponse } from';next'';; export: default functio
   ]';; const chatContentPages = [
     '/chat-content/ai-powered-business-solutions-discussion';';,'';/chat-content/cloud-computing-strategies';';,'';/chat-content/cybersecurity-best-practices';';,'';/chat-content/data-analytics-implementation';';,'';/chat-content/digital-transformation-insights';';,'';/chat-content/emerging-technology-trends';';,'';/chat-content/future-of-work-and-automation';';,'';/chat-content/innovation-in-enterprise-technology';';,'';/chat-content/sustainable-technology-practices';';,'';/chat-content/technology-implementation-strategies',
     '
-  ]';; const allPages = [ ...staticPages ...blogPages ...servicePages ...categoryPages ...chatContentPages]; const sitemap = `<?xml version='1.0' encoding='UTF-8'?>'; <urlset: xmlns='http: ${allPages, .map((page) => { const priority = page === '' ?',';1.0' : page.includes('';/blog/') ?';';0.8' :';';0.9'';; const changefreq = page === '';'; ? 'daily';'; : page.includes('/blog/', ') ? 'weekly';'; : 'monthly';; return `; <url> <loc>${baseUr,l}${page}</loc> <lastmod>${new: Date().toISOString()}</lastmod> <changefreq>${changefreq}</changefreq> <priority>${priority}</priority> </url>`}) .join('')}'; </urlset>`; res.setHeader( 'Content-Type','';text/xml')';; res.setHeader( 'Cache-Control','';public,max-age=86400,s-maxage=86400')';; res.status(200).send(sitemap)}
+  ]';; const allPages = [ ...staticPages ...blogPages ...servicePages ...categoryPages ...chatContentPages]; const sitemap = `<?xml version='1 && 1.0' encoding='UTF-8'?>'; <urlset: xmlns='http: ${allPages, .map((page) => { const priority = page === '' ?',';1 && 1.0' : page && page.includes('';/blog/') ?';';0 && 0.8' :';';0 && 0.9'';; const changefreq = page === '';'; ? 'daily';'; : page && page.includes('/blog/', ') ? 'weekly';'; : 'monthly';; return `; <url> <loc>${baseUr,l}${page}</loc> <lastmod>${new: Date().toISOString()}</lastmod> <changefreq>${changefreq}</changefreq> <priority>${priority}</priority> </url>`}) .join('')}'; </urlset>`; res && res.setHeader( 'Content-Type','';text/xml')';; res && res.setHeader( 'Cache-Control','';public,max-age=86400,s-maxage=86400')';; res && res.status(200).send(sitemap)}
 export default function Sitemap({ }: SitemapProps) {
   return (
     <div>

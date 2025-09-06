@@ -1,55 +1,49 @@
 <<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { handleAction } from "../../../utils/token/service",;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
-  const { userId, action, metadata } = req.body || {},
-  if (!userId || !action) return res.status(400).json({ error: "userId and action required" }),
-  try {
-    const tx = handleAction(userId, action, metadata),
-    return res.status(200).json({ tx })
-  } catch (err: any) {
-    return res.status(400).json({ error: err.message })
-  }
-};
 =======
-import { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase';
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import type { NextApiRequest, NextApiResponse } from "next";
+import { handleAction } from "../../../utils/token/service";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).end('Method Not Allowed');
-  }
-
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
+  const { userId, action, metadata } = req.body |{}
+  if (!userId |!action) return res.status(400).json({ error: "userId and action required" })
   try {
-    const { action, amount, userId } = req.body;
-    
-    if (!action || !amount || !userId) {
-      return res.status(400).json({ error: 'Action, amount, and userId are required' });
-    }
+    const tx = handleAction(userId, action, metadata)
 
-    const supabase = getServerSupabase();
-    
-    const { data, error } = await supabase
-      .from('wallet_transactions')
-      .insert({
-        user_id: userId,
-        action,
-        amount,
-        status: 'pending',
-        created_at: new Date().toISOString()
-      })
-      .select()
-      .single();
-
-    if (error) {
-      return res.status(500).json({ error: error.message });
-    }
-
-    res.status(200).json({ transaction: data });
-  } catch (err: any) {
-    return res.status(400).json({ error: err.message });
-  }
+    return res.status(200).json({ tx })
+=======
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { handle_action  } from '../../../utils / token / service';,
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: "Method not allowed" }), ) {
+  $2
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
+<<<<<<< HEAD
+=======
+  const { user_id, action, metadata } = req.body || {},
+  if (return res.status (400).json ({ error: "user_id and action required" }), ) {
+  $2
+}
+  try {
+    const tx = handle_action (user_id, action, metadata),
+    return res.status (200).json ({ tx });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  } catch (err: any) {
+    return res.status (400).json ({ error: err.message });
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

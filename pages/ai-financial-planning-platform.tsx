@@ -1,8 +1,13 @@
-import React from 'react',;
-import ServiceLanding from '../components/sections/ServiceLanding',;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AiFinancialPlanningPlatform() {
 	return (
 		<ServiceLanding
+
 			title="AI Financial Planning Platform"
 			description="Forecast revenue, optimize budgets, and model scenarios with AI-driven planning and real-time financial intelligence."
 			subtitle="Smarter, faster financial decisions"
@@ -10,17 +15,55 @@ export default function AiFinancialPlanningPlatform() {
 			implementationWeeks="1-2 weeks"
 			roiNote="Finance teams report 3–6x ROI via faster cycles and improved accuracy"
 			features={[
-				"Driver-based planning and what-if scenarios",
-				"Automated variance analysis and anomaly detection",
-				"Cohort and retention-aware revenue forecasting",
-				"Cash flow projections and runway insights",
-				"Budget vs. actuals with alerting",
-				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake",
-				"Executive dashboards and board-ready reports",
+				"Driver-based planning and what-if scenarios"
+				"Automated variance analysis and anomaly detection"
+				"Cohort and retention-aware revenue forecasting"
+				"Cash flow projections and runway insights"
+				"Budget vs. actuals with alerting"
+				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake"
+				"Executive dashboards and board-ready reports"
+
 				"Headcount planning and hiring plans"
 			]}
 			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
 			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
 		/>
 	)
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import React from 'react',
+import ServiceLanding from '../components / sections / ServiceLanding',
+export default /**
+ * AiFinancialPlanningPlatform - Function description
+ */
+function AiFinancialPlanningPlatform() {
+return (
+  <ServiceLanding;
+  title="AI Financial Planning Platform";
+  description="Forecast revenue, optimize budgets, and model scenarios with AI - driven planning and real - time financial intelligence.";
+  subtitle="Smarter, faster financial decisions";
+  pricePerMonthUSD={349}
+    implementation_weeks="1 - 2 weeks";
+  roi_note="Finance teams report 3–6x ROI via faster cycles and improved accuracy";
+  features={[;
+    "Driver - based planning and what - if scenarios",
+    "Automated variance analysis and anomaly detection",
+    "Cohort and retention - aware revenue forecasting",
+    "Cash flow projections and runway insights",
+    "Budget vs. actuals with alerting",
+    "Integrations: NetSuite, QuickBooks, Stripe, Snowflake",
+    "Executive dashboards and board - ready reports",
+    "Headcount planning and hiring plans";
+  ]}
+    industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
+    canonical="https: //ziontechgroup.com / ai - financial - planning - platform";
+  />);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

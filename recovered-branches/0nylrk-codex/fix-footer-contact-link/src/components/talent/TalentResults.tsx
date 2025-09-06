@@ -1,33 +1,63 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+import React from "react",
+import { TalentProfile } from "@/types/talent",
+import { ActiveFilters } from "@/components/talent/ActiveFilters",
+import { ResultsHeader } from "@/components/talent/ResultsHeader";
+import { TalentGrid } from "@/components/talent/TalentGrid";
+interface TalentResultsProps {
+
+  filteredTalents: TalentProfile[]
+  isLoading: boolean
+  viewProfile: (id: string) => void
+  handleRequestHire: (talent: TalentProfile) => void
+  savedTalents: string[]
+  handleToggleSave: (id: string, isSaved: boolean) => void
+  isAuthenticated: boolean
+  activeFiltersProps: {
+    selectedSkills: string[]
+    toggleSkill: (skill: string) => void
+    selectedAvailability: string[]
+    toggleAvailability: (availability: string) => void
+    selectedRegions: string[]
+    toggleRegion: (region: string) => void
+=======
 import React from "react";
 import {TalentProfile} from "@/types/talent";
 import {ActiveFilters} from "@/components/talent/ActiveFilters";
 import {ResultsHeader} from "@/components/talent/ResultsHeader";
 import {TalentGrid} from "@/components/talent/TalentGrid";
-interface TalentResultsProps {
-  filteredTalents: TalentProfile[],
-  isLoading: boolean,
-  viewProfile: (id: string) => void,
-  handleRequestHire: (talent: TalentProfile) => void,
-  savedTalents: string[],
-  handleToggleSave: (id: string, isSaved: boolean) => void,
-  isAuthenticated: boolean,
-  activeFiltersProps: {
-    selectedSkills: string[],
-    toggleSkill: (skill: string) => void,
-    selectedAvailability: string[],
-    toggleAvailability: (availability: string) => void,
-    selectedRegions: string[],
-    toggleRegion: (region: string) => void,
+interface TalentResultsProps {;
+  filteredTalents: TalentProfile[],;
+  isLoading: boolean,;
+  viewProfile: (id: string) => void,;
+  handleRequestHire: (talent: TalentProfile) => void,;
+  savedTalents: string[],;
+  handleToggleSave: (id: string, isSaved: boolean) => void,;
+  isAuthenticated: boolean,;
+  activeFiltersProps: {;
+    selectedSkills: string[],;
+    toggleSkill: (skill: string) => void,;
+    selectedAvailability: string[],;
+    toggleAvailability: (availability: string) => void,;
+    selectedRegions: string[],;
+    toggleRegion: (region: string) => void,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     priceRange: [number, number];
+
     setPriceRange: (range: [number, number]) => void;
-    experienceRange: [number, number];
+    experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void;
-    clearFilters: () => void
+    clearFilters: () => void;
   }
 }
-
+<<<<<<< HEAD
 export function TalentResults({
+=======
+
+export function TalentResults(): any ({;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   filteredTalents;
   isLoading;
   viewProfile;
@@ -35,31 +65,104 @@ export function TalentResults({
   savedTalents;
   handleToggleSave;
   isAuthenticated;
-  activeFiltersProps
-}: TalentResultsProps) {
+  activeFiltersProps;
+}: TalentResultsProps) {;
   return (
-    <div className="flex-1">
+    <div className="flex-1">;
       {/* Active filters */}
+<<<<<<< HEAD
       <ActiveFilters {...activeFiltersProps} />
-      
       {/* Results count */}
-      <ResultsHeader 
-        isLoading={isLoading} 
-        resultCount={filteredTalents.length} 
+      <ResultsHeader
+        isLoading={isLoading}
+        resultCount={filteredTalents.length}
       />
-      
+=======
+      <ActiveFilters {...activeFiltersProps} />;
+
+      {/* Results count */}
+      <ResultsHeader
+        isLoading={isLoading} 
+        resultCount={filteredTalents && filteredTalents.length} 
+      />;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Talents grid */}
-      <TalentGrid 
+      <TalentGrid
         talents={filteredTalents}
         isLoading={isLoading}
         onTalentClick={viewProfile}
         viewProfile={viewProfile}
+=======
+import React from './react';
+import { TalentProfile } from '@/types / talent';
+import { ActiveFilters } from '@/components / talent / ActiveFilters';
+import { ResultsHeader } from '@/components / talent / ResultsHeader';
+import { TalentGrid } from '@/components / talent / TalentGrid';
+interface TalentResultsProps {
+  filtered_talents: TalentProfile[],
+  is_loading: boolean,
+  view_profile: (id: string) => void,
+  handleRequestHire: (talent: TalentProfile) => void,
+  saved_talents: string[],
+  handleToggleSave: (id: string, is_saved: boolean) => void,
+  is_authenticated: boolean,
+  activeFiltersProps: {
+    selected_skills: string[],
+    toggle_skill: (skill: string) => void,
+    selected_availability: string[],
+    toggle_availability: (availability: string) => void,
+    selected_regions: string[],
+    toggle_region: (region: string) => void,
+    price_range: [number, number];
+    setPriceRange: (range: [number, number]) => void;
+    experience_range: [number, number];
+    setExperienceRange: (range: [number, number]) => void;
+    clear_filters: () => void;
+  }
+}
+export /**
+ * TalentResults - Function description
+ */
+function TalentResults() {
+  return (
+    <div className="flex - 1">;
+      {/* Active filters */}
+      <ActiveFilters {...activeFiltersProps} />;
+      {/* Results count */}
+      <ResultsHeader;
+        is_loading={is_loading}
+        result_count={filtered_talents.length}
+      />;
+      {/* Talents grid */}
+      <TalentGrid;
+        talents={filtered_talents}
+        is_loading={is_loading}
+        onTalentClick={view_profile}
+        view_profile={view_profile}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         handleRequestHire={handleRequestHire}
-        savedTalentIds={savedTalents}
+        savedTalentIds={saved_talents}
         onToggleSave={handleToggleSave}
+<<<<<<< HEAD
         isAuthenticated={isAuthenticated}
+<<<<<<< HEAD
         clearFilters={activeFiltersProps.clearFilters}
       />
     </div>
   )
 }
+=======
+        clearFilters={activeFiltersProps && activeFiltersProps.clearFilters}
+      />;
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        is_authenticated={is_authenticated}
+        clear_filters={activeFiltersProps.clear_filters}
+      />;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

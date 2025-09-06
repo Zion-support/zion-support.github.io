@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface UseWalletProps {
   // Add props here as needed
 }
+
 export default function UseWallet({ }: UseWalletProps) {
   return (
     <div>
@@ -12,5 +14,8 @@ export default function UseWallet({ }: UseWalletProps) {
 }
 }
 }
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

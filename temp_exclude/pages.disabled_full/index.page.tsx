@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from \'react\'; import Head from \'next/head\'; import Link from \'next/link\'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,and IT Solutions</title> <meta name=\"description\" content=\"AI services,micro SaaS solutions,and enterprise IT by Zion Tech Group.\" /> </Head> <main className=\"min-h-screen bg-gray-50\"> <section className=\"max-w-6xl mx-auto px-4 py-16 text-center\"> <h1 className=\"text-4xl font-bold text-gray-900 mb-4\">Zion Tech Group</h1> <p className=\"text-lg text-gray-600 mb-8\">AI services,micro SaaS,and enterprise IT solutions that drive growth.</p> <div className=\"flex flex-col \"sm\": flex-row gap-4 justify-center\"> <Link href=\"/services\" className=\"bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700\">Explore Services</Link> </div> </section> </main> </> )}
+const React from "react"; import Head from "next/head"; import Link from "next/link"; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group AI,Micro SaaS,and IT Solutions</title> <meta name="description" content="AI services,micro SaaS solutions,and enterprise IT by Zion Tech Group." /> </Head> <main className="min-h-screen bg-gray-50"> <section className="max-w-6xl mx-auto px-4 py-16 text-center"> <h1 className="text-4xl font-bold text-gray-900 mb-4">Zion Tech Group</h1> <p className="text-lg text-gray-600 mb-8">AI services,micro SaaS,and enterprise IT solutions that drive growth.</p> <div className="flex flex-col sm: flex-row gap-4 justify-center"> <Link href="/services" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Explore Services</Link> </div> </section> </main> </> )}'"'";
+<<<<<<< HEAD
+import _React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,and IT Solutions</title> <meta name="description" content="AI services,micro SaaS solutions,and enterprise IT by Zion Tech Group." /> </Head> <main className="min-h-screen bg-gray-50"> <section className="max-w-6xl mx-auto px-4 py-16 text-center"> <h1 className="text-4xl font-bold text-gray-900 mb-4">Zion Tech Group</h1> <p className="text-lg text-gray-600 mb-8">AI services,micro SaaS,and enterprise IT solutions that drive growth.</p> <div className="flex flex-col "sm": flex-row gap-4 justify-center"> <Link href="/services" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Explore Services</Link> </div> </section> </main> </> )}
+=======
+import _React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,and IT Solutions</title> <meta name="description" content="AI services,micro SaaS solutions,and enterprise IT by Zion Tech Group." /> </Head> <main className="min-h-screen bg-gray-50"> <section className="max-w-6xl mx-auto px-4 py-16 text-center"> <h1 className="text-4xl font-bold text-gray-900 mb-4">Zion Tech Group</h1> <p className="text-lg text-gray-600 mb-8">AI services,micro SaaS,and enterprise IT solutions that drive growth.</p> <div className="flex flex-col "sm": flex-row gap-4 justify-center"> <Link href="/services" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Explore Services</Link> </div> </section> </main> </> )}
+=======
 import React from \'react\'; import Head from \'next/head\'; import Link from \'next/link\'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,and IT Solutions</title> <meta name=\"description\" content=\"AI services,micro SaaS solutions,and enterprise IT by Zion Tech Group.\" /> </Head> <main className=\"min-h-screen bg-gray-50\"> <section className=\"max-w-6xl mx-auto px-4 py-16 text-center\"> <h1 className=\"text-4xl font-bold text-gray-900 mb-4\">Zion Tech Group</h1> <p className=\"text-lg text-gray-600 mb-8\">AI services,micro SaaS,and enterprise IT solutions that drive growth.</p> <div className=\"flex flex-col \"sm\": flex-row gap-4 justify-center\"> <Link href=\"/services\" className=\"bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700\">Explore Services</Link> </div> </section> </main> </> )}
 const React from "react"; import Head from "next/head"; import Link from "next/link"; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group AI,Micro SaaS,and IT Solutions</title> <meta name="description" content="AI services,micro SaaS solutions,and enterprise IT by Zion Tech Group." /> </Head> <main className="min-h-screen bg-gray-50"> <section className="max-w-6xl mx-auto px-4 py-16 text-center"> <h1 className="text-4xl font-bold text-gray-900 mb-4">Zion Tech Group</h1> <p className="text-lg text-gray-600 mb-8">AI services,micro SaaS,and enterprise IT solutions that drive growth.</p> <div className="flex flex-col sm: flex-row gap-4 justify-center"> <Link href="/services" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Explore Services</Link> </div> </section> </main> </> )}'"'"
 import _React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,and IT Solutions</title> <meta name="description" content="AI services,micro SaaS solutions,and enterprise IT by Zion Tech Group." /> </Head> <main className="min-h-screen bg-gray-50"> <section className="max-w-6xl mx-auto px-4 py-16 text-center"> <h1 className="text-4xl font-bold text-gray-900 mb-4">Zion Tech Group</h1> <p className="text-lg text-gray-600 mb-8">AI services,micro SaaS,and enterprise IT solutions that drive growth.</p> <div className="flex flex-col "sm": flex-row gap-4 justify-center"> <Link href="/services" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Explore Services</Link> </div> </section> </main> </> )}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

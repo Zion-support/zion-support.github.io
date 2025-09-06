@@ -1,10 +1,11 @@
 [build]
-<<<<<<< HEAD
-  command = "npm run build"
-  publish = ".next"
+command = "npm ci && npm run build"
+publish = "dist"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
@@ -15,13 +16,6 @@
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
-=======
-  command = "npm ci && npm run build"
-  publish = "out"
-
-[build.environment]
-  NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=4096"
 
 # Security and caching headers for static assets
 [[headers]]
@@ -49,7 +43,7 @@
     X-Permitted-Cross-Domain-Policies = "none"
     Origin-Agent-Cluster = "?1"
 
-# Static redirects to mirror Next.js redirects (since output: export)
+# Static redirects for exported site
 [[redirects]]
   from = "/ai-customer-success-platform"
   to = "/services/ai-customer-success-platform/"
@@ -89,4 +83,3 @@
   from = "/affiliate-attribution-suite"
   to = "/services/affiliate-attribution-suite/"
   status = 301
->>>>>>> origin/chore/seo-redirects-netlify-fix

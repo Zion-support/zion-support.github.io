@@ -1,4 +1,38 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+import { useState } from "react";
+import {
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuSeparator
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Dialog
+  DialogContent
+  DialogFooter
+  DialogHeader
+  DialogTitle
+} from "@/components/ui/dialog";
+import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
+import { Resume } from "@/types/resume";
+import { useResume } from "@/hooks/useResume";
+
+interface ResumeVersionSelectorProps {
+  currentResume: Resume;
+  onResumeChange: (resumeId: string) => void
+}
+
+export function ResumeVersionSelector({
+  currentResume
+  onResumeChange
+}: ResumeVersionSelectorProps) {
+
+=======
 import {useState} from 'react';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
 import {Button} from '@/components/ui/button';
@@ -7,45 +41,59 @@ import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/
 import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
 import {Resume} from '@/types/resume';
 import {useResume} from '@/hooks/useResume';
-interface ResumeVersionSelectorProps {
-  currentResume: Resume,
-  onResumeChange: (resumeId: string) => void
+interface ResumeVersionSelectorProps {;
+  currentResume: Resume,;
+  onResumeChange: (resumeId: string) => void;
 }
 
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {
+export function ResumeVersionSelector(): any ({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState('');
-  const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
+  const [existingResumes, setExistingResumes] = useState<Resume[]>([]),
   const [isLoading, setIsLoading] = useState(false);
-  
+
+<<<<<<< HEAD
   const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {
       setIsLoading(true);
-      const resumeId = await createResume({ title: newResumeTitle.trim() }),
+      const resumeId = await createResume({ title: newResumeTitle.trim() });
       if (resumeId) {
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
-        setNewResumeTitle('')
+        setNewResumeTitle("");
+=======
+  const handleCreateNewVersion = async () => {;
+    if (newResumeTitle && newResumeTitle.trim()) {;
+      setIsLoading(true);
+      const resumeId = await createResume({ title: newResumeTitle && newResumeTitle.trim() }),;
+      if (resumeId) {;
+        await fetchResume(resumeId);
+        onResumeChange(resumeId);
+        setSaveDialogOpen(false);
+        setNewResumeTitle('');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  };
+  }
 
   return (
+<<<<<<< HEAD
     <div className="flex items-center gap-2">
       <span className="text-sm text-muted-foreground">Resume:</span>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" size="sm" className="gap-2">
-            {currentResume?.basic_info?.title || 'My Resume'}
+            {currentResume?.basic_info?.title |"My Resume"}
             <ChevronDown className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           {existingResumes.map((resume) => (
-            <DropdownMenuItem 
+            <DropdownMenuItem
               key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
               className="cursor-pointer"
@@ -54,7 +102,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             </DropdownMenuItem>
           ))}
           <DropdownMenuSeparator />
-          <DropdownMenuItem 
+          <DropdownMenuItem
             onClick={() => setSaveDialogOpen(true)}
             className="cursor-pointer"
           >
@@ -63,7 +111,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-      
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
@@ -77,15 +124,12 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             />
           </div>
           <DialogFooter>
-            <Button 
-              variant="outline" 
-              onClick={() => setSaveDialogOpen(false)}
-            >
+            <Button variant="outline" onClick={() => setSaveDialogOpen(false)}>
               Cancel
             </Button>
-            <Button 
+            <Button
               onClick={handleCreateNewVersion}
-              disabled={!newResumeTitle.trim() || isLoading}
+              disabled={!newResumeTitle.trim() |isLoading}
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
@@ -96,6 +140,181 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         </DialogContent>
       </Dialog>
     </div>
-  )
+  );
 }
+=======
+    <div className="flex items-center gap-2">;
+      <span className="text-sm text-muted-foreground">Resume:</span>;
+      <DropdownMenu>;
+        <DropdownMenuTrigger asChild>;
+          <Button variant="outline" size="sm" className="gap-2">;
+            {currentResume?.basic_info?.title || 'My Resume'}
+            <ChevronDown className="h-4 w-4" />;
+          </Button>;
+        </DropdownMenuTrigger>;
+        <DropdownMenuContent align="end">;
+          {existingResumes && existingResumes.map((resume) => (;
+            <DropdownMenuItem
+              key={resume && resume.id}
+              onClick={() => onResumeChange(resume && resume.id!)}
+              className="cursor-pointer";
+            >;
+              {resume && resume.basic_info.title}
+            </DropdownMenuItem>;
+          ))}
+          <DropdownMenuSeparator />;
+          <DropdownMenuItem
+            onClick={() => setSaveDialogOpen(true)}
+            className="cursor-pointer";
+          >;
+            <Plus className="h-4 w-4 mr-2" />;
+=======
+import { useState  } from './react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components / ui / dropdown - menu';
+import { Button  } from '@/components / ui / button';
+import { Input  } from '@/components / ui / input';
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@/components / ui / dialog';
+import { Save, ChevronDown, Plus, Loader2  } from './lucide-react';
+import { Resume  } from '@/types / resume';
+import { use_resume  } from '@/hooks / use_resume';
+interface ResumeVersionSelectorProps {
+  current_resume: Resume;
+  onResumeChange: (resume_id: string) => void;
+}
+export /**
+ * ResumeVersionSelector - Function description
+ */
+function ResumeVersionSelector() {
+  const { create_resume, fetch_resume } = use_resume ();
+  const [saveDialogOpen, setSaveDialogOpen] = useState (false);
+  const [newResumeTitle, setNewResumeTitle] = useState ("");
+  const [existing_resumes, setExistingResumes] = useState < Resume[]>([]);
+  const [is_loading, setIsLoading] = useState (false);
 ;
+  const handleCreateNewVersion = async () => {
+    if () {) {
+  $2
+}
+      setIsLoading (true);
+      const resume_id = await create_resume ({ title: newResumeTitle.trim () });
+      // Check condition
+if ( {) {
+  $2
+}
+        await fetch_resume (resume_id);
+        onResumeChange (resume_id);
+        setSaveDialogOpen (false);
+        setNewResumeTitle ("");
+      }
+      setIsLoading (false);
+    }
+  }
+;
+  return (
+    <div className="flex items - center gap - 2">;
+      <span className="text - sm text - muted - foreground">Resume:</span>;
+      <DropdownMenu>;
+        <DropdownMenuTrigger as_child>;
+          <Button variant="outline" size="sm" className="gap - 2">;
+            {current_resume?.basic_info?.title || "My Resume"}
+            <ChevronDown className="h - 4 w - 4" />;
+          </Button>;
+        </DropdownMenuTrigger>;
+        <DropdownMenuContent align="end">;
+          {existing_resumes.map ((resume) => (
+            <DropdownMenuItem;
+              key={resume.id}
+              on_click={() => onResumeChange (resume.id!)}
+              className="cursor - pointer";
+            >;
+              {resume.basic_info.title}
+            </DropdownMenuItem>))}
+          <DropdownMenuSeparator />;
+          <DropdownMenuItem;
+            on_click={() => setSaveDialogOpen (true)}
+            className="cursor - pointer";
+          >;
+            <Plus className="h - 4 w - 4 mr - 2" />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            Save as new version;
+          </DropdownMenuItem>;
+        </DropdownMenuContent>;
+      </DropdownMenu>;
+<<<<<<< HEAD
+
+      <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>;
+        <DialogContent className="sm:max-w-md">;
+          <DialogHeader>;
+            <DialogTitle>Save as new resume version</DialogTitle>;
+          </DialogHeader>;
+          <div className="py-4">;
+            <Input
+              value={newResumeTitle}
+              onChange={(e) => setNewResumeTitle(e && e.target.value)}
+              placeholder="Enter resume title (e && e.g. DevOps Resume)";
+            />;
+          </div>;
+          <DialogFooter>;
+            <Button
+              variant="outline" 
+              onClick={() => setSaveDialogOpen(false)}
+            >;
+              Cancel;
+            </Button>;
+            <Button
+              onClick={handleCreateNewVersion}
+              disabled={!newResumeTitle && newResumeTitle.trim() || isLoading}
+              className="gap-2">;
+              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
+              <Save className="h-4 w-4" />;
+=======
+      <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>;
+        <DialogContent className="sm:max - w-md">;
+          <DialogHeader>;
+            <DialogTitle > Save as new resume version</DialogTitle>;
+          </DialogHeader>;
+          <div className="py - 4">;
+            <Input;
+              value={newResumeTitle}
+              on_change={(e) => setNewResumeTitle (e.target.value)}
+              placeholder="Enter resume title (e.g. DevOps Resume)";
+            />;
+          </div>;
+          <DialogFooter>;
+            <Button variant="outline" on_click={() => setSaveDialogOpen (false)}>;
+              Cancel;
+            </Button>;
+            <Button;
+              on_click={handleCreateNewVersion}
+              disabled={!newResumeTitle.trim () || is_loading}
+              className="gap - 2";
+            >;
+              {is_loading && <Loader2 className="h - 4 w - 4 animate - spin" />}
+              <Save className="h - 4 w - 4" />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              Save;
+            </Button>;
+          </DialogFooter>;
+        </DialogContent>;
+      </Dialog>;
+<<<<<<< HEAD
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

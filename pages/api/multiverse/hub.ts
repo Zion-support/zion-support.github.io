@@ -1,43 +1,54 @@
 <<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState } from "../../../utils/sync/storage",;
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState } from "../../../utils/sync/storage";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const state = readState(),
 
+  const state = readState()
   if (req.method === "GET") {
     return res.status(200).json({
-      route: "/multiverse/hub",
+      route: "/multiverse/hub"
+      instanceId: state.config.instanceId
+      peers: state.config.peers
+      scope: state.config.scope
+      optIn: state.config.optIn
+      paused: state.config.paused
+lastSyncedAt: state.lastSyncedAt})
+
+  }
+  return res.status(405).json({ error: "Method not allowed" })
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
 =======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState } from '../../../utils/sync/storage';
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  const state = readState();
-
-  if (req.method === 'GET') {
-    return res.status(200).json({
-      route: '/multiverse/hub',
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
-      instanceId: state.config.instanceId,
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { read_state  } from '../../../utils / sync / storage';,
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const state = read_state (),
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (200).json ({
+      route: "/multiverse / hub",
+      instance_id: state.config.instance_id,
       peers: state.config.peers,
       scope: state.config.scope,
-      optIn: state.config.optIn,
+      opt_in: state.config.opt_in,
       paused: state.config.paused,
-<<<<<<< HEAD
-      lastSyncedAt: state.lastSyncedAt})
+lastSyncedAt: state.lastSyncedAt});
   }
-
-  return res.status(405).json({ error: "Method not allowed" })
-};
-=======
-      lastSyncedAt: state.lastSyncedAt,
-    });
-  }
-
-  return res.status(405).json({ error: 'Method not allowed' });
-
+  return res.status (405).json ({ error: "Method not allowed" });
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

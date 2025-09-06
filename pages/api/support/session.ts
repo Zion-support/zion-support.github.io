@@ -1,58 +1,60 @@
 <<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { readJson, writeJson } from '../../../utils/fsDb',;
-import { logSupportEventToOperator } from '../../../utils/operator',;
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { readJson, writeJson } from '../../../utils/fsDb';
+import { logSupportEventToOperator } from '../../../utils/operator';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
-  const { sessionId, eventType, payload } = req.body as { sessionId: string, eventType: string, payload?: any },
-  if (!sessionId || !eventType) return res.status(400).json({ error: 'sessionId and eventType required' }),
-
-  const log = readJson<any[]>('support/sessions.json', []),
-  const entry = { ts: Date.now(), sessionId, eventType, payload },
-  log.push(entry),
-  writeJson('support/sessions.json', log),
-
-  await logSupportEventToOperator({ type: eventType, sessionId, payload }),
+<<<<<<< HEAD
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+  const { sessionId, eventType, payload } = req.body as { sessionId: string, eventType: string, payload?: any }
+  if (!sessionId |!eventType) return res.status(400).json({ error: 'sessionId and eventType required' })
+  const log = readJson<any[]>('support/sessions.json', [])
+  const entry = { ts: Date.now(), sessionId, eventType, payload }
+  log.push(entry)
+  writeJson('support/sessions.json', log)
+  await logSupportEventToOperator({ type: eventType, sessionId, payload })
 
   return res.status(200).json({ ok: true })
-};
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).end('Method Not Allowed');
-  }
-
-  try {
-    const { userId, issue } = req.body;
-    
-    if (!userId || !issue) {
-      return res.status(400).json({ error: 'User ID and issue are required' });
-    }
-
-    const supabase = getServerSupabase();
-    
-    const { data, error } = await supabase
-      .from('support_sessions')
-      .insert({
-        user_id: userId,
-        issue,
-        status: 'active',
-        created_at: new Date().toISOString()
-      })
-      .select()
-      .single();
-
-    if (error) {
-      return res.status(500).json({ error: error.message });
-    }
-
-    res.status(200).json({ ok: true });
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to create session' });
-  }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
+=======
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { sessionId, eventType, payload } = req.body as { sessionId: string, eventType: string, payload?: any };
+  if (!sessionId || !eventType) return res.status(400).json({ error: 'sessionId and eventType required' });
+
+  const log = readJson<any[]>('support/sessions.json', []);
+  const entry = { ts: Date.now(), sessionId, eventType, payload };
+  log.push(entry);
+  writeJson('support/sessions.json', log);
+
+  await logSupportEventToOperator({ type: eventType, sessionId, payload });
+
+  return res.status(200).json({ ok: true })
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { read_json, write_json } from '../../../utils / fs_db',
+import { logSupportEventToOperator } from '../../../utils / operator',
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
+}
+  const { session_id, event_type, payload } = req.body as { session_id: string, event_type: string, payload?: any },
+  if (return res.status (400).json ({ error: 'session_id and event_type required' }), ) {
+  $2
+}
+  const log = read_json < any[]>('support / sessions.json', []),
+  const entry = { ts: Date.now (), session_id, event_type, payload },
+  log.push (entry),
+  write_json ('support / sessions.json', log),
+  await logSupportEventToOperator ({ type: event_type, session_id, payload }),
+  return res.status (200).json ({ ok: true });
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

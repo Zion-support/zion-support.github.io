@@ -1,13 +1,47 @@
-import React from 'react';
-interface TeamProps {
-  // Add props here as needed
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
 }
-export default function Team({ }: TeamProps) {
+import React from 'react';
+interface TeamProps {;
+  // Add props here as needed;
+}
+export default function Team(): any ({ }: TeamProps) {;
   return (
-    <div>
-      <h1>Team</h1>
-      <p>This component is currently under development.</p>
-    </div>
+    <div>;
+      <h1>Team</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
   );
 }
+<<<<<<< HEAD
 }
+=======
+}
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

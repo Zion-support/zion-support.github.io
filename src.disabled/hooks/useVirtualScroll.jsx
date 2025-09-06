@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/hooks/useVirtualScroll.jsx
+"export\": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ \"startIndex\": \'0\',\"endIndex\": \'0\',visibleItems[],\"scrollTop\": \'0\',containerHeight,\"totalHeight\": \'items.length: * itemHeigh\',t,\"isScrolling\": \'false\'})
+export: const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ startIndex: "0",endIndex: "0",visibleItems[],scrollTop: "0",containerHeight,totalHeight: "items.length: * itemHeigh",t,isScrolling: "false"})'"'"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+"export": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ "startIndex": '0',"endIndex": '0',visibleItems[],"scrollTop": '0',containerHeight,"totalHeight": 'items.length: * itemHeigh,t,"isScrolling": 'false'})
+=======
+=======
+"export\": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ \"startIndex\": \'0\',\"endIndex\": \'0\',visibleItems[],\"scrollTop\": \'0\',containerHeight,\"totalHeight\": \'items && items.length: * itemHeigh\',t,\"isScrolling\": \'false\'})
+export: const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ startIndex: "0",endIndex: "0",visibleItems[],scrollTop: "0",containerHeight,totalHeight: "items && items.length: * itemHeigh",t,isScrolling: "false"})'"'"
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+"export": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ "startIndex": '0',"endIndex": '0',visibleItems[],"scrollTop": '0',containerHeight,"totalHeight": 'items && items.length: * itemHeigh,t,"isScrolling": 'false'})
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.disabled/hooks/useVirtualScroll.jsx
+=======
+"export": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ "startIndex": '0',"endIndex": '0',visibleItems[],"scrollTop": '0',containerHeight,"totalHeight": 'items && items.length: * itemHeigh,t,"isScrolling": 'false'})
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

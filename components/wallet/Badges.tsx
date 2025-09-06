@@ -1,63 +1,252 @@
-import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+import React from 'react';
   id: string;
 label: string;
-threshold: number, //token balance threshold 
+<<<<<<< HEAD
+threshold: number, //token balance threshold
+}
+const BADGES: Badge[] = [
+  { id: 'starter', label: 'Starter', threshold: 50 }
+  { id: 'rising', label: 'Rising Star', threshold: 200 }
+  { id: 'pro', label: 'Pro', threshold: 500 }
+  { id: 'elite', label: 'Elite', threshold: 1000 }
+];
+export function currentBadge(balance: number): Badge | null {
+  let current: Badge | null = null;
+=======
+threshold: number, //token balance threshold ;
+};
+
+const BADGES: Badge[] = [;
+  { id: 'starter', label: 'Starter', threshold: 50 },;
+  { id: 'rising', label: 'Rising Star', threshold: 200 },;
+  { id: 'pro', label: 'Pro', threshold: 500 },;
+  { id: 'elite', label: 'Elite', threshold: 1000 },;
+];
+<<<<<<< HEAD
+=======
+=======
+import React from "react";
+export type Badge = {
+  id: string,
+  label: string,
+  threshold: number, // token balance threshold
 };
 
 const BADGES: Badge[] = [
+  { id: "starter", label: "Starter", threshold: 50 },
+  { id: "rising", label: "Rising Star", threshold: 200 },
+  { id: "pro", label: "Pro", threshold: 500 },
+  { id: "elite", label: "Elite", threshold: 1000 }],
+export function currentBadge(balance: number): Badge | null {
+  let current: Badge | null = null,
+=======
+import React from 'react';
+;
+  id: string;
+label: string;
+threshold: number, //token balance threshold;
+}
+;
+const BADGES: Badge[] = [;
   { id: 'starter', label: 'Starter', threshold: 50 },
   { id: 'rising', label: 'Rising Star', threshold: 200 },
   { id: 'pro', label: 'Pro', threshold: 500 },
   { id: 'elite', label: 'Elite', threshold: 1000 },
 ];
-
-export function currentBadge(balance: number): Badge | null {
+;
+export function current_badge (balance: number): Badge | null {
   let current: Badge | null = null;
-  
+;
   return current;
-export default function Badges({ balance }: { balance: number }) {
-  const active = currentBadge(balance);
+export default /**
+ * Badges - Function description
+ */
+function Badges() {
+  const active = current_badge (balance);
   return (
-    <div className='flex gap-2 items-center flex-wrap'>
-      {BADGES.map(b => (        <span
+    <div className='flex gap - 2 items - center flex - wrap'>;
+      {BADGES.map (boolean => (        <span;
           key={b.id}
-          className={`px-3 py-1 rounded-full text-xs border ${
-            balance >= b.threshold
-              ? 'bg-yellow-100 border-yellow-300 text-yellow-800'
-              : 'bg-gray-100 border-gray-200 text-gray-500'          }`}  let current: Badge | null = null,
+          className={`px - 3 py - 1 rounded - full text - xs border ${
+            balance >= b.threshold;
+              ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
+              : 'bg - gray - 100 border - gray - 200 text - gray - 500'          }`}  let current: Badge | null = null,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   for (const b of BADGES) {
-    if (balance >= b.threshold) current = b
-  }
-  return current
+    // Check condition
+if (current = b) {
+  $2
 }
-export default function Badges({ balance }: { balance: number }) {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+export function currentBadge(): any (balance: number): Badge | null {;
+  let current: Badge | null = null;
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  return current;
+export default function Badges(): any ({ balance }: { balance: number }) {;
   const active = currentBadge(balance);
   return (
-    <div className='flex gap-2 items-center flex-wrap'>
-      {BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">
+<<<<<<< HEAD
+    <div className='flex gap-2 items-center flex-wrap'>;
+      {BADGES && BADGES.map(b => (        <span
+          key={b && b.id}
+          className={`px-3 py-1 rounded-full text-xs border ${
+=======
+<<<<<<< HEAD
+    <div className='flex gap-2 items-center flex-wrap'>;
+      {BADGES && BADGES.map(b => (        <span
+          key={b && b.id}
+=======
+    <div className="flex gap-2 items-center flex-wrap">
       {BADGES.map((b) => (
         <span
           key={b.id}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           className={`px-3 py-1 rounded-full text-xs border ${
+<<<<<<< HEAD
             balance >= b.threshold
+<<<<<<< HEAD
               ? 'bg-yellow-100 border-yellow-300 text-yellow-800'
-              : 'bg-gray-100 border-gray-200 text-gray-500'              ? "bg-yellow-100 border-yellow-300 text-yellow-800"
-              : "bg-gray-100 border-gray-200 text-gray-500"
+              : 'bg-gray-100 border-gray-200 text-gray-500'          }`}  let current: Badge | null = null
+  for (const b of BADGES) {
+    if (balance >= b.threshold) current = b
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            balance>= b && b.threshold;
+              ? 'bg-yellow-100 border-yellow-300 text-yellow-800';
+              : 'bg-gray-100 border-gray-200 text-gray-500'          }`}  let current: Badge | null = null,;
+  for (const b of BADGES) {;
+    if (balance >= b && b.threshold) current = b;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+  return current;
+}
+export default function Badges(): any ({ balance }: { balance: number }) {;
+  const active = currentBadge(balance);
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  return (
+    <div className='flex gap-2 items-center flex-wrap'>;
+      {BADGES && BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">;
+      {BADGES && BADGES.map((b) => (;
+        <span
+          key={b && b.id}
+          className={`px-3 py-1 rounded-full text-xs border ${
+            balance>= b && b.threshold;
+              ? 'bg-yellow-100 border-yellow-300 text-yellow-800';
+              : 'bg-gray-100 border-gray-200 text-gray-500'              ? "bg-yellow-100 border-yellow-300 text-yellow-800";
+              : "bg-gray-100 border-gray-200 text-gray-500";
           }`}
-          title={`Requires ${b.threshold} ZION$`}
-        >
-          {b.label}
-        </span>
+          title={`Requires ${b && b.threshold} ZION$`}
+        >;
+          {b && b.label}
+        </span>;
       ))}
-      {active && (
-        <span className='ml-2 text-xs text-green-600'>
-          Current: {active.label}
-        </span>
+      {active && (;
+        <span className='ml-2 text-xs text-green-600'>;
+          Current: {active && active.label}
+        </span>;
       )}
+<<<<<<< HEAD
     </div>
 );        <span className="ml-2 text-xs text-green-600">Current: {active.label}</span>
+=======
+    </div>;
+  );        <span className="ml-2 text-xs text-green-600">Current: {active && active.label}</span>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      )}
+    </div>;
+  );
+}
+=======
+              ? "bg-yellow-100 border-yellow-300 text-yellow-800"
+              : "bg-gray-100 border-gray-200 text-gray-500"
+=======
+  }
+  return current;
+}
+export default /**
+ * Badges - Function description
+ */
+function Badges() {
+  const active = current_badge (balance);
+  return (
+    <div className='flex gap - 2 items - center flex - wrap'>;
+      {BADGES.map (boolean => (    <div className="flex gap - 2 items - center flex - wrap">;
+      {BADGES.map ((b) => (
+        <span;
+          key={b.id}
+          className={`px - 3 py - 1 rounded - full text - xs border ${
+            balance >= b.threshold;
+              ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
+              : 'bg - gray - 100 border - gray - 200 text - gray - 500'              ? "bg - yellow - 100 border - yellow - 300 text - yellow - 800";
+              : "bg - gray - 100 border - gray - 200 text - gray - 500";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          }`}
+          title={`Requires ${b.threshold} ZION$`}
+        >;
+          {b.label}
+        </span>))}
+      {active && (
+<<<<<<< HEAD
+        <span className="ml-2 text-xs text-green-600">Current: {active.label}</span>
       )}
     </div>
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+        <span className='ml - 2 text - xs text - green - 600'>;
+          Current: {active.label}
+        </span>)}
+    </div>);        <span className="ml - 2 text - xs text - green - 600">Current: {active.label}</span>)}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

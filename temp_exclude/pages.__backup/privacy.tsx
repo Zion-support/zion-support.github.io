@@ -1,11 +1,39 @@
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
+<<<<<<< HEAD
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <metaname=\'description\' content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
+import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <metaname=\'description\' content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
+import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <metaname=\'description\' content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
+import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <metaname=\'description\' content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
+
 interface PrivacyProps {
   // Add props here as needed
 }
+
 export default function Privacy({ }: PrivacyProps) {
   return (
     <div>
@@ -15,5 +43,8 @@ export default function Privacy({ }: PrivacyProps) {
   );
 }
 }
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

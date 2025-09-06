@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-06T04:57:27.403Z",
+  "vulnerabilities": [
+    {
+      "file": "/workspace/package.json",
+      "type": "potential_hardcoded_secret",
+      "severity": "high"
+    }
+  "totalVulnerabilities": 1,
+  "highSeverity": 1,
+  "mediumSeverity": 0,
+  "lowSeverity": 0
+}

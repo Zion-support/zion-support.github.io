@@ -195,6 +195,8 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -207,6 +209,7 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
 }
 
 /* Custom scrollbar */
@@ -312,11 +315,14 @@ h3 {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
+>>>>>>> main
 .particle-bg::before {
 =======
   width: 100%;
@@ -338,6 +344,27 @@ h3 {
 
 /* Futuristic Grid Pattern */
 body::after {
+<<<<<<< HEAD
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+  animation: gridMove 20s linear infinite;
+}
+
+/* Quantum Particle Effects */
+body::after {
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-98d9
+  content: '';
+=======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   content: '';
@@ -353,6 +380,7 @@ body::after {
 =======
 .particle-bg::before {  content: '';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   position: absolute;
   top: 0;
   left: 0;
@@ -374,6 +402,8 @@ body::after {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -386,6 +416,7 @@ body::after {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
 /* Futuristic Card Effects */
 .futuristic-card {
   background: rgba(255, 255, 255, 0.05);
@@ -393,11 +424,14 @@ body::after {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
+>>>>>>> main
   transition: all 0.3s ease;
 =======
 /* Enhanced Animations */
@@ -536,6 +570,9 @@ h3 {
 /* Enhanced Button Styles */
 .btn-futuristic {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-98d9
+<<<<<<< HEAD
+  position: relative;
+=======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   position: relative;
@@ -551,6 +588,7 @@ h3 {
 =======
   transition: all 0.3s ease;  position: relative;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   overflow: hidden;
 }
 
@@ -633,6 +671,9 @@ h3 {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
@@ -647,6 +688,7 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
 }
 
 /* Futuristic Utility Classes */
@@ -695,6 +737,9 @@ h3 {
   color: white;
   padding: 12px 24px;
 <<<<<<< HEAD
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-98d9
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -710,6 +755,7 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   border-radius: 12px;
   padding: 12px 24px;
   color: white;

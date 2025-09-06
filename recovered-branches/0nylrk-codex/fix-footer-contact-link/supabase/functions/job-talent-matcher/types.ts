@@ -1,4 +1,3 @@
-
 export interface JobData {
   id: string;
   title: string;
@@ -6,12 +5,20 @@ export interface JobData {
   skills: string[];
   category: string;
   budget: {
-    min: number,
-    max: number
-  };
-  deadline: string
-}
+<<<<<<< HEAD
 
+    min: number
+
+    max: number
+  }
+  deadline: string
+=======
+    min: number,
+    max: number;
+  }
+  deadline: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
 export interface TalentProfile {
   id: string;
   full_name: string;
@@ -19,21 +26,40 @@ export interface TalentProfile {
   bio?: string;
   skills: string[];
   years_experience: number;
-  hourly_rate?: number,
-  availability_type?: string
-}
+<<<<<<< HEAD
 
+  hourly_rate?: number
+
+  availability_type?: string
+=======
+  hourly_rate?: number,
+  availability_type?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
 export interface TalentMatch {
   talent_id: string;
   job_id: string;
   match_score: number;
-  matched_skills: string[],
-  created_at: string
-}
+<<<<<<< HEAD
 
+  matched_skills: string[]
+
+  created_at: string
+=======
+  matched_skills: string[],
+  created_at: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
 export interface MatchResult {
-  talentId: string;
+  talent_id: string;
   score: number;
-  matchedSkills: string[],
+<<<<<<< HEAD
+
+  matchedSkills: string[]
+
   reason?: string
+=======
+  matched_skills: string[],
+  reason?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -1,11 +1,15 @@
-#!/usr/bin/env node const fs = const path = const { execSync } = class BackupManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'backups'); this.backupStats = {totalBackups: 0,lastBackup: null,backupSize: 0, compressionRatio: 0, failedBackups: 0}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir => { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} })} setupLogging() {this.logFile = path.join(this.logsDir,'backup-manager.log'),this.log('Backup Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}\n`; ); fs.appendFileSync(this.logFile,logEntry)} async createBackup() { this.log('Creating backup...','INFO'); try { const timestamp = new Date().toISOString().replace(/[:.]/g,'-'); const backupName = `backup-${timestamp}`; const backupPath = path.join(this.backupDir,backupName); fs.mkdirSync(backupPath,{ recursive: true }); await this.backupSourceCode(backupPath); await this.backupConfigFiles(backupPath); await this.backupDependencies(backupPath); await this.backupLogsAndReports(backupPath); const manifest = await this.createBackupManifest(backupPath); const compressedPath = await this.compressBackup(backupPath); fs.rmSync(backupPath,{ recursive: true,force: true }); this.backupStats.totalBackups++; this.backupStats.lastBackup = new Date().toISOString(); const stats = fs.statSync(compressedPath); this.backupStats.backupSize = stats.size; this.log(`Backup created successfully: ${compressedPath}`,'INFO'); this.log(`Backup size: ${this.formatBytes(stats.size)}`,'INFO'); return {path: compressedPath,size: stats.size; manifest}} catch (error) { this.log(`Error creating backup: ${error.message}`,'ERROR'); this.backupStats.failedBackups++; throw error} } async backupSourceCode(backupPath) { this.log('Backing up source code...','INFO'); try { const sourceDirs = ['src','pages','components','utils','hooks','lib','types']; const sourcePath = path.join(backupPath,'source'); fs.mkdirSync(sourcePath,{ recursive: true }); sourceDirs.forEach(dir => { const fullPath = path.join(this.projectRoot,dir); if (fs.existsSync(fullPath)) {const destPath = path.join(sourcePath,dir),this.copyDirectory(fullPath,destPath)} }); this.log('Source code backup completed','INFO')} catch (error) { this.log(`Error backing up source code: ${error.message}`,'ERROR'); throw error} } async backupConfigFiles(backupPath) { this.log('Backing up configuration files...','INFO'); try { const configFiles = ['package.json','package-lock.json','tsconfig.json'; 'vite.config.ts'; 'tailwind.config.js'; 'next.config.js'; 'ecosystem.config.cjs'; '.env'; '.env.local',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+#!/usr/bin/env node const fs = const path = const { execSync } = class BackupManager { constructor() { this && this.projectRoot = process && process.cwd(); this && this.logsDir = path && path.join(this && this.projectRoot,'logs'); this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports'); this && this.backupDir = path && path.join(this && this.projectRoot,'backups'); this && this.backupStats = {totalBackups: 0,lastBackup: null,backupSize: 0, compressionRatio: 0, failedBackups: 0}; this && this.setupDirectories(); this && this.setupLogging()} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir => { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ recursive: true })} })} setupLogging() {this && this.logFile = path && path.join(this && this.logsDir,'backup-manager && manager.log'),this && this.log('Backup Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}\n`; ); fs && fs.appendFileSync(this && this.logFile,logEntry)} async createBackup() { this && this.log('Creating backup...','INFO'); try { const timestamp = new Date().toISOString().replace(/[:.]/g,'-'); const backupName = `backup-${timestamp}`; const backupPath = path && path.join(this && this.backupDir,backupName); fs && fs.mkdirSync(backupPath,{ recursive: true }); await this && this.backupSourceCode(backupPath); await this && this.backupConfigFiles(backupPath); await this && this.backupDependencies(backupPath); await this && this.backupLogsAndReports(backupPath); const manifest = await this && this.createBackupManifest(backupPath); const compressedPath = await this && this.compressBackup(backupPath); fs && fs.rmSync(backupPath,{ recursive: true,force: true }); this && this.backupStats.totalBackups++; this && this.backupStats.lastBackup = new Date().toISOString(); const stats = fs && fs.statSync(compressedPath); this && this.backupStats.backupSize = stats && stats.size; this && this.log(`Backup created successfully: ${compressedPath}`,'INFO'); this && this.log(`Backup size: ${this && this.formatBytes(stats && stats.size)}`,'INFO'); return {path: compressedPath,size: stats && stats.size; manifest}} catch (error) { this && this.log(`Error creating backup: ${error && error.message}`,'ERROR'); this && this.backupStats.failedBackups++; throw error} } async backupSourceCode(backupPath) { this && this.log('Backing up source code...','INFO'); try { const sourceDirs = ['src','pages','components','utils','hooks','lib','types']; const sourcePath = path && path.join(backupPath,'source'); fs && fs.mkdirSync(sourcePath,{ recursive: true }); sourceDirs && sourceDirs.forEach(dir => { const fullPath = path && path.join(this && this.projectRoot,dir); if (fs && fs.existsSync(fullPath)) {const destPath = path && path.join(sourcePath,dir),this && this.copyDirectory(fullPath,destPath)} }); this && this.log('Source code backup completed','INFO')} catch (error) { this && this.log(`Error backing up source code: ${error && error.message}`,'ERROR'); throw error} } async backupConfigFiles(backupPath) { this && this.log('Backing up configuration files...','INFO'); try { const configFiles = ['package && package.json','package-lock && lock.json','tsconfig && tsconfig.json'; 'vite && vite.config.ts'; 'tailwind && tailwind.config.js'; 'next && next.config.js'; 'ecosystem && ecosystem.config.cjs'; '.env'; '.env && env.local',
     '.gitignore'
-  ]; const configPath = path.join(backupPath,'config'); fs.mkdirSync(configPath,{ recursive: true }); configFiles.forEach(file => { const sourcePath = path.join(this.projectRoot,file); if (fs.existsSync(sourcePath)) {const destPath = path.join(configPath,file),fs.copyFileSync(sourcePath,destPath)} }); this.log('Configuration files backup completed','INFO')} catch (error) { this.log(`Error backing up configuration files: ${error.message}`,'ERROR'); throw error} } async backupDependencies(backupPath) { this.log('Backing up dependencies...','INFO'); try { const depsPath = path.join(backupPath,'dependencies'); fs.mkdirSync(depsPath,{ recursive: true }); const packageJsonPath = path.join(this.projectRoot,'package.json'); const packageLockPath = path.join(this.projectRoot,'package-lock.json'); if (fs.existsSync(packageJsonPath)) { fs.copyFileSync(packageJsonPath,path.join(depsPath,'package.json'))} if (fs.existsSync(packageLockPath)) { fs.copyFileSync(packageLockPath,path.join(depsPath,'package-lock.json'))} const dependencyList = await this.generateDependencyList(); const depsListPath = path.join(depsPath,'dependency-list.txt'); fs.writeFileSync(depsListPath,dependencyList); this.log('Dependencies backup completed','INFO')} catch (error) { this.log(`Error backing up dependencies: ${error.message}`,'ERROR'); throw error} } async backupLogsAndReports(backupPath) { this.log('Backing up logs and reports...','INFO'); try { const logsPath = path.join(backupPath,'logs'); fs.mkdirSync(logsPath,{ recursive: true }); if (fs.existsSync(this.logsDir)) { this.copyDirectory(this.logsDir,logsPath)} if (fs.existsSync(this.errorReportsDir)) { const reportsPath = path.join(backupPath,'reports'); fs.mkdirSync(reportsPath,{ recursive: true }); this.copyDirectory(this.errorReportsDir,reportsPath)} this.log('Logs and reports backup completed','INFO')} catch (error) { this.log(`Error backing up logs and reports: ${error.message}`,'ERROR'); throw error} } async createBackupManifest(backupPath) { try { const manifest = { timestamp: new Date().toISOString(), projectRoot: this.projectRoot, backupPath: backupPath, files: [], directories: [],
-    metadata: {nodeVersion: process.version,platform: process.platform,arch: process.arch,
-    user: process.env.USER || 'unknown'} }; this.scanDirectory(backupPath,manifest.files,manifest.directories); const manifestPath = path.join(backupPath,'manifest.json'); fs.writeFileSync(manifestPath,JSON.stringify(manifest,null,2)); return manifest} catch (error) { this.log(`Error creating backup manifest: ${error.message}`,'ERROR'); return null} } async compressBackup(backupPath) { this.log('Compressing backup...','INFO'); try { const backupName = path.basename(backupPath); const compressedPath = `${backupPath}.tar.gz`; execSync(`tar -czf "${compressedPath}" -C "${path.dirname(backupPath)}" "${backupName}"`,{ stdio: 'pipe' }); const originalSize = this.getDirectorySize(backupPath); const compressedSize = fs.statSync(compressedPath).size; this.backupStats.compressionRatio = originalSize > 0 ? (1 - compressedSize / originalSize) * 100 : 0; this.log(`Backup compressed: ${this.backupStats.compressionRatio.toFixed(2)}% compression`,'INFO'); return compressedPath} catch (error) { this.log(`Error compressing backup: ${error.message}`,'ERROR'); throw error} } async restoreBackup(backupPath) { this.log(`Restoring backup from: ${backupPath}`,'INFO'); try { if (!fs.existsSync(backupPath)) { throw new Error('Backup file not found')} const tempDir = path.join(this.backupDir,'temp-restore-' + Date.now()); fs.mkdirSync(tempDir,{ recursive: true }); execSync(`tar -xzf "${backupPath}" -C "${tempDir}"`,{ stdio: 'pipe' }); const extractedDir = fs.readdirSync(tempDir)[0]; const extractedPath = path.join(tempDir,extractedDir); const manifestPath = path.join(extractedPath,'manifest.json'); if (!fs.existsSync(manifestPath)) { throw new Error('Backup manifest not found')} const manifest = JSON.parse(fs.readFileSync(manifestPath,'utf8')); await this.restoreFiles(extractedPath,manifest); fs.rmSync(tempDir,{ recursive: true,force: true }); this.log('Backup restoration completed successfully','INFO'); return manifest} catch (error) { this.log(`Error restoring backup: ${error.message}`,'ERROR'); throw error} } async restoreFiles(extractedPath,manifest) { this.log('Restoring files...','INFO'); try { const sourcePath = path.join(extractedPath,'source'); if (fs.existsSync(sourcePath)) { this.restoreDirectory(sourcePath,this.projectRoot)} const configPath = path.join(extractedPath,'config'); if (fs.existsSync(configPath)) { this.restoreDirectory(configPath,this.projectRoot)} const depsPath = path.join(extractedPath,'dependencies'); if (fs.existsSync(depsPath)) { const packageJsonPath = path.join(depsPath,'package.json'); if (fs.existsSync(packageJsonPath)) { fs.copyFileSync(packageJsonPath,path.join(this.projectRoot,'package.json'))} const packageLockPath = path.join(depsPath,'package-lock.json'); if (fs.existsSync(packageLockPath)) { fs.copyFileSync(packageLockPath,path.join(this.projectRoot,'package-lock.json'))} } this.log('Files restored successfully','INFO')} catch (error) { this.log(`Error restoring files: ${error.message}`,'ERROR'); throw error} } async listBackups() { this.log('Listing available backups...','INFO'); try { const backups = []; if (fs.existsSync(this.backupDir)) { const items = fs.readdirSync(this.backupDir); items.forEach(item => { if (item.endsWith('.tar.gz')) { const fullPath = path.join(this.backupDir,item); const stats = fs.statSync(fullPath); backups.push({name: item,path: fullPath,size: stats.size, created: stats.mtime, age: Date.now() - stats.mtime.getTime()})} })} backups.sort((a,b) => b.created - a.created); this.log(`Found ${backups.length} backups`,'INFO'); return backups} catch (error) { this.log(`Error listing backups: ${error.message}`,'ERROR'); return []} } async cleanupOldBackups(maxAge = 30 * 24 * 60 * 60 * 1000) { this.log('Cleaning up old backups...','INFO'); try { const backups = await this.listBackups(); const cutoffTime = Date.now() - maxAge; let cleanedCount = 0; let spaceFreed = 0; backups.forEach(backup => { if (backup.age > maxAge) { try { const size = backup.size; fs.unlinkSync(backup.path); cleanedCount++; spaceFreed += size; this.log(`Cleaned old backup: ${backup.name} (${this.formatBytes(size)})`,'INFO')} catch (error) { this.log(`Error cleaning backup ${backup.name}: ${error.message}`,'ERROR')} } }); this.log(`Cleaned ${cleanedCount} old backups,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning up old backups: ${error.message}`,'ERROR'); return { cleanedCount: 0,spaceFreed: 0 }} } async generateDependencyList() { try { const result = execSync('npm list --depth=0',{cwd: this.projectRoot,encoding: 'utf8',
-    stdio: 'pipe'}); return result} catch (error) { return 'Error generating dependency list: ' + error.message} } copyDirectory(source,destination) { if (!fs.existsSync(destination)) { fs.mkdirSync(destination,{ recursive: true })} const items = fs.readdirSync(source); items.forEach(item => { const sourcePath = path.join(source,item); const destPath = path.join(destination,item); const stat = fs.statSync(sourcePath); if (stat.isDirectory()) { this.copyDirectory(sourcePath,destPath)} else { fs.copyFileSync(sourcePath,destPath)} })} restoreDirectory(source,destination) { if (!fs.existsSync(destination)) { fs.mkdirSync(destination,{ recursive: true })} const items = fs.readdirSync(source); items.forEach(item => { const sourcePath = path.join(source,item); const destPath = path.join(destination,item); const stat = fs.statSync(sourcePath); if (stat.isDirectory()) { this.restoreDirectory(sourcePath,destPath)} else { fs.copyFileSync(sourcePath,destPath)} })} scanDirectory(dirPath,files,directories) { const items = fs.readdirSync(dirPath); items.forEach(item => { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {directories.push(fullPath),this.scanDirectory(fullPath,files,directories)} else { files.push({path: fullPath,size: stat.size,
-    modified: stat.mtime})} })} getDirectorySize(dirPath) { let totalSize = 0; function calculateSize(dir) { const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { calculateSize(fullPath)} else { totalSize += stat.size} })} if (fs.existsSync(dirPath)) { calculateSize(dirPath)} return totalSize} formatBytes(bytes) {if (bytes === 0) return '0 Bytes',const k = 1024,const sizes = ['Bytes','KB','MB','GB']; const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {timestamp: new Date().toISOString(),backupStats: this.backupStats,
-    recommendations: this.generateRecommendations()}; const reportFile = path.join(this.errorReportsDir,`backup-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${reportFile}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.backupStats.totalBackups === 0) { recommendations.push('Create initial backup of the project')} if (this.backupStats.lastBackup) { const lastBackupTime = new Date(this.backupStats.lastBackup); const daysSinceBackup = (Date.now() - lastBackupTime.getTime()) / (1000 * 60 * 60 * 24); if (daysSinceBackup > 7) { recommendations.push('Create new backup - last backup is over a week old')} } if (this.backupStats.failedBackups > 0) { recommendations.push('Investigate failed backup attempts')} if (this.backupStats.compressionRatio < 50) { recommendations.push('Consider optimizing backup compression')} recommendations.push('Set up automated backup scheduling'); recommendations.push('Test backup restoration regularly'); recommendations.push('Store backups in multiple locations'); return recommendations} async run() { try { this.log('Starting backup management automation...','INFO'); const existingBackups = await this.listBackups(); const newBackup = await this.createBackup(); await this.cleanupOldBackups(); this.backupStats.totalBackups = existingBackups.length + 1; const report = this.generateReport(); this.log('Backup management automation completed','INFO'); this.log(`Summary: ${this.backupStats.totalBackups} total backups,${this.formatBytes(this.backupStats.backupSize)} latest backup`,'INFO'); return report} catch (error) { this.log(`Fatal error in backup manager: ${error.message}`,'ERROR'); throw error} } } if (require.main === module) { const manager = new BackupManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Backup manager failed:',error),process.exit(1)})} module.exports = BackupManager;
+  ]; const configPath = path && path.join(backupPath,'config'); fs && fs.mkdirSync(configPath,{ recursive: true }); configFiles && configFiles.forEach(file => { const sourcePath = path && path.join(this && this.projectRoot,file); if (fs && fs.existsSync(sourcePath)) {const destPath = path && path.join(configPath,file),fs && fs.copyFileSync(sourcePath,destPath)} }); this && this.log('Configuration files backup completed','INFO')} catch (error) { this && this.log(`Error backing up configuration files: ${error && error.message}`,'ERROR'); throw error} } async backupDependencies(backupPath) { this && this.log('Backing up dependencies...','INFO'); try { const depsPath = path && path.join(backupPath,'dependencies'); fs && fs.mkdirSync(depsPath,{ recursive: true }); const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); const packageLockPath = path && path.join(this && this.projectRoot,'package-lock && lock.json'); if (fs && fs.existsSync(packageJsonPath)) { fs && fs.copyFileSync(packageJsonPath,path && path.join(depsPath,'package && package.json'))} if (fs && fs.existsSync(packageLockPath)) { fs && fs.copyFileSync(packageLockPath,path && path.join(depsPath,'package-lock && lock.json'))} const dependencyList = await this && this.generateDependencyList(); const depsListPath = path && path.join(depsPath,'dependency-list && list.txt'); fs && fs.writeFileSync(depsListPath,dependencyList); this && this.log('Dependencies backup completed','INFO')} catch (error) { this && this.log(`Error backing up dependencies: ${error && error.message}`,'ERROR'); throw error} } async backupLogsAndReports(backupPath) { this && this.log('Backing up logs and reports...','INFO'); try { const logsPath = path && path.join(backupPath,'logs'); fs && fs.mkdirSync(logsPath,{ recursive: true }); if (fs && fs.existsSync(this && this.logsDir)) { this && this.copyDirectory(this && this.logsDir,logsPath)} if (fs && fs.existsSync(this && this.errorReportsDir)) { const reportsPath = path && path.join(backupPath,'reports'); fs && fs.mkdirSync(reportsPath,{ recursive: true }); this && this.copyDirectory(this && this.errorReportsDir,reportsPath)} this && this.log('Logs and reports backup completed','INFO')} catch (error) { this && this.log(`Error backing up logs and reports: ${error && error.message}`,'ERROR'); throw error} } async createBackupManifest(backupPath) { try { const manifest = { timestamp: new Date().toISOString(), projectRoot: this && this.projectRoot, backupPath: backupPath, files: [], directories: [],
+    metadata: {nodeVersion: process && process.version,platform: process && process.platform,arch: process && process.arch,
+    user: process && process.env.USER || 'unknown'} }; this && this.scanDirectory(backupPath,manifest && manifest.files,manifest && manifest.directories); const manifestPath = path && path.join(backupPath,'manifest && manifest.json'); fs && fs.writeFileSync(manifestPath,JSON && JSON.stringify(manifest,null,2)); return manifest} catch (error) { this && this.log(`Error creating backup manifest: ${error && error.message}`,'ERROR'); return null} } async compressBackup(backupPath) { this && this.log('Compressing backup...','INFO'); try { const backupName = path && path.basename(backupPath); const compressedPath = `${backupPath}.tar && tar.gz`; execSync(`tar -czf "${compressedPath}" -C "${path && path.dirname(backupPath)}" "${backupName}"`,{ stdio: 'pipe' }); const originalSize = this && this.getDirectorySize(backupPath); const compressedSize = fs && fs.statSync(compressedPath).size; this && this.backupStats.compressionRatio = originalSize > 0 ? (1 - compressedSize / originalSize) * 100 : 0; this && this.log(`Backup compressed: ${this && this.backupStats.compressionRatio && compressionRatio.toFixed(2)}% compression`,'INFO'); return compressedPath} catch (error) { this && this.log(`Error compressing backup: ${error && error.message}`,'ERROR'); throw error} } async restoreBackup(backupPath) { this && this.log(`Restoring backup from: ${backupPath}`,'INFO'); try { if (!fs && fs.existsSync(backupPath)) { throw new Error('Backup file not found')} const tempDir = path && path.join(this && this.backupDir,'temp-restore-' + Date && Date.now()); fs && fs.mkdirSync(tempDir,{ recursive: true }); execSync(`tar -xzf "${backupPath}" -C "${tempDir}"`,{ stdio: 'pipe' }); const extractedDir = fs && fs.readdirSync(tempDir)[0]; const extractedPath = path && path.join(tempDir,extractedDir); const manifestPath = path && path.join(extractedPath,'manifest && manifest.json'); if (!fs && fs.existsSync(manifestPath)) { throw new Error('Backup manifest not found')} const manifest = JSON && JSON.parse(fs && fs.readFileSync(manifestPath,'utf8')); await this && this.restoreFiles(extractedPath,manifest); fs && fs.rmSync(tempDir,{ recursive: true,force: true }); this && this.log('Backup restoration completed successfully','INFO'); return manifest} catch (error) { this && this.log(`Error restoring backup: ${error && error.message}`,'ERROR'); throw error} } async restoreFiles(extractedPath,manifest) { this && this.log('Restoring files...','INFO'); try { const sourcePath = path && path.join(extractedPath,'source'); if (fs && fs.existsSync(sourcePath)) { this && this.restoreDirectory(sourcePath,this && this.projectRoot)} const configPath = path && path.join(extractedPath,'config'); if (fs && fs.existsSync(configPath)) { this && this.restoreDirectory(configPath,this && this.projectRoot)} const depsPath = path && path.join(extractedPath,'dependencies'); if (fs && fs.existsSync(depsPath)) { const packageJsonPath = path && path.join(depsPath,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { fs && fs.copyFileSync(packageJsonPath,path && path.join(this && this.projectRoot,'package && package.json'))} const packageLockPath = path && path.join(depsPath,'package-lock && lock.json'); if (fs && fs.existsSync(packageLockPath)) { fs && fs.copyFileSync(packageLockPath,path && path.join(this && this.projectRoot,'package-lock && lock.json'))} } this && this.log('Files restored successfully','INFO')} catch (error) { this && this.log(`Error restoring files: ${error && error.message}`,'ERROR'); throw error} } async listBackups() { this && this.log('Listing available backups...','INFO'); try { const backups = []; if (fs && fs.existsSync(this && this.backupDir)) { const items = fs && fs.readdirSync(this && this.backupDir); items && items.forEach(item => { if (item && item.endsWith('.tar && tar.gz')) { const fullPath = path && path.join(this && this.backupDir,item); const stats = fs && fs.statSync(fullPath); backups && backups.push({name: item,path: fullPath,size: stats && stats.size, created: stats && stats.mtime, age: Date && Date.now() - stats && stats.mtime.getTime()})} })} backups && backups.sort((a,b) => b && b.created - a && a.created); this && this.log(`Found ${backups && backups.length} backups`,'INFO'); return backups} catch (error) { this && this.log(`Error listing backups: ${error && error.message}`,'ERROR'); return []} } async cleanupOldBackups(maxAge = 30 * 24 * 60 * 60 * 1000) { this && this.log('Cleaning up old backups...','INFO'); try { const backups = await this && this.listBackups(); const cutoffTime = Date && Date.now() - maxAge; let cleanedCount = 0; let spaceFreed = 0; backups && backups.forEach(backup => { if (backup && backup.age > maxAge) { try { const size = backup && backup.size; fs && fs.unlinkSync(backup && backup.path); cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old backup: ${backup && backup.name} (${this && this.formatBytes(size)})`,'INFO')} catch (error) { this && this.log(`Error cleaning backup ${backup && backup.name}: ${error && error.message}`,'ERROR')} } }); this && this.log(`Cleaned ${cleanedCount} old backups,freed ${this && this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this && this.log(`Error cleaning up old backups: ${error && error.message}`,'ERROR'); return { cleanedCount: 0,spaceFreed: 0 }} } async generateDependencyList() { try { const result = execSync('npm list --depth=0',{cwd: this && this.projectRoot,encoding: 'utf8',
+    stdio: 'pipe'}); return result} catch (error) { return 'Error generating dependency list: ' + error && error.message} } copyDirectory(source,destination) { if (!fs && fs.existsSync(destination)) { fs && fs.mkdirSync(destination,{ recursive: true })} const items = fs && fs.readdirSync(source); items && items.forEach(item => { const sourcePath = path && path.join(source,item); const destPath = path && path.join(destination,item); const stat = fs && fs.statSync(sourcePath); if (stat && stat.isDirectory()) { this && this.copyDirectory(sourcePath,destPath)} else { fs && fs.copyFileSync(sourcePath,destPath)} })} restoreDirectory(source,destination) { if (!fs && fs.existsSync(destination)) { fs && fs.mkdirSync(destination,{ recursive: true })} const items = fs && fs.readdirSync(source); items && items.forEach(item => { const sourcePath = path && path.join(source,item); const destPath = path && path.join(destination,item); const stat = fs && fs.statSync(sourcePath); if (stat && stat.isDirectory()) { this && this.restoreDirectory(sourcePath,destPath)} else { fs && fs.copyFileSync(sourcePath,destPath)} })} scanDirectory(dirPath,files,directories) { const items = fs && fs.readdirSync(dirPath); items && items.forEach(item => { const fullPath = path && path.join(dirPath,item); const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) {directories && directories.push(fullPath),this && this.scanDirectory(fullPath,files,directories)} else { files && files.push({path: fullPath,size: stat && stat.size,
+    modified: stat && stat.mtime})} })} getDirectorySize(dirPath) { let totalSize = 0; function calculateSize(dir) { const items = fs && fs.readdirSync(dir); items && items.forEach(item => { const fullPath = path && path.join(dir,item); const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) { calculateSize(fullPath)} else { totalSize += stat && stat.size} })} if (fs && fs.existsSync(dirPath)) { calculateSize(dirPath)} return totalSize} formatBytes(bytes) {if (bytes === 0) return '0 Bytes',const k = 1024,const sizes = ['Bytes','KB','MB','GB']; const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k)); return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {timestamp: new Date().toISOString(),backupStats: this && this.backupStats,
+    recommendations: this && this.generateRecommendations()}; const reportFile = path && path.join(this && this.errorReportsDir,`backup-manager-report-${Date && Date.now()}.json`); fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2)); this && this.log(`Report generated: ${reportFile}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this && this.backupStats.totalBackups === 0) { recommendations && recommendations.push('Create initial backup of the project')} if (this && this.backupStats.lastBackup) { const lastBackupTime = new Date(this && this.backupStats.lastBackup); const daysSinceBackup = (Date && Date.now() - lastBackupTime && lastBackupTime.getTime()) / (1000 * 60 * 60 * 24); if (daysSinceBackup > 7) { recommendations && recommendations.push('Create new backup - last backup is over a week old')} } if (this && this.backupStats.failedBackups > 0) { recommendations && recommendations.push('Investigate failed backup attempts')} if (this && this.backupStats.compressionRatio < 50) { recommendations && recommendations.push('Consider optimizing backup compression')} recommendations && recommendations.push('Set up automated backup scheduling'); recommendations && recommendations.push('Test backup restoration regularly'); recommendations && recommendations.push('Store backups in multiple locations'); return recommendations} async run() { try { this && this.log('Starting backup management automation...','INFO'); const existingBackups = await this && this.listBackups(); const newBackup = await this && this.createBackup(); await this && this.cleanupOldBackups(); this && this.backupStats.totalBackups = existingBackups && existingBackups.length + 1; const report = this && this.generateReport(); this && this.log('Backup management automation completed','INFO'); this && this.log(`Summary: ${this && this.backupStats.totalBackups} total backups,${this && this.formatBytes(this && this.backupStats.backupSize)} latest backup`,'INFO'); return report} catch (error) { this && this.log(`Fatal error in backup manager: ${error && error.message}`,'ERROR'); throw error} } } if (require && require.main === module) { const manager = new BackupManager(); manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Backup manager failed:',error),process && process.exit(1)})} module && module.exports = BackupManager;
 #!/usr/bin/env node
 /**
  * Backup Manager - PM2 Automation Script
@@ -16,374 +20,394 @@ const path = // // require('path');
 const { execSync } = // // require('child_process');
 class BackupManager {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.logsDir = path.join(this.projectRoot, 'logs');
-    this.errorReportsDir = path.join(this.projectRoot, 'error-reports');
-    this.backupDir = path.join(this.projectRoot, 'backups');
-    this.backupStats = {"totalBackups": 0,"lastBackup": null,"backupSize": 0;
+    this && this.projectRoot = process && process.cwd();
+    this && this.logsDir = path && path.join(this && this.projectRoot, 'logs');
+    this && this.errorReportsDir = path && path.join(this && this.projectRoot, 'error-reports');
+    this && this.backupDir = path && path.join(this && this.projectRoot, 'backups');
+    this && this.backupStats = {"totalBackups": 0,"lastBackup": null,"backupSize": 0;
       compressionRatio: 0,
       failedBackups: 0};
-    this.setupDirectories();
-    this.setupLogging()}
+    this && this.setupDirectories();
+    this && this.setupLogging()}
   setupDirectories() {
-    [this.logsDir, this.errorReportsDir, this.backupDir].forEach(dir => {
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { "recursive": true })}
+    [this && this.logsDir, this && this.errorReportsDir, this && this.backupDir].forEach(dir => {
+      if (!fs && fs.existsSync(dir)) {
+        fs && fs.mkdirSync(dir, { "recursive": true })}
     })}
-  setupLogging() {this.logFile = path.join(this.logsDir, 'backup-manager.log'),this.log('Backup Manager started', 'INFO')}
+  setupLogging() {this && this.logFile = path && path.join(this && this.logsDir, 'backup-manager && manager.log'),this && this.log('Backup Manager started', 'INFO')}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    console.log(logEntry.trim());
-    fs.appendFileSync(this.logFile, logEntry)}
+    console && console.log(logEntry && logEntry.trim());
+    fs && fs.appendFileSync(this && this.logFile, logEntry)}
   async createBackup() {
-    this.log('Creating backup...', 'INFO');
+    this && this.log('Creating backup...', 'INFO');
     try {
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const backupName = `backup-${timestamp}`;
-      const backupPath = path.join(this.backupDir, backupName);
+      const backupPath = path && path.join(this && this.backupDir, backupName);
       // Create backup directory
-      fs.mkdirSync(backupPath, { "recursive": true });
+      fs && fs.mkdirSync(backupPath, { "recursive": true });
       // Backup source code
-      await this.backupSourceCode(backupPath);
+      await this && this.backupSourceCode(backupPath);
       // Backup configuration files
-      await this.backupConfigFiles(backupPath);
+      await this && this.backupConfigFiles(backupPath);
       // Backup dependencies
-      await this.backupDependencies(backupPath);
+      await this && this.backupDependencies(backupPath);
       // Backup logs and reports
-      await this.backupLogsAndReports(backupPath);
+      await this && this.backupLogsAndReports(backupPath);
       // Create backup manifest
-      const manifest = await this.createBackupManifest(backupPath);
+      const manifest = await this && this.createBackupManifest(backupPath);
       // Compress backup
-      const compressedPath = await this.compressBackup(backupPath);
+      const compressedPath = await this && this.compressBackup(backupPath);
       // Clean up uncompressed backup
-      fs.rmSync(backupPath, { "recursive": true, "force": true });
+      fs && fs.rmSync(backupPath, { "recursive": true, "force": true });
       // Update backup statistics
-      this.backupStats.totalBackups++;
-      this.backupStats.lastBackup = new Date().toISOString();
-      const stats = fs.statSync(compressedPath);
-      this.backupStats.backupSize = stats.size;
-      this.log(`Backup created "successfully": ${compressedPath}`, 'INFO');
-      this.log(`Backup "size": ${this.formatBytes(stats.size)}`, 'INFO');
-      return {"path": compressedPath,"size": stats.size;
+      this && this.backupStats.totalBackups++;
+      this && this.backupStats.lastBackup = new Date().toISOString();
+      const stats = fs && fs.statSync(compressedPath);
+      this && this.backupStats.backupSize = stats && stats.size;
+      this && this.log(`Backup created "successfully": ${compressedPath}`, 'INFO');
+      this && this.log(`Backup "size": ${this && this.formatBytes(stats && stats.size)}`, 'INFO');
+      return {"path": compressedPath,"size": stats && stats.size;
         manifest}} catch (error) {
-      this.log(`Error creating "backup": ${error.message}`, 'ERROR');
-      this.backupStats.failedBackups++;
+      this && this.log(`Error creating "backup": ${error && error.message}`, 'ERROR');
+      this && this.backupStats.failedBackups++;
       throw error}
   }
   async backupSourceCode(backupPath) {
-    this.log('Backing up source code...', 'INFO');
+    this && this.log('Backing up source code...', 'INFO');
     try {
       const sourceDirs = ['src', 'pages', 'components', 'utils', 'hooks', 'lib', 'types'];
-      const sourcePath = path.join(backupPath, 'source');
-      fs.mkdirSync(sourcePath, { "recursive": true });
-      sourceDirs.forEach(dir => {
-        const fullPath = path.join(this.projectRoot, dir);
-        if (fs.existsSync(fullPath)) {const destPath = path.join(sourcePath, dir),this.copyDirectory(fullPath, destPath)}
+      const sourcePath = path && path.join(backupPath, 'source');
+      fs && fs.mkdirSync(sourcePath, { "recursive": true });
+      sourceDirs && sourceDirs.forEach(dir => {
+        const fullPath = path && path.join(this && this.projectRoot, dir);
+        if (fs && fs.existsSync(fullPath)) {const destPath = path && path.join(sourcePath, dir),this && this.copyDirectory(fullPath, destPath)}
       });
-      this.log('Source code backup completed', 'INFO')} catch (error) {
-      this.log(`Error backing up source "code": ${error.message}`, 'ERROR');
+      this && this.log('Source code backup completed', 'INFO')} catch (error) {
+      this && this.log(`Error backing up source "code": ${error && error.message}`, 'ERROR');
       throw error}
   }
   async backupConfigFiles(backupPath) {
-    this.log('Backing up configuration files...', 'INFO');
+    this && this.log('Backing up configuration files...', 'INFO');
     try {
-      const configFiles = ['package.json','package-lock.json','tsconfig.json';
-        'vite.config.ts';
-        'tailwind.config.js';
-        'next.config.js';
-        'ecosystem.config.cjs';
+      const configFiles = ['package && package.json','package-lock && lock.json','tsconfig && tsconfig.json';
+        'vite && vite.config.ts';
+        'tailwind && tailwind.config.js';
+        'next && next.config.js';
+        'ecosystem && ecosystem.config.cjs';
         '.env';
-        '.env.local',
+        '.env && env.local',
     '.gitignore'
   ];
-      const configPath = path.join(backupPath, 'config');
-      fs.mkdirSync(configPath, { "recursive": true });
-      configFiles.forEach(file => {
-        const sourcePath = path.join(this.projectRoot, file);
-        if (fs.existsSync(sourcePath)) {const destPath = path.join(configPath, file),fs.copyFileSync(sourcePath, destPath)}
+      const configPath = path && path.join(backupPath, 'config');
+      fs && fs.mkdirSync(configPath, { "recursive": true });
+      configFiles && configFiles.forEach(file => {
+        const sourcePath = path && path.join(this && this.projectRoot, file);
+        if (fs && fs.existsSync(sourcePath)) {const destPath = path && path.join(configPath, file),fs && fs.copyFileSync(sourcePath, destPath)}
       });
-      this.log('Configuration files backup completed', 'INFO')} catch (error) {
-      this.log(`Error backing up configuration "files": ${error.message}`, 'ERROR');
+      this && this.log('Configuration files backup completed', 'INFO')} catch (error) {
+      this && this.log(`Error backing up configuration "files": ${error && error.message}`, 'ERROR');
       throw error}
   }
   async backupDependencies(backupPath) {
-    this.log('Backing up dependencies...', 'INFO');
+    this && this.log('Backing up dependencies...', 'INFO');
     try {
-      const depsPath = path.join(backupPath, 'dependencies');
-      fs.mkdirSync(depsPath, { "recursive": true });
-      // Backup package.json and package-lock.json
-      const packageJsonPath = path.join(this.projectRoot, 'package.json');
-      const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
-      if (fs.existsSync(packageJsonPath)) {
-        fs.copyFileSync(packageJsonPath, path.join(depsPath, 'package.json'))}
-      if (fs.existsSync(packageLockPath)) {
-        fs.copyFileSync(packageLockPath, path.join(depsPath, 'package-lock.json'))}
+      const depsPath = path && path.join(backupPath, 'dependencies');
+      fs && fs.mkdirSync(depsPath, { "recursive": true });
+      // Backup package && package.json and package-lock && lock.json
+      const packageJsonPath = path && path.join(this && this.projectRoot, 'package && package.json');
+      const packageLockPath = path && path.join(this && this.projectRoot, 'package-lock && lock.json');
+      if (fs && fs.existsSync(packageJsonPath)) {
+        fs && fs.copyFileSync(packageJsonPath, path && path.join(depsPath, 'package && package.json'))}
+      if (fs && fs.existsSync(packageLockPath)) {
+        fs && fs.copyFileSync(packageLockPath, path && path.join(depsPath, 'package-lock && lock.json'))}
       // Create dependency list
-      const dependencyList = await this.generateDependencyList();
-      const depsListPath = path.join(depsPath, 'dependency-list.txt');
-      fs.writeFileSync(depsListPath, dependencyList);
-      this.log('Dependencies backup completed', 'INFO')} catch (error) {
-      this.log(`Error backing up "dependencies": ${error.message}`, 'ERROR');
+      const dependencyList = await this && this.generateDependencyList();
+      const depsListPath = path && path.join(depsPath, 'dependency-list && list.txt');
+      fs && fs.writeFileSync(depsListPath, dependencyList);
+      this && this.log('Dependencies backup completed', 'INFO')} catch (error) {
+      this && this.log(`Error backing up "dependencies": ${error && error.message}`, 'ERROR');
       throw error}
   }
   async backupLogsAndReports(backupPath) {
-    this.log('Backing up logs and reports...', 'INFO');
+    this && this.log('Backing up logs and reports...', 'INFO');
     try {
-      const logsPath = path.join(backupPath, 'logs');
-      fs.mkdirSync(logsPath, { "recursive": true });
+      const logsPath = path && path.join(backupPath, 'logs');
+      fs && fs.mkdirSync(logsPath, { "recursive": true });
       // Backup logs directory
-      if (fs.existsSync(this.logsDir)) {
-        this.copyDirectory(this.logsDir, logsPath)}
+      if (fs && fs.existsSync(this && this.logsDir)) {
+        this && this.copyDirectory(this && this.logsDir, logsPath)}
       // Backup error reports
-      if (fs.existsSync(this.errorReportsDir)) {
-        const reportsPath = path.join(backupPath, 'reports');
-        fs.mkdirSync(reportsPath, { "recursive": true });
-        this.copyDirectory(this.errorReportsDir, reportsPath)}
-      this.log('Logs and reports backup completed', 'INFO')} catch (error) {
-      this.log(`Error backing up logs and "reports": ${error.message}`, 'ERROR');
+      if (fs && fs.existsSync(this && this.errorReportsDir)) {
+        const reportsPath = path && path.join(backupPath, 'reports');
+        fs && fs.mkdirSync(reportsPath, { "recursive": true });
+        this && this.copyDirectory(this && this.errorReportsDir, reportsPath)}
+      this && this.log('Logs and reports backup completed', 'INFO')} catch (error) {
+      this && this.log(`Error backing up logs and "reports": ${error && error.message}`, 'ERROR');
       throw error}
   }
   async createBackupManifest(backupPath) {
     try {
       const manifest = {
         "timestamp": new Date().toISOString();
-        projectRoot: this.projectRoot, backupPath: backupPath,
+        projectRoot: this && this.projectRoot, backupPath: backupPath,
         files: [], directories: [],
-        metadata: {nodeVersion: process.version,"platform": process.platform,"arch": process.arch;
-          user: process.env.USER || 'unknown'}
+        metadata: {nodeVersion: process && process.version,"platform": process && process.platform,"arch": process && process.arch;
+          user: process && process.env.USER || 'unknown'}
       };
       // Scan backup directory
-      this.scanDirectory(backupPath, manifest.files, manifest.directories);
-      const manifestPath = path.join(backupPath, 'manifest.json');
-      fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+      this && this.scanDirectory(backupPath, manifest && manifest.files, manifest && manifest.directories);
+      const manifestPath = path && path.join(backupPath, 'manifest && manifest.json');
+      fs && fs.writeFileSync(manifestPath, JSON && JSON.stringify(manifest, null, 2));
       return manifest} catch (error) {
-      this.log(`Error creating backup "manifest": ${error.message}`, 'ERROR');
+      this && this.log(`Error creating backup "manifest": ${error && error.message}`, 'ERROR');
       return null}
   }
   async compressBackup(backupPath) {
-    this.log('Compressing backup...', 'INFO');
+    this && this.log('Compressing backup...', 'INFO');
     try {
-      const backupName = path.basename(backupPath);
-      const compressedPath = `${backupPath}.tar.gz`;
-      // Create tar.gz archive
-      execSync(`tar -czf "${compressedPath}" -C "${path.dirname(backupPath)}" "${backupName}"`, {
+      const backupName = path && path.basename(backupPath);
+      const compressedPath = `${backupPath}.tar && tar.gz`;
+      // Create tar && tar.gz archive
+      execSync(`tar -czf "${compressedPath}" -C "${path && path.dirname(backupPath)}" "${backupName}"`, {
         "stdio": 'pipe'
       });
       // Calculate compression ratio
-      const originalSize = this.getDirectorySize(backupPath);
-      const compressedSize = fs.statSync(compressedPath).size;
-      this.backupStats.compressionRatio = originalSize > 0 ? (1 - compressedSize / originalSize) * 100 : 0;
-      this.log(`Backup "compressed": ${this.backupStats.compressionRatio.toFixed(2)}% compression`, 'INFO');
+      const originalSize = this && this.getDirectorySize(backupPath);
+      const compressedSize = fs && fs.statSync(compressedPath).size;
+      this && this.backupStats.compressionRatio = originalSize > 0 ? (1 - compressedSize / originalSize) * 100 : 0;
+      this && this.log(`Backup "compressed": ${this && this.backupStats.compressionRatio && compressionRatio.toFixed(2)}% compression`, 'INFO');
       return compressedPath} catch (error) {
-      this.log(`Error compressing "backup": ${error.message}`, 'ERROR');
+      this && this.log(`Error compressing "backup": ${error && error.message}`, 'ERROR');
       throw error}
   }
   async restoreBackup(backupPath) {
-    this.log(`Restoring backup "from": ${backupPath}`, 'INFO');
+    this && this.log(`Restoring backup "from": ${backupPath}`, 'INFO');
     try {
-      if (!fs.existsSync(backupPath)) {
+      if (!fs && fs.existsSync(backupPath)) {
         throw new Error('Backup file not found')}
       // Create temporary directory for extraction
-      const tempDir = path.join(this.backupDir, 'temp-restore-' + Date.now());
-      fs.mkdirSync(tempDir, { "recursive": true });
+      const tempDir = path && path.join(this && this.backupDir, 'temp-restore-' + Date && Date.now());
+      fs && fs.mkdirSync(tempDir, { "recursive": true });
       // Extract backup
       execSync(`tar -xzf "${backupPath}" -C "${tempDir}"`, { "stdio": 'pipe' });
       // Find extracted backup directory
-      const extractedDir = fs.readdirSync(tempDir)[0];
-      const extractedPath = path.join(tempDir, extractedDir);
+      const extractedDir = fs && fs.readdirSync(tempDir)[0];
+      const extractedPath = path && path.join(tempDir, extractedDir);
       // Read manifest
-      const manifestPath = path.join(extractedPath, 'manifest.json');
-      if (!fs.existsSync(manifestPath)) {
+      const manifestPath = path && path.join(extractedPath, 'manifest && manifest.json');
+      if (!fs && fs.existsSync(manifestPath)) {
         throw new Error('Backup manifest not found')}
-      const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+      const manifest = JSON && JSON.parse(fs && fs.readFileSync(manifestPath, 'utf8'));
       // Restore files
-      await this.restoreFiles(extractedPath, manifest);
+      await this && this.restoreFiles(extractedPath, manifest);
       // Clean up temporary directory
-      fs.rmSync(tempDir, { "recursive": true, "force": true });
-      this.log('Backup restoration completed successfully', 'INFO');
+      fs && fs.rmSync(tempDir, { "recursive": true, "force": true });
+      this && this.log('Backup restoration completed successfully', 'INFO');
       return manifest} catch (error) {
-      this.log(`Error restoring "backup": ${error.message}`, 'ERROR');
+      this && this.log(`Error restoring "backup": ${error && error.message}`, 'ERROR');
       throw error}
   }
   async restoreFiles(extractedPath, manifest) {
-    this.log('Restoring files...', 'INFO');
+    this && this.log('Restoring files...', 'INFO');
     try {
       // Restore source code
-      const sourcePath = path.join(extractedPath, 'source');
-      if (fs.existsSync(sourcePath)) {
-        this.restoreDirectory(sourcePath, this.projectRoot)}
+      const sourcePath = path && path.join(extractedPath, 'source');
+      if (fs && fs.existsSync(sourcePath)) {
+        this && this.restoreDirectory(sourcePath, this && this.projectRoot)}
       // Restore configuration files
-      const configPath = path.join(extractedPath, 'config');
-      if (fs.existsSync(configPath)) {
-        this.restoreDirectory(configPath, this.projectRoot)}
+      const configPath = path && path.join(extractedPath, 'config');
+      if (fs && fs.existsSync(configPath)) {
+        this && this.restoreDirectory(configPath, this && this.projectRoot)}
       // Restore dependencies
-      const depsPath = path.join(extractedPath, 'dependencies');
-      if (fs.existsSync(depsPath)) {
-        const packageJsonPath = path.join(depsPath, 'package.json');
-        if (fs.existsSync(packageJsonPath)) {
-          fs.copyFileSync(packageJsonPath, path.join(this.projectRoot, 'package.json'))}
-        const packageLockPath = path.join(depsPath, 'package-lock.json');
-        if (fs.existsSync(packageLockPath)) {
-          fs.copyFileSync(packageLockPath, path.join(this.projectRoot, 'package-lock.json'))}
+      const depsPath = path && path.join(extractedPath, 'dependencies');
+      if (fs && fs.existsSync(depsPath)) {
+        const packageJsonPath = path && path.join(depsPath, 'package && package.json');
+        if (fs && fs.existsSync(packageJsonPath)) {
+          fs && fs.copyFileSync(packageJsonPath, path && path.join(this && this.projectRoot, 'package && package.json'))}
+        const packageLockPath = path && path.join(depsPath, 'package-lock && lock.json');
+        if (fs && fs.existsSync(packageLockPath)) {
+          fs && fs.copyFileSync(packageLockPath, path && path.join(this && this.projectRoot, 'package-lock && lock.json'))}
       }
-      this.log('Files restored successfully', 'INFO')} catch (error) {
-      this.log(`Error restoring "files": ${error.message}`, 'ERROR');
+      this && this.log('Files restored successfully', 'INFO')} catch (error) {
+      this && this.log(`Error restoring "files": ${error && error.message}`, 'ERROR');
       throw error}
   }
   async listBackups() {
-    this.log('Listing available backups...', 'INFO');
+    this && this.log('Listing available backups...', 'INFO');
     try {
       const backups = [];
-      if (fs.existsSync(this.backupDir)) {
-        const items = fs.readdirSync(this.backupDir);
-        items.forEach(item => {
-          if (item.endsWith('.tar.gz')) {
-            const fullPath = path.join(this.backupDir, item);
-            const stats = fs.statSync(fullPath);
-            backups.push({"name": item,"path": fullPath,"size": stats.size;
-              created: stats.mtime,
-              age: Date.now() - stats.mtime.getTime()})}
+      if (fs && fs.existsSync(this && this.backupDir)) {
+        const items = fs && fs.readdirSync(this && this.backupDir);
+        items && items.forEach(item => {
+          if (item && item.endsWith('.tar && tar.gz')) {
+            const fullPath = path && path.join(this && this.backupDir, item);
+            const stats = fs && fs.statSync(fullPath);
+            backups && backups.push({"name": item,"path": fullPath,"size": stats && stats.size;
+              created: stats && stats.mtime,
+              age: Date && Date.now() - stats && stats.mtime.getTime()})}
         })}
       // Sort by creation date (newest first)
-      backups.sort((a, b) => b.created - a.created);
-      this.log(`Found ${backups.length} backups`, 'INFO');
+      backups && backups.sort((a, b) => b && b.created - a && a.created);
+      this && this.log(`Found ${backups && backups.length} backups`, 'INFO');
       return backups} catch (error) {
-      this.log(`Error listing "backups": ${error.message}`, 'ERROR');
+      this && this.log(`Error listing "backups": ${error && error.message}`, 'ERROR');
       return []}
   }
   async cleanupOldBackups(maxAge = 30 * 24 * 60 * 60 * 1000) { // 30 days
-    this.log('Cleaning up old backups...', 'INFO');
+    this && this.log('Cleaning up old backups...', 'INFO');
     try {
-      const backups = await this.listBackups();
-      const cutoffTime = Date.now() - maxAge;
+      const backups = await this && this.listBackups();
+      const cutoffTime = Date && Date.now() - maxAge;
       let cleanedCount = 0;
       let spaceFreed = 0;
-      backups.forEach(backup => {
-        if (backup.age > maxAge) {
+      backups && backups.forEach(backup => {
+        if (backup && backup.age > maxAge) {
           try {
-            const size = backup.size;
-            fs.unlinkSync(backup.path);
+            const size = backup && backup.size;
+            fs && fs.unlinkSync(backup && backup.path);
             cleanedCount++;
             spaceFreed += size;
-            this.log(`Cleaned old "backup": ${backup.name} (${this.formatBytes(size)})`, 'INFO')} catch (error) {
-            this.log(`Error cleaning backup ${backup.name}: ${error.message}`, 'ERROR')}
+            this && this.log(`Cleaned old "backup": ${backup && backup.name} (${this && this.formatBytes(size)})`, 'INFO')} catch (error) {
+            this && this.log(`Error cleaning backup ${backup && backup.name}: ${error && error.message}`, 'ERROR')}
         }
       });
-      this.log(`Cleaned ${cleanedCount} old backups, freed ${this.formatBytes(spaceFreed)}`, 'INFO');
+      this && this.log(`Cleaned ${cleanedCount} old backups, freed ${this && this.formatBytes(spaceFreed)}`, 'INFO');
       return { cleanedCount, spaceFreed }} catch (error) {
-      this.log(`Error cleaning up old "backups": ${error.message}`, 'ERROR');
+      this && this.log(`Error cleaning up old "backups": ${error && error.message}`, 'ERROR');
       return { "cleanedCount": 0, "spaceFreed": 0 }}
   }
   async generateDependencyList() {
     try {
-      const result = execSync('npm list --depth=0', {"cwd": this.projectRoot,"encoding": 'utf8';
+      const result = execSync('npm list --depth=0', {"cwd": this && this.projectRoot,"encoding": 'utf8';
         stdio: 'pipe'});
       return result} catch (error) {
-      return 'Error generating dependency "list": ' + error.message}
+      return 'Error generating dependency "list": ' + error && error.message}
   }
   copyDirectory(source, destination) {
-    if (!fs.existsSync(destination)) {
-      fs.mkdirSync(destination, { "recursive": true })}
-    const items = fs.readdirSync(source);
-    items.forEach(item => {
-      const sourcePath = path.join(source, item);
-      const destPath = path.join(destination, item);
-      const stat = fs.statSync(sourcePath);
-      if (stat.isDirectory()) {
-        this.copyDirectory(sourcePath, destPath)} else {
-        fs.copyFileSync(sourcePath, destPath)}
+    if (!fs && fs.existsSync(destination)) {
+      fs && fs.mkdirSync(destination, { "recursive": true })}
+    const items = fs && fs.readdirSync(source);
+    items && items.forEach(item => {
+      const sourcePath = path && path.join(source, item);
+      const destPath = path && path.join(destination, item);
+      const stat = fs && fs.statSync(sourcePath);
+      if (stat && stat.isDirectory()) {
+        this && this.copyDirectory(sourcePath, destPath)} else {
+        fs && fs.copyFileSync(sourcePath, destPath)}
     })}
   restoreDirectory(source, destination) {
-    if (!fs.existsSync(destination)) {
-      fs.mkdirSync(destination, { "recursive": true })}
-    const items = fs.readdirSync(source);
-    items.forEach(item => {
-      const sourcePath = path.join(source, item);
-      const destPath = path.join(destination, item);
-      const stat = fs.statSync(sourcePath);
-      if (stat.isDirectory()) {
-        this.restoreDirectory(sourcePath, destPath)} else {
-        fs.copyFileSync(sourcePath, destPath)}
+    if (!fs && fs.existsSync(destination)) {
+      fs && fs.mkdirSync(destination, { "recursive": true })}
+    const items = fs && fs.readdirSync(source);
+    items && items.forEach(item => {
+      const sourcePath = path && path.join(source, item);
+      const destPath = path && path.join(destination, item);
+      const stat = fs && fs.statSync(sourcePath);
+      if (stat && stat.isDirectory()) {
+        this && this.restoreDirectory(sourcePath, destPath)} else {
+        fs && fs.copyFileSync(sourcePath, destPath)}
     })}
   scanDirectory(dirPath, files, directories) {
-    const items = fs.readdirSync(dirPath);
-    items.forEach(item => {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {directories.push(fullPath),this.scanDirectory(fullPath, files, directories)} else {
-        files.push({"path": fullPath,"size": stat.size;
-          modified: stat.mtime})}
+    const items = fs && fs.readdirSync(dirPath);
+    items && items.forEach(item => {
+      const fullPath = path && path.join(dirPath, item);
+      const stat = fs && fs.statSync(fullPath);
+      if (stat && stat.isDirectory()) {directories && directories.push(fullPath),this && this.scanDirectory(fullPath, files, directories)} else {
+        files && files.push({"path": fullPath,"size": stat && stat.size;
+          modified: stat && stat.mtime})}
     })}
   getDirectorySize(dirPath) {
     let totalSize = 0;
     function calculateSize(dir) {
-      const items = fs.readdirSync(dir);
-      items.forEach(item => {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory()) {
+      const items = fs && fs.readdirSync(dir);
+      items && items.forEach(item => {
+        const fullPath = path && path.join(dir, item);
+        const stat = fs && fs.statSync(fullPath);
+        if (stat && stat.isDirectory()) {
           calculateSize(fullPath)} else {
-          totalSize += stat.size}
+          totalSize += stat && stat.size}
       })}
-    if (fs.existsSync(dirPath)) {
+    if (fs && fs.existsSync(dirPath)) {
       calculateSize(dirPath)}
     return totalSize}
   formatBytes(bytes) {if (bytes === 0) return '0 Bytes',const k = 1024,const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}
+    const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k));
+    return parseFloat((bytes / Math && Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}
   generateReport() {
-    const report = {"timestamp": new Date().toISOString(),"backupStats": this.backupStats;
-      recommendations: this.generateRecommendations()};
-    const reportFile = path.join(this.errorReportsDir, `backup-manager-report-${Date.now()}.json`);
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`Report "generated": ${reportFile}`, 'INFO');
+    const report = {"timestamp": new Date().toISOString(),"backupStats": this && this.backupStats;
+      recommendations: this && this.generateRecommendations()};
+    const reportFile = path && path.join(this && this.errorReportsDir, `backup-manager-report-${Date && Date.now()}.json`);
+    fs && fs.writeFileSync(reportFile, JSON && JSON.stringify(report, null, 2));
+    this && this.log(`Report "generated": ${reportFile}`, 'INFO');
     return report}
   generateRecommendations() {
     const recommendations = [];
-    if (this.backupStats.totalBackups === 0) {
-      recommendations.push('Create initial backup of the project')}
-    if (this.backupStats.lastBackup) {
-      const lastBackupTime = new Date(this.backupStats.lastBackup);
-      const daysSinceBackup = (Date.now() - lastBackupTime.getTime()) / (1000 * 60 * 60 * 24);
+    if (this && this.backupStats.totalBackups === 0) {
+      recommendations && recommendations.push('Create initial backup of the project')}
+    if (this && this.backupStats.lastBackup) {
+      const lastBackupTime = new Date(this && this.backupStats.lastBackup);
+      const daysSinceBackup = (Date && Date.now() - lastBackupTime && lastBackupTime.getTime()) / (1000 * 60 * 60 * 24);
       if (daysSinceBackup > 7) {
-        recommendations.push('Create new backup - last backup is over a week old')}
+        recommendations && recommendations.push('Create new backup - last backup is over a week old')}
     }
-    if (this.backupStats.failedBackups > 0) {
-      recommendations.push('Investigate failed backup attempts')}
-    if (this.backupStats.compressionRatio < 50) {
-      recommendations.push('Consider optimizing backup compression')}
-    recommendations.push('Set up automated backup scheduling');
-    recommendations.push('Test backup restoration regularly');
-    recommendations.push('Store backups in multiple locations');
+    if (this && this.backupStats.failedBackups > 0) {
+      recommendations && recommendations.push('Investigate failed backup attempts')}
+    if (this && this.backupStats.compressionRatio < 50) {
+      recommendations && recommendations.push('Consider optimizing backup compression')}
+    recommendations && recommendations.push('Set up automated backup scheduling');
+    recommendations && recommendations.push('Test backup restoration regularly');
+    recommendations && recommendations.push('Store backups in multiple locations');
     return recommendations}
   async run() {
     try {
-      this.log('Starting backup management automation...', 'INFO');
+      this && this.log('Starting backup management automation...', 'INFO');
       // List existing backups
-      const existingBackups = await this.listBackups();
+      const existingBackups = await this && this.listBackups();
       // Create new backup
-      const newBackup = await this.createBackup();
+      const newBackup = await this && this.createBackup();
       // Clean up old backups
-      await this.cleanupOldBackups();
+      await this && this.cleanupOldBackups();
       // Update backup statistics
-      this.backupStats.totalBackups = existingBackups.length + 1;
-      const report = this.generateReport();
-      this.log('Backup management automation completed', 'INFO');
-      this.log(`"Summary": ${this.backupStats.totalBackups} total backups, ${this.formatBytes(this.backupStats.backupSize)} latest backup`, 'INFO');
+      this && this.backupStats.totalBackups = existingBackups && existingBackups.length + 1;
+      const report = this && this.generateReport();
+      this && this.log('Backup management automation completed', 'INFO');
+      this && this.log(`"Summary": ${this && this.backupStats.totalBackups} total backups, ${this && this.formatBytes(this && this.backupStats.backupSize)} latest backup`, 'INFO');
       return report} catch (error) {
-      this.log(`Fatal error in backup "manager": ${error.message}`, 'ERROR');
+      this && this.log(`Fatal error in backup "manager": ${error && error.message}`, 'ERROR');
       throw error}
   }
 }
 // Run the backup manager if called directly
-if (require.main === module) {
+if (require && require.main === module) {
   const manager = new BackupManager();
-  manager.run()
+  manager && manager.run()
     .then(() => {
-      process.exit(0)})
-    .catch((error) => {console.error('Backup manager "failed": ', error),process.exit(1)})}
-module.exports = BackupManager;
+      process && process.exit(0)})
+    .catch((error) => {console && console.error('Backup manager "failed": ', error),process && process.exit(1)})}
+module && module.exports = BackupManager;
+#!/usr/bin/env node const fs = const path = const { execSync } = class BackupManager { constructor() { this && this.projectRoot = process && process.cwd(); this && this.logsDir = path && path.join(this && this.projectRoot,'logs'); this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports'); this && this.backupDir = path && path.join(this && this.projectRoot,'backups'); this && this.backupStats = {totalBackups: 0,lastBackup: null,backupSize: 0, compressionRatio: 0, failedBackups: 0}; this && this.setupDirectories(); this && this.setupLogging()} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir => { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ recursive: true })} })} setupLogging() {this && this.logFile = path && path.join(this && this.logsDir,'backup-manager && manager.log'),this && this.log('Backup Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}\n`; console && console.log(logEntry && logEntry.trim()); fs && fs.appendFileSync(this && this.logFile,logEntry)} async createBackup() { this && this.log('Creating backup...','INFO'); try { const timestamp = new Date().toISOString().replace(/[:.]/g,'-'); const backupName = `backup-${timestamp}`; const backupPath = path && path.join(this && this.backupDir,backupName); fs && fs.mkdirSync(backupPath,{ recursive: true }); await this && this.backupSourceCode(backupPath); await this && this.backupConfigFiles(backupPath); await this && this.backupDependencies(backupPath); await this && this.backupLogsAndReports(backupPath); const manifest = await this && this.createBackupManifest(backupPath); const compressedPath = await this && this.compressBackup(backupPath); fs && fs.rmSync(backupPath,{ recursive: true,force: true }); this && this.backupStats.totalBackups++; this && this.backupStats.lastBackup = new Date().toISOString(); const stats = fs && fs.statSync(compressedPath); this && this.backupStats.backupSize = stats && stats.size; this && this.log(`Backup created successfully: ${compressedPath}`,'INFO'); this && this.log(`Backup size: ${this && this.formatBytes(stats && stats.size)}`,'INFO'); return {path: compressedPath,size: stats && stats.size; manifest}} catch (error) { this && this.log(`Error creating backup: ${error && error.message}`,'ERROR'); this && this.backupStats.failedBackups++; throw error} } async backupSourceCode(backupPath) { this && this.log('Backing up source code...','INFO'); try { const sourceDirs = ['src','pages','components','utils','hooks','lib','types']; const sourcePath = path && path.join(backupPath,'source'); fs && fs.mkdirSync(sourcePath,{ recursive: true }); sourceDirs && sourceDirs.forEach(dir => { const fullPath = path && path.join(this && this.projectRoot,dir); if (fs && fs.existsSync(fullPath)) {const destPath = path && path.join(sourcePath,dir),this && this.copyDirectory(fullPath,destPath)} }); this && this.log('Source code backup completed','INFO')} catch (error) { this && this.log(`Error backing up source code: ${error && error.message}`,'ERROR'); throw error} } async backupConfigFiles(backupPath) { this && this.log('Backing up configuration files...','INFO'); try { const configFiles = ['package && package.json','package-lock && lock.json','tsconfig && tsconfig.json'; 'vite && vite.config.ts'; 'tailwind && tailwind.config.js'; 'next && next.config.js'; 'ecosystem && ecosystem.config.cjs'; '.env'; '.env && env.local',
+    '.gitignore'
+  ]; const configPath = path && path.join(backupPath,'config'); fs && fs.mkdirSync(configPath,{ recursive: true }); configFiles && configFiles.forEach(file => { const sourcePath = path && path.join(this && this.projectRoot,file); if (fs && fs.existsSync(sourcePath)) {const destPath = path && path.join(configPath,file),fs && fs.copyFileSync(sourcePath,destPath)} }); this && this.log('Configuration files backup completed','INFO')} catch (error) { this && this.log(`Error backing up configuration files: ${error && error.message}`,'ERROR'); throw error} } async backupDependencies(backupPath) { this && this.log('Backing up dependencies...','INFO'); try { const depsPath = path && path.join(backupPath,'dependencies'); fs && fs.mkdirSync(depsPath,{ recursive: true }); const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); const packageLockPath = path && path.join(this && this.projectRoot,'package-lock && lock.json'); if (fs && fs.existsSync(packageJsonPath)) { fs && fs.copyFileSync(packageJsonPath,path && path.join(depsPath,'package && package.json'))} if (fs && fs.existsSync(packageLockPath)) { fs && fs.copyFileSync(packageLockPath,path && path.join(depsPath,'package-lock && lock.json'))} const dependencyList = await this && this.generateDependencyList(); const depsListPath = path && path.join(depsPath,'dependency-list && list.txt'); fs && fs.writeFileSync(depsListPath,dependencyList); this && this.log('Dependencies backup completed','INFO')} catch (error) { this && this.log(`Error backing up dependencies: ${error && error.message}`,'ERROR'); throw error} } async backupLogsAndReports(backupPath) { this && this.log('Backing up logs and reports...','INFO'); try { const logsPath = path && path.join(backupPath,'logs'); fs && fs.mkdirSync(logsPath,{ recursive: true }); if (fs && fs.existsSync(this && this.logsDir)) { this && this.copyDirectory(this && this.logsDir,logsPath)} if (fs && fs.existsSync(this && this.errorReportsDir)) { const reportsPath = path && path.join(backupPath,'reports'); fs && fs.mkdirSync(reportsPath,{ recursive: true }); this && this.copyDirectory(this && this.errorReportsDir,reportsPath)} this && this.log('Logs and reports backup completed','INFO')} catch (error) { this && this.log(`Error backing up logs and reports: ${error && error.message}`,'ERROR'); throw error} } async createBackupManifest(backupPath) { try { const manifest = { timestamp: new Date().toISOString(), projectRoot: this && this.projectRoot, backupPath: backupPath, files: [], directories: [],
+    metadata: {nodeVersion: process && process.version,platform: process && process.platform,arch: process && process.arch,
+    user: process && process.env.USER || 'unknown'} }; this && this.scanDirectory(backupPath,manifest && manifest.files,manifest && manifest.directories); const manifestPath = path && path.join(backupPath,'manifest && manifest.json'); fs && fs.writeFileSync(manifestPath,JSON && JSON.stringify(manifest,null,2)); return manifest} catch (error) { this && this.log(`Error creating backup manifest: ${error && error.message}`,'ERROR'); return null} } async compressBackup(backupPath) { this && this.log('Compressing backup...','INFO'); try { const backupName = path && path.basename(backupPath); const compressedPath = `${backupPath}.tar && tar.gz`; execSync(`tar -czf "${compressedPath}" -C "${path && path.dirname(backupPath)}" "${backupName}"`,{ stdio: 'pipe' }); const originalSize = this && this.getDirectorySize(backupPath); const compressedSize = fs && fs.statSync(compressedPath).size; this && this.backupStats.compressionRatio = originalSize > 0 ? (1 - compressedSize / originalSize) * 100 : 0; this && this.log(`Backup compressed: ${this && this.backupStats.compressionRatio && compressionRatio.toFixed(2)}% compression`,'INFO'); return compressedPath} catch (error) { this && this.log(`Error compressing backup: ${error && error.message}`,'ERROR'); throw error} } async restoreBackup(backupPath) { this && this.log(`Restoring backup from: ${backupPath}`,'INFO'); try { if (!fs && fs.existsSync(backupPath)) { throw new Error('Backup file not found')} const tempDir = path && path.join(this && this.backupDir,'temp-restore-' + Date && Date.now()); fs && fs.mkdirSync(tempDir,{ recursive: true }); execSync(`tar -xzf "${backupPath}" -C "${tempDir}"`,{ stdio: 'pipe' }); const extractedDir = fs && fs.readdirSync(tempDir)[0]; const extractedPath = path && path.join(tempDir,extractedDir); const manifestPath = path && path.join(extractedPath,'manifest && manifest.json'); if (!fs && fs.existsSync(manifestPath)) { throw new Error('Backup manifest not found')} const manifest = JSON && JSON.parse(fs && fs.readFileSync(manifestPath,'utf8')); await this && this.restoreFiles(extractedPath,manifest); fs && fs.rmSync(tempDir,{ recursive: true,force: true }); this && this.log('Backup restoration completed successfully','INFO'); return manifest} catch (error) { this && this.log(`Error restoring backup: ${error && error.message}`,'ERROR'); throw error} } async restoreFiles(extractedPath,manifest) { this && this.log('Restoring files...','INFO'); try { const sourcePath = path && path.join(extractedPath,'source'); if (fs && fs.existsSync(sourcePath)) { this && this.restoreDirectory(sourcePath,this && this.projectRoot)} const configPath = path && path.join(extractedPath,'config'); if (fs && fs.existsSync(configPath)) { this && this.restoreDirectory(configPath,this && this.projectRoot)} const depsPath = path && path.join(extractedPath,'dependencies'); if (fs && fs.existsSync(depsPath)) { const packageJsonPath = path && path.join(depsPath,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { fs && fs.copyFileSync(packageJsonPath,path && path.join(this && this.projectRoot,'package && package.json'))} const packageLockPath = path && path.join(depsPath,'package-lock && lock.json'); if (fs && fs.existsSync(packageLockPath)) { fs && fs.copyFileSync(packageLockPath,path && path.join(this && this.projectRoot,'package-lock && lock.json'))} } this && this.log('Files restored successfully','INFO')} catch (error) { this && this.log(`Error restoring files: ${error && error.message}`,'ERROR'); throw error} } async listBackups() { this && this.log('Listing available backups...','INFO'); try { const backups = []; if (fs && fs.existsSync(this && this.backupDir)) { const items = fs && fs.readdirSync(this && this.backupDir); items && items.forEach(item => { if (item && item.endsWith('.tar && tar.gz')) { const fullPath = path && path.join(this && this.backupDir,item); const stats = fs && fs.statSync(fullPath); backups && backups.push({name: item,path: fullPath,size: stats && stats.size, created: stats && stats.mtime, age: Date && Date.now() - stats && stats.mtime.getTime()})} })} backups && backups.sort((a,b) => b && b.created - a && a.created); this && this.log(`Found ${backups && backups.length} backups`,'INFO'); return backups} catch (error) { this && this.log(`Error listing backups: ${error && error.message}`,'ERROR'); return []} } async cleanupOldBackups(maxAge = 30 * 24 * 60 * 60 * 1000) { this && this.log('Cleaning up old backups...','INFO'); try { const backups = await this && this.listBackups(); const cutoffTime = Date && Date.now() - maxAge; let cleanedCount = 0; let spaceFreed = 0; backups && backups.forEach(backup => { if (backup && backup.age > maxAge) { try { const size = backup && backup.size; fs && fs.unlinkSync(backup && backup.path); cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old backup: ${backup && backup.name} (${this && this.formatBytes(size)})`,'INFO')} catch (error) { this && this.log(`Error cleaning backup ${backup && backup.name}: ${error && error.message}`,'ERROR')} } }); this && this.log(`Cleaned ${cleanedCount} old backups,freed ${this && this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this && this.log(`Error cleaning up old backups: ${error && error.message}`,'ERROR'); return { cleanedCount: 0,spaceFreed: 0 }} } async generateDependencyList() { try { const result = execSync('npm list --depth=0',{cwd: this && this.projectRoot,encoding: 'utf8',
+    stdio: 'pipe'}); return result} catch (error) { return 'Error generating dependency list: ' + error && error.message} } copyDirectory(source,destination) { if (!fs && fs.existsSync(destination)) { fs && fs.mkdirSync(destination,{ recursive: true })} const items = fs && fs.readdirSync(source); items && items.forEach(item => { const sourcePath = path && path.join(source,item); const destPath = path && path.join(destination,item); const stat = fs && fs.statSync(sourcePath); if (stat && stat.isDirectory()) { this && this.copyDirectory(sourcePath,destPath)} else { fs && fs.copyFileSync(sourcePath,destPath)} })} restoreDirectory(source,destination) { if (!fs && fs.existsSync(destination)) { fs && fs.mkdirSync(destination,{ recursive: true })} const items = fs && fs.readdirSync(source); items && items.forEach(item => { const sourcePath = path && path.join(source,item); const destPath = path && path.join(destination,item); const stat = fs && fs.statSync(sourcePath); if (stat && stat.isDirectory()) { this && this.restoreDirectory(sourcePath,destPath)} else { fs && fs.copyFileSync(sourcePath,destPath)} })} scanDirectory(dirPath,files,directories) { const items = fs && fs.readdirSync(dirPath); items && items.forEach(item => { const fullPath = path && path.join(dirPath,item); const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) {directories && directories.push(fullPath),this && this.scanDirectory(fullPath,files,directories)} else { files && files.push({path: fullPath,size: stat && stat.size,
+    modified: stat && stat.mtime})} })} getDirectorySize(dirPath) { let totalSize = 0; function calculateSize(dir) { const items = fs && fs.readdirSync(dir); items && items.forEach(item => { const fullPath = path && path.join(dir,item); const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) { calculateSize(fullPath)} else { totalSize += stat && stat.size} })} if (fs && fs.existsSync(dirPath)) { calculateSize(dirPath)} return totalSize} formatBytes(bytes) {if (bytes === 0) return '0 Bytes',const k = 1024,const sizes = ['Bytes','KB','MB','GB']; const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k)); return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {timestamp: new Date().toISOString(),backupStats: this && this.backupStats,
+    recommendations: this && this.generateRecommendations()}; const reportFile = path && path.join(this && this.errorReportsDir,`backup-manager-report-${Date && Date.now()}.json`); fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2)); this && this.log(`Report generated: ${reportFile}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this && this.backupStats.totalBackups === 0) { recommendations && recommendations.push('Create initial backup of the project')} if (this && this.backupStats.lastBackup) { const lastBackupTime = new Date(this && this.backupStats.lastBackup); const daysSinceBackup = (Date && Date.now() - lastBackupTime && lastBackupTime.getTime()) / (1000 * 60 * 60 * 24); if (daysSinceBackup > 7) { recommendations && recommendations.push('Create new backup - last backup is over a week old')} } if (this && this.backupStats.failedBackups > 0) { recommendations && recommendations.push('Investigate failed backup attempts')} if (this && this.backupStats.compressionRatio < 50) { recommendations && recommendations.push('Consider optimizing backup compression')} recommendations && recommendations.push('Set up automated backup scheduling'); recommendations && recommendations.push('Test backup restoration regularly'); recommendations && recommendations.push('Store backups in multiple locations'); return recommendations} async run() { try { this && this.log('Starting backup management automation...','INFO'); const existingBackups = await this && this.listBackups(); const newBackup = await this && this.createBackup(); await this && this.cleanupOldBackups(); this && this.backupStats.totalBackups = existingBackups && existingBackups.length + 1; const report = this && this.generateReport(); this && this.log('Backup management automation completed','INFO'); this && this.log(`Summary: ${this && this.backupStats.totalBackups} total backups,${this && this.formatBytes(this && this.backupStats.backupSize)} latest backup`,'INFO'); return report} catch (error) { this && this.log(`Fatal error in backup manager: ${error && error.message}`,'ERROR'); throw error} } } if (require && require.main === module) { const manager = new BackupManager(); manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Backup manager failed:',error),process && process.exit(1)})} module && module.exports = BackupManager;
+#!/usr/bin/env node const fs = const path = const { execSync } = class BackupManager { constructor() { this && this.projectRoot = process && process.cwd(); this && this.logsDir = path && path.join(this && this.projectRoot,'logs'); this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports'); this && this.backupDir = path && path.join(this && this.projectRoot,'backups'); this && this.backupStats = {totalBackups: 0,lastBackup: null,backupSize: 0, compressionRatio: 0, failedBackups: 0}; this && this.setupDirectories(); this && this.setupLogging()} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir => { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ recursive: true })} })} setupLogging() {this && this.logFile = path && path.join(this && this.logsDir,'backup-manager && manager.log'),this && this.log('Backup Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}\n`; console && console.log(logEntry && logEntry.trim()); fs && fs.appendFileSync(this && this.logFile,logEntry)} async createBackup() { this && this.log('Creating backup...','INFO'); try { const timestamp = new Date().toISOString().replace(/[:.]/g,'-'); const backupName = `backup-${timestamp}`; const backupPath = path && path.join(this && this.backupDir,backupName); fs && fs.mkdirSync(backupPath,{ recursive: true }); await this && this.backupSourceCode(backupPath); await this && this.backupConfigFiles(backupPath); await this && this.backupDependencies(backupPath); await this && this.backupLogsAndReports(backupPath); const manifest = await this && this.createBackupManifest(backupPath); const compressedPath = await this && this.compressBackup(backupPath); fs && fs.rmSync(backupPath,{ recursive: true,force: true }); this && this.backupStats.totalBackups++; this && this.backupStats.lastBackup = new Date().toISOString(); const stats = fs && fs.statSync(compressedPath); this && this.backupStats.backupSize = stats && stats.size; this && this.log(`Backup created successfully: ${compressedPath}`,'INFO'); this && this.log(`Backup size: ${this && this.formatBytes(stats && stats.size)}`,'INFO'); return {path: compressedPath,size: stats && stats.size; manifest}} catch (error) { this && this.log(`Error creating backup: ${error && error.message}`,'ERROR'); this && this.backupStats.failedBackups++; throw error} } async backupSourceCode(backupPath) { this && this.log('Backing up source code...','INFO'); try { const sourceDirs = ['src','pages','components','utils','hooks','lib','types']; const sourcePath = path && path.join(backupPath,'source'); fs && fs.mkdirSync(sourcePath,{ recursive: true }); sourceDirs && sourceDirs.forEach(dir => { const fullPath = path && path.join(this && this.projectRoot,dir); if (fs && fs.existsSync(fullPath)) {const destPath = path && path.join(sourcePath,dir),this && this.copyDirectory(fullPath,destPath)} }); this && this.log('Source code backup completed','INFO')} catch (error) { this && this.log(`Error backing up source code: ${error && error.message}`,'ERROR'); throw error} } async backupConfigFiles(backupPath) { this && this.log('Backing up configuration files...','INFO'); try { const configFiles = ['package && package.json','package-lock && lock.json','tsconfig && tsconfig.json'; 'vite && vite.config.ts'; 'tailwind && tailwind.config.js'; 'next && next.config.js'; 'ecosystem && ecosystem.config.cjs'; '.env'; '.env && env.local',
+    '.gitignore'
+  ]; const configPath = path && path.join(backupPath,'config'); fs && fs.mkdirSync(configPath,{ recursive: true }); configFiles && configFiles.forEach(file => { const sourcePath = path && path.join(this && this.projectRoot,file); if (fs && fs.existsSync(sourcePath)) {const destPath = path && path.join(configPath,file),fs && fs.copyFileSync(sourcePath,destPath)} }); this && this.log('Configuration files backup completed','INFO')} catch (error) { this && this.log(`Error backing up configuration files: ${error && error.message}`,'ERROR'); throw error} } async backupDependencies(backupPath) { this && this.log('Backing up dependencies...','INFO'); try { const depsPath = path && path.join(backupPath,'dependencies'); fs && fs.mkdirSync(depsPath,{ recursive: true }); const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); const packageLockPath = path && path.join(this && this.projectRoot,'package-lock && lock.json'); if (fs && fs.existsSync(packageJsonPath)) { fs && fs.copyFileSync(packageJsonPath,path && path.join(depsPath,'package && package.json'))} if (fs && fs.existsSync(packageLockPath)) { fs && fs.copyFileSync(packageLockPath,path && path.join(depsPath,'package-lock && lock.json'))} const dependencyList = await this && this.generateDependencyList(); const depsListPath = path && path.join(depsPath,'dependency-list && list.txt'); fs && fs.writeFileSync(depsListPath,dependencyList); this && this.log('Dependencies backup completed','INFO')} catch (error) { this && this.log(`Error backing up dependencies: ${error && error.message}`,'ERROR'); throw error} } async backupLogsAndReports(backupPath) { this && this.log('Backing up logs and reports...','INFO'); try { const logsPath = path && path.join(backupPath,'logs'); fs && fs.mkdirSync(logsPath,{ recursive: true }); if (fs && fs.existsSync(this && this.logsDir)) { this && this.copyDirectory(this && this.logsDir,logsPath)} if (fs && fs.existsSync(this && this.errorReportsDir)) { const reportsPath = path && path.join(backupPath,'reports'); fs && fs.mkdirSync(reportsPath,{ recursive: true }); this && this.copyDirectory(this && this.errorReportsDir,reportsPath)} this && this.log('Logs and reports backup completed','INFO')} catch (error) { this && this.log(`Error backing up logs and reports: ${error && error.message}`,'ERROR'); throw error} } async createBackupManifest(backupPath) { try { const manifest = { timestamp: new Date().toISOString(), projectRoot: this && this.projectRoot, backupPath: backupPath, files: [], directories: [],
+    metadata: {nodeVersion: process && process.version,platform: process && process.platform,arch: process && process.arch,
+    user: process && process.env.USER || 'unknown'} }; this && this.scanDirectory(backupPath,manifest && manifest.files,manifest && manifest.directories); const manifestPath = path && path.join(backupPath,'manifest && manifest.json'); fs && fs.writeFileSync(manifestPath,JSON && JSON.stringify(manifest,null,2)); return manifest} catch (error) { this && this.log(`Error creating backup manifest: ${error && error.message}`,'ERROR'); return null} } async compressBackup(backupPath) { this && this.log('Compressing backup...','INFO'); try { const backupName = path && path.basename(backupPath); const compressedPath = `${backupPath}.tar && tar.gz`; execSync(`tar -czf "${compressedPath}" -C "${path && path.dirname(backupPath)}" "${backupName}"`,{ stdio: 'pipe' }); const originalSize = this && this.getDirectorySize(backupPath); const compressedSize = fs && fs.statSync(compressedPath).size; this && this.backupStats.compressionRatio = originalSize > 0 ? (1 - compressedSize / originalSize) * 100 : 0; this && this.log(`Backup compressed: ${this && this.backupStats.compressionRatio && compressionRatio.toFixed(2)}% compression`,'INFO'); return compressedPath} catch (error) { this && this.log(`Error compressing backup: ${error && error.message}`,'ERROR'); throw error} } async restoreBackup(backupPath) { this && this.log(`Restoring backup from: ${backupPath}`,'INFO'); try { if (!fs && fs.existsSync(backupPath)) { throw new Error('Backup file not found')} const tempDir = path && path.join(this && this.backupDir,'temp-restore-' + Date && Date.now()); fs && fs.mkdirSync(tempDir,{ recursive: true }); execSync(`tar -xzf "${backupPath}" -C "${tempDir}"`,{ stdio: 'pipe' }); const extractedDir = fs && fs.readdirSync(tempDir)[0]; const extractedPath = path && path.join(tempDir,extractedDir); const manifestPath = path && path.join(extractedPath,'manifest && manifest.json'); if (!fs && fs.existsSync(manifestPath)) { throw new Error('Backup manifest not found')} const manifest = JSON && JSON.parse(fs && fs.readFileSync(manifestPath,'utf8')); await this && this.restoreFiles(extractedPath,manifest); fs && fs.rmSync(tempDir,{ recursive: true,force: true }); this && this.log('Backup restoration completed successfully','INFO'); return manifest} catch (error) { this && this.log(`Error restoring backup: ${error && error.message}`,'ERROR'); throw error} } async restoreFiles(extractedPath,manifest) { this && this.log('Restoring files...','INFO'); try { const sourcePath = path && path.join(extractedPath,'source'); if (fs && fs.existsSync(sourcePath)) { this && this.restoreDirectory(sourcePath,this && this.projectRoot)} const configPath = path && path.join(extractedPath,'config'); if (fs && fs.existsSync(configPath)) { this && this.restoreDirectory(configPath,this && this.projectRoot)} const depsPath = path && path.join(extractedPath,'dependencies'); if (fs && fs.existsSync(depsPath)) { const packageJsonPath = path && path.join(depsPath,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { fs && fs.copyFileSync(packageJsonPath,path && path.join(this && this.projectRoot,'package && package.json'))} const packageLockPath = path && path.join(depsPath,'package-lock && lock.json'); if (fs && fs.existsSync(packageLockPath)) { fs && fs.copyFileSync(packageLockPath,path && path.join(this && this.projectRoot,'package-lock && lock.json'))} } this && this.log('Files restored successfully','INFO')} catch (error) { this && this.log(`Error restoring files: ${error && error.message}`,'ERROR'); throw error} } async listBackups() { this && this.log('Listing available backups...','INFO'); try { const backups = []; if (fs && fs.existsSync(this && this.backupDir)) { const items = fs && fs.readdirSync(this && this.backupDir); items && items.forEach(item => { if (item && item.endsWith('.tar && tar.gz')) { const fullPath = path && path.join(this && this.backupDir,item); const stats = fs && fs.statSync(fullPath); backups && backups.push({name: item,path: fullPath,size: stats && stats.size, created: stats && stats.mtime, age: Date && Date.now() - stats && stats.mtime.getTime()})} })} backups && backups.sort((a,b) => b && b.created - a && a.created); this && this.log(`Found ${backups && backups.length} backups`,'INFO'); return backups} catch (error) { this && this.log(`Error listing backups: ${error && error.message}`,'ERROR'); return []} } async cleanupOldBackups(maxAge = 30 * 24 * 60 * 60 * 1000) { this && this.log('Cleaning up old backups...','INFO'); try { const backups = await this && this.listBackups(); const cutoffTime = Date && Date.now() - maxAge; let cleanedCount = 0; let spaceFreed = 0; backups && backups.forEach(backup => { if (backup && backup.age > maxAge) { try { const size = backup && backup.size; fs && fs.unlinkSync(backup && backup.path); cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old backup: ${backup && backup.name} (${this && this.formatBytes(size)})`,'INFO')} catch (error) { this && this.log(`Error cleaning backup ${backup && backup.name}: ${error && error.message}`,'ERROR')} } }); this && this.log(`Cleaned ${cleanedCount} old backups,freed ${this && this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this && this.log(`Error cleaning up old backups: ${error && error.message}`,'ERROR'); return { cleanedCount: 0,spaceFreed: 0 }} } async generateDependencyList() { try { const result = execSync('npm list --depth=0',{cwd: this && this.projectRoot,encoding: 'utf8',
+    stdio: 'pipe'}); return result} catch (error) { return 'Error generating dependency list: ' + error && error.message} } copyDirectory(source,destination) { if (!fs && fs.existsSync(destination)) { fs && fs.mkdirSync(destination,{ recursive: true })} const items = fs && fs.readdirSync(source); items && items.forEach(item => { const sourcePath = path && path.join(source,item); const destPath = path && path.join(destination,item); const stat = fs && fs.statSync(sourcePath); if (stat && stat.isDirectory()) { this && this.copyDirectory(sourcePath,destPath)} else { fs && fs.copyFileSync(sourcePath,destPath)} })} restoreDirectory(source,destination) { if (!fs && fs.existsSync(destination)) { fs && fs.mkdirSync(destination,{ recursive: true })} const items = fs && fs.readdirSync(source); items && items.forEach(item => { const sourcePath = path && path.join(source,item); const destPath = path && path.join(destination,item); const stat = fs && fs.statSync(sourcePath); if (stat && stat.isDirectory()) { this && this.restoreDirectory(sourcePath,destPath)} else { fs && fs.copyFileSync(sourcePath,destPath)} })} scanDirectory(dirPath,files,directories) { const items = fs && fs.readdirSync(dirPath); items && items.forEach(item => { const fullPath = path && path.join(dirPath,item); const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) {directories && directories.push(fullPath),this && this.scanDirectory(fullPath,files,directories)} else { files && files.push({path: fullPath,size: stat && stat.size,
+    modified: stat && stat.mtime})} })} getDirectorySize(dirPath) { let totalSize = 0; function calculateSize(dir) { const items = fs && fs.readdirSync(dir); items && items.forEach(item => { const fullPath = path && path.join(dir,item); const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) { calculateSize(fullPath)} else { totalSize += stat && stat.size} })} if (fs && fs.existsSync(dirPath)) { calculateSize(dirPath)} return totalSize} formatBytes(bytes) {if (bytes === 0) return '0 Bytes',const k = 1024,const sizes = ['Bytes','KB','MB','GB']; const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k)); return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {timestamp: new Date().toISOString(),backupStats: this && this.backupStats,
+<<<<<<< HEAD
+    recommendations: this && this.generateRecommendations()}; const reportFile = path && path.join(this && this.errorReportsDir,`backup-manager-report-${Date && Date.now()}.json`); fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2)); this && this.log(`Report generated: ${reportFile}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this && this.backupStats.totalBackups === 0) { recommendations && recommendations.push('Create initial backup of the project')} if (this && this.backupStats.lastBackup) { const lastBackupTime = new Date(this && this.backupStats.lastBackup); const daysSinceBackup = (Date && Date.now() - lastBackupTime && lastBackupTime.getTime()) / (1000 * 60 * 60 * 24); if (daysSinceBackup > 7) { recommendations && recommendations.push('Create new backup - last backup is over a week old')} } if (this && this.backupStats.failedBackups > 0) { recommendations && recommendations.push('Investigate failed backup attempts')} if (this && this.backupStats.compressionRatio < 50) { recommendations && recommendations.push('Consider optimizing backup compression')} recommendations && recommendations.push('Set up automated backup scheduling'); recommendations && recommendations.push('Test backup restoration regularly'); recommendations && recommendations.push('Store backups in multiple locations'); return recommendations} async run() { try { this && this.log('Starting backup management automation...','INFO'); const existingBackups = await this && this.listBackups(); const newBackup = await this && this.createBackup(); await this && this.cleanupOldBackups(); this && this.backupStats.totalBackups = existingBackups && existingBackups.length + 1; const report = this && this.generateReport(); this && this.log('Backup management automation completed','INFO'); this && this.log(`Summary: ${this && this.backupStats.totalBackups} total backups,${this && this.formatBytes(this && this.backupStats.backupSize)} latest backup`,'INFO'); return report} catch (error) { this && this.log(`Fatal error in backup manager: ${error && error.message}`,'ERROR'); throw error} } } if (require && require.main === module) { const manager = new BackupManager(); manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Backup manager failed:',error),process && process.exit(1)})} module && module.exports = BackupManager;
+=======
+    recommendations: this && this.generateRecommendations()}; const reportFile = path && path.join(this && this.errorReportsDir,`backup-manager-report-${Date && Date.now()}.json`); fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2)); this && this.log(`Report generated: ${reportFile}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this && this.backupStats.totalBackups === 0) { recommendations && recommendations.push('Create initial backup of the project')} if (this && this.backupStats.lastBackup) { const lastBackupTime = new Date(this && this.backupStats.lastBackup); const daysSinceBackup = (Date && Date.now() - lastBackupTime && lastBackupTime.getTime()) / (1000 * 60 * 60 * 24); if (daysSinceBackup > 7) { recommendations && recommendations.push('Create new backup - last backup is over a week old')} } if (this && this.backupStats.failedBackups > 0) { recommendations && recommendations.push('Investigate failed backup attempts')} if (this && this.backupStats.compressionRatio < 50) { recommendations && recommendations.push('Consider optimizing backup compression')} recommendations && recommendations.push('Set up automated backup scheduling'); recommendations && recommendations.push('Test backup restoration regularly'); recommendations && recommendations.push('Store backups in multiple locations'); return recommendations} async run() { try { this && this.log('Starting backup management automation...','INFO'); const existingBackups = await this && this.listBackups(); const newBackup = await this && this.createBackup(); await this && this.cleanupOldBackups(); this && this.backupStats.totalBackups = existingBackups && existingBackups.length + 1; const report = this && this.generateReport(); this && this.log('Backup management automation completed','INFO'); this && this.log(`Summary: ${this && this.backupStats.totalBackups} total backups,${this && this.formatBytes(this && this.backupStats.backupSize)} latest backup`,'INFO'); return report} catch (error) { this && this.log(`Fatal error in backup manager: ${error && error.message}`,'ERROR'); throw error} } } if (require && require.main === module) { const manager = new BackupManager(); manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Backup manager failed:',error),process && process.exit(1)})} module && module.exports = BackupManager;
+=======
 #!/usr/bin/env node const fs = const path = const { execSync } = class BackupManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'backups'); this.backupStats = {totalBackups: 0,lastBackup: null,backupSize: 0, compressionRatio: 0, failedBackups: 0}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir => { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} })} setupLogging() {this.logFile = path.join(this.logsDir,'backup-manager.log'),this.log('Backup Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim()); fs.appendFileSync(this.logFile,logEntry)} async createBackup() { this.log('Creating backup...','INFO'); try { const timestamp = new Date().toISOString().replace(/[:.]/g,'-'); const backupName = `backup-${timestamp}`; const backupPath = path.join(this.backupDir,backupName); fs.mkdirSync(backupPath,{ recursive: true }); await this.backupSourceCode(backupPath); await this.backupConfigFiles(backupPath); await this.backupDependencies(backupPath); await this.backupLogsAndReports(backupPath); const manifest = await this.createBackupManifest(backupPath); const compressedPath = await this.compressBackup(backupPath); fs.rmSync(backupPath,{ recursive: true,force: true }); this.backupStats.totalBackups++; this.backupStats.lastBackup = new Date().toISOString(); const stats = fs.statSync(compressedPath); this.backupStats.backupSize = stats.size; this.log(`Backup created successfully: ${compressedPath}`,'INFO'); this.log(`Backup size: ${this.formatBytes(stats.size)}`,'INFO'); return {path: compressedPath,size: stats.size; manifest}} catch (error) { this.log(`Error creating backup: ${error.message}`,'ERROR'); this.backupStats.failedBackups++; throw error} } async backupSourceCode(backupPath) { this.log('Backing up source code...','INFO'); try { const sourceDirs = ['src','pages','components','utils','hooks','lib','types']; const sourcePath = path.join(backupPath,'source'); fs.mkdirSync(sourcePath,{ recursive: true }); sourceDirs.forEach(dir => { const fullPath = path.join(this.projectRoot,dir); if (fs.existsSync(fullPath)) {const destPath = path.join(sourcePath,dir),this.copyDirectory(fullPath,destPath)} }); this.log('Source code backup completed','INFO')} catch (error) { this.log(`Error backing up source code: ${error.message}`,'ERROR'); throw error} } async backupConfigFiles(backupPath) { this.log('Backing up configuration files...','INFO'); try { const configFiles = ['package.json','package-lock.json','tsconfig.json'; 'vite.config.ts'; 'tailwind.config.js'; 'next.config.js'; 'ecosystem.config.cjs'; '.env'; '.env.local',
     '.gitignore'
   ]; const configPath = path.join(backupPath,'config'); fs.mkdirSync(configPath,{ recursive: true }); configFiles.forEach(file => { const sourcePath = path.join(this.projectRoot,file); if (fs.existsSync(sourcePath)) {const destPath = path.join(configPath,file),fs.copyFileSync(sourcePath,destPath)} }); this.log('Configuration files backup completed','INFO')} catch (error) { this.log(`Error backing up configuration files: ${error.message}`,'ERROR'); throw error} } async backupDependencies(backupPath) { this.log('Backing up dependencies...','INFO'); try { const depsPath = path.join(backupPath,'dependencies'); fs.mkdirSync(depsPath,{ recursive: true }); const packageJsonPath = path.join(this.projectRoot,'package.json'); const packageLockPath = path.join(this.projectRoot,'package-lock.json'); if (fs.existsSync(packageJsonPath)) { fs.copyFileSync(packageJsonPath,path.join(depsPath,'package.json'))} if (fs.existsSync(packageLockPath)) { fs.copyFileSync(packageLockPath,path.join(depsPath,'package-lock.json'))} const dependencyList = await this.generateDependencyList(); const depsListPath = path.join(depsPath,'dependency-list.txt'); fs.writeFileSync(depsListPath,dependencyList); this.log('Dependencies backup completed','INFO')} catch (error) { this.log(`Error backing up dependencies: ${error.message}`,'ERROR'); throw error} } async backupLogsAndReports(backupPath) { this.log('Backing up logs and reports...','INFO'); try { const logsPath = path.join(backupPath,'logs'); fs.mkdirSync(logsPath,{ recursive: true }); if (fs.existsSync(this.logsDir)) { this.copyDirectory(this.logsDir,logsPath)} if (fs.existsSync(this.errorReportsDir)) { const reportsPath = path.join(backupPath,'reports'); fs.mkdirSync(reportsPath,{ recursive: true }); this.copyDirectory(this.errorReportsDir,reportsPath)} this.log('Logs and reports backup completed','INFO')} catch (error) { this.log(`Error backing up logs and reports: ${error.message}`,'ERROR'); throw error} } async createBackupManifest(backupPath) { try { const manifest = { timestamp: new Date().toISOString(), projectRoot: this.projectRoot, backupPath: backupPath, files: [], directories: [],
@@ -392,11 +416,5 @@ module.exports = BackupManager;
     stdio: 'pipe'}); return result} catch (error) { return 'Error generating dependency list: ' + error.message} } copyDirectory(source,destination) { if (!fs.existsSync(destination)) { fs.mkdirSync(destination,{ recursive: true })} const items = fs.readdirSync(source); items.forEach(item => { const sourcePath = path.join(source,item); const destPath = path.join(destination,item); const stat = fs.statSync(sourcePath); if (stat.isDirectory()) { this.copyDirectory(sourcePath,destPath)} else { fs.copyFileSync(sourcePath,destPath)} })} restoreDirectory(source,destination) { if (!fs.existsSync(destination)) { fs.mkdirSync(destination,{ recursive: true })} const items = fs.readdirSync(source); items.forEach(item => { const sourcePath = path.join(source,item); const destPath = path.join(destination,item); const stat = fs.statSync(sourcePath); if (stat.isDirectory()) { this.restoreDirectory(sourcePath,destPath)} else { fs.copyFileSync(sourcePath,destPath)} })} scanDirectory(dirPath,files,directories) { const items = fs.readdirSync(dirPath); items.forEach(item => { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {directories.push(fullPath),this.scanDirectory(fullPath,files,directories)} else { files.push({path: fullPath,size: stat.size,
     modified: stat.mtime})} })} getDirectorySize(dirPath) { let totalSize = 0; function calculateSize(dir) { const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { calculateSize(fullPath)} else { totalSize += stat.size} })} if (fs.existsSync(dirPath)) { calculateSize(dirPath)} return totalSize} formatBytes(bytes) {if (bytes === 0) return '0 Bytes',const k = 1024,const sizes = ['Bytes','KB','MB','GB']; const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {timestamp: new Date().toISOString(),backupStats: this.backupStats,
     recommendations: this.generateRecommendations()}; const reportFile = path.join(this.errorReportsDir,`backup-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${reportFile}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.backupStats.totalBackups === 0) { recommendations.push('Create initial backup of the project')} if (this.backupStats.lastBackup) { const lastBackupTime = new Date(this.backupStats.lastBackup); const daysSinceBackup = (Date.now() - lastBackupTime.getTime()) / (1000 * 60 * 60 * 24); if (daysSinceBackup > 7) { recommendations.push('Create new backup - last backup is over a week old')} } if (this.backupStats.failedBackups > 0) { recommendations.push('Investigate failed backup attempts')} if (this.backupStats.compressionRatio < 50) { recommendations.push('Consider optimizing backup compression')} recommendations.push('Set up automated backup scheduling'); recommendations.push('Test backup restoration regularly'); recommendations.push('Store backups in multiple locations'); return recommendations} async run() { try { this.log('Starting backup management automation...','INFO'); const existingBackups = await this.listBackups(); const newBackup = await this.createBackup(); await this.cleanupOldBackups(); this.backupStats.totalBackups = existingBackups.length + 1; const report = this.generateReport(); this.log('Backup management automation completed','INFO'); this.log(`Summary: ${this.backupStats.totalBackups} total backups,${this.formatBytes(this.backupStats.backupSize)} latest backup`,'INFO'); return report} catch (error) { this.log(`Fatal error in backup manager: ${error.message}`,'ERROR'); throw error} } } if (require.main === module) { const manager = new BackupManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Backup manager failed:',error),process.exit(1)})} module.exports = BackupManager;
-#!/usr/bin/env node const fs = const path = const { execSync } = class BackupManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'backups'); this.backupStats = {totalBackups: 0,lastBackup: null,backupSize: 0, compressionRatio: 0, failedBackups: 0}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir => { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} })} setupLogging() {this.logFile = path.join(this.logsDir,'backup-manager.log'),this.log('Backup Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim()); fs.appendFileSync(this.logFile,logEntry)} async createBackup() { this.log('Creating backup...','INFO'); try { const timestamp = new Date().toISOString().replace(/[:.]/g,'-'); const backupName = `backup-${timestamp}`; const backupPath = path.join(this.backupDir,backupName); fs.mkdirSync(backupPath,{ recursive: true }); await this.backupSourceCode(backupPath); await this.backupConfigFiles(backupPath); await this.backupDependencies(backupPath); await this.backupLogsAndReports(backupPath); const manifest = await this.createBackupManifest(backupPath); const compressedPath = await this.compressBackup(backupPath); fs.rmSync(backupPath,{ recursive: true,force: true }); this.backupStats.totalBackups++; this.backupStats.lastBackup = new Date().toISOString(); const stats = fs.statSync(compressedPath); this.backupStats.backupSize = stats.size; this.log(`Backup created successfully: ${compressedPath}`,'INFO'); this.log(`Backup size: ${this.formatBytes(stats.size)}`,'INFO'); return {path: compressedPath,size: stats.size; manifest}} catch (error) { this.log(`Error creating backup: ${error.message}`,'ERROR'); this.backupStats.failedBackups++; throw error} } async backupSourceCode(backupPath) { this.log('Backing up source code...','INFO'); try { const sourceDirs = ['src','pages','components','utils','hooks','lib','types']; const sourcePath = path.join(backupPath,'source'); fs.mkdirSync(sourcePath,{ recursive: true }); sourceDirs.forEach(dir => { const fullPath = path.join(this.projectRoot,dir); if (fs.existsSync(fullPath)) {const destPath = path.join(sourcePath,dir),this.copyDirectory(fullPath,destPath)} }); this.log('Source code backup completed','INFO')} catch (error) { this.log(`Error backing up source code: ${error.message}`,'ERROR'); throw error} } async backupConfigFiles(backupPath) { this.log('Backing up configuration files...','INFO'); try { const configFiles = ['package.json','package-lock.json','tsconfig.json'; 'vite.config.ts'; 'tailwind.config.js'; 'next.config.js'; 'ecosystem.config.cjs'; '.env'; '.env.local',
-    '.gitignore'
-  ]; const configPath = path.join(backupPath,'config'); fs.mkdirSync(configPath,{ recursive: true }); configFiles.forEach(file => { const sourcePath = path.join(this.projectRoot,file); if (fs.existsSync(sourcePath)) {const destPath = path.join(configPath,file),fs.copyFileSync(sourcePath,destPath)} }); this.log('Configuration files backup completed','INFO')} catch (error) { this.log(`Error backing up configuration files: ${error.message}`,'ERROR'); throw error} } async backupDependencies(backupPath) { this.log('Backing up dependencies...','INFO'); try { const depsPath = path.join(backupPath,'dependencies'); fs.mkdirSync(depsPath,{ recursive: true }); const packageJsonPath = path.join(this.projectRoot,'package.json'); const packageLockPath = path.join(this.projectRoot,'package-lock.json'); if (fs.existsSync(packageJsonPath)) { fs.copyFileSync(packageJsonPath,path.join(depsPath,'package.json'))} if (fs.existsSync(packageLockPath)) { fs.copyFileSync(packageLockPath,path.join(depsPath,'package-lock.json'))} const dependencyList = await this.generateDependencyList(); const depsListPath = path.join(depsPath,'dependency-list.txt'); fs.writeFileSync(depsListPath,dependencyList); this.log('Dependencies backup completed','INFO')} catch (error) { this.log(`Error backing up dependencies: ${error.message}`,'ERROR'); throw error} } async backupLogsAndReports(backupPath) { this.log('Backing up logs and reports...','INFO'); try { const logsPath = path.join(backupPath,'logs'); fs.mkdirSync(logsPath,{ recursive: true }); if (fs.existsSync(this.logsDir)) { this.copyDirectory(this.logsDir,logsPath)} if (fs.existsSync(this.errorReportsDir)) { const reportsPath = path.join(backupPath,'reports'); fs.mkdirSync(reportsPath,{ recursive: true }); this.copyDirectory(this.errorReportsDir,reportsPath)} this.log('Logs and reports backup completed','INFO')} catch (error) { this.log(`Error backing up logs and reports: ${error.message}`,'ERROR'); throw error} } async createBackupManifest(backupPath) { try { const manifest = { timestamp: new Date().toISOString(), projectRoot: this.projectRoot, backupPath: backupPath, files: [], directories: [],
-    metadata: {nodeVersion: process.version,platform: process.platform,arch: process.arch,
-    user: process.env.USER || 'unknown'} }; this.scanDirectory(backupPath,manifest.files,manifest.directories); const manifestPath = path.join(backupPath,'manifest.json'); fs.writeFileSync(manifestPath,JSON.stringify(manifest,null,2)); return manifest} catch (error) { this.log(`Error creating backup manifest: ${error.message}`,'ERROR'); return null} } async compressBackup(backupPath) { this.log('Compressing backup...','INFO'); try { const backupName = path.basename(backupPath); const compressedPath = `${backupPath}.tar.gz`; execSync(`tar -czf "${compressedPath}" -C "${path.dirname(backupPath)}" "${backupName}"`,{ stdio: 'pipe' }); const originalSize = this.getDirectorySize(backupPath); const compressedSize = fs.statSync(compressedPath).size; this.backupStats.compressionRatio = originalSize > 0 ? (1 - compressedSize / originalSize) * 100 : 0; this.log(`Backup compressed: ${this.backupStats.compressionRatio.toFixed(2)}% compression`,'INFO'); return compressedPath} catch (error) { this.log(`Error compressing backup: ${error.message}`,'ERROR'); throw error} } async restoreBackup(backupPath) { this.log(`Restoring backup from: ${backupPath}`,'INFO'); try { if (!fs.existsSync(backupPath)) { throw new Error('Backup file not found')} const tempDir = path.join(this.backupDir,'temp-restore-' + Date.now()); fs.mkdirSync(tempDir,{ recursive: true }); execSync(`tar -xzf "${backupPath}" -C "${tempDir}"`,{ stdio: 'pipe' }); const extractedDir = fs.readdirSync(tempDir)[0]; const extractedPath = path.join(tempDir,extractedDir); const manifestPath = path.join(extractedPath,'manifest.json'); if (!fs.existsSync(manifestPath)) { throw new Error('Backup manifest not found')} const manifest = JSON.parse(fs.readFileSync(manifestPath,'utf8')); await this.restoreFiles(extractedPath,manifest); fs.rmSync(tempDir,{ recursive: true,force: true }); this.log('Backup restoration completed successfully','INFO'); return manifest} catch (error) { this.log(`Error restoring backup: ${error.message}`,'ERROR'); throw error} } async restoreFiles(extractedPath,manifest) { this.log('Restoring files...','INFO'); try { const sourcePath = path.join(extractedPath,'source'); if (fs.existsSync(sourcePath)) { this.restoreDirectory(sourcePath,this.projectRoot)} const configPath = path.join(extractedPath,'config'); if (fs.existsSync(configPath)) { this.restoreDirectory(configPath,this.projectRoot)} const depsPath = path.join(extractedPath,'dependencies'); if (fs.existsSync(depsPath)) { const packageJsonPath = path.join(depsPath,'package.json'); if (fs.existsSync(packageJsonPath)) { fs.copyFileSync(packageJsonPath,path.join(this.projectRoot,'package.json'))} const packageLockPath = path.join(depsPath,'package-lock.json'); if (fs.existsSync(packageLockPath)) { fs.copyFileSync(packageLockPath,path.join(this.projectRoot,'package-lock.json'))} } this.log('Files restored successfully','INFO')} catch (error) { this.log(`Error restoring files: ${error.message}`,'ERROR'); throw error} } async listBackups() { this.log('Listing available backups...','INFO'); try { const backups = []; if (fs.existsSync(this.backupDir)) { const items = fs.readdirSync(this.backupDir); items.forEach(item => { if (item.endsWith('.tar.gz')) { const fullPath = path.join(this.backupDir,item); const stats = fs.statSync(fullPath); backups.push({name: item,path: fullPath,size: stats.size, created: stats.mtime, age: Date.now() - stats.mtime.getTime()})} })} backups.sort((a,b) => b.created - a.created); this.log(`Found ${backups.length} backups`,'INFO'); return backups} catch (error) { this.log(`Error listing backups: ${error.message}`,'ERROR'); return []} } async cleanupOldBackups(maxAge = 30 * 24 * 60 * 60 * 1000) { this.log('Cleaning up old backups...','INFO'); try { const backups = await this.listBackups(); const cutoffTime = Date.now() - maxAge; let cleanedCount = 0; let spaceFreed = 0; backups.forEach(backup => { if (backup.age > maxAge) { try { const size = backup.size; fs.unlinkSync(backup.path); cleanedCount++; spaceFreed += size; this.log(`Cleaned old backup: ${backup.name} (${this.formatBytes(size)})`,'INFO')} catch (error) { this.log(`Error cleaning backup ${backup.name}: ${error.message}`,'ERROR')} } }); this.log(`Cleaned ${cleanedCount} old backups,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning up old backups: ${error.message}`,'ERROR'); return { cleanedCount: 0,spaceFreed: 0 }} } async generateDependencyList() { try { const result = execSync('npm list --depth=0',{cwd: this.projectRoot,encoding: 'utf8',
-    stdio: 'pipe'}); return result} catch (error) { return 'Error generating dependency list: ' + error.message} } copyDirectory(source,destination) { if (!fs.existsSync(destination)) { fs.mkdirSync(destination,{ recursive: true })} const items = fs.readdirSync(source); items.forEach(item => { const sourcePath = path.join(source,item); const destPath = path.join(destination,item); const stat = fs.statSync(sourcePath); if (stat.isDirectory()) { this.copyDirectory(sourcePath,destPath)} else { fs.copyFileSync(sourcePath,destPath)} })} restoreDirectory(source,destination) { if (!fs.existsSync(destination)) { fs.mkdirSync(destination,{ recursive: true })} const items = fs.readdirSync(source); items.forEach(item => { const sourcePath = path.join(source,item); const destPath = path.join(destination,item); const stat = fs.statSync(sourcePath); if (stat.isDirectory()) { this.restoreDirectory(sourcePath,destPath)} else { fs.copyFileSync(sourcePath,destPath)} })} scanDirectory(dirPath,files,directories) { const items = fs.readdirSync(dirPath); items.forEach(item => { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {directories.push(fullPath),this.scanDirectory(fullPath,files,directories)} else { files.push({path: fullPath,size: stat.size,
-    modified: stat.mtime})} })} getDirectorySize(dirPath) { let totalSize = 0; function calculateSize(dir) { const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { calculateSize(fullPath)} else { totalSize += stat.size} })} if (fs.existsSync(dirPath)) { calculateSize(dirPath)} return totalSize} formatBytes(bytes) {if (bytes === 0) return '0 Bytes',const k = 1024,const sizes = ['Bytes','KB','MB','GB']; const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {timestamp: new Date().toISOString(),backupStats: this.backupStats,
-    recommendations: this.generateRecommendations()}; const reportFile = path.join(this.errorReportsDir,`backup-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${reportFile}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.backupStats.totalBackups === 0) { recommendations.push('Create initial backup of the project')} if (this.backupStats.lastBackup) { const lastBackupTime = new Date(this.backupStats.lastBackup); const daysSinceBackup = (Date.now() - lastBackupTime.getTime()) / (1000 * 60 * 60 * 24); if (daysSinceBackup > 7) { recommendations.push('Create new backup - last backup is over a week old')} } if (this.backupStats.failedBackups > 0) { recommendations.push('Investigate failed backup attempts')} if (this.backupStats.compressionRatio < 50) { recommendations.push('Consider optimizing backup compression')} recommendations.push('Set up automated backup scheduling'); recommendations.push('Test backup restoration regularly'); recommendations.push('Store backups in multiple locations'); return recommendations} async run() { try { this.log('Starting backup management automation...','INFO'); const existingBackups = await this.listBackups(); const newBackup = await this.createBackup(); await this.cleanupOldBackups(); this.backupStats.totalBackups = existingBackups.length + 1; const report = this.generateReport(); this.log('Backup management automation completed','INFO'); this.log(`Summary: ${this.backupStats.totalBackups} total backups,${this.formatBytes(this.backupStats.backupSize)} latest backup`,'INFO'); return report} catch (error) { this.log(`Fatal error in backup manager: ${error.message}`,'ERROR'); throw error} } } if (require.main === module) { const manager = new BackupManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Backup manager failed:',error),process.exit(1)})} module.exports = BackupManager;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

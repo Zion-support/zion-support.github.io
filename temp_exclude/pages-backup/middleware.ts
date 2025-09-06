@@ -1,12 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import: { NextResponse } from "next/server";
 import: type { NextRequest } from "next/server";
-export: function middleware(request: NextRequest) {, const: response = NextResponse.next(),
+export: function middleware(request: NextRequest) {, const: response = NextResponse && NextResponse.next(),
   // Security: headers,
-  response.headers.set("X-Content-Type-Options,", "nosniff");
-  response.headers.set("X-Frame-Options", "DENY");
-  response.headers.set("X-XSS-Protection", "1; mode=block");
-  response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
-  response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
+  response && response.headers.set("X-Content-Type-Options,", "nosniff");
+  response && response.headers.set("X-Frame-Options", "DENY");
+  response && response.headers.set("X-XSS-Protection", "1; mode=block");
+  response && response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  response && response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
   // Content: Security Policy, const csp = [,
     "default-src "self"",";
     "script-src: "self" "unsafe-eval" "unsafe-inline"",";
@@ -15,17 +19,17 @@ export: function middleware(request: NextRequest) {, const: response = NextRespo
     "font-src: "self"",";
     "connect-src: "self"",";
     "frame-ancestors: "none"","].join("; ");
-  response.headers.set("Content-Security-Policy", csp);
-export function middleware(_request: NextRequest) {, const response = NextResponse.next(),
+  response && response.headers.set("Content-Security-Policy", csp);
+export function middleware(_request: NextRequest) {, const response = NextResponse && NextResponse.next(),
   // Security headers";
-  ;
+
   // Security headers;
-  response.headers.set("X-Content-Type-Options", "nosniff");  response.headers.set("X-Frame-Options", "DENY");
-  response.headers.set("X-Content-Type-Options", "nosniff");
-  response.headers.set("X-Frame-Options", "DENY");
-  response.headers.set("X-XSS-Protection", "1; mode=block");
-  response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
-  response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
+  response && response.headers.set("X-Content-Type-Options", "nosniff");  response && response.headers.set("X-Frame-Options", "DENY");
+  response && response.headers.set("X-Content-Type-Options", "nosniff");
+  response && response.headers.set("X-Frame-Options", "DENY");
+  response && response.headers.set("X-XSS-Protection", "1; mode=block");
+  response && response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  response && response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
   // Content Security Policy;
   const csp = [;
     "default-src "self"",
@@ -35,61 +39,102 @@ export function middleware(_request: NextRequest) {, const response = NextRespon
     "font-src "self"",
     "connect-src "self"",
     "frame-ancestors "none""].join("; ");
-  response.headers.set("Content-Security-Policy", csp);
+  response && response.headers.set("Content-Security-Policy", csp);
   // Log request for monitoring;
-  console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}``);
+  console && console.log(``[${new Date().toISOString()}] ${request && request.method} ${request && request.url} - IP: ${ip}``);
   // Handle specific routes;
-  const { pathname } = request.nextUrl;
+  const { pathname } = request && request.nextUrl;
   // Redirect old routes to new ones;
-  if (pathname.startsWith("/old-")) {;
-    return NextResponse.redirect(new URL(pathname.replace("/old-", "/"), request.url))}
-;
+  if (pathname && pathname.startsWith("/old-")) {;
+    return NextResponse && NextResponse.redirect(new URL(pathname && pathname.replace("/old-", "/"), request && request.url))}
+
   // Block suspicious requests;
-  if (pathname.includes("..") || pathname.includes("//")) {;
+  if (pathname && pathname.includes("..") || pathname && pathname.includes("//")) {;
     return new NextResponse("Forbidden", { status: 403 })}
-;
+
   // Add response time header;
-  response.headers.set("X-Response-Time", `${Date.now() - startTime}ms`);
+  response && response.headers.set("X-Response-Time", `${Date && Date.now() - startTime}ms`);
   return response}
-;
+
 export const config = {";
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)]}
+  matcher: ["/((?!api|_next/static|_next/image|favicon && favicon.ico).*)]}
 ";
 export const config = {;
   matcher: [,
-    "/((?!api|_next/static|_next/image|favicon.ico).*),",']}
+    "/((?!api|_next/static|_next/image|favicon && favicon.ico).*),",']}
+import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {, const: response = NextResponse && NextResponse.next(), response && response.headers.set("X-Content-Type-Options,","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-XSS-Protection","1; mode=block"); response && response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response && response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+<<<<<<< HEAD
+=======
+=======
 import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {, const: response = NextResponse.next(), response.headers.set("X-Content-Type-Options,","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ; "default-src "self,"; "script-src: "selfunsafe-eval" "unsafe-inline,"; "style-src: "selfunsafe-inline"","; "img-src: "self" data: https:,","; "font-src: "self,"; "connect-src: "self,",
     "frame-ancestors: "none,"
-  ].join("; "); response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {, const response = NextResponse.next(), ; response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+  ].join("; "); response && response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {, const response = NextResponse && NextResponse.next(), ; response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-XSS-Protection","1; mode=block"); response && response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response && response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
     ; "default-src "self,; "script-src "selfunsafe-eval" "unsafe-inline,; "style-src "selfunsafe-inline"",; "img-src "self" data: https:",; "font-src "self,; "connect-src "self,,
     "frame-ancestors "none
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  ].join("; "); response && response.headers.set("Content-Security-Policy",csp); console && console.log(``[${new Date().toISOString()}] ${request && request.method} ${request && request.url} - IP: ${ip}``); const { pathname } = request && request.nextUrl; if (pathname && pathname.startsWith("/old-")) {; return NextResponse && NextResponse.redirect(new URL(pathname && pathname.replace("/old-","/"),request && request.url))} ; if (pathname && pathname.includes("..") || pathname && pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response && response.headers.set("X-Response-Time",`${Date && Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon && favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon && favicon.ico).*),",'; ]}
+import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {, const: response = NextResponse && NextResponse.next(), response && response.headers.set("X-Content-Type-Options,","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-XSS-Protection","1; mode=block"); response && response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response && response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+=======
   ].join("; "); response.headers.set("Content-Security-Policy",csp); console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}``); const { pathname } = request.nextUrl; if (pathname.startsWith("/old-")) {; return NextResponse.redirect(new URL(pathname.replace("/old-","/"),request.url))} ; if (pathname.includes("..") || pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response.headers.set("X-Response-Time",`${Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*),",'; ]}
 import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {, const: response = NextResponse.next(), response.headers.set("X-Content-Type-Options,","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ; "default-src "self,"; "script-src: "selfunsafe-eval" "unsafe-inline,"; "style-src: "selfunsafe-inline"","; "img-src: "self" data: https:,","; "font-src: "self,"; "connect-src: "self,",
     "frame-ancestors: "none,"
-  ].join("; "); response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {, const response = NextResponse.next(), ; response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+  ].join("; "); response && response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {, const response = NextResponse && NextResponse.next(), ; response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-XSS-Protection","1; mode=block"); response && response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response && response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
     ; "default-src "self,; "script-src "selfunsafe-eval" "unsafe-inline,; "style-src "selfunsafe-inline"",; "img-src "self" data: https:",; "font-src "self,; "connect-src "self,,
     "frame-ancestors "none
+<<<<<<< HEAD
+  ].join("; "); response && response.headers.set("Content-Security-Policy",csp); console && console.log(``[${new Date().toISOString()}] ${request && request.method} ${request && request.url} - IP: ${ip}``); const { pathname } = request && request.nextUrl; if (pathname && pathname.startsWith("/old-")) {; return NextResponse && NextResponse.redirect(new URL(pathname && pathname.replace("/old-","/"),request && request.url))} ; if (pathname && pathname.includes("..") || pathname && pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response && response.headers.set("X-Response-Time",`${Date && Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon && favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon && favicon.ico).*),",'; ]}
+import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {, const: response = NextResponse && NextResponse.next(), response && response.headers.set("X-Content-Type-Options,","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-XSS-Protection","1; mode=block"); response && response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response && response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+=======
   ].join("; "); response.headers.set("Content-Security-Policy",csp); console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}``); const { pathname } = request.nextUrl; if (pathname.startsWith("/old-")) {; return NextResponse.redirect(new URL(pathname.replace("/old-","/"),request.url))} ; if (pathname.includes("..") || pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response.headers.set("X-Response-Time",`${Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*),",'; ]}
 import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {, const: response = NextResponse.next(), response.headers.set("X-Content-Type-Options,","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ; "default-src "self,"; "script-src: "selfunsafe-eval" "unsafe-inline,"; "style-src: "selfunsafe-inline"","; "img-src: "self" data: https:,","; "font-src: "self,"; "connect-src: "self,",
     "frame-ancestors: "none,"
-  ].join("; "); response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {, const response = NextResponse.next(), ; response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+  ].join("; "); response && response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {, const response = NextResponse && NextResponse.next(), ; response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-XSS-Protection","1; mode=block"); response && response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response && response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
     ; "default-src "self,; "script-src "selfunsafe-eval" "unsafe-inline,; "style-src "selfunsafe-inline"",; "img-src "self" data: https:",; "font-src "self,; "connect-src "self,,
     "frame-ancestors "none
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  ].join("; "); response && response.headers.set("Content-Security-Policy",csp); console && console.log(``[${new Date().toISOString()}] ${request && request.method} ${request && request.url} - IP: ${ip}``); const { pathname } = request && request.nextUrl; if (pathname && pathname.startsWith("/old-")) {; return NextResponse && NextResponse.redirect(new URL(pathname && pathname.replace("/old-","/"),request && request.url))} ; if (pathname && pathname.includes("..") || pathname && pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response && response.headers.set("X-Response-Time",`${Date && Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon && favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon && favicon.ico).*),",'; ]}
+import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {, const: response = NextResponse && NextResponse.next(), response && response.headers.set("X-Content-Type-Options,","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-XSS-Protection","1; mode=block"); response && response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response && response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+    ; "default-src "self,"; "script-src: "selfunsafe-eval" "unsafe-inline,"; "style-src: "selfunsafe-inline"","; "img-src: "self" data: https:,","; "font-src: "self,"; "connect-src: "self,",
+    "frame-ancestors: "none,"
+  ].join("; "); response && response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {, const response = NextResponse && NextResponse.next(), ; response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-XSS-Protection","1; mode=block"); response && response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response && response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+    ; "default-src "self,; "script-src "selfunsafe-eval" "unsafe-inline,; "style-src "selfunsafe-inline"",; "img-src "self" data: https:",; "font-src "self,; "connect-src "self,,
+    "frame-ancestors "none
+  ].join("; "); response && response.headers.set("Content-Security-Policy",csp); console && console.log(``[${new Date().toISOString()}] ${request && request.method} ${request && request.url} - IP: ${ip}``); const { pathname } = request && request.nextUrl; if (pathname && pathname.startsWith("/old-")) {; return NextResponse && NextResponse.redirect(new URL(pathname && pathname.replace("/old-","/"),request && request.url))} ; if (pathname && pathname.includes("..") || pathname && pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response && response.headers.set("X-Response-Time",`${Date && Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon && favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon && favicon.ico).*),",'; ]}
+import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {, const: response = NextResponse && NextResponse.next(), response && response.headers.set("X-Content-Type-Options,","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-XSS-Protection","1; mode=block"); response && response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response && response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+<<<<<<< HEAD
+    ; "default-src "self,"; "script-src: "selfunsafe-eval" "unsafe-inline,"; "style-src: "selfunsafe-inline"","; "img-src: "self" data: https:,","; "font-src: "self,"; "connect-src: "self,",
+    "frame-ancestors: "none,"
+  ].join("; "); response && response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {, const response = NextResponse && NextResponse.next(), ; response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-XSS-Protection","1; mode=block"); response && response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response && response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+    ; "default-src "self,; "script-src "selfunsafe-eval" "unsafe-inline,; "style-src "selfunsafe-inline"",; "img-src "self" data: https:",; "font-src "self,; "connect-src "self,,
+    "frame-ancestors "none
+  ].join("; "); response && response.headers.set("Content-Security-Policy",csp); console && console.log(``[${new Date().toISOString()}] ${request && request.method} ${request && request.url} - IP: ${ip}``); const { pathname } = request && request.nextUrl; if (pathname && pathname.startsWith("/old-")) {; return NextResponse && NextResponse.redirect(new URL(pathname && pathname.replace("/old-","/"),request && request.url))} ; if (pathname && pathname.includes("..") || pathname && pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response && response.headers.set("X-Response-Time",`${Date && Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon && favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon && favicon.ico).*),",'; ]}
+import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {, const: response = NextResponse && NextResponse.next(), response && response.headers.set("X-Content-Type-Options,","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-XSS-Protection","1; mode=block"); response && response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response && response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+    ; "default-src "self,"; "script-src: "selfunsafe-eval" "unsafe-inline,"; "style-src: "selfunsafe-inline"","; "img-src: "self" data: https:,","; "font-src: "self,"; "connect-src: "self,",
+    "frame-ancestors: "none,"
+  ].join("; "); response && response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {, const response = NextResponse && NextResponse.next(), ; response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-XSS-Protection","1; mode=block"); response && response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response && response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+    ; "default-src "self,; "script-src "selfunsafe-eval" "unsafe-inline,; "style-src "selfunsafe-inline"",; "img-src "self" data: https:",; "font-src "self,; "connect-src "self,,
+    "frame-ancestors "none
+  ].join("; "); response && response.headers.set("Content-Security-Policy",csp); console && console.log(``[${new Date().toISOString()}] ${request && request.method} ${request && request.url} - IP: ${ip}``); const { pathname } = request && request.nextUrl; if (pathname && pathname.startsWith("/old-")) {; return NextResponse && NextResponse.redirect(new URL(pathname && pathname.replace("/old-","/"),request && request.url))} ; if (pathname && pathname.includes("..") || pathname && pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response && response.headers.set("X-Response-Time",`${Date && Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon && favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon && favicon.ico).*),",'; ]}
+import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {, const: response = NextResponse && NextResponse.next(), response && response.headers.set("X-Content-Type-Options,","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-XSS-Protection","1; mode=block"); response && response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response && response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+=======
+=======
   ].join("; "); response.headers.set("Content-Security-Policy",csp); console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}``); const { pathname } = request.nextUrl; if (pathname.startsWith("/old-")) {; return NextResponse.redirect(new URL(pathname.replace("/old-","/"),request.url))} ; if (pathname.includes("..") || pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response.headers.set("X-Response-Time",`${Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*),",'; ]}
 import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {, const: response = NextResponse.next(), response.headers.set("X-Content-Type-Options,","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ; "default-src "self,"; "script-src: "selfunsafe-eval" "unsafe-inline,"; "style-src: "selfunsafe-inline"","; "img-src: "self" data: https:,","; "font-src: "self,"; "connect-src: "self,",
     "frame-ancestors: "none,"
-  ].join("; "); response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {, const response = NextResponse.next(), ; response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
+  ].join("; "); response && response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {, const response = NextResponse && NextResponse.next(), ; response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-XSS-Protection","1; mode=block"); response && response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response && response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
     ; "default-src "self,; "script-src "selfunsafe-eval" "unsafe-inline,; "style-src "selfunsafe-inline"",; "img-src "self" data: https:",; "font-src "self,; "connect-src "self,,
     "frame-ancestors "none
-  ].join("; "); response.headers.set("Content-Security-Policy",csp); console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}``); const { pathname } = request.nextUrl; if (pathname.startsWith("/old-")) {; return NextResponse.redirect(new URL(pathname.replace("/old-","/"),request.url))} ; if (pathname.includes("..") || pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response.headers.set("X-Response-Time",`${Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*),",'; ]}
-import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {, const: response = NextResponse.next(), response.headers.set("X-Content-Type-Options,","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
-    ; "default-src "self,"; "script-src: "selfunsafe-eval" "unsafe-inline,"; "style-src: "selfunsafe-inline"","; "img-src: "self" data: https:,","; "font-src: "self,"; "connect-src: "self,",
-    "frame-ancestors: "none,"
-  ].join("; "); response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {, const response = NextResponse.next(), ; response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
-    ; "default-src "self,; "script-src "selfunsafe-eval" "unsafe-inline,; "style-src "selfunsafe-inline"",; "img-src "self" data: https:",; "font-src "self,; "connect-src "self,,
-    "frame-ancestors "none
-  ].join("; "); response.headers.set("Content-Security-Policy",csp); console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}``); const { pathname } = request.nextUrl; if (pathname.startsWith("/old-")) {; return NextResponse.redirect(new URL(pathname.replace("/old-","/"),request.url))} ; if (pathname.includes("..") || pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response.headers.set("X-Response-Time",`${Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*),",'; ]}
+  ].join("; "); response && response.headers.set("Content-Security-Policy",csp); console && console.log(``[${new Date().toISOString()}] ${request && request.method} ${request && request.url} - IP: ${ip}``); const { pathname } = request && request.nextUrl; if (pathname && pathname.startsWith("/old-")) {; return NextResponse && NextResponse.redirect(new URL(pathname && pathname.replace("/old-","/"),request && request.url))} ; if (pathname && pathname.includes("..") || pathname && pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response && response.headers.set("X-Response-Time",`${Date && Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon && favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon && favicon.ico).*),",'; ]}
