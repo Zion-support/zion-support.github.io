@@ -1,8 +1,9 @@
-import React from "react";
-import { WorkspaceHeader } from "./WorkspaceHeader";
-import { SharedInbox } from "./SharedInbox";
-import { TeamStats } from "./TeamStats";
-import { QuickActions } from "./QuickActions";
+
+import React from "react",
+import { WorkspaceHeader } from "./WorkspaceHeader",
+import { SharedInbox } from "./SharedInbox",
+import { TeamStats } from "./TeamStats",
+import { QuickActions } from "./QuickActions",
 import { RecentActivity } from "./RecentActivity";
 import { TalentPool } from "./TalentPool";
 export interface Company {
@@ -12,13 +13,13 @@ export interface Company {
   theme?: {
     primaryColor: string;
     backgroundColor: string;
-    textColor: string;
-  };
+    textColor: string
+  },
   plan: string;
   teamSize: number;
   teamLimit: number;
   billingCycle: string;
-  workspaceUrl: string;
+  workspaceUrl: string
 }
 
 interface CompanyDashboardProps {

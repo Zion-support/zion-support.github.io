@@ -1,12 +1,7 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
-import { ReferralReward } from '@/types/referrals'
-import { formatDate } from '@/utils/referralUtils'
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReferralReward } from "@/types/referrals";
+import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from 'lucide-react'
 interface RewardsCardProps {
   rewards: ReferralReward[]
@@ -17,7 +12,7 @@ import { formatDate } from "@/utils/referralUtils"
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 interface RewardsCardProps {
-  rewards: ReferralReward[],
+  rewards: ReferralReward[];
   isLoading: boolean
 }
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {

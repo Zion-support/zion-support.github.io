@@ -124,28 +124,10 @@ export class ErrorTracker {
   trackError(error, context = {}) {
     const errorInfo = {
       message: error.message,
-      stack: error.stack,
+      stack: error.stack;
+      timestamp: new Date().toISOString();
       context,
-      timestamp: new Date().toISOString(),
-      context,
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown';
-    };
-
-    this.errors.push(errorInfo);
-    
-    // Track error frequency
-    const errorKey = error.message;
-    this.errorCounts.set(errorKey, (this.errorCounts.get(errorKey) || 0) + 1);
-  }
-
-  getErrorStats() {
-    const recentErrors = this.errors.filter(
-      error => new Date(error.timestamp) > new Date(Date.now() - 24 * 60 * 60 * 1000);
-    );
-        return {      timestamp: new Date().toISOString(),
-      context,
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown';
       url: typeof window !== 'undefined' ? window.location.href : 'unknown'
     };
 
@@ -162,22 +144,22 @@ export class ErrorTracker {
     );
 
     return {
-      total: this.errors.length,
-      recent: recentErrors.length,
+      total: this.errors.length;
+      recent: recentErrors.length;
       topErrors: Array.from(this.errorCounts.entries())
         .sort((a, b) => b[1] - a[1])
-        .slice(0, 10)
+        .slice(0, 10);
+    };
   }
 }
 
 export const errorTracker = new ErrorTracker();
 
 // Global error handler
-if (typeof window !== 'undefined') {
-  window.addEventListener('error', (event) => {
+if (=> {
     errorTracker.trackError(event.error, {
-      filename: event.filename,
-      lineno: event.lineno,
+      filename: event.filename);
+      lineno: event.lineno);
       colno: event.colno
     });
   });
@@ -203,10 +185,10 @@ export class AnalyticsTracker {
   track(event, properties = {}) {
     const eventData = {
       event,
-      properties,
-      timestamp: new Date().toISOString(),
-      sessionId: this.sessionId,
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown';
+      properties;
+      timestamp: new Date().toISOString();
+      sessionId: this.sessionId;
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown'
     };
 
     this.events.push(eventData);
@@ -270,17 +252,12 @@ async getConnection() {
 });
   }
 
-releaseConnection(connection) {
-    this.usedConnections.delete(connection);
-    this.availableConnections.push(connection);
-  }
-
-  async createConnection() {
-    // This would create an actual database connection
-    return {
-      id: Math.random().toString(36).substr(2, 9),
-      createdAt: new Date(),
-      isHealthy: true
+export function debounce(func, wait) {
+  let timeout = null;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
     };
   }
 
@@ -295,16 +272,59 @@ getPoolStatus() {
 
 export const connectionPool = new ConnectionPool();`
   };
-  
-  // Create monitoring files
-  Object.entries(monitoringFiles).forEach(([filePath, content]) => {
-    const fullPath = path.join(process.cwd(), filePath);
-    const dir = path.dirname(fullPath);
-    
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
+}
+
+export function throttle(func, limit) {
+  let inThrottle = null;
+  return function(...args) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
+}`,
+
+    'utils/optimization.js': `// General optimization utilities
+export function optimizeImages() {
+  if (typeof window === 'undefined') return;
+
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    // Add loading="lazy" if not present
+    if (!img.hasAttribute('loading')) {
+      img.setAttribute('loading', 'lazy');
     }
     
+    // Add proper alt text if missing
+    if (!img.alt) {
+      img.alt = 'Image';
+    }
+  });
+}
+
+export function preloadCriticalResources() {
+  if (typeof window === 'undefined') return;
+
+  const criticalResources = [
+    '/fonts/main.woff2';
+    '/css/critical.css'
+  ];
+
+  criticalResources.forEach(resource => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    document.head.appendChild(link);
+  });
+}`
+
+  };
+
+  Object.entries(optimizationFiles).forEach(([filename, content]) => {
+    const fullPath = path.join('/workspace', filename);
+    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
     fs.writeFileSync(fullPath, content);
     console.log(`✅ Created ${filePath}`);
   });

@@ -8,9 +8,9 @@ interface LazyComponentProps {
   [key: string]: unknown,
 }
 
-const LazyComponent: React.FC<LazyComponentProps> = ({ 
-  component: Component, 
-  fallback = <div className="animate-pulse bg-gray-200 h-32 rounded" />,
+export const LazyComponent: React.FC<LazyComponentProps> = ({
+  component;
+  fallback;
   ...props
   return (
     <Suspense fallback={fallback}>
@@ -20,6 +20,6 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 };
 
 export default LazyComponent;
-import React from 'react',;
-},
-
+=======
+import React from 'react';
+};

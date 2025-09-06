@@ -1,70 +1,35 @@
 
-import {useState, useEffect} from 'react';
-import {useAuth} from '@/hooks/useAuth';
-import {useResume} from '@/hooks/useResume';
-import {Tabs} from '@/components/ui/tabs';
-import {Card, CardContent} from '@/components/ui/card';
-import {Alert, AlertDescription, AlertTitle} from '@/components/ui/alert';
-import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
-import {Button} from '@/components/ui/button';
-import {Resume} from '@/types/resume';
+import { useState, useEffect  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { useResume  } from '@/hooks/useResume';
+import { Tabs  } from '@/components/ui/tabs';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
+import { AlertCircle, FilePlus, Loader2  } from 'lucide-react';
+import { Button  } from '@/components/ui/button';
+import { Resume  } from '@/types/resume';
 // Import components
-import {ResumeProgress} from './ResumeProgress';
-import {EmptyResumeState} from './EmptyResumeState';
-import {CreateResumeForm} from './CreateResumeForm';
-import {ResumeSteps} from './ResumeSteps';
-import {ResumeStepContent} from './ResumeStepContent';
-import {useResumeProgress} from './useResumeProgress';
-import {ResumeVersionSelector} from './ResumeVersionSelector';
-import {RESUME_STEPS} from './constants';
+import { ResumeProgress  } from './ResumeProgress';
+import { EmptyResumeState  } from './EmptyResumeState';
+import { CreateResumeForm  } from './CreateResumeForm';
+import { ResumeSteps  } from './ResumeSteps';
+import { ResumeStepContent  } from './ResumeStepContent';
+import { useResumeProgress  } from './useResumeProgress';
+import { ResumeVersionSelector  } from './ResumeVersionSelector';
+import { RESUME_STEPS } from './constants';
 export function ResumeWizard() {
   const { user } = useAuth();
   const { 
     isLoading;
-    error, 
-    resume, 
+    error;
+    resume;
     fetchResume;
     createResume
   } = useResume();
-  
   const [activeTab, setActiveTab] = useState('basic-info');
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
-  
   // Use the extracted hook for progress calculation
-  const progress = useResumeProgress(resume);
-  
-  useEffect(() => {
-    if (user) {
-      fetchResume()
-    }
-  }, [user, fetchResume]);
-  
-  const handleCreateNewResume = async (title: string) => {
-    const resumeId = await createResume({ title: title.trim() }),
-    if (resumeId) {
-      await fetchResume(resumeId);
-      setShowNewResumeForm(false)
-    }
-  };
-  
-  const nextStep = () => {
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
-    if (currentIndex < RESUME_STEPS.length - 1) {
-      setActiveTab(RESUME_STEPS[currentIndex + 1].id)
-    }
-  };
-  
-  const prevStep = () => {
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
-    if (currentIndex > 0) {
-      setActiveTab(RESUME_STEPS[currentIndex - 1].id)
-    }
-  };
-
-  const handleResumeChange = (resumeId: string) => {
-    fetchResume(resumeId)
-  };
-  
+  const progress = null;
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">

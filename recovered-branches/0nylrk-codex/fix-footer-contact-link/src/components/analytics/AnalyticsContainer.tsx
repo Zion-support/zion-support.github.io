@@ -1,7 +1,8 @@
-import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
+
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
 import { Navigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 interface AnalyticsContainerProps {
@@ -10,10 +11,8 @@ interface AnalyticsContainerProps {
 
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   const { isAuthenticated, isLoading, user } = useAuth();
-
   // Check if user is admin (using either role or userType)
-  const isAdmin = user?.role === "admin" || user?.userType === "admin";
-
+  const isAdmin = null;
   // If still loading auth status, show loading
   if (isLoading) {
     return (

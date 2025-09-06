@@ -1,38 +1,21 @@
-import { format } from 'date-fns'
+
+import { format } from "date-fns";
 import { CalendarIcon } from 'lucide-react'
-import { UseFormReturn, ControllerRenderProps } from 'react-hook-form'
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormDescription,
-  FormMessage,
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Button } from '@/components/ui/button'
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover'
-import { Calendar } from '@/components/ui/calendar'
-import { ContractFormValues } from './ContractForm'
-import { format } from "date-fns"
-import { UseFormReturn, ControllerRenderProps } from "react-hook-form"
-  FormField,
-  FormItem, 
-  FormLabel, 
-  FormControl, 
-  FormDescription, 
+import { UseFormReturn, ControllerRenderProps } from "react-hook-form";
+import { 
+  FormField;
+  FormItem;
+  FormLabel;
+  FormControl;
+  FormDescription;
   FormMessage 
 } from "@/components/ui/form",
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { Calendar } from "@/components/ui/calendar"
-import { ContractFormValues } from "./ContractForm"
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
 }

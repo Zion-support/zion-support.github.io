@@ -1,44 +1,18 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import {
-  Check,
-  ShieldCheck,
-  TrendingUp,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,;
-} from 'lucide-react';
+import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 export default function AIEvalsPage() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  };
-
-  const features = [
-    'Golden datasets and synthetic evals',
-    'Hallucination and grounding score',
-    'Toxicity, bias and safety metrics',
-    'LLM version comparison reports',
-    'CI quality gates and webhooks',
-    'Latency and cost KPIs with budgets',
-  ];
-
-  return (
-    <QuantumHolographicMatrixBackground>
-      <Head>
-        <title>AI Evals & Observability | Zion Tech Group</title>
-        <meta
-          name='description'
-          content='Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.'
-        />
-        <link rel='canonical' href='https://ziontechgroup.com/ai-evals' />
-      </Head>
+	const contactInfo = null;
+	return (
+		<QuantumHolographicMatrixBackground>
+			<Head>
+				<title>AI Evals & Observability | Zion Tech Group</title>
+				<meta name="description" content="Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included." />
+				<link rel="canonical" href="https://ziontechgroup.com/ai-evals" />
+			</Head>
 
       <section className='min-h-screen pt-28 pb-20 px-4'>
         <div className='max-w-6xl mx-auto'>

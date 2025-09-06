@@ -1,11 +1,10 @@
 
 import React from 'react';
-import {Button} from '@/components/ui/button';
-import {useNavigate} from 'react-router-dom';
-import {XCircle} from 'lucide-react';
+import { Button  } from '@/components/ui/button';
+import { useNavigate  } from 'react-router-dom';
+import { XCircle } from 'lucide-react';
 export default function PaymentCanceled() {
-  const navigate = useNavigate();
-  
+  const navigate = null;
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">

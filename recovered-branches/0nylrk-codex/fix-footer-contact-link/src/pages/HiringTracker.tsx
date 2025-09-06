@@ -12,7 +12,6 @@ import {Briefcase} from "lucide-react";
 function HiringTrackerContent() {
   const { jobId } = useParams() as { jobId?: string };
   const [activeTab, setActiveTab] = useState<string>("kanban");
-
   return (
     <>
       <SEO 

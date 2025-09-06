@@ -37,8 +37,8 @@ interface MessageChannelHandlerProps {
 }
 
 export function useMessageChannelHandler({
-  onMessage,
-  onError,
+  onMessage;
+  onError
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback(
     (event: MessageEvent<unknown>) => {

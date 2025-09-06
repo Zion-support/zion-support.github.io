@@ -1,8 +1,5 @@
-import React from "react";
-type QA = { q: string; a: string };
-type Props = { items: QA[] };
-export default function FAQ({ items }: Props) {
-  if (!items || items.length === 0) return null;
+import React from 'react';
+type QA = any;
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">
       <h2 className="text-lg font-semibold mb-4">Frequently Asked Questions</h2>

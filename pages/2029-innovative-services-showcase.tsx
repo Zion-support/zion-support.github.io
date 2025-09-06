@@ -1,76 +1,16 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
-import { 
-  Brain, Atom, Target, ArrowRight, CheckCircle, Star, 
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Brain, Atom, Target, ArrowRight, CheckCircle, Star;
   Phone, Mail, MapPin
-} from 'lucide-react',
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',;
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',;
-import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem',;
-import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs',;
-import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions',;
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-
-export default function InnovativeServicesShowcase2029() {
-  const allServices = [
-    ...aiAutonomousEcosystemServices2029,
-    ...emergingTechBreakthroughServices2029,
-    ...practicalBusinessSolutionServices2029
-  ],
-
-  const serviceCategories = [
-    {
-      title: '🚀 AI Autonomous Ecosystem',
-      icon: Brain,
-      color: 'from-violet-600 via-purple-600 to-indigo-600',
-      services: aiAutonomousEcosystemServices2029
-    },
-    {
-      title: '⚛️ Emerging Tech Breakthroughs',
-      icon: Atom,
-      color: 'from-indigo-600 via-blue-600 to-cyan-600',
-      services: emergingTechBreakthroughServices2029
-    },
-    {
-      title: '🎯 Practical Business Solutions',
-      icon: Target,
-      color: 'from-cyan-600 via-teal-600 to-emerald-600',
-      services: practicalBusinessSolutionServices2029
-    }
-  ],
-
-  return (
-    <>
-      <Head>
-        <title>2029 Innovative Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="Discover our cutting-edge 2029 innovative services including AI autonomous ecosystems, emerging tech breakthroughs, and practical business solutions. Transform your business with next-generation technology." />
-        <meta name="keywords" content="2029 services, AI autonomous, emerging technology, business solutions, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/2029-innovative-services-showcase" />
-      </Head>
-      
-      <div className="min-h-screen bg-black text-white">
-        <UltraFuturisticNavigation2029 />
-
-        {/* Hero Section */}
-        <section className="py-32 bg-gradient-to-br from-black via-purple-900/20 to-black">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8">
-                2029 Innovative Services
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-                Experience the future of technology with our revolutionary AI autonomous ecosystems, 
+ } from 'lucide-react';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+import { aiAutonomousEcosystemServices2029  } from '../data/2029-ai-autonomous-ecosystem';
+import { emergingTechBreakthroughServices2029  } from '../data/2029-emerging-tech-breakthroughs';
+import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
+const contactInfo = null;
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">

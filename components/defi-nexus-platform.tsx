@@ -1,103 +1,12 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import {
-  TrendingUp,
-  Brain,
-  Shield,
-  Zap,
-  Target,
-  BarChart3,
-  Cpu,
-  Globe,
-  Users,
-  Award,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Phone,
-  Mail,
-  MapPin,;
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';import {
-  TrendingUp, Brain, Shield, Zap, Target, 
+import { TrendingUp, Brain, Shield, Zap, Target;
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
-} from 'lucide-react';
+ } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
-const features = [
-  'Multi-chain DeFi aggregation',
-  'Automated yield optimization',
-  'Liquidity pool management',
-  'Cross-chain bridge services',
-  'Smart contract auditing',
-  'DeFi analytics dashboard',
-  'Mobile app integration',
-  'Staking and governance',];  website: 'https://ziontechgroup.com'
-};
-
-const features = [
-  'Multi-chain DeFi aggregationAutomated yield optimizationLiquidity pool managementCross-chain bridge servicesSmart contract auditingDeFi analytics dashboardMobile app integrationStaking and governance'
-
-const pricingPlans = [
-  {
-    name: 'Starter',
-    price: 29,
-    period: 'month',
-    features: [
-      'Basic DeFi tools',
-      '3 blockchain networks',
-      'Yield tracking',
-      'Standard support',
-    ],
-    popular: false,
-  },  {
-    name: 'Professional',
-    price: 99,
-    period: 'month',    features: ['Basic DeFi tools3 blockchain networksYield trackingStandard support'],
-    popular: false
-  };
-  {
-    name: 'Professional',
-    price: 99,
-    period: 'month',
-    features: [
-      'Advanced DeFi tools',
-      'All major networks',
-      'Automated strategies',
-      'Analytics',
-      'Priority support',
-    ],
-    popular: true,
-  },  {
-    name: 'Enterprise',
-    price: 299,
-    period: 'month',    features: ['Advanced DeFi toolsAll major networksAutomated strategiesAnalyticsPriority support'],
-    popular: true
-  };
-  {
-    name: 'Enterprise',
-    price: 299,
-    period: 'month',
-    features: [
-      'Custom DeFi solutions',
-      'White-label platform',
-      'API access',
-      'Priority support',
-      'Custom integrations',
-    ],
-    popular: false,
-  },];    features: ['Custom DeFi solutionsWhite-label platformAPI accessPriority supportCustom integrations'],
-    popular: false
-  }
-];
-
+const contactInfo = null;
 export default function DeFiNexusPlatform() {
   return (
     <Layout>

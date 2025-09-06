@@ -1,32 +1,21 @@
-import { Link } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { useToast } from "@/hooks/use-toast";
+
+import { Link } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { useToast } from "@/hooks/use-toast",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { 
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuSeparator;
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu",
 
 export function UserMenu() {
   const { user, logout } = useAuth();
   const { toast } = useToast();
-
-  const handleSignOut = async () => {
-    try {
-      await logout();
-    } catch (error) {
-      toast({
-        title: "Error signing out",
-        description: "There was an error signing you out. Please try again.",
-        variant: "destructive",
-      });
-    }
-  };
-
+  const handleSignOut = null;
   if (!user) {
     return (
       <div className="hidden md: flex items-center space-x-4">

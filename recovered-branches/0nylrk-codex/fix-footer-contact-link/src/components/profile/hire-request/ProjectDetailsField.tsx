@@ -1,12 +1,7 @@
-import React from "react";
-import { UseFormReturn } from "react-hook-form";
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from "@/components/ui/form";
+
+import React from "react",
+import { UseFormReturn } from "react-hook-form",
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Textarea } from "@/components/ui/textarea";
 import { FormValues } from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {

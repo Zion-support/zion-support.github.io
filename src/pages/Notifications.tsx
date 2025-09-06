@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-return <Badge className="bg-blue-500">Message</Badge>;
-      return <Badge className="bg-orange-500">Order</Badge>;    default:
-      return <Badge variant="outline">Notification</Badge>
-=======
 import React, { useState, useEffect } from 'react';
 import { Bell, Check, X, AlertCircle, Info, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -10,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
 
 interface Notification {
   id: string;
@@ -21,10 +15,6 @@ interface Notification {
   read: boolean;
   actionUrl?: string;
 }
-<<<<<<< HEAD
-}
-;
-=======
 
 const getNotificationIcon = (type: string) => {
   switch (type) {
@@ -133,6 +123,21 @@ export default function Notifications() {
     );
   }
 
+=======
+import React, { useState } from 'react';
+import { useNotifications } from '@/context/notifications/NotificationContext';
+import { NotificationType;
+  NotificationContextType } from '@/context/notifications';
+import { formatDistanceToNow  } from 'date-fns';
+import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings, Package } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
+import { Badge  } from '@/components/ui/badge';
+import Skeleton from '@/components/ui/skeleton';
+import { SEO  } from '@/components/SEO';
+import { useRouter  } from 'next/router';
+import { cn } from '@/lib/utils';
+const getNotificationIcon = null;
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex items-center justify-between mb-6">
@@ -211,4 +216,3 @@ export default function Notifications() {
     </div>
   );
 }
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83

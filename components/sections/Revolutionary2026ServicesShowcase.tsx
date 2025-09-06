@@ -1,66 +1,13 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Rocket,
-  Globe,
-  Sparkles,;
-} from 'lucide-react';import Link from 'next/link';
-import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
+import { motion  } from 'framer-motion';
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles  } from 'lucide-react';
 import Link from 'next/link';
-import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
+import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function Revolutionary2026ServicesShowcase() {
   // Get featured services from each category
-  const featuredAIServices = aiAutonomousServices2026.slice(0, 3);
-  const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3);
-  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(
-    0,
-    3
-  );  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(0, 3);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },  };        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-      },
-    },
-  };
-
-  return (
-    <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
-      {/* Enhanced Background Effects */}
-      <div className='absolute inset-0'>
-        <div className='absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-cyan-900/30'></div>
-        <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/20 via-transparent to-blue-900/20'></div>
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse'></div>
-        <div className='absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>
-      </div>
-
-      <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  };
-
+  const featuredAIServices = null;
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Enhanced Background Effects */}

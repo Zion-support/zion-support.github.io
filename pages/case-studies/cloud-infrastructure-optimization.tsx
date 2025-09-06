@@ -1,104 +1,12 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
+import React from 'react',
+import Head from 'next/head';
+import Link from 'next/link';
 export default function CaseStudyPage() {
   return (
     <>
       <Head>
         <title>Cloud Infrastructure Optimization - Case Study | Zion Tech Group</title>
-        <meta name="description" content="Discover how an E-commerce Platform achieved 50% reduction in cloud costs with self-healing, auto-scaling infrastructure. Read our detailed case study." />
-        <meta name="keywords" content="cloud optimization, auto-scaling, infrastructure automation, cost reduction, DevOps" />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-        <main className="container mx-auto px-6 py-12">
-          {/* Breadcrumb */}
-          <nav className="mb-8">
-            <Link href="/" className="text-white/60 hover:text-white transition-colors">
-              Home
-            </Link>
-            <span className="text-white/60 mx-2">→</span>
-            <Link href="/case-studies" className="text-white/60 hover:text-white transition-colors">
-              Case Studies
-            </Link>
-            <span className="text-white/60 mx-2">→</span>
-            <span className="text-white">Cloud Infrastructure Optimization</span>
-          </nav>
-
-          {/* Header */}
-          <header className="text-center mb-16">
-            <div className="inline-block px-4 py-2 bg-blue-400/20 text-blue-400 text-sm rounded-full border border-blue-400/30 mb-6">
-              Technology Industry
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Cloud Infrastructure Optimization
-            </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              How an E-commerce Platform achieved 50% reduction in cloud costs with self-healing, auto-scaling infrastructure
-            </p>
-          </header>
-
-          {/* Case Study Content */}
-          <div className="max-w-4xl mx-auto">
-            {/* Company Overview */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-semibold text-blue-400 mb-4">E-commerce Platform</h3>
-                <p className="text-white/90 text-lg mb-4">
-                  A growing e-commerce platform serving thousands of customers daily. 
-                  The company faced challenges with high cloud costs, performance issues, and manual scaling requirements.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-400">10K+</div>
-                    <div className="text-white/70">Daily Users</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-400">100K+</div>
-                    <div className="text-white/70">Products</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-400">$5M+</div>
-                    <div className="text-white/70">Annual Revenue</div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Challenge */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-semibold text-red-400 mb-4">Critical Issues</h3>
-                <ul className="space-y-3 text-white/90 text-lg">
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
-                    <span>High cloud costs consuming 40% of operational budget</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
-                    <span>Performance issues during peak traffic periods</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
-                    <span>Manual scaling requirements causing service disruptions</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
-                    <span>Lack of monitoring and alerting systems</span>
-                  </li>
-                </ul>
-              </div>
-            </section>
-
-            {/* Solution */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-semibold text-green-400 mb-4">Self-Healing, Auto-Scaling Infrastructure</h3>
-                <p className="text-white/90 text-lg mb-6">
-                  We built a comprehensive cloud infrastructure solution that automatically scales, 
+        <meta name;
                   monitors, and heals itself while optimizing costs and performance.
                 </p>
                 

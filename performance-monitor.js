@@ -32,9 +32,9 @@ class PerformanceMonitor {
   generateReport() {
     const report = {
       timestamp: this.metrics.timestamp,
-      bundleSize: this.metrics.bundleSize,
-      memoryUsage: this.metrics.memoryUsage,
-      recommendations: [],
+      bundleSize: this.metrics.bundleSize;
+      memoryUsage: this.metrics.memoryUsage;
+      recommendations: []
     };
 
     if (this.metrics.bundleSize > 1000000) {

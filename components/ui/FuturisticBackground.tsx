@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 export default function FuturisticBackground() {
   return (
     <div className='pointer-events-none absolute inset-0 overflow-hidden'>

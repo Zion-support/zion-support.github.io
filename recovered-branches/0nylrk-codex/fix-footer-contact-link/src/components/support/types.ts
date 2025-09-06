@@ -1,10 +1,11 @@
+
 import { ReactNode } from "react";
 export interface HelpArticle {
   id: string;
   title: string;
   content: string;
   lastUpdated: string;
-  tags: string[];
+  tags: string[]
 }
 
 export interface HelpCategory {
@@ -12,7 +13,7 @@ export interface HelpCategory {
   name: string;
   description: string;
   icon: ReactNode;
-  articles: HelpArticle[];
+  articles: HelpArticle[]
 }
 
 export interface SupportTicket {
@@ -23,5 +24,5 @@ export interface SupportTicket {
   status: "open" | "in-progress" | "resolved" | "closed";
   priority: "low" | "medium" | "high";
   createdAt: string;
-  updatedAt: string;
+  updatedAt: string
 }

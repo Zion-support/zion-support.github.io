@@ -2,6 +2,9 @@ import React from 'react'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/router'; // Changed from useNavigate
 
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/router', // Changed from useNavigate
 import { XCircle } from 'lucide-react'
 import { useRouter } from 'next/router', // Changed from useNavigate
 export default function PaymentCanceled() {

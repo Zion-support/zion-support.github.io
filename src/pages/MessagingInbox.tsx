@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react'
-
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext';
@@ -14,53 +8,30 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
 import { useRouter } from 'next/router'; // Changed from react-router-dom
+=======
+
+import React, { useEffect, useState } from 'react';
+import { MessageSquare, Video } from 'lucide-react'
+import { useMessaging  } from '@/context/MessagingContext';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { ConversationsList, ConversationDetailView  } from '@/components/messaging';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { toast  } from 'sonner';
+import { Button  } from '@/components/ui/button';
+import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
+import { useRouter } from 'next/router', // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function MessagingInbox() {
 
   const { 
-    conversations,
-    activeConversation, 
-    setActiveConversation, 
+    conversations;
+    activeConversation;
+    setActiveConversation;
     markAsRead;
     fetchConversations;
     isLoading
   } = useMessaging();
-  const isMobile = useIsMobile();
-  const router = useRouter(), // Changed from navigate
-  const [activeCall, setActiveCall] = useState<string | null>(null);
-  
-  useEffect((,) => {
-    // Fetch conversations when component mounts
-    const loadData = async () => {
-      try {
-        await fetchConversations()
-      } catch (error) {
-        logErrorToProduction('Failed to load conversations:', { data: error }),
-        toast.error("Failed to load messages. Please try again.")
-      }
-    };
-    
-    loadData()
-  }, [fetchConversations]);
-  
-  const startVideoCall = () => {
-    if (!activeConversation) {
-      toast.error("Please select a conversation first");
-      return
-    }
-    
-    const roomId = `msg-${activeConversation.id}`;
-    setActiveCall(roomId);
-    
-    // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-    });
-    
-    // Navigate to video call page
-    router.push(`/call/${roomId}`), // Changed from navigate
-  };
-  
+  const isMobile = null;
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">

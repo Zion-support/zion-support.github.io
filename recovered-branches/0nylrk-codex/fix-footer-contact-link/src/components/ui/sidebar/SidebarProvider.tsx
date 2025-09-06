@@ -1,35 +1,13 @@
+
 import React, { createContext, useContext, useState } from "react";
 interface SidebarContextType {
   isOpen: boolean;
   toggle: () => void;
   open: () => void;
-  close: () => void;
+  close: () => void
 }
 
-const SidebarContext = createContext<SidebarContextType>({
-  isOpen: true,
-  toggle: () => {},
-  open: () => {},
-  close: () => {},
-});
-
-export const useSidebar = (): SidebarContextType => useContext(SidebarContext);
-
-interface SidebarProviderProps {
-  children: React.ReactNode;
-  defaultOpen?: boolean;
-}
-
-export function SidebarProvider({
-  children,
-  defaultOpen = true,
-}: SidebarProviderProps) {
-  const [isOpen, setIsOpen] = useState(defaultOpen);
-
-  const toggle = () => setIsOpen(!isOpen);
-  const open = () => setIsOpen(true);
-  const close = () => setIsOpen(false);
-
+const SidebarContext = null;
   return (
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
       <div

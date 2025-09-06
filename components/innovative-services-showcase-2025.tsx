@@ -1,207 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import {
-  Search,
-  Filter,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Brain,
-  Atom,
-  Shield,
-  Rocket,
-  Target,
-  Microscope,
-  Phone,
-  Mail,
-  MapPin,
-  TrendingUp,
-  Users,
-  Award,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Lock,
-  Cloud,
-  Stethoscope,
-  GraduationCap,
-  Leaf,
-  Truck,;
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';import {
-  Search, Filter, Star, CheckCircle, ArrowRight, 
+import { Search, Filter, Star, CheckCircle, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Phone, Mail, MapPin, TrendingUp, Users, Award;
   Zap, Globe, Cpu, Database, Lock, Cloud;
   Stethoscope, GraduationCap, Leaf, Truck
-} from 'lucide-react';
+ } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services';
-import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services';
-import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services';
-import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services';
-import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services';
+// Import all the new 2025 innovative service data
+import { innovativeFinancialServices2025  } from '../data/2025-innovative-financial-services';
+import { innovativeHealthcareServices2025  } from '../data/2025-innovative-healthcare-services';
+import { innovativeEducationServices2025  } from '../data/2025-innovative-education-services';
+import { innovativeSustainabilityServices2025  } from '../data/2025-innovative-sustainability-services';
+import { innovativeLogisticsServices2025  } from '../data/2025-innovative-logistics-services';
 // Import existing services for comprehensive coverage
-import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
-import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
-import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
+import { realMicroSaasServices2025  } from '../data/2025-real-micro-saas-services';
+import { innovativeAIServices2025  } from '../data/2025-innovative-ai-services';
+import { innovativeITServices2025  } from '../data/2025-innovative-it-services';
 import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-};
-
-const serviceCategories = [
-  {
-    id: 'financial-technology',
-    title: '💰 Financial Technology',
-    description: 'Innovative fintech, DeFi, and financial services',
-    icon: TrendingUp,
-    color: 'from-green-500 to-emerald-500',
-    services: [...innovativeFinancialServices2025],
-    gradient: 'from-green-500/20 to-emerald-500/20',
-    badge: 'New',
-  },  {    badge: 'New'
-  };
-  {
-    id: 'healthcare-biotech',
-    title: '🏥 Healthcare & Biotech',
-    description: 'AI-powered healthcare and biotechnology solutions',
-    icon: Stethoscope,
-    color: 'from-blue-500 to-indigo-500',
-    services: [...innovativeHealthcareServices2025],
-    gradient: 'from-blue-500/20 to-indigo-500/20',
-    badge: 'Hot',
-  },  {    badge: 'Hot'
-  };
-  {
-    id: 'education-technology',
-    title: '🎓 Education Technology',
-    description: 'AI-powered learning and educational innovation',
-    icon: GraduationCap,
-    color: 'from-purple-500 to-pink-500',
-    services: [...innovativeEducationServices2025],
-    gradient: 'from-purple-500/20 to-pink-500/20',
-    badge: 'Innovative',
-  },  {    badge: 'Innovative'
-  };
-  {
-    id: 'sustainability-green-tech',
-    title: '🌱 Sustainability & Green Tech',
-    description: 'Environmental technology and sustainability solutions',
-    icon: Leaf,
-    color: 'from-emerald-500 to-teal-500',
-    services: [...innovativeSustainabilityServices2025],
-    gradient: 'from-emerald-500/20 to-teal-500/20',
-    badge: 'Eco-Friendly',
-  },  {    badge: 'Eco-Friendly'
-  };
-  {
-    id: 'logistics-supply-chain',
-    title: '🚚 Logistics & Supply Chain',
-    description: 'Autonomous logistics and supply chain optimization',
-    icon: Truck,
-    color: 'from-orange-500 to-red-500',
-    services: [...innovativeLogisticsServices2025],
-    gradient: 'from-orange-500/20 to-red-500/20',
-    badge: 'Autonomous',
-  },
-  {
-    id: 'ai-consciousness',
-    title: '🧠 AI & Consciousness',
-    description:
-      'Revolutionary AI consciousness and emotional intelligence platforms',    icon: Brain,
-    color: 'from-violet-500 to-purple-500',
-    services: [...innovativeAIServices2025],
-    gradient: 'from-violet-500/20 to-indigo-500/20',
-    badge: 'Revolutionary',
-  },  {    badge: 'Autonomous'
-  };
-  {
-    id: 'ai-consciousness',
-    title: '🧠 AI & Consciousness',
-    description: 'Revolutionary AI consciousness and emotional intelligence platforms',
-    color: 'from-violet-500 to-purple-500',
-    services: [...innovativeAIServices2025],
-    gradient: 'from-violet-500/20 to-indigo-500/20',
-    badge: 'Revolutionary',
-  },    badge: 'Revolutionary'
-  };
-  {
-    id: 'quantum-emerging',
-    title: '⚛️ Quantum & Emerging Tech',
-    description: 'Quantum computing, DNA computing, and beyond',
-    icon: Atom,
-    color: 'from-indigo-500 to-blue-500',
-    services: [...emergingTechServices2025],
-    gradient: 'from-indigo-500/20 to-cyan-500/20',
-    badge: 'Quantum',
-  },  {    badge: 'Quantum'
-  };
-  {
-    id: 'enterprise-it',
-    title: '🏙️ Enterprise IT',
-    description: 'Autonomous operations and zero-trust security',
-    icon: Shield,
-    color: 'from-blue-500 to-cyan-500',
-    services: [...innovativeITServices2025],
-    gradient: 'from-blue-500/20 to-teal-500/20',
-    badge: 'Enterprise',
-  },  {    badge: 'Enterprise'
-  };
-  {
-    id: 'micro-saas',
-    title: '🎯 Micro SAAS',
-    description: 'Innovative solutions for every business need',
-    icon: Target,
-    color: 'from-teal-500 to-green-500',
-    services: [...realMicroSaasServices2025],
-    gradient: 'from-teal-500/20 to-green-500/20',
-    badge: 'Popular',
-  },];    badge: 'Popular'
-  }
-];
-
-export default function InnovativeServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
-
-  const filteredServices = serviceCategories.flatMap(category =>
-    category.services.filter(
-      service =>
-        (selectedCategory === 'all' || category.id === selectedCategory) &&
-        (searchTerm === '' ||
-          service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          service.description
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase()) ||
-          service.category.toLowerCase().includes(searchTerm.toLowerCase()))    )  const filteredServices = serviceCategories.flatMap(category => 
-    category.services.filter(service =>
-      (selectedCategory === 'all' || category.id === selectedCategory) &&
-      (searchTerm === '' || 
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.category.toLowerCase().includes(searchTerm.toLowerCase()))
-  );
-
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'name':
-        return a.name.localeCompare(b.name);
-      case 'price':
-        return a.pricing.starter.price - b.pricing.starter.price;
-      case 'category':
-        return a.category.localeCompare(b.category);
-      default:
-        return 0;    }      default: return 0
-    }
-  });
-
+const contactInfo = null;
   return (
     <Layout>
       <Head>

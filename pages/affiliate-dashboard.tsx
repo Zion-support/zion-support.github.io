@@ -1,49 +1,6 @@
-import { useEffect, useMemo, useState } from 'react',
-;
+import { useEffect, useMemo, useState } from 'react';
 function getRefCode(): string {
-  if (typeof window === 'undefined') return '',
-  return localStorage.getItem('ref_code') || ''
-}
-
-export default function AffiliateDashboard() {
-  const [code, setCode] = useState<string>(''),
-  const [metrics, setMetrics] = useState<any>(null),
-  const [amount, setAmount] = useState<string>(''),
-  const [msg, setMsg] = useState<string>(''),
-
-  useEffect(() => {
-    const c = getRefCode(),
-    setCode(c)
-  }, []),
-
-  useEffect(() => {
-    if (!code) return,
-    (async () => {
-      try {
-        const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`),
-        const json = await res.json(),
-        setMetrics(json)
-      } catch {}
-    })()
-  }, [code]),
-
-  async function requestPayout() {
-    setMsg(''),
-    try {
-      const res = await fetch('/api/partners/request-payout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })}),
-      const json = await res.json(),
-      if (!res.ok) throw new Error(json.error || 'Failed'),
-      setMsg('Payout requested')
-    } catch (e: any) {
-      setMsg(e?.message || 'Error')
-    }
-  }
-
-  const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]),
-
+  if (typeof window;
   if (!code) {
     return (
       <div className="space-y-4">

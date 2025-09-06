@@ -1,18 +1,18 @@
 
-import React, { useState } from "react";
-import {useToast} from "@/hooks/use-toast";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Sparkles} from "lucide-react";
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea";
+import { Sparkles } from "lucide-react";
 interface AIListingFormProps {
   onSubmit: (formData: {
-    title: string,
-    category: string,
-    keyFeatures: string,
+    title: string;
+    category: string;
+    keyFeatures: string;
     targetAudience: string
   }) => void;
-  isLoading: boolean,
+  isLoading: boolean;
   initialValues?: {
     title?: string;
     category?: string;
@@ -21,31 +21,7 @@ interface AIListingFormProps {
   }
 }
 
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
-  const { toast } = useToast();
-  const [title, setTitle] = useState(initialValues.title || "");
-  const [category, setCategory] = useState(initialValues.category || "");
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
-
-  const handleSubmit = () => {
-    if (!title || !category) {
-      toast({
-        title: "Missing required fields",
-        description: "Please provide at least a title and category.",
-        variant: "destructive"
-      });
-      return
-    }
-
-    onSubmit({
-      title;
-      category;
-      keyFeatures;
-      targetAudience
-    })
-  };
-
+export function AIListingForm({ onSubmit, isLoading, initialValues;
   return (
     <div className="space-y-4">
       <div className="space-y-2">

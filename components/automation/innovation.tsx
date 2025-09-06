@@ -1,8 +1,7 @@
-};
-</header> {
-  items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) 
-}</li>) ) 
-}</ul> </div>)
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+type Item = any;
 export default function InnovationDigest({ items }: Props) {
   return (
     <div className="space-y-6">

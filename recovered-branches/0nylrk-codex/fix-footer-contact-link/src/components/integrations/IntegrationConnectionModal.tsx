@@ -1,16 +1,10 @@
-import React, { useState } from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
+
+import React, { useState } from "react",
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Checkbox } from "@/components/ui/checkbox",
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
 interface Integration {
@@ -19,54 +13,24 @@ interface Integration {
   description: string;
   logoUrl?: string;
   status: "connected" | "warning" | "disconnected";
-  lastSync?: string;
+  lastSync?: string
 }
 
 interface IntegrationConnectionModalProps {
   isOpen: boolean;
   onClose: () => void;
-  integration: Integration;
+  integration: Integration
 }
 
-export function IntegrationConnectionModal({
-  isOpen,
-  onClose,
-  integration,
-}: IntegrationConnectionModalProps) {
+export function IntegrationConnectionModal({ isOpen, onClose, integration }: IntegrationConnectionModalProps) {
   const [isConnecting, setIsConnecting] = useState(false);
   const [syncSettings, setSyncSettings] = useState({
-    autoCreateContacts: true,
-    pushNotes: false,
-    syncJobDetails: true,
-    syncApplicantData: true,
+    autoCreateContacts: true;
+    pushNotes: false;
+    syncJobDetails: true;
+    syncApplicantData: true
   });
-
-  const handleConnectOAuth = () => {
-    setIsConnecting(true);
-
-    // Simulate OAuth flow
-    setTimeout(() => {
-      setIsConnecting(false);
-      toast.success(`Connected to ${integration.name} successfully`);
-      onClose();
-    }, 2000);
-
-    // In a real application, this would open a popup for OAuth authentication
-    // window.open(`/api/oauth/${integration.id}`, 'oauthwidth=600,height=600')
-  };
-
-  const handleDisconnect = () => {
-    // In a real application, this would revoke the OAuth token
-    toast.info(`Disconnected from ${integration.name}`);
-    onClose();
-  };
-
-  const handleSaveSettings = () => {
-    // In a real application, this would save the sync settings
-    toast.success("Integration settings saved");
-    onClose();
-  };
-
+  const handleConnectOAuth = null;
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md">

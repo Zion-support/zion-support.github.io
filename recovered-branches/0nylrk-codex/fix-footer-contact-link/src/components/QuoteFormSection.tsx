@@ -1,21 +1,12 @@
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
+
+import { Button } from "./ui/button",
+import { Input } from "./ui/input",
 import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      (setIsSubmitting(false), setIsSubmitted(true));
-    }, 1000);
-  };
-
+  const handleSubmit = null;
   return (
     <section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -12,12 +12,31 @@ interface ApiState<T> {
   error: string | null;
 }
 
-export function useApi<T>(url: string, options?: RequestInit) {
-  const [state, setState] = useState<ApiState<T>>({
-    data: null,
-    loading: true,
-    error: null,
-  });
+interface UseApiOptions {
+  immediate?: boolean;
+}
+
+export function useApi<T>(
+  apiCall: () => Promise<T>;
+  options: UseApiOptions = {}
+): ApiState<T> & { refetch: () => void } {
+  const [data, setData] = useState<T | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchData = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    
+    try {
+      const result = await apiCall();
+      setData(result);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
+    } finally {
+      setLoading(false);
+    }
+  }, [apiCall]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,55 +59,10 @@ export function useApi<T>(url: string, options?: RequestInit) {
       }
     };
 
-    fetchData();
-  }, [url, JSON.stringify(options)]);
-
-  return state;
-}
-};
-
-interface UseApiProps {
-  // Add props here as needed
-}
-
-interface UseApiOptions {
-  immediate?: boolean;
-  onSuccess?: (data: any) => void;
-  onError?: (error: any) => void}
-export const useApi = <T = any>(
-  apiFunction: (...args: any[]) => Promise<T>,
-  options: UseApiOptions = {}
-) => {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<any>(null);
-  const execute = useCallback(async (...args: any[]) => {
-    try {
-      setLoading(true);
-      setError(null);
-      const result = await apiFunction(...args);
-      setData(result);
-      options.onSuccess?.(result);
-      return result;
-    } catch (err) {
-      const error = err instanceof Error ? err : new Error(String(err));
-      setError(error);
-      options.onError?.(error);
-      throw error;
-      setLoading(false);
-    }
-  }, [apiFunction, options]);
-  useEffect(() => {
-    if (options.immediate) {
-      execute()}
-  }, [execute, options.immediate]);
-  return { data, loading, error, execute }};
-export default useApi;
-import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
-export default function UseApi({ }: UseApiProps) {
-  return (
-    <div>
-      <h1>UseApi</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
+  return {
+    data;
+    loading;
+    error;
+    refetch: fetchData;
+  };
 }

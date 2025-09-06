@@ -1,34 +1,22 @@
-import { useState } from "react";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { ApplicationCard } from "./ApplicationCard";
-import { LoadingState } from "./LoadingState";
-import { EmptyState } from "./EmptyState";
-import { ErrorState } from "./ErrorState";
+
+import { useState } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { ApplicationCard } from "./ApplicationCard",
+import { LoadingState } from "./LoadingState",
+import { EmptyState } from "./EmptyState",
+import { ErrorState } from "./ErrorState",
 import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
 export function ApplicationsTracker() {
   const { applications, isLoading, error } = useJobApplications();
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(
-    "all",
-  );
-
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),
+  
   if (isLoading) {
     return <LoadingState />;
   }
 
   if (error) {
-    return <ErrorState error={error} />;
-  }
-
-  if (applications.length === 0) {
-    return <EmptyState />;
-  }
-
-  const filteredApplications =
-    statusFilter === "all"
-      ? applications
-      : applications.filter((app) => app.status === statusFilter);
-
+    return <ErrorState error;
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap gap-2">

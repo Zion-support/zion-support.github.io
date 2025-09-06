@@ -1,11 +1,6 @@
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
 import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {

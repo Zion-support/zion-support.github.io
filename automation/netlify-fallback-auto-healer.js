@@ -17,30 +17,28 @@ body: JSON.stringify ({
 message: error.message 
 }) 
 
-};exports.handler = async (_event, _context) => {
-    console.log('auto-healer fallback executed locally'),
-    
+exports.handler = async (_event, _context) => {
+    console.log('auto-healer fallback executed locally');
     try {
         // Basic fallback logic
         const result = {
             statusCode: 200,
             body: JSON.stringify({
-                message: 'auto-healer executed locally as fallback',
-                timestamp: new Date().toISOString(),
+                message: 'auto-healer executed locally as fallback';
+                timestamp: new Date().toISOString();
                 fallback: true
             })
         },
         
         return result
     } catch (error) {
-        console.error('Fallback execution error:', error),
+        console.error('Fallback execution error:', error);
         return {
-            statusCode: 500,
+            statusCode: 500;
             body: JSON.stringify({
-                error: 'Fallback execution failed',
+                error: 'Fallback execution failed';
                 message: error.message
             })
         }
     }
-},
-;
+};

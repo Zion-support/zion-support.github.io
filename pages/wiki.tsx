@@ -1,32 +1,14 @@
-import React, { useMemo, useState } from 'react',;
-import {
-  generateZionWiki,
-  buildMarkdownFromWiki,
-  buildWikitextFromWiki,
-  operatorPrompt,
-  slugify} from '../utils/data/zionContent',
-
+import React, { useMemo, useState } from 'react';
+import { generateZionWiki;
+  buildMarkdownFromWiki;
+  buildWikitextFromWiki;
+  operatorPrompt;
+  slugify } from '../utils/data/zionContent';
 function CopyButton({ text, label }: { text: string, label: string }) {
-  const [copied, setCopied] = useState(false),
+  const [copied, setCopied] = useState(false);
   return (
     <button
-      onClick={async () => {
-        await navigator.clipboard.writeText(text),
-        setCopied(true),
-        setTimeout(() => setCopied(false), 1500)
-      }}
-      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
-    >
-      {copied ? 'Copied' : label}
-    </button>
-  )
-}
-
-export default function WikiPage() {
-  const wiki = useMemo(() => generateZionWiki(), []),
-  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),
-  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]),
-
+      onClick;
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
       <aside className="sticky top-20 self-start hidden lg:block">

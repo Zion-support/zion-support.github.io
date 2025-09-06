@@ -1,19 +1,5 @@
 import React, { useState } from 'react';
-export type ModerationModalProps = {
-  flag: any | null;
-  onClose: () => void;
-  onAction: (
-    action: 'approve' | 'remove' | 'warn' | 'ban',
-    adminNotes?: string
-  ) => Promise<void>;
-
-export default function ModerationModal({
-  flag,
-  onClose,
-  onAction,
-}: ModerationModalProps) {
-  const [adminNotes, setAdminNotes] = useState('');
-  if (!flag) return null;
+export type ModerationModalProps = any;
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
       <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>

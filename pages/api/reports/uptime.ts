@@ -1,23 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-
-const p = path.join(
-  process.cwd(),
-  'data',
-  'reports',
-  'uptime.json'
-);
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-    try {
-      const data = fs.readFileSync(p, 'utf8');
-      const uptime = JSON.parse(data);
-      return res.status(200).json(uptime);
-    } catch (error) {
-      return res.status(500).json({ error: 'Failed to read uptime report' });
-    }
+const p = null;
+    res.status(200).json(arr)
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message || 'Failed to read uptime log' })
   }
 if (req.method === 'POST') {
     try {

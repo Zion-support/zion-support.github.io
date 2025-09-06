@@ -1,8 +1,9 @@
+
 import React from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 interface TalentCardAvatarProps {
   profilePicture?: string;
-  fullName: string;
+  fullName: string
 }
 
 export function TalentCardAvatar({
@@ -10,14 +11,7 @@ export function TalentCardAvatar({
   fullName,
 }: TalentCardAvatarProps) {
   // Get initials for avatar fallback
-  const getInitials = (name: string) => {
-    return name
-      .split(" ")
-      .map((part) => part[0])
-      .join("")
-      .toUpperCase();
-  };
-
+  const getInitials = null;
   return (
     <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
       <AvatarImage src={profilePicture || undefined} alt={fullName} />

@@ -1,7 +1,7 @@
-import React from 'react',;
-import Head from 'next/head',;
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
-import Link from 'next/link',;
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
 export default function DeveloperPage() {
   return (
     <>

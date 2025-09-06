@@ -2,55 +2,15 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useState, useRef } from 'react'
 import { Mail } from 'lucide-react'
-import { useToast } from '@/hooks/use-toast'
-import { logErrorToProduction } from '@/utils/productionLogger'
+import { useToast } from "@/hooks/use-toast";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
-  const [email, setEmail] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const { toast } = useToast()
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  const lastSubmit = useRef(0)
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    const now = Date.now()
-    if (now - lastSubmit.current < 1000) return
-    lastSubmit.current = now
-    const trimmed = email.trim()
-    if (!EMAIL_REGEX.test(trimmed)) {
-      toast.error('Invalid email')
-      return
-    }
 
-    setIsSubmitting(true)
-    try {
-      const res = await fetch('/api/newsletter', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: trimmed }),
-      })
-      const data = await res.json().catch(() => ({}))
-      if (res.ok) {
-        // Handle different success statuses
-        if (data.status === 'already_subscribed') {
-          toast.success(data.message || "You're already subscribed!")
-        } else {
-          toast.success(data.message || 'Thanks for subscribing!')
-        }
-        setIsSubmitted(true)
-        setEmail('')
-      } else {
-        // Handle error responses
-        logErrorToProduction('Newsletter subscription failed:', { data: data })
-        toast.error(data.error || 'Subscription failed. Please try again.')
-      }
-    } catch (err: any) {
-      logErrorToProduction('Newsletter subscription error:', { data: err })
-      toast.error('Unable to subscribe right now. Please try again later.')
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const { toast } = useToast();
+  const EMAIL_REGEX = null;
   return (
     <div className='w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6'>
       <div className='flex items-center mb-4'>

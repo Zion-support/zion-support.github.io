@@ -1,8 +1,7 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-const AIAssistant: React.FC = () => {
+import Button from '../components/ui/Button';
+export default function AIAssistantPage() {
   return (
     <Layout>
       <Head>

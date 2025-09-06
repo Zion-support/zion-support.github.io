@@ -1,29 +1,28 @@
+import { useState, useEffect  } from 'react';
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge";
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
+import { supabase  } from '@/integrations/supabase/client';
+import { ModelConfig  } from '@/utils/zion-gpt';
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface ModelVersionData extends ModelConfig {
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
+  errorMessage?: string
+}
 
-        .order('createdAt', { ascending: false }),
+export function ZionGPTModelManager() {
+  const [models, setModels] = useState<ModelVersionData[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),
 
-  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
-    try {
-      // If activating, deactivate all other models with the same purpose
-      if (!currentActive) {
-        await supabase
-          .from('model_versions')
-          .update({ active: false })
-          .eq('purpose', purpose)
-      }
-      
-      // Update this model
-      await supabase
-        .from('model_versions')
-        .update({ active: !currentActive })
-        .eq('id', modelId),
-      
-      // Refresh the model list
-      fetchModels()
-    } catch (error) {
-      logErrorToProduction('Error toggling model active state:', { data: error })
-    }
-  },
+  // Fetch model data on component mount
+  useEffect(() => {
+    fetchModels()
+  }, []),
 
+  const fetchModels = null;
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-row items-center justify-between">

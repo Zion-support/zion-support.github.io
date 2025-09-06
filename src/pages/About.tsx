@@ -1,6 +1,11 @@
 import React from 'react'
 
-const About = () => {
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { ContactSection } from "@/components/ContactSection";
+import Link from "next/link";
+export default function About() {
+  const team = null;
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">

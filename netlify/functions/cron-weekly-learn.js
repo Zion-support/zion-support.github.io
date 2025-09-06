@@ -15,9 +15,9 @@ exports.handler = async function () {
     const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));    const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
     const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
-    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8')),
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));
     const summary = {
-      updatedAt: Date.now(),
+      updatedAt: Date.now();
       totals: {
         users: Object.keys(users).length,
         courses: courses.length,
@@ -62,12 +62,10 @@ exports.handler = async function () {
       }, {})
     },
 
-    const owner = process.env.GITHUB_OWNER,
-    const repo = process.env.GITHUB_REPO,
-    const token = process.env.GITHUB_TOKEN,
-
-    const content = JSON.stringify(summary, null, 2),
-
+    const owner = process.env.GITHUB_OWNER;
+    const repo = process.env.GITHUB_REPO;
+    const token = process.env.GITHUB_TOKEN;
+    const content = JSON.stringify(summary, null, 2);
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })
     }
@@ -76,4 +74,4 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-},
+};

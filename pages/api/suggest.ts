@@ -1,21 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-const SAMPLE_QUERIES = [
-  "React developers under $50/hr",
-  "Part-time DevOps jobs in LATAM",
-  "AI/ML engineers for startup",
-  "Blockchain developers remote",
-  "UI/UX designers available now",
-  "Full-stack developers with Next.js",
-  "Data scientists with Python",
-  "Mobile app developers iOS/Android",
-  "Cloud architects AWS/Azure",
-  "DevOps engineers with Kubernetes",
-];
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") {
-    res.setHeader("Allow", "GET");
-    return res.status(405).json({ error: "Method not allowed" });
+const SAMPLE_QUERIES = null;
+  for (const s of SAMPLE_QUERIES) {
+    if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
+  }
+  for (const s of SKILLS) {
+    if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
   }
 
   const { q = "" } = req.query;

@@ -1,23 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-
-const p = path.join(
-  process.cwd(),
-  'data',
-  'reports',
-  'pagespeed.json'
-);
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-    try {
-      const data = fs.readFileSync(p, 'utf8');
-      const pagespeed = JSON.parse(data);
-      return res.status(200).json(pagespeed);
-    } catch (error) {
-      return res.status(500).json({ error: 'Failed to read pagespeed report' });
-    }
+const p = null;
+    res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')))
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message || 'Failed to read PageSpeed report' })
   }
 if (req.method === 'POST') {
     try {
