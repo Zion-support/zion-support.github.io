@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 interface CardProps {
   children: React.ReactNode;
-<<<<<<< HEAD
   title?: string;
   description?: string;
   className?: string;
@@ -32,21 +31,9 @@ const Card: React.FC<CardProps> = ({
       {description && (
         <p className="text-gray-300 mb-4 text-center">{description}</p>
       )}
-=======
-  className?: string;
-}
-
-export default function Card({ children, className = '' }: CardProps) {
-  return (
-    <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {children}
     </motion.div>
   );
-<<<<<<< HEAD
 };
 
 export default Card;
-=======
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
