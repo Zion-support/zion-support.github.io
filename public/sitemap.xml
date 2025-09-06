@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ziontechgroup.com/</loc>
-    <lastmod>2025-09-06T01:33:17.163Z</lastmod>
+    <loc>https://zion.app/</loc>
+    <lastmod>2025-09-06T04:52:49.044Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/about</loc>
+    <lastmod>2025-09-06T04:52:49.044Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/services</loc>
+    <lastmod>2025-09-06T04:52:49.044Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/contact</loc>
+    <lastmod>2025-09-06T04:52:49.044Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/blog</loc>
+    <lastmod>2025-09-06T04:52:49.044Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/about</loc>
-    <lastmod>2025-09-06T01:33:17.163Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://zion.app/privacy</loc>
+    <lastmod>2025-09-06T04:52:49.044Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/contact</loc>
-    <lastmod>2025-09-06T01:33:17.163Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://zion.app/terms</loc>
+    <lastmod>2025-09-06T04:52:49.044Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

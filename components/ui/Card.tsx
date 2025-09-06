@@ -1,12 +1,6 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
 
-// Define HTML element types if not available
-declare global {
-  interface HTMLDivElement extends HTMLElement {}
-  interface HTMLParagraphElement extends HTMLElement {}
-  interface HTMLHeadingElement extends HTMLElement {}
-}
 
 const Card = React.forwardRef<
   HTMLDivElement,
@@ -36,7 +30,7 @@ const CardHeader = React.forwardRef<
 CardHeader.displayName = "CardHeader";
 
 const CardTitle = React.forwardRef<
-  HTMLParagraphElement,
+  HTMLHeadingElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
   <h3
@@ -46,7 +40,9 @@ const CardTitle = React.forwardRef<
       className
     )}
     {...props}
-  />
+  >
+    {props.children}
+  </h3>
 ));
 CardTitle.displayName = "CardTitle";
 

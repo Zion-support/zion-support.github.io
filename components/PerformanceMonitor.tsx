@@ -31,7 +31,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     if (typeof window === 'undefined' || typeof window.performance === 'undefined') return;
 
     const measurePerformance = () => {
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = (window.performance as Performance).getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = window.performance.getEntriesByType('paint');
       
       const performanceData = {
