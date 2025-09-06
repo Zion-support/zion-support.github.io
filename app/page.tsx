@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import Link from 'next/link';
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
 
 
           <Link 
@@ -22,6 +26,7 @@
       </section>
 
       <section className="py-12">
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
 
@@ -30,6 +35,14 @@
             href="/services/micro-saas" 
             description="End-to-end product engineering with billing, auth, analytics and growth." 
             icon="🚀" 
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Card
+            title="Micro SaaS"
+            href="/services/micro-saas"
+            description="End-to-end product engineering with billing, auth, analytics and growth."
+            icon="🚀"
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
           />
           <Card 
             title="AI Services" 
@@ -44,6 +57,24 @@
             icon="⚙️" 
 
 
+          />
+          <Card
+            title="Business Automation"
+            href="/services/automation-tools"
+            description="Intelligent automation tools that streamline operations and boost productivity by 300%."
+            icon="⚡"
+          />
+          <Card
+            title="AI Copilots"
+            href="/services/ai-copilots"
+            description="Intelligent assistants that enhance productivity and automate complex tasks."
+            icon="🧠"
+          />
+          <Card
+            title="Data Analytics"
+            href="/services/data-analytics"
+            description="Advanced analytics and BI solutions that transform data into actionable insights."
+            icon="📊"
           />
         </div>
       </section>
@@ -119,4 +150,7 @@ function FeatureCard({ title, description }: {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
